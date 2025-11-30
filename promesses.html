@@ -324,7 +324,7 @@
             document.getElementById('player-psalm').textContent = 'Psaume ' + psalmNum;
             
             // Build URL - Psaumes are book 19
-            const chapterPadded = String(psalmNum).padStart(2, '0');
+            const chapterPadded = String(psalmNum).padStart(3, '0');
             const url = ARCHIVE_BASE + '/19_Psaumes_' + chapterPadded + '.mp3';
             
             // Play audio
