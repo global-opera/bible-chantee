@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bible Chantee - Worship Francais</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Merriweather', Georgia, serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             min-height: 100vh;
             color: #fff;
@@ -19,7 +20,7 @@
             border-bottom: 1px solid rgba(255,255,255,0.1);
             margin-bottom: 30px;
         }
-        h1 { font-size: 2.5em; margin-bottom: 10px; color: #e94560; }
+        h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 2.5em; margin-bottom: 10px; color: #e94560; }
         .subtitle { color: #aaa; font-size: 1.1em; }
         .stats {
             background: rgba(255,255,255,0.05);
@@ -29,6 +30,7 @@
             display: inline-block;
         }
         .section-title {
+            font-family: 'Playfair Display', Georgia, serif;
             font-size: 1.3em;
             color: #e94560;
             margin: 30px 0 15px 0;
@@ -78,14 +80,16 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, #1a1a2e, rgba(26, 26, 46, 0.95));
+            background: linear-gradient(to top, #1a1a2e, rgba(26, 26, 46, 0.98));
             padding: 15px 20px;
             display: none;
             border-top: 1px solid rgba(233, 69, 96, 0.3);
+            max-height: 80vh;
+            overflow-y: auto;
         }
         .player-container.active { display: block; }
         .player-info { text-align: center; margin-bottom: 10px; }
-        .player-title { font-size: 1.1em; color: #e94560; }
+        .player-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.2em; color: #e94560; }
         .player-controls { display: flex; align-items: center; gap: 15px; justify-content: center; flex-wrap: wrap; }
         audio { width: 100%; max-width: 500px; }
         .nav-btn {
@@ -100,14 +104,74 @@
         .nav-btn:hover { background: #ff6b6b; }
         .nav-btn:disabled { background: #444; cursor: not-allowed; }
         .chapter-select { padding: 8px; border-radius: 5px; background: #333; color: #fff; border: 1px solid #555; }
+        
+        /* Toggle Paroles */
+        .lyrics-toggle {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+        .lyrics-toggle:hover { background: rgba(255,255,255,0.2); }
+        .lyrics-toggle.active { 
+            background: #e94560; 
+            border-color: #e94560;
+        }
+        
+        /* Zone Paroles */
+        .lyrics-container {
+            display: none;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 15px;
+            max-height: 200px;
+            overflow-y: auto;
+            text-align: center;
+        }
+        .lyrics-container.active { display: block; }
+        .lyrics-line {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #666;
+            transition: all 0.3s ease;
+            padding: 3px 8px;
+            border-radius: 3px;
+        }
+        .lyrics-line.active {
+            color: #fff;
+            font-size: 1.3em;
+            background: rgba(233, 69, 96, 0.3);
+        }
+        .lyrics-line.past { color: #888; }
+        .lyrics-loading { color: #888; font-style: italic; }
+        .lyrics-error { color: #e94560; }
+        .lyrics-unavailable { color: #666; }
+        
         footer {
             text-align: center;
             padding: 30px 0;
             color: #666;
             font-size: 0.85em;
-            margin-bottom: 100px;
+            margin-bottom: 180px;
         }
         footer a { color: #e94560; text-decoration: none; }
+        
+        /* Mobile */
+        @media (max-width: 600px) {
+            .books-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+            .book { padding: 10px 5px; }
+            .book-name { font-size: 0.85em; }
+            h1 { font-size: 1.8em; }
+            .lyrics-container { max-height: 150px; }
+            .lyrics-line { font-size: 1em; }
+            .lyrics-line.active { font-size: 1.1em; }
+            footer { margin-bottom: 250px; }
+        }
     </style>
 </head>
 <body>
@@ -138,13 +202,18 @@
             <button class="nav-btn" id="prev-btn">Precedent</button>
             <select class="chapter-select" id="chapter-select"></select>
             <button class="nav-btn" id="next-btn">Suivant</button>
+            <button class="lyrics-toggle" id="lyrics-toggle">Paroles</button>
         </div>
         <div class="player-controls" style="margin-top: 10px;">
             <audio id="audio" controls></audio>
         </div>
+        <div class="lyrics-container" id="lyrics-container">
+            <div class="lyrics-loading">Chargement des paroles...</div>
+        </div>
     </div>
     <script>
         const ARCHIVE_BASE = "https://archive.org/download/bible-chantee";
+        const LRC_BASE = "lrc";
         const fileNames = {
             "01": "Genese",
             "02": "Exode",
@@ -227,6 +296,10 @@
         const newTestament = books.filter(b => parseInt(b.num) > 39);
         let currentBook = null;
         let currentChapter = 1;
+        let lyrics = [];
+        let currentLineIndex = -1;
+        let lyricsVisible = false;
+        
         function renderBooks(container, bookList) {
             const el = document.getElementById(container);
             el.innerHTML = bookList.map(book => 
@@ -235,6 +308,87 @@
                 '<div class="book-name">'+book.name+'</div></div>'
             ).join('');
         }
+        
+        function parseLRC(lrcText) {
+            const lines = lrcText.split('\n');
+            const result = [];
+            const timeRegex = /\[(\d{2}):(\d{2})\.(\d{2})\]/;
+            lines.forEach(line => {
+                const match = line.match(timeRegex);
+                if (match) {
+                    const minutes = parseInt(match[1]);
+                    const seconds = parseInt(match[2]);
+                    const hundredths = parseInt(match[3]);
+                    const time = minutes * 60 + seconds + hundredths / 100;
+                    const text = line.replace(timeRegex, '').trim();
+                    if (text) result.push({ time, text });
+                }
+            });
+            return result;
+        }
+        
+        async function loadLyrics(bookNum, chapter) {
+            const container = document.getElementById('lyrics-container');
+            const book = books.find(b => b.num === bookNum);
+            if (!book) return;
+            
+            const chapterNum = String(chapter).padStart(2, '0');
+            const fileName = bookNum + '_' + fileNames[bookNum] + '_' + chapterNum;
+            
+            container.innerHTML = '<div class="lyrics-loading">Chargement des paroles...</div>';
+            lyrics = [];
+            currentLineIndex = -1;
+            
+            try {
+                const response = await fetch(LRC_BASE + '/' + fileName + '.lrc');
+                if (!response.ok) throw new Error('Non disponible');
+                
+                const lrcText = await response.text();
+                lyrics = parseLRC(lrcText);
+                
+                if (lyrics.length === 0) {
+                    container.innerHTML = '<div class="lyrics-unavailable">Paroles non disponibles</div>';
+                    return;
+                }
+                
+                container.innerHTML = lyrics.map((line, i) => 
+                    '<div class="lyrics-line" data-index="'+i+'">'+line.text+'</div>'
+                ).join('');
+                
+            } catch (error) {
+                container.innerHTML = '<div class="lyrics-unavailable">Paroles non disponibles pour ce chapitre</div>';
+            }
+        }
+        
+        function updateActiveLine(currentTime) {
+            if (lyrics.length === 0) return;
+            
+            let activeIndex = -1;
+            for (let i = lyrics.length - 1; i >= 0; i--) {
+                if (currentTime >= lyrics[i].time) {
+                    activeIndex = i;
+                    break;
+                }
+            }
+            
+            if (activeIndex === currentLineIndex) return;
+            currentLineIndex = activeIndex;
+            
+            const container = document.getElementById('lyrics-container');
+            const lines = container.querySelectorAll('.lyrics-line');
+            lines.forEach((line, index) => {
+                line.classList.remove('active', 'past');
+                if (index === activeIndex) {
+                    line.classList.add('active');
+                    if (lyricsVisible) {
+                        line.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                } else if (index < activeIndex) {
+                    line.classList.add('past');
+                }
+            });
+        }
+        
         function playBook(num, chapters) {
             currentBook = num;
             currentChapter = 1;
@@ -251,6 +405,7 @@
             document.getElementById('player').classList.add('active');
             playChapter(1);
         }
+        
         function playChapter(chapter) {
             currentChapter = chapter;
             const fileName = fileNames[currentBook];
@@ -264,7 +419,20 @@
             document.getElementById('chapter-select').value = chapter;
             document.getElementById('prev-btn').disabled = chapter <= 1;
             document.getElementById('next-btn').disabled = chapter >= book.chapters;
+            
+            // Charger les paroles
+            loadLyrics(currentBook, chapter);
         }
+        
+        // Toggle paroles
+        document.getElementById('lyrics-toggle').addEventListener('click', () => {
+            const toggle = document.getElementById('lyrics-toggle');
+            const container = document.getElementById('lyrics-container');
+            lyricsVisible = !lyricsVisible;
+            toggle.classList.toggle('active', lyricsVisible);
+            container.classList.toggle('active', lyricsVisible);
+        });
+        
         document.addEventListener('click', e => {
             const book = e.target.closest('.book');
             if (book && book.dataset.available === 'true') {
@@ -285,6 +453,10 @@
             const book = books.find(b => b.num === currentBook);
             if (currentChapter < book.chapters) playChapter(currentChapter + 1);
         });
+        document.getElementById('audio').addEventListener('timeupdate', () => {
+            updateActiveLine(document.getElementById('audio').currentTime);
+        });
+        
         renderBooks('old-testament', oldTestament);
         renderBooks('new-testament', newTestament);
     </script>
