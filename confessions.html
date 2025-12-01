@@ -1,210 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10 Confessions de la Bible en Musique</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+* {margin:0;padding:0;box-sizing:border-box}
+body{background:#0b0c1a;color:#fff;font-family:'Merriweather',serif}
+header{padding:60px 20px;text-align:center;background:linear-gradient(135deg,#1e3a8a,#1e40af)}
+h1{font-family:'Playfair Display',serif;font-size:3rem;color:#ffd700}
+.subtitle{font-size:1.3rem;color:#ccc;margin:10px 0}
+.grid{display:grid;gap:25px;padding:40px;max-width:900px;margin:auto;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:#111;padding:30px;border-radius:20px;text-align:center;cursor:pointer;transition:.3s}
+.card:hover{transform:scale(1.05);box-shadow:0 0 40px #ffd70044}
+.num{color:#ffd700;font-size:1.1rem}
+.title{font-size:1.5rem;color:#fff;margin:10px 0}
+.verse{color:#aaa;font-style:italic;font-size:0.9rem}
+.back{text-align:center;margin:40px 0}
+.back a{color:#ffd700;text-decoration:none;margin:0 20px;font-size:1.1rem}
+.popup{position:fixed;inset:0;background:rgba(0,0,0,0.95);display:flex;align-items:center;justify-content:center;z-index:999}
+.popup-content{background:#111;padding:40px;border-radius:25px;max-width:90%;max-height:90%;overflow:auto;position:relative}
+.close{position:absolute;top:15px;right:20px;font-size:2.5rem;background:none;border:none;color:#ffd700;cursor:pointer}
+.popup h2{color:#ffd700;text-align:center;margin-bottom:20px}
+audio{width:100%;margin:20px 0}
+</style>
+</head>
+<body>
+<header>
+<h1>10 Confessions de la Bible en Musique</h1>
+<p class="subtitle">Declarez-les avec foi - elles s'accomplissent</p>
+</header>
+<div class="grid" id="grid"></div>
+<div class="back">
+<a href="index.html">Accueil</a> |
+<a href="promesses.html">Promesses</a>
+</div>
+
+<div class="popup" id="popup" style="display:none">
+<div class="popup-content">
+<button class="close" onclick="fermer()">X</button>
+<h2 id="popupTitle"></h2>
+<p id="popupVerse" style="color:#aaa;text-align:center;font-style:italic;margin-bottom:15px"></p>
+<audio controls id="audio"></audio>
+</div>
+</div>
+
 <script>
-    const promesses = [
-      {
-        num: 1, file: "01_Presence", title: "Je suis dans Ta présence", verse: "Psaume 16:11",
-        lyrics: [
-          {t:0.0,text:""},
-          {t:9.5,text:"Dans Ta présence il y a la plénitude de joie"},
-          {t:16.2,text:"À Ta droite des délices éternels"},
-          {t:22.9,text:"Je suis dans Ta présence, Seigneur"},
-          {t:29.6,text:"Mon cœur se réjouit en Toi"},
-          {t:36.3,text:"Dans Ta présence, je suis comblé"},
-          {t:43.0,text:"Dans Ta présence, je suis heureux"},
-          {t:49.7,text:"Dans Ta présence, il y a la vie"},
-          {t:56.4,text:"Dans Ta présence, je suis restauré"}
-        ]
-      },
-      {
-        num: 2, file: "02_Protection", title: "Je suis protégé", verse: "Psaume 91",
-        lyrics: [
-          {t:0.0,text:""},
-          {t:8.8,text:"Celui qui demeure sous l’abri du Très-Haut"},
-          {t:15.5,text:"Repose à l’ombre du Tout-Puissant"},
-          {t:22.2,text:"Je dis à l’Éternel : Mon refuge et ma forteresse"},
-          {t:28.9,text:"Mon Dieu en qui je me confie"},
-          {t:35.6,text:"Il te couvrira de Ses plumes"},
-          {t:42.3,text:"Et sous Ses ailes tu trouveras un refuge"},
-          {t:49.0,text:"Je suis protégé, je suis protégé"},
-          {t:55.7,text:"Par le Dieu vivant"}
-        ]
-      },
-      {
-        num: 3, file: "03_Force", title: "Je suis fort en Toi", verse: "Ésaïe 40:31",
-        lyrics: [
-          {t:0.0,text:""},
-          {t:9.2,text:"Ceux qui se confient en l’Éternel"},
-          {t:15.9,text:"Renouvellent leur force"},
-          {t:22.6,text:"Ils prennent leur envol comme les aigles"},
-          {t:29.3,text:"Ils courent et ne se lassent point"},
-          {t:36.0,text:"Ils marchent et ne se fatiguent point"},
-          {t:42.7,text:"Je suis fort, je suis fort en Toi Seigneur"},
-          {t:49.4,text:"Ma force est renouvelée chaque matin"}
-        ]
-      },
-      {
-        num: 4, file: "04_Sagesse", title: "Je reçois la sagesse", verse: "Jacques 1:5",
-        lyrics: [
-          {t:0.0,text:""},
-          {t:8.7,text:"Si quelqu’un d’entre vous manque de sagesse"},
-          {t:15.4,text:"Qu’il la demande à Dieu"},
-          {t:22.1,text:"Qui donne à tous simplement et sans reproche"},
-          {t:28.8,text:"Et elle lui sera donnée"},
-          {t:35.5,text:"Je reçois la sagesse, je reçois la sagesse"},
-          {t:42.2,text:"Du Dieu qui donne généreusement"}
-        ]
-      },
-      {
-        num: 5, file: "05_Victoire", title: "Je suis plus que vainqueur", verse: "Romains 8:37",
-        lyrics: [
-          {t:0.0,text:""},
-          {t:9.0,text:"En toutes ces choses nous sommes"},
-          {t:15.7,text:"Plus que vainqueurs par Celui qui nous a aimés"},
-          {t:22.4,text:"Je suis plus que vainqueur"},
-          {t:29.1,text:"Par le sang de Jésus"},
-          {t:35.8,text:"Aucune puissance ne peut me séparer"},
-          {t:42.5,text:"De l’amour de Dieu"}
-        ]
-      },
-      {
-        num: 6, file: "06_Amour", title: "Je suis aimé de Dieu", verse: "Romains 8:38-39",
-        lyrics: [
-          {t:0.0,text:""},
-          {t:9.3,text:"Je suis convaincu que ni la mort ni la vie"},
-          {t:16.0,text:"Ni les anges ni les dominations"},
-          {t:22.7,text:"Ni le présent ni l’avenir"},
-          {t:29.4,text:"Ne pourront me séparer de l’amour de Dieu"},
-          {t:36.1,text:"Je suis aimé, je suis aimé"},
-          {t:42.8,text:"D’un amour éternel"}
-        ]
-      },
-      {
-        num: 7, file: "07_Provisions", title: "Tous mes besoins sont comblés", verse: "Philippiens 4:19",
-        lyrics: [
-          {t:0.0,text:""},
-          {t:8.9,text:"Mon Dieu pourvoira à tous vos besoins"},
-          {t:15.6,text:"Selon Ses richesses avec gloire"},
-          {t:22.3,text:"En Jésus-Christ"},
-          {t:29.0,text:"Tous mes besoins sont comblés"},
-          {t:35.7,text:"En Jésus-Christ"},
-          {t:42.4,text:"Je ne manque de rien"}
-        ]
-      },
-      {
-        num: 8, file: "08_Paix", title: "J’ai la paix de Dieu", verse: "Philippiens 4:7",
-        lyrics: [
-          {t:0.0,text:""},
-          {t:9.1,text:"La paix de Dieu qui surpasse toute intelligence"},
-          {t:15.8,text:"Garde vos cœurs et vos pensées"},
-          {t:22.5,text:"En Jésus-Christ"},
-          {t:29.2,text:"J’ai la paix de Dieu"},
-          {t:35.9,text:"Elle garde mon cœur et mon esprit"}
-        ]
-      },
-      {
-        num: 9, file: "09_Lumiere", title: "Je suis lumière du monde", verse: "Matthieu 5:14",
-        lyrics: [
-          {t:0.0,text:""},
-          {t:8.6,text:"Vous êtes la lumière du monde"},
-          {t:15.3,text:"Une ville située sur une montagne ne peut être cachée"},
-          {t:22.0,text:"Je suis lumière du monde"},
-          {t:28.7,text:"Je brille pour Jésus"},
-          {t:35.4,text:"Que ma lumière luise devant les hommes"}
-        ]
-      },
-      {
-        num: 10, file: "10_Esprit", title: "Je suis rempli du Saint-Esprit", verse: "Actes 1:8",
-        lyrics: [
-          {t:0.0,text:""},
-          {t:9.4,text:"Vous recevrez une puissance"},
-          {t:16.1,text:"Le Saint-Esprit survenant sur vous"},
-          {t:22.8,text:"Et vous serez mes témoins"},
-          {t:29.5,text:"Je suis rempli du Saint-Esprit"},
-          {t:36.2,text:"Il me donne la puissance"}
-        ]
-      },
-      {
-        num: 11, file: "11_Guerison", title: "Je suis guéri", verse: "Ésaïe 53:5",
-        lyrics: [
-          {t:0.0,text:""},
-          {t:9.0,text:"Par Ses meurtrissures nous sommes guéris"},
-          {t:15.7,text:"Il a été blessé pour nos péchés"},
-          {t:22.4,text:"Par Ses blessures je suis guéri"},
-          {t:29.1,text:"La guérison est mon partage aujourd’hui"}
-        ]
-      },
-      {
-        num: 12, file: "12_Eternite", title: "J’ai la vie éternelle", verse: "Jean 3:16",
-        lyrics: [
-          {t:0.0,text:""},
-          {t:9.6,text:"Car Dieu a tant aimé le monde"},
-          {t:16.3,text:"Qu’Il a donné Son Fils unique"},
-          {t:23.0,text:"Afin que quiconque croit en Lui"},
-          {t:29.7,text:"Ne périsse point mais ait la vie éternelle"},
-          {t:36.4,text:"J’ai la vie éternelle"},
-          {t:43.1,text:"Je ne péris point"},
-          {t:49.8,text:"Je vis pour toujours avec Jésus"}
-        ]
-      }
-    ];
+var BASE = "https://archive.org/download/confessions-bible-chantee-v2/";
 
-    // Génération des cartes
-    const grid = document.getElementById('grid');
-    promesses.forEach(p => {
-        grid.innerHTML += `
-            <div class="card" onclick="openPopup(${p.num})">
-                <div class="icon">✨</div>
-                <div class="num">Promesse ${p.num}</div>
-                <div class="title">${p.title}</div>
-                <div class="verse">${p.verse}</div>
-            </div>`;
-    });
+var confessions = [
+  {n:1, f:"01_Joie", t:"Je suis dans la joie", v:"Nehemie 8:10 ; Psaume 16:11"},
+  {n:2, f:"02_Gueri", t:"Je suis gueri", v:"Esaie 53:5 ; 1 Pierre 2:24"},
+  {n:3, f:"03_Sante", t:"Je suis en bonne sante", v:"3 Jean 1:2"},
+  {n:4, f:"04_Vainqueur", t:"Je suis vainqueur", v:"Romains 8:37 ; 1 Jean 5:4"},
+  {n:5, f:"05_Prospere", t:"Je prospere", v:"Josue 1:8 ; Psaume 1:3"},
+  {n:6, f:"06_Reconnaissant", t:"Je suis reconnaissant", v:"1 Thess. 5:18 ; Psaume 100:4"},
+  {n:7, f:"07_Heureux", t:"Je suis heureux", v:"Psaume 16:11"},
+  {n:8, f:"08_Beni", t:"Je suis beni", v:"Ephesiens 1:3 ; Nombres 6:24-26"},
+  {n:9, f:"09_Amen", t:"Ainsi soit-il (Amen)", v:"Matthieu 6:13 ; Apocalypse 22:20"},
+  {n:10, f:"10_Shalom", t:"Paix du Seigneur (Shalom)", v:"Jean 14:27 ; Nombres 6:26"}
+];
 
-    let currentLine = -1;
+var grid = document.getElementById('grid');
+confessions.forEach(function(c) {
+  grid.innerHTML += '<div class="card" onclick="ouvrir(' + c.n + ')">' +
+    '<div class="num">Confession ' + c.n + '</div>' +
+    '<div class="title">' + c.t + '</div>' +
+    '<div class="verse">' + c.v + '</div>' +
+  '</div>';
+});
 
-    function openPopup(n) {
-        const p = promesses[n-1];
-        document.getElementById('popupTitle').textContent = p.title;
-        document.getElementById('popupVerse').textContent = p.verse;
+function ouvrir(n) {
+  var c = confessions[n - 1];
+  document.getElementById('popupTitle').textContent = c.t;
+  document.getElementById('popupVerse').textContent = c.v;
+  var audio = document.getElementById('audio');
+  audio.src = BASE + c.f + '.mp3';
+  document.getElementById('popup').style.display = 'flex';
+  audio.play();
+}
 
-        const audio = document.getElementById('audio');
-        audio.src = `promesses/${p.file}.mp3`;
+function fermer() {
+  document.getElementById('popup').style.display = 'none';
+  document.getElementById('audio').pause();
+}
 
-        const scroll = document.getElementById('lyricsScroll');
-        scroll.innerHTML = p.lyrics.map((l,i) => `<div class="lyric-line" id="line${i}">${l.text}</div>`).join('');
-
-        document.getElementById('popup').style.display = 'block';
-        audio.play();
-        currentLine = -1;
-    }
-
-    document.getElementById('audio').addEventListener('timeupdate', () => {
-        const t = document.getElementById('audio').currentTime;
-        let newLine = -1;
-        for (let i = promesses.find(p => p.num === currentNum)?.lyrics.length-1 || 0; i >= 0; i--) {
-            if (t >= promesses.find(p => p.num === currentNum)?.lyrics[i].t) {
-                newLine = i;
-                break;
-            }
-        }
-        if (newLine !== currentLine) {
-            currentLine = newLine;
-            document.querySelectorAll('.lyric-line').forEach((el, i) => {
-                el.classList.toggle('active', i === currentLine);
-            });
-            if (currentLine >= 0) {
-                scroll.style.transform = `translateY(${100 - (currentLine * 60)}px)`;
-            }
-        }
-    });
-
-    function closePopup() {
-        document.getElementById('popup').style.display = 'none';
-        document.getElementById('audio').pause();
-    }
-
-    let currentNum = 0;
-    function openPopup(n) {
-        currentNum = n;
-        // … le reste du code reste identique
-    }
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') fermer();
+});
 </script>
+</body>
+</html>
