@@ -6786,6 +6786,917 @@ Moi et ma maison, nous servirons l’Éternel…
 [Outro]
 Choisis aujourd’hui qui tu veux servir.`
     },
+    "07": {
+        1: `Juges 1 – Une conquête incomplète
+
+[Couplet 1 – Voix homme]
+Après la mort de Josué,
+Le peuple demande encore Ta voix,
+Qui montera pour le combat ?
+Qui conduira la guerre pour Toi ?
+
+Juda se lève avec courage,
+Les ennemis tombent sous l’épée,
+Mais déjà les compromis s’installent
+Quand certaines villes restent occupées.
+
+[Pré-refrain]
+La promesse était entière,
+Mais l’obéissance devient partielle.
+
+[Refrain – Duo]
+Tu nous appelles à une conquête entière,
+Pas à mi-chemin, pas à moitié,
+Car ce que nous laissons dans l’ombre
+Revient toujours pour nous freiner.
+Tu nous appelles à une conquête entière,
+Sans pacte avec l’ennemi,
+Car la terre que Tu nous confies
+Doit être purifiée pour la vie.
+
+[Couplet 2 – Voix femme]
+Benjamin garde les Jébusiens,
+Manassé tolère ses oppressions,
+Éphraïm accepte la coexistence,
+Et Dan recule devant la pression.
+
+Peu à peu la victoire ralentit,
+Non par manque de puissance en Toi,
+Mais par fatigue dans les décisions,
+Par peur de perdre ce qui semble sûr ici-bas.
+
+[Refrain – Duo]
+Tu nous appelles à une conquête entière…
+
+[Outro]
+Apprends-nous à ne pas négocier
+Avec ce que Tu nous appelles à chasser.`,
+        2: `Juges 2 – Le cycle de l’oubli
+
+[Couplet 1 – Voix femme]
+Un ange parle au peuple rassemblé,
+Il rappelle l’alliance de l’Éternel,
+Mais les cœurs déjà s’éloignent doucement
+De l’amour premier et fidèle.
+
+Une génération sert le Seigneur,
+Puis une autre se lève sans mémoire,
+Les pierres des victoires disparaissent
+Des récits transmis le soir.
+
+[Pré-refrain]
+Quand l’homme oublie d’où il vient,
+Il ne sait plus où il va.
+
+[Refrain – Duo]
+Quand nous T’oublions, nos cœurs se perdent,
+Quand nous T’oublions, nos pas s’égarent,
+Mais même quand l’oubli nous emporte
+Ta miséricorde nous regarde encore de Ton regard.
+Quand nous T’oublions, la nuit s’installe,
+Quand nous T’oublions, nos choix se brisent,
+Mais Tu restes le Dieu fidèle
+Qui relève ceux qui s’effondrent dans la crise.
+
+[Couplet 2 – Voix homme]
+Ils servent les Baals et les Astartés,
+Ils abandonnent la source de vie,
+Alors l’oppression devient école
+Et la douleur devient un cri.
+
+Quand ils crient, Tu envoies un juge,
+Quand ils respirent, ils T’abandonnent encore,
+Ainsi tourne la roue des générations
+Entre délivrance et désordre.
+
+[Refrain – Duo]
+Quand nous T’oublions, nos cœurs se perdent…
+
+[Outro]
+Protège nos cœurs de l’oubli.`,
+        3: `Juges 3 – Les premiers libérateurs
+
+[Couplet 1 – Voix homme]
+Le peuple sert encore des dieux étrangers,
+Alors Tu livres Israël à l’ennemi,
+Mais quand le cri remonte vers le ciel
+Ta grâce relance encore la vie.
+
+Othniel se lève par Ton Esprit,
+La paix revient pour quarante ans,
+Puis l’oubli reprend sa place
+Quand la génération baisse la garde lentement.
+
+[Pré-refrain]
+Chaque liberté non gardée
+Devient la porte d’un nouvel esclavage.
+
+[Refrain – Duo]
+Tu envoies encore un libérateur,
+Quand le peuple crie dans la nuit,
+Même quand nous avons provoqué la chaîne,
+Tu viens toujours briser les liens de l’ennemi.
+Tu envoies encore un libérateur,
+Quand nos forces n’en peuvent plus,
+Car Ton cœur est plus persévérant
+Que nos chutes répétées et nos refus.
+
+[Couplet 2 – Voix femme]
+Éhoud arrive par la faiblesse,
+Gaucher inattendu dans Ta main,
+Une dague, un roi orgueilleux,
+Et Tu changes le cours du destin.
+
+Puis Shamgar se lève avec presque rien,
+Un aiguillon contre six cents ennemis,
+Car Tu montres que la puissance
+Ne dépend jamais de l’outil choisi.
+
+[Refrain – Duo]
+Tu envoies encore un libérateur…
+
+[Outro]
+Ta puissance choisit souvent
+Ce que l’homme n’attend pas.`,
+        4: `Juges 4 – Débora se lève
+
+[Couplet 1 – Voix femme]
+Une femme jugeait sous le palmier,
+Elle écoutait Isaël et Dieu,
+Dans un temps d’oppression silencieuse
+Tu fais lever une voix courageuse.
+
+Barak hésite devant l’appel,
+Il demande que Débora marche avec lui,
+Car la foi parfois a besoin d’un appui
+Pour affronter l’orage et la nuit.
+
+[Pré-refrain]
+Quand l’homme hésite,
+Dieu choisit quand même d’agir.
+
+[Refrain – Duo]
+Tu lèves des voix quand le peuple tremble,
+Tu choisis Tes instruments selon Ton plan,
+Et même quand nos cœurs reculent un peu
+Ta victoire avance malgré le temps.
+Tu lèves des voix quand tout semble figé,
+Tu renverses les chars et les rois,
+Et Tu rappelles à toute génération
+Que la délivrance vient toujours de Toi.
+
+[Couplet 2 – Voix homme]
+Siséra fuit à pied dans la nuit,
+Jaël l’accueille sous sa tente,
+Un geste, un marteau, un pieu,
+Et la peur s’effondre dans l’instant.
+
+Tu utilises ceux que personne n’attend,
+Pour fermer la bouche de l’oppresseur,
+Car Ta victoire ne dépend jamais
+Du rang, du genre ou de la valeur humaine.
+
+[Refrain – Duo]
+Tu lèves des voix quand le peuple tremble…
+
+[Outro]
+La victoire appartient toujours à l’Éternel.`,
+        5: `Juges 5 – Le chant de la victoire
+
+[Couplet 1 – Voix femme]
+Débora élève sa voix dans le matin,
+Barak répond par un chant d’alliance,
+Les chefs se lèvent, le peuple répond,
+La délivrance devient louange et danse.
+
+Les étoiles combattent dans leur course,
+Le torrent balaie la fierté,
+Quand Dieu se lève pour Son peuple
+Même la création se met à lutter.
+
+[Pré-refrain]
+Quand Dieu combat,
+Le ciel entre dans l’histoire.
+
+[Refrain – Duo]
+Nous chantons Ta victoire, Seigneur,
+Tu as brisé l’oppresseur,
+Des chevaux, des chars, des rois,
+Rien n’a tenu devant Ta voix.
+Nous chantons Ta victoire, Seigneur,
+Que nos cœurs se lèvent encore,
+Car la louange prolonge la délivrance
+Et grave Ta gloire dans nos mémoires.
+
+[Couplet 2 – Voix homme]
+Certains sont restés au bord des rives,
+Regardant passer l’histoire sans choix,
+Mais d’autres ont risqué leur vie
+Pour défendre l’avenir avec foi.
+
+Jaël est bénie parmi les femmes,
+Car elle a choisi le camp de la vie,
+Et Ton salut s’écrit souvent
+Par des décisions prises dans la nuit.
+
+[Refrain – Duo]
+Nous chantons Ta victoire, Seigneur…
+
+[Outro]
+Que nos chants n’oublient jamais
+Ce que Ta main a accompli.`,
+        6: `Juges 6 – Gédéon appelé dans la crainte
+
+[Couplet 1 – Voix homme]
+L’ennemi ravage la terre encore,
+Le peuple se cache dans les cavernes,
+Et au milieu de cette peur profonde
+Tu viens parler à un homme qui se terre.
+
+Gédéon bat le blé en secret,
+Se croyant faible parmi les faibles,
+Mais l’ange lui dit : « Vaillant héros »,
+Et Ta voix transforme l’impossible.
+
+[Pré-refrain]
+Tu vois déjà
+Ce que nous ne voyons pas encore.
+
+[Refrain – Duo]
+Tu appelles des héros dans la crainte,
+Tu parles la force dans nos tremblements,
+Et même quand nos mains sont vides
+Ta promesse devient équipement.
+Tu appelles des héros dans la crainte,
+Tu changes l’identité par Ta voix,
+Et celui qui se croyait le dernier
+Devient le premier par la foi.
+
+[Couplet 2 – Voix femme]
+Tu demandes d’abattre les idoles,
+Même avant de livrer le combat,
+Car la vraie victoire commence toujours
+Quand le cœur se rend avant les bras.
+
+Le feu consume l’offrande sur le rocher,
+La paix descend de Ton regard,
+Et Gédéon tressaille encore,
+Mais désormais il sait que Tu es là.
+
+[Refrain – Duo]
+Tu appelles des héros dans la crainte…
+
+[Outro]
+Ta voix précède la victoire.`,
+        7: `Juges 7 – La victoire par la faiblesse
+
+[Couplet 1 – Voix femme]
+Ils sont trop nombreux selon ton regard,
+Tu dis : « La gloire serait pour l’homme »,
+Alors Tu réduis, Tu épures, Tu tailles,
+Jusqu’à ce qu’il ne reste presque personne.
+
+Trois cents hommes face à la multitude,
+Avec des cruches, des torches, des cris,
+Car Tu montres que Ta puissance
+N’a jamais eu besoin d’une armée infinie.
+
+[Pré-refrain]
+Quand Dieu réduit,
+Il prépare une victoire pure.
+
+[Refrain – Duo]
+Quand Tu combats par la faiblesse,
+Toute la gloire Te revient,
+Quand nos forces tombent à zero
+Ta puissance commence enfin.
+Quand Tu combats par la faiblesse,
+La peur change de camp soudain,
+Et ceux qui fuyaient la bataille
+Poursuivent maintenant l’ennemi au loin.
+
+[Couplet 2 – Voix homme]
+Les trompettes brisent le silence,
+Les torches percent la nuit,
+L’ennemi se détruit lui-même
+Sous la panique que Tu as permise ici.
+
+Gédéon poursuit les rois tremblants,
+Même épuisé, il ne s’arrête pas,
+Car quand la victoire est lancée par Dieu
+Même la fatigue apprend à marcher avec la foi.
+
+[Refrain – Duo]
+Quand Tu combats par la faiblesse…
+
+[Outro]
+La victoire appartient à Celui
+Qui choisit la faiblesse.`,
+        8: `Juges 8 – La victoire qui vacille
+
+[Couplet 1 – Voix homme]
+Les chefs d’Éphraïm s’irritent encore,
+La jalousie surgit après la bataille,
+Gédéon apaise par des paroles douces
+Ce que l’orgueil voulait transformer en faille.
+
+Les rois sont exécutés au désert,
+La victoire est bien complète,
+Mais le cœur de l’homme reste fragile
+Même quand l’ennemi tombe sous l’épée.
+
+[Pré-refrain]
+La victoire extérieure
+Ne garantit pas la paix intérieure.
+
+[Refrain – Duo]
+Protège nos cœurs après la victoire,
+Quand le danger ne fait plus peur,
+Car l’orgueil se cache dans l’ovation
+Quand les foules acclament nos heures.
+Protège nos cœurs après la victoire,
+Quand le combat semble fini,
+Car ce qui veut encore nous faire tomber
+Ne porte pas toujours un visage d’ennemi.
+
+[Couplet 2 – Voix femme]
+Gédéon refuse le trône,
+Mais demande l’or des combats,
+Et de l’or naît un éphod
+Qui détournera plus tard les pas.
+
+Israël se prostitue à nouveau,
+La fidélité s’émousse vite,
+Et celui qui fut libérateur
+Devient pied d’achoppement sans l’avoir voulu, la suite.
+
+[Refrain – Duo]
+Protège nos cœurs après la victoire…
+
+[Outro]
+Même la gloire a besoin
+D’être gardée par la crainte de Dieu.`,
+        9: `Juges 9 – Le règne sombre d’Abimélec
+
+[Couplet 1 – Voix homme]
+Un fils de Gédéon cherche la couronne,
+Non par appel, mais par ambition,
+Il verse le sang de ses propres frères
+Pour bâtir un trône sur la trahison.
+
+Une parabole s’élève sur la montagne,
+Les arbres cherchent un roi sans fruit,
+Le buisson d’épines prend la place
+Et promet une ombre qui détruit.
+
+[Pré-refrain]
+Quand l’homme choisit sans Dieu,
+Le pouvoir devient poison.
+
+[Refrain – Duo]
+Protège-nous des règnés sans appel,
+Des couronnes sans fondement,
+Car le pouvoir sans Ta présence
+Ne fait que multiplier les tourments.
+Protège-nous des règnes sans appel,
+Quand l’orgueil promet la sécurité,
+Car seul le règne né de Ta volonté
+Peut porter une vraie stabilité.
+
+[Couplet 2 – Voix femme]
+La violence dévore la violence,
+Les alliances se retournent en feu,
+Et Abimélec tombe par une pierre
+Jetée d’une main anonyme vers les cieux.
+
+Ainsi Tu rends à chacun son œuvre,
+Le mal revient sur sa propre trace,
+Et Tu montres dans le fracas des armes
+Que l’injustice n’a jamais la dernière place.
+
+[Refrain – Duo]
+Protège-nous des règnes sans appel…
+
+[Outro]
+Ta justice finit toujours par parler.`,
+        10: `Juges 10 – Le peuple encore infidèle
+
+[Couplet 1 – Voix femme]
+Encore une fois le peuple s’égare,
+Il sert des dieux venus d’ailleurs,
+Les Baals, les Astartés, les idoles,
+Et le cœur s’éloigne de son Sauveur.
+
+Tu les livres aux mains de leurs ennemis,
+Comme un miroir de leurs choix,
+Ils crient après dix-huit ans de douleur
+Et enfin leurs larmes reviennent vers Toi.
+
+[Pré-refrain]
+Quand le fond est touché,
+Le ciel recommence à être regardé.
+
+[Refrain – Duo]
+Même quand nous revenons brisés,
+Tu écoutes encore nos voix,
+Tu n’éteins pas la mèche qui fume,
+Tu la ranimes sous Ton toit.
+Même quand nous revenons brisés,
+Après trop d’années loin de Toi,
+Ton cœur reste plus grand que nos erreurs,
+Et Ton pardon trouve encore un chemin pour nos pas.
+
+[Couplet 2 – Voix homme]
+Tu dis : « Allez vers vos dieux ! »,
+Comme pour révéler leur néant,
+Mais leurs cris de misère Te touchent encore
+Et Ta compassion se lève dans le temps.
+
+Tu prépares déjà un nouveau juge,
+Alors même que la détresse gronde,
+Car Ton plan de délivrance commence
+Avant même que l’homme comprenne le monde.
+
+[Refrain – Duo]
+Même quand nous revenons brisés…
+
+[Outro]
+Ta miséricorde ne s’épuise pas.`,
+        11: `Juges 11 – Le vœu de Jephté
+
+[Couplet 1 – Voix homme]
+Jephté rejeté par ses frères,
+Devient le refuge d’hommes perdus,
+Et dans l’exil Tu prépares l’instrument
+Que personne n’avait vraiment voulu.
+
+Quand l’ennemi revient sur la frontière,
+On le rappelle pour mener le combat,
+Et celui que l’on avait mis de côté
+Devient chef par Ta voix.
+
+[Pré-refrain]
+Ce que l’homme rejette,
+Dieu sait l’élever.
+
+[Refrain – Duo]
+Tu relèves les rejetés,
+Tu appelles ceux qu’on a oubliés,
+Et même les cicatrices du passé
+Deviennent des armes pour délivrer.
+Tu relèves les rejetés,
+Quand l’héritage semblait perdu,
+Car Ton appel ne regarde pas nos origines,
+Mais ce que Ton Esprit rend vivant en nous.
+
+[Couplet 2 – Voix femme]
+Avant la bataille Jephté promet,
+Un vœu forgé dans la peur,
+Et la victoire vient de Ta main,
+Mais le prix frappe son cœur.
+
+Sa fille accueille le destin,
+Dans le silence et la fidélité,
+Et Tu rappelles que nos promesses humaines
+Ne doivent jamais dépasser Ta vérité.
+
+[Refrain – Duo]
+Tu relèves les rejetés…
+
+[Outro]
+Apprends-nous à promettre
+Seulement ce que Tu nous demandes.`,
+        12: `Juges 12 – La division entre frères
+
+[Couplet 1 – Voix femme]
+Après la victoire naît encore la querelle,
+Les mots deviennent armes dans la bouche,
+Éphraïm se lève pour contester
+Celui que Tu avais conduit dans la lutte.
+
+Un mot devient frontière,
+Un son trahit l’appartenance,
+Et la langue sépare les frères
+Plus sûrement que l’épée d’une armée en transe.
+
+[Pré-refrain]
+Ce qui devait unir
+Devient parfois instrument de chute.
+
+[Refrain – Duo]
+Guéris nos divisions, Seigneur,
+Quand les mots deviennent meurtriers,
+Quand l’orgueil cherche sa raison
+Dans des victoires mal digérées.
+Guéris nos divisions, Seigneur,
+Quand le frère devient l’adversaire,
+Car Ton Royaume ne se bâtit jamais
+Sur la victoire d’un frère contre un frère.
+
+[Couplet 2 – Voix homme]
+Après Jephté se lèvent encore d’autres juges,
+Ibtsan, Élon, Abdôn dans l’ombre,
+Des vies humbles, des années silencieuses,
+Où Ta paix travaille sans faire de tonnerre.
+
+Ainsi l’histoire ne s’écrit pas seulement
+Par les grandes batailles éclatantes,
+Mais aussi par la fidélité tranquille
+Qui garde la flamme quand le feu baisse lentement.
+
+[Refrain – Duo]
+Guéris nos divisions, Seigneur…
+
+[Outro]
+Que Ton peuple marche encore uni.`,
+        13: `Juges 13 – La naissance annoncée de Samson
+
+[Couplet 1 – Voix femme]
+Une femme stérile pleure en silence,
+Sous l’oppression des Philistins,
+Et dans ce désert de souffrance
+L’ange de l’Éternel trace un chemin.
+
+Un fils naîtra pour délivrer,
+Mis à part dès le premier jour,
+Naziréen consacré pour Dieu,
+Portant une promesse plus lourde que l’amour.
+
+[Pré-refrain]
+Avant même la naissance,
+Tu écris déjà l’appel.
+
+[Refrain – Duo]
+Tu connais nos noms avant nos pas,
+Tu appelles avant nos combats,
+Et même dans l’attente la plus longue
+Ta promesse se prépare déjà.
+Tu connais nos noms avant nos pas,
+Tu formes Tes plans dans le secret,
+Et ce que Tu annonces dans le ciel
+Prend chair un jour dans nos réalités.
+
+[Couplet 2 – Voix homme]
+Manoah doute encore et demande un signe,
+Tu reviens confirmer Ta parole,
+Et dans l’offrande qui monte en flamme
+Tu rappelles que Tu es le Dieu qui console.
+
+L’enfant grandira sous Ton regard,
+L’Esprit de Dieu commencera à l’agiter,
+Car quand Tu appelles une vie,
+Même l’enfance devient terrain sacré.
+
+[Refrain – Duo]
+Tu connais nos noms avant nos pas…
+
+[Outro]
+Ce que Tu promets, Tu l’enfantes.`,
+        14: `Juges 14 – La force et la faille
+
+[Couplet 1 – Voix homme]
+Samson grandit avec une force étrange,
+Un feu brut coule dans ses veines,
+Mais son regard se pose sur Timna
+Et son désir choisit hors de Ton terrain.
+
+Un lion surgit sur le chemin,
+Et à mains nues il le déchire,
+Ta puissance l’enveloppe pleinement,
+Mais son cœur, déjà, apprend à mentir.
+
+[Pré-refrain]
+Le don est puissant,
+Mais l’âme reste en combat.
+
+[Refrain – Duo]
+Protège nos dons de nos désirs,
+Nos forces de nos propres pièges,
+Car même l’onction la plus visible
+Peut chuter dans les failles du cœur qui néglige.
+Protège nos dons de nos désirs,
+Apprends-nous à porter la force,
+Sans la livrer aux pulsions
+Qui détournent la gloire de Ta source.
+
+[Couplet 2 – Voix femme]
+Au festin, les énigmes s’entremêlent,
+La trahison gagne le jeu,
+La femme cherche, Samson parle,
+Et la victoire se fissure dans le feu.
+
+La colère s’enflamme comme un brasier,
+Les liens familiaux se brisent au vent,
+Et déjà le chemin du libérateur
+S’écrit dans la solitude et le sang.
+
+[Refrain – Duo]
+Protège nos dons de nos désirs…
+
+[Outro]
+La force sans sagesse devient fragilité.`,
+        15: `Juges 15 – La force de la vengeance
+
+[Couplet 1 – Voix femme]
+Samson revient chercher son amour,
+Mais la trahison a déjà scellé son sort,
+Alors la colère prend la place du pardon,
+Et la vengeance devient son plus fort ressort.
+
+Les champs brûlent sous les torches,
+Les mâchoires frappent mille ennemis,
+Et Tu couvres encore sa force
+Même quand son cœur n’a plus de paix ni de répit.
+
+[Pré-refrain]
+Tu délivres par la main d’un homme,
+Mais Tu pleures sur son âme.
+
+[Refrain – Duo]
+Tu es le Dieu qui sauve encore
+Même à travers nos colères,
+Mais Tu veux aussi sauver nos cœurs
+De la spirale de la guerre.
+Tu es le Dieu qui sauve encore
+Même quand nos motifs sont flous,
+Mais Ta grâce cherche plus que la victoire :
+Elle veut restaurer l’homme en nous.
+
+[Couplet 2 – Voix homme]
+Les habitants de Juda livrent Samson,
+La peur parle plus fort que la foi,
+Mais les cordes fondent sous Ta puissance
+Et la force jaillit encore une fois.
+
+Puis la soif terrasse le héros,
+La source jaillit d’un creux du rocher,
+Car Tu rappelles que même le plus fort
+Reste dépendant pour respirer.
+
+[Refrain – Duo]
+Tu es le Dieu qui sauve encore…
+
+[Outro]
+La victoire sans paix n’est jamais totale.`,
+        16: `Juges 16 – La chute et le cri final
+
+[Couplet 1 – Voix homme]
+Samson joue encore avec le danger,
+Il s’approche trop près du feu,
+Delila pose ses questions de miel,
+Et la force se noie dans un aveu.
+
+Les liens tombent une fois encore,
+Puis la vérité est livrée enfin,
+Et dans le sommeil de la trahison
+Le rasoir vole l’alliance de ses mains.
+
+[Pré-refrain]
+Quand l’intimité est livrée au mensonge,
+La puissance s’éteint en silence.
+
+[Refrain – Duo]
+Relève-nous quand nous tombons bas,
+Quand nos yeux ont perdu la lumière,
+Quand nos forces s’en vont sans bruit
+Sous les ciseaux de nos propres prières mal dirigées.
+Relève-nous quand nous tombons bas,
+Quand notre gloire devient poussière,
+Car même au fond de la prison
+Ton appel peut encore faire trembler la terre.
+
+[Couplet 2 – Voix femme]
+Les yeux crevés, les mains en chaînes,
+Il tourne encore la meule de la honte,
+Mais ses cheveux repoussent lentement
+Et l’espoir renaît dans l’ombre profonde.
+
+Au milieu de la foule ennemie,
+Il crie une dernière fois vers le ciel,
+Et dans un acte mêlé de foi et de mort
+Tu renverses le temple et l’orgueil avec lui.
+
+[Refrain – Duo]
+Relève-nous quand nous tombons bas…
+
+[Outro]
+Même la fin peut devenir délivrance.`,
+        17: `Juges 17 – Une foi façonnée à sa manière
+
+[Couplet 1 – Voix homme]
+Un homme vole, puis rend par crainte,
+L’argent devient idole et offrande,
+Un dieu fabriqué dans une maison
+Prend la place de Celui qui commande.
+
+Un lévite s’invite pour quelques pièces,
+Le sacré devient un métier,
+Quand chacun suit son propre cœur
+La vérité commence à se plier.
+
+[Pré-refrain]
+Quand la foi se fabrique soi-même,
+Elle perd la voix du ciel.
+
+[Refrain – Duo]
+Garde-nous d’une foi sur mesure,
+Façonnée selon nos désirs,
+Nous voulons Ta vérité pure,
+Pas une image pour nous servir.
+Garde-nous d’une foi sur mesure,
+Quand le sacré devient banal,
+Rends-nous la crainte de Ton Nom
+Qui libère et restaure le cœur loyal.
+
+[Couplet 2 – Voix femme]
+L’homme croit que Dieu le bénit
+Parce qu’un prêtre habite sa maison,
+Mais l’erreur habillée en religion
+Conduit souvent à la confusion.
+
+Et déjà l’histoire se prépare
+À glisser vers une chute plus sombre,
+Quand la foi quitte l’obéissance
+La nuit s’épaissit dans les cendres.
+
+[Refrain – Duo]
+Garde-nous d’une foi sur mesure…
+
+[Outro]
+Reprends la première place.`,
+        18: `Juges 18 – La conquête sans Dieu
+
+[Couplet 1 – Voix femme]
+La tribu de Dan cherche encore sa place,
+Elle n’ose pas prendre ce que Tu donnes,
+Alors elle choisit une route facile
+Sous une foi volée qui l’emprisonne.
+
+Le prêtre, l’idole, les images,
+Tout est déplacé sans combat,
+Et la ville tranquille tombe par surprise
+Sous une conquête sans Toi.
+
+[Pré-refrain]
+Quand la foi est remplacée par la ruse,
+La victoire devient violence.
+
+[Refrain – Duo]
+Ne nous laisse pas bâtir sans Toi,
+Ne nous laisse pas vaincre sans Ton nom,
+Car toute victoire sans Ta présence
+Prépare déjà la désolation.
+Ne nous laisse pas bâtir sans Toi,
+Quand la facilité parle plus fort,
+Car la paix sans la vérité
+Devient toujours un décor de mort.
+
+[Couplet 2 – Voix homme]
+Dan s’installe dans une paix trompeuse,
+Sous un culte déjà déformé,
+Et l’idole trouve une maison stable
+Là où Ton nom devait demeurer.
+
+Ainsi la conquête sans alliance
+Devient un chemin d’illusion,
+Car prendre sans recevoir de Toi
+Ne conduit jamais à la bénédiction.
+
+[Refrain – Duo]
+Ne nous laisse pas bâtir sans Toi…
+
+[Outro]
+Sans Toi, toute victoire est vide.`,
+        19: `Juges 19 – La nuit de Guibea
+
+[Couplet 1 – Voix homme]
+Un lévite marche avec sa concubine,
+Ils cherchent l’hospitalité au crépuscule,
+Les cœurs sont fermés sur le chemin
+Et la nuit se fait dangereuse et trouble.
+
+À Guibea les hommes encerclent la maison,
+La violence réclame ses droits,
+Et l’horreur s’abat sur une femme
+Pendant que la ville ferme ses voix.
+
+[Pré-refrain]
+Quand l’homme rejette complètement Dieu,
+L’humanité elle-même se brise.
+
+[Refrain – Duo]
+Quand la nuit devient sans limite,
+Quand l’innocence est brisée sans loi,
+Où est Ta lumière, Seigneur,
+Dans les ténèbres que l’homme choisit pour soi ?
+Quand la nuit devient sans limite,
+Nos cris montent vers Ton trône,
+Car sans Ta justice et Ta présence,
+Le monde devient une terre sans horizon.
+
+[Couplet 2 – Voix femme]
+Le matin découvre l’horreur figée,
+Le corps brisé devant la porte,
+Et Israël se lève sous le choc
+D’une barbarie que plus rien ne supporte.
+
+Le lévite partage le corps en douze parts,
+Un signal dans tout le pays,
+Quand le mal atteint son summum
+La nation entière frémit.
+
+[Refrain – Duo]
+Quand la nuit devient sans limite…
+
+[Outro]
+Seigneur, viens relever ce que l’homme a détruit.`,
+        20: `Juges 20 – La guerre des frères
+
+[Couplet 1 – Voix femme]
+Les tribus montent comme une seule armée,
+La justice réclame une réponse,
+Mais le cœur des Benjamites se ferme
+Et la vérité devient offense.
+
+Trois fois Israël consulte le ciel,
+Trois fois la guerre frappe au sol,
+Et même la cause la plus juste
+Passe parfois par la douleur et l’école.
+
+[Pré-refrain]
+Chercher Dieu ne supprime pas toujours
+Les cicatrices du combat.
+
+[Refrain – Duo]
+Quand la guerre naît entre les frères,
+Même la victoire a goût de pleurs,
+Car gagner sans amour ni paix
+Laisse des ruines dans les cœurs.
+Quand la guerre naît entre les frères,
+Seigneur, viens sauver l’unité,
+Car Ton royaume ne se bâtit jamais
+Sur le sang de l’identité.
+
+[Couplet 2 – Voix homme]
+L’embuscade se referme enfin,
+Benjamin est presque effacé,
+La vengeance a parlé plus fort
+Que la restauration recherchée.
+
+Et dans le silence après la bataille
+Chacun regarde les morts au sol,
+Se demandant si la justice rendue
+Ne porte pas aussi un goût de deuil et de sang.
+
+[Refrain – Duo]
+Quand la guerre naît entre les frères…
+
+[Outro]
+Seigneur, apprends-nous à protéger l’unité avant la colère.`,
+        21: `Juges 21 – Quand Israël manque de roi
+
+[Couplet 1 – Voix homme]
+Le peuple pleure devant l’Éternel,
+Benjamin presque effacé de la terre,
+Ils veulent réparer avec leurs mains
+Ce que la vengeance a rendu désert.
+
+Des serments deviennent des pièges,
+Des femmes sont prises pour reconstruire,
+Même la restauration devient trouble
+Quand l’homme agit sans vraiment réfléchir.
+
+[Pré-refrain]
+Quand Dieu n’est plus roi,
+La solution devient souvent injuste.
+
+[Refrain – Duo]
+Quand il n’y a pas de roi en Israël,
+Chacun fait ce qui lui semble bon,
+Mais le bien sans Ta vérité
+Devient une autre forme d’illusion.
+Quand il n’y a pas de roi en Israël,
+Seigneur, reviens régner sur nos cœurs,
+Car même nos meilleures intentions
+Peuvent se perdre sans Ton autorité et Ta lumière.
+
+[Couplet 2 – Voix femme]
+Le livre se ferme dans une blessure,
+Sans trône, sans paix, sans roi,
+Et pourtant l’attente silencieuse
+Annonce qu’un jour Tu viendras.
+
+Car au milieu du chaos des hommes
+Ta promesse continue son chemin,
+Et un royaume plus juste se prépare
+Dans l’ombre de demain.
+
+[Refrain – Duo]
+Quand il n’y a pas de roi en Israël…
+
+[Outro]
+Règne sur nous, Seigneur.`,
+    },
     "19": {
         1: `[Couplet 1]
 Heureux l’homme qui ne marche pas
