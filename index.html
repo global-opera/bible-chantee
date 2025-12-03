@@ -408,7 +408,16 @@
             audio.src = url;
             audio.play().catch(err => console.error("Erreur lecture:", url, err));
             const book = books.find(b => b.num === currentBook);
-            document.getElementById('player-title').textContent = book.name + ' - Chapitre ' + chapter;
+            // Extraire titre depuis paroles (format: "Livre X - Titre")
+            let displayTitle = book.name + ' - Ch.' + String(chapter).padStart(2, '0');
+            if (chapterLyrics[currentBook] && chapterLyrics[currentBook][chapter]) {
+                const firstLine = chapterLyrics[currentBook][chapter].split('\n')[0];
+                const titleMatch = firstLine.match(/[â€“-]\s*(.+)$/);
+                if (titleMatch) {
+                    displayTitle = book.name + ' Ch.' + String(chapter).padStart(2, '0') + ' - ' + titleMatch[1].trim();
+                }
+            }
+            document.getElementById('player-title').textContent = displayTitle;
             document.getElementById('chapter-select').value = chapter;
             document.getElementById('prev-btn').disabled = chapter <= 1;
             document.getElementById('next-btn').disabled = chapter >= book.chapters;
