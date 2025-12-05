@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# API Keys (CRITICAL - Never commit!)
+api_key.py
+.env
+*.key
+*_key.txt
+credentials.json
+
+# Suno Output MP3 (trop volumineux pour GitHub)
+Suno_Output/
+*.mp3
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary
+tmp/
+temp/
+*.tmp
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Personal notes
+notes/
+TODO.txt
