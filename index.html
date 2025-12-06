@@ -409,14 +409,11 @@
             audio.src = url;
             audio.play().catch(err => console.error("Erreur lecture:", url, err));
             const book = books.find(b => b.num === currentBook);
-            // Extraire titre depuis paroles (format: "Livre X - Titre")
+            // Construire le titre avec le titre du chapitre
             let displayTitle = book.name + ' - Ch.' + String(chapter).padStart(2, '0');
-            if (chapterLyrics[currentBook] && chapterLyrics[currentBook][chapter]) {
-                const firstLine = chapterLyrics[currentBook][chapter].split('\n')[0];
-                const titleMatch = firstLine.match(/[â€“-]\s*(.+)$/);
-                if (titleMatch) {
-                    displayTitle = book.name + ' Ch.' + String(chapter).padStart(2, '0') + ' - ' + titleMatch[1].trim();
-                }
+            // Ajouter le titre du chapitre depuis chapterTitles
+            if (chapterTitles && chapterTitles[currentBook] && chapterTitles[currentBook][chapter]) {
+                displayTitle += ' - ' + chapterTitles[currentBook][chapter];
             }
             document.getElementById('player-title').textContent = displayTitle;
             document.getElementById('chapter-select').value = chapter;
