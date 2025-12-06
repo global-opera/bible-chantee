@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Chantée - Crédits et Droits d'Auteur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #000080 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        .page {
+            width: 297mm;
+            height: 210mm;
+            margin: 20mm auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.3);
+            display: flex;
+            position: relative;
+            overflow: hidden;
+        }
+        .panel {
+            flex: 1;
+            padding: 30px;
+            border-right: 1px dashed #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .panel:last-child {
+            border-right: none;
+        }
+
+        /* Panel 1 - Couverture */
+        .panel-1 {
+            background: linear-gradient(135deg, #000080 0%, #0000b0 100%);
+            color: white;
+            text-align: center;
+            justify-content: center;
+            position: relative;
+        }
+        .panel-1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="60" opacity="0.05" fill="%23ffce00">♪</text></svg>');
+            background-size: 100px;
+            opacity: 0.3;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #ffce00;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+        }
+        .tagline {
+            font-size: 18px;
+            color: #ffce00;
+            font-weight: 300;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        .url {
+            background: #ffce00;
+            color: #000080;
+            padding: 15px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Panel 2 - À propos */
+        .panel-2 {
+            background: #f8f9fa;
+            color: #333;
+        }
+        .panel-2 h2 {
+            font-family: 'Playfair Display', serif;
+            color: #000080;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #ffce00;
+            padding-bottom: 10px;
+        }
+        .panel-2 h3 {
+            color: #000080;
+            font-size: 18px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .panel-2 p {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        .highlight {
+            background: #fff8dc;
+            border-left: 4px solid #ffce00;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .stat-box {
+            background: white;
+            border: 2px solid #000080;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #ffce00;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        /* Panel 3 - Droits d'auteur */
+        .panel-3 {
+            background: linear-gradient(180deg, #ffffff 0%, #f0f0f0 100%);
+            color: #333;
+        }
+        .panel-3 h2 {
+            font-family: 'Playfair Display', serif;
+            color: #000080;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #ffce00;
+            padding-bottom: 10px;
+        }
+        .copyright-section {
+            background: white;
+            border: 2px solid #000080;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .copyright-section h3 {
+            color: #000080;
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .copyright-section h3::before {
+            content: '©';
+            background: #ffce00;
+            color: #000080;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .copyright-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .copyright-section li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 13px;
+        }
+        .copyright-section li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #ffce00;
+            font-weight: bold;
+        }
+        .footer-box {
+            background: #000080;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: auto;
+        }
+        .footer-box strong {
+            color: #ffce00;
+            font-size: 16px;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .page {
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- Panel 1 - Couverture -->
+        <div class="panel panel-1">
+            <div>
+                <div class="logo">Bible Chantée</div>
+                <div class="tagline">La Parole de Dieu en musique worship française</div>
+                <div style="font-size: 16px; margin: 20px 0; line-height: 1.8;">
+                    39 livres • 415 chapitres<br>
+                    Synchronisation paroles/audio<br>
+                    Bible Segond 1910<br>
+                    Style Worship contemporain
+                </div>
+                <div class="url">biblechantee.netlify.app</div>
+            </div>
+        </div>
+
+        <!-- Panel 2 - À propos -->
+        <div class="panel panel-2">
+            <div>
+                <h2>À propos du Projet</h2>
+
+                <p>
+                    <strong>Bible Chantée</strong> est un projet musical innovant qui transforme
+                    l'intégralité de la Bible Segond 1910 en musique worship française contemporaine.
+                </p>
+
+                <div class="highlight">
+                    <strong>Une expérience unique :</strong><br>
+                    Chaque chapitre biblique est mis en musique avec synchronisation
+                    précise des paroles sur l'audio, permettant une immersion totale dans la Parole.
+                </div>
+
+                <h3>Caractéristiques</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li>🎵 Musique worship contemporaine</li>
+                    <li>📖 Texte intégral Bible Segond 1910</li>
+                    <li>⏱️ Synchronisation paroles/audio</li>
+                    <li>🌐 Accessible en ligne gratuitement</li>
+                    <li>📱 Compatible mobile et desktop</li>
+                </ul>
+
+                <div class="stats">
+                    <div class="stat-box">
+                        <div class="stat-number">39</div>
+                        <div class="stat-label">Livres AT</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">415</div>
+                        <div class="stat-label">Chapitres</div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 25px;">Technologie</h3>
+                <p style="font-size: 12px;">
+                    Production musicale avec intelligence artificielle Suno AI,
+                    synchronisation automatisée avec Python, interface web responsive HTML5/CSS3/JavaScript.
+                </p>
+            </div>
+        </div>
+
+        <!-- Panel 3 - Droits d'auteur -->
+        <div class="panel panel-3">
+            <div>
+                <h2>Droits d'Auteur</h2>
+
+                <div class="copyright-section">
+                    <h3>Propriété Intellectuelle</h3>
+                    <ul>
+                        <li><strong>Musique générée :</strong> Propriété de Stéphane Cassani</li>
+                        <li><strong>Adaptation musicale :</strong> Travail créatif original</li>
+                        <li><strong>Arrangements :</strong> Composition et structure</li>
+                        <li><strong>Synchronisation :</strong> Système de timing développé</li>
+                        <li><strong>Site web :</strong> Code et design interface</li>
+                        <li><strong>Scripts de production :</strong> Outils Python personnalisés</li>
+                    </ul>
+                </div>
+
+                <div class="copyright-section">
+                    <h3>Domaine Public</h3>
+                    <ul>
+                        <li><strong>Bible Segond 1910 :</strong> Texte source libre de droits</li>
+                    </ul>
+                </div>
+
+                <div class="copyright-section">
+                    <h3>Outils Utilisés</h3>
+                    <ul>
+                        <li><strong>Suno AI :</strong> Génération musicale (licence commerciale)</li>
+                        <li><strong>Python :</strong> Automatisation et traitement</li>
+                        <li><strong>Netlify :</strong> Hébergement et déploiement</li>
+                    </ul>
+                </div>
+
+                <div class="footer-box">
+                    <strong>© 2025 Bible Chantée</strong><br>
+                    Stéphane Cassani<br>
+                    Tous droits d'auteur réservés
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; padding: 20px; color: white; font-size: 12px;">
+        Document imprimable - Format dépliant A4 paysage
+    </div>
+</body>
+</html>
