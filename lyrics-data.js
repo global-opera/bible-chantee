@@ -13069,6 +13069,41 @@ Dans les liens de l'amour, nous sommes liés,
 Rachetant nos cœurs, Tu es notre clarté.`,
     },
     "09": {
+        1: `[Couplet 1]  
+En terre d'Éphraïm vivait Elqana,  
+Avec deux épouses, son foyer partagé,  
+Anne, au cœur brisé, pleine de solitude,  
+Ses larmes montaient vers Dieu dans l’attitude.  
+
+[Refrain]  
+Éternel, écoute ma prière,  
+Toi qui vois mon âme en ce désert,  
+Ne détourne pas ton regard,  
+Viens guérir mon cœur qui espère.  
+
+[Couplet 2]  
+Face aux moqueries, Anne se fait forte en Dieu,  
+Son souffle appelle la délivrance des cieux,  
+Elle promet un enfant au Seigneur tout-puissant,  
+Son désir ardent brille dans chaque moment.  
+
+[Refrain]  
+Éternel, écoute ma prière,  
+Toi qui vois mon âme en ce désert,  
+Ne détourne pas ton regard,  
+Viens guérir mon cœur qui espère.  
+
+[Pont]  
+L’Éternel se souvient des cris de son peuple,  
+Il exauce l’appel, Il répond à la foi,  
+Dans le silence, Sa grâce se révèle,  
+L’espérance renaît, Sa promesse éclatée.  
+
+[Refrain]  
+Éternel, écoute ma prière,  
+Toi qui vois mon âme en ce désert,  
+Ne détourne pas ton regard,  
+Viens guérir mon cœur qui espère.`,
         2: `[Couplet 1]  
 Dans la joie, je chante, ô mon Dieu,  
 Mon cœur s'élève, je te rends grâce,  
