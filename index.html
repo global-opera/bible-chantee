@@ -9,7 +9,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Merriweather', Georgia, serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: #1e40af;
             min-height: 100vh;
             color: #fff;
         }
@@ -20,7 +20,7 @@
             border-bottom: 1px solid rgba(255,255,255,0.1);
             margin-bottom: 30px;
         }
-        h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 2.5em; margin-bottom: 10px; color: #d4af37; }
+        h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 2.5em; margin-bottom: 10px; color: #f59e0b; }
         .subtitle { color: #aaa; font-size: 1.1em; }
         .stats {
             background: rgba(255,255,255,0.05);
@@ -32,7 +32,7 @@
         .section-title {
             font-family: 'Playfair Display', Georgia, serif;
             font-size: 1.3em;
-            color: #d4af37;
+            color: #f59e0b;
             margin: 30px 0 15px 0;
             padding-bottom: 10px;
             border-bottom: 1px solid rgba(212, 175, 55, 0.3);
@@ -54,7 +54,7 @@
         }
         .book:hover { 
             background: rgba(212, 175, 55, 0.4); 
-            border-color: #d4af37;
+            border-color: #f59e0b;
             transform: translateY(-2px); 
         }
         .book.unavailable {
@@ -70,7 +70,7 @@
         }
         .book.playing { 
             background: rgba(212, 175, 55, 0.6); 
-            border-color: #d4af37;
+            border-color: #f59e0b;
             box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
         }
         .book-num { font-size: 0.75em; color: #ddd; margin-bottom: 5px; }
@@ -80,20 +80,20 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, #1a1a2e, rgba(26, 26, 46, 0.98));
+            background: #f59e0b;
             padding: 15px 20px;
             display: none;
-            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            border-top: 1px solid rgba(245, 158, 11, 0.5);
             max-height: 80vh;
             overflow-y: auto;
         }
         .player-container.active { display: block; }
         .player-info { text-align: center; margin-bottom: 10px; }
-        .player-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.2em; color: #d4af37; }
+        .player-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.2em; color: #1e40af; }
         .player-controls { display: flex; align-items: center; gap: 15px; justify-content: center; flex-wrap: wrap; }
         audio { width: 100%; max-width: 500px; }
         .nav-btn {
-            background: #d4af37;
+            background: #1e40af;
             border: none;
             color: #fff;
             padding: 8px 20px;
@@ -101,14 +101,14 @@
             cursor: pointer;
             font-size: 0.9em;
         }
-        .nav-btn:hover { background: #f0c040; }
+        .nav-btn:hover { background: #2563eb; }
         .nav-btn:disabled { background: #444; cursor: not-allowed; }
         .chapter-select { padding: 8px; border-radius: 5px; background: #333; color: #fff; border: 1px solid #555; }
         
         /* Bouton Paroles */
         .lyrics-btn {
-            background: linear-gradient(135deg, #2a3a5a 0%, #1e2a4a 100%);
-            border: 2px solid #d4af37;
+            background: #1e40af;
+            border: 2px solid #f59e0b;
             color: #fff;
             padding: 8px 16px;
             border-radius: 20px;
@@ -120,12 +120,12 @@
             transition: all 0.3s;
         }
         .lyrics-btn:hover {
-            background: linear-gradient(135deg, #3a4a6a 0%, #2e3a5a 100%);
+            background: #2563eb;
             border-color: #f0c040;
         }
         .lyrics-btn.active {
-            background: linear-gradient(135deg, #d4af37 0%, #b8962e 100%);
-            color: #1a1a2e;
+            background: #f59e0b;
+            color: #1e40af;
         }
         .lyrics-btn svg {
             width: 18px;
@@ -155,7 +155,7 @@
             border-radius: 4px;
         }
         .lyrics-container::-webkit-scrollbar-thumb {
-            background: #d4af37;
+            background: #f59e0b;
             border-radius: 4px;
         }
         .lyrics-text {
@@ -165,7 +165,7 @@
             color: #e0e0e0;
         }
         .lyrics-text .section-label {
-            color: #d4af37;
+            color: #f59e0b;
             font-weight: bold;
             display: block;
             margin-top: 10px;
@@ -184,7 +184,7 @@
             font-size: 0.85em;
             margin-bottom: 180px;
         }
-        footer a { color: #d4af37; text-decoration: none; }
+        footer a { color: #f59e0b; text-decoration: none; }
         
         /* Mobile */
         @media (max-width: 600px) {
