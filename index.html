@@ -29,6 +29,93 @@
             margin: 20px auto;
             display: inline-block;
         }
+        .search-container {
+            margin: 25px auto;
+            display: flex;
+            gap: 10px;
+            max-width: 600px;
+            justify-content: center;
+        }
+        .search-input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid #ffce00;
+            border-radius: 25px;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            font-size: 1em;
+            outline: none;
+        }
+        .search-input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+        .search-input:focus {
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 0 15px rgba(255, 206, 0, 0.3);
+        }
+        .search-btn {
+            background: #ffce00;
+            border: none;
+            color: #000080;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .search-btn:hover {
+            background: #f0c040;
+            transform: scale(1.05);
+        }
+        .search-results {
+            margin: 20px auto;
+            max-width: 800px;
+            max-height: 400px;
+            overflow-y: auto;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 15px;
+            display: none;
+        }
+        .search-results.active {
+            display: block;
+        }
+        .search-result-item {
+            background: rgba(255,255,255,0.1);
+            border-left: 3px solid #ffce00;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .search-result-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(5px);
+        }
+        .result-reference {
+            color: #ffce00;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .result-text {
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        .result-highlight {
+            background: #ffce00;
+            color: #000080;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .search-stats {
+            color: #ffce00;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.95em;
+        }
         .section-title {
             font-family: 'Playfair Display', Georgia, serif;
             font-size: 1.3em;
@@ -253,6 +340,11 @@
                 <span id="available-count">36</span> livres disponibles sur 66 |
                 <span id="chapters-count">850</span> chapitres
             </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Rechercher un mot dans la Bible...">
+                <button class="search-btn" onclick="searchBible()">🔍 Rechercher</button>
+            </div>
+            <div class="search-results" id="searchResults"></div>
         </header>
         <h2 class="section-title">Ancien Testament</h2>
         <div class="books-grid" id="old-testament"></div>
@@ -402,12 +494,118 @@
         
         function renderBooks(container, bookList) {
             const el = document.getElementById(container);
-            el.innerHTML = bookList.map(book => 
+            el.innerHTML = bookList.map(book =>
                 '<div class="book'+(book.available ? '' : ' unavailable')+'" data-num="'+book.num+'" data-chapters="'+book.chapters+'" data-available="'+book.available+'">' +
                 '<div class="book-num">'+book.num+'</div>' +
                 '<div class="book-name">'+book.name+'</div></div>'
             ).join('');
         }
+
+        function searchBible() {
+            const searchInput = document.getElementById('searchInput');
+            const searchResults = document.getElementById('searchResults');
+            const searchTerm = searchInput.value.trim().toLowerCase();
+
+            if (!searchTerm || searchTerm.length < 3) {
+                alert('Veuillez entrer au moins 3 caractères pour la recherche');
+                return;
+            }
+
+            if (typeof bibleData === 'undefined') {
+                alert('Données bibliques non chargées');
+                return;
+            }
+
+            // Recherche dans toute la Bible
+            let results = [];
+            let totalMatches = 0;
+
+            for (let bookNum in bibleData) {
+                const book = books.find(b => b.num === bookNum);
+                if (!book) continue;
+
+                for (let chapter in bibleData[bookNum]) {
+                    const verses = bibleData[bookNum][chapter];
+                    verses.forEach(verse => {
+                        const verseText = verse.text.toLowerCase();
+                        if (verseText.includes(searchTerm)) {
+                            results.push({
+                                bookNum: bookNum,
+                                bookName: book.name,
+                                chapter: parseInt(chapter),
+                                verseNum: verse.num,
+                                text: verse.text,
+                                available: book.available
+                            });
+                            totalMatches++;
+                        }
+                    });
+                }
+            }
+
+            // Limiter les résultats à 50 pour performance
+            results = results.slice(0, 50);
+
+            // Afficher les résultats
+            if (results.length === 0) {
+                searchResults.innerHTML = '<div class="search-stats">Aucun résultat trouvé pour "' + searchTerm + '"</div>';
+                searchResults.classList.add('active');
+                return;
+            }
+
+            let html = '<div class="search-stats">' + totalMatches + ' verset(s) trouvé(s) pour "' + searchTerm + '"';
+            if (totalMatches > 50) html += ' (affichage des 50 premiers)';
+            html += '</div>';
+
+            results.forEach(result => {
+                // Highlight du terme recherché
+                const regex = new RegExp('(' + searchTerm + ')', 'gi');
+                const highlightedText = result.text.replace(regex, '<span class="result-highlight">$1</span>');
+
+                const onclick = result.available
+                    ? 'onclick="searchResultClick(\'' + result.bookNum + '\', ' + result.chapter + ')"'
+                    : '';
+
+                const availableClass = result.available ? '' : ' style="opacity: 0.5; cursor: not-allowed;"';
+
+                html += '<div class="search-result-item" ' + onclick + availableClass + '>';
+                html += '<div class="result-reference">' + result.bookName + ' ' + result.chapter + ':' + result.verseNum;
+                if (!result.available) html += ' (non disponible)';
+                html += '</div>';
+                html += '<div class="result-text">' + highlightedText + '</div>';
+                html += '</div>';
+            });
+
+            searchResults.innerHTML = html;
+            searchResults.classList.add('active');
+        }
+
+        function searchResultClick(bookNum, chapter) {
+            const book = books.find(b => b.num === bookNum);
+            if (!book || !book.available) return;
+
+            // Ouvrir le livre et jouer le chapitre
+            playBook(bookNum, book.chapters);
+            // Petit délai pour que le lecteur s'initialise
+            setTimeout(() => {
+                playChapter(chapter);
+            }, 100);
+
+            // Scroll vers le lecteur
+            document.getElementById('player').scrollIntoView({ behavior: 'smooth' });
+
+            // Fermer les résultats de recherche
+            document.getElementById('searchResults').classList.remove('active');
+        }
+
+        // Recherche en appuyant sur Entrée
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('searchInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    searchBible();
+                }
+            });
+        });
         
         function toggleLyrics() {
             lyricsVisible = !lyricsVisible;
