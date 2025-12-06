@@ -168,13 +168,29 @@
             left: 0;
             right: 0;
             background: #ffce00;
-            padding: 15px 20px;
+            padding: 25px 20px;
             display: none;
-            border-top: 1px solid rgba(245, 158, 11, 0.5);
+            border-top: 5px solid #000080;
             max-height: 80vh;
             overflow-y: auto;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
+            z-index: 1000;
+            min-height: 200px;
         }
-        .player-container.active { display: block; }
+        .player-container.active {
+            display: block;
+            animation: slideUp 0.3s ease-out;
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
         .player-info { text-align: center; margin-bottom: 10px; }
         .player-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.2em; color: #000080; }
         .player-controls { display: flex; align-items: center; gap: 15px; justify-content: center; flex-wrap: wrap; }
@@ -337,7 +353,7 @@
             <h1>Bible Chantee</h1>
             <p class="subtitle">La Parole de Dieu en musique worship francaise</p>
             <div class="stats">
-                <span id="available-count">36</span> livres disponibles sur 66 |
+                <span id="available-count">39</span> livres disponibles sur 66 |
                 <span id="chapters-count">850</span> chapitres
             </div>
             <div class="search-container">
@@ -443,19 +459,19 @@
                 { num: "23", name: "Esaie", chapters: 66, available: true },
                 { num: "24", name: "Jeremie", chapters: 52, available: true },
                 { num: "25", name: "Lamentations", chapters: 5, available: true },
-                { num: "26", name: "Ezechiel", chapters: 48, available: false },
+                { num: "26", name: "Ezechiel", chapters: 48, available: true },
                 { num: "27", name: "Daniel", chapters: 12, available: true },
                 { num: "28", name: "Osee", chapters: 14, available: true },
                 { num: "29", name: "Joel", chapters: 3, available: true },
                 { num: "30", name: "Amos", chapters: 9, available: true },
                 { num: "31", name: "Abdias", chapters: 1, available: true },
                 { num: "32", name: "Jonas", chapters: 4, available: true },
-                { num: "33", name: "Michee", chapters: 7, available: false },
+                { num: "33", name: "Michee", chapters: 7, available: true },
                 { num: "34", name: "Nahum", chapters: 3, available: true },
                 { num: "35", name: "Habacuc", chapters: 3, available: true },
                 { num: "36", name: "Sophonie", chapters: 3, available: true },
                 { num: "37", name: "Aggee", chapters: 2, available: true },
-                { num: "38", name: "Zacharie", chapters: 14, available: false },
+                { num: "38", name: "Zacharie", chapters: 14, available: true },
                 { num: "39", name: "Malachie", chapters: 4, available: true },
                 { num: "40", name: "Matthieu", chapters: 28, available: false },
                 { num: "41", name: "Marc", chapters: 16, available: false },
