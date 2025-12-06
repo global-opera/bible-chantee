@@ -105,8 +105,8 @@
         .nav-btn:disabled { background: #444; cursor: not-allowed; }
         .chapter-select { padding: 8px; border-radius: 5px; background: #333; color: #fff; border: 1px solid #555; }
         
-        /* Bouton Paroles */
-        .lyrics-btn {
+        /* Boutons Paroles et Bible */
+        .lyrics-btn, .bible-btn {
             background: #000080;
             border: 2px solid #ffce00;
             color: #fff;
@@ -119,15 +119,15 @@
             gap: 6px;
             transition: all 0.3s;
         }
-        .lyrics-btn:hover {
+        .lyrics-btn:hover, .bible-btn:hover {
             background: #2563eb;
             border-color: #f0c040;
         }
-        .lyrics-btn.active {
+        .lyrics-btn.active, .bible-btn.active {
             background: #ffce00;
             color: #000080;
         }
-        .lyrics-btn svg {
+        .lyrics-btn svg, .bible-btn svg {
             width: 18px;
             height: 18px;
         }
@@ -171,6 +171,52 @@
             margin-top: 10px;
         }
         .no-lyrics {
+            text-align: center;
+            color: #888;
+            font-style: italic;
+            padding: 20px;
+        }
+
+        /* Zone du texte biblique */
+        .bible-container {
+            display: none;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px auto 10px auto;
+            max-width: 700px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .bible-container.active {
+            display: block;
+        }
+        .bible-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        .bible-container::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+        }
+        .bible-container::-webkit-scrollbar-thumb {
+            background: #ffce00;
+            border-radius: 4px;
+        }
+        .bible-text {
+            font-size: 0.95em;
+            line-height: 1.8;
+            color: #e0e0e0;
+        }
+        .verse {
+            margin-bottom: 10px;
+        }
+        .verse-number {
+            color: #ffce00;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        .no-bible {
             text-align: center;
             color: #888;
             font-style: italic;
@@ -233,6 +279,13 @@
                 </svg>
                 Paroles
             </button>
+            <button class="bible-btn" id="bibleBtn" onclick="toggleBible()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                Bible
+            </button>
         </div>
         <div class="player-controls" style="margin-top: 10px;">
             <audio id="audio" controls></audio>
@@ -240,12 +293,16 @@
         <div class="lyrics-container" id="lyricsContainer">
             <div class="lyrics-text" id="lyricsText"></div>
         </div>
+        <div class="bible-container" id="bibleContainer">
+            <div class="bible-text" id="bibleText"></div>
+        </div>
     </div>
     
-    <!-- Donnees des paroles -->
+    <!-- Donnees des paroles et de la Bible -->
     <script src="lyrics-data.js"></script>
     <script src="audio-urls.js"></script>
     <script src="chapter-titles.js"></script>
+    <script src="bible-data.js"></script>
 
     <script>
         const driveMapping = {
@@ -341,6 +398,7 @@
         let currentBook = null;
         let currentChapter = 1;
         let lyricsVisible = false;
+        let bibleVisible = false;
         
         function renderBooks(container, bookList) {
             const el = document.getElementById(container);
@@ -363,11 +421,24 @@
                 lyricsBtn.classList.remove('active');
             }
         }
+
+        function toggleBible() {
+            bibleVisible = !bibleVisible;
+            const bibleContainer = document.getElementById('bibleContainer');
+            const bibleBtn = document.getElementById('bibleBtn');
+            if (bibleVisible) {
+                bibleContainer.classList.add('active');
+                bibleBtn.classList.add('active');
+            } else {
+                bibleContainer.classList.remove('active');
+                bibleBtn.classList.remove('active');
+            }
+        }
         
         function updateLyrics() {
             const lyricsText = document.getElementById('lyricsText');
             const lyricsContainer = document.getElementById('lyricsContainer');
-            
+
             if (typeof chapterLyrics !== 'undefined' && chapterLyrics[currentBook] && chapterLyrics[currentBook][currentChapter]) {
                 let lyrics = chapterLyrics[currentBook][currentChapter];
                 // Formatter les sections [Couplet], [Refrain], etc. en couleur doree
@@ -378,6 +449,24 @@
             }
             // Scroll en haut
             lyricsContainer.scrollTop = 0;
+        }
+
+        function updateBible() {
+            const bibleText = document.getElementById('bibleText');
+            const bibleContainer = document.getElementById('bibleContainer');
+
+            if (typeof bibleData !== 'undefined' && bibleData[currentBook] && bibleData[currentBook][currentChapter]) {
+                const verses = bibleData[currentBook][currentChapter];
+                let html = '';
+                verses.forEach(verse => {
+                    html += '<div class="verse"><span class="verse-number">' + verse.num + '.</span>' + verse.text + '</div>';
+                });
+                bibleText.innerHTML = html;
+            } else {
+                bibleText.innerHTML = '<div class="no-bible">Texte biblique non disponible pour ce chapitre</div>';
+            }
+            // Scroll en haut
+            bibleContainer.scrollTop = 0;
         }
         
         function playBook(num, chapters) {
@@ -419,8 +508,9 @@
             document.getElementById('chapter-select').value = chapter;
             document.getElementById('prev-btn').disabled = chapter <= 1;
             document.getElementById('next-btn').disabled = chapter >= book.chapters;
-            // Mettre a jour les paroles
+            // Mettre a jour les paroles et la Bible
             updateLyrics();
+            updateBible();
         }
         
         document.addEventListener('click', e => {
