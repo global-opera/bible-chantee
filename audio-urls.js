@@ -505,6 +505,7 @@ const audioUrls = {
         39: "https://musicfile.api.box/MDJiZTNkNGItYjI2Ny00OGQzLThkNjUtNmQ4OWYwMWFkYjQ4.mp3",
         40: "https://musicfile.api.box/MDQ3NmE4OGQtZDcxNS00YjU3LWFkYTItYjI3OGJiODRlODc3.mp3",
         41: "https://musicfile.api.box/ZmZjM2E0ZDMtZjQ2My00OGQyLTg0MWItMjhmNGYwZWVmNzI5.mp3",
+        42: "https://musicfile.api.box/YWI5MmJiOTQtMzgyNi00NjcyLTljMzYtMjcwMTRhN2Q4N2U4.mp3",
     },
     "19": {
         1: "https://cdn1.suno.ai/7feec49d-ece9-43d9-8970-d754363e1eac.mp3",
