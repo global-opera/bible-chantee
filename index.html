@@ -234,17 +234,26 @@
             width: 18px;
             height: 18px;
         }
-        
+
+        /* Wrapper flex pour Paroles et Bible côte à côte */
+        .content-wrapper {
+            display: none;
+            gap: 15px;
+            margin: 15px 10px 10px 10px;
+            max-height: 350px;
+        }
+        .content-wrapper.active {
+            display: flex;
+        }
+
         /* Zone des paroles */
         .lyrics-container {
             display: none;
+            flex: 1;
             background: rgba(0,0,0,0.4);
             border: 1px solid rgba(212, 175, 55, 0.3);
             border-radius: 15px;
             padding: 20px;
-            margin: 15px auto 10px auto;
-            max-width: 700px;
-            max-height: 300px;
             overflow-y: auto;
         }
         .lyrics-container.active {
@@ -313,13 +322,11 @@
         /* Zone du texte biblique */
         .bible-container {
             display: none;
+            flex: 1;
             background: rgba(0,0,0,0.4);
             border: 1px solid rgba(212, 175, 55, 0.3);
             border-radius: 15px;
             padding: 20px;
-            margin: 15px auto 10px auto;
-            max-width: 700px;
-            max-height: 300px;
             overflow-y: auto;
         }
         .bible-container.active {
@@ -372,7 +379,13 @@
             .book-name { font-size: 0.85em; }
             h1 { font-size: 1.8em; }
             footer { margin-bottom: 250px; }
-            .lyrics-container { max-height: 250px; }
+            .content-wrapper {
+                flex-direction: column;
+                max-height: none;
+            }
+            .lyrics-container, .bible-container {
+                max-height: 200px;
+            }
             .player-title { font-size: 1.1em; }
         }
     </style>
@@ -428,11 +441,13 @@
         <div class="player-controls" style="margin-top: 10px;">
             <audio id="audio" controls></audio>
         </div>
-        <div class="lyrics-container" id="lyricsContainer">
-            <div class="lyrics-text" id="lyricsText"></div>
-        </div>
-        <div class="bible-container" id="bibleContainer">
-            <div class="bible-text" id="bibleText"></div>
+        <div class="content-wrapper" id="contentWrapper">
+            <div class="lyrics-container" id="lyricsContainer">
+                <div class="lyrics-text" id="lyricsText"></div>
+            </div>
+            <div class="bible-container" id="bibleContainer">
+                <div class="bible-text" id="bibleText"></div>
+            </div>
         </div>
     </div>
     
@@ -658,6 +673,8 @@
             lyricsVisible = !lyricsVisible;
             const lyricsContainer = document.getElementById('lyricsContainer');
             const lyricsBtn = document.getElementById('lyricsBtn');
+            const contentWrapper = document.getElementById('contentWrapper');
+
             if (lyricsVisible) {
                 lyricsContainer.classList.add('active');
                 lyricsBtn.classList.add('active');
@@ -665,18 +682,34 @@
                 lyricsContainer.classList.remove('active');
                 lyricsBtn.classList.remove('active');
             }
+
+            // Afficher le wrapper si au moins un container est actif
+            if (lyricsVisible || bibleVisible) {
+                contentWrapper.classList.add('active');
+            } else {
+                contentWrapper.classList.remove('active');
+            }
         }
 
         function toggleBible() {
             bibleVisible = !bibleVisible;
             const bibleContainer = document.getElementById('bibleContainer');
             const bibleBtn = document.getElementById('bibleBtn');
+            const contentWrapper = document.getElementById('contentWrapper');
+
             if (bibleVisible) {
                 bibleContainer.classList.add('active');
                 bibleBtn.classList.add('active');
             } else {
                 bibleContainer.classList.remove('active');
                 bibleBtn.classList.remove('active');
+            }
+
+            // Afficher le wrapper si au moins un container est actif
+            if (lyricsVisible || bibleVisible) {
+                contentWrapper.classList.add('active');
+            } else {
+                contentWrapper.classList.remove('active');
             }
         }
         
