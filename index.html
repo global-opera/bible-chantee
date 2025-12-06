@@ -280,6 +280,36 @@
             padding: 20px;
         }
 
+        /* Sections de paroles synchronisées */
+        .lyrics-section {
+            margin-bottom: 25px;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border-left: 3px solid rgba(255, 206, 0, 0.3);
+            transition: all 0.5s ease;
+        }
+        .lyrics-section.active {
+            background: rgba(255, 206, 0, 0.15);
+            border-left: 5px solid #ffce00;
+            box-shadow: 0 0 20px rgba(255, 206, 0, 0.3);
+            transform: scale(1.02);
+        }
+        .lyrics-section .section-title {
+            font-weight: bold;
+            color: #ffce00;
+            margin: 0 0 10px 0;
+            font-size: 1em;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(255, 206, 0, 0.2);
+        }
+        .lyrics-section .lyrics-line {
+            margin: 5px 0;
+            line-height: 1.8;
+            font-size: 0.95em;
+            color: #e0e0e0;
+        }
+
         /* Zone du texte biblique */
         .bible-container {
             display: none;
@@ -411,6 +441,7 @@
     <script src="audio-urls.js"></script>
     <script src="chapter-titles.js"></script>
     <script src="bible-data.js"></script>
+    <script src="lyrics-timestamps.js"></script>
 
     <script>
         const driveMapping = {
@@ -649,19 +680,47 @@
             }
         }
         
+        let lastActiveSection = -1;
+
         function updateLyrics() {
             const lyricsText = document.getElementById('lyricsText');
             const lyricsContainer = document.getElementById('lyricsContainer');
 
-            if (typeof chapterLyrics !== 'undefined' && chapterLyrics[currentBook] && chapterLyrics[currentBook][currentChapter]) {
+            // Utiliser les timestamps si disponibles
+            if (typeof lyricsTimestamps !== 'undefined' && lyricsTimestamps[currentBook] && lyricsTimestamps[currentBook][currentChapter]) {
+                const sections = lyricsTimestamps[currentBook][currentChapter];
+                lyricsText.innerHTML = '';
+
+                sections.forEach((section, index) => {
+                    const sectionDiv = document.createElement('div');
+                    sectionDiv.className = 'lyrics-section';
+                    sectionDiv.id = 'lyrics-section-' + index;
+                    sectionDiv.dataset.start = section.start;
+
+                    const titleDiv = document.createElement('div');
+                    titleDiv.className = 'section-title';
+                    titleDiv.textContent = section.type;
+                    sectionDiv.appendChild(titleDiv);
+
+                    section.lines.forEach(line => {
+                        const lineDiv = document.createElement('div');
+                        lineDiv.className = 'lyrics-line';
+                        lineDiv.textContent = line;
+                        sectionDiv.appendChild(lineDiv);
+                    });
+
+                    lyricsText.appendChild(sectionDiv);
+                });
+
+                lastActiveSection = -1;
+            } else if (typeof chapterLyrics !== 'undefined' && chapterLyrics[currentBook] && chapterLyrics[currentBook][currentChapter]) {
                 let lyrics = chapterLyrics[currentBook][currentChapter];
-                // Formatter les sections [Couplet], [Refrain], etc. en couleur doree
                 lyrics = lyrics.replace(/\[([^\]]+)\]/g, '<span class="section-label">[$1]</span>');
                 lyricsText.innerHTML = lyrics;
             } else {
                 lyricsText.innerHTML = '<div class="no-lyrics">Paroles non disponibles pour ce chapitre</div>';
             }
-            // Scroll en haut
+
             lyricsContainer.scrollTop = 0;
         }
 
@@ -747,7 +806,52 @@
             const book = books.find(b => b.num === currentBook);
             if (currentChapter < book.chapters) playChapter(currentChapter + 1);
         });
-        
+
+        // AUTO-SCROLL des paroles synchronisées
+        document.getElementById('audio').addEventListener('timeupdate', function() {
+            if (typeof lyricsTimestamps === 'undefined' || !lyricsTimestamps[currentBook] || !lyricsTimestamps[currentBook][currentChapter]) {
+                return;
+            }
+
+            const sections = lyricsTimestamps[currentBook][currentChapter];
+            const currentTime = this.currentTime;
+            let activeIndex = 0;
+
+            // Trouver la section active avec buffer de 2 secondes
+            for (let i = sections.length - 1; i >= 0; i--) {
+                if (currentTime >= sections[i].start + 2.0) {
+                    activeIndex = i;
+                    break;
+                }
+            }
+
+            // Mettre à jour seulement si la section a changé
+            if (activeIndex !== lastActiveSection) {
+                // Retirer le highlight de toutes les sections
+                document.querySelectorAll('.lyrics-section').forEach(s => s.classList.remove('active'));
+
+                // Ajouter le highlight à la section active
+                const activeSection = document.getElementById('lyrics-section-' + activeIndex);
+                if (activeSection) {
+                    activeSection.classList.add('active');
+
+                    // Scroll automatique vers la section active
+                    const lyricsContainer = document.getElementById('lyricsContainer');
+                    const containerTop = lyricsContainer.scrollTop;
+                    const containerBottom = containerTop + lyricsContainer.clientHeight;
+                    const sectionTop = activeSection.offsetTop;
+                    const sectionBottom = sectionTop + activeSection.offsetHeight;
+
+                    // Centrer la section active dans le container
+                    if (sectionTop < containerTop || sectionBottom > containerBottom) {
+                        lyricsContainer.scrollTop = sectionTop - lyricsContainer.clientHeight / 2 + activeSection.offsetHeight / 2;
+                    }
+                }
+
+                lastActiveSection = activeIndex;
+            }
+        });
+
         renderBooks('old-testament', oldTestament);
         renderBooks('new-testament', newTestament);
     </script>
