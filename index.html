@@ -553,7 +553,13 @@
         let currentChapter = 1;
         let lyricsVisible = false;
         let bibleVisible = false;
-        
+
+        // Update stats dynamically
+        const availableBooks = books.filter(b => b.available);
+        const totalChapters = availableBooks.reduce((sum, b) => sum + b.chapters, 0);
+        document.getElementById('available-count').textContent = availableBooks.length;
+        document.getElementById('chapters-count').textContent = totalChapters;
+
         function renderBooks(container, bookList) {
             const el = document.getElementById(container);
             el.innerHTML = bookList.map(book =>
