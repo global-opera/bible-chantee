@@ -1,5 +1,5 @@
 // audio-urls.js - URLs Suno CDN pour Bible Chantee
-// Auto-generated: 2025-12-07 08:40:30
+// Auto-generated: 2025-12-07 14:37:33
 const audioUrls = {
     "01": {
         1: "https://cdn1.suno.ai/a153d840-7c9b-487c-9ea5-e352ddd32477.mp3",
