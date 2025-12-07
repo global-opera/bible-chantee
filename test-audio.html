@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Audio - Bible Chantee</title>
+</head>
+<body>
+    <h1>Test Audio Suno CDN</h1>
+    <p>Test de lecture d'un fichier MP3 depuis Suno CDN</p>
+
+    <audio id="audioPlayer" controls>
+        <source src="https://cdn1.suno.ai/a153d840-7c9b-487c-9ea5-e352ddd32477.mp3" type="audio/mpeg">
+        Votre navigateur ne supporte pas l'audio.
+    </audio>
+
+    <div id="status"></div>
+
+    <script src="audio-urls.js"></script>
+    <script>
+        const status = document.getElementById('status');
+        const player = document.getElementById('audioPlayer');
+
+        // Test si audioUrls est chargé
+        if (typeof audioUrls !== 'undefined') {
+            status.innerHTML += '<p>✓ audio-urls.js charge correctement</p>';
+            status.innerHTML += '<p>Nombre de livres: ' + Object.keys(audioUrls).length + '</p>';
+
+            // Afficher quelques URLs
+            status.innerHTML += '<h3>Premiers chapitres:</h3>';
+            for (let book in audioUrls) {
+                for (let chapter in audioUrls[book]) {
+                    status.innerHTML += '<p>Livre ' + book + ', Chapitre ' + chapter + ': ' + audioUrls[book][chapter] + '</p>';
+                    break; // Juste le premier chapitre de chaque livre
+                }
+                if (Object.keys(audioUrls).indexOf(book) >= 2) break; // 3 premiers livres
+            }
+        } else {
+            status.innerHTML += '<p>✗ audio-urls.js PAS charge</p>';
+        }
+
+        // Test lecture audio
+        player.addEventListener('error', function(e) {
+            status.innerHTML += '<p style="color: red;">✗ Erreur audio: ' + e.target.error.message + '</p>';
+        });
+
+        player.addEventListener('canplay', function() {
+            status.innerHTML += '<p style="color: green;">✓ Audio pret a jouer</p>';
+        });
+    </script>
+</body>
+</html>
