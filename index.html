@@ -820,6 +820,12 @@
             document.getElementById('chapter-select').value = chapter;
             document.getElementById('prev-btn').disabled = chapter <= 1;
             document.getElementById('next-btn').disabled = chapter >= book.chapters;
+
+            // Activer automatiquement les paroles
+            if (!lyricsVisible) {
+                toggleLyrics();
+            }
+
             // Mettre a jour les paroles et la Bible
             updateLyrics();
             updateBible();
