@@ -6,63 +6,102 @@
     <title>Bible Chantee - Dashboard</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: #fff; padding: 20px; }
-        h1 { text-align: center; margin-bottom: 30px; font-size: 2.5em; background: linear-gradient(90deg, #ffd700, #ff8c00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .container { max-width: 1400px; margin: 0 auto; }
-        .section { background: rgba(255,255,255,0.05); border-radius: 15px; padding: 20px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.1); }
+        body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #1a1a2e, #16213e); min-height: 100vh; color: #fff; padding: 20px; }
+        h1 { text-align: center; margin-bottom: 30px; font-size: 2.2em; background: linear-gradient(90deg, #ffd700, #ff8c00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .section { background: rgba(255,255,255,0.05); border-radius: 15px; padding: 20px; margin-bottom: 20px; }
         .section h2 { color: #ffd700; margin-bottom: 15px; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
         .stat-card { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 15px; text-align: center; }
         .stat-card .value { font-size: 1.8em; font-weight: bold; color: #ffd700; }
         .stat-card .label { font-size: 0.85em; color: rgba(255,255,255,0.7); }
-        .btn { padding: 12px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; }
+        .btn { padding: 12px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; margin: 5px; }
+        .btn-green { background: linear-gradient(135deg, #38ef7d, #11998e); color: #1a1a2e; }
         .btn-red { background: linear-gradient(135deg, #f43f5e, #ec4899); color: #fff; }
         .btn-purple { background: linear-gradient(135deg, #a855f7, #6366f1); color: #fff; }
         .btn-blue { background: linear-gradient(135deg, #4facfe, #00f2fe); color: #1a1a2e; }
         .btn-primary { background: linear-gradient(135deg, #ffd700, #ff8c00); color: #1a1a2e; }
-        .quick-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+        .progress-bar { background: rgba(255,255,255,0.1); border-radius: 10px; height: 30px; overflow: hidden; margin: 15px 0; }
+        .progress-fill { background: linear-gradient(90deg, #38ef7d, #4facfe); height: 100%; transition: width 0.5s; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+        .updated { text-align: center; color: rgba(255,255,255,0.5); font-size: 0.85em; margin-top: 10px; }
+        .quick-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+        pre { background: #0d1117; padding: 15px; border-radius: 10px; margin-top: 15px; color: #58a6ff; overflow-x: auto; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Bible Chantee - Dashboard</h1>
+        <h1>Bible Chantee</h1>
+        
         <div class="section">
-            <h2>Statistiques</h2>
-            <div class="stats-grid">
-                <div class="stat-card"><div class="value">12</div><div class="label">Langues</div></div>
-                <div class="stat-card"><div class="value">66</div><div class="label">Livres</div></div>
-                <div class="stat-card"><div class="value">1189</div><div class="label">Chapitres</div></div>
-                <div class="stat-card"><div class="value">15457</div><div class="label">Fichiers</div></div>
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;">
+                <h2>Progression</h2>
+                <button class="btn btn-green" onclick="loadStats()">Actualiser</button>
             </div>
-            <div style="margin-top:20px;padding:15px;background:rgba(0,0,0,0.3);border-radius:10px;">
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-                    <span style="color:#ffd700;font-weight:bold;">Progression MP3</span>
-                    <div><input type="number" id="mp3" value="0" style="width:80px;padding:5px;border-radius:5px;border:none;" onchange="upd()"> / 15457 <span id="pct" style="color:#38ef7d;font-weight:bold;">0%</span></div>
-                </div>
-                <div style="background:rgba(255,255,255,0.1);border-radius:10px;height:25px;overflow:hidden;">
-                    <div id="bar" style="background:linear-gradient(90deg,#38ef7d,#4facfe);height:100%;width:0%;transition:width 0.5s;"></div>
-                </div>
-                <div style="display:flex;justify-content:space-between;margin-top:10px;font-size:0.85em;color:rgba(255,255,255,0.6);">
-                    <span>Bloc1: FR_V2+PT+ES+EN</span><span>Bloc2: DE+IT+AR+RU</span><span>Bloc3: ZH+TL+SW+HI</span><span>Bloc4: FR</span>
-                </div>
+            <div class="stats-grid">
+                <div class="stat-card"><div class="value" id="v1">-</div><div class="label">MP3 V1</div></div>
+                <div class="stat-card"><div class="value" id="v2">-</div><div class="label">MP3 V2</div></div>
+                <div class="stat-card"><div class="value" id="total">-</div><div class="label">Total</div></div>
+                <div class="stat-card"><div class="value" id="pct">-</div><div class="label">Progression</div></div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="bar" style="width:0%"></div>
+            </div>
+            <div class="updated" id="updated">Cliquez sur Actualiser</div>
+            <div style="text-align:center;margin-top:15px;">
+                <small style="color:#ffd700;">Sur PC: double-clic ACTUALISER_STATS.bat puis Actualiser ici</small>
             </div>
         </div>
+
         <div class="section">
             <h2>Generation Suno</h2>
             <div class="quick-actions">
-                <button class="btn btn-red" onclick="copy('bloc1')">BLOC 1 (FR_V2,PT,ES,EN)</button>
-                <button class="btn btn-purple" onclick="copy('bloc2')">BLOC 2 (DE,IT,AR,RU)</button>
-                <button class="btn btn-blue" onclick="copy('bloc3')">BLOC 3 (ZH,TL,SW,HI)</button>
-                <button class="btn btn-primary" onclick="copy('bloc4')">BLOC 4 (FR)</button>
+                <button class="btn btn-red" onclick="copyCmd('bloc1')">BLOC 1 (FR_V2,PT,ES,EN)</button>
+                <button class="btn btn-purple" onclick="copyCmd('bloc2')">BLOC 2 (DE,IT,AR,RU)</button>
+                <button class="btn btn-blue" onclick="copyCmd('bloc3')">BLOC 3 (ZH,TL,SW,HI)</button>
+                <button class="btn btn-primary" onclick="copyCmd('bloc4')">BLOC 4 (FR)</button>
             </div>
-            <pre id="cmd" style="background:#0d1117;padding:15px;border-radius:10px;margin-top:15px;color:#58a6ff;">cd "G:\Mon Drive\01 BibleChantee\Scripts"
+            <pre id="cmd">cd "G:\Mon Drive\01 BibleChantee\Scripts"
 python generate_bloc1_mass.py</pre>
         </div>
+
+        <div class="section">
+            <h2>Blocs</h2>
+            <div style="font-size:0.9em;color:rgba(255,255,255,0.7);">
+                Bloc1: FR_V2+PT+ES+EN | Bloc2: DE+IT+AR+RU | Bloc3: ZH+TL+SW+HI | Bloc4: FR
+            </div>
+        </div>
     </div>
+
     <script>
-        function upd(){const c=parseInt(document.getElementById('mp3').value)||0;const p=(c/15457*100).toFixed(1);document.getElementById('pct').textContent=p+'%';document.getElementById('bar').style.width=p+'%';localStorage.setItem('mp3',c);}
-        function copy(b){const cmds={bloc1:'python generate_bloc1_mass.py',bloc2:'python generate_bloc2_mass.py',bloc3:'python generate_bloc3_mass.py',bloc4:'python generate_bloc4_mass.py'};document.getElementById('cmd').textContent='cd "G:\\Mon Drive\\01 BibleChantee\\Scripts"\n'+cmds[b];navigator.clipboard.writeText(document.getElementById('cmd').textContent);}
-        if(localStorage.getItem('mp3')){document.getElementById('mp3').value=localStorage.getItem('mp3');upd();}
+        const TARGET = 15457;
+        
+        async function loadStats() {
+            try {
+                const resp = await fetch('progress.json?t=' + Date.now());
+                const data = await resp.json();
+                document.getElementById('v1').textContent = data.mp3_v1 || 0;
+                document.getElementById('v2').textContent = data.mp3_v2 || 0;
+                const total = (data.mp3_v1 || 0);
+                document.getElementById('total').textContent = total;
+                const pct = (total / TARGET * 100).toFixed(1);
+                document.getElementById('pct').textContent = pct + '%';
+                document.getElementById('bar').style.width = pct + '%';
+                document.getElementById('bar').textContent = pct + '%';
+                const d = new Date(data.updated);
+                document.getElementById('updated').textContent = 'Mis a jour: ' + d.toLocaleString('fr-CH');
+            } catch (e) {
+                document.getElementById('updated').textContent = 'Erreur chargement - lancez ACTUALISER_STATS.bat';
+            }
+        }
+
+        function copyCmd(b) {
+            const cmds = {bloc1:'generate_bloc1_mass.py',bloc2:'generate_bloc2_mass.py',bloc3:'generate_bloc3_mass.py',bloc4:'generate_bloc4_mass.py'};
+            const cmd = 'cd "G:\\Mon Drive\\01 BibleChantee\\Scripts"\npython ' + cmds[b];
+            document.getElementById('cmd').textContent = cmd;
+            navigator.clipboard.writeText(cmd);
+        }
+
+        loadStats();
     </script>
 </body>
 </html>
