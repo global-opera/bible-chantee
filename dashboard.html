@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Chantee - Dashboard Commandes</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, sans-serif; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+        h1 { 
+            text-align: center; 
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            background: linear-gradient(90deg, #ffd700, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        
+        .section {
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .section h2 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        
+        .selector-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        .selector-group label {
+            font-weight: bold;
+            color: #ffd700;
+            min-width: 80px;
+        }
+        select, input {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            font-size: 14px;
+            min-width: 150px;
+        }
+        
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+        }
+        .btn-primary { background: linear-gradient(135deg, #ffd700, #ff8c00); color: #1a1a2e; }
+        .btn-blue { background: linear-gradient(135deg, #4facfe, #00f2fe); color: #1a1a2e; }
+        .btn-green { background: linear-gradient(135deg, #38ef7d, #11998e); color: #1a1a2e; }
+        .btn-purple { background: linear-gradient(135deg, #a855f7, #6366f1); color: #fff; }
+        .btn-red { background: linear-gradient(135deg, #f43f5e, #ec4899); color: #fff; }
+        .btn:hover { transform: translateY(-2px); }
+        
+        .lang-btn {
+            padding: 10px 15px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.05);
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .lang-btn:hover { border-color: #ffd700; }
+        .lang-btn.active { border-color: #ffd700; background: rgba(255,215,0,0.2); color: #ffd700; }
+        
+        .command-output {
+            background: #0d1117;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            font-family: 'Consolas', monospace;
+            font-size: 13px;
+            border: 1px solid #30363d;
+            position: relative;
+        }
+        .command-output pre { color: #58a6ff; white-space: pre-wrap; }
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background: #238636;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        .stat-card .value { font-size: 1.8em; font-weight: bold; color: #ffd700; }
+        .stat-card .label { font-size: 0.85em; color: rgba(255,255,255,0.7); }
+        
+        /* Credits Box */
+        .credits-box {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f2744 100%);
+            border: 2px solid #4facfe;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .credits-info { display: flex; align-items: center; gap: 20px; }
+        .credits-info .icon { font-size: 2.5em; }
+        .credits-info .details h3 { color: #4facfe; font-size: 1.1em; margin-bottom: 5px; }
+        .credits-info .details .amount { font-size: 2em; font-weight: bold; color: #38ef7d; }
+        .credits-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+        
+        .quick-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+        
+        @media (max-width: 768px) {
+            .grid-2, .grid-4 { grid-template-columns: 1fr; }
+            .credits-box { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bible Chantee - Dashboard</h1>
+        
+        <!-- Suno Credits -->
+        <div class="credits-box">
+            <div class="credits-info">
+                <div class="icon">&#127925;</div>
+                <div class="details">
+                    <h3>Credits Suno API</h3>
+                    <div class="amount" id="credits-amount">Cliquer pour verifier</div>
+                    <div style="font-size: 0.8em; color: rgba(255,255,255,0.6);" id="credits-updated"></div>
+                </div>
+            </div>
+            <div class="credits-actions">
+                <button class="btn btn-blue" onclick="copyCreditsCmd()">Copier Commande Solde</button>
+                <button class="btn btn-green" onclick="copyDownloadCmd()">Telecharger MP3 Prets</button>
+            </div>
+        </div>
+        
+        <!-- Stats -->
+        <div class="section">
+            <h2>Statistiques Projet</h2>
+            <div class="stats-grid">
+                <div class="stat-card"><div class="value">12</div><div class="label">Langues</div></div>
+                <div class="stat-card"><div class="value">66</div><div class="label">Livres</div></div>
+                <div class="stat-card"><div class="value">1189</div><div class="label">Chapitres</div></div>
+                <div class="stat-card"><div class="value">15457</div><div class="label">Fichiers Lyrics</div></div>
+            </div>
+        </div>
+        
+        <!-- Selection -->
+        <div class="section">
+            <h2>Selection</h2>
+            <div class="selector-group">
+                <label>Langue:</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 5px;">
+                    <button class="lang-btn active" onclick="setLang('FR')" id="lang-FR">FR</button>
+                    <button class="lang-btn" onclick="setLang('FR_V2')" id="lang-FR_V2">FR_V2</button>
+                    <button class="lang-btn" onclick="setLang('EN')" id="lang-EN">EN</button>
+                    <button class="lang-btn" onclick="setLang('PT')" id="lang-PT">PT</button>
+                    <button class="lang-btn" onclick="setLang('ES')" id="lang-ES">ES</button>
+                    <button class="lang-btn" onclick="setLang('DE')" id="lang-DE">DE</button>
+                    <button class="lang-btn" onclick="setLang('IT')" id="lang-IT">IT</button>
+                    <button class="lang-btn" onclick="setLang('AR')" id="lang-AR">AR</button>
+                    <button class="lang-btn" onclick="setLang('RU')" id="lang-RU">RU</button>
+                    <button class="lang-btn" onclick="setLang('ZH')" id="lang-ZH">ZH</button>
+                    <button class="lang-btn" onclick="setLang('TL')" id="lang-TL">TL</button>
+                    <button class="lang-btn" onclick="setLang('SW')" id="lang-SW">SW</button>
+                    <button class="lang-btn" onclick="setLang('HI')" id="lang-HI">HI</button>
+                </div>
+            </div>
+            <div class="selector-group">
+                <label>Livre:</label>
+                <select id="book-select" onchange="updateCommands()">
+                    <option value="01_GEN">01 - Genese</option>
+                    <option value="02_EXO">02 - Exode</option>
+                    <option value="03_LEV">03 - Levitique</option>
+                    <option value="04_NUM">04 - Nombres</option>
+                    <option value="05_DEU">05 - Deuteronome</option>
+                    <option value="19_PSA">19 - Psaumes</option>
+                    <option value="20_PRO">20 - Proverbes</option>
+                    <option value="23_ISA">23 - Esaie</option>
+                    <option value="40_MAT">40 - Matthieu</option>
+                    <option value="43_JOH">43 - Jean</option>
+                    <option value="45_ROM">45 - Romains</option>
+                    <option value="66_REV">66 - Apocalypse</option>
+                </select>
+                <label>Chapitre:</label>
+                <input type="number" id="chapter-input" value="1" min="1" max="150" onchange="updateCommands()">
+            </div>
+        </div>
+        
+        <!-- Fichiers -->
+        <div class="grid-2">
+            <div class="section">
+                <h2>Ouvrir Lyrics</h2>
+                <div class="quick-actions">
+                    <button class="btn btn-primary" onclick="copyCmd('lyrics-file')">Fichier</button>
+                    <button class="btn btn-blue" onclick="copyCmd('lyrics-book')">Livre</button>
+                    <button class="btn btn-green" onclick="copyCmd('lyrics-lang')">Langue</button>
+                    <button class="btn btn-purple" onclick="copyCmd('lyrics-all')">Tous</button>
+                </div>
+                <div class="command-output">
+                    <button class="copy-btn" onclick="copyToClipboard('lyrics-cmd')">Copier</button>
+                    <pre id="lyrics-cmd">cd "G:\Mon Drive\01 BibleChantee\Scripts"
+Start-Process "G:\Mon Drive\01 BibleChantee\Lyrics\FR\01_GEN"</pre>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Ouvrir MP3</h2>
+                <div class="quick-actions">
+                    <button class="btn btn-primary" onclick="copyCmd('mp3-file')">Fichier</button>
+                    <button class="btn btn-blue" onclick="copyCmd('mp3-book')">Livre</button>
+                    <button class="btn btn-green" onclick="copyCmd('mp3-lang')">Langue</button>
+                    <button class="btn btn-purple" onclick="copyCmd('mp3-test')">Test</button>
+                </div>
+                <div class="command-output">
+                    <button class="copy-btn" onclick="copyToClipboard('mp3-cmd')">Copier</button>
+                    <pre id="mp3-cmd">cd "G:\Mon Drive\01 BibleChantee\Scripts"
+Start-Process "G:\Mon Drive\01 BibleChantee\Suno_Output\FR\01_GEN"</pre>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scripts -->
+        <div class="grid-2">
+            <div class="section">
+                <h2>Monitoring</h2>
+                <div class="quick-actions">
+                    <button class="btn btn-green" onclick="copyCmd('check-status')">Check Status</button>
+                    <button class="btn btn-blue" onclick="copyCmd('progression')">Progression</button>
+                    <button class="btn btn-purple" onclick="copyCmd('count-mp3')">Compter MP3</button>
+                </div>
+                <div class="command-output">
+                    <button class="copy-btn" onclick="copyToClipboard('monitor-cmd')">Copier</button>
+                    <pre id="monitor-cmd">cd "G:\Mon Drive\01 BibleChantee\Scripts"
+python check_suno_status.py</pre>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Generation Suno</h2>
+                <div class="quick-actions">
+                    <button class="btn btn-red" onclick="copyCmd('gen-bloc1')">BLOC 1 (FR,PT,ES,EN)</button>
+                    <button class="btn btn-purple" onclick="copyCmd('gen-bloc2')">BLOC 2 (DE,IT,AR,RU)</button>
+                    <button class="btn btn-blue" onclick="copyCmd('gen-bloc3')">BLOC 3 (ZH,TL,SW,HI)</button>
+                </div>
+                <div class="command-output">
+                    <button class="copy-btn" onclick="copyToClipboard('gen-cmd')">Copier</button>
+                    <pre id="gen-cmd">cd "G:\Mon Drive\01 BibleChantee\Scripts"
+python generate_bloc1_mass.py</pre>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Globales -->
+        <div class="section">
+            <h2>Commandes Globales</h2>
+            <div class="grid-4">
+                <button class="btn btn-primary" onclick="copyCmd('open-base')">Ouvrir Projet</button>
+                <button class="btn btn-blue" onclick="copyCmd('open-scripts')">Scripts</button>
+                <button class="btn btn-green" onclick="copyCmd('audit')">Audit Styles</button>
+                <button class="btn btn-purple" onclick="copyCmd('count-all')">Compter Fichiers</button>
+            </div>
+            <div class="command-output">
+                <button class="copy-btn" onclick="copyToClipboard('global-cmd')">Copier</button>
+                <pre id="global-cmd">cd "G:\Mon Drive\01 BibleChantee\Scripts"
+Start-Process "G:\Mon Drive\01 BibleChantee"</pre>
+            </div>
+        </div>
+        
+        <!-- Regles -->
+        <div class="section">
+            <h2>Regles Critiques</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px;">
+                <div style="background: rgba(255,0,0,0.1); padding: 12px; border-radius: 8px; border-left: 3px solid #f43f5e;">
+                    <strong>Model V5</strong><br><small>JAMAIS V4</small>
+                </div>
+                <div style="background: rgba(255,215,0,0.1); padding: 12px; border-radius: 8px; border-left: 3px solid #ffd700;">
+                    <strong>Accents</strong><br><small>Garder natifs</small>
+                </div>
+                <div style="background: rgba(0,255,0,0.1); padding: 12px; border-radius: 8px; border-left: 3px solid #38ef7d;">
+                    <strong>[Spoken Word]</strong><br><small>Style simple</small>
+                </div>
+                <div style="background: rgba(168,85,247,0.1); padding: 12px; border-radius: 8px; border-left: 3px solid #a855f7;">
+                    <strong>[STYLE]/[TITRE]</strong><br><small>PAS dans lyrics</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let currentLang = 'FR';
+        const BASE = 'G:\\Mon Drive\\01 BibleChantee';
+        
+        function setLang(lang) {
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('lang-' + lang).classList.add('active');
+            currentLang = lang;
+            updateCommands();
+        }
+        
+        function getBook() { return document.getElementById('book-select').value; }
+        function getChapter() { return document.getElementById('chapter-input').value.padStart(2, '0'); }
+        
+        function updateCommands() {
+            const book = getBook();
+            document.getElementById('lyrics-cmd').textContent = `cd "${BASE}\\Scripts"\nStart-Process "${BASE}\\Lyrics\\${currentLang}\\${book}"`;
+            document.getElementById('mp3-cmd').textContent = `cd "${BASE}\\Scripts"\nStart-Process "${BASE}\\Suno_Output\\${currentLang}\\${book}"`;
+        }
+        
+        function copyCreditsCmd() {
+            const cmd = `cd "${BASE}\\Scripts"\npython -c "from suno_api_generator import SunoAPIGenerator; from api_key import SUNO_API_KEY; g=SunoAPIGenerator(SUNO_API_KEY); print(g.check_credits())"`;
+            navigator.clipboard.writeText(cmd);
+            document.getElementById('credits-amount').textContent = 'Commande copiee!';
+            document.getElementById('credits-updated').textContent = 'Collez dans PowerShell pour voir le solde';
+        }
+        
+        function copyDownloadCmd() {
+            const cmd = `cd "${BASE}\\Scripts"\npython check_suno_status.py`;
+            navigator.clipboard.writeText(cmd);
+            alert('Commande copiee! Collez dans PowerShell pour telecharger les MP3 prets.');
+        }
+        
+        function copyCmd(type) {
+            const book = getBook();
+            const chapter = getChapter();
+            let cmd = '';
+            
+            switch(type) {
+                case 'lyrics-file':
+                    cmd = `cd "${BASE}\\Scripts"\nnotepad "${BASE}\\Lyrics\\${currentLang}\\${book}\\${book}_${chapter}_${currentLang}.txt"`;
+                    document.getElementById('lyrics-cmd').textContent = cmd; break;
+                case 'lyrics-book':
+                    cmd = `cd "${BASE}\\Scripts"\nStart-Process "${BASE}\\Lyrics\\${currentLang}\\${book}"`;
+                    document.getElementById('lyrics-cmd').textContent = cmd; break;
+                case 'lyrics-lang':
+                    cmd = `cd "${BASE}\\Scripts"\nStart-Process "${BASE}\\Lyrics\\${currentLang}"`;
+                    document.getElementById('lyrics-cmd').textContent = cmd; break;
+                case 'lyrics-all':
+                    cmd = `cd "${BASE}\\Scripts"\nStart-Process "${BASE}\\Lyrics"`;
+                    document.getElementById('lyrics-cmd').textContent = cmd; break;
+                case 'mp3-file':
+                    cmd = `cd "${BASE}\\Scripts"\nStart-Process "${BASE}\\Suno_Output\\${currentLang}\\${book}\\${book}_${chapter}.mp3"`;
+                    document.getElementById('mp3-cmd').textContent = cmd; break;
+                case 'mp3-book':
+                    cmd = `cd "${BASE}\\Scripts"\nStart-Process "${BASE}\\Suno_Output\\${currentLang}\\${book}"`;
+                    document.getElementById('mp3-cmd').textContent = cmd; break;
+                case 'mp3-lang':
+                    cmd = `cd "${BASE}\\Scripts"\nStart-Process "${BASE}\\Suno_Output\\${currentLang}"`;
+                    document.getElementById('mp3-cmd').textContent = cmd; break;
+                case 'mp3-test':
+                    cmd = `cd "${BASE}\\Scripts"\nStart-Process "${BASE}\\Test_Suno_Gen01_MP3"`;
+                    document.getElementById('mp3-cmd').textContent = cmd; break;
+                case 'check-status':
+                    cmd = `cd "${BASE}\\Scripts"\npython check_suno_status.py`;
+                    document.getElementById('monitor-cmd').textContent = cmd; break;
+                case 'progression':
+                    cmd = `cd "${BASE}\\Scripts"\n$langs = @("FR","EN","PT","ES","DE","IT","AR","RU","ZH","TL","SW","HI")\nforeach ($l in $langs) {\n  $c=(Get-ChildItem "${BASE}\\Suno_Output\\$l" -Recurse -Filter "*.mp3" -ErrorAction SilentlyContinue).Count\n  Write-Host "$l : $c MP3"\n}`;
+                    document.getElementById('monitor-cmd').textContent = cmd; break;
+                case 'count-mp3':
+                    cmd = `cd "${BASE}"\n(Get-ChildItem "Suno_Output" -Recurse -Filter "*.mp3").Count`;
+                    document.getElementById('monitor-cmd').textContent = cmd; break;
+                case 'gen-bloc1':
+                    cmd = `cd "${BASE}\\Scripts"\npython generate_bloc1_mass.py`;
+                    document.getElementById('gen-cmd').textContent = cmd; break;
+                case 'gen-bloc2':
+                    cmd = `cd "${BASE}\\Scripts"\npython generate_bloc2_mass.py`;
+                    document.getElementById('gen-cmd').textContent = cmd; break;
+                case 'gen-bloc3':
+                    cmd = `cd "${BASE}\\Scripts"\npython generate_bloc3_mass.py`;
+                    document.getElementById('gen-cmd').textContent = cmd; break;
+                case 'open-base':
+                    cmd = `Start-Process "${BASE}"`;
+                    document.getElementById('global-cmd').textContent = cmd; break;
+                case 'open-scripts':
+                    cmd = `Start-Process "${BASE}\\Scripts"`;
+                    document.getElementById('global-cmd').textContent = cmd; break;
+                case 'audit':
+                    cmd = `cd "${BASE}\\Scripts"\n$langs = @("FR","EN","PT","ES","DE","IT","AR","RU","ZH","TL","SW","HI")\nforeach ($l in $langs) { $bad=0; Get-ChildItem "${BASE}\\Lyrics\\$l" -Recurse -Filter "*.txt" | ForEach-Object { if((Get-Content $_.FullName -Raw) -match '\\[STYLE\\]\\s*The '){$bad++} }; Write-Host "$l : $bad invalides" -ForegroundColor $(if($bad -eq 0){'Green'}else{'Red'}) }`;
+                    document.getElementById('global-cmd').textContent = cmd; break;
+                case 'count-all':
+                    cmd = `cd "${BASE}"\nWrite-Host "Lyrics:" (Get-ChildItem "Lyrics" -Recurse -Filter "*.txt").Count\nWrite-Host "MP3:" (Get-ChildItem "Suno_Output" -Recurse -Filter "*.mp3").Count`;
+                    document.getElementById('global-cmd').textContent = cmd; break;
+            }
+        }
+        
+        function copyToClipboard(elementId) {
+            const text = document.getElementById(elementId).textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.target;
+                btn.textContent = 'Copie!';
+                setTimeout(() => btn.textContent = 'Copier', 1500);
+            });
+        }
+        
+        updateCommands();
+    </script>
+</body>
+</html>
