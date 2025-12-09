@@ -7,100 +7,207 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #1a1a2e, #16213e); min-height: 100vh; color: #fff; padding: 20px; }
-        h1 { text-align: center; margin-bottom: 30px; font-size: 2.2em; background: linear-gradient(90deg, #ffd700, #ff8c00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { text-align: center; margin-bottom: 20px; font-size: 2em; background: linear-gradient(90deg, #ffd700, #ff8c00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .section { background: rgba(255,255,255,0.05); border-radius: 15px; padding: 20px; margin-bottom: 20px; }
-        .section h2 { color: #ffd700; margin-bottom: 15px; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
-        .stat-card { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 15px; text-align: center; }
-        .stat-card .value { font-size: 1.8em; font-weight: bold; color: #ffd700; }
-        .stat-card .label { font-size: 0.85em; color: rgba(255,255,255,0.7); }
-        .btn { padding: 12px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; margin: 5px; }
+        .section h2 { color: #ffd700; margin-bottom: 15px; font-size: 1.2em; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px; }
+        .stat-card { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 12px; text-align: center; }
+        .stat-card .value { font-size: 1.5em; font-weight: bold; color: #ffd700; }
+        .stat-card .label { font-size: 0.8em; color: rgba(255,255,255,0.7); }
+        .btn { padding: 10px 16px; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 13px; margin: 3px; }
         .btn-green { background: linear-gradient(135deg, #38ef7d, #11998e); color: #1a1a2e; }
         .btn-red { background: linear-gradient(135deg, #f43f5e, #ec4899); color: #fff; }
         .btn-purple { background: linear-gradient(135deg, #a855f7, #6366f1); color: #fff; }
         .btn-blue { background: linear-gradient(135deg, #4facfe, #00f2fe); color: #1a1a2e; }
         .btn-primary { background: linear-gradient(135deg, #ffd700, #ff8c00); color: #1a1a2e; }
-        .progress-bar { background: rgba(255,255,255,0.1); border-radius: 10px; height: 30px; overflow: hidden; margin: 15px 0; }
-        .progress-fill { background: linear-gradient(90deg, #38ef7d, #4facfe); height: 100%; transition: width 0.5s; display: flex; align-items: center; justify-content: center; font-weight: bold; }
-        .updated { text-align: center; color: rgba(255,255,255,0.5); font-size: 0.85em; margin-top: 10px; }
-        .quick-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-        pre { background: #0d1117; padding: 15px; border-radius: 10px; margin-top: 15px; color: #58a6ff; overflow-x: auto; }
+        .lang-btn { padding: 8px 12px; border: 2px solid rgba(255,255,255,0.2); border-radius: 6px; background: transparent; color: #fff; cursor: pointer; font-weight: bold; font-size: 12px; }
+        .lang-btn:hover { border-color: #ffd700; }
+        .lang-btn.active { border-color: #ffd700; background: rgba(255,215,0,0.2); color: #ffd700; }
+        .progress-bar { background: rgba(255,255,255,0.1); border-radius: 10px; height: 25px; overflow: hidden; margin: 10px 0; }
+        .progress-fill { background: linear-gradient(90deg, #38ef7d, #4facfe); height: 100%; transition: width 0.5s; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; }
+        select, input { padding: 8px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; font-size: 13px; }
+        pre { background: #0d1117; padding: 12px; border-radius: 8px; margin-top: 10px; color: #58a6ff; font-size: 12px; overflow-x: auto; position: relative; }
+        .copy-btn { position: absolute; top: 5px; right: 5px; padding: 4px 8px; background: #238636; border: none; border-radius: 4px; color: #fff; cursor: pointer; font-size: 11px; }
+        .updated { text-align: center; color: rgba(255,255,255,0.5); font-size: 0.8em; margin-top: 8px; }
+        @media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Bible Chantee</h1>
+        <h1>Bible Chantee - Dashboard</h1>
         
+        <!-- Stats Live -->
         <div class="section">
-            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;">
-                <h2>Progression</h2>
+            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+                <h2>Progression Live</h2>
                 <button class="btn btn-green" onclick="loadStats()">Actualiser</button>
             </div>
             <div class="stats-grid">
                 <div class="stat-card"><div class="value" id="v1">-</div><div class="label">MP3 V1</div></div>
                 <div class="stat-card"><div class="value" id="v2">-</div><div class="label">MP3 V2</div></div>
-                <div class="stat-card"><div class="value" id="total">-</div><div class="label">Total</div></div>
-                <div class="stat-card"><div class="value" id="pct">-</div><div class="label">Progression</div></div>
+                <div class="stat-card"><div class="value">15457</div><div class="label">Cible</div></div>
+                <div class="stat-card"><div class="value" id="pct">-</div><div class="label">%</div></div>
             </div>
-            <div class="progress-bar">
-                <div class="progress-fill" id="bar" style="width:0%"></div>
+            <div class="progress-bar"><div class="progress-fill" id="bar" style="width:0%"></div></div>
+            <div class="updated" id="updated">Cliquez Actualiser</div>
+        </div>
+
+        <!-- Selection -->
+        <div class="section">
+            <h2>Selection</h2>
+            <div style="margin-bottom:10px;">
+                <span style="color:#ffd700;margin-right:10px;">Langue:</span>
+                <button class="lang-btn active" onclick="setLang('FR')" id="lang-FR">FR</button>
+                <button class="lang-btn" onclick="setLang('FR_V2')" id="lang-FR_V2">FR_V2</button>
+                <button class="lang-btn" onclick="setLang('EN')" id="lang-EN">EN</button>
+                <button class="lang-btn" onclick="setLang('PT')" id="lang-PT">PT</button>
+                <button class="lang-btn" onclick="setLang('ES')" id="lang-ES">ES</button>
+                <button class="lang-btn" onclick="setLang('DE')" id="lang-DE">DE</button>
+                <button class="lang-btn" onclick="setLang('IT')" id="lang-IT">IT</button>
+                <button class="lang-btn" onclick="setLang('AR')" id="lang-AR">AR</button>
+                <button class="lang-btn" onclick="setLang('RU')" id="lang-RU">RU</button>
+                <button class="lang-btn" onclick="setLang('ZH')" id="lang-ZH">ZH</button>
+                <button class="lang-btn" onclick="setLang('TL')" id="lang-TL">TL</button>
+                <button class="lang-btn" onclick="setLang('SW')" id="lang-SW">SW</button>
+                <button class="lang-btn" onclick="setLang('HI')" id="lang-HI">HI</button>
             </div>
-            <div class="updated" id="updated">Cliquez sur Actualiser</div>
-            <div style="text-align:center;margin-top:15px;">
-                <small style="color:#ffd700;">Sur PC: double-clic ACTUALISER_STATS.bat puis Actualiser ici</small>
+            <div>
+                <span style="color:#ffd700;margin-right:10px;">Livre:</span>
+                <select id="book" onchange="update()">
+                    <option value="01_GEN">01-Genese</option><option value="02_EXO">02-Exode</option><option value="03_LEV">03-Levitique</option>
+                    <option value="04_NUM">04-Nombres</option><option value="05_DEU">05-Deuteronome</option><option value="06_JOS">06-Josue</option>
+                    <option value="07_JDG">07-Juges</option><option value="08_RUT">08-Ruth</option><option value="09_1SA">09-1Samuel</option>
+                    <option value="10_2SA">10-2Samuel</option><option value="11_1KI">11-1Rois</option><option value="12_2KI">12-2Rois</option>
+                    <option value="13_1CH">13-1Chroniques</option><option value="14_2CH">14-2Chroniques</option><option value="15_EZR">15-Esdras</option>
+                    <option value="16_NEH">16-Nehemie</option><option value="17_EST">17-Esther</option><option value="18_JOB">18-Job</option>
+                    <option value="19_PSA">19-Psaumes</option><option value="20_PRO">20-Proverbes</option><option value="21_ECC">21-Ecclesiaste</option>
+                    <option value="22_SNG">22-Cantique</option><option value="23_ISA">23-Esaie</option><option value="24_JER">24-Jeremie</option>
+                    <option value="25_LAM">25-Lamentations</option><option value="26_EZE">26-Ezechiel</option><option value="27_DAN">27-Daniel</option>
+                    <option value="28_HOS">28-Osee</option><option value="29_JOL">29-Joel</option><option value="30_AMO">30-Amos</option>
+                    <option value="31_OBA">31-Abdias</option><option value="32_JON">32-Jonas</option><option value="33_MIC">33-Michee</option>
+                    <option value="34_NAM">34-Nahum</option><option value="35_HAB">35-Habacuc</option><option value="36_ZEP">36-Sophonie</option>
+                    <option value="37_HAG">37-Aggee</option><option value="38_ZEC">38-Zacharie</option><option value="39_MAL">39-Malachie</option>
+                    <option value="40_MAT">40-Matthieu</option><option value="41_MAR">41-Marc</option><option value="42_LUK">42-Luc</option>
+                    <option value="43_JHN">43-Jean</option><option value="44_ACT">44-Actes</option><option value="45_ROM">45-Romains</option>
+                    <option value="46_1CO">46-1Corinthiens</option><option value="47_2CO">47-2Corinthiens</option><option value="48_GAL">48-Galates</option>
+                    <option value="49_EPH">49-Ephesiens</option><option value="50_PHP">50-Philippiens</option><option value="51_COL">51-Colossiens</option>
+                    <option value="52_1TH">52-1Thessaloniciens</option><option value="53_2TH">53-2Thessaloniciens</option><option value="54_1TI">54-1Timothee</option>
+                    <option value="55_2TI">55-2Timothee</option><option value="56_TIT">56-Tite</option><option value="57_PHM">57-Philemon</option>
+                    <option value="58_HEB">58-Hebreux</option><option value="59_JAS">59-Jacques</option><option value="60_1PE">60-1Pierre</option>
+                    <option value="61_2PE">61-2Pierre</option><option value="62_1JN">62-1Jean</option><option value="63_2JN">63-2Jean</option>
+                    <option value="64_3JN">64-3Jean</option><option value="65_JUD">65-Jude</option><option value="66_REV">66-Apocalypse</option>
+                </select>
+                <span style="color:#ffd700;margin:0 10px;">Chap:</span>
+                <input type="number" id="chap" value="1" min="1" style="width:60px;" onchange="update()">
             </div>
         </div>
 
+        <div class="grid-2">
+            <!-- Ouvrir Lyrics -->
+            <div class="section">
+                <h2>Ouvrir Lyrics</h2>
+                <button class="btn btn-blue" onclick="cmd('lyrics-file')">Fichier</button>
+                <button class="btn btn-blue" onclick="cmd('lyrics-book')">Livre</button>
+                <button class="btn btn-blue" onclick="cmd('lyrics-lang')">Langue</button>
+                <button class="btn btn-blue" onclick="cmd('lyrics-all')">Tous</button>
+                <pre id="lyrics-cmd"><button class="copy-btn" onclick="copy('lyrics-cmd')">Copier</button>cd "G:\Mon Drive\01 BibleChantee\Scripts"</pre>
+            </div>
+            <!-- Ouvrir MP3 -->
+            <div class="section">
+                <h2>Ouvrir MP3</h2>
+                <button class="btn btn-green" onclick="cmd('mp3-file')">Fichier</button>
+                <button class="btn btn-green" onclick="cmd('mp3-book')">Livre</button>
+                <button class="btn btn-green" onclick="cmd('mp3-lang')">Langue</button>
+                <button class="btn btn-green" onclick="cmd('mp3-v2')">V2</button>
+                <pre id="mp3-cmd"><button class="copy-btn" onclick="copy('mp3-cmd')">Copier</button>cd "G:\Mon Drive\01 BibleChantee\Scripts"</pre>
+            </div>
+        </div>
+
+        <!-- Generation Suno -->
         <div class="section">
             <h2>Generation Suno</h2>
-            <div class="quick-actions">
-                <button class="btn btn-red" onclick="copyCmd('bloc1')">BLOC 1 (FR_V2,PT,ES,EN)</button>
-                <button class="btn btn-purple" onclick="copyCmd('bloc2')">BLOC 2 (DE,IT,AR,RU)</button>
-                <button class="btn btn-blue" onclick="copyCmd('bloc3')">BLOC 3 (ZH,TL,SW,HI)</button>
-                <button class="btn btn-primary" onclick="copyCmd('bloc4')">BLOC 4 (FR)</button>
-            </div>
-            <pre id="cmd">cd "G:\Mon Drive\01 BibleChantee\Scripts"
+            <button class="btn btn-red" onclick="cmd('gen-bloc1')">BLOC 1 (FR_V2,PT,ES,EN)</button>
+            <button class="btn btn-purple" onclick="cmd('gen-bloc2')">BLOC 2 (DE,IT,AR,RU)</button>
+            <button class="btn btn-blue" onclick="cmd('gen-bloc3')">BLOC 3 (ZH,TL,SW,HI)</button>
+            <button class="btn btn-primary" onclick="cmd('gen-bloc4')">BLOC 4 (FR)</button>
+            <pre id="gen-cmd"><button class="copy-btn" onclick="copy('gen-cmd')">Copier</button>cd "G:\Mon Drive\01 BibleChantee\Scripts"
 python generate_bloc1_mass.py</pre>
         </div>
 
+        <!-- Monitoring -->
         <div class="section">
-            <h2>Blocs</h2>
-            <div style="font-size:0.9em;color:rgba(255,255,255,0.7);">
-                Bloc1: FR_V2+PT+ES+EN | Bloc2: DE+IT+AR+RU | Bloc3: ZH+TL+SW+HI | Bloc4: FR
-            </div>
+            <h2>Monitoring</h2>
+            <button class="btn btn-primary" onclick="cmd('check')">Check Status</button>
+            <button class="btn btn-purple" onclick="cmd('count')">Compter MP3</button>
+            <button class="btn btn-blue" onclick="cmd('credits')">Credits Suno</button>
+            <pre id="mon-cmd"><button class="copy-btn" onclick="copy('mon-cmd')">Copier</button>cd "G:\Mon Drive\01 BibleChantee\Scripts"
+python check_suno_status.py</pre>
         </div>
     </div>
 
     <script>
-        const TARGET = 15457;
-        
-        async function loadStats() {
-            try {
-                const resp = await fetch('progress.json?t=' + Date.now());
-                const data = await resp.json();
-                document.getElementById('v1').textContent = data.mp3_v1 || 0;
-                document.getElementById('v2').textContent = data.mp3_v2 || 0;
-                const total = (data.mp3_v1 || 0);
-                document.getElementById('total').textContent = total;
-                const pct = (total / TARGET * 100).toFixed(1);
-                document.getElementById('pct').textContent = pct + '%';
-                document.getElementById('bar').style.width = pct + '%';
-                document.getElementById('bar').textContent = pct + '%';
-                const d = new Date(data.updated);
-                document.getElementById('updated').textContent = 'Mis a jour: ' + d.toLocaleString('fr-CH');
-            } catch (e) {
-                document.getElementById('updated').textContent = 'Erreur chargement - lancez ACTUALISER_STATS.bat';
+        const BASE = 'G:\\Mon Drive\\01 BibleChantee';
+        let lang = 'FR';
+
+        function setLang(l) {
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('lang-' + l).classList.add('active');
+            lang = l;
+            update();
+        }
+
+        function update() {
+            const book = document.getElementById('book').value;
+            document.getElementById('lyrics-cmd').innerHTML = `<button class="copy-btn" onclick="copy('lyrics-cmd')">Copier</button>Start-Process "${BASE}\\Lyrics\\${lang}\\${book}"`;
+            document.getElementById('mp3-cmd').innerHTML = `<button class="copy-btn" onclick="copy('mp3-cmd')">Copier</button>Start-Process "${BASE}\\Suno_Output\\${lang}\\${book}"`;
+        }
+
+        function cmd(c) {
+            const book = document.getElementById('book').value;
+            const chap = document.getElementById('chap').value.padStart(2,'0');
+            let txt = '';
+            switch(c) {
+                case 'lyrics-file': txt = `notepad "${BASE}\\Lyrics\\${lang}\\${book}\\${book}_${chap}_${lang}.txt"`; document.getElementById('lyrics-cmd').innerHTML = `<button class="copy-btn" onclick="copy('lyrics-cmd')">Copier</button>${txt}`; break;
+                case 'lyrics-book': txt = `Start-Process "${BASE}\\Lyrics\\${lang}\\${book}"`; document.getElementById('lyrics-cmd').innerHTML = `<button class="copy-btn" onclick="copy('lyrics-cmd')">Copier</button>${txt}`; break;
+                case 'lyrics-lang': txt = `Start-Process "${BASE}\\Lyrics\\${lang}"`; document.getElementById('lyrics-cmd').innerHTML = `<button class="copy-btn" onclick="copy('lyrics-cmd')">Copier</button>${txt}`; break;
+                case 'lyrics-all': txt = `Start-Process "${BASE}\\Lyrics"`; document.getElementById('lyrics-cmd').innerHTML = `<button class="copy-btn" onclick="copy('lyrics-cmd')">Copier</button>${txt}`; break;
+                case 'mp3-file': txt = `Start-Process "${BASE}\\Suno_Output\\${lang}\\${book}\\${book}_${chap}.mp3"`; document.getElementById('mp3-cmd').innerHTML = `<button class="copy-btn" onclick="copy('mp3-cmd')">Copier</button>${txt}`; break;
+                case 'mp3-book': txt = `Start-Process "${BASE}\\Suno_Output\\${lang}\\${book}"`; document.getElementById('mp3-cmd').innerHTML = `<button class="copy-btn" onclick="copy('mp3-cmd')">Copier</button>${txt}`; break;
+                case 'mp3-lang': txt = `Start-Process "${BASE}\\Suno_Output\\${lang}"`; document.getElementById('mp3-cmd').innerHTML = `<button class="copy-btn" onclick="copy('mp3-cmd')">Copier</button>${txt}`; break;
+                case 'mp3-v2': txt = `Start-Process "${BASE}\\Suno_Output_V2\\${lang}"`; document.getElementById('mp3-cmd').innerHTML = `<button class="copy-btn" onclick="copy('mp3-cmd')">Copier</button>${txt}`; break;
+                case 'gen-bloc1': txt = `cd "${BASE}\\Scripts"\npython generate_bloc1_mass.py`; document.getElementById('gen-cmd').innerHTML = `<button class="copy-btn" onclick="copy('gen-cmd')">Copier</button>${txt}`; break;
+                case 'gen-bloc2': txt = `cd "${BASE}\\Scripts"\npython generate_bloc2_mass.py`; document.getElementById('gen-cmd').innerHTML = `<button class="copy-btn" onclick="copy('gen-cmd')">Copier</button>${txt}`; break;
+                case 'gen-bloc3': txt = `cd "${BASE}\\Scripts"\npython generate_bloc3_mass.py`; document.getElementById('gen-cmd').innerHTML = `<button class="copy-btn" onclick="copy('gen-cmd')">Copier</button>${txt}`; break;
+                case 'gen-bloc4': txt = `cd "${BASE}\\Scripts"\npython generate_bloc4_mass.py`; document.getElementById('gen-cmd').innerHTML = `<button class="copy-btn" onclick="copy('gen-cmd')">Copier</button>${txt}`; break;
+                case 'check': txt = `cd "${BASE}\\Scripts"\npython check_suno_status.py`; document.getElementById('mon-cmd').innerHTML = `<button class="copy-btn" onclick="copy('mon-cmd')">Copier</button>${txt}`; break;
+                case 'count': txt = `cd "${BASE}"\nWrite-Host "V1:" (Get-ChildItem Suno_Output -Recurse -Filter *.mp3).Count\nWrite-Host "V2:" (Get-ChildItem Suno_Output_V2 -Recurse -Filter *.mp3 -EA Silent).Count`; document.getElementById('mon-cmd').innerHTML = `<button class="copy-btn" onclick="copy('mon-cmd')">Copier</button>${txt}`; break;
+                case 'credits': txt = `cd "${BASE}\\Scripts"\npython -c "from suno_api_generator import SunoAPIGenerator; from api_key import SUNO_API_KEY; g=SunoAPIGenerator(SUNO_API_KEY); print(g.check_credits())"`; document.getElementById('mon-cmd').innerHTML = `<button class="copy-btn" onclick="copy('mon-cmd')">Copier</button>${txt}`; break;
             }
         }
 
-        function copyCmd(b) {
-            const cmds = {bloc1:'generate_bloc1_mass.py',bloc2:'generate_bloc2_mass.py',bloc3:'generate_bloc3_mass.py',bloc4:'generate_bloc4_mass.py'};
-            const cmd = 'cd "G:\\Mon Drive\\01 BibleChantee\\Scripts"\npython ' + cmds[b];
-            document.getElementById('cmd').textContent = cmd;
-            navigator.clipboard.writeText(cmd);
+        function copy(id) {
+            const el = document.getElementById(id);
+            const txt = el.textContent.replace('Copier','').trim();
+            navigator.clipboard.writeText(txt);
         }
 
+        async function loadStats() {
+            try {
+                const r = await fetch('progress.json?t='+Date.now());
+                const d = await r.json();
+                document.getElementById('v1').textContent = d.mp3_v1 || 0;
+                document.getElementById('v2').textContent = d.mp3_v2 || 0;
+                const pct = ((d.mp3_v1||0) / 15457 * 100).toFixed(1);
+                document.getElementById('pct').textContent = pct + '%';
+                document.getElementById('bar').style.width = pct + '%';
+                document.getElementById('bar').textContent = pct + '%';
+                document.getElementById('updated').textContent = 'Maj: ' + new Date(d.updated).toLocaleString('fr-CH');
+            } catch(e) { document.getElementById('updated').textContent = 'Erreur - watchdog actif?'; }
+        }
+
+        update();
         loadStats();
     </script>
 </body>
