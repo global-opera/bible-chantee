@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Chant&eacute;e V2 - Karaok&eacute;</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        .home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #667eea;
+            border: 2px solid #667eea;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        .home-button:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 20px 20px;
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 20px;
+            min-height: 100vh;
+        }
+        @media (max-width: 1000px) {
+            .main-container { grid-template-columns: 1fr; padding-top: 70px; }
+            .books-panel { max-height: 250px; }
+        }
+        .books-panel {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow-y: auto;
+            max-height: calc(100vh - 100px);
+        }
+        .panel-title {
+            text-align: center;
+            color: #667eea;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        .version-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 0.6em;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
+        .section-title {
+            color: #667eea;
+            font-size: 0.95em;
+            margin: 15px 0 8px;
+            padding-left: 5px;
+            font-weight: 600;
+        }
+        .section-title:first-of-type { margin-top: 0; }
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 6px;
+        }
+        .book {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border: 2px solid transparent;
+            border-radius: 8px;
+            padding: 8px 6px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.8em;
+        }
+        .book:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        .book.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-color: #667eea;
+        }
+        .book.unavailable {
+            opacity: 0.35;
+            cursor: not-allowed;
+        }
+        .book.unavailable:hover {
+            transform: none;
+            box-shadow: none;
+            border-color: transparent;
+        }
+        .book-num { font-size: 0.7em; opacity: 0.7; }
+        .player-panel {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+        }
+        .player-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .player-title {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        .player-subtitle {
+            color: #666;
+            font-size: 0.95em;
+        }
+        .chapter-nav {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        .chapter-select {
+            background: #f8f9fa;
+            border: 2px solid #667eea;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 1em;
+            color: #333;
+            cursor: pointer;
+        }
+        .nav-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .nav-btn:hover { transform: scale(1.05); box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); }
+        .nav-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+        .info-box {
+            background: #cce5ff;
+            border-left: 4px solid #004085;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            color: #004085;
+            font-size: 0.9em;
+        }
+        audio {
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .lyrics-window {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 50px;
+            min-height: 300px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .lyrics-line {
+            font-size: 1.8em;
+            line-height: 1.8;
+            color: #333;
+            font-weight: 500;
+            margin: 5px 0;
+            transition: all 0.4s ease;
+            opacity: 0.95;
+            white-space: pre-line;
+        }
+        .lyrics-line.active {
+            color: #667eea;
+            font-weight: 600;
+            transform: scale(1.05);
+            text-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+        }
+        .time {
+            text-align: center;
+            color: #666;
+            margin-top: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+        }
+        .no-selection {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .no-selection h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        .no-selection p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .stats-box {
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        .stats-box span {
+            display: inline-block;
+            margin: 0 15px;
+            color: #667eea;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="home-button">&#8592; Retour Accueil</a>
+
+    <div class="main-container">
+        <div class="books-panel">
+            <div class="panel-title">Bible Chant&eacute;e <span class="version-badge">V2</span></div>
+            
+            <div class="section-title">Ancien Testament</div>
+            <div class="books-grid" id="old-testament"></div>
+            
+            <div class="section-title">Nouveau Testament</div>
+            <div class="books-grid" id="new-testament"></div>
+        </div>
+
+        <div class="player-panel" id="player-panel">
+            <div class="no-selection">
+                <h2>&#127925; Bible Chant&eacute;e V2</h2>
+                <p>S&eacute;lectionnez un livre pour &eacute;couter avec les paroles synchronis&eacute;es.</p>
+                <p style="margin-top:10px; font-size:0.9em; opacity:0.7;">
+                    G&eacute;n&eacute;ration Suno API V5 &bull; Synchronisation Whisper AI
+                </p>
+                <div class="stats-box">
+                    <span>&#128214; 2 livres</span>
+                    <span>&#127925; 90 chapitres</span>
+                    <span>&#9201; Karaok&eacute;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration des livres V2
+        const books = [
+            {num: "01_GEN", name: "Gen&egrave;se", chapters: 50, testament: "old", available: true},
+            {num: "02_EXO", name: "Exode", chapters: 40, testament: "old", available: true},
+            {num: "03_LEV", name: "L&eacute;vitique", chapters: 27, testament: "old", available: false},
+            {num: "04_NUM", name: "Nombres", chapters: 36, testament: "old", available: false},
+            {num: "05_DEU", name: "Deut&eacute;ronome", chapters: 34, testament: "old", available: false},
+            {num: "06_JOS", name: "Josu&eacute;", chapters: 24, testament: "old", available: false},
+            {num: "07_JUG", name: "Juges", chapters: 21, testament: "old", available: false},
+            {num: "08_RUT", name: "Ruth", chapters: 4, testament: "old", available: false},
+            {num: "09_1SA", name: "1 Samuel", chapters: 31, testament: "old", available: false},
+            {num: "10_2SA", name: "2 Samuel", chapters: 24, testament: "old", available: false},
+            {num: "11_1KI", name: "1 Rois", chapters: 22, testament: "old", available: false},
+            {num: "12_2KI", name: "2 Rois", chapters: 25, testament: "old", available: false},
+            {num: "13_1CH", name: "1 Chroniques", chapters: 29, testament: "old", available: false},
+            {num: "14_2CH", name: "2 Chroniques", chapters: 36, testament: "old", available: false},
+            {num: "15_EZR", name: "Esdras", chapters: 10, testament: "old", available: false},
+            {num: "16_NEH", name: "N&eacute;h&eacute;mie", chapters: 13, testament: "old", available: false},
+            {num: "17_EST", name: "Esther", chapters: 10, testament: "old", available: false},
+            {num: "18_JOB", name: "Job", chapters: 42, testament: "old", available: false},
+            {num: "19_PSA", name: "Psaumes", chapters: 150, testament: "old", available: false},
+            {num: "20_PRO", name: "Proverbes", chapters: 31, testament: "old", available: false},
+            {num: "21_ECC", name: "Eccl&eacute;siaste", chapters: 12, testament: "old", available: false},
+            {num: "22_SNG", name: "Cantique", chapters: 8, testament: "old", available: false},
+            {num: "23_ISA", name: "Esa&iuml;e", chapters: 66, testament: "old", available: false},
+            {num: "24_JER", name: "J&eacute;r&eacute;mie", chapters: 52, testament: "old", available: false},
+            {num: "25_LAM", name: "Lamentations", chapters: 5, testament: "old", available: false},
+            {num: "26_EZK", name: "Ez&eacute;chiel", chapters: 48, testament: "old", available: false},
+            {num: "27_DAN", name: "Daniel", chapters: 12, testament: "old", available: false},
+            {num: "28_HOS", name: "Os&eacute;e", chapters: 14, testament: "old", available: false},
+            {num: "29_JOL", name: "Jo&euml;l", chapters: 3, testament: "old", available: false},
+            {num: "30_AMO", name: "Amos", chapters: 9, testament: "old", available: false},
+            {num: "31_OBA", name: "Abdias", chapters: 1, testament: "old", available: false},
+            {num: "32_JON", name: "Jonas", chapters: 4, testament: "old", available: false},
+            {num: "33_MIC", name: "Mich&eacute;e", chapters: 7, testament: "old", available: false},
+            {num: "34_NAM", name: "Nahum", chapters: 3, testament: "old", available: false},
+            {num: "35_HAB", name: "Habacuc", chapters: 3, testament: "old", available: false},
+            {num: "36_ZEP", name: "Sophonie", chapters: 3, testament: "old", available: false},
+            {num: "37_HAG", name: "Agg&eacute;e", chapters: 2, testament: "old", available: false},
+            {num: "38_ZEC", name: "Zacharie", chapters: 14, testament: "old", available: false},
+            {num: "39_MAL", name: "Malachie", chapters: 4, testament: "old", available: false},
+            {num: "40_MAT", name: "Matthieu", chapters: 28, testament: "new", available: false},
+            {num: "41_MAR", name: "Marc", chapters: 16, testament: "new", available: false},
+            {num: "42_LUK", name: "Luc", chapters: 24, testament: "new", available: false},
+            {num: "43_JHN", name: "Jean", chapters: 21, testament: "new", available: false},
+            {num: "44_ACT", name: "Actes", chapters: 28, testament: "new", available: false},
+            {num: "45_ROM", name: "Romains", chapters: 16, testament: "new", available: false},
+            {num: "46_1CO", name: "1 Corinthiens", chapters: 16, testament: "new", available: false},
+            {num: "47_2CO", name: "2 Corinthiens", chapters: 13, testament: "new", available: false},
+            {num: "48_GAL", name: "Galates", chapters: 6, testament: "new", available: false},
+            {num: "49_EPH", name: "Eph&eacute;siens", chapters: 6, testament: "new", available: false},
+            {num: "50_PHP", name: "Philippiens", chapters: 4, testament: "new", available: false},
+            {num: "51_COL", name: "Colossiens", chapters: 4, testament: "new", available: false},
+            {num: "52_1TH", name: "1 Thessaloniciens", chapters: 5, testament: "new", available: false},
+            {num: "53_2TH", name: "2 Thessaloniciens", chapters: 3, testament: "new", available: false},
+            {num: "54_1TI", name: "1 Timoth&eacute;e", chapters: 6, testament: "new", available: false},
+            {num: "55_2TI", name: "2 Timoth&eacute;e", chapters: 4, testament: "new", available: false},
+            {num: "56_TIT", name: "Tite", chapters: 3, testament: "new", available: false},
+            {num: "57_PHM", name: "Phil&eacute;mon", chapters: 1, testament: "new", available: false},
+            {num: "58_HEB", name: "H&eacute;breux", chapters: 13, testament: "new", available: false},
+            {num: "59_JAS", name: "Jacques", chapters: 5, testament: "new", available: false},
+            {num: "60_1PE", name: "1 Pierre", chapters: 5, testament: "new", available: false},
+            {num: "61_2PE", name: "2 Pierre", chapters: 3, testament: "new", available: false},
+            {num: "62_1JN", name: "1 Jean", chapters: 5, testament: "new", available: false},
+            {num: "63_2JN", name: "2 Jean", chapters: 1, testament: "new", available: false},
+            {num: "64_3JN", name: "3 Jean", chapters: 1, testament: "new", available: false},
+            {num: "65_JUD", name: "Jude", chapters: 1, testament: "new", available: false},
+            {num: "66_REV", name: "Apocalypse", chapters: 22, testament: "new", available: false}
+        ];
+
+        let currentBook = null;
+        let currentChapter = 1;
+        let currentBlock = -1;
+        let blocks = [];
+
+        // Rendu des livres
+        function renderBooks() {
+            const oldT = document.getElementById('old-testament');
+            const newT = document.getElementById('new-testament');
+            
+            books.forEach((book, idx) => {
+                const div = document.createElement('div');
+                div.className = 'book' + (book.available ? '' : ' unavailable');
+                div.dataset.num = book.num;
+                div.innerHTML = `<div class="book-num">${(idx + 1).toString().padStart(2, '0')}</div><div>${book.name}</div>`;
+                
+                if (book.available) {
+                    div.onclick = () => selectBook(book);
+                }
+                
+                if (book.testament === 'old') oldT.appendChild(div);
+                else newT.appendChild(div);
+            });
+        }
+
+        // Selection d'un livre
+        function selectBook(book) {
+            currentBook = book;
+            currentChapter = 1;
+            
+            document.querySelectorAll('.book').forEach(b => b.classList.remove('active'));
+            document.querySelector(`.book[data-num="${book.num}"]`).classList.add('active');
+            
+            renderPlayer();
+            loadChapter(1);
+        }
+
+        // Rendu du lecteur
+        function renderPlayer() {
+            const panel = document.getElementById('player-panel');
+            const bookName = currentBook.name;
+            
+            panel.innerHTML = `
+                <div class="player-header">
+                    <h1 class="player-title" id="player-title">${bookName}</h1>
+                    <p class="player-subtitle" id="player-subtitle">${bookName} Chapitre 1 &bull; G&eacute;n&eacute;ration automatique API V5</p>
+                    <div class="chapter-nav">
+                        <button class="nav-btn" id="prev-btn" onclick="prevChapter()">&#9664; Pr&eacute;c&eacute;dent</button>
+                        <select class="chapter-select" id="chapter-select" onchange="changeChapter(this.value)">
+                            ${Array.from({length: currentBook.chapters}, (_, i) => 
+                                `<option value="${i+1}">Chapitre ${i+1}</option>`
+                            ).join('')}
+                        </select>
+                        <button class="nav-btn" id="next-btn" onclick="nextChapter()">Suivant &#9654;</button>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <strong>Synchronisation automatique Whisper AI:</strong><br>
+                    &bull; Paroles synchronis&eacute;es en temps r&eacute;el<br>
+                    &bull; Lignes individuelles propres
+                </div>
+                
+                <audio id="audio" controls></audio>
+                
+                <div class="lyrics-window" id="lyricsWindow">
+                    <div class="lyrics-line">Appuyez sur Play pour commencer...</div>
+                </div>
+                
+                <div class="time" id="time">00:00 / 00:00</div>
+            `;
+            
+            setupAudioEvents();
+        }
+
+        // Charger un chapitre
+        function loadChapter(chapter) {
+            currentChapter = chapter;
+            currentBlock = -1;
+            blocks = [];
+            
+            const chapterStr = chapter.toString().padStart(2, '0');
+            const bookName = currentBook.name;
+            
+            document.getElementById('player-title').innerHTML = bookName;
+            document.getElementById('player-subtitle').innerHTML = `${bookName} Chapitre ${chapter} &bull; G&eacute;n&eacute;ration automatique API V5`;
+            document.getElementById('chapter-select').value = chapter;
+            document.getElementById('prev-btn').disabled = chapter <= 1;
+            document.getElementById('next-btn').disabled = chapter >= currentBook.chapters;
+            
+            document.getElementById('lyricsWindow').innerHTML = '<div class="lyrics-line">Chargement...</div>';
+            
+            // Charger les paroles depuis lyricsV2 si disponible
+            const lrcKey = `${currentBook.num}_${chapterStr}`;
+            if (typeof lyricsV2 !== 'undefined' && lyricsV2[lrcKey]) {
+                blocks = parseLRC(lyricsV2[lrcKey]);
+                document.getElementById('lyricsWindow').innerHTML = '<div class="lyrics-line">Appuyez sur Play pour commencer...</div>';
+            } else {
+                document.getElementById('lyricsWindow').innerHTML = '<div class="lyrics-line" style="opacity:0.6;">Paroles karaok&eacute; en cours de pr&eacute;paration...</div>';
+            }
+            
+            // Charger l'audio
+            const audio = document.getElementById('audio');
+            if (typeof audioUrlsV2 !== 'undefined' && audioUrlsV2[lrcKey]) {
+                audio.src = audioUrlsV2[lrcKey];
+            } else {
+                audio.src = '';
+            }
+        }
+
+        // Parser LRC
+        function parseLRC(lrc) {
+            const lines = lrc.split('\n');
+            return lines.map(line => {
+                const match = line.match(/\[(\d+):(\d+\.\d+)\]\s*(.+)/);
+                if (match) {
+                    const minutes = parseInt(match[1]);
+                    const seconds = parseFloat(match[2]);
+                    return {
+                        time: minutes * 60 + seconds,
+                        text: match[3]
+                    };
+                }
+                return null;
+            }).filter(Boolean);
+        }
+
+        // Events audio
+        function setupAudioEvents() {
+            const audio = document.getElementById('audio');
+            
+            audio.addEventListener('timeupdate', () => {
+                updateTime();
+                updateLyrics();
+            });
+            
+            audio.addEventListener('play', () => {
+                if (currentBlock === -1 && blocks.length > 0) {
+                    document.getElementById('lyricsWindow').innerHTML = '<div class="lyrics-line">&#9835; &Eacute;coute en cours...</div>';
+                }
+            });
+        }
+
+        // Mise a jour du temps
+        function updateTime() {
+            const audio = document.getElementById('audio');
+            const currentTime = audio.currentTime;
+            const duration = audio.duration || 0;
+            
+            const formatTime = (s) => {
+                const mins = Math.floor(s / 60);
+                const secs = Math.floor(s % 60);
+                return `${mins}:${secs.toString().padStart(2, '0')}`;
+            };
+            
+            document.getElementById('time').textContent = `${formatTime(currentTime)} / ${formatTime(duration)}`;
+        }
+
+        // Mise a jour des paroles
+        function updateLyrics() {
+            if (!blocks || blocks.length === 0) return;
+            
+            const audio = document.getElementById('audio');
+            const currentTime = audio.currentTime;
+            
+            let activeIndex = -1;
+            for (let i = 0; i < blocks.length; i++) {
+                if (currentTime >= blocks[i].time) {
+                    activeIndex = i;
+                } else {
+                    break;
+                }
+            }
+            
+            if (activeIndex !== currentBlock && activeIndex >= 0) {
+                currentBlock = activeIndex;
+                const block = blocks[currentBlock];
+                document.getElementById('lyricsWindow').innerHTML = `<div class="lyrics-line active">${block.text}</div>`;
+            }
+        }
+
+        // Navigation
+        function prevChapter() {
+            if (currentChapter > 1) loadChapter(currentChapter - 1);
+        }
+
+        function nextChapter() {
+            if (currentChapter < currentBook.chapters) loadChapter(currentChapter + 1);
+        }
+
+        function changeChapter(chapter) {
+            loadChapter(parseInt(chapter));
+        }
+
+        // Init
+        renderBooks();
+    </script>
+    
+    <!-- Fichiers de donnees V2 (a generer) -->
+    <script src="lyrics-v2.js"></script>
+    <script src="audio-urls-v2.js"></script>
+</body>
+</html>
