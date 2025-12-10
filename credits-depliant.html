@@ -9,6 +9,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        .home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            color: #1e3a8a;
+            border: 2px solid #1e3a8a;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        .home-button:hover {
+            background: #1e3a8a;
+            color: white;
+            transform: translateY(-2px);
+        }
         body {
             font-family: 'Montserrat', sans-serif;
             background: linear-gradient(135deg, #1a1a2e 0%, #1e3a8a 100%);
@@ -237,6 +259,7 @@
     </style>
 </head>
 <body>
+    <a href="index.html" class="home-button">&#8592; Retour Accueil</a>
     <div class="page">
         <!-- Panel 1 - Couverture -->
         <div class="panel panel-1">
