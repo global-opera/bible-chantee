@@ -7,11 +7,12 @@ Au commencement, tout était vide,
 Les ténèbres dansaient sur l'abîme,
 L'Esprit de Dieu se mouvait,
 Et Sa voix, comme un souffle, s'élevait.
+[Spoken Word] « Que la lumière soit ! » a-t-il dit,
 Et la lumière a brillé, elle a pris vie.
-
-[Chorus]
 Dieu vit que c'était bon,
 Il sépara le jour de l'horizon.
+
+[Chorus]
 Gloire à Toi, Créateur des cieux,
 Toi qui fais briller l'azur lumineux.
 Dans chaque étoile, dans chaque mer,
@@ -24,16 +25,17 @@ La verdure pousse, les arbres fleurissent,
 Chaque fruit, chaque semence, en Lui s'épanouissent.
 Les luminaires brillent dans l'obscurité,
 Signes de temps, de paix et de vérité.
-
-[Chorus]
 Dieu vit que c'était bon,
 Dans chaque créature, un hymne, un chant.
+
+[Chorus]
 Gloire à Toi, Créateur des cieux,
 Toi qui fais briller l'azur lumineux.
 Dans chaque étoile, dans chaque mer,
 Nous chantons, ô Dieu, Ta lumière sur terre.
 
 [Bridge]
+[Spoken Word] « Faisons l'homme » à notre image,
 Unis dans la bonté, dans le partage.
 Élevons-nous, dominons les mers,
 Sous Ta grâce, nous sommes Ta lumière.
@@ -41,6 +43,12 @@ Tout est très bon, oh, que c'est vrai,
 Dans chaque souffle, dans chaque pas,
 Nous glorifions, nous Te louons,
 Pour la création, pour la vie, pour l'union.
+
+[Chorus]
+Gloire à Toi, Créateur des cieux,
+Toi qui fais briller l'azur lumineux.
+Dans chaque étoile, dans chaque mer,
+Nous chantons, ô Dieu, Ta lumière sur terre.
 
 [Outro]
 Au commencement, tout a été fait,
@@ -84,5 +92,5 @@ Dans l'arche de Ta grâce, je suis en sécurité.
 Loin des eaux tumultueuses, je chante Ta bonté,
 Oh, Éternel, en Toi, je suis restauré.`
     }
-    // Autres livres à ajouter via script d'import
+    // Autres livres à ajouter au fur et à mesure
 };
