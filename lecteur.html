@@ -209,6 +209,44 @@
         .nav-btn:hover { background: #2563eb; }
         .nav-btn:disabled { background: #444; cursor: not-allowed; }
         .chapter-select { padding: 8px; border-radius: 5px; background: #333; color: #fff; border: 1px solid #555; }
+        .version-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: 15px;
+            padding: 5px 12px;
+            background: rgba(255,206,0,0.15);
+            border-radius: 20px;
+        }
+        .toggle-label { color: #aaa; font-size: 0.85em; font-weight: 600; }
+        .toggle-label.toggle-v2 { color: #aaa; }
+        .toggle-switch {
+            position: relative;
+            width: 44px;
+            height: 24px;
+        }
+        .toggle-switch input { opacity: 0; width: 0; height: 0; }
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: #555;
+            transition: 0.3s;
+            border-radius: 24px;
+        }
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background: white;
+            transition: 0.3s;
+            border-radius: 50%;
+        }
+        .toggle-switch input:checked + .toggle-slider { background: #667eea; }
+        .toggle-switch input:checked + .toggle-slider:before { transform: translateX(20px); }
         
         /* Boutons Paroles et Bible */
         .lyrics-btn, .bible-btn {
@@ -424,6 +462,14 @@
             <button class="nav-btn" id="prev-btn">Precedent</button>
             <select class="chapter-select" id="chapter-select"></select>
             <button class="nav-btn" id="next-btn">Suivant</button>
+            <div class="version-toggle" id="versionToggle" style="display:none;">
+                <span class="toggle-label">V1</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="versionSwitch" onchange="switchVersion()">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label toggle-v2">V2</span>
+            </div>
             <button class="lyrics-btn" id="lyricsBtn" onclick="toggleLyrics()">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -457,6 +503,7 @@
     <!-- Donnees des paroles et de la Bible -->
     <script src="lyrics-data.js"></script>
     <script src="audio-urls.js"></script>
+    <script src="audio-urls-v2.js"></script>
     <script src="chapter-titles.js"></script>
     <script src="bible-data.js"></script>
     <script src="lyrics-timestamps.js"></script>
@@ -798,13 +845,43 @@
                 select.appendChild(opt);
             }
             document.getElementById('player').classList.add('active');
+            checkV2Available();
             playChapter(1);
+        }
+        
+        let useV2 = false; // Toggle V1/V2
+        
+        function switchVersion() {
+            useV2 = document.getElementById('versionSwitch').checked;
+            // Recharger le chapitre avec la nouvelle version
+            if (currentBook && currentChapter) {
+                playChapter(currentChapter);
+            }
+        }
+        
+        function checkV2Available() {
+            // Afficher le toggle si V2 est disponible pour ce livre
+            const toggle = document.getElementById('versionToggle');
+            if (typeof audioUrlsV2 !== 'undefined' && audioUrlsV2[currentBook] && audioUrlsV2[currentBook][currentChapter]) {
+                toggle.style.display = 'flex';
+            } else {
+                toggle.style.display = 'none';
+                useV2 = false;
+                document.getElementById('versionSwitch').checked = false;
+            }
         }
         
         function playChapter(chapter) {
             currentChapter = chapter;
-            // Utiliser URLs Suno CDN depuis audio-urls.js
-            const url = audioUrls[currentBook] && audioUrls[currentBook][chapter];
+            
+            // Choisir la source audio V1 ou V2
+            let url;
+            if (useV2 && typeof audioUrlsV2 !== 'undefined' && audioUrlsV2[currentBook] && audioUrlsV2[currentBook][chapter]) {
+                url = audioUrlsV2[currentBook][chapter];
+            } else {
+                url = audioUrls[currentBook] && audioUrls[currentBook][chapter];
+            }
+            
             if (!url) {
                 console.error("URL non trouvee pour:", currentBook, chapter);
                 return;
@@ -821,6 +898,7 @@
             }
             document.getElementById('player-title').textContent = displayTitle;
             document.getElementById('chapter-select').value = chapter;
+            checkV2Available();
             document.getElementById('prev-btn').disabled = chapter <= 1;
             document.getElementById('next-btn').disabled = chapter >= book.chapters;
 
