@@ -166,18 +166,43 @@
         }
         .nav-btn:hover { transform: scale(1.05); box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); }
         .nav-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
-        .info-box {
-            background: #cce5ff;
-            border-left: 4px solid #004085;
+        .sync-controls {
+            background: #e8f4fd;
+            border-radius: 10px;
             padding: 15px;
-            margin: 20px 0;
-            border-radius: 5px;
-            color: #004085;
-            font-size: 0.9em;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .sync-controls label {
+            color: #667eea;
+            font-weight: 600;
+        }
+        .sync-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .sync-btn:hover { transform: scale(1.1); }
+        .sync-value {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            min-width: 60px;
+            text-align: center;
+            color: #333;
         }
         audio {
             width: 100%;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             border-radius: 10px;
         }
         .lyrics-window {
@@ -267,8 +292,8 @@
                     G&eacute;n&eacute;ration Suno API V5 &bull; Synchronisation Whisper AI
                 </p>
                 <div class="stats-box">
-                    <span>&#128214; 2 livres</span>
-                    <span>&#127925; 90 chapitres</span>
+                    <span>&#128214; 1 livre</span>
+                    <span>&#127925; 50 chapitres</span>
                     <span>&#9201; Karaok&eacute;</span>
                 </div>
             </div>
@@ -279,7 +304,7 @@
         // Configuration des livres V2
         const books = [
             {num: "01_GEN", name: "Gen&egrave;se", chapters: 50, testament: "old", available: true},
-            {num: "02_EXO", name: "Exode", chapters: 40, testament: "old", available: true},
+            {num: "02_EXO", name: "Exode", chapters: 40, testament: "old", available: false},
             {num: "03_LEV", name: "L&eacute;vitique", chapters: 27, testament: "old", available: false},
             {num: "04_NUM", name: "Nombres", chapters: 36, testament: "old", available: false},
             {num: "05_DEU", name: "Deut&eacute;ronome", chapters: 34, testament: "old", available: false},
@@ -350,6 +375,7 @@
         let currentChapter = 1;
         let currentBlock = -1;
         let blocks = [];
+        let syncOffset = 6; // Offset par defaut en secondes (ajustable)
 
         // Rendu des livres
         function renderBooks() {
@@ -391,25 +417,27 @@
             panel.innerHTML = `
                 <div class="player-header">
                     <h1 class="player-title" id="player-title">${bookName}</h1>
-                    <p class="player-subtitle" id="player-subtitle">${bookName} Chapitre 1 &bull; G&eacute;n&eacute;ration automatique API V5</p>
+                    <p class="player-subtitle" id="player-subtitle">${bookName} Chapitre 1 &bull; G&eacute;n&eacute;ration API V5</p>
                     <div class="chapter-nav">
-                        <button class="nav-btn" id="prev-btn" onclick="prevChapter()">&#9664; Pr&eacute;c&eacute;dent</button>
+                        <button class="nav-btn" id="prev-btn" onclick="prevChapter()">&#9664; Pr&eacute;c.</button>
                         <select class="chapter-select" id="chapter-select" onchange="changeChapter(this.value)">
                             ${Array.from({length: currentBook.chapters}, (_, i) => 
                                 `<option value="${i+1}">Chapitre ${i+1}</option>`
                             ).join('')}
                         </select>
-                        <button class="nav-btn" id="next-btn" onclick="nextChapter()">Suivant &#9654;</button>
+                        <button class="nav-btn" id="next-btn" onclick="nextChapter()">Suiv. &#9654;</button>
                     </div>
                 </div>
                 
-                <div class="info-box">
-                    <strong>Synchronisation automatique Whisper AI:</strong><br>
-                    &bull; Paroles synchronis&eacute;es en temps r&eacute;el<br>
-                    &bull; Lignes individuelles propres
-                </div>
-                
                 <audio id="audio" controls></audio>
+                
+                <div class="sync-controls">
+                    <label>Synchro:</label>
+                    <button class="sync-btn" onclick="adjustSync(-1)">-</button>
+                    <span class="sync-value" id="sync-value">+${syncOffset}s</span>
+                    <button class="sync-btn" onclick="adjustSync(1)">+</button>
+                    <button class="nav-btn" style="padding:8px 15px; font-size:0.85em;" onclick="syncOffset=6; updateSyncDisplay();">Reset</button>
+                </div>
                 
                 <div class="lyrics-window" id="lyricsWindow">
                     <div class="lyrics-line">Appuyez sur Play pour commencer...</div>
@@ -421,40 +449,43 @@
             setupAudioEvents();
         }
 
+        // Ajuster la synchronisation
+        function adjustSync(delta) {
+            syncOffset += delta;
+            updateSyncDisplay();
+        }
+        
+        function updateSyncDisplay() {
+            const display = document.getElementById('sync-value');
+            if (display) {
+                display.textContent = (syncOffset >= 0 ? '+' : '') + syncOffset + 's';
+            }
+        }
+
         // Charger un chapitre
         function loadChapter(chapter) {
             currentChapter = chapter;
             currentBlock = -1;
             blocks = [];
             
-            // Reset detection de voix pour nouveau chapitre
-            voiceDetected = false;
-            voiceOffset = 0;
-            firstLrcTime = 0;
-            
             const chapterStr = chapter.toString().padStart(2, '0');
             const bookName = currentBook.name;
             
             document.getElementById('player-title').innerHTML = bookName;
-            document.getElementById('player-subtitle').innerHTML = `${bookName} Chapitre ${chapter} &bull; G&eacute;n&eacute;ration automatique API V5`;
+            document.getElementById('player-subtitle').innerHTML = `${bookName} Chapitre ${chapter} &bull; G&eacute;n&eacute;ration API V5`;
             document.getElementById('chapter-select').value = chapter;
             document.getElementById('prev-btn').disabled = chapter <= 1;
             document.getElementById('next-btn').disabled = chapter >= currentBook.chapters;
             
             document.getElementById('lyricsWindow').innerHTML = '<div class="lyrics-line">Chargement...</div>';
             
-            // Charger les paroles depuis lyricsV2 si disponible
+            // Charger les paroles
             const lrcKey = `${currentBook.num}_${chapterStr}`;
             if (typeof lyricsV2 !== 'undefined' && lyricsV2[lrcKey]) {
                 blocks = parseLRC(lyricsV2[lrcKey]);
-                // Stocker le premier timestamp LRC pour calcul d'offset
-                if (blocks.length > 0) {
-                    firstLrcTime = blocks[0].time;
-                    console.log('First LRC timestamp:', firstLrcTime);
-                }
                 document.getElementById('lyricsWindow').innerHTML = '<div class="lyrics-line">Appuyez sur Play pour commencer...</div>';
             } else {
-                document.getElementById('lyricsWindow').innerHTML = '<div class="lyrics-line" style="opacity:0.6;">Paroles karaok&eacute; en cours de pr&eacute;paration...</div>';
+                document.getElementById('lyricsWindow').innerHTML = '<div class="lyrics-line" style="opacity:0.6;">Paroles non disponibles</div>';
             }
             
             // Charger l'audio
@@ -473,7 +504,6 @@
             const timestamps = [];
             let match;
             
-            // Trouver tous les timestamps et leurs positions
             while ((match = regex.exec(lrc)) !== null) {
                 timestamps.push({
                     time: parseInt(match[1]) * 60 + parseFloat(match[2]),
@@ -482,7 +512,6 @@
                 });
             }
             
-            // Extraire le texte entre chaque timestamp
             for (let i = 0; i < timestamps.length; i++) {
                 const start = timestamps[i].endIndex;
                 const end = (i + 1 < timestamps.length) ? timestamps[i + 1].index : lrc.length;
@@ -498,100 +527,18 @@
             return blocks;
         }
 
-        // Detection intelligente du debut de voix
-        let voiceOffset = 0;
-        let audioContext = null;
-        let analyser = null;
-        let voiceDetected = false;
-        let firstLrcTime = 0;
-
-        function setupVoiceDetection(audioElement) {
-            if (audioContext) return;
-            
-            audioContext = new (window.AudioContext || window.webkitAudioContext)();
-            analyser = audioContext.createAnalyser();
-            analyser.fftSize = 256;
-            
-            const source = audioContext.createMediaElementSource(audioElement);
-            source.connect(analyser);
-            analyser.connect(audioContext.destination);
-            
-            console.log('Voice detection initialized');
-        }
-
-        function detectVoiceStart(audioElement) {
-            if (!analyser || voiceDetected) return;
-            
-            const dataArray = new Uint8Array(analyser.frequencyBinCount);
-            analyser.getByteFrequencyData(dataArray);
-            
-            // Calculer le volume moyen (focus sur frequences vocales 100-3000Hz)
-            let sum = 0;
-            const startBin = Math.floor(100 / (audioContext.sampleRate / analyser.fftSize));
-            const endBin = Math.floor(3000 / (audioContext.sampleRate / analyser.fftSize));
-            
-            for (let i = startBin; i < endBin && i < dataArray.length; i++) {
-                sum += dataArray[i];
-            }
-            const avgVolume = sum / (endBin - startBin);
-            
-            // Seuil de detection de voix (ajustable)
-            const VOICE_THRESHOLD = 50;
-            
-            if (avgVolume > VOICE_THRESHOLD && !voiceDetected) {
-                const actualVoiceStart = audioElement.currentTime;
-                voiceOffset = actualVoiceStart - firstLrcTime;
-                voiceDetected = true;
-                
-                console.log('Voice detected at:', actualVoiceStart.toFixed(2), 's');
-                console.log('LRC first timestamp:', firstLrcTime.toFixed(2), 's');
-                console.log('Calculated offset:', voiceOffset.toFixed(2), 's');
-                
-                // Afficher l'offset dans l'info box
-                const infoBox = document.querySelector('.info-box');
-                if (infoBox) {
-                    infoBox.innerHTML = `<strong>Synchronisation automatique:</strong><br>
-                        &bull; Voix d&eacute;tect&eacute;e &agrave; ${actualVoiceStart.toFixed(1)}s<br>
-                        &bull; Offset appliqu&eacute;: +${voiceOffset.toFixed(1)}s`;
-                }
-            }
-        }
-
         // Events audio
         function setupAudioEvents() {
             const audio = document.getElementById('audio');
             
-            audio.addEventListener('play', () => {
-                // Initialiser la detection de voix au premier play
-                if (!audioContext) {
-                    setupVoiceDetection(audio);
-                }
-                if (audioContext && audioContext.state === 'suspended') {
-                    audioContext.resume();
-                }
-                
-                if (currentBlock === -1 && blocks.length > 0) {
-                    document.getElementById('lyricsWindow').innerHTML = '<div class="lyrics-line">&#9835; D&eacute;tection de la voix...</div>';
-                }
-            });
-            
             audio.addEventListener('timeupdate', () => {
                 updateTime();
-                
-                // Detecter le debut de voix pendant les 20 premieres secondes
-                if (!voiceDetected && audio.currentTime < 20) {
-                    detectVoiceStart(audio);
-                }
-                
                 updateLyrics();
             });
             
-            audio.addEventListener('seeked', () => {
-                // Reset la detection si on revient au debut
-                if (audio.currentTime < 5) {
-                    voiceDetected = false;
-                    voiceOffset = 0;
-                    currentBlock = -1;
+            audio.addEventListener('play', () => {
+                if (currentBlock === -1 && blocks.length > 0) {
+                    document.getElementById('lyricsWindow').innerHTML = '<div class="lyrics-line">&#9835; &Eacute;coute en cours...</div>';
                 }
             });
         }
@@ -599,25 +546,20 @@
         // Mise a jour du temps
         function updateTime() {
             const audio = document.getElementById('audio');
-            const currentTime = audio.currentTime;
-            const duration = audio.duration || 0;
-            
             const formatTime = (s) => {
                 const mins = Math.floor(s / 60);
                 const secs = Math.floor(s % 60);
                 return `${mins}:${secs.toString().padStart(2, '0')}`;
             };
-            
-            document.getElementById('time').textContent = `${formatTime(currentTime)} / ${formatTime(duration)}`;
+            document.getElementById('time').textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration || 0)}`;
         }
 
-        // Mise a jour des paroles (avec offset de voix)
+        // Mise a jour des paroles (avec offset)
         function updateLyrics() {
             if (!blocks || blocks.length === 0) return;
             
             const audio = document.getElementById('audio');
-            // Appliquer l'offset detecte
-            const adjustedTime = audio.currentTime - voiceOffset;
+            const adjustedTime = audio.currentTime - syncOffset;
             
             let activeIndex = -1;
             for (let i = 0; i < blocks.length; i++) {
@@ -652,7 +594,6 @@
         renderBooks();
     </script>
     
-    <!-- Fichiers de donnees V2 (a generer) -->
     <script src="lyrics-v2.js"></script>
     <script src="audio-urls-v2.js"></script>
 </body>
