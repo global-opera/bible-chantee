@@ -456,21 +456,36 @@
             }
         }
 
-        // Parser LRC
+        // Parser LRC - capture le texte ENTRE les timestamps
         function parseLRC(lrc) {
-            const lines = lrc.split('\n');
-            return lines.map(line => {
-                const match = line.match(/\[(\d+):(\d+\.\d+)\]\s*(.+)/);
-                if (match) {
-                    const minutes = parseInt(match[1]);
-                    const seconds = parseFloat(match[2]);
-                    return {
-                        time: minutes * 60 + seconds,
-                        text: match[3]
-                    };
+            const regex = /\[(\d+):(\d+\.\d+)\]/g;
+            const blocks = [];
+            const timestamps = [];
+            let match;
+            
+            // Trouver tous les timestamps et leurs positions
+            while ((match = regex.exec(lrc)) !== null) {
+                timestamps.push({
+                    time: parseInt(match[1]) * 60 + parseFloat(match[2]),
+                    index: match.index,
+                    endIndex: regex.lastIndex
+                });
+            }
+            
+            // Extraire le texte entre chaque timestamp
+            for (let i = 0; i < timestamps.length; i++) {
+                const start = timestamps[i].endIndex;
+                const end = (i + 1 < timestamps.length) ? timestamps[i + 1].index : lrc.length;
+                const text = lrc.slice(start, end).trim();
+                if (text) {
+                    blocks.push({
+                        time: timestamps[i].time,
+                        text: text
+                    });
                 }
-                return null;
-            }).filter(Boolean);
+            }
+            
+            return blocks;
         }
 
         // Events audio
