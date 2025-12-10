@@ -427,6 +427,11 @@
             currentBlock = -1;
             blocks = [];
             
+            // Reset detection de voix pour nouveau chapitre
+            voiceDetected = false;
+            voiceOffset = 0;
+            firstLrcTime = 0;
+            
             const chapterStr = chapter.toString().padStart(2, '0');
             const bookName = currentBook.name;
             
@@ -442,6 +447,11 @@
             const lrcKey = `${currentBook.num}_${chapterStr}`;
             if (typeof lyricsV2 !== 'undefined' && lyricsV2[lrcKey]) {
                 blocks = parseLRC(lyricsV2[lrcKey]);
+                // Stocker le premier timestamp LRC pour calcul d'offset
+                if (blocks.length > 0) {
+                    firstLrcTime = blocks[0].time;
+                    console.log('First LRC timestamp:', firstLrcTime);
+                }
                 document.getElementById('lyricsWindow').innerHTML = '<div class="lyrics-line">Appuyez sur Play pour commencer...</div>';
             } else {
                 document.getElementById('lyricsWindow').innerHTML = '<div class="lyrics-line" style="opacity:0.6;">Paroles karaok&eacute; en cours de pr&eacute;paration...</div>';
@@ -488,18 +498,100 @@
             return blocks;
         }
 
+        // Detection intelligente du debut de voix
+        let voiceOffset = 0;
+        let audioContext = null;
+        let analyser = null;
+        let voiceDetected = false;
+        let firstLrcTime = 0;
+
+        function setupVoiceDetection(audioElement) {
+            if (audioContext) return;
+            
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            analyser = audioContext.createAnalyser();
+            analyser.fftSize = 256;
+            
+            const source = audioContext.createMediaElementSource(audioElement);
+            source.connect(analyser);
+            analyser.connect(audioContext.destination);
+            
+            console.log('Voice detection initialized');
+        }
+
+        function detectVoiceStart(audioElement) {
+            if (!analyser || voiceDetected) return;
+            
+            const dataArray = new Uint8Array(analyser.frequencyBinCount);
+            analyser.getByteFrequencyData(dataArray);
+            
+            // Calculer le volume moyen (focus sur frequences vocales 100-3000Hz)
+            let sum = 0;
+            const startBin = Math.floor(100 / (audioContext.sampleRate / analyser.fftSize));
+            const endBin = Math.floor(3000 / (audioContext.sampleRate / analyser.fftSize));
+            
+            for (let i = startBin; i < endBin && i < dataArray.length; i++) {
+                sum += dataArray[i];
+            }
+            const avgVolume = sum / (endBin - startBin);
+            
+            // Seuil de detection de voix (ajustable)
+            const VOICE_THRESHOLD = 50;
+            
+            if (avgVolume > VOICE_THRESHOLD && !voiceDetected) {
+                const actualVoiceStart = audioElement.currentTime;
+                voiceOffset = actualVoiceStart - firstLrcTime;
+                voiceDetected = true;
+                
+                console.log('Voice detected at:', actualVoiceStart.toFixed(2), 's');
+                console.log('LRC first timestamp:', firstLrcTime.toFixed(2), 's');
+                console.log('Calculated offset:', voiceOffset.toFixed(2), 's');
+                
+                // Afficher l'offset dans l'info box
+                const infoBox = document.querySelector('.info-box');
+                if (infoBox) {
+                    infoBox.innerHTML = `<strong>Synchronisation automatique:</strong><br>
+                        &bull; Voix d&eacute;tect&eacute;e &agrave; ${actualVoiceStart.toFixed(1)}s<br>
+                        &bull; Offset appliqu&eacute;: +${voiceOffset.toFixed(1)}s`;
+                }
+            }
+        }
+
         // Events audio
         function setupAudioEvents() {
             const audio = document.getElementById('audio');
             
+            audio.addEventListener('play', () => {
+                // Initialiser la detection de voix au premier play
+                if (!audioContext) {
+                    setupVoiceDetection(audio);
+                }
+                if (audioContext && audioContext.state === 'suspended') {
+                    audioContext.resume();
+                }
+                
+                if (currentBlock === -1 && blocks.length > 0) {
+                    document.getElementById('lyricsWindow').innerHTML = '<div class="lyrics-line">&#9835; D&eacute;tection de la voix...</div>';
+                }
+            });
+            
             audio.addEventListener('timeupdate', () => {
                 updateTime();
+                
+                // Detecter le debut de voix pendant les 20 premieres secondes
+                if (!voiceDetected && audio.currentTime < 20) {
+                    detectVoiceStart(audio);
+                }
+                
                 updateLyrics();
             });
             
-            audio.addEventListener('play', () => {
-                if (currentBlock === -1 && blocks.length > 0) {
-                    document.getElementById('lyricsWindow').innerHTML = '<div class="lyrics-line">&#9835; &Eacute;coute en cours...</div>';
+            audio.addEventListener('seeked', () => {
+                // Reset la detection si on revient au debut
+                if (audio.currentTime < 5) {
+                    voiceDetected = false;
+                    voiceOffset = 0;
+                    currentBlock = -1;
                 }
             });
         }
@@ -519,16 +611,17 @@
             document.getElementById('time').textContent = `${formatTime(currentTime)} / ${formatTime(duration)}`;
         }
 
-        // Mise a jour des paroles
+        // Mise a jour des paroles (avec offset de voix)
         function updateLyrics() {
             if (!blocks || blocks.length === 0) return;
             
             const audio = document.getElementById('audio');
-            const currentTime = audio.currentTime;
+            // Appliquer l'offset detecte
+            const adjustedTime = audio.currentTime - voiceOffset;
             
             let activeIndex = -1;
             for (let i = 0; i < blocks.length; i++) {
-                if (currentTime >= blocks[i].time) {
+                if (adjustedTime >= blocks[i].time) {
                     activeIndex = i;
                 } else {
                     break;
