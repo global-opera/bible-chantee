@@ -435,15 +435,14 @@
     
         /* === SELECTEUR DE LANGUES === */
         .language-selector {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 8px;
             margin: 20px auto;
             padding: 15px;
             background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            max-width: 400px;
+            max-width: 350px;
         }
         .lang-btn {
             display: flex;
