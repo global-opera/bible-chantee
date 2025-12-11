@@ -1,8 +1,6 @@
 // Audio URLs - Bible Chantee FR V2
-// Archive.org - 2025-12-11
-
 const audioUrlsV2 = {
-    "01_GEN": {
+    "01": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/01_GEN_01.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/01_GEN_02.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/01_GEN_03.mp3",
@@ -54,7 +52,7 @@ const audioUrlsV2 = {
         "49": "https://archive.org/download/bible-chantee-fr-v2/01_GEN_49.mp3",
         "50": "https://archive.org/download/bible-chantee-fr-v2/01_GEN_50.mp3"
     },
-    "02_EXO": {
+    "02": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/02_EXO_01.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/02_EXO_02.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/02_EXO_03.mp3",
@@ -96,7 +94,7 @@ const audioUrlsV2 = {
         "39": "https://archive.org/download/bible-chantee-fr-v2/02_EXO_39.mp3",
         "40": "https://archive.org/download/bible-chantee-fr-v2/02_EXO_40.mp3"
     },
-    "03_LEV": {
+    "03": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/03_LEV_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/03_LEV_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/03_LEV_03_FR.mp3",
@@ -125,7 +123,7 @@ const audioUrlsV2 = {
         "26": "https://archive.org/download/bible-chantee-fr-v2/03_LEV_26_FR.mp3",
         "27": "https://archive.org/download/bible-chantee-fr-v2/03_LEV_27_FR.mp3"
     },
-    "04_NUM": {
+    "04": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/04_NUM_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/04_NUM_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/04_NUM_03_FR.mp3",
@@ -163,7 +161,7 @@ const audioUrlsV2 = {
         "35": "https://archive.org/download/bible-chantee-fr-v2/04_NUM_35_FR.mp3",
         "36": "https://archive.org/download/bible-chantee-fr-v2/04_NUM_36_FR.mp3"
     },
-    "05_DEU": {
+    "05": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/05_DEU_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/05_DEU_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/05_DEU_03_FR.mp3",
@@ -199,7 +197,7 @@ const audioUrlsV2 = {
         "33": "https://archive.org/download/bible-chantee-fr-v2/05_DEU_33_FR.mp3",
         "34": "https://archive.org/download/bible-chantee-fr-v2/05_DEU_34_FR.mp3"
     },
-    "06_JOS": {
+    "06": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/06_JOS_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/06_JOS_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/06_JOS_03_FR.mp3",
@@ -225,7 +223,7 @@ const audioUrlsV2 = {
         "23": "https://archive.org/download/bible-chantee-fr-v2/06_JOS_23_FR.mp3",
         "24": "https://archive.org/download/bible-chantee-fr-v2/06_JOS_24_FR.mp3"
     },
-    "07_JDG": {
+    "07": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/07_JDG_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/07_JDG_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/07_JDG_03_FR.mp3",
@@ -248,13 +246,13 @@ const audioUrlsV2 = {
         "20": "https://archive.org/download/bible-chantee-fr-v2/07_JDG_20_FR.mp3",
         "21": "https://archive.org/download/bible-chantee-fr-v2/07_JDG_21_FR.mp3"
     },
-    "08_RUT": {
+    "08": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/08_RUT_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/08_RUT_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/08_RUT_03_FR.mp3",
         "4": "https://archive.org/download/bible-chantee-fr-v2/08_RUT_04_FR.mp3"
     },
-    "09_1SAM": {
+    "09": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/09_1SAM_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/09_1SAM_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/09_1SAM_03_FR.mp3",
@@ -287,7 +285,7 @@ const audioUrlsV2 = {
         "30": "https://archive.org/download/bible-chantee-fr-v2/09_1SAM_30_FR.mp3",
         "31": "https://archive.org/download/bible-chantee-fr-v2/09_1SAM_31_FR.mp3"
     },
-    "10_2SAM": {
+    "10": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/10_2SAM_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/10_2SAM_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/10_2SAM_03_FR.mp3",
@@ -313,7 +311,7 @@ const audioUrlsV2 = {
         "23": "https://archive.org/download/bible-chantee-fr-v2/10_2SAM_23_FR.mp3",
         "24": "https://archive.org/download/bible-chantee-fr-v2/10_2SAM_24_FR.mp3"
     },
-    "11_1KI": {
+    "11": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/11_1KI_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/11_1KI_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/11_1KI_03_FR.mp3",
@@ -337,7 +335,7 @@ const audioUrlsV2 = {
         "21": "https://archive.org/download/bible-chantee-fr-v2/11_1KI_21_FR.mp3",
         "22": "https://archive.org/download/bible-chantee-fr-v2/11_1KI_22_FR.mp3"
     },
-    "12_2KI": {
+    "12": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/12_2KI_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/12_2KI_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/12_2KI_03_FR.mp3",
@@ -364,7 +362,7 @@ const audioUrlsV2 = {
         "24": "https://archive.org/download/bible-chantee-fr-v2/12_2KI_24_FR.mp3",
         "25": "https://archive.org/download/bible-chantee-fr-v2/12_2KI_25_FR.mp3"
     },
-    "13_1CH": {
+    "13": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/13_1CH_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/13_1CH_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/13_1CH_03_FR.mp3",
@@ -395,7 +393,7 @@ const audioUrlsV2 = {
         "28": "https://archive.org/download/bible-chantee-fr-v2/13_1CH_28_FR.mp3",
         "29": "https://archive.org/download/bible-chantee-fr-v2/13_1CH_29_FR.mp3"
     },
-    "14_2CH": {
+    "14": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/14_2CH_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/14_2CH_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/14_2CH_03_FR.mp3",
@@ -433,7 +431,7 @@ const audioUrlsV2 = {
         "35": "https://archive.org/download/bible-chantee-fr-v2/14_2CH_35_FR.mp3",
         "36": "https://archive.org/download/bible-chantee-fr-v2/14_2CH_36_FR.mp3"
     },
-    "15_EZR": {
+    "15": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/15_EZR_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/15_EZR_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/15_EZR_03_FR.mp3",
@@ -445,7 +443,7 @@ const audioUrlsV2 = {
         "9": "https://archive.org/download/bible-chantee-fr-v2/15_EZR_09_FR.mp3",
         "10": "https://archive.org/download/bible-chantee-fr-v2/15_EZR_10_FR.mp3"
     },
-    "16_NEH": {
+    "16": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/16_NEH_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/16_NEH_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/16_NEH_03_FR.mp3",
@@ -460,7 +458,7 @@ const audioUrlsV2 = {
         "12": "https://archive.org/download/bible-chantee-fr-v2/16_NEH_12_FR.mp3",
         "13": "https://archive.org/download/bible-chantee-fr-v2/16_NEH_13_FR.mp3"
     },
-    "17_EST": {
+    "17": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/17_EST_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/17_EST_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/17_EST_03_FR.mp3",
@@ -472,7 +470,7 @@ const audioUrlsV2 = {
         "9": "https://archive.org/download/bible-chantee-fr-v2/17_EST_09_FR.mp3",
         "10": "https://archive.org/download/bible-chantee-fr-v2/17_EST_10_FR.mp3"
     },
-    "18_JOB": {
+    "18": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/18_JOB_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/18_JOB_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/18_JOB_03_FR.mp3",
@@ -516,7 +514,7 @@ const audioUrlsV2 = {
         "41": "https://archive.org/download/bible-chantee-fr-v2/18_JOB_41_FR.mp3",
         "42": "https://archive.org/download/bible-chantee-fr-v2/18_JOB_42_FR.mp3"
     },
-    "19_PSA": {
+    "19": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/19_PSA_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/19_PSA_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/19_PSA_03_FR.mp3",
@@ -668,7 +666,7 @@ const audioUrlsV2 = {
         "149": "https://archive.org/download/bible-chantee-fr-v2/19_PSA_149_FR.mp3",
         "150": "https://archive.org/download/bible-chantee-fr-v2/19_PSA_150_FR.mp3"
     },
-    "20_PRO": {
+    "20": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/20_PRO_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/20_PRO_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/20_PRO_03_FR.mp3",
@@ -700,7 +698,7 @@ const audioUrlsV2 = {
         "30": "https://archive.org/download/bible-chantee-fr-v2/20_PRO_30_FR.mp3",
         "31": "https://archive.org/download/bible-chantee-fr-v2/20_PRO_31_FR.mp3"
     },
-    "21_ECC": {
+    "21": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/21_ECC_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/21_ECC_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/21_ECC_03_FR.mp3",
@@ -714,7 +712,7 @@ const audioUrlsV2 = {
         "11": "https://archive.org/download/bible-chantee-fr-v2/21_ECC_11_FR.mp3",
         "12": "https://archive.org/download/bible-chantee-fr-v2/21_ECC_12_FR.mp3"
     },
-    "22_SON": {
+    "22": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/22_SON_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/22_SON_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/22_SON_03_FR.mp3",
@@ -724,7 +722,7 @@ const audioUrlsV2 = {
         "7": "https://archive.org/download/bible-chantee-fr-v2/22_SON_07_FR.mp3",
         "8": "https://archive.org/download/bible-chantee-fr-v2/22_SON_08_FR.mp3"
     },
-    "23_ISA": {
+    "23": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/23_ISA_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/23_ISA_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/23_ISA_03_FR.mp3",
@@ -792,7 +790,7 @@ const audioUrlsV2 = {
         "65": "https://archive.org/download/bible-chantee-fr-v2/23_ISA_65_FR.mp3",
         "66": "https://archive.org/download/bible-chantee-fr-v2/23_ISA_66_FR.mp3"
     },
-    "24_JER": {
+    "24": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/24_JER_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/24_JER_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/24_JER_03_FR.mp3",
@@ -846,7 +844,7 @@ const audioUrlsV2 = {
         "51": "https://archive.org/download/bible-chantee-fr-v2/24_JER_51_FR.mp3",
         "52": "https://archive.org/download/bible-chantee-fr-v2/24_JER_52_FR.mp3"
     },
-    "40_MAT": {
+    "40": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/40_MAT_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/40_MAT_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/40_MAT_03_FR.mp3",
@@ -876,7 +874,7 @@ const audioUrlsV2 = {
         "27": "https://archive.org/download/bible-chantee-fr-v2/40_MAT_27_FR.mp3",
         "28": "https://archive.org/download/bible-chantee-fr-v2/40_MAT_28_FR.mp3"
     },
-    "41_MAR": {
+    "41": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/41_MAR_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/41_MAR_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/41_MAR_03_FR.mp3",
@@ -894,7 +892,7 @@ const audioUrlsV2 = {
         "15": "https://archive.org/download/bible-chantee-fr-v2/41_MAR_15_FR.mp3",
         "16": "https://archive.org/download/bible-chantee-fr-v2/41_MAR_16_FR.mp3"
     },
-    "42_LUK": {
+    "42": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/42_LUK_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/42_LUK_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/42_LUK_03_FR.mp3",
@@ -920,7 +918,7 @@ const audioUrlsV2 = {
         "23": "https://archive.org/download/bible-chantee-fr-v2/42_LUK_23_FR.mp3",
         "24": "https://archive.org/download/bible-chantee-fr-v2/42_LUK_24_FR.mp3"
     },
-    "43_JOH": {
+    "43": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/43_JOH_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/43_JOH_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/43_JOH_03_FR.mp3",
@@ -942,7 +940,7 @@ const audioUrlsV2 = {
         "20": "https://archive.org/download/bible-chantee-fr-v2/43_JOH_20_FR.mp3",
         "21": "https://archive.org/download/bible-chantee-fr-v2/43_JOH_21_FR.mp3"
     },
-    "44_ACT": {
+    "44": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/44_ACT_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/44_ACT_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/44_ACT_03_FR.mp3",
@@ -971,7 +969,7 @@ const audioUrlsV2 = {
         "27": "https://archive.org/download/bible-chantee-fr-v2/44_ACT_27_FR.mp3",
         "28": "https://archive.org/download/bible-chantee-fr-v2/44_ACT_28_FR.mp3"
     },
-    "45_ROM": {
+    "45": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/45_ROM_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/45_ROM_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/45_ROM_03_FR.mp3",
@@ -989,7 +987,7 @@ const audioUrlsV2 = {
         "15": "https://archive.org/download/bible-chantee-fr-v2/45_ROM_15_FR.mp3",
         "16": "https://archive.org/download/bible-chantee-fr-v2/45_ROM_16_FR.mp3"
     },
-    "46_1CO": {
+    "46": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/46_1CO_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/46_1CO_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/46_1CO_03_FR.mp3",
@@ -1007,7 +1005,7 @@ const audioUrlsV2 = {
         "15": "https://archive.org/download/bible-chantee-fr-v2/46_1CO_15_FR.mp3",
         "16": "https://archive.org/download/bible-chantee-fr-v2/46_1CO_16_FR.mp3"
     },
-    "47_2CO": {
+    "47": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/47_2CO_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/47_2CO_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/47_2CO_03_FR.mp3",
@@ -1022,7 +1020,7 @@ const audioUrlsV2 = {
         "12": "https://archive.org/download/bible-chantee-fr-v2/47_2CO_12_FR.mp3",
         "13": "https://archive.org/download/bible-chantee-fr-v2/47_2CO_13_FR.mp3"
     },
-    "48_GAL": {
+    "48": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/48_GAL_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/48_GAL_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/48_GAL_03_FR.mp3",
@@ -1030,7 +1028,7 @@ const audioUrlsV2 = {
         "5": "https://archive.org/download/bible-chantee-fr-v2/48_GAL_05_FR.mp3",
         "6": "https://archive.org/download/bible-chantee-fr-v2/48_GAL_06_FR.mp3"
     },
-    "49_EPH": {
+    "49": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/49_EPH_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/49_EPH_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/49_EPH_03_FR.mp3",
@@ -1038,57 +1036,57 @@ const audioUrlsV2 = {
         "5": "https://archive.org/download/bible-chantee-fr-v2/49_EPH_05_FR.mp3",
         "6": "https://archive.org/download/bible-chantee-fr-v2/49_EPH_06_FR.mp3"
     },
-    "50_PHP": {
+    "50": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/50_PHP_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/50_PHP_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/50_PHP_03_FR.mp3",
         "4": "https://archive.org/download/bible-chantee-fr-v2/50_PHP_04_FR.mp3"
     },
-    "51_COL": {
+    "51": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/51_COL_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/51_COL_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/51_COL_03_FR.mp3",
         "4": "https://archive.org/download/bible-chantee-fr-v2/51_COL_04_FR.mp3"
     },
-    "52_1TH": {
+    "52": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/52_1TH_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/52_1TH_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/52_1TH_03_FR.mp3",
         "4": "https://archive.org/download/bible-chantee-fr-v2/52_1TH_04_FR.mp3",
         "5": "https://archive.org/download/bible-chantee-fr-v2/52_1TH_05_FR.mp3"
     },
-    "53_2TH": {
+    "53": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/53_2TH_01_FR.mp3"
     },
-    "60_1PE": {
+    "60": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/60_1PE_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/60_1PE_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/60_1PE_03_FR.mp3",
         "4": "https://archive.org/download/bible-chantee-fr-v2/60_1PE_04_FR.mp3",
         "5": "https://archive.org/download/bible-chantee-fr-v2/60_1PE_05_FR.mp3"
     },
-    "61_2PE": {
+    "61": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/61_2PE_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/61_2PE_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/61_2PE_03_FR.mp3"
     },
-    "62_1JO": {
+    "62": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/62_1JO_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/62_1JO_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/62_1JO_03_FR.mp3",
         "4": "https://archive.org/download/bible-chantee-fr-v2/62_1JO_04_FR.mp3",
         "5": "https://archive.org/download/bible-chantee-fr-v2/62_1JO_05_FR.mp3"
     },
-    "63_2JO": {
+    "63": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/63_2JO_01_FR.mp3"
     },
-    "64_3JO": {
+    "64": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/64_3JO_01_FR.mp3"
     },
-    "65_JUD": {
+    "65": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/65_JUD_01_FR.mp3"
     },
-    "66_REV": {
+    "66": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/66_REV_01_FR.mp3",
         "2": "https://archive.org/download/bible-chantee-fr-v2/66_REV_02_FR.mp3",
         "3": "https://archive.org/download/bible-chantee-fr-v2/66_REV_03_FR.mp3",
@@ -1113,5 +1111,4 @@ const audioUrlsV2 = {
         "22": "https://archive.org/download/bible-chantee-fr-v2/66_REV_22_FR.mp3"
     }
 };
-
 
