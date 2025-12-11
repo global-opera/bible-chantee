@@ -935,7 +935,7 @@
             // Afficher le toggle si V2 est disponible pour ce livre
             const toggle = document.getElementById('versionToggle');
             if (typeof audioUrlsV2 !== 'undefined' && audioUrlsV2[currentBook] && audioUrlsV2[currentBook][currentChapter]) {
-                toggle.style.display = 'flex';
+                toggle.style.display = 'none'; // V2 only, no toggle
             } else {
                 toggle.style.display = 'none';
                 useV2 = false;
