@@ -289,7 +289,9 @@
         /* Zone des paroles */
         .lyrics-container {
             display: none;
-            flex: 1;`n            min-height: 60vh;`n            max-height: 70vh;
+            flex: 1;
+            min-height: 60vh;
+            max-height: 70vh;
             background: rgba(0,0,0,0.4);
             border: 1px solid rgba(212, 175, 55, 0.3);
             border-radius: 15px;
@@ -362,7 +364,9 @@
         /* Zone du texte biblique */
         .bible-container {
             display: none;
-            flex: 1;`n            min-height: 60vh;`n            max-height: 70vh;
+            flex: 1;
+            min-height: 60vh;
+            max-height: 70vh;
             background: rgba(0,0,0,0.4);
             border: 1px solid rgba(212, 175, 55, 0.3);
             border-radius: 15px;
@@ -424,7 +428,7 @@
                 max-height: none;
             }
             .lyrics-container, .bible-container {
-                max-height: 70vh;
+                max-height: 200px;
             }
             .player-title { font-size: 1.1em; }
         }
@@ -895,7 +899,7 @@
             }
             const audio = document.getElementById('audio');
             audio.src = url;
-            // audio.play() - disabled autoplay, user must click
+            // audio.play() - user must click
             const book = books.find(b => b.num === currentBook);
             // Construire le titre avec le titre du chapitre
             let displayTitle = book.name + ' - Ch.' + String(chapter).padStart(2, '0');
