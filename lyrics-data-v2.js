@@ -1,6 +1,6 @@
 ﻿// Paroles des chapitres - Bible Chantee
 // Source: G:\Mon Drive\01 BibleChantee\Lyrics\FR_V2
-// Auto-genere: 2025-12-11 11:34:12
+// Auto-genere: 2025-12-11 11:39:46
 const chapterLyricsV2 = {
     "01": {
         1: `[Verse 1]  
@@ -11046,6 +11046,1120 @@ Aujourd’hui et toujours, avec nos vœux.
 
 Ces paroles, inspirées de Josué 24, rappellent l'engagement du peuple d'Israël envers Dieu et leur désir de servir l'Éternel avec intégrité et fidélité. La structure et le style visent à apporter un message puissant et mémorable, tout en étant chantable et adapté à un cadre de culte.`
     },
+    "07": {
+        1: `**Couplet 1**  
+Après la mort de Josué,  
+Les cœurs cherchaient ta voix,  
+L'Éternel, tu réponds en vérité,  
+« Juda montera, je lui donne la voie. »  
+Ensemble, frères, unis dans la foi,  
+Vers les Cananéens, nous irons avec toi.  
+
+**Refrain**  
+Au nom de l'Éternel, nous marcherons,  
+Dans les batailles, ta force nous portera,  
+Avec courage, nous nous lèverons,  
+L'Éternel est notre Dieu, il nous délivrera.  
+
+**Couplet 2**  
+À Bézek, la victoire éclatante,  
+Dix mille hommes tombent sous ta main,  
+Adoni-Bézek, sa fierté déchante,  
+Dieu lui rend ce qu'il a fait aux siens.  
+À Jérusalem, la lumière brille,  
+L'Éternel nous fortifie, sa promesse scintille.  
+
+**Refrain**  
+Au nom de l'Éternel, nous marcherons,  
+Dans les batailles, ta force nous portera,  
+Avec courage, nous nous lèverons,  
+L'Éternel est notre Dieu, il nous délivrera.  
+
+**Pont**  
+Des sources d'eau pour la terre promise,  
+Acsa demande, le cœur plein de foi,  
+Caleb répond, sa bonté nous étreint,  
+Ensemble, nous bâtirons, main dans la main.  
+Où l'ennemi règne, nous prendrons courage,  
+L'Éternel nous conduit, dans chaque passage.  
+
+**Refrain**  
+Au nom de l'Éternel, nous marcherons,  
+Dans les batailles, ta force nous portera,  
+Avec courage, nous nous lèverons,  
+L'Éternel est notre Dieu, il nous délivrera.  
+
+**Outro**  
+À chaque pas, ta promesse demeure,  
+Nous te louons, ô notre Sauveur.  
+Au nom de l'Éternel, nous vaincrons,  
+Dans chaque bataille, nous chanterons.`,
+        2: `**TITRE**  
+**« Rappelle-nous, Seigneur »**
+
+[Verse 1]  
+Seigneur des cieux, Tu as promis,  
+Un pays de paix, un héritage à vie.  
+De l'Égypte, Tu nous as tirés,  
+Pour Ta gloire, nous Te louerons, ô Saint.
+
+[Chorus]  
+Rappelle-nous, Seigneur, de Ta fidélité,  
+Dans nos cœurs, que Ta voix soit gravée.  
+Nous Te cherchons, ô Dieu d'Israël,  
+Guide nos pas sur le chemin éternel.
+
+[Verse 2]  
+À Bokim, nos larmes ont coulé,  
+Nous avons failli, nos cœurs égarés.  
+Les dieux des nations nous ont séduits,  
+Mais dans Ta miséricorde, Tu es notre abri.
+
+[Chorus]  
+Rappelle-nous, Seigneur, de Ta fidélité,  
+Dans nos cœurs, que Ta voix soit gravée.  
+Nous Te cherchons, ô Dieu d'Israël,  
+Guide nos pas sur le chemin éternel.
+
+[Bridge]  
+Quand la colère s’enflamme,  
+Et que l’ennemi s’avance,  
+Nous levons nos voix,  
+Vers Toi, notre espérance.  
+Éveille des juges, ô notre Roi,  
+Pour nous délivrer, pour nous montrer Ta voie.
+
+[Chorus]  
+Rappelle-nous, Seigneur, de Ta fidélité,  
+Dans nos cœurs, que Ta voix soit gravée.  
+Nous Te cherchons, ô Dieu d'Israël,  
+Guide nos pas sur le chemin éternel.
+
+[Verse 3]  
+Nous avons besoin de Ta grâce,  
+De Ta lumière, ô notre place.  
+Tu es le seul chemin, le seul vrai,  
+Rappelle-nous, Seigneur, de Te servir à jamais.
+
+[Chorus]  
+Rappelle-nous, Seigneur, de Ta fidélité,  
+Dans nos cœurs, que Ta voix soit gravée.  
+Nous Te cherchons, ô Dieu d'Israël,  
+Guide nos pas sur le chemin éternel.
+
+[Outro]  
+Seigneur, Tu es notre héritage,  
+À jamais, nous Te louerons,  
+Dans l’épreuve et dans l’orage,  
+Rappelle-nous, Seigneur, de Ta bonté.`,
+        3: `**TITRE**  
+« Libérateur du Ciel »
+
+****
+
+*Couplet 1*  
+Dans les ombres de la nuit, où l’ennemi se lève,  
+Ton peuple en détresse, vers Toi, il s'élève.  
+O Éternel, entends notre cri,  
+Libère-nous des chaînes, nous T’implorons ici.  
+
+*Refrain*  
+Ô notre Dieu, Tu es notre force,  
+Dans la bataille, Ta main nous endorse.  
+Quand l'ombre s’approche, Tu es notre guide,  
+Libérateur du ciel, notre cœur Te confide.  
+
+*Couplet 2*  
+Des princes de la nuit, des idoles enchaînées,  
+Nous avons oublié, mais Tu es notre clé.  
+Othniel est venu, Ta promesse éclatante,  
+Par Sa force, la victoire est éclatante.  
+
+*Refrain*  
+Ô notre Dieu, Tu es notre force,  
+Dans la bataille, Ta main nous endorse.  
+Quand l'ombre s’approche, Tu es notre guide,  
+Libérateur du ciel, notre cœur Te confide.  
+
+*Pont*  
+Quand la peur nous entoure, et que les murs s'effondrent,  
+Nous levons nos voix, et nous T’adorons.  
+Ehud, fort et brave, avec Ta sagesse,  
+Dans la victoire, nous chantons Ta noblesse.  
+
+*Refrain*  
+Ô notre Dieu, Tu es notre force,  
+Dans la bataille, Ta main nous endorse.  
+Quand l'ombre s’approche, Tu es notre guide,  
+Libérateur du ciel, notre cœur Te confide.  
+
+*Conclusion*  
+Éternel, notre roi, pour toujours nous chanterons,  
+Dans chaque combat, nous trouverons Ta raison.  
+Tu es notre refuge, notre espoir, notre chant,  
+Libérateur du ciel, vers Toi, nous avançons.  
+
+---
+
+Ces paroles, inspirées par les récits bibliques, évoquent la puissance de Dieu et la délivrance de Son peuple, tout en étant conçues pour une atmosphère de louange et de révérence.`,
+        4: `****Dans la Tempête de la Foi**
+
+[VERS 1]  
+Dans le cœur d’Israël, un cri s’élève,  
+Oppressés par l’ennemi, leurs âmes s’achèvent.  
+Jabin règne en tyran, son fer brille au loin,  
+Mais l’Éternel entend, Il répond à leur soin.
+
+[CHORUS]  
+O Dieu des batailles, Tu es notre force,  
+Dans la tempête, notre cœur s’endorse.  
+Débora s’élève, prophétesse de lumière,  
+Avec courage, nous avançons dans la prière.
+
+[VERS 2]  
+Barak hésitant, mais la promesse est là,  
+« Lève-toi, l’Éternel, devant nous, il combat. »  
+Dix mille hommes marchent, guidés par Ta main,  
+Le mont Thabor tremble, l’espoir est chemin.
+
+[CHORUS]  
+O Dieu des batailles, Tu es notre force,  
+Dans la tempête, notre cœur s’endorse.  
+Débora s’élève, prophétesse de lumière,  
+Avec courage, nous avançons dans la prière.
+
+[BRIDGE]  
+Et Sisera tremble, l’ennemi se disperse,  
+Sous le tranchant de l’épée, nous célébrons Ta grâce.  
+Jaël dans la tente, la victoire s’annonce,  
+Par une femme, ô Dieu, Ta gloire s’enfonce.
+
+[VERS 3]  
+Ton peuple se lève, dans la lumière de Ta voix,  
+Nous chantons Ta victoire, nous sommes dans Ta foi.  
+Jabin humilité, sous Ta main puissante,  
+L’histoire s’écrit, chaque âme se contente.
+
+[CHORUS]  
+O Dieu des batailles, Tu es notre force,  
+Dans la tempête, notre cœur s’endorse.  
+Débora s’élève, prophétesse de lumière,  
+Avec courage, nous avançons dans la prière.
+
+[Outro]  
+Dans la tempête, notre foi est ancrée,  
+O Éternel, pour toujours, nous Te louerons,  
+Dans les luttes de la vie, Ta main nous guide,  
+Nous sommes victorieuses, en Toi, notre guide.`,
+        5: `[Verse 1]  
+Ô Éternel, en ce jour de gloire,  
+Avec Débora, nous chantons,  
+Des chefs se lèvent pour Ta victoire,  
+Peuple d'Israël, nous T’adorons.  
+Quand Tu sortis de Séir, ô Dieu,  
+La terre trembla, les cieux s’ouvrirent,  
+Les montagnes, tremblantes sous Tes yeux,  
+Avec foi, nous venons Te servir.
+
+[Chorus]  
+Chantons à l'Éternel,  
+Le Dieu d'Israël,  
+Bénissons Son nom,  
+Élevons notre chant,  
+Des archers et des cœurs,  
+Nous proclamons Sa douceur,  
+Ô Éternel, notre force,  
+Viens, fais briller Ta lumière.
+
+[Verse 2]  
+Au temps de Jaël, la route était noire,  
+Les cœurs tremblaient, sans espoir,  
+Mais moi, Débora, j’ai levé ma voix,  
+Comme une mère, j’ai pris ma foi.  
+Ô peuple, préparez-vous à combattre,  
+Bénissez l'Éternel, soyez unis,  
+Car dans la vallée, Il nous fait éclâtre,  
+Ensemble, nous vaincrons les ennemis.
+
+[Chorus]  
+Chantons à l'Éternel,  
+Le Dieu d'Israël,  
+Bénissons Son nom,  
+Élevons notre chant,  
+Des archers et des cœurs,  
+Nous proclamons Sa douceur,  
+Ô Éternel, notre force,  
+Viens, fais briller Ta lumière.
+
+[Bridge]  
+Par les torrents de Kison,  
+Les cieux ont combattu pour nous,  
+Jaël, héroïne, avec passion,  
+Elle a frappé, elle a fait tout,  
+Et nous, ensemble, nous nous levons,  
+Pour glorifier Ta sainte mission.  
+Maudits soient ceux qui n’ont pas pris part,  
+À la lutte pour l’amour, l’espoir!
+
+[Chorus]  
+Chantons à l'Éternel,  
+Le Dieu d'Israël,  
+Bénissons Son nom,  
+Élevons notre chant,  
+Des archers et des cœurs,  
+Nous proclamons Sa douceur,  
+Ô Éternel, notre force,  
+Viens, fais briller Ta lumière.
+
+[Outro]  
+Périssent tous Tes ennemis,  
+Comme le soleil, nous brillons,  
+Pour toujours, en paix, nous vivons,  
+Ô Éternel, notre chant s’élève,  
+À jamais, nous T’adorons!`,
+        6: `****L'Éternel est avec nous**  
+
+[VERSE 1]  
+Dans les ombres des montagnes,  
+Israël se cache en pleurs,  
+Madian, puissant dans la plaine,  
+Ravage nos cœurs, nos labeurs.  
+Seigneur, où est notre espoir,  
+Quand l'ennemi vient nous frapper?  
+Nous crions vers Toi, notre gloire,  
+Entends notre voix, notre clameur.
+
+[CHORUS]  
+L'Éternel est avec nous,  
+Dans la tempête, dans la nuit.  
+Éveille en nous le courage,  
+Comme Gédéon, dans la foi, nous suivrons.  
+L'Éternel est avec nous,  
+Armés de Ta force, nous vaincrons.  
+Ta promesse est notre refuge,  
+Nous marcherons, par Ta main, nous serons.
+
+[VERSE 2]  
+L'ange du Seigneur s'approche,  
+Sous le térébinthe, il parle:  
+"Héros vaillant, lève-toi, approche,  
+Je suis avec toi, ne crains rien."  
+Dans nos faiblesses, Tu es fort,  
+Avec Toi, nos chaînes sont brisées.  
+Nous bâtissons un autel d’or,  
+L’Éternel paix, notre vérité.
+
+[CHORUS]  
+L'Éternel est avec nous,  
+Dans la tempête, dans la nuit.  
+Éveille en nous le courage,  
+Comme Gédéon, dans la foi, nous suivrons.  
+L'Éternel est avec nous,  
+Armés de Ta force, nous vaincrons.  
+Ta promesse est notre refuge,  
+Nous marcherons, par Ta main, nous serons.
+
+[BRIDGE]  
+Éclaire nos cœurs, Seigneur,  
+Fais briller Ta lumière,  
+Quand la peur s'installe en nous,  
+Rappelle-nous que Tu es là.  
+Un signe de Ta bonté,  
+Un souffle de Ta vérité,  
+Nous marcherons ensemble,  
+Vers la victoire, main dans la main.
+
+[CHORUS]  
+L'Éternel est avec nous,  
+Dans la tempête, dans la nuit.  
+Éveille en nous le courage,  
+Comme Gédéon, dans la foi, nous suivrons.  
+L'Éternel est avec nous,  
+Armés de Ta force, nous vaincrons.  
+Ta promesse est notre refuge,  
+Nous marcherons, par Ta main, nous serons.
+
+[Outro]  
+L'Éternel est avec nous,  
+Nous chantons, nous proclamons,  
+Dans la lutte et l’épreuve,  
+C'est Toi, notre libérateur.  
+L'Éternel est notre force,  
+Nous glorifions Ton nom,  
+À jamais, dans la victoire,  
+Nous vivrons, par Ta main, nous serons.`,
+        7: `[Verse 1]  
+Le matin s'éveille, l'ennemi s'approche,  
+Gédéon, fidèle, devant la bataille,  
+L'Éternel murmure, “Trop nombreux sont-ils,  
+Retourne ceux qui craignent, que leur cœur s'éloigne.”  
+
+[Chorus]  
+Épée pour l'Éternel, pour Gédéon,  
+Avec trois cents hommes, nous marcherons,  
+Dans la nuit, Sa lumière brillera,  
+Avec foi, nous vaincrons, notre Dieu, nous suivrons.
+
+[Verse 2]  
+À la source, l'épreuve, le triage des cœurs,  
+Trois cents choisis, l'armée se réduit,  
+Des trompettes et des flambeaux, dans la main,  
+Nous briserons les ténèbres, le mal fuira loin.  
+
+[Chorus]  
+Épée pour l'Éternel, pour Gédéon,  
+Avec trois cents hommes, nous marcherons,  
+Dans la nuit, Sa lumière brillera,  
+Avec foi, nous vaincrons, notre Dieu, nous suivrons.
+
+[Bridge]  
+Quand la trompette sonne, et le cri s'élève,  
+Les murs de la peur s’effondrent, le ciel nous élève,  
+L'Éternel combat pour nous, en Lui notre force,  
+Le camp de l'ennemi tremble, leur fin approche.  
+
+[Chorus]  
+Épée pour l'Éternel, pour Gédéon,  
+Avec trois cents hommes, nous marcherons,  
+Dans la nuit, Sa lumière brillera,  
+Avec foi, nous vaincrons, notre Dieu, nous suivrons.
+
+[Outro]  
+Épée pour l'Éternel, nous levons nos voix,  
+Pour l'Éternel et Gédéon, ensemble dans la foi,  
+Dans chaque bataille, Sa victoire viendra,  
+Nous marchons en vainqueurs, car Il est avec nous là.`,
+        8: `**Titre:** « La Victoire de l'Éternel »
+
+[Verse 1]  
+Dans la nuit de la peur, Gédéon s'est levé,  
+Face à Madian, avec courage, il a prié.  
+Trois cents hommes, fatigue dans le cœur,  
+Mais la force du ciel, leur était en labeur.  
+
+[Chorus]  
+Oh, Éternel, Tu es notre lumière,  
+Dans la tempête, Tu es notre fer.  
+Nous marchons en puissance sous Ta main,  
+Avec Toi, Seigneur, nous vaincrons demain.  
+
+[Verse 2]  
+Les hommes d'Éphraïm, dans la colère, ont crié,  
+Mais Gédéon, humble, a su les apaiser.  
+"Que suis-je en comparaison de vous, mes frères?  
+C'est l'Éternel qui nous donne la prospérité sur terre."  
+
+[Chorus]  
+Oh, Éternel, Tu es notre lumière,  
+Dans la tempête, Tu es notre fer.  
+Nous marchons en puissance sous Ta main,  
+Avec Toi, Seigneur, nous vaincrons demain.  
+
+[Bridge]  
+Zébach et Tsalmunna, l'ennemi qui s'enfuit,  
+Sous la promesse de Ta force, nous les chassons ici.  
+Notre cœur est unis, dans la foi, nous avançons,  
+L'Éternel est notre roi, notre belle chanson.  
+
+[Chorus]  
+Oh, Éternel, Tu es notre lumière,  
+Dans la tempête, Tu es notre fer.  
+Nous marchons en puissance sous Ta main,  
+Avec Toi, Seigneur, nous vaincrons demain.  
+
+[Outro]  
+Quand la victoire arrive, nous Te louerons,  
+Car Tu es notre force, notre seule raison.  
+Dans chaque bataille, nous chantons en cœur,  
+Éternel, notre Dieu, notre grand Sauveur.  
+
+---
+
+Ces paroles, inspirées par l'histoire de Gédéon, célèbrent la foi, la victoire et la grandeur de Dieu, tout en restant fidèles au message biblique.`,
+        9: `**TITRE**: **Reine des Cèdres**
+
+[**VERS 1**]  
+Dans le cœur de Sichem, un choix fut fait,  
+Soixante-dix frères, un seul roi pour régner.  
+Abimélec, par l'argent attiré,  
+Masque de loyauté, son cœur s'est égaré.  
+
+[**CHORUS**]  
+Écoutez, ô habitants, écoutez ce cri,  
+De l'ombre des arbres, la vérité s'épanouit.  
+Choisissez le chemin de la lumière,  
+Ou bien celui du feu, qui dévore la terre.  
+
+[**VERS 2**]  
+Les arbres en conseil, ont cherché un roi,  
+L'olivier, le figuier, refusaient leur choix.  
+La vigne se tenait, son vin pour l'adoration,  
+Mais le buisson d'épines, avec séduction.  
+
+[**CHORUS**]  
+Écoutez, ô habitants, écoutez ce cri,  
+De l'ombre des arbres, la vérité s'épanouit.  
+Choisissez le chemin de la lumière,  
+Ou bien celui du feu, qui dévore la terre.  
+
+[**BRIDGE**]  
+Dans le sang de l'innocent, la justice se lève,  
+Jotham appelle, son message s'achève.  
+Si c'est de bonne foi, que votre cœur soit pur,  
+Ou le feu de la colère, dévorera l'azur.  
+
+[**VERS 3**]  
+Abimélec, roi, son règne est maudit,  
+Dans la tour de Sichem, la fin s'écrit.  
+Une femme annonce, la chute du tyran,  
+Dieu fait tomber le mal, sur ceux qui sont méchants.  
+
+[**CHORUS**]  
+Écoutez, ô habitants, écoutez ce cri,  
+De l'ombre des arbres, la vérité s'épanouit.  
+Choisissez le chemin de la lumière,  
+Ou bien celui du feu, qui dévore la terre.  
+
+[**OUTRO**]  
+Ainsi se termine l'histoire de la douleur,  
+Dans la foi et l'espoir, renaît le cœur.  
+Écoutez, ô habitants, ce cri de vérité,  
+Choisissez le roi des cieux, pour l'éternité.`,
+        10: `[Verse 1]  
+Dans les ombres de la nuit,  
+Israël s'est égaré,  
+Servant des dieux de pierre,  
+La colère s'est enflammée.  
+Nous avons abandonné notre Roi,  
+Pour des promesses sans foi,  
+Mais dans notre cœur meurtri,  
+Nous levons nos voix, oh Éternel.
+
+[Chorus]  
+Dans la détresse, nous crions,  
+Vers Toi, notre Dieu, notre Sauveur,  
+Entends notre supplication,  
+Libère-nous de cette terreur.  
+Façonne nos cœurs, redonne l’espoir,  
+Nous revenons, Éternel, à Toi ce soir.
+
+[Verse 2]  
+Des années d'oppression,  
+Les fils d'Ammon nous entourent,  
+Mais nous nous unissons,  
+Pour chercher Ta main qui secoure.  
+Toi qui as délivré,  
+Des tyrans, des vagues de mal,  
+Rappelle-nous Ta bonté,  
+Restaure notre peuple, ô divin Légal.
+
+[Chorus]  
+Dans la détresse, nous crions,  
+Vers Toi, notre Dieu, notre Sauveur,  
+Entends notre supplication,  
+Libère-nous de cette terreur.  
+Façonne nos cœurs, redonne l’espoir,  
+Nous revenons, Éternel, à Toi ce soir.
+
+[Bridge]  
+Ô, Éternel, regarde notre douleur,  
+Nous renonçons à nos faux dieux,  
+Avec humilité, nous venons,  
+Reçois notre cœur, prends-le, c'est à Toi.  
+Ta miséricorde est notre chant,  
+Soudain, nos chaînes s'évanouissent,  
+Tu es notre force, notre chant,  
+Dans l'épreuve, nous sommes heureux.
+
+[Chorus]  
+Dans la détresse, nous crions,  
+Vers Toi, notre Dieu, notre Sauveur,  
+Entends notre supplication,  
+Libère-nous de cette terreur.  
+Façonne nos cœurs, redonne l’espoir,  
+Nous revenons, Éternel, à Toi ce soir.
+
+[Outro]  
+Nous revenons, Éternel, à Toi ce soir,  
+Dans la détresse, nous crions,  
+Nous avons péché, mais Ta grâce,  
+Nous transforme, nous redonne la voix.  
+Éternel, dans notre détresse,  
+Nous trouvons notre paix en Toi.`,
+        11: `# Jephthé, Héros de Foi
+
+## [Verset 1]
+Dans l'ombre d'un passé, rejeté par ses frères,  
+Jephthé, vaillant héros, se tenait solitaire.  
+Fuyant la haine, il trouva la paix,  
+Dans le pays de Tob, où le cœur se plaît.  
+
+## [Chorus]  
+Ô Éternel, tu es ma force, ma lumière,  
+Quand l'ennemi s'avance, je ne crains rien, je fais confiance.  
+Par ta main, je combats, je me lève, je m’élève,  
+Jephthé, guidé par ta voix, je marche en ta présence.  
+
+## [Verset 2]  
+Les anciens de Galaad, dans leur détresse,  
+Cherchèrent le héros, pour une promesse.  
+« Viens, sois notre chef, mène-nous à la victoire, »  
+Jephthé répondit, « Si Dieu est dans notre histoire. »  
+
+## [Chorus]  
+Ô Éternel, tu es ma force, ma lumière,  
+Quand l'ennemi s'avance, je ne crains rien, je fais confiance.  
+Par ta main, je combats, je me lève, je m’élève,  
+Jephthé, guidé par ta voix, je marche en ta présence.  
+
+## [Bridge]  
+L’esprit de l’Éternel, sur lui descend,  
+Il avance courageux, pour un peuple en attente.  
+Son vœu s'élève, un sacrifice à l'ombre,  
+Pour voir la victoire, il se tient sans nombre.  
+
+## [Verset 3]  
+La bataille éclata, l’Éternel livra,  
+Les fils d'Ammon, par sa main, s'inclina.  
+Et quand il revint, sa fille dansa,  
+Une promesse scellée, un cœur qui pleura.  
+
+## [Chorus]  
+Ô Éternel, tu es ma force, ma lumière,  
+Quand l'ennemi s'avance, je ne crains rien, je fais confiance.  
+Par ta main, je combats, je me lève, je m’élève,  
+Jephthé, guidé par ta voix, je marche en ta présence.  
+
+## [Conclusion]  
+Quatre jours par an, nous célébrons sa foi,  
+La fille de Jephthé, un héritage de joie.  
+Dans chaque bataille, l'Éternel est là,  
+Nous chantons sa victoire, pour l'éternité, Amen.  
+
+---
+
+Ces paroles évoquent la fidélité de Dieu dans les épreuves et la victoire qui vient par la foi, tout en respectant l'histoire de Jephthé et son engagement face à des défis.`,
+        12: `[Verse 1]  
+Dans l'ombre des batailles, un peuple s'est levé,  
+Éphraïm en colère, des cœurs à déchirer.  
+Jephthé a lutté, guidé par Ta main,  
+Face aux fils d'Ammon, il a pris le chemin.  
+
+[Chorus]  
+Seigneur, Tu es notre refuge,  
+Dans le feu et la tempête,  
+Quand les voix s’élèvent,  
+Nous chantons Ta vérité.  
+Oh, délivreur, Tu es notre force,  
+Dans la nuit sombre,  
+Nous crions vers Toi.  
+
+[Verse 2]  
+Les gués du Jourdain, un test de vérité,  
+Un mot pour passer, un cœur à dévoiler.  
+Schibboleth ou Sibboleth, la vie en un souffle,  
+Les promesses de Galaad, dans le sang se déroulent.  
+
+[Chorus]  
+Seigneur, Tu es notre refuge,  
+Dans le feu et la tempête,  
+Quand les voix s’élèvent,  
+Nous chantons Ta vérité.  
+Oh, délivreur, Tu es notre force,  
+Dans la nuit sombre,  
+Nous crions vers Toi.  
+
+[Bridge]  
+Jephthé, un juge au cœur fidèle,  
+Il a tenu bon, il a combattu,  
+Avec courage, il a triomphé,  
+Par Ta grâce, il a vaincu.  
+Et nous, en ce temps de guerre,  
+Nous nous tenons, unis dans la prière,  
+Car Tu es notre espoir, notre lumière,  
+Dans chaque combat, O Seigneur, nous espérons.  
+
+[Chorus]  
+Seigneur, Tu es notre refuge,  
+Dans le feu et la tempête,  
+Quand les voix s’élèvent,  
+Nous chantons Ta vérité.  
+Oh, délivreur, Tu es notre force,  
+Dans la nuit sombre,  
+Nous crions vers Toi.  
+
+[Outro]  
+Dans l'histoire de Galaad, Ta main se révèle,  
+Un peuple debout, fort et fidèle.  
+Seigneur, nous marchons, main dans la main,  
+Ta gloire éclatante, notre chemin.`,
+        13: `[Verse 1]  
+Dans la nuit sombre, un cri s'élève,  
+Les cœurs d'Israël sont en détresse,  
+Quarante ans sous l'oppression,  
+Mais une promesse, une révélation.  
+
+[Pre-Chorus]  
+Une lumière brille, un ange apparaît,  
+"Ne crains pas, je suis envoyé pour vous,  
+Un fils naîtra, consacré dès le ventre,  
+Le début d’une délivrance, un nouveau temps."
+
+[Chorus]  
+Ô Éternel, Tu es notre espoir,  
+Dans les ténèbres, Tu es notre phare,  
+Ton nom est merveilleux, oh, nous t'adorons,  
+Dans chaque prière, Tu entends notre chant.
+
+[Verse 2]  
+Manoach s’incline, humble devant Toi,  
+« Enseigne-nous, Seigneur, ce qu’il faut faire ici-bas, »  
+La femme attend, son cœur en paix,  
+Elle porte en elle le futur, la clé.  
+
+[Pre-Chorus]  
+Les promesses s'accomplissent, la foi se lève,  
+Un enfant béni, un héros de lumière,  
+Dans la puissance de l'Esprit, il grandira,  
+Pour délivrer son peuple, il combattra.
+
+[Chorus]  
+Ô Éternel, Tu es notre espoir,  
+Dans les ténèbres, Tu es notre phare,  
+Ton nom est merveilleux, oh, nous t'adorons,  
+Dans chaque prière, Tu entends notre chant.
+
+[Bridge]  
+Quand la flamme monte, l’autel s’embrase,  
+Nous tombons face contre terre, en Ta grâce,  
+Nous avons vu Ta gloire, éternelle lumière,  
+Rien n'est impossible, ô notre Père.  
+
+[Chorus]  
+Ô Éternel, Tu es notre espoir,  
+Dans les ténèbres, Tu es notre phare,  
+Ton nom est merveilleux, oh, nous t'adorons,  
+Dans chaque prière, Tu entends notre chant.
+
+[Outro]  
+L'ange de l'Éternel, notre guide fidèle,  
+Dans chaque combat, nous chantons l'Éternel,  
+Samson est né, avec force et foi,  
+L'Éternel est notre Dieu, en Lui, nous vivons, à jamais, par la joie.`,
+        14: `[Verse 1]  
+Dans les vignes de Thimna, un rugissement,  
+Un lion s'avance, puissant, menaçant.  
+Mais l'Esprit de l'Éternel, sur moi descendu,  
+Avec force et courage, je me lève, je suis entendu.  
+
+[Chorus]  
+Oh Seigneur, dans les combats, Tu es là,  
+Dans la tempête, Ta lumière éclatera.  
+Du fort est sorti le doux,  
+Dans les épreuves, je trouve en Toi mon tout.  
+
+[Verse 2]  
+Les Philistins dominent, mais je ne crains rien,  
+Car Ta main me guide, Tu es mon chemin.  
+Des énigmes de la vie, Tu es la clé,  
+Dans chaque défi, avec Toi, je vais avancer.  
+
+[Chorus]  
+Oh Seigneur, dans les combats, Tu es là,  
+Dans la tempête, Ta lumière éclatera.  
+Du fort est sorti le doux,  
+Dans les épreuves, je trouve en Toi mon tout.  
+
+[Bridge]  
+Les abeilles dans le lion, un miel caché,  
+Des promesses et des forces dans la vérité.  
+Je T’adore, ô mon Roi, pour ce que Tu fais,  
+Dans chaque lutte, c’est Toi qui me soutiens.  
+
+[Chorus]  
+Oh Seigneur, dans les combats, Tu es là,  
+Dans la tempête, Ta lumière éclatera.  
+Du fort est sorti le doux,  
+Dans les épreuves, je trouve en Toi mon tout.  
+
+[Outro]  
+Je chante, je loue, pour Ta grâce infinie,  
+Dans chaque victoire, je marche avec foi en Vie.  
+Oh, l’Éternel est mon guide, je ne crains rien,  
+Avec Toi, mon Dieu, chaque jour est un refrain.  
+
+---
+
+Ce chant, inspiré des événements de la vie de Samson, nous rappelle que même dans les luttes et les épreuves, l'Éternel est toujours présent et nous accorde la force et la sagesse pour surmonter.`,
+        15: `[Verse 1]  
+Dans les champs de blé, un cri s'élève,  
+Samson, héro, dans la nuit se lève.  
+Trahi par ceux qu'il aimait,  
+Mais l'Esprit de l'Éternel le guidait.  
+Trois cents renards, flambeaux enflammés,  
+Son cœur brûle de justice, prêt à combattre.
+
+[Chorus]  
+Ô Seigneur, Tu es notre force,  
+Dans les combats, Tu es notre voix.  
+Avec une mâchoire d'âne,  
+Nous vaincrons, nous chanterons,  
+Ta délivrance, notre espérance,  
+Pour toujours, nous T’adorerons.
+
+[Verse 2]  
+Les Philistins viennent comme un torrent,  
+Mais Samson se tient, ferme et vaillant.  
+Avec courage, il répond à leur défi,  
+Où est la peur quand Dieu est ici ?  
+Des chaînes se brisent, des liens se rompent,  
+Dans la caverne, la lumière s'impose.
+
+[Chorus]  
+Ô Seigneur, Tu es notre force,  
+Dans les combats, Tu es notre voix.  
+Avec une mâchoire d'âne,  
+Nous vaincrons, nous chanterons,  
+Ta délivrance, notre espérance,  
+Pour toujours, nous T’adorerons.
+
+[Bridge]  
+Quand la soif nous presse, nous T’invoquons,  
+Fend le rocher, donne-nous la raison.  
+L’eau vive coule, réveille nos âmes,  
+Dans chaque épreuve, nous chantons Ta flamme.  
+Samson, héros, avec foi en avance,  
+Chaque victoire est une danse.
+
+[Chorus]  
+Ô Seigneur, Tu es notre force,  
+Dans les combats, Tu es notre voix.  
+Avec une mâchoire d'âne,  
+Nous vaincrons, nous chanterons,  
+Ta délivrance, notre espérance,  
+Pour toujours, nous T’adorerons.
+
+[Outro]  
+Dans les champs de blé, un cri s'élève,  
+Samson, avec Toi, il s'élève.  
+Nous marchons en foi, main dans la main,  
+Seigneur, notre force, notre chemin.  
+Nous T’adorerons, pour toujours, Amen.`,
+        16: `[Verse 1]  
+Dans la nuit sombre, je suis tombé,  
+Perdu dans les ombres, la force a quitté.  
+Les chaînes de l’ennemi, serrent mon cœur,  
+Ô Seigneur, je crie, entends ma douleur.
+
+[Chorus]  
+Souviens-toi de moi, ô Dieu de ma foi,  
+Rends-moi la force, pour vivre en toi.  
+Dans la lutte et la tempête,  
+Je t’invoquerai, je te chercherai.
+
+[Verse 2]  
+J’ai connu l’amour, j’ai connu la trahison,  
+Delila m’a pris, a volé ma raison.  
+Les Philistins rient, mais toi tu es là,  
+Redonne-moi la force, pour briser les pas.
+
+[Chorus]  
+Souviens-toi de moi, ô Dieu de ma foi,  
+Rends-moi la force, pour vivre en toi.  
+Dans la lutte et la tempête,  
+Je t’invoquerai, je te chercherai.
+
+[Bridge]  
+Quand tout semble perdu, je me lève,  
+Par ta grâce, je suis libre, je m'élève.  
+Dans la prison de la honte, je crie,  
+Ô Seigneur, ma lumière, ma vie.
+
+[Chorus]  
+Souviens-toi de moi, ô Dieu de ma foi,  
+Rends-moi la force, pour vivre en toi.  
+Dans la lutte et la tempête,  
+Je t’invoquerai, je te chercherai.
+
+[Verse 3]  
+Alors dans la douleur, je t’invoquerai,  
+Sur les colonnes, ma force, je mettrai.  
+Que ma vie soit un acte de foi,  
+Dans ma mort, je te glorifierai.
+
+[Chorus]  
+Souviens-toi de moi, ô Dieu de ma foi,  
+Rends-moi la force, pour vivre en toi.  
+Dans la lutte et la tempête,  
+Je t’invoquerai, je te chercherai.
+
+[Outro]  
+Souviens-toi de moi, dans l’éternité,  
+Avec toi, Seigneur, je veux régner.  
+Que ma voix s’élève, dans ta majesté,  
+Ô Dieu des cieux, pour l’éternité.`,
+        17: `[Verse 1]  
+Dans la montagne d'Éphraïm, un homme se tenait,  
+Mica, son nom, un cœur qui se souciait.  
+Il a pris l'argent, un trésor volé,  
+Pour sa mère, une promesse, un chant à chanter.  
+
+[Chorus]  
+[Spoken Word] « Où es-tu », ô mon Dieu, dans les cœurs blessés ?  
+Dans la lumière de Ta grâce, nous sommes relevés.  
+L'Éternel, notre guide, l'espoir renouvelé,  
+Avec ce Lévite, Tu nous feras du bien,  
+Nous Te louerons, nous Te louerons,  
+À jamais, nous Te louerons.  
+
+[Verse 2]  
+Mica a consacré, l'argent entre ses mains,  
+Une image en fonte, un culte incertain.  
+En ces jours sans roi, chacun suivait son chemin,  
+Mais dans l'ombre de la nuit, Ta voix nous maintient.  
+
+[Chorus]  
+[Spoken Word] « Où es-tu », ô mon Dieu, dans les cœurs blessés ?  
+Dans la lumière de Ta grâce, nous sommes relevés.  
+L'Éternel, notre guide, l'espoir renouvelé,  
+Avec ce Lévite, Tu nous feras du bien,  
+Nous Te louerons, nous Te louerons,  
+À jamais, nous Te louerons.  
+
+[Bridge]  
+Dans chaque prière, chaque cri de notre cœur,  
+Tu es notre refuge, notre Sauveur.  
+Nous cherchons une demeure, un lieu pour adorer,  
+Et dans Ton amour, nous sommes restaurés.  
+
+[Chorus]  
+[Spoken Word] « Où es-tu », ô mon Dieu, dans les cœurs blessés ?  
+Dans la lumière de Ta grâce, nous sommes relevés.  
+L'Éternel, notre guide, l'espoir renouvelé,  
+Avec ce Lévite, Tu nous feras du bien,  
+Nous Te louerons, nous Te louerons,  
+À jamais, nous Te louerons.  
+
+[Outro]  
+L'Éternel me fera du bien,  
+Je marcherai dans la foi,  
+Avec Lui, je ne crains rien,  
+L'Éternel est mon roi.  
+Nous Te louerons, à jamais,  
+Nous Te louerons, ô notre Dieu.`,
+        18: `[Verse 1]  
+Dans un temps sans roi, un peuple en quête,  
+Les fils de Dan, dans l’ombre, se lèvent.  
+Ils cherchent un pays, une terre promise,  
+Écoutent la voix de l’Éternel qui leur dit :  
+
+[Chorus]  
+Allez, mes enfants, en paix, avancez,  
+Car Dieu vous guide, son regard est sur vous.  
+Dans la lumière de sa promesse,  
+Nous marchons, unis, vers notre héritage.  
+
+[Verse 2]  
+Ils ont vu Laïs, un peuple en sécurité,  
+Sans crainte, sans lutte, ils ont été trouvés.  
+« Ce pays est bon, ne restez pas là,  
+L’Éternel vous l’a donné, c’est votre droit. »  
+
+[Chorus]  
+Allez, mes enfants, en paix, avancez,  
+Car Dieu vous guide, son regard est sur vous.  
+Dans la lumière de sa promesse,  
+Nous marchons, unis, vers notre héritage.  
+
+[Bridge]  
+Et quand les ténèbres tentent de nous saisir,  
+Rappelons-nous les promesses, ne craignons rien.  
+Avec foi, nous marchons, dans la vérité,  
+Le cœur joyeux, notre prière s’élève.  
+
+[Chorus]  
+Allez, mes enfants, en paix, avancez,  
+Car Dieu vous guide, son regard est sur vous.  
+Dans la lumière de sa promesse,  
+Nous marchons, unis, vers notre héritage.  
+
+[Verse 3]  
+Mica a crié, ses dieux sont partis,  
+Mais l'Éternel est notre seul abri.  
+Ensemble, nous bâtissons, une maison pour lui,  
+Dans la foi et l’amour, nous sommes rassemblés.  
+
+[Chorus]  
+Allez, mes enfants, en paix, avancez,  
+Car Dieu vous guide, son regard est sur vous.  
+Dans la lumière de sa promesse,  
+Nous marchons, unis, vers notre héritage.  
+
+[Conclusion]  
+Dans la lumière de Ta promesse,  
+Nous avançons, main dans la main,  
+Éternel, notre roi, notre force,  
+Pour toujours, en Toi, nous sommes vainqueurs.`,
+        19: `[Verse 1]  
+Dans l’ombre des montagnes, un cœur se languit,  
+Un Lévite en quête de sa douce moitié,  
+La concubine s’enfuit, son amour s’est terni,  
+Il brave la distance, pour la ramener.  
+
+[Pre-Chorus]  
+Trois jours de festin, chez le père en joie,  
+Un cœur qui se bat, pour retrouver la voie,  
+Mais le temps s’écoule, le désir s’intensifie,  
+Il lève les yeux, vers l’horizon infini.  
+
+[Chorus]  
+Ramène-moi, Seigneur, vers ta maison,  
+Où l’amour abonde, et règne la passion,  
+Dans la lumière de Ta vérité,  
+Je cherche ta grâce, pour me restaurer.  
+
+[Verse 2]  
+Les portes se ferment, la ville est muette,  
+Un voyageur perdu, dans la nuit qui s’apprête,  
+Un vieillard compatissant, ouvre avec bienveillance,  
+Il offre refuge, dans l’espérance.  
+
+[Pre-Chorus]  
+Mais dans l’obscurité, le mal s’approche,  
+Des hommes de la ville, la haine se perche,  
+La lumière vacille, la paix se dérobe,  
+Un cri dans la nuit, l’angoisse se dérobe.  
+
+[Chorus]  
+Ramène-moi, Seigneur, vers ta maison,  
+Où l’amour abonde, et règne la passion,  
+Dans la lumière de Ta vérité,  
+Je cherche ta grâce, pour me restaurer.  
+
+[Bridge]  
+Dans la douleur, je me lève,  
+Chaque morceau de moi crie vers le ciel,  
+Rassemble mes larmes, guéris ma trêve,  
+Ouvre mon cœur, fais briller l'étincelle.  
+
+[Chorus]  
+Ramène-moi, Seigneur, vers ta maison,  
+Où l’amour abonde, et règne la passion,  
+Dans la lumière de Ta vérité,  
+Je cherche ta grâce, pour me restaurer.  
+
+[Outro]  
+À travers les tempêtes, je marcherai,  
+Dans la maison du Père, je resterai,  
+Unis dans l’amour, ensemble pour toujours,  
+Seigneur, ma vie est un chant d’amour.  
+
+---`,
+        20: `[Verset 1]  
+Tous ensemble, nous nous levons,  
+De Dan à Beer-Schéba, nous marchons,  
+Devant l'Éternel, nos cœurs en prière,  
+À Mitspa, unis dans la lumière.  
+
+[Chorus]  
+Ô Seigneur, écoute notre voix,  
+Nous sommes unis, nous sommes en toi,  
+Dans la bataille, nous ne tremblerons pas,  
+Car tu es notre force, notre roi, notre roi.  
+
+[Verset 2]  
+Le Lévite a parlé de l'infamie,  
+Une douleur, un cri dans la nuit gris,  
+Nous cherchons justice, nous demandons ta grâce,  
+Pour ôter le mal, pour ramener la paix.  
+
+[Chorus]  
+Ô Seigneur, écoute notre voix,  
+Nous sommes unis, nous sommes en toi,  
+Dans la bataille, nous ne tremblerons pas,  
+Car tu es notre force, notre roi, notre roi.  
+
+[Bridge]  
+À Béthel, nous pleurons,  
+Avec jeûne, nous cherchons,  
+Ta lumière dans l'obscurité,  
+Tu nous conduiras, tu es notre clarté.  
+
+[Verset 3]  
+Trois jours de lutte, la foi en nous,  
+L'Éternel nous guide, il est là pour tous,  
+Les Benjamites tombent, mais nous restons,  
+Car l'union fait notre raison.  
+
+[Chorus]  
+Ô Seigneur, écoute notre voix,  
+Nous sommes unis, nous sommes en toi,  
+Dans la bataille, nous ne tremblerons pas,  
+Car tu es notre force, notre roi, notre roi.  
+
+[Outro]  
+Unis comme un seul homme, nous marcherons,  
+Avec toi, Seigneur, vers la rédemption,  
+Dans chaque cœur, une même prière,  
+Ô Éternel, notre lumière, notre lumière.`,
+        21: `[Verse 1]  
+O Seigneur, dans nos larmes,  
+Nous venons devant Toi,  
+Une tribu est perdue,  
+Une histoire de foi.  
+À Béthel, nous pleurons,  
+Pour Benjamin, notre frère,  
+Dans notre cœur, un cri,  
+Pourquoi cette guerre amère ?
+
+[Chorus]  
+O Dieu d'Israël, entend notre voix,  
+Nous cherchons Ta lumière, dans l'ombre de la foi.  
+Rassemble nos cœurs, répare nos brèches,  
+Dans l'unité et l'amour, Ta grâce nous empêche.
+
+[Verse 2]  
+Des promesses gravées,  
+Sur l’autel de l'espérance,  
+Des sacrifices de paix,  
+Pour une nouvelle chance.  
+Les jeunes filles de Silo,  
+Dansent sous le ciel étoilé,  
+Une lueur dans la nuit,  
+Pour ceux qui sont désolés.
+
+[Chorus]  
+O Dieu d'Israël, entend notre voix,  
+Nous cherchons Ta lumière, dans l'ombre de la foi.  
+Rassemble nos cœurs, répare nos brèches,  
+Dans l'unité et l'amour, Ta grâce nous empêche.
+
+[Bridge]  
+Nous sommes unis dans la peine,  
+Unis sous Ton regard,  
+Ta miséricorde nous entraîne,  
+Vers un futur, un départ.  
+Réveille en nous la promesse,  
+D’un peuple qui Te suivra,  
+Dans l’amour et la tendresse,  
+Nous marcherons vers Toi, oh roi.
+
+[Chorus]  
+O Dieu d'Israël, entend notre voix,  
+Nous cherchons Ta lumière, dans l'ombre de la foi.  
+Rassemble nos cœurs, répare nos brèches,  
+Dans l'unité et l'amour, Ta grâce nous empêche.
+
+[Outro]  
+O Seigneur, à jamais,  
+Nous T’adorerons,  
+Dans la joie et la foi,  
+Nous T’offrirons.  
+Unis dans la douleur,  
+Nous trouvons notre voie,  
+Car en Toi, éternellement,  
+Nous vivrons dans la joie.`
+    },
     "08": {
         1: `[Verse 1]  
 Dans la nuit sombre, une femme se lève,  
@@ -13990,6 +15104,6199 @@ Ta lumière guide nos pas pour l’éternité.
 ---
 
 *Ces paroles inspirées des Écritures invitent à la repentance et à la recherche de la miséricorde de Dieu, tout en honorant son amour et sa grâce. Le style est conçu pour une interprétation dynamique et respectueuse, propice à un moment de worship puissant.*`
+    },
+    "11": {
+        1: `[Verse 1]  
+Dans l’ombre du vieux roi, une promesse brille,  
+Salomon, l’héritier, vers le trône, il file.  
+Bath-Schéba en larmes, implore la vérité,  
+O Éternel, souviens-toi, ta parole est fidélité.
+
+[Chorus]  
+Ô Roi, lève ton nom,  
+Dans nos cœurs, ta lumière,  
+Le trône que tu as promis,  
+Est notre espoir, notre prière.  
+Vive le roi Salomon,  
+Dans la joie, chantons fort,  
+L'Éternel est notre guide,  
+Il nous conduit vers le port.
+
+[Verse 2]  
+Adonija s’élève, son orgueil se déploie,  
+Mais ton choix, ô Éternel, est dans ta loi.  
+Nathan et Tsadok, en toute vérité,  
+Oignent celui que tu as choisi pour régner.
+
+[Chorus]  
+Ô Roi, lève ton nom,  
+Dans nos cœurs, ta lumière,  
+Le trône que tu as promis,  
+Est notre espoir, notre prière.  
+Vive le roi Salomon,  
+Dans la joie, chantons fort,  
+L'Éternel est notre guide,  
+Il nous conduit vers le port.
+
+[Bridge]  
+Les trompettes résonnent, la terre tremble de joie,  
+Salomon, le roi, a pris sa voie.  
+Tous les peuples rendent gloire,  
+À celui qui nous sauve,  
+Dans l'unité, nous chantons,  
+L’amour qui nous enveloppe.
+
+[Chorus]  
+Ô Roi, lève ton nom,  
+Dans nos cœurs, ta lumière,  
+Le trône que tu as promis,  
+Est notre espoir, notre prière.  
+Vive le roi Salomon,  
+Dans la joie, chantons fort,  
+L'Éternel est notre guide,  
+Il nous conduit vers le port.
+
+[Outro]  
+Dans la paix, nous marchons,  
+Main dans la main, ensemble,  
+Le règne de Salomon,  
+Pour toujours, nous l’assemblons.  
+Ô Éternel, notre roi,  
+Nous te louons à jamais,  
+Notre cœur est à toi,  
+Pour l’éternité, nous prions.`,
+        2: `[Verse 1]  
+Dans l'ombre de la mort, David parle à son fils,  
+Fortifie-toi, marche, suis la voix de l'Éternel.  
+Observe ses commandements, sois fidèle et sage,  
+Dans chaque pas, sa lumière, guide ton cœur éternel.
+
+[Chorus]  
+Fortifie-toi, oh Salomon,  
+Dans la vérité, trouve ta force,  
+L'Éternel est avec toi,  
+Sur le trône de David,  
+Sa promesse est pour toujours,  
+Dans la foi, nous marcherons.
+
+[Verse 2]  
+Les combats, les luttes, dans l’histoire d’un roi,  
+Les pleurs et les cris, mais l'amour reste roi.  
+Joab et Schimeï, leurs choix ont un prix,  
+Mais la paix pour David, l'Éternel, il l’a dit.
+
+[Chorus]  
+Fortifie-toi, oh Salomon,  
+Dans la vérité, trouve ta force,  
+L'Éternel est avec toi,  
+Sur le trône de David,  
+Sa promesse est pour toujours,  
+Dans la foi, nous marcherons.
+
+[Bridge]  
+Et quand les tempêtes viendront,  
+Rappelle-toi de ses promesses,  
+Il est le roi de ta vie,  
+Suis ses voies, tu es béni.  
+La sagesse te couvrira,  
+Dans la lumière, tu brilleras,  
+Fortifie-toi, sois un homme,  
+L'Éternel est ton roc, ton nom.
+
+[Chorus]  
+Fortifie-toi, oh Salomon,  
+Dans la vérité, trouve ta force,  
+L'Éternel est avec toi,  
+Sur le trône de David,  
+Sa promesse est pour toujours,  
+Dans la foi, nous marcherons.
+
+[Outro]  
+Dans la foi, nous marcherons,  
+Fortifiés par son amour,  
+L'Éternel, notre Dieu,  
+Pour toujours, son règne est grand.  
+Fortifie-toi, sois un homme,  
+L'Éternel est avec toi.`,
+        3: `[Verse 1]  
+Dans le silence de la nuit,  
+Au sommet de Gabaon,  
+Salomon, humble et petit,  
+Cherche ta voix, ô mon Dieu.  
+Un cœur intelligent, il te demande,  
+Pour guider ce peuple en errance,  
+Toi qui es la lumière éclatante,  
+Accorde-lui ta bienveillance.
+
+[Chorus]  
+Ô Éternel, fais briller ta sagesse,  
+Dans nos cœurs, fais-nous briller,  
+Guide-nous sur les chemins justes,  
+Dans ta vérité, fais-nous marcher.  
+Ta gloire, nous l’adorons,  
+Dans l’amour, nous nous tenons,  
+Éternel, notre Roi, notre lumière,  
+À jamais, nous te louerons.
+
+[Verse 2]  
+Devant l'arche, il t’offre des louanges,  
+Des sacrifices, un cœur en fête,  
+Sa prière monte, douce mélodie,  
+Seigneur, sa vie est à ta quête.  
+Deux femmes viennent, en larmes,  
+Devant le roi, elles se dévoilent,  
+Dans le jugement, ta sagesse charme,  
+La vérité, dans l’amour, s’installe.
+
+[Chorus]  
+Ô Éternel, fais briller ta sagesse,  
+Dans nos cœurs, fais-nous briller,  
+Guide-nous sur les chemins justes,  
+Dans ta vérité, fais-nous marcher.  
+Ta gloire, nous l’adorons,  
+Dans l’amour, nous nous tenons,  
+Éternel, notre Roi, notre lumière,  
+À jamais, nous te louerons.
+
+[Bridge]  
+Dans les hauts lieux, nous venons,  
+Pour offrir nos cœurs en adoration,  
+Ta voix nous guide, ô Seigneur,  
+Dans ta présence, nous trouvons la ferveur.  
+Comme Salomon, nous cherchons,  
+Ta sagesse, notre fondation,  
+Donne-nous, Seigneur, un cœur pur,  
+Pour servir et aimer, c’est notre murmure.
+
+[Chorus]  
+Ô Éternel, fais briller ta sagesse,  
+Dans nos cœurs, fais-nous briller,  
+Guide-nous sur les chemins justes,  
+Dans ta vérité, fais-nous marcher.  
+Ta gloire, nous l’adorons,  
+Dans l’amour, nous nous tenons,  
+Éternel, notre Roi, notre lumière,  
+À jamais, nous te louerons.
+
+[Outro]  
+Éternel, notre Roi,  
+Nous te cherchons dans l’obscurité,  
+Accorde-nous ta sagesse,  
+Dans ta lumière, nous voulons marcher.`,
+        4: `**Titre**: **La Sagesse du Roi**
+
+[Verse 1]  
+Dans les jours de Salomon, un roi plein de lumière,  
+Sur Israël il règne, avec sagesse de l'air.  
+Des chefs et des intendants, autour de lui rassemblés,  
+Chaque cœur est en paix, chaque voix pour chanter.  
+
+[Chorus]  
+Ô Seigneur, donne-nous ta sagesse,  
+Comme le sable au bord de la mer,  
+Dans ta lumière, nous trouvons notre forteresse,  
+Ta gloire éclaire nos pas sur cette terre.  
+
+[Verse 2]  
+Des montagnes à la mer, son royaume s’étend,  
+Juda et Israël, en sécurité, s'épanouissant.  
+Sous la vigne et le figuier, ils se réjouissent,  
+Des dons et des présents, en toute délice.  
+
+[Chorus]  
+Ô Seigneur, donne-nous ta sagesse,  
+Comme le sable au bord de la mer,  
+Dans ta lumière, nous trouvons notre forteresse,  
+Ta gloire éclaire nos pas sur cette terre.  
+
+[Bridge]  
+Écoute, ô peuple, la sagesse du roi,  
+Il parle des arbres, des animaux, avec foi.  
+Des cantiques résonnent, un chant d'amour,  
+Chaque note, un écho de ton divin secours.  
+
+[Chorus]  
+Ô Seigneur, donne-nous ta sagesse,  
+Comme le sable au bord de la mer,  
+Dans ta lumière, nous trouvons notre forteresse,  
+Ta gloire éclaire nos pas sur cette terre.  
+
+[Verse 3]  
+Seigneur de l’univers, toi qui es notre guide,  
+Dans les batailles de la vie, sois notre aide solide.  
+Comme Salomon, remplis-nous de ta vérité,  
+En toi, nous avons tout, en toi, la liberté.  
+
+[Chorus]  
+Ô Seigneur, donne-nous ta sagesse,  
+Comme le sable au bord de la mer,  
+Dans ta lumière, nous trouvons notre forteresse,  
+Ta gloire éclaire nos pas sur cette terre.  
+
+[Outro]  
+Dans chaque pas que nous faisons,  
+Nous chantons pour ta gloire, ô Roi des rois,  
+Ta sagesse est notre chant, notre raison,  
+Pour l’éternité, nous marcherons en toi.`,
+        5: `[Verse 1]  
+Dans le cœur de Salomon, une voix s’élève,  
+L’Éternel a donné, un repos sans trêve.  
+David, son père, a rêvé cette demeure,  
+Où la gloire divine, éclaire nos heures.  
+
+[Chorus]  
+Bâtissons pour l'Éternel,  
+Une maison de lumière,  
+Pour glorifier son nom,  
+Dans la paix, nous vivrons,  
+Unis dans l'amour,  
+Ensemble pour toujours,  
+Bâtissons pour l'Éternel,  
+Car il est notre roi.  
+
+[Verse 2]  
+Hiram, roi de Tyr, entend cette promesse,  
+Sa joie éclate, il célèbre sa richesse.  
+Cèdres du Liban, bois précieux en main,  
+Pour l’œuvre de Dieu, nous marchons chemin.  
+
+[Chorus]  
+Bâtissons pour l'Éternel,  
+Une maison de lumière,  
+Pour glorifier son nom,  
+Dans la paix, nous vivrons,  
+Unis dans l'amour,  
+Ensemble pour toujours,  
+Bâtissons pour l'Éternel,  
+Car il est notre roi.  
+
+[Bridge]  
+Des pierres taillées, des cèdres en haut,  
+Les ouvriers s’unissent, pour un rêve nouveau.  
+Sagesse et alliance, entre nos cœurs,  
+Dans cette maison, chantons nos ardeurs.  
+
+[Chorus]  
+Bâtissons pour l'Éternel,  
+Une maison de lumière,  
+Pour glorifier son nom,  
+Dans la paix, nous vivrons,  
+Unis dans l'amour,  
+Ensemble pour toujours,  
+Bâtissons pour l'Éternel,  
+Car il est notre roi.  
+
+[Conclusion]  
+O Éternel, notre guide et notre force,  
+Dans l'unité, nous avançons sans écorce.  
+Élevons nos voix, pour ta gloire chantons,  
+Dans cette demeure, Seigneur, nous t’adorons.  
+
+---
+
+Ces paroles évoquent le désir de bâtir une maison pour l'Éternel, inspirées par l'alliance entre Salomon et Hiram, tout en restant fidèles à la sagesse et à la paix que Dieu a accordées.`,
+        6: `**Couplet 1**  
+Dans la lumière, un rêve s'élève,  
+Salomon bâtit, un temple en prière,  
+Soixante coudées, un abri pour l'âme,  
+La promesse scellée, un lieu de drame.  
+
+**Refrain**  
+Ô Éternel, Tu habites parmi nous,  
+Dans ce sanctuaire, notre cœur s'émeut,  
+Ton amour demeure, Tu ne nous abandonnes pas,  
+Dans la maison de l'Éternel, nous levons nos voix.
+
+**Couplet 2**  
+Des pierres taillées, aucun bruit,  
+La paix règne ici, en Toi, nous sommes unis,  
+Des chérubins d'or, ailes déployées,  
+Dans ce lieu saint, nos âmes sont invitées.  
+
+**Refrain**  
+Ô Éternel, Tu habites parmi nous,  
+Dans ce sanctuaire, notre cœur s'émeut,  
+Ton amour demeure, Tu ne nous abandonnes pas,  
+Dans la maison de l'Éternel, nous levons nos voix.
+
+**Pont**  
+Marche selon mes lois, je suis avec toi,  
+Dans cette maison, je dévoile ma foi,  
+Les promesses s'accomplissent, sous ton ciel,  
+Nous nous tenons ensemble, en ce lieu éternel.  
+
+**Refrain**  
+Ô Éternel, Tu habites parmi nous,  
+Dans ce sanctuaire, notre cœur s'émeut,  
+Ton amour demeure, Tu ne nous abandonnes pas,  
+Dans la maison de l'Éternel, nous levons nos voix.
+
+**Final**  
+La maison de l'Éternel,  
+Un refuge de lumière,  
+Ici nos âmes s'élèvent,  
+Pour l'éternité, nous Te prions, notre Père.`,
+        7: `**Titre :** La Maison de l'Éternel
+
+[Verse 1]  
+Dans le silence des cèdres, Salomon bâtit,  
+Une demeure pour toi, Seigneur, dans l'infini.  
+Quarante-cinq chambres, des colonnes dorées,  
+La sagesse d'Hiram, en œuvres dévoilées.
+
+[Chorus]  
+Ô Éternel, tu es notre fondement,  
+Dans ta maison, nous trouvons le changement.  
+Des pierres magnifiques, tes promesses sont là,  
+Nous adorons, nous venons, devant toi, oh roi.
+
+[Verse 2]  
+Le portique du jugement, ta justice rayonne,  
+La mer de bronze, ta grâce nous couronne.  
+Sur douze bœufs dressés, ta gloire s'élève,  
+Au cœur de ta maison, l'amour se révèle.
+
+[Chorus]  
+Ô Éternel, tu es notre fondement,  
+Dans ta maison, nous trouvons le changement.  
+Des pierres magnifiques, tes promesses sont là,  
+Nous adorons, nous venons, devant toi, oh roi.
+
+[Bridge]  
+Les chapiteaux de fleurs, les grenades en chant,  
+Échos de ta bonté, remplissent notre temps.  
+À chaque pas dans ta cour, nous découvrons,  
+La beauté de ta grâce, notre seule raison.
+
+[Chorus]  
+Ô Éternel, tu es notre fondement,  
+Dans ta maison, nous trouvons le changement.  
+Des pierres magnifiques, tes promesses sont là,  
+Nous adorons, nous venons, devant toi, oh roi.
+
+[Outro]  
+Dans la maison de l'Éternel, nos cœurs s'élèvent,  
+Pour l'éternité, nous te louons sans trêve.  
+Salomon a bâti, mais toi tu es le vrai,  
+Notre refuge et force, pour toujours, ô vrai.`,
+        8: `[Verset 1]  
+Dans la lumière de Ta gloire, nous nous rassemblons,  
+Les anciens d’Israël, unis dans l’action,  
+Toi, l’Alliance sacrée, dans notre cœur,  
+Nous consacrons cette maison, ô notre Sauveur.  
+
+[Chorus]  
+Béni sois-Tu, Seigneur,  
+Dans cette maison, nous T’adorons,  
+Ta présence est notre bonheur,  
+Éternel, nous T’élévons.  
+
+[Verset 2]  
+Sous les ailes des chérubins, nous nous tenons,  
+L’arche de l’Alliance, symbole de Ta passion,  
+Des milliers de sacrifices, une offrande de louange,  
+À jamais, dans notre cœur, Ta bonté s’échange.  
+
+[Chorus]  
+Béni sois-Tu, Seigneur,  
+Dans cette maison, nous T’adorons,  
+Ta présence est notre bonheur,  
+Éternel, nous T’élévons.  
+
+[Bridge]  
+Quand nos cœurs s’égarent,  
+Tu écoutes notre supplication,  
+Dans la détresse, nous Te cherchons,  
+Seigneur, accorde-nous Ta rédemption.  
+
+[Verset 3]  
+Si le ciel se ferme et que la pluie ne vient pas,  
+Nous tournons nos regards, vers cette maison, ici-bas,  
+Pardonne nos péchés, ô Dieu de miséricorde,  
+Ramenons-nous à Toi, sur le chemin sans bord.  
+
+[Chorus]  
+Béni sois-Tu, Seigneur,  
+Dans cette maison, nous T’adorons,  
+Ta présence est notre bonheur,  
+Éternel, nous T’élévons.  
+
+[Bridge]  
+Ô Éternel, écoute notre prière,  
+Que nos voix s’élèvent, unies dans la lumière,  
+Dans chaque épreuve, Tu es notre refuge,  
+Dans cette maison, ô Dieu, nous nous immergeons.  
+
+[Chorus]  
+Béni sois-Tu, Seigneur,  
+Dans cette maison, nous T’adorons,  
+Ta présence est notre bonheur,  
+Éternel, nous T’élévons.  
+
+[Outro]  
+À jamais dans nos cœurs,  
+Nous T’offrons nos vies,  
+Seigneur, dans Ta demeure,  
+Nous vivrons pour l’éternité.  
+
+---
+
+Cette chanson, inspirée des versets de la prière de Salomon, évoque la gloire de Dieu, la consécration du temple et notre désir de vivre dans Sa présence.`,
+        9: `**TITRE**  
+**Dans Ta Maison, Eternel**
+
+[VERS 1]  
+Lorsque Salomon a bâti,  
+Un temple pour Ton Saint Nom,  
+Les murs ont résonné,  
+Avec Ta gloire, ô Eternel.  
+Tu es venu à lui,  
+Promesse d'un cœur ardent,  
+Sanctifiant ce lieu,  
+Où Tu mets Ton amour vivant.
+
+[CHORUS]  
+Dans Ta maison, je me tiens,  
+Eternel, je T’adore,  
+Mon cœur s'élève vers Toi,  
+Dans la lumière de Ta gloire.  
+Guide mes pas, ô Seigneur,  
+Que je marche en Ta vérité,  
+Dans Ta maison, je demeure,  
+À jamais, je veux Te louer.
+
+[VERS 2]  
+Si je marche comme David,  
+Avec sincérité,  
+Obéissant à Tes voies,  
+Mon âme s'épanouit.  
+Mais si je me détourne,  
+Des chemins que Tu as tracés,  
+Je sais que dans la tristesse,  
+Ta présence peut s'éclipser.
+
+[CHORUS]  
+Dans Ta maison, je me tiens,  
+Eternel, je T’adore,  
+Mon cœur s'élève vers Toi,  
+Dans la lumière de Ta gloire.  
+Guide mes pas, ô Seigneur,  
+Que je marche en Ta vérité,  
+Dans Ta maison, je demeure,  
+À jamais, je veux Te louer.
+
+[BRIDGE]  
+Oh, que ne se détourne pas,  
+Mon cœur de Ta bonté,  
+Je veux Te servir, oh Dieu,  
+Dans l'humilité.  
+Si le monde s'étonne,  
+De Ta main qui châtie,  
+Je me tiens dans la foi,  
+En Ta grâce infinie.
+
+[CHORUS]  
+Dans Ta maison, je me tiens,  
+Eternel, je T’adore,  
+Mon cœur s'élève vers Toi,  
+Dans la lumière de Ta gloire.  
+Guide mes pas, ô Seigneur,  
+Que je marche en Ta vérité,  
+Dans Ta maison, je demeure,  
+À jamais, je veux Te louer.
+
+[Outro]  
+Dans Ta maison, je m’incline,  
+Eternel, Tu es ma voie,  
+Avec foi, je Te déclare,  
+Je vivrai pour Toi, pour Toi seul,  
+Dans Ta maison, je T’adore,  
+À jamais, Eternel, je T'adore.`,
+        10: `[Verse 1]  
+Dans la lumière de Ta gloire, Seigneur,  
+La reine s'avance, son cœur en quête,  
+Elle a entendu, murmures de l'honneur,  
+De Salomon, sage et prophète.  
+À Jérusalem, elle arrive en prière,  
+Avec des trésors, des dons de la terre,  
+Pour voir de ses yeux, la sagesse éclatante,  
+Qui dans ce royaume, éclaire chaque instant.
+
+[Chorus]  
+Béni soit l'Éternel, notre Dieu,  
+Toi qui donnes la sagesse sans fin,  
+Dans chaque épreuve, Tu es notre lieu,  
+Guide nos cœurs, Seigneur, vers le chemin.  
+Heureux ceux qui marchent dans Ta lumière,  
+Heureux ceux qui écoutent Ta voix,  
+O toi, le roi, l'étoile de la mer,  
+Nous chantons, Seigneur, en toute foi.
+
+[Verse 2]  
+Elle vit de ses yeux, la table dressée,  
+Les mets savoureux, la grâce déployée,  
+Les serviteurs fidèles, dans leur splendeur,  
+Unis en louange, offrant leur cœur.  
+Elle s'écria, émerveillée, oh quelle vérité,  
+"Je ne croyais pas avant d'avoir goûté,  
+À la sagesse, à la richesse infinie,  
+De l'Éternel qui règne en harmonie."
+
+[Chorus]  
+Béni soit l'Éternel, notre Dieu,  
+Toi qui donnes la sagesse sans fin,  
+Dans chaque épreuve, Tu es notre lieu,  
+Guide nos cœurs, Seigneur, vers le chemin.  
+Heureux ceux qui marchent dans Ta lumière,  
+Heureux ceux qui écoutent Ta voix,  
+O toi, le roi, l'étoile de la mer,  
+Nous chantons, Seigneur, en toute foi.
+
+[Bridge]  
+Seigneur, nous venons devant Toi,  
+Avec des cœurs ouverts, des mains levées,  
+Pour célébrer Ta bonté, Ta loi,  
+Chaque promesse, toujours accomplie.  
+À Ta gloire, nous élevons nos chants,  
+Comme la reine, émerveillés, nous attendons,  
+Car Ta sagesse nous guide, chaque instant,  
+Dans l'amour d'un roi, en toute saison.
+
+[Chorus]  
+Béni soit l'Éternel, notre Dieu,  
+Toi qui donnes la sagesse sans fin,  
+Dans chaque épreuve, Tu es notre lieu,  
+Guide nos cœurs, Seigneur, vers le chemin.  
+Heureux ceux qui marchent dans Ta lumière,  
+Heureux ceux qui écoutent Ta voix,  
+O toi, le roi, l'étoile de la mer,  
+Nous chantons, Seigneur, en toute foi.`,
+        11: `[Verse 1]  
+Dans le cœur de Salomon, un amour s'est levé,  
+Des voix étrangères, l'âme a détourné.  
+L'Éternel avait dit, « Ne les cherche pas, »  
+Mais son cœur s'est égaré, loin de Ta loi.
+
+[Chorus]  
+Rappelle-moi, Seigneur, de Ta fidélité,  
+De suivre Tes voies, de ne jamais céder.  
+Rappelle-moi, Seigneur, de Ton amour parfait,  
+Que mon cœur demeure en Toi, à jamais.
+
+[Verse 2]  
+Des dieux des nations, il s'est prosterné,  
+Kemosch et Astarté, son cœur a trahi.  
+Dans les ombres de Jérusalem, il a péché,  
+O Éternel, dans Ta grâce, fais-moi revenir.
+
+[Chorus]  
+Rappelle-moi, Seigneur, de Ta fidélité,  
+De suivre Tes voies, de ne jamais céder.  
+Rappelle-moi, Seigneur, de Ton amour parfait,  
+Que mon cœur demeure en Toi, à jamais.
+
+[Bridge]  
+Tu as promis, ô Dieu, de ne jamais partir,  
+D’être avec nous même lorsque l'on chavire.  
+Je choisis de marcher, dans la lumière,  
+Laisse Ta sagesse, guider ma prière.
+
+[Chorus]  
+Rappelle-moi, Seigneur, de Ta fidélité,  
+De suivre Tes voies, de ne jamais céder.  
+Rappelle-moi, Seigneur, de Ton amour parfait,  
+Que mon cœur demeure en Toi, à jamais.
+
+[Outro]  
+Dans les promesses de David, je trouve ma voix,  
+L’Éternel est mon guide, je marcherai droit.  
+Rappelle-moi, Seigneur, de Ta fidélité,  
+À jamais, à jamais, je T'adorerai.`,
+        12: `[Verse 1]  
+Dans le vent de Sichem, le peuple se lève,  
+Roboam, roi, écoute les cœurs en grève.  
+« Allège notre joug, fais-nous grâce,  
+Nous serons tes serviteurs, ô roi de notre place. »
+
+[Chorus]  
+Éternel, guide nos pas,  
+Dans le tumulte, sois notre voix.  
+Unis dans la foi, nous marchons,  
+Vers la promesse, notre direction.
+
+[Verse 2]  
+Les vieillards conseillent, sages et pleins de vie,  
+Mais Roboam choisit l'orgueil, et la fierté.  
+« Mon petit doigt, plus fort que leur peine,  
+Je rendrai leur joug plus lourd, tel un poing dans la veine. »
+
+[Chorus]  
+Éternel, guide nos pas,  
+Dans le tumulte, sois notre voix.  
+Unis dans la foi, nous marchons,  
+Vers la promesse, notre direction.
+
+[Bridge]  
+Mais la voix de Dieu résonne dans la nuit,  
+« Ne combattez pas, retournez, soyez unis. »  
+Dans l'obéissance, le cœur se redresse,  
+Roboam, rappelle-toi de la tendresse.
+
+[Verse 3]  
+Jéroboam bâtit, des veaux d'or surgissent,  
+Une fausse adoration, une triste malice.  
+Mais l'Éternel reste, fidèle dans la lutte,  
+Il appelle son peuple, à sa lumière, à sa route.
+
+[Chorus]  
+Éternel, guide nos pas,  
+Dans le tumulte, sois notre voix.  
+Unis dans la foi, nous marchons,  
+Vers la promesse, notre direction.
+
+[Outro]  
+Laisse nos cœurs, comme des flambeaux,  
+Dans l'obscurité, éclaire nos mots.  
+Nous sommes ton peuple, pour l'éternité,  
+Éternel, notre roi, dans ta vérité.`,
+        13: `[Verse 1]  
+Un homme de Dieu, envoyé du ciel,  
+À Béthel il est venu, fidèle et réel.  
+Il crie à l'autel, par la voix du Très-Haut,  
+Le nom de Josias, pour détruire le faux.
+
+[Chorus]  
+Ô Éternel, nous chantons ta vérité,  
+Dans les cendres et les cœurs, ta lumière va briller.  
+Tu es notre guide, notre force, notre roi,  
+Nous marchons dans ta promesse, en toi, nous sommes en bois.
+
+[Verse 2]  
+Le roi Jéroboam, dans son cœur il s'égare,  
+Sa main se fige, il implore le bizarre.  
+L'homme de Dieu, avec foi, il prie,  
+La guérison vient, ta bonté s'épanouit.
+
+[Chorus]  
+Ô Éternel, nous chantons ta vérité,  
+Dans les cendres et les cœurs, ta lumière va briller.  
+Tu es notre guide, notre force, notre roi,  
+Nous marchons dans ta promesse, en toi, nous sommes en bois.
+
+[Bridge]  
+Mais la voix du mensonge, elle se lève,  
+Un vieux prophète, avec ruse, il s'élève.  
+« Viens, mange avec moi », il a dit,  
+Mais l’homme de Dieu, il s’est souvenu.
+
+[Verse 3]  
+Il a choisi la voie, de la foi et de l'ordre,  
+Ne pas se détourner, il suit sa propre corde.  
+Mais le faible cœur, il a cédé,  
+Et dans la désobéissance, il a trébuché. 
+
+[Chorus]  
+Ô Éternel, nous chantons ta vérité,  
+Dans les cendres et les cœurs, ta lumière va briller.  
+Tu es notre guide, notre force, notre roi,  
+Nous marchons dans ta promesse, en toi, nous sommes en bois.
+
+[Bridge]  
+Éveille nos âmes, Seigneur, rappelle-nous,  
+Que ta voix est plus forte que tout ce qui est flou.  
+Dans les doutes et les peurs, nous levons nos yeux,  
+Toi, notre refuge, notre espoir, notre Dieu.
+
+[Chorus]  
+Ô Éternel, nous chantons ta vérité,  
+Dans les cendres et les cœurs, ta lumière va briller.  
+Tu es notre guide, notre force, notre roi,  
+Nous marchons dans ta promesse, en toi, nous sommes en bois.
+
+[Outro]  
+L’homme de Dieu, son histoire vit,  
+Dans notre cœur, sa foi nous conduit.  
+Ô Éternel, dans nos vies, nous te glorifions,  
+Pour ta bonté et ta grâce, nous te chantons.`,
+        14: `[Verse 1]  
+Dans les ombres de Silo, un appel résonne,  
+Achija, le prophète, voit la douleur qui tonne.  
+Jéroboam a péché, son cœur s'est égaré,  
+Mais l'Éternel parle, sa voix vient l'avertir.
+
+[Chorus]  
+Ô Seigneur, Tu es juste, dans Ta colère,  
+Chaque promesse, chaque mot, nous éclaire.  
+Malgré notre faiblesse, Ta grâce demeure,  
+Dans la tempête, Ta lumière nous sauve.
+
+[Verse 2]  
+La femme déguisée, l'espoir dans son cœur,  
+Elle cherche une réponse, elle craint la douleur.  
+Achija l'attend, il sait son désespoir,  
+Les paroles de l'Éternel, un sombre miroir.
+
+[Chorus]  
+Ô Seigneur, Tu es juste, dans Ta colère,  
+Chaque promesse, chaque mot, nous éclaire.  
+Malgré notre faiblesse, Ta grâce demeure,  
+Dans la tempête, Ta lumière nous sauve.
+
+[Bridge]  
+Tu as établi un roi, mais il s'est détourné,  
+Des idoles, des faux dieux, son âme a sacrifié.  
+Mais, dans l'obscurité, une lueur d'espoir,  
+Tu es fidèle, Seigneur, toujours prêt à nous voir.
+
+[Verse 3]  
+Quand l'enfant s'éteint, tout un peuple pleure,  
+À cause des péchés, un royaume en malheur.  
+Mais dans le cœur de ceux qui cherchent Ta voix,  
+Tu as une promesse, Tu es notre choix.
+
+[Chorus]  
+Ô Seigneur, Tu es juste, dans Ta colère,  
+Chaque promesse, chaque mot, nous éclaire.  
+Malgré notre faiblesse, Ta grâce demeure,  
+Dans la tempête, Ta lumière nous sauve.
+
+[Outro]  
+Dans la maison de Jéroboam, un cri s'élève,  
+Réveille-nous, Seigneur, dans la foi, nous Te célèbrons.  
+Car même dans la lutte, Ta main nous soulève,  
+Nous serons toujours là, Seigneur, pour Te chanter.`,
+        15: `**TITRE:** « Lumière de Jérusalem »
+
+****
+
+**Couplet 1**  
+Dans les ombres du passé, un roi s'est levé,  
+Abijam, son cœur divisé,  
+Mais la grâce a brillé, pour David, un héritage,  
+Une lampe à Jérusalem, éternelle lumière.
+
+**Refrain**  
+Ô Éternel, guide nos pas,  
+Dans la vérité, nous marcherons,  
+Comme Asa, dans Ta volonté,  
+Nous bâtirons, en unité,  
+Lumière de Jérusalem, nous T'adorons.
+
+**Couplet 2**  
+Asa, roi de Juda, a vaincu le péché,  
+Il a détruit les idoles, a mis fin à l’iniquité,  
+Pour honorer Ta maison, il a donné son cœur,  
+Dans la lutte et la foi, il a trouvé sa force.
+
+**Refrain**  
+Ô Éternel, guide nos pas,  
+Dans la vérité, nous marcherons,  
+Comme Asa, dans Ta volonté,  
+Nous bâtirons, en unité,  
+Lumière de Jérusalem, nous T'adorons.
+
+**Pont**  
+Quand les guerres s’élèvent, nous ne craindrons pas,  
+Ta promesse est notre refuge, en Toi, nous restons,  
+Les hauts lieux s’effondrent, Ta gloire se manifeste,  
+Dans la bataille, nous chantons, notre roi est victorieux.
+
+**Refrain**  
+Ô Éternel, guide nos pas,  
+Dans la vérité, nous marcherons,  
+Comme Asa, dans Ta volonté,  
+Nous bâtirons, en unité,  
+Lumière de Jérusalem, nous T'adorons.
+
+**Outro**  
+Ô Éternel, notre cœur est à Toi,  
+Lumière de Jérusalem, pour l’éternité,  
+Dans chaque pas, dans chaque choix,  
+Nous Te louons, éternellement,  
+Lumière de Jérusalem, nous T'adorons.`,
+        16: `**Titre:** *Élevé de la Poussière*
+
+[Verse 1]  
+Dans la poussière, Tu m'as trouvé,  
+Élevé par Ta main, ô Seigneur,  
+Comme Jéhu, Tu m'as appelé,  
+Pour marcher dans Ta lumière, avec ferveur.  
+Mais comme Baescha, j'ai failli,  
+Rendant l'adoration vain,  
+Seigneur, retourne-moi, je T'implore,  
+Éclaire mon cœur par Ta grâce, enfin.  
+
+[Chorus]  
+Ô Éternel, Tu es ma force,  
+Dans les batailles, je me tiens,  
+Je T'adore, Tu es ma source,  
+Élevé de la poussière, je chante pour Toi, Amen.  
+Dans chaque épreuve, je Te cherche,  
+Ton amour, mon roc et refuge,  
+Dans la tempête, je ressens Ta paix,  
+Élevé de la poussière, je chante pour Toi, Amen.  
+
+[Verse 2]  
+Les rois ont chuté, leurs noms oubliés,  
+Échos de péchés, l'histoire se tisse,  
+Mais Ta promesse ne peut se briser,  
+En Toi, je trouve ma vraie justice.  
+Comme Omri, je m'égare parfois,  
+Mais Ta miséricorde me couvre,  
+Restaure en moi, ô mon Roi,  
+Un cœur pur, une âme qui se découvre.  
+
+[Chorus]  
+Ô Éternel, Tu es ma force,  
+Dans les batailles, je me tiens,  
+Je T'adore, Tu es ma source,  
+Élevé de la poussière, je chante pour Toi, Amen.  
+Dans chaque épreuve, je Te cherche,  
+Ton amour, mon roc et refuge,  
+Dans la tempête, je ressens Ta paix,  
+Élevé de la poussière, je chante pour Toi, Amen.  
+
+[Bridge]  
+Alors que les ombres s'avancent,  
+Je T'élève, ô Dieu de lumière,  
+Ta voix me guide, me lance,  
+Vers les cieux, je brise mes chaînes.  
+Si la route est semée d'embûches,  
+Je me tiens ferme, je Te fais confiance,  
+Ta fidélité, comme un bouclier,  
+Me protège, je suis en Ta présence.  
+
+[Chorus]  
+Ô Éternel, Tu es ma force,  
+Dans les batailles, je me tiens,  
+Je T'adore, Tu es ma source,  
+Élevé de la poussière, je chante pour Toi, Amen.  
+Dans chaque épreuve, je Te cherche,  
+Ton amour, mon roc et refuge,  
+Dans la tempête, je ressens Ta paix,  
+Élevé de la poussière, je chante pour Toi, Amen.  
+
+[Outro]  
+Élevé de la poussière, je Te glorifie,  
+À jamais, à jamais, je Te louerai.  
+Élevé de la poussière, je Te glorifie,  
+À jamais, à jamais, je Te louerai.`,
+        17: `[Verse 1]  
+Dans les jours de la sécheresse,  
+Elie s’est levé avec foi,  
+Il a parlé de Ta promesse,  
+L’Éternel, en Toi je crois.  
+Au torrent de Kerith, caché,  
+Avec des corbeaux pour ami,  
+Le pain du ciel, Tu as donné,  
+Ta grâce, Seigneur, m’a nourri.
+
+[Chorus]  
+Ô Dieu qui pourvoit,  
+Dans l’épreuve, je Te vois,  
+Ta main me guide,  
+Ta voix me dit : « N’aie pas peur. »  
+Dans la tempête, je choisis de croire,  
+Ton amour est ma victoire,  
+Je m’appuie sur Ta parole,  
+Ma foi s’élève, mon âme s’envole.
+
+[Verse 2]  
+À Sarepta, une veuve en larmes,  
+Ramassant du bois, perdue,  
+Elie l’appelle, avec des charmes,  
+« Prépare un pain, la vie est à vue. »  
+Elle a dit : "Seigneur, je n’ai rien,  
+Juste une poignée pour nous deux."  
+Mais Ta promesse était le chemin,  
+La farine et l’huile, un miracle heureux.
+
+[Chorus]  
+Ô Dieu qui pourvoit,  
+Dans l’épreuve, je Te vois,  
+Ta main me guide,  
+Ta voix me dit : « N’aie pas peur. »  
+Dans la tempête, je choisis de croire,  
+Ton amour est ma victoire,  
+Je m’appuie sur Ta parole,  
+Ma foi s’élève, mon âme s’envole.
+
+[Bridge]  
+Quand le fils de la veuve s’éteint,  
+Elie crie vers Toi, ô Seigneur,  
+"Rends-lui la vie, fais-le plein,  
+De Ta puissance et de Ta douceur."  
+Et Tu as entendu son cri,  
+L’âme a retrouvé son chemin,  
+Ô miracle de vie, Ta magie,  
+Nous chantons, Ô Dieu, pour demain.
+
+[Chorus]  
+Ô Dieu qui pourvoit,  
+Dans l’épreuve, je Te vois,  
+Ta main me guide,  
+Ta voix me dit : « N’aie pas peur. »  
+Dans la tempête, je choisis de croire,  
+Ton amour est ma victoire,  
+Je m’appuie sur Ta parole,  
+Ma foi s’élève, mon âme s’envole.
+
+[Outro]  
+Je reconnais que Tu es ici,  
+La vérité, dans ma vie,  
+Seigneur, Tu es le Dieu qui pourvoit,  
+Je T’adore, je T’exalte, ô mon Roi.`,
+        18: `[Verse 1]  
+Dans les jours de famine, le ciel se taisait,  
+Mais Ta voix, ô Éternel, a brisé le silence.  
+Élie, le prophète, devant Achab se tenait,  
+Un défi lancé, pour Ta gloire, il s'avance.
+
+[Chorus]  
+Éternel, Tu es Dieu,  
+Sur le mont Carmel,  
+Envoyant le feu,  
+Ramenant nos cœurs vers le ciel.  
+Éternel, Tu es Dieu,  
+Nous tombons à genoux,  
+Reconnaissant Ta puissance,  
+Tu es le seul, le vrai, le doux.
+
+[Verse 2]  
+Les prophètes de Baal, en vain, ils criaient,  
+Leur voix s'éteignait, aucun feu n'émergeait.  
+Élie, avec foi, l'autel a restauré,  
+L'eau abondante, un sacrifice pour prier.
+
+[Chorus]  
+Éternel, Tu es Dieu,  
+Sur le mont Carmel,  
+Envoyant le feu,  
+Ramenant nos cœurs vers le ciel.  
+Éternel, Tu es Dieu,  
+Nous tombons à genoux,  
+Reconnaissant Ta puissance,  
+Tu es le seul, le vrai, le doux.
+
+[Bridge]  
+Quand les nuages s'amoncellent, et l'espoir s'efface,  
+Nous levons nos yeux, dans la prière, nous traçons.  
+La pluie va tomber, Ta grâce nous embrasse,  
+Dans ce combat de foi, notre cœur Te répond.
+
+[Chorus]  
+Éternel, Tu es Dieu,  
+Sur le mont Carmel,  
+Envoyant le feu,  
+Ramenant nos cœurs vers le ciel.  
+Éternel, Tu es Dieu,  
+Nous tombons à genoux,  
+Reconnaissant Ta puissance,  
+Tu es le seul, le vrai, le doux.
+
+[Outro]  
+Éternel, notre force, notre seul abri,  
+Dans chaque bataille, Tu es là, Tu es ici.  
+Éternel, Tu es Dieu,  
+À jamais, nous Te louerons,  
+Pour Ta gloire, pour Ta majesté,  
+Nous Te chantons, ô notre Roi!`,
+        19: `[Verse 1]  
+Dans le désert, je me tiens,  
+Éprouvé, seul, par le chagrin,  
+Jézabel cherche ma fin,  
+Mais je crie vers Toi, ô Éternel, je viens.  
+
+[Chorus]  
+Lève-toi, mange, prends courage,  
+Ta force vient de l’Éternel,  
+Dans le murmure doux, je t’encourage,  
+Je suis avec toi, fidèle et éternel.  
+
+[Verse 2]  
+Des vents forts brisent les rochers,  
+Des tremblements de terre, je suis effrayé,  
+Mais Ta voix douce, je l'ai entendue,  
+Dans la tempête, c'est Toi qui es venu.  
+
+[Chorus]  
+Lève-toi, mange, prends courage,  
+Ta force vient de l’Éternel,  
+Dans le murmure doux, je t’encourage,  
+Je suis avec toi, fidèle et éternel.  
+
+[Bridge]  
+Tu es le Dieu qui restaure,  
+Tu es le Dieu qui renouvelle,  
+Sept mille hommes gardent l’aurore,  
+Je suis choisi, dans Ta merveille.  
+
+[Verse 3]  
+À Horeb, je découvre Ta présence,  
+Dans l’obscurité, Tu es mon essence,  
+Je suis prêt à Te servir, à marcher,  
+Avec Elisée, je suis appelé.  
+
+[Chorus]  
+Lève-toi, mange, prends courage,  
+Ta force vient de l’Éternel,  
+Dans le murmure doux, je t’encourage,  
+Je suis avec toi, fidèle et éternel.  
+
+[Outro]  
+Lève-toi, marche en avant,  
+L’Éternel est ton guide, ton aimant,  
+Dans les combats et les épreuves,  
+L'amour de Dieu jamais ne s'achève.  
+
+---
+
+Ces paroles sont inspirées du passage biblique d'Élie, soulignant la force divine, la présence de Dieu dans les moments difficiles, et l'appel à la mission. Elles sont conçues pour être chantées avec émotion, offrant un message d'espoir et de courage.`,
+        20: `[Verse 1]  
+Dans le tumulte et la peur,  
+Ben-Hadad a levé son armée,  
+Des rois en nombre, un grand labeur,  
+Mais qui contre notre Dieu peut se dresser ?  
+Achab, le roi, a tremblé,  
+Il a cherché conseil et vérité,  
+Les anciens ont dit : Ne l'écoute pas,  
+L'Éternel sera notre appui, notre combat.
+
+[Chorus]  
+L'Éternel, notre force, notre bouclier,  
+Dans la vallée ou sous les cieux étoilés,  
+Il livrera nos ennemis à nos pieds,  
+Nous chanterons, nous louerons son nom,  
+L'Éternel est notre force, notre victoire,  
+À jamais, nous proclamerons sa gloire.
+
+[Verse 2]  
+Les serviteurs sont sortis,  
+Au combat, ils ont pris courage,  
+Comme deux troupeaux en harmonie,  
+Contre la multitude, ils feront naufrage.  
+Dieu a parlé, sa voix résonne,  
+« Je suis avec toi, ne crains rien, mon fils, »  
+Cent mille sont tombés, la victoire est à nous,  
+Dans chaque bataille, l’Éternel sera notre plus.
+
+[Chorus]  
+L'Éternel, notre force, notre bouclier,  
+Dans la vallée ou sous les cieux étoilés,  
+Il livrera nos ennemis à nos pieds,  
+Nous chanterons, nous louerons son nom,  
+L'Éternel est notre force, notre victoire,  
+À jamais, nous proclamerons sa gloire.
+
+[Bridge]  
+Quand les ténèbres s'approchent, et l'ennemi avance,  
+Nous levant les mains, nous proclamons ta puissance.  
+Tu es notre refuge, notre espérance,  
+L'Éternel des armées, en toi nous avons confiance.  
+Oh, peuple de Dieu, lève les yeux,  
+Pour le combat, notre force vient des cieux.  
+Avec foi, nous marcherons,  
+Dans la lumière de ta vision.
+
+[Chorus]  
+L'Éternel, notre force, notre bouclier,  
+Dans la vallée ou sous les cieux étoilés,  
+Il livrera nos ennemis à nos pieds,  
+Nous chanterons, nous louerons son nom,  
+L'Éternel est notre force, notre victoire,  
+À jamais, nous proclamerons sa gloire.
+
+[Outro]  
+L'Éternel est notre force,  
+Dans chaque lutte, dans chaque épreuve,  
+Nous chantons, nous glorifions,  
+À jamais, nous nous tenons dans l'épreuve.`,
+        21: `[Verset 1]  
+Dans la vigne de Jizreel, un cri s’élève,  
+Naboth, fidèle, défend son héritage.  
+Achab désire, mais son cœur s'aveugle,  
+Pour un jardin, il brise un doux partage.  
+
+[Chorus]  
+Éternel, garde nos cœurs,  
+De l'avidité, des douleurs.  
+Dans l'ombre, Tu es lumière,  
+Héritiers de la terre,  
+Nous T'adorons, Seigneur,  
+En toi, nous trouvons la ferveur.  
+
+[Verset 2]  
+Jézabel, perfide, écrit des mensonges,  
+Des mots d’injustice, pour un cœur troublé.  
+Naboth, innocent, sa vie s’étrangle,  
+Dans la douleur, il s’en remet à l’Éternel.  
+
+[Chorus]  
+Éternel, garde nos cœurs,  
+De l'avidité, des douleurs.  
+Dans l'ombre, Tu es lumière,  
+Héritiers de la terre,  
+Nous T'adorons, Seigneur,  
+En toi, nous trouvons la ferveur.  
+
+[Bridge]  
+Oh, comme Achab, nous serons tentés,  
+De perdre notre voie, de nous égarer.  
+Mais dans l’humilité, nous venons pleurer,  
+Seigneur, par Ta grâce, fais-nous avancer.  
+
+[Chorus]  
+Éternel, garde nos cœurs,  
+De l'avidité, des douleurs.  
+Dans l'ombre, Tu es lumière,  
+Héritiers de la terre,  
+Nous T'adorons, Seigneur,  
+En toi, nous trouvons la ferveur.  
+
+[Outro]  
+L’héritage de foi, que rien ne dérobe,  
+Dans la lutte, Seigneur, Tu es notre robe.  
+Avec chaque pas, nous proclamons Ta gloire,  
+Éternel, notre force, notre espoir.`,
+        22: `[Verset 1]  
+Dans les cieux, l'Éternel siège,  
+Sa voix résonne, un cri d’espoir,  
+Josaphat écoute, il s'approche,  
+Cherchant la vérité pour voir.  
+Ramoth attend, mais qui est le guide?  
+Les prophètes parlent, leurs cœurs en flamme,  
+Mais un seul dit l’histoire de l’Aide,  
+La voix d’un homme, un souffle de drame.
+
+[Chorus]  
+Écoute, ô peuple, la voix du Seigneur,  
+Il parle dans les tempêtes, dans la douleur.  
+Suis la lumière, même dans la nuit,  
+Ramène nos cœurs, dans l'amour infini.
+
+[Verset 2]  
+Les rois se déguisent, la bataille commence,  
+Le cœur d'Israël, au bord du désespoir,  
+Mais l’Éternel, dans sa puissance,  
+Veut voir son peuple se lever, croire.  
+Un esprit de mensonge, un défi cruel,  
+Mais le vrai prophète tient son regard,  
+Il voit l'armée, des âmes en duel,  
+Et prêche la paix, un espoir sans retard.
+
+[Chorus]  
+Écoute, ô peuple, la voix du Seigneur,  
+Il parle dans les tempêtes, dans la douleur.  
+Suis la lumière, même dans la nuit,  
+Ramène nos cœurs, dans l'amour infini.
+
+[Bridge]  
+L’ombre de la mort n’aura pas le dernier mot,  
+L’Éternel est vivant, son règne est beau.  
+Laissez vos craintes, ouvrez vos âmes,  
+Car dans la bataille, Il est notre flamme.  
+Un cri de victoire, un chant de foi,  
+Nous marchons ensemble, en Lui, notre roi.
+
+[Chorus]  
+Écoute, ô peuple, la voix du Seigneur,  
+Il parle dans les tempêtes, dans la douleur.  
+Suis la lumière, même dans la nuit,  
+Ramène nos cœurs, dans l'amour infini.
+
+[Outro]  
+Ramoth, nous venons, unis dans la prière,  
+Sous le regard de l'Éternel, nous sommes lumière.  
+Nos vies, nos luttes, tout est entre Ses mains,  
+L'Appel de l'Éternel, guide-nous au chemin.`
+    },
+    "12": {
+        1: `[Verse 1]  
+Dans l'ombre de la nuit, le roi s'est égaré,  
+Il cherche des réponses, mais où peut-il aller?  
+Baal-Zebub l'appelle, mais le ciel est fermé,  
+Où est le vrai Dieu qui peut le sauver?
+
+[Chorus]  
+Ô Éternel, Tu es notre lumière,  
+Dans nos doutes, Ta voix est notre prière.  
+Comme un feu qui descend, éclaire nos chemins,  
+Nous T'adorons, Seigneur, notre seul soutien.
+
+[Verse 2]  
+Elie, homme de Dieu, sur la montagne se tient,  
+Il sait que la vérité n’est pas dans le lointain.  
+« Revenez vers le roi, dites-lui sans regret,  
+Est-ce qu'il n'y a point de Dieu en Israël? »
+
+[Chorus]  
+Ô Éternel, Tu es notre lumière,  
+Dans nos doutes, Ta voix est notre prière.  
+Comme un feu qui descend, éclaire nos chemins,  
+Nous T'adorons, Seigneur, notre seul soutien.
+
+[Bridge]  
+Descends du ciel, ô feu divin,  
+Consume nos cœurs, révèle le chemin.  
+Que chaque âme, chaque vie,  
+Cherche en Toi, la vraie magie.
+
+[Verse 3]  
+Trois chefs sont envoyés, mais le cœur est lourd,  
+Deux tombent sous le feu, la fin d’un parcours.  
+Le troisième s’agenouille, implore avec foi,  
+« Que ma vie soit précieuse, Seigneur, écoute ma voix! »
+
+[Chorus]  
+Ô Éternel, Tu es notre lumière,  
+Dans nos doutes, Ta voix est notre prière.  
+Comme un feu qui descend, éclaire nos chemins,  
+Nous T'adorons, Seigneur, notre seul soutien.
+
+[Bridge]  
+Descends du ciel, ô feu divin,  
+Consume nos cœurs, révèle le chemin.  
+Que chaque âme, chaque vie,  
+Cherche en Toi, la vraie magie.
+
+[Chorus]  
+Ô Éternel, Tu es notre lumière,  
+Dans nos doutes, Ta voix est notre prière.  
+Comme un feu qui descend, éclaire nos chemins,  
+Nous T'adorons, Seigneur, notre seul soutien.
+
+[Conclusion]  
+Achazia est tombé, la parole s’est accomplie,  
+Mais notre espoir reste, dans l’amour infini.  
+Seigneur, nous T’adorons, dans la vérité,  
+Car en Toi, nous vivons, pour l’éternité.`,
+        2: `****« La Voie de la Promesse »**
+
+[VERS 1]  
+À Guilgal, le prophète s’en va,  
+Elisée le suit, son cœur en émoi.  
+« Reste ici », dit Elie, mais il s'accroche,  
+« L'Éternel est vivant, je ne te lâcherai pas. »
+
+[CHORUS]  
+Oh, Éternel, guide notre pas,  
+Dans la tempête, nous nous tenons là.  
+Avec foi, nous marchons en avant,  
+Double portion, nous prions ardemment.
+
+[VERS 2]  
+À Béthel, les fils des prophètes s'approchent,  
+« Sais-tu qu'aujourd'hui, ton maître s’envole? »  
+Elisée répond, les yeux pleins de lumière,  
+« Je le sais, en lui, je mets ma prière. »
+
+[CHORUS]  
+Oh, Éternel, guide notre pas,  
+Dans la tempête, nous nous tenons là.  
+Avec foi, nous marchons en avant,  
+Double portion, nous prions ardemment.
+
+[BRIDGE]  
+Sur le Jourdain, les eaux se divisent,  
+Elie frappe, et la terre se réalise.  
+[Spoken Word] « Seigneur, où es-tu, Dieu d'Elie? »  
+La foi se lève, dans Ta promesse, nous vivons ici.
+
+[VERS 3]  
+Un char de feu, un tourbillon,  
+Elie s’en va, une divine mission.  
+Elisée regarde, son cœur déchiré,  
+« Mon père bien-aimé, je suis là pour avancer. »
+
+[CHORUS]  
+Oh, Éternel, guide notre pas,  
+Dans la tempête, nous nous tenons là.  
+Avec foi, nous marchons en avant,  
+Double portion, nous prions ardemment.
+
+[Outro]  
+Les eaux sont assainies par Ta main,  
+Dans chaque épreuve, Tu es notre chemin.  
+Éternel, notre espoir, notre lumière,  
+Nous chantons ensemble, Ta grâce en prière.`,
+        3: `[Verse 1]  
+Dans le désert, nous marchons,  
+Trois rois en quête de la vérité,  
+L'ennemi s'approche, la peur dans nos cœurs,  
+Mais Josaphat se lève, il cherche Ta lumière.
+
+[Chorus]  
+Ô Éternel, Tu es notre espoir,  
+Fais couler l'eau dans cette vallée noire.  
+Nous levons nos voix, nous chantons Ta gloire,  
+Tu es notre force, notre victoire.
+
+[Verse 2]  
+Elisée, prophète, l'Esprit sur lui,  
+[Spoken Word] Il dit : « Faites des fosses, l'eau viendra ici. »  
+Sans vent ni pluie, Ta promesse éclot,  
+Remplis nos âmes, Éternel, fais-nous voir.
+
+[Chorus]  
+Ô Éternel, Tu es notre espoir,  
+Fais couler l'eau dans cette vallée noire.  
+Nous levons nos voix, nous chantons Ta gloire,  
+Tu es notre force, notre victoire.
+
+[Bridge]  
+Quand le matin se lève, l'eau rouge apparaît,  
+Moab est troublé, leur cœur est en défaite.  
+Nous marchons en confiance, Ta voix nous guide,  
+Dans la bataille, Éternel, Tu es notre aide.
+
+[Chorus]  
+Ô Éternel, Tu es notre espoir,  
+Fais couler l'eau dans cette vallée noire.  
+Nous levons nos voix, nous chantons Ta gloire,  
+Tu es notre force, notre victoire.
+
+[Outro]  
+Dans la vallée, nous T’adorons,  
+Ton amour nous sauve, notre chant s’élève,  
+Éternel, notre rocher, notre libérateur,  
+Nous marchons en foi, écoutant Ta voix, Seigneur.`,
+        4: `[Verse 1]  
+Dans la nuit sombre, une mère pleure,  
+Ses enfants pris, son cœur en douleur,  
+Elle crie vers Toi, ô Dieu de bonté,  
+Elisée entend, la foi va s'élever.  
+Un vase d'huile, rien de plus,  
+Mais dans Ta main, le miracle est à la vue.
+
+[Chorus]  
+Ô Seigneur, Tu es notre espoir,  
+Dans nos détresses, Tu viens nous voir.  
+L’huile déborde, Ta grâce abonde,  
+Dans chaque épreuve, Tu es là, Tu réponds.  
+Laisse couler, laisse couler,  
+L’huile de promesse pour nous libérer.
+
+[Verse 2]  
+Dans la maison, la chambre élevée,  
+Une femme de foi, son cœur dévoué,  
+Elisée, homme de Dieu, elle l'a reconnu,  
+Un fils promis, son âme a vu l'imprévu.  
+Quand la douleur frappe, l’espoir s’effondre,  
+Mais Tu es là, Seigneur, pour nous répondre.
+
+[Chorus]  
+Ô Seigneur, Tu es notre espoir,  
+Dans nos détresses, Tu viens nous voir.  
+L’huile déborde, Ta grâce abonde,  
+Dans chaque épreuve, Tu es là, Tu réponds.  
+Laisse couler, laisse couler,  
+L’huile de promesse pour nous libérer.
+
+[Bridge]  
+Quand la mort rôde, et l’ombre s’étend,  
+Sur le lit du désespoir, Tu es présent.  
+Tu ressuscites nos rêves, nos cœurs brisés,  
+Par Ta puissance, nous sommes libérés.  
+Lève-nous, Seigneur, par Ta lumière,  
+Nous chantons Ta gloire, notre prière.
+
+[Chorus]  
+Ô Seigneur, Tu es notre espoir,  
+Dans nos détresses, Tu viens nous voir.  
+L’huile déborde, Ta grâce abonde,  
+Dans chaque épreuve, Tu es là, Tu réponds.  
+Laisse couler, laisse couler,  
+L’huile de promesse pour nous libérer.
+
+[Outro]  
+Dans la nuit sombre, une mère pleure,  
+Mais Ta lumière, ô Dieu, toujours demeure.  
+Ton amour infini, notre refuge,  
+Nous chantons sans fin, Ta bonté, notre juge.  
+Laisse couler, laisse couler,  
+L’huile de promesse pour nous libérer.`,
+        5: `[Verse 1]  
+Naaman, grand chef, dans la douleur,  
+Lépreux, brisé, il cherche un sauveur.  
+Une jeune fille, pleine de foi,  
+Dit au maître : « Écoute la voix. »  
+
+[Chorus]  
+Dans le Jourdain, je serai pur,  
+Par la parole, je suis assuré.  
+Lave-moi, ô Seigneur, je t’en prie,  
+À ta grâce, je m’abandonne, je crois en toi.  
+
+[Verse 2]  
+Il partit, les trésors en main,  
+Vers Israël, il espère un chemin.  
+Elisée l’attend, prophète de Dieu,  
+« Lave-toi sept fois, ta foi sera le lieu. »  
+
+[Chorus]  
+Dans le Jourdain, je serai pur,  
+Par la parole, je suis assuré.  
+Lave-moi, ô Seigneur, je t’en prie,  
+À ta grâce, je m’abandonne, je crois en toi.  
+
+[Bridge]  
+Oh, Naaman, l'orgueil doit tomber,  
+Dans les eaux, ta peur doit s’effacer.  
+Écoute la voix qui t’appelle,  
+La guérison vient de l’Éternel.  
+
+[Chorus]  
+Dans le Jourdain, je serai pur,  
+Par la parole, je suis assuré.  
+Lave-moi, ô Seigneur, je t’en prie,  
+À ta grâce, je m’abandonne, je crois en toi.  
+
+[Verse 3]  
+De l’eau du fleuve, il sort guéri,  
+Sa chair rajeunie, il rendit gloire ici.  
+« Maintenant je sais, il n’y a qu'un Dieu,  
+En Israël, je me prosterne devant le vrai. »  
+
+[Chorus]  
+Dans le Jourdain, je serai pur,  
+Par la parole, je suis assuré.  
+Lave-moi, ô Seigneur, je t’en prie,  
+À ta grâce, je m’abandonne, je crois en toi.  
+
+[Outro]  
+Dans le Jourdain, je serai pur,  
+À ta grâce, je me confie, je t’adore,  
+Ô mon Seigneur, seul toi es mon roi,  
+Dans le Jourdain, je suis vivant en toi!  
+
+---
+
+Ces paroles sont inspirées des événements relatés dans 2 Rois 5, mettant en avant la guérison de Naaman en se lavant dans le Jourdain, un acte de foi et d'humilité. Les paroles sont conçues pour être chantées avec une musique orchestrale, créant une atmosphère de révérence et de puissance.`,
+        6: `[Verse 1]  
+Dans les ombres de Dothan,  
+Les cœurs tremblent, l'angoisse s'étend,  
+Un serviteur craint, il voit les chars,  
+Mais toi, Seigneur, tu es notre phare.  
+Élisée, homme de Dieu, lève le regard,  
+Les cieux s'ouvrent, ta voix nous égare.  
+
+[Chorus]  
+[Spoken Word] « Ne crains point », ô mon âme, il est là,  
+Celui qui protège, qui ne faillit pas.  
+Des armées de feu, autour de nous,  
+[Spoken Word] « Où es-tu », Seigneur ? Je te cherche, je crois en toi.  
+
+[Verse 2]  
+Au Jourdain, l'outil de bois sombre,  
+Le fer perd son chemin, l'eau l’engloutit,  
+Mais par ta grâce, tout peut renaître,  
+Élisée coupe le bois, et le fer se lève.  
+Dans la tempête, quand tout semble perdu,  
+Ta main s'étend, et nous es-tu connu.  
+
+[Chorus]  
+[Spoken Word] « Ne crains point », ô mon âme, il est là,  
+Celui qui protège, qui ne faillit pas.  
+Des armées de feu, autour de nous,  
+[Spoken Word] « Où es-tu », Seigneur ? Je te cherche, je crois en toi.  
+
+[Bridge]  
+Quand la famine touche nos cœurs,  
+Et que l'espoir semble s'éteindre,  
+Si l'Éternel ne sauve pas, qui le fera ?  
+Écoute, oh mon roi, le cri de ta misère,  
+Élisée prie, et la grâce se libère.  
+
+[Chorus]  
+[Spoken Word] « Ne crains point », ô mon âme, il est là,  
+Celui qui protège, qui ne faillit pas.  
+Des armées de feu, autour de nous,  
+[Spoken Word] « Où es-tu », Seigneur ? Je te cherche, je crois en toi.  
+
+[Outro]  
+[Spoken Word] « Où es-tu », Seigneur ? Dans la nuit et le jour,  
+Nous t’invoquons, pour ta lumière d’amour.  
+Dans chaque bataille, dans chaque épreuve,  
+Nous te louons, notre cœur se lève.  
+[Spoken Word] « Où es-tu », Seigneur ? Je te cherche, je crois en toi.`,
+        7: `[Verse 1]  
+Écoutez, peuple de Dieu,  
+La voix du Très-Haut se lève,  
+Dans la nuit sombre et sans espoir,  
+Il promet l’abondance, la lumière qui s’achève.  
+Les lépreux, au bord du désespoir,  
+Se sont levés pour avancer,  
+Dans le camp des ennemis,  
+La victoire est là, il faut l'annoncer.
+
+[Chorus]  
+Oh Éternel, Tu es notre force,  
+Dans la famine, Tu es notre source,  
+Quand tout semble perdu,  
+Ta parole est notre salut.  
+Nous croyons en Ta promesse,  
+Dans l'obscurité, Ta lumière nous presse,  
+Il y a une mesure de farine,  
+Pour un sicle, Tu es notre destin.
+
+[Verse 2]  
+Les portes de la ville sont fermées,  
+La peur hante chaque cœur,  
+Mais Tu fais trembler les ennemis,  
+Dans leur fuite, ils abandonnent leurs peurs.  
+Les lépreux, témoins de Ta grâce,  
+Ont goûté à Ta bonté,  
+Ils se sont dits, "C'est un jour de bonne nouvelle,  
+Allons porter l’espoir, à tous, à jamais."
+
+[Chorus]  
+Oh Éternel, Tu es notre force,  
+Dans la famine, Tu es notre source,  
+Quand tout semble perdu,  
+Ta parole est notre salut.  
+Nous croyons en Ta promesse,  
+Dans l'obscurité, Ta lumière nous presse,  
+Il y a une mesure de farine,  
+Pour un sicle, Tu es notre destin.
+
+[Bridge]  
+Nous ne garderons pas le silence,  
+Nous annoncerons Ta délivrance,  
+Ton amour est notre chant,  
+Nous marcherons, en avant,  
+Dans les ténèbres, nous brillons,  
+L’espoir d’un monde en union,  
+Oh Éternel, nous proclamons,  
+Ta victoire, notre chant de passion.
+
+[Chorus]  
+Oh Éternel, Tu es notre force,  
+Dans la famine, Tu es notre source,  
+Quand tout semble perdu,  
+Ta parole est notre salut.  
+Nous croyons en Ta promesse,  
+Dans l'obscurité, Ta lumière nous presse,  
+Il y a une mesure de farine,  
+Pour un sicle, Tu es notre destin.
+
+[Outro]  
+Nous marchons dans Ta vérité,  
+Éternel, notre foi est renouvelée,  
+À la porte de Samarie,  
+Ta promesse s’accomplit,  
+Nous chantons, nous glorifions,  
+Car en Toi, nous avons la rédemption.`,
+        8: `[Verset 1]  
+Dans la nuit sombre, une voix s'élève,  
+Elisée parle, l'espoir se révèle.  
+« Lève-toi, femme, va vers la lumière,  
+La famine viendra, mais Dieu est ta prière. »
+
+[Chorus]  
+Retourne à ta maison,  
+Les promesses de l'Éternel,  
+Il restaure ce qui est perdu,  
+Dans son amour éternel.  
+Retourne à ta maison,  
+Vois les fruits de sa bonté,  
+L'Éternel ne t'oublie pas,  
+Son cœur est pour l'éternité.
+
+[Verset 2]  
+Sept années passent, le cœur en prière,  
+Elle revient pleine de foi, sans crainte, sans colère.  
+« O roi, entends ma voix, je viens implorer,  
+Restitue, s'il te plaît, ce qu'on m'a pris, à jamais. »
+
+[Chorus]  
+Retourne à ta maison,  
+Les promesses de l'Éternel,  
+Il restaure ce qui est perdu,  
+Dans son amour éternel.  
+Retourne à ta maison,  
+Vois les fruits de sa bonté,  
+L'Éternel ne t'oublie pas,  
+Son cœur est pour l'éternité.
+
+[Bridge]  
+Hazaël, l'homme de guerre,  
+Peut-il vraiment comprendre,  
+Le plan que Dieu a pour ses enfants,  
+Sa grâce, toujours en veille,  
+Il pleure pour Israël,  
+Il voit le mal, mais l'amour demeure.
+
+[Chorus]  
+Retourne à ta maison,  
+Les promesses de l'Éternel,  
+Il restaure ce qui est perdu,  
+Dans son amour éternel.  
+Retourne à ta maison,  
+Vois les fruits de sa bonté,  
+L'Éternel ne t'oublie pas,  
+Son cœur est pour l'éternité.
+
+[Outro]  
+Dans chaque lutte, dans chaque bataille,  
+Sa fidélité nous accompagne,  
+Retourne à ta maison,  
+Rappelle-toi de son nom.  
+L'Éternel est avec toi,  
+Aujourd'hui et pour toujours,  
+Dans son amour, tu es restauré,  
+Dans son amour, tu es libéré.`,
+        9: `[Verse 1]  
+Dans les ombres de la nuit, un cri s’élève,  
+Elisée a parlé, sa voix nous soulève.  
+Une fiole d’huile, un appel du ciel,  
+Jéhu, roi choisi, lève-toi, sois fidèle.  
+
+[Chorus]  
+Oins pour la victoire, l'Eternel est avec nous,  
+Dans les combats de la vie, Il nous rend plus forts,  
+Jéhu, lève les yeux, le royaume est à toi,  
+Par Sa promesse, nous marcherons en foi.  
+
+[Verse 2]  
+Les chefs se rassemblent, l'assemblée est en émoi,  
+Le messager arrive, le plan se dévoile,  
+Tu frappes les ténèbres, Jéhu, sois le roi,  
+L'honneur de l'Eternel, en toi se dévoile.  
+
+[Chorus]  
+Oins pour la victoire, l'Eternel est avec nous,  
+Dans les combats de la vie, Il nous rend plus forts,  
+Jéhu, lève les yeux, le royaume est à toi,  
+Par Sa promesse, nous marcherons en foi.  
+
+[Bridge]  
+Et quand la bataille gronde, nous ne craindrons point,  
+Ton arc est tendu, Seigneur, Tu es notre soutien.  
+Jézabel, au sol, le mal s'écroule,  
+Par Ta puissance, oh Dieu, nous sommes en foule.  
+
+[Chorus]  
+Oins pour la victoire, l'Eternel est avec nous,  
+Dans les combats de la vie, Il nous rend plus forts,  
+Jéhu, lève les yeux, le royaume est à toi,  
+Par Sa promesse, nous marcherons en foi.  
+
+[Verse 3]  
+Et dans le champ de Jizreel, les chiens s’approchent,  
+Le sang des prophètes, la justice s’approche.  
+Nous chantons Ta gloire, ô Roi des rois,  
+Pour chaque victoire, nous T’adorons, ô Dieu, là-bas.  
+
+[Chorus]  
+Oins pour la victoire, l'Eternel est avec nous,  
+Dans les combats de la vie, Il nous rend plus forts,  
+Jéhu, lève les yeux, le royaume est à toi,  
+Par Sa promesse, nous marcherons en foi.  
+
+[Outro]  
+Elisée a parlé, et nous écoutons,  
+Oins pour la victoire, vers le ciel, notre horizon.  
+Ensemble, nous avançons, main dans la main,  
+L'Eternel est notre force, en Lui nous serons vainqueurs, Amen.`,
+        10: `**Le Zèle de l'Éternel
+
+****
+
+**Verset 1**  
+Dans la ville de Jizreel,  
+Un cri s’élève, un appel,  
+Jéhu, le roi, dans sa ferveur,  
+Combat pour notre Sauveur.  
+Les têtes des faux dieux tombent,  
+Sous le poids de Sa promesse,  
+Il restaure notre espérance,  
+Dans la lumière de Sa présence.
+
+**Refrain**  
+Ô Éternel, nous Te louons,  
+Pour Ta vérité, nous chantons.  
+Le zèle de Ton cœur brûle,  
+Dans nos âmes, Ta gloire circule.  
+Alléluia, nous proclamons,  
+En Ton nom, nous avançons.  
+Ton règne vient, Ta volonté,  
+Dans nos vies, pour l’éternité.
+
+**Verset 2**  
+Les fils de la maison d’Achab,  
+Ont connu le jugement juste,  
+Mais Ta parole, ô Seigneur,  
+S'accomplit dans notre cœur.  
+Jéhu, héros de la foi,  
+Dans la bataille, il n'est pas seul,  
+Avec courage, il nous entraîne,  
+Vers le trône où la paix règne.
+
+**Refrain**  
+Ô Éternel, nous Te louons,  
+Pour Ta vérité, nous chantons.  
+Le zèle de Ton cœur brûle,  
+Dans nos âmes, Ta gloire circule.  
+Alléluia, nous proclamons,  
+En Ton nom, nous avançons.  
+Ton règne vient, Ta volonté,  
+Dans nos vies, pour l’éternité.
+
+**Pont**  
+Parle, Seigneur, nous écoutons,  
+Ta voix guide nos décisions.  
+Dans chaque lutte, dans chaque pas,  
+Nous sommes forts, car Tu es là.  
+À jamais, nous Te servirons,  
+Dans la lumière, nous marcherons.  
+Ton esprit, notre force,  
+Pour Ta gloire, nous nous éleverons.
+
+**Refrain**  
+Ô Éternel, nous Te louons,  
+Pour Ta vérité, nous chantons.  
+Le zèle de Ton cœur brûle,  
+Dans nos âmes, Ta gloire circule.  
+Alléluia, nous proclamons,  
+En Ton nom, nous avançons.  
+Ton règne vient, Ta volonté,  
+Dans nos vies, pour l’éternité.
+
+**Outro**  
+Dans le zèle de l'Éternel,  
+Nous trouvons notre appel.  
+Avec foi, nous continuerons,  
+Dans l'amour, nous bâtirons.  
+Amen, amen, nous le chantons,  
+Pour toujours, en Toi, nous vivrons.`,
+        11: `**TITRE**  
+« Le Roi de la Promesse »
+
+****
+
+**Couplet 1**  
+Dans l'ombre d'Athalie, le désespoir,  
+Le sang royal pleure, un futur à revoir.  
+Mais Joschéba, avec foi, un enfant caché,  
+Joas, l'espoir du peuple, en secret protégé.
+
+**Refrain**  
+Lève-toi, peuple d'Éternel,  
+Rendons gloire à notre Roi,  
+Dans la maison de l'Éternel,  
+La promesse vit en nous,  
+Vive le Roi, vive l'espoir,  
+Joas règne, la lumière vient,  
+Dans la joie, nous chantons,  
+Pour toujours, nous T'adorons.
+
+**Couplet 2**  
+À la septième année, un cri de victoire,  
+Jehojada rassemble, unis par l'espoir.  
+Les trompettes résonnent, le peuple en prière,  
+Le Roi est couronné, la paix sur la terre.
+
+**Refrain**  
+Lève-toi, peuple d'Éternel,  
+Rendons gloire à notre Roi,  
+Dans la maison de l'Éternel,  
+La promesse vit en nous,  
+Vive le Roi, vive l'espoir,  
+Joas règne, la lumière vient,  
+Dans la joie, nous chantons,  
+Pour toujours, nous T'adorons.
+
+**Pont**  
+Athalie, tu tombes, l'obscurité fuit,  
+Nous bâtissons l'autel où l'amour s'unit.  
+Des cœurs enflammés, unis dans la foi,  
+Éternel, notre Dieu, nous marchons avec Toi.
+
+**Refrain**  
+Lève-toi, peuple d'Éternel,  
+Rendons gloire à notre Roi,  
+Dans la maison de l'Éternel,  
+La promesse vit en nous,  
+Vive le Roi, vive l'espoir,  
+Joas règne, la lumière vient,  
+Dans la joie, nous chantons,  
+Pour toujours, nous T'adorons.
+
+[FIN]  
+Dans la maison de l'Éternel,  
+Notre avenir est en Toi.  
+Joas, notre Roi,  
+Nous T'adorons,  
+Pour toujours, nous T'adorons.`,
+        12: `**Couplet 1**  
+Dans le silence des âges, un roi s'est levé,  
+Joas, fils de la promesse, pour Ta gloire, il a régné.  
+Les cœurs s'éveillent, l'argent s'assemble,  
+Pour Ta maison, Seigneur, la lumière tremble.
+
+**Refrain**  
+Ô éternel, réparez notre maison,  
+Auprès de Toi, nous cherchons la rédemption.  
+Avec foi, nous donnons tout,  
+Pour Ta sainteté, nous nous tenons debout.
+
+**Couplet 2**  
+Les sacrificateurs, dans l'ombre, attendaient,  
+Le coffre s'emplissait, les âmes se levaient.  
+Pour chaque pierre, chaque bois,  
+Nous bâtissons, ô Dieu, notre foi.
+
+**Refrain**  
+Ô éternel, réparez notre maison,  
+Auprès de Toi, nous cherchons la rédemption.  
+Avec foi, nous donnons tout,  
+Pour Ta sainteté, nous nous tenons debout.
+
+**Pont**  
+Quand l'ennemi s'avance, quand la peur s'installe,  
+Nous remettons nos cœurs à Ta voix, à Ta salle.  
+Hazaël menace, mais Tu es le Roi,  
+Tu es notre refuge, notre force, notre foi.
+
+**Refrain**  
+Ô éternel, réparez notre maison,  
+Auprès de Toi, nous cherchons la rédemption.  
+Avec foi, nous donnons tout,  
+Pour Ta sainteté, nous nous tenons debout.
+
+**Outro**  
+Alors, ensemble, nous chantons,  
+Pour Ta gloire, nous bâtissons.  
+Dans chaque épreuve, chaque saison,  
+Réparez, Seigneur, notre maison.`,
+        13: `[Verset 1]  
+Dans l'ombre des rois, où le péché a régné,  
+Joachaz implorait, son cœur s'est tourné.  
+L'Eternel entendit, sa miséricorde a vu,  
+Dans l'oppression, Il a donné un salut.  
+
+[Chorus]  
+Oh, flèche de délivrance,  
+Tire vers l'horizon,  
+Avec foi, nous avançons,  
+Sur les promesses du Roi.  
+Oh, flèche de délivrance,  
+Brise l'ombre de nos peurs,  
+En toi, Seigneur, nous vivons,  
+Notre espoir, notre ferveur.  
+
+[Verset 2]  
+Les péchés se répètent, la voix du passé,  
+Jéroboam, l'idole, nous a fait oublier.  
+Mais dans la détresse, un cri monte vers Toi,  
+Tu es notre refuge, notre seul choix.  
+
+[Chorus]  
+Oh, flèche de délivrance,  
+Tire vers l'horizon,  
+Avec foi, nous avançons,  
+Sur les promesses du Roi.  
+Oh, flèche de délivrance,  
+Brise l'ombre de nos peurs,  
+En toi, Seigneur, nous vivons,  
+Notre espoir, notre ferveur.  
+
+[Bridge]  
+Quand les combats nous assaillent,  
+Et que le cœur se lasse,  
+Tu es là, ô notre Force,  
+Notre victoire, notre grâce.  
+Il faut frapper encore,  
+Cinq fois ou six, oh Seigneur,  
+Pour que la terre tremble,  
+Et que vienne Ta splendeur.  
+
+[Chorus]  
+Oh, flèche de délivrance,  
+Tire vers l'horizon,  
+Avec foi, nous avançons,  
+Sur les promesses du Roi.  
+Oh, flèche de délivrance,  
+Brise l'ombre de nos peurs,  
+En toi, Seigneur, nous vivons,  
+Notre espoir, notre ferveur.  
+
+[Outro]  
+Dans la lumière de Ta grâce,  
+Nous marchons, libérés,  
+Car Ta miséricorde embrasse,  
+Tous ceux qui veulent crier.  
+Oh, flèche de délivrance,  
+Nous chantons Ta victoire,  
+Pour toujours, nous espérons,  
+En Toi, notre histoire.`,
+        14: `**TITRE: Le Roi au Coeur Juste**
+
+[Verse 1]  
+Dans les temps anciens, un roi s'éveilla,  
+Amatsia, fils de Joas, sur Juda régna,  
+Vingt-cinq ans, il fit ce qui est droit,  
+Mais les hauts lieux demeuraient, le peuple en émoi.  
+
+[Chorus]  
+Ô Éternel, guide nos pas,  
+Tu es notre lumière dans l’obscurité,  
+Dans nos combats, nous serons là,  
+Pour Te louer, pour Ta vérité.  
+
+[Verse 2]  
+Il frappa les Edomites dans la vallée,  
+D’un cœur ardent, sa victoire célébrée,  
+Mais au défi d’Israël, il s’avança,  
+Joas lui répondit, « Reste chez toi, je t’en prie, va! »  
+
+[Chorus]  
+Ô Éternel, guide nos pas,  
+Tu es notre lumière dans l’obscurité,  
+Dans nos combats, nous serons là,  
+Pour Te louer, pour Ta vérité.  
+
+[Bridge]  
+Et bien que la guerre fût terrible et rude,  
+Il ne craignit pas, sa foi l’intrigue,  
+Dans les Chroniques, son nom vivra,  
+Chaque acte, chaque prière, s'écrira.  
+
+[Verse 3]  
+Mais la conspiration s'éleva dans Jérusalem,  
+Amatsia, en fuite, cherchant un emblème,  
+À Lakis, la mort vint le chercher,  
+Et son héritage, aux cieux, va s’élever.  
+
+[Chorus]  
+Ô Éternel, guide nos pas,  
+Tu es notre lumière dans l’obscurité,  
+Dans nos combats, nous serons là,  
+Pour Te louer, pour Ta vérité.  
+
+[Outro]  
+Dans les récits de foi, nos cœurs s’uniront,  
+Par Ta grâce, éternellement, nous marcherons,  
+Amatsia, un roi, un modèle pour nous,  
+Dans chaque bataille, notre regard est sur Toi, ô Dieu.  
+
+---
+
+Ces paroles invitent à la réflexion et au culte, tout en s'inspirant fidèlement des événements bibliques relatifs à Amatsia. Cette structure est conçue pour être chantée avec une mélodie dynamique et émouvante, propice à l'adoration.`,
+        15: `[Verse 1]  
+Dans la lumière de Ta vérité,  
+Azaria, roi d'un cœur en paix,  
+Fidèle à l'Éternel, il marcha,  
+Mais les hauts lieux, il ne les chassa.  
+
+[Chorus]  
+Ô Seigneur, guide notre voie,  
+Dans les luttes, fais-nous voir,  
+Que chaque pas, dans la foi,  
+Nous rapproche de Ta gloire,  
+Nous rapproche de Ta gloire.  
+
+[Verse 2]  
+Zacharie s’éloigna de Ton chemin,  
+Son cœur s'égara, son règne fut vain,  
+Mais Ta promesse, fidèle et vraie,  
+S'accomplit à travers l’histoire.  
+
+[Chorus]  
+Ô Seigneur, guide notre voie,  
+Dans les luttes, fais-nous voir,  
+Que chaque pas, dans la foi,  
+Nous rapproche de Ta gloire,  
+Nous rapproche de Ta gloire.  
+
+[Bridge]  
+Jotham bâtit, l'espoir en mains,  
+Il leva la porte vers le divin,  
+Dans les épreuves, nous restons,  
+Ancrés en Toi, notre fondation.  
+
+[Chorus]  
+Ô Seigneur, guide notre voie,  
+Dans les luttes, fais-nous voir,  
+Que chaque pas, dans la foi,  
+Nous rapproche de Ta gloire,  
+Nous rapproche de Ta gloire.  
+
+[Verse 3]  
+Menahem, sombre, un cœur de pierre,  
+Cherchant la force, au milieu des guerres,  
+Mais nous, en Toi, nous trouverons,  
+La paix et l'amour, notre direction.  
+
+[Chorus]  
+Ô Seigneur, guide notre voie,  
+Dans les luttes, fais-nous voir,  
+Que chaque pas, dans la foi,  
+Nous rapproche de Ta gloire,  
+Nous rapproche de Ta gloire.  
+
+[Outro]  
+Dans les pas de la foi, nous irons,  
+Vers Ta lumière, notre horizon,  
+Que nos vies chantent Ta grandeur,  
+Pour l’éternité, notre Sauveur.`,
+        16: `[Verse 1]  
+Dans l'ombre de la nuit, un roi s'est levé,  
+Achaz, dans ses peines, s'est égaré.  
+Il a suivi des voies, loin de Ta lumière,  
+Sacrifiant son fils, oh, quelle misère.  
+
+[Pre-Chorus]  
+Mais dans le tumulte, Tu es toujours là,  
+Éternel, le Sauveur, qui ne faillit pas.  
+Des nations s'élèvent, des rois en colère,  
+Mais Ta main puissante, nous libère.  
+
+[Chorus]  
+Auprès de Toi, Éternel, je viens m'abandonner,  
+Dans la tempête, Ta paix va régner.  
+Quand les murs s'effondrent, je Te chanterai,  
+Avec confiance, dans Ta grâce, je marcherai.  
+
+[Verse 2]  
+Achaz, dans l'angoisse, vers l'Assyrie a crié,  
+Cherchant un secours, dans l'or, il s'est trompé.  
+Mais même dans la nuit, Tu as entendu,  
+Les larmes de Ton peuple, jamais perdu.  
+
+[Pre-Chorus]  
+Rappelle-nous, Seigneur, de rester fidèles,  
+À Ta Parole, à Ta voix éternelle.  
+Quand le monde s'effondre, nous Te ferons confiance,  
+Dans l'espoir renouvelé, nous vivrons Ta danse.  
+
+[Chorus]  
+Auprès de Toi, Éternel, je viens m'abandonner,  
+Dans la tempête, Ta paix va régner.  
+Quand les murs s'effondrent, je Te chanterai,  
+Avec confiance, dans Ta grâce, je marcherai.  
+
+[Bridge]  
+Ô, Éternel, Tu es mon refuge,  
+Dans chaque bataille, dans chaque usage.  
+Rien ne peut me séparer de Ton amour,  
+Avec Toi, je me lève, chaque jour.  
+
+[Chorus]  
+Auprès de Toi, Éternel, je viens m'abandonner,  
+Dans la tempête, Ta paix va régner.  
+Quand les murs s'effondrent, je Te chanterai,  
+Avec confiance, dans Ta grâce, je marcherai.  
+
+[Outro]  
+Dans l'histoire de ce roi, nous trouvons la vérité,  
+Que même dans nos faiblesses, Tu es notre clarté.  
+Auprès de Toi, Éternel, pour l'éternité,  
+Je marche avec foi, dans Ta sainteté.`,
+        17: `[Verse 1]  
+Dans les ombres de nos péchés,  
+Nous avons oublié Ta voix,  
+Comme Israël, nous avons erré,  
+Derrière des idoles, loin de Toi.  
+Nous avons suivi les chemins de l’orgueil,  
+Écartés des promesses de l’éternel,  
+Mais en silence, Tu nous appelles,  
+À revenir à Ta lumière éternelle.
+
+[Chorus]  
+Seigneur, nous levons nos cœurs,  
+Nous revenons vers Toi, notre Sauveur.  
+Avec des cendres, nous pleurons,  
+Dans Ton amour, nous retrouvons raison.  
+Éternel, rends-nous fidèles,  
+Nous T’adorerons, ô Dieu de miel.  
+Dans Ta grâce, nous renaîtrons,  
+Retourne-nous, nous T’adorons.
+
+[Verse 2]  
+Des voix s’élevaient dans le désert,  
+Des prophètes Te parlaient en pleurs,  
+Mais nos cœurs, ils étaient durs,  
+Nous avons méprisé Ta douceur.  
+Nous avons offert nos enfants au feu,  
+Pour des dieux de néant, nous avons été aveugles,  
+Mais Ta miséricorde, ô Dieu, est si grande,  
+Rappelle-nous de Ta voie, ô tendre demande.
+
+[Chorus]  
+Seigneur, nous levons nos cœurs,  
+Nous revenons vers Toi, notre Sauveur.  
+Avec des cendres, nous pleurons,  
+Dans Ton amour, nous retrouvons raison.  
+Éternel, rends-nous fidèles,  
+Nous T’adorerons, ô Dieu de miel.  
+Dans Ta grâce, nous renaîtrons,  
+Retourne-nous, nous T’adorons.
+
+[Bridge]  
+Nous ne craindrons plus d’autres dieux,  
+Car seul Toi es notre refuge,  
+Ô Éternel, par Ta main puissante,  
+Libère-nous de l’ombre, de la crainte.  
+Avec des chants, nous T’exalterons,  
+Dans les batailles, nous Tiens nous accrochons,  
+Nous nous prosternons devant Ta majesté,  
+En Toi, Seigneur, nous voulons demeurer.
+
+[Chorus]  
+Seigneur, nous levons nos cœurs,  
+Nous revenons vers Toi, notre Sauveur.  
+Avec des cendres, nous pleurons,  
+Dans Ton amour, nous retrouvons raison.  
+Éternel, rends-nous fidèles,  
+Nous T’adorerons, ô Dieu de miel.  
+Dans Ta grâce, nous renaîtrons,  
+Retourne-nous, nous T’adorons. 
+
+[Outro]  
+Dans le silence, nous entendons,  
+La promesse d’un cœur qui répond,  
+Éternel, nous T’appartenons,  
+Pour toujours, nous T’adorons.`,
+        18: `**Titre :** « Confiance en l'Éternel »
+
+[Verse 1]  
+Dans la ville de Jérusalem,  
+Ezéchias se leva,  
+Un roi de cœur ardent,  
+Il fit disparaître l'ombre,  
+Des idoles et des faux dieux,  
+Il se tourna vers l'Éternel,  
+Avec foi, il s'éleva,  
+Comme David, il avança.
+
+[Chorus]  
+O Éternel, ma force et mon chant,  
+Dans les tempêtes, Tu es présent,  
+Je mets ma confiance en Toi,  
+Mon refuge, ma voix, ma foi.  
+Quand le monde s'effondre autour de moi,  
+Je sais que Tu es là,  
+O Éternel, je ne craindrai pas,  
+Car Tu es mon Dieu, toujours là.
+
+[Verse 2]  
+Les armées s'élevaient, menaçantes,  
+Les murmures de terreur,  
+Mais Ezéchias s’est agenouillé,  
+A prié avec ferveur,  
+« Viens, ô Dieu de l'univers,  
+Délivre-nous de ce mal,  
+Ton nom est notre lumière,  
+En Toi, nous trouvons le salut. »
+
+[Chorus]  
+O Éternel, ma force et mon chant,  
+Dans les tempêtes, Tu es présent,  
+Je mets ma confiance en Toi,  
+Mon refuge, ma voix, ma foi.  
+Quand le monde s'effondre autour de moi,  
+Je sais que Tu es là,  
+O Éternel, je ne craindrai pas,  
+Car Tu es mon Dieu, toujours là.
+
+[Bridge]  
+Parle, Éternel, et fais-moi entendre,  
+Le bruit de la victoire,  
+Quand tous les vents se lèveront,  
+Je resterai dans l'espoir,  
+Les dieux des nations, ils sont muets,  
+Mais Toi, Tu es vivant,  
+Je chante Ta fidélité,  
+Car Tu es le roi des rois, puissant.
+
+[Chorus]  
+O Éternel, ma force et mon chant,  
+Dans les tempêtes, Tu es présent,  
+Je mets ma confiance en Toi,  
+Mon refuge, ma voix, ma foi.  
+Quand le monde s'effondre autour de moi,  
+Je sais que Tu es là,  
+O Éternel, je ne craindrai pas,  
+Car Tu es mon Dieu, toujours là.
+
+[Outro]  
+O, Éternel, je Te loue,  
+Dans la bataille, je Te suis,  
+Avec Toi, je me tiens debout,  
+Ma confiance, c'est en Toi, Jésus.  
+Amen.`,
+        19: `[Verse 1]  
+Dans l’angoisse, je viens, Seigneur,  
+Mon cœur brisé, rempli de peur,  
+Ezéchias a crié, devant Toi,  
+Dans la maison, il a déployé sa voix.  
+Les menaces de l’ennemi résonnent,  
+Mais en Toi, je trouve ma couronne.  
+Ouvre mes yeux, écoute ma prière,  
+Dieu vivant, Tu es ma lumière.
+
+[Chorus]  
+Éternel, Tu es mon refuge,  
+Dans les tempêtes, je me confie à Toi.  
+Délivre-moi de l’adversité,  
+Fais-moi voir Ta gloire, ô Roi des rois.  
+Je sais que Tu es souverain,  
+Dans chaque bataille, Tu es le chemin.  
+Éternel, je crie vers Toi,  
+Dieu de délivrance, Tu es mon espoir.
+
+[Verse 2]  
+Rabschaké s’élève, ses mots sont durs,  
+Mais je sais, en Toi, je suis sûr.  
+Les nations tombent, mais je Te louerai,  
+Ta puissance, Seigneur, je proclamerai.  
+Toi qui as fait les cieux et la terre,  
+Incline Ton oreille, entend ma prière.  
+Les faux dieux, ils ne sont rien,  
+Mais Toi, Éternel, Tu es le chemin.
+
+[Chorus]  
+Éternel, Tu es mon refuge,  
+Dans les tempêtes, je me confie à Toi.  
+Délivre-moi de l’adversité,  
+Fais-moi voir Ta gloire, ô Roi des rois.  
+Je sais que Tu es souverain,  
+Dans chaque bataille, Tu es le chemin.  
+Éternel, je crie vers Toi,  
+Dieu de délivrance, Tu es mon espoir.
+
+[Bridge]  
+Ta promesse, je m’y tiens,  
+Chaque jour, je suis dans Tes mains.  
+L’ange de l’Éternel, à mes côtés,  
+Il combat pour moi, je suis libéré.  
+Rien ne peut me séparer,  
+De Ton amour, je suis restauré.  
+Dans la lumière de Ta vérité,  
+Je marche en victoire, je suis sauvé.
+
+[Chorus]  
+Éternel, Tu es mon refuge,  
+Dans les tempêtes, je me confie à Toi.  
+Délivre-moi de l’adversité,  
+Fais-moi voir Ta gloire, ô Roi des rois.  
+Je sais que Tu es souverain,  
+Dans chaque bataille, Tu es le chemin.  
+Éternel, je crie vers Toi,  
+Dieu de délivrance, Tu es mon espoir.
+
+[Outro]  
+Éternel, Dieu de délivrance,  
+Tu es ma force, ma confiance.  
+À travers les âges, je chanterai,  
+Ta fidélité, à jamais, je louerai.`,
+        21: `[Verse 1]  
+Dans l'ombre de nos choix,  
+Où Manassé a trébuché,  
+Il a suivi des chemins,  
+Qui ont détourné son cœur.  
+Des autels à Baal,  
+Dans la maison du Très-Haut,  
+Le sang innocent pleure,  
+À Jérusalem, au fond de l'eau.
+
+[Chorus]  
+Ô Éternel, regagne nos âmes,  
+Ramène-nous à Ta lumière,  
+Purifie nos cœurs,  
+De l’iniquité, nous pleurons.  
+Dans le sillage de Josias,  
+Nous cherchons Ta face,  
+Rends-nous purs, Seigneur,  
+Pour T’adorer en vérité.
+
+[Verse 2]  
+Amon a suivi le mal,  
+Comme son père avant lui,  
+Mais un peuple s’est levé,  
+Pour briser cette nuit.  
+Nous voulons revenir,  
+À la voix du prophète,  
+Écouter Tes commandements,  
+Sur cette terre, nous sommes prêts.
+
+[Chorus]  
+Ô Éternel, regagne nos âmes,  
+Ramène-nous à Ta lumière,  
+Purifie nos cœurs,  
+De l’iniquité, nous pleurons.  
+Dans le sillage de Josias,  
+Nous cherchons Ta face,  
+Rends-nous purs, Seigneur,  
+Pour T’adorer en vérité.
+
+[Bridge]  
+Tu as dit que Tu ne nous abandonneras pas,  
+Si nous marchons dans Tes voies,  
+Rends-nous fidèles, Seigneur,  
+Pour que nos cœurs Te ressemblent.  
+Nous bâtissons des autels,  
+Pas de pierre, mais d’amour,  
+Pour T’honorer, pour Te louer,  
+Nous revenons à Ta source.
+
+[Chorus]  
+Ô Éternel, regagne nos âmes,  
+Ramène-nous à Ta lumière,  
+Purifie nos cœurs,  
+De l’iniquité, nous pleurons.  
+Dans le sillage de Josias,  
+Nous cherchons Ta face,  
+Rends-nous purs, Seigneur,  
+Pour T’adorer en vérité.
+
+[Outro]  
+Dans la grâce de Tes bras,  
+Nous serons renouvelés,  
+Ô Éternel, nos cœurs,  
+À jamais Te louer.  
+À jamais Te louer.  
+À jamais Te louer.`,
+        22: `[Verset 1]  
+Petit roi, au cœur pur,  
+Josias, tu as choisi,  
+De marcher dans la voie sûre,  
+De David, ton père, en vie.  
+Ton regard s'élevait vers le ciel,  
+Dans la maison de l'Éternel,  
+Tu as cherché la vérité,  
+Dans la loi, l'amour révélé.
+
+[Chorus]  
+Ô Éternel, notre lumière,  
+Nous venons, nous humilions,  
+Éveille nos cœurs à Ta prière,  
+Rassemble-nous, dans Ta vision.  
+Car ici, nous bâtissons,  
+Avec foi, notre adoration,  
+Dans l'amour, nous marchons,  
+Vers Ta sainte révélation.
+
+[Verset 2]  
+Hilkija avec foi, a trouvé,  
+Le livre caché dans le temple,  
+Les paroles ont fait trembler,  
+Josias, le roi, en exemple.  
+« Consultez l'Éternel pour nous, »  
+L'angoisse dans son cœur en feu,  
+Car nos pères ont délaissé,  
+Ta voix, ô Dieu, dans l'aveuglement.
+
+[Chorus]  
+Ô Éternel, notre lumière,  
+Nous venons, nous humilions,  
+Éveille nos cœurs à Ta prière,  
+Rassemble-nous, dans Ta vision.  
+Car ici, nous bâtissons,  
+Avec foi, notre adoration,  
+Dans l'amour, nous marchons,  
+Vers Ta sainte révélation.
+
+[Bridge]  
+Tu as entendu nos soupirs,  
+Notre cœur touché par Ta grâce,  
+Nous pleurons, nous désirons,  
+Un retour vers Ta face.  
+La colère s'est enflammée,  
+Mais Ta promesse est notre paix,  
+Recueillis dans Ta vérité,  
+Nous chantons, nous Te louons.
+
+[Chorus]  
+Ô Éternel, notre lumière,  
+Nous venons, nous humilions,  
+Éveille nos cœurs à Ta prière,  
+Rassemble-nous, dans Ta vision.  
+Car ici, nous bâtissons,  
+Avec foi, notre adoration,  
+Dans l'amour, nous marchons,  
+Vers Ta sainte révélation.
+
+[Outro]  
+Petit roi, au cœur pur,  
+Nous Te louons, ô Éternel,  
+Dans la foi, nous sommes sûrs,  
+À jamais, nous sommes Ton ciel.  
+À jamais, nous sommes Ton ciel.`,
+        23: `**TITRE**  
+**Roi de Cœur, Roi de Foi**
+
+[VERS 1]  
+Rassemble-nous, ô notre roi,  
+Tous ensemble, dans Ta lumière,  
+De tout notre cœur, nous Te suivrons,  
+Comme Josias, vers Ta prière.  
+Ta Parole, un livre sacré,  
+Révèle l’alliance, notre destinée,  
+Nous abandonnerons nos faux dieux,  
+Pour marcher, fidèles, vers les cieux.
+
+[CHORUS]  
+Roi de cœur, Roi de foi,  
+Nous Te louons, en Toi nous croyons,  
+Brise les chaînes, ô notre Dieu,  
+Dans l’alliance, nous sommes en feu.  
+Roi de cœur, Roi de foi,  
+Nous T’adorons, notre voix s’élève,  
+Dans Ta présence, nous sommes unis,  
+Revêts-nous de Ta grâce infinie.
+
+[VERS 2]  
+À l’autel, nous offrons nos vies,  
+Brûlant les idoles, avec ferveur,  
+Dans nos cœurs, l'amour s’épanouit,  
+Pour Ta gloire, nous vivrons en labeur.  
+Des ténèbres, Tu nous as tirés,  
+Comme Josias, nous renonçons,  
+À chaque faux dieu, nous dirons : « Non ! »  
+Vers Toi, Seigneur, nous levons nos noms.
+
+[CHORUS]  
+Roi de cœur, Roi de foi,  
+Nous Te louons, en Toi nous croyons,  
+Brise les chaînes, ô notre Dieu,  
+Dans l’alliance, nous sommes en feu.  
+Roi de cœur, Roi de foi,  
+Nous T’adorons, notre voix s’élève,  
+Dans Ta présence, nous sommes unis,  
+Revêts-nous de Ta grâce infinie.
+
+[BRIDGE]  
+Nous célébrons la Pâque, en un cœur,  
+Ta promesse, notre rédempteur,  
+Au milieu de l’ombre, Tu es la lumière,  
+Dans Ta bonté, nous trouvons notre prière.  
+Ouvre nos yeux pour voir Ta grandeur,  
+Josias, modèle de foi et de ferveur,  
+Dans chaque pas, nous marchons en vérité,  
+O notre roi, en Toi, nous sommes comblés.
+
+[CHORUS]  
+Roi de cœur, Roi de foi,  
+Nous Te louons, en Toi nous croyons,  
+Brise les chaînes, ô notre Dieu,  
+Dans l’alliance, nous sommes en feu.  
+Roi de cœur, Roi de foi,  
+Nous T’adorons, notre voix s’élève,  
+Dans Ta présence, nous sommes unis,  
+Revêts-nous de Ta grâce infinie.
+
+[Outro]  
+Roi de cœur, nous Te cherchons,  
+Dans Ta lumière, nous trouverons,  
+Aujourd'hui et toujours, Tu es notre roi,  
+En chaque souffle, nous chantons pour Toi.`,
+        24: `**Verse 1**  
+Dans l’ombre de l’orgueil, un roi s’est levé,  
+Jojakim s’est détourné, de la voie sacrée.  
+L’Éternel a parlé, ses voix résonnent,  
+Des légions sont venues, la justice s’étonne.  
+
+**Chorus**  
+Ô Éternel, Tu es notre lumière,  
+Dans les ténèbres, Tu es notre prière.  
+Rends-nous, Seigneur, ce que nous avons perdu,  
+Dans Ta miséricorde, nous sommes renouvelés.
+
+**Verse 2**  
+Le sang innocent coule, le cri s’élève,  
+Manassé a troublé, la paix qu’il enlève.  
+Jérusalem pleure, son cœur est en feu,  
+Mais Ta grâce, ô Dieu, nous ramène mieux.  
+
+**Chorus**  
+Ô Éternel, Tu es notre lumière,  
+Dans les ténèbres, Tu es notre prière.  
+Rends-nous, Seigneur, ce que nous avons perdu,  
+Dans Ta miséricorde, nous sommes renouvelés.
+
+**Bridge**  
+Quand les murs s’effondrent, et que tout semble fini,  
+Nous levons nos yeux, vers Toi, notre abri.  
+Rassemble les débris, de nos cœurs égarés,  
+Restaure en nous la foi, aide-nous à marcher.  
+
+**Chorus**  
+Ô Éternel, Tu es notre lumière,  
+Dans les ténèbres, Tu es notre prière.  
+Rends-nous, Seigneur, ce que nous avons perdu,  
+Dans Ta miséricorde, nous sommes renouvelés.
+
+**Outro**  
+Et quand le roi s’incline, devant Ta sainteté,  
+Nous chantons la victoire, en toute humilité.  
+Ô Éternel, notre force, notre chant, notre roi,  
+Dans chaque révolte, nous nous tenons à Toi.`,
+        25: `****« Dans les Ruines de Jérusalem »**  
+
+[VERSE 1]  
+Dans la nuit sombre des cieux,  
+Ton peuple pleure, ô Éternel,  
+Jérusalem, la ville en feu,  
+Où est la paix, où est le ciel ?  
+Les murs s'effondrent, l'espoir s'éteint,  
+Mais Tu es là, ô mon soutien.  
+
+[CHORUS]  
+Éternel, Tu es notre force,  
+Dans la tempête, nous levons nos voix,  
+Quand le monde s'effondre et se disperse,  
+Ta lumière brille, nous sommes à Toi.  
+Dans les ruines, nous trouvons Ta grâce,  
+Rénove nos cœurs, fais-nous avancer.  
+
+[VERSE 2]  
+Le roi est captif, la terre pleure,  
+Les larmes coulent comme un torrent,  
+Mais au milieu des cendres, lueur,  
+Une promesse, un nouvel instant.  
+Guedalia parle, « Ne craignez rien, »  
+Dans le silence, Tu es notre chemin.  
+
+[CHORUS]  
+Éternel, Tu es notre force,  
+Dans la tempête, nous levons nos voix,  
+Quand le monde s'effondre et se disperse,  
+Ta lumière brille, nous sommes à Toi.  
+Dans les ruines, nous trouvons Ta grâce,  
+Rénove nos cœurs, fais-nous avancer.  
+
+[BRIDGE]  
+Et même dans les ténèbres,  
+Ta main nous guide,  
+Rappelle-nous, Seigneur,  
+Que l'espoir ne s'éteint jamais.  
+De la cendre à la vie,  
+Nous chanterons pour l'éternité,  
+Car Tu nous relèves,  
+Dans Ta fidélité.  
+
+[CHORUS]  
+Éternel, Tu es notre force,  
+Dans la tempête, nous levons nos voix,  
+Quand le monde s'effondre et se disperse,  
+Ta lumière brille, nous sommes à Toi.  
+Dans les ruines, nous trouvons Ta grâce,  
+Rénove nos cœurs, fais-nous avancer.  
+
+[Outro]  
+Dans les ruines de Jérusalem,  
+Nous bâtissons, Seigneur, en Ton nom,  
+Car Tu es notre rocher, notre hymne,  
+Et nous chantons pour l'éternel présent.`
+    },
+    "13": {
+        1: `[Verse 1]  
+Dans le jardin d'Éden, la vie a commencé,  
+Adam et Ève, l'amour d'un Créateur révélé.  
+Seth et Énosch, des promesses en fleur,  
+Des générations chantent, l'histoire de notre cœur.  
+
+[Chorus]  
+Ô Dieu de nos pères, Tu es notre lumière,  
+De génération en génération, Tu es notre prière.  
+Dans les lignées de foi, nous trouvons notre voix,  
+À travers l'héritage, nous marchons avec Toit.  
+
+[Verse 2]  
+D'Abraham, le père, est né un grand peuple,  
+Isaac et Ismaël, dans un plan si noble.  
+Les fils de Jacob, porteurs d'une bénédiction,  
+Dans chaque nom, une promesse, une direction.  
+
+[Chorus]  
+Ô Dieu de nos pères, Tu es notre lumière,  
+De génération en génération, Tu es notre prière.  
+Dans les lignées de foi, nous trouvons notre voix,  
+À travers l'héritage, nous marchons avec Toit.  
+
+[Bridge]  
+Des rois et des cœurs, des luttes et des chants,  
+Chaque pas dans l'histoire, nous unit à Ton sang.  
+Nimrod à Moïse, des héros de la foi,  
+Ton peuple s'élève, nous ne faiblirons pas.  
+
+[Chorus]  
+Ô Dieu de nos pères, Tu es notre lumière,  
+De génération en génération, Tu es notre prière.  
+Dans les lignées de foi, nous trouvons notre voix,  
+À travers l'héritage, nous marchons avec Toit.  
+
+[Outro]  
+Dans les racines de notre foi, nous trouvons la vérité,  
+Unis dans l'amour, à jamais dans l'éternité.  
+Ô notre Dieu, notre guide, notre roi,  
+Nous chantons ensemble, pour toujours en Toi.  
+
+---
+
+Ces paroles évoquent l'héritage biblique tout en restant accessibles et chantables, adaptées à un style de louange moderne.`,
+        2: `### Titre: « Héritage de Foi »
+
+[Verse 1]  
+Voici les fils d'Israël,  
+Ruben et Siméon,  
+Leur histoire est gravée,  
+Dans le cœur de la nation.  
+Juda s'est levé,  
+Parmi les siens, il a brillé,  
+De Pérets à David,  
+Sa lignée a été bénie.
+
+[Chorus]  
+Ô Seigneur, dans les âges,  
+Tu écris notre héritage,  
+Par chaque pas, chaque chemin,  
+Nous marchons main dans la main.  
+Dans les luttes et les victoires,  
+Ta promesse est notre gloire,  
+À jamais, nous te louerons,  
+Dans la foi, nous avancerons.
+
+[Verse 2]  
+Tamar a porté l'espoir,  
+Dans les ombres du passé,  
+Un appel à ne pas choir,  
+Dans la grâce renouvelée.  
+Caleb et ses fils,  
+Ont combattu avec ferveur,  
+Dans chaque bataille, un prémisse,  
+De Ta force et de Ta douceur.
+
+[Chorus]  
+Ô Seigneur, dans les âges,  
+Tu écris notre héritage,  
+Par chaque pas, chaque chemin,  
+Nous marchons main dans la main.  
+Dans les luttes et les victoires,  
+Ta promesse est notre gloire,  
+À jamais, nous te louerons,  
+Dans la foi, nous avancerons.
+
+[Bridge]  
+Nous sommes les héritiers,  
+Des promesses de nos pères,  
+Unis dans la prière,  
+Dans la lumière de Ta lumière.  
+Chaque nom, chaque histoire,  
+Tisse notre destinée,  
+Dans l’amour et l’espoir,  
+Nous sommes ta vérité.
+
+[Chorus]  
+Ô Seigneur, dans les âges,  
+Tu écris notre héritage,  
+Par chaque pas, chaque chemin,  
+Nous marchons main dans la main.  
+Dans les luttes et les victoires,  
+Ta promesse est notre gloire,  
+À jamais, nous te louerons,  
+Dans la foi, nous avancerons.
+
+[Outro]  
+Héritiers de Ta grâce,  
+Nous chantons Ta louange,  
+Dans chaque génération,  
+Nous vivrons Ta chanson.  
+Dans la lumière de Ta face,  
+Nous courrons avec passion,  
+À jamais, nous marcherons,  
+Avec foi, et conviction.`,
+        3: `**Titre :** **L'Héritage du Roi**
+
+[Verse 1]  
+Dans les lignées de David, l'histoire se tisse,  
+Fils de la promesse, un héritage en Christ.  
+À Hébron, il régna, fort de la foi,  
+Six fils, une lignée, marquée par ta voix.  
+
+[Chorus]  
+Oh, Seigneur, nous chantons,  
+Ton plan éternel, ta rédemption.  
+Des générations, unis en prière,  
+Dans l'amour de Jésus, nous sommes frères.  
+
+[Verse 2]  
+Des rois et des rêves, des luttes et des chants,  
+Salomon, l'homme sage, au cœur bienveillant.  
+À Jérusalem, ta lumière brille,  
+Chaque pas, chaque souffle, une divine famille.  
+
+[Chorus]  
+Oh, Seigneur, nous chantons,  
+Ton plan éternel, ta rédemption.  
+Des générations, unis en prière,  
+Dans l'amour de Jésus, nous sommes frères.  
+
+[Bridge]  
+Et même dans la douleur,  
+Il y a un chemin,  
+Les cœurs se relèvent,  
+Ensemble, main dans la main.  
+Héritiers de la promesse,  
+Dans la foi, nous marchons,  
+Ton nom est notre force,  
+En toi, nous vivons.  
+
+[Chorus]  
+Oh, Seigneur, nous chantons,  
+Ton plan éternel, ta rédemption.  
+Des générations, unis en prière,  
+Dans l'amour de Jésus, nous sommes frères.  
+
+[Outro]  
+Dans les lignées de David,  
+L’histoire se tisse encore,  
+Alors, ensemble, chantons,  
+Pour l’éternité, nous sommes d’accord.`,
+        4: `[Verse 1]  
+Dans la lignée de Juda,  
+Se lèvent les voix,  
+Père et fils chantent,  
+Ta promesse, ô Roi,  
+Jaebets a prié,  
+Pour ta main sur lui,  
+Élargis mes frontières,  
+Préserve-moi, je vois.
+
+[Chorus]  
+Bénis sois, Seigneur,  
+Ton amour est ma force,  
+Dans la douleur, tu es là,  
+À chaque pas, je t’adore,  
+Bénis sois, Seigneur,  
+Mon cœur s'élève en toi,  
+Dans la lumière et l'ombre,  
+Tu es ma voie, ma foi.
+
+[Verse 2]  
+Des vallées aux montagnes,  
+Ton peuple se lève,  
+D'Abraham à David,  
+En toi, nous sommes un,  
+Des fils de Siméon,  
+À la conquête, unis,  
+Les pâturages sont là,  
+Ta grâce nous conduit.
+
+[Chorus]  
+Bénis sois, Seigneur,  
+Ton amour est ma force,  
+Dans la douleur, tu es là,  
+À chaque pas, je t’adore,  
+Bénis sois, Seigneur,  
+Mon cœur s'élève en toi,  
+Dans la lumière et l'ombre,  
+Tu es ma voie, ma foi.
+
+[Bridge]  
+Et nous marchons,  
+Dans l’ombre de ta gloire,  
+Écoute nos cœurs,  
+Chantant ta victoire,  
+Des siècles en avant,  
+Nous resterons fidèles,  
+Car tu es notre Dieu,  
+Notre Emmanuel.
+
+[Chorus]  
+Bénis sois, Seigneur,  
+Ton amour est ma force,  
+Dans la douleur, tu es là,  
+À chaque pas, je t’adore,  
+Bénis sois, Seigneur,  
+Mon cœur s'élève en toi,  
+Dans la lumière et l'ombre,  
+Tu es ma voie, ma foi.
+
+[Outro]  
+Oh, Bénis sois, Seigneur,  
+Ton amour est ma force,  
+Dans chaque épreuve,  
+Je m'appuie sur toi.  
+Bénis sois, Seigneur,  
+À jamais, je t'adore,  
+Ma vie, je te l’offre,  
+Dans ton amour, je crois.`,
+        5: `**Titre :** **« Cri de Victoire »**
+
+[Verse 1]  
+Dans l'ombre des ancêtres, un cri retentit,  
+Fils de Ruben, notre histoire s'écrit.  
+Parmi les vaillants, l'honneur est levé,  
+Dieu de nos pères, Tu es notre clé.  
+
+[Chorus]  
+Écoute notre voix, Seigneur des armées,  
+Dans la bataille, Ton nom est élevé.  
+Nous crions vers Toi, notre aide vient de là,  
+Dans les combats, Tu es notre roi.  
+
+[Verse 2]  
+Joseph, l’aîné, a reçu les promesses,  
+Mais Juda, puissant, porte l’allégresse.  
+Des héros se lèvent, armés de foi,  
+Chaque étape de l’histoire, c’est Toi qui es roi.  
+
+[Chorus]  
+Écoute notre voix, Seigneur des armées,  
+Dans la bataille, Ton nom est élevé.  
+Nous crions vers Toi, notre aide vient de là,  
+Dans les combats, Tu es notre roi.  
+
+[Bridge]  
+Quand les Hagaréniens s'avancent en rage,  
+Nous levons nos yeux, nous brisons l'orage.  
+Ton souffle divin nous conduit à l’aube,  
+Seigneur, Tu es là, même au cœur de la robe.  
+
+[Chorus]  
+Écoute notre voix, Seigneur des armées,  
+Dans la bataille, Ton nom est élevé.  
+Nous crions vers Toi, notre aide vient de là,  
+Dans les combats, Tu es notre roi.  
+
+[Verse 3]  
+Dans le pays de Basan, les vaillants s’assemblent,  
+Sous Ta protection, nos âmes se rassemblent.  
+Les promesses de Dieu, nourrissent notre cœur,  
+Ton amour et Ta grâce, nous donnent la ferveur.  
+
+[Chorus]  
+Écoute notre voix, Seigneur des armées,  
+Dans la bataille, Ton nom est élevé.  
+Nous crions vers Toi, notre aide vient de là,  
+Dans les combats, Tu es notre roi.  
+
+[Outro]  
+Dans la lumière, nous marchons en avant,  
+Les fils de la foi, unis dans le sang.  
+Seigneur, nous chantons, pour l’éternité,  
+Dans chaque victoire, c’est Toi qui es.  
+
+---
+
+Ces paroles sont conçues pour inspirer la foi et encourager le rassemblement autour du Seigneur, tout en restant fidèles à la narration biblique des tribus d'Israël.`,
+        6: `[Verse 1]  
+Dans la lignée des ancêtres,  
+Fils de Lévi, appelés à Te servir,  
+Guerschom, Kehath, Merari,  
+Unis pour Ta gloire, prêts à bâtir.  
+Aaron et Moïse, des leaders de foi,  
+Au cœur de l’exode, ils marchaient pour Toi.  
+Par leurs sacrifices, l’odeur de l’encens,  
+Nous chantons ensemble, Ta grâce, notre défense.
+
+[Chorus]  
+Ô Éternel, nous Te louons,  
+Dans la maison que Tu as bâtie,  
+De génération en génération,  
+Nous élevons nos voix, pour l’éternité.  
+Tous les cœurs en adoration,  
+Dans la lumière de Ta vérité.  
+Nous sommes unis dans la célébration,  
+L'héritage de la louange, pour l'éternité.
+
+[Verse 2]  
+Des chants d'Asaph, échos du ciel,  
+Héman et Ethan, portant l’essentiel.  
+Dans le sanctuaire, la présence divine,  
+Chaque note résonne, comme une doctrine.  
+À Jérusalem, l’autel s’élève,  
+Les cœurs s’inclinent, la foi se révèle.  
+Avec les Lévites, nous prenons notre place,  
+Dans l’unité, pour Ta grâce.
+
+[Chorus]  
+Ô Éternel, nous Te louons,  
+Dans la maison que Tu as bâtie,  
+De génération en génération,  
+Nous élevons nos voix, pour l’éternité.  
+Tous les cœurs en adoration,  
+Dans la lumière de Ta vérité.  
+Nous sommes unis dans la célébration,  
+L'héritage de la louange, pour l'éternité.
+
+[Bridge]  
+Tu es notre refuge, notre héritage,  
+Dans chaque bataille, Tu es notre sage.  
+Des rivières de louanges, nos âmes s’élèvent,  
+Pour Ta gloire, Seigneur, nous sommes en grève.  
+Dans l’obéissance, nous marchons en avant,  
+Ta promesse, notre force, un chant éclatant.
+
+[Chorus]  
+Ô Éternel, nous Te louons,  
+Dans la maison que Tu as bâtie,  
+De génération en génération,  
+Nous élevons nos voix, pour l’éternité.  
+Tous les cœurs en adoration,  
+Dans la lumière de Ta vérité.  
+Nous sommes unis dans la célébration,  
+L'héritage de la louange, pour l'éternité.
+
+[Outro]  
+Dans la lignée des ancêtres,  
+Nous Te glorifions, ô Éternel.  
+Pour l’éternité, nous chantons,  
+L'héritage de la louange, notre appel.`,
+        7: `**Titre :** « Héritiers de la Promesse »
+
+[Verset 1]  
+Dans la lignée d'Issacar,  
+Les vaillants hommes se lèvent,  
+Thola et Pua, leurs cœurs ardents,  
+Ensemble ils marchent, fortifiés,  
+Vingt-deux mille, dans l'unité,  
+Pour combattre avec fidélité.
+
+[Chorus]  
+Héritiers de la promesse,  
+Nous levons nos voix en louange,  
+Dans la bataille, nous avançons,  
+Avec foi, nous sommes unis,  
+Seigneur, Tu es notre force,  
+Dans l'ombre, Ta lumière éclaire.
+
+[Verset 2]  
+Benjamin, fils de bravoure,  
+Béla et Jediaël, leurs noms brillent,  
+Dix-sept mille, soldats de lumière,  
+Ensemble ils portent l'héritage,  
+Des générations, unis en prière,  
+Pour Ta gloire, nous nous engageons.
+
+[Chorus]  
+Héritiers de la promesse,  
+Nous levons nos voix en louange,  
+Dans la bataille, nous avançons,  
+Avec foi, nous sommes unis,  
+Seigneur, Tu es notre force,  
+Dans l'ombre, Ta lumière éclaire.
+
+[Bridge]  
+Oh, nous nous tenons,  
+Sur les ruines des anciens,  
+Nous bâtissons, nous bâtissons,  
+Avec espoir, pour demain,  
+Les fils de Joseph, en avant,  
+Pour la terre, nous croyons.
+
+[Chorus]  
+Héritiers de la promesse,  
+Nous levons nos voix en louange,  
+Dans la bataille, nous avançons,  
+Avec foi, nous sommes unis,  
+Seigneur, Tu es notre force,  
+Dans l'ombre, Ta lumière éclaire.
+
+[Outro]  
+Héritiers de la promesse,  
+Nous marchons, main dans la main,  
+Sous Ta grâce, nous sommes forts,  
+À jamais, nous Te louons,  
+Seigneur, notre héritage,  
+Pour l'éternité, nous chantons.`,
+        8: `[Verse 1]  
+Dans l'ombre de l'histoire, une lignée se lève,  
+Benjamin, fils chéri, par Ta grâce, nous sommes.  
+Béla et ses fils, témoignage de Ta promesse,  
+Addar, Guéra, la force de notre peuple.  
+
+[Chorus]  
+Ô Seigneur, dans nos luttes, nous levons nos voix,  
+Nous sommes unis, Ta lumière guide nos pas.  
+Des fils de Benjamin, nous chantons Ta gloire,  
+Dans chaque bataille, Ta fidélité nous restaure.  
+
+[Verse 2]  
+À Guéba, des chefs sont nés pour notre terre,  
+Naaman, Achija, des leaders de lumière.  
+Dans les cœurs vaillants, Ton esprit réside,  
+Avec courage et foi, nous marchons, ô Seigneur.  
+
+[Chorus]  
+Ô Seigneur, dans nos luttes, nous levons nos voix,  
+Nous sommes unis, Ta lumière guide nos pas.  
+Des fils de Benjamin, nous chantons Ta gloire,  
+Dans chaque bataille, Ta fidélité nous restaure.  
+
+[Bridge]  
+Écoute, ô mon âme, les récits des ancêtres,  
+Chaque nom, chaque histoire, un reflet de Ta promesse.  
+Dans la prière, nous nous tenons ensemble,  
+Ton nom est notre force, Ta parole, notre emblème.  
+
+[Chorus]  
+Ô Seigneur, dans nos luttes, nous levons nos voix,  
+Nous sommes unis, Ta lumière guide nos pas.  
+Des fils de Benjamin, nous chantons Ta gloire,  
+Dans chaque bataille, Ta fidélité nous restaure.  
+
+[Conclusion]  
+Dans chaque génération, nous Te louerons,  
+Fils de Benjamin, ensemble nous marcherons.  
+Garde notre héritage, dans l'unité, fais-nous vivre,  
+Ô Seigneur, notre refuge, en Toi, nous croyons.`,
+        9: `[Verse 1]  
+Dans les pages de l'histoire,  
+Les ancêtres se sont levés,  
+Juda et Benjamin, en gloire,  
+Les promesses sont gravées.  
+Des Lévites au cœur ardent,  
+Servant avec dévotion,  
+Portiers aux portes du Temple,  
+Gardiens de notre raison.
+
+[Chorus]  
+Ô Seigneur, nous Te glorifions,  
+Pour les racines de notre foi,  
+Chaque nom inscrit dans la chanson,  
+Nos cœurs chantent pour Toi.  
+À Jérusalem, nous nous tenons,  
+Dans la lumière de Ta grâce,  
+Pour toujours, nous T’adorerons,  
+Dans cette sainte place.
+
+[Verse 2]  
+Là où les âmes s’assemblent,  
+Et où la prière s’élève,  
+Des chants d’espoir nous rassemblent,  
+Ton amour jamais ne s’achève.  
+Des fils de Péréts, et leurs voix,  
+Célèbrent Ta fidélité,  
+Dans le service et la foi,  
+Nous marchons avec clarté.
+
+[Chorus]  
+Ô Seigneur, nous Te glorifions,  
+Pour les racines de notre foi,  
+Chaque nom inscrit dans la chanson,  
+Nos cœurs chantent pour Toi.  
+À Jérusalem, nous nous tenons,  
+Dans la lumière de Ta grâce,  
+Pour toujours, nous T’adorerons,  
+Dans cette sainte place.
+
+[Bridge]  
+À chaque génération,  
+Nous bâtissons Ton royaume,  
+Dans l'unité et l'unisson,  
+Nous proclamons Ton nom.  
+De Babylone à la victoire,  
+Ta promesse est notre force,  
+Nous portons l'espoir,  
+Dans la foi, nous T'encorons.
+
+[Chorus]  
+Ô Seigneur, nous Te glorifions,  
+Pour les racines de notre foi,  
+Chaque nom inscrit dans la chanson,  
+Nos cœurs chantent pour Toi.  
+À Jérusalem, nous nous tenons,  
+Dans la lumière de Ta grâce,  
+Pour toujours, nous T’adorerons,  
+Dans cette sainte place.
+
+[Outro]  
+Ensemble, nous chantons,  
+Pour nos pères et nos fils,  
+Dans l’amour, nous vivons,  
+Ô Seigneur, notre délice.  
+Les racines de notre foi,  
+Rendent gloire à Ton nom,  
+Éternel, Tu es notre roi,  
+À jamais, notre chant.`,
+        10: `[Verse 1]  
+Sur la montagne, le vent pleure,  
+Les âmes tombées, une sombre heure.  
+Saül, roi, en guerre, a failli,  
+Sa cœur égaré, la lumière s'est enfuie.  
+
+[Pre-Chorus]  
+Les archers frappent, le combat fait rage,  
+Pour un instant, il perd son courage.  
+Mais au fond de son cœur, une voix se tait,  
+L'Éternel l'a appelé, mais il n'a pas obéi.
+
+[Chorus]  
+Oh, Saül, oh, Saül,  
+Ton nom s'éteint dans le cri du duel.  
+Les ombres dansent, le temps s'arrête,  
+Une royauté perdue, un destin en défaite.  
+Oh, Saül, oh, Saül,  
+La gloire s’éteint, mais l’histoire est éternelle.  
+Dans la vallée, le peuple pleure,  
+L'Éternel appelle, entendons Sa clameur.
+
+[Verse 2]  
+Les Philistins, avec leurs cris de joie,  
+Ont pris la tête, mais quelle victoire,  
+La honte et l'orgueil, dans leur temple, ils mettent,  
+Les armes de Saül, mais leur cœur est en défaite.  
+
+[Pre-Chorus]  
+À Jabès, l'amour se lève,  
+Des hommes vaillants, ils ne s'achèvent.  
+Ils portent le corps, ils honorent le roi,  
+Dans le silence, une promesse émoi.
+
+[Chorus]  
+Oh, Saül, oh, Saül,  
+Ton nom s'éteint dans le cri du duel.  
+Les ombres dansent, le temps s'arrête,  
+Une royauté perdue, un destin en défaite.  
+Oh, Saül, oh, Saül,  
+La gloire s’éteint, mais l’histoire est éternelle.  
+Dans la vallée, le peuple pleure,  
+L'Éternel appelle, entendons Sa clameur.
+
+[Bridge]  
+Nous pleurons pour les âmes perdues,  
+Pour chaque pas qui nous a déçus.  
+Mais dans la douleur, une leçon,  
+Obéir à l'Éternel, c'est notre raison.  
+
+[Chorus]  
+Oh, Saül, oh, Saül,  
+Ton nom s'éteint dans le cri du duel.  
+Les ombres dansent, le temps s'arrête,  
+Une royauté perdue, un destin en défaite.  
+Oh, Saül, oh, Saül,  
+La gloire s’éteint, mais l’histoire est éternelle.  
+Dans la vallée, le peuple pleure,  
+L'Éternel appelle, entendons Sa clameur.
+
+[Outro]  
+Nous levons nos voix, pour ceux qui sont tombés,  
+Dans la lumière, leurs âmes vivront à jamais.  
+L'Éternel est notre roi, notre guide et notre lumière,  
+Dans chaque bataille, Il est notre prière.`,
+        11: `[Verse 1]  
+À Hébron, le peuple s'unit,  
+David, roi, l'Éternel t'a choisi.  
+Tes os, ta chair, en toi nous croyons,  
+Guidé par Ta main, nous marchons,  
+Dans la lumière de Ta promesse,  
+Nous chantons, c'est Toi notre forteresse.
+
+[Chorus]  
+Ô Éternel, notre roi,  
+Par Ta grâce, nous vivrons en Toi,  
+Dans les combats, Tu es notre guide,  
+Sur les montagnes, notre route est limpide.  
+Roi des cœurs, dans la victoire,  
+Nous T'élevons, notre espoir.
+
+[Verse 2]  
+À Jebus, les portes se ferment,  
+Mais David, plein de force, s'affirme.  
+Avec Joab, il prend la cité,  
+La forteresse de Sion, son héritage sacré.  
+Les vaillants hommes, ensemble, unis,  
+Pour Ta gloire, nous vaincrons la nuit.
+
+[Chorus]  
+Ô Éternel, notre roi,  
+Par Ta grâce, nous vivrons en Toi,  
+Dans les combats, Tu es notre guide,  
+Sur les montagnes, notre route est limpide.  
+Roi des cœurs, dans la victoire,  
+Nous T'élevons, notre espoir.
+
+[Bridge]  
+David a soif de l'eau de Bethléhem,  
+Des hommes courageux, prêts à prendre le même  
+Risques pour honorer leur roi,  
+Leur cœur pour lui, écho de foi.  
+Et devant Toi, il offre ce don,  
+Un sacrifice, un acte d'abandon.
+
+[Chorus]  
+Ô Éternel, notre roi,  
+Par Ta grâce, nous vivrons en Toi,  
+Dans les combats, Tu es notre guide,  
+Sur les montagnes, notre route est limpide.  
+Roi des cœurs, dans la victoire,  
+Nous T'élevons, notre espoir.
+
+[Conclusion]  
+David, puissant, avec l'Éternel,  
+Construisant une gloire éternelle.  
+Nous sommes ensemble, dans l'unité,  
+Ô Roi des cœurs, pour l'éternité.  
+Amen.`,
+        12: `[Verse 1]  
+Dans le désert, ils sont venus,  
+Des vaillants hommes, armés de vertu.  
+Avec David, en cœur unis,  
+Pour combattre l'ennemi, pour vivre la vie.  
+
+[Chorus]  
+Héros de la foi, nous marchons ensemble,  
+Sous Ta lumière, nos âmes tremblent.  
+O Dieu des armées, notre refuge et force,  
+En Toi seul, nous trouvons notre course.  
+
+[Verse 2]  
+De Benjamin, de Gad, ils ont répondu,  
+La voix du courage, en eux, est née.  
+Comme des lions, prêts à s’élancer,  
+Pour Ta gloire, Seigneur, nous sommes là, rassemblés.  
+
+[Chorus]  
+Héros de la foi, nous marchons ensemble,  
+Sous Ta lumière, nos âmes tremblent.  
+O Dieu des armées, notre refuge et force,  
+En Toi seul, nous trouvons notre course.  
+
+[Bridge]  
+Avec David, leur cœur s'est uni,  
+« Paix, paix à ceux qui Te secourent, ô Dieu, ici! »  
+Des milliers en sincérité,  
+Pour établir Ta royauté, notre vérité.  
+
+[Chorus]  
+Héros de la foi, nous marchons ensemble,  
+Sous Ta lumière, nos âmes tremblent.  
+O Dieu des armées, notre refuge et force,  
+En Toi seul, nous trouvons notre course.  
+
+[Verse 3]  
+Trois jours de joie, nos cœurs remplis,  
+Des mets de bonheur, des âmes unies.  
+Célébrons ensemble, dans la foi, la victoire,  
+Pour l'Éternel, chantons notre histoire.  
+
+[Chorus]  
+Héros de la foi, nous marchons ensemble,  
+Sous Ta lumière, nos âmes tremblent.  
+O Dieu des armées, notre refuge et force,  
+En Toi seul, nous trouvons notre course.  
+
+[Outro]  
+Héros de la foi, unis pour toujours,  
+Avec notre roi, nous chantons l’amour.  
+Ensemble, avançons, sous Ta main puissante,  
+O Dieu de victoire, notre âme est vibrante.  
+
+---
+
+Ces paroles, inspirées par le texte biblique, évoquent le courage, la foi et la communauté des hommes qui se sont unis pour soutenir David. Elles sont conçues pour être chantées dans un style de louange cinématographique et épique, reflétant la puissance de Dieu et la solidarité de Son peuple.`,
+        13: `[Verse 1]  
+Au cœur de nos peines, nous levons nos voix,  
+David, roi de l’Israël, entend notre choix.  
+Unissons nos cœurs, dans la lumière d’L'Éternel,  
+Pour ramener l’Arche, où Son amour est éternel.
+
+[Chorus]  
+Ramenons l’Arche, vers Ta maison,  
+Où la gloire brille, entre les chérubins,  
+Dans la danse et le chant, nous Te louons,  
+Éternel, notre Dieu, notre chemin, notre fin.
+
+[Verse 2]  
+De Kirjath-Jearim, nous marchons en prière,  
+Avec des tambourins, nos âmes en lumière.  
+Uzza, dans ta fougue, a touché le Saint,  
+Nous apprenons la crainte, devant Le Tout-Puissant.
+
+[Chorus]  
+Ramenons l’Arche, vers Ta maison,  
+Où la gloire brille, entre les chérubins,  
+Dans la danse et le chant, nous Te louons,  
+Éternel, notre Dieu, notre chemin, notre fin.
+
+[Bridge]  
+Obed-Edom, béni par Ta grâce,  
+Trois mois de Ta faveur, dans cette douce place.  
+Nous nous approchons, avec foi et amour,  
+Ta présence nous guide, chaque jour, chaque jour.
+
+[Chorus]  
+Ramenons l’Arche, vers Ta maison,  
+Où la gloire brille, entre les chérubins,  
+Dans la danse et le chant, nous Te louons,  
+Éternel, notre Dieu, notre chemin, notre fin.
+
+[Outro]  
+David et tout Israël, dansent en unisson,  
+Pour l’amour de notre Dieu, nous chantons,  
+Ramenons l’Arche, vers Ta maison,  
+Éternel, notre Dieu, notre cœur, notre raison.`,
+        14: `[Verse 1]  
+Dans la vallée, l'ombre s'étend,  
+Les ennemis rôdent, menaçants,  
+Mais j'entends une voix qui résonne,  
+C'est l'Éternel qui me donne le ton.  
+David se lève, dans la prière,  
+Il consulte son Dieu, sa lumière.  
+« Monterai-je contre ces géants ? »  
+L'Éternel répond, fort et puissant.
+
+[Chorus]  
+L'Éternel, mon fort, ma délivrance,  
+Dans chaque bataille, je trouve l'espérance.  
+Comme des eaux qui coulent, il disperse mes peurs,  
+Je l'exalte, mon roi, avec tout mon cœur.
+
+[Verse 2]  
+À Baal-Peratsim, la victoire éclatante,  
+Par la main de Dieu, l'ennemi s'en va,  
+Ils laissent leurs dieux, la flamme brûlante,  
+C'est le cri de la foi qui s'élève là.  
+David obéit aux ordres du ciel,  
+Sous les mûriers, la promesse éternelle,  
+Quand le bruit se lève, la force se déploie,  
+L'Éternel marche, je ne crains aucun roi.
+
+[Chorus]  
+L'Éternel, mon fort, ma délivrance,  
+Dans chaque bataille, je trouve l'espérance.  
+Comme des eaux qui coulent, il disperse mes peurs,  
+Je l'exalte, mon roi, avec tout mon cœur.
+
+[Bridge]  
+Oh, l'Éternel, en qui je mets ma foi,  
+Tu es ma lumière, dans l'ombre, tu es là.  
+Ton nom se répand, ta gloire sur les cieux,  
+Chaque victoire, chaque pas, je t'appartiens, ô Dieu.
+
+[Chorus]  
+L'Éternel, mon fort, ma délivrance,  
+Dans chaque bataille, je trouve l'espérance.  
+Comme des eaux qui coulent, il disperse mes peurs,  
+Je l'exalte, mon roi, avec tout mon cœur.
+
+[Outro]  
+Dans la vallée, je ne crains rien,  
+Car l'Éternel est mon soutien.  
+Sa renommée dans les nations,  
+Mon cœur chantant, sa glorification.  
+L'Éternel, mon fort, pour l'éternité,  
+Je l'adore, je l'exalte, en toute vérité.`,
+        15: `[Verse 1]  
+Dans la cité de David, un lieu préparé,  
+L'arche de notre Dieu, un trésor à porter.  
+Les Lévites se sanctifient, en son nom,  
+Pour porter la gloire, avec dévotion.  
+
+[Chorus]  
+Lève ta voix, chante avec joie,  
+L'arche de l'Éternel, nous guide ici-bas.  
+Au son des trompettes, des cymbales en fête,  
+Nos cœurs en adoration, auprès de Lui se mettent.  
+
+[Verse 2]  
+David assemble Israël, en ce jour saint,  
+L'écho de la louange, comme un refrain.  
+Les frères et les chantres, ensemble unis,  
+Pour faire résonner, l'amour infini.  
+
+[Chorus]  
+Lève ta voix, chante avec joie,  
+L'arche de l'Éternel, nous guide ici-bas.  
+Au son des trompettes, des cymbales en fête,  
+Nos cœurs en adoration, auprès de Lui se mettent.  
+
+[Bridge]  
+Oh, que les cœurs s'élèvent, en vérité,  
+Comme l'arche entre en gloire, nous sommes libérés.  
+Dans la danse et la louange, nous vivons,  
+Car l'Éternel est là, dans notre chanson.  
+
+[Chorus]  
+Lève ta voix, chante avec joie,  
+L'arche de l'Éternel, nous guide ici-bas.  
+Au son des trompettes, des cymbales en fête,  
+Nos cœurs en adoration, auprès de Lui se mettent.  
+
+[Fin]  
+Dans la cité de David, ensemble nous chantons,  
+L'arche de notre Dieu, fait battre nos cœurs,  
+Avec des cris de joie, nous célébrons,  
+L'amour éternel, qui nous donne des heures.`,
+        16: `**TITRE: Louez l'Éternel, notre Roi**
+
+[VERSE 1]  
+Dans la tente dressée, l'Arche est là,  
+L'Éternel nous appelle, en Sa grâce, on s'unit,  
+Les holocaustes montent, nos cœurs en émoi,  
+David bénit le peuple, sa voix nous conduit.
+
+[CHORUS]  
+Louez l'Éternel, invoquez Son nom,  
+Chantez ses merveilles, proclamez Sa gloire,  
+Élevez vos voix, de génération en génération,  
+Notre Dieu est grand, Il est notre histoire.
+
+[VERSE 2]  
+Asaph et ses frères, avec des instruments,  
+Cymbales et luths, retentissent en ce lieu,  
+Les trompettes sonnent, en honneur de l’Éternel,  
+Le ciel et la terre, ensemble rendent hommage.
+
+[CHORUS]  
+Louez l'Éternel, invoquez Son nom,  
+Chantez ses merveilles, proclamez Sa gloire,  
+Élevez vos voix, de génération en génération,  
+Notre Dieu est grand, Il est notre histoire.
+
+[BRIDGE]  
+Souvenons-nous des promesses, de l'alliance,  
+Auprès de nos ancêtres, Il a été fidèle,  
+Dans les tempêtes, Il est notre confiance,  
+Sa miséricorde dure, à jamais, éternelle.
+
+[CHORUS]  
+Louez l'Éternel, invoquez Son nom,  
+Chantez ses merveilles, proclamez Sa gloire,  
+Élevez vos voix, de génération en génération,  
+Notre Dieu est grand, Il est notre histoire.
+
+[VERSE 3]  
+Des nations, des peuples, tous ensemble en prière,  
+Que la mer chante, que la terre exulte,  
+Il vient pour juger, avec force et lumière,  
+L'Éternel règne, notre cœur exulte.
+
+[CHORUS]  
+Louez l'Éternel, invoquez Son nom,  
+Chantez ses merveilles, proclamez Sa gloire,  
+Élevez vos voix, de génération en génération,  
+Notre Dieu est grand, Il est notre histoire.
+
+[Outro]  
+Béni soit l'Éternel, d'éternité en éternité,  
+Amen, amen, louons avec ferveur,  
+Ensemble, célébrons, avec toute notre clarté,  
+L'Éternel est bon, Il est notre Sauveur.`,
+        17: `[Verse 1]  
+Dans la tente, je t’adore,  
+L’arche, un signe de ta gloire,  
+David, dans son cœur, implore,  
+Pour bâtir, un lieu de mémoire.  
+Mais ta voix, Seigneur, résonne,  
+« Je t'ai pris, tu es le roi,  
+De mes promesses, je t’ordonne,  
+Je suis avec toi, tu es à moi. »
+
+[Chorus]  
+Ô Éternel, bâtis ta maison,  
+Pour toujours, dans nos cœurs, ta passion.  
+Ton nom, glorifié, à jamais,  
+Dans chaque génération, nous te louerons.  
+Ô Éternel, tu es notre Dieu,  
+Avec toi, nos âmes, en toi, s’éveillent.  
+Ta grâce, pour l’éternité,  
+Rédempteur, en toi, nous sommes unis.
+
+[Verse 2]  
+Qui suis-je, ô Dieu, devant ta splendeur?  
+Tu as fait de nous un peuple, un vainqueur.  
+Des nations, tu as chassé,  
+Pour nous, tu es venu libérer.  
+Tes promesses, comme un abri,  
+Sur David, tu as veillé,  
+Pour l’éternité, ta fidélité,  
+Dans ta maison, nous voulons demeurer.
+
+[Chorus]  
+Ô Éternel, bâtis ta maison,  
+Pour toujours, dans nos cœurs, ta passion.  
+Ton nom, glorifié, à jamais,  
+Dans chaque génération, nous te louerons.  
+Ô Éternel, tu es notre Dieu,  
+Avec toi, nos âmes, en toi, s’éveillent.  
+Ta grâce, pour l’éternité,  
+Rédempteur, en toi, nous sommes unis.
+
+[Bridge]  
+À jamais, ton trône affermi,  
+Dans les cieux, ta lumière brille.  
+Comme David, nous nous prosternons,  
+À jamais, dans ta présence, nous chantons.  
+L’Éternel des armées,  
+Tu es notre roi, notre clarté,  
+Dans les tempêtes, tu es notre paix,  
+À jamais, nous te louerons, Amen.
+
+[Chorus]  
+Ô Éternel, bâtis ta maison,  
+Pour toujours, dans nos cœurs, ta passion.  
+Ton nom, glorifié, à jamais,  
+Dans chaque génération, nous te louerons.  
+Ô Éternel, tu es notre Dieu,  
+Avec toi, nos âmes, en toi, s’éveillent.  
+Ta grâce, pour l’éternité,  
+Rédempteur, en toi, nous sommes unis.
+
+[Fin]  
+Ô Éternel, notre cœur t'appartient,  
+Dans ta maison, nous serons bien.  
+Ta bénédiction, pour toujours, Amen,  
+Nous te louons, jusqu’à la fin.`,
+        18: `[Verse 1]  
+Dans la vallée, où l'ombre plane,  
+David s’avance, fort de Sa main.  
+Les Philistins tombent, leur orgueil s'éteint,  
+L'Éternel est là, Il est mon soutien.  
+
+[Chorus]  
+L'Éternel est mon bouclier,  
+Mon refuge dans la bataille,  
+Il me garde, Il me protège,  
+À chaque pas, Sa grâce m’enseigne.  
+Où que j’aille, Il est ma lumière,  
+De Sa force, je suis fier.  
+
+[Verse 2]  
+Moab et Édom, sous Son autorité,  
+David les guide, en toute vérité.  
+Les nations tremblent, car Dieu est puissant,  
+Il règne en justice, Il est toujours présent.  
+
+[Chorus]  
+L'Éternel est mon bouclier,  
+Mon refuge dans la bataille,  
+Il me garde, Il me protège,  
+À chaque pas, Sa grâce m’enseigne.  
+Où que j’aille, Il est ma lumière,  
+De Sa force, je suis fier.  
+
+[Bridge]  
+À Jérusalem, l'or et l'argent,  
+Tout ce que j'ai, je le livre à l’instant.  
+Les victoires de Dieu, je les proclame,  
+Dans chaque lutte, je chante Son nom.  
+L'Éternel est fidèle, Il n'échoue jamais,  
+Dans chaque combat, Sa main me soutient.  
+
+[Chorus]  
+L'Éternel est mon bouclier,  
+Mon refuge dans la bataille,  
+Il me garde, Il me protège,  
+À chaque pas, Sa grâce m’enseigne.  
+Où que j’aille, Il est ma lumière,  
+De Sa force, je suis fier.  
+
+[Outro]  
+Dans les luttes, dans les peines,  
+L'Éternel m’accompagne, je ne crains rien.  
+Comme David, je lève ma voix,  
+Mon roi, mon refuge, je fais confiance en Toi.  
+
+---
+
+Ces paroles évoquent la protection et la force de Dieu à travers l'histoire de David, tout en restant ancrées dans le texte biblique et en adoptant un style de louange épique et cinématographique.`,
+        19: `## Titre: **Courage et Foi**
+
+### [Verse 1]
+Quand la tempête se lève,  
+Et que l’ennemi approche,  
+Nous levons nos yeux vers Toi,  
+Seigneur, notre force et notre Roche.  
+Comme David au milieu du combat,  
+Il a choisi de croire en Toi,  
+Pour notre peuple, pour notre Dieu,  
+Dans la lutte, Tu es notre voix.
+
+### [Chorus]
+Courage et foi, levons nos cœurs,  
+Ensemble, nous marcherons,  
+Rien n'est plus grand que Ta douceur,  
+Dans la bataille, nous T’adorerons.  
+Ton amour nous guide à chaque pas,  
+Nous sommes unis, oh, Éternel, en Toi,  
+Courage et foi, notre chant d'espoir,  
+Dans l’obscurité, Ta lumière est notre miroir.
+
+### [Verse 2]
+Quand les flèches volent, et que l’ombre s’étend,  
+Nous nous tenons fermes, main dans la main,  
+Comme Joab, nous choisissons d’avancer,  
+Pour défendre nos villes, pour Te glorifier.  
+Alors que l'ennemi cherche à nous détruire,  
+Nous proclamons Ta vérité, sans faiblir,  
+Avec courage, nous ferons face,  
+Car en Toi, nous trouvons notre place.
+
+### [Chorus]
+Courage et foi, levons nos cœurs,  
+Ensemble, nous marcherons,  
+Rien n'est plus grand que Ta douceur,  
+Dans la bataille, nous T’adorerons.  
+Ton amour nous guide à chaque pas,  
+Nous sommes unis, oh, Éternel, en Toi,  
+Courage et foi, notre chant d'espoir,  
+Dans l’obscurité, Ta lumière est notre miroir.
+
+### [Bridge]
+Oh Éternel, fais briller Ta gloire,  
+Nous chantons, nous proclamons notre histoire,  
+Dans les combats, nous Te ferons confiance,  
+Chaque victoire, un acte de louange.  
+Quand les cœurs sont troublés,  
+Nous Te cherchons, Tu es la vérité,  
+Dans chaque épreuve, Ta main nous garde,  
+Pour toujours, nous Te louerons, jamais en retard.
+
+### [Chorus]
+Courage et foi, levons nos cœurs,  
+Ensemble, nous marcherons,  
+Rien n'est plus grand que Ta douceur,  
+Dans la bataille, nous T’adorerons.  
+Ton amour nous guide à chaque pas,  
+Nous sommes unis, oh, Éternel, en Toi,  
+Courage et foi, notre chant d'espoir,  
+Dans l’obscurité, Ta lumière est notre miroir.
+
+### [Outro]
+Courage et foi, dans chaque instant,  
+Nous avançons, main dans la main,  
+Éternel, notre lumière, notre chant,  
+À jamais, nous Te louerons, amen.`,
+        20: `### TITRE: **La Victoire de David**
+
+[Verse 1]  
+Quand l'ennemi s'avance,  
+Dans l'ombre du combat,  
+Joab, courageux, en lance,  
+Toujours fidèle, il se bat.  
+À Rabba il porte l'assaut,  
+David, cœur d'un roi en prière,  
+Dans la ville, le cri du sanglot,  
+Il attend la lumière de l'ère.
+
+[Chorus]  
+Ô Seigneur, tu es notre force,  
+Dans la bataille, tu es notre chant.  
+Avec toi, nous avançons,  
+À jamais, tu es notre garant.  
+Ta promesse, notre victoire,  
+Sur les géants, nous triomphons.  
+Dans l'obscurité, tu es l'espoir,  
+À jamais, en toi, nous sommes un.
+
+[Verse 2]  
+La couronne d'or, pesant le sort,  
+David reçoit, la gloire éclatante.  
+Des hommes de foi, dans le fort,  
+Ils combattent, leur âme vaillante.  
+Sibbecaï fend l'ombre du mal,  
+Elchanan brave le défi,  
+Les géants tombent, c'est le signal,  
+Par ta main, la victoire, la vie.
+
+[Chorus]  
+Ô Seigneur, tu es notre force,  
+Dans la bataille, tu es notre chant.  
+Avec toi, nous avançons,  
+À jamais, tu es notre garant.  
+Ta promesse, notre victoire,  
+Sur les géants, nous triomphons.  
+Dans l'obscurité, tu es l'espoir,  
+À jamais, en toi, nous sommes un.
+
+[Bridge]  
+Quand la peur vient assaillir,  
+Quand le coeur veut faiblir,  
+Nous levons les yeux vers toi,  
+Tu es l'alpha, tu es la voie.  
+Dans chaque lutte, dans chaque pleur,  
+Nous trouvons en toi le cœur,  
+Seigneur de gloire, roi des rois,  
+Avec toi, nous marcherons droit.
+
+[Chorus]  
+Ô Seigneur, tu es notre force,  
+Dans la bataille, tu es notre chant.  
+Avec toi, nous avançons,  
+À jamais, tu es notre garant.  
+Ta promesse, notre victoire,  
+Sur les géants, nous triomphons.  
+Dans l'obscurité, tu es l'espoir,  
+À jamais, en toi, nous sommes un.
+
+[Outro]  
+Nous chantons, au cœur de la nuit,  
+Avec toi, nos craintes s'enfuient.  
+David victorieux, nous marchons,  
+Ensemble, Seigneur, nous croyons.`,
+        21: `**Titre:** Le Plein De Grâce
+
+[Verse 1]  
+Dans la nuit, l’angoisse m’étreint,  
+J’ai péché, ô Seigneur, j’ai fauté,  
+Mon cœur se brise, je t'implore,  
+Pardonne à ton serviteur, je suis égaré.  
+
+[Chorus]  
+Ô Dieu de miséricorde,  
+Ton amour est ma lumière,  
+Dans ma faiblesse, je m'effondre,  
+Rends mon âme sincère.  
+Dans la poussière, je me prosterne,  
+Par ta grâce, je renverse la peine,  
+Accorde-moi, Seigneur, ta clémence,  
+Guide-moi vers ta présence.  
+
+[Verse 2]  
+L’ange du mal se tient devant moi,  
+Avec une épée prête à frapper,  
+Mais je crie à toi, ô Éternel,  
+Que ta main repose sur moi, je suis sauvé.  
+
+[Chorus]  
+Ô Dieu de miséricorde,  
+Ton amour est ma lumière,  
+Dans ma faiblesse, je m'effondre,  
+Rends mon âme sincère.  
+Dans la poussière, je me prosterne,  
+Par ta grâce, je renverse la peine,  
+Accorde-moi, Seigneur, ta clémence,  
+Guide-moi vers ta présence.  
+
+[Bridge]  
+Je bâtirai un autel,  
+Sur ce sol, je me tiens,  
+Pour offrir en holocauste,  
+Tout mon cœur, tout mon sein.  
+Dans la lumière de ta gloire,  
+Je lève mes mains vers le ciel,  
+Ô Éternel, entends ma prière,  
+Dans la grâce, je trouve mon miel.  
+
+[Chorus]  
+Ô Dieu de miséricorde,  
+Ton amour est ma lumière,  
+Dans ma faiblesse, je m'effondre,  
+Rends mon âme sincère.  
+Dans la poussière, je me prosterne,  
+Par ta grâce, je renverse la peine,  
+Accorde-moi, Seigneur, ta clémence,  
+Guide-moi vers ta présence.  
+
+[Outro]  
+Ô Éternel, tu m’as répondu,  
+Ta flamme embrase mon cœur,  
+Dans la paix que tu as donnée,  
+Je chante ta douce lueur.  
+Amen.`,
+        22: `[Verse 1]  
+Dans le cœur de David, un rêve s'est levé,  
+Un lieu pour l'Éternel, un sanctuaire sacré.  
+Des pierres taillées, des cèdres en abondance,  
+Préparons une maison pour Ta gloire, en confiance.  
+
+[Chorus]  
+Élever Ta maison, ô Dieu de lumière,  
+Dans chaque prière, nous T'adorerons,  
+Avec sagesse, nous bâtirons,  
+Pour Ta gloire, Éternel, nous Te servirons.  
+
+[Verse 2]  
+Salomon, jeune roi, dans l'ombre de son père,  
+Reçoit l'appel divin, une promesse éphémère.  
+« Fortifie-toi, agis, l'Éternel est avec toi, »  
+Les cœurs se rassemblent, unis dans la foi.  
+
+[Chorus]  
+Élever Ta maison, ô Dieu de lumière,  
+Dans chaque prière, nous T'adorerons,  
+Avec sagesse, nous bâtirons,  
+Pour Ta gloire, Éternel, nous Te servirons.  
+
+[Bridge]  
+Nous venons, ô Seigneur, avec nos cœurs ouverts,  
+Pour chercher Ta face, loin de tout repère.  
+Que l'airain et l'or, nos sacrifices d'amour,  
+Éclairent Ta demeure, chaque heure, chaque jour.  
+
+[Chorus]  
+Élever Ta maison, ô Dieu de lumière,  
+Dans chaque prière, nous T'adorerons,  
+Avec sagesse, nous bâtirons,  
+Pour Ta gloire, Éternel, nous Te servirons.  
+
+[Outro]  
+Alors lève-toi, et agis avec ardeur,  
+Éternel, notre Dieu, Tu es notre cœur.  
+Dans l'unité, nous bâtirons pour Ta gloire,  
+Élever Ta maison, c’est notre histoire.  
+
+---
+
+Ces paroles évoquent le rêve de David et l'appel de Salomon, tout en restant fidèles aux textes bibliques et à leur message d'unité, de dévotion et de construction spirituelle.`,
+        23: `[Verse 1]  
+Dans la lumière de Ta gloire,  
+David a rassemblé,  
+Les chefs, les sacrificateurs,  
+Pour T’honorer, pour T’adorer.  
+Lévites en nombre comptés,  
+À Ta maison, ils sont appelés,  
+Pour veiller, pour servir,  
+Dans la louange, nous voulons s’unir.
+
+[Chorus]  
+Ô Éternel, nous Te célébrons,  
+Dans Ta paix, nous trouvons notre raison.  
+À Jérusalem, Ta présence demeure,  
+Nous T’apportons nos cœurs en labeur.  
+À jamais, nous T’adorerons,  
+Dans le service de notre Roi, nous marcherons.
+
+[Verse 2]  
+Les fils de Lévi, en classe divisés,  
+Pour offrir, pour sanctifier,  
+Aaron et Moïse, guides de vérité,  
+Avec des parfums, ils T’élèveront.  
+Chaque matin et chaque soir,  
+Nous venons, prêts à croire,  
+Dans la joie et la dévotion,  
+Nous chantons Ta grande révélation.
+
+[Chorus]  
+Ô Éternel, nous Te célébrons,  
+Dans Ta paix, nous trouvons notre raison.  
+À Jérusalem, Ta présence demeure,  
+Nous T’apportons nos cœurs en labeur.  
+À jamais, nous T’adorerons,  
+Dans le service de notre Roi, nous marcherons.
+
+[Bridge]  
+Tu es notre refuge, notre force,  
+Dans les batailles, Ta voix nous ressource.  
+Nous Te louons, ô Dieu de promesse,  
+Dans Ta maison, nous trouvons la sagesse.  
+Les sacrifices, nos vies, nous donnons,  
+Pour l'éternité, avec Toi, nous vivrons.
+
+[Chorus]  
+Ô Éternel, nous Te célébrons,  
+Dans Ta paix, nous trouvons notre raison.  
+À Jérusalem, Ta présence demeure,  
+Nous T’apportons nos cœurs en labeur.  
+À jamais, nous T’adorerons,  
+Dans le service de notre Roi, nous marcherons.
+
+[Outro]  
+Serviteurs de l'Éternel, ensemble,  
+Dans la louange, nos âmes tremblent.  
+Par Ta grâce, nous sommes unis,  
+Pour l'éternité, nous T’adorerons, ô Éternel, notre vie.`,
+        24: `[Verse 1]  
+Dans l'ombre du sanctuaire,  
+Où Ta présence demeure,  
+Les fils d'Aaron se tiennent,  
+Prêts à servir, prêts à pleurer.  
+Nadab, Abihu, ont quitté ce monde,  
+Mais Eléazar et Ithamar,  
+Rendent hommage, avec foi profonde,  
+Dans l'unité, ils Te chercheront ce soir.
+
+[Chorus]  
+Serviteurs de Ta gloire,  
+Nous venons devant Toi,  
+Dans l'allégresse et la foi,  
+Pour célébrer Ta victoire.  
+Oh, Éternel, nous Te prions,  
+Guide nos cœurs, nos passions,  
+Dans le service de Ta maison,  
+Nous T'offrons notre adoration.
+
+[Verse 2]  
+David a vu le besoin,  
+De diviser les fonctions,  
+Les chefs des Lévites, unis en chemin,  
+Pour Te louer, dans la dévotion.  
+Les noms inscrits dans le livre,  
+Chaque cœur prêt à s'offrir,  
+Par le sort, ils sont choisis,  
+Pour Ta gloire, nous voulons grandir.
+
+[Chorus]  
+Serviteurs de Ta gloire,  
+Nous venons devant Toi,  
+Dans l'allégresse et la foi,  
+Pour célébrer Ta victoire.  
+Oh, Éternel, nous Te prions,  
+Guide nos cœurs, nos passions,  
+Dans le service de Ta maison,  
+Nous T'offrons notre adoration.
+
+[Bridge]  
+L'Éternel, notre force et notre chant,  
+Dans chaque pas, nous marchons en avant.  
+Fais de nous des instruments,  
+De Ta paix, de Ton amour, éclatant.  
+Comme les Lévites, unis dans l'Esprit,  
+Nous Te rendons gloire, ô notre abri.
+
+[Chorus]  
+Serviteurs de Ta gloire,  
+Nous venons devant Toi,  
+Dans l'allégresse et la foi,  
+Pour célébrer Ta victoire.  
+Oh, Éternel, nous Te prions,  
+Guide nos cœurs, nos passions,  
+Dans le service de Ta maison,  
+Nous T'offrons notre adoration.
+
+[Outro]  
+Dans l'unité, nous Te servirons,  
+Dans Ta lumière, nous marcherons,  
+Fils et filles, ensemble, nous chantons,  
+À jamais, Seigneur, notre dévotion.`,
+        25: `**Couplet 1:**  
+Dans la maison de l'Éternel,  
+Asaph, Jeduthun, avec zèle,  
+Les cœurs unis, pour célébrer,  
+Par la harpe, nous allons louer.  
+Les fils d'Héman, ensemble en prière,  
+Éveillent en nous la lumière,  
+Proclamant Ta puissance, oh Seigneur,  
+Dans chaque note, chaque cœur.
+
+**Refrain:**  
+Chantez, chantez, peuple de Dieu,  
+Élevez nos voix vers les cieux,  
+Dans l'unité, nous Te glorifions,  
+Avec les cymbales, nous proclamons.  
+Chantez, chantez, joie et ferveur,  
+Dans l'esprit, en toute ardeur,  
+Tu es notre force, notre chant,  
+Oh Éternel, nous Te rendons grâce, maintenant.
+
+**Couplet 2:**  
+Sur les chemins de l'adoration,  
+Nous levons nos mains, en communion,  
+Chaque frère, chaque sœur, ensemble,  
+Dans Ta présence, nos âmes tremblent.  
+Prophétisant par Ta bonté,  
+Les promesses que Tu as données,  
+Nos cœurs, par Ta grâce, libérés,  
+Dans la louange, nous serons guidés.
+
+**Refrain:**  
+Chantez, chantez, peuple de Dieu,  
+Élevez nos voix vers les cieux,  
+Dans l'unité, nous Te glorifions,  
+Avec les cymbales, nous proclamons.  
+Chantez, chantez, joie et ferveur,  
+Dans l'esprit, en toute ardeur,  
+Tu es notre force, notre chant,  
+Oh Éternel, nous Te rendons grâce, maintenant.
+
+**Pont:**  
+Et même dans les batailles,  
+Nos cœurs s'accrochent à Ta taille,  
+Chantant avec foi, nous avançons,  
+Avec Toi, Seigneur, nous triomphons.  
+Chaque note, chaque mot,  
+Révèle Ta gloire, oh, notre héros,  
+Dans le silence et le tumulte,  
+Ta voix nous appelle, et nous exulte.
+
+**Refrain:**  
+Chantez, chantez, peuple de Dieu,  
+Élevez nos voix vers les cieux,  
+Dans l'unité, nous Te glorifions,  
+Avec les cymbales, nous proclamons.  
+Chantez, chantez, joie et ferveur,  
+Dans l'esprit, en toute ardeur,  
+Tu es notre force, notre chant,  
+Oh Éternel, nous Te rendons grâce, maintenant.
+
+**Fin:**  
+Dans la maison de l'Éternel,  
+Nos cœurs vibrent, éternel,  
+Proclamons ensemble, en vérité,  
+L'amour du Christ, pour l'éternité.`,
+        26: `[Verse 1]  
+Dans la lumière de Ta gloire, ô Seigneur,  
+Les portiers se tiennent, fidèles en cœur,  
+Meschélémia et ses fils, par Ta main,  
+Zacharie sage, sur le chemin divin.  
+
+[Chorus]  
+Gardiens de Ta maison, nous levons nos voix,  
+Ensemble dans le service, nous marchons à pas,  
+Bénis par Ta bonté, remplis de Ta force,  
+Nous chantons pour la gloire, dans l’unité, sans écorce.  
+
+[Verse 2]  
+Obed-Edom, sa lignée, des hommes vaillants,  
+À chaque porte, ils veillent, unis dans le temps,  
+Dans la nuit sombre, Ta lumière éclaire,  
+Ensemble nous sommes, dans la prière sincère.  
+
+[Chorus]  
+Gardiens de Ta maison, nous levons nos voix,  
+Ensemble dans le service, nous marchons à pas,  
+Bénis par Ta bonté, remplis de Ta force,  
+Nous chantons pour la gloire, dans l’unité, sans écorce.  
+
+[Bridge]  
+À chaque porte, à chaque seuil,  
+Nos cœurs sont prêts, nous sommes en éveil,  
+Dans l'ombre ou la lumière, nous Te servirons,  
+Seigneur de l'univers, notre seule passion.  
+
+[Chorus]  
+Gardiens de Ta maison, nous levons nos voix,  
+Ensemble dans le service, nous marchons à pas,  
+Bénis par Ta bonté, remplis de Ta force,  
+Nous chantons pour la gloire, dans l’unité, sans écorce.  
+
+[Conclusion]  
+Ô Dieu, nos vies, unies en Ta grâce,  
+Dans le service et l’amour, notre âme embrasse,  
+Les portiers de Ta maison, nous sommes en marche,  
+Pour Ta gloire éternelle, notre cœur s'achève.  
+
+---
+
+Ces paroles évoquent la dévotion et l'engagement des portiers dans la maison de Dieu, tout en restant fidèles au texte biblique. La mélodie peut être inspirée par des arrangements orchestraux modernes, créant une atmosphère de culte cinématographique.`,
+        27: `[Verse 1]  
+Enfants de lumière, unis dans Ta grâce,  
+Chaque division, unis dans l’espace.  
+Dans les mois des cieux, nos âmes chantent,  
+À la tête, Tu es, Seigneur, notre guide.
+
+[Chorus]  
+Ô Éternel, notre roi,  
+Nous levons nos voix,  
+Comme les étoiles, nous brillons,  
+Dans Ta promesse, nous marchons.  
+Des chefs de nos cœurs, nous proclamons,  
+Ta fidélité, notre chant, notre raison.
+
+[Verse 2]  
+Jaschobeam et Dodaï, héros de la foi,  
+Benaja, Asaël, Ta force est notre voie.  
+Dans les batailles, nous trouvons l'espoir,  
+Car Tu es notre refuge, notre victoire.
+
+[Chorus]  
+Ô Éternel, notre roi,  
+Nous levons nos voix,  
+Comme les étoiles, nous brillons,  
+Dans Ta promesse, nous marchons.  
+Des chefs de nos cœurs, nous proclamons,  
+Ta fidélité, notre chant, notre raison.
+
+[Bridge]  
+À chaque pas, Ta main nous guide,  
+Dans les vallées sombres, Ta lumière nous vide.  
+Nous sommes les soldats, de Ta grande armée,  
+Dans l'unité, Seigneur, nous voulons marcher.
+
+[Chorus]  
+Ô Éternel, notre roi,  
+Nous levons nos voix,  
+Comme les étoiles, nous brillons,  
+Dans Ta promesse, nous marchons.  
+Des chefs de nos cœurs, nous proclamons,  
+Ta fidélité, notre chant, notre raison.
+
+[Outro]  
+Ô Éternel, notre roi,  
+Nous sommes les enfants de Ta loi.  
+Dans chaque division, dans chaque mois,  
+Nous Te servons, notre cœur à Toi.`,
+        28: `[Verse 1]  
+Écoutez, mes frères, le cœur de David,  
+L'appel du roi résonne, un choix divin,  
+Un rêve de bâtir, un sanctuaire,  
+Pour l'Arche d'Alliance, notre Dieu en lumière.
+
+[Chorus]  
+Fortifie-toi, oh Salomon,  
+Sers-Le avec cœur, dans la vérité,  
+L'Éternel est avec toi, sur ce chemin,  
+Agis avec foi, dans sa sainteté.
+
+[Verse 2]  
+Il a choisi Juda, pour régner en roi,  
+Dans la maison de David, Il s'est plu à moi.  
+L'héritage à transmettre, aux générations,  
+Un pays de promesse, dans notre adoration.
+
+[Chorus]  
+Fortifie-toi, oh Salomon,  
+Sers-Le avec cœur, dans la vérité,  
+L'Éternel est avec toi, sur ce chemin,  
+Agis avec foi, dans sa sainteté.
+
+[Bridge]  
+Cherche-Le de tout ton cœur,  
+Il se dévoilera à toi,  
+[Spoken Word] « Ne crains point », ne te laisse pas vaincre,  
+L'Éternel est là, il t'ouvrira la voie.
+
+[Chorus]  
+Fortifie-toi, oh Salomon,  
+Sers-Le avec cœur, dans la vérité,  
+L'Éternel est avec toi, sur ce chemin,  
+Agis avec foi, dans sa sainteté.
+
+[Verse 3]  
+Des trésors d'or et d'argent, un modèle,  
+Pour sa maison, un service éternel,  
+Tout est prêt pour l'œuvre, unis en prière,  
+Pour glorifier notre Dieu, avec ferveur et lumière.
+
+[Chorus]  
+Fortifie-toi, oh Salomon,  
+Sers-Le avec cœur, dans la vérité,  
+L'Éternel est avec toi, sur ce chemin,  
+Agis avec foi, dans sa sainteté.
+
+[Outro]  
+Écoutez, mes frères, l'appel résonne,  
+Construisons ensemble, là où l'amour rayonne.  
+Fortifie-toi, oh Salomon,  
+Dans le service de notre Dieu, allons!`,
+        29: `[Verse 1]  
+Dans l'ombre d'un grand roi, David se tenait,  
+Son cœur plein de foi, devant l'Éternel, il priait.  
+« Mon fils, Salomon, choisi avec soin,  
+Pour bâtir ta maison, un lieu divin.  
+
+[Chorus]  
+Pour Ta maison, ô Dieu, nous offrons nos cœurs,  
+De l'or et de l'argent, des dons de nos heures.  
+Béni sois-Tu, Éternel, à jamais,  
+Tous nos trésors sont à Tes pieds,  
+Nous Te louons, nous Te glorifions.
+
+[Verse 2]  
+Le peuple s'est rassemblé, dans l'unité,  
+Avec des cœurs joyeux, ils ont donné,  
+Cinq mille talents d'or, des pierres précieuses,  
+Pour Ta gloire, ô Dieu, nos vies sont joyeuses.
+
+[Chorus]  
+Pour Ta maison, ô Dieu, nous offrons nos cœurs,  
+De l'or et de l'argent, des dons de nos heures.  
+Béni sois-Tu, Éternel, à jamais,  
+Tous nos trésors sont à Tes pieds,  
+Nous Te louons, nous Te glorifions.
+
+[Bridge]  
+Ô Éternel, Tu sondes nos cœurs,  
+Dans l'intégrité, nous T'offrons nos labeurs.  
+Accorde à Salomon, un cœur de roi,  
+Pour bâtir Ta maison, et suivre Ta voix.
+
+[Chorus]  
+Pour Ta maison, ô Dieu, nous offrons nos cœurs,  
+De l'or et de l'argent, des dons de nos heures.  
+Béni sois-Tu, Éternel, à jamais,  
+Tous nos trésors sont à Tes pieds,  
+Nous Te louons, nous Te glorifions.
+
+[Outro]  
+David a prié, et le peuple a chanté,  
+Dans l'ombre de Ta grâce, nous sommes libérés.  
+Pour Ta maison, ô Dieu, nous T’élevons,  
+Dans l'unité du cœur, nous célébrons.  
+Béni sois-Tu, Éternel, à jamais.`
+    },
+    "14": {
+        1: `[Verse 1]  
+Tu as élevé Salomon, ô Dieu,  
+Dans la gloire, il a vu Ta main,  
+Il a cherché, avec tout son cœur,  
+La sagesse pour guider son peuple,  
+À Gabaon, devant l’autel,  
+Il a offert, mille sacrifices,  
+Tu es venu, dans la nuit étoilée,  
+Et Tu as entendu sa prière.
+
+[Chorus]  
+Dans Ta sagesse, Seigneur, je me tiens,  
+Guide mes pas, éclaire mon chemin,  
+Accorde-moi, comme à David,  
+La lumière qui jamais ne s’éteint.  
+Ô éternel, je T’adore,  
+Ta promesse est mon trésor,  
+Dans Ta sagesse, je me repose,  
+Toi, mon Dieu, mon cœur s’expose.
+
+[Verse 2]  
+Quand la foule s’assemble autour,  
+Salomon sait que Tu es là,  
+Richesses et gloire, il ne cherche pas,  
+Mais une âme pour T’honorer,  
+Dans chaque choix, dans chaque pas,  
+Il se tourne vers Ta vérité,  
+Accorde-moi, ô Dieu puissant,  
+La sagesse pour aimer les gens.
+
+[Chorus]  
+Dans Ta sagesse, Seigneur, je me tiens,  
+Guide mes pas, éclaire mon chemin,  
+Accorde-moi, comme à David,  
+La lumière qui jamais ne s’éteint.  
+Ô éternel, je T’adore,  
+Ta promesse est mon trésor,  
+Dans Ta sagesse, je me repose,  
+Toi, mon Dieu, mon cœur s’expose.
+
+[Bridge]  
+Des cèdres aux pierres, tout est à Toi,  
+Dans le silence, je T’entends,  
+Ta voix résonne dans le ciel et la terre,  
+Je marche dans Ta présence, je crois.  
+Accorde-moi la sagesse, Seigneur,  
+Pour juger avec amour et ferveur,  
+Dans chaque défi, je me tiens debout,  
+Avec Toi, je suis fort, je le sais bien.
+
+[Chorus]  
+Dans Ta sagesse, Seigneur, je me tiens,  
+Guide mes pas, éclaire mon chemin,  
+Accorde-moi, comme à David,  
+La lumière qui jamais ne s’éteint.  
+Ô éternel, je T’adore,  
+Ta promesse est mon trésor,  
+Dans Ta sagesse, je me repose,  
+Toi, mon Dieu, mon cœur s’expose.
+
+[Outro]  
+Dans Ta sagesse, je me confie,  
+Ô éternel, Tu es ma vie,  
+Avec foi, je T’élève,  
+Dans Ta sagesse, je m’achève.`,
+        2: `***Une Maison pour l'Éternel*
+
+****  
+
+**Couplet 1:**  
+Dans le cœur de Jérusalem,  
+Salomon a rêvé,  
+Une maison pour l'Éternel,  
+Un lieu de sainteté.  
+Des cèdres du Liban,  
+Des pierres à tailler,  
+Pour l’honorer, l’élever,  
+Son nom glorifier.
+
+**Refrain:**  
+Ô Éternel, notre Dieu,  
+Plus grand que tous les cieux,  
+Dans cette maison que nous bâtissons,  
+Nous te rendons nos actions.  
+Des parfums d’adoration,  
+Nos cœurs en procession,  
+Pour toi, nous élevons,  
+Notre chant de dévotion.
+
+**Couplet 2:**  
+Des hommes habiles, envoyés,  
+Avec sagesse et foi,  
+Pour construire cette demeure,  
+Où l’amour est roi.  
+De l’or et de l’argent,  
+Des étoffes en couleur,  
+Tout pour ta gloire, ô Seigneur,  
+Dans la paix et l’ardeur.
+
+**Refrain:**  
+Ô Éternel, notre Dieu,  
+Plus grand que tous les cieux,  
+Dans cette maison que nous bâtissons,  
+Nous te rendons nos actions.  
+Des parfums d’adoration,  
+Nos cœurs en procession,  
+Pour toi, nous élevons,  
+Notre chant de dévotion.
+
+**Pont:**  
+Qui sommes-nous pour bâtir,  
+Une demeure pour toi?  
+Les cieux et cieux des cieux,  
+Ne peuvent te contenir.  
+Mais dans notre humble cœur,  
+Nous t’offrons notre vie,  
+Avec foi et ferveur,  
+Tu es notre abri.
+
+**Refrain:**  
+Ô Éternel, notre Dieu,  
+Plus grand que tous les cieux,  
+Dans cette maison que nous bâtissons,  
+Nous te rendons nos actions.  
+Des parfums d’adoration,  
+Nos cœurs en procession,  
+Pour toi, nous élevons,  
+Notre chant de dévotion.
+
+**Outro:**  
+Éternel, tu es notre lumière,  
+Dans cette maison, nous prions,  
+Avec un cœur sincère,  
+Nous chantons notre union.  
+Pour toujours, nous t’adorerons,  
+Dans la paix et l’amour,  
+Ô Éternel, notre Dieu,  
+Accueille notre retour.`,
+        3: `**Couplet 1:**  
+Sur la montagne de Morija,  
+Salomon bâtit l’autel,  
+Une maison pour l’Éternel,  
+Dans la lumière de son appel.  
+De l’or pur il a revêtu,  
+Chaque mur, chaque seuil,  
+Les chérubins en silence,  
+Veillent sur notre réveil.
+
+**Refrain:**  
+Ô Éternel, ta gloire descend,  
+Dans ce temple construit pour toi.  
+Nous chantons, nous nous prosternons,  
+À jamais, nous serons en toi.  
+Ta présence, notre trésor,  
+Ensemble, nous adorons encore.
+
+**Couplet 2:**  
+Les colonnes dressées au ciel,  
+Jakin et Boaz en unité,  
+Chaque chaînette, chaque appel,  
+Rappelle ta fidélité.  
+Les ailes des chérubins,  
+S’étendent sur nos cœurs,  
+Dans ce lieu très saint,  
+Nous trouvons nos valeurs.
+
+**Refrain:**  
+Ô Éternel, ta gloire descend,  
+Dans ce temple construit pour toi.  
+Nous chantons, nous nous prosternons,  
+À jamais, nous serons en toi.  
+Ta présence, notre trésor,  
+Ensemble, nous adorons encore.
+
+**Pont:**  
+Que chaque pierre crie ta louange,  
+Que chaque souffle soit un chant,  
+Dans la beauté de ta présence,  
+Nous marchons, main dans la main.  
+Ton amour est notre fondation,  
+Tu es le roc sur lequel nous tenons.  
+Dans le sanctuaire, nous sommes unis,  
+À jamais, nous glorifions.
+
+**Refrain:**  
+Ô Éternel, ta gloire descend,  
+Dans ce temple construit pour toi.  
+Nous chantons, nous nous prosternons,  
+À jamais, nous serons en toi.  
+Ta présence, notre trésor,  
+Ensemble, nous adorons encore.
+
+**Outro:**  
+Sur la montagne de Morija,  
+Nous bâtissons pour l’Éternel,  
+Dans son amour, nous vivons,  
+Pour toujours en lui, éternel.`,
+        4: `[Verse 1]  
+Dans le cœur de Ta Maison,  
+Salomon a bâti avec passion,  
+Un autel d'airain, glorieux,  
+Pour T'offrir nos cœurs, ô Dieu.  
+La mer de fonte, ronde et pure,  
+Sous le ciel, elle assure,  
+L’ablution des sacrificateurs,  
+Préparant nos âmes, pleines de ferveur.
+
+[Chorus]  
+Ô Éternel, nous T'adorons,  
+Dans Ta présence, nous nous prosternons.  
+Ce lieu saint où l'on Te cherche,  
+Rend nos vies, ô Seigneur, des perles en mer.  
+L'autel s'élève, nos voix s'unissent,  
+Pour Ta gloire, notre amour s'exprime.
+
+[Verse 2]  
+Dix chandeliers d’or brillent dans la nuit,  
+Cinq à droite, cinq à gauche, chaque vie,  
+Illuminée par Ta main divine,  
+Chaque flamme, un souffle qui fascine.  
+Les tables de l’alliance, précieuses,  
+Portent nos offrandes, nos âmes, heureuses,  
+Des coupes d'or pour un festin,  
+À Ta table, nous sommes enfin.
+
+[Chorus]  
+Ô Éternel, nous T'adorons,  
+Dans Ta présence, nous nous prosternons.  
+Ce lieu saint où l'on Te cherche,  
+Rend nos vies, ô Seigneur, des perles en mer.  
+L'autel s'élève, nos voix s'unissent,  
+Pour Ta gloire, notre amour s'exprime.
+
+[Bridge]  
+Dans la plaine du Jourdain,  
+L'airain poli, reflet du chemin,  
+Nous sommes des instruments,  
+Pour Ta vérité, pour Ton avènement.  
+Chaque pas, chaque sacrifice,  
+Ensemble, nous proclamons Ta justice.  
+Dans le temple, nos âmes se lient,  
+À jamais, en Toi, nous sommes unis.
+
+[Chorus]  
+Ô Éternel, nous T'adorons,  
+Dans Ta présence, nous nous prosternons.  
+Ce lieu saint où l'on Te cherche,  
+Rend nos vies, ô Seigneur, des perles en mer.  
+L'autel s'élève, nos voix s'unissent,  
+Pour Ta gloire, notre amour s'exprime.
+
+[Outro]  
+L’Éternel est notre lumière,  
+Dans Sa maison, nous trouvons la prière.  
+L’autel brille, notre cœur s'éveille,  
+Pour toujours, en Toi, notre merveille.  
+Amen.`,
+        5: `[Verse 1]  
+Dans la cité de David, un appel s’élève,  
+Les anciens se rassemblent, unis dans la foi,  
+Salomon, en roi sage, à l’autel se lève,  
+L’arche de l’alliance, un trésor pour nos pas.  
+
+[Chorus]  
+Car il est bon, sa miséricorde dure à toujours,  
+Nous chantons en chœur, élevons notre voix,  
+La gloire de l’Éternel remplit notre cœur,  
+Dans la maison de Dieu, nous trouvons notre choix.  
+
+[Verse 2]  
+Les Lévites portent l’arche, la tentation sacrée,  
+Des brebis et des bœufs, un sacrifice sans fin,  
+Les trompettes résonnent, l’assemblée émerveillée,  
+Dans ce lieu très saint, nous adorons sans frein.  
+
+[Chorus]  
+Car il est bon, sa miséricorde dure à toujours,  
+Nous chantons en chœur, élevons notre voix,  
+La gloire de l’Éternel remplit notre cœur,  
+Dans la maison de Dieu, nous trouvons notre choix.  
+
+[Bridge]  
+O nuée de gloire, descends parmi nous,  
+Sanctifie ce lieu, remplis notre âme,  
+Nous nous tenons ensemble, pour te rendre tout,  
+L'Éternel est notre force, notre doux drame.  
+
+[Chorus]  
+Car il est bon, sa miséricorde dure à toujours,  
+Nous chantons en chœur, élevons notre voix,  
+La gloire de l’Éternel remplit notre cœur,  
+Dans la maison de Dieu, nous trouvons notre choix.  
+
+[Outro]  
+Éternel, tu es saint, dans ta paix nous reposons,  
+Ta présence nous comble, dans cette adoration,  
+Gloire à toi, ô Dieu, pour toujours, nous chantons,  
+Dans la maison de l’Éternel, nous vivons ta passion.`,
+        6: `**TITRE**  
+*Dans Ta Maison, Seigneur*  
+
+[VERSE 1]  
+Dans l’obscurité, Tu as choisi de rester,  
+Seigneur, Tu es là, dans le cœur de Ta vérité.  
+Jérusalem, lieu de Ta présence sacrée,  
+Où l’arche de l’alliance vient nous rassembler.  
+
+[CHORUS]  
+Ô Eternel, Dieu d’Israël,  
+Ton nom est grand, Ta promesse éternelle.  
+Écoute notre prière, dans cette maison,  
+Accorde-nous grâce, exauce notre chant.  
+
+[VERSE 2]  
+David a rêvé d’un lieu pour Te glorifier,  
+Son fils a bâti, ta demeure à adorer.  
+Quand nous prions, accorde-nous de voir,  
+Ton cœur ouvert, réponds à notre espoir.  
+
+[CHORUS]  
+Ô Eternel, Dieu d’Israël,  
+Ton nom est grand, Ta promesse éternelle.  
+Écoute notre prière, dans cette maison,  
+Accorde-nous grâce, exauce notre chant.  
+
+[BRIDGE]  
+Quand le ciel est fermé et que la pluie s’en va,  
+Nous revenons à Toi, Seigneur, entends notre voix.  
+Pardonne nos péchés, ramène-nous à la vie,  
+Dans le pays promis, où l’amour nous unit.  
+
+[VERSE 3]  
+Les étrangers viennent, attirés par Ta lumière,  
+Ils prient dans cette maison, pour connaître Ta manière.  
+Que tous les peuples, Te craignent et Te louent,  
+Dans cette maison bâtie, que Ton nom soit partout.  
+
+[CHORUS]  
+Ô Eternel, Dieu d’Israël,  
+Ton nom est grand, Ta promesse éternelle.  
+Écoute notre prière, dans cette maison,  
+Accorde-nous grâce, exauce notre chant.  
+
+[Outro]  
+Seigneur, nous T’adorons, dans Ta maison,  
+Que Ta gloire descende, remplisse notre raison.  
+Lève-toi, ô Dieu, viens à notre secours,  
+Dans cette maison, Seigneur, que Ton amour demeure toujours.`,
+        7: `[Verse 1]  
+Lorsque Salomon a prié,  
+Le ciel a répondu,  
+Le feu est descendu,  
+La gloire est apparue.  
+Tous les cœurs se sont inclinés,  
+Devant l'autel sacré,  
+Car Ta miséricorde, ô Seigneur,  
+Dure à jamais, c'est notre chant de cœur.
+
+[Chorus]  
+Nous louons, nous adorons,  
+La gloire de l'Éternel,  
+Dans ce lieu où Tu résides,  
+Nous chantons des merveilles.  
+Où la prière s'élève,  
+Dans l'humilité,  
+Seigneur, écoute notre voix,  
+Guéris notre pays.
+
+[Verse 2]  
+Le peuple s'est rassemblé,  
+Pour célébrer Ta bonté,  
+Les sacrifices offerts,  
+Pour honorer Ton nom.  
+Salomon a consacré,  
+Cette maison à jamais,  
+À Toi, notre Dieu puissant,  
+Nous T'apportons nos chants.
+
+[Chorus]  
+Nous louons, nous adorons,  
+La gloire de l'Éternel,  
+Dans ce lieu où Tu résides,  
+Nous chantons des merveilles.  
+Où la prière s'élève,  
+Dans l'humilité,  
+Seigneur, écoute notre voix,  
+Guéris notre pays.
+
+[Bridge]  
+Si nous revenons à Toi,  
+Et que nous cherchons Ta face,  
+Tu nous entendras des cieux,  
+Et Tu feras grâce.  
+Nous Te prions, ô Seigneur,  
+Restaure notre cœur,  
+Ne nous abandonne jamais,  
+Nous sommes devant Toi, en pleurs.
+
+[Chorus]  
+Nous louons, nous adorons,  
+La gloire de l'Éternel,  
+Dans ce lieu où Tu résides,  
+Nous chantons des merveilles.  
+Où la prière s'élève,  
+Dans l'humilité,  
+Seigneur, écoute notre voix,  
+Guéris notre pays.
+
+[Outro]  
+Car Ta miséricorde,  
+Dure à jamais,  
+Nous Te célébrons,  
+Seigneur, à jamais.  
+Dans ce lieu de Ta gloire,  
+Nous T'apporterons,  
+Nos cœurs et nos vies,  
+À Toi, notre Rédempteur.`,
+        8: `[Verse 1]  
+Dans la terre promise, un roi s'est levé,  
+Salomon, sage, bâtisseur de foi,  
+Une maison pour l'Éternel, il a consacré,  
+Son cœur en adoration, vers le ciel, il se noie.
+
+[Chorus]  
+Ô Éternel, Ta gloire resplendit,  
+Dans chaque pierre, Ton amour, je le sens,  
+Nous venons, en ce lieu, T’honorer,  
+Ta maison est sainte, notre cœur s'élève, vraiment.
+
+[Verse 2]  
+Des villes fortes, il a fondées,  
+Des murs et des portes, pour protéger,  
+Les sacrificateurs, en ordre, ont chanté,  
+La louange, chaque jour, pour Te glorifier.
+
+[Chorus]  
+Ô Éternel, Ta gloire resplendit,  
+Dans chaque pierre, Ton amour, je le sens,  
+Nous venons, en ce lieu, T’honorer,  
+Ta maison est sainte, notre cœur s'élève, vraiment.
+
+[Bridge]  
+Ensemble, nous offrons nos cœurs,  
+Des holocaustes, des chants de ferveur,  
+Dans la lumière de Ta présence,  
+Nous trouvons la paix, notre délivrance.
+
+[Chorus]  
+Ô Éternel, Ta gloire resplendit,  
+Dans chaque pierre, Ton amour, je le sens,  
+Nous venons, en ce lieu, T’honorer,  
+Ta maison est sainte, notre cœur s'élève, vraiment.
+
+[Outro]  
+Ainsi, nous marchons, main dans la main,  
+Vers la maison de l'Éternel, chemin divin,  
+Le roi et son peuple, unis pour l'éternité,  
+Dans la louange, à jamais, nous allons chanter.`,
+        9: `[Verse 1]  
+Dans l'ombre des cèdres, une reine est arrivée,  
+Cherchant la sagesse, elle est venue, éblouie.  
+Des trésors, des parfums, un cœur en vérité,  
+Elle a posé ses énigmes, son âme en émoi.  
+
+[Chorus]  
+Ô Seigneur, comme Salomon,  
+Ta sagesse éclaire nos chemins.  
+Bénis sois-Tu, Dieu des cieux,  
+Ta grandeur, nous l'adorons !  
+
+[Verse 2]  
+Elle a vu la beauté, la gloire de Ta maison,  
+Les mets sur la table, la joie des serviteurs.  
+Dans l'éclat de Ta lumière, elle a trouvé raison,  
+Sa voix s'est élevée, elle a proclamé : « Dieu est vainqueur ! »  
+
+[Chorus]  
+Ô Seigneur, comme Salomon,  
+Ta sagesse éclaire nos chemins.  
+Bénis sois-Tu, Dieu des cieux,  
+Ta grandeur, nous l'adorons !  
+
+[Bridge]  
+Les rois de la terre cherchent Ta face,  
+Et chacun apporte un présent de grâce.  
+L'or et l'argent, rien n'est comparé,  
+À la sagesse qui vient de Ta bonté.  
+
+[Chorus]  
+Ô Seigneur, comme Salomon,  
+Ta sagesse éclaire nos chemins.  
+Bénis sois-Tu, Dieu des cieux,  
+Ta grandeur, nous l'adorons !  
+
+[Outro]  
+Dans le silence des âges, nous chantons sans fin,  
+Pour Ta gloire, ô Dieu, notre cœur est le chemin.  
+Comme la reine de Séba, nous venons à Toi,  
+Pour trouver la sagesse, pour vivre en Ta foi.  
+
+---
+
+Ces paroles racontent l'histoire de la rencontre entre la reine de Séba et Salomon, mettant l'accent sur la sagesse divine et la gloire de Dieu. Elles sont conçues pour être chantées avec passion, en invitant l'assemblée à adorer et à célébrer la grandeur de Dieu à travers la sagesse de Salomon.`,
+        10: `[Verse 1]  
+Dans les ombres de Sichem, un roi se tenait,  
+Roboam en son cœur, des choix à peser.  
+Le peuple avec douleur, implore sa clémence,  
+« Allège notre joug, donne-nous l'espérance. »
+
+[Chorus]  
+Ô Seigneur, écoute nos cris,  
+Dans la nuit, nous cherchons la lumière.  
+Des chaînes brisées, des âmes en vie,  
+Rétablis le royaume, dans ta miséricorde entière.
+
+[Verse 2]  
+Les vieillards ont parlé, sagesse d'autrefois,  
+« Si tu es bon, ils seront à toi. »  
+Mais le cœur en détresse, Roboam s'est détourné,  
+Des voix de la jeunesse, il s'est laissé guider.
+
+[Chorus]  
+Ô Seigneur, écoute nos cris,  
+Dans la nuit, nous cherchons la lumière.  
+Des chaînes brisées, des âmes en vie,  
+Rétablis le royaume, dans ta miséricorde entière.
+
+[Bridge]  
+Comme Israël s'est éloigné,  
+Nous prions pour le retour,  
+Dans la peine, dans le désespoir,  
+Réveille-nous, Seigneur, par ta gloire.
+
+[Chorus]  
+Ô Seigneur, écoute nos cris,  
+Dans la nuit, nous cherchons la lumière.  
+Des chaînes brisées, des âmes en vie,  
+Rétablis le royaume, dans ta miséricorde entière.
+
+[Outro]  
+Le poids de la couronne, sur des épaules fragiles,  
+Roboam, entends la voix de ton peuple en exil.  
+Dans les cœurs égarés, fais renaître la foi,  
+Nous sommes unis, Seigneur, nous venons à toi.`,
+        11: `**Titre:** **L'Écho de la Grâce**
+
+[Verse 1]  
+Dans la ville de Jérusalem, ô Roi bien-aimé,  
+Roboam a rassemblé son cœur, prêt à combattre,  
+Mais l'Éternel parla, sa voix résonna,  
+« Ne fais pas la guerre, retourne dans ta maison. »
+
+[Chorus]  
+Écoute, écoute, la voix de l'Éternel,  
+Suis le chemin de paix, où l'amour se révèle.  
+Fortifie ton cœur, bâtis des villes de foi,  
+Dans la grâce de Dieu, nous marcherons en joie.
+
+[Verse 2]  
+Les Lévites s'éveillent, leur cœur en émoi,  
+Ils quittent leur terre pour répondre à la foi.  
+Vers Jérusalem, ensemble, ils viendront,  
+Sacrifiant au Dieu de nos pères, en union.
+
+[Chorus]  
+Écoute, écoute, la voix de l'Éternel,  
+Suis le chemin de paix, où l'amour se révèle.  
+Fortifie ton cœur, bâtis des villes de foi,  
+Dans la grâce de Dieu, nous marcherons en joie.
+
+[Bridge]  
+Oh, Roi, dans la lumière, fais briller ta vérité,  
+Les boucliers et lances, dans ta main, pour prier.  
+Établis ta maison sur le roc de la foi,  
+Avec tous tes fils, en unis, nous bâtirons.
+
+[Chorus]  
+Écoute, écoute, la voix de l'Éternel,  
+Suis le chemin de paix, où l'amour se révèle.  
+Fortifie ton cœur, bâtis des villes de foi,  
+Dans la grâce de Dieu, nous marcherons en joie.
+
+[Outro]  
+Dans la douceur de l'Éternel, nous trouverons notre voie,  
+Ensemble, célébrons la promesse d'amour,  
+Pour toujours, dans Ses bras, nous vivrons en Sa loi,  
+Roboam, ô roi, conduis-nous vers le jour.`,
+        12: `[Verse 1]  
+Quand Roboam dans son trône se tenait,  
+Il a oublié la loi de l’Éternel,  
+Son cœur s’est tourné vers l’orgueil,  
+Et tout Israël, avec lui, s'est égaré.  
+L’Éternel observa leur chute,  
+Les péchés montaient comme une ombre,  
+Mais au fond de leur cœur, une lueur,  
+Quand l’humilité, enfin, est venue.
+
+[Chorus]  
+O Seigneur, Tu es juste,  
+Nous revenons à Toi,  
+Dans la poussière, nous nous humilions,  
+Ta grâce nous réveille,  
+Ton amour nous libère,  
+O Éternel, nous Te chantons,  
+Pour Ta bonté, nous Te rendons gloire.
+
+[Verse 2]  
+Schischak, le roi d’Égypte, s'approche,  
+Les trésors sont pris, les boucliers d'or,  
+Mais quand ils se sont humiliés,  
+Ta colère s'est détournée, ô Seigneur!  
+Tu as promis d'être leur refuge,  
+Dans la tempête, Tu es leur paix,  
+Et quand le cœur se tourne vers Toi,  
+Ta main puissante les relève.
+
+[Chorus]  
+O Seigneur, Tu es juste,  
+Nous revenons à Toi,  
+Dans la poussière, nous nous humilions,  
+Ta grâce nous réveille,  
+Ton amour nous libère,  
+O Éternel, nous Te chantons,  
+Pour Ta bonté, nous Te rendons gloire.
+
+[Bridge]  
+Il y a encore des bonnes choses en Juda,  
+Dans chaque épreuve, Ta fidélité demeure,  
+Avec un cœur contrit, nous cherchons Ta face,  
+Seigneur, guide nos pas, dans la lumière de Ta grâce.  
+Nous choisissons de Te servir, ô notre Roi,  
+Dans chaque bataille, nous mettons notre foi.
+
+[Chorus]  
+O Seigneur, Tu es juste,  
+Nous revenons à Toi,  
+Dans la poussière, nous nous humilions,  
+Ta grâce nous réveille,  
+Ton amour nous libère,  
+O Éternel, nous Te chantons,  
+Pour Ta bonté, nous Te rendons gloire.
+
+[Outro]  
+O Seigneur, notre Roi, dans l'humilité,  
+Nous Te cherchons, pour l'éternité.  
+Ton nom est notre refuge, notre chant,  
+Nous T'adorons, pour toujours, à chaque instant.`,
+        13: `[Verse 1]  
+Écoutez, ô Israël, le cri du roi,  
+Abija s'est levé, fort dans la foi.  
+Jérusalem, la lumière de notre espoir,  
+L'Éternel est avec nous, n'ayons plus de peur.  
+
+[Chorus]  
+Car notre Dieu, l'Éternel,  
+Il est notre refuge, notre force éternelle.  
+Dans les batailles, Il est notre vainqueur,  
+Avec Lui, nous marchons, remplis de Sa ferveur.  
+
+[Verse 2]  
+Jéroboam, dans l'ombre, a dressé ses armées,  
+Mais notre cœur s'élève, pour l’Éternel adoré.  
+Il a promis à David, un royaume sans fin,  
+Nous ne plierons pas, notre foi est chemin.  
+
+[Chorus]  
+Car notre Dieu, l'Éternel,  
+Il est notre refuge, notre force éternelle.  
+Dans les batailles, Il est notre vainqueur,  
+Avec Lui, nous marchons, remplis de Sa ferveur.  
+
+[Bridge]  
+Ne craignez pas, oh peuple bien-aimé,  
+Les trompettes résonnent, pour l'Éternel, nous sommes unifiés.  
+Les sacrificateurs prient, le parfum monte aux cieux,  
+Nous nous unissons, devant le Dieu des lieux.  
+
+[Chorus]  
+Car notre Dieu, l'Éternel,  
+Il est notre refuge, notre force éternelle.  
+Dans les batailles, Il est notre vainqueur,  
+Avec Lui, nous marchons, remplis de Sa ferveur.  
+
+[Verse 3]  
+Les ennemis fuient, sous notre cri de guerre,  
+L'Éternel combat pour nous, Il est notre lumière.  
+Cinq cent mille tombent, la victoire est là,  
+Car nous avons prié, et notre foi reste en Lui, voilà.  
+
+[Chorus]  
+Car notre Dieu, l'Éternel,  
+Il est notre refuge, notre force éternelle.  
+Dans les batailles, Il est notre vainqueur,  
+Avec Lui, nous marchons, remplis de Sa ferveur.  
+
+[Outro]  
+Abija, fortifié, dans la grâce avérée,  
+L'Éternel est notre héritage, pour l'éternité.  
+Louons le Roi, le Dieu de nos pères,  
+Aujourd'hui, demain, pour toujours en prière.`,
+        14: `[Verset 1]  
+Dans les années de paix, Asa s'éleva,  
+Un roi juste, un cœur à la loi.  
+Il brisa les idoles, les faux lieux,  
+Dans la lumière, il a conduit les cieux.  
+
+[Pre-Chorus]  
+O Juda, leve-toi, cherche son nom,  
+Dans chaque prière, trouve le pardon.  
+
+[Chorus]  
+Recherchons l'Éternel, notre Dieu,  
+Lui qui nous donne repos et lieu.  
+Quand l'ennemi s'avance, nous crions,  
+C'est sur Lui seul, notre fondation.  
+
+[Verset 2]  
+Dans la vallée, face à l'ennemi,  
+Asa invoque, sa foi en lui.  
+"Seigneur, aide-nous, dans l’épreuve,  
+C'est en Ton nom que nous nous éleve."  
+
+[Pre-Chorus]  
+O Juda, leve-toi, cherche son nom,  
+Dans chaque prière, trouve le pardon.  
+
+[Chorus]  
+Recherchons l'Éternel, notre Dieu,  
+Lui qui nous donne repos et lieu.  
+Quand l'ennemi s'avance, nous crions,  
+C'est sur Lui seul, notre fondation.  
+
+[Bridge]  
+Il a frappé l'ennemi, dans sa puissance,  
+Par sa grâce, nous avons l'assurance.  
+Des villes fortes, bâties en Son honneur,  
+Dans le calme, nous chantons Sa grandeur.  
+
+[Chorus]  
+Recherchons l'Éternel, notre Dieu,  
+Lui qui nous donne repos et lieu.  
+Quand l'ennemi s'avance, nous crions,  
+C'est sur Lui seul, notre fondation.  
+
+[Outro]  
+O Juda, nous marchons vers la lumière,  
+Avec foi, nous sommes Sa prière.  
+Recherchons l'Éternel, notre Dieu,  
+Pour toujours, en Lui, nous sommes heureux.  
+
+---
+
+Ces paroles sont inspirées des événements du règne d'Asa et reflètent l'appel à rechercher Dieu, la foi face à l'adversité, et la paix que Dieu accorde à ceux qui L'invoquent.`,
+        15: `[Verse 1]  
+Dans la détresse, nous avons crié,  
+Vers le ciel, nos cœurs enflammés.  
+Ô Éternel, Tu es notre refuge,  
+Avec Toi, nous n'avons plus d'usage.  
+Quand nous cherchons, nous Te trouvons,  
+Ta présence, notre raison,  
+Nous T'invoquons, ô Dieu fidèle,  
+Guide nos pas, Ta grâce nous appelle.
+
+[Chorus]  
+Cherchons l'Éternel, de tout notre cœur,  
+Il est avec nous, notre sauveur.  
+Jérusalem, lève-toi dans la joie,  
+Ensemble, chantons, notre foi est en Toi.  
+Cherchons l'Éternel, avec ferveur,  
+De génération en génération,  
+L'Éternel est bon, notre libérateur,  
+Pour toujours, nous T'offrons notre adoration.
+
+[Verse 2]  
+Asa, roi, a entendu la voix,  
+Des prophètes qui parlent en foi.  
+Il a fortifié son peuple, unis,  
+Ensemble, ils ont brisé les idoles, amis.  
+Des sacrifices offerts avec amour,  
+Sept cents bœufs, sept mille brebis pour Toi en retour.  
+Nous jurons fidélité à Ta loi,  
+Dans l'alliance, nous serons en émoi.
+
+[Chorus]  
+Cherchons l'Éternel, de tout notre cœur,  
+Il est avec nous, notre sauveur.  
+Jérusalem, lève-toi dans la joie,  
+Ensemble, chantons, notre foi est en Toi.  
+Cherchons l'Éternel, avec ferveur,  
+De génération en génération,  
+L'Éternel est bon, notre libérateur,  
+Pour toujours, nous T'offrons notre adoration.
+
+[Bridge]  
+Fortifiez-vous, ne craignez pas,  
+Les promesses de Dieu sont notre combat.  
+Il apportera le repos, la paix,  
+Dans nos luttes, Il est notre clé.  
+Quand le monde tremble, nous restons debout,  
+Dans Sa lumière, nous avançons, c'est tout.  
+Élevons nos voix, en choeur chantons,  
+Pour l'Éternel, nous vivons, nous sommes sons.
+
+[Chorus]  
+Cherchons l'Éternel, de tout notre cœur,  
+Il est avec nous, notre sauveur.  
+Jérusalem, lève-toi dans la joie,  
+Ensemble, chantons, notre foi est en Toi.  
+Cherchons l'Éternel, avec ferveur,  
+De génération en génération,  
+L'Éternel est bon, notre libérateur,  
+Pour toujours, nous T'offrons notre adoration.
+
+[Outro]  
+Cherchons l'Éternel, de tout notre cœur,  
+À jamais, nous vivrons dans Sa douceur.  
+L'Éternel est notre lumière, notre chant,  
+Pour toujours, ensemble, nous serons en avant.`,
+        16: `**Titre:** *L'Alliance de Foi*
+
+[Verset 1]  
+Dans la lumière du jour, tu es là, Seigneur,  
+Asa cherchait en toi, dans sa peur,  
+Mais il se tourna vers un roi étranger,  
+Oubliant ta promesse, ô Dieu de vérité.
+
+[Chorus]  
+Tu étends tes bras sur la terre,  
+Pour soutenir ceux au cœur sincère.  
+Laisse nos vies être un témoignage,  
+De ta fidélité, de ton héritage.
+
+[Verset 2]  
+Baescha, le roi, construisait avec fureur,  
+Mais Asa, dans son cœur, ressentit la douleur.  
+Il prit de l'or, de l'argent pour pactiser,  
+Mais en toi, ô Dieu, il devait s'appuyer.
+
+[Chorus]  
+Tu étends tes bras sur la terre,  
+Pour soutenir ceux au cœur sincère.  
+Laisse nos vies être un témoignage,  
+De ta fidélité, de ton héritage.
+
+[Bridge]  
+Oh, que nos âmes se tournent vers toi,  
+Dans nos luttes, sois notre choix.  
+Qu'aucun roi humain ne nous détourne,  
+De la foi qui, en toi, nous entoure.
+
+[Chorus]  
+Tu étends tes bras sur la terre,  
+Pour soutenir ceux au cœur sincère.  
+Laisse nos vies être un témoignage,  
+De ta fidélité, de ton héritage.
+
+[Verset 3]  
+Asa a oublié, même dans la maladie,  
+De chercher ta face, de prier, d'implorer.  
+Mais nous, Seigneur, nous levons nos voix,  
+Pour te louer, pour marcher dans ta foi.
+
+[Chorus]  
+Tu étends tes bras sur la terre,  
+Pour soutenir ceux au cœur sincère.  
+Laisse nos vies être un témoignage,  
+De ta fidélité, de ton héritage.
+
+[Outro]  
+Dans chaque bataille, nous choisirons,  
+De rester fidèles, de te suivre, ô roi.  
+Car en toi, notre espoir est né,  
+L'Alliance de foi, pour l'éternité.`,
+        17: `[Verse 1]  
+Dans les cieux, Tu règnas, ô Éternel,  
+Josaphat, ton serviteur, se leva,  
+Fortifié par Ta main, il marcha,  
+Sur les chemins de David, il s'engagea.  
+
+[Pre-Chorus]  
+Il chassa les idoles, en Toi il croira,  
+Sa foi dans les promesses, jamais ne faiblira.  
+Avec le livre de Ta loi, il enseigna,  
+Dans tout Juda, Ta voix résonna.  
+
+[Chorus]  
+Ô Roi de Juda, notre refuge,  
+Ta lumière brille, nous conduis,  
+Dans la bataille, Ta force est notre juge,  
+Par Ta grâce, nous vaincrons ici.  
+
+[Verse 2]  
+Des présent s'apportèrent, d'autres nations,  
+La terreur de l'Éternel, sur tous les royaumes,  
+Les Philistins, les Arabes, avec dévotion,  
+Pour Josaphat, ils offrirent des hommes.  
+
+[Pre-Chorus]  
+Il bâtit des châteaux, des villes en splendeur,  
+Des soldats vaillants, prêts à donner leur cœur.  
+Dans l'unité, nous nous tenons,  
+Sous Ta bannière, nous chantons.  
+
+[Chorus]  
+Ô Roi de Juda, notre refuge,  
+Ta lumière brille, nous conduis,  
+Dans la bataille, Ta force est notre juge,  
+Par Ta grâce, nous vaincrons ici.  
+
+[Bridge]  
+Éternel, Tu es notre guide,  
+Ta main nous protège, nous sommes unis.  
+Dans chaque épreuve, avec courage,  
+Nous marcherons, Ta victoire est notre héritage.  
+
+[Chorus]  
+Ô Roi de Juda, notre refuge,  
+Ta lumière brille, nous conduis,  
+Dans la bataille, Ta force est notre juge,  
+Par Ta grâce, nous vaincrons ici.  
+
+[Outro]  
+Josaphat, dans la foi, nous avançons,  
+AvecToi, Éternel, nous faisons cette chanson.  
+Roi de Juda, à jamais notre lumière,  
+Dans l'ombre ou la gloire, nous chantons Ta prière.`,
+        18: `**Couplet 1 :**  
+Dans les ombres de la guerre, un roi s'est levé,  
+Josaphat, le courage, dans son cœur embrasé.  
+Avec Achab, il part, prêt pour la bataille,  
+Mais il cherche la voix, celle qui jamais ne faillit.  
+
+**Refrain :**  
+Ô Éternel, parle à mon cœur,  
+Dans le tumulte, sois ma lueur.  
+Ta vérité, je veux entendre,  
+Guide mes pas, fais-moi défendre.  
+
+**Couplet 2 :**  
+Quatre cents prophètes, en chœur ils chantent,  
+« Monte à Ramoth, la victoire est présente. »  
+Mais Josaphat insiste, "Un autre doit parler,  
+Un homme de Dieu, pour nous guider."  
+
+**Refrain :**  
+Ô Éternel, parle à mon cœur,  
+Dans le tumulte, sois ma lueur.  
+Ta vérité, je veux entendre,  
+Guide mes pas, fais-moi défendre.  
+
+**Pont :**  
+Michée se lève, la voix du Très-Haut,  
+Il voit Israël, comme des brebis, sans guide,  
+Le ciel s'ouvre, l’Éternel est là,  
+« Je suis avec toi, n’aie crainte, va! »  
+
+**Refrain :**  
+Ô Éternel, parle à mon cœur,  
+Dans le tumulte, sois ma lueur.  
+Ta vérité, je veux entendre,  
+Guide mes pas, fais-moi défendre.  
+
+**Couplet 3 :**  
+Au milieu des combats, Josaphat crie,  
+L’Éternel le sauve, dans l’ombre, il s’appuie.  
+Les cœurs sont troublés, mais il sait en qui croire,  
+La promesse du ciel, éclaire son histoire.  
+
+**Refrain :**  
+Ô Éternel, parle à mon cœur,  
+Dans le tumulte, sois ma lueur.  
+Ta vérité, je veux entendre,  
+Guide mes pas, fais-moi défendre.  
+
+**Outro :**  
+Dans chaque bataille, je marcherai,  
+Avec toi, Seigneur, je ne faiblirai.  
+L'Appel du ciel, dans ma vie résonne,  
+Avec toi, Éternel, je suis plus qu’un homme.`,
+        19: `[Verse 1]  
+Dans la paix, Josaphat est revenu,  
+De l’ombre, il a vu la lumière,  
+Le prophète lui a parlé,  
+De la vérité, il a été éclairé.  
+Des idoles, il a chassé,  
+Son cœur, à Dieu, il a donné,  
+De ses mains, il a bâti,  
+Un chemin pour l’éternité.
+
+[Chorus]  
+Éternel, guide nos pas,  
+Dans la crainte, nous nous tenons là,  
+Avec foi, nous cherchons ta face,  
+Dans ta grâce, notre cœur s’embrase.  
+Fortifie-nous, ô Dieu de cœur,  
+Nous marchons sous ta douce lueur.  
+Ramenons, Seigneur, ton peuple en toi,  
+Dans l’unité, nous levons nos voix.
+
+[Verse 2]  
+Des juges, il a établi,  
+Pour veiller sur chaque vie,  
+Avec intégrité, ils agiront,  
+Pour l’Éternel, ils rendront raison.  
+Que la justice soit leur chant,  
+Dans l’amour, ils seront présents,  
+Ne craignons ni l’obscurité,  
+Car avec toi, nous serons en vérité.
+
+[Chorus]  
+Éternel, guide nos pas,  
+Dans la crainte, nous nous tenons là,  
+Avec foi, nous cherchons ta face,  
+Dans ta grâce, notre cœur s’embrase.  
+Fortifie-nous, ô Dieu de cœur,  
+Nous marchons sous ta douce lueur.  
+Ramenons, Seigneur, ton peuple en toi,  
+Dans l’unité, nous levons nos voix.
+
+[Bridge]  
+Amaria, notre guide,  
+De ta sagesse, nous avons besoin,  
+Dans chaque lutte, chaque décision,  
+Que ta présence soit notre direction.  
+Zebadia, fort et vaillant,  
+Dans l’unité, nous avançons,  
+Avec tous les Lévites en prière,  
+Nous bâtissons, Seigneur, notre terre.
+
+[Chorus]  
+Éternel, guide nos pas,  
+Dans la crainte, nous nous tenons là,  
+Avec foi, nous cherchons ta face,  
+Dans ta grâce, notre cœur s’embrase.  
+Fortifie-nous, ô Dieu de cœur,  
+Nous marchons sous ta douce lueur.  
+Ramenons, Seigneur, ton peuple en toi,  
+Dans l’unité, nous levons nos voix.
+
+[Outro]  
+Fortifiez-vous, agissez,  
+Sous la main de Dieu, nous serons,  
+Car l’Éternel est avec nous,  
+Dans la victoire, nous resterons.  
+Oh, Éternel, notre roi,  
+À jamais, nous chantons pour toi.`,
+        20: `[Verse 1]  
+Dans la peur, Josaphat s'est tourné,  
+Une multitude s'avance, il a prié.  
+Les fils d'Ammon, et Moab en marche,  
+Son cœur tremble, mais il cherche ta face.  
+
+[Pre-Chorus]  
+Ô Dieu des cieux, tu es notre force,  
+Dominant sur toutes les nations,  
+À toi, nous élevons nos voix,  
+Dans l'assemblée, nous implorons.  
+
+[Chorus]  
+L’Éternel combat pour nous,  
+Ne crains pas, il est là,  
+Nous levons nos chants vers lui,  
+Sa miséricorde dure à jamais.  
+L’Éternel combat pour nous,  
+Dans la vallée de la foi,  
+Nous verrons la victoire,  
+Car l’Éternel est avec nous.  
+
+[Verse 2]  
+Josaphat a rassemblé tout Juda,  
+Des enfants aux anciens, tous en prière.  
+« Si calamité vient, nous crierons, »  
+Devant ta maison, ô Dieu, nous t’adorons.  
+
+[Pre-Chorus]  
+Une voix se lève dans l’assemblée,  
+« Ne craignez pas, je suis avec vous. »  
+À l’aube, ils chantent, la louange s’élève,  
+L’Éternel combat, il est notre refuge.  
+
+[Chorus]  
+L’Éternel combat pour nous,  
+Ne crains pas, il est là,  
+Nous levons nos chants vers lui,  
+Sa miséricorde dure à jamais.  
+L’Éternel combat pour nous,  
+Dans la vallée de la foi,  
+Nous verrons la victoire,  
+Car l’Éternel est avec nous.  
+
+[Bridge]  
+Quand la bataille semble perdue,  
+Regarde, il est à l'œuvre,  
+Les ennemis se détruisent,  
+Et nous marchons dans la lumière.  
+La joie nous envahit,  
+Dans ta présence, nous sommes libres,  
+Ensemble, nous bénissons ton nom,  
+Dans la vallée de Beraca, nous proclamons.  
+
+[Chorus]  
+L’Éternel combat pour nous,  
+Ne crains pas, il est là,  
+Nous levons nos chants vers lui,  
+Sa miséricorde dure à jamais.  
+L’Éternel combat pour nous,  
+Dans la vallée de la foi,  
+Nous verrons la victoire,  
+Car l’Éternel est avec nous.  
+
+[Outro]  
+L’Éternel est notre roi,  
+À jamais, nous chanterons,  
+Dans son amour, nous reposons,  
+L’Éternel combat pour nous.`,
+        21: `**Couplet 1 :**  
+Josaphat, roi de paix,  
+Dans la lumière a marché,  
+Ses fils, héritiers d’un royaume,  
+L’or et l’argent en leur somme.  
+Mais Joram, par ambition,  
+A trahi la tradition,  
+Dans les voies d’Achab, il s’est perdu,  
+S’éloignant du Dieu qui le reçut.  
+
+**Refrain :**  
+Ô Éternel, Ta promesse demeure,  
+À David, une lampe pour les heures.  
+Malgré nos chutes, Ta grâce éclaire,  
+Dans l’obscurité, Tu es notre lumière.  
+Tu es fidèle, Tu es là,  
+Dans nos luttes, Tu ne nous abandonnes pas.  
+
+**Couplet 2 :**  
+L'Écriture, une voix qui appelle,  
+Elie annonce la nouvelle,  
+Pour nos péchés, un lourd prix,  
+Pour retourner vers l’infini.  
+Les Philistins dans la nuit,  
+Ont envahi, pris tout ici,  
+Mais même au cœur de la rébellion,  
+L’Éternel parle de rédemption.  
+
+**Refrain :**  
+Ô Éternel, Ta promesse demeure,  
+À David, une lampe pour les heures.  
+Malgré nos chutes, Ta grâce éclaire,  
+Dans l’obscurité, Tu es notre lumière.  
+Tu es fidèle, Tu es là,  
+Dans nos luttes, Tu ne nous abandonnes pas.  
+
+**Pont :**  
+Dans la douleur, nous cherchons Ta face,  
+Sur les chemins sombres, Tu nous embrasses.  
+Ta parole est notre refuge,  
+Dans le chaos, Ta force nous subjugue.  
+Nous levons les yeux, vers le ciel,  
+Ta promesse, un amour éternel.  
+
+**Refrain :**  
+Ô Éternel, Ta promesse demeure,  
+À David, une lampe pour les heures.  
+Malgré nos chutes, Ta grâce éclaire,  
+Dans l’obscurité, Tu es notre lumière.  
+Tu es fidèle, Tu es là,  
+Dans nos luttes, Tu ne nous abandonnes pas.  
+
+**Conclusion :**  
+Josaphat, dans la foi, a brillé,  
+Nous aussi, faisons le choix de prier,  
+L’Éternel, notre roi, notre guide,  
+Dans chaque bataille, Son amour nous décide.`,
+        22: `[Verse 1]  
+Dans les ombres de Jérusalem,  
+Un roi est né, mais son cœur s'éteint,  
+Conseils impies, chemins de perdition,  
+Achazia, perdu dans l'illusion.  
+
+[Chorus]  
+Ô Éternel, Tu es notre lumière,  
+Dans la nuit, Tu nous fais voir,  
+Guide nos pas, délivre nos cœurs,  
+Nous cherchons Ta vérité, notre Roi, notre Sauveur.  
+
+[Verse 2]  
+Il marcha avec ceux qui T'oublient,  
+Dans la guerre, il ne vit que l’ennemi,  
+Mais par Ta volonté, il fut entraîné,  
+Vers sa ruine, il s'est laissé guider.  
+
+[Chorus]  
+Ô Éternel, Tu es notre lumière,  
+Dans la nuit, Tu nous fais voir,  
+Guide nos pas, délivre nos cœurs,  
+Nous cherchons Ta vérité, notre Roi, notre Sauveur.  
+
+[Bridge]  
+Joschabeath a sauvé l’héritier,  
+Dans la maison de Dieu, caché,  
+L’espoir renaît au cœur du royaume,  
+Car Tu es là, Seigneur, dans notre trône.  
+
+[Chorus]  
+Ô Éternel, Tu es notre lumière,  
+Dans la nuit, Tu nous fais voir,  
+Guide nos pas, délivre nos cœurs,  
+Nous cherchons Ta vérité, notre Roi, notre Sauveur.  
+
+[Outro]  
+Dans les épreuves, Ta grâce demeure,  
+Tu es notre force, notre protecteur,  
+Achazia, un écho dans l'histoire,  
+Mais en Toi, Seigneur, nous avons l’espoir.  
+Amen, amen, nous proclamons Ta gloire.`,
+        23: `[Verse 1]  
+Dans la maison de l'Éternel, nous venons,  
+Unis dans l'alliance, un cœur en passion.  
+Le roi sous le diadème, lumière de notre foi,  
+Nous chantons, nous louons, ensemble pour toi.
+
+[Chorus]  
+Vive le roi, vive le roi,  
+L'Éternel est notre guide,  
+Dans la joie et dans l'unité,  
+Nous marchons, main dans la main,  
+Vive le roi, vive le roi,  
+Notre cœur à jamais,  
+Seigneur, nous sommes à toi,  
+L'Éternel, notre roi.
+
+[Verse 2]  
+Les Lévites en prière, les cœurs en éveil,  
+Le bruit des trompettes, la louange sans pareil.  
+Nous démolissons les idoles,  
+Dans la lumière, nous nous consolons,  
+La gloire du Seigneur, pour toujours, nous chantons.
+
+[Chorus]  
+Vive le roi, vive le roi,  
+L'Éternel est notre guide,  
+Dans la joie et dans l'unité,  
+Nous marchons, main dans la main,  
+Vive le roi, vive le roi,  
+Notre cœur à jamais,  
+Seigneur, nous sommes à toi,  
+L'Éternel, notre roi.
+
+[Bridge]  
+O peuple de Dieu, entends l'appel,  
+Nous sommes les témoins de son amour éternel.  
+Dans chaque bataille, dans chaque combat,  
+L'Éternel nous fortifie, notre force est là.
+
+[Chorus]  
+Vive le roi, vive le roi,  
+L'Éternel est notre guide,  
+Dans la joie et dans l'unité,  
+Nous marchons, main dans la main,  
+Vive le roi, vive le roi,  
+Notre cœur à jamais,  
+Seigneur, nous sommes à toi,  
+L'Éternel, notre roi.
+
+[Outro]  
+Dans la maison de l'Éternel, nous nous tenons,  
+Rassemblés dans l'amour, unis pour toujours,  
+L'Éternel notre roi, chantons avec ferveur,  
+Nous sommes son peuple, remplis de sa douceur.`,
+        24: `[Verse 1]  
+Dans l'ombre des âges, un roi s'est levé,  
+Joas, jeune cœur, dans la lumière guidé.  
+Il a fait ce qui est droit aux yeux de l'Éternel,  
+Avec Jehojada, son mentor éternel.  
+
+[Chorus]  
+Ouvre nos cœurs, Seigneur, pour Te rendre honneur,  
+Dans Ta maison, nous bâtissons avec ardeur.  
+Répare nos âmes, ô Dieu de vérité,  
+Dans la lumière, fais-nous marcher en unité.  
+
+[Verse 2]  
+La maison de Dieu, nous l'avons laissée,  
+Ravagée par l'ombre, par des cœurs éloignés.  
+Mais Joas a rassemblé, un appel au peuple,  
+Pour restaurer l'autel, pour que l'amour s'emmêle.  
+
+[Chorus]  
+Ouvre nos cœurs, Seigneur, pour Te rendre honneur,  
+Dans Ta maison, nous bâtissons avec ardeur.  
+Répare nos âmes, ô Dieu de vérité,  
+Dans la lumière, fais-nous marcher en unité.  
+
+[Bridge]  
+Et même quand les voix s'élèvent dans la nuit,  
+Nous nous tournons vers Toi, notre seul abri.  
+Prophètes de vérité, nous entendons l'appel,  
+Ramenons nos âmes, vers l'Éternel.  
+
+[Chorus]  
+Ouvre nos cœurs, Seigneur, pour Te rendre honneur,  
+Dans Ta maison, nous bâtissons avec ardeur.  
+Répare nos âmes, ô Dieu de vérité,  
+Dans la lumière, fais-nous marcher en unité.  
+
+[Verse 3]  
+Mais quand la tempête vient, et que l'ombre s'étend,  
+Rappelons-nous de Ta grâce, du sacrifice, du sang.  
+Que la colère ne nous éloigne jamais,  
+Car dans Ta miséricorde, à jamais nous serons liés.  
+
+[Chorus]  
+Ouvre nos cœurs, Seigneur, pour Te rendre honneur,  
+Dans Ta maison, nous bâtissons avec ardeur.  
+Répare nos âmes, ô Dieu de vérité,  
+Dans la lumière, fais-nous marcher en unité.  
+
+[Outro]  
+Restauration, notre chant,  
+Dans Ta maison, nous vivons d'un même vent.  
+Joas, un roi, un exemple pour nous,  
+Éveille notre foi, ô Dieu, rends-nous fous d'amour.  
+
+---
+
+Ces paroles visent à capturer l'essence de l'histoire de Joas, en mettant l'accent sur la restauration spirituelle et la communion avec Dieu, tout en respectant le style et le rythme souhaités pour un chant de louange.`,
+        25: `**Titre :** *Le Cœur Dévoué*
+
+[Verse 1]  
+Dans la lumière de Jérusalem,  
+Amatsia s'est levé, un temps de règne,  
+Il a fait ce qui est droit, sans hésitation,  
+Mais son cœur était égaré, en dévotion.  
+
+Il a rassemblé les hommes de Juda,  
+Trois cent mille héros, prêts à combattre,  
+Mais un homme de Dieu lui a dit,  
+« Ne crains pas, l’Éternel est là, fais-lui confiance. »  
+
+[Chorus]  
+Oh Éternel, guide notre voie,  
+Dans la bataille, nous levons nos voix,  
+Nous marchons en Ta lumière,  
+Avec un cœur dévoué, nous te prions.  
+
+[Verse 2]  
+Amatsia a conquis, avec courage et foi,  
+Mais dans les ombres, il a fait un choix,  
+Il a cherché des dieux qui n’étaient pas si forts,  
+L’Éternel s’est enflammé, son cœur en désaccord.  
+
+« Pourquoi as-tu abandonné, tes promesses si vraies ?  
+Ces faux dieux ne peuvent rien, ils ne te sauveront jamais.  
+Écoute ma voix, retourne vers le vrai,  
+Car je suis le Dieu qui te protégera à jamais. »  
+
+[Chorus]  
+Oh Éternel, guide notre voie,  
+Dans la bataille, nous levons nos voix,  
+Nous marchons en Ta lumière,  
+Avec un cœur dévoué, nous te prions.  
+
+[Bridge]  
+Quand les ténèbres m’entourent,  
+Je n’aurai pas peur, je sais que Tu es là,  
+Ta force est ma lumière,  
+Je m’appuie sur Toi, je ne faiblirai pas.  
+
+Amatsia, dans sa fierté, a chuté,  
+Un roi déchu, mais Ta grâce a triomphé,  
+Nous chantons Ta victoire, notre espoir renouvelé,  
+Éternel, notre refuge, à jamais, nous T’adorerons.  
+
+[Chorus]  
+Oh Éternel, guide notre voie,  
+Dans la bataille, nous levons nos voix,  
+Nous marchons en Ta lumière,  
+Avec un cœur dévoué, nous te prions.  
+
+[Outro]  
+Éternel, notre Dieu, nous Te cherchons,  
+Dans chaque épreuve, nous T’adorons,  
+Avec un cœur dévoué, nous T’aimons,  
+Pour toujours, Éternel, nous Te louerons.`,
+        26: `[Verse 1]  
+Dans les jours anciens, un roi s'éleva,  
+Ozias, jeune cœur, vers Toi il se tourna.  
+Il chercha Ta face, dans l’ombre et la lumière,  
+Et Tu l’as prospéré, ô Dieu de la prière.  
+
+[Chorus]  
+Roi Ozias, dans Ta grâce,  
+Nous levons nos voix, dans la foi, nous traçons.  
+À travers les luttes, nous marchons avec force,  
+Dans Ta présence, Seigneur, nous trouvons notre course.  
+
+[Verse 2]  
+Il bâtit des tours, et les murs se redressèrent,  
+Sa renommée grandit, au-delà des frontières.  
+Les Philistins tremblent, sous Ta main puissante,  
+Dans chaque bataille, Ta lumière éclatante.  
+
+[Chorus]  
+Roi Ozias, dans Ta grâce,  
+Nous levons nos voix, dans la foi, nous traçons.  
+À travers les luttes, nous marchons avec force,  
+Dans Ta présence, Seigneur, nous trouvons notre course.  
+
+[Bridge]  
+Mais quand il fut puissant, son cœur s’éleva,  
+Dans l’orgueil, il oublia, l'amour de son roi.  
+Oh, préserve nos âmes, de l’arrogance et du péché,  
+Car dans l’humilité, nous voulons T’adorer.  
+
+[Chorus]  
+Roi Ozias, dans Ta grâce,  
+Nous levons nos voix, dans la foi, nous traçons.  
+À travers les luttes, nous marchons avec force,  
+Dans Ta présence, Seigneur, nous trouvons notre course.  
+
+[Verse 3]  
+Dans la douleur et la perte, nous Te cherchons encore,  
+Comme Ozias, Seigneur, dans l’épreuve, notre sort.  
+Et quand les ténèbres, viennent nous cerner,  
+Nous levons nos yeux, vers le ciel, à jamais.  
+
+[Chorus]  
+Roi Ozias, dans Ta grâce,  
+Nous levons nos voix, dans la foi, nous traçons.  
+À travers les luttes, nous marchons avec force,  
+Dans Ta présence, Seigneur, nous trouvons notre course.  
+
+[Outro]  
+Roi d'éternité, nous T’adorons,  
+Dans chaque victoire, et chaque frisson.  
+Ô Dieu, notre refuge, guide nos pas,  
+Comme Ozias, nous nous tenons, près de Toi, à jamais, là.`,
+        27: `[Verse 1]  
+Dans la lumière de Jérusalem,  
+Jotham, roi au cœur ardent,  
+Il a marché dans tes chemins,  
+Comme son père, il a fait le bien.  
+Les murs de ta maison il a bâti,  
+Une porte d'espoir, un abri,  
+Malgré la corruption du peuple,  
+Il a gardé sa foi, il a été ferme.
+
+[Chorus]  
+Ô Éternel, notre force et notre chant,  
+Comme Jotham, nous te cherchons,  
+Dans les combats, tu es notre guide,  
+Fort dans l'Éternel, nous avançons.  
+Élevons nos voix, louons ton nom,  
+Dans la tempête, tu es notre fondation.
+
+[Verse 2]  
+Des villes dans les montagnes, il a construit,  
+Des châteaux qui brillent dans l'infini,  
+Face à l'ennemi, il a triomphé,  
+Par ta grâce, il s'est affermi.  
+Les fils d'Ammon, il a vaincus,  
+Avec courage, il a poursuivi,  
+Dans chaque bataille, ta main l’a conduit,  
+En toi, Seigneur, il a mis sa vie.
+
+[Chorus]  
+Ô Éternel, notre force et notre chant,  
+Comme Jotham, nous te cherchons,  
+Dans les combats, tu es notre guide,  
+Fort dans l'Éternel, nous avançons.  
+Élevons nos voix, louons ton nom,  
+Dans la tempête, tu es notre fondation.
+
+[Bridge]  
+L'héritage de foi, dans nos cœurs,  
+Nous marchons ensemble, sans peur,  
+Le livre des rois, notre histoire,  
+Ta promesse nous mène à la victoire.  
+Dans chaque pas, nous chantons,  
+Tu es notre roi, notre direction,  
+Nous bâtissons sur le roc,  
+Éternel, notre soutien, notre force.
+
+[Chorus]  
+Ô Éternel, notre force et notre chant,  
+Comme Jotham, nous te cherchons,  
+Dans les combats, tu es notre guide,  
+Fort dans l'Éternel, nous avançons.  
+Élevons nos voix, louons ton nom,  
+Dans la tempête, tu es notre fondation.
+
+[Outro]  
+Jotham, roi, nous nous souvenons,  
+De ta foi, de ta dévotion,  
+Seigneur, nous te rendons gloire,  
+Pour chaque victoire, chaque histoire.  
+Amen.`,
+        28: `**Titre:** *Restauration dans la Pénombre*
+
+[Verse 1]  
+Dans l'ombre d'un roi, Achaz a péché,  
+Il a tourné le dos à Ta vérité,  
+Des idoles dressées, des cœurs égarés,  
+Jérusalem pleure, l'Éternel est en colère.
+
+[Chorus]  
+Oh, restaurateur des cœurs brisés,  
+Rappelle-nous à Ta lumière,  
+Nous revenons, ô notre Dieu,  
+Vers Toi, seul refuge, notre prière.
+
+[Verse 2]  
+Les nations ont envahi, la douleur est grande,  
+Des captifs emportés, la foi se fane,  
+Mais un prophète a crié, ô Éternel,  
+Ne laisse pas notre peuple tomber dans le ciel.
+
+[Chorus]  
+Oh, restaurateur des cœurs brisés,  
+Rappelle-nous à Ta lumière,  
+Nous revenons, ô notre Dieu,  
+Vers Toi, seul refuge, notre prière.
+
+[Bridge]  
+Rappelle-nous, Seigneur, de nos erreurs,  
+Rends-nous la force et la ferveur,  
+Que le feu de Ta sainteté,  
+Brûle en nous, pour l'éternité.
+
+[Chorus]  
+Oh, restaurateur des cœurs brisés,  
+Rappelle-nous à Ta lumière,  
+Nous revenons, ô notre Dieu,  
+Vers Toi, seul refuge, notre prière.
+
+[Outro]  
+Achaz s'est couché, mais l'espoir demeure,  
+Ezéchias s'élève, brisant les erreurs,  
+Dans la pénombre, Ta lumière éclaire,  
+Restauration, ô Dieu, nous T’adorerons en prière.`,
+        29: `**TITRE**  
+**Rénovation de notre cœur**
+
+[VERS 1]  
+Seigneur, Tu as entendu notre cri,  
+Dans l'ombre, nous avons erré,  
+Les portes de Ta maison, fermées,  
+Mais aujourd’hui, nous revenons à Toi.  
+Comme Ezéchias, nous voulons sanctifier,  
+Purifier ce qui est impur,  
+Élever nos voix dans l'adoration,  
+Renaître dans la lumière de Ta grâce.
+
+[CHORUS]  
+Rénovation de notre cœur,  
+Nous venons T’offrir nos pleurs,  
+Ouvre les portes de Ta maison,  
+Nous T’adorons, ô notre Rédemption.  
+Dans l’ombre, Ta lumière brille,  
+Nous nous prosternons, oh, Seigneur,  
+Dans l’unité, nous célébrons,  
+Rénovation, renouvellement.
+
+[VERS 2]  
+Les sacrificateurs s'avancent en prière,  
+Le sang des innocents nous purifie,  
+Avec des hymnes de louange, nous chantons,  
+Des cœurs renouvelés, une foi ravivée.  
+Comme David, nous T’exaltons,  
+Instruments résonnent, cris de joie,  
+Dans le temple, notre voix s'élève,  
+Pour Ta gloire, notre sacrifice, ô Roi.
+
+[CHORUS]  
+Rénovation de notre cœur,  
+Nous venons T’offrir nos pleurs,  
+Ouvre les portes de Ta maison,  
+Nous T’adorons, ô notre Rédemption.  
+Dans l’ombre, Ta lumière brille,  
+Nous nous prosternons, oh, Seigneur,  
+Dans l’unité, nous célébrons,  
+Rénovation, renouvellement.
+
+[BRIDGE]  
+Seigneur, Tu es notre refuge,  
+Nous T’adorons en esprit et vérité,  
+Que chaque âme soit restaurée,  
+Dans Ta présence, nous voulons demeurer.  
+Prends notre fardeau, ô Dieu d'amour,  
+Fais de nous un peuple en ardente prière,  
+Renouvelle nos cœurs, et comme Ezéchias,  
+Nous nous levons pour Ta gloire, notre lumière.
+
+[CHORUS]  
+Rénovation de notre cœur,  
+Nous venons T’offrir nos pleurs,  
+Ouvre les portes de Ta maison,  
+Nous T’adorons, ô notre Rédemption.  
+Dans l’ombre, Ta lumière brille,  
+Nous nous prosternons, oh, Seigneur,  
+Dans l’unité, nous célébrons,  
+Rénovation, renouvellement.
+
+[Outro]  
+Rénovation, Seigneur, dans Ta présence,  
+Nous T’adorons avec ferveur,  
+À jamais, pour Ta gloire,  
+Ouvrons nos cœurs, renouvelons notre ardeur.`,
+        30: `**Titre :** « Revenons à l'Éternel »
+
+[Verse 1]  
+Dans la nuit de nos cœurs, un appel résonne,  
+Ezéchias, roi, à son peuple s'étonne.  
+« Venez célébrer, revenez à la lumière,  
+À la maison de l'Éternel, pour un grand mystère. »  
+
+[Chorus]  
+Revenons à l'Éternel, Dieu de compassion,  
+Dans la joie et l’unité, chantons notre raison.  
+Son amour nous appelle, sa miséricorde,  
+Oh, qu'il nous transforme, en un peuple d'accord.  
+
+[Verse 2]  
+Des messagers courent, de ville en ville,  
+Un cri d'espoir, un retour vers la famille.  
+« Ne raidissez pas vos cœurs, ouvrez les portes,  
+L'Éternel attend, sa grâce nous réconforte. »  
+
+[Chorus]  
+Revenons à l'Éternel, Dieu de compassion,  
+Dans la joie et l’unité, chantons notre raison.  
+Son amour nous appelle, sa miséricorde,  
+Oh, qu'il nous transforme, en un peuple d'accord.  
+
+[Bridge]  
+À Jérusalem, une immense assemblée,  
+Les autels détruits, le passé effacé.  
+Le sang des victimes, pour nous a coulé,  
+À chaque sacrifice, nos âmes sont libérées.  
+
+[Verse 3]  
+Sept jours de louange, unis dans la foi,  
+Les cœurs s'élèvent, en harmonie, en joie.  
+Ezéchias prie, pour ceux qui ont pleuré,  
+L’Éternel entend, et il vient pardonner.  
+
+[Chorus]  
+Revenons à l'Éternel, Dieu de compassion,  
+Dans la joie et l’unité, chantons notre raison.  
+Son amour nous appelle, sa miséricorde,  
+Oh, qu'il nous transforme, en un peuple d'accord.  
+
+[Outro]  
+Bénissons son nom, élevons notre voix,  
+Pour l'Éternel, notre Dieu, chantons avec foi.  
+À jamais nous serons, sous son regard d'amour,  
+Revenons à l'Éternel, chaque jour, chaque jour.`,
+        31: `### TITRE
+**Restauration en Ton Nom**
+
+### **Couplet 1**  
+Dans le silence d'un cœur brisé,  
+Israël s'est levé, pour Te chercher,  
+Les idoles abattues, les statues renversées,  
+Un cri de louange, pour Ta vérité.  
+
+**Refrain**  
+Restauration, Seigneur, dans Ton amour,  
+Nous revenons à Toi, chaque jour,  
+Avec des offrandes, nos cœurs enflammés,  
+Pour honorer Ta gloire, pour Te célébrer.  
+
+**Couplet 2**  
+Ezéchias a pris le temps de prier,  
+Rétablissant les cœurs, pour Te servir,  
+Les sacrificateurs et Lévitique en unité,  
+Leurs chants résonnent, pour jamais.  
+
+**Refrain**  
+Restauration, Seigneur, dans Ton amour,  
+Nous revenons à Toi, chaque jour,  
+Avec des offrandes, nos cœurs enflammés,  
+Pour honorer Ta gloire, pour Te célébrer.  
+
+**Pont**  
+Dans chaque ville, dans chaque maison,  
+Les promesses de Dieu, notre fondation,  
+Nous donnons en abondance, avec joie et foi,  
+Car l’Éternel a béni, Son peuple à la fois.  
+
+**Refrain**  
+Restauration, Seigneur, dans Ton amour,  
+Nous revenons à Toi, chaque jour,  
+Avec des offrandes, nos cœurs enflammés,  
+Pour honorer Ta gloire, pour Te célébrer.  
+
+**Outro**  
+Dans la lumière de Ta présence,  
+Nous marchons dans la confiance,  
+Unis dans l'Esprit, pour Ta sainteté,  
+Restauration, Seigneur, pour l’éternité.  
+
+###`,
+        32: `[Verse 1]  
+Dans l'ombre des murs, une menace s'érige,  
+Sanchérib approche, le cœur se fige,  
+Ezéchias, roi, face à l'ennemi,  
+Rassemble son peuple, leur dit avec foi :  
+
+[Pre-Chorus]  
+"Ne craignez point, ô Israël,  
+L'Éternel est avec nous, c’est notre appel,  
+Il combat pour nous, il est notre bouclier,  
+Son bras puissant nous fera triompher."  
+
+[Chorus]  
+Fortifiés par Ta force,  
+Nous marchons en victoire,  
+L’Éternel, notre source,  
+Éclaire notre histoire.  
+Dans les tempêtes, nous ne fléchirons pas,  
+Avec Toi, Seigneur, nous vaincrons à chaque pas.  
+
+[Verse 2]  
+Le roi d'Assyrie, des mots pleins de défi,  
+Insulte le Dieu qui nous a affranchi,  
+Mais Ezéchias, en prière, se tient,  
+Avec Esaïe, il crie vers le Très-Haut, serein.  
+
+[Pre-Chorus]  
+"Ne craignez point, ô Israël,  
+L'Éternel est avec nous, c’est notre appel,  
+Il combat pour nous, il est notre bouclier,  
+Son bras puissant nous fera triompher."  
+
+[Chorus]  
+Fortifiés par Ta force,  
+Nous marchons en victoire,  
+L’Éternel, notre source,  
+Éclaire notre histoire.  
+Dans les tempêtes, nous ne fléchirons pas,  
+Avec Toi, Seigneur, nous vaincrons à chaque pas.  
+
+[Bridge]  
+Un ange envoyé, la nuit s'illumine,  
+Les ténèbres s'enfuient, la lumière s'exprime,  
+Sanchérib tombe, son armée s'effondre,  
+L'Éternel nous sauve, dans Sa grâce profonde.  
+
+[Chorus]  
+Fortifiés par Ta force,  
+Nous marchons en victoire,  
+L’Éternel, notre source,  
+Éclaire notre histoire.  
+Dans les tempêtes, nous ne fléchirons pas,  
+Avec Toi, Seigneur, nous vaincrons à chaque pas.  
+
+[Outro]  
+Fortifiés par Ta force,  
+Nous chantons Ta gloire,  
+Éternel, notre source,  
+Tu es notre espoir.  
+Amen, amen, nous sommes debout,  
+Avec Toi, Seigneur, nous avançons en tout.`,
+        33: `[Verse 1]  
+Dans l'ombre des hauts lieux, Manassé a erré,  
+Oubliant la promesse que Tu as donnée.  
+Des idoles de Baal, il a fait son roi,  
+Mais au fond de son cœur, il cherchait Ta voix.
+
+[Chorus]  
+Ô Éternel, dans la détresse,  
+J'implore Ta grâce, Ta tendresse.  
+Rappelle-nous à la vérité,  
+Rédemption et retour, dans l'humilité.
+
+[Verse 2]  
+Les chaînes d'Assyrie, il a connues,  
+Dans la nuit de ses craintes, son âme perdue.  
+Mais quand il s'est abaissé, il a crié,  
+Et Ta main puissante, l’a délivré.
+
+[Chorus]  
+Ô Éternel, dans la détresse,  
+J'implore Ta grâce, Ta tendresse.  
+Rappelle-nous à la vérité,  
+Rédemption et retour, dans l'humilité.
+
+[Bridge]  
+Sur l'autel de la foi, nous allons prier,  
+Pour nos cœurs rebellés, viens les restaurer.  
+Les hauts lieux abattus, les idoles brisées,  
+Dans Ta lumière, nous serons libérés.
+
+[Chorus]  
+Ô Éternel, dans la détresse,  
+J'implore Ta grâce, Ta tendresse.  
+Rappelle-nous à la vérité,  
+Rédemption et retour, dans l'humilité.
+
+[Outro]  
+Nous chantons pour Ta gloire, ô Dieu de miséricorde,  
+À jamais, nous Te servirons, notre cœur s'accorde.  
+Dans la paix de Ta présence, nous serons unis,  
+Rédemption et retour, pour l'éternité.`,
+        34: `[Verse 1]  
+Dans l'ombre des idoles,  
+Josias s'est levé,  
+Huit ans de promesse,  
+Un cœur à renouveler.  
+Il a fouillé les ruines,  
+Cherchant la vérité,  
+Dans la Loi de l'Éternel,  
+Son âme a été touchée.
+
+[Chorus]  
+Ô Éternel, nous T'adorons,  
+Restaure nos cœurs,  
+Nous revenons à Toi,  
+Ensemble, dans Ta douceur.  
+Purifie notre terre,  
+Et fais-nous renaître,  
+Dans la lumière de Ta grâce,  
+Nous désirons Te connaître.
+
+[Verse 2]  
+Il a brisé les chaînes,  
+Des autels des démons,  
+Il a restauré le culte,  
+Ramenant la passion.  
+Tout le peuple en prière,  
+Unis dans l'action,  
+Josias a conduit,  
+Vers la rédemption.
+
+[Chorus]  
+Ô Éternel, nous T'adorons,  
+Restaure nos cœurs,  
+Nous revenons à Toi,  
+Ensemble, dans Ta douceur.  
+Purifie notre terre,  
+Et fais-nous renaître,  
+Dans la lumière de Ta grâce,  
+Nous désirons Te connaître.
+
+[Bridge]  
+Quand les livres sont ouverts,  
+Et que la voix résonne,  
+Nous nous humilions,  
+Devant notre Trône.  
+Car Ta colère s'est levée,  
+Mais Ta miséricorde est grande,  
+Tu entends nos cris,  
+Et Ta bonté nous commande.
+
+[Chorus]  
+Ô Éternel, nous T'adorons,  
+Restaure nos cœurs,  
+Nous revenons à Toi,  
+Ensemble, dans Ta douceur.  
+Purifie notre terre,  
+Et fais-nous renaître,  
+Dans la lumière de Ta grâce,  
+Nous désirons Te connaître.
+
+[Outro]  
+Josias, notre roi,  
+Nous guide vers Ta voie,  
+Nos âmes restaurées,  
+En Toi, nous sommes unis.  
+Ô Éternel, nous T'adorons,  
+Pour l'éternité,  
+Dans la lumière de Ta grâce,  
+Nous serons en sécurité.`,
+        35: `**TITRE**  
+Célébrons l'Éternel
+
+****
+
+**Couplet 1**  
+À Jérusalem, le roi Josias,  
+A célébré la Pâque en son honneur,  
+Les sacrificateurs se sont levés,  
+Pour servir l'Éternel, le Créateur.  
+L’arche sainte, dans la maison de Salomon,  
+Un appel à l'unité, à la dévotion,  
+Préparez-vous, ô peuple, en ce jour,  
+Pour rendre gloire à l'Éternel, en amour.
+
+**Refrain**  
+Célébrons l'Éternel, notre Roi,  
+Offrons nos cœurs, levons la voix,  
+Dans la lumière de Sa bonté,  
+Nos âmes chantent, pour l'éternité.
+
+**Couplet 2**  
+Les agneaux et bœufs, des offrandes sacrées,  
+Josias a donné, pour la sainteté,  
+Les Lévites s’unissent, dans la joie et l’hymne,  
+Pour honorer le Saint, l’Alpha, l’Oméga, sublime.  
+Avec des chants d'Asaph, nos cœurs vibrent,  
+Ensemble, en vérité, nous voulons vivre,  
+Le feu des holocaustes, dans la nuit,  
+Rappelle-nous, ô Dieu, de Ta grande vie.
+
+**Refrain**  
+Célébrons l'Éternel, notre Roi,  
+Offrons nos cœurs, levons la voix,  
+Dans la lumière de Sa bonté,  
+Nos âmes chantent, pour l'éternité.
+
+**Pont**  
+Josias, roi de foi, un modèle pour nous,  
+Ensemble dans la bataille, sous Ta main, nous sommes debout,  
+Ta parole est la lumière, notre guide,  
+Dans chaque pas, chaque lutte, Tu es notre vide.  
+Éternel, nous T'invoquons, en ce jour,  
+Pour Ta grâce infinie, pour notre amour.
+
+**Refrain**  
+Célébrons l'Éternel, notre Roi,  
+Offrons nos cœurs, levons la voix,  
+Dans la lumière de Sa bonté,  
+Nos âmes chantent, pour l'éternité.
+
+**Outro**  
+À jamais, nous chanterons Ta gloire,  
+Dans les épreuves, Tu es notre espoir,  
+Célébrons l'Éternel, unis en prière,  
+Pour l'éternité, nous serons dans Ta lumière.`,
+        36: `[Verse 1]  
+Dans les ombres de Jérusalem,  
+Joachaz, roi, a vu son règne,  
+Trois mois de gloire, puis la douleur,  
+Le roi d'Égypte a pris son cœur.  
+Eliakim, le frère, pris dans les chaînes,  
+Jojakim, un roi, dans ses erreurs,  
+Des abominations, un cri de détresse,  
+L'Éternel pleure, son peuple en détresse.
+
+[Chorus]  
+Éternel, nous revenons à Toi,  
+Restaure notre cœur, renouvelle notre foi.  
+Dans les ruines, fais briller Ta lumière,  
+Sur les cendres, lève notre prière.  
+Éternel, nous revenons à Toi,  
+Restaure notre cœur, renouvelle notre foi.
+
+[Verse 2]  
+Sédécias, roi au cœur dur,  
+Ignorant les pleurs des prophètes purs,  
+Le peuple s'égare, l'amour se perd,  
+Mais Tu cherches encore, ô notre lumière.  
+Les murs s'effondrent, le feu dévore,  
+Les trésors de Dieu, emportés encore,  
+Mais par Ta grâce, nous espérons,  
+Un retour vers Toi, notre seule raison.
+
+[Chorus]  
+Éternel, nous revenons à Toi,  
+Restaure notre cœur, renouvelle notre foi.  
+Dans les ruines, fais briller Ta lumière,  
+Sur les cendres, lève notre prière.  
+Éternel, nous revenons à Toi,  
+Restaure notre cœur, renouvelle notre foi.
+
+[Bridge]  
+Cyrus, le roi, entend Ta voix,  
+Un appel à bâtir, un cri de joie.  
+Qui parmi nous, se lève en prière,  
+Pour voir Ta gloire, sur cette terre ?  
+Rassemble Ton peuple, unis en vérité,  
+Dans les bras du Père, nous voulons marcher.
+
+[Chorus]  
+Éternel, nous revenons à Toi,  
+Restaure notre cœur, renouvelle notre foi.  
+Dans les ruines, fais briller Ta lumière,  
+Sur les cendres, lève notre prière.  
+Éternel, nous revenons à Toi,  
+Restaure notre cœur, renouvelle notre foi.
+
+[Outro]  
+Dans les cendres, une promesse,  
+Renaître en Toi, ô notre sagesse.  
+Éternel, notre cœur est à Toi,  
+Pour l'éternité, nous serons en Toi.`
     },
     "15": {
         1: `[Verse 1]  
@@ -46515,6 +53822,1478 @@ Gloire et louange, à jamais, ici-bas,
 En Jésus-Christ, nous sommes un,  
 Amen, pour l'éternité, nous cheminons.`
     },
+    "46": {
+        1: `[Verse 1]  
+Seigneur, dans Ta grâce, je viens m’incliner,  
+Appelé par Ta voix, pour toujours Te louer.  
+Tout ce que je suis, en Toi je le trouve,  
+Dans l’unité d’esprit, ensemble nous nous mouvons.  
+
+[Chorus]  
+Ô Christ, crucifié, puissance de Dieu,  
+Dans la folie du monde, Tu es mon vœu.  
+Ta sagesse éclaire, notre cœur épris,  
+Ensemble, nous croyons, en Toi, notre vie.  
+
+[Verse 2]  
+Au milieu des disputes, unis nous serons,  
+Parle en nous, Seigneur, unissons nos chansons.  
+La croix est notre force, la grâce notre chant,  
+Dans la faiblesse du monde, Ta gloire éclatant.  
+
+[Chorus]  
+Ô Christ, crucifié, puissance de Dieu,  
+Dans la folie du monde, Tu es mon vœu.  
+Ta sagesse éclaire, notre cœur épris,  
+Ensemble, nous croyons, en Toi, notre vie.  
+
+[Bridge]  
+Que celui qui se glorifie, se glorifie en Toi,  
+Dans la communion, nous marchons pas à pas.  
+Les viles et les faibles, Tu les as choisis,  
+Pour montrer Ta force, Ta sagesse infinie.  
+
+[Chorus]  
+Ô Christ, crucifié, puissance de Dieu,  
+Dans la folie du monde, Tu es mon vœu.  
+Ta sagesse éclaire, notre cœur épris,  
+Ensemble, nous croyons, en Toi, notre vie.  
+
+[Outro]  
+Seigneur, en Ta présence, nous restons unis,  
+Dans la joie de l'Esprit, pour l’éternité.  
+Comblés de Tes dons, notre âme est en paix,  
+À jamais, dans Ta grâce, nous Te louerons.`,
+        2: `**Couplet 1 :**  
+Quand je viens devant Toi, Seigneur,  
+Ce n'est pas avec grandeur,  
+Mais dans ma faiblesse, je m'incline,  
+Pour Te louer, ma lumière divine.  
+Jésus-Christ, Ton nom je proclame,  
+Crucifié, Tu es notre flamme.  
+
+**Refrain :**  
+Oh, révèle-nous Ta sagesse,  
+Mystérieuse, pleine de tendresse,  
+L'Esprit sonde les cœurs en profondeur,  
+Nous sommes comblés par Ta douceur.  
+
+**Couplet 2 :**  
+Loin des discours de ce monde,  
+Ta vérité, douce et profonde,  
+Préparée pour ceux qui T'aiment,  
+Des choses que l'œil n'atteigne.  
+L'homme animal ne peut saisir,  
+Mais en Toi, nous voulons grandir.  
+
+**Refrain :**  
+Oh, révèle-nous Ta sagesse,  
+Mystérieuse, pleine de tendresse,  
+L'Esprit sonde les cœurs en profondeur,  
+Nous sommes comblés par Ta douceur.  
+
+**Pont :**  
+Nous avons la pensée de Christ,  
+Dans un cœur renouvelé,  
+À Toi, Seigneur, nous nous soumettons,  
+Guide-nous sur Ta voie, dans la passion.  
+
+**Refrain :**  
+Oh, révèle-nous Ta sagesse,  
+Mystérieuse, pleine de tendresse,  
+L'Esprit sonde les cœurs en profondeur,  
+Nous sommes comblés par Ta douceur.  
+
+**Outro :**  
+Dans ce moment, nous Te cherchons,  
+Esprit de Dieu, nous T'invoquons,  
+Ta puissance est notre fondation,  
+Jésus-Christ, notre inspiration.`,
+        3: `**Couplet 1 :**  
+Écoutez, ô mes frères, dans l'amour du Christ,  
+Un lait pour nos âmes, dans l'unité, nous grandir.  
+Non pas la jalousie, ni les disputes ici,  
+Dans l'Esprit, nous marchons, unis pour bâtir.
+
+**Refrain :**  
+Nous sommes le temple, l'édifice de Dieu,  
+Christ est le fondement, notre espoir précieux.  
+Ouvriers ensemble, dans la grâce d’en haut,  
+Avançons en Lui, vers le céleste flot.
+
+**Couplet 2 :**  
+Paul et Apollos, des serviteurs en vérité,  
+Plantant et arrosant, mais Dieu fait croître,  
+Ne mettons pas notre gloire dans des hommes,  
+Tout est à nous, en Christ, nous sommes un.
+
+**Refrain :**  
+Nous sommes le temple, l'édifice de Dieu,  
+Christ est le fondement, notre espoir précieux.  
+Ouvriers ensemble, dans la grâce d’en haut,  
+Avançons en Lui, vers le céleste flot.
+
+**Pont :**  
+La sagesse du monde, folie devant Toi,  
+Fais-nous devenir fous, pour être sages en foi.  
+Le feu révélera notre œuvre à l’épreuve,  
+Dans l’amour, nous bâtissons, pour Ta gloire sans trêve.
+
+**Refrain :**  
+Nous sommes le temple, l'édifice de Dieu,  
+Christ est le fondement, notre espoir précieux.  
+Ouvriers ensemble, dans la grâce d’en haut,  
+Avançons en Lui, vers le céleste flot.
+
+**Conclusion :**  
+Nous sommes à Christ, et Christ est à Dieu,  
+Unis dans l'Esprit, notre cœur joyeux.  
+Élevons nos voix, en adoration,  
+Dans ce temple vivant, vivons la mission.`,
+        4: `[Verse 1]  
+Nous sommes appelés, en vérité,  
+Dispensateurs des mystères,  
+Avec fidélité, nous marcherons,  
+Dans l'amour de notre Père.  
+Ne jugeons pas, mais laissons,  
+Lui seul connaît nos cœurs,  
+Dans la lumière, Il révélera,  
+Ce qui est caché, notre valeur.
+
+[Chorus]  
+Seigneur, nous voulons Te louer,  
+Avec des cœurs humbles, nous prions,  
+Ensemble, marchons dans la vérité,  
+Serviteurs de Christ, pour Ta gloire, nous vivrons.
+
+[Verse 2]  
+Qui sommes-nous, que nous recevons,  
+Tout ce que nous avons, c'est par Ta main,  
+Ne nous glorifions pas en vain,  
+Car tout est don, rien n'est à nous, Seigneur.  
+Nous portons la croix, faibles et souffrants,  
+Mais en Toi, nous trouvons force,  
+Nous bénissons ceux qui nous blessent,  
+Dans l'amour, nous avançons, sans cesse.
+
+[Chorus]  
+Seigneur, nous voulons Te louer,  
+Avec des cœurs humbles, nous prions,  
+Ensemble, marchons dans la vérité,  
+Serviteurs de Christ, pour Ta gloire, nous vivrons.
+
+[Bridge]  
+Timothée, fidèle compagnon,  
+Nous rappelle tes voies, ô Jésus,  
+Dans l’unité, nous sommes un,  
+Le royaume n’est pas en mots, mais en puissance,  
+Avec amour, nous avançons,  
+Dans la douceur, nous T'adorons.
+
+[Chorus]  
+Seigneur, nous voulons Te louer,  
+Avec des cœurs humbles, nous prions,  
+Ensemble, marchons dans la vérité,  
+Serviteurs de Christ, pour Ta gloire, nous vivrons.
+
+[Outro]  
+Serviteurs de Christ, marchons ensemble,  
+Dans la lumière, notre appel résonne,  
+Unis dans l’amour, nous proclamons,  
+Ta grandeur, Seigneur, au monde, nous annonçons.`,
+        5: `**Couplet 1 :**  
+Dans l'ombre de la chair, l'impudicité,  
+Un cri de détresse, un cœur en vérité.  
+Dans l'orgueil et la peine, nous avons failli,  
+Seigneur, fais-nous voir, ta lumière, ô Christ.
+
+**Refrain :**  
+Ô, que notre cœur soit pur,  
+Libéré des vieux levains,  
+Ensemble, nous chantons,  
+Pour ta gloire, nous marchons,  
+Pains sans levain, en vérité,  
+Christ, notre Pâque, nous a sauvés.
+
+**Couplet 2 :**  
+Dans ta maison, ô Dieu, nous voulons juger,  
+Non pour condamner, mais pour libérer.  
+Si un frère s'égare, dans l'ombre et le mal,  
+Ramenons-le à toi, à ta lumière, au bien.
+
+**Refrain :**  
+Ô, que notre cœur soit pur,  
+Libéré des vieux levains,  
+Ensemble, nous chantons,  
+Pour ta gloire, nous marchons,  
+Pains sans levain, en vérité,  
+Christ, notre Pâque, nous a sauvés.
+
+**Pont :**  
+Où deux ou trois sont réunis,  
+Dans ton nom, tu es là,  
+Éloigne le mal de nos vies,  
+Restaure-nous, fais-nous foi.  
+La fête de pureté,  
+Nous célébrons en unisson,  
+Avec des cœurs renouvelés,  
+Dans ta vérité, nous nous tenons.
+
+**Refrain :**  
+Ô, que notre cœur soit pur,  
+Libéré des vieux levains,  
+Ensemble, nous chantons,  
+Pour ta gloire, nous marchons,  
+Pains sans levain, en vérité,  
+Christ, notre Pâque, nous a sauvés.
+
+**Outro :**  
+Pains sans levain,  
+Dans ta grâce, nous vivons,  
+Christ, notre Pâque,  
+À jamais, nous chantons.`,
+        6: `[Verse 1]  
+Dans le silence, je viens à Toi,  
+Cherchant la sagesse, ô mon Roi.  
+Des conflits entre frères, quel triste sort,  
+Rappelle-nous, Seigneur, de T’aimer encore.  
+
+[Chorus]  
+Car nous sommes le temple de l'Esprit,  
+Rachetés par le Sang, lavés, oh oui,  
+Dans nos corps, Ta gloire, nous proclamons,  
+Glorifions-Te, ô Dieu de passion.  
+
+[Verse 2]  
+Je choisis de souffrir l'injustice,  
+Plutôt que d’entrer dans la malice.  
+Ensemble, unis, marchons dans la lumière,  
+Dans l’amour fraternel, ô notre prière.  
+
+[Chorus]  
+Car nous sommes le temple de l'Esprit,  
+Rachetés par le Sang, lavés, oh oui,  
+Dans nos corps, Ta gloire, nous proclamons,  
+Glorifions-Te, ô Dieu de passion.  
+
+[Bridge]  
+Ne laissons pas le péché nous séparer,  
+Unis par Ton amour, nous voulons marcher.  
+Chaque membre en Toi, pour Ta volonté,  
+Avec un seul cœur, nous Te louerons.  
+
+[Chorus]  
+Car nous sommes le temple de l'Esprit,  
+Rachetés par le Sang, lavés, oh oui,  
+Dans nos corps, Ta gloire, nous proclamons,  
+Glorifions-Te, ô Dieu de passion.  
+
+[Outro]  
+Seigneur, dans nos vies, fais briller Ta lumière,  
+Ensemble, nous sommes, unis dans Ta prière.  
+Glorifions-Te, éternellement,  
+Dans nos cœurs, Ta présence, à chaque moment.  
+
+---
+
+Ces paroles sont conçues pour être chantées dans un esprit de méditation et de communion, tout en restant fidèles aux enseignements bibliques.`,
+        7: `**Titre**: **Dans Ton Amour, Seigneur**
+
+**Couplet 1**  
+Seigneur, dans Ta sagesse, Tu as établi,  
+L’union sacrée, un lien de vie,  
+Chaque cœur, chaque âme, ensemble nous marchons,  
+Pour éviter l’impureté, nous nous donnons.  
+
+**Refrain**  
+Dans Ton amour, Seigneur, nous marchons,  
+Nos vies en Toi, notre fondation,  
+Unis dans la prière, ensemble nous sommes,  
+Rien ne nous sépare, dans Ton amour, nous sommes.  
+
+**Couplet 2**  
+Tu as dit, ô Dieu, que l'amour est saint,  
+Que le mari et la femme se tiennent main dans la main,  
+Car ensemble, nous sommes sanctifiés,  
+Nos enfants sont bénis, dans la vérité.  
+
+**Refrain**  
+Dans Ton amour, Seigneur, nous marchons,  
+Nos vies en Toi, notre fondation,  
+Unis dans la prière, ensemble nous sommes,  
+Rien ne nous sépare, dans Ton amour, nous sommes.  
+
+**Pont**  
+Le temps est court, Seigneur, guide nos pas,  
+Dans les épreuves, à Toi nous nous confions,  
+Que les cœurs se tournent vers Toi,  
+Pour vivre en paix, dans Ta vérité,  
+Nous sommes appelés à vivre dans l’unité.  
+
+**Refrain**  
+Dans Ton amour, Seigneur, nous marchons,  
+Nos vies en Toi, notre fondation,  
+Unis dans la prière, ensemble nous sommes,  
+Rien ne nous sépare, dans Ton amour, nous sommes.  
+
+**Outro**  
+Dans Ton amour, Seigneur, nous demeurons,  
+Dans la paix et la joie, nous Te louons,  
+Que chacun reste en Toi, fidèle à son appel,  
+Dans l’amour éternel, ensemble, nous chantons.`,
+        8: `[Verse 1]  
+Dans le silence, j'entends ta voix,  
+Un seul Dieu, tu es là pour moi.  
+La connaissance, elle peut grandir,  
+Mais l'amour, Seigneur, c'est ce qui bâtit.  
+
+[Chorus]  
+Un seul Dieu, notre Père, oh,  
+Pour toi, nous vivons et nous prions.  
+Un seul Christ, notre Sauveur,  
+Par lui, nous sommes, dans ton cœur.  
+
+[Verse 2]  
+Les idoles, elles sont vaines ici,  
+En toi, Seigneur, je trouve la vie.  
+Si mon frère doute, je choisis,  
+De marcher en amour, dans l’humilité.  
+
+[Chorus]  
+Un seul Dieu, notre Père, oh,  
+Pour toi, nous vivons et nous prions.  
+Un seul Christ, notre Sauveur,  
+Par lui, nous sommes, dans ton cœur.  
+
+[Bridge]  
+Dans chaque acte, je te cherche,  
+Que mon cœur soit un reflet,  
+De ta grâce, de ta douceur,  
+Aide-moi à porter les fardeaux.  
+
+[Chorus]  
+Un seul Dieu, notre Père, oh,  
+Pour toi, nous vivons et nous prions.  
+Un seul Christ, notre Sauveur,  
+Par lui, nous sommes, dans ton cœur.  
+
+[Outro]  
+Pour l’amour de mon frère, je renonce,  
+À tout ce qui, Seigneur, le blesserait.  
+Un seul Dieu, dans l’unité,  
+En toi, Jésus, nous sommes en paix.  
+
+---
+
+Ces paroles s'inspirent du message de 1 Corinthiens 8, mettant en avant l'importance de l'amour et de la considération pour les autres, tout en célébrant l'unicité de notre Dieu.`,
+        9: `[Verse 1]  
+Libres en Christ, appelés à témoigner,  
+Jésus, notre Seigneur, nous a fait marcher.  
+Dans les épreuves, nous trouvons la force,  
+Ensemble, unis, nous prêchons sa course.  
+
+[Chorus]  
+Serviteurs de l'Évangile,  
+Nous portons la lumière,  
+Dans les cœurs, dans les âmes,  
+Nous partageons sa prière.  
+Pour chaque âme, pour chaque vie,  
+Nous offrons notre amour,  
+À cause de l'Évangile,  
+Nous marchons chaque jour.
+
+[Verse 2]  
+Droits et renoncements, pour l’amour des perdus,  
+Comme Paul, nous nous faisons tous, pour être entendus.  
+Avec ceux qui souffrent, nous partageons leur peine,  
+Pour gagner les âmes, nous brisons nos chaînes.  
+
+[Chorus]  
+Serviteurs de l'Évangile,  
+Nous portons la lumière,  
+Dans les cœurs, dans les âmes,  
+Nous partageons sa prière.  
+Pour chaque âme, pour chaque vie,  
+Nous offrons notre amour,  
+À cause de l'Évangile,  
+Nous marchons chaque jour.
+
+[Bridge]  
+Courons vers la couronne,  
+Incorruptible et pure,  
+À travers le combat,  
+Nous trouvons notre mesure.  
+En Christ, nous sommes un,  
+Son corps, son héritage,  
+Pour l’Évangile, nous vivons,  
+Pour sa gloire, notre hommage.
+
+[Chorus]  
+Serviteurs de l'Évangile,  
+Nous portons la lumière,  
+Dans les cœurs, dans les âmes,  
+Nous partageons sa prière.  
+Pour chaque âme, pour chaque vie,  
+Nous offrons notre amour,  
+À cause de l'Évangile,  
+Nous marchons chaque jour.
+
+[Outro]  
+Ensemble, nous avançons,  
+Avec foi, main dans la main,  
+Serviteurs de l'Évangile,  
+Pour son amour, nous vivons sans fin.`,
+        10: `**Couplet 1:**  
+Dans le désert, nos pères ont marché,  
+Sous la nuée, leur foi déployée.  
+Baptisés en Moïse, unis dans l'espoir,  
+Ils ont goûté à la vie, dans le noir.  
+Le rocher qui les suit, c'est Christ, notre lumière,  
+Il abreuve nos âmes, éternelle rivière.
+
+**Refrain:**  
+Un seul pain, un seul corps,  
+Nous sommes unis, en Toi, Seigneur.  
+Dans la coupe de bénédiction,  
+Nous partageons Ta rédemption.  
+Oh, viens, Seigneur, dans notre louange,  
+Que nos cœurs Te rendent hommage.
+
+**Couplet 2:**  
+Ces exemples, Seigneur, nous rappellent,  
+De ne pas murmurer, de ne pas être rebelles.  
+Fuyons l'idolâtrie, gardons notre cœur,  
+Cherchons l'intérêt d'autrui, avec ardeur.  
+Tout est permis, mais tout ne construit pas,  
+En Toi, nous trouvons la voie, le vrai pas.
+
+**Refrain:**  
+Un seul pain, un seul corps,  
+Nous sommes unis, en Toi, Seigneur.  
+Dans la coupe de bénédiction,  
+Nous partageons Ta rédemption.  
+Oh, viens, Seigneur, dans notre louange,  
+Que nos cœurs Te rendent hommage.
+
+**Pont:**  
+Seigneur, Tu es fidèle, Tu es notre refuge,  
+Dans les tentations, Tu es notre subterfuge.  
+Avec Toi, nous ne craignons pas,  
+Car dans chaque épreuve, Ta grâce est là.  
+Nous Te glorifions, ô Dieu, notre rocher,  
+Avec foi et amour, nous venons Te prier.
+
+**Refrain:**  
+Un seul pain, un seul corps,  
+Nous sommes unis, en Toi, Seigneur.  
+Dans la coupe de bénédiction,  
+Nous partageons Ta rédemption.  
+Oh, viens, Seigneur, dans notre louange,  
+Que nos cœurs Te rendent hommage.
+
+**Fin:**  
+Un seul pain, un seul corps,  
+Nous chantons ensemble, à jamais d'accord.  
+Dans Ta présence, nous trouvons la paix,  
+À Toi, ô Christ, nos vies nous remettons.`,
+        11: `****Imitons le Christ**
+
+[VERSE 1]  
+Seigneur, nous voulons Te suivre,  
+Comme Paul a bien dit,  
+Être des imitateurs,  
+De Ton amour infini.  
+Dans l'unité, levons nos voix,  
+Unis en Toi, nous sommes une foi.  
+
+[CHORUS]  
+Rappelle-nous, Seigneur,  
+De Ta grâce et Ta lumière.  
+Que notre cœur soit en accord,  
+Ensemble, nous Te célébrons encore.  
+C'est en Toi que nous vivons,  
+Christ, notre fondation.  
+
+[VERSE 2]  
+Chaque femme et chaque homme,  
+Dans Ta gloire, nous sommes.  
+Souvenons-nous de Ton corps,  
+Rompu pour nous, jusqu'à ce qu'on s'endorme.  
+Avec reverence, nous partageons,  
+Le pain, la coupe, en communion.  
+
+[CHORUS]  
+Rappelle-nous, Seigneur,  
+De Ta grâce et Ta lumière.  
+Que notre cœur soit en accord,  
+Ensemble, nous Te célébrons encore.  
+C'est en Toi que nous vivons,  
+Christ, notre fondation.  
+
+[BRIDGE]  
+Seigneur, nous T’adorons,  
+Dans la vérité, nous marchons.  
+Que chacun s’éprouve,  
+Dans ce mystère d’amour,  
+Unis dans Ta présence,  
+Nous chantons notre espérance.  
+
+[CHORUS]  
+Rappelle-nous, Seigneur,  
+De Ta grâce et Ta lumière.  
+Que notre cœur soit en accord,  
+Ensemble, nous Te célébrons encore.  
+C'est en Toi que nous vivons,  
+Christ, notre fondation.  
+
+[Outro]  
+Ainsi, ensemble, nous prions,  
+Attendant Ta venue, Seigneur,  
+Dans l'amour et l'unité,  
+Nous marchons, O notre Sauveur.  
+Amen.`,
+        12: `[Verse 1]  
+Seigneur, ouvre nos cœurs,  
+À la voix de Ton Esprit,  
+Nous étions perdus, dans l’erreur,  
+Mais maintenant, Tu es notre guide.  
+Unis dans Ta lumière,  
+Nous formons un seul corps,  
+Chaque don, chaque prière,  
+Révèle Ta gloire encore.
+
+[Chorus]  
+Ensemble nous chantons,  
+Jésus, Tu es notre Seigneur,  
+Unis dans l’amour,  
+Nous sommes les membres de Ton cœur.  
+Esprit, viens nous remplir,  
+Que Ta force nous unisse,  
+Dans la diversité,  
+Nous trouvons notre service.
+
+[Verse 2]  
+Des mots de sagesse,  
+Des paroles de vérité,  
+Nous partageons la richesse,  
+Du don de l’unité.  
+Les plus faibles nous entourons,  
+Avec honneur et compassion,  
+Chaque membre a sa raison,  
+Dans ce grand plan de salvation.
+
+[Chorus]  
+Ensemble nous chantons,  
+Jésus, Tu es notre Seigneur,  
+Unis dans l’amour,  
+Nous sommes les membres de Ton cœur.  
+Esprit, viens nous remplir,  
+Que Ta force nous unisse,  
+Dans la diversité,  
+Nous trouvons notre service.
+
+[Bridge]  
+Si un membre souffre,  
+Tous unissons nos voix,  
+Si un membre se lève,  
+Nous célébrons en toi.  
+O Dieu, sans division,  
+Fais de nous un seul cœur,  
+Dans cette mission,  
+Nous proclamons Ta douceur.
+
+[Chorus]  
+Ensemble nous chantons,  
+Jésus, Tu es notre Seigneur,  
+Unis dans l’amour,  
+Nous sommes les membres de Ton cœur.  
+Esprit, viens nous remplir,  
+Que Ta force nous unisse,  
+Dans la diversité,  
+Nous trouvons notre service.
+
+[Outro]  
+Un corps, un Esprit,  
+Pour Ta gloire, ô Seigneur,  
+Nous marchons dans la vie,  
+Ensemble, dans l’ardeur.  
+Amen, amen,  
+Nous sommes un en Toi,  
+Amen, amen,  
+Jésus, toujours près de moi.`,
+        13: `**Couplet 1**  
+Quand je parle en langues,  
+Sans amour, je ne suis rien,  
+Un écho dans le vide,  
+Un son qui ne touche rien.  
+Si j'ai la foi des montagnes,  
+Mais pas de cœur en vérité,  
+Alors je suis sans valeur,  
+Tout cela va s'évanouir.
+
+**Refrain**  
+L'amour, l'amour demeure,  
+Il ne faillit jamais,  
+Dans la peine et la joie,  
+Il nous unit à jamais.  
+La charité, notre guide,  
+Elle éclaire notre chemin,  
+Avec elle, nous marchons,  
+À travers l’ombre et le chagrin.
+
+**Couplet 2**  
+Si je donne mes biens,  
+Pour nourrir ceux qui sont seuls,  
+Sans amour pour les porter,  
+C'est un sacrifice sans feu.  
+L'amour est patient et bon,  
+Il ne se vexe jamais,  
+Dans la vérité, il vit,  
+Il espère et il soutient.
+
+**Refrain**  
+L'amour, l'amour demeure,  
+Il ne faillit jamais,  
+Dans la peine et la joie,  
+Il nous unit à jamais.  
+La charité, notre guide,  
+Elle éclaire notre chemin,  
+Avec elle, nous marchons,  
+À travers l’ombre et le chagrin.
+
+**Pont**  
+Un jour nous verrons,  
+Face à face, en plénitude,  
+Ce qui est parfait viendra,  
+Et l'amour nous conduira.  
+Les prophéties s'éteindront,  
+Les langues se tairont,  
+Mais l'amour, oh l'amour,  
+Reste notre fondation.
+
+**Refrain**  
+L'amour, l'amour demeure,  
+Il ne faillit jamais,  
+Dans la peine et la joie,  
+Il nous unit à jamais.  
+La charité, notre guide,  
+Elle éclaire notre chemin,  
+Avec elle, nous marchons,  
+À travers l’ombre et le chagrin.
+
+**Outro**  
+Maintenant, foi, espérance, et amour,  
+Mais le plus grand, c'est l'amour.  
+L'amour, l'amour qui reste,  
+Dans nos cœurs pour toujours.`,
+        14: `[Verse 1]  
+Seigneur, nous venons en Ta présence,  
+Cherchant Ta charité, Ta lumière immense.  
+Ensemble, unis par l’Esprit, nous prions,  
+Pour que Ta voix guide nos actions.
+
+[Chorus]  
+Édifie Ton Église, Seigneur,  
+Parole de vie, source de douceur.  
+Prophétie et chants, conduis notre cœur,  
+Dans l'unité, nous Te louons, notre Sauveur.
+
+[Verse 2]  
+Donne-nous l'intelligence pour Te glorifier,  
+Que chaque langue puisse T'honorer.  
+Car dans l'amour, nous trouvons la vérité,  
+Écoute nos cœurs, ô Dieu, dans l'humilité.
+
+[Chorus]  
+Édifie Ton Église, Seigneur,  
+Parole de vie, source de douceur.  
+Prophétie et chants, conduis notre cœur,  
+Dans l'unité, nous Te louons, notre Sauveur.
+
+[Bridge]  
+Quand l'assemblée se réunit,  
+Que chacun soit un instrument de vie.  
+Dans l'Esprit, nous chantons,  
+Proclamant Ta bonté, notre raison.
+
+[Chorus]  
+Édifie Ton Église, Seigneur,  
+Parole de vie, source de douceur.  
+Prophétie et chants, conduis notre cœur,  
+Dans l'unité, nous Te louons, notre Sauveur.
+
+[Verse 3]  
+Nous désirerons des dons pour édifier,  
+Que chaque parole soit pour Te glorifier.  
+Dans la paix, nous marchons, main dans la main,  
+Écoute nos voix, ô Dieu, nous sommes Tes témoins.
+
+[Chorus]  
+Édifie Ton Église, Seigneur,  
+Parole de vie, source de douceur.  
+Prophétie et chants, conduis notre cœur,  
+Dans l'unité, nous Te louons, notre Sauveur.
+
+[Outro]  
+Édifie, Seigneur, notre foi,  
+Dans l'amour, unis par Ta loi.  
+Nous Te prions, ô Dieu de paix,  
+Que notre louange soit de l'écho de nos cœurs, à jamais.`,
+        15: `[Verset 1]  
+Souviens-toi, ô frère, de l'Évangile,  
+Que Christ a porté, pour nos péchés,  
+Il est mort et ressuscité,  
+Selon les Écritures, notre espérance.
+
+[Chorus]  
+O mort, où est ta victoire ?  
+O mort, où est ton aiguillon ?  
+Par la grâce, nous sommes vivants,  
+En Jésus-Christ, notre Rédemption.
+
+[Verset 2]  
+Il est apparu aux témoins fidèles,  
+À Céphas, et aux douze réunis,  
+Plus de cinq cents ont vu sa gloire,  
+Il est le chemin, la vérité, la vie.
+
+[Chorus]  
+O mort, où est ta victoire ?  
+O mort, où est ton aiguillon ?  
+Par la grâce, nous sommes vivants,  
+En Jésus-Christ, notre Rédemption.
+
+[Bridge]  
+Nous serons changés en un instant,  
+À la dernière trompette,  
+L'incorruptible revêt le corps,  
+La mort est engloutie dans la victoire.
+
+[Chorus]  
+O mort, où est ta victoire ?  
+O mort, où est ton aiguillon ?  
+Par la grâce, nous sommes vivants,  
+En Jésus-Christ, notre Rédemption.
+
+[Verset 3]  
+Ainsi, restons fermes, inébranlables,  
+Dans l'œuvre du Seigneur, avançons,  
+Savoir que notre travail n'est jamais vain,  
+Car par lui, nous vivons, nous témoignons.
+
+[Chorus]  
+O mort, où est ta victoire ?  
+O mort, où est ton aiguillon ?  
+Par la grâce, nous sommes vivants,  
+En Jésus-Christ, notre Rédemption.
+
+[Outro]  
+Grâces soient rendues à notre Sauveur,  
+Qui nous donne la victoire éternelle,  
+Dans son amour, nous avons nos cœurs,  
+En Christ, pour toujours, nous chantons.`,
+        16: `[Verse 1]  
+Seigneur, nous venons avec nos cœurs,  
+Offrir nos dons, comme Tu l’as ordonné.  
+Chaque semaine, dans Ta lumière,  
+Nous partageons, en toute sincérité.  
+
+[Chorus]  
+Demeurons dans l’amour,  
+Fortifiés par Ta grâce,  
+Ensemble, nous avançons,  
+Dans la paix de Ta face.  
+
+[Verse 2]  
+Dans l’unité, nous nous encourageons,  
+Comme la famille de Stéphanas,  
+Au service des saints, dans ce monde,  
+Nous marchons ensemble, main dans la main.  
+
+[Chorus]  
+Demeurons dans l’amour,  
+Fortifiés par Ta grâce,  
+Ensemble, nous avançons,  
+Dans la paix de Ta face.  
+
+[Bridge]  
+Veillons et restons fermes,  
+Dans la foi, ensemble,  
+Que tout soit fait avec charité,  
+Seigneur, nous T’adorons en vérité.  
+
+[Verse 3]  
+À chaque rencontre, nous Te célébrons,  
+Par un saint baiser, un geste d’union.  
+Que Ta grâce, Seigneur, soit notre chemin,  
+Nous voulons marcher avec Toi, Amen.  
+
+[Chorus]  
+Demeurons dans l’amour,  
+Fortifiés par Ta grâce,  
+Ensemble, nous avançons,  
+Dans la paix de Ta face.  
+
+[Outro]  
+Si quelqu’un n’aime pas, qu'il soit anathème,  
+Maranatha, Seigneur, viens dans notre cœur.  
+Nous T’attendons avec joie et foi,  
+Mon amour est avec tous en Toi.  
+
+---
+
+Ces paroles sont conçues pour être chantées dans un climat de méditation et d'adoration, encourageant l’unité et le service au sein de la communauté chrétienne.`
+    },
+    "47": {
+        1: `[Verse 1]  
+Ô Dieu de miséricorde,  
+Père de toute consolation,  
+Tu nous donnes la paix,  
+Dans notre affliction,  
+Lorsque les souffrances nous entourent,  
+Ta grâce vient nous sauver,  
+À travers nos épreuves,  
+Ta lumière va briller.
+
+[Chorus]  
+Dans les larmes et les peines,  
+Nous avons l'espoir en Toi,  
+Car en Christ, nous sommes unis,  
+Ta bonté nous soutient,  
+Nous trouvons force et joie,  
+Dans la douleur, Tu es là,  
+Consolateur, notre guide,  
+Nous chantons à Ta gloire.
+
+[Verse 2]  
+Si nous portons des fardeaux,  
+C'est pour le salut des âmes,  
+Avec patience, nous avançons,  
+Ensemble dans Ta grâce,  
+Au milieu de la tempête,  
+Ta voix calme nos cœurs,  
+Nous plaçons notre confiance,  
+En Toi, notre Rédempteur.
+
+[Chorus]  
+Dans les larmes et les peines,  
+Nous avons l'espoir en Toi,  
+Car en Christ, nous sommes unis,  
+Ta bonté nous soutient,  
+Nous trouvons force et joie,  
+Dans la douleur, Tu es là,  
+Consolateur, notre guide,  
+Nous chantons à Ta gloire.
+
+[Bridge]  
+Amen, Amen,  
+Ta promesse est notre chant,  
+Amen, Amen,  
+Tu es fidèle à chaque instant,  
+Dans nos faiblesses,  
+Tu es notre force,  
+En Toi, nous trouvons  
+L'espérance et la vie.
+
+[Chorus]  
+Dans les larmes et les peines,  
+Nous avons l'espoir en Toi,  
+Car en Christ, nous sommes unis,  
+Ta bonté nous soutient,  
+Nous trouvons force et joie,  
+Dans la douleur, Tu es là,  
+Consolateur, notre guide,  
+Nous chantons à Ta gloire.
+
+[Outro]  
+Ô Dieu de miséricorde,  
+Dans chaque affliction,  
+Nous savons que Ta grâce,  
+Nous mène à la rédemption.  
+Amen, Amen,  
+Nous chantons à Ta gloire,  
+Amen, Amen,  
+Pour toujours, notre espoir.`,
+        2: `[Verse 1]  
+Dans la douleur, je viens à Toi,  
+Avec un cœur lourd, je cherche Ta voix.  
+Je ressens l’affliction, je pleure en silence,  
+Mais Ta grâce me guide, Ta douce présence.
+
+[Chorus]  
+Ô Seigneur, Tu es ma joie,  
+Dans l'amour, je trouve ma foi.  
+Pardonne, console, réveille en moi,  
+L’odeur de vie, l’odeur de Toi.
+
+[Verse 2]  
+Quand l’angoisse me touche, je me tourne vers Toi,  
+Ton amour extrême, si fort dans ma foi.  
+Je choisis de pardonner, de laisser la lumière,  
+Car en Christ, je suis libre, je suis dans la prière.
+
+[Chorus]  
+Ô Seigneur, Tu es ma joie,  
+Dans l'amour, je trouve ma foi.  
+Pardonne, console, réveille en moi,  
+L’odeur de vie, l’odeur de Toi.
+
+[Bridge]  
+Grâces soient rendues, pour chaque victoire,  
+Dans l’épreuve, je vois, je suis dans l’espoir.  
+Nous sommes l’odeur de Christ, dans ce monde en pleurs,  
+Pour les perdus, pour les sauvés, nous portons Sa douceur.
+
+[Chorus]  
+Ô Seigneur, Tu es ma joie,  
+Dans l'amour, je trouve ma foi.  
+Pardonne, console, réveille en moi,  
+L’odeur de vie, l’odeur de Toi.
+
+[Outro]  
+Odeur de vie, en nous, en Toi,  
+Seigneur, nous proclamons, nous sommes en Toi.  
+Dans chaque souffrance, Ta lumière éclaire,  
+Nous marchons ensemble, dans la prière.`,
+        3: `[Verse 1]  
+Dans nos cœurs, une lettre écrite,  
+À tous, connue, notre vie,  
+Non avec l’encre, mais avec l’Esprit,  
+Nous sommes, Seigneur, Ta mélodie.  
+
+[Chorus]  
+Où l'Esprit est, là est la liberté,  
+Transformés dans Ta gloire, nous Te cherchons.  
+Auprès de Toi, nos âmes sont vivifiées,  
+Lettre de Christ, nous proclamons.  
+
+[Verse 2]  
+Pas de lettres, ni de recommandation,  
+Juste Ta grâce, notre fondation.  
+Ministres d’une nouvelle alliance,  
+Ton amour, notre espérance.  
+
+[Chorus]  
+Où l'Esprit est, là est la liberté,  
+Transformés dans Ta gloire, nous Te cherchons.  
+Auprès de Toi, nos âmes sont vivifiées,  
+Lettre de Christ, nous proclamons.  
+
+[Bridge]  
+Le voile est levé, nos cœurs s'éveillent,  
+Contemplant Ta face, nous sommes émerveillés.  
+De gloire en gloire, nous Te suivrons,  
+Seigneur, en Toi, nous avons notre raison.  
+
+[Chorus]  
+Où l'Esprit est, là est la liberté,  
+Transformés dans Ta gloire, nous Te cherchons.  
+Auprès de Toi, nos âmes sont vivifiées,  
+Lettre de Christ, nous proclamons.  
+
+[Outro]  
+Dans nos cœurs, une lettre écrite,  
+À tous, connue, notre vie,  
+Seigneur, en Toi, notre chemin spirituel,  
+Lettre de Christ, éternelle.`,
+        4: `[Verse 1]  
+Dans la miséricorde, nous avançons,  
+Avec courage, nous proclamons,  
+La vérité, notre seule voix,  
+Christ, notre Seigneur, en qui nous croyons.  
+
+[Chorus]  
+Lumière, éclaire nos cœurs,  
+Ta gloire brille, ô Sauveur,  
+Dans nos faiblesses, Tu es fort,  
+Nous chantons, pour toujours, notre sort.  
+
+[Verse 2]  
+Pressés, mais jamais à l’extrémité,  
+Détresses, mais pleins d’espérance,  
+Avec nous, la mort de Jésus,  
+Pour que sa vie soit notre danse.  
+
+[Chorus]  
+Lumière, éclaire nos cœurs,  
+Ta gloire brille, ô Sauveur,  
+Dans nos faiblesses, Tu es fort,  
+Nous chantons, pour toujours, notre sort.  
+
+[Bridge]  
+Nous regardons au-delà des voiles,  
+À l’invisible, à la lumière,  
+Chaque épreuve, chaque bataille,  
+Nous rapproche de notre Père.  
+
+[Chorus]  
+Lumière, éclaire nos cœurs,  
+Ta gloire brille, ô Sauveur,  
+Dans nos faiblesses, Tu es fort,  
+Nous chantons, pour toujours, notre sort.  
+
+[Outro]  
+Car nos afflictions d’un instant,  
+Produisent en nous un poids éclatant,  
+L’éternité s’ouvre devant,  
+En Toi, notre cœur est triomphant.  
+
+---
+
+Ces paroles visent à capturer l'essence du passage biblique, tout en offrant une structure chantable pour la louange et l'adoration.`,
+        5: `**Couplet 1 :**  
+Dans cette tente, nous gémissons,  
+Un désir profond, une aspiration.  
+Vers notre ciel, notre édifice,  
+Ouvrage de Dieu, douce promesse.  
+
+**Refrain :**  
+Nous marchons par la foi, oh Seigneur,  
+Dans l'ombre, Ta lumière, notre cœur.  
+Revêts-nous de Ta vie éternelle,  
+Nous voulons vivre pour Toi, ô Christ, éternel.  
+
+**Couplet 2 :**  
+Accablés, nous cherchons Ta face,  
+Dans la douleur, Ta grâce nous enlace.  
+Nous ne sommes plus, mais Toi en nous,  
+Des choses nouvelles, Tu fais en tout.  
+
+**Refrain :**  
+Nous marchons par la foi, oh Seigneur,  
+Dans l'ombre, Ta lumière, notre cœur.  
+Revêts-nous de Ta vie éternelle,  
+Nous voulons vivre pour Toi, ô Christ, éternel.  
+
+**Pont :**  
+Ambassadeurs de réconciliation,  
+Dans le cœur, une nouvelle création.  
+L'amour de Christ nous presse,  
+Pour vivre en Lui, nous confessons.  
+
+**Refrain :**  
+Nous marchons par la foi, oh Seigneur,  
+Dans l'ombre, Ta lumière, notre cœur.  
+Revêts-nous de Ta vie éternelle,  
+Nous voulons vivre pour Toi, ô Christ, éternel.  
+
+**Outro :**  
+Tu es notre espérance, notre refuge,  
+Dans cette vie, nous cherchons Ta vertu.  
+Nous serons unis, auprès de Toi,  
+Dans notre demeure, pour toujours, ô roi.`,
+        6: `**Couplet 1 :**  
+Dans l'ombre, Tu es la lumière,  
+Au jour du salut, Tu es là,  
+Ta grâce ne tombe pas en vain,  
+Ô Seigneur, reçois notre foi.  
+
+**Refrain :**  
+Voici maintenant le temps favorable,  
+Voici le jour de notre salut,  
+En Toi, nous trouvons notre force,  
+Ensemble, nous marchons vers la vérité.  
+
+**Couplet 2 :**  
+À travers tribulations, nous avançons,  
+Patience et bonté, notre chant,  
+Malgré les épreuves, nous restons,  
+Servants de Dieu, main dans la main.  
+
+**Refrain :**  
+Voici maintenant le temps favorable,  
+Voici le jour de notre salut,  
+En Toi, nous trouvons notre force,  
+Ensemble, nous marchons vers la vérité.  
+
+**Pont :**  
+Sors des ténèbres, viens à la lumière,  
+Le temple de Dieu, nous sommes en prière,  
+Élargissons nos cœurs, ô mon Père,  
+Fais de nous, des fils, des filles de lumière.  
+
+**Refrain :**  
+Voici maintenant le temps favorable,  
+Voici le jour de notre salut,  
+En Toi, nous trouvons notre force,  
+Ensemble, nous marchons vers la vérité.  
+
+**Conclusion :**  
+Au temps favorable, Tu es là pour nous,  
+Nous sommes Tes enfants, dans la joie, nous vivons,  
+Élargis nos cœurs, ô Dieu d'amour,  
+Dans Ta présence, nous trouvons notre jour.`,
+        7: `**Couplet 1 :**  
+Dans la lumière de Tes promesses,  
+Nous nous purifions, Seigneur,  
+De toute souillure, de toute tristesse,  
+Achèvons notre cœur en Ta peur.
+
+**Refrain :**  
+Nous sommes à Toi, ô notre Dieu,  
+Dans la joie et les larmes,  
+Tu es notre refuge, notre feu,  
+Dans la paix, nous trouvons l'âme.
+
+**Couplet 2 :**  
+Parfois le cœur lourd, nous trébuchons,  
+Mais Ta consolation nous relève,  
+Dans les luttes, Tu es notre raison,  
+Ton amour, notre force, nous achève.
+
+**Refrain :**  
+Nous sommes à Toi, ô notre Dieu,  
+Dans la joie et les larmes,  
+Tu es notre refuge, notre feu,  
+Dans la paix, nous trouvons l'âme.
+
+**Pont :**  
+La tristesse selon Toi, elle nous transforme,  
+Produisant en nous la vraie repentance,  
+Un désir ardent, une vie qui s'informe,  
+Pour Te glorifier dans chaque circonstance.
+
+**Refrain :**  
+Nous sommes à Toi, ô notre Dieu,  
+Dans la joie et les larmes,  
+Tu es notre refuge, notre feu,  
+Dans la paix, nous trouvons l'âme.
+
+**Couplet 3 :**  
+Nous nous réjouissons de Tite,  
+De l'affection que Tu insuffles,  
+Dans nos cœurs, Ta grâce s’édite,  
+Ensemble, vers Toi, nous nous rassemblons.
+
+**Refrain :**  
+Nous sommes à Toi, ô notre Dieu,  
+Dans la joie et les larmes,  
+Tu es notre refuge, notre feu,  
+Dans la paix, nous trouvons l'âme.
+
+**Outro :**  
+Seigneur, nous nous confions en Toi,  
+Dans chaque pas, chaque choix,  
+Ta vérité, notre voie,  
+Nous marchons, nous marchons en Toi.`,
+        8: `[Verse 1]  
+Dans la tribulation, nous trouvons la joie,  
+Un cœur libéral, se donnant pour Toi.  
+Pauvres en ce monde, riches en amour,  
+Ta grâce nous pousse, c'est un nouveau jour.
+
+[Chorus]  
+Ô Seigneur, nous venons,  
+Pour partager notre don,  
+Dans l’unité, nous marchons,  
+Ta bonté, notre chanson.  
+Par Ta pauvreté, nous sommes comblés,  
+Dans l’amour, nous voulons exceller.
+
+[Verse 2]  
+Comme Tite, nous agissons avec zèle,  
+Notre foi se lève, notre cœur s’émerveille.  
+Nous donnons nos vies, tout ce que nous sommes,  
+Pour Ta gloire, Seigneur, dans ce que nous faisons.
+
+[Chorus]  
+Ô Seigneur, nous venons,  
+Pour partager notre don,  
+Dans l’unité, nous marchons,  
+Ta bonté, notre chanson.  
+Par Ta pauvreté, nous sommes comblés,  
+Dans l’amour, nous voulons exceller.
+
+[Bridge]  
+À face des Églises, notre charité,  
+Dans l’égalité, nous voulons donner.  
+Riches de Ta grâce, nous serons unis,  
+Pour Ta gloire, Seigneur, nous vivons en amis.
+
+[Chorus]  
+Ô Seigneur, nous venons,  
+Pour partager notre don,  
+Dans l’unité, nous marchons,  
+Ta bonté, notre chanson.  
+Par Ta pauvreté, nous sommes comblés,  
+Dans l’amour, nous voulons exceller.
+
+[Outro]  
+Dans l'abondance de Ta grâce,  
+Nous marchons avec foi,  
+Pour chaque cœur qui s'embrase,  
+Nous Te louons, ô Roi.  
+Amen.`,
+        9: `[Verse 1]  
+Seigneur, je viens devant Toi,  
+Avec un cœur qui désire donner,  
+Comme un semeur dans la joie,  
+Pour ceux qui sont dans le besoin, oh, oui.  
+Mon âme s'ouvre à Ta lumière,  
+Je veux partager Ta bonté,  
+Dans l’amour et la prière,  
+Je T’offre tout, je veux semer.
+
+[Chorus]  
+Car Dieu, Tu es notre pourvoyeur,  
+Avec Ta grâce, nous sommes comblés.  
+En abondance, Tu es le Donneur,  
+Dans l’amour, nous sommes unis, oh, Seigneur.  
+Nous donnons avec joie, sans contrainte,  
+Pour Ta gloire, nos cœurs s'étreignent,  
+Dans la louange, nous levons nos voix,  
+Grâces soient rendues, ô Dieu de foi.
+
+[Verse 2]  
+Seigneur, chaque jour Tu es là,  
+Nous enseignant à aimer, à servir,  
+Ta justice demeure en nous,  
+Par nos dons, nous apprenons à vivre.  
+Les besoins des saints, nous portons,  
+Avec un cœur plein de gratitude,  
+Ensemble, nous prions, nous chantons,  
+Pour Ta grâce, Ta plénitude.
+
+[Chorus]  
+Car Dieu, Tu es notre pourvoyeur,  
+Avec Ta grâce, nous sommes comblés.  
+En abondance, Tu es le Donneur,  
+Dans l’amour, nous sommes unis, oh, Seigneur.  
+Nous donnons avec joie, sans contrainte,  
+Pour Ta gloire, nos cœurs s'étreignent,  
+Dans la louange, nous levons nos voix,  
+Grâces soient rendues, ô Dieu de foi.
+
+[Bridge]  
+Oh, que nos cœurs s'élèvent,  
+À Toi, notre Roi,  
+Nous vivons pour Ta gloire,  
+Dans chaque acte de foi.  
+Ensemble, nous glorifions,  
+Ta grâce infinie,  
+Seigneur, rends-nous généreux,  
+Pour Ta cause, pour la vie.
+
+[Chorus]  
+Car Dieu, Tu es notre pourvoyeur,  
+Avec Ta grâce, nous sommes comblés.  
+En abondance, Tu es le Donneur,  
+Dans l’amour, nous sommes unis, oh, Seigneur.  
+Nous donnons avec joie, sans contrainte,  
+Pour Ta gloire, nos cœurs s'étreignent,  
+Dans la louange, nous levons nos voix,  
+Grâces soient rendues, ô Dieu de foi.
+
+[Outro]  
+Grâces soient rendues,  
+Pour le don ineffable,  
+Seigneur, nous T’honorons,  
+Dans notre amour, inébranlable.  
+Amen, amen, oh, Dieu de grâce,  
+Nous vivons pour Toi,  
+Dans chaque pas que nous traçons,  
+Nous Te glorifions, ô Roi de joie.`,
+        10: `[Verse 1]  
+Seigneur, dans Ta bonté, je m'élève,  
+Humble devant Toi, je me tiens,  
+Ta force renverse, les murs s'achèvent,  
+Dans la lumière, je vois le chemin.  
+
+[Chorus]  
+Dans Ta douceur, je combats,  
+Ce n'est pas par la chair, mais par Ta foi,  
+Les pensées captives, je les amène,  
+À l'obéissance, à Ta voix.  
+
+[Verse 2]  
+Regarde, ô mon âme, à l'apparence,  
+Ne juge pas selon les regards,  
+Car Ta vérité, elle est ma défense,  
+En Toi, Seigneur, je mets mon espoir.  
+
+[Chorus]  
+Dans Ta douceur, je combats,  
+Ce n'est pas par la chair, mais par Ta foi,  
+Les pensées captives, je les amène,  
+À l'obéissance, à Ta voix.  
+
+[Bridge]  
+Oh, que celui qui se glorifie,  
+Se glorifie dans le Seigneur,  
+Car c'est Toi qui nous approuves,  
+Dans Ta lumière, ô notre Sauveur.  
+
+[Chorus]  
+Dans Ta douceur, je combats,  
+Ce n'est pas par la chair, mais par Ta foi,  
+Les pensées captives, je les amène,  
+À l'obéissance, à Ta voix.  
+
+[Conclusion]  
+Seigneur, dans Ta bonté, je trouve le chemin,  
+Avec assurance, je marche en Toi,  
+Renversant les forteresses, unis dans le lien,  
+Ensemble, Seigneur, nous vivons par Ta foi.  
+
+---
+
+Ces paroles cherchent à capturer la beauté et la profondeur des passages bibliques tout en restant chantables et accessibles pour l'adoration.`,
+        11: `[Verse 1]  
+Oh, Seigneur, dans Ta lumière,  
+Je me tiens avec crainte,  
+Mon cœur est rempli de prière,  
+Pour garder la foi, je m’implore.  
+Comme un époux, Tu m’as choisi,  
+Dans la pureté, je veux marcher,  
+Ne laisse pas mes pensées s’égarer,  
+Vers d’autres voix, je ne veux pas tourner.
+
+[Chorus]  
+Garde-moi, oh, mon Sauveur,  
+Dans la simplicité de Ton amour,  
+Je T’adore, ô mon Rédempteur,  
+Ta vérité est mon secours.  
+Jalousie de Dieu, en moi,  
+Je suis à Toi, pour toujours,  
+Rien ni personne ne me séparera,  
+De la grâce qui m’entoure.
+
+[Verse 2]  
+Dans les épreuves, je me tiens debout,  
+Ton Évangile, je proclame partout,  
+Je ne crains pas les faux apôtres,  
+Car Ta voix, je veux entendre.  
+À travers les larmes et les combats,  
+Ton Esprit me soutient ici-bas,  
+Chaque faiblesse, je la remets,  
+À Toi, mon Dieu, je me confie.
+
+[Chorus]  
+Garde-moi, oh, mon Sauveur,  
+Dans la simplicité de Ton amour,  
+Je T’adore, ô mon Rédempteur,  
+Ta vérité est mon secours.  
+Jalousie de Dieu, en moi,  
+Je suis à Toi, pour toujours,  
+Rien ni personne ne me séparera,  
+De la grâce qui m’entoure.
+
+[Bridge]  
+Dans la nuit, Tu es ma lumière,  
+Dans le doute, Tu es ma vérité,  
+Que mes pensées s’attachent à Toi,  
+Oh, Jésus, je ne cesserai de prier.  
+À chaque pas, je sais que Tu es là,  
+Mon cœur brûle pour Ta majesté,  
+Dans chaque faiblesse, je Te glorifie,  
+Car c’est dans ma souffrance que je suis fortifié.
+
+[Chorus]  
+Garde-moi, oh, mon Sauveur,  
+Dans la simplicité de Ton amour,  
+Je T’adore, ô mon Rédempteur,  
+Ta vérité est mon secours.  
+Jalousie de Dieu, en moi,  
+Je suis à Toi, pour toujours,  
+Rien ni personne ne me séparera,  
+De la grâce qui m’entoure.
+
+[Outro]  
+Oh, Jalousie de Dieu,  
+Je suis à Toi, à jamais,  
+Dans la paix, je me tiens,  
+Oh, Seigneur, je suis à Toi.`,
+        12: `**Couplet 1 :**  
+Dans la faiblesse, je viens devant Toi,  
+Des visions, des révélations, je ne peux parler.  
+Un homme en Christ, au ciel il s’est envolé,  
+Des paroles ineffables, oh, qui peut les porter ?  
+
+**Refrain :**  
+Ma grâce te suffit, dans la tempête je suis fort,  
+Quand je suis faible, c’est alors que je m’endors.  
+Je me glorifie, non de ma grandeur,  
+Mais de mes faiblesses, en Toi, mon Sauveur.  
+
+**Couplet 2 :**  
+Trois fois j’ai prié, éloigne cette douleur,  
+Mais Ta voix résonne, douce comme le cœur.  
+L’ange de Satan, pour me garder humble,  
+Dans chaque épreuve, c’est Ta force qui tremble.  
+
+**Refrain :**  
+Ma grâce te suffit, dans la tempête je suis fort,  
+Quand je suis faible, c’est alors que je m’endors.  
+Je me glorifie, non de ma grandeur,  
+Mais de mes faiblesses, en Toi, mon Sauveur.  
+
+**Pont :**  
+Je crains de ne pas être, comme je voudrais,  
+Mais je cherche Ta face, ô mon Dieu, me guidez.  
+Dans l’amour et la paix, je veux marcher,  
+Pour édifier, Seigneur, et Te glorifier.  
+
+**Refrain :**  
+Ma grâce te suffit, dans la tempête je suis fort,  
+Quand je suis faible, c’est alors que je m’endors.  
+Je me glorifie, non de ma grandeur,  
+Mais de mes faiblesses, en Toi, mon Sauveur.  
+
+**Outro :**  
+Je me plaît dans l’humilité, dans les larmes,  
+Car Ta puissance, Seigneur, me garde en ses bras.  
+Je suis fort en Toi, dans chaque tourment,  
+Ma grâce te suffit, mon cœur, en avant.`,
+        13: `[Verse 1]  
+Quand je viens devant Toi, Seigneur,  
+Je cherche Ta voix, Ta douceur,  
+Dans ma faiblesse, je T’implore,  
+Que Ta force en moi éclore.  
+Examine en moi, oh, mon cœur,  
+Fais briller Ta lumière, Ta splendeur.  
+
+[Chorus]  
+Christ, Tu es puissant parmi nous,  
+Dans l’amour, nous vivons en Vous.  
+Dans la paix, nous nous levons,  
+Ensemble, pour Ta perfection.  
+
+[Verse 2]  
+Dans la joie, nous nous unissons,  
+Un même esprit, une même raison.  
+Seigneur, garde-nous dans Ta vérité,  
+Ensemble, nous voulons marcher.  
+Que Ta grâce soit notre chant,  
+Dans chaque pas, nous sommes vivants.  
+
+[Chorus]  
+Christ, Tu es puissant parmi nous,  
+Dans l’amour, nous vivons en Vous.  
+Dans la paix, nous nous levons,  
+Ensemble, pour Ta perfection.  
+
+[Bridge]  
+Nous ne sommes pas réprouvés,  
+Ta parole, notre vérité.  
+Dans la prière, nous nous tenons,  
+Pour Ta gloire, nous T’adorons.  
+
+[Chorus]  
+Christ, Tu es puissant parmi nous,  
+Dans l’amour, nous vivons en Vous.  
+Dans la paix, nous nous levons,  
+Ensemble, pour Ta perfection.  
+
+[Conclusion]  
+Que la grâce, l’amour et l’Esprit,  
+Nous unissent, aujourd’hui, ici.  
+Dans Ta présence, nous sommes un,  
+Seigneur Jésus, notre chemin.  
+
+---
+
+Ces paroles sont conçues pour être chantées dans un esprit de méditation et de contemplation, favorisant une atmosphère de louange et d’unité en Christ.`
+    },
     "48": {
         1: `**Couplet 1 :**  
 Toi qui m’as appelé, dès le sein de ma mère,  
@@ -47087,6 +55866,184 @@ Que Ta grâce soit notre chant,
 Pour toujours, dans l’amour, en avant.  
 Nous marchons, nous restons forts,  
 En Toi, Seigneur, notre trésor.`
+    },
+    "50": {
+        1: `[Verse 1]  
+Dans la grâce du Père, nous marchons,  
+Tous ensemble en Jésus, unissons nos chants,  
+Je rends grâces pour chacun de vous,  
+Dans la prière, ma joie se renouvelle, c'est doux.
+
+[Chorus]  
+Christ, notre vie, notre espoir,  
+Dans les liens ou dans la gloire,  
+Nous proclamons Ta vérité,  
+Pour l'Évangile, nous avançons, unis à jamais.
+
+[Verse 2]  
+Dans les épreuves, nous sommes debout,  
+En amour croissant, Seigneur, guide-nous,  
+Purs et irréprochables, nous Te cherchons,  
+Remplis nos cœurs de Ta justice, oh, notre chant.
+
+[Chorus]  
+Christ, notre vie, notre espoir,  
+Dans les liens ou dans la gloire,  
+Nous proclamons Ta vérité,  
+Pour l'Évangile, nous avançons, unis à jamais.
+
+[Bridge]  
+Que chaque jour, nous soyons témoins,  
+Dans l'unité, l'amour, main dans la main,  
+Ensemble, nous luttons, pour la foi,  
+Dans le combat, nous tenons, nous ne ployons pas.
+
+[Chorus]  
+Christ, notre vie, notre espoir,  
+Dans les liens ou dans la gloire,  
+Nous proclamons Ta vérité,  
+Pour l'Évangile, nous avançons, unis à jamais.
+
+[Outro]  
+Dans la paix du Seigneur, nous nous tenons,  
+Avec assurance, nous Te louons,  
+Pour l'Évangile et Ta grâce infinie,  
+En Christ, nous avançons, pour l'éternité.`,
+        2: `[Verse 1]  
+Dans la lumière de Ta grâce,  
+Nous cherchons, Seigneur, Ta face,  
+Unis dans l'amour, un cœur en prière,  
+Remplis-nous de Ta douce lumière.  
+
+[Chorus]  
+Jésus, notre Sauveur,  
+Nous fléchissons devant Ta grandeur,  
+Ensemble, nous chantons,  
+À la gloire de Ton nom.  
+
+[Verse 2]  
+En humilité, nous nous donnons,  
+Regardant les autres, nous nous élevons,  
+Dans un monde qui perd son chemin,  
+Fais briller, Seigneur, Ta lumière en nous, enfin.  
+
+[Chorus]  
+Jésus, notre Sauveur,  
+Nous fléchissons devant Ta grandeur,  
+Ensemble, nous chantons,  
+À la gloire de Ton nom.  
+
+[Bridge]  
+Tout genou fléchira,  
+Au nom de Jésus, notre Roi,  
+Chaque langue confessera,  
+Que Tu es Seigneur, en nous, en moi.  
+
+[Verse 3]  
+Dans la souffrance, nous trouvons la paix,  
+Par le sacrifice, Tu es notre clé,  
+Ensemble, nous portons, la parole de vie,  
+Au milieu des ténèbres, Ta lumière, oh, oui!  
+
+[Chorus]  
+Jésus, notre Sauveur,  
+Nous fléchissons devant Ta grandeur,  
+Ensemble, nous chantons,  
+À la gloire de Ton nom.  
+
+[Chorus]  
+Jésus, notre Sauveur,  
+Nous fléchissons devant Ta grandeur,  
+Unis dans l'amour,  
+Nous proclamons chaque jour.  
+
+[Fin]  
+Unis en Christ, nous avançons,  
+Dans la foi et l'amour, nous marchons,  
+À la gloire de Ton nom,  
+Seigneur, nous T’adorons.`,
+        3: `[Verse 1]  
+Auprès de Toi, Seigneur, je me réjouis,  
+Dans l'Esprit, je T’adore, ô Jésus, mon Roi.  
+Je laisse derrière moi mes fardeaux, mes soucis,  
+Tout ce qui est perte, je T’offre, je m’abandonne à Ta foi.
+
+[Chorus]  
+Je cours vers le but, vers l'appel céleste,  
+En Toi, je trouve ma vraie richesse.  
+Renouvelle en moi, Seigneur de gloire,  
+Je T’implore, fais briller ma mémoire.
+
+[Verse 2]  
+Je ne confie pas en moi, ni en ma chair,  
+Mais en Ta justice, ô Christ, je me perds.  
+Chaque souffrance, chaque croix que je porte,  
+Me rapproche de Toi, dans l'amour qui emporte.
+
+[Chorus]  
+Je cours vers le but, vers l'appel céleste,  
+En Toi, je trouve ma vraie richesse.  
+Renouvelle en moi, Seigneur de gloire,  
+Je T’implore, fais briller ma mémoire.
+
+[Bridge]  
+Nous marchons ensemble, d’un même pas,  
+Modèle d’amour, Seigneur, Tu es là.  
+Loin des attaches, de ce monde en déclin,  
+Nous sommes citoyens de la lumière sans fin.
+
+[Chorus]  
+Je cours vers le but, vers l'appel céleste,  
+En Toi, je trouve ma vraie richesse.  
+Renouvelle en moi, Seigneur de gloire,  
+Je T’implore, fais briller ma mémoire.
+
+[Outro]  
+Oh, Jésus, notre Sauveur,  
+Transforme nos cœurs, ô notre vainqueur.  
+Nous attendons de Toi, notre espérance,  
+Dans Ta présence, nous trouvons notre danse.`,
+        4: `[Verse 1]  
+Mes frères bien-aimés, ensemble nous marchons,  
+Dans la joie du Seigneur, nos cœurs en union.  
+Soyons d’un même sentiment, en Lui nous sommes forts,  
+La paix qui surpasse tout, nous garde encore.
+
+[Chorus]  
+Réjouissez-vous toujours, dans le Seigneur,  
+Je le répète, chantez avec ardeur.  
+Que votre douceur s'étende autour de vous,  
+Le Seigneur est proche, Il est notre secours.
+
+[Verse 2]  
+Ne craignez rien, mais priez, en toute chose,  
+Avec actions de grâces, notre voix s’illumine.  
+Tout ce qui est vrai, juste et honorable,  
+Que cela soit notre force, notre table.
+
+[Chorus]  
+Réjouissez-vous toujours, dans le Seigneur,  
+Je le répète, chantez avec ardeur.  
+Que votre douceur s'étende autour de vous,  
+Le Seigneur est proche, Il est notre secours.
+
+[Bridge]  
+Il pourvoira à tous vos besoins,  
+En Jésus-Christ, le vrai chemin.  
+Dans l'humilité, dans l’abondance,  
+Nous vivons en Lui, dans la confiance.
+
+[Chorus]  
+Réjouissez-vous toujours, dans le Seigneur,  
+Je le répète, chantez avec ardeur.  
+Que votre douceur s'étende autour de vous,  
+Le Seigneur est proche, Il est notre secours.
+
+[Outro]  
+À notre Dieu, la gloire, pour l’éternité,  
+Tous les saints s’unissent, dans l’unité.  
+Que la grâce du Christ soit avec nos esprits,  
+Dans l’amour et la paix, vivons en Lui.`
     },
     "51": {
         1: `**Couplet 1**  
@@ -47739,6 +56696,495 @@ Seigneur, accorde-nous,
 Ta paix chaque jour,  
 Que Ta grâce soit avec nous,  
 Nous marchons dans l'amour.`
+    },
+    "54": {
+        1: `**(Couplet 1)**  
+Je lève les yeux vers Toi, Seigneur,  
+Car Tu es ma force, mon Sauveur,  
+Dans l’obscurité, Ta lumière brille,  
+Ta grâce surabonde, mon cœur s’émerveille.  
+
+**(Refrain)**  
+Ô Jésus, en Toi, j’ai trouvé la vie,  
+Mon espérance, ma foi infinie.  
+Dans l’amour qui vient d’un cœur pur,  
+Je marche avec Toi, sûr de l’avenir.  
+
+**(Couplet 2)**  
+Sur le chemin, je combats le bon combat,  
+En gardant la foi, je ne faiblirai pas.  
+Ta miséricorde, douce et profonde,  
+Me rappelle que Tu es le Roi du monde.  
+
+**(Refrain)**  
+Ô Jésus, en Toi, j’ai trouvé la vie,  
+Mon espérance, ma foi infinie.  
+Dans l’amour qui vient d’un cœur pur,  
+Je marche avec Toi, sûr de l’avenir.  
+
+**(Pont)**  
+Je rends grâce pour la grâce reçue,  
+Pour le don de la foi, je suis revêtu.  
+À Toi, seul Dieu, honneur et gloire,  
+Pour les siècles, je chante Ta victoire.  
+
+**(Refrain)**  
+Ô Jésus, en Toi, j’ai trouvé la vie,  
+Mon espérance, ma foi infinie.  
+Dans l’amour qui vient d’un cœur pur,  
+Je marche avec Toi, sûr de l’avenir.  
+
+**(Conclusion)**  
+Au roi des siècles, immortel, invisible,  
+Que ma louange soit douce et audible.  
+Dans l’unité, ensemble nous prions,  
+Pour Ta gloire, Seigneur, nos cœurs s’unissons.`,
+        2: `[Verse 1]  
+Dans le silence, nous venons,  
+Élever nos mains vers le ciel,  
+Pour tous les hommes, notre prière,  
+Dans l'amour, nous cherchons la lumière.  
+Seigneur, écoute notre supplication,  
+Pour nos rois, pour notre nation,  
+Que la paix règne dans nos cœurs,  
+Transforme nos vies par Ta douceur.
+
+[Chorus]  
+Oh, viens, Esprit, dans notre adoration,  
+Unis nos voix en une seule prière,  
+Jésus, notre médiateur, notre raison,  
+En Toi, nous trouvons notre lumière.
+
+[Verse 2]  
+Dans la modestie et la foi,  
+Nous marchons, Seigneur, près de Toi,  
+Fais de nous des instruments de paix,  
+Dans l'amour, nous voulons avancer.  
+Que chaque femme, chaque homme,  
+Soit par des œuvres, que le cœur s'étonne,  
+En toute piété, nous nous tenons,  
+Pour Ta gloire, nous Te prions.
+
+[Chorus]  
+Oh, viens, Esprit, dans notre adoration,  
+Unis nos voix en une seule prière,  
+Jésus, notre médiateur, notre raison,  
+En Toi, nous trouvons notre lumière.
+
+[Bridge]  
+Il n'y a qu'un seul Dieu, un seul chemin,  
+Jésus, notre Sauveur, notre destin,  
+En Toi, nous trouvons l'espoir,  
+Ton amour nous fera croire.  
+Persévérons dans la vérité,  
+Par la foi, nous serons libérés,  
+Dans l'amour et la sainteté,  
+Nous marchons, Seigneur, à Tes côtés.
+
+[Chorus]  
+Oh, viens, Esprit, dans notre adoration,  
+Unis nos voix en une seule prière,  
+Jésus, notre médiateur, notre raison,  
+En Toi, nous trouvons notre lumière.
+
+[Outro]  
+Dans le silence, nous venons,  
+Élever nos cœurs, en prière,  
+Pour tous les hommes, notre chant,  
+Seigneur, nous Te cherchons, maintenant.`,
+        3: `**Couplet 1 :**  
+Dans la lumière de Ta vérité,  
+Nous aspirons à Ta sainteté,  
+Fais de nous, Seigneur, des serviteurs,  
+Irréprochables, pleins de douceur.
+
+**Refrain :**  
+Dans la maison de Dieu, nous marchons,  
+Avec foi, en toute direction.  
+Élevons nos voix, unis en prière,  
+Pour Ta gloire, Seigneur, nous sommes sincères.
+
+**Couplet 2 :**  
+Le cœur pur, éloigné de l'orgueil,  
+Dans l'amour, ensemble, nous veillons,  
+Nos enfants grandissent dans Ta paix,  
+Nous gardons la foi, dans l'humilité.
+
+**Refrain :**  
+Dans la maison de Dieu, nous marchons,  
+Avec foi, en toute direction.  
+Élevons nos voix, unis en prière,  
+Pour Ta gloire, Seigneur, nous sommes sincères.
+
+**Pont :**  
+Ô mystère de piété,  
+Manifesté, Tu es la vérité,  
+Justifié par l'Esprit, élevé,  
+Jésus, notre foi en Toi est scellée.
+
+**Refrain :**  
+Dans la maison de Dieu, nous marchons,  
+Avec foi, en toute direction.  
+Élevons nos voix, unis en prière,  
+Pour Ta gloire, Seigneur, nous sommes sincères.
+
+**Conclusion :**  
+Ensemble, nous bâtissons,  
+La colonne de Ta vérité,  
+Dans l'amour, nous nous tenons,  
+Dans Ta maison, pour l'éternité.`,
+        4: `**Couplet 1 :**  
+Dans les temps troublés, Seigneur,  
+Où l'ombre danse, où l'erreur,  
+S'élèvent des voix, des doctrines,  
+Mais Ta vérité, elle nous domine.  
+
+**Pré-refrain :**  
+Tout ce que Tu crées est bon,  
+Nous Te rendons grâce, ô notre Rédempteur,  
+Chaque don, chaque saison,  
+Nous guide vers Ta douceur.  
+
+**Refrain :**  
+Espoir en Toi, Dieu vivant,  
+Sauvateur de tous les croyants,  
+Dans la foi, nous marcherons,  
+En Ton nom, nous louerons.  
+
+**Couplet 2 :**  
+Faux docteurs peuvent troubler,  
+Mais Ta Parole va nous éclairer,  
+Modelons nos cœurs en pureté,  
+Pour T’honorer, pour Te glorifier.  
+
+**Pré-refrain :**  
+Nous serons, Seigneur, fidèles,  
+Parole et acte, amour éternel,  
+Dans notre jeunesse, un exemple,  
+Pour ceux qui cherchent, qui s'assemblent.  
+
+**Refrain :**  
+Espoir en Toi, Dieu vivant,  
+Sauvateur de tous les croyants,  
+Dans la foi, nous marcherons,  
+En Ton nom, nous louerons.  
+
+**Pont :**  
+Ne négligeons pas le don précieux,  
+Que Tu as mis en nous, ô Dieu,  
+Avec des cœurs unis, nous prions,  
+Ensemble, vers Toi nous nous élevons.  
+
+**Refrain :**  
+Espoir en Toi, Dieu vivant,  
+Sauvateur de tous les croyants,  
+Dans la foi, nous marcherons,  
+En Ton nom, nous louerons.  
+
+**Outro :**  
+Veillons sur nous, Seigneur,  
+Dans la piété, dans l'ardeur,  
+Ton amour, notre lumière,  
+Pour toujours, notre prière.`,
+        5: `**Titre :** « Honore les Veuves »
+
+[Verse 1]  
+Seigneur, apprends-nous à aimer,  
+Comme un père, comme un frère,  
+À porter les fardeaux, en vérité,  
+Dans la pureté, nous nous rassemblons.  
+
+[Chorus]  
+Honore les veuves, ô notre Dieu,  
+Elles mettent leur foi en Toi,  
+Dans l'isolement, elles prient,  
+Nuit et jour, leur cœur Te crie.  
+
+[Verse 2]  
+Les jeunes filles, en toute douceur,  
+Élevons nos familles, avec ferveur.  
+Que l’hospitalité soit notre chemin,  
+À secourir les âmes, nous marcherons bien.  
+
+[Chorus]  
+Honore les veuves, ô notre Dieu,  
+Elles mettent leur foi en Toi,  
+Dans l'isolement, elles prient,  
+Nuit et jour, leur cœur Te crie.  
+
+[Bridge]  
+Fais que nos cœurs soient purs,  
+Dans l'amour et la bonté,  
+Ne laissons pas l'adversaire,  
+Nous détourner de la vérité.  
+
+[Verse 3]  
+Seigneur, que nous soyons témoins,  
+De la foi qui nous unit,  
+Prends soin de ceux qui souffrent,  
+Dans nos œuvres, que Ta lumière brille.  
+
+[Chorus]  
+Honore les veuves, ô notre Dieu,  
+Elles mettent leur foi en Toi,  
+Dans l'isolement, elles prient,  
+Nuit et jour, leur cœur Te crie.  
+
+[Outro]  
+Ainsi, ensemble, nous marcherons,  
+Dans Ta grâce, nous nous unirons,  
+À Toi, Seigneur, notre adoration,  
+Dans l’amour, notre proclamation.  
+
+---
+
+Ces paroles offrent un cadre contemplatif et méditatif, fidèle au message biblique, tout en étant adaptées à une atmosphère de louange moderne.`,
+        6: `**Titre:** « Garde le Dépôt »
+
+[Verse 1]  
+Seigneur, dans l'humilité,  
+Nous cherchons ta vérité,  
+Sous le joug de la servitude,  
+Nous honorons ta plénitude.  
+
+[Chorus]  
+Garde nos cœurs, Seigneur,  
+Dans la foi, dans la douceur,  
+Que nos vies, par ton amour,  
+Révèlent ta gloire chaque jour.  
+
+[Verse 2]  
+Fuis les pièges du monde,  
+Cherche la justice profonde,  
+Avec contentement, vivons,  
+Dans ta grâce, nous marchons.  
+
+[Chorus]  
+Garde nos cœurs, Seigneur,  
+Dans la foi, dans la douceur,  
+Que nos vies, par ton amour,  
+Révèlent ta gloire chaque jour.  
+
+[Bridge]  
+À toi, Roi des rois, nous élevons,  
+En toi, notre espérance, notre chant,  
+Que ta lumière éclaire nos pas,  
+Jusqu'à l'apparition de ta voix.  
+
+[Chorus]  
+Garde nos cœurs, Seigneur,  
+Dans la foi, dans la douceur,  
+Que nos vies, par ton amour,  
+Révèlent ta gloire chaque jour.  
+
+[Verse 3]  
+Riches en bonnes œuvres,  
+À tes pieds, nous nous offrons,  
+Dans la générosité,  
+Nous trouvons notre vérité.  
+
+[Chorus]  
+Garde nos cœurs, Seigneur,  
+Dans la foi, dans la douceur,  
+Que nos vies, par ton amour,  
+Révèlent ta gloire chaque jour.  
+
+[Outro]  
+Oh, Timothée, garde le dépôt,  
+Dans la lumière, nous marchons,  
+Avec toi, Seigneur, notre espoir,  
+Nous vivons pour ta gloire, chaque soir.  
+
+---
+
+Ces paroles sont conçues pour être chantées dans un esprit de méditation et d'adoration, tout en restant fidèles aux enseignements de la Bible et à la beauté de la langue française.`
+    },
+    "55": {
+        1: `**Couplet 1 :**  
+Dans l’obscurité, Tu es ma lumière,  
+Seigneur, Tu as brisé mes chaînes,  
+Par Ta promesse de vie éternelle,  
+Je ressens Ta force, je m’éveille.  
+
+**Refrain :**  
+Renaître dans Ta grâce,  
+Où la foi se lève,  
+Je garde le bon dépôt,  
+Par l'Esprit qui m'élève.  
+Jésus, mon Sauveur,  
+En Toi je trouve mon cœur,  
+Je ne crains rien, Seigneur,  
+Car Tu es mon rédempteur.  
+
+**Couplet 2 :**  
+Avec un cœur pur, je T’implore,  
+Je me souviens de Ta miséricorde,  
+Comme Onésiphore, je cherche Ta gloire,  
+Dans la souffrance, je vois l’espoir.  
+
+**Refrain :**  
+Renaître dans Ta grâce,  
+Où la foi se lève,  
+Je garde le bon dépôt,  
+Par l'Esprit qui m'élève.  
+Jésus, mon Sauveur,  
+En Toi je trouve mon cœur,  
+Je ne crains rien, Seigneur,  
+Car Tu es mon rédempteur.  
+
+**Pont :**  
+Ne crains pas, ô mon âme,  
+Dieu a pour nous un plan,  
+Sa puissance nous transforme,  
+Dans l’amour, nous avançons,  
+Renaissants dans Sa lumière,  
+Pour partager Son message,  
+L’Évangile de vie,  
+Dans chaque pas, je suis en Lui.  
+
+**Refrain :**  
+Renaître dans Ta grâce,  
+Où la foi se lève,  
+Je garde le bon dépôt,  
+Par l'Esprit qui m'élève.  
+Jésus, mon Sauveur,  
+En Toi je trouve mon cœur,  
+Je ne crains rien, Seigneur,  
+Car Tu es mon rédempteur.  
+
+**Outro :**  
+Seigneur, je T’adore,  
+Dans la paix, je demeure,  
+Ta miséricorde à jamais,  
+Mon cœur, à jamais, Te crie.  
+Amen.`,
+        2: `[Verse 1]  
+Toi, mon enfant, lève les yeux,  
+Fortifie-toi dans Sa grâce,  
+Confie ta foi aux cœurs sincères,  
+Ensemble, nous marcherons, en Sa place.  
+
+[Chorus]  
+Souviens-toi de Jésus, ressuscité,  
+L'Agneau de Dieu, en Lui nous vivons,  
+Dans la souffrance, il est notre paix,  
+Sa parole libre, notre fondation.  
+
+[Verse 2]  
+Comme un bon soldat, restons unis,  
+Ne nous laissons pas distraire,  
+L'athlète combat selon les règles,  
+Pour la couronne, nous devons faire.  
+
+[Chorus]  
+Souviens-toi de Jésus, ressuscité,  
+L'Agneau de Dieu, en Lui nous vivons,  
+Dans la souffrance, il est notre paix,  
+Sa parole libre, notre fondation.  
+
+[Bridge]  
+Fuyons les passions, cherchons la vérité,  
+La foi, l’amour, et la paix à partager,  
+Ensemble, nous invoquons Son nom,  
+Purifiés, nous serons Ses vases d’honneur.  
+
+[Chorus]  
+Souviens-toi de Jésus, ressuscité,  
+L'Agneau de Dieu, en Lui nous vivons,  
+Dans la souffrance, il est notre paix,  
+Sa parole libre, notre fondation.  
+
+[Outro]  
+Il demeure fidèle, dans l’éternité,  
+En Lui, nous sommes unis,  
+Fortifiés par Sa vérité.  
+Amen, en Lui, nous vivons, amen.`,
+        3: `[Verse 1]  
+Dans les derniers jours, des temps difficiles,  
+Les cœurs se froissent, l'amour devient fragile.  
+Égoïsme et orgueil, le monde s'égare,  
+Mais Ta lumière, ô Seigneur, nous prépare.  
+
+[Chorus]  
+Je demeure en Ta vérité,  
+Dans la foi, je vais avancer.  
+Tout ce que j’ai appris, je garderai,  
+En Toi, ma force, je m'appuierai.  
+
+[Verse 2]  
+Les hommes sont traîtres, dans l'ombre, ils marchent,  
+Mais Ta parole, Seigneur, en moi se charge.  
+L'ingratitude règne, mais j'élève ma voix,  
+Pour proclamer Ta grâce, Ta paix en moi.  
+
+[Chorus]  
+Je demeure en Ta vérité,  
+Dans la foi, je vais avancer.  
+Tout ce que j’ai appris, je garderai,  
+En Toi, ma force, je m'appuierai.  
+
+[Bridge]  
+Ô Seigneur, délivre-moi des souffrances,  
+Comme Paul a connu Ta délivrance.  
+Chaque épreuve, je les porterai,  
+Car en Jésus-Christ, je vivrai.  
+
+[Chorus]  
+Je demeure en Ta vérité,  
+Dans la foi, je vais avancer.  
+Tout ce que j’ai appris, je garderai,  
+En Toi, ma force, je m'appuierai.  
+
+[Outro]  
+Sache que Ta parole est ma lumière,  
+Inspire mon cœur, ô douce prière.  
+Dans les derniers jours, je marcherai,  
+Avec Toi, Seigneur, je triompherai.  
+
+---
+
+Ces paroles, inspirées de l'Écriture, sont conçues pour être chantées dans un esprit de méditation et de louange, encourageant les croyants à rester fidèles à la vérité dans des temps difficiles.`,
+        4: `[Verse 1]  
+Seigneur, devant Toi, je me tiens,  
+Tu juges les vivants et les morts,  
+Je prêche Ta parole en tout temps,  
+Dans la douceur, je garde le fort.  
+
+[Chorus]  
+Oh, viens, Seigneur, dans Ta gloire,  
+Je combats, je cours, je garde la foi,  
+Le moment approche, je n'ai pas peur,  
+Ta couronne de justice est pour moi.  
+
+[Verse 2]  
+Des voix s'élèvent, des fables en écho,  
+Cherchant des docteurs qui caressent leurs désirs,  
+Mais je reste ferme, je ne fléchirai pas,  
+Ta vérité, Seigneur, je veux chérir.  
+
+[Chorus]  
+Oh, viens, Seigneur, dans Ta gloire,  
+Je combats, je cours, je garde la foi,  
+Le moment approche, je n'ai pas peur,  
+Ta couronne de justice est pour moi.  
+
+[Bridge]  
+Quand l'abandon m'entoure, Tu es là,  
+Ton esprit me fortifie,  
+Dans les ténèbres, je lève les yeux,  
+Mon sauveur, c'est Toi, ma vie, ma vie.  
+
+[Chorus]  
+Oh, viens, Seigneur, dans Ta gloire,  
+Je combats, je cours, je garde la foi,  
+Le moment approche, je n'ai pas peur,  
+Ta couronne de justice est pour moi.  
+
+[Outro]  
+À Toi soit la gloire, aux siècles des siècles,  
+Amen, Amen, je T'adore,  
+Seigneur, reste avec moi,  
+Ta grâce, ma lumière, pour toujours, encore.`
     },
     "56": {
         1: `**Couplet 1 :**  
@@ -48616,6 +58062,272 @@ Que la grâce soit avec nous, en toute saison,
 Rendant gloire au Père, dans chaque action.  
 Amen, Amen, chantons en unisson,  
 Notre cœur est à Lui, notre seule direction.`
+    },
+    "59": {
+        1: `**Couplet 1 :**  
+Dans les épreuves, nous nous tenons,  
+Frères bien-aimés, levons nos cœurs,  
+La joie complète, en chaque saison,  
+Car notre foi nous mène à l’ardeur.  
+
+**Refrain :**  
+Seigneur, donne-nous la sagesse,  
+Fais grandir en nous la patience,  
+Sans douter, nous cherchons Ta lumière,  
+Dans chaque lutte, Ta douce présence.
+
+**Couplet 2 :**  
+Loin des tempêtes, notre âme repose,  
+Dans l’humilité, nous nous glorifions,  
+Comme la fleur qui s’épanouit,  
+Nous savons que tout vient de Ta main.
+
+**Refrain :**  
+Seigneur, donne-nous la sagesse,  
+Fais grandir en nous la patience,  
+Sans douter, nous cherchons Ta lumière,  
+Dans chaque lutte, Ta douce présence.
+
+**Pont :**  
+Tu es le don parfait, de l’amour,  
+Dans les ténèbres, nous te cherchons,  
+Ta parole vivante, notre secours,  
+Transforme nos cœurs, dans l’abandon.
+
+**Refrain :**  
+Seigneur, donne-nous la sagesse,  
+Fais grandir en nous la patience,  
+Sans douter, nous cherchons Ta lumière,  
+Dans chaque lutte, Ta douce présence.
+
+**Outro :**  
+Écoutons Ta voix, dans le silence,  
+Pratiquons Ta parole, dans l’espérance.  
+Ouvre nos yeux, Seigneur, nous prions,  
+Que notre foi soit une vraie action.`,
+        2: `[Verse 1]  
+Dans l'assemblée, ô Seigneur,  
+Nous venons, rassemblés par Ta douceur,  
+Que notre foi soit sans distinction,  
+Unis dans l’amour, une seule action.  
+
+[Chorus]  
+Ouvre nos cœurs, fais-nous aimer,  
+Comme Tu aimes, nous voulons marcher,  
+Que la miséricorde triomphe en nous,  
+Dans chaque acte, Seigneur, fais-nous doux.  
+
+[Verse 2]  
+Si le riche entre, et le pauvre aussi,  
+Ne jugeons pas selon ce que l’on voit,  
+Car Tu as choisi ceux qui n’ont rien,  
+Pour qu’ils soient riches, dans l’esprit et le sein.  
+
+[Chorus]  
+Ouvre nos cœurs, fais-nous aimer,  
+Comme Tu aimes, nous voulons marcher,  
+Que la miséricorde triomphe en nous,  
+Dans chaque acte, Seigneur, fais-nous doux.  
+
+[Bridge]  
+La foi sans œuvres est morte, ô Dieu,  
+Comme le corps sans âme, elle est sans feu,  
+Rends-nous témoins de Ta vérité,  
+Par nos actions, que l’amour soit né.  
+
+[Verse 3]  
+Abraham crut, et par son cœur,  
+Il a été appelé ami, en son labeur,  
+Rahab a agi, a sauvé, a cru,  
+Que nos vies soient des œuvres en vertu.  
+
+[Chorus]  
+Ouvre nos cœurs, fais-nous aimer,  
+Comme Tu aimes, nous voulons marcher,  
+Que la miséricorde triomphe en nous,  
+Dans chaque acte, Seigneur, fais-nous doux.  
+
+[Fin]  
+Seigneur, nous voulons Te refléter,  
+Dans chaque geste, Ta lumière porter,  
+Donne-nous, ô Dieu, une foi vivante,  
+En Ton amour, notre âme se chante.`,
+        3: `**Titre :** Paroles de Vie
+
+[Verse 1]  
+Seigneur, guide ma langue,  
+Dans la douceur de Ta lumière,  
+Que mes mots soient des chants,  
+D'amour et de vérité,  
+Ne permets pas que je tombe,  
+Dans le piège de l'iniquité,  
+Fais de moi un instrument,  
+Pour Ta paix, pour Ta beauté.
+
+[Chorus]  
+Oh, que mes paroles soient vie,  
+Pour ceux qui sont blessés,  
+Comme une source d'eau pure,  
+Fais jaillir la bonté,  
+Car de ma bouche, je choisis,  
+De bénir, de partager,  
+Dans l'harmonie, la sagesse,  
+En Toi, je veux marcher.
+
+[Verse 2]  
+Ma voix doit être lumière,  
+Dans ce monde de ténèbres,  
+Ne laisse pas l'orgueil,  
+Souiller mes pensées,  
+Enseigne-moi la douceur,  
+Dans chaque conflit, chaque épreuve,  
+Que mes mots soient des fleurs,  
+Pour les cœurs en quête de paix.
+
+[Chorus]  
+Oh, que mes paroles soient vie,  
+Pour ceux qui sont blessés,  
+Comme une source d'eau pure,  
+Fais jaillir la bonté,  
+Car de ma bouche, je choisis,  
+De bénir, de partager,  
+Dans l'harmonie, la sagesse,  
+En Toi, je veux marcher.
+
+[Bridge]  
+Donne-moi, Seigneur, Ta sagesse,  
+Pure et pleine de miséricorde,  
+Que mon cœur soit en paix,  
+Que ma voix Te glorifie,  
+Car ici, dans Ta présence,  
+Je trouve ma vérité,  
+Mon âme se repose,  
+Dans Ta douce volonté.
+
+[Chorus]  
+Oh, que mes paroles soient vie,  
+Pour ceux qui sont blessés,  
+Comme une source d'eau pure,  
+Fais jaillir la bonté,  
+Car de ma bouche, je choisis,  
+De bénir, de partager,  
+Dans l'harmonie, la sagesse,  
+En Toi, je veux marcher.
+
+[Outro]  
+Seigneur, guide ma langue,  
+Dans la douceur de Ta lumière,  
+À chaque instant, à chaque pas,  
+Je choisis de T'honorer.`,
+        4: `[Verse 1]  
+D'où viennent nos luttes, ô Seigneur,  
+De passions qui consument nos coeurs,  
+Nous convoitions, mais nous ne possédons,  
+Des querelles naissent dans nos actions.  
+
+[Chorus]  
+Approchons-nous de Toi, ô Dieu,  
+Nettoyons nos mains, purifions nos coeurs,  
+Dans l'humilité, nous levons nos voix,  
+Élevons nos âmes, faisons Ta volonté.  
+
+[Verse 2]  
+Adultères, nous sommes, face à ce monde,  
+L'amour du monde, ton cœur le sonde,  
+Résiste au diable, il fuira loin,  
+Soumets-toi à Dieu, trouve en Lui le chemin.  
+
+[Chorus]  
+Approchons-nous de Toi, ô Dieu,  
+Nettoyons nos mains, purifions nos coeurs,  
+Dans l'humilité, nous levons nos voix,  
+Élevons nos âmes, faisons Ta volonté.  
+
+[Bridge]  
+Seigneur, nous pleurons nos misères,  
+Transforme nos rires en larmes sincères,  
+Éleve-nous, dans Ta grâce infinie,  
+Car seule Ta paix nous donne la vie.  
+
+[Chorus]  
+Approchons-nous de Toi, ô Dieu,  
+Nettoyons nos mains, purifions nos coeurs,  
+Dans l'humilité, nous levons nos voix,  
+Élevons nos âmes, faisons Ta volonté.  
+
+[Fin]  
+Si Dieu le veut, nous vivrons,  
+Dans Ta lumière, nous marcherons,  
+Ouvre nos yeux, guide nos pas,  
+À Toi, Seigneur, nous nous soumettons.`,
+        5: `**Titre:** Patience et Espérance
+
+[Verse 1]  
+Frères, pleurez pour ceux qui souffrent,  
+Leur douleur crie vers le ciel,  
+Richesses périssables, tes trésors,  
+Ne nous séparent pas du réel.  
+Nous avons vécu dans l'illusion,  
+À l'ombre du jugement qui vient,  
+Mais en Christ, trouvons la passion,  
+Pour aimer, même au cœur du chagrin.
+
+[Chorus]  
+Patience, ô mon âme,  
+Le Seigneur est proche,  
+Il entend nos larmes,  
+Et notre cœur se rapproche.  
+Dans la tempête, chantons,  
+Pour la joie de demain,  
+Car la prière de foi,  
+Sauvera nos destins.
+
+[Verse 2]  
+Voyez, comme le laboureur attend,  
+Les pluies qui nourrissent la terre,  
+Nous aussi, espérons, confiant,  
+Sa grâce qui brille dans la lumière.  
+Job a connu l’épreuve,  
+Mais le Seigneur est bon,  
+Il restaure et il relève,  
+Donnant force à notre union.
+
+[Chorus]  
+Patience, ô mon âme,  
+Le Seigneur est proche,  
+Il entend nos larmes,  
+Et notre cœur se rapproche.  
+Dans la tempête, chantons,  
+Pour la joie de demain,  
+Car la prière de foi,  
+Sauvera nos destins.
+
+[Bridge]  
+Si un frère se perd dans la nuit,  
+Ramène-le par amour,  
+Ensemble, nous prions, unis,  
+Pour la guérison, le retour.  
+Confessons nos faiblesses,  
+Et prions les uns pour les autres,  
+Dans l'amour, notre richesse,  
+Nous trouverons notre apôtre.
+
+[Chorus]  
+Patience, ô mon âme,  
+Le Seigneur est proche,  
+Il entend nos larmes,  
+Et notre cœur se rapproche.  
+Dans la tempête, chantons,  
+Pour la joie de demain,  
+Car la prière de foi,  
+Sauvera nos destins.
+
+[Fin]  
+Patience et espérance,  
+En Lui, nos cœurs vivent,  
+Car le Christ, notre délivrance,  
+Nous guide et nous inspire.  
+Amen.`
     },
     "60": {
         1: `[Verse 1]  
