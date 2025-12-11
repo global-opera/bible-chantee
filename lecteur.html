@@ -424,7 +424,7 @@
                 max-height: none;
             }
             .lyrics-container, .bible-container {
-                max-height: 200px;
+                max-height: 70vh;
             }
             .player-title { font-size: 1.1em; }
         }
@@ -895,7 +895,7 @@
             }
             const audio = document.getElementById('audio');
             audio.src = url;
-            audio.play().catch(err => console.error("Erreur lecture:", url, err));
+            // audio.play() - disabled autoplay, user must click
             const book = books.find(b => b.num === currentBook);
             // Construire le titre avec le titre du chapitre
             let displayTitle = book.name + ' - Ch.' + String(chapter).padStart(2, '0');
