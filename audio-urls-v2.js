@@ -697,6 +697,8 @@ const audioUrlsV2 = {
         "29": "https://archive.org/download/bible-chantee-fr-v2/20_PRO_29_FR.mp3",
         "30": "https://archive.org/download/bible-chantee-fr-v2/20_PRO_30_FR.mp3",
         "31": "https://archive.org/download/bible-chantee-fr-v2/20_PRO_31_FR.mp3"
+    ,
+        "31": "https://archive.org/download/bible-chantee-fr-v2/20_PRO_31_FR.mp3"
     },
     "21": {
         "1": "https://archive.org/download/bible-chantee-fr-v2/21_ECC_01_FR.mp3",
