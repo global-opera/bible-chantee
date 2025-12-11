@@ -432,6 +432,66 @@
             }
             .player-title { font-size: 1.1em; }
         }
+    
+        /* === SELECTEUR DE LANGUES === */
+        .language-selector {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px auto;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            max-width: 900px;
+        }
+        .lang-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 12px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+            cursor: pointer;
+            transition: all 0.3s;
+            min-width: 65px;
+        }
+        .lang-btn:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,206,0,0.5);
+            transform: translateY(-2px);
+        }
+        .lang-btn.active {
+            background: rgba(255,206,0,0.2);
+            border-color: #ffce00;
+            box-shadow: 0 0 15px rgba(255,206,0,0.3);
+        }
+        .lang-btn.disabled {
+            opacity: 0.35;
+            cursor: not-allowed;
+        }
+        .lang-btn.disabled:hover {
+            transform: none;
+            background: rgba(255,255,255,0.05);
+        }
+        .lang-flag { font-size: 1.6em; margin-bottom: 4px; }
+        .lang-code { font-weight: bold; color: #fff; font-size: 0.85em; }
+        .lang-progress { font-size: 0.65em; color: #aaa; margin-top: 2px; }
+        .lang-btn.active .lang-code, .lang-btn.active .lang-progress { color: #ffce00; }
+        .lang-progress-bar {
+            width: 100%;
+            height: 3px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 2px;
+            margin-top: 4px;
+            overflow: hidden;
+        }
+        .lang-progress-fill {
+            height: 100%;
+            background: #ffce00;
+            border-radius: 2px;
+        }
     </style>
 </head>
 <body>
@@ -450,6 +510,8 @@
             </div>
             <div class="search-results" id="searchResults"></div>
         </header>
+        <!-- SELECTEUR DE LANGUES -->
+        <div class="language-selector" id="languageSelector"></div>
         <h2 class="section-title">Ancien Testament</h2>
         <div class="books-grid" id="old-testament"></div>
         <h2 class="section-title">Nouveau Testament</h2>
@@ -989,6 +1051,49 @@
 
         renderBooks('old-testament', oldTestament);
         renderBooks('new-testament', newTestament);
+    // === SELECTEUR DE LANGUES ===
+    const LANGUAGES = {
+        FR: { flag: '🇫🇷', name: 'Francais', chapters: 1020, total: 1189 },
+        EN: { flag: '🇬🇧', name: 'English', chapters: 0, total: 1189 },
+        PT: { flag: '🇧🇷', name: 'Portugues', chapters: 0, total: 1189 },
+        ES: { flag: '🇪🇸', name: 'Espanol', chapters: 0, total: 1189 },
+        DE: { flag: '🇩🇪', name: 'Deutsch', chapters: 0, total: 1189 },
+        IT: { flag: '🇮🇹', name: 'Italiano', chapters: 0, total: 1189 },
+        AR: { flag: '🇸🇦', name: 'Arabic', chapters: 0, total: 1189 },
+        RU: { flag: '🇷🇺', name: 'Russian', chapters: 0, total: 1189 },
+        ZH: { flag: '🇨🇳', name: 'Chinese', chapters: 0, total: 1189 },
+        TL: { flag: '🇵🇭', name: 'Tagalog', chapters: 0, total: 1189 },
+        SW: { flag: '🇰🇪', name: 'Swahili', chapters: 0, total: 1189 },
+        HI: { flag: '🇮🇳', name: 'Hindi', chapters: 0, total: 1189 }
+    };
+    let currentLanguage = 'FR';
+    
+    function renderLanguageSelector() {
+        const container = document.getElementById('languageSelector');
+        if (!container) return;
+        container.innerHTML = '';
+        Object.entries(LANGUAGES).forEach(([code, lang]) => {
+            const percent = Math.round((lang.chapters / lang.total) * 100);
+            const isAvailable = lang.chapters > 0;
+            const isActive = code === currentLanguage;
+            const btn = document.createElement('div');
+            btn.className = 'lang-btn' + (isActive ? ' active' : '') + (!isAvailable ? ' disabled' : '');
+            btn.innerHTML = '<span class="lang-flag">' + lang.flag + '</span>' +
+                '<span class="lang-code">' + code + '</span>' +
+                '<span class="lang-progress">' + percent + '%</span>' +
+                '<div class="lang-progress-bar"><div class="lang-progress-fill" style="width:' + percent + '%"></div></div>';
+            if (isAvailable) btn.onclick = function() { switchLanguage(code); };
+            container.appendChild(btn);
+        });
+    }
+    
+    function switchLanguage(langCode) {
+        if (!LANGUAGES[langCode] || LANGUAGES[langCode].chapters === 0) return;
+        currentLanguage = langCode;
+        renderLanguageSelector();
+    }
+    
+    renderLanguageSelector();
     </script>
 </body>
 </html>
