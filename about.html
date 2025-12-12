@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>&Agrave; propos - Bible Chant&eacute;e</title>
+  <meta name="description" content="D&eacute;couvrez Bible Chant&eacute;e, un projet musical spirituel mettant en musique les 1189 chapitres de la Bible en 12 langues.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="40" opacity="0.08" fill="%23ffffff">&#9835;</text></svg>');
+      background-size: 80px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 3em;
+      margin-bottom: 15px;
+      position: relative;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 1.25em;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.95;
+      position: relative;
+    }
+
+    nav {
+      background: #020617;
+      text-align: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    nav a {
+      color: #93c5fd;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    main {
+      padding: 50px 20px 70px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .bloc {
+      background: linear-gradient(145deg, #111827, #1e293b);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+      border: 1px solid rgba(147, 197, 253, 0.1);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: #93c5fd;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.6em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2 i {
+      font-size: 0.9em;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #cbd5e1;
+    }
+
+    ul {
+      list-style-position: inside;
+      color: #cbd5e1;
+      margin-bottom: 15px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      padding-left: 10px;
+    }
+
+    .platforms {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 25px;
+    }
+
+    .platform-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: #93c5fd;
+      transition: transform 0.3s, color 0.3s;
+      padding: 15px;
+      border-radius: 12px;
+      background: rgba(147, 197, 253, 0.05);
+      min-width: 120px;
+    }
+
+    .platform-link:hover {
+      transform: translateY(-5px);
+      color: #ffffff;
+      background: rgba(147, 197, 253, 0.1);
+    }
+
+    .platform-link i {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .platform-link span {
+      font-weight: 600;
+      font-size: 0.9em;
+    }
+
+    .usage-list {
+      background: rgba(147, 197, 253, 0.05);
+      border-left: 4px solid #93c5fd;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .usage-list ul {
+      margin-bottom: 0;
+    }
+
+    .contact-info {
+      background: rgba(37, 99, 235, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 15px;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    .contact-info a {
+      color: #93c5fd;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact-info a:hover {
+      color: #ffffff;
+    }
+
+    footer {
+      background: #020617;
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 50px;
+      border-top: 1px solid rgba(147, 197, 253, 0.1);
+    }
+
+    footer p {
+      color: #94a3b8;
+      font-size: 0.9em;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      header p {
+        font-size: 1em;
+      }
+
+      .platforms {
+        gap: 15px;
+      }
+
+      .platform-link {
+        min-width: 100px;
+        padding: 12px;
+      }
+
+      .platform-link i {
+        font-size: 2.5em;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Bible Chant&eacute;e</h1>
+  <p>La Parole de Dieu en musique</p>
+</header>
+
+<nav>
+  <a href="index.html">Accueil</a>
+  <a href="lecteur.html">Lecteur</a>
+  <a href="about.html">À propos</a>
+</nav>
+
+<main>
+  <div class="bloc">
+    <h2><i class="fas fa-info-circle"></i> À propos</h2>
+    <p>
+      <strong>Bible Chant&eacute;e</strong> est un projet musical spirituel visant &agrave; mettre en musique
+      les <strong>1189 chapitres de la Bible</strong> en <strong>12 langues</strong>.
+    </p>
+    <p>
+      Toutes les compositions sont originales. Les paroles sont bas&eacute;es sur les textes bibliques
+      du domaine public.
+    </p>
+  </div>
+
+  <div class="bloc">
+    <h2><i class="fas fa-headphones"></i> &Eacute;coutez Bible Chant&eacute;e</h2>
+    <p>Retrouvez nos musiques sur vos plateformes de streaming pr&eacute;f&eacute;r&eacute;es :</p>
+
+    <div class="platforms">
+      <a href="https://open.spotify.com/artist/XXXXX" class="platform-link" target="_blank" rel="noopener">
+        <i class="fab fa-spotify"></i>
+        <span>Spotify</span>
+      </a>
+
+      <a href="https://music.apple.com/artist/XXXXX" class="platform-link" target="_blank" rel="noopener">
+        <i class="fab fa-apple"></i>
+        <span>Apple Music</span>
+      </a>
+
+      <a href="https://music.youtube.com/channel/XXXXX" class="platform-link" target="_blank" rel="noopener">
+        <i class="fab fa-youtube"></i>
+        <span>YouTube Music</span>
+      </a>
+
+      <a href="https://www.deezer.com/artist/XXXXX" class="platform-link" target="_blank" rel="noopener">
+        <i class="fab fa-deezer"></i>
+        <span>Deezer</span>
+      </a>
+
+      <a href="https://music.amazon.com/artists/XXXXX" class="platform-link" target="_blank" rel="noopener">
+        <i class="fab fa-amazon"></i>
+        <span>Amazon Music</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bloc">
+    <h2><i class="fas fa-check-circle"></i> Utilisation autoris&eacute;e</h2>
+    <p>
+      Vous &ecirc;tes libre d'utiliser ces musiques dans un cadre :
+    </p>
+    <div class="usage-list">
+      <ul>
+        <li><strong>Spirituel</strong> (&eacute;glises, cultes, m&eacute;ditations)</li>
+        <li><strong>&Eacute;ducatif</strong> (cours, &eacute;tudes bibliques)</li>
+        <li><strong>Personnel</strong> (vid&eacute;os non commerciales)</li>
+      </ul>
+    </div>
+    <p style="margin-top: 20px;">
+      Sans crainte de blocage, tant que l'usage reste <strong>non commercial</strong> et conforme
+      aux conditions des plateformes.
+    </p>
+  </div>
+
+  <div class="bloc">
+    <h2><i class="fas fa-envelope"></i> Contact</h2>
+    <div class="contact-info">
+      <p><strong>Email :</strong> <em>[&agrave; d&eacute;finir]</em></p>
+      <p><strong>Site web :</strong> <a href="https://global-opera.github.io/bible-chantee" target="_blank">https://global-opera.github.io/bible-chantee</a></p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2024-2025 Bible Chant&eacute;e - Tous droits r&eacute;serv&eacute;s</p>
+</footer>
+
+</body>
+</html>
