@@ -840,10 +840,11 @@
         function updateLyrics() {
             const lyricsText = document.getElementById('lyricsText');
             const lyricsContainer = document.getElementById('lyricsContainer');
+            const chapterStr = String(currentChapter);
 
             // Utiliser les timestamps si disponibles
-            if (typeof lyricsTimestamps !== 'undefined' && lyricsTimestamps[currentBook] && lyricsTimestamps[currentBook][currentChapter]) {
-                const sections = lyricsTimestamps[currentBook][currentChapter];
+            if (typeof lyricsTimestamps !== 'undefined' && lyricsTimestamps[currentBook] && lyricsTimestamps[currentBook][chapterStr]) {
+                const sections = lyricsTimestamps[currentBook][chapterStr];
                 lyricsText.innerHTML = '';
 
                 sections.forEach((section, index) => {
@@ -868,13 +869,13 @@
                 });
 
                 lastActiveSection = -1;
-            } else if (typeof chapterLyrics !== 'undefined' && chapterLyrics[currentBook] && chapterLyrics[currentBook][currentChapter]) {
+            } else if (typeof chapterLyrics !== 'undefined' && chapterLyrics[currentBook] && chapterLyrics[currentBook][chapterStr]) {
                 // Choisir paroles V1 ou V2
                 let lyrics;
-                if (useV2 && typeof chapterLyricsV2 !== 'undefined' && chapterLyricsV2[currentBook] && chapterLyricsV2[currentBook][currentChapter]) {
-                    lyrics = chapterLyricsV2[currentBook][currentChapter];
+                if (useV2 && typeof chapterLyricsV2 !== 'undefined' && chapterLyricsV2[currentBook] && chapterLyricsV2[currentBook][chapterStr]) {
+                    lyrics = chapterLyricsV2[currentBook][chapterStr];
                 } else {
-                    lyrics = chapterLyrics[currentBook][currentChapter];
+                    lyrics = chapterLyrics[currentBook][chapterStr];
                 }
                 lyrics = lyrics.replace(/\[([^\]]+)\]/g, '<span class="section-label">[$1]</span>');
                 lyricsText.innerHTML = lyrics;
@@ -888,9 +889,10 @@
         function updateBible() {
             const bibleText = document.getElementById('bibleText');
             const bibleContainer = document.getElementById('bibleContainer');
+            const chapterStr = String(currentChapter);
 
-            if (typeof bibleData !== 'undefined' && bibleData[currentBook] && bibleData[currentBook][currentChapter]) {
-                const verses = bibleData[currentBook][currentChapter];
+            if (typeof bibleData !== 'undefined' && bibleData[currentBook] && bibleData[currentBook][chapterStr]) {
+                const verses = bibleData[currentBook][chapterStr];
                 let html = '';
                 verses.forEach(verse => {
                     html += '<div class="verse"><span class="verse-number">' + verse.num + '.</span>' + verse.text + '</div>';
@@ -934,7 +936,8 @@
         function checkV2Available() {
             // Afficher le toggle si V2 est disponible pour ce livre
             const toggle = document.getElementById('versionToggle');
-            if (typeof audioUrlsV2 !== 'undefined' && audioUrlsV2[currentBook] && audioUrlsV2[currentBook][currentChapter]) {
+            const chapterStr = String(currentChapter);
+            if (typeof audioUrlsV2 !== 'undefined' && audioUrlsV2[currentBook] && audioUrlsV2[currentBook][chapterStr]) {
                 toggle.style.display = 'none'; // V2 only, no toggle
             } else {
                 toggle.style.display = 'none';
@@ -945,15 +948,28 @@
         
         function playChapter(chapter) {
             currentChapter = chapter;
-            
+
+            // DEBUG - Diagnostiquer le probleme audio
+            console.log("=== DEBUG AUDIO ===");
+            console.log("Book:", currentBook, "Chapter:", chapter, "Type chapter:", typeof chapter);
+            console.log("audioUrls keys:", Object.keys(window.audioUrls || {}));
+            console.log("Book exists:", !!window.audioUrls[currentBook]);
+            if (window.audioUrls[currentBook]) {
+                console.log("Chapters available:", Object.keys(window.audioUrls[currentBook]));
+            }
+            console.log("URL (number):", window.audioUrls[currentBook]?.[chapter]);
+            console.log("URL (string):", window.audioUrls[currentBook]?.[String(chapter)]);
+
             // Choisir la source audio V1 ou V2
             let url;
-            if (useV2 && typeof audioUrlsV2 !== 'undefined' && audioUrlsV2[currentBook] && audioUrlsV2[currentBook][chapter]) {
-                url = audioUrlsV2[currentBook][chapter];
+            // CORRECTION: Convertir chapter en string pour match avec audio-urls.js
+            const chapterStr = String(chapter);
+            if (useV2 && typeof audioUrlsV2 !== 'undefined' && audioUrlsV2[currentBook] && audioUrlsV2[currentBook][chapterStr]) {
+                url = audioUrlsV2[currentBook][chapterStr];
             } else {
-                url = audioUrls[currentBook] && audioUrls[currentBook][chapter];
+                url = audioUrls[currentBook] && audioUrls[currentBook][chapterStr];
             }
-            
+
             if (!url) {
                 console.error("URL non trouvee pour:", currentBook, chapter);
                 return;
@@ -965,8 +981,8 @@
             // Construire le titre avec le titre du chapitre
             let displayTitle = book.name + ' - Ch.' + String(chapter).padStart(2, '0');
             // Ajouter le titre du chapitre depuis chapterTitles
-            if (chapterTitles && chapterTitles[currentBook] && chapterTitles[currentBook][chapter]) {
-                displayTitle += ' - ' + chapterTitles[currentBook][chapter];
+            if (chapterTitles && chapterTitles[currentBook] && chapterTitles[currentBook][chapterStr]) {
+                displayTitle += ' - ' + chapterTitles[currentBook][chapterStr];
             }
             document.getElementById('player-title').textContent = displayTitle;
             document.getElementById('chapter-select').value = chapter;
@@ -1007,11 +1023,12 @@
 
         // AUTO-SCROLL des paroles synchronisées
         document.getElementById('audio').addEventListener('timeupdate', function() {
-            if (typeof lyricsTimestamps === 'undefined' || !lyricsTimestamps[currentBook] || !lyricsTimestamps[currentBook][currentChapter]) {
+            const chapterStr = String(currentChapter);
+            if (typeof lyricsTimestamps === 'undefined' || !lyricsTimestamps[currentBook] || !lyricsTimestamps[currentBook][chapterStr]) {
                 return;
             }
 
-            const sections = lyricsTimestamps[currentBook][currentChapter];
+            const sections = lyricsTimestamps[currentBook][chapterStr];
             const currentTime = this.currentTime;
             let activeIndex = 0;
 
