@@ -169,6 +169,12 @@
         const newLang = e.target.value;
         this.currentLang = newLang;
         localStorage.setItem('selectedLanguage', newLang);
+
+        // UPDATE URL with new language parameter
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', newLang);
+        window.history.replaceState({}, '', url.toString());
+
         this.applyTranslations(newLang);
       });
     }
@@ -227,7 +233,7 @@
 
       // Update all internal links to include ?lang parameter
       document.querySelectorAll('a[href]').forEach(link => {
-        const href = link.getAttribute('href');
+        let href = link.getAttribute('href');
 
         // Skip external links, anchors, mailto, and javascript
         if (!href ||
@@ -239,12 +245,15 @@
           return;
         }
 
-        // Skip if already has lang parameter
-        if (href.includes('?lang=') || href.includes('&lang=')) {
-          return;
-        }
+        // Remove existing lang parameter if present
+        href = href.replace(/[?&]lang=[A-Z]{2}(&|$)/, (match, after) => {
+          return after === '&' ? '&' : '';
+        });
 
-        // Add language parameter
+        // Clean up any trailing ? or &
+        href = href.replace(/[?&]$/, '');
+
+        // Add updated language parameter
         const separator = href.includes('?') ? '&' : '?';
         const newHref = href + separator + 'lang=' + currentLang;
         link.setAttribute('href', newHref);
