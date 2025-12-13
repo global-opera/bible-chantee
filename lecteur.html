@@ -571,6 +571,7 @@
     <script src="lyrics-data-v2.js"></script>
     <script src="audio-urls.js"></script>
     <script src="audio-urls-v2.js"></script>
+    <script src="audio-urls-pt.js"></script>
     <script src="chapter-titles.js"></script>
     <script src="bible-data.js"></script>
     <script src="lyrics-timestamps.js"></script>
@@ -961,14 +962,31 @@
             console.log("URL (number):", window.audioUrls[currentBook]?.[chapter]);
             console.log("URL (string):", window.audioUrls[currentBook]?.[String(chapter)]);
 
-            // Choisir la source audio V1 ou V2
+            // Choisir la source audio selon la langue et version
             let url;
             // CORRECTION: Convertir chapter en string pour match avec audio-urls.js
             const chapterStr = String(chapter);
-            if (useV2 && typeof audioUrlsV2 !== 'undefined' && audioUrlsV2[currentBook] && audioUrlsV2[currentBook][chapterStr]) {
-                url = audioUrlsV2[currentBook][chapterStr];
+
+            // Select audio source based on current language
+            let audioSource;
+            if (currentLanguage === 'PT' && typeof window.audioUrlsPT !== 'undefined') {
+                audioSource = window.audioUrlsPT;
+                console.log("Using Portuguese audio source");
+            } else if (currentLanguage === 'FR') {
+                if (useV2 && typeof audioUrlsV2 !== 'undefined' && audioUrlsV2[currentBook] && audioUrlsV2[currentBook][chapterStr]) {
+                    url = audioUrlsV2[currentBook][chapterStr];
+                } else {
+                    audioSource = window.audioUrls;
+                }
             } else {
-                url = audioUrls[currentBook] && audioUrls[currentBook][chapterStr];
+                // Fallback to French if language not available
+                console.warn(`Language ${currentLanguage} not available, falling back to French`);
+                audioSource = window.audioUrls;
+            }
+
+            // Get URL from selected source
+            if (!url && audioSource) {
+                url = audioSource[currentBook] && audioSource[currentBook][chapterStr];
             }
 
             if (!url) {
@@ -1088,9 +1106,9 @@
 
     // === SELECTEUR DE LANGUES ===
     const LANGUAGES = {
-        FR: { flag: '🇫🇷', name: 'Francais', chapters: 1020, total: 1189 },
+        FR: { flag: '🇫🇷', name: 'Francais', chapters: 1189, total: 1189 },
         EN: { flag: '🇬🇧', name: 'English', chapters: 0, total: 1189 },
-        PT: { flag: '🇧🇷', name: 'Portugues', chapters: 0, total: 1189 },
+        PT: { flag: '🇧🇷', name: 'Portugues', chapters: 431, total: 1189 },
         ES: { flag: '🇪🇸', name: 'Espanol', chapters: 0, total: 1189 },
         DE: { flag: '🇩🇪', name: 'Deutsch', chapters: 0, total: 1189 },
         IT: { flag: '🇮🇹', name: 'Italiano', chapters: 0, total: 1189 },
