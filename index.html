@@ -344,20 +344,42 @@
   <div class="bloc" id="ecouter">
     <h2><span class="icon">&#127925;</span> Ecouter la Bible Chant&eacute;e</h2>
     <p>
-      Acc&eacute;dez &agrave; l'int&eacute;gralit&eacute; de la Bible mise en musique. Choisissez un livre, un chapitre, 
+      Acc&eacute;dez &agrave; l'int&eacute;gralit&eacute; de la Bible mise en musique. Choisissez un livre, un chapitre,
       et laissez-vous porter par la Parole de Dieu en musique.
     </p>
+
+    <!-- Language Selector -->
+    <div style="margin-bottom: 20px;">
+      <label style="display: block; margin-bottom: 10px; font-weight: 600; color: #93c5fd;">
+        <span class="icon">&#127760;</span> Choisir une langue:
+      </label>
+      <select id="languageSelector" style="width: 100%; padding: 12px; font-size: 1em; border-radius: 8px; border: 2px solid rgba(147, 197, 253, 0.3); background: rgba(30, 41, 59, 0.8); color: #e5e7eb; cursor: pointer; font-weight: 600;">
+        <option value="FR" selected>🇫🇷 Français (FR)</option>
+        <option value="PT">🇵🇹 Português (PT)</option>
+        <option value="EN">🇬🇧 English (EN)</option>
+        <option value="ES">🇪🇸 Español (ES)</option>
+        <option value="DE">🇩🇪 Deutsch (DE)</option>
+        <option value="IT">🇮🇹 Italiano (IT)</option>
+        <option value="AR">🇸🇦 العربية (AR)</option>
+        <option value="RU">🇷🇺 Русский (RU)</option>
+        <option value="ZH">🇨🇳 中文 (ZH)</option>
+        <option value="TL">🇵🇭 Tagalog (TL)</option>
+        <option value="SW">🇰🇪 Kiswahili (SW)</option>
+        <option value="HI">🇮🇳 हिन्दी (HI)</option>
+      </select>
+    </div>
+
     <div class="btns-grid">
-      <a href="bible.html" class="btn btn-secondary">
+      <a href="bible.html" class="btn btn-secondary" data-page="bible">
         <span class="btn-icon">&#128216;</span> Bible (texte)
       </a>
-      <a href="lecteur.html" class="btn">
+      <a href="lecteur.html" class="btn" data-page="lecteur">
         <span class="btn-icon">&#128214;</span> Ecouter la Bible
       </a>
-      <a href="promesses.html" class="btn btn-gold">
+      <a href="promesses.html" class="btn btn-gold" data-page="promesses">
         <span class="btn-icon">&#9733;</span> Promesses bibliques
       </a>
-      <a href="confessions.html" class="btn btn-gold">
+      <a href="confessions.html" class="btn btn-gold" data-page="confessions">
         <span class="btn-icon">&#10084;</span> 10 Confessions de foi
       </a>
     </div>
@@ -445,6 +467,60 @@
   <p>Bible Chant&eacute;e &ndash; Projet missionnaire chr&eacute;tien international</p>
   <p>&copy; 2025 St&eacute;phane Cassani &ndash; Tous droits r&eacute;serv&eacute;s</p>
 </footer>
+
+<script>
+// Language Selection System
+(function() {
+  const languageSelector = document.getElementById('languageSelector');
+  const pageButtons = document.querySelectorAll('a[data-page]');
+
+  // Load saved language preference
+  const savedLang = localStorage.getItem('selectedLanguage') || 'FR';
+  languageSelector.value = savedLang;
+
+  // Save language preference when changed
+  languageSelector.addEventListener('change', function() {
+    localStorage.setItem('selectedLanguage', this.value);
+    updateButtonLinks();
+  });
+
+  // Update button links based on selected language
+  function updateButtonLinks() {
+    const selectedLang = languageSelector.value;
+
+    // Available content by language and page
+    const availableContent = {
+      'FR': ['bible', 'lecteur', 'promesses', 'confessions'],
+      'PT': ['lecteur'] // Only lecteur available for PT (built-in multi-lang)
+    };
+
+    pageButtons.forEach(button => {
+      const pageName = button.getAttribute('data-page');
+
+      // Check if content is available for this language
+      const isAvailable = availableContent[selectedLang]?.includes(pageName);
+
+      if (!isAvailable && selectedLang !== 'FR') {
+        // Redirect to coming soon page for unavailable content
+        button.href = `coming-soon.html?lang=${selectedLang}&page=${pageName}`;
+      } else if (pageName === 'lecteur') {
+        // lecteur.html has built-in language selector, just pass lang parameter
+        button.href = `lecteur.html?lang=${selectedLang}`;
+      } else {
+        // For other available pages
+        const langSuffix = selectedLang === 'FR' ? '' : `-${selectedLang.toLowerCase()}`;
+        button.href = `${pageName}${langSuffix}.html`;
+      }
+    });
+  }
+
+  // Initialize button links
+  updateButtonLinks();
+
+  // Update links when language changes
+  languageSelector.addEventListener('change', updateButtonLinks);
+})();
+</script>
 
 </body>
 </html>

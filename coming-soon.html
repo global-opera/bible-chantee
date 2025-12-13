@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bientôt disponible - Bible Chantée</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            min-height: 100vh;
+            color: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            text-align: center;
+            background: rgba(30, 41, 59, 0.8);
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.5em;
+            color: #93c5fd;
+            margin-bottom: 20px;
+        }
+        .icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #cbd5e1;
+        }
+        .highlight {
+            color: #60a5fa;
+            font-weight: 600;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 35px;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(37, 99, 235, 0.5);
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+        }
+        .languages {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(147, 197, 253, 0.2);
+        }
+        .languages p {
+            font-size: 0.95em;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🚧</div>
+        <h1>Bientôt disponible</h1>
+        <p>
+            Cette version linguistique de <span class="highlight">Bible Chantée</span> est actuellement en préparation.
+        </p>
+        <p>
+            Nous travaillons activement pour vous offrir l'intégralité de la Parole de Dieu en musique dans <strong>12 langues</strong>.
+        </p>
+        <div class="languages">
+            <p><strong>Langues disponibles actuellement:</strong></p>
+            <p>🇫🇷 Français (FR) - 100%</p>
+            <p>🇵🇹 Português (PT) - En cours</p>
+        </div>
+        <a href="index.html" class="btn">← Retour à l'accueil</a>
+    </div>
+
+    <script>
+        // Read language from URL parameter and display appropriate message
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang');
+
+        if (lang) {
+            const langNames = {
+                'EN': 'English',
+                'ES': 'Español',
+                'DE': 'Deutsch',
+                'IT': 'Italiano',
+                'AR': 'العربية',
+                'RU': 'Русский',
+                'ZH': '中文',
+                'TL': 'Tagalog',
+                'SW': 'Kiswahili',
+                'HI': 'हिन्दी',
+                'PT': 'Português'
+            };
+
+            if (langNames[lang]) {
+                document.querySelector('h1').textContent = langNames[lang] + ' - Coming Soon';
+            }
+        }
+    </script>
+</body>
+</html>

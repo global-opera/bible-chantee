@@ -1101,8 +1101,12 @@
         SW: { flag: '🇰🇪', name: 'Swahili', chapters: 0, total: 1189 },
         HI: { flag: '🇮🇳', name: 'Hindi', chapters: 0, total: 1189 }
     };
-    let currentLanguage = 'FR';
-    
+
+    // Get language from URL parameter or default to FR
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+    let currentLanguage = (urlLang && LANGUAGES[urlLang.toUpperCase()]) ? urlLang.toUpperCase() : 'FR';
+
     function renderLanguageSelector() {
         const container = document.getElementById('languageSelector');
         if (!container) return;
