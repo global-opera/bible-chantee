@@ -9,8 +9,9 @@ from pathlib import Path
 from collections import defaultdict
 
 # ========== CONFIGURATION ==========
-SOURCE_DIR = Path(r"G:\Mon Drive\01 BibleChantee\Suno_Output_V2")
-OUTPUT_DIR = Path(r"C:\Users\Stéphane CASSANI\bible-chantee")
+SCRIPT_DIR = Path(__file__).parent
+SOURCE_DIR = SCRIPT_DIR / "Suno_Output_V2"
+OUTPUT_DIR = SCRIPT_DIR
 ARCHIVE_BASE = "https://archive.org/download/bible-chantee-{lang}-v2"
 
 # 11 target languages + codes

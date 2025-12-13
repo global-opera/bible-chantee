@@ -76,7 +76,8 @@ BIBLE_BOOKS = [
 
 def count_existing_mp3s(book_code):
     """Compte les MP3 déjà générés pour un livre"""
-    output_dir = Path(f"G:/Mon Drive/01 BibleChantee/Suno_Output/FR/{book_code}")
+    project_root = Path(__file__).parent.parent
+    output_dir = project_root / f"Suno_Output/FR/{book_code}"
     if not output_dir.exists():
         return 0
     return len(list(output_dir.glob("*.mp3")))
@@ -146,7 +147,8 @@ def main():
     print(f"Livres complets: {books_completed}/66")
     print(f"Chapitres générés: {total_generated}/{total_chapters}")
     print(f"Taux complétion: {(total_generated/total_chapters*100):.1f}%")
-    print("\n📂 Dossier sortie: G:/Mon Drive/01 BibleChantee/Suno_Output/FR/")
+    project_root = Path(__file__).parent.parent
+    print(f"\n📂 Dossier sortie: {project_root / 'Suno_Output/FR/'}")
 
 if __name__ == "__main__":
     try:

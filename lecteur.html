@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible Chantee - Worship Francais</title>
+    <title data-i18n-title="readerPageTitle">Bible Chantee - Worship Francais</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -496,28 +496,28 @@
 <body>
     <div class="container">
         <header>
-            <h1>Bible Chantee</h1>
-            <a href="index.html" class="back-link">← Retour accueil</a>
-            <a href="about.html" class="back-link" style="margin-left: 15px;">&Agrave; propos</a>
-            <p class="subtitle">La Parole de Dieu en musique worship francaise</p>
+            <h1 data-i18n="readerHeading">Bible Chantee</h1>
+            <a href="index.html" class="back-link" data-i18n="readerBackHome">← Retour accueil</a>
+            <a href="about.html" class="back-link" style="margin-left: 15px;" data-i18n="readerAbout">&Agrave; propos</a>
+            <p class="subtitle" data-i18n="readerSubtitle">La Parole de Dieu en musique worship francaise</p>
             <div class="stats">
-                <span id="available-count">39</span> livres disponibles sur 66 |
-                <span id="chapters-count">850</span> chapitres
+                <span id="available-count">39</span> <span data-i18n="readerBooksAvailable">livres disponibles</span> <span data-i18n="readerOf">sur</span> 66 |
+                <span id="chapters-count">850</span> <span data-i18n="readerChapters">chapitres</span>
             </div>
             <div class="search-container">
-                <input type="text" id="searchInput" class="search-input" placeholder="  un mot  =  un chant  " style="text-align:center;">
-                <button class="search-btn" onclick="searchBible()">🔍 Rechercher</button>
+                <input type="text" id="searchInput" class="search-input" data-i18n-placeholder="readerSearchPlaceholder" placeholder="  un mot  =  un chant  " style="text-align:center;">
+                <button class="search-btn" onclick="searchBible()"><span data-i18n="readerSearchButton">🔍 Rechercher</span></button>
             </div>
             <div class="search-results" id="searchResults"></div>
         </header>
         <!-- SELECTEUR DE LANGUES -->
         <div class="language-selector" id="languageSelector"></div>
-        <h2 class="section-title">Ancien Testament</h2>
+        <h2 class="section-title" data-i18n="readerOldTestament">Ancien Testament</h2>
         <div class="books-grid" id="old-testament"></div>
-        <h2 class="section-title">Nouveau Testament</h2>
+        <h2 class="section-title" data-i18n="readerNewTestament">Nouveau Testament</h2>
         <div class="books-grid" id="new-testament"></div>
         <footer>
-            <p>&copy; 2025 Bible Chantée - Stéphane Cassani - Tous droits d'auteur réservés</p>
+            <p data-i18n="readerFooterCopyright">&copy; 2025 Bible Chantée - Stéphane Cassani - Tous droits d'auteur réservés</p>
         </footer>
     </div>
     <div class="player-container" id="player">
@@ -525,9 +525,9 @@
             <span class="player-title" id="player-title">-</span>
         </div>
         <div class="player-controls">
-            <button class="nav-btn" id="prev-btn">Precedent</button>
+            <button class="nav-btn" id="prev-btn" data-i18n="readerPrevious">Precedent</button>
             <select class="chapter-select" id="chapter-select"></select>
-            <button class="nav-btn" id="next-btn">Suivant</button>
+            <button class="nav-btn" id="next-btn" data-i18n="readerNext">Suivant</button>
             <div class="version-toggle" id="versionToggle" style="display:none;">
                 <span class="toggle-label">V1</span>
                 <label class="toggle-switch">
@@ -543,14 +543,14 @@
                     <line x1="8" y1="13" x2="16" y2="13"></line>
                     <line x1="8" y1="17" x2="16" y2="17"></line>
                 </svg>
-                Paroles
+                <span data-i18n="readerLyrics">Paroles</span>
             </button>
             <button class="bible-btn" id="bibleBtn" onclick="toggleBible()">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
                     <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                 </svg>
-                Bible
+                <span data-i18n="readerBible">Bible</span>
             </button>
         </div>
         <div class="player-controls" style="margin-top: 10px;">
@@ -565,7 +565,11 @@
             </div>
         </div>
     </div>
-    
+
+    <!-- Translations and i18n -->
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
+
     <!-- Donnees des paroles et de la Bible -->
     <script src="lyrics-data.js"></script>
     <script src="lyrics-data-v2.js"></script>
@@ -703,14 +707,15 @@
             const searchInput = document.getElementById('searchInput');
             const searchResults = document.getElementById('searchResults');
             const searchTerm = searchInput.value.trim().toLowerCase();
+            const t = window.getTranslation || ((key) => key);
 
             if (!searchTerm || searchTerm.length < 3) {
-                alert('Veuillez entrer au moins 3 caractères pour la recherche');
+                alert(t('readerSearchMinChars') || 'Veuillez entrer au moins 3 caractères pour la recherche');
                 return;
             }
 
             if (typeof bibleData === 'undefined') {
-                alert('Données bibliques non chargées');
+                alert(t('readerSearchNoData') || 'Données bibliques non chargées');
                 return;
             }
 
@@ -746,13 +751,13 @@
 
             // Afficher les résultats
             if (results.length === 0) {
-                searchResults.innerHTML = '<div class="search-stats">Aucun résultat trouvé pour "' + searchTerm + '"</div>';
+                searchResults.innerHTML = '<div class="search-stats">' + (t('readerSearchNoResults') || 'Aucun résultat trouvé pour') + ' "' + searchTerm + '"</div>';
                 searchResults.classList.add('active');
                 return;
             }
 
-            let html = '<div class="search-stats">' + totalMatches + ' verset(s) trouvé(s) pour "' + searchTerm + '"';
-            if (totalMatches > 50) html += ' (affichage des 50 premiers)';
+            let html = '<div class="search-stats">' + totalMatches + ' ' + (t('readerSearchFound') || 'verset(s) trouvé(s)') + ' "' + searchTerm + '"';
+            if (totalMatches > 50) html += ' (' + (t('readerSearchShowing') || 'affichage des 50 premiers') + ')';
             html += '</div>';
 
             results.forEach(result => {
@@ -768,7 +773,7 @@
 
                 html += '<div class="search-result-item" ' + onclick + availableClass + '>';
                 html += '<div class="result-reference">' + result.bookName + ' ' + result.chapter + ':' + result.verseNum;
-                if (!result.available) html += ' (non disponible)';
+                if (!result.available) html += ' (' + (t('readerSearchUnavailable') || 'non disponible') + ')';
                 html += '</div>';
                 html += '<div class="result-text">' + highlightedText + '</div>';
                 html += '</div>';
@@ -894,7 +899,8 @@
                 lyrics = lyrics.replace(/\[([^\]]+)\]/g, '<span class="section-label">[$1]</span>');
                 lyricsText.innerHTML = lyrics;
             } else {
-                lyricsText.innerHTML = '<div class="no-lyrics">Paroles non disponibles pour ce chapitre</div>';
+                const t = window.getTranslation || ((key) => key);
+                lyricsText.innerHTML = '<div class="no-lyrics">' + (t('readerNoLyrics') || 'Paroles non disponibles pour ce chapitre') + '</div>';
             }
 
             lyricsContainer.scrollTop = 0;
@@ -913,7 +919,8 @@
                 });
                 bibleText.innerHTML = html;
             } else {
-                bibleText.innerHTML = '<div class="no-bible">Texte biblique non disponible pour ce chapitre</div>';
+                const t = window.getTranslation || ((key) => key);
+                bibleText.innerHTML = '<div class="no-bible">' + (t('readerNoBible') || 'Texte biblique non disponible pour ce chapitre') + '</div>';
             }
             // Scroll en haut
             bibleContainer.scrollTop = 0;
@@ -926,10 +933,11 @@
             document.querySelector('.book[data-num="'+num+'"]').classList.add('playing');
             const select = document.getElementById('chapter-select');
             select.innerHTML = '';
+            const chapterWord = window.getTranslation ? getTranslation('readerChapter') : 'Chapitre';
             for (let i = 1; i <= chapters; i++) {
                 const opt = document.createElement('option');
                 opt.value = i;
-                opt.textContent = 'Chapitre ' + i;
+                opt.textContent = chapterWord + ' ' + i;
                 select.appendChild(opt);
             }
             document.getElementById('player').classList.add('active');
@@ -1140,10 +1148,30 @@
         KO: { flag: '🇰🇷', name: 'Korean', chapters: 0, total: 1189 }
     };
 
-    // Get language from URL parameter or default to FR
-    const urlParams = new URLSearchParams(window.location.search);
-    const urlLang = urlParams.get('lang');
-    let currentLanguage = (urlLang && LANGUAGES[urlLang.toUpperCase()]) ? urlLang.toUpperCase() : 'FR';
+    // Get language from i18n system (respects URL param, localStorage, and browser detection)
+    let currentLanguage = 'FR';
+
+    // Try to get language from i18n system first (it handles URL params, localStorage, browser detection)
+    if (window.i18nInstance) {
+        currentLanguage = window.i18nInstance.getCurrentLanguage();
+    } else if (window.BibleI18n) {
+        // Initialize i18n if not already initialized
+        window.BibleI18n.init();
+        currentLanguage = window.i18nInstance.getCurrentLanguage();
+    } else {
+        // Fallback to URL parameter check (for backward compatibility)
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlLang = urlParams.get('lang');
+        if (urlLang && LANGUAGES[urlLang.toUpperCase()]) {
+            currentLanguage = urlLang.toUpperCase();
+        } else {
+            // Check localStorage as final fallback
+            const saved = localStorage.getItem('selectedLanguage');
+            if (saved && LANGUAGES[saved]) {
+                currentLanguage = saved;
+            }
+        }
+    }
 
     function renderLanguageSelector() {
         const container = document.getElementById('languageSelector');

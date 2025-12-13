@@ -8,7 +8,8 @@ from pathlib import Path
 from collections import defaultdict
 
 # Configuration
-PT_DIR = Path(r"G:\Mon Drive\01 BibleChantee\Suno_Output_V2\PT")
+SCRIPT_DIR = Path(__file__).parent
+PT_DIR = SCRIPT_DIR / "Suno_Output_V2" / "PT"
 
 # Complete Bible structure (66 books)
 BIBLE_STRUCTURE = [

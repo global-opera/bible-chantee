@@ -49,7 +49,8 @@ def generate_complete_bible():
         print(f"  [{i}/66] LIVRE: {book_code}")
         print("=" * 80)
 
-        lyrics_dir = Path(f"G:/Mon Drive/01 BibleChantee/Lyrics/FR/{book_code}")
+        project_root = Path(__file__).parent.parent
+        lyrics_dir = project_root / f"Lyrics/FR/{book_code}"
 
         if not lyrics_dir.exists():
             print(f"[SKIP] Dossier introuvable: {lyrics_dir}")
@@ -62,7 +63,7 @@ def generate_complete_bible():
 
         print(f"[INFO] {len(files)} chapitres trouves")
 
-        output_dir = Path(f"G:/Mon Drive/01 BibleChantee/Suno_Output/FR/{book_code}")
+        output_dir = project_root / f"Suno_Output/FR/{book_code}"
         output_dir.mkdir(parents=True, exist_ok=True)
 
         # Traiter chaque chapitre
