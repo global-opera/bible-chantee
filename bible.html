@@ -298,11 +298,14 @@
             document.getElementById('chapter-select').value = chapter;
             document.getElementById('prev-ch').disabled = chapter <= 1;
             document.getElementById('next-ch').disabled = chapter >= currentBook.chapters;
-            
+
             const textDiv = document.getElementById('bible-text');
-            
-            if (typeof bibleData !== 'undefined' && bibleData[currentBook.num] && bibleData[currentBook.num][chapter]) {
-                const verses = bibleData[currentBook.num][chapter];
+
+            // Extraire les 2 premiers chiffres du code livre (01_GEN -> 01)
+            const bookKey = currentBook.num.substring(0, 2);
+
+            if (typeof bibleData !== 'undefined' && bibleData[bookKey] && bibleData[bookKey][chapter]) {
+                const verses = bibleData[bookKey][chapter];
                 let html = '';
                 verses.forEach(v => {
                     html += '<div class="verse"><span class="verse-number">' + v.num + '</span>' + v.text + '</div>';
@@ -311,7 +314,7 @@
             } else {
                 textDiv.innerHTML = '<p style="color: #888; text-align: center; padding: 40px;">Texte non disponible pour ce chapitre</p>';
             }
-            
+
             textDiv.scrollTop = 0;
         }
 
