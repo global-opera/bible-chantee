@@ -4,298 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bible Chantee - Presentation du Projet</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        .home-button {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            background: rgba(255, 255, 255, 0.95);
-            color: #1e3a8a;
-            border: 2px solid #1e3a8a;
-            padding: 12px 24px;
-            border-radius: 25px;
-            font-size: 1em;
-            font-weight: 600;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
-            transition: all 0.3s ease;
-            z-index: 1000;
-            text-decoration: none;
-        }
-        .home-button:hover {
-            background: #1e3a8a;
-            color: white;
-            transform: translateY(-2px);
-        }
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #1e3a8a 100%);
-            color: #e0e0e0;
-            line-height: 1.6;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .page {
-            width: 100%;
-            max-width: 1200px;
-            min-height: 700px;
-            margin: 0 auto;
-            background: white;
-            box-shadow: 0 0 30px rgba(0,0,0,0.3);
-            display: flex;
-            position: relative;
-            overflow: visible;
-            border-radius: 15px;
-        }
-        .panel {
-            flex: 1;
-            padding: 25px;
-            border-right: 1px dashed #ccc;
-            display: flex;
-            flex-direction: column;
-        }
+
+        .home-button { position: fixed; top: 20px; left: 20px; background: rgba(255, 255, 255, 0.95); color: #1e3a8a; border: 2px solid #1e3a8a; padding: 12px 24px; border-radius: 25px; font-size: 1em; font-weight: 600; cursor: pointer; box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3); transition: all 0.3s ease; z-index: 1000; text-decoration: none; }
+        .home-button:hover { background: #1e3a8a; color: white; transform: translateY(-2px); }
+
+        body { font-family: 'Montserrat', sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #1e3a8a 100%); color: #e0e0e0; line-height: 1.6; min-height: 100vh; padding: 20px; }
+
+        .page { width: 100%; max-width: 1200px; min-height: 700px; margin: 0 auto; background: white; box-shadow: 0 0 30px rgba(0,0,0,0.3); display: flex; position: relative; overflow: visible; border-radius: 15px; }
+
+        .panel { flex: 1; padding: 25px; border-right: 1px dashed #ccc; display: flex; flex-direction: column; }
         .panel:last-child { border-right: none; }
         .panel:first-child { border-radius: 15px 0 0 15px; }
         .panel:last-child { border-radius: 0 15px 15px 0; }
 
-        /* Panel 1 - Couverture */
-        .panel-1 {
-            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-            color: white;
-            text-align: center;
-            justify-content: center;
-            position: relative;
-        }
-        .panel-1::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="60" opacity="0.05" fill="%23ffffff">%E2%99%AA</text></svg>');
-            background-size: 100px;
-            opacity: 0.3;
-        }
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 42px;
-            font-weight: 700;
-            color: #fbbf24;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            position: relative;
-            z-index: 1;
-        }
-        .tagline {
-            font-size: 16px;
-            color: #fbbf24;
-            font-weight: 300;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-        .url {
-            background: #fbbf24;
-            color: #1e3a8a;
-            padding: 12px 22px;
-            border-radius: 25px;
-            font-weight: 600;
-            display: inline-block;
-            margin-top: 20px;
-            position: relative;
-            z-index: 1;
-            text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .url:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-            background: #fcd34d;
-        }
+        .panel-1 { background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); color: white; text-align: center; justify-content: center; position: relative; }
+        .panel-1::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="60" opacity="0.05" fill="%23ffffff">♪</text></svg>'); background-size: 100px; opacity: 0.3; }
 
-        /* Panel 2 - A propos */
-        .panel-2 {
-            background: #f8f9fa;
-            color: #333;
-        }
-        .panel-2 h2 {
-            font-family: 'Playfair Display', serif;
-            color: #1e3a8a;
-            font-size: 24px;
-            margin-bottom: 15px;
-            border-bottom: 3px solid #fbbf24;
-            padding-bottom: 8px;
-        }
-        .panel-2 h3 {
-            color: #1e3a8a;
-            font-size: 16px;
-            margin-top: 15px;
-            margin-bottom: 8px;
-        }
-        .panel-2 p {
-            margin-bottom: 12px;
-            font-size: 13px;
-        }
-        .highlight {
-            background: #fef3c7;
-            border-left: 4px solid #fbbf24;
-            padding: 12px;
-            margin: 12px 0;
-            border-radius: 5px;
-            font-size: 13px;
-        }
-        .stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-top: 15px;
-        }
-        .stat-box {
-            background: white;
-            border: 2px solid #1e3a8a;
-            border-radius: 10px;
-            padding: 12px;
-            text-align: center;
-        }
-        .stat-number {
-            font-size: 28px;
-            font-weight: 700;
-            color: #2563eb;
-        }
-        .stat-label {
-            font-size: 11px;
-            color: #666;
-            text-transform: uppercase;
-        }
+        .logo { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; color: #fbbf24; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); position: relative; z-index: 1; }
+        .tagline { font-size: 16px; color: #fbbf24; font-weight: 300; margin-bottom: 20px; position: relative; z-index: 1; }
+        .url { background: #fbbf24; color: #1e3a8a; padding: 12px 22px; border-radius: 25px; font-weight: 600; display: inline-block; margin-top: 20px; position: relative; z-index: 1; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+        .url:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.4); background: #fcd34d; }
 
-        /* Panel 3 - Droits d'auteur */
-        .panel-3 {
-            background: linear-gradient(180deg, #ffffff 0%, #f0f0f0 100%);
-            color: #333;
-        }
-        .panel-3 h2 {
-            font-family: 'Playfair Display', serif;
-            color: #1e3a8a;
-            font-size: 24px;
-            margin-bottom: 15px;
-            border-bottom: 3px solid #fbbf24;
-            padding-bottom: 8px;
-        }
-        .copyright-section {
-            background: white;
-            border: 2px solid #1e3a8a;
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 15px;
-        }
-        .copyright-section h3 {
-            color: #1e3a8a;
-            font-size: 15px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .copyright-section h3::before {
-            content: '(c)';
-            background: #fbbf24;
-            color: #1e3a8a;
-            width: 26px;
-            height: 26px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 10px;
-            font-weight: bold;
-            font-size: 10px;
-        }
-        .copyright-section ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        .copyright-section li {
-            padding: 5px 0;
-            padding-left: 20px;
-            position: relative;
-            font-size: 12px;
-        }
-        .copyright-section li::before {
-            content: '+';
-            position: absolute;
-            left: 0;
-            color: #fbbf24;
-            font-weight: bold;
-            font-size: 16px;
-        }
-        .footer-box {
-            background: #1e3a8a;
-            color: white;
-            padding: 12px;
-            border-radius: 10px;
-            text-align: center;
-            margin-top: auto;
-        }
-        .footer-box strong {
-            color: #fbbf24;
-            font-size: 14px;
-        }
+        .panel-2 { background: #f8f9fa; color: #333; }
+        .panel-2 h2 { font-family: 'Playfair Display', serif; color: #1e3a8a; font-size: 24px; margin-bottom: 15px; border-bottom: 3px solid #fbbf24; padding-bottom: 8px; }
+        .panel-2 h3 { color: #1e3a8a; font-size: 16px; margin-top: 15px; margin-bottom: 8px; }
+        .panel-2 p { margin-bottom: 12px; font-size: 13px; }
 
-        @media print {
-            body { background: white; padding: 0; }
-            .page { margin: 0; box-shadow: none; width: 297mm; min-height: 210mm; border-radius: 0; }
-            .panel:first-child, .panel:last-child { border-radius: 0; }
-            .print-footer { display: none; }
-        }
+        .highlight { background: #fef3c7; border-left: 4px solid #fbbf24; padding: 12px; margin: 12px 0; border-radius: 5px; font-size: 13px; }
 
-        @media (max-width: 900px) {
-            .page { flex-direction: column; border-radius: 15px; }
-            .panel { border-right: none; border-bottom: 1px dashed #ccc; }
-            .panel:last-child { border-bottom: none; }
-            .panel:first-child { border-radius: 15px 15px 0 0; }
-            .panel:last-child { border-radius: 0 0 15px 15px; }
-        }
+        .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 15px; }
+        .stat-box { background: white; border: 2px solid #1e3a8a; border-radius: 10px; padding: 12px; text-align: center; }
+        .stat-number { font-size: 28px; font-weight: 700; color: #2563eb; }
+        .stat-label { font-size: 11px; color: #666; text-transform: uppercase; }
+
+        .panel-3 { background: linear-gradient(180deg, #ffffff 0%, #f0f0f0 100%); color: #333; }
+        .panel-3 h2 { font-family: 'Playfair Display', serif; color: #1e3a8a; font-size: 24px; margin-bottom: 15px; border-bottom: 3px solid #fbbf24; padding-bottom: 8px; }
+
+        .copyright-section { background: white; border: 2px solid #1e3a8a; border-radius: 10px; padding: 15px; margin-bottom: 15px; }
+        .copyright-section h3 { color: #1e3a8a; font-size: 15px; margin-bottom: 10px; display: flex; align-items: center; }
+        .copyright-section h3::before { content: '©'; background: #fbbf24; color: #1e3a8a; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-weight: bold; font-size: 10px; }
+        .copyright-section ul { list-style: none; padding-left: 0; }
+        .copyright-section li { padding: 5px 0; padding-left: 20px; position: relative; font-size: 12px; }
+        .copyright-section li::before { content: '+'; position: absolute; left: 0; color: #fbbf24; font-weight: bold; font-size: 16px; }
+
+        .footer-box { background: #1e3a8a; color: white; padding: 12px; border-radius: 10px; text-align: center; margin-top: auto; }
+        .footer-box strong { color: #fbbf24; font-size: 14px; }
+
+        @media print { body { background: white; padding: 0; } .page { margin: 0; box-shadow: none; width: 297mm; min-height: 210mm; border-radius: 0; } .panel:first-child, .panel:last-child { border-radius: 0; } }
+
+        @media (max-width: 900px) { .page { flex-direction: column; border-radius: 15px; } .panel { border-right: none; border-bottom: 1px dashed #ccc; } .panel:last-child { border-bottom: none; } .panel:first-child { border-radius: 15px 15px 0 0; } .panel:last-child { border-radius: 0 0 15px 15px; } }
     </style>
 </head>
 <body>
-    <a href="index.html" class="home-button">&#8592; Retour Accueil</a>
+    <a href="index.html" class="home-button">← Retour Accueil</a>
+
     <div class="page">
-        <!-- Panel 1 - Couverture -->
+        <!-- Panel 1: Cover -->
         <div class="panel panel-1">
-            <div>
-                <div class="logo">Bible Chantee</div>
-                <div class="tagline">La Parole de Dieu en musique worship</div>
-                <div style="font-size: 14px; margin: 15px 0; line-height: 1.8; position: relative; z-index: 1;">
-                    66 livres - 1189 chapitres<br>
-                    12 langues - 1.8 milliard de personnes<br>
-                    Style Worship contemporain
-                </div>
-                <a href="https://biblechantee.com/" target="_blank" class="url">biblechantee.com</a>
+            <div class="logo">Bible Chantee</div>
+            <div class="tagline">La Parole de Dieu en musique worship</div>
+            <div style="margin-top: 20px;">
+                <div>66 livres - 1189 chapitres</div>
+                <div>12 langues - 1.8 milliard de personnes</div>
+                <div>Style Worship contemporain</div>
             </div>
+            <a href="https://biblechantee.com/" class="url">biblechantee.com</a>
         </div>
 
-        <!-- Panel 2 - A propos -->
+        <!-- Panel 2: About -->
         <div class="panel panel-2">
             <h2>A propos du Projet</h2>
+            <p><strong>Bible Chantee</strong> est un projet missionnaire chretien qui transforme l'integralite de la Bible en musique worship contemporaine, en 12 langues.</p>
 
-            <p>
-                <strong>Bible Chantee</strong> est un projet missionnaire chretien qui transforme
-                l'integralite de la Bible en musique worship contemporaine, en 12 langues.
-            </p>
-
-            <div class="highlight">
-                <strong>Une experience unique :</strong><br>
-                Chaque chapitre biblique est mis en musique avec une qualite professionnelle
-                et des paroles poetiques originales.
-            </div>
+            <div class="highlight"><strong>Une experience unique :</strong> Chaque chapitre biblique est mis en musique avec une qualite professionnelle et des paroles poetiques originales.</div>
 
             <h3>Caracteristiques</h3>
-            <ul style="list-style: none; padding-left: 0; font-size: 12px;">
-                <li style="padding: 3px 0;">* Musique worship contemporaine IA</li>
-                <li style="padding: 3px 0;">* Paroles poetiques originales</li>
-                <li style="padding: 3px 0;">* Accessible en ligne gratuitement</li>
-                <li style="padding: 3px 0;">* Compatible mobile et desktop</li>
+            <ul style="list-style: none; padding-left: 0; font-size: 13px;">
+                <li style="padding-left: 20px; position: relative;">
+                    <span style="position: absolute; left: 0; color: #fbbf24; font-weight: bold;">✓</span>
+                    Musique worship contemporaine IA
+                </li>
+                <li style="padding-left: 20px; position: relative;">
+                    <span style="position: absolute; left: 0; color: #fbbf24; font-weight: bold;">✓</span>
+                    Paroles poetiques originales
+                </li>
+                <li style="padding-left: 20px; position: relative;">
+                    <span style="position: absolute; left: 0; color: #fbbf24; font-weight: bold;">✓</span>
+                    Accessible en ligne gratuitement
+                </li>
+                <li style="padding-left: 20px; position: relative;">
+                    <span style="position: absolute; left: 0; color: #fbbf24; font-weight: bold;">✓</span>
+                    Compatible mobile et desktop
+                </li>
             </ul>
 
             <div class="stats">
@@ -308,22 +111,20 @@
                     <div class="stat-label">Chapitres</div>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-number">1069</div>
-                    <div class="stat-label">MP3 FR generes</div>
+                    <div class="stat-number">1552</div>
+                    <div class="stat-label">MP3 Total (FR+PT)</div>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-number">89.9%</div>
-                    <div class="stat-label">Progression FR</div>
+                    <div class="stat-number">10.9%</div>
+                    <div class="stat-label">Progression 12 langues</div>
                 </div>
             </div>
 
-            <h3 style="margin-top: 15px;">Technologie</h3>
-            <p style="font-size: 11px;">
-                Production musicale Suno AI, interface web responsive.
-            </p>
+            <h3>Technologie</h3>
+            <p>Production musicale Suno AI, interface web responsive.</p>
         </div>
 
-        <!-- Panel 3 - Droits d'auteur -->
+        <!-- Panel 3: Copyright -->
         <div class="panel panel-3">
             <h2>Droits d'Auteur</h2>
 
@@ -353,17 +154,12 @@
             </div>
 
             <div class="footer-box">
-                <strong>(c) 2025 Bible Chantee</strong><br>
-                <span style="font-size: 11px; line-height: 1.4; display: inline-block;">
-                    Stephane Cassani - Suisse<br>
-                    global.opera.biblechantee@gmail.com
-                </span>
+                <strong>© 2025 Bible Chantee</strong><br>
+                Stephane Cassani - Suisse<br>
+                global.opera.biblechantee@gmail.com<br>
+                <small style="display: block; margin-top: 10px;">Document imprimable - Format depliant A4 paysage</small>
             </div>
         </div>
-    </div>
-
-    <div class="print-footer" style="text-align: center; padding: 20px; color: white; font-size: 12px;">
-        Document imprimable - Format depliant A4 paysage
     </div>
 </body>
 </html>
