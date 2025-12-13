@@ -2,20 +2,67 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Bible Chant&eacute;e - La Parole de Dieu en musique</title>
-  <meta name="description" content="Bible Chant&eacute;e est un projet missionnaire chr&eacute;tien international rendant toute la Bible accessible en musique dans 12 langues.">
+  <title data-i18n="siteName">Bible Chantée</title>
+  <meta name="description" content="Bible Chantée - Toute la Parole de Dieu en musique dans 12 langues">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    
+
     body {
       font-family: 'Inter', Arial, sans-serif;
       background: #0f172a;
       color: #e5e7eb;
       line-height: 1.7;
+    }
+
+    /* Language Selector Styles */
+    .language-selector-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: rgba(30, 41, 59, 0.95);
+      padding: 10px 15px;
+      border-radius: 25px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      border: 2px solid rgba(147, 197, 253, 0.3);
+    }
+
+    .language-selector {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .language-selector label {
+      color: #93c5fd;
+      font-size: 0.9em;
+      font-weight: 600;
+    }
+
+    .language-selector select {
+      padding: 8px 12px;
+      font-size: 0.95em;
+      border-radius: 8px;
+      border: 2px solid rgba(147, 197, 253, 0.3);
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+      cursor: pointer;
+      font-weight: 600;
+      outline: none;
+      transition: all 0.3s;
+    }
+
+    .language-selector select:hover {
+      border-color: #60a5fa;
+      background: rgba(15, 23, 42, 1);
+    }
+
+    .language-selector select:focus {
+      border-color: #3b82f6;
     }
 
     header {
@@ -25,7 +72,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     header::before {
       content: '';
       position: absolute;
@@ -98,7 +145,7 @@
       align-items: center;
       gap: 12px;
     }
-    
+
     h2 .icon {
       font-size: 1.2em;
     }
@@ -107,7 +154,7 @@
       padding-left: 25px;
       margin: 15px 0;
     }
-    
+
     ul li {
       margin-bottom: 10px;
     }
@@ -116,7 +163,7 @@
       color: #60a5fa;
       font-weight: 600;
     }
-    
+
     .status-done {
       background: linear-gradient(90deg, #22c55e, #16a34a);
       color: white;
@@ -125,7 +172,7 @@
       font-size: 0.85em;
       font-weight: 600;
     }
-    
+
     .status-progress {
       background: linear-gradient(90deg, #f59e0b, #d97706);
       color: white;
@@ -164,22 +211,22 @@
       box-shadow: 0 6px 25px rgba(37, 99, 235, 0.5);
       background: linear-gradient(135deg, #3b82f6, #2563eb);
     }
-    
+
     .btn-gold {
       background: linear-gradient(135deg, #d4af37, #b8860b);
       box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
     }
-    
+
     .btn-gold:hover {
       background: linear-gradient(135deg, #f0c850, #d4af37);
       box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
     }
-    
+
     .btn-secondary {
       background: linear-gradient(135deg, #475569, #334155);
       box-shadow: 0 4px 15px rgba(71, 85, 105, 0.3);
     }
-    
+
     .btn-secondary:hover {
       background: linear-gradient(135deg, #64748b, #475569);
       box-shadow: 0 6px 25px rgba(71, 85, 105, 0.5);
@@ -196,7 +243,7 @@
       gap: 20px;
       margin-top: 20px;
     }
-    
+
     .stat-card {
       background: rgba(37, 99, 235, 0.1);
       border: 1px solid rgba(37, 99, 235, 0.3);
@@ -204,14 +251,14 @@
       padding: 20px;
       text-align: center;
     }
-    
+
     .stat-number {
       font-family: 'Playfair Display', Georgia, serif;
       font-size: 2.2em;
       color: #60a5fa;
       font-weight: 700;
     }
-    
+
     .stat-label {
       color: #94a3b8;
       font-size: 0.9em;
@@ -226,7 +273,7 @@
       padding: 25px;
       text-align: center;
     }
-    
+
     .mission-box p {
       font-size: 1.15em;
       color: #fbbf24;
@@ -240,18 +287,18 @@
       color: #9ca3af;
       border-top: 1px solid #1e293b;
     }
-    
+
     footer a {
       color: #60a5fa;
       text-decoration: none;
       margin: 0 10px;
     }
-    
+
     footer a:hover {
       color: #93c5fd;
       text-decoration: underline;
     }
-    
+
     .footer-links {
       margin-bottom: 15px;
     }
@@ -261,15 +308,45 @@
       header p { font-size: 1em; }
       nav a { margin: 0 8px; font-size: 0.85em; }
       .btns-grid { grid-template-columns: 1fr; }
+      .language-selector-container {
+        top: 10px;
+        right: 10px;
+        padding: 8px 12px;
+      }
+      .language-selector {
+        flex-direction: column;
+        gap: 5px;
+      }
     }
   </style>
 </head>
 
 <body>
 
+<!-- Language Selector -->
+<div class="language-selector-container">
+  <div class="language-selector">
+    <label>🌐</label>
+    <select id="globalLanguageSelector">
+      <option value="FR">🇫🇷 Français</option>
+      <option value="EN">🇬🇧 English</option>
+      <option value="ES">🇪🇸 Español</option>
+      <option value="PT">🇵🇹 Português</option>
+      <option value="DE">🇩🇪 Deutsch</option>
+      <option value="IT">🇮🇹 Italiano</option>
+      <option value="RU">🇷🇺 Русский</option>
+      <option value="AR">🇸🇦 العربية</option>
+      <option value="ZH">🇨🇳 中文</option>
+      <option value="HI">🇮🇳 हिन्दी</option>
+      <option value="TL">🇵🇭 Tagalog</option>
+      <option value="KO">🇰🇷 한국어</option>
+    </select>
+  </div>
+</div>
+
 <header>
-  <h1>Bible Chant&eacute;e</h1>
-  <p>Toute la Parole de Dieu en musique &ndash; 12 langues</p>
+  <h1 data-i18n="siteName">Bible Chantée</h1>
+  <p data-i18n="tagline">Toute la Parole de Dieu en musique – 12 langues</p>
   <div style="margin-top: 25px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 900px; margin-left: auto; margin-right: auto;">
     <span style="background: rgba(255,255,255,0.15); padding: 8px 14px; border-radius: 20px; font-size: 0.85em;">ES <span style="opacity:0.7">(470M)</span></span>
     <span style="background: rgba(255,255,255,0.15); padding: 8px 14px; border-radius: 20px; font-size: 0.85em;">EN <span style="opacity:0.7">(540M)</span></span>
@@ -284,168 +361,147 @@
     <span style="background: rgba(255,255,255,0.15); padding: 8px 14px; border-radius: 20px; font-size: 0.85em;">KO <span style="opacity:0.7">(15M)</span></span>
     <span style="background: rgba(255,255,255,0.15); padding: 8px 14px; border-radius: 20px; font-size: 0.85em;">AR <span style="opacity:0.7">(15M)</span></span>
   </div>
-  <p style="margin-top: 15px; font-size: 0.95em; opacity: 0.85;"><strong>1.8 milliard</strong> de chr&eacute;tiens dans le monde</p>
+  <p style="margin-top: 15px; font-size: 0.95em; opacity: 0.85;" data-i18n="totalChristians"><strong>1.8 milliard</strong> de chrétiens dans le monde</p>
 </header>
 
 <nav>
-  <a href="#projet">Le Projet</a>
-  <a href="#ecouter">Ecouter</a>
-  <a href="#eglises">Eglises</a>
-  <a href="#mission">Mission</a>
-  <a href="#soutenir">Soutenir</a>
-  <a href="about.html">&Agrave; propos</a>
-  <a href="#contact">Contact</a>
+  <a href="#projet" data-i18n="navProject">Le Projet</a>
+  <a href="#ecouter" data-i18n="navListen">Ecouter</a>
+  <a href="#eglises" data-i18n="navChurches">Eglises</a>
+  <a href="#mission" data-i18n="navMission">Mission</a>
+  <a href="#soutenir" data-i18n="navSupport">Soutenir</a>
+  <a href="about.html" data-i18n="navAbout">À propos</a>
+  <a href="#contact" data-i18n="navContact">Contact</a>
 </nav>
 
 <main>
 
   <div class="bloc" id="projet">
-    <h2><span class="icon">&#128214;</span> Le projet</h2>
-    <p>
-      Bible Chant&eacute;e est un projet missionnaire chr&eacute;tien international dont la vision est de rendre
+    <h2><span class="icon">📖</span> <span data-i18n="projectTitle">Le projet</span></h2>
+    <p data-i18n="projectDesc1">
+      Bible Chantée est un projet missionnaire chrétien international dont la vision est de rendre
       la Parole de Dieu accessible en musique, <strong>chapitre par chapitre</strong>, dans 12 langues.
     </p>
-    <p style="margin-top: 15px;">
-      Le projet s'adresse aux enfants, familles, personnes &acirc;g&eacute;es, personnes qui ne savent pas lire,
-      nouveaux convertis, ainsi qu'aux &eacute;glises pour la louange, l'enseignement, la pri&egrave;re et l'&eacute;vang&eacute;lisation.
+    <p style="margin-top: 15px;" data-i18n="projectDesc2">
+      Le projet s'adresse aux enfants, familles, personnes âgées, personnes qui ne savent pas lire,
+      nouveaux convertis, ainsi qu'aux églises pour la louange, l'enseignement, la prière et l'évangélisation.
     </p>
-    
+
     <div class="stats-grid">
       <div class="stat-card">
         <div class="stat-number">1189</div>
-        <div class="stat-label">chapitres</div>
+        <div class="stat-label" data-i18n="statChapters">chapitres</div>
       </div>
       <div class="stat-card">
         <div class="stat-number">12</div>
-        <div class="stat-label">langues</div>
+        <div class="stat-label" data-i18n="statLanguages">langues</div>
       </div>
       <div class="stat-card">
         <div class="stat-number">66</div>
-        <div class="stat-label">livres</div>
+        <div class="stat-label" data-i18n="statBooks">livres</div>
       </div>
       <div class="stat-card">
         <div class="stat-number">1.8</div>
-        <div class="stat-label">milliard de personnes</div>
+        <div class="stat-label" data-i18n="statPeople">milliard de personnes</div>
       </div>
     </div>
   </div>
 
   <div class="bloc">
-    <h2><span class="icon">&#127760;</span> Vision mondiale</h2>
+    <h2><span class="icon">🌐</span> <span data-i18n="visionTitle">Vision mondiale</span></h2>
     <ul>
-      <li>Version fran&ccedil;aise : <span class="status-done">Termin&eacute;e</span></li>
-      <li>Version portugaise : <span class="status-progress">En cours</span></li>
-      <li>10 autres langues : en pr&eacute;paration (anglais, espagnol, allemand, russe, arabe, chinois, hindi, tagalog...)</li>
-      <li>Diffusion : site web, application mobile, YouTube, plateformes streaming</li>
+      <li><span data-i18n="visionFrench">Version française :</span> <span class="status-done" data-i18n="visionFrenchStatus">Terminée</span></li>
+      <li><span data-i18n="visionPortuguese">Version portugaise :</span> <span class="status-progress" data-i18n="visionPortugueseStatus">En cours</span></li>
+      <li data-i18n="visionOthers">10 autres langues : en préparation (anglais, espagnol, allemand, russe, arabe, chinois, hindi, tagalog...)</li>
+      <li data-i18n="visionDiffusion">Diffusion : site web, application mobile, YouTube, plateformes streaming</li>
     </ul>
   </div>
 
   <div class="bloc" id="ecouter">
-    <h2><span class="icon">&#127925;</span> Ecouter la Bible Chant&eacute;e</h2>
-    <p>
-      Acc&eacute;dez &agrave; l'int&eacute;gralit&eacute; de la Bible mise en musique. Choisissez un livre, un chapitre,
+    <h2><span class="icon">🎵</span> <span data-i18n="listenTitle">Ecouter la Bible Chantée</span></h2>
+    <p data-i18n="listenDesc">
+      Accédez à l'intégralité de la Bible mise en musique. Choisissez un livre, un chapitre,
       et laissez-vous porter par la Parole de Dieu en musique.
     </p>
 
-    <!-- Language Selector -->
-    <div style="margin-bottom: 20px;">
-      <label style="display: block; margin-bottom: 10px; font-weight: 600; color: #93c5fd;">
-        <span class="icon">&#127760;</span> Choisir une langue:
-      </label>
-      <select id="languageSelector" style="width: 100%; padding: 12px; font-size: 1em; border-radius: 8px; border: 2px solid rgba(147, 197, 253, 0.3); background: rgba(30, 41, 59, 0.8); color: #e5e7eb; cursor: pointer; font-weight: 600;">
-        <option value="FR" selected>🇫🇷 Français (FR)</option>
-        <option value="PT">🇵🇹 Português (PT)</option>
-        <option value="EN">🇬🇧 English (EN)</option>
-        <option value="ES">🇪🇸 Español (ES)</option>
-        <option value="DE">🇩🇪 Deutsch (DE)</option>
-        <option value="IT">🇮🇹 Italiano (IT)</option>
-        <option value="AR">🇸🇦 العربية (AR)</option>
-        <option value="RU">🇷🇺 Русский (RU)</option>
-        <option value="ZH">🇨🇳 中文 (ZH)</option>
-        <option value="TL">🇵🇭 Tagalog (TL)</option>
-        <option value="SW">🇰🇪 Kiswahili (SW)</option>
-        <option value="HI">🇮🇳 हिन्दी (HI)</option>
-      </select>
-    </div>
-
     <div class="btns-grid">
       <a href="bible.html" class="btn btn-secondary" data-page="bible">
-        <span class="btn-icon">&#128216;</span> Bible (texte)
+        <span class="btn-icon">📖</span> <span data-i18n="btnBibleText">Bible (texte)</span>
       </a>
       <a href="promesses.html" class="btn btn-gold" data-page="promesses">
-        <span class="btn-icon">&#9733;</span> Promesses bibliques
+        <span class="btn-icon">⭐</span> <span data-i18n="btnPromises">Promesses bibliques</span>
       </a>
       <a href="confessions.html" class="btn btn-gold" data-page="confessions">
-        <span class="btn-icon">&#10084;</span> 10 Confessions de foi
+        <span class="btn-icon">❤</span> <span data-i18n="btnConfessions">10 Confessions de foi</span>
       </a>
     </div>
   </div>
 
   <div class="bloc" id="eglises">
-    <h2><span class="icon">&#9962;</span> Pour les &eacute;glises</h2>
-    <p>
-      Bible Chant&eacute;e est un outil pour la louange, l'enseignement, les groupes de maison,
-      la jeunesse, les enfants et l'&eacute;vang&eacute;lisation.
+    <h2><span class="icon">⛪</span> <span data-i18n="churchesTitle">Pour les églises</span></h2>
+    <p data-i18n="churchesDesc">
+      Bible Chantée est un outil pour la louange, l'enseignement, les groupes de maison,
+      la jeunesse, les enfants et l'évangélisation.
     </p>
-    <p style="margin-top: 15px;">
-      Des <span class="highlight">licences &eacute;glises</span> permettront l'utilisation r&eacute;guli&egrave;re au culte, la diffusion,
-      la projection et l'int&eacute;gration dans les activit&eacute;s communautaires.
+    <p style="margin-top: 15px;" data-i18n="churchesLicense">
+      Des <span class="highlight">licences églises</span> permettront l'utilisation régulière au culte, la diffusion,
+      la projection et l'intégration dans les activités communautaires.
     </p>
   </div>
 
   <div class="bloc" id="mission">
-    <h2><span class="icon">&#10084;</span> Engagement missionnaire</h2>
-    <p>
-      Bible Chant&eacute;e est un projet &agrave; vocation spirituelle et missionnaire.
+    <h2><span class="icon">❤</span> <span data-i18n="missionTitle">Engagement missionnaire</span></h2>
+    <p data-i18n="missionDesc">
+      Bible Chantée est un projet à vocation spirituelle et missionnaire.
     </p>
     <div class="mission-box" style="margin-top: 20px;">
-      <p><strong>10 % des b&eacute;n&eacute;fices nets seront revers&eacute;s &agrave; des oeuvres missionnaires chr&eacute;tiennes.</strong></p>
+      <p data-i18n="missionCommitment"><strong>10 % des bénéfices nets seront reversés à des oeuvres missionnaires chrétiennes.</strong></p>
     </div>
   </div>
 
   <div class="bloc" id="soutenir">
-    <h2><span class="icon">&#129309;</span> Soutenir le projet</h2>
-    <p>
-      Une campagne de financement participatif est pr&eacute;vue afin de permettre
-      le d&eacute;ploiement mondial de l'application mobile, du site multilingue et de la diffusion.
+    <h2><span class="icon">🤝</span> <span data-i18n="supportTitle">Soutenir le projet</span></h2>
+    <p data-i18n="supportDesc">
+      Une campagne de financement participatif est prévue afin de permettre
+      le déploiement mondial de l'application mobile, du site multilingue et de la diffusion.
     </p>
-    <p style="margin-top: 15px;">
-      Vous pouvez d&egrave;s maintenant nous contacter pour en savoir plus sur les opportunit&eacute;s de partenariat.
+    <p style="margin-top: 15px;" data-i18n="supportContact">
+      Vous pouvez dès maintenant nous contacter pour en savoir plus sur les opportunités de partenariat.
     </p>
     <div style="margin-top: 25px; text-align: center;">
       <a href="crowdfunding.html" class="btn btn-gold" style="display: inline-block; padding: 15px 35px; font-size: 1.1em;">
-        &#128176; Soutenir le projet
+        💰 <span data-i18n="supportBtn">Soutenir le projet</span>
       </a>
     </div>
   </div>
 
   <div class="bloc">
-    <h2><span class="icon">&#128640;</span> Acc&egrave;s rapides</h2>
+    <h2><span class="icon">🚀</span> <span data-i18n="quickAccessTitle">Accès rapides</span></h2>
     <div class="btns-grid">
       <a href="bible.html" class="btn btn-secondary">
-        <span class="btn-icon">&#128216;</span> Bible (texte)
+        <span class="btn-icon">📖</span> <span data-i18n="btnBibleText">Bible (texte)</span>
       </a>
       <a href="promesses.html" class="btn btn-gold">
-        <span class="btn-icon">&#9733;</span> Promesses
+        <span class="btn-icon">⭐</span> <span data-i18n="btnPromises">Promesses</span>
       </a>
       <a href="confessions.html" class="btn btn-gold">
-        <span class="btn-icon">&#10084;</span> Confessions
+        <span class="btn-icon">❤</span> <span data-i18n="btnConfessions">Confessions</span>
       </a>
       <a href="credits-depliant.html" class="btn">
-        <span class="btn-icon">&#128196;</span> Presentation
+        <span class="btn-icon">📄</span> <span data-i18n="btnPresentation">Presentation</span>
       </a>
       <a href="mailto:global.opera.biblechantee@gmail.com" class="btn btn-secondary">
-        <span class="btn-icon">&#9993;</span> Email
+        <span class="btn-icon">✉</span> <span data-i18n="btnEmail">Email</span>
       </a>
     </div>
   </div>
 
   <div class="bloc" id="contact">
-    <h2><span class="icon">&#128236;</span> Contact</h2>
+    <h2><span class="icon">📬</span> <span data-i18n="contactTitle">Contact</span></h2>
     <p>
-      Email officiel du projet : <strong>global.opera.biblechantee@gmail.com</strong>
+      <span data-i18n="contactEmail">Email officiel du projet :</span> <strong>global.opera.biblechantee@gmail.com</strong>
     </p>
-    <p style="margin-top: 10px;">
+    <p style="margin-top: 10px;" data-i18n="contactLocation">
       Localisation : Suisse
     </p>
   </div>
@@ -454,61 +510,137 @@
 
 <footer>
   <div class="footer-links">
-    <a href="mentions-legales.html">Mentions l&eacute;gales</a> |
-    <a href="credits-depliant.html">Cr&eacute;dits</a> |
+    <a href="mentions-legales.html" data-i18n="footerLegal">Mentions légales</a> |
+    <a href="credits-depliant.html" data-i18n="footerCredits">Crédits</a> |
   </div>
-  <p>Bible Chant&eacute;e &ndash; Projet missionnaire chr&eacute;tien international</p>
-  <p>&copy; 2025 St&eacute;phane Cassani &ndash; Tous droits r&eacute;serv&eacute;s</p>
+  <p data-i18n="footerMission">Bible Chantée – Projet missionnaire chrétien international</p>
+  <p data-i18n="footerCopyright">&copy; 2025 Stéphane Cassani – Tous droits réservés</p>
 </footer>
 
+<!-- Load translations -->
+<script src="translations.js"></script>
+
 <script>
-// Language Selection System
+// Multi-language translation system
 (function() {
-  const languageSelector = document.getElementById('languageSelector');
-  const pageButtons = document.querySelectorAll('a[data-page]');
+  const languageSelector = document.getElementById('globalLanguageSelector');
 
-  // Load saved language preference
-  const savedLang = localStorage.getItem('selectedLanguage') || 'FR';
-  languageSelector.value = savedLang;
+  // Load language from URL, localStorage, or browser
+  function getInitialLanguage() {
+    const validLangs = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];
 
-  // Save language preference when changed
-  languageSelector.addEventListener('change', function() {
-    localStorage.setItem('selectedLanguage', this.value);
-    updateButtonLinks();
-  });
+    // Priority 1: URL parameter ?lang=XX
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+    if (urlLang) {
+      const langCode = urlLang.toUpperCase();
+      if (validLangs.includes(langCode)) {
+        localStorage.setItem('selectedLanguage', langCode);
+        return langCode;
+      }
+    }
 
-  // Update button links based on selected language
-  function updateButtonLinks() {
-    const selectedLang = languageSelector.value;
+    // Priority 2: localStorage (user's previous choice)
+    const saved = localStorage.getItem('selectedLanguage');
+    if (saved && validLangs.includes(saved)) {
+      return saved;
+    }
 
-    // Available content by language and page
-    const availableContent = {
-      'FR': ['bible', 'promesses', 'confessions'],
-      'PT': [] // Only lecteur available for PT (built-in multi-lang)
+    // Priority 3: Detect browser language
+    const browserLang = navigator.language || navigator.userLanguage;
+    const langCode = browserLang.split('-')[0].toUpperCase();
+
+    const langMap = {
+      'FR': 'FR', 'EN': 'EN', 'ES': 'ES', 'PT': 'PT',
+      'DE': 'DE', 'IT': 'IT', 'RU': 'RU', 'AR': 'AR',
+      'ZH': 'ZH', 'HI': 'HI', 'TL': 'TL', 'KO': 'KO'
     };
 
-    pageButtons.forEach(button => {
-      const pageName = button.getAttribute('data-page');
+    return langMap[langCode] || 'FR';
+  }
 
-      // Check if content is available for this language
-      const isAvailable = availableContent[selectedLang]?.includes(pageName);
+  const currentLang = getInitialLanguage();
+  languageSelector.value = currentLang;
 
-      if (!isAvailable && selectedLang !== 'FR') {
-        // Redirect to coming soon page for unavailable content
-        button.href = `coming-soon.html?lang=${selectedLang}&page=${pageName}`;
-      } else {
-        // For other available pages
-        const langSuffix = selectedLang === 'FR' ? '' : `-${selectedLang.toLowerCase()}`;
-        button.href = `${pageName}${langSuffix}.html`;
+  // Apply translations to page
+  function applyTranslations(lang) {
+    const trans = translations[lang] || translations['FR'];
+
+    // Update all elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      if (trans[key]) {
+        // Handle elements with HTML content (like bold tags)
+        if (element.innerHTML.includes('<strong>') || element.innerHTML.includes('<span')) {
+          // Preserve HTML structure when possible
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = trans[key];
+          if (tempDiv.textContent) {
+            element.textContent = trans[key];
+          }
+        } else {
+          element.textContent = trans[key];
+        }
       }
+    });
+
+    // Update page title
+    document.title = trans.siteName || 'Bible Chantée';
+
+    // Update HTML lang attribute
+    const langAttrMap = {
+      'FR': 'fr', 'EN': 'en', 'ES': 'es', 'PT': 'pt',
+      'DE': 'de', 'IT': 'it', 'RU': 'ru', 'AR': 'ar',
+      'ZH': 'zh', 'HI': 'hi', 'TL': 'tl', 'KO': 'ko'
+    };
+    document.documentElement.lang = langAttrMap[lang] || 'fr';
+
+    // Special handling for RTL languages
+    if (lang === 'AR') {
+      document.body.dir = 'rtl';
+    } else {
+      document.body.dir = 'ltr';
+    }
+
+    // CRITICAL: Preserve language in all links
+    preserveLanguageInLinks(lang);
+  }
+
+  // UNIVERSAL LINK FIXER - Preserve language across all navigation
+  function preserveLanguageInLinks(lang) {
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+
+      // Skip external links, mailto, anchors, javascript
+      if (!href ||
+          href.startsWith('http://') ||
+          href.startsWith('https://') ||
+          href.startsWith('mailto:') ||
+          href.startsWith('#') ||
+          href.startsWith('javascript:')) {
+        return;
+      }
+
+      // Skip if already has lang parameter
+      if (href.includes('?lang=') || href.includes('&lang=')) {
+        return;
+      }
+
+      // Add language parameter
+      const separator = href.includes('?') ? '&' : '?';
+      link.setAttribute('href', href + separator + 'lang=' + lang);
     });
   }
 
-  // Initialize button links
-  updateButtonLinks();
+  // Apply initial translations
+  applyTranslations(currentLang);
 
-  // Update links when language changes
-  languageSelector.addEventListener('change', updateButtonLinks);
+  // Save language preference and reload translations when changed
+  languageSelector.addEventListener('change', function() {
+    const newLang = this.value;
+    localStorage.setItem('selectedLanguage', newLang);
+    applyTranslations(newLang);
+  });
 })();
 </script>
 
