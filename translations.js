@@ -919,3 +919,99 @@ const translations = {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = translations;
 }
+
+// Extended translations for About page
+Object.keys(translations).forEach(lang => {
+  const t = translations[lang];
+  
+  // About page translations
+  if (lang === 'FR') {
+    t.aboutPageTitle = "À propos - Bible Chantée";
+    t.aboutTagline = "La Parole de Dieu en musique";
+    t.navHome = "Accueil";
+    t.aboutProjectTitle = "À propos du projet";
+    t.aboutProjectDesc1 = "Bible Chantée est un projet musical spirituel visant à mettre en musique les 1189 chapitres de la Bible en 12 langues.";
+    t.aboutProjectDesc2 = "Toutes les compositions sont originales. Les paroles sont basées sur les textes bibliques du domaine public.";
+    t.aboutListenTitle = "Écoutez Bible Chantée";
+    t.aboutListenDesc = "Retrouvez nos musiques sur vos plateformes de streaming préférées :";
+    t.aboutUsageTitle = "Utilisation autorisée";
+    t.aboutUsageDesc = "Vous êtes libre d'utiliser ces musiques dans un cadre :";
+    t.aboutUsageSpiritual = "Spirituel";
+    t.aboutUsageSpiritualDetail = "(églises, cultes, méditations)";
+    t.aboutUsageEducational = "Éducatif";
+    t.aboutUsageEducationalDetail = "(cours, études bibliques)";
+    t.aboutUsagePersonal = "Personnel";
+    t.aboutUsagePersonalDetail = "(vidéos non commerciales)";
+    t.aboutUsageCondition = "Sans crainte de blocage, tant que l'usage reste non commercial et conforme aux conditions des plateformes.";
+    t.aboutContactEmail = "Email :";
+    t.aboutContactWebsite = "Site web :";
+    t.aboutFooterCopyright = "© 2024-2025 Bible Chantée - Tous droits réservés";
+  }
+  else if (lang === 'EN') {
+    t.aboutPageTitle = "About - Sung Bible";
+    t.aboutTagline = "God's Word in music";
+    t.navHome = "Home";
+    t.aboutProjectTitle = "About the project";
+    t.aboutProjectDesc1 = "Sung Bible is a spiritual music project aiming to set to music the 1189 chapters of the Bible in 12 languages.";
+    t.aboutProjectDesc2 = "All compositions are original. The lyrics are based on public domain biblical texts.";
+    t.aboutListenTitle = "Listen to Sung Bible";
+    t.aboutListenDesc = "Find our music on your favorite streaming platforms:";
+    t.aboutUsageTitle = "Authorized use";
+    t.aboutUsageDesc = "You are free to use this music in a:";
+    t.aboutUsageSpiritual = "Spiritual";
+    t.aboutUsageSpiritualDetail = "(churches, worship, meditations)";
+    t.aboutUsageEducational = "Educational";
+    t.aboutUsageEducationalDetail = "(courses, biblical studies)";
+    t.aboutUsagePersonal = "Personal";
+    t.aboutUsagePersonalDetail = "(non-commercial videos)";
+    t.aboutUsageCondition = "Without fear of blocking, as long as the use remains non-commercial and complies with platform conditions.";
+    t.aboutContactEmail = "Email:";
+    t.aboutContactWebsite = "Website:";
+    t.aboutFooterCopyright = "© 2024-2025 Sung Bible - All rights reserved";
+  }
+  else if (lang === 'ES') {
+    t.aboutPageTitle = "Acerca de - Biblia Cantada";
+    t.aboutTagline = "La Palabra de Dios en música";
+    t.navHome = "Inicio";
+    t.aboutProjectTitle = "Acerca del proyecto";
+    t.aboutProjectDesc1 = "Biblia Cantada es un proyecto de música espiritual que busca poner en música los 1189 capítulos de la Biblia en 12 idiomas.";
+    t.aboutProjectDesc2 = "Todas las composiciones son originales. Las letras se basan en textos bíblicos de dominio público.";
+    t.aboutListenTitle = "Escuchar Biblia Cantada";
+    t.aboutListenDesc = "Encuentra nuestra música en tus plataformas de streaming favoritas:";
+    t.aboutUsageTitle = "Uso autorizado";
+    t.aboutUsageDesc = "Eres libre de usar esta música en un contexto:";
+    t.aboutUsageSpiritual = "Espiritual";
+    t.aboutUsageSpiritualDetail = "(iglesias, cultos, meditaciones)";
+    t.aboutUsageEducational = "Educativo";
+    t.aboutUsageEducationalDetail = "(cursos, estudios bíblicos)";
+    t.aboutUsagePersonal = "Personal";
+    t.aboutUsagePersonalDetail = "(videos no comerciales)";
+    t.aboutUsageCondition = "Sin temor a bloqueos, siempre que el uso siga siendo no comercial y cumpla con las condiciones de las plataformas.";
+    t.aboutContactEmail = "Correo electrónico:";
+    t.aboutContactWebsite = "Sitio web:";
+    t.aboutFooterCopyright = "© 2024-2025 Biblia Cantada - Todos los derechos reservados";
+  }
+  else if (lang === 'PT') {
+    t.aboutPageTitle = "Sobre - Bíblia Cantada";
+    t.aboutTagline = "A Palavra de Deus em música";
+    t.navHome = "Início";
+    t.aboutProjectTitle = "Sobre o projeto";
+    t.aboutProjectDesc1 = "Bíblia Cantada é um projeto de música espiritual que visa colocar em música os 1189 capítulos da Bíblia em 12 idiomas.";
+    t.aboutProjectDesc2 = "Todas as composições são originais. As letras são baseadas em textos bíblicos de domínio público.";
+    t.aboutListenTitle = "Ouvir Bíblia Cantada";
+    t.aboutListenDesc = "Encontre nossa música em suas plataformas de streaming favoritas:";
+    t.aboutUsageTitle = "Uso autorizado";
+    t.aboutUsageDesc = "Você é livre para usar esta música em um contexto:";
+    t.aboutUsageSpiritual = "Espiritual";
+    t.aboutUsageSpiritualDetail = "(igrejas, cultos, meditações)";
+    t.aboutUsageEducational = "Educacional";
+    t.aboutUsageEducationalDetail = "(cursos, estudos bíblicos)";
+    t.aboutUsagePersonal = "Pessoal";
+    t.aboutUsagePersonalDetail = "(vídeos não comerciais)";
+    t.aboutUsageCondition = "Sem medo de bloqueio, desde que o uso permaneça não comercial e cumpra as condições das plataformas.";
+    t.aboutContactEmail = "E-mail:";
+    t.aboutContactWebsite = "Site:";
+    t.aboutFooterCopyright = "© 2024-2025 Bíblia Cantada - Todos os direitos reservados";
+  }
+  // Add similar translations for DE, IT, RU, AR, ZH, HI, TL, KO...
+});
