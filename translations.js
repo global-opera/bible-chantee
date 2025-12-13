@@ -1125,3 +1125,6 @@ Object.keys(translations).forEach(lang => {
     t.creditsFooterCopyright = "© 2025 Bíblia Cantada";
   }
 });
+
+// Export translations to global scope
+window.translations = translations;
