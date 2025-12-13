@@ -1068,6 +1068,24 @@
 
         renderBooks('old-testament', oldTestament);
         renderBooks('new-testament', newTestament);
+
+        // === AUTO-LECTURE DEPUIS PARAMETRES URL ===
+        // Permet d'ouvrir directement un chapitre via ?book=01_GEN&chapter=1
+        const urlParams = new URLSearchParams(window.location.search);
+        const bookParam = urlParams.get('book');
+        const chapterParam = urlParams.get('chapter');
+
+        if (bookParam && chapterParam) {
+            const book = books.find(b => b.num === bookParam);
+            if (book) {
+                playBook(bookParam, book.chapters);
+                // Attendre que le player soit initialise avant de lancer le chapitre
+                setTimeout(() => {
+                    playChapter(parseInt(chapterParam));
+                }, 100);
+            }
+        }
+
     // === SELECTEUR DE LANGUES ===
     const LANGUAGES = {
         FR: { flag: '🇫🇷', name: 'Francais', chapters: 1020, total: 1189 },
