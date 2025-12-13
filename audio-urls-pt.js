@@ -1,6 +1,7 @@
-// Audio URLs - Bible Chantee PT V2 - 431 chapters
+// Audio URLs - Bible Chantée PT V2 - 434 chapters
 // Generated automatically from Suno_Output_V2/PT directory
-// Upload these files to Archive.org collection: bible-chantee-pt-v2
+// Language: Português
+// Upload files to Archive.org collection: bible-chantee-pt-v2
 
 window.audioUrlsPT = {
     "01": {
@@ -469,5 +470,8 @@ window.audioUrlsPT = {
         "3": "https://archive.org/download/bible-chantee-pt-v2/18_JOB_03_PT.mp3",
         "4": "https://archive.org/download/bible-chantee-pt-v2/18_JOB_04_PT.mp3",
         "5": "https://archive.org/download/bible-chantee-pt-v2/18_JOB_05_PT.mp3",
+        "6": "https://archive.org/download/bible-chantee-pt-v2/18_JOB_06_PT.mp3",
+        "7": "https://archive.org/download/bible-chantee-pt-v2/18_JOB_07_PT.mp3",
+        "8": "https://archive.org/download/bible-chantee-pt-v2/18_JOB_08_PT.mp3",
     },
 };
