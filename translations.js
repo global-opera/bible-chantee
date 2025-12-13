@@ -1015,3 +1015,39 @@ Object.keys(translations).forEach(lang => {
   }
   // Add similar translations for DE, IT, RU, AR, ZH, HI, TL, KO...
 });
+
+// Extended translations for Crowdfunding and other pages
+Object.keys(translations).forEach(lang => {
+  const t = translations[lang];
+  
+  if (lang === 'FR') {
+    // Crowdfunding page
+    t.cfPageTitle = "Soutenir Bible Chantée - Crowdfunding";
+    t.cfHeading = "Soutenir Bible Chantée";
+    t.cfSubtitle = "Participez à la diffusion mondiale de la Parole de Dieu en musique";
+    t.cfBackHome = "← Retour accueil";
+    t.cfGoalTitle = "Objectif de la campagne";
+    t.cfGoalDesc = "Bible Chantée a pour vision de rendre la Bible accessible en musique worship dans 12 langues, touchant potentiellement 1.8 milliard de personnes.";
+    t.cfGoalAmount = "50 000 CHF";
+    t.cfGoalLabel = "Objectif de financement";
+    t.cfMission = "10% des bénéfices nets seront reversés à des oeuvres missionnaires chrétiennes.";
+    t.cfFundsTitle = "Utilisation des fonds";
+    t.cfRewardsTitle = "Contreparties";
+    t.cfComingSoonTitle = "🚀 Campagne bientôt disponible";
+    t.cfOtherWaysTitle = "Autres façons de soutenir";
+  } else if (lang === 'EN') {
+    t.cfPageTitle = "Support Sung Bible - Crowdfunding";
+    t.cfHeading = "Support Sung Bible";
+    t.cfSubtitle = "Participate in the global spread of God's Word in music";
+    t.cfBackHome = "← Back home";
+    t.cfGoalTitle = "Campaign goal";
+    t.cfGoalDesc = "Sung Bible's vision is to make the Bible accessible in worship music in 12 languages, potentially reaching 1.8 billion people.";
+    t.cfGoalAmount = "50,000 CHF";
+    t.cfGoalLabel = "Funding goal";
+    t.cfMission = "10% of net profits will be donated to Christian missionary works.";
+    t.cfFundsTitle = "Use of funds";
+    t.cfRewardsTitle = "Rewards";
+    t.cfComingSoonTitle = "🚀 Campaign coming soon";
+    t.cfOtherWaysTitle = "Other ways to support";
+  }
+});
