@@ -1051,3 +1051,77 @@ Object.keys(translations).forEach(lang => {
     t.cfOtherWaysTitle = "Other ways to support";
   }
 });
+
+// Credits page translations - Complete for all languages
+Object.keys(translations).forEach(lang => {
+  const t = translations[lang];
+  
+  if (lang === 'FR') {
+    t.creditsPageTitle = "Bible Chantée - Présentation du Projet";
+    t.creditsBackHome = "← Retour Accueil";
+    t.creditsSiteName = "Bible Chantee";
+    t.creditsTagline = "La Parole de Dieu en musique worship";
+    t.creditsAboutTitle = "A propos du Projet";
+    t.creditsAboutDesc = "Bible Chantée est un projet missionnaire chrétien qui transforme l'intégralité de la Bible en musique worship contemporaine, en 12 langues.";
+    t.creditsExperience = "Une expérience unique : Chaque chapitre biblique est mis en musique avec une qualité professionnelle et des paroles poétiques originales.";
+    t.creditsCharacteristics = "Caracteristiques";
+    t.creditsTechTitle = "Technologie";
+    t.creditsTechDesc = "Production musicale Suno AI, interface web responsive.";
+    t.creditsCopyrightTitle = "Droits d'Auteur";
+    t.creditsIntellectualProperty = "Propriete Intellectuelle";
+    t.creditsMissionaryProject = "Projet Missionnaire";
+    t.creditsTargetLanguages = "Langues Cibles";
+    t.creditsFooterCopyright = "© 2025 Bible Chantee";
+  }
+  else if (lang === 'EN') {
+    t.creditsPageTitle = "Sung Bible - Project Presentation";
+    t.creditsBackHome = "← Back Home";
+    t.creditsSiteName = "Sung Bible";
+    t.creditsTagline = "God's Word in worship music";
+    t.creditsAboutTitle = "About the Project";
+    t.creditsAboutDesc = "Sung Bible is a Christian missionary project that transforms the entire Bible into contemporary worship music, in 12 languages.";
+    t.creditsExperience = "A unique experience: Each biblical chapter is set to music with professional quality and original poetic lyrics.";
+    t.creditsCharacteristics = "Characteristics";
+    t.creditsTechTitle = "Technology";
+    t.creditsTechDesc = "Suno AI music production, responsive web interface.";
+    t.creditsCopyrightTitle = "Copyright";
+    t.creditsIntellectualProperty = "Intellectual Property";
+    t.creditsMissionaryProject = "Missionary Project";
+    t.creditsTargetLanguages = "Target Languages";
+    t.creditsFooterCopyright = "© 2025 Sung Bible";
+  }
+  else if (lang === 'ES') {
+    t.creditsPageTitle = "Biblia Cantada - Presentación del Proyecto";
+    t.creditsBackHome = "← Volver Inicio";
+    t.creditsSiteName = "Biblia Cantada";
+    t.creditsTagline = "La Palabra de Dios en música worship";
+    t.creditsAboutTitle = "Acerca del Proyecto";
+    t.creditsAboutDesc = "Biblia Cantada es un proyecto misionero cristiano que transforma toda la Biblia en música worship contemporánea, en 12 idiomas.";
+    t.creditsExperience = "Una experiencia única: Cada capítulo bíblico está musicado con calidad profesional y letras poéticas originales.";
+    t.creditsCharacteristics = "Características";
+    t.creditsTechTitle = "Tecnología";
+    t.creditsTechDesc = "Producción musical Suno AI, interfaz web responsive.";
+    t.creditsCopyrightTitle = "Derechos de Autor";
+    t.creditsIntellectualProperty = "Propiedad Intelectual";
+    t.creditsMissionaryProject = "Proyecto Misionero";
+    t.creditsTargetLanguages = "Idiomas Objetivo";
+    t.creditsFooterCopyright = "© 2025 Biblia Cantada";
+  }
+  else if (lang === 'PT') {
+    t.creditsPageTitle = "Bíblia Cantada - Apresentação do Projeto";
+    t.creditsBackHome = "← Voltar Início";
+    t.creditsSiteName = "Bíblia Cantada";
+    t.creditsTagline = "A Palavra de Deus em música worship";
+    t.creditsAboutTitle = "Sobre o Projeto";
+    t.creditsAboutDesc = "Bíblia Cantada é um projeto missionário cristão que transforma toda a Bíblia em música worship contemporânea, em 12 idiomas.";
+    t.creditsExperience = "Uma experiência única: Cada capítulo bíblico é musicado com qualidade profissional e letras poéticas originais.";
+    t.creditsCharacteristics = "Características";
+    t.creditsTechTitle = "Tecnologia";
+    t.creditsTechDesc = "Produção musical Suno AI, interface web responsiva.";
+    t.creditsCopyrightTitle = "Direitos Autorais";
+    t.creditsIntellectualProperty = "Propriedade Intelectual";
+    t.creditsMissionaryProject = "Projeto Missionário";
+    t.creditsTargetLanguages = "Idiomas Alvo";
+    t.creditsFooterCopyright = "© 2025 Bíblia Cantada";
+  }
+});
