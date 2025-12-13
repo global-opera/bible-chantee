@@ -137,20 +137,6 @@
             margin-right: 8px;
             font-size: 0.85em;
         }
-        .listen-btn {
-            background: linear-gradient(135deg, #1e3a8a, #2563eb);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.95em;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .listen-btn:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4); }
     </style>
     <script src="bible-data.js"></script>
 </head>
@@ -175,7 +161,6 @@
                     <button class="nav-btn" id="prev-ch">Precedent</button>
                     <select class="chapter-select" id="chapter-select"></select>
                     <button class="nav-btn" id="next-ch">Suivant</button>
-                    <button class="listen-btn" id="listen-btn">&#127925; Ecouter ce chapitre</button>
                 </div>
             </div>
             <div class="bible-text" id="bible-text"></div>
@@ -321,9 +306,6 @@
         document.getElementById('chapter-select').onchange = (e) => loadChapter(parseInt(e.target.value));
         document.getElementById('prev-ch').onclick = () => { if (currentChapter > 1) loadChapter(currentChapter - 1); };
         document.getElementById('next-ch').onclick = () => { if (currentChapter < currentBook.chapters) loadChapter(currentChapter + 1); };
-        document.getElementById('listen-btn').onclick = () => {
-            window.location.href = 'lecteur.html?book=' + currentBook.num + '&chapter=' + currentChapter;
-        };
 
         renderBooks();
     </script>

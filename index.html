@@ -289,7 +289,6 @@
 
 <nav>
   <a href="#projet">Le Projet</a>
-  <a href="lecteur.html">Lecteur</a>
   <a href="#ecouter">Ecouter</a>
   <a href="#eglises">Eglises</a>
   <a href="#mission">Mission</a>
@@ -373,9 +372,6 @@
       <a href="bible.html" class="btn btn-secondary" data-page="bible">
         <span class="btn-icon">&#128216;</span> Bible (texte)
       </a>
-      <a href="lecteur.html" class="btn" data-page="lecteur">
-        <span class="btn-icon">&#128214;</span> Ecouter la Bible
-      </a>
       <a href="promesses.html" class="btn btn-gold" data-page="promesses">
         <span class="btn-icon">&#9733;</span> Promesses bibliques
       </a>
@@ -428,9 +424,6 @@
     <div class="btns-grid">
       <a href="bible.html" class="btn btn-secondary">
         <span class="btn-icon">&#128216;</span> Bible (texte)
-      </a>
-      <a href="lecteur.html" class="btn">
-        <span class="btn-icon">&#128214;</span> Ecouter la Bible
       </a>
       <a href="promesses.html" class="btn btn-gold">
         <span class="btn-icon">&#9733;</span> Promesses
@@ -490,8 +483,8 @@
 
     // Available content by language and page
     const availableContent = {
-      'FR': ['bible', 'lecteur', 'promesses', 'confessions'],
-      'PT': ['lecteur'] // Only lecteur available for PT (built-in multi-lang)
+      'FR': ['bible', 'promesses', 'confessions'],
+      'PT': [] // Only lecteur available for PT (built-in multi-lang)
     };
 
     pageButtons.forEach(button => {
@@ -503,9 +496,6 @@
       if (!isAvailable && selectedLang !== 'FR') {
         // Redirect to coming soon page for unavailable content
         button.href = `coming-soon.html?lang=${selectedLang}&page=${pageName}`;
-      } else if (pageName === 'lecteur') {
-        // lecteur.html has built-in language selector, just pass lang parameter
-        button.href = `lecteur.html?lang=${selectedLang}`;
       } else {
         // For other available pages
         const langSuffix = selectedLang === 'FR' ? '' : `-${selectedLang.toLowerCase()}`;
