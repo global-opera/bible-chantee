@@ -33917,71 +33917,47 @@ Dans la maison de deuil, je demeure,
 Avec Toi, Seigneur, je trouve ma lueur,  
 Car dans chaque larmes, une leçon,  
 Ta sagesse, mon unique raison.`,
-        8: `[Verse 1]  
-Qui est comme le sage,  
-Celui qui connaît le temps,  
-Sa lumière éclaire nos âmes,  
-Dans les ombres de ce monde errant.  
-Ne nous éloignons pas du roi,  
-Sa parole est notre guide,  
-Dans la tempête, il est notre voie,  
-Nous marchons, confiants, sans vide.
+        8: `[Verse 1]
+Ô Sagesse, tu cries au cœur des chemins,
+Tes paroles résonnent, tu guides nos destins.
+À la croisée des routes, tu fais entendre ta voix,
+Hommes, ouvrez vos cœurs, écoutez ta loi.
 
-[Chorus]  
-Ô Seigneur, nous te cherchons,  
-Dans la sagesse et la crainte,  
-Tu es notre salvation,  
-Dans la paix, notre cœur se feinte.  
-Il y a un temps pour chaque chose,  
-Et ton jugement éclaire nos pas,  
-Dans la joie, nous te louons,  
-Notre refuge, notre Abba.
+[Chorus]
+Sagesse, précieuse, plus que l'or et l'argent,
+À tes pieds, nous venons, ô notre Dieu vivant.
+Ton fruit est meilleur, que tous les trésors,
+Dans ta lumière, nous trouvons encore.
 
-[Verse 2]  
-Les méchants prospèrent en silence,  
-Mais leur fin est dans l'oubli.  
-Nous, nous trouvons notre espérance,  
-Dans ta lumière, notre vie.  
-Car le bonheur est dans ta crainte,  
-Tu es notre force et notre chant,  
-Dans les épreuves, ta main étreinte,  
-Nous avançons, le cœur vibrant.
+[Verse 2]
+Tu es la vérité, tes lèvres sont droites,
+Dans un monde troublé, tu es notre lumière.
+Préférons tes instructions, à l'illusion,
+Car c'est en toi, Seigneur, que vient la raison.
 
-[Chorus]  
-Ô Seigneur, nous te cherchons,  
-Dans la sagesse et la crainte,  
-Tu es notre salvation,  
-Dans la paix, notre cœur se feinte.  
-Il y a un temps pour chaque chose,  
-Et ton jugement éclaire nos pas,  
-Dans la joie, nous te louons,  
-Notre refuge, notre Abba.
+[Chorus]
+Sagesse, précieuse, plus que l'or et l'argent,
+À tes pieds, nous venons, ô notre Dieu vivant.
+Ton fruit est meilleur, que tous les trésors,
+Dans ta lumière, nous trouvons encore.
 
-[Bridge]  
-Quand l’homme ne comprend pas,  
-Et que le mal semble triompher,  
-Nous plaçons notre foi en toi,  
-Tu es le Dieu qui sait.  
-Dans l’ombre ou la lumière,  
-Nous te faisons confiance,  
-Ta promesse est notre prière,  
-En toi, nous trouvons la délivrance.
+[Bridge]
+Tu as été là, avant la création,
+Dans le cœur de Dieu, tu es la fondation.
+Avec Lui, tu as joué, dans l'éternité,
+Sagesse, notre guide, pour l'éternité.
 
-[Chorus]  
-Ô Seigneur, nous te cherchons,  
-Dans la sagesse et la crainte,  
-Tu es notre salvation,  
-Dans la paix, notre cœur se feinte.  
-Il y a un temps pour chaque chose,  
-Et ton jugement éclaire nos pas,  
-Dans la joie, nous te louons,  
-Notre refuge, notre Abba.
+[Verse 3]
+Heureux ceux qui t'écoutent, qui veillent chaque jour,
+À tes portes, ils trouvent, la vie et l'amour.
+Ne rejetons pas, cette voix qui nous parle,
+Car en toi, Sagesse, nos âmes se rassemblent.
 
-[Outro]  
-Dans la sagesse et la crainte,  
-Nous marchons à ta lumière,  
-Notre cœur, rempli de ta grâce,  
-Se réjouit dans ta prière.`,
+[Chorus]
+Sagesse, précieuse, plus que l'or et l'argent,
+À tes pieds, nous venons, ô notre Dieu vivant.
+Ton fruit est meilleur, que tous les trésors,
+Dans ta lumière, nous trouvons encore.`,
         9: `[Verse 1]  
 J'ai regardé, mon cœur s'est posé,  
 Les justes et sages, tous sont sous Son regard.  
