@@ -90,19 +90,30 @@
       this.init();
     }
 
-    // Get initial language from localStorage or browser
+    // Get initial language from URL, localStorage, or browser
     getInitialLanguage() {
-      // Priority 1: localStorage (user choice)
-      const saved = localStorage.getItem('selectedLanguage');
-      if (saved) {
-        // Valid language codes
-        const validLangs = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];
-        if (validLangs.includes(saved)) {
-          return saved;
+      // Valid language codes
+      const validLangs = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];
+
+      // Priority 1: URL parameter ?lang=XX (highest priority for navigation)
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlLang = urlParams.get('lang');
+      if (urlLang) {
+        const langCode = urlLang.toUpperCase();
+        if (validLangs.includes(langCode)) {
+          // Save to localStorage for future visits
+          localStorage.setItem('selectedLanguage', langCode);
+          return langCode;
         }
       }
 
-      // Priority 2: Detect browser language
+      // Priority 2: localStorage (user's previous choice)
+      const saved = localStorage.getItem('selectedLanguage');
+      if (saved && validLangs.includes(saved)) {
+        return saved;
+      }
+
+      // Priority 3: Detect browser language
       const browserLang = navigator.language || navigator.userLanguage;
       const langCode = browserLang.split('-')[0].toUpperCase();
 
@@ -205,6 +216,39 @@
       } else {
         document.body.dir = 'ltr';
       }
+
+      // CRITICAL: Preserve language in all links after translation
+      this.preserveLanguageInLinks();
+    }
+
+    // UNIVERSAL LINK FIXER - Automatically preserve language across navigation
+    preserveLanguageInLinks() {
+      const currentLang = this.currentLang;
+
+      // Update all internal links to include ?lang parameter
+      document.querySelectorAll('a[href]').forEach(link => {
+        const href = link.getAttribute('href');
+
+        // Skip external links, anchors, mailto, and javascript
+        if (!href ||
+            href.startsWith('http://') ||
+            href.startsWith('https://') ||
+            href.startsWith('mailto:') ||
+            href.startsWith('#') ||
+            href.startsWith('javascript:')) {
+          return;
+        }
+
+        // Skip if already has lang parameter
+        if (href.includes('?lang=') || href.includes('&lang=')) {
+          return;
+        }
+
+        // Add language parameter
+        const separator = href.includes('?') ? '&' : '?';
+        const newHref = href + separator + 'lang=' + currentLang;
+        link.setAttribute('href', newHref);
+      });
     }
 
     // Get current language

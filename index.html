@@ -532,23 +532,31 @@
 (function() {
   const languageSelector = document.getElementById('globalLanguageSelector');
 
-  // Load saved language preference or detect browser language
+  // Load language from URL, localStorage, or browser
   function getInitialLanguage() {
-    // Priority 1: localStorage (user choice)
-    const saved = localStorage.getItem('selectedLanguage');
-    if (saved) {
-      // Valid language codes
-      const validLangs = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];
-      if (validLangs.includes(saved)) {
-        return saved;
+    const validLangs = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];
+
+    // Priority 1: URL parameter ?lang=XX
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+    if (urlLang) {
+      const langCode = urlLang.toUpperCase();
+      if (validLangs.includes(langCode)) {
+        localStorage.setItem('selectedLanguage', langCode);
+        return langCode;
       }
     }
 
-    // Priority 2: Detect browser language
+    // Priority 2: localStorage (user's previous choice)
+    const saved = localStorage.getItem('selectedLanguage');
+    if (saved && validLangs.includes(saved)) {
+      return saved;
+    }
+
+    // Priority 3: Detect browser language
     const browserLang = navigator.language || navigator.userLanguage;
     const langCode = browserLang.split('-')[0].toUpperCase();
 
-    // Map common browser language codes to our language codes
     const langMap = {
       'FR': 'FR', 'EN': 'EN', 'ES': 'ES', 'PT': 'PT',
       'DE': 'DE', 'IT': 'IT', 'RU': 'RU', 'AR': 'AR',
@@ -600,6 +608,35 @@
     } else {
       document.body.dir = 'ltr';
     }
+
+    // CRITICAL: Preserve language in all links
+    preserveLanguageInLinks(lang);
+  }
+
+  // UNIVERSAL LINK FIXER - Preserve language across all navigation
+  function preserveLanguageInLinks(lang) {
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+
+      // Skip external links, mailto, anchors, javascript
+      if (!href ||
+          href.startsWith('http://') ||
+          href.startsWith('https://') ||
+          href.startsWith('mailto:') ||
+          href.startsWith('#') ||
+          href.startsWith('javascript:')) {
+        return;
+      }
+
+      // Skip if already has lang parameter
+      if (href.includes('?lang=') || href.includes('&lang=')) {
+        return;
+      }
+
+      // Add language parameter
+      const separator = href.includes('?') ? '&' : '?';
+      link.setAttribute('href', href + separator + 'lang=' + lang);
+    });
   }
 
   // Apply initial translations
