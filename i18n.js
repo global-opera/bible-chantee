@@ -92,10 +92,17 @@
 
     // Get initial language from localStorage or browser
     getInitialLanguage() {
+      // Priority 1: localStorage (user choice)
       const saved = localStorage.getItem('selectedLanguage');
-      if (saved && this.translations[saved]) return saved;
+      if (saved) {
+        // Valid language codes
+        const validLangs = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];
+        if (validLangs.includes(saved)) {
+          return saved;
+        }
+      }
 
-      // Detect browser language
+      // Priority 2: Detect browser language
       const browserLang = navigator.language || navigator.userLanguage;
       const langCode = browserLang.split('-')[0].toUpperCase();
 
