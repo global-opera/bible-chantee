@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promesses de la Bible en Musique</title>
+    <title data-i18n="promPageTitle">Promesses de la Bible en Musique</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="promesses-lyrics.js"></script>
     <style>
@@ -175,9 +175,9 @@
 <body>
     <div class="container">
         <header>
-            <h1>Promesses de la Bible en Musique</h1>
-            <a href="index.html" class="back-link">← Retour accueil</a>
-            <p class="subtitle">Trouvez la paix dans les Psaumes selon votre besoin</p>
+            <h1 data-i18n="promHeading">Promesses de la Bible en Musique</h1>
+            <a href="index.html" class="back-link" data-i18n="promBackHome">← Retour accueil</a>
+            <p class="subtitle" data-i18n="promSubtitle">Trouvez la paix dans les Psaumes selon votre besoin</p>
         </header>
         
         <div class="player-section" id="player-section">
@@ -188,8 +188,8 @@
                 <audio id="audio" controls></audio>
             </div>
             <div class="player-actions">
-                <button class="lyrics-btn" id="lyrics-btn" onclick="toggleLyrics()">📜 Paroles</button>
-                <button class="close-player" onclick="closePlayer()">Fermer</button>
+                <button class="lyrics-btn" id="lyrics-btn" onclick="toggleLyrics()"><span>📜</span> <span data-i18n="promLyricsBtn">Paroles</span></button>
+                <button class="close-player" onclick="closePlayer()" data-i18n="promClose">Fermer</button>
             </div>
             <div class="lyrics-container" id="lyrics-container">
                 <div class="lyrics-text" id="lyrics-text"></div>
@@ -200,7 +200,7 @@
         
         <footer>
             <p>© 2025 Bible Chantée - Stéphane Cassani</p>
-            <p><a href="index.html">Retour à la Bible Chantée</a></p>
+            <p><a href="index.html" data-i18n="promFooterBack">Retour à la Bible Chantée</a></p>
         </footer>
     </div>
     
@@ -211,57 +211,57 @@
             {
                 id: 'anxiete',
                 icon: '😰',
-                name: 'Anxiété / Peur',
-                description: 'Quand l\'inquiétude t\'étouffe, trouve le repos dans la présence de Dieu.',
+                nameKey: 'promTheme1Name',
+                descKey: 'promTheme1Desc',
                 psalms: [23, 27, 46, 91]
             },
             {
                 id: 'paix',
                 icon: '🕊️',
-                name: 'Paix',
-                description: 'La paix qui surpasse toute intelligence, celle que le monde ne peut donner.',
+                nameKey: 'promTheme2Name',
+                descKey: 'promTheme2Desc',
                 psalms: [4, 23, 37, 131]
             },
             {
                 id: 'louange',
                 icon: '🙌',
-                name: 'Louange / Joie',
-                description: 'Quand ton cœur déborde de gratitude et veut célébrer le Seigneur.',
+                nameKey: 'promTheme3Name',
+                descKey: 'promTheme3Desc',
                 psalms: [100, 145, 148, 150]
             },
             {
                 id: 'protection',
                 icon: '🛡️',
-                name: 'Protection',
-                description: 'Le Seigneur est ton refuge, ta forteresse, ton bouclier.',
+                nameKey: 'promTheme4Name',
+                descKey: 'promTheme4Desc',
                 psalms: [91, 121, 125]
             },
             {
                 id: 'tristesse',
                 icon: '😢',
-                name: 'Tristesse / Découragement',
-                description: 'Dans la vallée de l\'ombre, Il est avec toi.',
+                nameKey: 'promTheme5Name',
+                descKey: 'promTheme5Desc',
                 psalms: [34, 42, 130]
             },
             {
                 id: 'force',
                 icon: '💪',
-                name: 'Force / Courage',
-                description: 'Quand tu as besoin de renouveler tes forces et ton courage.',
+                nameKey: 'promTheme6Name',
+                descKey: 'promTheme6Desc',
                 psalms: [18, 27, 46, 144]
             },
             {
                 id: 'confiance',
                 icon: '🙏',
-                name: 'Confiance',
-                description: 'Remets ton chemin à l\'Éternel, confie-toi en Lui.',
+                nameKey: 'promTheme7Name',
+                descKey: 'promTheme7Desc',
                 psalms: [23, 37, 62, 91]
             },
             {
                 id: 'guerison',
                 icon: '💚',
-                name: 'Guérison',
-                description: 'Celui qui guérit toutes tes maladies, qui rachète ta vie.',
+                nameKey: 'promTheme8Name',
+                descKey: 'promTheme8Desc',
                 psalms: [30, 103, 147]
             }
         ];
@@ -272,12 +272,15 @@
         
         function renderThemes() {
             const grid = document.getElementById('themes-grid');
+            const t = window.getTranslation || ((key) => key);
+            const psalmsWord = t('promPsalms') || 'Psaumes';
+
             grid.innerHTML = themes.map(theme => `
                 <div class="theme-card" data-id="${theme.id}" onclick="selectTheme('${theme.id}')">
                     <div class="theme-icon">${theme.icon}</div>
-                    <div class="theme-name">${theme.name}</div>
-                    <div class="theme-description">${theme.description}</div>
-                    <div class="theme-psalms">Psaumes ${theme.psalms.join(', ')}</div>
+                    <div class="theme-name">${t(theme.nameKey)}</div>
+                    <div class="theme-description">${t(theme.descKey)}</div>
+                    <div class="theme-psalms">${psalmsWord} ${theme.psalms.join(', ')}</div>
                 </div>
             `).join('');
         }
@@ -295,13 +298,15 @@
             const playerSection = document.getElementById('player-section');
             playerSection.classList.add('active');
             
-            document.getElementById('player-theme').innerHTML = theme.icon + ' ' + theme.name;
-            document.getElementById('player-psalm').textContent = 'Choisissez un Psaume';
+            const t = window.getTranslation || ((key) => key);
+            document.getElementById('player-theme').innerHTML = theme.icon + ' ' + t(theme.nameKey);
+            document.getElementById('player-psalm').textContent = t('promChoosePsalm') || 'Choisissez un Psaume';
             
             const buttonsContainer = document.getElementById('psalm-buttons');
+            const psalmWord = t('promPsalm') || 'Psaume';
             buttonsContainer.innerHTML = theme.psalms.map(psalm => `
                 <button class="psalm-btn" data-psalm="${psalm}" onclick="playPsalm(${psalm})">
-                    Psaume ${psalm}
+                    ${psalmWord} ${psalm}
                 </button>
             `).join('');
             
@@ -319,7 +324,9 @@
                 btn.classList.toggle('playing', parseInt(btn.dataset.psalm) === psalmNum);
             });
             
-            document.getElementById('player-psalm').textContent = 'Psaume ' + psalmNum;
+            const t = window.getTranslation || ((key) => key);
+            const psalmWord = t('promPsalm') || 'Psaume';
+            document.getElementById('player-psalm').textContent = psalmWord + ' ' + psalmNum;
             
             const chapterPadded = String(psalmNum).padStart(3, '0');
             const url = ARCHIVE_BASE + '/19_Psaumes_' + chapterPadded + '.mp3';
@@ -339,18 +346,20 @@
         
         function updateLyrics() {
             const lyricsText = document.getElementById('lyrics-text');
+            const t = window.getTranslation || ((key) => key);
+
             if (!currentPsalm) {
-                lyricsText.innerHTML = '<div class="no-lyrics">Choisissez un Psaume d\'abord</div>';
+                lyricsText.innerHTML = '<div class="no-lyrics">' + (t('promChoosePsalmFirst') || 'Choisissez un Psaume d\'abord') + '</div>';
                 return;
             }
-            
+
             if (typeof psalmLyrics !== 'undefined' && psalmLyrics[currentPsalm]) {
                 let lyrics = psalmLyrics[currentPsalm];
                 let formatted = lyrics.replace(/\[([^\]]+)\]/g, '<span class="section-label">[$1]</span>');
                 formatted = formatted.replace(/\n/g, '<br>');
                 lyricsText.innerHTML = formatted;
             } else {
-                lyricsText.innerHTML = '<div class="no-lyrics">Paroles non disponibles pour ce Psaume</div>';
+                lyricsText.innerHTML = '<div class="no-lyrics">' + (t('promLyricsNotAvailable') || 'Paroles non disponibles pour ce Psaume') + '</div>';
             }
         }
         
@@ -362,7 +371,21 @@
             currentPsalm = null;
             lyricsVisible = false;
         }
-        
+
+        // DON'T call renderThemes() here - wait for i18n to load
+    </script>
+
+    <!-- i18n Scripts -->
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
+
+    <!-- Initialize UI after i18n is ready -->
+    <script>
+        // Wait for i18n to be fully loaded, then render themes
+        if (window.BibleI18n) {
+            window.BibleI18n.init();
+        }
+        // Now render with translations available
         renderThemes();
     </script>
 </body>

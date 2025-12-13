@@ -268,6 +268,10 @@
     init: function() {
       if (!window.i18nInstance) {
         window.i18nInstance = new I18n();
+        // Expose getTranslation function globally
+        window.getTranslation = function(key) {
+          return window.i18nInstance ? window.i18nInstance.t(key) : key;
+        };
       }
       return window.i18nInstance;
     },
