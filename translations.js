@@ -218,9 +218,7 @@ const translations = {
     footerLegal: "Legal notices",
     footerCredits: "Credits",
     footerMission: "Sung Bible – International Christian missionary project",
-    footerCopyright: "© 2025 Stéphane Cassani – All rights reserved"
-
-
+    footerCopyright: "© 2025 Stéphane Cassani – All rights reserved",
     // Book names (66 books)
     book01: "Genesis",
     book02: "Exodus",
@@ -363,9 +361,7 @@ const translations = {
     footerLegal: "Avisos legales",
     footerCredits: "Créditos",
     footerMission: "Biblia Cantada – Proyecto misionero cristiano internacional",
-    footerCopyright: "© 2025 Stéphane Cassani – Todos los derechos reservados"
-
-
+    footerCopyright: "© 2025 Stéphane Cassani – Todos los derechos reservados",
     // Book names (66 books)
     book01: "Génesis",
     book02: "Éxodo",
@@ -508,9 +504,7 @@ const translations = {
     footerLegal: "Avisos legais",
     footerCredits: "Créditos",
     footerMission: "Bíblia Cantada – Projeto missionário cristão internacional",
-    footerCopyright: "© 2025 Stéphane Cassani – Todos os direitos reservados"
-
-
+    footerCopyright: "© 2025 Stéphane Cassani – Todos os direitos reservados",
     // Book names (66 books)
     book01: "Gênesis",
     book02: "Êxodo",
@@ -653,9 +647,7 @@ const translations = {
     footerLegal: "Rechtliche Hinweise",
     footerCredits: "Credits",
     footerMission: "Gesungene Bibel – Internationales christliches Missionsprojekt",
-    footerCopyright: "© 2025 Stéphane Cassani – Alle Rechte vorbehalten"
-
-
+    footerCopyright: "© 2025 Stéphane Cassani – Alle Rechte vorbehalten",
     // Book names (66 books)
     book01: "Genesis",
     book02: "Exodus",
@@ -798,9 +790,7 @@ const translations = {
     footerLegal: "Note legali",
     footerCredits: "Crediti",
     footerMission: "Bibbia Cantata – Progetto missionario cristiano internazionale",
-    footerCopyright: "© 2025 Stéphane Cassani – Tutti i diritti riservati"
-
-
+    footerCopyright: "© 2025 Stéphane Cassani – Tutti i diritti riservati",
     // Book names (66 books)
     book01: "Genesi",
     book02: "Esodo",
@@ -943,9 +933,7 @@ const translations = {
     footerLegal: "Правовая информация",
     footerCredits: "Кредиты",
     footerMission: "Поющая Библия – Международный христианский миссионерский проект",
-    footerCopyright: "© 2025 Stéphane Cassani – Все права защищены"
-
-
+    footerCopyright: "© 2025 Stéphane Cassani – Все права защищены",
     // Book names (66 books)
     book01: "Бытие",
     book02: "Исход",
@@ -1088,9 +1076,7 @@ const translations = {
     footerLegal: "إشعارات قانونية",
     footerCredits: "اعتمادات",
     footerMission: "الكتاب المقدس المُغنّى – مشروع تبشيري مسيحي دولي",
-    footerCopyright: "© 2025 Stéphane Cassani – جميع الحقوق محفوظة"
-
-
+    footerCopyright: "© 2025 Stéphane Cassani – جميع الحقوق محفوظة",
     // Book names (66 books)
     book01: "التكوين",
     book02: "الخروج",
@@ -1233,9 +1219,7 @@ const translations = {
     footerLegal: "法律声明",
     footerCredits: "鸣谢",
     footerMission: "圣经之歌 – 国际基督教宣教项目",
-    footerCopyright: "© 2025 Stéphane Cassani – 版权所有"
-
-
+    footerCopyright: "© 2025 Stéphane Cassani – 版权所有",
     // Book names (66 books)
     book01: "创世记",
     book02: "出埃及记",
@@ -1378,9 +1362,7 @@ const translations = {
     footerLegal: "कानूनी नोटिस",
     footerCredits: "श्रेय",
     footerMission: "गायी जाने वाली बाइबिल – अंतरराष्ट्रीय ईसाई मिशनरी परियोजना",
-    footerCopyright: "© 2025 Stéphane Cassani – सर्वाधिकार सुरक्षित"
-
-
+    footerCopyright: "© 2025 Stéphane Cassani – सर्वाधिकार सुरक्षित",
     // Book names (66 books)
     book01: "उत्पत्ति",
     book02: "निर्गमन",
@@ -1523,9 +1505,7 @@ const translations = {
     footerLegal: "Mga legal na paalala",
     footerCredits: "Mga kredito",
     footerMission: "Aawitin ng Bibliya – Internasyonal na Kristiyanong misyonaryong proyekto",
-    footerCopyright: "© 2025 Stéphane Cassani – Lahat ng karapatan ay nakalaan"
-
-
+    footerCopyright: "© 2025 Stéphane Cassani – Lahat ng karapatan ay nakalaan",
     // Book names (66 books)
     book01: "Genesis",
     book02: "Exodo",
@@ -1668,9 +1648,7 @@ const translations = {
     footerLegal: "법적 고지",
     footerCredits: "크레딧",
     footerMission: "노래하는 성경 – 국제 기독교 선교 프로젝트",
-    footerCopyright: "© 2025 Stéphane Cassani – 판권 소유"
-
-
+    footerCopyright: "© 2025 Stéphane Cassani – 판권 소유",
     // Book names (66 books)
     book01: "창세기",
     book02: "출애굽기",
