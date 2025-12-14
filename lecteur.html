@@ -208,6 +208,37 @@
         }
         .nav-btn:hover { background: #2563eb; }
         .nav-btn:disabled { background: #444; cursor: not-allowed; }
+        .play-book-btn {
+            background: #ffce00;
+            border: 2px solid #000080;
+            color: #000080;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.95em;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .play-book-btn:hover {
+            background: #f0c040;
+            transform: scale(1.05);
+        }
+        .play-book-btn.playing {
+            background: #dc2626;
+            color: #fff;
+            border-color: #dc2626;
+        }
+        .book-progress {
+            color: #000080;
+            font-size: 0.9em;
+            font-weight: 600;
+            padding: 5px 15px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 15px;
+        }
         .chapter-select { padding: 8px; border-radius: 5px; background: #333; color: #fff; border: 1px solid #555; }
         .version-toggle {
             display: flex;
@@ -525,6 +556,13 @@
             <span class="player-title" id="player-title">-</span>
         </div>
         <div class="player-controls">
+            <button class="play-book-btn" id="playBookBtn" onclick="togglePlayEntireBook()">
+                <span id="playBookIcon">▶</span>
+                <span id="playBookText">Lire tout le livre</span>
+            </button>
+            <span class="book-progress" id="bookProgress" style="display:none;"></span>
+        </div>
+        <div class="player-controls" style="margin-top: 10px;">
             <button class="nav-btn" id="prev-btn">Precedent</button>
             <select class="chapter-select" id="chapter-select"></select>
             <button class="nav-btn" id="next-btn">Suivant</button>
@@ -683,6 +721,10 @@
         let currentChapter = 1;
         let lyricsVisible = false;
         let bibleVisible = false;
+
+        // Variables pour la lecture continue du livre
+        let autoPlayEnabled = false;
+        let totalBookChapters = 0;
 
         // Update stats dynamically
         const availableBooks = books.filter(b => b.available);
@@ -922,6 +964,17 @@
         function playBook(num, chapters) {
             currentBook = num;
             currentChapter = 1;
+            totalBookChapters = chapters;
+
+            // Reinitialiser l'autoplay
+            if (autoPlayEnabled) {
+                autoPlayEnabled = false;
+                document.getElementById('playBookBtn').classList.remove('playing');
+                document.getElementById('playBookIcon').textContent = '▶';
+                document.getElementById('playBookText').textContent = 'Lire tout le livre';
+                document.getElementById('bookProgress').style.display = 'none';
+            }
+
             document.querySelectorAll('.book').forEach(b => b.classList.remove('playing'));
             document.querySelector('.book[data-num="'+num+'"]').classList.add('playing');
             const select = document.getElementById('chapter-select');
@@ -1036,8 +1089,55 @@
             // Mettre a jour les paroles et la Bible
             updateLyrics();
             updateBible();
+
+            // Mettre a jour la progression du livre si autoplay actif
+            if (autoPlayEnabled) {
+                updateBookProgress();
+            }
         }
-        
+
+        // FONCTION: Activer/Desactiver la lecture continue du livre
+        function togglePlayEntireBook() {
+            autoPlayEnabled = !autoPlayEnabled;
+            const playBookBtn = document.getElementById('playBookBtn');
+            const playBookIcon = document.getElementById('playBookIcon');
+            const playBookText = document.getElementById('playBookText');
+            const bookProgress = document.getElementById('bookProgress');
+
+            if (autoPlayEnabled) {
+                // Activer la lecture continue
+                playBookBtn.classList.add('playing');
+                playBookIcon.textContent = '■';
+                playBookText.textContent = 'Arreter lecture';
+                bookProgress.style.display = 'inline-block';
+
+                // Demarrer depuis le chapitre 1
+                playChapter(1);
+                updateBookProgress();
+
+                // Auto-play
+                setTimeout(() => {
+                    document.getElementById('audio').play();
+                }, 300);
+            } else {
+                // Desactiver la lecture continue
+                playBookBtn.classList.remove('playing');
+                playBookIcon.textContent = '▶';
+                playBookText.textContent = 'Lire tout le livre';
+                bookProgress.style.display = 'none';
+
+                // Arreter la lecture
+                const audio = document.getElementById('audio');
+                audio.pause();
+            }
+        }
+
+        // FONCTION: Mettre a jour l'affichage de la progression
+        function updateBookProgress() {
+            const bookProgress = document.getElementById('bookProgress');
+            bookProgress.textContent = 'Chapitre ' + currentChapter + ' / ' + totalBookChapters;
+        }
+
         document.addEventListener('click', e => {
             const book = e.target.closest('.book');
             if (book && book.dataset.available === 'true') {
@@ -1056,7 +1156,18 @@
         });
         document.getElementById('audio').addEventListener('ended', () => {
             const book = books.find(b => b.num === currentBook);
-            if (currentChapter < book.chapters) playChapter(currentChapter + 1);
+
+            // Lecture automatique du prochain chapitre (avec ou sans autoplay)
+            if (currentChapter < book.chapters) {
+                playChapter(currentChapter + 1);
+            } else if (autoPlayEnabled) {
+                // Fin du livre atteinte en mode autoplay: arreter
+                autoPlayEnabled = false;
+                document.getElementById('playBookBtn').classList.remove('playing');
+                document.getElementById('playBookIcon').textContent = '▶';
+                document.getElementById('playBookText').textContent = 'Lire tout le livre';
+                document.getElementById('bookProgress').style.display = 'none';
+            }
         });
 
         // AUTO-SCROLL des paroles synchronisées
