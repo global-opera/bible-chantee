@@ -51,6 +51,45 @@
       position: relative;
     }
 
+    /* Barre de langues horizontale */
+    .lang-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto 20px;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      position: relative;
+    }
+    .lang-btn {
+      padding: 8px 12px;
+      background: #1e3a5f;
+      color: #f5c842;
+      border: 1px solid #f5c842;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.3s;
+      min-width: 60px;
+      text-align: center;
+    }
+    .lang-btn:hover {
+      background: #2a4a7f;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(245, 196, 66, 0.3);
+    }
+    .lang-btn.active {
+      background: #f5c842;
+      color: #1e3a5f;
+      border-color: #f5c842;
+      font-weight: 700;
+    }
+
     nav {
       background: #020617;
       text-align: center;
@@ -213,6 +252,12 @@
         font-size: 1em;
       }
 
+      .lang-btn {
+        padding: 6px 8px;
+        font-size: 12px;
+        min-width: 50px;
+      }
+
       .platforms {
         gap: 15px;
       }
@@ -236,6 +281,22 @@
 <body>
 
 <header>
+  <!-- Barre de langues horizontale -->
+  <div class="lang-bar">
+    <button class="lang-btn" data-lang="FR">🇫🇷 FR</button>
+    <button class="lang-btn" data-lang="EN">🇬🇧 EN</button>
+    <button class="lang-btn" data-lang="PT">🇧🇷 PT</button>
+    <button class="lang-btn" data-lang="ES">🇪🇸 ES</button>
+    <button class="lang-btn" data-lang="DE">🇩🇪 DE</button>
+    <button class="lang-btn" data-lang="IT">🇮🇹 IT</button>
+    <button class="lang-btn" data-lang="AR">🇸🇦 AR</button>
+    <button class="lang-btn" data-lang="RU">🇷🇺 RU</button>
+    <button class="lang-btn" data-lang="ZH">🇨🇳 ZH</button>
+    <button class="lang-btn" data-lang="HI">🇮🇳 HI</button>
+    <button class="lang-btn" data-lang="TL">🇵🇭 TL</button>
+    <button class="lang-btn" data-lang="KO">🇰🇷 KO</button>
+  </div>
+
   <h1 data-i18n="siteName">Bible Chantée</h1>
   <p data-i18n="aboutTagline">La Parole de Dieu en musique</p>
 </header>
@@ -324,6 +385,33 @@
 <!-- Load translations and i18n system -->
 <script src="translations.js"></script>
 <script src="i18n.js"></script>
+
+<!-- Language switching -->
+<script>
+// Language switching
+function setLanguage(lang) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', lang);
+    window.location.href = url.toString();
+}
+
+// Mark active language button
+const urlParams = new URLSearchParams(window.location.search);
+const currentLang = urlParams.get('lang') || window.i18nInstance?.getCurrentLanguage() || 'FR';
+document.querySelectorAll('.lang-btn').forEach(btn => {
+    if (btn.dataset.lang === currentLang) {
+        btn.classList.add('active');
+    }
+});
+
+// Add click listeners to language buttons
+document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const lang = this.dataset.lang;
+        setLanguage(lang);
+    });
+});
+</script>
 
 </body>
 </html>

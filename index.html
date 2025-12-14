@@ -18,51 +18,43 @@
       line-height: 1.7;
     }
 
-    /* Language Selector Styles */
-    .language-selector-container {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
-      background: rgba(30, 41, 59, 0.95);
-      padding: 10px 15px;
-      border-radius: 25px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-      border: 2px solid rgba(147, 197, 253, 0.3);
-    }
-
-    .language-selector {
+    /* Barre de langues horizontale */
+    .lang-bar {
       display: flex;
-      align-items: center;
-      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .language-selector label {
-      color: #93c5fd;
-      font-size: 0.9em;
-      font-weight: 600;
-    }
-
-    .language-selector select {
+    .lang-btn {
       padding: 8px 12px;
-      font-size: 0.95em;
-      border-radius: 8px;
-      border: 2px solid rgba(147, 197, 253, 0.3);
-      background: rgba(15, 23, 42, 0.9);
-      color: #e5e7eb;
+      background: #1e3a5f;
+      color: #f5c842;
+      border: 1px solid #f5c842;
+      border-radius: 5px;
       cursor: pointer;
+      font-size: 14px;
       font-weight: 600;
-      outline: none;
       transition: all 0.3s;
+      min-width: 60px;
+      text-align: center;
     }
 
-    .language-selector select:hover {
-      border-color: #60a5fa;
-      background: rgba(15, 23, 42, 1);
+    .lang-btn:hover {
+      background: #2a4a7f;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(245, 196, 66, 0.3);
     }
 
-    .language-selector select:focus {
-      border-color: #3b82f6;
+    .lang-btn.active {
+      background: #f5c842;
+      color: #1e3a5f;
+      border-color: #f5c842;
+      font-weight: 700;
     }
 
     header {
@@ -322,14 +314,10 @@
       header p { font-size: 1em; }
       nav a { margin: 0 8px; font-size: 0.85em; }
       .btns-grid { grid-template-columns: 1fr; }
-      .language-selector-container {
-        top: 10px;
-        right: 10px;
-        padding: 8px 12px;
-      }
-      .language-selector {
-        flex-direction: column;
-        gap: 5px;
+      .lang-btn {
+        padding: 6px 8px;
+        font-size: 12px;
+        min-width: 50px;
       }
     }
   </style>
@@ -337,25 +325,20 @@
 
 <body>
 
-<!-- Language Selector -->
-<div class="language-selector-container">
-  <div class="language-selector">
-    <label>🌐</label>
-    <select id="globalLanguageSelector">
-      <option value="FR">🇫🇷 Français</option>
-      <option value="EN">🇬🇧 English</option>
-      <option value="ES">🇪🇸 Español</option>
-      <option value="PT">🇵🇹 Português</option>
-      <option value="DE">🇩🇪 Deutsch</option>
-      <option value="IT">🇮🇹 Italiano</option>
-      <option value="RU">🇷🇺 Русский</option>
-      <option value="AR">🇸🇦 العربية</option>
-      <option value="ZH">🇨🇳 中文</option>
-      <option value="HI">🇮🇳 हिन्दी</option>
-      <option value="TL">🇵🇭 Tagalog</option>
-      <option value="KO">🇰🇷 한국어</option>
-    </select>
-  </div>
+<!-- Barre de langues horizontale -->
+<div class="lang-bar">
+    <button class="lang-btn" data-lang="FR">🇫🇷 FR</button>
+    <button class="lang-btn" data-lang="EN">🇬🇧 EN</button>
+    <button class="lang-btn" data-lang="PT">🇧🇷 PT</button>
+    <button class="lang-btn" data-lang="ES">🇪🇸 ES</button>
+    <button class="lang-btn" data-lang="DE">🇩🇪 DE</button>
+    <button class="lang-btn" data-lang="IT">🇮🇹 IT</button>
+    <button class="lang-btn" data-lang="AR">🇸🇦 AR</button>
+    <button class="lang-btn" data-lang="RU">🇷🇺 RU</button>
+    <button class="lang-btn" data-lang="ZH">🇨🇳 ZH</button>
+    <button class="lang-btn" data-lang="HI">🇮🇳 HI</button>
+    <button class="lang-btn" data-lang="TL">🇵🇭 TL</button>
+    <button class="lang-btn" data-lang="KO">🇰🇷 KO</button>
 </div>
 
 <header>
@@ -543,8 +526,6 @@
 <script>
 // Multi-language translation system
 (function() {
-  const languageSelector = document.getElementById('globalLanguageSelector');
-
   // Load language from URL, localStorage, or browser
   function getInitialLanguage() {
     const validLangs = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];
@@ -578,9 +559,6 @@
 
     return langMap[langCode] || 'FR';
   }
-
-  const currentLang = getInitialLanguage();
-  languageSelector.value = currentLang;
 
   // Apply translations to page
   function applyTranslations(lang) {
@@ -652,14 +630,34 @@
     });
   }
 
-  // Apply initial translations
-  applyTranslations(currentLang);
+  // Change language with URL parameter
+  function setLanguage(lang) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', lang);
+    window.location.href = url.toString();
+  }
 
-  // Save language preference and reload translations when changed
-  languageSelector.addEventListener('change', function() {
-    const newLang = this.value;
-    localStorage.setItem('selectedLanguage', newLang);
-    applyTranslations(newLang);
+  // Initialize: Mark active button and apply translations
+  document.addEventListener('DOMContentLoaded', function() {
+    const currentLang = getInitialLanguage();
+
+    // Mark active button
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      if (btn.dataset.lang === currentLang) {
+        btn.classList.add('active');
+      }
+    });
+
+    // Apply translations
+    applyTranslations(currentLang);
+
+    // Add click listeners to language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const lang = this.dataset.lang;
+        setLanguage(lang);
+      });
+    });
   });
 })();
 </script>
