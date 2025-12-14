@@ -193,17 +193,7 @@
             <p class="confession-verse" id="confessionVerse"></p>
         </div>
         
-        <div class="player-section">
-            <h3 id="listenTitle">Ecouter la confession</h3>
-            <div id="audioContainer"></div>
-        </div>
-        
         <div class="actions-section" id="actionsSection"></div>
-        
-        <div class="related-verses" id="relatedSection" style="display: none;">
-            <h3 id="relatedTitle">Versets associes</h3>
-            <div class="verse-list" id="verseList"></div>
-        </div>
     </div>
 
     <script>
@@ -297,11 +287,6 @@
 
     const ICONS = ["😊", "🤍", "💪", "🏆", "🌱", "🙏", "⭐", "🎵", "🙌", "❤️"];
 
-    // No audio available yet for confessions
-    function getAudioUrl(confessionId, lang) {
-        return null;
-    }
-
     function getLecteurUrl(book, chapter, lang) {
         return `lecteur.html?book=${book}&chapter=${chapter}&lang=${lang}`;
     }
@@ -329,23 +314,6 @@
         document.getElementById('confessionTitle').textContent = confession.title;
         document.getElementById('confessionVerse').textContent = confession.verse;
         document.title = `${confession.title} - Bible Chantee`;
-        
-        // Audio section
-        document.getElementById('listenTitle').textContent = langData.listenTitle;
-        const audioContainer = document.getElementById('audioContainer');
-        const audioUrl = getAudioUrl(confessionId, lang);
-        
-        if (audioUrl) {
-            audioContainer.innerHTML = `
-                <div class="audio-player">
-                    <audio controls preload="none">
-                        <source src="${audioUrl}" type="audio/mpeg">
-                    </audio>
-                </div>
-            `;
-        } else {
-            audioContainer.innerHTML = `<div class="no-audio">${langData.comingSoon}</div>`;
-        }
         
         // Actions section - link to chapter
         const actionsSection = document.getElementById('actionsSection');

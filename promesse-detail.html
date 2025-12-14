@@ -266,18 +266,6 @@
         150: { FR: "Louez Dieu dans son sanctuaire", EN: "Praise God in His sanctuary", PT: "Louvai a Deus no seu santuario", ES: "Alabad a Dios en su santuario" }
     };
 
-    // Audio URLs on Archive.org
-    const ARCHIVE_BASE = "https://archive.org/download/bible-chantee";
-    
-    function getAudioUrl(psalmNum, lang) {
-        // FR has audio available
-        if (lang === 'FR') {
-            const chapterPadded = String(psalmNum).padStart(2, '0');
-            return `${ARCHIVE_BASE}/19_PSA_${chapterPadded}_FR.mp3`;
-        }
-        return null;
-    }
-
     function getLecteurUrl(psalmNum, lang) {
         const chapterPadded = String(psalmNum).padStart(2, '0');
         return `lecteur.html?book=19_PSA&chapter=${chapterPadded}&lang=${lang}`;
@@ -315,28 +303,13 @@
             card.className = 'psalm-card';
             
             const psalmTheme = PSALM_THEMES[psalmNum] ? (PSALM_THEMES[psalmNum][lang] || PSALM_THEMES[psalmNum].FR) : '';
-            const audioUrl = getAudioUrl(psalmNum, lang);
             const lecteurUrl = getLecteurUrl(psalmNum, lang);
-            
-            let audioHtml = '';
-            if (audioUrl) {
-                audioHtml = `
-                    <div class="audio-player">
-                        <audio controls preload="none">
-                            <source src="${audioUrl}" type="audio/mpeg">
-                        </audio>
-                    </div>
-                `;
-            } else {
-                audioHtml = `<div class="no-audio">${langData.comingSoon}</div>`;
-            }
             
             card.innerHTML = `
                 <div class="psalm-header">
                     <h2 class="psalm-title">${langData.psalmWord} ${psalmNum}</h2>
                     <span class="psalm-theme">${psalmTheme}</span>
                 </div>
-                ${audioHtml}
                 <div class="psalm-actions">
                     <a href="${lecteurUrl}" class="btn btn-primary">
                         <span>&#9658;</span> ${langData.listenLabel}
