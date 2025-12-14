@@ -504,7 +504,7 @@
       <a href="credits-depliant.html" class="btn">
         <span class="btn-icon">📄</span> <span data-i18n="btnPresentation">Presentation</span>
       </a>
-      <a href="mailto:info@biblechantee.com" class="btn btn-secondary">
+      <a href="/cdn-cgi/l/email-protection#e0898e868fa08289828c858388818e948585ce838f8d" class="btn btn-secondary">
         <span class="btn-icon">✉</span> <span data-i18n="btnEmail">Email</span>
       </a>
     </div>
@@ -513,7 +513,7 @@
   <div class="bloc" id="contact">
     <h2><span class="icon">📬</span> <span data-i18n="contactTitle">Contact</span></h2>
     <p>
-      <span data-i18n="contactEmail">Email officiel du projet :</span> <strong>info@biblechantee.com</strong>
+      <span data-i18n="contactEmail">Email officiel du projet :</span> <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c9a0a7afa689aba0aba5acaaa1a8a7bdacace7aaa6a4">[email&#160;protected]</a></strong>
     </p>
     <p style="margin-top: 10px;" data-i18n="contactLocation">
       Localisation : Suisse
@@ -532,7 +532,7 @@
 </footer>
 
 <!-- Load translations -->
-<script src="translations.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="translations.js"></script>
 
 <script>
 // Multi-language translation system
@@ -662,16 +662,35 @@
     // Apply translations
     applyTranslations(currentLang);
 
-    // Add click listeners to language buttons
+    // Add click handlers to language buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', function() {
         const lang = this.dataset.lang;
-        setLanguage(lang);
+        
+        // Update active state
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Apply translations
+        applyTranslations(lang);
+        
+        // Preserve language in links
+        preserveLanguageInLinks(lang);
+        
+        // Update URL without reload
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        window.history.pushState({}, '', url.toString());
+        
+        // Save to localStorage
+        localStorage.setItem('selectedLang', lang);
       });
     });
+
+    // Preserve language in all links
+    preserveLanguageInLinks(currentLang);
   });
 })();
 </script>
-
 </body>
 </html>
