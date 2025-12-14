@@ -1,0 +1,702 @@
+[
+  {
+    "timestamp": "2025-12-08T16:51:59.794524",
+    "total_mp3s": 355,
+    "total_urls": 1182,
+    "valid_urls": 454,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T16:52:31.878567",
+    "total_mp3s": 355,
+    "total_urls": 1182,
+    "valid_urls": 454,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T16:53:04.103640",
+    "total_mp3s": 356,
+    "total_urls": 1182,
+    "valid_urls": 455,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T16:53:36.595551",
+    "total_mp3s": 356,
+    "total_urls": 1182,
+    "valid_urls": 455,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T16:54:08.916631",
+    "total_mp3s": 356,
+    "total_urls": 1182,
+    "valid_urls": 455,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T16:54:40.989943",
+    "total_mp3s": 356,
+    "total_urls": 1182,
+    "valid_urls": 455,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T16:55:13.594989",
+    "total_mp3s": 356,
+    "total_urls": 1182,
+    "valid_urls": 455,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T16:55:46.586659",
+    "total_mp3s": 357,
+    "total_urls": 1182,
+    "valid_urls": 456,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T16:56:18.544489",
+    "total_mp3s": 357,
+    "total_urls": 1182,
+    "valid_urls": 456,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T16:56:50.908693",
+    "total_mp3s": 357,
+    "total_urls": 1182,
+    "valid_urls": 456,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T16:57:23.175750",
+    "total_mp3s": 358,
+    "total_urls": 1182,
+    "valid_urls": 457,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T16:57:55.303031",
+    "total_mp3s": 358,
+    "total_urls": 1182,
+    "valid_urls": 457,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T16:58:27.416276",
+    "total_mp3s": 358,
+    "total_urls": 1182,
+    "valid_urls": 457,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T16:58:59.694661",
+    "total_mp3s": 358,
+    "total_urls": 1182,
+    "valid_urls": 457,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T16:59:31.977307",
+    "total_mp3s": 359,
+    "total_urls": 1182,
+    "valid_urls": 458,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:00:04.644665",
+    "total_mp3s": 359,
+    "total_urls": 1182,
+    "valid_urls": 458,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:00:36.620728",
+    "total_mp3s": 359,
+    "total_urls": 1182,
+    "valid_urls": 458,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:01:08.767471",
+    "total_mp3s": 359,
+    "total_urls": 1182,
+    "valid_urls": 458,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:01:40.951110",
+    "total_mp3s": 360,
+    "total_urls": 1182,
+    "valid_urls": 459,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:02:13.138104",
+    "total_mp3s": 360,
+    "total_urls": 1182,
+    "valid_urls": 459,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:02:45.463895",
+    "total_mp3s": 360,
+    "total_urls": 1182,
+    "valid_urls": 459,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:03:17.641126",
+    "total_mp3s": 360,
+    "total_urls": 1182,
+    "valid_urls": 459,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:03:50.165207",
+    "total_mp3s": 361,
+    "total_urls": 1182,
+    "valid_urls": 460,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:04:21.857509",
+    "total_mp3s": 361,
+    "total_urls": 1182,
+    "valid_urls": 460,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:04:54.378166",
+    "total_mp3s": 361,
+    "total_urls": 1182,
+    "valid_urls": 460,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:05:26.441529",
+    "total_mp3s": 361,
+    "total_urls": 1182,
+    "valid_urls": 460,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:05:59.261174",
+    "total_mp3s": 362,
+    "total_urls": 1182,
+    "valid_urls": 461,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:06:31.420694",
+    "total_mp3s": 362,
+    "total_urls": 1182,
+    "valid_urls": 461,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:07:03.817307",
+    "total_mp3s": 362,
+    "total_urls": 1182,
+    "valid_urls": 461,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:07:35.993272",
+    "total_mp3s": 362,
+    "total_urls": 1182,
+    "valid_urls": 461,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:08:08.711360",
+    "total_mp3s": 362,
+    "total_urls": 1182,
+    "valid_urls": 461,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:08:41.088064",
+    "total_mp3s": 363,
+    "total_urls": 1182,
+    "valid_urls": 462,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:09:13.696179",
+    "total_mp3s": 363,
+    "total_urls": 1182,
+    "valid_urls": 462,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:09:45.582295",
+    "total_mp3s": 363,
+    "total_urls": 1182,
+    "valid_urls": 462,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:10:17.784629",
+    "total_mp3s": 363,
+    "total_urls": 1182,
+    "valid_urls": 462,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:10:49.644256",
+    "total_mp3s": 363,
+    "total_urls": 1182,
+    "valid_urls": 462,
+    "completed_books": 21
+  },
+  {
+    "timestamp": "2025-12-08T17:11:21.712513",
+    "total_mp3s": 364,
+    "total_urls": 1182,
+    "valid_urls": 463,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:11:53.731386",
+    "total_mp3s": 364,
+    "total_urls": 1182,
+    "valid_urls": 463,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:12:25.793166",
+    "total_mp3s": 364,
+    "total_urls": 1182,
+    "valid_urls": 463,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:12:58.052654",
+    "total_mp3s": 364,
+    "total_urls": 1182,
+    "valid_urls": 463,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:13:30.485695",
+    "total_mp3s": 364,
+    "total_urls": 1182,
+    "valid_urls": 463,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:14:02.409572",
+    "total_mp3s": 364,
+    "total_urls": 1182,
+    "valid_urls": 463,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:14:34.225744",
+    "total_mp3s": 364,
+    "total_urls": 1182,
+    "valid_urls": 463,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:15:06.519979",
+    "total_mp3s": 364,
+    "total_urls": 1182,
+    "valid_urls": 463,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:15:38.803535",
+    "total_mp3s": 364,
+    "total_urls": 1182,
+    "valid_urls": 463,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:16:10.941511",
+    "total_mp3s": 364,
+    "total_urls": 1182,
+    "valid_urls": 463,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:16:42.947433",
+    "total_mp3s": 364,
+    "total_urls": 1182,
+    "valid_urls": 463,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:17:15.401565",
+    "total_mp3s": 364,
+    "total_urls": 1182,
+    "valid_urls": 463,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:17:47.475652",
+    "total_mp3s": 364,
+    "total_urls": 1182,
+    "valid_urls": 463,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:18:19.525495",
+    "total_mp3s": 364,
+    "total_urls": 1182,
+    "valid_urls": 463,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:18:51.661398",
+    "total_mp3s": 364,
+    "total_urls": 1182,
+    "valid_urls": 463,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:19:24.606016",
+    "total_mp3s": 364,
+    "total_urls": 1182,
+    "valid_urls": 463,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:19:56.897589",
+    "total_mp3s": 364,
+    "total_urls": 1182,
+    "valid_urls": 463,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:20:29.827912",
+    "total_mp3s": 365,
+    "total_urls": 1182,
+    "valid_urls": 464,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:21:02.082938",
+    "total_mp3s": 365,
+    "total_urls": 1182,
+    "valid_urls": 464,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:21:34.441782",
+    "total_mp3s": 365,
+    "total_urls": 1182,
+    "valid_urls": 464,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:22:06.362547",
+    "total_mp3s": 365,
+    "total_urls": 1182,
+    "valid_urls": 464,
+    "completed_books": 22
+  },
+  {
+    "timestamp": "2025-12-08T17:22:38.500479",
+    "total_mp3s": 366,
+    "total_urls": 1182,
+    "valid_urls": 465,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:23:11.670003",
+    "total_mp3s": 366,
+    "total_urls": 1182,
+    "valid_urls": 465,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:23:44.484419",
+    "total_mp3s": 366,
+    "total_urls": 1182,
+    "valid_urls": 465,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:24:17.424144",
+    "total_mp3s": 366,
+    "total_urls": 1182,
+    "valid_urls": 465,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:24:49.658895",
+    "total_mp3s": 366,
+    "total_urls": 1182,
+    "valid_urls": 465,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:25:21.600051",
+    "total_mp3s": 366,
+    "total_urls": 1182,
+    "valid_urls": 465,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:25:53.610231",
+    "total_mp3s": 366,
+    "total_urls": 1182,
+    "valid_urls": 465,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:26:26.263042",
+    "total_mp3s": 366,
+    "total_urls": 1182,
+    "valid_urls": 465,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:26:58.474128",
+    "total_mp3s": 366,
+    "total_urls": 1182,
+    "valid_urls": 465,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:27:31.764725",
+    "total_mp3s": 366,
+    "total_urls": 1182,
+    "valid_urls": 465,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:28:04.045577",
+    "total_mp3s": 366,
+    "total_urls": 1182,
+    "valid_urls": 465,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:28:36.031268",
+    "total_mp3s": 366,
+    "total_urls": 1182,
+    "valid_urls": 465,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:29:09.257992",
+    "total_mp3s": 367,
+    "total_urls": 1182,
+    "valid_urls": 466,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:29:41.377264",
+    "total_mp3s": 367,
+    "total_urls": 1182,
+    "valid_urls": 466,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:30:13.468559",
+    "total_mp3s": 367,
+    "total_urls": 1182,
+    "valid_urls": 466,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:30:45.856546",
+    "total_mp3s": 367,
+    "total_urls": 1182,
+    "valid_urls": 466,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:31:18.088388",
+    "total_mp3s": 368,
+    "total_urls": 1182,
+    "valid_urls": 467,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:31:50.494769",
+    "total_mp3s": 368,
+    "total_urls": 1182,
+    "valid_urls": 467,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:32:22.998600",
+    "total_mp3s": 368,
+    "total_urls": 1182,
+    "valid_urls": 467,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:32:55.276390",
+    "total_mp3s": 368,
+    "total_urls": 1182,
+    "valid_urls": 467,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:33:28.035587",
+    "total_mp3s": 369,
+    "total_urls": 1182,
+    "valid_urls": 468,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:34:00.363113",
+    "total_mp3s": 369,
+    "total_urls": 1182,
+    "valid_urls": 468,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:34:32.688209",
+    "total_mp3s": 369,
+    "total_urls": 1182,
+    "valid_urls": 468,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:35:06.276922",
+    "total_mp3s": 369,
+    "total_urls": 1182,
+    "valid_urls": 468,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:35:39.815488",
+    "total_mp3s": 370,
+    "total_urls": 1182,
+    "valid_urls": 469,
+    "completed_books": 23
+  },
+  {
+    "timestamp": "2025-12-08T17:36:12.536979",
+    "total_mp3s": 72,
+    "total_urls": 1182,
+    "valid_urls": 469,
+    "completed_books": 1
+  },
+  {
+    "timestamp": "2025-12-08T17:36:44.585242",
+    "total_mp3s": 72,
+    "total_urls": 1182,
+    "valid_urls": 469,
+    "completed_books": 1
+  },
+  {
+    "timestamp": "2025-12-08T17:37:16.294774",
+    "total_mp3s": 72,
+    "total_urls": 1182,
+    "valid_urls": 469,
+    "completed_books": 1
+  },
+  {
+    "timestamp": "2025-12-08T17:37:47.935616",
+    "total_mp3s": 72,
+    "total_urls": 1182,
+    "valid_urls": 469,
+    "completed_books": 1
+  },
+  {
+    "timestamp": "2025-12-08T17:38:19.634500",
+    "total_mp3s": 72,
+    "total_urls": 1182,
+    "valid_urls": 469,
+    "completed_books": 1
+  },
+  {
+    "timestamp": "2025-12-08T17:38:51.441933",
+    "total_mp3s": 72,
+    "total_urls": 1182,
+    "valid_urls": 469,
+    "completed_books": 1
+  },
+  {
+    "timestamp": "2025-12-08T17:39:23.411561",
+    "total_mp3s": 73,
+    "total_urls": 1182,
+    "valid_urls": 470,
+    "completed_books": 1
+  },
+  {
+    "timestamp": "2025-12-08T17:39:55.531616",
+    "total_mp3s": 73,
+    "total_urls": 1182,
+    "valid_urls": 470,
+    "completed_books": 1
+  },
+  {
+    "timestamp": "2025-12-08T17:40:27.753199",
+    "total_mp3s": 73,
+    "total_urls": 1182,
+    "valid_urls": 470,
+    "completed_books": 1
+  },
+  {
+    "timestamp": "2025-12-08T17:40:59.876299",
+    "total_mp3s": 73,
+    "total_urls": 1182,
+    "valid_urls": 470,
+    "completed_books": 1
+  },
+  {
+    "timestamp": "2025-12-08T17:41:32.182200",
+    "total_mp3s": 73,
+    "total_urls": 1182,
+    "valid_urls": 470,
+    "completed_books": 1
+  },
+  {
+    "timestamp": "2025-12-08T17:42:04.278156",
+    "total_mp3s": 73,
+    "total_urls": 1182,
+    "valid_urls": 470,
+    "completed_books": 1
+  },
+  {
+    "timestamp": "2025-12-08T17:42:37.134802",
+    "total_mp3s": 73,
+    "total_urls": 1182,
+    "valid_urls": 470,
+    "completed_books": 1
+  },
+  {
+    "timestamp": "2025-12-08T17:43:09.476065",
+    "total_mp3s": 73,
+    "total_urls": 1182,
+    "valid_urls": 470,
+    "completed_books": 1
+  },
+  {
+    "timestamp": "2025-12-08T17:43:41.872854",
+    "total_mp3s": 73,
+    "total_urls": 1182,
+    "valid_urls": 470,
+    "completed_books": 1
+  },
+  {
+    "timestamp": "2025-12-08T17:44:14.083779",
+    "total_mp3s": 73,
+    "total_urls": 1182,
+    "valid_urls": 470,
+    "completed_books": 1
+  },
+  {
+    "timestamp": "2025-12-08T17:44:46.370829",
+    "total_mp3s": 73,
+    "total_urls": 1182,
+    "valid_urls": 470,
+    "completed_books": 1
+  },
+  {
+    "timestamp": "2025-12-08T17:45:18.544114",
+    "total_mp3s": 73,
+    "total_urls": 1182,
+    "valid_urls": 470,
+    "completed_books": 1
+  }
+]

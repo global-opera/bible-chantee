@@ -1,0 +1,366 @@
+================================================================================
+  CONFIGURATION YOUTUBE API - GUIDE COMPLET
+================================================================================
+
+Ce guide explique comment configurer l'accès à l'API YouTube pour uploader
+automatiquement les vidéos Bible Chantée.
+
+================================================================================
+  ÉTAPE 1: CRÉER UN PROJET GOOGLE CLOUD
+================================================================================
+
+1. Aller sur: https://console.cloud.google.com
+
+2. Se connecter avec votre compte Google (celui du canal YouTube)
+
+3. Cliquer sur "Sélectionner un projet" en haut
+   → "NOUVEAU PROJET"
+
+4. Remplir les informations:
+   Nom du projet: "Bible Chantee YouTube"
+   Organisation: (laisser vide si personnel)
+
+5. Cliquer "CRÉER"
+
+6. Attendre quelques secondes que le projet soit créé
+
+7. Vérifier que le nouveau projet est bien sélectionné (coin supérieur gauche)
+
+
+================================================================================
+  ÉTAPE 2: ACTIVER L'API YOUTUBE DATA v3
+================================================================================
+
+1. Dans le menu de gauche (☰), aller sur:
+   → "APIs et services"
+   → "Bibliothèque"
+
+2. Dans la barre de recherche, taper: "YouTube Data API v3"
+
+3. Cliquer sur "YouTube Data API v3"
+
+4. Cliquer sur le bouton bleu "ACTIVER"
+
+5. Attendre quelques secondes (l'API est maintenant activée)
+
+
+================================================================================
+  ÉTAPE 3: CRÉER DES IDENTIFIANTS OAUTH 2.0
+================================================================================
+
+1. Dans le menu de gauche, aller sur:
+   → "APIs et services"
+   → "Identifiants"
+
+2. Cliquer sur "+ CRÉER DES IDENTIFIANTS" en haut
+   → Sélectionner "ID client OAuth"
+
+3. Si c'est votre première fois, vous devrez configurer l'écran de consentement:
+
+   a) Cliquer sur "CONFIGURER L'ÉCRAN DE CONSENTEMENT"
+
+   b) Choisir "Externe" (sauf si vous avez Google Workspace)
+      Cliquer "CRÉER"
+
+   c) Remplir les informations de l'application:
+      - Nom de l'application: "Bible Chantée Upload"
+      - E-mail d'assistance utilisateur: [votre email]
+      - Logo: (optionnel)
+      - Domaine de l'application: (laisser vide)
+      - E-mail du développeur: [votre email]
+
+   d) Cliquer "ENREGISTRER ET CONTINUER"
+
+   e) Section "Champs d'application":
+      Cliquer "AJOUTER OU SUPPRIMER DES CHAMPS D'APPLICATION"
+      Rechercher et sélectionner:
+      - YouTube Data API v3 (tous les champs)
+      Cliquer "METTRE À JOUR"
+      Cliquer "ENREGISTRER ET CONTINUER"
+
+   f) Section "Utilisateurs test":
+      Cliquer "+ AJOUTER DES UTILISATEURS"
+      Entrer votre adresse email (celle du canal YouTube)
+      Cliquer "AJOUTER"
+      Cliquer "ENREGISTRER ET CONTINUER"
+
+   g) Vérifier le résumé, cliquer "RETOUR AU TABLEAU DE BORD"
+
+4. Maintenant créer l'ID client OAuth:
+
+   a) Retourner sur "Identifiants" dans le menu de gauche
+
+   b) Cliquer "+ CRÉER DES IDENTIFIANTS"
+      → "ID client OAuth"
+
+   c) Type d'application: Sélectionner "Application de bureau"
+
+   d) Nom: "Bible Chantée Desktop Uploader"
+
+   e) Cliquer "CRÉER"
+
+5. Une fenêtre apparaît avec votre ID client et secret
+
+   Cliquer sur "TÉLÉCHARGER JSON"
+
+   ⚠️ IMPORTANT: Ce fichier contient vos identifiants secrets!
+
+
+================================================================================
+  ÉTAPE 4: CONFIGURER LE FICHIER client_secret.json
+================================================================================
+
+1. Le fichier JSON téléchargé a un nom comme:
+   client_secret_123456789-abcdef.apps.googleusercontent.com.json
+
+2. RENOMMER ce fichier en: client_secret.json
+
+3. DÉPLACER le fichier dans le dossier:
+   C:\ScriptBible\bible-chantee\Scripts\
+
+4. Vérifier que le fichier est bien nommé:
+   C:\ScriptBible\bible-chantee\Scripts\client_secret.json
+
+
+================================================================================
+  ÉTAPE 5: INSTALLER LES MODULES PYTHON REQUIS
+================================================================================
+
+Ouvrir une invite de commande et taper:
+
+pip install google-api-python-client google-auth-oauthlib google-auth-httplib2
+
+Attendre que l'installation se termine (quelques secondes).
+
+
+================================================================================
+  ÉTAPE 6: PREMIÈRE AUTHENTIFICATION
+================================================================================
+
+1. Double-cliquer sur: LANCER_UPLOAD_YOUTUBE.bat
+
+2. Votre navigateur va s'ouvrir automatiquement
+
+3. Connexion Google:
+   - Se connecter avec le compte du canal YouTube
+
+4. Écran d'avertissement (si l'app n'est pas vérifiée):
+   - Cliquer sur "Paramètres avancés"
+   - Cliquer sur "Accéder à Bible Chantée Upload (dangereux)"
+
+5. Autorisation des permissions:
+   - Cocher "Voir, modifier et supprimer définitivement vos vidéos..."
+   - Cocher "Gérer votre compte YouTube"
+   - Cliquer "Continuer"
+
+6. Page de confirmation:
+   "L'authentification s'est terminée avec succès. Vous pouvez fermer..."
+   → Fermer l'onglet et retourner au terminal
+
+7. Le script affiche: "[OK] Authentification réussie!"
+
+8. Un fichier youtube_token.pickle est créé automatiquement
+   → Contient le token d'accès (valide 7 jours)
+   → Sera rafraîchi automatiquement
+
+⚠️ NE JAMAIS PARTAGER le fichier youtube_token.pickle ou client_secret.json!
+
+
+================================================================================
+  ÉTAPE 7: VÉRIFIER LE QUOTA YOUTUBE
+================================================================================
+
+1. Retourner sur: https://console.cloud.google.com
+
+2. Menu de gauche → "APIs et services" → "Quotas et limites système"
+
+3. Rechercher "YouTube Data API v3"
+
+4. Vérifier les quotas:
+
+   QUOTA GRATUIT (par défaut):
+   - 10,000 unités/jour
+   - Reset à minuit Pacific Time (PT = UTC-8 ou UTC-7)
+
+   COÛT PAR OPÉRATION:
+   - Upload vidéo: ~1,600 unités
+   - Créer playlist: 50 unités
+   - Ajouter à playlist: 50 unités
+   - Upload thumbnail: 50 unités
+
+   CALCUL:
+   - 1 vidéo complète = 1,600 + 50 + 50 = 1,750 unités
+   - Capacité quotidienne = 10,000 / 1,750 = ~5-6 vidéos/jour
+
+5. Pour augmenter le quota:
+   - Cliquer sur "YouTube Data API v3"
+   - Cliquer "DEMANDER UNE AUGMENTATION"
+   - Justifier la demande (projet religieux, éducatif, non-commercial)
+   - Attendre validation (quelques jours)
+
+
+================================================================================
+  ÉTAPE 8: UTILISATION DU SCRIPT
+================================================================================
+
+MODE 1: UPLOAD AUTOMATIQUE (Recommandé)
+----------------------------------------
+1. Double-cliquer: LANCER_UPLOAD_YOUTUBE.bat
+2. Choisir option "1" (Scanner et uploader automatiquement)
+3. Entrer nombre max uploads (défaut: 6)
+4. Le script:
+   - Scanne tous les fichiers MP4 dans Videos/FR/
+   - Upload les vidéos non encore uploadées
+   - Génère automatiquement titres/descriptions/tags
+   - Ajoute aux playlists correspondantes
+   - Sauvegarde les URLs dans youtube_uploads.json
+5. Attendre la fin (environ 3-5 min/vidéo)
+
+
+MODE 2: UPLOAD PAR LIVRE
+-------------------------
+1. Lancer le script
+2. Choisir option "2" (Uploader un livre spécifique)
+3. Entrer le code livre (ex: 19_PSA pour Psaumes)
+4. Entrer nombre max uploads
+5. Seul ce livre sera traité
+
+
+MODE 3: UPLOAD VIDÉO UNIQUE
+----------------------------
+1. Lancer le script
+2. Choisir option "3" (Uploader une vidéo unique)
+3. Entrer code livre (ex: 19_PSA)
+4. Entrer numéro chapitre (ex: 23)
+5. Seule cette vidéo sera uploadée
+
+
+MODE 4: VOIR STATISTIQUES
+--------------------------
+1. Lancer le script
+2. Choisir option "4" (Voir statistiques)
+3. Affiche un résumé des uploads effectués
+
+
+================================================================================
+  FICHIERS GÉNÉRÉS
+================================================================================
+
+youtube_token.pickle
+  → Token d'authentification OAuth2
+  → Régénéré automatiquement tous les 7 jours
+  → NE PAS PARTAGER
+
+youtube_uploads.json
+  → Historique de tous les uploads
+  → Format: {book_code: {chapter: {youtube_id, url, date, ...}}}
+  → Utilisé pour éviter les doublons
+
+youtube_playlists.json
+  → Mapping des IDs de playlists créées
+  → Format: {book_code: playlist_id}
+  → Utilisé pour ajouter vidéos aux bonnes playlists
+
+
+================================================================================
+  RÉSOLUTION DE PROBLÈMES
+================================================================================
+
+Problème: "Module 'google.oauth2.credentials' not found"
+Solution: pip install google-api-python-client google-auth-oauthlib
+
+Problème: "client_secret.json not found"
+Solution: Vérifier que le fichier est bien dans Scripts/ et correctement nommé
+
+Problème: "Quota exceeded (403)"
+Solution: Attendre demain (reset quota à minuit PT) ou demander augmentation
+
+Problème: "Invalid credentials"
+Solution: Supprimer youtube_token.pickle et refaire l'authentification
+
+Problème: "Upload failed (500)"
+Solution: Vérifier taille vidéo (max 256GB), format (MP4), attendre et réessayer
+
+Problème: Vidéo uploadée mais pas dans la playlist
+Solution: Le script réessaiera automatiquement au prochain lancement
+
+Problème: Thumbnail non uploadée
+Solution: Vérifier que le fichier existe dans Thumbnails/FR/ et fait < 2MB
+
+
+================================================================================
+  SÉCURITÉ ET BONNES PRATIQUES
+================================================================================
+
+✅ À FAIRE:
+- Garder client_secret.json et youtube_token.pickle PRIVÉS
+- Ne JAMAIS commit ces fichiers sur GitHub
+- Sauvegarder client_secret.json dans un endroit sûr
+- Vérifier régulièrement les quotas consommés
+- Uploader en heures creuses (moins de concurrence sur les quotas)
+
+❌ À ÉVITER:
+- Partager les fichiers de credentials
+- Uploader plus de 6 vidéos/jour (risque quota)
+- Utiliser plusieurs comptes simultanément (violation TOS)
+- Modifier manuellement youtube_uploads.json (risque corruption)
+
+
+================================================================================
+  OPTIMISATION POUR UPLOADS EN MASSE
+================================================================================
+
+Pour uploader les 1,189 chapitres complets:
+
+STRATÉGIE 1: Quota gratuit (5-6 vidéos/jour)
+  → Durée totale: ~200 jours (6-7 mois)
+  → Coût: 0€
+  → Méthode: Lancer le script chaque jour
+
+STRATÉGIE 2: Quota augmenté (50 vidéos/jour)
+  → Durée totale: ~24 jours (1 mois)
+  → Coût: 0€ (si demande acceptée)
+  → Méthode: Demander augmentation quota à Google
+
+STRATÉGIE 3: Quota payant (illimité)
+  → Durée totale: 1-2 jours
+  → Coût: ~$4,000 (1,189 vidéos × $0.000003/unité × 1,750 unités)
+  → Méthode: Activer facturation Google Cloud
+
+
+RECOMMANDATION:
+  1. Commencer avec quota gratuit (6 vidéos/jour)
+  2. En parallèle, demander augmentation quota
+  3. Uploader les vidéos phares en priorité (Top 50 chapitres)
+  4. Une fois quota augmenté, accélérer le rythme
+
+
+================================================================================
+  RESSOURCES UTILES
+================================================================================
+
+Documentation YouTube Data API:
+  https://developers.google.com/youtube/v3/docs
+
+Console Google Cloud:
+  https://console.cloud.google.com
+
+Quotas et limites:
+  https://developers.google.com/youtube/v3/getting-started#quota
+
+Support Google:
+  https://support.google.com/youtube/answer/71673
+
+
+================================================================================
+  CONTACT
+================================================================================
+
+Pour toute question sur ce setup:
+1. Vérifier cette documentation
+2. Consulter les logs dans la console
+3. Vérifier YouTube Data API status: https://www.google.com/appsstatus
+
+================================================================================
+Dernière mise à jour: 7 décembre 2025
+================================================================================

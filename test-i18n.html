@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Test i18n Book Names</title>
+</head>
+<body>
+    <h1>Test i18n - Book Names</h1>
+    <div id="test-results"></div>
+
+    <!-- Load translations and i18n -->
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
+
+    <script>
+        const results = document.getElementById('test-results');
+
+        function log(msg) {
+            const p = document.createElement('p');
+            p.textContent = msg;
+            results.appendChild(p);
+        }
+
+        log('=== TEST 1: Verificationsjs loaded ===');
+        log('window.translations exists: ' + (typeof window.translations !== 'undefined'));
+        log('window.translations.FR exists: ' + (window.translations && typeof window.translations.FR !== 'undefined'));
+
+        log('\n=== TEST 2: Verifications i18n loaded ===');
+        log('window.BibleI18n exists: ' + (typeof window.BibleI18n !== 'undefined'));
+        log('window.i18nInstance exists: ' + (typeof window.i18nInstance !== 'undefined'));
+        log('window.getTranslation exists: ' + (typeof window.getTranslation !== 'undefined'));
+
+        log('\n=== TEST 3: Check book01 translation ===');
+        if (window.translations && window.translations.FR) {
+            log('translations.FR.book01 = ' + window.translations.FR.book01);
+        }
+
+        log('\n=== TEST 4: Test getTranslation function ===');
+        if (typeof window.getTranslation === 'function') {
+            const result = window.getTranslation('book01');
+            log('getTranslation("book01") = ' + result);
+        } else {
+            log('ERROR: window.getTranslation is not a function!');
+
+            // Try to initialize manually
+            log('\n=== TEST 5: Manual initialization ===');
+            if (window.BibleI18n) {
+                window.BibleI18n.init();
+                log('BibleI18n.init() called');
+                log('window.i18nInstance now exists: ' + (typeof window.i18nInstance !== 'undefined'));
+                log('window.getTranslation now exists: ' + (typeof window.getTranslation !== 'undefined'));
+
+                if (typeof window.getTranslation === 'function') {
+                    const result = window.getTranslation('book01');
+                    log('getTranslation("book01") after init = ' + result);
+                }
+            }
+        }
+
+        log('\n=== TEST 6: Test current language ===');
+        if (window.i18nInstance) {
+            log('Current language: ' + window.i18nInstance.getCurrentLanguage());
+        }
+    </script>
+</body>
+</html>
