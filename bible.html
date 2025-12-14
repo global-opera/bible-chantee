@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible Segond 1910 - Texte</title>
+    <title data-i18n="biblePageTitle">Bible Segond 1910 - Texte</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -143,24 +143,24 @@
 <body>
     <div class="container">
         <header>
-            <h1>Bible Segond 1910</h1>
-            <p class="subtitle">Texte integral - 66 livres - 1189 chapitres</p>
-            <a href="index.html" class="back-link">Retour a l'accueil</a>
+            <h1 data-i18n="bibleHeading">Bible Segond 1910</h1>
+            <p class="subtitle" data-i18n="bibleSubtitle">Texte integral - 66 livres - 1189 chapitres</p>
+            <a href="index.html" class="back-link" data-i18n="bibleBackHome">Retour a l'accueil</a>
         </header>
 
-        <h2 class="section-title">Ancien Testament</h2>
+        <h2 class="section-title" data-i18n="bibleOldTestament">Ancien Testament</h2>
         <div class="books-grid" id="old-testament"></div>
 
-        <h2 class="section-title">Nouveau Testament</h2>
+        <h2 class="section-title" data-i18n="bibleNewTestament">Nouveau Testament</h2>
         <div class="books-grid" id="new-testament"></div>
 
         <div class="reader-panel" id="reader">
             <div class="reader-header">
                 <div class="reader-title" id="reader-title">Genese</div>
                 <div class="chapter-nav">
-                    <button class="nav-btn" id="prev-ch">Precedent</button>
+                    <button class="nav-btn" id="prev-ch" data-i18n="biblePrevious">Precedent</button>
                     <select class="chapter-select" id="chapter-select"></select>
-                    <button class="nav-btn" id="next-ch">Suivant</button>
+                    <button class="nav-btn" id="next-ch" data-i18n="bibleNext">Suivant</button>
                 </div>
             </div>
             <div class="bible-text" id="bible-text"></div>
@@ -269,7 +269,7 @@
             for (let i = 1; i <= book.chapters; i++) {
                 const opt = document.createElement('option');
                 opt.value = i;
-                opt.textContent = 'Chapitre ' + i;
+                opt.textContent = (window.getTranslation ? getTranslation('bibleChapter') : 'Chapitre') + ' ' + i;
                 select.appendChild(opt);
             }
             
@@ -279,7 +279,8 @@
 
         function loadChapter(chapter) {
             currentChapter = chapter;
-            document.getElementById('reader-title').textContent = currentBook.name + ' - Chapitre ' + chapter;
+            const chapterWord = window.getTranslation ? getTranslation('bibleChapter') : 'Chapitre';
+            document.getElementById('reader-title').textContent = currentBook.name + ' - ' + chapterWord + ' ' + chapter;
             document.getElementById('chapter-select').value = chapter;
             document.getElementById('prev-ch').disabled = chapter <= 1;
             document.getElementById('next-ch').disabled = chapter >= currentBook.chapters;
@@ -297,7 +298,8 @@
                 });
                 textDiv.innerHTML = html;
             } else {
-                textDiv.innerHTML = '<p style="color: #888; text-align: center; padding: 40px;">Texte non disponible pour ce chapitre</p>';
+                const notAvailable = window.getTranslation ? getTranslation('bibleTextNotAvailable') : 'Texte non disponible pour ce chapitre';
+                textDiv.innerHTML = '<p style="color: #888; text-align: center; padding: 40px;">' + notAvailable + '</p>';
             }
 
             textDiv.scrollTop = 0;
@@ -309,5 +311,9 @@
 
         renderBooks();
     </script>
+
+    <!-- i18n Scripts -->
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
 </body>
 </html>

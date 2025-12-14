@@ -302,7 +302,7 @@ def parse_lyrics_file(file_path):
     }
 
 
-def process_book(lang_code, book_code, api_key, output_dir=None, start_chapter=1):
+def process_book(lang_code, book_code, api_key, output_dir=None, start_chapter=1, end_chapter=None):
     """
     Traite tous les chapitres d'un livre avec l'API Suno
 
@@ -312,6 +312,7 @@ def process_book(lang_code, book_code, api_key, output_dir=None, start_chapter=1
         api_key: Clé API Suno
         output_dir: Dossier de sortie pour les MP3
         start_chapter: Chapitre de départ
+        end_chapter: Chapitre de fin (None = jusqu'à la fin du livre)
     """
     generator = SunoAPIGenerator(api_key)
 
@@ -319,7 +320,8 @@ def process_book(lang_code, book_code, api_key, output_dir=None, start_chapter=1
     generator.check_credits()
 
     # Trouver tous les fichiers du livre
-    lyrics_dir = Path(f"G:/Mon Drive/01 BibleChantee/Lyrics/{lang_code}/{book_code}")
+    project_root = Path(__file__).parent.parent
+    lyrics_dir = project_root / f"Lyrics/{lang_code}/{book_code}"
 
     if not lyrics_dir.exists():
         print(f"[ERROR] Dossier introuvable: {lyrics_dir}")
@@ -333,7 +335,8 @@ def process_book(lang_code, book_code, api_key, output_dir=None, start_chapter=1
 
     # Output directory
     if not output_dir:
-        output_dir = Path(f"G:/Mon Drive/01 BibleChantee/Suno_Output/{lang_code}/{book_code}")
+        project_root = Path(__file__).parent.parent
+        output_dir = project_root / f"Suno_Output_V2/{lang_code}/{book_code}"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"\n{'='*70}")
@@ -354,6 +357,10 @@ def process_book(lang_code, book_code, api_key, output_dir=None, start_chapter=1
 
         if chapter_num < start_chapter:
             print(f"[SKIP] Chapitre {chapter_num} (< {start_chapter})")
+            continue
+
+        if end_chapter is not None and chapter_num > end_chapter:
+            print(f"[SKIP] Chapitre {chapter_num} (> {end_chapter})")
             continue
 
         print(f"\n--- [{i}/{len(files)}] Chapitre {chapter_num} ---")
@@ -402,6 +409,7 @@ def process_book(lang_code, book_code, api_key, output_dir=None, start_chapter=1
     print(f"\n{'='*70}")
     print(f"  TERMINE!")
     print(f"{'='*70}")
+    return True
 
 
 def main():

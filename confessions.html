@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>10 Confessions de la Bible en Musique</title>
+<title data-i18n="confPageTitle">10 Confessions de la Bible en Musique</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -40,13 +40,13 @@ footer{text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid #
 <body>
 <div class="container">
 <header>
-<h1>10 Confessions de la Bible en Musique</h1><a href="index.html" class="back-link">← Retour accueil</a>
-<p class="subtitle">Declarez la Parole de Dieu sur votre vie</p>
+<h1 data-i18n="confHeading">10 Confessions de la Bible en Musique</h1><a href="index.html" class="back-link" data-i18n="confBackHome">← Retour accueil</a>
+<p class="subtitle" data-i18n="confSubtitle">Declarez la Parole de Dieu sur votre vie</p>
 </header>
 <div class="grid" id="grid"></div>
 <div class="links">
-<a href="index.html">Retour a la Bible Chantee</a> |
-<a href="promesses.html">Promesses de la Bible</a>
+<a href="index.html" data-i18n="confFooterBack">Retour a la Bible Chantee</a> |
+<a href="promesses.html" data-i18n="confPromisesLink">Promesses de la Bible</a>
 </div>
 <footer>&copy; 2025 St&eacute;phane Cassani - Tous droits r&eacute;serv&eacute;s</footer>
 </div>
@@ -75,42 +75,57 @@ var URLS={
 "09_Amen":"https://cdn1.suno.ai/8b14d0ee-1611-4222-8f9c-108db657fa96.mp3",
 "10_Shalom":"https://cdn1.suno.ai/1fefd605-4d8d-4af2-93af-67645e0bf825.mp3"
 };
+// Confession data structure with multilingual support
 var C=[
-{n:1,i:"&#x1F60A;",f:"01_Joie",t:"Je suis dans la joie",v:"Nehemie 8:10 ; Psaume 16:11",l:"[Couplet 1]\nLa joie du Seigneur est ma force aujourd'hui\nMeme dans l'epreuve, je tiens debout, je vis\nTa parole eclaire chacun de mes pas\nTu remplis mon coeur de Ta joie\n\n[Refrain]\nJe suis dans la joie, je suis dans la joie\nLa joie du Seigneur habite en moi\nJe suis dans la joie, je suis dans la joie\nDans Ta presence, mon coeur se rejouit\n\n[Couplet 2]\nTu me fais connaitre le chemin de la vie\nDevant Ta face, la joie grandit\nDes plaisirs eternels sont a Ta droite\nMon ame exulte et se rappelle Ta bonte\n\n[Pont]\nMeme si les larmes viennent pour un temps\nTa joie revient comme le soleil levant"},
-{n:2,i:"&#x2764;",f:"02_Gueri",t:"Je suis gueri",v:"Esaie 53:5 ; 1 Pierre 2:24",l:"[Couplet 1]\nIl a porte nos fautes, nos douleurs aussi\nPar ses blessures, je suis gueri\nA la croix, Il a tout pris pour moi\nAujourd'hui, Sa vie coule en moi\n\n[Refrain]\nJe suis gueri au nom de Jesus\nJe suis gueri par le sang repandu\nLa croix a parle plus fort que la mort\nJe suis gueri par l'amour du Seigneur\n\n[Couplet 2]\nIl a porte mes peches sur le bois\nPour que je vive pour Dieu par la foi\nPar ses blessures, j'ai recu la vie\nAujourd'hui, la guerison grandit en moi\n\n[Pont]\nIl a envoye Sa parole\nEt m'a totalement gueri"},
-{n:3,i:"&#x1F4AA;",f:"03_Sante",t:"Je suis en bonne sante",v:"3 Jean 1:2",l:"[Couplet 1]\nJe souhaite que tu ailles bien en tout\nEt que tu sois en bonne sante\nComme ton ame va bien aussi\nC'est la promesse que Dieu a donnee\n\n[Refrain]\nJe suis en bonne sante, corps et ame en paix\nLe Seigneur veille sur moi, jour apres jour\nJe suis en bonne sante, fortifie par Sa bonte\nMa vie Lui appartient pour toujours\n\n[Couplet 2]\nC'est Lui qui renouvelle mes forces\nComme l'aigle je reprends mon vol"},
-{n:4,i:"&#x1F3C6;",f:"04_Vainqueur",t:"Je suis vainqueur",v:"Romains 8:37 ; 1 Jean 5:4",l:"[Couplet 1]\nTout ce qui nait de Dieu triomphe du monde\nMa foi me fait avancer\nLa victoire m'a deja ete donnee\nJe n'ai plus peur d'affronter\n\n[Refrain]\nJe suis vainqueur, plus que vainqueur\nPar Celui qui m'a aime\nJe suis vainqueur, plus que vainqueur\nMa victoire vient du Seigneur\n\n[Couplet 2]\nRien ne peut me separer de Son amour\nNi la vie, ni la mort\nDans toutes ces choses je triomphe\nPar la puissance de Son nom fort\n\n[Pont]\nSi Dieu est pour moi, qui sera contre moi ?"},
-{n:5,i:"&#x1F331;",f:"05_Prospere",t:"Je prospere",v:"Josue 1:8 ; Psaume 1:3",l:"[Couplet 1]\nQue ce livre ne quitte pas mes levres\nJe le medite jour et nuit\nAlors je reussis dans mes voies\nEt la benediction grandit en moi\n\n[Refrain]\nJe prospere, par la main de Dieu\nTout ce que je fais porte du fruit\nJe prospere, sous Ses yeux\nMa vie fleurit jour et nuit\n\n[Couplet 2]\nJe suis comme un arbre pres de l'eau\nQui donne son fruit en sa saison\nTout ce que j'entreprends reussit\nDans la paix de Sa maison"},
-{n:6,i:"&#x1F64F;",f:"06_Reconnaissant",t:"Je suis reconnaissant",v:"1 Thess. 5:18 ; Psaume 100:4",l:"[Couplet 1]\nEn toutes choses, je remercie Dieu\nMeme quand je ne comprends pas\nMon coeur choisit de Lui faire confiance\nCar Sa fidelite ne faiblit pas\n\n[Refrain]\nJe suis reconnaissant, de tout mon coeur\nPour Ton amour et Ta bonte\nJe suis reconnaissant, mon Seigneur\nA jamais je Te louerai\n\n[Couplet 2]\nJ'entre dans Ta maison avec louange\nAvec actions de grace et chant"},
-{n:7,i:"&#x2728;",f:"07_Heureux",t:"Je suis heureux",v:"Psaume 16:11",l:"[Couplet 1]\nDans Ta presence, il y a la joie parfaite\nA Ta droite, le bonheur sans fin\nMa joie ne depend plus du monde\nMais de Ton amour qui vit en moi\n\n[Refrain]\nJe suis heureux, vraiment heureux\nMa joie vient de Toi, Seigneur Jesus\nJe suis heureux, vraiment heureux\nMa vie est cachee en Dieu\n\n[Couplet 2]\nMeme quand la nuit vient me couvrir\nTa joie m'apprend encore a sourire"},
-{n:8,i:"&#x1F54A;",f:"08_Beni",t:"Je suis beni",v:"Ephesiens 1:3 ; Nombres 6:24-26",l:"[Couplet 1]\nBeni soit le Dieu qui m'a beni en Christ\nDe toute benediction dans le ciel\nSa grace m'enveloppe aujourd'hui\nEt Sa lumiere se revele en moi\n\n[Refrain]\nJe suis beni, je suis garde\nLe Seigneur veille sur mes pas\nJe suis beni, je suis aime\nSa paix demeure en moi\n\n[Couplet 2]\nQue le Seigneur me benisse et me garde\nQu'Il fasse briller Son visage sur moi"},
-{n:9,i:"&#x1F932;",f:"09_Amen",t:"Ainsi soit-il (Amen)",v:"Matthieu 6:13 ; Apocalypse 22:20",l:"[Couplet 1]\nQue Ta volonte s'accomplisse\nSur la terre comme au ciel\nQue Ton regne vienne dans nos vies\nDans la paix eternelle\n\n[Refrain]\nAmen, amen, ainsi soit-il\nA Toi la gloire pour toujours\nAmen, amen, ainsi soit-il\nViens Seigneur, regne sur nous\n\n[Couplet 2]\nOui, viens Seigneur Jesus\nMon coeur T'attend dans la foi"},
-{n:10,i:"&#x1F54A;",f:"10_Shalom",t:"Paix du Seigneur (Shalom)",v:"Jean 14:27 ; Nombres 6:26",l:"[Couplet 1]\nJe vous laisse la paix, je vous donne Ma paix\nDit le Seigneur, plein d'amour\nCe n'est pas comme le monde peut donner\nC'est une paix pour toujours\n\n[Refrain]\nPaix du Seigneur, paix d'Adonai\nPaix qui garde mon coeur\nPaix du Seigneur, paix d'Adonai\nPaix qui chasse la peur\n\n[Couplet 2]\nQue le Seigneur tourne Son regard vers moi\nEt qu'Il me donne la paix"}
+{n:1,i:"&#x1F60A;",f:"01_Joie",titleKey:"conf1Title",verseKey:"conf1Verse",l:"[Couplet 1]\nLa joie du Seigneur est ma force aujourd'hui\nMeme dans l'epreuve, je tiens debout, je vis\nTa parole eclaire chacun de mes pas\nTu remplis mon coeur de Ta joie\n\n[Refrain]\nJe suis dans la joie, je suis dans la joie\nLa joie du Seigneur habite en moi\nJe suis dans la joie, je suis dans la joie\nDans Ta presence, mon coeur se rejouit\n\n[Couplet 2]\nTu me fais connaitre le chemin de la vie\nDevant Ta face, la joie grandit\nDes plaisirs eternels sont a Ta droite\nMon ame exulte et se rappelle Ta bonte\n\n[Pont]\nMeme si les larmes viennent pour un temps\nTa joie revient comme le soleil levant"},
+{n:2,i:"&#x2764;",f:"02_Gueri",titleKey:"conf2Title",verseKey:"conf2Verse",l:"[Couplet 1]\nIl a porte nos fautes, nos douleurs aussi\nPar ses blessures, je suis gueri\nA la croix, Il a tout pris pour moi\nAujourd'hui, Sa vie coule en moi\n\n[Refrain]\nJe suis gueri au nom de Jesus\nJe suis gueri par le sang repandu\nLa croix a parle plus fort que la mort\nJe suis gueri par l'amour du Seigneur\n\n[Couplet 2]\nIl a porte mes peches sur le bois\nPour que je vive pour Dieu par la foi\nPar ses blessures, j'ai recu la vie\nAujourd'hui, la guerison grandit en moi\n\n[Pont]\nIl a envoye Sa parole\nEt m'a totalement gueri"},
+{n:3,i:"&#x1F4AA;",f:"03_Sante",titleKey:"conf3Title",verseKey:"conf3Verse",l:"[Couplet 1]\nJe souhaite que tu ailles bien en tout\nEt que tu sois en bonne sante\nComme ton ame va bien aussi\nC'est la promesse que Dieu a donnee\n\n[Refrain]\nJe suis en bonne sante, corps et ame en paix\nLe Seigneur veille sur moi, jour apres jour\nJe suis en bonne sante, fortifie par Sa bonte\nMa vie Lui appartient pour toujours\n\n[Couplet 2]\nC'est Lui qui renouvelle mes forces\nComme l'aigle je reprends mon vol"},
+{n:4,i:"&#x1F3C6;",f:"04_Vainqueur",titleKey:"conf4Title",verseKey:"conf4Verse",l:"[Couplet 1]\nTout ce qui nait de Dieu triomphe du monde\nMa foi me fait avancer\nLa victoire m'a deja ete donnee\nJe n'ai plus peur d'affronter\n\n[Refrain]\nJe suis vainqueur, plus que vainqueur\nPar Celui qui m'a aime\nJe suis vainqueur, plus que vainqueur\nMa victoire vient du Seigneur\n\n[Couplet 2]\nRien ne peut me separer de Son amour\nNi la vie, ni la mort\nDans toutes ces choses je triomphe\nPar la puissance de Son nom fort\n\n[Pont]\nSi Dieu est pour moi, qui sera contre moi ?"},
+{n:5,i:"&#x1F331;",f:"05_Prospere",titleKey:"conf5Title",verseKey:"conf5Verse",l:"[Couplet 1]\nQue ce livre ne quitte pas mes levres\nJe le medite jour et nuit\nAlors je reussis dans mes voies\nEt la benediction grandit en moi\n\n[Refrain]\nJe prospere, par la main de Dieu\nTout ce que je fais porte du fruit\nJe prospere, sous Ses yeux\nMa vie fleurit jour et nuit\n\n[Couplet 2]\nJe suis comme un arbre pres de l'eau\nQui donne son fruit en sa saison\nTout ce que j'entreprends reussit\nDans la paix de Sa maison"},
+{n:6,i:"&#x1F64F;",f:"06_Reconnaissant",titleKey:"conf6Title",verseKey:"conf6Verse",l:"[Couplet 1]\nEn toutes choses, je remercie Dieu\nMeme quand je ne comprends pas\nMon coeur choisit de Lui faire confiance\nCar Sa fidelite ne faiblit pas\n\n[Refrain]\nJe suis reconnaissant, de tout mon coeur\nPour Ton amour et Ta bonte\nJe suis reconnaissant, mon Seigneur\nA jamais je Te louerai\n\n[Couplet 2]\nJ'entre dans Ta maison avec louange\nAvec actions de grace et chant"},
+{n:7,i:"&#x2728;",f:"07_Heureux",titleKey:"conf7Title",verseKey:"conf7Verse",l:"[Couplet 1]\nDans Ta presence, il y a la joie parfaite\nA Ta droite, le bonheur sans fin\nMa joie ne depend plus du monde\nMais de Ton amour qui vit en moi\n\n[Refrain]\nJe suis heureux, vraiment heureux\nMa joie vient de Toi, Seigneur Jesus\nJe suis heureux, vraiment heureux\nMa vie est cachee en Dieu\n\n[Couplet 2]\nMeme quand la nuit vient me couvrir\nTa joie m'apprend encore a sourire"},
+{n:8,i:"&#x1F54A;",f:"08_Beni",titleKey:"conf8Title",verseKey:"conf8Verse",l:"[Couplet 1]\nBeni soit le Dieu qui m'a beni en Christ\nDe toute benediction dans le ciel\nSa grace m'enveloppe aujourd'hui\nEt Sa lumiere se revele en moi\n\n[Refrain]\nJe suis beni, je suis garde\nLe Seigneur veille sur mes pas\nJe suis beni, je suis aime\nSa paix demeure en moi\n\n[Couplet 2]\nQue le Seigneur me benisse et me garde\nQu'Il fasse briller Son visage sur moi"},
+{n:9,i:"&#x1F932;",f:"09_Amen",titleKey:"conf9Title",verseKey:"conf9Verse",l:"[Couplet 1]\nQue Ta volonte s'accomplisse\nSur la terre comme au ciel\nQue Ton regne vienne dans nos vies\nDans la paix eternelle\n\n[Refrain]\nAmen, amen, ainsi soit-il\nA Toi la gloire pour toujours\nAmen, amen, ainsi soit-il\nViens Seigneur, regne sur nous\n\n[Couplet 2]\nOui, viens Seigneur Jesus\nMon coeur T'attend dans la foi"},
+{n:10,i:"&#x1F54A;",f:"10_Shalom",titleKey:"conf10Title",verseKey:"conf10Verse",l:"[Couplet 1]\nJe vous laisse la paix, je vous donne Ma paix\nDit le Seigneur, plein d'amour\nCe n'est pas comme le monde peut donner\nC'est une paix pour toujours\n\n[Refrain]\nPaix du Seigneur, paix d'Adonai\nPaix qui garde mon coeur\nPaix du Seigneur, paix d'Adonai\nPaix qui chasse la peur\n\n[Couplet 2]\nQue le Seigneur tourne Son regard vers moi\nEt qu'Il me donne la paix"}
 ];
-var g=document.getElementById('grid');
-C.forEach(function(c){
-g.innerHTML+='<div class="card" onclick="ouvrir('+c.n+')"><div class="icon">'+c.i+'</div><div class="num">Confession '+c.n+'</div><div class="title">'+c.t+'</div><div class="verse">'+c.v+'</div></div>';
-});
+
+// Render confessions cards with translations
+function renderConfessions() {
+    var g=document.getElementById('grid');
+    g.innerHTML = '';
+    C.forEach(function(c){
+        var getTranslation=window.getTranslation||(function(k){return k;});
+        var confWord=getTranslation('confWord')||'Confession';
+        var title=getTranslation(c.titleKey)||c.titleKey;
+        var verse=getTranslation(c.verseKey)||c.verseKey;
+        g.innerHTML+='<div class="card" onclick="ouvrir('+c.n+')"><div class="icon">'+c.i+'</div><div class="num">'+confWord+' '+c.n+'</div><div class="title">'+title+'</div><div class="verse">'+verse+'</div></div>';
+    });
+}
+
 function ouvrir(n){
 var c=C[n-1];
-document.getElementById('pt').textContent=c.t;
-document.getElementById('pv').textContent=c.v;
+var getTranslation=window.getTranslation||(function(k){return k;});
+var title=getTranslation(c.titleKey)||c.titleKey;
+var verse=getTranslation(c.verseKey)||c.verseKey;
+document.getElementById('pt').textContent=title;
+document.getElementById('pv').textContent=verse;
 document.getElementById('au').src=URLS[c.f];
 document.getElementById('ly').textContent=c.l;
 document.getElementById('ly').classList.remove('show');
-document.querySelector('.btn-lyrics').textContent='Voir les paroles';
+document.querySelector('.btn-lyrics').textContent=getTranslation('confShowLyrics')||'Voir les paroles';
 document.getElementById('popup').style.display='flex';
 document.getElementById('au').play();
 }
 function toggleLyrics(){
 var ly=document.getElementById('ly');
 var btn=document.querySelector('.btn-lyrics');
+var t=window.getTranslation||(function(k){return k;});
 if(ly.classList.contains('show')){
 ly.classList.remove('show');
-btn.textContent='Voir les paroles';
+btn.textContent=t('confShowLyrics')||'Voir les paroles';
 }else{
 ly.classList.add('show');
-btn.textContent='Masquer les paroles';
+btn.textContent=t('confHideLyrics')||'Masquer les paroles';
 }
 }
 function fermer(){
@@ -118,6 +133,20 @@ document.getElementById('popup').style.display='none';
 document.getElementById('au').pause();
 }
 document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
+</script>
+
+<!-- i18n Scripts -->
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+
+<!-- Initialize UI after i18n is ready -->
+<script>
+// Wait for i18n to be fully loaded, then render confessions
+if (window.BibleI18n) {
+    window.BibleI18n.init();
+}
+// Now render with translations available
+renderConfessions();
 </script>
 </body>
 </html>
