@@ -953,62 +953,83 @@
         let lastActiveSection = -1;
 
         function updateLyrics() {
-            const lyricsText = document.getElementById('lyricsText');
-            const lyricsContainer = document.getElementById('lyricsContainer');
-            const chapterStr = String(currentChapter);
+    const lyricsText = document.getElementById('lyricsText');
+    const lyricsContainer = document.getElementById('lyricsContainer');
+    const chapterStr = String(currentChapter);
 
-            // Utiliser les timestamps si disponibles
-            if (typeof lyricsTimestamps !== 'undefined' && lyricsTimestamps[currentBook] && lyricsTimestamps[currentBook][chapterStr]) {
-                const sections = lyricsTimestamps[currentBook][chapterStr];
-                lyricsText.innerHTML = '';
+    // Utiliser les timestamps si disponibles
+    if (typeof lyricsTimestamps !== 'undefined' &&
+        lyricsTimestamps[currentBook] &&
+        lyricsTimestamps[currentBook][chapterStr]) {
 
-                sections.forEach((section, index) => {
-                    const sectionDiv = document.createElement('div');
-                    sectionDiv.className = 'lyrics-section';
-                    sectionDiv.id = 'lyrics-section-' + index;
-                    sectionDiv.dataset.start = section.start;
+        const sections = lyricsTimestamps[currentBook][chapterStr];
+        lyricsText.innerHTML = '';
 
-                    const titleDiv = document.createElement('div');
-                    titleDiv.className = 'section-title';
-                    titleDiv.textContent = section.type;
-                    sectionDiv.appendChild(titleDiv);
+        sections.forEach((section, index) => {
+            const sectionDiv = document.createElement('div');
+            sectionDiv.className = 'lyrics-section';
+            sectionDiv.id = 'lyrics-section-' + index;
+            sectionDiv.dataset.start = section.start;
 
-                    section.lines.forEach(line => {
-                        const lineDiv = document.createElement('div');
-                        lineDiv.className = 'lyrics-line';
-                        lineDiv.textContent = line;
-                        sectionDiv.appendChild(lineDiv);
-                    });
+            const titleDiv = document.createElement('div');
+            titleDiv.className = 'section-title';
+            titleDiv.textContent = section.type;
+            sectionDiv.appendChild(titleDiv);
 
-                    lyricsText.appendChild(sectionDiv);
-                });
+            section.lines.forEach(line => {
+                const lineDiv = document.createElement('div');
+                lineDiv.className = 'lyrics-line';
+                lineDiv.textContent = line;
+                sectionDiv.appendChild(lineDiv);
+            });
 
-                lastActiveSection = -1;
+            lyricsText.appendChild(sectionDiv);
+        });
+
+        lastActiveSection = -1;
+
+    } else {
+        let lyrics = null;
+
+        // PRIORITE A LA LANGUE COURANTE
+        if (currentLanguage === 'PT' &&
+            typeof chapterLyricsPT !== 'undefined' &&
+            chapterLyricsPT[currentBook] &&
+            chapterLyricsPT[currentBook][chapterStr]) {
+
+            lyrics = chapterLyricsPT[currentBook][chapterStr];
+
+        } else if (typeof chapterLyrics !== 'undefined' &&
+                   chapterLyrics[currentBook] &&
+                   chapterLyrics[currentBook][chapterStr]) {
+
+            if (useV2 &&
+                typeof chapterLyricsV2 !== 'undefined' &&
+                chapterLyricsV2[currentBook] &&
+                chapterLyricsV2[currentBook][chapterStr]) {
+
+                lyrics = chapterLyricsV2[currentBook][chapterStr];
             } else {
-                let lyrics = null;
-
-                if (currentLanguage === 'PT' && typeof chapterLyricsPT !== 'undefined' &&
-                    chapterLyricsPT[currentBook] && chapterLyricsPT[currentBook][chapterStr]) {
-                    lyrics = chapterLyricsPT[currentBook][chapterStr];
-                } else if (typeof chapterLyrics !== 'undefined' && chapterLyrics[currentBook] && chapterLyrics[currentBook][chapterStr]) {
-                    if (useV2 && typeof chapterLyricsV2 !== 'undefined' &&
-                        chapterLyricsV2[currentBook] && chapterLyricsV2[currentBook][chapterStr]) {
-                        lyrics = chapterLyricsV2[currentBook][chapterStr];
-                    } else {
-                        lyrics = chapterLyrics[currentBook][chapterStr];
-                    }
-                }
-
-                if (lyrics) {
-                    lyricsText.innerHTML = lyrics.replace(/\[([^\]]+)\]/g, '<span class="section-label">[$1]</span>');
-                }
-            } else {
-                const t = window.getTranslation || ((key) => null);
-                lyricsText.innerHTML = '<div class="no-lyrics">' + (t('readerNoLyrics') || 'Paroles non disponibles pour ce chapitre') + '</div>';
+                lyrics = chapterLyrics[currentBook][chapterStr];
             }
-
-            lyricsContainer.scrollTop = 0;
         }
+
+        if (lyrics) {
+            lyricsText.innerHTML = lyrics.replace(
+                /\[([^\]]+)\]/g,
+                '<span class="section-label">[$1]</span>'
+            );
+        } else {
+            const t = window.getTranslation || ((key) => null);
+            lyricsText.innerHTML =
+                '<div class="no-lyrics">' +
+                (t('readerNoLyrics') || 'Paroles non disponibles pour ce chapitre') +
+                '</div>';
+        }
+    }
+
+    lyricsContainer.scrollTop = 0;
+}
 
         function updateBible() {
             const bibleText = document.getElementById('bibleText');
