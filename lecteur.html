@@ -778,11 +778,17 @@
 
         function renderBooks(container, bookList) {
             const el = document.getElementById(container);
-            el.innerHTML = bookList.map(book =>
-                '<div class="book'+(book.available ? '' : ' unavailable')+'" data-num="'+book.num+'" data-chapters="'+book.chapters+'" data-available="'+book.available+'">' +
+            const t = window.getTranslation || ((key) => key);
+
+            el.innerHTML = bookList.map(book => {
+                const bookNum = parseInt(book.num);
+                const bookKey = 'book' + book.num;
+                const bookName = t(bookKey) || book.name;
+
+                return '<div class="book'+(book.available ? '' : ' unavailable')+'" data-num="'+book.num+'" data-chapters="'+book.chapters+'" data-available="'+book.available+'">' +
                 '<div class="book-num">'+book.num+'</div>' +
-                '<div class="book-name">'+book.name+'</div></div>'
-            ).join('');
+                '<div class="book-name" data-i18n="'+bookKey+'">'+bookName+'</div></div>';
+            }).join('');
         }
 
         function searchBible() {
