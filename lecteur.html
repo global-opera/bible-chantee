@@ -462,6 +462,25 @@
                 max-height: 200px;
             }
             .player-title { font-size: 1.1em; }
+
+            /* Mobile: cacher drapeaux, afficher dropdown */
+            .language-selector .lang-btn {
+                display: none;
+            }
+
+            .lang-dropdown-mobile {
+                display: block;
+                width: calc(100% - 40px);
+                max-width: 350px;
+                margin: 20px auto;
+                padding: 15px;
+                font-size: 18px;
+                background: #1e3a5f;
+                color: #f5c842;
+                border: 2px solid #f5c842;
+                border-radius: 10px;
+                cursor: pointer;
+            }
         }
     
         /* === SELECTEUR DE LANGUES === */
@@ -509,6 +528,12 @@
         .lang-code { font-weight: bold; color: #fff; font-size: 0.85em; }
         .lang-progress { font-size: 0.65em; color: #aaa; margin-top: 2px; }
         .lang-btn.active .lang-code, .lang-btn.active .lang-progress { color: #ffce00; }
+
+        /* Menu déroulant mobile (caché par défaut) */
+        .lang-dropdown-mobile {
+            display: none;
+        }
+
         .lang-progress-bar {
             width: 100%;
             height: 3px;
@@ -543,6 +568,21 @@
         </header>
         <!-- SELECTEUR DE LANGUES -->
         <div class="language-selector" id="languageSelector"></div>
+        <!-- MENU DEROULANT MOBILE -->
+        <select id="langSelectMobile" class="lang-dropdown-mobile">
+            <option value="FR">🇫🇷 Français (100%)</option>
+            <option value="EN">🇬🇧 English (0%)</option>
+            <option value="PT">🇧🇷 Português (67%)</option>
+            <option value="ES">🇪🇸 Español (0%)</option>
+            <option value="DE">🇩🇪 Deutsch (0%)</option>
+            <option value="IT">🇮🇹 Italiano (0%)</option>
+            <option value="AR">🇸🇦 العربية (0%)</option>
+            <option value="RU">🇷🇺 Русский (0%)</option>
+            <option value="ZH">🇨🇳 中文 (0%)</option>
+            <option value="HI">🇮🇳 हिन्दी (0%)</option>
+            <option value="TL">🇵🇭 Tagalog (0%)</option>
+            <option value="KO">🇰🇷 한국어 (0%)</option>
+        </select>
         <h2 class="section-title" data-i18n="readerOldTestament">Ancien Testament</h2>
         <div class="books-grid" id="old-testament"></div>
         <h2 class="section-title" data-i18n="readerNewTestament">Nouveau Testament</h2>
@@ -1307,9 +1347,21 @@
         if (!LANGUAGES[langCode] || LANGUAGES[langCode].chapters === 0) return;
         currentLanguage = langCode;
         renderLanguageSelector();
+        // Synchroniser le dropdown mobile
+        const mobileSelect = document.getElementById('langSelectMobile');
+        if (mobileSelect) mobileSelect.value = langCode;
     }
-    
+
     renderLanguageSelector();
+
+    // Event listener pour le menu déroulant mobile
+    document.getElementById('langSelectMobile').addEventListener('change', function() {
+        const lang = this.value;
+        switchLanguage(lang);
+    });
+
+    // Synchroniser le dropdown mobile avec la langue actuelle au chargement
+    document.getElementById('langSelectMobile').value = currentLanguage;
     </script>
 </body>
 </html>
