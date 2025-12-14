@@ -41,6 +41,7 @@ const translations = {
     selectLanguage: "Choisir une langue:",
     btnBibleText: "Bible (texte)",
     btnListenBible: "Ecouter la Bible",
+    btnPlayer: "Lecteur",
     btnPromises: "Promesses bibliques",
     btnConfessions: "10 Confessions de foi",
 
@@ -116,6 +117,7 @@ const translations = {
     selectLanguage: "Choose a language:",
     btnBibleText: "Bible (text)",
     btnListenBible: "Listen to the Bible",
+    btnPlayer: "Player",
     btnPromises: "Biblical promises",
     btnConfessions: "10 Confessions of faith",
 
@@ -191,6 +193,7 @@ const translations = {
     selectLanguage: "Elegir un idioma:",
     btnBibleText: "Biblia (texto)",
     btnListenBible: "Escuchar la Biblia",
+    btnPlayer: "Reproductor",
     btnPromises: "Promesas bíblicas",
     btnConfessions: "10 Confesiones de fe",
 
@@ -266,6 +269,7 @@ const translations = {
     selectLanguage: "Escolher um idioma:",
     btnBibleText: "Bíblia (texto)",
     btnListenBible: "Ouvir a Bíblia",
+    btnPlayer: "Leitor",
     btnPromises: "Promessas bíblicas",
     btnConfessions: "10 Confissões de fé",
 
@@ -341,6 +345,7 @@ const translations = {
     selectLanguage: "Sprache wählen:",
     btnBibleText: "Bibel (Text)",
     btnListenBible: "Bibel hören",
+    btnPlayer: "Spieler",
     btnPromises: "Biblische Verheißungen",
     btnConfessions: "10 Glaubensbekenntnisse",
 
@@ -416,6 +421,7 @@ const translations = {
     selectLanguage: "Scegliere una lingua:",
     btnBibleText: "Bibbia (testo)",
     btnListenBible: "Ascoltare la Bibbia",
+    btnPlayer: "Lettore",
     btnPromises: "Promesse bibliche",
     btnConfessions: "10 Confessioni di fede",
 
@@ -491,6 +497,7 @@ const translations = {
     selectLanguage: "Выбрать язык:",
     btnBibleText: "Библия (текст)",
     btnListenBible: "Слушать Библию",
+    btnPlayer: "Плеер",
     btnPromises: "Библейские обетования",
     btnConfessions: "10 Исповеданий веры",
 
@@ -566,6 +573,7 @@ const translations = {
     selectLanguage: "اختر لغة:",
     btnBibleText: "الكتاب المقدس (نص)",
     btnListenBible: "استمع إلى الكتاب المقدس",
+    btnPlayer: "مشغل",
     btnPromises: "الوعود الكتابية",
     btnConfessions: "10 اعترافات إيمان",
 
@@ -641,6 +649,7 @@ const translations = {
     selectLanguage: "选择语言：",
     btnBibleText: "圣经（文本）",
     btnListenBible: "聆听圣经",
+    btnPlayer: "播放器",
     btnPromises: "圣经应许",
     btnConfessions: "10个信仰告白",
 
@@ -716,6 +725,7 @@ const translations = {
     selectLanguage: "एक भाषा चुनें:",
     btnBibleText: "बाइबिल (पाठ)",
     btnListenBible: "बाइबिल सुनें",
+    btnPlayer: "प्लेयर",
     btnPromises: "बाइबिल के वादे",
     btnConfessions: "10 विश्वास की स्वीकारोक्तियाँ",
 
@@ -791,6 +801,7 @@ const translations = {
     selectLanguage: "Pumili ng wika:",
     btnBibleText: "Bibliya (teksto)",
     btnListenBible: "Makinig sa Bibliya",
+    btnPlayer: "Tagapatugtog",
     btnPromises: "Mga pangako sa Bibliya",
     btnConfessions: "10 Pagtatapat ng pananampalataya",
 
@@ -866,6 +877,7 @@ const translations = {
     selectLanguage: "언어 선택:",
     btnBibleText: "성경 (텍스트)",
     btnListenBible: "성경 듣기",
+    btnPlayer: "플레이어",
     btnPromises: "성경적 약속",
     btnConfessions: "10가지 신앙 고백",
 
