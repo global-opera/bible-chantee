@@ -532,11 +532,17 @@
 </footer>
 
 <!-- Load translations -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="translations.js"></script>
+<script src="translations.js"></script>
 
 <script>
 // Multi-language translation system
 (function() {
+  // Check if translations loaded
+  if (typeof translations === 'undefined') {
+    console.error('translations.js not loaded - check path');
+    return;
+  }
+  
   // Load language from URL, localStorage, or browser
   function getInitialLanguage() {
     const validLangs = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];
