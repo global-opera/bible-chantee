@@ -1004,12 +1004,9 @@
                 }
                 
                 if (lyrics) {
-                    lyrics = lyrics.replace(/\[([^\]]+)\]/g, '<span class="section-label">[]</span>');
+                    lyrics = lyrics.replace(/\[([^\]]+)\]/g, '<span class="section-label">[$1]</span>');
                     lyricsText.innerHTML = lyrics;
-                }
-                lyrics = lyrics.replace(/\[([^\]]+)\]/g, '<span class="section-label">[$1]</span>');
-                lyricsText.innerHTML = lyrics;
-            } else {
+                } else {
                 const t = window.getTranslation || ((key) => null);
                 lyricsText.innerHTML = '<div class="no-lyrics">' + (t('readerNoLyrics') || 'Paroles non disponibles pour ce chapitre') + '</div>';
             }
