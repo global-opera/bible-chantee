@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confession - Bible Chantee</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a237e 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        
+        .back-link {
+            display: inline-block;
+            color: #f5c842;
+            text-decoration: none;
+            padding: 10px 25px;
+            border: 2px solid #f5c842;
+            border-radius: 25px;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            background: #f5c842;
+            color: #1a237e;
+        }
+        
+        .confession-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .confession-icon { font-size: 5rem; margin-bottom: 20px; }
+        .confession-number { 
+            color: #f5c842; 
+            font-size: 1rem; 
+            margin-bottom: 10px;
+        }
+        .confession-title { 
+            color: #fff; 
+            font-size: 2.2rem; 
+            font-weight: bold; 
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        .confession-verse { 
+            color: #b0b0b0; 
+            font-size: 1.2rem; 
+            font-style: italic;
+        }
+        
+        .player-section {
+            background: rgba(30, 58, 95, 0.9);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .player-section h3 {
+            color: #f5c842;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .audio-player {
+            width: 100%;
+        }
+        
+        .audio-player audio {
+            width: 100%;
+            height: 50px;
+            border-radius: 25px;
+        }
+        
+        .no-audio {
+            color: #8899aa;
+            font-style: italic;
+            padding: 30px;
+            text-align: center;
+            background: rgba(0,0,0,0.2);
+            border-radius: 15px;
+        }
+        
+        .actions-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .action-card {
+            background: rgba(30, 58, 95, 0.9);
+            border-radius: 15px;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(245, 200, 66, 0.2);
+        }
+        
+        .action-icon {
+            font-size: 2.5rem;
+            min-width: 60px;
+            text-align: center;
+        }
+        
+        .action-content {
+            flex: 1;
+        }
+        
+        .action-title {
+            color: #f5c842;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .action-desc {
+            color: #b0b0b0;
+            font-size: 0.9rem;
+        }
+        
+        .action-arrow {
+            color: #f5c842;
+            font-size: 1.5rem;
+        }
+        
+        .related-verses {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .related-verses h3 {
+            color: #f5c842;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .verse-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .verse-item {
+            background: rgba(30, 58, 95, 0.6);
+            border-radius: 10px;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .verse-item:hover {
+            background: rgba(30, 58, 95, 0.9);
+        }
+        
+        .verse-ref {
+            color: #f5c842;
+            font-weight: 500;
+        }
+        
+        .verse-arrow {
+            color: #8899aa;
+        }
+        
+        @media (max-width: 480px) {
+            .confession-title { font-size: 1.6rem; }
+            .action-card { flex-direction: column; text-align: center; }
+            .action-arrow { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="confessions.html" class="back-link" id="backLink">Retour aux confessions</a>
+        
+        <div class="confession-header">
+            <div class="confession-icon" id="confessionIcon"></div>
+            <div class="confession-number" id="confessionNumber"></div>
+            <h1 class="confession-title" id="confessionTitle"></h1>
+            <p class="confession-verse" id="confessionVerse"></p>
+        </div>
+        
+        <div class="player-section">
+            <h3 id="listenTitle">Ecouter la confession</h3>
+            <div id="audioContainer"></div>
+        </div>
+        
+        <div class="actions-section" id="actionsSection"></div>
+        
+        <div class="related-verses" id="relatedSection" style="display: none;">
+            <h3 id="relatedTitle">Versets associes</h3>
+            <div class="verse-list" id="verseList"></div>
+        </div>
+    </div>
+
+    <script>
+    // Confessions data
+    const CONFESSIONS_DATA = {
+        FR: {
+            back: "Retour aux confessions",
+            word: "Confession",
+            listenTitle: "Ecouter la confession",
+            comingSoon: "Audio bientot disponible",
+            readChapter: "Lire le chapitre complet",
+            readDesc: "Ouvrir dans le lecteur biblique",
+            relatedTitle: "Versets associes",
+            items: [
+                { title: "Je suis enfant de Dieu", verse: "Jean 1:12", book: "43_JOH", chapter: "01" },
+                { title: "Je suis justifie par la foi", verse: "Romains 5:1", book: "45_ROM", chapter: "05" },
+                { title: "Je suis plus que vainqueur", verse: "Romains 8:37", book: "45_ROM", chapter: "08" },
+                { title: "Je peux tout en Christ", verse: "Philippiens 4:13", book: "50_PHP", chapter: "04" },
+                { title: "Dieu pourvoit a tous mes besoins", verse: "Philippiens 4:19", book: "50_PHP", chapter: "04" },
+                { title: "Je suis gueri par ses meurtrissures", verse: "Esaie 53:5", book: "23_ISA", chapter: "53" },
+                { title: "Aucune arme ne prosperera", verse: "Esaie 54:17", book: "23_ISA", chapter: "54" },
+                { title: "Le Seigneur est mon berger", verse: "Psaume 23:1", book: "19_PSA", chapter: "23" },
+                { title: "Je suis beni", verse: "Ephesiens 1:3", book: "49_EPH", chapter: "01" },
+                { title: "L'amour de Dieu est en moi", verse: "Romains 5:5", book: "45_ROM", chapter: "05" }
+            ]
+        },
+        EN: {
+            back: "Back to confessions",
+            word: "Confession",
+            listenTitle: "Listen to the confession",
+            comingSoon: "Audio coming soon",
+            readChapter: "Read the full chapter",
+            readDesc: "Open in Bible reader",
+            relatedTitle: "Related verses",
+            items: [
+                { title: "I am a child of God", verse: "John 1:12", book: "43_JOH", chapter: "01" },
+                { title: "I am justified by faith", verse: "Romans 5:1", book: "45_ROM", chapter: "05" },
+                { title: "I am more than a conqueror", verse: "Romans 8:37", book: "45_ROM", chapter: "08" },
+                { title: "I can do all things through Christ", verse: "Philippians 4:13", book: "50_PHP", chapter: "04" },
+                { title: "God supplies all my needs", verse: "Philippians 4:19", book: "50_PHP", chapter: "04" },
+                { title: "By His stripes I am healed", verse: "Isaiah 53:5", book: "23_ISA", chapter: "53" },
+                { title: "No weapon shall prosper", verse: "Isaiah 54:17", book: "23_ISA", chapter: "54" },
+                { title: "The Lord is my shepherd", verse: "Psalm 23:1", book: "19_PSA", chapter: "23" },
+                { title: "I am blessed", verse: "Ephesians 1:3", book: "49_EPH", chapter: "01" },
+                { title: "God's love is in me", verse: "Romans 5:5", book: "45_ROM", chapter: "05" }
+            ]
+        },
+        PT: {
+            back: "Voltar as confissoes",
+            word: "Confissao",
+            listenTitle: "Ouvir a confissao",
+            comingSoon: "Audio em breve",
+            readChapter: "Ler o capitulo completo",
+            readDesc: "Abrir no leitor biblico",
+            relatedTitle: "Versiculos relacionados",
+            items: [
+                { title: "Sou filho de Deus", verse: "Joao 1:12", book: "43_JOH", chapter: "01" },
+                { title: "Sou justificado pela fe", verse: "Romanos 5:1", book: "45_ROM", chapter: "05" },
+                { title: "Sou mais que vencedor", verse: "Romanos 8:37", book: "45_ROM", chapter: "08" },
+                { title: "Posso todas as coisas em Cristo", verse: "Filipenses 4:13", book: "50_PHP", chapter: "04" },
+                { title: "Deus supre todas as minhas necessidades", verse: "Filipenses 4:19", book: "50_PHP", chapter: "04" },
+                { title: "Pelas suas feridas fui sarado", verse: "Isaias 53:5", book: "23_ISA", chapter: "53" },
+                { title: "Nenhuma arma prosperara", verse: "Isaias 54:17", book: "23_ISA", chapter: "54" },
+                { title: "O Senhor e meu pastor", verse: "Salmo 23:1", book: "19_PSA", chapter: "23" },
+                { title: "Sou abencoado", verse: "Efesios 1:3", book: "49_EPH", chapter: "01" },
+                { title: "O amor de Deus esta em mim", verse: "Romanos 5:5", book: "45_ROM", chapter: "05" }
+            ]
+        },
+        ES: {
+            back: "Volver a las confesiones",
+            word: "Confesion",
+            listenTitle: "Escuchar la confesion",
+            comingSoon: "Audio proximamente",
+            readChapter: "Leer el capitulo completo",
+            readDesc: "Abrir en el lector biblico",
+            relatedTitle: "Versiculos relacionados",
+            items: [
+                { title: "Soy hijo de Dios", verse: "Juan 1:12", book: "43_JOH", chapter: "01" },
+                { title: "Soy justificado por la fe", verse: "Romanos 5:1", book: "45_ROM", chapter: "05" },
+                { title: "Soy mas que vencedor", verse: "Romanos 8:37", book: "45_ROM", chapter: "08" },
+                { title: "Todo lo puedo en Cristo", verse: "Filipenses 4:13", book: "50_PHP", chapter: "04" },
+                { title: "Dios suple todas mis necesidades", verse: "Filipenses 4:19", book: "50_PHP", chapter: "04" },
+                { title: "Por sus llagas fui sanado", verse: "Isaias 53:5", book: "23_ISA", chapter: "53" },
+                { title: "Ninguna arma prosperara", verse: "Isaias 54:17", book: "23_ISA", chapter: "54" },
+                { title: "El Senor es mi pastor", verse: "Salmo 23:1", book: "19_PSA", chapter: "23" },
+                { title: "Soy bendecido", verse: "Efesios 1:3", book: "49_EPH", chapter: "01" },
+                { title: "El amor de Dios esta en mi", verse: "Romanos 5:5", book: "45_ROM", chapter: "05" }
+            ]
+        }
+    };
+
+    const ICONS = ["😊", "🤍", "💪", "🏆", "🌱", "🙏", "⭐", "🎵", "🙌", "❤️"];
+
+    // No audio available yet for confessions
+    function getAudioUrl(confessionId, lang) {
+        return null;
+    }
+
+    function getLecteurUrl(book, chapter, lang) {
+        return `lecteur.html?book=${book}&chapter=${chapter}&lang=${lang}`;
+    }
+
+    function render() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const confessionId = parseInt(urlParams.get('id')) || 0;
+        const lang = urlParams.get('lang') || localStorage.getItem('selectedLang') || 'FR';
+        
+        const langData = CONFESSIONS_DATA[lang] || CONFESSIONS_DATA.FR;
+        const confession = langData.items[confessionId];
+        
+        if (!confession) {
+            window.location.href = 'confessions.html';
+            return;
+        }
+        
+        // Update back link
+        document.getElementById('backLink').textContent = langData.back;
+        document.getElementById('backLink').href = `confessions.html?lang=${lang}`;
+        
+        // Update header
+        document.getElementById('confessionIcon').textContent = ICONS[confessionId];
+        document.getElementById('confessionNumber').textContent = `${langData.word} ${confessionId + 1}`;
+        document.getElementById('confessionTitle').textContent = confession.title;
+        document.getElementById('confessionVerse').textContent = confession.verse;
+        document.title = `${confession.title} - Bible Chantee`;
+        
+        // Audio section
+        document.getElementById('listenTitle').textContent = langData.listenTitle;
+        const audioContainer = document.getElementById('audioContainer');
+        const audioUrl = getAudioUrl(confessionId, lang);
+        
+        if (audioUrl) {
+            audioContainer.innerHTML = `
+                <div class="audio-player">
+                    <audio controls preload="none">
+                        <source src="${audioUrl}" type="audio/mpeg">
+                    </audio>
+                </div>
+            `;
+        } else {
+            audioContainer.innerHTML = `<div class="no-audio">${langData.comingSoon}</div>`;
+        }
+        
+        // Actions section - link to chapter
+        const actionsSection = document.getElementById('actionsSection');
+        const lecteurUrl = getLecteurUrl(confession.book, confession.chapter, lang);
+        
+        actionsSection.innerHTML = `
+            <a href="${lecteurUrl}" class="action-card">
+                <div class="action-icon">📖</div>
+                <div class="action-content">
+                    <div class="action-title">${langData.readChapter}</div>
+                    <div class="action-desc">${confession.verse} - ${langData.readDesc}</div>
+                </div>
+                <div class="action-arrow">&#9658;</div>
+            </a>
+        `;
+    }
+
+    document.addEventListener('DOMContentLoaded', render);
+    </script>
+</body>
+</html>

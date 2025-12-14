@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10 Confessions de la Bible en Musique</title>
+    <title>10 Confessions de la Bible Chantee</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -80,15 +80,27 @@
             text-align: center;
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: block;
         }
         .confession-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(245, 200, 66, 0.3);
         }
         .confession-icon { font-size: 3rem; margin-bottom: 15px; }
         .confession-word { color: #f5c842; font-size: 0.9rem; }
         .confession-title { font-size: 1.3rem; margin: 10px 0; color: #fff; }
-        .confession-verse { color: #b0b0b0; font-style: italic; }
+        .confession-verse { color: #b0b0b0; font-style: italic; margin-bottom: 15px; }
+        .confession-cta {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #f5c842 0%, #e0b030 100%);
+            color: #1e3a5f;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
         
         @media (max-width: 480px) {
             h1 { font-size: 1.8rem; }
@@ -98,24 +110,24 @@
 </head>
 <body>
     <div class="lang-bar">
-        <button class="lang-btn" data-lang="FR">🇫🇷 FR</button>
-        <button class="lang-btn" data-lang="EN">🇬🇧 EN</button>
-        <button class="lang-btn" data-lang="PT">🇧🇷 PT</button>
-        <button class="lang-btn" data-lang="ES">🇪🇸 ES</button>
-        <button class="lang-btn" data-lang="DE">🇩🇪 DE</button>
-        <button class="lang-btn" data-lang="IT">🇮🇹 IT</button>
-        <button class="lang-btn" data-lang="AR">🇸🇦 AR</button>
-        <button class="lang-btn" data-lang="RU">🇷🇺 RU</button>
-        <button class="lang-btn" data-lang="ZH">🇨🇳 ZH</button>
-        <button class="lang-btn" data-lang="HI">🇮🇳 HI</button>
-        <button class="lang-btn" data-lang="TL">🇵🇭 TL</button>
-        <button class="lang-btn" data-lang="KO">🇰🇷 KO</button>
+        <button class="lang-btn" data-lang="FR">FR</button>
+        <button class="lang-btn" data-lang="EN">EN</button>
+        <button class="lang-btn" data-lang="PT">PT</button>
+        <button class="lang-btn" data-lang="ES">ES</button>
+        <button class="lang-btn" data-lang="DE">DE</button>
+        <button class="lang-btn" data-lang="IT">IT</button>
+        <button class="lang-btn" data-lang="AR">AR</button>
+        <button class="lang-btn" data-lang="RU">RU</button>
+        <button class="lang-btn" data-lang="ZH">ZH</button>
+        <button class="lang-btn" data-lang="HI">HI</button>
+        <button class="lang-btn" data-lang="TL">TL</button>
+        <button class="lang-btn" data-lang="KO">KO</button>
     </div>
 
     <div class="container">
         <h1 id="pageTitle">10 Confessions de la Bible en Musique</h1>
-        <a href="index.html" class="back-link" id="backLink">← Retour accueil</a>
-        <p class="subtitle" id="subtitle">Déclarez la Parole de Dieu sur votre vie</p>
+        <a href="index.html" class="back-link" id="backLink">Retour accueil</a>
+        <p class="subtitle" id="subtitle">Declarez la Parole de Dieu sur votre vie</p>
         
         <div class="confessions-grid" id="confessionsGrid"></div>
     </div>
@@ -123,28 +135,30 @@
     <script>
     const DATA = {
         FR: {
-            title: "10 Confessions de la Bible en Musique",
-            back: "← Retour accueil",
-            subtitle: "Déclarez la Parole de Dieu sur votre vie",
+            title: "10 Confessions de la Bible Chantee",
+            back: "Retour accueil",
+            subtitle: "Declarez la Parole de Dieu sur votre vie",
             word: "Confession",
+            listenBtn: "Ecouter",
             items: [
                 ["Je suis enfant de Dieu", "Jean 1:12"],
-                ["Je suis justifié par la foi", "Romains 5:1"],
+                ["Je suis justifie par la foi", "Romains 5:1"],
                 ["Je suis plus que vainqueur", "Romains 8:37"],
                 ["Je peux tout en Christ", "Philippiens 4:13"],
-                ["Dieu pourvoit à tous mes besoins", "Philippiens 4:19"],
-                ["Je suis guéri par ses meurtrissures", "Ésaïe 53:5"],
-                ["Aucune arme ne prospérera", "Ésaïe 54:17"],
+                ["Dieu pourvoit a tous mes besoins", "Philippiens 4:19"],
+                ["Je suis gueri par ses meurtrissures", "Esaie 53:5"],
+                ["Aucune arme ne prosperera", "Esaie 54:17"],
                 ["Le Seigneur est mon berger", "Psaume 23:1"],
-                ["Je suis béni", "Éphésiens 1:3"],
+                ["Je suis beni", "Ephesiens 1:3"],
                 ["L'amour de Dieu est en moi", "Romains 5:5"]
             ]
         },
         EN: {
-            title: "10 Bible Confessions in Music",
-            back: "← Back to Home",
+            title: "10 Sung Bible Confessions",
+            back: "Back to Home",
             subtitle: "Declare God's Word over your life",
             word: "Confession",
+            listenBtn: "Listen",
             items: [
                 ["I am a child of God", "John 1:12"],
                 ["I am justified by faith", "Romans 5:1"],
@@ -159,82 +173,87 @@
             ]
         },
         PT: {
-            title: "10 Confissões da Bíblia em Música",
-            back: "← Voltar ao início",
+            title: "10 Confissoes da Biblia Cantada",
+            back: "Voltar ao inicio",
             subtitle: "Declare a Palavra de Deus sobre sua vida",
-            word: "Confissão",
+            word: "Confissao",
+            listenBtn: "Ouvir",
             items: [
-                ["Sou filho de Deus", "João 1:12"],
-                ["Sou justificado pela fé", "Romanos 5:1"],
+                ["Sou filho de Deus", "Joao 1:12"],
+                ["Sou justificado pela fe", "Romanos 5:1"],
                 ["Sou mais que vencedor", "Romanos 8:37"],
                 ["Posso todas as coisas em Cristo", "Filipenses 4:13"],
                 ["Deus supre todas as minhas necessidades", "Filipenses 4:19"],
-                ["Pelas suas feridas fui sarado", "Isaías 53:5"],
-                ["Nenhuma arma prosperará", "Isaías 54:17"],
-                ["O Senhor é meu pastor", "Salmo 23:1"],
-                ["Sou abençoado", "Efésios 1:3"],
-                ["O amor de Deus está em mim", "Romanos 5:5"]
+                ["Pelas suas feridas fui sarado", "Isaias 53:5"],
+                ["Nenhuma arma prosperara", "Isaias 54:17"],
+                ["O Senhor e meu pastor", "Salmo 23:1"],
+                ["Sou abencoado", "Efesios 1:3"],
+                ["O amor de Deus esta em mim", "Romanos 5:5"]
             ]
         },
         ES: {
-            title: "10 Confesiones de la Biblia en Música",
-            back: "← Volver al inicio",
+            title: "10 Confesiones de la Biblia Cantada",
+            back: "Volver al inicio",
             subtitle: "Declara la Palabra de Dios sobre tu vida",
-            word: "Confesión",
+            word: "Confesion",
+            listenBtn: "Escuchar",
             items: [
                 ["Soy hijo de Dios", "Juan 1:12"],
                 ["Soy justificado por la fe", "Romanos 5:1"],
-                ["Soy más que vencedor", "Romanos 8:37"],
+                ["Soy mas que vencedor", "Romanos 8:37"],
                 ["Todo lo puedo en Cristo", "Filipenses 4:13"],
                 ["Dios suple todas mis necesidades", "Filipenses 4:19"],
-                ["Por sus llagas fui sanado", "Isaías 53:5"],
-                ["Ninguna arma prosperará", "Isaías 54:17"],
-                ["El Señor es mi pastor", "Salmo 23:1"],
+                ["Por sus llagas fui sanado", "Isaias 53:5"],
+                ["Ninguna arma prosperara", "Isaias 54:17"],
+                ["El Senor es mi pastor", "Salmo 23:1"],
                 ["Soy bendecido", "Efesios 1:3"],
-                ["El amor de Dios está en mí", "Romanos 5:5"]
+                ["El amor de Dios esta en mi", "Romanos 5:5"]
             ]
         },
         DE: {
-            title: "10 Bibel-Bekenntnisse in Musik",
-            back: "← Zurück zur Startseite",
-            subtitle: "Bekenne Gottes Wort über dein Leben",
+            title: "10 Bekenntnisse der gesungenen Bibel",
+            back: "Zuruck zur Startseite",
+            subtitle: "Bekenne Gottes Wort uber dein Leben",
             word: "Bekenntnis",
+            listenBtn: "Anhoren",
             items: [
                 ["Ich bin ein Kind Gottes", "Johannes 1:12"],
-                ["Ich bin durch Glauben gerechtfertigt", "Römer 5:1"],
-                ["Ich bin mehr als ein Überwinder", "Römer 8:37"],
+                ["Ich bin durch Glauben gerechtfertigt", "Romer 5:1"],
+                ["Ich bin mehr als ein Uberwinder", "Romer 8:37"],
                 ["Ich kann alles durch Christus", "Philipper 4:13"],
-                ["Gott versorgt alle meine Bedürfnisse", "Philipper 4:19"],
+                ["Gott versorgt alle meine Bedurfnisse", "Philipper 4:19"],
                 ["Durch seine Wunden bin ich geheilt", "Jesaja 53:5"],
                 ["Keine Waffe wird Erfolg haben", "Jesaja 54:17"],
                 ["Der Herr ist mein Hirte", "Psalm 23:1"],
                 ["Ich bin gesegnet", "Epheser 1:3"],
-                ["Gottes Liebe ist in mir", "Römer 5:5"]
+                ["Gottes Liebe ist in mir", "Romer 5:5"]
             ]
         },
         IT: {
-            title: "10 Confessioni della Bibbia in Musica",
-            back: "← Torna alla home",
+            title: "10 Confessioni della Bibbia Cantata",
+            back: "Torna alla home",
             subtitle: "Dichiara la Parola di Dio sulla tua vita",
             word: "Confessione",
+            listenBtn: "Ascolta",
             items: [
                 ["Sono figlio di Dio", "Giovanni 1:12"],
                 ["Sono giustificato per fede", "Romani 5:1"],
-                ["Sono più che vincitore", "Romani 8:37"],
+                ["Sono piu che vincitore", "Romani 8:37"],
                 ["Posso ogni cosa in Cristo", "Filippesi 4:13"],
                 ["Dio provvede a ogni mio bisogno", "Filippesi 4:19"],
                 ["Per le sue piaghe sono guarito", "Isaia 53:5"],
-                ["Nessuna arma prosperà", "Isaia 54:17"],
-                ["Il Signore è il mio pastore", "Salmo 23:1"],
+                ["Nessuna arma prospera", "Isaia 54:17"],
+                ["Il Signore e il mio pastore", "Salmo 23:1"],
                 ["Sono benedetto", "Efesini 1:3"],
-                ["L'amore di Dio è in me", "Romani 5:5"]
+                ["L'amore di Dio e in me", "Romani 5:5"]
             ]
         },
         AR: {
-            title: "10 اعترافات الكتاب المقدس في الموسيقى",
-            back: "← العودة للرئيسية",
+            title: "10 اعترافات الكتاب المقدس المُرنَّم",
+            back: "العودة للرئيسية",
             subtitle: "أعلن كلمة الله على حياتك",
             word: "اعتراف",
+            listenBtn: "استمع",
             items: [
                 ["أنا ابن الله", "يوحنا 1:12"],
                 ["أنا مبرر بالإيمان", "رومية 5:1"],
@@ -249,15 +268,16 @@
             ]
         },
         RU: {
-            title: "10 Библейских исповеданий в музыке",
-            back: "← На главную",
-            subtitle: "Провозглашайте Слово Божье над своей жизнью",
+            title: "10 Исповеданий Библии в песнях",
+            back: "На главную",
+            subtitle: "Провозглашайте Слово Божье",
             word: "Исповедание",
+            listenBtn: "Слушать",
             items: [
                 ["Я дитя Божье", "Иоанна 1:12"],
                 ["Я оправдан верой", "Римлянам 5:1"],
                 ["Я более чем победитель", "Римлянам 8:37"],
-                ["Всё могу в укрепляющем меня Христе", "Филиппийцам 4:13"],
+                ["Всё могу в Христе", "Филиппийцам 4:13"],
                 ["Бог восполняет все мои нужды", "Филиппийцам 4:19"],
                 ["Ранами Его я исцелён", "Исаия 53:5"],
                 ["Никакое оружие не будет успешным", "Исаия 54:17"],
@@ -267,10 +287,11 @@
             ]
         },
         ZH: {
-            title: "10首圣经宣告诗歌",
-            back: "← 返回首页",
+            title: "10首圣经宣告 - 唱诵圣经",
+            back: "返回首页",
             subtitle: "宣告神的话语在你的生命中",
             word: "宣告",
+            listenBtn: "聆听",
             items: [
                 ["我是神的儿女", "约翰福音 1:12"],
                 ["我因信称义", "罗马书 5:1"],
@@ -285,10 +306,11 @@
             ]
         },
         HI: {
-            title: "संगीत में 10 बाइबिल अंगीकार",
-            back: "← होम पर वापस",
+            title: "10 गाए गए बाइबिल अंगीकार",
+            back: "होम पर वापस",
             subtitle: "अपने जीवन पर परमेश्वर के वचन की घोषणा करें",
             word: "अंगीकार",
+            listenBtn: "सुनें",
             items: [
                 ["मैं परमेश्वर की संतान हूं", "यूहन्ना 1:12"],
                 ["मैं विश्वास से धर्मी ठहराया गया", "रोमियों 5:1"],
@@ -303,10 +325,11 @@
             ]
         },
         TL: {
-            title: "10 Pangungumpisal ng Biblia sa Musika",
-            back: "← Bumalik sa Home",
+            title: "10 Pangungumpisal ng Bibliang Inaawit",
+            back: "Bumalik sa Home",
             subtitle: "Ipahayag ang Salita ng Diyos sa iyong buhay",
             word: "Pangungumpisal",
+            listenBtn: "Makinig",
             items: [
                 ["Ako ay anak ng Diyos", "Juan 1:12"],
                 ["Ako ay pinawalang-sala", "Roma 5:1"],
@@ -321,10 +344,11 @@
             ]
         },
         KO: {
-            title: "음악으로 듣는 10가지 성경 고백",
-            back: "← 홈으로",
+            title: "노래하는 10가지 성경 고백",
+            back: "홈으로",
             subtitle: "당신의 삶에 하나님의 말씀을 선포하세요",
             word: "고백",
+            listenBtn: "듣기",
             items: [
                 ["나는 하나님의 자녀입니다", "요한복음 1:12"],
                 ["나는 믿음으로 의롭게 되었습니다", "로마서 5:1"],
@@ -355,13 +379,15 @@
         grid.innerHTML = '';
         
         d.items.forEach((item, i) => {
-            const card = document.createElement('div');
+            const card = document.createElement('a');
             card.className = 'confession-card';
+            card.href = `confession-detail.html?id=${i}&lang=${lang}`;
             card.innerHTML = `
                 <div class="confession-icon">${ICONS[i]}</div>
                 <div class="confession-word">${d.word} ${i + 1}</div>
                 <h3 class="confession-title">${item[0]}</h3>
                 <p class="confession-verse">${item[1]}</p>
+                <div class="confession-cta">${d.listenBtn} &#9658;</div>
             `;
             grid.appendChild(card);
         });

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promesses de la Bible en Musique</title>
+    <title>Promesses de la Bible Chantee</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -79,15 +79,32 @@
             padding: 25px;
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: block;
         }
         .theme-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(245, 200, 66, 0.3);
         }
         .theme-icon { font-size: 3rem; margin-bottom: 15px; }
         .theme-name { color: #f5c842; font-size: 1.4rem; font-weight: bold; margin-bottom: 10px; }
         .theme-desc { color: #b0b0b0; font-size: 0.95rem; margin-bottom: 15px; }
-        .theme-psalms { color: #8899aa; font-size: 0.85rem; border-top: 1px solid #334455; padding-top: 10px; }
+        .theme-psalms { 
+            color: #8899aa; 
+            font-size: 0.85rem; 
+            border-top: 1px solid #334455; 
+            padding-top: 10px;
+        }
+        .theme-cta {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #f5c842 0%, #e0b030 100%);
+            color: #1e3a5f;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
         
         @media (max-width: 480px) {
             h1 { font-size: 1.8rem; }
@@ -97,23 +114,23 @@
 </head>
 <body>
     <div class="lang-bar">
-        <button class="lang-btn" data-lang="FR">🇫🇷 FR</button>
-        <button class="lang-btn" data-lang="EN">🇬🇧 EN</button>
-        <button class="lang-btn" data-lang="PT">🇧🇷 PT</button>
-        <button class="lang-btn" data-lang="ES">🇪🇸 ES</button>
-        <button class="lang-btn" data-lang="DE">🇩🇪 DE</button>
-        <button class="lang-btn" data-lang="IT">🇮🇹 IT</button>
-        <button class="lang-btn" data-lang="AR">🇸🇦 AR</button>
-        <button class="lang-btn" data-lang="RU">🇷🇺 RU</button>
-        <button class="lang-btn" data-lang="ZH">🇨🇳 ZH</button>
-        <button class="lang-btn" data-lang="HI">🇮🇳 HI</button>
-        <button class="lang-btn" data-lang="TL">🇵🇭 TL</button>
-        <button class="lang-btn" data-lang="KO">🇰🇷 KO</button>
+        <button class="lang-btn" data-lang="FR">FR</button>
+        <button class="lang-btn" data-lang="EN">EN</button>
+        <button class="lang-btn" data-lang="PT">PT</button>
+        <button class="lang-btn" data-lang="ES">ES</button>
+        <button class="lang-btn" data-lang="DE">DE</button>
+        <button class="lang-btn" data-lang="IT">IT</button>
+        <button class="lang-btn" data-lang="AR">AR</button>
+        <button class="lang-btn" data-lang="RU">RU</button>
+        <button class="lang-btn" data-lang="ZH">ZH</button>
+        <button class="lang-btn" data-lang="HI">HI</button>
+        <button class="lang-btn" data-lang="TL">TL</button>
+        <button class="lang-btn" data-lang="KO">KO</button>
     </div>
 
     <div class="container">
         <h1 id="pageTitle">Promesses de la Bible en Musique</h1>
-        <a href="index.html" class="back-link" id="backLink">← Retour accueil</a>
+        <a href="index.html" class="back-link" id="backLink">Retour accueil</a>
         <p class="subtitle" id="subtitle">Trouvez la paix dans les Psaumes selon votre besoin</p>
         
         <div class="themes-grid" id="themesGrid"></div>
@@ -122,219 +139,231 @@
     <script>
     const DATA = {
         FR: {
-            title: "Promesses de la Bible en Musique",
-            back: "← Retour accueil",
+            title: "Promesses de la Bible Chantee",
+            back: "Retour accueil",
             subtitle: "Trouvez la paix dans les Psaumes selon votre besoin",
             psalmWord: "Psaumes",
+            listenBtn: "Ecouter",
             themes: [
-                { icon: "😰", name: "Anxiété & Peur", desc: "Trouvez la paix intérieure", psalms: "23, 27, 46, 91" },
-                { icon: "🕊️", name: "Paix & Repos", desc: "Entrez dans le repos de Dieu", psalms: "4, 23, 37, 131" },
-                { icon: "🙌", name: "Louange & Gratitude", desc: "Célébrez la bonté de Dieu", psalms: "100, 145, 148, 150" },
-                { icon: "🛡️", name: "Protection", desc: "Dieu est votre refuge", psalms: "91, 121, 125" },
-                { icon: "😢", name: "Tristesse & Deuil", desc: "Réconfort dans l'épreuve", psalms: "34, 42, 130" },
-                { icon: "💪", name: "Force & Courage", desc: "Soyez fortifié par Dieu", psalms: "18, 27, 46, 144" },
-                { icon: "🙏", name: "Confiance en Dieu", desc: "Abandonnez-vous à Lui", psalms: "37, 62, 112" },
-                { icon: "❤️", name: "Amour de Dieu", desc: "Expérimentez Son amour", psalms: "103, 136, 138" },
-                { icon: "🌟", name: "Espérance", desc: "L'avenir est entre Ses mains", psalms: "27, 42, 130" },
-                { icon: "🎵", name: "Adoration", desc: "Adorez le Roi des rois", psalms: "95, 96, 150" }
+                { icon: "😰", name: "Anxiete et Peur", desc: "Trouvez la paix interieure", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "Paix et Repos", desc: "Entrez dans le repos de Dieu", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "Louange et Gratitude", desc: "Celebrez la bonte de Dieu", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "Protection", desc: "Dieu est votre refuge", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "Tristesse et Deuil", desc: "Reconfort dans l'epreuve", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "Force et Courage", desc: "Soyez fortifie par Dieu", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "Confiance en Dieu", desc: "Abandonnez-vous a Lui", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "Amour de Dieu", desc: "Experimentez Son amour", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "Esperance", desc: "L'avenir est entre Ses mains", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "Adoration", desc: "Adorez le Roi des rois", psalms: [100, 148, 150] }
             ]
         },
         EN: {
-            title: "Bible Promises in Music",
-            back: "← Back to Home",
+            title: "Sung Bible Promises",
+            back: "Back to Home",
             subtitle: "Find peace in the Psalms according to your need",
             psalmWord: "Psalms",
+            listenBtn: "Listen",
             themes: [
-                { icon: "😰", name: "Anxiety & Fear", desc: "Find inner peace", psalms: "23, 27, 46, 91" },
-                { icon: "🕊️", name: "Peace & Rest", desc: "Enter God's rest", psalms: "4, 23, 37, 131" },
-                { icon: "🙌", name: "Praise & Gratitude", desc: "Celebrate God's goodness", psalms: "100, 145, 148, 150" },
-                { icon: "🛡️", name: "Protection", desc: "God is your refuge", psalms: "91, 121, 125" },
-                { icon: "😢", name: "Sadness & Grief", desc: "Comfort in trials", psalms: "34, 42, 130" },
-                { icon: "💪", name: "Strength & Courage", desc: "Be strengthened by God", psalms: "18, 27, 46, 144" },
-                { icon: "🙏", name: "Trust in God", desc: "Surrender to Him", psalms: "37, 62, 112" },
-                { icon: "❤️", name: "God's Love", desc: "Experience His love", psalms: "103, 136, 138" },
-                { icon: "🌟", name: "Hope", desc: "The future is in His hands", psalms: "27, 42, 130" },
-                { icon: "🎵", name: "Worship", desc: "Worship the King of kings", psalms: "95, 96, 150" }
+                { icon: "😰", name: "Anxiety and Fear", desc: "Find inner peace", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "Peace and Rest", desc: "Enter God's rest", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "Praise and Gratitude", desc: "Celebrate God's goodness", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "Protection", desc: "God is your refuge", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "Sadness and Grief", desc: "Comfort in trials", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "Strength and Courage", desc: "Be strengthened by God", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "Trust in God", desc: "Surrender to Him", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "God's Love", desc: "Experience His love", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "Hope", desc: "The future is in His hands", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "Worship", desc: "Worship the King of kings", psalms: [100, 148, 150] }
             ]
         },
         PT: {
-            title: "Promessas da Bíblia em Música",
-            back: "← Voltar ao início",
+            title: "Promessas da Biblia Cantada",
+            back: "Voltar ao inicio",
             subtitle: "Encontre paz nos Salmos conforme sua necessidade",
             psalmWord: "Salmos",
+            listenBtn: "Ouvir",
             themes: [
-                { icon: "😰", name: "Ansiedade & Medo", desc: "Encontre paz interior", psalms: "23, 27, 46, 91" },
-                { icon: "🕊️", name: "Paz & Descanso", desc: "Entre no descanso de Deus", psalms: "4, 23, 37, 131" },
-                { icon: "🙌", name: "Louvor & Gratidão", desc: "Celebre a bondade de Deus", psalms: "100, 145, 148, 150" },
-                { icon: "🛡️", name: "Proteção", desc: "Deus é seu refúgio", psalms: "91, 121, 125" },
-                { icon: "😢", name: "Tristeza & Luto", desc: "Conforto nas provações", psalms: "34, 42, 130" },
-                { icon: "💪", name: "Força & Coragem", desc: "Seja fortalecido por Deus", psalms: "18, 27, 46, 144" },
-                { icon: "🙏", name: "Confiança em Deus", desc: "Entregue-se a Ele", psalms: "37, 62, 112" },
-                { icon: "❤️", name: "Amor de Deus", desc: "Experimente Seu amor", psalms: "103, 136, 138" },
-                { icon: "🌟", name: "Esperança", desc: "O futuro está nas mãos Dele", psalms: "27, 42, 130" },
-                { icon: "🎵", name: "Adoração", desc: "Adore o Rei dos reis", psalms: "95, 96, 150" }
+                { icon: "😰", name: "Ansiedade e Medo", desc: "Encontre paz interior", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "Paz e Descanso", desc: "Entre no descanso de Deus", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "Louvor e Gratidao", desc: "Celebre a bondade de Deus", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "Protecao", desc: "Deus e seu refugio", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "Tristeza e Luto", desc: "Conforto nas provas", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "Forca e Coragem", desc: "Seja fortalecido por Deus", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "Confianca em Deus", desc: "Entregue-se a Ele", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "Amor de Deus", desc: "Experimente Seu amor", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "Esperanca", desc: "O futuro esta em Suas maos", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "Adoracao", desc: "Adore o Rei dos reis", psalms: [100, 148, 150] }
             ]
         },
         ES: {
-            title: "Promesas de la Biblia en Música",
-            back: "← Volver al inicio",
-            subtitle: "Encuentra paz en los Salmos según tu necesidad",
+            title: "Promesas de la Biblia Cantada",
+            back: "Volver al inicio",
+            subtitle: "Encuentra paz en los Salmos segun tu necesidad",
             psalmWord: "Salmos",
+            listenBtn: "Escuchar",
             themes: [
-                { icon: "😰", name: "Ansiedad & Miedo", desc: "Encuentra paz interior", psalms: "23, 27, 46, 91" },
-                { icon: "🕊️", name: "Paz & Descanso", desc: "Entra en el descanso de Dios", psalms: "4, 23, 37, 131" },
-                { icon: "🙌", name: "Alabanza & Gratitud", desc: "Celebra la bondad de Dios", psalms: "100, 145, 148, 150" },
-                { icon: "🛡️", name: "Protección", desc: "Dios es tu refugio", psalms: "91, 121, 125" },
-                { icon: "😢", name: "Tristeza & Duelo", desc: "Consuelo en las pruebas", psalms: "34, 42, 130" },
-                { icon: "💪", name: "Fuerza & Valor", desc: "Sé fortalecido por Dios", psalms: "18, 27, 46, 144" },
-                { icon: "🙏", name: "Confianza en Dios", desc: "Entrégate a Él", psalms: "37, 62, 112" },
-                { icon: "❤️", name: "Amor de Dios", desc: "Experimenta Su amor", psalms: "103, 136, 138" },
-                { icon: "🌟", name: "Esperanza", desc: "El futuro está en Sus manos", psalms: "27, 42, 130" },
-                { icon: "🎵", name: "Adoración", desc: "Adora al Rey de reyes", psalms: "95, 96, 150" }
+                { icon: "😰", name: "Ansiedad y Miedo", desc: "Encuentra paz interior", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "Paz y Descanso", desc: "Entra en el reposo de Dios", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "Alabanza y Gratitud", desc: "Celebra la bondad de Dios", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "Proteccion", desc: "Dios es tu refugio", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "Tristeza y Duelo", desc: "Consuelo en las pruebas", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "Fuerza y Valor", desc: "Se fortalecido por Dios", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "Confianza en Dios", desc: "Entregate a El", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "Amor de Dios", desc: "Experimenta Su amor", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "Esperanza", desc: "El futuro esta en Sus manos", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "Adoracion", desc: "Adora al Rey de reyes", psalms: [100, 148, 150] }
             ]
         },
         DE: {
-            title: "Bibelverheißungen in Musik",
-            back: "← Zurück zur Startseite",
-            subtitle: "Finde Frieden in den Psalmen nach deinem Bedürfnis",
+            title: "Verheissungen der gesungenen Bibel",
+            back: "Zuruck zur Startseite",
+            subtitle: "Finde Frieden in den Psalmen",
             psalmWord: "Psalmen",
+            listenBtn: "Anhoren",
             themes: [
-                { icon: "😰", name: "Angst & Furcht", desc: "Finde inneren Frieden", psalms: "23, 27, 46, 91" },
-                { icon: "🕊️", name: "Frieden & Ruhe", desc: "Tritt ein in Gottes Ruhe", psalms: "4, 23, 37, 131" },
-                { icon: "🙌", name: "Lob & Dankbarkeit", desc: "Feiere Gottes Güte", psalms: "100, 145, 148, 150" },
-                { icon: "🛡️", name: "Schutz", desc: "Gott ist deine Zuflucht", psalms: "91, 121, 125" },
-                { icon: "😢", name: "Trauer & Leid", desc: "Trost in Prüfungen", psalms: "34, 42, 130" },
-                { icon: "💪", name: "Stärke & Mut", desc: "Werde von Gott gestärkt", psalms: "18, 27, 46, 144" },
-                { icon: "🙏", name: "Vertrauen auf Gott", desc: "Übergib dich Ihm", psalms: "37, 62, 112" },
-                { icon: "❤️", name: "Gottes Liebe", desc: "Erfahre Seine Liebe", psalms: "103, 136, 138" },
-                { icon: "🌟", name: "Hoffnung", desc: "Die Zukunft liegt in Seinen Händen", psalms: "27, 42, 130" },
-                { icon: "🎵", name: "Anbetung", desc: "Bete den König der Könige an", psalms: "95, 96, 150" }
+                { icon: "😰", name: "Angst und Furcht", desc: "Finde inneren Frieden", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "Friede und Ruhe", desc: "Tritt ein in Gottes Ruhe", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "Lob und Dankbarkeit", desc: "Feiere Gottes Gute", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "Schutz", desc: "Gott ist deine Zuflucht", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "Traurigkeit", desc: "Trost in Prufungen", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "Starke und Mut", desc: "Werde von Gott gestarkt", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "Vertrauen auf Gott", desc: "Ubergib dich Ihm", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "Gottes Liebe", desc: "Erfahre Seine Liebe", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "Hoffnung", desc: "Die Zukunft in Seinen Handen", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "Anbetung", desc: "Bete den Konig an", psalms: [100, 148, 150] }
             ]
         },
         IT: {
-            title: "Promesse della Bibbia in Musica",
-            back: "← Torna alla home",
+            title: "Promesse della Bibbia Cantata",
+            back: "Torna alla home",
             subtitle: "Trova pace nei Salmi secondo il tuo bisogno",
             psalmWord: "Salmi",
+            listenBtn: "Ascolta",
             themes: [
-                { icon: "😰", name: "Ansia & Paura", desc: "Trova pace interiore", psalms: "23, 27, 46, 91" },
-                { icon: "🕊️", name: "Pace & Riposo", desc: "Entra nel riposo di Dio", psalms: "4, 23, 37, 131" },
-                { icon: "🙌", name: "Lode & Gratitudine", desc: "Celebra la bontà di Dio", psalms: "100, 145, 148, 150" },
-                { icon: "🛡️", name: "Protezione", desc: "Dio è il tuo rifugio", psalms: "91, 121, 125" },
-                { icon: "😢", name: "Tristezza & Lutto", desc: "Conforto nelle prove", psalms: "34, 42, 130" },
-                { icon: "💪", name: "Forza & Coraggio", desc: "Sii rafforzato da Dio", psalms: "18, 27, 46, 144" },
-                { icon: "🙏", name: "Fiducia in Dio", desc: "Abbandonati a Lui", psalms: "37, 62, 112" },
-                { icon: "❤️", name: "Amore di Dio", desc: "Sperimenta il Suo amore", psalms: "103, 136, 138" },
-                { icon: "🌟", name: "Speranza", desc: "Il futuro è nelle Sue mani", psalms: "27, 42, 130" },
-                { icon: "🎵", name: "Adorazione", desc: "Adora il Re dei re", psalms: "95, 96, 150" }
+                { icon: "😰", name: "Ansia e Paura", desc: "Trova pace interiore", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "Pace e Riposo", desc: "Entra nel riposo di Dio", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "Lode e Gratitudine", desc: "Celebra la bonta di Dio", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "Protezione", desc: "Dio e il tuo rifugio", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "Tristezza e Lutto", desc: "Conforto nelle prove", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "Forza e Coraggio", desc: "Sii rafforzato da Dio", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "Fiducia in Dio", desc: "Abbandonati a Lui", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "Amore di Dio", desc: "Sperimenta il Suo amore", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "Speranza", desc: "Il futuro nelle Sue mani", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "Adorazione", desc: "Adora il Re dei re", psalms: [100, 148, 150] }
             ]
         },
         AR: {
-            title: "وعود الكتاب المقدس في الموسيقى",
-            back: "← العودة للرئيسية",
+            title: "وعود الكتاب المقدس المُرنَّم",
+            back: "العودة للرئيسية",
             subtitle: "جد السلام في المزامير حسب حاجتك",
             psalmWord: "مزامير",
+            listenBtn: "استمع",
             themes: [
-                { icon: "😰", name: "القلق والخوف", desc: "جد السلام الداخلي", psalms: "23, 27, 46, 91" },
-                { icon: "🕊️", name: "السلام والراحة", desc: "ادخل راحة الله", psalms: "4, 23, 37, 131" },
-                { icon: "🙌", name: "التسبيح والشكر", desc: "احتفل بصلاح الله", psalms: "100, 145, 148, 150" },
-                { icon: "🛡️", name: "الحماية", desc: "الله ملجأك", psalms: "91, 121, 125" },
-                { icon: "😢", name: "الحزن والأسى", desc: "العزاء في التجارب", psalms: "34, 42, 130" },
-                { icon: "💪", name: "القوة والشجاعة", desc: "تقوَّ بالله", psalms: "18, 27, 46, 144" },
-                { icon: "🙏", name: "الثقة بالله", desc: "سلّم أمرك له", psalms: "37, 62, 112" },
-                { icon: "❤️", name: "محبة الله", desc: "اختبر محبته", psalms: "103, 136, 138" },
-                { icon: "🌟", name: "الرجاء", desc: "المستقبل في يديه", psalms: "27, 42, 130" },
-                { icon: "🎵", name: "العبادة", desc: "اعبد ملك الملوك", psalms: "95, 96, 150" }
+                { icon: "😰", name: "القلق والخوف", desc: "جد السلام الداخلي", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "السلام والراحة", desc: "ادخل راحة الله", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "التسبيح والشكر", desc: "احتفل بصلاح الله", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "الحماية", desc: "الله ملجأك", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "الحزن والأسى", desc: "العزاء في التجارب", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "القوة والشجاعة", desc: "تقوَّ بالله", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "الثقة بالله", desc: "سلّم أمرك له", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "محبة الله", desc: "اختبر محبته", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "الرجاء", desc: "المستقبل في يديه", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "العبادة", desc: "اعبد ملك الملوك", psalms: [100, 148, 150] }
             ]
         },
         RU: {
-            title: "Обетования Библии в музыке",
-            back: "← На главную",
+            title: "Обетования Библии в песнях",
+            back: "На главную",
             subtitle: "Найдите мир в Псалмах по вашей нужде",
             psalmWord: "Псалмы",
+            listenBtn: "Слушать",
             themes: [
-                { icon: "😰", name: "Тревога и страх", desc: "Найдите внутренний мир", psalms: "23, 27, 46, 91" },
-                { icon: "🕊️", name: "Мир и покой", desc: "Войдите в покой Божий", psalms: "4, 23, 37, 131" },
-                { icon: "🙌", name: "Хвала и благодарность", desc: "Прославьте благость Бога", psalms: "100, 145, 148, 150" },
-                { icon: "🛡️", name: "Защита", desc: "Бог - ваше прибежище", psalms: "91, 121, 125" },
-                { icon: "😢", name: "Печаль и скорбь", desc: "Утешение в испытаниях", psalms: "34, 42, 130" },
-                { icon: "💪", name: "Сила и мужество", desc: "Укрепитесь в Боге", psalms: "18, 27, 46, 144" },
-                { icon: "🙏", name: "Доверие Богу", desc: "Предайтесь Ему", psalms: "37, 62, 112" },
-                { icon: "❤️", name: "Любовь Божья", desc: "Испытайте Его любовь", psalms: "103, 136, 138" },
-                { icon: "🌟", name: "Надежда", desc: "Будущее в Его руках", psalms: "27, 42, 130" },
-                { icon: "🎵", name: "Поклонение", desc: "Поклонитесь Царю царей", psalms: "95, 96, 150" }
+                { icon: "😰", name: "Тревога и страх", desc: "Найдите внутренний мир", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "Мир и покой", desc: "Войдите в покой Божий", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "Хвала и благодарность", desc: "Прославьте благость Бога", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "Защита", desc: "Бог - ваше прибежище", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "Печаль и скорбь", desc: "Утешение в испытаниях", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "Сила и мужество", desc: "Укрепитесь в Боге", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "Доверие Богу", desc: "Предайтесь Ему", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "Любовь Божья", desc: "Испытайте Его любовь", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "Надежда", desc: "Будущее в Его руках", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "Поклонение", desc: "Поклонитесь Царю царей", psalms: [100, 148, 150] }
             ]
         },
         ZH: {
-            title: "圣经应许诗歌",
-            back: "← 返回首页",
+            title: "圣经应许诗歌 - 唱诵圣经",
+            back: "返回首页",
             subtitle: "按照你的需要在诗篇中找到平安",
             psalmWord: "诗篇",
+            listenBtn: "聆听",
             themes: [
-                { icon: "😰", name: "焦虑与恐惧", desc: "找到内心的平安", psalms: "23, 27, 46, 91" },
-                { icon: "🕊️", name: "平安与安息", desc: "进入神的安息", psalms: "4, 23, 37, 131" },
-                { icon: "🙌", name: "赞美与感恩", desc: "赞美神的美善", psalms: "100, 145, 148, 150" },
-                { icon: "🛡️", name: "保护", desc: "神是你的避难所", psalms: "91, 121, 125" },
-                { icon: "😢", name: "悲伤与哀痛", desc: "试炼中的安慰", psalms: "34, 42, 130" },
-                { icon: "💪", name: "力量与勇气", desc: "被神坚固", psalms: "18, 27, 46, 144" },
-                { icon: "🙏", name: "信靠神", desc: "将自己交托给祂", psalms: "37, 62, 112" },
-                { icon: "❤️", name: "神的爱", desc: "经历祂的爱", psalms: "103, 136, 138" },
-                { icon: "🌟", name: "盼望", desc: "未来在祂手中", psalms: "27, 42, 130" },
-                { icon: "🎵", name: "敬拜", desc: "敬拜万王之王", psalms: "95, 96, 150" }
+                { icon: "😰", name: "焦虑与恐惧", desc: "找到内心的平安", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "平安与安息", desc: "进入神的安息", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "赞美与感恩", desc: "赞美神的美善", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "保护", desc: "神是你的避难所", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "悲伤与哀痛", desc: "试炼中的安慰", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "力量与勇气", desc: "被神坚固", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "信靠神", desc: "将自己交托给祂", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "神的爱", desc: "经历祂的爱", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "盼望", desc: "未来在祂手中", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "敬拜", desc: "敬拜万王之王", psalms: [100, 148, 150] }
             ]
         },
         HI: {
-            title: "संगीत में बाइबिल की प्रतिज्ञाएं",
-            back: "← होम पर वापस",
+            title: "गाई गई बाइबिल की प्रतिज्ञाएं",
+            back: "होम पर वापस",
             subtitle: "अपनी आवश्यकता के अनुसार भजनों में शांति पाएं",
             psalmWord: "भजन",
+            listenBtn: "सुनें",
             themes: [
-                { icon: "😰", name: "चिंता और भय", desc: "आंतरिक शांति पाएं", psalms: "23, 27, 46, 91" },
-                { icon: "🕊️", name: "शांति और विश्राम", desc: "परमेश्वर के विश्राम में प्रवेश करें", psalms: "4, 23, 37, 131" },
-                { icon: "🙌", name: "स्तुति और कृतज्ञता", desc: "परमेश्वर की भलाई का जश्न मनाएं", psalms: "100, 145, 148, 150" },
-                { icon: "🛡️", name: "सुरक्षा", desc: "परमेश्वर आपकी शरण है", psalms: "91, 121, 125" },
-                { icon: "😢", name: "दुख और शोक", desc: "परीक्षाओं में सांत्वना", psalms: "34, 42, 130" },
-                { icon: "💪", name: "शक्ति और साहस", desc: "परमेश्वर द्वारा मजबूत बनें", psalms: "18, 27, 46, 144" },
-                { icon: "🙏", name: "परमेश्वर पर भरोसा", desc: "उसके सामने समर्पण करें", psalms: "37, 62, 112" },
-                { icon: "❤️", name: "परमेश्वर का प्रेम", desc: "उसके प्रेम का अनुभव करें", psalms: "103, 136, 138" },
-                { icon: "🌟", name: "आशा", desc: "भविष्य उसके हाथों में है", psalms: "27, 42, 130" },
-                { icon: "🎵", name: "आराधना", desc: "राजाओं के राजा की आराधना करें", psalms: "95, 96, 150" }
+                { icon: "😰", name: "चिंता और भय", desc: "आंतरिक शांति पाएं", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "शांति और विश्राम", desc: "परमेश्वर के विश्राम में प्रवेश करें", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "स्तुति और कृतज्ञता", desc: "परमेश्वर की भलाई का जश्न मनाएं", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "सुरक्षा", desc: "परमेश्वर आपकी शरण है", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "दुख और शोक", desc: "परीक्षाओं में सांत्वना", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "शक्ति और साहस", desc: "परमेश्वर द्वारा मजबूत बनें", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "परमेश्वर पर भरोसा", desc: "उसके सामने समर्पण करें", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "परमेश्वर का प्रेम", desc: "उसके प्रेम का अनुभव करें", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "आशा", desc: "भविष्य उसके हाथों में है", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "आराधना", desc: "राजाओं के राजा की आराधना करें", psalms: [100, 148, 150] }
             ]
         },
         TL: {
-            title: "Mga Pangako ng Biblia sa Musika",
-            back: "← Bumalik sa Home",
-            subtitle: "Makahanap ng kapayapaan sa mga Awit ayon sa iyong pangangailangan",
+            title: "Mga Pangako ng Bibliang Inaawit",
+            back: "Bumalik sa Home",
+            subtitle: "Makahanap ng kapayapaan sa mga Awit",
             psalmWord: "Mga Awit",
+            listenBtn: "Makinig",
             themes: [
-                { icon: "😰", name: "Pagkabalisa at Takot", desc: "Makahanap ng panloob na kapayapaan", psalms: "23, 27, 46, 91" },
-                { icon: "🕊️", name: "Kapayapaan at Pahinga", desc: "Pumasok sa kapahingahan ng Diyos", psalms: "4, 23, 37, 131" },
-                { icon: "🙌", name: "Papuri at Pasasalamat", desc: "Ipagdiwang ang kabutihan ng Diyos", psalms: "100, 145, 148, 150" },
-                { icon: "🛡️", name: "Proteksyon", desc: "Ang Diyos ang iyong kanlungan", psalms: "91, 121, 125" },
-                { icon: "😢", name: "Kalungkutan at Pagdadalamhati", desc: "Kaaliwan sa mga pagsubok", psalms: "34, 42, 130" },
-                { icon: "💪", name: "Lakas at Tapang", desc: "Magpalakas sa Diyos", psalms: "18, 27, 46, 144" },
-                { icon: "🙏", name: "Pagtitiwala sa Diyos", desc: "Isuko ang sarili sa Kanya", psalms: "37, 62, 112" },
-                { icon: "❤️", name: "Pag-ibig ng Diyos", desc: "Maranasan ang Kanyang pag-ibig", psalms: "103, 136, 138" },
-                { icon: "🌟", name: "Pag-asa", desc: "Ang kinabukasan ay nasa Kanyang mga kamay", psalms: "27, 42, 130" },
-                { icon: "🎵", name: "Pagsamba", desc: "Sambahin ang Hari ng mga hari", psalms: "95, 96, 150" }
+                { icon: "😰", name: "Pagkabalisa at Takot", desc: "Makahanap ng panloob na kapayapaan", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "Kapayapaan at Pahinga", desc: "Pumasok sa kapahingahan ng Diyos", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "Papuri at Pasasalamat", desc: "Ipagdiwang ang kabutihan ng Diyos", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "Proteksyon", desc: "Ang Diyos ang iyong kanlungan", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "Kalungkutan", desc: "Kaaliwan sa mga pagsubok", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "Lakas at Tapang", desc: "Magpalakas sa Diyos", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "Pagtitiwala sa Diyos", desc: "Isuko ang sarili sa Kanya", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "Pag-ibig ng Diyos", desc: "Maranasan ang Kanyang pag-ibig", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "Pag-asa", desc: "Ang kinabukasan nasa Kanyang kamay", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "Pagsamba", desc: "Sambahin ang Hari ng mga hari", psalms: [100, 148, 150] }
             ]
         },
         KO: {
-            title: "음악으로 듣는 성경의 약속",
-            back: "← 홈으로",
+            title: "노래하는 성경의 약속",
+            back: "홈으로",
             subtitle: "필요에 따라 시편에서 평안을 찾으세요",
             psalmWord: "시편",
+            listenBtn: "듣기",
             themes: [
-                { icon: "😰", name: "불안과 두려움", desc: "내면의 평화를 찾으세요", psalms: "23, 27, 46, 91" },
-                { icon: "🕊️", name: "평화와 안식", desc: "하나님의 안식에 들어가세요", psalms: "4, 23, 37, 131" },
-                { icon: "🙌", name: "찬양과 감사", desc: "하나님의 선하심을 기뻐하세요", psalms: "100, 145, 148, 150" },
-                { icon: "🛡️", name: "보호", desc: "하나님은 당신의 피난처입니다", psalms: "91, 121, 125" },
-                { icon: "😢", name: "슬픔과 애도", desc: "시련 중의 위로", psalms: "34, 42, 130" },
-                { icon: "💪", name: "힘과 용기", desc: "하나님 안에서 강해지세요", psalms: "18, 27, 46, 144" },
-                { icon: "🙏", name: "하나님을 신뢰", desc: "그분께 맡기세요", psalms: "37, 62, 112" },
-                { icon: "❤️", name: "하나님의 사랑", desc: "그분의 사랑을 경험하세요", psalms: "103, 136, 138" },
-                { icon: "🌟", name: "소망", desc: "미래는 그분의 손에 있습니다", psalms: "27, 42, 130" },
-                { icon: "🎵", name: "예배", desc: "만왕의 왕을 경배하세요", psalms: "95, 96, 150" }
+                { icon: "😰", name: "불안과 두려움", desc: "내면의 평화를 찾으세요", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "평화와 안식", desc: "하나님의 안식에 들어가세요", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "찬양과 감사", desc: "하나님의 선하심을 기뻐하세요", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "보호", desc: "하나님은 당신의 피난처입니다", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "슬픔과 애도", desc: "시련 중의 위로", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "힘과 용기", desc: "하나님 안에서 강해지세요", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "하나님을 신뢰", desc: "그분께 맡기세요", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "하나님의 사랑", desc: "그분의 사랑을 경험하세요", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "소망", desc: "미래는 그분의 손에 있습니다", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "예배", desc: "만왕의 왕을 경배하세요", psalms: [100, 148, 150] }
             ]
         }
     };
@@ -353,13 +382,18 @@
         grid.innerHTML = '';
         
         d.themes.forEach((theme, i) => {
-            const card = document.createElement('div');
+            const card = document.createElement('a');
             card.className = 'theme-card';
+            card.href = `promesse-detail.html?theme=${i}&lang=${lang}`;
+            
+            const psalmsText = theme.psalms.join(', ');
+            
             card.innerHTML = `
                 <div class="theme-icon">${theme.icon}</div>
                 <div class="theme-name">${theme.name}</div>
                 <div class="theme-desc">${theme.desc}</div>
-                <div class="theme-psalms">${d.psalmWord}: ${theme.psalms}</div>
+                <div class="theme-psalms">${d.psalmWord}: ${psalmsText}</div>
+                <div class="theme-cta">${d.listenBtn} &#9658;</div>
             `;
             grid.appendChild(card);
         });

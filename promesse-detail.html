@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesses - Bible Chantee</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a237e 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        
+        .back-link {
+            display: inline-block;
+            color: #f5c842;
+            text-decoration: none;
+            padding: 10px 25px;
+            border: 2px solid #f5c842;
+            border-radius: 25px;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            background: #f5c842;
+            color: #1a237e;
+        }
+        
+        .theme-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .theme-icon { font-size: 4rem; margin-bottom: 15px; }
+        .theme-name { 
+            color: #f5c842; 
+            font-size: 2.2rem; 
+            font-weight: bold; 
+            margin-bottom: 10px; 
+        }
+        .theme-desc { 
+            color: #b0b0b0; 
+            font-size: 1.1rem; 
+            font-style: italic;
+        }
+        
+        .psalms-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .psalm-card {
+            background: rgba(30, 58, 95, 0.9);
+            border-radius: 15px;
+            padding: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .psalm-card:hover {
+            box-shadow: 0 5px 20px rgba(245, 200, 66, 0.2);
+        }
+        
+        .psalm-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .psalm-title {
+            color: #f5c842;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        
+        .psalm-theme {
+            color: #8899aa;
+            font-size: 0.9rem;
+            background: rgba(0,0,0,0.3);
+            padding: 5px 12px;
+            border-radius: 15px;
+        }
+        
+        .audio-player {
+            width: 100%;
+            margin: 15px 0;
+        }
+        
+        .audio-player audio {
+            width: 100%;
+            height: 45px;
+            border-radius: 25px;
+        }
+        
+        .psalm-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #f5c842 0%, #e0b030 100%);
+            color: #1e3a5f;
+        }
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(245, 200, 66, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid #f5c842;
+            color: #f5c842;
+        }
+        .btn-secondary:hover {
+            background: rgba(245, 200, 66, 0.1);
+        }
+        
+        .no-audio {
+            color: #8899aa;
+            font-style: italic;
+            padding: 20px;
+            text-align: center;
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+        
+        @media (max-width: 480px) {
+            .theme-name { font-size: 1.6rem; }
+            .psalm-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .psalm-actions { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="promesses.html" class="back-link" id="backLink">Retour aux themes</a>
+        
+        <div class="theme-header">
+            <div class="theme-icon" id="themeIcon"></div>
+            <h1 class="theme-name" id="themeName"></h1>
+            <p class="theme-desc" id="themeDesc"></p>
+        </div>
+        
+        <div class="psalms-list" id="psalmsList"></div>
+    </div>
+
+    <script>
+    // Themes data (same as promesses.html)
+    const THEMES_DATA = {
+        FR: {
+            back: "Retour aux themes",
+            psalmWord: "Psaume",
+            listenLabel: "Ecouter dans le lecteur",
+            comingSoon: "Audio bientot disponible",
+            themes: [
+                { icon: "😰", name: "Anxiete et Peur", desc: "Trouvez la paix interieure", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "Paix et Repos", desc: "Entrez dans le repos de Dieu", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "Louange et Gratitude", desc: "Celebrez la bonte de Dieu", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "Protection", desc: "Dieu est votre refuge", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "Tristesse et Deuil", desc: "Reconfort dans l'epreuve", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "Force et Courage", desc: "Soyez fortifie par Dieu", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "Confiance en Dieu", desc: "Abandonnez-vous a Lui", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "Amour de Dieu", desc: "Experimentez Son amour", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "Esperance", desc: "L'avenir est entre Ses mains", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "Adoration", desc: "Adorez le Roi des rois", psalms: [100, 148, 150] }
+            ]
+        },
+        EN: {
+            back: "Back to themes",
+            psalmWord: "Psalm",
+            listenLabel: "Listen in player",
+            comingSoon: "Audio coming soon",
+            themes: [
+                { icon: "😰", name: "Anxiety and Fear", desc: "Find inner peace", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "Peace and Rest", desc: "Enter God's rest", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "Praise and Gratitude", desc: "Celebrate God's goodness", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "Protection", desc: "God is your refuge", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "Sadness and Grief", desc: "Comfort in trials", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "Strength and Courage", desc: "Be strengthened by God", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "Trust in God", desc: "Surrender to Him", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "God's Love", desc: "Experience His love", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "Hope", desc: "The future is in His hands", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "Worship", desc: "Worship the King of kings", psalms: [100, 148, 150] }
+            ]
+        },
+        PT: {
+            back: "Voltar aos temas",
+            psalmWord: "Salmo",
+            listenLabel: "Ouvir no leitor",
+            comingSoon: "Audio em breve",
+            themes: [
+                { icon: "😰", name: "Ansiedade e Medo", desc: "Encontre paz interior", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "Paz e Descanso", desc: "Entre no descanso de Deus", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "Louvor e Gratidao", desc: "Celebre a bondade de Deus", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "Protecao", desc: "Deus e seu refugio", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "Tristeza e Luto", desc: "Conforto nas provas", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "Forca e Coragem", desc: "Seja fortalecido por Deus", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "Confianca em Deus", desc: "Entregue-se a Ele", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "Amor de Deus", desc: "Experimente Seu amor", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "Esperanca", desc: "O futuro esta em Suas maos", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "Adoracao", desc: "Adore o Rei dos reis", psalms: [100, 148, 150] }
+            ]
+        },
+        ES: {
+            back: "Volver a los temas",
+            psalmWord: "Salmo",
+            listenLabel: "Escuchar en el reproductor",
+            comingSoon: "Audio proximamente",
+            themes: [
+                { icon: "😰", name: "Ansiedad y Miedo", desc: "Encuentra paz interior", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "Paz y Descanso", desc: "Entra en el reposo de Dios", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "Alabanza y Gratitud", desc: "Celebra la bondad de Dios", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "Proteccion", desc: "Dios es tu refugio", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "Tristeza y Duelo", desc: "Consuelo en las pruebas", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "Fuerza y Valor", desc: "Se fortalecido por Dios", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "Confianza en Dios", desc: "Entregate a El", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "Amor de Dios", desc: "Experimenta Su amor", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "Esperanza", desc: "El futuro esta en Sus manos", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "Adoracion", desc: "Adora al Rey de reyes", psalms: [100, 148, 150] }
+            ]
+        }
+    };
+
+    // Psalm themes/subtitles
+    const PSALM_THEMES = {
+        4: { FR: "Paix dans la nuit", EN: "Peace at night", PT: "Paz na noite", ES: "Paz en la noche" },
+        18: { FR: "Dieu mon rocher", EN: "God my rock", PT: "Deus minha rocha", ES: "Dios mi roca" },
+        23: { FR: "L'Eternel est mon berger", EN: "The Lord is my shepherd", PT: "O Senhor e meu pastor", ES: "El Senor es mi pastor" },
+        27: { FR: "L'Eternel est ma lumiere", EN: "The Lord is my light", PT: "O Senhor e minha luz", ES: "El Senor es mi luz" },
+        30: { FR: "La joie vient le matin", EN: "Joy comes in the morning", PT: "A alegria vem pela manha", ES: "El gozo viene por la manana" },
+        34: { FR: "Goutez et voyez", EN: "Taste and see", PT: "Provai e vede", ES: "Gustad y ved" },
+        37: { FR: "Confie-toi en l'Eternel", EN: "Trust in the Lord", PT: "Confia no Senhor", ES: "Confia en el Senor" },
+        42: { FR: "Mon ame a soif de Dieu", EN: "My soul thirsts for God", PT: "Minha alma tem sede de Deus", ES: "Mi alma tiene sed de Dios" },
+        46: { FR: "Dieu est notre refuge", EN: "God is our refuge", PT: "Deus e nosso refugio", ES: "Dios es nuestro refugio" },
+        62: { FR: "Mon ame se confie en Dieu", EN: "My soul trusts in God", PT: "Minha alma confia em Deus", ES: "Mi alma confia en Dios" },
+        91: { FR: "A l'abri du Tres-Haut", EN: "Shelter of the Most High", PT: "Abrigo do Altissimo", ES: "Abrigo del Altisimo" },
+        100: { FR: "Acclamez l'Eternel", EN: "Shout for joy", PT: "Aclamai ao Senhor", ES: "Aclamad al Senor" },
+        103: { FR: "Benis l'Eternel mon ame", EN: "Bless the Lord O my soul", PT: "Bendize o Senhor minha alma", ES: "Bendice al Senor alma mia" },
+        121: { FR: "Mon secours vient de l'Eternel", EN: "My help comes from the Lord", PT: "O meu socorro vem do Senhor", ES: "Mi socorro viene del Senor" },
+        125: { FR: "Ceux qui se confient", EN: "Those who trust", PT: "Os que confiam", ES: "Los que confian" },
+        130: { FR: "Des profondeurs", EN: "Out of the depths", PT: "Das profundezas", ES: "De lo profundo" },
+        131: { FR: "Mon coeur n'est pas orgueilleux", EN: "My heart is not proud", PT: "Meu coracao nao e soberbo", ES: "Mi corazon no es soberbio" },
+        144: { FR: "Mon rocher et ma forteresse", EN: "My rock and fortress", PT: "Minha rocha e fortaleza", ES: "Mi roca y fortaleza" },
+        145: { FR: "Je t'exalterai mon Dieu", EN: "I will exalt You my God", PT: "Eu te exaltarei meu Deus", ES: "Te exaltare mi Dios" },
+        147: { FR: "Louez l'Eternel", EN: "Praise the Lord", PT: "Louvai ao Senhor", ES: "Alabad al Senor" },
+        148: { FR: "Que tout ce qui respire loue", EN: "Let everything praise", PT: "Tudo que respira louve", ES: "Todo lo que respira alabe" },
+        150: { FR: "Louez Dieu dans son sanctuaire", EN: "Praise God in His sanctuary", PT: "Louvai a Deus no seu santuario", ES: "Alabad a Dios en su santuario" }
+    };
+
+    // Audio URLs on Archive.org
+    const ARCHIVE_BASE = "https://archive.org/download/bible-chantee";
+    
+    function getAudioUrl(psalmNum, lang) {
+        // FR has audio available
+        if (lang === 'FR') {
+            const chapterPadded = String(psalmNum).padStart(2, '0');
+            return `${ARCHIVE_BASE}/19_PSA_${chapterPadded}_FR.mp3`;
+        }
+        return null;
+    }
+
+    function getLecteurUrl(psalmNum, lang) {
+        const chapterPadded = String(psalmNum).padStart(2, '0');
+        return `lecteur.html?book=19_PSA&chapter=${chapterPadded}&lang=${lang}`;
+    }
+
+    function render() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const themeIndex = parseInt(urlParams.get('theme')) || 0;
+        const lang = urlParams.get('lang') || localStorage.getItem('selectedLang') || 'FR';
+        
+        const langData = THEMES_DATA[lang] || THEMES_DATA.FR;
+        const theme = langData.themes[themeIndex];
+        
+        if (!theme) {
+            window.location.href = 'promesses.html';
+            return;
+        }
+        
+        // Update back link
+        document.getElementById('backLink').textContent = langData.back;
+        document.getElementById('backLink').href = `promesses.html?lang=${lang}`;
+        
+        // Update header
+        document.getElementById('themeIcon').textContent = theme.icon;
+        document.getElementById('themeName').textContent = theme.name;
+        document.getElementById('themeDesc').textContent = theme.desc;
+        document.title = `${theme.name} - Bible Chantee`;
+        
+        // Build psalms list
+        const listContainer = document.getElementById('psalmsList');
+        listContainer.innerHTML = '';
+        
+        theme.psalms.forEach(psalmNum => {
+            const card = document.createElement('div');
+            card.className = 'psalm-card';
+            
+            const psalmTheme = PSALM_THEMES[psalmNum] ? (PSALM_THEMES[psalmNum][lang] || PSALM_THEMES[psalmNum].FR) : '';
+            const audioUrl = getAudioUrl(psalmNum, lang);
+            const lecteurUrl = getLecteurUrl(psalmNum, lang);
+            
+            let audioHtml = '';
+            if (audioUrl) {
+                audioHtml = `
+                    <div class="audio-player">
+                        <audio controls preload="none">
+                            <source src="${audioUrl}" type="audio/mpeg">
+                        </audio>
+                    </div>
+                `;
+            } else {
+                audioHtml = `<div class="no-audio">${langData.comingSoon}</div>`;
+            }
+            
+            card.innerHTML = `
+                <div class="psalm-header">
+                    <h2 class="psalm-title">${langData.psalmWord} ${psalmNum}</h2>
+                    <span class="psalm-theme">${psalmTheme}</span>
+                </div>
+                ${audioHtml}
+                <div class="psalm-actions">
+                    <a href="${lecteurUrl}" class="btn btn-primary">
+                        <span>&#9658;</span> ${langData.listenLabel}
+                    </a>
+                </div>
+            `;
+            
+            listContainer.appendChild(card);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', render);
+    </script>
+</body>
+</html>
