@@ -1326,36 +1326,58 @@
             }
         }
 
-    function updateActiveLanguage() {
-        // Remove active class from all buttons
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.remove('active');
-        });
-        // Add active class to current language button
-        const activeBtn = document.querySelector(`.lang-btn[data-lang="${currentLanguage}"]`);
-        if (activeBtn) activeBtn.classList.add('active');
-    }
+    // FONCTION COMPLÈTE: Traduit TOUTE la page (pas seulement les livres)
+    function changeLanguage(lang) {
+        // Sauvegarder la langue
+        currentLanguage = lang;
+        localStorage.setItem('selectedLanguage', lang);
 
-    function switchLanguage(langCode) {
-        currentLanguage = langCode;
-        updateActiveLanguage();
-        // Re-render book names with new language
+        // Mettre à jour URL
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        history.pushState({}, '', url);
+
+        // Traduire TOUS les éléments avec data-i18n
+        if (window.translations && window.translations[lang]) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (window.translations[lang][key]) {
+                    el.textContent = window.translations[lang][key];
+                }
+            });
+
+            // Traduire les placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (window.translations[lang][key]) {
+                    el.placeholder = window.translations[lang][key];
+                }
+            });
+        }
+
+        // Mettre à jour les noms des livres
         renderBooks('old-testament', oldTestament);
         renderBooks('new-testament', newTestament);
-        // Store preference
-        localStorage.setItem('selectedLanguage', langCode);
+
+        // Mettre à jour bouton actif
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.dataset.lang === lang) {
+                btn.classList.add('active');
+            }
+        });
     }
 
     // Add click listeners to all language buttons
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             const lang = this.getAttribute('data-lang');
-            switchLanguage(lang);
+            changeLanguage(lang);
         });
     });
 
-    // Set initial active language
-    updateActiveLanguage();
+    // Set initial active language on page load
+    changeLanguage(currentLanguage);
     </script>
 </body>
 </html>
