@@ -1268,26 +1268,6 @@
             }
         });
 
-        renderBooks('old-testament', oldTestament);
-        renderBooks('new-testament', newTestament);
-
-        // === AUTO-LECTURE DEPUIS PARAMETRES URL ===
-        // Permet d'ouvrir directement un chapitre via ?book=01_GEN&chapter=1
-        const urlParams = new URLSearchParams(window.location.search);
-        const bookParam = urlParams.get('book');
-        const chapterParam = urlParams.get('chapter');
-
-        if (bookParam && chapterParam) {
-            const book = books.find(b => b.num === bookParam);
-            if (book) {
-                playBook(bookParam, book.chapters);
-                // Attendre que le player soit initialise avant de lancer le chapitre
-                setTimeout(() => {
-                    playChapter(parseInt(chapterParam));
-                }, 100);
-            }
-        }
-
     // === SELECTEUR DE LANGUES ===
     // UNIVERSAL LANGUAGE CONFIGURATION - Auto-updated by generate-all-audio-urls.py
     const LANGUAGES = {
@@ -1317,8 +1297,8 @@
         currentLanguage = window.i18nInstance.getCurrentLanguage();
     } else {
         // Fallback to URL parameter check (for backward compatibility)
-        const urlParams = new URLSearchParams(window.location.search);
-        const urlLang = urlParams.get('lang');
+        const urlParams2 = new URLSearchParams(window.location.search);
+        const urlLang = urlParams2.get('lang');
         if (urlLang && LANGUAGES[urlLang.toUpperCase()]) {
             currentLanguage = urlLang.toUpperCase();
         } else {
@@ -1329,6 +1309,26 @@
             }
         }
     }
+
+        renderBooks('old-testament', oldTestament);
+        renderBooks('new-testament', newTestament);
+
+        // === AUTO-LECTURE DEPUIS PARAMETRES URL ===
+        // Permet d'ouvrir directement un chapitre via ?book=01_GEN&chapter=1
+        const urlParams = new URLSearchParams(window.location.search);
+        const bookParam = urlParams.get('book');
+        const chapterParam = urlParams.get('chapter');
+
+        if (bookParam && chapterParam) {
+            const book = books.find(b => b.num === bookParam);
+            if (book) {
+                playBook(bookParam, book.chapters);
+                // Attendre que le player soit initialise avant de lancer le chapitre
+                setTimeout(() => {
+                    playChapter(parseInt(chapterParam));
+                }, 100);
+            }
+        }
 
     function renderLanguageSelector() {
         const container = document.getElementById('languageSelector');
