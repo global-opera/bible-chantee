@@ -42,12 +42,23 @@
       transition: all 0.3s;
       min-width: 60px;
       text-align: center;
+      /* iOS fixes */
+      -webkit-tap-highlight-color: rgba(245, 196, 66, 0.2);
+      touch-action: manipulation;
+      user-select: none;
+      -webkit-user-select: none;
     }
 
     .lang-btn:hover {
       background: #2a4a7f;
       transform: translateY(-1px);
       box-shadow: 0 2px 8px rgba(245, 196, 66, 0.3);
+    }
+
+    .lang-btn:active {
+      background: #f5c842;
+      color: #1e3a5f;
+      transform: scale(0.98);
     }
 
     .lang-btn.active {
@@ -327,18 +338,18 @@
 
 <!-- Barre de langues horizontale -->
 <div class="lang-bar">
-    <button class="lang-btn" data-lang="FR">🇫🇷 FR</button>
-    <button class="lang-btn" data-lang="EN">🇬🇧 EN</button>
-    <button class="lang-btn" data-lang="PT">🇧🇷 PT</button>
-    <button class="lang-btn" data-lang="ES">🇪🇸 ES</button>
-    <button class="lang-btn" data-lang="DE">🇩🇪 DE</button>
-    <button class="lang-btn" data-lang="IT">🇮🇹 IT</button>
-    <button class="lang-btn" data-lang="AR">🇸🇦 AR</button>
-    <button class="lang-btn" data-lang="RU">🇷🇺 RU</button>
-    <button class="lang-btn" data-lang="ZH">🇨🇳 ZH</button>
-    <button class="lang-btn" data-lang="HI">🇮🇳 HI</button>
-    <button class="lang-btn" data-lang="TL">🇵🇭 TL</button>
-    <button class="lang-btn" data-lang="KO">🇰🇷 KO</button>
+    <button type="button" class="lang-btn" data-lang="FR">🇫🇷 FR</button>
+    <button type="button" class="lang-btn" data-lang="EN">🇬🇧 EN</button>
+    <button type="button" class="lang-btn" data-lang="PT">🇧🇷 PT</button>
+    <button type="button" class="lang-btn" data-lang="ES">🇪🇸 ES</button>
+    <button type="button" class="lang-btn" data-lang="DE">🇩🇪 DE</button>
+    <button type="button" class="lang-btn" data-lang="IT">🇮🇹 IT</button>
+    <button type="button" class="lang-btn" data-lang="AR">🇸🇦 AR</button>
+    <button type="button" class="lang-btn" data-lang="RU">🇷🇺 RU</button>
+    <button type="button" class="lang-btn" data-lang="ZH">🇨🇳 ZH</button>
+    <button type="button" class="lang-btn" data-lang="HI">🇮🇳 HI</button>
+    <button type="button" class="lang-btn" data-lang="TL">🇵🇭 TL</button>
+    <button type="button" class="lang-btn" data-lang="KO">🇰🇷 KO</button>
 </div>
 
 <header>
