@@ -638,7 +638,6 @@
 
     <!-- Donnees des paroles et de la Bible -->
     <script src="lyrics-data.js"></script>
-    <script src="lyrics-data-pt.js"></script>
     <script src="lyrics-data-v2.js"></script>
     <script src="audio-urls.js"></script>
     <script src="audio-urls-v2.js"></script>
@@ -984,21 +983,17 @@
                 });
 
                 lastActiveSection = -1;
-            } else {
-                // Choisir paroles selon la langue
-                let lyrics = null;
-                const langVar = 'chapterLyrics' + currentLanguage;
-                if (typeof window[langVar] !== 'undefined' && window[langVar][currentBook] && window[langVar][currentBook][chapterStr]) {
-                    lyrics = window[langVar][currentBook][chapterStr];
-                } else if (useV2 && typeof chapterLyricsV2 !== 'undefined' && chapterLyricsV2[currentBook] && chapterLyricsV2[currentBook][chapterStr]) {
+            } else if (typeof chapterLyrics !== 'undefined' && chapterLyrics[currentBook] && chapterLyrics[currentBook][chapterStr]) {
+                // Choisir paroles V1 ou V2
+                let lyrics;
+                if (useV2 && typeof chapterLyricsV2 !== 'undefined' && chapterLyricsV2[currentBook] && chapterLyricsV2[currentBook][chapterStr]) {
                     lyrics = chapterLyricsV2[currentBook][chapterStr];
-                } else if (typeof chapterLyrics !== 'undefined' && chapterLyrics[currentBook] && chapterLyrics[currentBook][chapterStr]) {
+                } else {
                     lyrics = chapterLyrics[currentBook][chapterStr];
                 }
-                if (lyrics) {
-                    lyrics = lyrics.replace(/\[([^\]]+)\]/g, '<span class="section-label">[$1]</span>');
-                    lyricsText.innerHTML = lyrics;
-                } else {
+                lyrics = lyrics.replace(/\[([^\]]+)\]/g, '<span class="section-label">[$1]</span>');
+                lyricsText.innerHTML = lyrics;
+            } else {
                 const t = window.getTranslation || ((key) => null);
                 lyricsText.innerHTML = '<div class="no-lyrics">' + (t('readerNoLyrics') || 'Paroles non disponibles pour ce chapitre') + '</div>';
             }
