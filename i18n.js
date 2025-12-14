@@ -91,6 +91,14 @@
         }
       });
 
+      // Update placeholders for input elements with data-i18n-placeholder attribute
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        if (trans[key]) {
+          element.placeholder = trans[key];
+        }
+      });
+
       // Update page title if exists
       if (trans.pageTitle) {
         document.title = trans.pageTitle;
