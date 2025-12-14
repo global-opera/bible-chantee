@@ -463,75 +463,54 @@
             }
             .player-title { font-size: 1.1em; }
 
-            /* Mobile: cacher drapeaux, afficher dropdown */
-            .language-selector .lang-btn {
-                display: none;
-            }
+        }
 
-            .lang-dropdown-mobile {
-                display: block;
-                width: calc(100% - 40px);
-                max-width: 350px;
-                margin: 20px auto;
-                padding: 15px;
-                font-size: 18px;
-                background: #1e3a5f;
-                color: #f5c842;
-                border: 2px solid #f5c842;
-                border-radius: 10px;
-                cursor: pointer;
-            }
-        }
-    
-        /* === SELECTEUR DE LANGUES === */
-        .language-selector {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 8px;
-            margin: 20px auto;
-            padding: 15px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 15px;
-            max-width: 350px;
-        }
-        .lang-btn {
+        /* === BARRE LANGUES HORIZONTALE === */
+        .lang-bar {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px 12px;
-            border: 2px solid rgba(255,255,255,0.2);
-            border-radius: 10px;
-            background: rgba(255,255,255,0.05);
-            cursor: pointer;
-            transition: all 0.3s;
-            min-width: 65px;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .lang-btn:hover {
-            background: rgba(255,255,255,0.15);
-            border-color: rgba(255,206,0,0.5);
-            transform: translateY(-2px);
-        }
-        .lang-btn.active {
-            background: rgba(255,206,0,0.2);
-            border-color: #ffce00;
-            box-shadow: 0 0 15px rgba(255,206,0,0.3);
-        }
-        .lang-btn.disabled {
-            opacity: 0.35;
-            cursor: not-allowed;
-        }
-        .lang-btn.disabled:hover {
-            transform: none;
-            background: rgba(255,255,255,0.05);
-        }
-        .lang-flag { font-size: 1.6em; margin-bottom: 4px; }
-        .lang-code { font-weight: bold; color: #fff; font-size: 0.85em; }
-        .lang-progress { font-size: 0.65em; color: #aaa; margin-top: 2px; }
-        .lang-btn.active .lang-code, .lang-btn.active .lang-progress { color: #ffce00; }
 
-        /* Menu déroulant mobile (caché par défaut) */
-        .lang-dropdown-mobile {
-            display: none;
+        .lang-btn {
+            padding: 8px 12px;
+            background: #1e3a5f;
+            color: #f5c842;
+            border: 1px solid #f5c842;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .lang-btn:hover {
+            background: #2a4a7f;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(245, 196, 66, 0.3);
+        }
+
+        .lang-btn.active {
+            background: #f5c842;
+            color: #1e3a5f;
+            border-color: #f5c842;
+            font-weight: 700;
+        }
+
+        /* Mobile: boutons plus petits */
+        @media (max-width: 480px) {
+            .lang-btn {
+                padding: 6px 8px;
+                font-size: 12px;
+                min-width: 50px;
+            }
         }
 
         .lang-progress-bar {
@@ -566,23 +545,21 @@
             </div>
             <div class="search-results" id="searchResults"></div>
         </header>
-        <!-- SELECTEUR DE LANGUES -->
-        <div class="language-selector" id="languageSelector"></div>
-        <!-- MENU DEROULANT MOBILE -->
-        <select id="langSelectMobile" class="lang-dropdown-mobile">
-            <option value="FR">🇫🇷 Français (100%)</option>
-            <option value="EN">🇬🇧 English (0%)</option>
-            <option value="PT">🇧🇷 Português (67%)</option>
-            <option value="ES">🇪🇸 Español (0%)</option>
-            <option value="DE">🇩🇪 Deutsch (0%)</option>
-            <option value="IT">🇮🇹 Italiano (0%)</option>
-            <option value="AR">🇸🇦 العربية (0%)</option>
-            <option value="RU">🇷🇺 Русский (0%)</option>
-            <option value="ZH">🇨🇳 中文 (0%)</option>
-            <option value="HI">🇮🇳 हिन्दी (0%)</option>
-            <option value="TL">🇵🇭 Tagalog (0%)</option>
-            <option value="KO">🇰🇷 한국어 (0%)</option>
-        </select>
+        <!-- BARRE LANGUES HORIZONTALE -->
+        <div class="lang-bar" id="languageBar">
+            <button class="lang-btn" data-lang="FR">🇫🇷 FR</button>
+            <button class="lang-btn" data-lang="EN">🇬🇧 EN</button>
+            <button class="lang-btn" data-lang="PT">🇧🇷 PT</button>
+            <button class="lang-btn" data-lang="ES">🇪🇸 ES</button>
+            <button class="lang-btn" data-lang="DE">🇩🇪 DE</button>
+            <button class="lang-btn" data-lang="IT">🇮🇹 IT</button>
+            <button class="lang-btn" data-lang="AR">🇸🇦 AR</button>
+            <button class="lang-btn" data-lang="RU">🇷🇺 RU</button>
+            <button class="lang-btn" data-lang="ZH">🇨🇳 ZH</button>
+            <button class="lang-btn" data-lang="HI">🇮🇳 HI</button>
+            <button class="lang-btn" data-lang="TL">🇵🇭 TL</button>
+            <button class="lang-btn" data-lang="KO">🇰🇷 KO</button>
+        </div>
         <h2 class="section-title" data-i18n="readerOldTestament">Ancien Testament</h2>
         <div class="books-grid" id="old-testament"></div>
         <h2 class="section-title" data-i18n="readerNewTestament">Nouveau Testament</h2>
@@ -691,6 +668,23 @@
             "07": "Juges",
             "19": "Psaumes"
         };
+
+        // BOOK NAMES - 66 books in 12 languages (hardcoded for reliability)
+        const BOOK_NAMES = {
+            FR: ["Genèse","Exode","Lévitique","Nombres","Deutéronome","Josué","Juges","Ruth","1 Samuel","2 Samuel","1 Rois","2 Rois","1 Chroniques","2 Chroniques","Esdras","Néhémie","Esther","Job","Psaumes","Proverbes","Ecclésiaste","Cantique","Ésaïe","Jérémie","Lamentations","Ézéchiel","Daniel","Osée","Joël","Amos","Abdias","Jonas","Michée","Nahum","Habacuc","Sophonie","Aggée","Zacharie","Malachie","Matthieu","Marc","Luc","Jean","Actes","Romains","1 Corinthiens","2 Corinthiens","Galates","Éphésiens","Philippiens","Colossiens","1 Thessaloniciens","2 Thessaloniciens","1 Timothée","2 Timothée","Tite","Philémon","Hébreux","Jacques","1 Pierre","2 Pierre","1 Jean","2 Jean","3 Jean","Jude","Apocalypse"],
+            PT: ["Gênesis","Êxodo","Levítico","Números","Deuteronômio","Josué","Juízes","Rute","1 Samuel","2 Samuel","1 Reis","2 Reis","1 Crônicas","2 Crônicas","Esdras","Neemias","Ester","Jó","Salmos","Provérbios","Eclesiastes","Cantares","Isaías","Jeremias","Lamentações","Ezequiel","Daniel","Oséias","Joel","Amós","Obadias","Jonas","Miquéias","Naum","Habacuque","Sofonias","Ageu","Zacarias","Malaquias","Mateus","Marcos","Lucas","João","Atos","Romanos","1 Coríntios","2 Coríntios","Gálatas","Efésios","Filipenses","Colossenses","1 Tessalonicenses","2 Tessalonicenses","1 Timóteo","2 Timóteo","Tito","Filemom","Hebreus","Tiago","1 Pedro","2 Pedro","1 João","2 João","3 João","Judas","Apocalipse"],
+            EN: ["Genesis","Exodus","Leviticus","Numbers","Deuteronomy","Joshua","Judges","Ruth","1 Samuel","2 Samuel","1 Kings","2 Kings","1 Chronicles","2 Chronicles","Ezra","Nehemiah","Esther","Job","Psalms","Proverbs","Ecclesiastes","Song of Solomon","Isaiah","Jeremiah","Lamentations","Ezekiel","Daniel","Hosea","Joel","Amos","Obadiah","Jonah","Micah","Nahum","Habakkuk","Zephaniah","Haggai","Zechariah","Malachi","Matthew","Mark","Luke","John","Acts","Romans","1 Corinthians","2 Corinthians","Galatians","Ephesians","Philippians","Colossians","1 Thessalonians","2 Thessalonians","1 Timothy","2 Timothy","Titus","Philemon","Hebrews","James","1 Peter","2 Peter","1 John","2 John","3 John","Jude","Revelation"],
+            ES: ["Génesis","Éxodo","Levítico","Números","Deuteronomio","Josué","Jueces","Rut","1 Samuel","2 Samuel","1 Reyes","2 Reyes","1 Crónicas","2 Crónicas","Esdras","Nehemías","Ester","Job","Salmos","Proverbios","Eclesiastés","Cantares","Isaías","Jeremías","Lamentaciones","Ezequiel","Daniel","Oseas","Joel","Amós","Abdías","Jonás","Miqueas","Nahúm","Habacuc","Sofonías","Hageo","Zacarías","Malaquías","Mateo","Marcos","Lucas","Juan","Hechos","Romanos","1 Corintios","2 Corintios","Gálatas","Efesios","Filipenses","Colosenses","1 Tesalonicenses","2 Tesalonicenses","1 Timoteo","2 Timoteo","Tito","Filemón","Hebreos","Santiago","1 Pedro","2 Pedro","1 Juan","2 Juan","3 Juan","Judas","Apocalipsis"],
+            DE: ["Genesis","Exodus","Levitikus","Numeri","Deuteronomium","Josua","Richter","Rut","1 Samuel","2 Samuel","1 Könige","2 Könige","1 Chronik","2 Chronik","Esra","Nehemia","Ester","Hiob","Psalmen","Sprüche","Prediger","Hohelied","Jesaja","Jeremia","Klagelieder","Hesekiel","Daniel","Hosea","Joel","Amos","Obadja","Jona","Micha","Nahum","Habakuk","Zefanja","Haggai","Sacharja","Maleachi","Matthäus","Markus","Lukas","Johannes","Apostelgeschichte","Römer","1 Korinther","2 Korinther","Galater","Epheser","Philipper","Kolosser","1 Thessalonicher","2 Thessalonicher","1 Timotheus","2 Timotheus","Titus","Philemon","Hebräer","Jakobus","1 Petrus","2 Petrus","1 Johannes","2 Johannes","3 Johannes","Judas","Offenbarung"],
+            IT: ["Genesi","Esodo","Levitico","Numeri","Deuteronomio","Giosuè","Giudici","Rut","1 Samuele","2 Samuele","1 Re","2 Re","1 Cronache","2 Cronache","Esdra","Neemia","Ester","Giobbe","Salmi","Proverbi","Ecclesiaste","Cantico","Isaia","Geremia","Lamentazioni","Ezechiele","Daniele","Osea","Gioele","Amos","Abdia","Giona","Michea","Naum","Abacuc","Sofonia","Aggeo","Zaccaria","Malachia","Matteo","Marco","Luca","Giovanni","Atti","Romani","1 Corinzi","2 Corinzi","Galati","Efesini","Filippesi","Colossesi","1 Tessalonicesi","2 Tessalonicesi","1 Timoteo","2 Timoteo","Tito","Filemone","Ebrei","Giacomo","1 Pietro","2 Pietro","1 Giovanni","2 Giovanni","3 Giovanni","Giuda","Apocalisse"],
+            AR: ["التكوين","الخروج","اللاويين","العدد","التثنية","يشوع","القضاة","راعوث","صموئيل الأول","صموئيل الثاني","الملوك الأول","الملوك الثاني","أخبار الأيام الأول","أخبار الأيام الثاني","عزرا","نحميا","أستير","أيوب","المزامير","الأمثال","الجامعة","نشيد الأنشاد","إشعياء","إرميا","مراثي إرميا","حزقيال","دانيال","هوشع","يوئيل","عاموس","عوبديا","يونان","ميخا","ناحوم","حبقوق","صفنيا","حجي","زكريا","ملاخي","متى","مرقس","لوقا","يوحنا","أعمال الرسل","رومية","كورنثوس الأولى","كورنثوس الثانية","غلاطية","أفسس","فيلبي","كولوسي","تسالونيكي الأولى","تسالونيكي الثانية","تيموثاوس الأولى","تيموثاوس الثانية","تيطس","فليمون","العبرانيين","يعقوب","بطرس الأولى","بطرس الثانية","يوحنا الأولى","يوحنا الثانية","يوحنا الثالثة","يهوذا","الرؤيا"],
+            RU: ["Бытие","Исход","Левит","Числа","Второзаконие","Иисус Навин","Судьи","Руфь","1 Царств","2 Царств","3 Царств","4 Царств","1 Паралипоменон","2 Паралипоменон","Ездра","Неемия","Есфирь","Иов","Псалтирь","Притчи","Екклесиаст","Песня Песней","Исаия","Иеремия","Плач Иеремии","Иезекииль","Даниил","Осия","Иоиль","Амос","Авдий","Иона","Михей","Наум","Аввакум","Софония","Аггей","Захария","Малахия","Матфей","Марк","Лука","Иоанн","Деяния","Римлянам","1 Коринфянам","2 Коринфянам","Галатам","Ефесянам","Филиппийцам","Колоссянам","1 Фессалоникийцам","2 Фессалоникийцам","1 Тимофею","2 Тимофею","Титу","Филимону","Евреям","Иакова","1 Петра","2 Петра","1 Иоанна","2 Иоанна","3 Иоанна","Иуды","Откровение"],
+            ZH: ["创世记","出埃及记","利未记","民数记","申命记","约书亚记","士师记","路得记","撒母耳记上","撒母耳记下","列王纪上","列王纪下","历代志上","历代志下","以斯拉记","尼希米记","以斯帖记","约伯记","诗篇","箴言","传道书","雅歌","以赛亚书","耶利米书","耶利米哀歌","以西结书","但以理书","何西阿书","约珥书","阿摩司书","俄巴底亚书","约拿书","弥迦书","那鸿书","哈巴谷书","西番雅书","哈该书","撒迦利亚书","玛拉基书","马太福音","马可福音","路加福音","约翰福音","使徒行传","罗马书","哥林多前书","哥林多后书","加拉太书","以弗所书","腓立比书","歌罗西书","帖撒罗尼迦前书","帖撒罗尼迦后书","提摩太前书","提摩太后书","提多书","腓利门书","希伯来书","雅各书","彼得前书","彼得后书","约翰一书","约翰二书","约翰三书","犹大书","启示录"],
+            HI: ["उत्पत्ति","निर्गमन","लैव्यव्यवस्था","गिनती","व्यवस्थाविवरण","यहोशू","न्यायियों","रूत","1 शमूएल","2 शमूएल","1 राजा","2 राजा","1 इतिहास","2 इतिहास","एज्रा","नहेम्याह","एस्तेर","अय्यूब","भजन संहिता","नीतिवचन","सभोपदेशक","श्रेष्ठगीत","यशायाह","यिर्मयाह","विलापगीत","यहेजकेल","दानिय्येल","होशे","योएल","आमोस","ओबद्याह","योना","मीका","नहूम","हबक्कूक","सपन्याह","हाग्गै","जकर्याह","मलाकी","मत्ती","मरकुस","लूका","यूहन्ना","प्रेरितों के काम","रोमियों","1 कुरिन्थियों","2 कुरिन्थियों","गलातियों","इफिसियों","फिलिप्पियों","कुलुस्सियों","1 थिस्सलुनीकियों","2 थिस्सलुनीकियों","1 तीमुथियुस","2 तीमुथियुस","तीतुस","फिलेमोन","इब्रानियों","याकूब","1 पतरस","2 पतरस","1 यूहन्ना","2 यूहन्ना","3 यूहन्ना","यहूदा","प्रकाशितवाक्य"],
+            TL: ["Genesis","Exodo","Levitico","Mga Bilang","Deuteronomio","Josue","Mga Hukom","Ruth","1 Samuel","2 Samuel","1 Mga Hari","2 Mga Hari","1 Mga Cronica","2 Mga Cronica","Ezra","Nehemias","Ester","Job","Mga Awit","Mga Kawikaan","Mangangaral","Awit ni Solomon","Isaias","Jeremias","Mga Panaghoy","Ezekiel","Daniel","Hosea","Joel","Amos","Obadias","Jonas","Mikas","Nahum","Habakuk","Sofonias","Hagai","Zacarias","Malakias","Mateo","Marcos","Lucas","Juan","Mga Gawa","Roma","1 Corinto","2 Corinto","Galacia","Efeso","Filipos","Colosas","1 Tesalonica","2 Tesalonica","1 Timoteo","2 Timoteo","Tito","Filemon","Hebreo","Santiago","1 Pedro","2 Pedro","1 Juan","2 Juan","3 Juan","Judas","Apocalipsis"],
+            KO: ["창세기","출애굽기","레위기","민수기","신명기","여호수아","사사기","룻기","사무엘상","사무엘하","열왕기상","열왕기하","역대상","역대하","에스라","느헤미야","에스더","욥기","시편","잠언","전도서","아가","이사야","예레미야","예레미야애가","에스겔","다니엘","호세아","요엘","아모스","오바댜","요나","미가","나훔","하박국","스바냐","학개","스가랴","말라기","마태복음","마가복음","누가복음","요한복음","사도행전","로마서","고린도전서","고린도후서","갈라디아서","에베소서","빌립보서","골로새서","데살로니가전서","데살로니가후서","디모데전서","디모데후서","디도서","빌레몬서","히브리서","야고보서","베드로전서","베드로후서","요한일서","요한이서","요한삼서","유다서","요한계시록"]
+        };
+
         const books = [
                 { num: "01", name: "Genese", chapters: 50, available: true },
                 { num: "02", name: "Exode", chapters: 40, available: true },
@@ -778,17 +772,18 @@
 
         function renderBooks(container, bookList) {
             const el = document.getElementById(container);
-            // Fallback returns null (not key) so || book.name works
-            const t = window.getTranslation || ((key) => null);
+            // Use BOOK_NAMES array for reliable multilingual display
+            const lang = currentLanguage || 'FR';
+            const bookNames = BOOK_NAMES[lang] || BOOK_NAMES.FR;
 
             el.innerHTML = bookList.map(book => {
                 const bookNum = parseInt(book.num);
-                const bookKey = 'book' + book.num;
-                const bookName = t(bookKey) || book.name;
+                const bookIndex = bookNum - 1; // Array is 0-indexed
+                const bookName = bookNames[bookIndex] || book.name;
 
                 return '<div class="book'+(book.available ? '' : ' unavailable')+'" data-num="'+book.num+'" data-chapters="'+book.chapters+'" data-available="'+book.available+'">' +
                 '<div class="book-num">'+book.num+'</div>' +
-                '<div class="book-name" data-i18n="'+bookKey+'">'+bookName+'</div></div>';
+                '<div class="book-name">'+bookName+'</div></div>';
             }).join('');
         }
 
@@ -1331,44 +1326,36 @@
             }
         }
 
-    function renderLanguageSelector() {
-        const container = document.getElementById('languageSelector');
-        if (!container) return;
-        container.innerHTML = '';
-        Object.entries(LANGUAGES).forEach(([code, lang]) => {
-            const percent = Math.round((lang.chapters / lang.total) * 100);
-            const isAvailable = lang.chapters > 0;
-            const isActive = code === currentLanguage;
-            const btn = document.createElement('div');
-            btn.className = 'lang-btn' + (isActive ? ' active' : '') + (!isAvailable ? ' disabled' : '');
-            btn.innerHTML = '<span class="lang-flag">' + lang.flag + '</span>' +
-                '<span class="lang-code">' + code + '</span>' +
-                '<span class="lang-progress">' + percent + '%</span>' +
-                '<div class="lang-progress-bar"><div class="lang-progress-fill" style="width:' + percent + '%"></div></div>';
-            if (isAvailable) btn.onclick = function() { switchLanguage(code); };
-            container.appendChild(btn);
+    function updateActiveLanguage() {
+        // Remove active class from all buttons
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.remove('active');
         });
+        // Add active class to current language button
+        const activeBtn = document.querySelector(`.lang-btn[data-lang="${currentLanguage}"]`);
+        if (activeBtn) activeBtn.classList.add('active');
     }
-    
+
     function switchLanguage(langCode) {
-        if (!LANGUAGES[langCode] || LANGUAGES[langCode].chapters === 0) return;
         currentLanguage = langCode;
-        renderLanguageSelector();
-        // Synchroniser le dropdown mobile
-        const mobileSelect = document.getElementById('langSelectMobile');
-        if (mobileSelect) mobileSelect.value = langCode;
+        updateActiveLanguage();
+        // Re-render book names with new language
+        renderBooks('old-testament', oldTestament);
+        renderBooks('new-testament', newTestament);
+        // Store preference
+        localStorage.setItem('selectedLanguage', langCode);
     }
 
-    renderLanguageSelector();
-
-    // Event listener pour le menu déroulant mobile
-    document.getElementById('langSelectMobile').addEventListener('change', function() {
-        const lang = this.value;
-        switchLanguage(lang);
+    // Add click listeners to all language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            switchLanguage(lang);
+        });
     });
 
-    // Synchroniser le dropdown mobile avec la langue actuelle au chargement
-    document.getElementById('langSelectMobile').value = currentLanguage;
+    // Set initial active language
+    updateActiveLanguage();
     </script>
 </body>
 </html>
