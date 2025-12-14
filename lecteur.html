@@ -638,6 +638,7 @@
 
     <!-- Donnees des paroles et de la Bible -->
     <script src="lyrics-data.js"></script>
+    <script src="lyrics-data-pt.js"></script>
     <script src="lyrics-data-v2.js"></script>
     <script src="audio-urls.js"></script>
     <script src="audio-urls-v2.js"></script>
@@ -983,16 +984,24 @@
                 });
 
                 lastActiveSection = -1;
-            } else if (typeof chapterLyrics !== 'undefined' && chapterLyrics[currentBook] && chapterLyrics[currentBook][chapterStr]) {
-                // Choisir paroles V1 ou V2
-                let lyrics;
-                if (useV2 && typeof chapterLyricsV2 !== 'undefined' && chapterLyricsV2[currentBook] && chapterLyricsV2[currentBook][chapterStr]) {
-                    lyrics = chapterLyricsV2[currentBook][chapterStr];
-                } else {
-                    lyrics = chapterLyrics[currentBook][chapterStr];
+            } else {
+                let lyrics = null;
+
+                if (currentLanguage === 'PT' && typeof chapterLyricsPT !== 'undefined' &&
+                    chapterLyricsPT[currentBook] && chapterLyricsPT[currentBook][chapterStr]) {
+                    lyrics = chapterLyricsPT[currentBook][chapterStr];
+                } else if (typeof chapterLyrics !== 'undefined' && chapterLyrics[currentBook] && chapterLyrics[currentBook][chapterStr]) {
+                    if (useV2 && typeof chapterLyricsV2 !== 'undefined' &&
+                        chapterLyricsV2[currentBook] && chapterLyricsV2[currentBook][chapterStr]) {
+                        lyrics = chapterLyricsV2[currentBook][chapterStr];
+                    } else {
+                        lyrics = chapterLyrics[currentBook][chapterStr];
+                    }
                 }
-                lyrics = lyrics.replace(/\[([^\]]+)\]/g, '<span class="section-label">[$1]</span>');
-                lyricsText.innerHTML = lyrics;
+
+                if (lyrics) {
+                    lyricsText.innerHTML = lyrics.replace(/\[([^\]]+)\]/g, '<span class="section-label">[$1]</span>');
+                }
             } else {
                 const t = window.getTranslation || ((key) => null);
                 lyricsText.innerHTML = '<div class="no-lyrics">' + (t('readerNoLyrics') || 'Paroles non disponibles pour ce chapitre') + '</div>';
