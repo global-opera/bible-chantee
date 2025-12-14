@@ -547,18 +547,18 @@
         </header>
         <!-- BARRE LANGUES HORIZONTALE -->
         <div class="lang-bar" id="languageBar">
-            <button class="lang-btn" data-lang="FR">🇫🇷 FR</button>
-            <button class="lang-btn" data-lang="EN">🇬🇧 EN</button>
-            <button class="lang-btn" data-lang="PT">🇧🇷 PT</button>
-            <button class="lang-btn" data-lang="ES">🇪🇸 ES</button>
-            <button class="lang-btn" data-lang="DE">🇩🇪 DE</button>
-            <button class="lang-btn" data-lang="IT">🇮🇹 IT</button>
-            <button class="lang-btn" data-lang="AR">🇸🇦 AR</button>
-            <button class="lang-btn" data-lang="RU">🇷🇺 RU</button>
-            <button class="lang-btn" data-lang="ZH">🇨🇳 ZH</button>
-            <button class="lang-btn" data-lang="HI">🇮🇳 HI</button>
-            <button class="lang-btn" data-lang="TL">🇵🇭 TL</button>
-            <button class="lang-btn" data-lang="KO">🇰🇷 KO</button>
+            <button class="lang-btn" data-lang="FR" onclick="changeLanguage('FR')">🇫🇷 FR</button>
+            <button class="lang-btn" data-lang="EN" onclick="changeLanguage('EN')">🇬🇧 EN</button>
+            <button class="lang-btn" data-lang="PT" onclick="changeLanguage('PT')">🇧🇷 PT</button>
+            <button class="lang-btn" data-lang="ES" onclick="changeLanguage('ES')">🇪🇸 ES</button>
+            <button class="lang-btn" data-lang="DE" onclick="changeLanguage('DE')">🇩🇪 DE</button>
+            <button class="lang-btn" data-lang="IT" onclick="changeLanguage('IT')">🇮🇹 IT</button>
+            <button class="lang-btn" data-lang="AR" onclick="changeLanguage('AR')">🇸🇦 AR</button>
+            <button class="lang-btn" data-lang="RU" onclick="changeLanguage('RU')">🇷🇺 RU</button>
+            <button class="lang-btn" data-lang="ZH" onclick="changeLanguage('ZH')">🇨🇳 ZH</button>
+            <button class="lang-btn" data-lang="HI" onclick="changeLanguage('HI')">🇮🇳 HI</button>
+            <button class="lang-btn" data-lang="TL" onclick="changeLanguage('TL')">🇵🇭 TL</button>
+            <button class="lang-btn" data-lang="KO" onclick="changeLanguage('KO')">🇰🇷 KO</button>
         </div>
         <h2 class="section-title" data-i18n="readerOldTestament">Ancien Testament</h2>
         <div class="books-grid" id="old-testament"></div>
@@ -1326,6 +1326,178 @@
             }
         }
 
+    // TRANSLATIONS OBJECT - All languages for lecteur.html
+    const TRANSLATIONS = {
+        FR: {
+            readerHeading: "Bible Chantée",
+            readerBackHome: "← Retour accueil",
+            readerAbout: "À propos",
+            readerSubtitle: "La Parole de Dieu en musique worship française",
+            readerBooksAvailable: "livres disponibles",
+            readerOf: "sur",
+            readerChapters: "chapitres",
+            readerSearchPlaceholder: "  un mot  =  un chant  ",
+            readerSearchButton: "🔍 Rechercher",
+            readerOldTestament: "Ancien Testament",
+            readerNewTestament: "Nouveau Testament",
+            readerFooterCopyright: "© 2025 Bible Chantée - Stéphane Cassani - Tous droits d'auteur réservés"
+        },
+        EN: {
+            readerHeading: "Sung Bible",
+            readerBackHome: "← Back home",
+            readerAbout: "About",
+            readerSubtitle: "God's Word in French worship music",
+            readerBooksAvailable: "books available",
+            readerOf: "of",
+            readerChapters: "chapters",
+            readerSearchPlaceholder: "  one word  =  one song  ",
+            readerSearchButton: "🔍 Search",
+            readerOldTestament: "Old Testament",
+            readerNewTestament: "New Testament",
+            readerFooterCopyright: "© 2025 Sung Bible - Stéphane Cassani - All rights reserved"
+        },
+        ES: {
+            readerHeading: "Biblia Cantada",
+            readerBackHome: "← Volver inicio",
+            readerAbout: "Acerca de",
+            readerSubtitle: "La Palabra de Dios en música worship francesa",
+            readerBooksAvailable: "libros disponibles",
+            readerOf: "de",
+            readerChapters: "capítulos",
+            readerSearchPlaceholder: "  una palabra  =  una canción  ",
+            readerSearchButton: "🔍 Buscar",
+            readerOldTestament: "Antiguo Testamento",
+            readerNewTestament: "Nuevo Testamento",
+            readerFooterCopyright: "© 2025 Biblia Cantada - Stéphane Cassani - Todos los derechos reservados"
+        },
+        PT: {
+            readerHeading: "Bíblia Cantada",
+            readerBackHome: "← Voltar início",
+            readerAbout: "Sobre",
+            readerSubtitle: "A Palavra de Deus em música worship francesa",
+            readerBooksAvailable: "livros disponíveis",
+            readerOf: "de",
+            readerChapters: "capítulos",
+            readerSearchPlaceholder: "  uma palavra  =  uma canção  ",
+            readerSearchButton: "🔍 Pesquisar",
+            readerOldTestament: "Antigo Testamento",
+            readerNewTestament: "Novo Testamento",
+            readerFooterCopyright: "© 2025 Bíblia Cantada - Stéphane Cassani - Todos os direitos reservados"
+        },
+        DE: {
+            readerHeading: "Gesungene Bibel",
+            readerBackHome: "← Zurück zur Startseite",
+            readerAbout: "Über uns",
+            readerSubtitle: "Gottes Wort in französischer Worship-Musik",
+            readerBooksAvailable: "Bücher verfügbar",
+            readerOf: "von",
+            readerChapters: "Kapitel",
+            readerSearchPlaceholder: "  ein Wort  =  ein Lied  ",
+            readerSearchButton: "🔍 Suchen",
+            readerOldTestament: "Altes Testament",
+            readerNewTestament: "Neues Testament",
+            readerFooterCopyright: "© 2025 Gesungene Bibel - Stéphane Cassani - Alle Rechte vorbehalten"
+        },
+        IT: {
+            readerHeading: "Bibbia Cantata",
+            readerBackHome: "← Torna alla home",
+            readerAbout: "Chi siamo",
+            readerSubtitle: "La Parola di Dio nella musica worship francese",
+            readerBooksAvailable: "libri disponibili",
+            readerOf: "di",
+            readerChapters: "capitoli",
+            readerSearchPlaceholder: "  una parola  =  una canzone  ",
+            readerSearchButton: "🔍 Cerca",
+            readerOldTestament: "Antico Testamento",
+            readerNewTestament: "Nuovo Testamento",
+            readerFooterCopyright: "© 2025 Bibbia Cantata - Stéphane Cassani - Tutti i diritti riservati"
+        },
+        RU: {
+            readerHeading: "Поющая Библия",
+            readerBackHome: "← Вернуться на главную",
+            readerAbout: "О нас",
+            readerSubtitle: "Слово Божье во французской богослужебной музыке",
+            readerBooksAvailable: "книг доступно",
+            readerOf: "из",
+            readerChapters: "глав",
+            readerSearchPlaceholder: "  одно слово  =  одна песня  ",
+            readerSearchButton: "🔍 Поиск",
+            readerOldTestament: "Ветхий Завет",
+            readerNewTestament: "Новый Завет",
+            readerFooterCopyright: "© 2025 Поющая Библия - Стéфан Кассани - Все права защищены"
+        },
+        AR: {
+            readerHeading: "الكتاب المقدس المُغنّى",
+            readerBackHome: "← العودة إلى الصفحة الرئيسية",
+            readerAbout: "عن",
+            readerSubtitle: "كلمة الله في موسيقى العبادة الفرنسية",
+            readerBooksAvailable: "كتب متاحة",
+            readerOf: "من",
+            readerChapters: "فصول",
+            readerSearchPlaceholder: "  كلمة واحدة  =  أغنية واحدة  ",
+            readerSearchButton: "🔍 بحث",
+            readerOldTestament: "العهد القديم",
+            readerNewTestament: "العهد الجديد",
+            readerFooterCopyright: "© 2025 الكتاب المقدس المُغنّى - ستيفان كاساني - جميع الحقوق محفوظة"
+        },
+        ZH: {
+            readerHeading: "歌唱圣经",
+            readerBackHome: "← 返回主页",
+            readerAbout: "关于",
+            readerSubtitle: "法国赞美音乐中的神的话语",
+            readerBooksAvailable: "本书可用",
+            readerOf: "共",
+            readerChapters: "章",
+            readerSearchPlaceholder: "  一个词  =  一首歌  ",
+            readerSearchButton: "🔍 搜索",
+            readerOldTestament: "旧约",
+            readerNewTestament: "新约",
+            readerFooterCopyright: "© 2025 歌唱圣经 - 斯特凡·卡萨尼 - 版权所有"
+        },
+        HI: {
+            readerHeading: "गायी गई बाइबिल",
+            readerBackHome: "← मुख्य पृष्ठ पर वापस जाएं",
+            readerAbout: "के बारे में",
+            readerSubtitle: "फ्रांसीसी उपासना संगीत में परमेश्वर का वचन",
+            readerBooksAvailable: "पुस्तकें उपलब्ध",
+            readerOf: "में से",
+            readerChapters: "अध्याय",
+            readerSearchPlaceholder: "  एक शब्द  =  एक गीत  ",
+            readerSearchButton: "🔍 खोजें",
+            readerOldTestament: "पुराना नियम",
+            readerNewTestament: "नया नियम",
+            readerFooterCopyright: "© 2025 गायी गई बाइबिल - स्टेफ़न कासानी - सर्वाधिकार सुरक्षित"
+        },
+        TL: {
+            readerHeading: "Awiting Bibliya",
+            readerBackHome: "← Bumalik sa home",
+            readerAbout: "Tungkol sa",
+            readerSubtitle: "Ang Salita ng Diyos sa musikang pagsamba ng Pranses",
+            readerBooksAvailable: "mga aklat na available",
+            readerOf: "sa",
+            readerChapters: "mga kabanata",
+            readerSearchPlaceholder: "  isang salita  =  isang awit  ",
+            readerSearchButton: "🔍 Maghanap",
+            readerOldTestament: "Lumang Tipan",
+            readerNewTestament: "Bagong Tipan",
+            readerFooterCopyright: "© 2025 Awiting Bibliya - Stéphane Cassani - Lahat ng karapatan ay nakalaan"
+        },
+        KO: {
+            readerHeading: "노래하는 성경",
+            readerBackHome: "← 홈으로 돌아가기",
+            readerAbout: "소개",
+            readerSubtitle: "프랑스 예배 음악으로 듣는 하나님의 말씀",
+            readerBooksAvailable: "권 사용 가능",
+            readerOf: "총",
+            readerChapters: "장",
+            readerSearchPlaceholder: "  한 단어  =  한 곡  ",
+            readerSearchButton: "🔍 검색",
+            readerOldTestament: "구약",
+            readerNewTestament: "신약",
+            readerFooterCopyright: "© 2025 노래하는 성경 - 스테판 카사니 - 모든 권리 보유"
+        }
+    };
+
     // FONCTION COMPLÈTE: Traduit TOUTE la page (pas seulement les livres)
     function changeLanguage(lang) {
         // Sauvegarder la langue
@@ -1338,19 +1510,19 @@
         history.pushState({}, '', url);
 
         // Traduire TOUS les éléments avec data-i18n
-        if (window.translations && window.translations[lang]) {
+        if (TRANSLATIONS[lang]) {
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (window.translations[lang][key]) {
-                    el.textContent = window.translations[lang][key];
+                if (TRANSLATIONS[lang][key]) {
+                    el.textContent = TRANSLATIONS[lang][key];
                 }
             });
 
             // Traduire les placeholders
             document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
                 const key = el.getAttribute('data-i18n-placeholder');
-                if (window.translations[lang][key]) {
-                    el.placeholder = window.translations[lang][key];
+                if (TRANSLATIONS[lang][key]) {
+                    el.placeholder = TRANSLATIONS[lang][key];
                 }
             });
         }
