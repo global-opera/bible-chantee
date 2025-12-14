@@ -75,9 +75,7 @@ const translations = {
     footerLegal: "Mentions légales",
     footerCredits: "Crédits",
     footerMission: "Bible Chantée – Projet missionnaire chrétien international",
-    footerCopyright: "© 2025 Stéphane Cassani – Tous droits réservés"
-
-
+    footerCopyright: "© 2025 Stéphane Cassani – Tous droits réservés",
     // Book names (66 books)
     book01: "Genèse",
     book02: "Exode",
