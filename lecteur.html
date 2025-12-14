@@ -489,12 +489,23 @@
             font-weight: 600;
             transition: all 0.3s;
             text-align: center;
+            /* iOS fixes */
+            -webkit-tap-highlight-color: rgba(245, 196, 66, 0.2);
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
         }
 
         .lang-btn:hover {
             background: #2a4a7f;
             transform: translateY(-1px);
             box-shadow: 0 2px 8px rgba(245, 196, 66, 0.3);
+        }
+
+        .lang-btn:active {
+            background: #f5c842;
+            color: #1e3a5f;
+            transform: scale(0.98);
         }
 
         .lang-btn.active {
@@ -547,18 +558,18 @@
         </header>
         <!-- BARRE LANGUES HORIZONTALE -->
         <div class="lang-bar" id="languageBar">
-            <button class="lang-btn" data-lang="FR" onclick="changeLanguage('FR')">🇫🇷 FR</button>
-            <button class="lang-btn" data-lang="EN" onclick="changeLanguage('EN')">🇬🇧 EN</button>
-            <button class="lang-btn" data-lang="PT" onclick="changeLanguage('PT')">🇧🇷 PT</button>
-            <button class="lang-btn" data-lang="ES" onclick="changeLanguage('ES')">🇪🇸 ES</button>
-            <button class="lang-btn" data-lang="DE" onclick="changeLanguage('DE')">🇩🇪 DE</button>
-            <button class="lang-btn" data-lang="IT" onclick="changeLanguage('IT')">🇮🇹 IT</button>
-            <button class="lang-btn" data-lang="AR" onclick="changeLanguage('AR')">🇸🇦 AR</button>
-            <button class="lang-btn" data-lang="RU" onclick="changeLanguage('RU')">🇷🇺 RU</button>
-            <button class="lang-btn" data-lang="ZH" onclick="changeLanguage('ZH')">🇨🇳 ZH</button>
-            <button class="lang-btn" data-lang="HI" onclick="changeLanguage('HI')">🇮🇳 HI</button>
-            <button class="lang-btn" data-lang="TL" onclick="changeLanguage('TL')">🇵🇭 TL</button>
-            <button class="lang-btn" data-lang="KO" onclick="changeLanguage('KO')">🇰🇷 KO</button>
+            <button type="button" class="lang-btn" data-lang="FR" onclick="changeLanguage('FR')">🇫🇷 FR</button>
+            <button type="button" class="lang-btn" data-lang="EN" onclick="changeLanguage('EN')">🇬🇧 EN</button>
+            <button type="button" class="lang-btn" data-lang="PT" onclick="changeLanguage('PT')">🇧🇷 PT</button>
+            <button type="button" class="lang-btn" data-lang="ES" onclick="changeLanguage('ES')">🇪🇸 ES</button>
+            <button type="button" class="lang-btn" data-lang="DE" onclick="changeLanguage('DE')">🇩🇪 DE</button>
+            <button type="button" class="lang-btn" data-lang="IT" onclick="changeLanguage('IT')">🇮🇹 IT</button>
+            <button type="button" class="lang-btn" data-lang="AR" onclick="changeLanguage('AR')">🇸🇦 AR</button>
+            <button type="button" class="lang-btn" data-lang="RU" onclick="changeLanguage('RU')">🇷🇺 RU</button>
+            <button type="button" class="lang-btn" data-lang="ZH" onclick="changeLanguage('ZH')">🇨🇳 ZH</button>
+            <button type="button" class="lang-btn" data-lang="HI" onclick="changeLanguage('HI')">🇮🇳 HI</button>
+            <button type="button" class="lang-btn" data-lang="TL" onclick="changeLanguage('TL')">🇵🇭 TL</button>
+            <button type="button" class="lang-btn" data-lang="KO" onclick="changeLanguage('KO')">🇰🇷 KO</button>
         </div>
         <h2 class="section-title" data-i18n="readerOldTestament">Ancien Testament</h2>
         <div class="books-grid" id="old-testament"></div>
@@ -1539,14 +1550,6 @@
             }
         });
     }
-
-    // Add click listeners to all language buttons
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const lang = this.getAttribute('data-lang');
-            changeLanguage(lang);
-        });
-    });
 
     // Set initial active language on page load
     changeLanguage(currentLanguage);
