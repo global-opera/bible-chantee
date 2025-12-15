@@ -2,13 +2,72 @@
 <html lang="pt">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Promessas</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0a1628 0%, #1a237e 100%);
+  min-height: 100vh;
+  color: #fff;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #f5c842;
+  margin-bottom: 30px;
+}
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+#cards > div {
+  background: rgba(30, 58, 95, 0.8);
+  border-radius: 15px;
+  padding: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+#cards > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(245, 200, 66, 0.3);
+}
+#cards h3 {
+  color: #f5c842;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+#cards p {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+#cards a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #f5c842;
+  color: #1a237e;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+#cards a:hover {
+  background: #ffdd57;
+  transform: scale(1.05);
+}
+</style>
 <script src="lang-shared.js"></script>
 <script src="promessas-data.js"></script>
+<script src="debug-ui.js" defer></script>
 </head>
 <body>
+<div class="container">
 <h1>Promessas</h1>
 <div id="cards"></div>
+</div>
 
 <script>
 const container = document.getElementById("cards");
@@ -22,5 +81,6 @@ for (const key in temas) {
   container.appendChild(div);
 }
 </script>
+</div>
 </body>
 </html>
