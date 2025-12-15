@@ -14,13 +14,16 @@
 <script>
 const params = new URLSearchParams(window.location.search);
 const tema = params.get("tema");
+const section = params.get("section") || "";
 const data = PROMESSAS[currentLanguage][tema];
 
 document.getElementById("title").textContent = data.titulo;
 
 data.salmos.forEach(ch => {
   const a = document.createElement("a");
-  a.href = `lecteur.html?lang=${currentLanguage}&book=19&chapter=${ch}`;
+  // Build return URL with all context (lang, tema, section)
+  const ret = `promessas-tema.html?lang=${encodeURIComponent(currentLanguage)}&tema=${encodeURIComponent(tema)}${section ? `&section=${encodeURIComponent(section)}` : ''}`;
+  a.href = `lecteur.html?lang=${encodeURIComponent(currentLanguage)}&book=19&chapter=${encodeURIComponent(ch)}&return=${encodeURIComponent(ret)}`;
   a.textContent = "Salmo " + ch;
   a.style.display="block";
   document.getElementById("list").appendChild(a);
