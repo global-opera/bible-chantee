@@ -128,41 +128,6 @@
       margin: auto;
     }
 
-    /* Liens Promesses/Promessas */
-    .promises-links {
-      background: rgba(245, 196, 66, 0.1);
-      border: 1px solid rgba(245, 196, 66, 0.3);
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 600px;
-    }
-
-    .promises-links ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .promises-links li a {
-      display: block;
-      padding: 12px 20px;
-      background: rgba(30, 58, 95, 0.8);
-      color: #f5c842;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: all 0.3s;
-      font-weight: 600;
-    }
-
-    .promises-links li a:hover {
-      background: #2a4a7f;
-      transform: translateX(5px);
-    }
-
     .bloc {
       background: linear-gradient(145deg, #111827, #1e293b);
       border-radius: 16px;
@@ -388,33 +353,13 @@
 
 <nav>
   <a href="index.html" data-i18n="navHome">Accueil</a>
+  <a href="promessas.html" data-i18n="navPromises">Promesses</a>
   <a href="about.html" data-i18n="navAbout">À propos</a>
   <a href="lecteur.html" data-i18n="navPlayer">Lecteur</a>
   <a href="bible.html" data-i18n="navBible">Bible</a>
 </nav>
 
 <main>
-  <!-- Liens Promesses bibliques -->
-  <nav class="promises-links">
-    <ul>
-      <li>
-        <a href="/promessas.html?lang=PT">
-          🇧🇷 Promessas – Português (nouveau)
-        </a>
-      </li>
-      <li>
-        <a href="/promessas.html?lang=FR">
-          🇫🇷 Promessas – Français / English (nouveau)
-        </a>
-      </li>
-      <li>
-        <a href="/promesses.html?lang=FR">
-          📖 Promesses – Français (ancien)
-        </a>
-      </li>
-    </ul>
-  </nav>
-
   <div class="bloc" id="projet">
     <h2><span class="icon">📖</span> <span data-i18n="projectTitle">Le Projet</span></h2>
     <p data-i18n="projectDesc">
