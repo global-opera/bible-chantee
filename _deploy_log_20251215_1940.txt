@@ -1,8 +1,0 @@
-=== DEPLOIEMENT 20251215_1940 ===
-OK  index.html
-MISS lecteur.html (non trouvé)
-MISS lang-shared.js (non trouvé)
-MISS promessas.html (non trouvé)
-MISS promessas-tema.html (non trouvé)
-MISS confessions.html (non trouvé)
-MISS confessions-tema.html (non trouvé)
