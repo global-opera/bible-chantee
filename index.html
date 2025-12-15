@@ -353,10 +353,10 @@
 
 <nav>
   <a href="index.html" data-i18n="navHome">Accueil</a>
-  <a href="promessas.html" data-i18n="navPromises">Promesses</a>
-  <a href="about.html" data-i18n="navAbout">À propos</a>
-  <a href="lecteur.html" data-i18n="navPlayer">Lecteur</a>
-  <a href="bible.html" data-i18n="navBible">Bible</a>
+  <a href="promessas.html" data-lang-link data-i18n="navPromises">Promesses</a>
+  <a href="about.html" data-lang-link data-i18n="navAbout">À propos</a>
+  <a href="lecteur.html" data-lang-link data-i18n="navPlayer">Lecteur</a>
+  <a href="bible.html" data-lang-link data-i18n="navBible">Bible</a>
 </nav>
 
 <main>
@@ -402,16 +402,16 @@
       Accédez gratuitement à toute la Bible en musique via notre lecteur en ligne.
     </p>
     <div class="btns-grid">
-      <a href="bible.html" class="btn btn-primary" data-page="bible">
+      <a href="bible.html" data-lang-link class="btn btn-primary" data-page="bible">
         <span class="btn-icon">📖</span> <span data-i18n="btnBible">Bible (66 livres)</span>
       </a>
-      <a href="promessas.html" class="btn btn-gold" data-page="promessas">
+      <a href="promessas.html" data-lang-link class="btn btn-gold" data-page="promessas">
         <span class="btn-icon">⭐</span> <span data-i18n="btnPromises">Promesses bibliques</span>
       </a>
-      <a href="confessions.html" class="btn btn-gold" data-page="confessions">
+      <a href="confessions.html" data-lang-link class="btn btn-gold" data-page="confessions">
         <span class="btn-icon">❤</span> <span data-i18n="btnConfessions">10 Confessions de foi</span>
       </a>
-      <a href="lecteur.html" class="btn btn-lecteur" data-page="lecteur">
+      <a href="lecteur.html" data-lang-link class="btn btn-lecteur" data-page="lecteur">
         <span class="btn-icon">🎵</span> <span data-i18n="btnPlayer">Lecteur</span>
       </a>
     </div>
@@ -502,6 +502,7 @@
 
 <!-- Load translations -->
 <script src="translations.js"></script>
+<script src="lang-shared.js"></script>
 
 <script>
 /**
@@ -512,7 +513,7 @@
   'use strict';
 
   // Clé localStorage UNIQUE pour tout le site
-  const STORAGE_KEY = 'selectedLanguage';
+  const STORAGE_KEY = 'lang';
   const VALID_LANGUAGES = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];
 
   // Récupérer la langue initiale
@@ -625,6 +626,11 @@
 
         // Appliquer traductions
         applyTranslations(lang);
+
+        // Mettre à jour tous les liens avec la nouvelle langue
+        if (typeof applyLangToLinks === 'function') {
+          applyLangToLinks();
+        }
 
         // Mettre à jour URL sans rechargement
         const url = new URL(window.location.href);
