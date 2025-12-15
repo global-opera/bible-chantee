@@ -42,6 +42,7 @@ const translations = {
     btnBibleText: "Bible (texte)",
     btnListenBible: "Ecouter la Bible",
     btnPlayer: "Lecteur",
+    btnBible: "Bible (66 livres)",
     btnPromises: "Promesses bibliques",
     btnConfessions: "10 Confessions de foi",
 
@@ -185,6 +186,7 @@ const translations = {
     btnBibleText: "Bible (text)",
     btnListenBible: "Listen to the Bible",
     btnPlayer: "Player",
+    btnBible: "Bible (66 books)",
     btnPromises: "Biblical promises",
     btnConfessions: "10 Confessions of faith",
 
@@ -328,6 +330,7 @@ const translations = {
     btnBibleText: "Biblia (texto)",
     btnListenBible: "Escuchar la Biblia",
     btnPlayer: "Reproductor",
+    btnBible: "Biblia (66 libros)",
     btnPromises: "Promesas bíblicas",
     btnConfessions: "10 Confesiones de fe",
 
@@ -471,6 +474,7 @@ const translations = {
     btnBibleText: "Bíblia (texto)",
     btnListenBible: "Ouvir a Bíblia",
     btnPlayer: "Leitor",
+    btnBible: "Bíblia (66 livros)",
     btnPromises: "Promessas bíblicas",
     btnConfessions: "10 Confissões de fé",
 
