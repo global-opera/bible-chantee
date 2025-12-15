@@ -645,6 +645,11 @@
     <!-- Donnees des paroles et de la Bible -->
     <!-- Script langue partagé - DOIT être chargé en premier -->
     <script src="lang-shared.js"></script>
+<script>
+  // sync lecteur.html language with lang-shared.js (URL ?lang=XX has priority)
+  if (window.currentLanguage) { window.currentLanguage = String(window.currentLanguage).toUpperCase(); }
+  try { if (typeof currentLanguage !== 'undefined' && window.currentLanguage) { currentLanguage = window.currentLanguage; } } catch(e) {}
+</script>
     
     <script src="lyrics-data.js"></script>
     <script src="lyrics-data-pt.js"></script>
@@ -710,7 +715,7 @@
 
         // === LANGUE GLOBALE - Definie au chargement ===
         // Lire depuis window.currentLanguage (defini par lang-shared.js) ou URL/localStorage
-        let currentLanguage = window.currentLanguage || 'FR';
+        let currentLanguage = (window.currentLanguage || currentLanguage || "FR");
         if (!window.currentLanguage) {
             const urlParams = new URLSearchParams(window.location.search);
             const urlLang = urlParams.get('lang');
@@ -1149,10 +1154,7 @@
                 url = audioSource[currentBook] && audioSource[currentBook][chapterStr];
             }
 
-            if (!url) {
-                console.error("URL non trouvee pour:", currentBook, chapter);
-                return;
-            }
+            if (!url) { console.error("AUDIO URL NOT FOUND", {currentLanguage, currentBook, chapter, langAudioVar}); alert("MP3 introuvable pour "+currentLanguage+" livre "+currentBook+" chapitre "+chapter); return; }
             const audio = document.getElementById('audio');
             audio.src = url;
             // audio.play() - user must click
