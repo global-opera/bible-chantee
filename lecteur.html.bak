@@ -537,104 +537,10 @@
             background: #ffce00;
             border-radius: 2px;
         }
-
-        /* === MODE SECTION (Solution A - Promesses/Confessions) === */
-        .section-back-btn {
-            display: none;
-            background: linear-gradient(135deg, #f5c842 0%, #e0b030 100%);
-            color: #000080;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: bold;
-            margin: 20px auto;
-            transition: all 0.3s;
-        }
-        .section-back-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 20px rgba(245, 200, 66, 0.4);
-        }
-        .section-back-btn.visible {
-            display: inline-block;
-        }
-
-        .section-menu-container {
-            display: none;
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 206, 0, 0.3);
-        }
-        .section-menu-container.visible {
-            display: block;
-        }
-        .section-menu-title {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 1.4em;
-            color: #ffce00;
-            text-align: center;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(255, 206, 0, 0.3);
-        }
-        .section-chapter-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .section-chapter-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: rgba(212, 175, 55, 0.15);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            border-radius: 10px;
-            padding: 12px 20px;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            color: #fff;
-        }
-        .section-chapter-item:hover {
-            background: rgba(212, 175, 55, 0.3);
-            border-color: #ffce00;
-            transform: translateX(5px);
-        }
-        .section-chapter-item.active {
-            background: rgba(212, 175, 55, 0.4);
-            border-color: #ffce00;
-            box-shadow: 0 0 15px rgba(255, 206, 0, 0.3);
-        }
-        .section-chapter-label {
-            font-weight: 500;
-        }
-        .section-chapter-subtitle {
-            color: #aaa;
-            font-size: 0.85em;
-        }
-        .section-chapter-play {
-            color: #ffce00;
-            font-size: 1.2em;
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Bouton Retour Section (visible seulement en mode section) -->
-        <div style="text-align: center;">
-            <button class="section-back-btn" id="sectionBackBtn" onclick="goBackToSection()">← Retour</button>
-        </div>
-        
-        <!-- Menu Section (visible seulement en mode section) -->
-        <div class="section-menu-container" id="sectionMenuContainer">
-            <div class="section-menu-title" id="sectionMenuTitle">Section</div>
-            <div class="section-chapter-list" id="sectionChapterList"></div>
-        </div>
-
         <header>
             <h1 data-i18n="readerHeading">Bible Chantee</h1>
             <a href="index.html" class="back-link" data-i18n="readerBackHome">← Retour accueil</a>
@@ -752,8 +658,6 @@
     <script src="chapter-titles.js"></script>
     <script src="bible-data.js"></script>
     <script src="lyrics-timestamps.js"></script>
-    <!-- Sections pour Promesses/Confessions (Solution A) -->
-    <script src="sections-promesses.js"></script>
 
     <script>
         const driveMapping = {
@@ -1049,83 +953,62 @@
         let lastActiveSection = -1;
 
         function updateLyrics() {
-    const lyricsText = document.getElementById('lyricsText');
-    const lyricsContainer = document.getElementById('lyricsContainer');
-    const chapterStr = String(currentChapter);
+            const lyricsText = document.getElementById('lyricsText');
+            const lyricsContainer = document.getElementById('lyricsContainer');
+            const chapterStr = String(currentChapter);
 
-    // Utiliser les timestamps si disponibles
-    if (typeof lyricsTimestamps !== 'undefined' &&
-        lyricsTimestamps[currentBook] &&
-        lyricsTimestamps[currentBook][chapterStr]) {
+            // Utiliser les timestamps si disponibles
+            if (typeof lyricsTimestamps !== 'undefined' && lyricsTimestamps[currentBook] && lyricsTimestamps[currentBook][chapterStr]) {
+                const sections = lyricsTimestamps[currentBook][chapterStr];
+                lyricsText.innerHTML = '';
 
-        const sections = lyricsTimestamps[currentBook][chapterStr];
-        lyricsText.innerHTML = '';
+                sections.forEach((section, index) => {
+                    const sectionDiv = document.createElement('div');
+                    sectionDiv.className = 'lyrics-section';
+                    sectionDiv.id = 'lyrics-section-' + index;
+                    sectionDiv.dataset.start = section.start;
 
-        sections.forEach((section, index) => {
-            const sectionDiv = document.createElement('div');
-            sectionDiv.className = 'lyrics-section';
-            sectionDiv.id = 'lyrics-section-' + index;
-            sectionDiv.dataset.start = section.start;
+                    const titleDiv = document.createElement('div');
+                    titleDiv.className = 'section-title';
+                    titleDiv.textContent = section.type;
+                    sectionDiv.appendChild(titleDiv);
 
-            const titleDiv = document.createElement('div');
-            titleDiv.className = 'section-title';
-            titleDiv.textContent = section.type;
-            sectionDiv.appendChild(titleDiv);
+                    section.lines.forEach(line => {
+                        const lineDiv = document.createElement('div');
+                        lineDiv.className = 'lyrics-line';
+                        lineDiv.textContent = line;
+                        sectionDiv.appendChild(lineDiv);
+                    });
 
-            section.lines.forEach(line => {
-                const lineDiv = document.createElement('div');
-                lineDiv.className = 'lyrics-line';
-                lineDiv.textContent = line;
-                sectionDiv.appendChild(lineDiv);
-            });
+                    lyricsText.appendChild(sectionDiv);
+                });
 
-            lyricsText.appendChild(sectionDiv);
-        });
-
-        lastActiveSection = -1;
-
-    } else {
-        let lyrics = null;
-
-        // PRIORITE A LA LANGUE COURANTE
-        if (currentLanguage === 'PT' &&
-            typeof chapterLyricsPT !== 'undefined' &&
-            chapterLyricsPT[currentBook] &&
-            chapterLyricsPT[currentBook][chapterStr]) {
-
-            lyrics = chapterLyricsPT[currentBook][chapterStr];
-
-        } else if (typeof chapterLyrics !== 'undefined' &&
-                   chapterLyrics[currentBook] &&
-                   chapterLyrics[currentBook][chapterStr]) {
-
-            if (useV2 &&
-                typeof chapterLyricsV2 !== 'undefined' &&
-                chapterLyricsV2[currentBook] &&
-                chapterLyricsV2[currentBook][chapterStr]) {
-
-                lyrics = chapterLyricsV2[currentBook][chapterStr];
+                lastActiveSection = -1;
             } else {
-                lyrics = chapterLyrics[currentBook][chapterStr];
+                let lyrics = null;
+
+                if (currentLanguage === 'PT' && typeof chapterLyricsPT !== 'undefined' &&
+                    chapterLyricsPT[currentBook] && chapterLyricsPT[currentBook][chapterStr]) {
+                    lyrics = chapterLyricsPT[currentBook][chapterStr];
+                } else if (typeof chapterLyrics !== 'undefined' && chapterLyrics[currentBook] && chapterLyrics[currentBook][chapterStr]) {
+                    if (useV2 && typeof chapterLyricsV2 !== 'undefined' &&
+                        chapterLyricsV2[currentBook] && chapterLyricsV2[currentBook][chapterStr]) {
+                        lyrics = chapterLyricsV2[currentBook][chapterStr];
+                    } else {
+                        lyrics = chapterLyrics[currentBook][chapterStr];
+                    }
+                }
+
+                if (lyrics) {
+                    lyricsText.innerHTML = lyrics.replace(/\[([^\]]+)\]/g, '<span class="section-label">[$1]</span>');
+                }
+            } else {
+                const t = window.getTranslation || ((key) => null);
+                lyricsText.innerHTML = '<div class="no-lyrics">' + (t('readerNoLyrics') || 'Paroles non disponibles pour ce chapitre') + '</div>';
             }
-        }
 
-        if (lyrics) {
-            lyricsText.innerHTML = lyrics.replace(
-                /\[([^\]]+)\]/g,
-                '<span class="section-label">[$1]</span>'
-            );
-        } else {
-            const t = window.getTranslation || ((key) => null);
-            lyricsText.innerHTML =
-                '<div class="no-lyrics">' +
-                (t('readerNoLyrics') || 'Paroles non disponibles pour ce chapitre') +
-                '</div>';
+            lyricsContainer.scrollTop = 0;
         }
-    }
-
-    lyricsContainer.scrollTop = 0;
-}
 
         function updateBible() {
             const bibleText = document.getElementById('bibleText');
@@ -1451,96 +1334,6 @@
         const urlParams = new URLSearchParams(window.location.search);
         const bookParam = urlParams.get('book');
         const chapterParam = urlParams.get('chapter');
-        
-        // === SOLUTION A: Parametres return et section ===
-        const returnUrl = urlParams.get('return');
-        const sectionParam = urlParams.get('section');
-
-        // Fonction pour retourner a la page d'origine
-        window.goBackToSection = function() {
-            if (returnUrl) {
-                window.location.href = returnUrl + (returnUrl.includes('?') ? '&' : '?') + 'lang=' + currentLanguage;
-            }
-        };
-
-        // Fonction pour construire l'URL avec les parametres section
-        function buildSectionUrl(book, chapter) {
-            let url = `lecteur.html?book=${book}&chapter=${chapter}&lang=${currentLanguage}`;
-            if (returnUrl) url += `&return=${encodeURIComponent(returnUrl)}`;
-            if (sectionParam) url += `&section=${sectionParam}`;
-            return url;
-        }
-
-        // Fonction pour afficher le bouton retour (sans menu section)
-        function renderBackButton() {
-            if (!returnUrl) return;
-            
-            const backBtn = document.getElementById('sectionBackBtn');
-            const isConfessions = returnUrl.includes('confession');
-            const backLabels = isConfessions ? {
-                FR: '← Retour a la confession',
-                EN: '← Back to confession',
-                PT: '← Voltar a confissao',
-                ES: '← Volver a la confesion',
-                DE: '← Zuruck zum Bekenntnis',
-                IT: '← Torna alla confessione'
-            } : {
-                FR: '← Retour aux promesses',
-                EN: '← Back to promises',
-                PT: '← Voltar as promessas',
-                ES: '← Volver a las promesas',
-                DE: '← Zuruck zu den Verheissungen',
-                IT: '← Torna alle promesse'
-            };
-            backBtn.textContent = backLabels[currentLanguage] || backLabels.FR;
-            backBtn.classList.add('visible');
-        }
-
-        // Fonction pour afficher le menu section
-        function renderSectionMenu() {
-            // Toujours afficher le bouton retour si returnUrl est present
-            renderBackButton();
-            
-            if (!sectionParam || !window.PROMESSES_SECTIONS || !window.PROMESSES_SECTIONS[sectionParam]) {
-                return;
-            }
-
-            const chapters = window.PROMESSES_SECTIONS[sectionParam];
-            const labels = window.PROMESSES_SECTION_LABELS[currentLanguage] || window.PROMESSES_SECTION_LABELS.FR;
-            const sectionLabel = labels[sectionParam] || sectionParam;
-            const psalmWord = labels.psalm || 'Psaume';
-
-            // Afficher le titre de la section
-            const menuContainer = document.getElementById('sectionMenuContainer');
-            const menuTitle = document.getElementById('sectionMenuTitle');
-            const chapterList = document.getElementById('sectionChapterList');
-
-            menuTitle.textContent = sectionLabel;
-            chapterList.innerHTML = '';
-
-            chapters.forEach(ch => {
-                const chNum = parseInt(ch.chapter);
-                const subtitle = window.PSALM_SUBTITLES && window.PSALM_SUBTITLES[chNum] 
-                    ? (window.PSALM_SUBTITLES[chNum][currentLanguage] || window.PSALM_SUBTITLES[chNum].FR || '')
-                    : '';
-                
-                const isActive = ch.book === currentBook && String(ch.chapter) === String(currentChapter);
-                
-                const item = document.createElement('a');
-                item.className = 'section-chapter-item' + (isActive ? ' active' : '');
-                item.href = buildSectionUrl(ch.book, ch.chapter);
-                item.innerHTML = `
-                    <div>
-                        <div class="section-chapter-label">${psalmWord} ${chNum}</div>
-                        <div class="section-chapter-subtitle">${subtitle}</div>
-                    </div>
-                    <div class="section-chapter-play">▶</div>
-                `;
-                chapterList.appendChild(item);
-            });
-
-            menuContainer.classList.add('visible');
-        }
 
         if (bookParam && chapterParam) {
             const book = books.find(b => b.num === bookParam);
@@ -1549,8 +1342,6 @@
                 // Attendre que le player soit initialise avant de lancer le chapitre
                 setTimeout(() => {
                     playChapter(parseInt(chapterParam));
-                    // Afficher le menu section si en mode section
-                    renderSectionMenu();
                 }, 100);
             }
         }
@@ -1603,7 +1394,7 @@
             readerHeading: "Bíblia Cantada",
             readerBackHome: "← Voltar início",
             readerAbout: "Sobre",
-            readerSubtitle: "A Palavra de Deus em música worship portuguesa",
+            readerSubtitle: "A Palavra de Deus em música worship francesa",
             readerBooksAvailable: "livros disponíveis",
             readerOf: "de",
             readerChapters: "capítulos",
@@ -1733,15 +1524,10 @@
         currentLanguage = lang;
         localStorage.setItem('selectedLanguage', lang);
 
-        // Mettre à jour URL (avec try-catch pour environnements restreints)
-        try {
-            const url = new URL(window.location.href);
-            url.searchParams.set('lang', lang);
-            history.pushState({}, '', url);
-        } catch (e) {
-            // Ignorer dans les iframes/environnements restreints
-            console.log('URL update skipped (restricted context)');
-        }
+        // Mettre à jour URL
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        history.pushState({}, '', url);
 
         // Traduire TOUS les éléments avec data-i18n
         if (TRANSLATIONS[lang]) {

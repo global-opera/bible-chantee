@@ -287,8 +287,8 @@
 
     const ICONS = ["😊", "🤍", "💪", "🏆", "🌱", "🙏", "⭐", "🎵", "🙌", "❤️"];
 
-    function getLecteurUrl(book, chapter, lang) {
-        return `lecteur.html?book=${book}&chapter=${chapter}&lang=${lang}`;
+    function getLecteurUrl(book, chapter, lang, confessionId) {
+        return `lecteur.html?book=${book}&chapter=${chapter}&lang=${lang}&return=/confession-detail.html?id=${confessionId}`;
     }
 
     function render() {
@@ -317,7 +317,7 @@
         
         // Actions section - link to chapter
         const actionsSection = document.getElementById('actionsSection');
-        const lecteurUrl = getLecteurUrl(confession.book, confession.chapter, lang);
+        const lecteurUrl = getLecteurUrl(confession.book, confession.chapter, lang, confessionId);
         
         actionsSection.innerHTML = `
             <a href="${lecteurUrl}" class="action-card">

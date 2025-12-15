@@ -266,9 +266,24 @@
         150: { FR: "Louez Dieu dans son sanctuaire", EN: "Praise God in His sanctuary", PT: "Louvai a Deus no seu santuario", ES: "Alabad a Dios en su santuario" }
     };
 
-    function getLecteurUrl(psalmNum, lang) {
+    // Mapping index theme -> section key (meme que sections-promesses.js)
+    const THEME_INDEX_TO_KEY = [
+        'anxiete',   // 0
+        'paix',      // 1
+        'louange',   // 2
+        'protection', // 3
+        'tristesse', // 4
+        'force',     // 5
+        'confiance', // 6
+        'amour',     // 7
+        'esperance', // 8
+        'adoration'  // 9
+    ];
+
+    function getLecteurUrl(psalmNum, lang, themeIndex) {
         const chapterPadded = String(psalmNum).padStart(2, '0');
-        return `lecteur.html?book=19&chapter=${chapterPadded}&lang=${lang}`;
+        const sectionKey = THEME_INDEX_TO_KEY[themeIndex] || 'anxiete';
+        return `lecteur.html?book=19&chapter=${chapterPadded}&lang=${lang}&return=/promesse-detail.html?theme=${themeIndex}&section=${sectionKey}`;
     }
 
     function render() {
@@ -303,7 +318,7 @@
             card.className = 'psalm-card';
             
             const psalmTheme = PSALM_THEMES[psalmNum] ? (PSALM_THEMES[psalmNum][lang] || PSALM_THEMES[psalmNum].FR) : '';
-            const lecteurUrl = getLecteurUrl(psalmNum, lang);
+            const lecteurUrl = getLecteurUrl(psalmNum, lang, themeIndex);
             
             card.innerHTML = `
                 <div class="psalm-header">
