@@ -229,6 +229,9 @@
         </div>
     </div>
 
+    <!-- Script langue partagé - DOIT être chargé en premier -->
+    <script src="lang-shared.js"></script>
+
     <script>
         const books = [
             {num: "01_GEN", name: "Genese", chapters: 50, testament: "old"},
@@ -311,7 +314,8 @@
                 div.className = 'book';
                 div.dataset.num = book.num;
                 div.dataset.chapters = book.chapters;
-                div.innerHTML = '<div class="book-num">' + (idx + 1).toString().padStart(2, '0') + '</div><div class="book-name">' + book.name + '</div>';
+                const bookName = window.getBookName ? window.getBookName(idx) : book.name;
+                div.innerHTML = '<div class="book-num">' + (idx + 1).toString().padStart(2, '0') + '</div><div class="book-name">' + bookName + '</div>';
                 div.onclick = () => openBook(book);
                 
                 if (book.testament === 'old') oldT.appendChild(div);
@@ -342,7 +346,9 @@
         function loadChapter(chapter) {
             currentChapter = chapter;
             const chapterWord = window.getTranslation ? getTranslation('bibleChapter') : 'Chapitre';
-            document.getElementById('reader-title').textContent = currentBook.name + ' - ' + chapterWord + ' ' + chapter;
+            const bookIdx = books.indexOf(currentBook);
+            const bookName = window.getBookName ? window.getBookName(bookIdx) : currentBook.name;
+            document.getElementById('reader-title').textContent = bookName + ' - ' + chapterWord + ' ' + chapter;
             document.getElementById('chapter-select').value = chapter;
             document.getElementById('prev-ch').disabled = chapter <= 1;
             document.getElementById('next-ch').disabled = chapter >= currentBook.chapters;
@@ -372,6 +378,22 @@
         document.getElementById('next-ch').onclick = () => { if (currentChapter < currentBook.chapters) loadChapter(currentChapter + 1); };
 
         renderBooks();
+
+        // Écouter les changements de langue
+        window.addEventListener('languageChanged', function(e) {
+            // Re-render les livres avec les nouveaux noms
+            document.getElementById('old-testament').innerHTML = '';
+            document.getElementById('new-testament').innerHTML = '';
+            renderBooks();
+            
+            // Mettre à jour le titre du lecteur si un livre est ouvert
+            if (currentBook) {
+                const bookIdx = books.indexOf(currentBook);
+                const bookName = window.getBookName ? window.getBookName(bookIdx) : currentBook.name;
+                const chapterWord = window.getTranslation ? getTranslation('bibleChapter') : 'Chapitre';
+                document.getElementById('reader-title').textContent = bookName + ' - ' + chapterWord + ' ' + currentChapter;
+            }
+        });
     </script>
 
     <!-- i18n Scripts -->
@@ -380,27 +402,33 @@
 
     <!-- Language switching -->
     <script>
-    // Language switching
-    function setLanguage(lang) {
-        const url = new URL(window.location.href);
-        url.searchParams.set('lang', lang);
-        window.location.href = url.toString();
-    }
-
-    // Mark active language button
-    const urlParams = new URLSearchParams(window.location.search);
-    const currentLang = urlParams.get('lang') || window.i18nInstance?.getCurrentLanguage() || 'FR';
+    // Marquer le bouton langue actif
+    const currentLang = window.currentLanguage || 'FR';
     document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
         if (btn.dataset.lang === currentLang) {
             btn.classList.add('active');
         }
     });
 
-    // Add click listeners to language buttons
+    // Ajouter les listeners aux boutons de langue
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             const lang = this.dataset.lang;
-            setLanguage(lang);
+            
+            // Utiliser le système partagé
+            if (window.setLanguage) {
+                window.setLanguage(lang);
+            }
+            
+            // Mettre à jour les boutons
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Déclencher la traduction i18n si disponible
+            if (window.i18nInstance && window.i18nInstance.setLanguage) {
+                window.i18nInstance.setLanguage(lang);
+            }
         });
     });
     </script>
