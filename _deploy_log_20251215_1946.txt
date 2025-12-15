@@ -1,0 +1,12 @@
+START 20251215_1946
+OK  index.html
+OK  lecteur.html
+OK  lang-shared.js
+OK  promessas-tema.html
+OK  promessas.html
+OK  promessas-data.js
+OK  confessions.html
+OK  audio-urls-promessas-pt.js
+OK  audio-urls-confessions-pt.js
+OK  playlist-urls.js
+END

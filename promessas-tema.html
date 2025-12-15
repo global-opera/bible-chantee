@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Tema</title>
+<script src="lang-shared.js"></script>
+<script src="promessas-data.js"></script>
+</head>
+<body>
+<a href="promessas.html">← Voltar</a>
+<h1 id="title"></h1>
+<div id="list"></div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const tema = params.get("tema");
+const data = PROMESSAS[currentLanguage][tema];
+
+document.getElementById("title").textContent = data.titulo;
+
+data.salmos.forEach(ch => {
+  const a = document.createElement("a");
+  a.href = `lecteur.html?lang=${currentLanguage}&book=19&chapter=${ch}`;
+  a.textContent = "Salmo " + ch;
+  a.style.display="block";
+  document.getElementById("list").appendChild(a);
+});
+</script>
+</body>
+</html>

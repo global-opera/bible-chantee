@@ -18,7 +18,7 @@
       line-height: 1.7;
     }
 
-    /* Barre de langues horizontale */
+    /* Barre de langues horizontale - UNIQUEMENT SUR INDEX.HTML */
     .lang-bar {
       display: flex;
       flex-wrap: wrap;
@@ -42,7 +42,6 @@
       transition: all 0.3s;
       min-width: 60px;
       text-align: center;
-      /* iOS fixes */
       -webkit-tap-highlight-color: rgba(245, 196, 66, 0.2);
       touch-action: manipulation;
       user-select: none;
@@ -185,7 +184,6 @@
       font-weight: 600;
     }
 
-    /* Section Acces Rapides */
     .btns-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -253,7 +251,6 @@
       font-size: 1.3em;
     }
 
-    /* Section Stats */
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -262,180 +259,148 @@
     }
 
     .stat-card {
-      background: rgba(37, 99, 235, 0.1);
-      border: 1px solid rgba(37, 99, 235, 0.3);
+      background: rgba(147, 197, 253, 0.1);
       border-radius: 12px;
       padding: 20px;
       text-align: center;
+      border: 1px solid rgba(147, 197, 253, 0.2);
     }
 
     .stat-number {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 2.2em;
-      color: #60a5fa;
+      font-size: 2.5em;
       font-weight: 700;
+      color: #60a5fa;
+      display: block;
     }
 
     .stat-label {
-      color: #94a3b8;
       font-size: 0.9em;
+      color: #94a3b8;
       margin-top: 5px;
     }
 
-    /* Mission Box */
     .mission-box {
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
-      border: 2px solid rgba(212, 175, 55, 0.4);
-      border-radius: 12px;
-      padding: 25px;
-      text-align: center;
+      background: rgba(34, 197, 94, 0.1);
+      border-left: 4px solid #22c55e;
+      padding: 20px;
+      border-radius: 8px;
     }
 
     .mission-box p {
-      font-size: 1.15em;
-      color: #fbbf24;
+      color: #86efac;
+      margin: 0;
     }
 
     footer {
       background: #020617;
       text-align: center;
       padding: 30px 20px;
-      font-size: 0.9em;
-      color: #9ca3af;
-      border-top: 1px solid #1e293b;
+      border-top: 1px solid rgba(147, 197, 253, 0.1);
+    }
+
+    footer p {
+      color: #64748b;
+      margin-bottom: 10px;
     }
 
     footer a {
-      color: #60a5fa;
+      color: #93c5fd;
       text-decoration: none;
-      margin: 0 10px;
     }
 
     footer a:hover {
-      color: #93c5fd;
-      text-decoration: underline;
+      color: #ffffff;
     }
 
     .footer-links {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
-    @media (max-width: 600px) {
-      header h1 { font-size: 2.2em; }
+    .footer-links a {
+      margin: 0 10px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2em; }
       header p { font-size: 1em; }
-      nav a { margin: 0 8px; font-size: 0.85em; }
-      .btns-grid { grid-template-columns: 1fr; }
-      .lang-btn {
-        padding: 6px 8px;
-        font-size: 12px;
-        min-width: 50px;
-      }
+      .lang-btn { padding: 6px 8px; font-size: 12px; min-width: 50px; }
+      nav a { display: inline-block; margin: 5px 8px; }
     }
   </style>
 </head>
-
 <body>
 
-<!-- Barre de langues horizontale -->
+<!-- BARRE DE LANGUES - UNIQUEMENT ICI SUR INDEX.HTML -->
 <div class="lang-bar">
-    <button type="button" class="lang-btn" data-lang="FR">🇫🇷 FR</button>
-    <button type="button" class="lang-btn" data-lang="EN">🇬🇧 EN</button>
-    <button type="button" class="lang-btn" data-lang="PT">🇧🇷 PT</button>
-    <button type="button" class="lang-btn" data-lang="ES">🇪🇸 ES</button>
-    <button type="button" class="lang-btn" data-lang="DE">🇩🇪 DE</button>
-    <button type="button" class="lang-btn" data-lang="IT">🇮🇹 IT</button>
-    <button type="button" class="lang-btn" data-lang="AR">🇸🇦 AR</button>
-    <button type="button" class="lang-btn" data-lang="RU">🇷🇺 RU</button>
-    <button type="button" class="lang-btn" data-lang="ZH">🇨🇳 ZH</button>
-    <button type="button" class="lang-btn" data-lang="HI">🇮🇳 HI</button>
-    <button type="button" class="lang-btn" data-lang="TL">🇵🇭 TL</button>
-    <button type="button" class="lang-btn" data-lang="KO">🇰🇷 KO</button>
+  <button type="button" class="lang-btn" data-lang="FR">🇫🇷 FR</button>
+  <button type="button" class="lang-btn" data-lang="EN">🇬🇧 EN</button>
+  <button type="button" class="lang-btn" data-lang="PT">🇧🇷 PT</button>
+  <button type="button" class="lang-btn" data-lang="ES">🇪🇸 ES</button>
+  <button type="button" class="lang-btn" data-lang="DE">🇩🇪 DE</button>
+  <button type="button" class="lang-btn" data-lang="IT">🇮🇹 IT</button>
+  <button type="button" class="lang-btn" data-lang="AR">🇸🇦 AR</button>
+  <button type="button" class="lang-btn" data-lang="RU">🇷🇺 RU</button>
+  <button type="button" class="lang-btn" data-lang="ZH">🇨🇳 ZH</button>
+  <button type="button" class="lang-btn" data-lang="HI">🇮🇳 HI</button>
+  <button type="button" class="lang-btn" data-lang="TL">🇵🇭 TL</button>
+  <button type="button" class="lang-btn" data-lang="KO">🇰🇷 KO</button>
 </div>
 
 <header>
   <h1 data-i18n="siteName">Bible Chantée</h1>
-  <p data-i18n="tagline">Toute la Parole de Dieu en musique – 12 langues</p>
-  <div style="margin-top: 25px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 900px; margin-left: auto; margin-right: auto;">
-    <span style="background: rgba(255,255,255,0.15); padding: 8px 14px; border-radius: 20px; font-size: 0.85em;">ES <span style="opacity:0.7">(470M)</span></span>
-    <span style="background: rgba(255,255,255,0.15); padding: 8px 14px; border-radius: 20px; font-size: 0.85em;">EN <span style="opacity:0.7">(540M)</span></span>
-    <span style="background: rgba(255,255,255,0.15); padding: 8px 14px; border-radius: 20px; font-size: 0.85em;">PT <span style="opacity:0.7">(230M)</span></span>
-    <span style="background: rgba(255,255,255,0.15); padding: 8px 14px; border-radius: 20px; font-size: 0.85em;">FR <span style="opacity:0.7">(100M)</span></span>
-    <span style="background: rgba(255,255,255,0.15); padding: 8px 14px; border-radius: 20px; font-size: 0.85em;">RU <span style="opacity:0.7">(130M)</span></span>
-    <span style="background: rgba(255,255,255,0.15); padding: 8px 14px; border-radius: 20px; font-size: 0.85em;">ZH <span style="opacity:0.7">(100M)</span></span>
-    <span style="background: rgba(255,255,255,0.15); padding: 8px 14px; border-radius: 20px; font-size: 0.85em;">TL <span style="opacity:0.7">(95M)</span></span>
-    <span style="background: rgba(255,255,255,0.15); padding: 8px 14px; border-radius: 20px; font-size: 0.85em;">DE <span style="opacity:0.7">(55M)</span></span>
-    <span style="background: rgba(255,255,255,0.15); padding: 8px 14px; border-radius: 20px; font-size: 0.85em;">IT <span style="opacity:0.7">(55M)</span></span>
-    <span style="background: rgba(255,255,255,0.15); padding: 8px 14px; border-radius: 20px; font-size: 0.85em;">HI <span style="opacity:0.7">(30M)</span></span>
-    <span style="background: rgba(255,255,255,0.15); padding: 8px 14px; border-radius: 20px; font-size: 0.85em;">KO <span style="opacity:0.7">(15M)</span></span>
-    <span style="background: rgba(255,255,255,0.15); padding: 8px 14px; border-radius: 20px; font-size: 0.85em;">AR <span style="opacity:0.7">(15M)</span></span>
-  </div>
-  <p style="margin-top: 15px; font-size: 0.95em; opacity: 0.85;" data-i18n="totalChristians"><strong>1.8 milliard</strong> de chrétiens dans le monde</p>
+  <p data-i18n="tagline">La Parole de Dieu en musique dans 12 langues</p>
 </header>
 
 <nav>
-  <a href="#projet" data-i18n="navProject">Le Projet</a>
-  <a href="#ecouter" data-i18n="navListen">Ecouter</a>
-  <a href="#eglises" data-i18n="navChurches">Eglises</a>
-  <a href="#mission" data-i18n="navMission">Mission</a>
-  <a href="#soutenir" data-i18n="navSupport">Soutenir</a>
+  <a href="index.html" data-i18n="navHome">Accueil</a>
   <a href="about.html" data-i18n="navAbout">À propos</a>
-  <a href="#contact" data-i18n="navContact">Contact</a>
+  <a href="lecteur.html" data-i18n="navPlayer">Lecteur</a>
+  <a href="bible.html" data-i18n="navBible">Bible</a>
 </nav>
 
 <main>
-
   <div class="bloc" id="projet">
-    <h2><span class="icon">📖</span> <span data-i18n="projectTitle">Le projet</span></h2>
-    <p data-i18n="projectDesc1">
-      Bible Chantée est un projet missionnaire chrétien international dont la vision est de rendre
-      la Parole de Dieu accessible en musique, <strong>chapitre par chapitre</strong>, dans 12 langues.
+    <h2><span class="icon">📖</span> <span data-i18n="projectTitle">Le Projet</span></h2>
+    <p data-i18n="projectDesc">
+      Bible Chantée est un projet missionnaire qui met en musique l'intégralité de la Bible
+      (66 livres, 1189 chapitres) en style worship contemporain, dans 12 langues.
     </p>
-    <p style="margin-top: 15px;" data-i18n="projectDesc2">
-      Le projet s'adresse aux enfants, familles, personnes âgées, personnes qui ne savent pas lire,
-      nouveaux convertis, ainsi qu'aux églises pour la louange, l'enseignement, la prière et l'évangélisation.
-    </p>
-
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-number">1189</div>
-        <div class="stat-label" data-i18n="statChapters">chapitres</div>
+        <span class="stat-number">66</span>
+        <span class="stat-label" data-i18n="statBooks">Livres</span>
       </div>
       <div class="stat-card">
-        <div class="stat-number">12</div>
-        <div class="stat-label" data-i18n="statLanguages">langues</div>
+        <span class="stat-number">1189</span>
+        <span class="stat-label" data-i18n="statChapters">Chapitres</span>
       </div>
       <div class="stat-card">
-        <div class="stat-number">66</div>
-        <div class="stat-label" data-i18n="statBooks">livres</div>
+        <span class="stat-number">12</span>
+        <span class="stat-label" data-i18n="statLanguages">Langues</span>
       </div>
       <div class="stat-card">
-        <div class="stat-number">1.8</div>
-        <div class="stat-label" data-i18n="statPeople">milliard de personnes</div>
+        <span class="stat-number">1.8B</span>
+        <span class="stat-label" data-i18n="statPeople">Personnes</span>
       </div>
     </div>
   </div>
 
-  <div class="bloc">
-    <h2><span class="icon">🌐</span> <span data-i18n="visionTitle">Vision mondiale</span></h2>
+  <div class="bloc" id="langues">
+    <h2><span class="icon">🌍</span> <span data-i18n="languagesTitle">Langues disponibles</span></h2>
     <ul>
-      <li><span data-i18n="visionFrench">Version française :</span> <span class="status-done" data-i18n="visionFrenchStatus">Terminée</span></li>
-      <li><span data-i18n="visionPortuguese">Version portugaise :</span> <span class="status-progress" data-i18n="visionPortugueseStatus">En cours</span></li>
-      <li data-i18n="visionOthers">10 autres langues : en préparation (anglais, espagnol, allemand, russe, arabe, chinois, hindi, tagalog...)</li>
-      <li data-i18n="visionDiffusion">Diffusion : site web, application mobile, YouTube, plateformes streaming</li>
+      <li>🇫🇷 <span data-i18n="langFR">Français</span> <span class="status-done">100%</span></li>
+      <li>🇧🇷 <span data-i18n="langPT">Português</span> <span class="status-progress">En cours</span></li>
+      <li>🇬🇧 <span data-i18n="langEN">English</span> - <span data-i18n="statusSoon">Bientôt</span></li>
+      <li>🇪🇸 <span data-i18n="langES">Español</span> - <span data-i18n="statusSoon">Bientôt</span></li>
     </ul>
   </div>
 
   <div class="bloc" id="ecouter">
-    <h2><span class="icon">🎵</span> <span data-i18n="listenTitle">Ecouter la Bible Chantée</span></h2>
+    <h2><span class="icon">🎧</span> <span data-i18n="listenTitle">Écouter</span></h2>
     <p data-i18n="listenDesc">
-      Accédez à l'intégralité de la Bible mise en musique. Choisissez un livre, un chapitre,
-      et laissez-vous porter par la Parole de Dieu en musique.
+      Accédez gratuitement à toute la Bible en musique via notre lecteur en ligne.
     </p>
-
     <div class="btns-grid">
-      <a href="bible.html" class="btn btn-secondary" data-page="bible">
-        <span class="btn-icon">📖</span> <span data-i18n="btnBibleText">Bible (texte)</span>
-      </a>
       <a href="promesses.html" class="btn btn-gold" data-page="promesses">
         <span class="btn-icon">⭐</span> <span data-i18n="btnPromises">Promesses bibliques</span>
       </a>
@@ -504,7 +469,7 @@
       <a href="credits-depliant.html" class="btn">
         <span class="btn-icon">📄</span> <span data-i18n="btnPresentation">Presentation</span>
       </a>
-      <a href="/cdn-cgi/l/email-protection#e0898e868fa08289828c858388818e948585ce838f8d" class="btn btn-secondary">
+      <a href="mailto:info@biblechantee.com" class="btn btn-secondary">
         <span class="btn-icon">✉</span> <span data-i18n="btnEmail">Email</span>
       </a>
     </div>
@@ -513,7 +478,7 @@
   <div class="bloc" id="contact">
     <h2><span class="icon">📬</span> <span data-i18n="contactTitle">Contact</span></h2>
     <p>
-      <span data-i18n="contactEmail">Email officiel du projet :</span> <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c9a0a7afa689aba0aba5acaaa1a8a7bdacace7aaa6a4">[email&#160;protected]</a></strong>
+      <span data-i18n="contactEmail">Email officiel du projet :</span> <strong>info@biblechantee.com</strong>
     </p>
     <p style="margin-top: 10px;" data-i18n="contactLocation">
       Localisation : Suisse
@@ -525,7 +490,7 @@
 <footer>
   <div class="footer-links">
     <a href="mentions-legales.html" data-i18n="footerLegal">Mentions légales</a> |
-    <a href="credits-depliant.html" data-i18n="footerCredits">Crédits</a> |
+    <a href="credits-depliant.html" data-i18n="footerCredits">Crédits</a>
   </div>
   <p data-i18n="footerMission">Bible Chantée – Projet missionnaire chrétien international</p>
   <p data-i18n="footerCopyright">&copy; 2025 Stéphane Cassani – Tous droits réservés</p>
@@ -535,74 +500,64 @@
 <script src="translations.js"></script>
 
 <script>
-// Multi-language translation system
+/**
+ * INDEX.HTML - Seule page avec boutons de changement de langue
+ * Gère localStorage.setItem('selectedLanguage', ...)
+ */
 (function() {
-  // Check if translations loaded
-  if (typeof translations === 'undefined') {
-    console.error('translations.js not loaded - check path');
-    return;
-  }
-  
-  // Load language from URL, localStorage, or browser
-  function getInitialLanguage() {
-    const validLangs = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];
+  'use strict';
 
-    // Priority 1: URL parameter ?lang=XX
+  // Clé localStorage UNIQUE pour tout le site
+  const STORAGE_KEY = 'selectedLanguage';
+  const VALID_LANGUAGES = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];
+
+  // Récupérer la langue initiale
+  function getInitialLanguage() {
+    // 1. URL parameter ?lang=XX
     const urlParams = new URLSearchParams(window.location.search);
     const urlLang = urlParams.get('lang');
     if (urlLang) {
       const langCode = urlLang.toUpperCase();
-      if (validLangs.includes(langCode)) {
-        localStorage.setItem('selectedLanguage', langCode);
+      if (VALID_LANGUAGES.includes(langCode)) {
+        localStorage.setItem(STORAGE_KEY, langCode);
         return langCode;
       }
     }
 
-    // Priority 2: localStorage (user's previous choice)
-    const saved = localStorage.getItem('selectedLanguage');
-    if (saved && validLangs.includes(saved)) {
+    // 2. localStorage
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved && VALID_LANGUAGES.includes(saved)) {
       return saved;
     }
 
-    // Priority 3: Detect browser language
-    const browserLang = navigator.language || navigator.userLanguage;
-    const langCode = browserLang.split('-')[0].toUpperCase();
+    // 3. Langue navigateur
+    const browserLang = (navigator.language || navigator.userLanguage || 'fr').split('-')[0].toUpperCase();
+    if (VALID_LANGUAGES.includes(browserLang)) {
+      return browserLang;
+    }
 
-    const langMap = {
-      'FR': 'FR', 'EN': 'EN', 'ES': 'ES', 'PT': 'PT',
-      'DE': 'DE', 'IT': 'IT', 'RU': 'RU', 'AR': 'AR',
-      'ZH': 'ZH', 'HI': 'HI', 'TL': 'TL', 'KO': 'KO'
-    };
-
-    return langMap[langCode] || 'FR';
+    // 4. Défaut
+    return 'FR';
   }
 
-  // Apply translations to page
+  // Appliquer les traductions
   function applyTranslations(lang) {
+    if (typeof translations === 'undefined') {
+      console.error('[index] translations.js non chargé');
+      return;
+    }
+
     const trans = translations[lang] || translations['FR'];
 
-    // Update all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(element => {
       const key = element.getAttribute('data-i18n');
       if (trans[key]) {
-        // Handle elements with HTML content (like bold tags)
-        if (element.innerHTML.includes('<strong>') || element.innerHTML.includes('<span')) {
-          // Preserve HTML structure when possible
-          const tempDiv = document.createElement('div');
-          tempDiv.innerHTML = trans[key];
-          if (tempDiv.textContent) {
-            element.textContent = trans[key];
-          }
-        } else {
-          element.textContent = trans[key];
-        }
+        element.textContent = trans[key];
       }
     });
 
-    // Update page title
     document.title = trans.siteName || 'Bible Chantée';
 
-    // Update HTML lang attribute
     const langAttrMap = {
       'FR': 'fr', 'EN': 'en', 'ES': 'es', 'PT': 'pt',
       'DE': 'de', 'IT': 'it', 'RU': 'ru', 'AR': 'ar',
@@ -610,23 +565,16 @@
     };
     document.documentElement.lang = langAttrMap[lang] || 'fr';
 
-    // Special handling for RTL languages
-    if (lang === 'AR') {
-      document.body.dir = 'rtl';
-    } else {
-      document.body.dir = 'ltr';
-    }
+    document.body.dir = (lang === 'AR') ? 'rtl' : 'ltr';
 
-    // CRITICAL: Preserve language in all links
     preserveLanguageInLinks(lang);
   }
 
-  // UNIVERSAL LINK FIXER - Preserve language across all navigation
+  // Préserver langue dans les liens
   function preserveLanguageInLinks(lang) {
     document.querySelectorAll('a[href]').forEach(link => {
       const href = link.getAttribute('href');
 
-      // Skip external links, mailto, anchors, javascript
       if (!href ||
           href.startsWith('http://') ||
           href.startsWith('https://') ||
@@ -636,65 +584,54 @@
         return;
       }
 
-      // Skip if already has lang parameter
       if (href.includes('?lang=') || href.includes('&lang=')) {
         return;
       }
 
-      // Add language parameter
       const separator = href.includes('?') ? '&' : '?';
       link.setAttribute('href', href + separator + 'lang=' + lang);
     });
   }
 
-  // Change language with URL parameter
-  function setLanguage(lang) {
-    const url = new URL(window.location.href);
-    url.searchParams.set('lang', lang);
-    window.location.href = url.toString();
-  }
-
-  // Initialize: Mark active button and apply translations
+  // Initialisation
   document.addEventListener('DOMContentLoaded', function() {
     const currentLang = getInitialLanguage();
 
-    // Mark active button
+    // Marquer le bouton actif
     document.querySelectorAll('.lang-btn').forEach(btn => {
       if (btn.dataset.lang === currentLang) {
         btn.classList.add('active');
       }
     });
 
-    // Apply translations
+    // Appliquer traductions
     applyTranslations(currentLang);
 
-    // Add click handlers to language buttons
+    // Gestionnaires de clic sur boutons langue
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', function() {
         const lang = this.dataset.lang;
-        
-        // Update active state
+
+        // Sauvegarder dans localStorage (clé UNIQUE)
+        localStorage.setItem(STORAGE_KEY, lang);
+
+        // Mettre à jour UI
         document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
         this.classList.add('active');
-        
-        // Apply translations
+
+        // Appliquer traductions
         applyTranslations(lang);
-        
-        // Preserve language in links
-        preserveLanguageInLinks(lang);
-        
-        // Update URL without reload
+
+        // Mettre à jour URL sans rechargement
         const url = new URL(window.location.href);
         url.searchParams.set('lang', lang);
         window.history.pushState({}, '', url.toString());
-        
-        // Save to localStorage
-        localStorage.setItem('selectedLang', lang);
+
+        console.log('[index] Langue changée:', lang);
       });
     });
 
-    // Preserve language in all links
-    preserveLanguageInLinks(currentLang);
+    console.log('[index] Langue initiale:', currentLang);
   });
 })();
 </script>
