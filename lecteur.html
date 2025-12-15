@@ -650,21 +650,6 @@
             </div>
             <div class="search-results" id="searchResults"></div>
         </header>
-        <!-- BARRE LANGUES HORIZONTALE -->
-        <div class="lang-bar" id="languageBar">
-            <button type="button" class="lang-btn" data-lang="FR" onclick="changeLanguage('FR')">🇫🇷 FR</button>
-            <button type="button" class="lang-btn" data-lang="EN" onclick="changeLanguage('EN')">🇬🇧 EN</button>
-            <button type="button" class="lang-btn" data-lang="PT" onclick="changeLanguage('PT')">🇧🇷 PT</button>
-            <button type="button" class="lang-btn" data-lang="ES" onclick="changeLanguage('ES')">🇪🇸 ES</button>
-            <button type="button" class="lang-btn" data-lang="DE" onclick="changeLanguage('DE')">🇩🇪 DE</button>
-            <button type="button" class="lang-btn" data-lang="IT" onclick="changeLanguage('IT')">🇮🇹 IT</button>
-            <button type="button" class="lang-btn" data-lang="AR" onclick="changeLanguage('AR')">🇸🇦 AR</button>
-            <button type="button" class="lang-btn" data-lang="RU" onclick="changeLanguage('RU')">🇷🇺 RU</button>
-            <button type="button" class="lang-btn" data-lang="ZH" onclick="changeLanguage('ZH')">🇨🇳 ZH</button>
-            <button type="button" class="lang-btn" data-lang="HI" onclick="changeLanguage('HI')">🇮🇳 HI</button>
-            <button type="button" class="lang-btn" data-lang="TL" onclick="changeLanguage('TL')">🇵🇭 TL</button>
-            <button type="button" class="lang-btn" data-lang="KO" onclick="changeLanguage('KO')">🇰🇷 KO</button>
-        </div>
         <h2 class="section-title" data-i18n="readerOldTestament">Ancien Testament</h2>
         <div class="books-grid" id="old-testament"></div>
         <h2 class="section-title" data-i18n="readerNewTestament">Nouveau Testament</h2>
@@ -1683,14 +1668,6 @@
         // Mettre à jour les noms des livres
         renderBooks('old-testament', oldTestament);
         renderBooks('new-testament', newTestament);
-
-        // Mettre à jour bouton actif
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.dataset.lang === lang) {
-                btn.classList.add('active');
-            }
-        });
 
         // Mettre à jour les paroles et le lecteur si actif
         if (currentBook && currentChapter) {

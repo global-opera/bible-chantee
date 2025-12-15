@@ -189,22 +189,6 @@
 <body>
     <div class="container">
         <header>
-            <!-- Barre de langues horizontale -->
-            <div class="lang-bar">
-                <button class="lang-btn" data-lang="FR">🇫🇷 FR</button>
-                <button class="lang-btn" data-lang="EN">🇬🇧 EN</button>
-                <button class="lang-btn" data-lang="PT">🇧🇷 PT</button>
-                <button class="lang-btn" data-lang="ES">🇪🇸 ES</button>
-                <button class="lang-btn" data-lang="DE">🇩🇪 DE</button>
-                <button class="lang-btn" data-lang="IT">🇮🇹 IT</button>
-                <button class="lang-btn" data-lang="AR">🇸🇦 AR</button>
-                <button class="lang-btn" data-lang="RU">🇷🇺 RU</button>
-                <button class="lang-btn" data-lang="ZH">🇨🇳 ZH</button>
-                <button class="lang-btn" data-lang="HI">🇮🇳 HI</button>
-                <button class="lang-btn" data-lang="TL">🇵🇭 TL</button>
-                <button class="lang-btn" data-lang="KO">🇰🇷 KO</button>
-            </div>
-
             <h1 data-i18n="bibleHeading">Bible Segond 1910</h1>
             <p class="subtitle" data-i18n="bibleSubtitle">Texte integral - 66 livres - 1189 chapitres</p>
             <a href="index.html" class="back-link" data-i18n="bibleBackHome">Retour a l'accueil</a>
@@ -402,35 +386,6 @@
 
     <!-- Language switching -->
     <script>
-    // Marquer le bouton langue actif
-    const currentLang = window.currentLanguage || 'FR';
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.dataset.lang === currentLang) {
-            btn.classList.add('active');
-        }
-    });
-
-    // Ajouter les listeners aux boutons de langue
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const lang = this.dataset.lang;
-            
-            // Utiliser le système partagé
-            if (window.setLanguage) {
-                window.setLanguage(lang);
-            }
-            
-            // Mettre à jour les boutons
-            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Déclencher la traduction i18n si disponible
-            if (window.i18nInstance && window.i18nInstance.setLanguage) {
-                window.i18nInstance.setLanguage(lang);
-            }
-        });
-    });
     </script>
 </body>
 </html>

@@ -109,20 +109,8 @@
     </style>
 </head>
 <body>
-    <div class="lang-bar">
-        <button class="lang-btn" data-lang="FR">FR</button>
-        <button class="lang-btn" data-lang="EN">EN</button>
-        <button class="lang-btn" data-lang="PT">PT</button>
-        <button class="lang-btn" data-lang="ES">ES</button>
-        <button class="lang-btn" data-lang="DE">DE</button>
-        <button class="lang-btn" data-lang="IT">IT</button>
-        <button class="lang-btn" data-lang="AR">AR</button>
-        <button class="lang-btn" data-lang="RU">RU</button>
-        <button class="lang-btn" data-lang="ZH">ZH</button>
-        <button class="lang-btn" data-lang="HI">HI</button>
-        <button class="lang-btn" data-lang="TL">TL</button>
-        <button class="lang-btn" data-lang="KO">KO</button>
-    </div>
+    <!-- Langue lue depuis localStorage (définie sur page accueil) -->
+    <script src="lang-shared.js"></script>
 
     <div class="container">
         <h1 id="pageTitle">10 Confessions de la Bible en Musique</h1>
@@ -391,23 +379,11 @@
             `;
             grid.appendChild(card);
         });
-        
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.lang === lang);
-        });
-        
-        localStorage.setItem('selectedLang', lang);
     }
 
     document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                render(this.dataset.lang);
-            });
-        });
-        
-        const urlParams = new URLSearchParams(window.location.search);
-        const lang = urlParams.get('lang') || localStorage.getItem('selectedLang') || 'FR';
+        // Utiliser la langue depuis lang-shared.js (lue depuis localStorage)
+        const lang = window.currentLanguage || 'FR';
         render(lang);
     });
     </script>
