@@ -51,3 +51,5 @@ temp/
 # Personal notes
 notes/
 TODO.txt
+
+_deploy_log_*.txt

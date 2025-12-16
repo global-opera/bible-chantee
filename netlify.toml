@@ -2,7 +2,86 @@
   publish = "."
   command = "echo 'No build needed'"
 
+# ============================================================================
+# ARCHITECTURE DÉFINITIVE - REDIRECTIONS 301
+# ============================================================================
+# Règle absolue : TOUTES les URLs clean → fichier .html
+# AUCUNE page sans extension ne doit exister
+# Index.html = SEULE page avec sélecteur de langue
+# ============================================================================
+
+# Promesses/Promessas (PT/EN/FR)
+[[redirects]]
+  from = "/promessas"
+  to = "/promessas.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/promessas-tema"
+  to = "/promessas-tema.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/promesses"
+  to = "/promesses.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/promesse-detail"
+  to = "/promesse-detail.html"
+  status = 301
+  force = true
+
+# Confessions
+[[redirects]]
+  from = "/confessions"
+  to = "/confessions.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/confessions-tema"
+  to = "/confessions-tema.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/confession-detail"
+  to = "/confession-detail.html"
+  status = 301
+  force = true
+
+# Bible & Lecteur
+[[redirects]]
+  from = "/bible"
+  to = "/bible.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lecteur"
+  to = "/lecteur.html"
+  status = 301
+  force = true
+
+# Pages informatives
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/mentions-legales"
+  to = "/mentions-legales.html"
+  status = 301
+  force = true
+
+# 404 fallback - APRÈS toutes les règles spécifiques
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200
+  status = 404

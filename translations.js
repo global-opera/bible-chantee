@@ -42,6 +42,7 @@ const translations = {
     btnBibleText: "Bible (texte)",
     btnListenBible: "Ecouter la Bible",
     btnPlayer: "Lecteur",
+    btnBible: "Bible (66 livres)",
     btnPromises: "Promesses bibliques",
     btnConfessions: "10 Confessions de foi",
 
@@ -185,6 +186,7 @@ const translations = {
     btnBibleText: "Bible (text)",
     btnListenBible: "Listen to the Bible",
     btnPlayer: "Player",
+    btnBible: "Bible (66 books)",
     btnPromises: "Biblical promises",
     btnConfessions: "10 Confessions of faith",
 
@@ -328,6 +330,7 @@ const translations = {
     btnBibleText: "Biblia (texto)",
     btnListenBible: "Escuchar la Biblia",
     btnPlayer: "Reproductor",
+    btnBible: "Biblia (66 libros)",
     btnPromises: "Promesas bíblicas",
     btnConfessions: "10 Confesiones de fe",
 
@@ -471,6 +474,7 @@ const translations = {
     btnBibleText: "Bíblia (texto)",
     btnListenBible: "Ouvir a Bíblia",
     btnPlayer: "Leitor",
+    btnBible: "Bíblia (66 livros)",
     btnPromises: "Promessas bíblicas",
     btnConfessions: "10 Confissões de fé",
 
@@ -1733,6 +1737,7 @@ Object.keys(translations).forEach(lang => {
     t.aboutPageTitle = "À propos - Bible Chantée";
     t.aboutTagline = "La Parole de Dieu en musique";
     t.navHome = "Accueil";
+    t.navPromises = "Promesses";
     t.aboutProjectTitle = "À propos du projet";
     t.aboutProjectDesc1 = "Bible Chantée est un projet musical spirituel visant à mettre en musique les 1189 chapitres de la Bible en 12 langues.";
     t.aboutProjectDesc2 = "Toutes les compositions sont originales. Les paroles sont basées sur les textes bibliques du domaine public.";
@@ -1755,6 +1760,7 @@ Object.keys(translations).forEach(lang => {
     t.aboutPageTitle = "About - Sung Bible";
     t.aboutTagline = "God's Word in music";
     t.navHome = "Home";
+    t.navPromises = "Promises";
     t.aboutProjectTitle = "About the project";
     t.aboutProjectDesc1 = "Sung Bible is a spiritual music project aiming to set to music the 1189 chapters of the Bible in 12 languages.";
     t.aboutProjectDesc2 = "All compositions are original. The lyrics are based on public domain biblical texts.";
@@ -1777,6 +1783,7 @@ Object.keys(translations).forEach(lang => {
     t.aboutPageTitle = "Acerca de - Biblia Cantada";
     t.aboutTagline = "La Palabra de Dios en música";
     t.navHome = "Inicio";
+    t.navPromises = "Promesas";
     t.aboutProjectTitle = "Acerca del proyecto";
     t.aboutProjectDesc1 = "Biblia Cantada es un proyecto de música espiritual que busca poner en música los 1189 capítulos de la Biblia en 12 idiomas.";
     t.aboutProjectDesc2 = "Todas las composiciones son originales. Las letras se basan en textos bíblicos de dominio público.";
@@ -1799,6 +1806,7 @@ Object.keys(translations).forEach(lang => {
     t.aboutPageTitle = "Sobre - Bíblia Cantada";
     t.aboutTagline = "A Palavra de Deus em música";
     t.navHome = "Início";
+    t.navPromises = "Promessas";
     t.aboutProjectTitle = "Sobre o projeto";
     t.aboutProjectDesc1 = "Bíblia Cantada é um projeto de música espiritual que visa colocar em música os 1189 capítulos da Bíblia em 12 idiomas.";
     t.aboutProjectDesc2 = "Todas as composições são originais. As letras são baseadas em textos bíblicos de domínio público.";

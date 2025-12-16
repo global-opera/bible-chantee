@@ -113,9 +113,6 @@
     </style>
 </head>
 <body>
-    <!-- Langue lue depuis localStorage (définie sur page accueil) -->
-    <script src="lang-shared.js"></script>
-
     <div class="container">
         <h1 id="pageTitle">Promesses de la Bible en Musique</h1>
         <a href="index.html" class="back-link" id="backLink">Retour accueil</a>
@@ -385,11 +382,23 @@
             `;
             grid.appendChild(card);
         });
+        
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+        
+        localStorage.setItem('selectedLang', lang);
     }
 
     document.addEventListener('DOMContentLoaded', function() {
-        // Utiliser la langue depuis lang-shared.js (lue depuis localStorage)
-        const lang = window.currentLanguage || 'FR';
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                render(this.dataset.lang);
+            });
+        });
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || localStorage.getItem('selectedLang') || 'FR';
         render(lang);
     });
     </script>
