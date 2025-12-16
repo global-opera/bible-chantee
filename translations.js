@@ -15,6 +15,7 @@ const translations = {
     navMission: "Mission",
     navSupport: "Soutenir",
     navAbout: "À propos",
+    navConfessions: "Confessions",
     navContact: "Contact",
 
     // Project Section
@@ -159,6 +160,7 @@ const translations = {
     navMission: "Mission",
     navSupport: "Support",
     navAbout: "About",
+    navConfessions: "Confessions",
     navContact: "Contact",
 
     // Project Section
@@ -303,6 +305,7 @@ const translations = {
     navMission: "Misión",
     navSupport: "Apoyar",
     navAbout: "Acerca de",
+    navConfessions: "Confesiones",
     navContact: "Contacto",
 
     // Project Section
@@ -447,6 +450,7 @@ const translations = {
     navMission: "Missão",
     navSupport: "Apoiar",
     navAbout: "Sobre",
+    navConfessions: "Confissões",
     navContact: "Contato",
 
     // Project Section
@@ -591,6 +595,7 @@ const translations = {
     navMission: "Mission",
     navSupport: "Unterstützen",
     navAbout: "Über uns",
+    navConfessions: "Bekenntnisse",
     navContact: "Kontakt",
 
     // Project Section
@@ -734,6 +739,7 @@ const translations = {
     navMission: "Missione",
     navSupport: "Sostenere",
     navAbout: "Chi siamo",
+    navConfessions: "Confessioni",
     navContact: "Contatto",
 
     // Project Section
@@ -877,6 +883,7 @@ const translations = {
     navMission: "Миссия",
     navSupport: "Поддержать",
     navAbout: "О нас",
+    navConfessions: "Исповедания",
     navContact: "Контакты",
 
     // Project Section
@@ -1020,6 +1027,7 @@ const translations = {
     navMission: "المهمة",
     navSupport: "دعم",
     navAbout: "حول",
+    navConfessions: "اعترافات",
     navContact: "اتصل",
 
     // Project Section
@@ -1163,6 +1171,7 @@ const translations = {
     navMission: "使命",
     navSupport: "支持",
     navAbout: "关于",
+    navConfessions: "宣告",
     navContact: "联系",
 
     // Project Section
@@ -1306,6 +1315,7 @@ const translations = {
     navMission: "मिशन",
     navSupport: "समर्थन करें",
     navAbout: "हमारे बारे में",
+    navConfessions: "घोषणाएं",
     navContact: "संपर्क",
 
     // Project Section
@@ -1449,6 +1459,7 @@ const translations = {
     navMission: "Misyon",
     navSupport: "Suportahan",
     navAbout: "Tungkol",
+    navConfessions: "Mga Pahayag",
     navContact: "Makipag-ugnayan",
 
     // Project Section
@@ -1592,6 +1603,7 @@ const translations = {
     navMission: "선교",
     navSupport: "지원",
     navAbout: "소개",
+    navConfessions: "신앙고백",
     navContact: "연락처",
 
     // Project Section
@@ -1738,6 +1750,7 @@ Object.keys(translations).forEach(lang => {
     t.aboutTagline = "La Parole de Dieu en musique";
     t.navHome = "Accueil";
     t.navPromises = "Promesses";
+    t.navConfessions = "Confessions";
     t.aboutProjectTitle = "À propos du projet";
     t.aboutProjectDesc1 = "Bible Chantée est un projet musical spirituel visant à mettre en musique les 1189 chapitres de la Bible en 12 langues.";
     t.aboutProjectDesc2 = "Toutes les compositions sont originales. Les paroles sont basées sur les textes bibliques du domaine public.";
@@ -1761,6 +1774,7 @@ Object.keys(translations).forEach(lang => {
     t.aboutTagline = "God's Word in music";
     t.navHome = "Home";
     t.navPromises = "Promises";
+    t.navConfessions = "Confessions";
     t.aboutProjectTitle = "About the project";
     t.aboutProjectDesc1 = "Sung Bible is a spiritual music project aiming to set to music the 1189 chapters of the Bible in 12 languages.";
     t.aboutProjectDesc2 = "All compositions are original. The lyrics are based on public domain biblical texts.";
@@ -1784,6 +1798,7 @@ Object.keys(translations).forEach(lang => {
     t.aboutTagline = "La Palabra de Dios en música";
     t.navHome = "Inicio";
     t.navPromises = "Promesas";
+    t.navConfessions = "Confesiones";
     t.aboutProjectTitle = "Acerca del proyecto";
     t.aboutProjectDesc1 = "Biblia Cantada es un proyecto de música espiritual que busca poner en música los 1189 capítulos de la Biblia en 12 idiomas.";
     t.aboutProjectDesc2 = "Todas las composiciones son originales. Las letras se basan en textos bíblicos de dominio público.";
@@ -1807,6 +1822,7 @@ Object.keys(translations).forEach(lang => {
     t.aboutTagline = "A Palavra de Deus em música";
     t.navHome = "Início";
     t.navPromises = "Promessas";
+    t.navConfessions = "Confissões";
     t.aboutProjectTitle = "Sobre o projeto";
     t.aboutProjectDesc1 = "Bíblia Cantada é um projeto de música espiritual que visa colocar em música os 1189 capítulos da Bíblia em 12 idiomas.";
     t.aboutProjectDesc2 = "Todas as composições são originais. As letras são baseadas em textos bíblicos de domínio público.";
