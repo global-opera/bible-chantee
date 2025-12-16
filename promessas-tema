@@ -1,0 +1,8 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<base href="/">
+<script>
+(function(){
+  var q = window.location.search || "";
+  window.location.replace("/promessas-tema.html" + q);
+})();
+</script></head><body></body></html>
