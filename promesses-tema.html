@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <base href="/">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promesses</title>
+
+  <link rel="stylesheet" href="/site.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0a1628 0%, #1a237e 100%);
+      min-height: 100vh;
+      color: #fff;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #f5c842;
+      margin-bottom: 10px;
+    }
+    .back {
+      display: inline-block;
+      margin: 15px 0 25px 0;
+      padding: 10px 18px;
+      background: rgba(245,200,66,0.15);
+      border: 1px solid rgba(245,200,66,0.35);
+      border-radius: 10px;
+      color: #f5c842;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .item {
+      background: rgba(30, 58, 95, 0.8);
+      border-radius: 14px;
+      padding: 18px 20px;
+      border-left: 4px solid rgba(245,200,66,0.5);
+    }
+    .item a {
+      color: #f5c842;
+      text-decoration: none;
+      font-weight: 800;
+    }
+    .item p { color: #d1d5db; margin-top: 6px; }
+    .error {
+      text-align: center;
+      color: #fca5a5;
+      margin-top: 30px;
+      font-weight: 700;
+    }
+  </style>
+
+  <!-- Langue globale -->
+
+  <!-- Données promesses -->
+    <script src="/lang-shared.js"></script>
+  <script src="/promesses-data.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <a class="back" id="backLink" href="/promesses.html">← Promesses</a>
+    <h1 id="pageTitle">Promesses</h1>
+    <div class="list" id="list"></div>
+    <div class="error" id="err" style="display:none;"></div>
+  </div>
+
+<script>
+(function () {
+  // 1) Langue canonique
+  const lang = (
+    window.BC_LANG && typeof BC_LANG.getCurrentLanguage === "function"
+  )
+    ? BC_LANG.getCurrentLanguage()
+    : "FR";
+
+  const qs = new URLSearchParams(location.search);
+  const tema = qs.get("tema") || "";
+
+  const back = document.getElementById("backLink");
+  back.href = `promesses.html?lang=${lang}`;
+
+  const list = document.getElementById("list");
+  const err = document.getElementById("err");
+
+  // 2) Sécurité données
+  if (!window.PROMESSAS) {
+    err.style.display = "block";
+    err.textContent = "Erreur : données des promesses non chargées.";
+    return;
+  }
+
+  const temas = PROMESSAS[lang] || PROMESSAS["FR"];
+  const t = temas && temas[tema];
+
+  if (!t) {
+    err.style.display = "block";
+    err.textContent = "Thème introuvable.";
+    return;
+  }
+
+  document.getElementById("pageTitle").textContent = t.titulo || "Promesses";
+
+  // 3) Liste des éléments
+  const items = t.items || t.lista || t.list || t.chapters || [];
+
+  if (!items || items.length === 0) {
+    const p = document.createElement("div");
+    p.className = "item";
+    p.innerHTML = `<p>${t.sub || ""}</p>`;
+    list.appendChild(p);
+    return;
+  }
+
+  items.forEach(it => {
+    const div = document.createElement("div");
+    div.className = "item";
+
+    const book = it.book || it.livro || "";
+    const chapter = it.chapter || it.capitulo || it.ch || "";
+    const label = it.label || it.titulo || it.title || "";
+
+    if (book && chapter) {
+      div.innerHTML = `
+        <a href="/lecteur.html?book=${encodeURIComponent(book)}&chapter=${encodeURIComponent(chapter)}&lang=${lang}&return=${encodeURIComponent("promesses-tema.html?tema=" + tema)}&section=${encodeURIComponent(tema)}">
+          ▶ ${label || (book + " " + chapter)}
+        </a>
+        ${it.sub ? `<p>${it.sub}</p>` : ""}
+      `;
+    } else {
+      div.innerHTML = `<p>${label || JSON.stringify(it)}</p>`;
+    }
+
+    list.appendChild(div);
+  });
+})();
+</script>
+
+</body>
+</html>
+
