@@ -139,10 +139,10 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-        .book:hover { 
-            background: rgba(212, 175, 55, 0.4); 
+        .book:hover {
+            background: rgba(212, 175, 55, 0.4);
             border-color: #ffce00;
-            transform: translateY(-2px); 
+            transform: translateY(-2px);
         }
         .book.unavailable {
             background: rgba(255,255,255,0.05);
@@ -150,13 +150,13 @@
             opacity: 0.3;
             cursor: not-allowed;
         }
-        .book.unavailable:hover { 
-            transform: none; 
-            background: rgba(255,255,255,0.05); 
+        .book.unavailable:hover {
+            transform: none;
+            background: rgba(255,255,255,0.05);
             border: 1px solid rgba(255,255,255,0.1);
         }
-        .book.playing { 
-            background: rgba(212, 175, 55, 0.6); 
+        .book.playing {
+            background: rgba(212, 175, 55, 0.6);
             border-color: #ffce00;
             box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
         }
@@ -184,14 +184,8 @@
             animation: slideUp 0.3s ease-out;
         }
         @keyframes slideUp {
-            from {
-                transform: translateY(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
         .player-info { text-align: center; margin-bottom: 10px; }
         .player-title { font-family: 'Playfair Display', Georgia, serif; font-size: 1.2em; color: #000080; }
@@ -278,7 +272,7 @@
         }
         .toggle-switch input:checked + .toggle-slider { background: #667eea; }
         .toggle-switch input:checked + .toggle-slider:before { transform: translateX(20px); }
-        
+
         /* Boutons Paroles et Bible */
         .lyrics-btn, .bible-btn {
             background: #000080;
@@ -313,9 +307,7 @@
             margin: 15px 10px 10px 10px;
             max-height: 350px;
         }
-        .content-wrapper.active {
-            display: flex;
-        }
+        .content-wrapper.active { display: flex; }
 
         /* Zone des paroles */
         .lyrics-container {
@@ -329,38 +321,13 @@
             padding: 20px;
             overflow-y: auto;
         }
-        .lyrics-container.active {
-            display: block;
-        }
-        .lyrics-container::-webkit-scrollbar {
-            width: 8px;
-        }
-        .lyrics-container::-webkit-scrollbar-track {
-            background: rgba(255,255,255,0.1);
-            border-radius: 4px;
-        }
-        .lyrics-container::-webkit-scrollbar-thumb {
-            background: #ffce00;
-            border-radius: 4px;
-        }
-        .lyrics-text {
-            font-size: 0.95em;
-            line-height: 1.8;
-            white-space: pre-wrap;
-            color: #e0e0e0;
-        }
-        .lyrics-text .section-label {
-            color: #ffce00;
-            font-weight: bold;
-            display: block;
-            margin-top: 10px;
-        }
-        .no-lyrics {
-            text-align: center;
-            color: #888;
-            font-style: italic;
-            padding: 20px;
-        }
+        .lyrics-container.active { display: block; }
+        .lyrics-container::-webkit-scrollbar { width: 8px; }
+        .lyrics-container::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 4px; }
+        .lyrics-container::-webkit-scrollbar-thumb { background: #ffce00; border-radius: 4px; }
+        .lyrics-text { font-size: 0.95em; line-height: 1.8; white-space: pre-wrap; color: #e0e0e0; }
+        .lyrics-text .section-label { color: #ffce00; font-weight: bold; display: block; margin-top: 10px; }
+        .no-lyrics { text-align: center; color: #888; font-style: italic; padding: 20px; }
 
         /* Sections de paroles synchronisées */
         .lyrics-section {
@@ -385,12 +352,7 @@
             padding-bottom: 5px;
             border-bottom: 1px solid rgba(255, 206, 0, 0.2);
         }
-        .lyrics-section .lyrics-line {
-            margin: 5px 0;
-            line-height: 1.8;
-            font-size: 0.95em;
-            color: #e0e0e0;
-        }
+        .lyrics-section .lyrics-line { margin: 5px 0; line-height: 1.8; font-size: 0.95em; color: #e0e0e0; }
 
         /* Zone du texte biblique */
         .bible-container {
@@ -404,39 +366,14 @@
             padding: 20px;
             overflow-y: auto;
         }
-        .bible-container.active {
-            display: block;
-        }
-        .bible-container::-webkit-scrollbar {
-            width: 8px;
-        }
-        .bible-container::-webkit-scrollbar-track {
-            background: rgba(255,255,255,0.1);
-            border-radius: 4px;
-        }
-        .bible-container::-webkit-scrollbar-thumb {
-            background: #ffce00;
-            border-radius: 4px;
-        }
-        .bible-text {
-            font-size: 0.95em;
-            line-height: 1.8;
-            color: #e0e0e0;
-        }
-        .verse {
-            margin-bottom: 10px;
-        }
-        .verse-number {
-            color: #ffce00;
-            font-weight: bold;
-            margin-right: 5px;
-        }
-        .no-bible {
-            text-align: center;
-            color: #888;
-            font-style: italic;
-            padding: 20px;
-        }
+        .bible-container.active { display: block; }
+        .bible-container::-webkit-scrollbar { width: 8px; }
+        .bible-container::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 4px; }
+        .bible-container::-webkit-scrollbar-thumb { background: #ffce00; border-radius: 4px; }
+        .bible-text { font-size: 0.95em; line-height: 1.8; color: #e0e0e0; }
+        .verse { margin-bottom: 10px; }
+        .verse-number { color: #ffce00; font-weight: bold; margin-right: 5px; }
+        .no-bible { text-align: center; color: #888; font-style: italic; padding: 20px; }
 
         footer {
             text-align: center;
@@ -446,7 +383,7 @@
             margin-bottom: 180px;
         }
         footer a { color: #ffce00; text-decoration: none; }
-        
+
         /* Mobile */
         @media (max-width: 600px) {
             .books-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
@@ -454,15 +391,9 @@
             .book-name { font-size: 0.85em; }
             h1 { font-size: 1.8em; }
             footer { margin-bottom: 250px; }
-            .content-wrapper {
-                flex-direction: column;
-                max-height: none;
-            }
-            .lyrics-container, .bible-container {
-                max-height: 200px;
-            }
+            .content-wrapper { flex-direction: column; max-height: none; }
+            .lyrics-container, .bible-container { max-height: 200px; }
             .player-title { font-size: 1.1em; }
-
         }
 
         /* === MODE SECTION (Solution A - Promesses/Confessions) === */
@@ -483,9 +414,7 @@
             transform: scale(1.05);
             box-shadow: 0 5px 20px rgba(245, 200, 66, 0.4);
         }
-        .section-back-btn.visible {
-            display: inline-block;
-        }
+        .section-back-btn.visible { display: inline-block; }
 
         .section-menu-container {
             display: none;
@@ -496,9 +425,7 @@
             border-radius: 15px;
             border: 1px solid rgba(255, 206, 0, 0.3);
         }
-        .section-menu-container.visible {
-            display: block;
-        }
+        .section-menu-container.visible { display: block; }
         .section-menu-title {
             font-family: 'Playfair Display', Georgia, serif;
             font-size: 1.4em;
@@ -508,11 +435,7 @@
             padding-bottom: 10px;
             border-bottom: 1px solid rgba(255, 206, 0, 0.3);
         }
-        .section-chapter-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+        .section-chapter-list { display: flex; flex-direction: column; gap: 10px; }
         .section-chapter-item {
             display: flex;
             align-items: center;
@@ -536,17 +459,9 @@
             border-color: #ffce00;
             box-shadow: 0 0 15px rgba(255, 206, 0, 0.3);
         }
-        .section-chapter-label {
-            font-weight: 500;
-        }
-        .section-chapter-subtitle {
-            color: #aaa;
-            font-size: 0.85em;
-        }
-        .section-chapter-play {
-            color: #ffce00;
-            font-size: 1.2em;
-        }
+        .section-chapter-label { font-weight: 500; }
+        .section-chapter-subtitle { color: #aaa; font-size: 0.85em; }
+        .section-chapter-play { color: #ffce00; font-size: 1.2em; }
     </style>
 </head>
 <body>
@@ -555,7 +470,7 @@
         <div style="text-align: center;">
             <button class="section-back-btn" id="sectionBackBtn" onclick="goBackToSection()">← Retour</button>
         </div>
-        
+
         <!-- Menu Section (visible seulement en mode section) -->
         <div class="section-menu-container" id="sectionMenuContainer">
             <div class="section-menu-title" id="sectionMenuTitle">Section</div>
@@ -585,6 +500,7 @@
             <p data-i18n="readerFooterCopyright">&copy; 2025 Bible Chantée - Stéphane Cassani - Tous droits d'auteur réservés</p>
         </footer>
     </div>
+
     <div class="player-container" id="player">
         <div class="player-info">
             <span class="player-title" id="player-title">-</span>
@@ -642,20 +558,17 @@
     <script src="translations.js"></script>
     <script src="i18n.js"></script>
 
-    <!-- Donnees des paroles et de la Bible -->
-    <!-- Script langue partagé - DOIT être chargé en premier -->
+    <!-- Script langue partagé - DOIT être chargé avant d'utiliser currentLanguage -->
     <script src="lang-shared.js"></script>
-<script>
-  // sync lecteur.html language with lang-shared.js (URL ?lang=XX has priority)
-  if (window.currentLanguage) { window.currentLanguage = String(window.currentLanguage).toUpperCase(); }
-  try { if (typeof currentLanguage !== 'undefined' && window.currentLanguage) { currentLanguage = window.currentLanguage; } } catch(e) {}
-</script>
-    
+
+    <!-- Donnees des paroles et de la Bible -->
     <script src="lyrics-data.js"></script>
     <script src="lyrics-data-pt.js"></script>
     <script src="lyrics-data-v2.js"></script>
+
     <script src="audio-urls.js"></script>
     <script src="audio-urls-v2.js"></script>
+
     <!-- UNIVERSAL MULTILINGUAL AUDIO URLs - Auto-generated by generate-all-audio-urls.py -->
     <script src="audio-urls-fr.js"></script>
     <script src="audio-urls-pt.js"></script>
@@ -669,11 +582,73 @@
     <script src="audio-urls-hi.js"></script>
     <script src="audio-urls-tl.js"></script>
     <script src="audio-urls-ko.js"></script>
+
     <script src="chapter-titles.js"></script>
     <script src="bible-data.js"></script>
 
     <!-- Sections pour Promesses/Confessions (Solution A) -->
     <script src="sections-promesses.js"></script>
+
+    <script>
+        // ============================================================
+        // LANGUAGE BOOTSTRAP (SOURCE OF TRUTH)
+        // Priority: URL ?lang=XX -> BC_LANG(localStorage) -> browser -> FR
+        // ============================================================
+        (function () {
+            const VALID_LANGUAGES = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];
+
+            function normalizeLang(v) {
+                if (!v) return null;
+                const x = String(v).trim().toUpperCase();
+                return VALID_LANGUAGES.includes(x) ? x : null;
+            }
+
+            function getLangFromUrl() {
+                const urlParams = new URLSearchParams(window.location.search);
+                return normalizeLang(urlParams.get('lang'));
+            }
+
+            function getLangFromBC() {
+                try {
+                    if (window.BC_LANG && typeof BC_LANG.getCurrentLanguage === 'function') {
+                        return normalizeLang(BC_LANG.getCurrentLanguage());
+                    }
+                } catch (e) {}
+                return null;
+            }
+
+            function setLangToBC(lang) {
+                try {
+                    if (window.BC_LANG && typeof BC_LANG.setCurrentLanguage === 'function') {
+                        BC_LANG.setCurrentLanguage(lang);
+                        return;
+                    }
+                } catch (e) {}
+                // fallback
+                try { localStorage.setItem('BC_LANG', lang); } catch (e) {}
+            }
+
+            const urlLang = getLangFromUrl();
+            const baseLang = urlLang || getLangFromBC() || 'FR';
+
+            // Always ensure global vars exist and are consistent
+            window.currentLanguage = baseLang;
+            try { window.currentLanguage = String(window.currentLanguage).toUpperCase(); } catch (e) {}
+            window.currentLanguage = normalizeLang(window.currentLanguage) || 'FR';
+
+            // Persist only after URL override is applied (URL wins)
+            setLangToBC(window.currentLanguage);
+
+            // Optional: keep URL canonical (no surprise navigation, only normalize case)
+            if (urlLang && urlLang !== window.currentLanguage) {
+                const u = new URL(window.location.href);
+                u.searchParams.set('lang', window.currentLanguage);
+                window.history.replaceState({}, '', u.toString());
+            }
+
+            console.log('[lecteur] Langue initialisée:', window.currentLanguage, '(urlLang=', urlLang, ')');
+        })();
+    </script>
 
     <script>
         const driveMapping = {
@@ -713,23 +688,10 @@
             KO: ["창세기","출애굽기","레위기","민수기","신명기","여호수아","사사기","룻기","사무엘상","사무엘하","열왕기상","열왕기하","역대상","역대하","에스라","느헤미야","에스더","욥기","시편","잠언","전도서","아가","이사야","예레미야","예레미야애가","에스겔","다니엘","호세아","요엘","아모스","오바댜","요나","미가","나훔","하박국","스바냐","학개","스가랴","말라기","마태복음","마가복음","누가복음","요한복음","사도행전","로마서","고린도전서","고린도후서","갈라디아서","에베소서","빌립보서","골로새서","데살로니가전서","데살로니가후서","디모데전서","디모데후서","디도서","빌레몬서","히브리서","야고보서","베드로전서","베드로후서","요한일서","요한이서","요한삼서","유다서","요한계시록"]
         };
 
-        // === LANGUE GLOBALE - Definie au chargement ===
-        // Lire depuis window.currentLanguage (defini par lang-shared.js) ou URL/localStorage
-        if (!window.currentLanguage) {
-            const urlParams = new URLSearchParams(window.location.search);
-            const urlLang = urlParams.get('lang');
-            if (urlLang) {
-                currentLanguage = urlLang.toUpperCase();
-                window.currentLanguage = currentLanguage;
-            } else {
-                const saved = localStorage.getItem('selectedLanguage');
-                if (saved) {
-                    currentLanguage = saved;
-                    window.currentLanguage = saved;
-                }
-            }
-        }
-        console.log('Langue initialisee:', currentLanguage);
+        // === LANGUE GLOBALE ===
+        // window.currentLanguage est fixé par le bootstrap ci-dessus
+        const currentLanguage = window.currentLanguage || 'FR';
+        console.log('Langue (lecteur) effective:', currentLanguage);
 
         const books = [
                 { num: "01", name: "Genese", chapters: 50, available: true },
@@ -939,7 +901,7 @@
                 }
             });
         });
-        
+
         function toggleLyrics() {
             lyricsVisible = !lyricsVisible;
             const lyricsContainer = document.getElementById('lyricsContainer');
@@ -983,13 +945,13 @@
                 contentWrapper.classList.remove('active');
             }
         }
-        
+
         function updateLyrics() {
             const lyricsText = document.getElementById('lyricsText');
             const lyricsContainer = document.getElementById('lyricsContainer');
             const chapterStr = String(currentChapter);
             let lyrics = null;
-            
+
             console.log('updateLyrics - langue:', currentLanguage, 'livre:', currentBook, 'chapitre:', chapterStr);
 
             // PRIORITE A LA LANGUE COURANTE
@@ -1051,7 +1013,7 @@
             // Scroll en haut
             bibleContainer.scrollTop = 0;
         }
-        
+
         function playBook(num, chapters) {
             currentBook = num;
             currentChapter = 1;
@@ -1062,15 +1024,17 @@
                 autoPlayEnabled = false;
                 document.getElementById('playBookBtn').classList.remove('playing');
                 document.getElementById('playBookIcon').textContent = '▶';
-                document.getElementById('playBookText').textContent = t('readerPlayBook') || 'Lire tout le livre';
+                document.getElementById('playBookText').textContent = (window.getTranslation ? getTranslation('readerPlayBook') : null) || 'Lire tout le livre';
                 document.getElementById('bookProgress').style.display = 'none';
             }
 
             document.querySelectorAll('.book').forEach(b => b.classList.remove('playing'));
-            document.querySelector('.book[data-num="'+num+'"]').classList.add('playing');
+            const activeBookEl = document.querySelector('.book[data-num="'+num+'"]');
+            if (activeBookEl) activeBookEl.classList.add('playing');
+
             const select = document.getElementById('chapter-select');
             select.innerHTML = '';
-            const chapterWord = window.getTranslation ? getTranslation('readerChapter') : 'Chapitre';
+            const chapterWord = window.getTranslation ? (getTranslation('readerChapter') || 'Chapitre') : 'Chapitre';
             for (let i = 1; i <= chapters; i++) {
                 const opt = document.createElement('option');
                 opt.value = i;
@@ -1081,9 +1045,9 @@
             checkV2Available();
             playChapter(1);
         }
-        
+
         let useV2 = true; // Toggle V1/V2
-        
+
         function switchVersion() {
             useV2 = document.getElementById('versionSwitch').checked;
             // Recharger le chapitre avec la nouvelle version
@@ -1091,9 +1055,8 @@
                 playChapter(currentChapter);
             }
         }
-        
+
         function checkV2Available() {
-            // Afficher le toggle si V2 est disponible pour ce livre
             const toggle = document.getElementById('versionToggle');
             const chapterStr = String(currentChapter);
             if (typeof audioUrlsV2 !== 'undefined' && audioUrlsV2[currentBook] && audioUrlsV2[currentBook][chapterStr]) {
@@ -1104,75 +1067,72 @@
                 document.getElementById('versionSwitch').checked = false;
             }
         }
-        
+
         function playChapter(chapter) {
             currentChapter = chapter;
 
             // DEBUG - Diagnostiquer le probleme audio
             console.log("=== DEBUG AUDIO ===");
             console.log("Book:", currentBook, "Chapter:", chapter, "Type chapter:", typeof chapter);
-            console.log("audioUrls keys:", Object.keys(window.audioUrls || {}));
-            console.log("Book exists:", !!window.audioUrls[currentBook]);
-            if (window.audioUrls[currentBook]) {
-                console.log("Chapters available:", Object.keys(window.audioUrls[currentBook]));
-            }
-            console.log("URL (number):", window.audioUrls[currentBook]?.[chapter]);
-            console.log("URL (string):", window.audioUrls[currentBook]?.[String(chapter)]);
 
             // Choisir la source audio selon la langue et version
             let url;
-            // CORRECTION: Convertir chapter en string pour match avec audio-urls.js
             const chapterStr = String(chapter);
 
             // UNIVERSAL LANGUAGE-AWARE AUDIO SOURCE SELECTION
-            // Dynamically select audio source for any language (FR, PT, EN, ES, etc.)
             let audioSource;
 
             // Try language-specific source: window.audioUrlsFR, window.audioUrlsPT, etc.
             const langAudioVar = `audioUrls${currentLanguage}`;
 
             if (typeof window[langAudioVar] !== 'undefined') {
-                // Language-specific audio URLs exist
                 audioSource = window[langAudioVar];
                 console.log(`Using ${currentLanguage} audio source (${langAudioVar})`);
             } else if (currentLanguage === 'FR') {
-                // French special case: check V2 first
                 if (useV2 && typeof audioUrlsV2 !== 'undefined' && audioUrlsV2[currentBook] && audioUrlsV2[currentBook][chapterStr]) {
                     url = audioUrlsV2[currentBook][chapterStr];
                 } else {
                     audioSource = window.audioUrls || window.audioUrlsFR;
                 }
             } else {
-                // Fallback to French if language not available
                 console.warn(`Language ${currentLanguage} not available, falling back to French`);
                 audioSource = window.audioUrls || window.audioUrlsFR;
             }
 
-            // Get URL from selected source
             if (!url && audioSource) {
                 url = audioSource[currentBook] && audioSource[currentBook][chapterStr];
             }
 
-            if (!url) { console.error("AUDIO URL NOT FOUND", {currentLanguage, currentBook, chapter, langAudioVar}); alert("MP3 introuvable pour "+currentLanguage+" livre "+currentBook+" chapitre "+chapter); return; }
+            if (!url) {
+                console.error("AUDIO URL NOT FOUND", {currentLanguage, currentBook, chapter, langAudioVar});
+                alert("MP3 introuvable pour " + currentLanguage + " livre " + currentBook + " chapitre " + chapter);
+                return;
+            }
+
             const audio = document.getElementById('audio');
             audio.src = url;
-            // audio.play() - user must click
+
             const book = books.find(b => b.num === currentBook);
-            // Construire le titre avec le nom traduit
+
             const bookNames = BOOK_NAMES[currentLanguage] || BOOK_NAMES.FR;
             const bookIndex = parseInt(currentBook) - 1;
-            const bookName = bookNames[bookIndex] || book.name;
+            const bookName = bookNames[bookIndex] || (book ? book.name : currentBook);
+
             const chapterWord = currentLanguage === 'PT' ? 'Cap.' : 'Ch.';
             let displayTitle = bookName + ' - ' + chapterWord + String(chapter).padStart(2, '0');
-            // Ajouter le titre du chapitre depuis chapterTitles
-            if (chapterTitles && chapterTitles[currentBook] && chapterTitles[currentBook][chapterStr]) {
+
+            if (typeof chapterTitles !== 'undefined' && chapterTitles && chapterTitles[currentBook] && chapterTitles[currentBook][chapterStr]) {
                 displayTitle += ' - ' + chapterTitles[currentBook][chapterStr];
             }
+
             document.getElementById('player-title').textContent = displayTitle;
             document.getElementById('chapter-select').value = chapter;
             checkV2Available();
-            document.getElementById('prev-btn').disabled = chapter <= 1;
-            document.getElementById('next-btn').disabled = chapter >= book.chapters;
+
+            if (book) {
+                document.getElementById('prev-btn').disabled = chapter <= 1;
+                document.getElementById('next-btn').disabled = chapter >= book.chapters;
+            }
 
             // Activer automatiquement les paroles
             if (!lyricsVisible) {
@@ -1191,6 +1151,8 @@
 
         // FONCTION: Activer/Desactiver la lecture continue du livre
         function togglePlayEntireBook() {
+            const t = window.getTranslation || ((key) => null);
+
             autoPlayEnabled = !autoPlayEnabled;
             const playBookBtn = document.getElementById('playBookBtn');
             const playBookIcon = document.getElementById('playBookIcon');
@@ -1198,28 +1160,23 @@
             const bookProgress = document.getElementById('bookProgress');
 
             if (autoPlayEnabled) {
-                // Activer la lecture continue
                 playBookBtn.classList.add('playing');
                 playBookIcon.textContent = '■';
                 playBookText.textContent = t('readerStopBook') || 'Arreter lecture';
                 bookProgress.style.display = 'inline-block';
 
-                // Demarrer depuis le chapitre 1
                 playChapter(1);
                 updateBookProgress();
 
-                // Auto-play
                 setTimeout(() => {
                     document.getElementById('audio').play();
                 }, 300);
             } else {
-                // Desactiver la lecture continue
                 playBookBtn.classList.remove('playing');
                 playBookIcon.textContent = '▶';
                 playBookText.textContent = t('readerPlayBook') || 'Lire tout le livre';
                 bookProgress.style.display = 'none';
 
-                // Arreter la lecture
                 const audio = document.getElementById('audio');
                 audio.pause();
             }
@@ -1227,34 +1184,40 @@
 
         // FONCTION: Mettre a jour l'affichage de la progression
         function updateBookProgress() {
+            const t = window.getTranslation || ((key) => null);
             const bookProgress = document.getElementById('bookProgress');
             bookProgress.textContent = (t('readerChapter') || 'Chapitre') + ' ' + currentChapter + ' / ' + totalBookChapters;
         }
 
         document.addEventListener('click', e => {
-            const book = e.target.closest('.book');
-            if (book && book.dataset.available === 'true') {
-                playBook(book.dataset.num, parseInt(book.dataset.chapters));
+            const bookEl = e.target.closest('.book');
+            if (bookEl && bookEl.dataset.available === 'true') {
+                playBook(bookEl.dataset.num, parseInt(bookEl.dataset.chapters));
             }
         });
+
         document.getElementById('chapter-select').addEventListener('change', e => {
             playChapter(parseInt(e.target.value));
         });
+
         document.getElementById('prev-btn').addEventListener('click', () => {
             if (currentChapter > 1) playChapter(currentChapter - 1);
         });
+
         document.getElementById('next-btn').addEventListener('click', () => {
             const book = books.find(b => b.num === currentBook);
-            if (currentChapter < book.chapters) playChapter(currentChapter + 1);
+            if (book && currentChapter < book.chapters) playChapter(currentChapter + 1);
         });
+
         document.getElementById('audio').addEventListener('ended', () => {
+            const t = window.getTranslation || ((key) => null);
             const book = books.find(b => b.num === currentBook);
 
-            // Lecture automatique du prochain chapitre (avec ou sans autoplay)
+            if (!book) return;
+
             if (currentChapter < book.chapters) {
                 playChapter(currentChapter + 1);
             } else if (autoPlayEnabled) {
-                // Fin du livre atteinte en mode autoplay: arreter
                 autoPlayEnabled = false;
                 document.getElementById('playBookBtn').classList.remove('playing');
                 document.getElementById('playBookIcon').textContent = '▶';
@@ -1263,22 +1226,22 @@
             }
         });
 
-    // === SELECTEUR DE LANGUES ===
-    // UNIVERSAL LANGUAGE CONFIGURATION - Auto-updated by generate-all-audio-urls.py
-    const LANGUAGES = {
-        FR: { flag: '🇫🇷', name: 'Francais', chapters: 1189, total: 1189 },
-        EN: { flag: '🇬🇧', name: 'English', chapters: 0, total: 1189 },
-        PT: { flag: '🇧🇷', name: 'Portugues', chapters: 434, total: 1189 },
-        ES: { flag: '🇪🇸', name: 'Espanol', chapters: 0, total: 1189 },
-        DE: { flag: '🇩🇪', name: 'Deutsch', chapters: 0, total: 1189 },
-        IT: { flag: '🇮🇹', name: 'Italiano', chapters: 0, total: 1189 },
-        RU: { flag: '🇷🇺', name: 'Russian', chapters: 0, total: 1189 },
-        AR: { flag: '🇸🇦', name: 'Arabic', chapters: 0, total: 1189 },
-        ZH: { flag: '🇨🇳', name: 'Chinese', chapters: 0, total: 1189 },
-        HI: { flag: '🇮🇳', name: 'Hindi', chapters: 0, total: 1189 },
-        TL: { flag: '🇵🇭', name: 'Tagalog', chapters: 0, total: 1189 },
-        KO: { flag: '🇰🇷', name: 'Korean', chapters: 0, total: 1189 }
-    };
+        // === SELECTEUR DE LANGUES ===
+        // UNIVERSAL LANGUAGE CONFIGURATION - Auto-updated by generate-all-audio-urls.py
+        const LANGUAGES = {
+            FR: { flag: '🇫🇷', name: 'Francais', chapters: 1189, total: 1189 },
+            EN: { flag: '🇬🇧', name: 'English', chapters: 0, total: 1189 },
+            PT: { flag: '🇧🇷', name: 'Portugues', chapters: 434, total: 1189 },
+            ES: { flag: '🇪🇸', name: 'Espanol', chapters: 0, total: 1189 },
+            DE: { flag: '🇩🇪', name: 'Deutsch', chapters: 0, total: 1189 },
+            IT: { flag: '🇮🇹', name: 'Italiano', chapters: 0, total: 1189 },
+            RU: { flag: '🇷🇺', name: 'Russian', chapters: 0, total: 1189 },
+            AR: { flag: '🇸🇦', name: 'Arabic', chapters: 0, total: 1189 },
+            ZH: { flag: '🇨🇳', name: 'Chinese', chapters: 0, total: 1189 },
+            HI: { flag: '🇮🇳', name: 'Hindi', chapters: 0, total: 1189 },
+            TL: { flag: '🇵🇭', name: 'Tagalog', chapters: 0, total: 1189 },
+            KO: { flag: '🇰🇷', name: 'Korean', chapters: 0, total: 1189 }
+        };
 
         renderBooks('old-testament', oldTestament);
         renderBooks('new-testament', newTestament);
@@ -1288,7 +1251,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const bookParam = urlParams.get('book');
         const chapterParam = urlParams.get('chapter');
-        
+
         // === SOLUTION A: Parametres return et section ===
         const returnUrl = urlParams.get('return');
         const sectionParam = urlParams.get('section');
@@ -1311,7 +1274,7 @@
         // Fonction pour afficher le bouton retour (sans menu section)
         function renderBackButton() {
             if (!returnUrl) return;
-            
+
             const backBtn = document.getElementById('sectionBackBtn');
             const isConfessions = returnUrl.includes('confession');
             const backLabels = isConfessions ? {
@@ -1335,9 +1298,8 @@
 
         // Fonction pour afficher le menu section
         function renderSectionMenu() {
-            // Toujours afficher le bouton retour si returnUrl est present
             renderBackButton();
-            
+
             if (!sectionParam || !window.PROMESSES_SECTIONS || !window.PROMESSES_SECTIONS[sectionParam]) {
                 return;
             }
@@ -1347,7 +1309,6 @@
             const sectionLabel = labels[sectionParam] || sectionParam;
             const psalmWord = labels.psalm || 'Psaume';
 
-            // Afficher le titre de la section
             const menuContainer = document.getElementById('sectionMenuContainer');
             const menuTitle = document.getElementById('sectionMenuTitle');
             const chapterList = document.getElementById('sectionChapterList');
@@ -1357,12 +1318,12 @@
 
             chapters.forEach(ch => {
                 const chNum = parseInt(ch.chapter);
-                const subtitle = window.PSALM_SUBTITLES && window.PSALM_SUBTITLES[chNum] 
+                const subtitle = window.PSALM_SUBTITLES && window.PSALM_SUBTITLES[chNum]
                     ? (window.PSALM_SUBTITLES[chNum][currentLanguage] || window.PSALM_SUBTITLES[chNum].FR || '')
                     : '';
-                
+
                 const isActive = ch.book === currentBook && String(ch.chapter) === String(currentChapter);
-                
+
                 const item = document.createElement('a');
                 item.className = 'section-chapter-item' + (isActive ? ' active' : '');
                 item.href = buildSectionUrl(ch.book, ch.chapter);
@@ -1383,213 +1344,207 @@
             const book = books.find(b => b.num === bookParam);
             if (book) {
                 playBook(bookParam, book.chapters);
-                // Attendre que le player soit initialise avant de lancer le chapitre
                 setTimeout(() => {
                     playChapter(parseInt(chapterParam));
-                    // Afficher le menu section si en mode section
                     renderSectionMenu();
                 }, 100);
             }
         }
 
-    // TRANSLATIONS OBJECT - All languages for lecteur.html
-    const TRANSLATIONS = {
-        FR: {
-            readerHeading: "Bible Chantée",
-            readerBackHome: "← Retour accueil",
-            readerAbout: "À propos",
-            readerSubtitle: "La Parole de Dieu en musique worship française",
-            readerBooksAvailable: "livres disponibles",
-            readerOf: "sur",
-            readerChapters: "chapitres",
-            readerSearchPlaceholder: "  un mot  =  un chant  ",
-            readerSearchButton: "🔍 Rechercher",
-            readerOldTestament: "Ancien Testament",
-            readerNewTestament: "Nouveau Testament",
-            readerFooterCopyright: "© 2025 Bible Chantée - Stéphane Cassani - Tous droits d'auteur réservés"
-        },
-        EN: {
-            readerHeading: "Sung Bible",
-            readerBackHome: "← Back home",
-            readerAbout: "About",
-            readerSubtitle: "God's Word in French worship music",
-            readerBooksAvailable: "books available",
-            readerOf: "of",
-            readerChapters: "chapters",
-            readerSearchPlaceholder: "  one word  =  one song  ",
-            readerSearchButton: "🔍 Search",
-            readerOldTestament: "Old Testament",
-            readerNewTestament: "New Testament",
-            readerFooterCopyright: "© 2025 Sung Bible - Stéphane Cassani - All rights reserved"
-        },
-        ES: {
-            readerHeading: "Biblia Cantada",
-            readerBackHome: "← Volver inicio",
-            readerAbout: "Acerca de",
-            readerSubtitle: "La Palabra de Dios en música worship francesa",
-            readerBooksAvailable: "libros disponibles",
-            readerOf: "de",
-            readerChapters: "capítulos",
-            readerSearchPlaceholder: "  una palabra  =  una canción  ",
-            readerSearchButton: "🔍 Buscar",
-            readerOldTestament: "Antiguo Testamento",
-            readerNewTestament: "Nuevo Testamento",
-            readerFooterCopyright: "© 2025 Biblia Cantada - Stéphane Cassani - Todos los derechos reservados"
-        },
-        PT: {
-            readerHeading: "Bíblia Cantada",
-            readerBackHome: "← Voltar início",
-            readerAbout: "Sobre",
-            readerSubtitle: "A Palavra de Deus em música worship portuguesa",
-            readerBooksAvailable: "livros disponíveis",
-            readerOf: "de",
-            readerChapters: "capítulos",
-            readerSearchPlaceholder: "  uma palavra  =  uma canção  ",
-            readerSearchButton: "🔍 Pesquisar",
-            readerOldTestament: "Antigo Testamento",
-            readerNewTestament: "Novo Testamento",
-            readerFooterCopyright: "© 2025 Bíblia Cantada - Stéphane Cassani - Todos os direitos reservados"
-        },
-        DE: {
-            readerHeading: "Gesungene Bibel",
-            readerBackHome: "← Zurück zur Startseite",
-            readerAbout: "Über uns",
-            readerSubtitle: "Gottes Wort in französischer Worship-Musik",
-            readerBooksAvailable: "Bücher verfügbar",
-            readerOf: "von",
-            readerChapters: "Kapitel",
-            readerSearchPlaceholder: "  ein Wort  =  ein Lied  ",
-            readerSearchButton: "🔍 Suchen",
-            readerOldTestament: "Altes Testament",
-            readerNewTestament: "Neues Testament",
-            readerFooterCopyright: "© 2025 Gesungene Bibel - Stéphane Cassani - Alle Rechte vorbehalten"
-        },
-        IT: {
-            readerHeading: "Bibbia Cantata",
-            readerBackHome: "← Torna alla home",
-            readerAbout: "Chi siamo",
-            readerSubtitle: "La Parola di Dio nella musica worship francese",
-            readerBooksAvailable: "libri disponibili",
-            readerOf: "di",
-            readerChapters: "capitoli",
-            readerSearchPlaceholder: "  una parola  =  una canzone  ",
-            readerSearchButton: "🔍 Cerca",
-            readerOldTestament: "Antico Testamento",
-            readerNewTestament: "Nuovo Testamento",
-            readerFooterCopyright: "© 2025 Bibbia Cantata - Stéphane Cassani - Tutti i diritti riservati"
-        },
-        RU: {
-            readerHeading: "Поющая Библия",
-            readerBackHome: "← Вернуться на главную",
-            readerAbout: "О нас",
-            readerSubtitle: "Слово Божье во французской богослужебной музыке",
-            readerBooksAvailable: "книг доступно",
-            readerOf: "из",
-            readerChapters: "глав",
-            readerSearchPlaceholder: "  одно слово  =  одна песня  ",
-            readerSearchButton: "🔍 Поиск",
-            readerOldTestament: "Ветхий Завет",
-            readerNewTestament: "Новый Завет",
-            readerFooterCopyright: "© 2025 Поющая Библия - Стéфан Кассани - Все права защищены"
-        },
-        AR: {
-            readerHeading: "الكتاب المقدس المُغنّى",
-            readerBackHome: "← العودة إلى الصفحة الرئيسية",
-            readerAbout: "عن",
-            readerSubtitle: "كلمة الله في موسيقى العبادة الفرنسية",
-            readerBooksAvailable: "كتب متاحة",
-            readerOf: "من",
-            readerChapters: "فصول",
-            readerSearchPlaceholder: "  كلمة واحدة  =  أغنية واحدة  ",
-            readerSearchButton: "🔍 بحث",
-            readerOldTestament: "العهد القديم",
-            readerNewTestament: "العهد الجديد",
-            readerFooterCopyright: "© 2025 الكتاب المقدس المُغنّى - ستيفان كاساني - جميع الحقوق محفوظة"
-        },
-        ZH: {
-            readerHeading: "歌唱圣经",
-            readerBackHome: "← 返回主页",
-            readerAbout: "关于",
-            readerSubtitle: "法国赞美音乐中的神的话语",
-            readerBooksAvailable: "本书可用",
-            readerOf: "共",
-            readerChapters: "章",
-            readerSearchPlaceholder: "  一个词  =  一首歌  ",
-            readerSearchButton: "🔍 搜索",
-            readerOldTestament: "旧约",
-            readerNewTestament: "新约",
-            readerFooterCopyright: "© 2025 歌唱圣经 - 斯特凡·卡萨尼 - 版权所有"
-        },
-        HI: {
-            readerHeading: "गायी गई बाइबिल",
-            readerBackHome: "← मुख्य पृष्ठ पर वापस जाएं",
-            readerAbout: "के बारे में",
-            readerSubtitle: "फ्रांसीसी उपासना संगीत में परमेश्वर का वचन",
-            readerBooksAvailable: "पुस्तकें उपलब्ध",
-            readerOf: "में से",
-            readerChapters: "अध्याय",
-            readerSearchPlaceholder: "  एक शब्द  =  एक गीत  ",
-            readerSearchButton: "🔍 खोजें",
-            readerOldTestament: "पुराना नियम",
-            readerNewTestament: "नया नियम",
-            readerFooterCopyright: "© 2025 गायी गई बाइबिल - स्टेफ़न कासानी - सर्वाधिकार सुरक्षित"
-        },
-        TL: {
-            readerHeading: "Awiting Bibliya",
-            readerBackHome: "← Bumalik sa home",
-            readerAbout: "Tungkol sa",
-            readerSubtitle: "Ang Salita ng Diyos sa musikang pagsamba ng Pranses",
-            readerBooksAvailable: "mga aklat na available",
-            readerOf: "sa",
-            readerChapters: "mga kabanata",
-            readerSearchPlaceholder: "  isang salita  =  isang awit  ",
-            readerSearchButton: "🔍 Maghanap",
-            readerOldTestament: "Lumang Tipan",
-            readerNewTestament: "Bagong Tipan",
-            readerFooterCopyright: "© 2025 Awiting Bibliya - Stéphane Cassani - Lahat ng karapatan ay nakalaan"
-        },
-        KO: {
-            readerHeading: "노래하는 성경",
-            readerBackHome: "← 홈으로 돌아가기",
-            readerAbout: "소개",
-            readerSubtitle: "프랑스 예배 음악으로 듣는 하나님의 말씀",
-            readerBooksAvailable: "권 사용 가능",
-            readerOf: "총",
-            readerChapters: "장",
-            readerSearchPlaceholder: "  한 단어  =  한 곡  ",
-            readerSearchButton: "🔍 검색",
-            readerOldTestament: "구약",
-            readerNewTestament: "신약",
-            readerFooterCopyright: "© 2025 노래하는 성경 - 스테판 카사니 - 모든 권리 보유"
-        }
-    };
+        // TRANSLATIONS OBJECT - All languages for lecteur.html
+        const TRANSLATIONS = {
+            FR: {
+                readerHeading: "Bible Chantée",
+                readerBackHome: "← Retour accueil",
+                readerAbout: "À propos",
+                readerSubtitle: "La Parole de Dieu en musique worship française",
+                readerBooksAvailable: "livres disponibles",
+                readerOf: "sur",
+                readerChapters: "chapitres",
+                readerSearchPlaceholder: "  un mot  =  un chant  ",
+                readerSearchButton: "🔍 Rechercher",
+                readerOldTestament: "Ancien Testament",
+                readerNewTestament: "Nouveau Testament",
+                readerFooterCopyright: "© 2025 Bible Chantée - Stéphane Cassani - Tous droits d'auteur réservés"
+            },
+            EN: {
+                readerHeading: "Sung Bible",
+                readerBackHome: "← Back home",
+                readerAbout: "About",
+                readerSubtitle: "God's Word in French worship music",
+                readerBooksAvailable: "books available",
+                readerOf: "of",
+                readerChapters: "chapters",
+                readerSearchPlaceholder: "  one word  =  one song  ",
+                readerSearchButton: "🔍 Search",
+                readerOldTestament: "Old Testament",
+                readerNewTestament: "New Testament",
+                readerFooterCopyright: "© 2025 Sung Bible - Stéphane Cassani - All rights reserved"
+            },
+            ES: {
+                readerHeading: "Biblia Cantada",
+                readerBackHome: "← Volver inicio",
+                readerAbout: "Acerca de",
+                readerSubtitle: "La Palabra de Dios en música worship francesa",
+                readerBooksAvailable: "libros disponibles",
+                readerOf: "de",
+                readerChapters: "capítulos",
+                readerSearchPlaceholder: "  una palabra  =  una canción  ",
+                readerSearchButton: "🔍 Buscar",
+                readerOldTestament: "Antiguo Testamento",
+                readerNewTestament: "Nuevo Testamento",
+                readerFooterCopyright: "© 2025 Biblia Cantada - Stéphane Cassani - Todos los derechos reservados"
+            },
+            PT: {
+                readerHeading: "Bíblia Cantada",
+                readerBackHome: "← Voltar início",
+                readerAbout: "Sobre",
+                readerSubtitle: "A Palavra de Deus em música worship portuguesa",
+                readerBooksAvailable: "livros disponíveis",
+                readerOf: "de",
+                readerChapters: "capítulos",
+                readerSearchPlaceholder: "  uma palavra  =  uma canção  ",
+                readerSearchButton: "🔍 Pesquisar",
+                readerOldTestament: "Antigo Testamento",
+                readerNewTestament: "Novo Testamento",
+                readerFooterCopyright: "© 2025 Bíblia Cantada - Stéphane Cassani - Todos os direitos reservados"
+            },
+            DE: {
+                readerHeading: "Gesungene Bibel",
+                readerBackHome: "← Zurück zur Startseite",
+                readerAbout: "Über uns",
+                readerSubtitle: "Gottes Wort in französischer Worship-Musik",
+                readerBooksAvailable: "Bücher verfügbar",
+                readerOf: "von",
+                readerChapters: "Kapitel",
+                readerSearchPlaceholder: "  ein Wort  =  ein Lied  ",
+                readerSearchButton: "🔍 Suchen",
+                readerOldTestament: "Altes Testament",
+                readerNewTestament: "Neues Testament",
+                readerFooterCopyright: "© 2025 Gesungene Bibel - Stéphane Cassani - Alle Rechte vorbehalten"
+            },
+            IT: {
+                readerHeading: "Bibbia Cantata",
+                readerBackHome: "← Torna alla home",
+                readerAbout: "Chi siamo",
+                readerSubtitle: "La Parola di Dio nella musica worship francese",
+                readerBooksAvailable: "libri disponibili",
+                readerOf: "di",
+                readerChapters: "capitoli",
+                readerSearchPlaceholder: "  una parola  =  una canzone  ",
+                readerSearchButton: "🔍 Cerca",
+                readerOldTestament: "Antico Testamento",
+                readerNewTestament: "Nuovo Testamento",
+                readerFooterCopyright: "© 2025 Bibbia Cantata - Stéphane Cassani - Tutti i diritti riservati"
+            },
+            RU: {
+                readerHeading: "Поющая Библия",
+                readerBackHome: "← Вернуться на главную",
+                readerAbout: "О нас",
+                readerSubtitle: "Слово Божье во французской богослужебной музыке",
+                readerBooksAvailable: "книг доступно",
+                readerOf: "из",
+                readerChapters: "глав",
+                readerSearchPlaceholder: "  одно слово  =  одна песня  ",
+                readerSearchButton: "🔍 Поиск",
+                readerOldTestament: "Ветхий Завет",
+                readerNewTestament: "Новый Завет",
+                readerFooterCopyright: "© 2025 Поющая Библия - Стéфан Кассани - Все права защищены"
+            },
+            AR: {
+                readerHeading: "الكتاب المقدس المُغنّى",
+                readerBackHome: "← العودة إلى الصفحة الرئيسية",
+                readerAbout: "عن",
+                readerSubtitle: "كلمة الله في موسيقى العبادة الفرنسية",
+                readerBooksAvailable: "كتب متاحة",
+                readerOf: "من",
+                readerChapters: "فصول",
+                readerSearchPlaceholder: "  كلمة واحدة  =  أغنية واحدة  ",
+                readerSearchButton: "🔍 بحث",
+                readerOldTestament: "العهد القديم",
+                readerNewTestament: "العهد الجديد",
+                readerFooterCopyright: "© 2025 الكتاب المقدس المُغنّى - ستيفان كاساني - جميع الحقوق محفوظة"
+            },
+            ZH: {
+                readerHeading: "歌唱圣经",
+                readerBackHome: "← 返回主页",
+                readerAbout: "关于",
+                readerSubtitle: "法国赞美音乐中的神的话语",
+                readerBooksAvailable: "本书可用",
+                readerOf: "共",
+                readerChapters: "章",
+                readerSearchPlaceholder: "  一个词  =  一首歌  ",
+                readerSearchButton: "🔍 搜索",
+                readerOldTestament: "旧约",
+                readerNewTestament: "新约",
+                readerFooterCopyright: "© 2025 歌唱圣经 - 斯特凡·卡萨尼 - 版权所有"
+            },
+            HI: {
+                readerHeading: "गायी गई बाइबिल",
+                readerBackHome: "← मुख्य पृष्ठ पर वापस जाएं",
+                readerAbout: "के बारे में",
+                readerSubtitle: "फ्रांसीसी उपासना संगीत में परमेश्वर का वचन",
+                readerBooksAvailable: "पुस्तकें उपलब्ध",
+                readerOf: "में से",
+                readerChapters: "अध्याय",
+                readerSearchPlaceholder: "  एक शब्द  =  एक गीत  ",
+                readerSearchButton: "🔍 खोजें",
+                readerOldTestament: "पुराना नियम",
+                readerNewTestament: "नया नियम",
+                readerFooterCopyright: "© 2025 गायी गई बाइबिल - स्टेफ़न कासानी - सर्वाधिकार सुरक्षित"
+            },
+            TL: {
+                readerHeading: "Awiting Bibliya",
+                readerBackHome: "← Bumalik sa home",
+                readerAbout: "Tungkol sa",
+                readerSubtitle: "Ang Salita ng Diyos sa musikang pagsamba ng Pranses",
+                readerBooksAvailable: "mga aklat na available",
+                readerOf: "sa",
+                readerChapters: "mga kabanata",
+                readerSearchPlaceholder: "  isang salita  =  isang awit  ",
+                readerSearchButton: "🔍 Maghanap",
+                readerOldTestament: "Lumang Tipan",
+                readerNewTestament: "Bagong Tipan",
+                readerFooterCopyright: "© 2025 Awiting Bibliya - Stéphane Cassani - Lahat ng karapatan ay nakalaan"
+            },
+            KO: {
+                readerHeading: "노래하는 성경",
+                readerBackHome: "← 홈으로 돌아가기",
+                readerAbout: "소개",
+                readerSubtitle: "프랑스 예배 음악으로 듣는 하나님의 말씀",
+                readerBooksAvailable: "권 사용 가능",
+                readerOf: "총",
+                readerChapters: "장",
+                readerSearchPlaceholder: "  한 단어  =  한 곡  ",
+                readerSearchButton: "🔍 검색",
+                readerOldTestament: "구약",
+                readerNewTestament: "신약",
+                readerFooterCopyright: "© 2025 노래하는 성경 - 스테판 카사니 - 모든 권리 보유"
+            }
+        };
 
-    // INITIALISATION - Appliquer les traductions au chargement
-    function applyTranslations(lang) {
-        if (TRANSLATIONS[lang]) {
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (TRANSLATIONS[lang][key]) {
-                    el.textContent = TRANSLATIONS[lang][key];
-                }
-            });
-            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-                const key = el.getAttribute('data-i18n-placeholder');
-                if (TRANSLATIONS[lang][key]) {
-                    el.placeholder = TRANSLATIONS[lang][key];
-                }
-            });
+        // INITIALISATION - Appliquer les traductions au chargement
+        function applyTranslations(lang) {
+            if (TRANSLATIONS[lang]) {
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (TRANSLATIONS[lang][key]) {
+                        el.textContent = TRANSLATIONS[lang][key];
+                    }
+                });
+                document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                    const key = el.getAttribute('data-i18n-placeholder');
+                    if (TRANSLATIONS[lang][key]) {
+                        el.placeholder = TRANSLATIONS[lang][key];
+                    }
+                });
+            }
+            renderBooks('old-testament', oldTestament);
+            renderBooks('new-testament', newTestament);
         }
-        // Mettre à jour les noms des livres
-        renderBooks('old-testament', oldTestament);
-        renderBooks('new-testament', newTestament);
-    }
 
-    // Appliquer au chargement
-    applyTranslations(currentLanguage);
+        // Appliquer au chargement
+        applyTranslations(currentLanguage);
     </script>
 </body>
 </html>
-
-
-

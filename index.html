@@ -352,7 +352,7 @@
 </header>
 
 <nav>
-  <a href="index.html" data-i18n="navHome">Accueil</a>
+  <a href="index.html" data-lang-link data-i18n="navHome">Accueil</a>
   <a href="promessas.html" data-lang-link data-i18n="navPromises">Promesses</a>
   <a href="about.html" data-lang-link data-i18n="navAbout">À propos</a>
   <a href="lecteur.html" data-lang-link data-i18n="navPlayer">Lecteur</a>
@@ -458,19 +458,19 @@
   <div class="bloc">
     <h2><span class="icon">🚀</span> <span data-i18n="quickAccessTitle">Accès rapides</span></h2>
     <div class="btns-grid">
-      <a href="bible.html" class="btn btn-secondary">
+      <a href="bible.html" data-lang-link class="btn btn-secondary">
         <span class="btn-icon">📖</span> <span data-i18n="btnBibleText">Bible (texte)</span>
       </a>
-      <a href="lecteur.html" class="btn btn-lecteur">
+      <a href="lecteur.html" data-lang-link class="btn btn-lecteur">
         <span class="btn-icon">🎵</span> <span data-i18n="btnPlayer">Lecteur</span>
       </a>
-      <a href="promesses.html" class="btn btn-gold">
+      <a href="promesses.html" data-lang-link class="btn btn-gold">
         <span class="btn-icon">⭐</span> <span data-i18n="btnPromises">Promesses</span>
       </a>
-      <a href="confessions.html" class="btn btn-gold">
+      <a href="confessions.html" data-lang-link class="btn btn-gold">
         <span class="btn-icon">❤</span> <span data-i18n="btnConfessions">Confessions</span>
       </a>
-      <a href="credits-depliant.html" class="btn">
+      <a href="credits-depliant.html" data-lang-link class="btn">
         <span class="btn-icon">📄</span> <span data-i18n="btnPresentation">Presentation</span>
       </a>
       <a href="mailto:info@biblechantee.com" class="btn btn-secondary">
@@ -493,59 +493,47 @@
 
 <footer>
   <div class="footer-links">
-    <a href="mentions-legales.html" data-i18n="footerLegal">Mentions légales</a> |
-    <a href="credits-depliant.html" data-i18n="footerCredits">Crédits</a>
+    <a href="mentions-legales.html" data-lang-link data-i18n="footerLegal">Mentions légales</a> |
+    <a href="credits-depliant.html" data-lang-link data-i18n="footerCredits">Crédits</a>
   </div>
   <p data-i18n="footerMission">Bible Chantée – Projet missionnaire chrétien international</p>
   <p data-i18n="footerCopyright">&copy; 2025 Stéphane Cassani – Tous droits réservés</p>
 </footer>
 
-<!-- Load translations -->
 <script src="translations.js"></script>
 <script src="lang-shared.js"></script>
 
 <script>
-/**
- * INDEX.HTML - Seule page avec boutons de changement de langue
- * Gère localStorage.setItem('selectedLanguage', ...)
- */
-(function() {
+(function () {
   'use strict';
 
-  // Clé localStorage UNIQUE pour tout le site
-  const STORAGE_KEY = 'lang';
   const VALID_LANGUAGES = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];
 
-  // Récupérer la langue initiale
-  function getInitialLanguage() {
-    // 1. URL parameter ?lang=XX
-    const urlParams = new URLSearchParams(window.location.search);
-    const urlLang = urlParams.get('lang');
-    if (urlLang) {
-      const langCode = urlLang.toUpperCase();
-      if (VALID_LANGUAGES.includes(langCode)) {
-        localStorage.setItem(STORAGE_KEY, langCode);
-        return langCode;
-      }
-    }
-
-    // 2. localStorage
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved && VALID_LANGUAGES.includes(saved)) {
-      return saved;
-    }
-
-    // 3. Langue navigateur
-    const browserLang = (navigator.language || navigator.userLanguage || 'fr').split('-')[0].toUpperCase();
-    if (VALID_LANGUAGES.includes(browserLang)) {
-      return browserLang;
-    }
-
-    // 4. Défaut
-    return 'FR';
+  function normalizeLang(v) {
+    if (!v) return null;
+    const x = String(v).trim().toUpperCase();
+    return VALID_LANGUAGES.includes(x) ? x : null;
   }
 
-  // Appliquer les traductions
+  function getCurrentLang() {
+    if (window.BC_LANG && typeof BC_LANG.getCurrentLanguage === 'function') {
+      return BC_LANG.getCurrentLanguage();
+    }
+    const urlParams = new URLSearchParams(window.location.search);
+    return normalizeLang(urlParams.get('lang')) || 'FR';
+  }
+
+  function setCurrentLang(lang) {
+    const v = normalizeLang(lang) || 'FR';
+    if (window.BC_LANG && typeof BC_LANG.setCurrentLanguage === 'function') {
+      BC_LANG.setCurrentLanguage(v);
+    }
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', v);
+    window.history.replaceState({}, '', url.toString());
+    return v;
+  }
+
   function applyTranslations(lang) {
     if (typeof translations === 'undefined') {
       console.error('[index] translations.js non chargé');
@@ -571,77 +559,63 @@
     document.documentElement.lang = langAttrMap[lang] || 'fr';
 
     document.body.dir = (lang === 'AR') ? 'rtl' : 'ltr';
-
-    preserveLanguageInLinks(lang);
   }
 
-  // Préserver langue dans les liens
+  function setActiveButton(lang) {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+  }
+
+  function setLangParamOnHref(href, lang) {
+    try {
+      const u = new URL(href, window.location.origin);
+      u.searchParams.set('lang', lang);
+      return u.pathname + '?' + u.searchParams.toString();
+    } catch {
+      return href;
+    }
+  }
+
   function preserveLanguageInLinks(lang) {
-    document.querySelectorAll('a[href]').forEach(link => {
+    document.querySelectorAll('a[data-lang-link], a[href]').forEach(link => {
       const href = link.getAttribute('href');
+      if (!href) return;
 
-      if (!href ||
-          href.startsWith('http://') ||
-          href.startsWith('https://') ||
-          href.startsWith('mailto:') ||
-          href.startsWith('#') ||
-          href.startsWith('javascript:')) {
+      if (
+        href.startsWith('http://') ||
+        href.startsWith('https://') ||
+        href.startsWith('mailto:') ||
+        href.startsWith('#') ||
+        href.startsWith('javascript:')
+      ) {
         return;
       }
 
-      if (href.includes('?lang=') || href.includes('&lang=')) {
-        return;
-      }
-
-      const separator = href.includes('?') ? '&' : '?';
-      link.setAttribute('href', href + separator + 'lang=' + lang);
+      link.setAttribute('href', setLangParamOnHref(href, lang));
     });
   }
 
-  // Initialisation
-  document.addEventListener('DOMContentLoaded', function() {
-    const currentLang = getInitialLanguage();
+  document.addEventListener('DOMContentLoaded', function () {
+    const lang = setCurrentLang(getCurrentLang());
+    console.log('[index] Langue initiale:', lang);
 
-    // Marquer le bouton actif
+    setActiveButton(lang);
+    applyTranslations(lang);
+    preserveLanguageInLinks(lang);
+
     document.querySelectorAll('.lang-btn').forEach(btn => {
-      if (btn.dataset.lang === currentLang) {
-        btn.classList.add('active');
-      }
-    });
+      btn.addEventListener('click', function () {
+        const chosen = normalizeLang(this.dataset.lang) || 'FR';
+        const newLang = setCurrentLang(chosen);
 
-    // Appliquer traductions
-    applyTranslations(currentLang);
+        setActiveButton(newLang);
+        applyTranslations(newLang);
+        preserveLanguageInLinks(newLang);
 
-    // Gestionnaires de clic sur boutons langue
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', function() {
-        const lang = this.dataset.lang;
-
-        // Sauvegarder dans localStorage (clé UNIQUE)
-        localStorage.setItem(STORAGE_KEY, lang);
-
-        // Mettre à jour UI
-        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-
-        // Appliquer traductions
-        applyTranslations(lang);
-
-        // Mettre à jour tous les liens avec la nouvelle langue
-        if (typeof applyLangToLinks === 'function') {
-          applyLangToLinks();
-        }
-
-        // Mettre à jour URL sans rechargement
-        const url = new URL(window.location.href);
-        url.searchParams.set('lang', lang);
-        window.history.pushState({}, '', url.toString());
-
-        console.log('[index] Langue changée:', lang);
+        console.log('[index] Langue changée:', newLang);
       });
     });
-
-    console.log('[index] Langue initiale:', currentLang);
   });
 })();
 </script>

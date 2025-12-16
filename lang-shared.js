@@ -1,34 +1,71 @@
-const params = new URLSearchParams(window.location.search);
-let currentLanguage =
-  params.get("lang") ||
-  localStorage.getItem("lang") ||
-  "PT";
+/* lang-shared.js — BibleChantée
+   Priority: URL ?lang=XX → localStorage → browser → FR
+*/
 
-localStorage.setItem("lang", currentLanguage);
+(function () {
+  const STORAGE_KEY = "BC_LANG";
+  const VALID_LANGUAGES = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];
+  const DEFAULT_LANG = "FR";
 
-// Helpers pour gestion globale de la langue
-function getLang() {
-  return (localStorage.getItem("lang") || "FR").toUpperCase();
-}
+  function normalizeLang(v) {
+    if (!v) return null;
+    const x = String(v).trim().toUpperCase();
+    return VALID_LANGUAGES.includes(x) ? x : null;
+  }
 
-function setLang(lang) {
-  localStorage.setItem("lang", String(lang || "FR").toUpperCase());
-}
+  function getLangFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return normalizeLang(params.get("lang"));
+  }
 
-function applyLangToLinks() {
-  const lang = getLang();
-  document.querySelectorAll("a[data-lang-link]").forEach(a => {
-    const base = a.getAttribute("href");
-    if (!base) return;
-    const u = new URL(base, window.location.origin);
-    u.searchParams.set("lang", lang);
-    a.setAttribute("href", u.pathname + u.search);
-  });
-}
+  function getLangFromStorage() {
+    try {
+      return normalizeLang(localStorage.getItem(STORAGE_KEY));
+    } catch {
+      return null;
+    }
+  }
 
-// Auto-apply on page load
-if (document.readyState === 'loading') {
-  document.addEventListener("DOMContentLoaded", applyLangToLinks);
-} else {
-  applyLangToLinks();
-}
+  function getLangFromBrowser() {
+    const nav = (navigator.language || navigator.userLanguage || "").toLowerCase();
+    if (!nav) return null;
+    if (nav.startsWith("fr")) return "FR";
+    if (nav.startsWith("pt")) return "PT";
+    if (nav.startsWith("en")) return "EN";
+    if (nav.startsWith("es")) return "ES";
+    if (nav.startsWith("de")) return "DE";
+    if (nav.startsWith("it")) return "IT";
+    if (nav.startsWith("ru")) return "RU";
+    if (nav.startsWith("ar")) return "AR";
+    if (nav.startsWith("zh")) return "ZH";
+    if (nav.startsWith("hi")) return "HI";
+    if (nav.startsWith("tl")) return "TL";
+    if (nav.startsWith("ko")) return "KO";
+    return null;
+  }
+
+  function getCurrentLanguage() {
+    return (
+      getLangFromUrl() ||
+      getLangFromStorage() ||
+      getLangFromBrowser() ||
+      DEFAULT_LANG
+    );
+  }
+
+  function setCurrentLanguage(lang) {
+    const v = normalizeLang(lang) || DEFAULT_LANG;
+    try { localStorage.setItem(STORAGE_KEY, v); } catch {}
+    return v;
+  }
+
+  window.BC_LANG = {
+    VALID_LANGUAGES,
+    DEFAULT_LANG,
+    normalizeLang,
+    getCurrentLanguage,
+    setCurrentLanguage,
+    getLangFromUrl,
+    getLangFromStorage
+  };
+})();
