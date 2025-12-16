@@ -1,155 +1,391 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>10 Confessions – Bible Chantée</title>
-
-  <!-- Langue globale (OBLIGATOIRE AVANT TOUT SCRIPT) -->
-  <script src="lang-shared.js"></script>
-
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0a1628 0%, #1a237e 100%);
-      min-height: 100vh;
-      color: #fff;
-    }
-    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #f5c842;
-      margin-bottom: 20px;
-    }
-    .back-link {
-      display: block;
-      text-align: center;
-      color: #f5c842;
-      text-decoration: none;
-      padding: 10px 25px;
-      border: 2px solid #f5c842;
-      border-radius: 25px;
-      width: fit-content;
-      margin: 0 auto 20px;
-      transition: all 0.3s;
-    }
-    .back-link:hover {
-      background: #f5c842;
-      color: #1a237e;
-    }
-    .subtitle {
-      text-align: center;
-      font-style: italic;
-      color: #b0b0b0;
-      margin-bottom: 40px;
-      font-size: 1.2rem;
-    }
-    .confessions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    .confession-card {
-      background: rgba(30, 58, 95, 0.8);
-      border-radius: 15px;
-      padding: 25px;
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s;
-      text-decoration: none;
-      display: block;
-      color: inherit;
-    }
-    .confession-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(245, 200, 66, 0.3);
-    }
-    .confession-icon { font-size: 3rem; margin-bottom: 15px; }
-    .confession-word { color: #f5c842; font-size: 0.9rem; }
-    .confession-title { font-size: 1.3rem; margin: 10px 0; }
-    .confession-verse { color: #b0b0b0; font-style: italic; margin-bottom: 15px; }
-    .confession-cta {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 8px 16px;
-      background: linear-gradient(135deg, #f5c842, #e0b030);
-      color: #1e3a5f;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Confessions de la Bible Chantee</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a237e 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        
+        .lang-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 15px;
+            background: rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+        }
+        .lang-btn {
+            padding: 8px 16px;
+            background: #1e3a5f;
+            color: #f5c842;
+            border: 1px solid #f5c842;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        .lang-btn:hover, .lang-btn.active {
+            background: #f5c842;
+            color: #1e3a5f;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #f5c842;
+            margin-bottom: 20px;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            color: #f5c842;
+            text-decoration: none;
+            padding: 10px 25px;
+            border: 2px solid #f5c842;
+            border-radius: 25px;
+            width: fit-content;
+            margin: 0 auto 20px;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            background: #f5c842;
+            color: #1a237e;
+        }
+        .subtitle {
+            text-align: center;
+            font-style: italic;
+            color: #b0b0b0;
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+        }
+        
+        .confessions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .confession-card {
+            background: rgba(30, 58, 95, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: block;
+        }
+        .confession-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(245, 200, 66, 0.3);
+        }
+        .confession-icon { font-size: 3rem; margin-bottom: 15px; }
+        .confession-word { color: #f5c842; font-size: 0.9rem; }
+        .confession-title { font-size: 1.3rem; margin: 10px 0; color: #fff; }
+        .confession-verse { color: #b0b0b0; font-style: italic; margin-bottom: 15px; }
+        .confession-cta {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #f5c842 0%, #e0b030 100%);
+            color: #1e3a5f;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            .lang-btn { padding: 6px 10px; font-size: 12px; }
+        }
+    </style>
 </head>
-
 <body>
-<div class="container">
-  <h1 id="pageTitle"></h1>
-  <a href="#" class="back-link" id="backLink"></a>
-  <p class="subtitle" id="subtitle"></p>
-  <div class="confessions-grid" id="confessionsGrid"></div>
-</div>
+    <!-- Langue lue depuis localStorage (définie sur page accueil) -->
+    <script src="lang-shared.js"></script>
 
-<script>
-(function () {
-  const lang = window.currentLanguage || "FR";
+    <div class="container">
+        <h1 id="pageTitle">10 Confessions de la Bible en Musique</h1>
+        <a href="index.html" class="back-link" id="backLink">Retour accueil</a>
+        <p class="subtitle" id="subtitle">Declarez la Parole de Dieu sur votre vie</p>
+        
+        <div class="confessions-grid" id="confessionsGrid"></div>
+    </div>
 
-  const DATA = {
-    FR: {
-      title: "10 Confessions de la Bible Chantée",
-      back: "Retour accueil",
-      subtitle: "Déclare la Parole de Dieu sur ta vie",
-      word: "Confession",
-      listenBtn: "Écouter"
-    },
-    EN: {
-      title: "10 Sung Bible Confessions",
-      back: "Back to Home",
-      subtitle: "Declare God's Word over your life",
-      word: "Confession",
-      listenBtn: "Listen"
+    <script>
+    const DATA = {
+        FR: {
+            title: "10 Confessions de la Bible Chantee",
+            back: "Retour accueil",
+            subtitle: "Declarez la Parole de Dieu sur votre vie",
+            word: "Confession",
+            listenBtn: "Ecouter",
+            items: [
+                ["Je suis enfant de Dieu", "Jean 1:12"],
+                ["Je suis justifie par la foi", "Romains 5:1"],
+                ["Je suis plus que vainqueur", "Romains 8:37"],
+                ["Je peux tout en Christ", "Philippiens 4:13"],
+                ["Dieu pourvoit a tous mes besoins", "Philippiens 4:19"],
+                ["Je suis gueri par ses meurtrissures", "Esaie 53:5"],
+                ["Aucune arme ne prosperera", "Esaie 54:17"],
+                ["Le Seigneur est mon berger", "Psaume 23:1"],
+                ["Je suis beni", "Ephesiens 1:3"],
+                ["L'amour de Dieu est en moi", "Romains 5:5"]
+            ]
+        },
+        EN: {
+            title: "10 Sung Bible Confessions",
+            back: "Back to Home",
+            subtitle: "Declare God's Word over your life",
+            word: "Confession",
+            listenBtn: "Listen",
+            items: [
+                ["I am a child of God", "John 1:12"],
+                ["I am justified by faith", "Romans 5:1"],
+                ["I am more than a conqueror", "Romans 8:37"],
+                ["I can do all things through Christ", "Philippians 4:13"],
+                ["God supplies all my needs", "Philippians 4:19"],
+                ["By His stripes I am healed", "Isaiah 53:5"],
+                ["No weapon shall prosper", "Isaiah 54:17"],
+                ["The Lord is my shepherd", "Psalm 23:1"],
+                ["I am blessed", "Ephesians 1:3"],
+                ["God's love is in me", "Romans 5:5"]
+            ]
+        },
+        PT: {
+            title: "10 Confissoes da Biblia Cantada",
+            back: "Voltar ao inicio",
+            subtitle: "Declare a Palavra de Deus sobre sua vida",
+            word: "Confissao",
+            listenBtn: "Ouvir",
+            items: [
+                ["Sou filho de Deus", "Joao 1:12"],
+                ["Sou justificado pela fe", "Romanos 5:1"],
+                ["Sou mais que vencedor", "Romanos 8:37"],
+                ["Posso todas as coisas em Cristo", "Filipenses 4:13"],
+                ["Deus supre todas as minhas necessidades", "Filipenses 4:19"],
+                ["Pelas suas feridas fui sarado", "Isaias 53:5"],
+                ["Nenhuma arma prosperara", "Isaias 54:17"],
+                ["O Senhor e meu pastor", "Salmo 23:1"],
+                ["Sou abencoado", "Efesios 1:3"],
+                ["O amor de Deus esta em mim", "Romanos 5:5"]
+            ]
+        },
+        ES: {
+            title: "10 Confesiones de la Biblia Cantada",
+            back: "Volver al inicio",
+            subtitle: "Declara la Palabra de Dios sobre tu vida",
+            word: "Confesion",
+            listenBtn: "Escuchar",
+            items: [
+                ["Soy hijo de Dios", "Juan 1:12"],
+                ["Soy justificado por la fe", "Romanos 5:1"],
+                ["Soy mas que vencedor", "Romanos 8:37"],
+                ["Todo lo puedo en Cristo", "Filipenses 4:13"],
+                ["Dios suple todas mis necesidades", "Filipenses 4:19"],
+                ["Por sus llagas fui sanado", "Isaias 53:5"],
+                ["Ninguna arma prosperara", "Isaias 54:17"],
+                ["El Senor es mi pastor", "Salmo 23:1"],
+                ["Soy bendecido", "Efesios 1:3"],
+                ["El amor de Dios esta en mi", "Romanos 5:5"]
+            ]
+        },
+        DE: {
+            title: "10 Bekenntnisse der gesungenen Bibel",
+            back: "Zuruck zur Startseite",
+            subtitle: "Bekenne Gottes Wort uber dein Leben",
+            word: "Bekenntnis",
+            listenBtn: "Anhoren",
+            items: [
+                ["Ich bin ein Kind Gottes", "Johannes 1:12"],
+                ["Ich bin durch Glauben gerechtfertigt", "Romer 5:1"],
+                ["Ich bin mehr als ein Uberwinder", "Romer 8:37"],
+                ["Ich kann alles durch Christus", "Philipper 4:13"],
+                ["Gott versorgt alle meine Bedurfnisse", "Philipper 4:19"],
+                ["Durch seine Wunden bin ich geheilt", "Jesaja 53:5"],
+                ["Keine Waffe wird Erfolg haben", "Jesaja 54:17"],
+                ["Der Herr ist mein Hirte", "Psalm 23:1"],
+                ["Ich bin gesegnet", "Epheser 1:3"],
+                ["Gottes Liebe ist in mir", "Romer 5:5"]
+            ]
+        },
+        IT: {
+            title: "10 Confessioni della Bibbia Cantata",
+            back: "Torna alla home",
+            subtitle: "Dichiara la Parola di Dio sulla tua vita",
+            word: "Confessione",
+            listenBtn: "Ascolta",
+            items: [
+                ["Sono figlio di Dio", "Giovanni 1:12"],
+                ["Sono giustificato per fede", "Romani 5:1"],
+                ["Sono piu che vincitore", "Romani 8:37"],
+                ["Posso ogni cosa in Cristo", "Filippesi 4:13"],
+                ["Dio provvede a ogni mio bisogno", "Filippesi 4:19"],
+                ["Per le sue piaghe sono guarito", "Isaia 53:5"],
+                ["Nessuna arma prospera", "Isaia 54:17"],
+                ["Il Signore e il mio pastore", "Salmo 23:1"],
+                ["Sono benedetto", "Efesini 1:3"],
+                ["L'amore di Dio e in me", "Romani 5:5"]
+            ]
+        },
+        AR: {
+            title: "10 اعترافات الكتاب المقدس المُرنَّم",
+            back: "العودة للرئيسية",
+            subtitle: "أعلن كلمة الله على حياتك",
+            word: "اعتراف",
+            listenBtn: "استمع",
+            items: [
+                ["أنا ابن الله", "يوحنا 1:12"],
+                ["أنا مبرر بالإيمان", "رومية 5:1"],
+                ["أنا أكثر من منتصر", "رومية 8:37"],
+                ["أستطيع كل شيء في المسيح", "فيلبي 4:13"],
+                ["الله يسد جميع احتياجاتي", "فيلبي 4:19"],
+                ["بجراحه شفيت", "إشعياء 53:5"],
+                ["لا سلاح يصلح ضدي", "إشعياء 54:17"],
+                ["الرب راعي", "مزمور 23:1"],
+                ["أنا مبارك", "أفسس 1:3"],
+                ["محبة الله في قلبي", "رومية 5:5"]
+            ]
+        },
+        RU: {
+            title: "10 Исповеданий Библии в песнях",
+            back: "На главную",
+            subtitle: "Провозглашайте Слово Божье",
+            word: "Исповедание",
+            listenBtn: "Слушать",
+            items: [
+                ["Я дитя Божье", "Иоанна 1:12"],
+                ["Я оправдан верой", "Римлянам 5:1"],
+                ["Я более чем победитель", "Римлянам 8:37"],
+                ["Всё могу в Христе", "Филиппийцам 4:13"],
+                ["Бог восполняет все мои нужды", "Филиппийцам 4:19"],
+                ["Ранами Его я исцелён", "Исаия 53:5"],
+                ["Никакое оружие не будет успешным", "Исаия 54:17"],
+                ["Господь - Пастырь мой", "Псалом 23:1"],
+                ["Я благословлён", "Ефесянам 1:3"],
+                ["Любовь Божья во мне", "Римлянам 5:5"]
+            ]
+        },
+        ZH: {
+            title: "10首圣经宣告 - 唱诵圣经",
+            back: "返回首页",
+            subtitle: "宣告神的话语在你的生命中",
+            word: "宣告",
+            listenBtn: "聆听",
+            items: [
+                ["我是神的儿女", "约翰福音 1:12"],
+                ["我因信称义", "罗马书 5:1"],
+                ["我得胜有余", "罗马书 8:37"],
+                ["靠着基督我凡事都能", "腓立比书 4:13"],
+                ["神供应我一切所需", "腓立比书 4:19"],
+                ["因他受的鞭伤我得医治", "以赛亚书 53:5"],
+                ["没有兵器能害我", "以赛亚书 54:17"],
+                ["耶和华是我的牧者", "诗篇 23:1"],
+                ["我是蒙福的", "以弗所书 1:3"],
+                ["神的爱在我里面", "罗马书 5:5"]
+            ]
+        },
+        HI: {
+            title: "10 गाए गए बाइबिल अंगीकार",
+            back: "होम पर वापस",
+            subtitle: "अपने जीवन पर परमेश्वर के वचन की घोषणा करें",
+            word: "अंगीकार",
+            listenBtn: "सुनें",
+            items: [
+                ["मैं परमेश्वर की संतान हूं", "यूहन्ना 1:12"],
+                ["मैं विश्वास से धर्मी ठहराया गया", "रोमियों 5:1"],
+                ["मैं जयवंत से भी बढ़कर हूं", "रोमियों 8:37"],
+                ["मसीह में मैं सब कुछ कर सकता हूं", "फिलिप्पियों 4:13"],
+                ["परमेश्वर मेरी सब आवश्यकताएं पूरी करता है", "फिलिप्पियों 4:19"],
+                ["उसके मार खाने से मैं चंगा हुआ", "यशायाह 53:5"],
+                ["कोई हथियार सफल नहीं होगा", "यशायाह 54:17"],
+                ["यहोवा मेरा चरवाहा है", "भजन 23:1"],
+                ["मैं धन्य हूं", "इफिसियों 1:3"],
+                ["परमेश्वर का प्रेम मुझ में है", "रोमियों 5:5"]
+            ]
+        },
+        TL: {
+            title: "10 Pangungumpisal ng Bibliang Inaawit",
+            back: "Bumalik sa Home",
+            subtitle: "Ipahayag ang Salita ng Diyos sa iyong buhay",
+            word: "Pangungumpisal",
+            listenBtn: "Makinig",
+            items: [
+                ["Ako ay anak ng Diyos", "Juan 1:12"],
+                ["Ako ay pinawalang-sala", "Roma 5:1"],
+                ["Ako ay higit pa sa mananagumpay", "Roma 8:37"],
+                ["Kaya kong gawin ang lahat kay Cristo", "Filipos 4:13"],
+                ["Tinutugunan ng Diyos ang lahat ng pangangailangan", "Filipos 4:19"],
+                ["Sa kanyang mga sugat ako ay gumaling", "Isaias 53:5"],
+                ["Walang sandata ang magtatagumpay", "Isaias 54:17"],
+                ["Ang Panginoon ang aking pastol", "Awit 23:1"],
+                ["Ako ay pinagpala", "Efeso 1:3"],
+                ["Ang pag-ibig ng Diyos ay nasa akin", "Roma 5:5"]
+            ]
+        },
+        KO: {
+            title: "노래하는 10가지 성경 고백",
+            back: "홈으로",
+            subtitle: "당신의 삶에 하나님의 말씀을 선포하세요",
+            word: "고백",
+            listenBtn: "듣기",
+            items: [
+                ["나는 하나님의 자녀입니다", "요한복음 1:12"],
+                ["나는 믿음으로 의롭게 되었습니다", "로마서 5:1"],
+                ["나는 넉넉히 이기는 자입니다", "로마서 8:37"],
+                ["나는 그리스도 안에서 모든 것을 할 수 있습니다", "빌립보서 4:13"],
+                ["하나님이 나의 모든 필요를 채우십니다", "빌립보서 4:19"],
+                ["그의 채찍에 맞음으로 나는 나음을 받았습니다", "이사야 53:5"],
+                ["어떤 무기도 형통하지 못합니다", "이사야 54:17"],
+                ["여호와는 나의 목자시니", "시편 23:1"],
+                ["나는 복 받은 자입니다", "에베소서 1:3"],
+                ["하나님의 사랑이 내 안에 있습니다", "로마서 5:5"]
+            ]
+        }
+    };
+
+    const ICONS = ["😊", "🤍", "💪", "🏆", "🌱", "🙏", "⭐", "🎵", "🙌", "❤️"];
+    let currentLang = 'FR';
+
+    function render(lang) {
+        currentLang = lang;
+        const d = DATA[lang] || DATA.FR;
+        
+        document.getElementById('pageTitle').textContent = d.title;
+        document.getElementById('backLink').textContent = d.back;
+        document.getElementById('subtitle').textContent = d.subtitle;
+        
+        const grid = document.getElementById('confessionsGrid');
+        grid.innerHTML = '';
+        
+        d.items.forEach((item, i) => {
+            const card = document.createElement('a');
+            card.className = 'confession-card';
+            card.href = `confession-detail.html?id=${i}&lang=${lang}`;
+            card.innerHTML = `
+                <div class="confession-icon">${ICONS[i]}</div>
+                <div class="confession-word">${d.word} ${i + 1}</div>
+                <h3 class="confession-title">${item[0]}</h3>
+                <p class="confession-verse">${item[1]}</p>
+                <div class="confession-cta">${d.listenBtn} &#9658;</div>
+            `;
+            grid.appendChild(card);
+        });
     }
-  };
 
-  const ITEMS = [
-    ["Je suis enfant de Dieu", "Jean 1:12"],
-    ["Je suis justifié par la foi", "Romains 5:1"],
-    ["Je suis plus que vainqueur", "Romains 8:37"],
-    ["Je peux tout en Christ", "Philippiens 4:13"],
-    ["Dieu pourvoit à mes besoins", "Philippiens 4:19"],
-    ["Je suis guéri", "Ésaïe 53:5"],
-    ["Aucune arme ne prospère", "Ésaïe 54:17"],
-    ["Le Seigneur est mon berger", "Psaume 23:1"],
-    ["Je suis béni", "Éphésiens 1:3"],
-    ["L’amour de Dieu est en moi", "Romains 5:5"]
-  ];
-
-  const ICONS = ["😊","🤍","💪","🏆","🌱","🙏","⭐","🎵","🙌","❤️"];
-  const d = DATA[lang] || DATA.FR;
-
-  document.getElementById("pageTitle").textContent = d.title;
-  document.getElementById("subtitle").textContent = d.subtitle;
-  document.getElementById("backLink").textContent = d.back;
-  document.getElementById("backLink").href = `index.html?lang=${lang}`;
-
-  const grid = document.getElementById("confessionsGrid");
-
-  ITEMS.forEach((item, i) => {
-    const a = document.createElement("a");
-    a.className = "confession-card";
-    a.href = `lecteur.html?confession=${i}&lang=${lang}&return=confessions.html`;
-    a.innerHTML = `
-      <div class="confession-icon">${ICONS[i]}</div>
-      <div class="confession-word">${d.word} ${i+1}</div>
-      <h3 class="confession-title">${item[0]}</h3>
-      <p class="confession-verse">${item[1]}</p>
-      <div class="confession-cta">${d.listenBtn} ▶</div>
-    `;
-    grid.appendChild(a);
-  });
-})();
-</script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Utiliser la langue depuis lang-shared.js (lue depuis localStorage)
+        const lang = window.currentLanguage || 'FR';
+        render(lang);
+    });
+    </script>
 </body>
 </html>
