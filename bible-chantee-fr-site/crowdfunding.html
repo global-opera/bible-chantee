@@ -4,295 +4,269 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soutenir Bible Chantée - Crowdfunding</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #1a1a6e 0%, #2d2d8a 100%);
-            color: white;
-            padding: 3rem 2rem;
+        /* Styles spécifiques crowdfunding */
+        .crowdfunding-hero {
+            padding: 4rem 0;
             text-align: center;
         }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
+        
+        .crowdfunding-hero h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
-
-        .hero .subtitle {
-            font-size: 1.2rem;
-            color: #ffd700;
-            margin-bottom: 1rem;
+        
+        .crowdfunding-hero .subtitle {
+            font-size: 1.3rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
         }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
+        
+        .donate-section {
+            padding: 3rem 0;
         }
-
-        .section {
-            background: white;
-            padding: 2rem;
-            margin: 1.5rem 0;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .section h2 {
-            font-family: 'Playfair Display', serif;
-            color: #1a1a6e;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
+        
         .gofundme-btn {
-            display: block;
+            display: inline-block;
             background: linear-gradient(135deg, #00b964 0%, #00a857 100%);
             color: white;
-            padding: 1.2rem 2rem;
+            padding: 1.2rem 3rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
             font-size: 1.3rem;
-            text-align: center;
             transition: all 0.3s ease;
             box-shadow: 0 8px 25px rgba(0, 185, 100, 0.3);
-            max-width: 400px;
-            margin: 1.5rem auto;
+            margin: 1rem;
         }
-
+        
         .gofundme-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 12px 35px rgba(0, 185, 100, 0.4);
         }
-
+        
         .payment-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
-
+        
         .payment-card {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
             text-align: center;
-            border: 2px solid #e0e0e0;
             transition: all 0.3s ease;
         }
-
+        
         .payment-card:hover {
-            border-color: #1a1a6e;
-            transform: translateY(-3px);
+            border-color: var(--gold);
+            transform: translateY(-5px);
         }
-
+        
         .payment-card .icon {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
-
+        
         .payment-card h3 {
-            color: #1a1a6e;
-            margin-bottom: 0.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
         }
-
+        
         .payment-card .value {
             font-family: monospace;
-            font-size: 1rem;
-            background: white;
-            padding: 0.5rem;
-            border-radius: 5px;
+            font-size: 1.1rem;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.8rem;
+            border-radius: 8px;
             word-break: break-all;
-            border: 1px solid #ddd;
-        }
-
-        .payment-card .note {
-            font-size: 0.85rem;
-            color: #666;
-            margin-top: 0.5rem;
-        }
-
-        .copy-btn {
-            background: #1a1a6e;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             color: white;
+        }
+        
+        .payment-card .note {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 0.8rem;
+        }
+        
+        .copy-btn {
+            background: var(--gold);
+            color: var(--dark);
             border: none;
-            padding: 0.4rem 1rem;
-            border-radius: 5px;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
             cursor: pointer;
-            margin-top: 0.5rem;
-            font-size: 0.85rem;
+            margin-top: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
         }
-
+        
         .copy-btn:hover {
-            background: #2d2d8a;
+            transform: scale(1.05);
         }
-
-        .impact-list {
-            list-style: none;
-            padding: 0;
+        
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
-
-        .impact-list li {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #eee;
+        
+        .impact-item {
             display: flex;
             align-items: center;
             gap: 1rem;
-        }
-
-        .impact-list li:last-child {
-            border-bottom: none;
-        }
-
-        .impact-list .emoji {
-            font-size: 1.5rem;
-        }
-
-        .progress-section {
-            text-align: center;
-            padding: 1.5rem;
-            background: linear-gradient(135deg, #ffd700 0%, #ffed4a 100%);
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
-            margin-bottom: 1.5rem;
         }
-
-        .progress-section h3 {
-            color: #1a1a6e;
-            margin-bottom: 0.5rem;
+        
+        .impact-item .emoji {
+            font-size: 2rem;
         }
-
-        .stats-grid {
+        
+        .impact-item p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        
+        .missionary-note {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
+            border-left: 4px solid var(--gold);
+            padding: 1.5rem 2rem;
+            border-radius: 0 10px 10px 0;
+            margin: 2rem 0;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        .missionary-note strong {
+            color: var(--gold);
+        }
+        
+        .quote-section {
+            text-align: center;
+            padding: 3rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.2rem;
+        }
+        
+        .quote-section .verse {
+            font-weight: 600;
+            color: var(--gold);
+            margin-top: 1rem;
+            font-style: normal;
+        }
+        
+        .progress-stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-top: 1rem;
+            gap: 2rem;
+            margin: 2rem 0;
         }
-
-        .stat-item {
-            background: rgba(255,255,255,0.8);
-            padding: 1rem;
-            border-radius: 8px;
-        }
-
-        .stat-number {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #1a1a6e;
-        }
-
-        .stat-label {
-            font-size: 0.85rem;
-            color: #555;
-        }
-
-        .quote {
+        
+        .progress-stat {
             text-align: center;
-            font-style: italic;
-            color: #666;
             padding: 1.5rem;
-            border-left: 4px solid #ffd700;
-            background: #fffef5;
-            margin: 1.5rem 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-
-        .quote .verse {
-            font-weight: 600;
-            color: #1a1a6e;
+        
+        .progress-stat .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+        
+        .progress-stat .label {
+            color: rgba(255, 255, 255, 0.7);
             margin-top: 0.5rem;
         }
-
-        .back-link {
+        
+        .divider {
             text-align: center;
-            margin-top: 2rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin: 2rem 0;
         }
-
-        .back-link a {
-            color: #1a1a6e;
-            text-decoration: none;
-        }
-
-        .back-link a:hover {
-            text-decoration: underline;
-        }
-
-        .missionary-note {
-            background: linear-gradient(135deg, #fff8dc 0%, #fffef5 100%);
-            border-left: 4px solid #ffd700;
-            padding: 1rem 1.5rem;
-            border-radius: 0 8px 8px 0;
-            margin-top: 1.5rem;
-            text-align: center;
-        }
-
-        .missionary-note strong {
-            color: #1a1a6e;
-        }
-
-        @media (max-width: 600px) {
-            .hero h1 {
+        
+        @media (max-width: 768px) {
+            .progress-stats {
+                grid-template-columns: 1fr;
+            }
+            .crowdfunding-hero h1 {
                 font-size: 1.8rem;
-            }
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-            .payment-grid {
-                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <h1>🎵 Soutenez Bible Chantée</h1>
-        <p class="subtitle">La Bible en musique, gratuite pour le monde entier</p>
-    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🎵</span>
+                <span class="logo-text">BIBLE CHANTÉE</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="livres.html">Livres</a></li>
+                <li><a href="player.html">Player</a></li>
+                <li><a href="crowdfunding.html" class="active">Soutenir</a></li>
+                <li><a href="about.html">À Propos</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <div class="container">
-        <div class="section">
-            <div class="progress-section">
-                <h3>📊 Déjà accompli</h3>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">2378</div>
-                        <div class="stat-label">Chapitres générés</div>
+    <!-- Hero Section -->
+    <header class="hero crowdfunding-hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">💝 Soutenez le Projet</div>
+                <h1 class="hero-title">
+                    <span class="gradient-text">Soutenir Bible Chantée</span>
+                </h1>
+                <p class="subtitle">La Bible en musique, gratuite pour le monde entier</p>
+                
+                <div class="progress-stats">
+                    <div class="progress-stat">
+                        <div class="number">2378</div>
+                        <div class="label">Chapitres générés</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">2</div>
-                        <div class="stat-label">Langues complètes</div>
+                    <div class="progress-stat">
+                        <div class="number">2</div>
+                        <div class="label">Langues complètes</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">12</div>
-                        <div class="stat-label">Langues prévues</div>
+                    <div class="progress-stat">
+                        <div class="number">12</div>
+                        <div class="label">Langues prévues</div>
                     </div>
                 </div>
             </div>
+        </div>
+    </header>
 
-            <h2>💝 Faire un don</h2>
+    <!-- Donate Section -->
+    <section class="donate-section">
+        <div class="container">
+            <h2 class="section-title">💝 Faire un Don</h2>
             
-            <a href="https://gofund.me/65145a53b" target="_blank" class="gofundme-btn">
-                🚀 Donner via GoFundMe
-            </a>
-
-            <p style="text-align: center; color: #666; margin: 1rem 0;">ou par virement direct (sans frais)</p>
-
+            <div style="text-align: center;">
+                <a href="https://gofund.me/65145a53b" target="_blank" class="gofundme-btn">
+                    🚀 Donner via GoFundMe
+                </a>
+            </div>
+            
+            <p class="divider">— ou par virement direct (sans frais) —</p>
+            
             <div class="payment-grid">
                 <div class="payment-card">
                     <div class="icon">🏦</div>
@@ -313,45 +287,80 @@
                 <div class="payment-card">
                     <div class="icon">💳</div>
                     <h3>PayPal</h3>
-                    <div class="value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="85f6e6e4f6f6e4ebecc5e2e8e4ece9abe6eae8">[email&#160;protected]</a></div>
+                    <div class="value">scassani@gmail.com</div>
                     <div class="note">Mondial</div>
                     <button class="copy-btn" onclick="copyToClipboard('scassani@gmail.com')">Copier</button>
                 </div>
             </div>
-
+            
             <div class="missionary-note">
                 🙏 <strong>10% de tous les dons seront reversés à des œuvres missionnaires chrétiennes.</strong>
             </div>
         </div>
+    </section>
 
-        <div class="section">
-            <h2>🌍 Votre don permet</h2>
-            <ul class="impact-list">
-                <li><span class="emoji">👶</span> Aux enfants d'apprendre la Bible en chantant</li>
-                <li><span class="emoji">📖</span> Aux non-lecteurs de découvrir la Parole de Dieu</li>
-                <li><span class="emoji">⛪</span> Aux églises persécutées d'accéder aux Écritures</li>
-                <li><span class="emoji">👨‍👩‍👧</span> Aux familles de prier ensemble en musique</li>
-                <li><span class="emoji">🌐</span> À 12 langues d'être générées gratuitement</li>
-                <li><span class="emoji">📱</span> À l'application mobile d'être développée</li>
-            </ul>
+    <!-- Impact Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">🌍 Votre Don Permet</h2>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="emoji">👶</span>
+                    <p>Aux enfants d'apprendre la Bible en chantant</p>
+                </div>
+                <div class="impact-item">
+                    <span class="emoji">📖</span>
+                    <p>Aux non-lecteurs de découvrir la Parole de Dieu</p>
+                </div>
+                <div class="impact-item">
+                    <span class="emoji">⛪</span>
+                    <p>Aux églises persécutées d'accéder aux Écritures</p>
+                </div>
+                <div class="impact-item">
+                    <span class="emoji">👨‍👩‍👧</span>
+                    <p>Aux familles de prier ensemble en musique</p>
+                </div>
+                <div class="impact-item">
+                    <span class="emoji">🌐</span>
+                    <p>À 12 langues d'être générées gratuitement</p>
+                </div>
+                <div class="impact-item">
+                    <span class="emoji">📱</span>
+                    <p>À l'application mobile d'être développée</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="quote">
+    <!-- Quote Section -->
+    <div class="quote-section">
+        <div class="container">
             "Chantez à l'Éternel un cantique nouveau !<br>
             Chantez à l'Éternel, vous tous, habitants de la terre !"
             <div class="verse">— Psaume 96:1</div>
         </div>
-
-        <div class="back-link">
-            <a href="/">← Retour à Bible Chantée</a>
-        </div>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">🎵</span>
+                    <span>Bible Chantée</span>
+                </div>
+                <p>© 2025 Bible Chantée - Stéphane Cassani. Tous droits réservés.</p>
+                <p><a href="index.html">← Retour à l'accueil</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
                 alert('Copié : ' + text);
             });
         }
-
-        // Gestion
+    </script>
+</body>
+</html>
