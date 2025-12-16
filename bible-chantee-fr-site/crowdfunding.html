@@ -33,7 +33,6 @@
             color: var(--text-primary);
         }
 
-        /* Header */
         .header {
             text-align: center;
             padding: 3rem 2rem;
@@ -53,7 +52,6 @@
             color: var(--text-secondary);
         }
 
-        /* Navigation */
         .nav {
             display: flex;
             justify-content: center;
@@ -75,14 +73,12 @@
             color: var(--text-primary);
         }
 
-        /* Container */
         .container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        /* Cards */
         .card {
             background: var(--bg-card);
             border-radius: 16px;
@@ -103,6 +99,48 @@
 
         .card h2 .icon {
             font-size: 1.5rem;
+        }
+
+        /* Objectif Card */
+        .objectif-card {
+            background: linear-gradient(135deg, #1e3a5f 0%, #0f2744 100%);
+            border: 2px solid var(--accent-gold);
+            text-align: center;
+            padding: 2.5rem;
+        }
+
+        .objectif-amount {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin: 1rem 0;
+        }
+
+        .objectif-label {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        .progress-bar-container {
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            height: 20px;
+            margin: 1.5rem 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-gold), #f5d742);
+            border-radius: 10px;
+            width: 2%;
+            transition: width 0.5s;
+        }
+
+        .progress-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
         }
 
         /* Stats Grid */
@@ -139,13 +177,14 @@
             display: inline-block;
             background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
             color: white;
-            padding: 1rem 2.5rem;
+            padding: 1.2rem 3rem;
             border-radius: 50px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
+            font-weight: 700;
+            font-size: 1.2rem;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+            margin: 0.5rem;
         }
 
         .gofundme-btn:hover {
@@ -212,20 +251,49 @@
             margin-top: 0.5rem;
         }
 
-        .copy-btn {
+        .payment-btn {
+            display: inline-block;
             background: var(--accent-blue);
             color: white;
             border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .payment-btn:hover {
+            background: #5aa0e9;
+            transform: scale(1.05);
+        }
+
+        .payment-btn.paypal {
+            background: #0070ba;
+        }
+
+        .payment-btn.paypal:hover {
+            background: #003087;
+        }
+
+        .copy-btn {
+            background: transparent;
+            color: var(--accent-blue);
+            border: 1px solid var(--accent-blue);
             padding: 0.4rem 1rem;
             border-radius: 20px;
             cursor: pointer;
-            margin-top: 0.75rem;
-            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
             transition: all 0.3s;
         }
 
         .copy-btn:hover {
-            background: #5aa0e9;
+            background: var(--accent-blue);
+            color: white;
         }
 
         /* Missionary Note */
@@ -333,9 +401,37 @@
             gap: 0.75rem;
         }
 
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--success-green);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            display: none;
+            z-index: 1000;
+            font-weight: 600;
+        }
+
+        .toast.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateX(-50%) translateY(20px); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2rem;
+            }
+            .objectif-amount {
+                font-size: 2.5rem;
             }
             .nav {
                 gap: 1rem;
@@ -365,6 +461,61 @@
     </nav>
 
     <div class="container">
+        <!-- Objectif Card -->
+        <div class="card objectif-card">
+            <h2 style="justify-content: center; color: var(--accent-gold);"><span class="icon">🎯</span> Objectif de la collecte</h2>
+            <div class="objectif-amount">CHF 100'000</div>
+            <div class="objectif-label">Pour finaliser les 12 langues et l'application mobile</div>
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="progress-text">Collecte en cours - Chaque don compte !</div>
+        </div>
+
+        <!-- Donate Card -->
+        <div class="card">
+            <h2><span class="icon">💝</span> Faire un don maintenant</h2>
+            
+            <div class="center" style="margin-bottom: 1.5rem;">
+                <a href="https://gofund.me/65145a53b" target="_blank" class="gofundme-btn">
+                    🚀 Donner via GoFundMe
+                </a>
+            </div>
+            
+            <p class="divider">— ou par virement direct (sans frais de plateforme) —</p>
+            
+            <div class="payment-grid">
+                <div class="payment-card">
+                    <div class="icon">🏦</div>
+                    <h3>Virement bancaire</h3>
+                    <div class="value">CH96 0900 0000 1422 5706 6</div>
+                    <div class="note">PostFinance Suisse<br>Stéphane Cassani</div>
+                    <button class="copy-btn" onclick="copyToClipboard('CH9609000000142257066', 'IBAN copié !')">📋 Copier IBAN</button>
+                </div>
+
+                <div class="payment-card">
+                    <div class="icon">📱</div>
+                    <h3>Twint</h3>
+                    <div class="value">+41 78 212 53 63</div>
+                    <div class="note">Suisse uniquement<br>Scannez ou ajoutez le numéro</div>
+                    <button class="copy-btn" onclick="copyToClipboard('+41782125363', 'Numéro copié !')">📋 Copier numéro</button>
+                </div>
+
+                <div class="payment-card">
+                    <div class="icon">💳</div>
+                    <h3>PayPal</h3>
+                    <div class="value">scassani@gmail.com</div>
+                    <div class="note">Paiement mondial sécurisé</div>
+                    <a href="https://www.paypal.com/paypalme/scassani" target="_blank" class="payment-btn paypal">💳 Payer avec PayPal</a>
+                    <button class="copy-btn" onclick="copyToClipboard('scassani@gmail.com', 'Email copié !')">📋 Copier email</button>
+                </div>
+            </div>
+            
+            <div class="missionary-note">
+                🙏 <strong>10% de tous les dons seront reversés à des œuvres missionnaires chrétiennes.</strong>
+            </div>
+        </div>
+
         <!-- Progress Card -->
         <div class="card">
             <h2><span class="icon">📊</span> Avancement du projet</h2>
@@ -392,49 +543,6 @@
                 <li>Version anglaise : <span class="badge badge-progress">En cours</span></li>
                 <li>10 autres langues : en préparation (espagnol, allemand, russe, arabe, chinois, hindi, tagalog...)</li>
             </ul>
-        </div>
-
-        <!-- Donate Card -->
-        <div class="card">
-            <h2><span class="icon">💝</span> Faire un don</h2>
-            
-            <div class="center">
-                <a href="https://gofund.me/65145a53b" target="_blank" class="gofundme-btn">
-                    🚀 Donner via GoFundMe
-                </a>
-            </div>
-            
-            <p class="divider">— ou par virement direct (sans frais) —</p>
-            
-            <div class="payment-grid">
-                <div class="payment-card">
-                    <div class="icon">🏦</div>
-                    <h3>Virement IBAN</h3>
-                    <div class="value">CH96 0900 0000 1422 5706 6</div>
-                    <div class="note">PostFinance Suisse<br>Stéphane Cassani</div>
-                    <button class="copy-btn" onclick="copyToClipboard('CH9609000000142257066')">Copier IBAN</button>
-                </div>
-
-                <div class="payment-card">
-                    <div class="icon">📱</div>
-                    <h3>Twint</h3>
-                    <div class="value">+41 78 212 53 63</div>
-                    <div class="note">Suisse uniquement</div>
-                    <button class="copy-btn" onclick="copyToClipboard('+41782125363')">Copier</button>
-                </div>
-
-                <div class="payment-card">
-                    <div class="icon">💳</div>
-                    <h3>PayPal</h3>
-                    <div class="value">scassani@gmail.com</div>
-                    <div class="note">Mondial</div>
-                    <button class="copy-btn" onclick="copyToClipboard('scassani@gmail.com')">Copier</button>
-                </div>
-            </div>
-            
-            <div class="missionary-note">
-                🙏 <strong>10% de tous les dons seront reversés à des œuvres missionnaires chrétiennes.</strong>
-            </div>
         </div>
 
         <!-- Impact Card -->
@@ -482,11 +590,32 @@
         <p><a href="index.html">← Retour à l'accueil</a></p>
     </footer>
 
+    <!-- Toast notification -->
+    <div class="toast" id="toast"></div>
+
     <script>
-        function copyToClipboard(text) {
+        function copyToClipboard(text, message) {
             navigator.clipboard.writeText(text).then(() => {
-                alert('Copié : ' + text);
+                showToast(message || 'Copié !');
+            }).catch(() => {
+                // Fallback pour navigateurs plus anciens
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showToast(message || 'Copié !');
             });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
         }
     </script>
 </body>
