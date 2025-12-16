@@ -424,6 +424,10 @@
         <div class="player-controls" style="margin-top: 10px;">
             <audio id="audio" controls></audio>
         </div>
+        <div class="player-controls" style="margin-top: 10px;">
+            <button class="nav-btn" id="forcePlayBtn" style="display:none;">▶ Lancer</button>
+            <span id="forcePlayMsg" style="display:none;color:#000080;font-weight:600;"></span>
+        </div>
         <div class="content-wrapper" id="contentWrapper">
             <div class="lyrics-container" id="lyricsContainer">
                 <div class="lyrics-text" id="lyricsText"></div>
@@ -881,7 +885,7 @@
 
             
             audio.load();
-            audio.play().catch(()=>{});
+            __BC_tryAutoPlay(audio);
 const bookName = getBookDisplayName(currentBook);
             const chapterWord = (currentLanguage === 'PT') ? 'Cap.' : (t('readerChapterShort') || 'Ch.');
             let displayTitle = bookName + ' - ' + chapterWord + String(chapter).padStart(2, '0');
@@ -1177,7 +1181,50 @@ const bookName = getBookDisplayName(currentBook);
 
         applyTranslations(currentLanguage);
 
-        renderBooks('old-testament', oldTestament);
+        
+
+        function __BC_showForcePlay(msg) {
+            const b = document.getElementById("forcePlayBtn");
+            const m = document.getElementById("forcePlayMsg");
+            if (b) b.style.display = "inline-block";
+            if (m) { m.style.display = "inline-block"; m.textContent = msg || "Clique ▶ Lancer"; }
+        }
+
+        function __BC_hideForcePlay() {
+            const b = document.getElementById("forcePlayBtn");
+            const m = document.getElementById("forcePlayMsg");
+            if (b) b.style.display = "none";
+            if (m) m.style.display = "none";
+        }
+
+        function __BC_tryAutoPlay(audioEl) {
+            if (!audioEl) return;
+            __BC_hideForcePlay();
+
+            const p = audioEl.play();
+            if (p && typeof p.catch === "function") {
+                p.catch((err) => {
+                    const name = err && (err.name || err.code) ? String(err.name || err.code) : "";
+                    if (name.toLowerCase().includes("notallowed")) {
+                        __BC_showForcePlay("Autoplay bloqué — clique ▶ Lancer");
+                    } else {
+                        __BC_showForcePlay("Clique ▶ Lancer");
+                    }
+                    console.warn("[lecteur] autoplay refused:", err);
+                });
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const b = document.getElementById("forcePlayBtn");
+            const audioEl = document.getElementById("audio");
+            if (b && audioEl) {
+                b.addEventListener("click", () => {
+                    audioEl.play().catch(()=>{});
+                });
+            }
+        });
+renderBooks('old-testament', oldTestament);
         renderBooks('new-testament', newTestament);
 
         if (bookParam && chapterParam) {
@@ -1193,4 +1240,5 @@ const bookName = getBookDisplayName(currentBook);
     </script>
 </body>
 </html>
+
 
