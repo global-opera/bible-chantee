@@ -24,6 +24,7 @@ const translations = {
     projectDesc2: "Le projet s'adresse aux enfants, familles, personnes âgées, personnes qui ne savent pas lire, nouveaux convertis, ainsi qu'aux églises pour la louange, l'enseignement, la prière et l'évangélisation.",
     statChapters: "chapitres",
     statLanguages: "langues",
+    statusSoon: "Bientôt",
     statBooks: "livres",
     statPeople: "milliard de personnes",
 
@@ -169,6 +170,7 @@ const translations = {
     projectDesc2: "The project is aimed at children, families, elderly people, people who cannot read, new converts, as well as churches for worship, teaching, prayer and evangelization.",
     statChapters: "chapters",
     statLanguages: "languages",
+    statusSoon: "Soon",
     statBooks: "books",
     statPeople: "billion people",
 
@@ -314,6 +316,7 @@ const translations = {
     projectDesc2: "El proyecto está dirigido a niños, familias, personas mayores, personas que no saben leer, nuevos convertidos, así como a iglesias para la adoración, enseñanza, oración y evangelización.",
     statChapters: "capítulos",
     statLanguages: "idiomas",
+    statusSoon: "Pronto",
     statBooks: "libros",
     statPeople: "mil millones de personas",
 
@@ -459,6 +462,7 @@ const translations = {
     projectDesc2: "O projeto é voltado para crianças, famílias, idosos, pessoas que não sabem ler, novos convertidos, bem como igrejas para adoração, ensino, oração e evangelização.",
     statChapters: "capítulos",
     statLanguages: "idiomas",
+    statusSoon: "Pronto",
     statBooks: "livros",
     statPeople: "bilhão de pessoas",
 
@@ -604,6 +608,7 @@ const translations = {
     projectDesc2: "Das Projekt richtet sich an Kinder, Familien, ältere Menschen, Menschen die nicht lesen können, Neubekehrte sowie Kirchen für Gottesdienst, Lehre, Gebet und Evangelisation.",
     statChapters: "Kapitel",
     statLanguages: "Sprachen",
+    statusSoon: "Bald",
     statBooks: "Bücher",
     statPeople: "Milliarden Menschen",
 
@@ -748,6 +753,7 @@ const translations = {
     projectDesc2: "Il progetto si rivolge a bambini, famiglie, anziani, persone che non sanno leggere, nuovi convertiti, nonché chiese per il culto, insegnamento, preghiera ed evangelizzazione.",
     statChapters: "capitoli",
     statLanguages: "lingue",
+    statusSoon: "Presto",
     statBooks: "libri",
     statPeople: "miliardi di persone",
 
@@ -892,6 +898,7 @@ const translations = {
     projectDesc2: "Проект предназначен для детей, семей, пожилых людей, людей которые не умеют читать, новообращённых, а также для церквей для богослужения, обучения, молитвы и евангелизации.",
     statChapters: "глав",
     statLanguages: "языков",
+    statusSoon: "Скоро",
     statBooks: "книг",
     statPeople: "миллиард человек",
 
@@ -1036,6 +1043,7 @@ const translations = {
     projectDesc2: "المشروع موجه للأطفال والعائلات وكبار السن والأشخاص الذين لا يعرفون القراءة والمتحولين الجدد، وكذلك للكنائس للعبادة والتعليم والصلاة والتبشير.",
     statChapters: "فصول",
     statLanguages: "لغات",
+    statusSoon: "قريباً",
     statBooks: "كتب",
     statPeople: "مليار شخص",
 
@@ -1180,6 +1188,7 @@ const translations = {
     projectDesc2: "该项目面向儿童、家庭、老年人、不识字的人、新信徒，以及教会用于敬拜、教导、祷告和传福音。",
     statChapters: "章",
     statLanguages: "语言",
+    statusSoon: "即将推出",
     statBooks: "卷",
     statPeople: "亿人",
 
@@ -1324,6 +1333,7 @@ const translations = {
     projectDesc2: "यह परियोजना बच्चों, परिवारों, बुजुर्गों, जो पढ़ नहीं सकते, नए धर्मांतरित लोगों के साथ-साथ पूजा, शिक्षा, प्रार्थना और सुसमाचार प्रचार के लिए चर्चों के लिए है।",
     statChapters: "अध्याय",
     statLanguages: "भाषाएँ",
+    statusSoon: "जल्द ही",
     statBooks: "पुस्तकें",
     statPeople: "अरब लोग",
 
@@ -1468,6 +1478,7 @@ const translations = {
     projectDesc2: "Ang proyekto ay nakatuon sa mga bata, pamilya, matatanda, mga taong hindi marunong magbasa, bagong converts, pati na rin sa mga simbahan para sa pagsamba, pagtuturo, panalangin at ebanghelisasyon.",
     statChapters: "kabanata",
     statLanguages: "wika",
+    statusSoon: "Malapit na",
     statBooks: "aklat",
     statPeople: "bilyong tao",
 
@@ -1612,6 +1623,7 @@ const translations = {
     projectDesc2: "이 프로젝트는 어린이, 가족, 노인, 읽을 수 없는 사람들, 새 신자들, 그리고 예배, 가르침, 기도, 전도를 위한 교회를 대상으로 합니다.",
     statChapters: "장",
     statLanguages: "언어",
+    statusSoon: "곧 출시",
     statBooks: "책",
     statPeople: "억 명",
 
