@@ -186,7 +186,7 @@
         }
     </style>
     <script src="bible-data.js"></script>
-    <script src="/book-names.js"></script>
+    <script src="lang-shared.js"></script>
 </head>
 <body>
     <div class="container">
@@ -215,9 +215,6 @@
             <div class="bible-text" id="bible-text"></div>
         </div>
     </div>
-
-    <!-- Script langue partagé - DOIT être chargé en premier -->
-    <script src="lang-shared.js"></script>
 
     <script>
         const books = [
@@ -364,6 +361,20 @@
         document.getElementById('prev-ch').onclick = () => { if (currentChapter > 1) loadChapter(currentChapter - 1); };
         document.getElementById('next-ch').onclick = () => { if (currentChapter < currentBook.chapters) loadChapter(currentChapter + 1); };
 
+        // INITIALISATION LANGUE - DOIT être avant renderBooks()
+        (function(){
+          const VALID_LANGUAGES = ['FR','EN','ES','PT','DE','IT','RU','AR','ZH','HI','TL','KO'];
+          function normalizeLang(v){ if(!v) return null; const x=String(v).trim().toUpperCase(); return VALID_LANGUAGES.includes(x)?x:null; }
+          function getLangFromUrl(){ const p=new URLSearchParams(window.location.search); return normalizeLang(p.get('lang')); }
+          function getLangFromStorage(){ try{ return normalizeLang(localStorage.getItem('selectedLanguage')); }catch(e){} return null; }
+          const urlLang = getLangFromUrl();
+          const baseLang = urlLang || getLangFromStorage() || 'FR';
+          window.currentLanguage = normalizeLang(baseLang) || 'FR';
+          // Sauvegarder dans localStorage
+          try{ localStorage.setItem('selectedLanguage', window.currentLanguage); }catch(e){}
+          console.log('[bible] Langue:', window.currentLanguage);
+        })();
+
         renderBooks();
 
         // Écouter les changements de langue
@@ -387,32 +398,18 @@
     <script src="translations.js"></script>
     <script src="i18n.js"></script>
 
-    <!-- Language switching -->
+    <!-- BC_getBookName helper -->
     <script>
+    window.BC_getBookName = function(bookNum, fallback){
+      try{
+        const n = parseInt(String(bookNum),10);
+        const idx = n - 1;
+        const names = (window.BC_BOOK_NAMES && window.BC_BOOK_NAMES[window.currentLanguage]) ? window.BC_BOOK_NAMES[window.currentLanguage] : (window.BC_BOOK_NAMES ? window.BC_BOOK_NAMES.FR : null);
+        if (names && idx >= 0 && idx < names.length) return names[idx];
+      }catch(e){}
+      return fallback || String(bookNum);
+    };
     </script>
-<script>
-(function(){
-  const VALID_LANGUAGES = ['FR','EN','ES','PT','DE','IT','RU','AR','ZH','HI','TL','KO'];
-  function normalizeLang(v){ if(!v) return null; const x=String(v).trim().toUpperCase(); return VALID_LANGUAGES.includes(x)?x:null; }
-  function getLangFromUrl(){ const p=new URLSearchParams(window.location.search); return normalizeLang(p.get('lang')); }
-  function getLangFromBC(){ try{ if(window.BC_LANG&&typeof BC_LANG.getCurrentLanguage==='function') return normalizeLang(BC_LANG.getCurrentLanguage()); }catch(e){} return null; }
-  function setLangToBC(lang){ try{ if(window.BC_LANG&&typeof BC_LANG.setCurrentLanguage==='function'){ BC_LANG.setCurrentLanguage(lang); return; } }catch(e){} try{ localStorage.setItem('BC_LANG', lang);}catch(e){} }
-  const urlLang = getLangFromUrl();
-  const baseLang = urlLang || getLangFromBC() || 'FR';
-  window.currentLanguage = normalizeLang(baseLang) || 'FR';
-  setLangToBC(window.currentLanguage);
-
-  window.BC_getBookName = function(bookNum, fallback){
-    try{
-      const n = parseInt(String(bookNum),10);
-      const idx = n - 1;
-      const names = (window.BC_BOOK_NAMES && window.BC_BOOK_NAMES[window.currentLanguage]) ? window.BC_BOOK_NAMES[window.currentLanguage] : (window.BC_BOOK_NAMES ? window.BC_BOOK_NAMES.FR : null);
-      if (names && idx >= 0 && idx < names.length) return names[idx];
-    }catch(e){}
-    return fallback || String(bookNum);
-  };
-})();
-</script>
 </body>
 </html>
 
