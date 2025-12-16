@@ -443,6 +443,12 @@
     <script src="/lyrics-data.js"></script>
     <script src="/lyrics-data-pt.js"></script>
     <script src="/lyrics-data-v2.js"></script>
+    <!-- Fix: Expose lyrics variables to window (const ne s'expose pas automatiquement) -->
+    <script>
+    if (typeof chapterLyrics !== 'undefined' && !window.chapterLyrics) window.chapterLyrics = chapterLyrics;
+    if (typeof chapterLyricsV2 !== 'undefined' && !window.chapterLyricsV2) window.chapterLyricsV2 = chapterLyricsV2;
+    if (typeof chapterLyricsPT !== 'undefined' && !window.chapterLyricsPT) window.chapterLyricsPT = chapterLyricsPT;
+    </script>
 
     <script src="/audio-urls.js"></script>
     <script src="/audio-urls-v2.js"></script>
@@ -461,6 +467,10 @@
     <script src="/audio-urls-ko.js"></script>
 
     <script src="/chapter-titles.js"></script>
+    <!-- Fix: Expose chapter titles to window -->
+    <script>
+    if (typeof chapterTitles !== 'undefined' && !window.chapterTitles) window.chapterTitles = chapterTitles;
+    </script>
     <script src="/bible-data.js"></script>
 
     <script src="/sections-promesses.js"></script>
