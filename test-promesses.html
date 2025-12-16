@@ -28,7 +28,7 @@
 
   // Test 1: Check files exist
   log('TEST 1: Files Existence', 'info');
-  const files = ['promessas.html', 'promessas-data.js', 'lang-shared.js'];
+  const files = ['promesses.html', 'promesses-data.js', 'lang-shared.js'];
   let filesOK = true;
 
   for (const file of files) {
@@ -60,7 +60,7 @@
 
   await new Promise((resolve) => {
     iframe.onload = resolve;
-    iframe.src = 'promessas.html?lang=PT';
+    iframe.src = 'promesses.html?lang=PT';
   });
 
   // Wait for DOMContentLoaded to fire
@@ -109,7 +109,7 @@
   // Test 4: Check language switching
   log('\nTEST 4: Language Switching (FR)', 'info');
 
-  iframe.src = 'promessas.html?lang=FR';
+  iframe.src = 'promesses.html?lang=FR';
   await new Promise(resolve => {
     iframe.onload = resolve;
   });
@@ -144,3 +144,4 @@
 </script>
 </body>
 </html>
+
