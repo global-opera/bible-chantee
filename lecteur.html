@@ -803,7 +803,12 @@
             const lyrics = getLyricsForCurrent(currentLanguage, currentBook, chapterStr);
 
             if (lyrics) {
-                lyricsText.innerHTML = String(lyrics).replace(/\[([^\]]+)\]/g, '<span class="section-label">[$1]</span>');
+                // Supprimer les marqueurs de sections : [Verse], [Chorus], **Couplet**, etc.
+                let cleanLyrics = String(lyrics)
+                    .replace(/\[([^\]]+)\]\s*/g, '')           // [Verse 1], [Chorus], etc.
+                    .replace(/\*\*[^*]+\*\*\s*/g, '')          // **Couplet 1:**, **Refrain**, etc.
+                    .replace(/^\s*\n/gm, '');                   // Lignes vides en trop
+                lyricsText.innerHTML = cleanLyrics;
             } else {
                 lyricsText.innerHTML =
                     '<div class="no-lyrics">' +
