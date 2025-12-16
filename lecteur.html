@@ -364,8 +364,8 @@
 
         <header>
             <h1 data-i18n="readerHeading">Bible Chantée</h1>
-            <a href="index.html" class="back-link" data-i18n="readerBackHome">← Retour accueil</a>
-            <a href="about.html" class="back-link" style="margin-left: 15px;" data-i18n="readerAbout">À propos</a>
+            <a href="/index.html" class="back-link" data-i18n="readerBackHome">← Retour accueil</a>
+            <a href="/about.html" class="back-link" style="margin-left: 15px;" data-i18n="readerAbout">À propos</a>
             <p class="subtitle" data-i18n="readerSubtitle">La Parole de Dieu en musique worship française</p>
             <div class="stats">
                 <span id="available-count">0</span> <span data-i18n="readerBooksAvailable">livres disponibles</span> <span data-i18n="readerOf">sur</span> 66 |
@@ -434,32 +434,32 @@
         </div>
     </div>
 
-    <script src="lang-shared.js"></script>
+    <script src="/lang-shared.js"></script>
 
-    <script src="lyrics-data.js"></script>
-    <script src="lyrics-data-pt.js"></script>
-    <script src="lyrics-data-v2.js"></script>
+    <script src="/lyrics-data.js"></script>
+    <script src="/lyrics-data-pt.js"></script>
+    <script src="/lyrics-data-v2.js"></script>
 
-    <script src="audio-urls.js"></script>
-    <script src="audio-urls-v2.js"></script>
+    <script src="/audio-urls.js"></script>
+    <script src="/audio-urls-v2.js"></script>
 
-    <script src="audio-urls-fr.js"></script>
-    <script src="audio-urls-pt.js"></script>
-    <script src="audio-urls-en.js"></script>
-    <script src="audio-urls-es.js"></script>
-    <script src="audio-urls-de.js"></script>
-    <script src="audio-urls-it.js"></script>
-    <script src="audio-urls-ru.js"></script>
-    <script src="audio-urls-ar.js"></script>
-    <script src="audio-urls-zh.js"></script>
-    <script src="audio-urls-hi.js"></script>
-    <script src="audio-urls-tl.js"></script>
-    <script src="audio-urls-ko.js"></script>
+    <script src="/audio-urls-fr.js"></script>
+    <script src="/audio-urls-pt.js"></script>
+    <script src="/audio-urls-en.js"></script>
+    <script src="/audio-urls-es.js"></script>
+    <script src="/audio-urls-de.js"></script>
+    <script src="/audio-urls-it.js"></script>
+    <script src="/audio-urls-ru.js"></script>
+    <script src="/audio-urls-ar.js"></script>
+    <script src="/audio-urls-zh.js"></script>
+    <script src="/audio-urls-hi.js"></script>
+    <script src="/audio-urls-tl.js"></script>
+    <script src="/audio-urls-ko.js"></script>
 
-    <script src="chapter-titles.js"></script>
-    <script src="bible-data.js"></script>
+    <script src="/chapter-titles.js"></script>
+    <script src="/bible-data.js"></script>
 
-    <script src="sections-promesses.js"></script>
+    <script src="/sections-promesses.js"></script>
 
     <script>
         (function () {
@@ -879,7 +879,10 @@
             const audio = document.getElementById('audio');
             audio.src = url;
 
-            const bookName = getBookDisplayName(currentBook);
+            
+            audio.load();
+            audio.play().catch(()=>{});
+const bookName = getBookDisplayName(currentBook);
             const chapterWord = (currentLanguage === 'PT') ? 'Cap.' : (t('readerChapterShort') || 'Ch.');
             let displayTitle = bookName + ' - ' + chapterWord + String(chapter).padStart(2, '0');
 
@@ -1190,3 +1193,4 @@
     </script>
 </body>
 </html>
+
