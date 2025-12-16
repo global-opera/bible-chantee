@@ -1,26 +1,11 @@
-#/lecteur -> lecteur.html
-/lecteur  /lecteur.html  301
-/lecteur/ /lecteur.html  301
+# --------------------------------------------------
+# SECURITY – block non-production folders
+# --------------------------------------------------
+/Scripts/*     /index.html   404
+/Lyrics/*      /index.html   404
+/.git-hooks/*  /index.html   404
 
-#/promesses / promessas
-/promessas  /promessas.html  301
-/promessas/ /promessas.html  301
-/promesses  /promesses.html  301
-/promesses/ /promesses.html  301
-
-# Confessions
-/confessions  /confessions.html  301
-/confessions/ /confessions.html  301
-/confessios   /confessions.html  301
-/confessios/  /confessions.html  301
-
-# Promesses (FR) -> page thème (actuellement promessas-tema.html chez toi)
-/promesses-tema      /promessas-tema.html  301
-/promesses-tema/     /promessas-tema.html  301
-/promesses-tema.html /promessas-tema.html  301
-
-# Détails (au cas où des liens existent sans .html)
-/promesse        /promesse-detail.html  301
-/promesse/       /promesse-detail.html  301
-/confession      /confession-detail.html  301
-/confession/     /confession-detail.html  301
+# --------------------------------------------------
+# SPA fallback (MUST BE LAST)
+# --------------------------------------------------
+/*             /index.html   200
