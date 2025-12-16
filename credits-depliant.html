@@ -21,7 +21,7 @@
         .panel:last-child { border-radius: 0 15px 15px 0; }
 
         .panel-1 { background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%); color: white; text-align: center; justify-content: center; position: relative; }
-        .panel-1::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="60" opacity="0.05" fill="%23ffffff">♪</text></svg>'); background-size: 100px; opacity: 0.3; }
+        .panel-1::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="60" opacity="0.05" fill="%23ffffff">&#9835;</text></svg>'); background-size: 100px; opacity: 0.3; }
 
         .logo { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; color: #fbbf24; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); position: relative; z-index: 1; }
         .tagline { font-size: 16px; color: #fbbf24; font-weight: 300; margin-bottom: 20px; position: relative; z-index: 1; }
@@ -45,15 +45,16 @@
 
         .copyright-section { background: white; border: 2px solid #1e3a8a; border-radius: 10px; padding: 15px; margin-bottom: 15px; }
         .copyright-section h3 { color: #1e3a8a; font-size: 15px; margin-bottom: 10px; display: flex; align-items: center; }
-        .copyright-section h3::before { content: '©'; background: #fbbf24; color: #1e3a8a; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-weight: bold; font-size: 10px; }
+        .copyright-section h3::before { content: '\00A9'; background: #fbbf24; color: #1e3a8a; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; font-weight: bold; font-size: 10px; }
         .copyright-section ul { list-style: none; padding-left: 0; }
         .copyright-section li { padding: 5px 0; padding-left: 20px; position: relative; font-size: 12px; }
         .copyright-section li::before { content: '+'; position: absolute; left: 0; color: #fbbf24; font-weight: bold; font-size: 16px; }
 
         .footer-box { background: #1e3a8a; color: white; padding: 12px; border-radius: 10px; text-align: center; margin-top: auto; }
         .footer-box strong { color: #fbbf24; font-size: 14px; }
+        .footer-box a { color: #93c5fd; text-decoration: none; }
 
-        @media print { body { background: white; padding: 0; } .page { margin: 0; box-shadow: none; width: 297mm; min-height: 210mm; border-radius: 0; } .panel:first-child, .panel:last-child { border-radius: 0; } }
+        @media print { body { background: white; padding: 0; } .page { margin: 0; box-shadow: none; width: 297mm; min-height: 210mm; border-radius: 0; } .panel:first-child, .panel:last-child { border-radius: 0; } .home-button { display: none; } }
 
         @media (max-width: 900px) { .page { flex-direction: column; border-radius: 15px; } .panel { border-right: none; border-bottom: 1px dashed #ccc; } .panel:last-child { border-bottom: none; } .panel:first-child { border-radius: 15px 15px 0 0; } .panel:last-child { border-radius: 0 0 15px 15px; } }
     </style>
@@ -66,7 +67,7 @@
         <div class="panel panel-1">
             <div class="logo" data-i18n="creditsSiteName">Bible Chantee</div>
             <div class="tagline" data-i18n="creditsTagline">La Parole de Dieu en musique worship</div>
-            <div style="margin-top: 20px;">
+            <div style="margin-top: 20px; position: relative; z-index: 1;">
                 <div>66 livres - 1189 chapitres</div>
                 <div>12 langues - 1.8 milliard de personnes</div>
                 <div>Style Worship contemporain</div>
@@ -111,17 +112,17 @@
                     <div class="stat-label" data-i18n="creditsStatChapters">Chapitres</div>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-number">1552</div>
+                    <div class="stat-number">1503</div>
                     <div class="stat-label" data-i18n="creditsStatMP3">MP3 Total (FR+PT)</div>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-number">10.9%</div>
+                    <div class="stat-number">63.2%</div>
                     <div class="stat-label" data-i18n="creditsStatProgress">Progression 12 langues</div>
                 </div>
             </div>
 
             <h3 data-i18n="creditsTechTitle">Technologie</h3>
-            <p data-i18n="creditsTechDesc">Production musicale Suno AI, interface web responsive.</p>
+            <p data-i18n="creditsTechDesc">Production musicale Suno AI V5, interface web responsive.</p>
         </div>
 
         <!-- Panel 3: Copyright -->
@@ -154,15 +155,16 @@
             </div>
 
             <div class="footer-box">
-                <strong data-i18n="creditsFooterCopyright">© 2025 Bible Chantee</strong><br>
+                <strong data-i18n="creditsFooterCopyright">&copy; 2025 Bible Chantee</strong><br>
                 <span data-i18n="creditsFooterAuthor">Stephane Cassani - Suisse</span><br>
-                info@biblechantee.com<br>
+                <a href="mailto:contact@biblechantee.com">contact@biblechantee.com</a><br>
                 <small style="display: block; margin-top: 10px;" data-i18n="creditsFooterFormat">Document imprimable - Format depliant A4 paysage</small>
             </div>
         </div>
     </div>
 
-<!-- Load translations and i18n system -->
+<!-- Scripts langue et traductions - ARCHITECTURE SIMPLE -->
+<script src="lang-shared.js"></script>
 <script src="translations.js"></script>
 <script src="i18n.js"></script>
 

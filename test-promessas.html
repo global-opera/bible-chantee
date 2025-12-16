@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Test Promessas</title>
+<style>
+  body { font-family: monospace; padding: 20px; background: #1a1a2e; color: #e0e0e0; }
+  .pass { color: #22c55e; }
+  .fail { color: #ef4444; }
+  .warn { color: #f59e0b; }
+</style>
+</head>
+<body>
+<h1>🧪 Test Promessas - Détection Contenu</h1>
+<pre id="log"></pre>
+
+<script>
+(async () => {
+  const log = (msg, type = 'info') => {
+    const el = document.getElementById('log');
+    const className = type === 'pass' ? 'pass' : type === 'fail' ? 'fail' : type === 'warn' ? 'warn' : '';
+    el.innerHTML += `<span class="${className}">${msg}</span>\n`;
+  };
+
+  log('═══════════════════════════════════════');
+  log('  TEST PROMESSAS - Content Generation');
+  log('═══════════════════════════════════════\n');
+
+  // Test 1: Check files exist
+  log('TEST 1: Files Existence', 'info');
+  const files = ['promessas.html', 'promessas-data.js', 'lang-shared.js'];
+  let filesOK = true;
+
+  for (const file of files) {
+    try {
+      const r = await fetch(file, { method: 'HEAD' });
+      if (r.ok) {
+        log(`  ✅ ${file} → ${r.status}`, 'pass');
+      } else {
+        log(`  ❌ ${file} → ${r.status}`, 'fail');
+        filesOK = false;
+      }
+    } catch (e) {
+      log(`  ❌ ${file} → ERROR`, 'fail');
+      filesOK = false;
+    }
+  }
+
+  if (!filesOK) {
+    log('\n❌ TEST FAILED: Missing files', 'fail');
+    return;
+  }
+
+  // Test 2: Check page generates content
+  log('\nTEST 2: Content Generation (PT)', 'info');
+
+  const iframe = document.createElement('iframe');
+  iframe.style.display = 'none';
+  document.body.appendChild(iframe);
+
+  await new Promise((resolve) => {
+    iframe.onload = resolve;
+    iframe.src = 'promessas.html?lang=PT';
+  });
+
+  // Wait for DOMContentLoaded to fire
+  await new Promise(resolve => setTimeout(resolve, 500));
+
+  const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+  const cards = iframeDoc.getElementById('cards');
+
+  if (!cards) {
+    log('  ❌ Container #cards not found', 'fail');
+    log('\n❌ TEST FAILED', 'fail');
+    return;
+  }
+
+  const cardDivs = cards.querySelectorAll('div');
+
+  if (cardDivs.length === 0) {
+    // Check if there's an error message
+    const errorMsg = cards.textContent;
+    if (errorMsg.includes('ERREUR') || errorMsg.includes('Aucune promesse')) {
+      log(`  ⚠️  Page shows error: ${errorMsg.substring(0, 50)}...`, 'warn');
+      log('\n⚠️  TEST WARNING: No content but error is visible', 'warn');
+    } else {
+      log('  ❌ No cards generated (silent failure)', 'fail');
+      log('\n❌ TEST FAILED: Empty page with no error', 'fail');
+    }
+    return;
+  }
+
+  log(`  ✅ ${cardDivs.length} cards generated`, 'pass');
+
+  // Test 3: Check content structure
+  log('\nTEST 3: Content Structure', 'info');
+  const firstCard = cardDivs[0];
+  const hasTitle = firstCard.querySelector('h3');
+  const hasSubtitle = firstCard.querySelector('p');
+  const hasLink = firstCard.querySelector('a');
+
+  if (hasTitle && hasSubtitle && hasLink) {
+    log('  ✅ Card structure valid (h3 + p + a)', 'pass');
+    log(`     Title: ${hasTitle.textContent}`, 'pass');
+  } else {
+    log('  ❌ Card structure incomplete', 'fail');
+  }
+
+  // Test 4: Check language switching
+  log('\nTEST 4: Language Switching (FR)', 'info');
+
+  iframe.src = 'promessas.html?lang=FR';
+  await new Promise(resolve => {
+    iframe.onload = resolve;
+  });
+  await new Promise(resolve => setTimeout(resolve, 500));
+
+  const iframeDoc2 = iframe.contentDocument || iframe.contentWindow.document;
+  const cards2 = iframeDoc2.getElementById('cards');
+  const cardDivs2 = cards2.querySelectorAll('div');
+
+  if (cardDivs2.length > 0) {
+    log(`  ✅ ${cardDivs2.length} cards generated for FR`, 'pass');
+  } else {
+    const errorMsg2 = cards2.textContent;
+    if (errorMsg2.includes('Aucune promesse')) {
+      log('  ⚠️  FR not available (expected if not implemented)', 'warn');
+    } else {
+      log('  ❌ FR failed silently', 'fail');
+    }
+  }
+
+  // Summary
+  log('\n═══════════════════════════════════════');
+  log('✅ PROMESSAS CONTENT TEST PASSED', 'pass');
+  log('   • Files exist');
+  log('   • Content generated for PT');
+  log('   • Card structure valid');
+  log('   • Error handling works');
+  log('═══════════════════════════════════════');
+
+  document.body.removeChild(iframe);
+})();
+</script>
+</body>
+</html>

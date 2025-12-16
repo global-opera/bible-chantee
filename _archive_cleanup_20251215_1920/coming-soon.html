@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bientôt disponible - Bible Chantée</title>
+    <title data-i18n="comingSoonPageTitle">Bientot disponible - Bible Chantee</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -72,50 +72,71 @@
             font-size: 0.95em;
             color: #94a3b8;
         }
+        .progress-info {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(251, 191, 36, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+        .progress-info strong {
+            color: #fbbf24;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="icon">🚧</div>
-        <h1>Bientôt disponible</h1>
-        <p>
-            Cette version linguistique de <span class="highlight">Bible Chantée</span> est actuellement en préparation.
+        <h1 id="mainTitle" data-i18n="comingSoonHeading">Bientot disponible</h1>
+        <p data-i18n="comingSoonDesc1">
+            Cette version linguistique de <span class="highlight">Bible Chantee</span> est actuellement en preparation.
         </p>
-        <p>
-            Nous travaillons activement pour vous offrir l'intégralité de la Parole de Dieu en musique dans <strong>12 langues</strong>.
+        <p data-i18n="comingSoonDesc2">
+            Nous travaillons activement pour vous offrir l'integralite de la Parole de Dieu en musique dans <strong>12 langues</strong>.
         </p>
-        <div class="languages">
-            <p><strong>Langues disponibles actuellement:</strong></p>
-            <p>🇫🇷 Français (FR) - 100%</p>
-            <p>🇵🇹 Português (PT) - En cours</p>
+        
+        <div class="progress-info">
+            <p><strong data-i18n="comingSoonProgress">Progression globale : 89.9%</strong></p>
+            <p data-i18n="comingSoonProgressDetail">1069 chapitres sur 1189 disponibles en francais</p>
         </div>
-        <a href="index.html" class="btn">← Retour à l'accueil</a>
+        
+        <div class="languages">
+            <p><strong data-i18n="comingSoonAvailable">Langues disponibles actuellement:</strong></p>
+            <p>🇫🇷 Francais (FR) - 89.9%</p>
+            <p>🇧🇷 Portugues (PT) - 36.5%</p>
+        </div>
+        <a href="index.html" class="btn" data-i18n="comingSoonBackHome">← Retour a l'accueil</a>
     </div>
 
-    <script>
-        // Read language from URL parameter and display appropriate message
-        const urlParams = new URLSearchParams(window.location.search);
-        const lang = urlParams.get('lang');
+<!-- Scripts langue et traductions - ARCHITECTURE SIMPLE -->
+<script src="lang-shared.js"></script>
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
 
-        if (lang) {
-            const langNames = {
-                'EN': 'English',
-                'ES': 'Español',
-                'DE': 'Deutsch',
-                'IT': 'Italiano',
-                'AR': 'العربية',
-                'RU': 'Русский',
-                'ZH': '中文',
-                'TL': 'Tagalog',
-                'SW': 'Kiswahili',
-                'HI': 'हिन्दी',
-                'PT': 'Português'
-            };
+<script>
+    // Afficher le nom de la langue demandee dans le titre
+    document.addEventListener('DOMContentLoaded', function() {
+        const lang = window.currentLanguage || 'FR';
+        
+        const langNames = {
+            'EN': 'English',
+            'ES': 'Espanol',
+            'DE': 'Deutsch',
+            'IT': 'Italiano',
+            'AR': 'Arabic',
+            'RU': 'Russian',
+            'ZH': 'Chinese',
+            'TL': 'Tagalog',
+            'SW': 'Kiswahili',
+            'HI': 'Hindi',
+            'KO': 'Korean'
+        };
 
-            if (langNames[lang]) {
-                document.querySelector('h1').textContent = langNames[lang] + ' - Coming Soon';
-            }
+        if (langNames[lang]) {
+            document.getElementById('mainTitle').textContent = langNames[lang] + ' - Coming Soon';
         }
-    </script>
+    });
+</script>
+
 </body>
 </html>

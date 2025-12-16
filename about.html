@@ -51,55 +51,6 @@
       position: relative;
     }
 
-    /* Barre de langues horizontale */
-    .lang-bar {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto 20px;
-      padding: 10px;
-      background: rgba(0, 0, 0, 0.3);
-      border-radius: 10px;
-      position: relative;
-    }
-    .lang-btn {
-      padding: 8px 12px;
-      background: #1e3a5f;
-      color: #f5c842;
-      border: 1px solid #f5c842;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: 600;
-      transition: all 0.3s;
-      min-width: 60px;
-      text-align: center;
-      /* iOS fixes */
-      -webkit-tap-highlight-color: rgba(245, 196, 66, 0.2);
-      touch-action: manipulation;
-      user-select: none;
-      -webkit-user-select: none;
-    }
-    .lang-btn:hover {
-      background: #2a4a7f;
-      transform: translateY(-1px);
-      box-shadow: 0 2px 8px rgba(245, 196, 66, 0.3);
-    }
-    .lang-btn:active {
-      background: #f5c842;
-      color: #1e3a5f;
-      transform: scale(0.98);
-    }
-    .lang-btn.active {
-      background: #f5c842;
-      color: #1e3a5f;
-      border-color: #f5c842;
-      font-weight: 700;
-    }
-
     nav {
       background: #020617;
       text-align: center;
@@ -119,9 +70,7 @@
       transition: color 0.3s;
     }
 
-    nav a:hover {
-      color: #ffffff;
-    }
+    nav a:hover { color: #ffffff; }
 
     main {
       padding: 50px 20px 70px;
@@ -149,25 +98,12 @@
       gap: 12px;
     }
 
-    h2 i {
-      font-size: 0.9em;
-    }
+    h2 i { font-size: 0.9em; }
 
-    p {
-      margin-bottom: 15px;
-      color: #cbd5e1;
-    }
+    p { margin-bottom: 15px; color: #cbd5e1; }
 
-    ul {
-      list-style-position: inside;
-      color: #cbd5e1;
-      margin-bottom: 15px;
-    }
-
-    ul li {
-      margin-bottom: 8px;
-      padding-left: 10px;
-    }
+    ul { list-style-position: inside; color: #cbd5e1; margin-bottom: 15px; }
+    ul li { margin-bottom: 8px; padding-left: 10px; }
 
     .platforms {
       display: flex;
@@ -196,15 +132,8 @@
       background: rgba(147, 197, 253, 0.1);
     }
 
-    .platform-link i {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-
-    .platform-link span {
-      font-weight: 600;
-      font-size: 0.9em;
-    }
+    .platform-link i { font-size: 3em; margin-bottom: 10px; }
+    .platform-link span { font-weight: 600; font-size: 0.9em; }
 
     .usage-list {
       background: rgba(147, 197, 253, 0.05);
@@ -214,9 +143,7 @@
       margin-top: 20px;
     }
 
-    .usage-list ul {
-      margin-bottom: 0;
-    }
+    .usage-list ul { margin-bottom: 0; }
 
     .contact-info {
       background: rgba(37, 99, 235, 0.1);
@@ -225,19 +152,9 @@
       margin-top: 15px;
     }
 
-    .contact-info p {
-      margin-bottom: 10px;
-    }
-
-    .contact-info a {
-      color: #93c5fd;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .contact-info a:hover {
-      color: #ffffff;
-    }
+    .contact-info p { margin-bottom: 10px; }
+    .contact-info a { color: #93c5fd; text-decoration: none; transition: color 0.3s; }
+    .contact-info a:hover { color: #ffffff; }
 
     footer {
       background: #020617;
@@ -247,66 +164,21 @@
       border-top: 1px solid rgba(147, 197, 253, 0.1);
     }
 
-    footer p {
-      color: #94a3b8;
-      font-size: 0.9em;
-      margin-bottom: 0;
-    }
+    footer p { color: #94a3b8; font-size: 0.9em; margin-bottom: 0; }
 
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2em;
-      }
-
-      header p {
-        font-size: 1em;
-      }
-
-      .lang-btn {
-        padding: 6px 8px;
-        font-size: 12px;
-        min-width: 50px;
-      }
-
-      .platforms {
-        gap: 15px;
-      }
-
-      .platform-link {
-        min-width: 100px;
-        padding: 12px;
-      }
-
-      .platform-link i {
-        font-size: 2.5em;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px 8px;
-      }
+      header h1 { font-size: 2em; }
+      header p { font-size: 1em; }
+      .platforms { gap: 15px; }
+      .platform-link { min-width: 100px; padding: 12px; }
+      .platform-link i { font-size: 2.5em; }
+      nav a { display: inline-block; margin: 5px 8px; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <!-- Barre de langues horizontale -->
-  <div class="lang-bar">
-    <button type="button" class="lang-btn" data-lang="FR">🇫🇷 FR</button>
-    <button type="button" class="lang-btn" data-lang="EN">🇬🇧 EN</button>
-    <button type="button" class="lang-btn" data-lang="PT">🇧🇷 PT</button>
-    <button type="button" class="lang-btn" data-lang="ES">🇪🇸 ES</button>
-    <button type="button" class="lang-btn" data-lang="DE">🇩🇪 DE</button>
-    <button type="button" class="lang-btn" data-lang="IT">🇮🇹 IT</button>
-    <button type="button" class="lang-btn" data-lang="AR">🇸🇦 AR</button>
-    <button type="button" class="lang-btn" data-lang="RU">🇷🇺 RU</button>
-    <button type="button" class="lang-btn" data-lang="ZH">🇨🇳 ZH</button>
-    <button type="button" class="lang-btn" data-lang="HI">🇮🇳 HI</button>
-    <button type="button" class="lang-btn" data-lang="TL">🇵🇭 TL</button>
-    <button type="button" class="lang-btn" data-lang="KO">🇰🇷 KO</button>
-  </div>
-
   <h1 data-i18n="siteName">Bible Chantée</h1>
   <p data-i18n="aboutTagline">La Parole de Dieu en musique</p>
 </header>
@@ -338,22 +210,18 @@
         <i class="fab fa-spotify"></i>
         <span>Spotify</span>
       </a>
-
       <a href="https://music.apple.com/artist/XXXXX" class="platform-link" target="_blank" rel="noopener">
         <i class="fab fa-apple"></i>
         <span>Apple Music</span>
       </a>
-
       <a href="https://music.youtube.com/channel/XXXXX" class="platform-link" target="_blank" rel="noopener">
         <i class="fab fa-youtube"></i>
         <span>YouTube Music</span>
       </a>
-
       <a href="https://www.deezer.com/artist/XXXXX" class="platform-link" target="_blank" rel="noopener">
         <i class="fab fa-deezer"></i>
         <span>Deezer</span>
       </a>
-
       <a href="https://music.amazon.com/artists/XXXXX" class="platform-link" target="_blank" rel="noopener">
         <i class="fab fa-amazon"></i>
         <span>Amazon Music</span>
@@ -363,9 +231,7 @@
 
   <div class="bloc">
     <h2><i class="fas fa-check-circle"></i> <span data-i18n="aboutUsageTitle">Utilisation autorisée</span></h2>
-    <p data-i18n="aboutUsageDesc">
-      Vous êtes libre d'utiliser ces musiques dans un cadre :
-    </p>
+    <p data-i18n="aboutUsageDesc">Vous êtes libre d'utiliser ces musiques dans un cadre :</p>
     <div class="usage-list">
       <ul>
         <li><strong data-i18n="aboutUsageSpiritual">Spirituel</strong> <span data-i18n="aboutUsageSpiritualDetail">(églises, cultes, méditations)</span></li>
@@ -374,15 +240,14 @@
       </ul>
     </div>
     <p style="margin-top: 20px;" data-i18n="aboutUsageCondition">
-      Sans crainte de blocage, tant que l'usage reste <strong>non commercial</strong> et conforme
-      aux conditions des plateformes.
+      Sans crainte de blocage, tant que l'usage reste <strong>non commercial</strong> et conforme aux conditions des plateformes.
     </p>
   </div>
 
   <div class="bloc">
     <h2><i class="fas fa-envelope"></i> <span data-i18n="contactTitle">Contact</span></h2>
     <div class="contact-info">
-      <p><strong data-i18n="aboutContactEmail">Email :</strong> <strong>info@biblechantee.com</strong></p>
+      <p><strong data-i18n="aboutContactEmail">Email :</strong> <strong><a href="mailto:contact@biblechantee.com">contact@biblechantee.com</a></strong></p>
       <p><strong data-i18n="aboutContactWebsite">Site web :</strong> <a href="https://biblechantee.com" target="_blank">biblechantee.com</a></p>
     </div>
   </div>
@@ -392,36 +257,10 @@
   <p data-i18n="aboutFooterCopyright">&copy; 2024-2025 Bible Chantée - Tous droits réservés</p>
 </footer>
 
-<!-- Load translations and i18n system -->
+<!-- Scripts langue et traductions - ARCHITECTURE SIMPLE -->
+<script src="lang-shared.js"></script>
 <script src="translations.js"></script>
 <script src="i18n.js"></script>
-
-<!-- Language switching -->
-<script>
-// Language switching
-function setLanguage(lang) {
-    const url = new URL(window.location.href);
-    url.searchParams.set('lang', lang);
-    window.location.href = url.toString();
-}
-
-// Mark active language button
-const urlParams = new URLSearchParams(window.location.search);
-const currentLang = urlParams.get('lang') || window.i18nInstance?.getCurrentLanguage() || 'FR';
-document.querySelectorAll('.lang-btn').forEach(btn => {
-    if (btn.dataset.lang === currentLang) {
-        btn.classList.add('active');
-    }
-});
-
-// Add click listeners to language buttons
-document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-        const lang = this.dataset.lang;
-        setLanguage(lang);
-    });
-});
-</script>
 
 </body>
 </html>

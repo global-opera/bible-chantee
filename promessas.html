@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>Promessas</title>
+<script src="lang-shared.js"></script>
+<script src="promessas-data.js"></script>
+</head>
+<body>
+<h1>Promessas</h1>
+<div id="cards"></div>
+
+<script>
+// PROTECTION: Attendre que tout soit chargé (DOM + scripts externes)
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("cards");
+
+  // GARDE-FOU 1: Vérifier que les dépendances sont chargées
+  if (typeof currentLanguage === "undefined") {
+    container.innerHTML = '<p style="color:red">❌ ERREUR: lang-shared.js non chargé</p>';
+    console.error("currentLanguage is undefined");
+    return;
+  }
+
+  if (typeof PROMESSAS === "undefined") {
+    container.innerHTML = '<p style="color:red">❌ ERREUR: promessas-data.js non chargé</p>';
+    console.error("PROMESSAS is undefined");
+    return;
+  }
+
+  const temas = PROMESSAS[currentLanguage];
+
+  // GARDE-FOU 2: Vérifier que la langue existe dans les données
+  if (!temas) {
+    container.innerHTML = `<p style="color:orange">⚠️ Aucune promesse disponible pour ${currentLanguage}</p>`;
+    console.warn(`No data for language: ${currentLanguage}`);
+    return;
+  }
+
+  // GÉNÉRATION: Tout est OK, créer les cartes
+  for (const key in temas) {
+    const t = temas[key];
+    const div = document.createElement("div");
+    div.innerHTML = `<h3>${t.titulo}</h3><p>${t.sub}</p>
+    <a href="promessas-tema.html?tema=${key}&lang=${currentLanguage}">Abrir</a>`;
+    container.appendChild(div);
+  }
+
+  console.log(`✅ ${Object.keys(temas).length} promesses chargées pour ${currentLanguage}`);
+});
+</script>
+</body>
+</html>
