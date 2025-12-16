@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <base href="/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="biblePageTitle">Bible Segond 1910 - Texte</title>
@@ -185,10 +186,12 @@
         }
     </style>
     <script src="bible-data.js"></script>
+    <script src="/book-names.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
+    <base href="/">
             <h1 data-i18n="bibleHeading">Bible Segond 1910</h1>
             <p class="subtitle" data-i18n="bibleSubtitle">Texte integral - 66 livres - 1189 chapitres</p>
             <a href="index.html" class="back-link" data-i18n="bibleBackHome">Retour a l'accueil</a>
@@ -298,7 +301,7 @@
                 div.className = 'book';
                 div.dataset.num = book.num;
                 div.dataset.chapters = book.chapters;
-                const bookName = window.getBookName ? window.getBookName(idx) : book.name;
+                const bookName = window.getBookName ? window.getBookName(idx) : BC_getBookName(book.num, book.name);
                 div.innerHTML = '<div class="book-num">' + (idx + 1).toString().padStart(2, '0') + '</div><div class="book-name">' + bookName + '</div>';
                 div.onclick = () => openBook(book);
                 
@@ -387,5 +390,29 @@
     <!-- Language switching -->
     <script>
     </script>
+<script>
+(function(){
+  const VALID_LANGUAGES = ['FR','EN','ES','PT','DE','IT','RU','AR','ZH','HI','TL','KO'];
+  function normalizeLang(v){ if(!v) return null; const x=String(v).trim().toUpperCase(); return VALID_LANGUAGES.includes(x)?x:null; }
+  function getLangFromUrl(){ const p=new URLSearchParams(window.location.search); return normalizeLang(p.get('lang')); }
+  function getLangFromBC(){ try{ if(window.BC_LANG&&typeof BC_LANG.getCurrentLanguage==='function') return normalizeLang(BC_LANG.getCurrentLanguage()); }catch(e){} return null; }
+  function setLangToBC(lang){ try{ if(window.BC_LANG&&typeof BC_LANG.setCurrentLanguage==='function'){ BC_LANG.setCurrentLanguage(lang); return; } }catch(e){} try{ localStorage.setItem('BC_LANG', lang);}catch(e){} }
+  const urlLang = getLangFromUrl();
+  const baseLang = urlLang || getLangFromBC() || 'FR';
+  window.currentLanguage = normalizeLang(baseLang) || 'FR';
+  setLangToBC(window.currentLanguage);
+
+  window.BC_getBookName = function(bookNum, fallback){
+    try{
+      const n = parseInt(String(bookNum),10);
+      const idx = n - 1;
+      const names = (window.BC_BOOK_NAMES && window.BC_BOOK_NAMES[window.currentLanguage]) ? window.BC_BOOK_NAMES[window.currentLanguage] : (window.BC_BOOK_NAMES ? window.BC_BOOK_NAMES.FR : null);
+      if (names && idx >= 0 && idx < names.length) return names[idx];
+    }catch(e){}
+    return fallback || String(bookNum);
+  };
+})();
+</script>
 </body>
 </html>
+
