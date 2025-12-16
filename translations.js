@@ -462,7 +462,7 @@ const translations = {
     projectDesc2: "O projeto é voltado para crianças, famílias, idosos, pessoas que não sabem ler, novos convertidos, bem como igrejas para adoração, ensino, oração e evangelização.",
     statChapters: "capítulos",
     statLanguages: "idiomas",
-    statusSoon: "Pronto",
+    statusSoon: "Em breve",
     statBooks: "livros",
     statPeople: "bilhão de pessoas",
 
