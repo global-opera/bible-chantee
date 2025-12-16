@@ -59,7 +59,9 @@
     return v;
   }
 
-  window.BC_LANG = {
+    // Backward-compat: expose currentLanguage for legacy pages
+  try { window.currentLanguage = (window.BC_LANG && window.BC_LANG.getCurrentLanguage) ? window.BC_LANG.getCurrentLanguage() : window.currentLanguage; } catch(e) {}
+window.BC_LANG = {
     VALID_LANGUAGES,
     DEFAULT_LANG,
     normalizeLang,
@@ -69,3 +71,4 @@
     getLangFromStorage
   };
 })();
+
