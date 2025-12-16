@@ -715,7 +715,6 @@
 
         // === LANGUE GLOBALE - Definie au chargement ===
         // Lire depuis window.currentLanguage (defini par lang-shared.js) ou URL/localStorage
-        let currentLanguage = (window.currentLanguage || currentLanguage || "FR");
         if (!window.currentLanguage) {
             const urlParams = new URLSearchParams(window.location.search);
             const urlLang = urlParams.get('lang');
