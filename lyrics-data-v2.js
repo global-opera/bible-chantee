@@ -1,7 +1,7 @@
-﻿// Paroles des chapitres - Bible Chantee
+// Paroles des chapitres - Bible Chantee
 // Source: G:\Mon Drive\01 BibleChantee\Lyrics\FR_V2
 // Auto-genere: 2025-12-11 11:39:46
-const chapterLyricsV2 = {
+window.chapterLyricsV2 = {
     "01": {
         1: `[Verse 1]  
 Au commencement, tout était vide,  

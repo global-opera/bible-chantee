@@ -1,5 +1,5 @@
 // Titres des chapitres - Bible Chantee
-const chapterTitles = {
+window.chapterTitles = {
     "01": {
         1: "\"Création de Lumière\"",
         2: "\"Création d'Amour\"",
