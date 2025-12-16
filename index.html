@@ -503,8 +503,8 @@
   <p data-i18n="footerCopyright">&copy; 2025 Stéphane Cassani – Tous droits réservés</p>
 </footer>
 
-<script src="/translations.js"></script>
-<script src="/lang-shared.js"></script>
+<script src="translations.js?v=3"></script>
+<script src="lang-shared.js"></script>
 
 <script>
 (function () {
@@ -545,10 +545,15 @@
 
     const trans = translations[lang] || translations['FR'];
 
+    // Debug: vérifier si navPlayer et navBible existent
+    console.log('[index] Langue:', lang, '| navPlayer:', trans.navPlayer, '| navBible:', trans.navBible);
+
     document.querySelectorAll('[data-i18n]').forEach(element => {
       const key = element.getAttribute('data-i18n');
       if (trans[key]) {
         element.textContent = trans[key];
+      } else if (key === 'navPlayer' || key === 'navBible') {
+        console.warn('[index] Traduction manquante pour', key, 'en langue', lang);
       }
     });
 

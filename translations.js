@@ -9,13 +9,17 @@ const translations = {
     totalChristians: "1.8 milliard de chrétiens dans le monde",
 
     // Navigation
+    navHome: "Accueil",
     navProject: "Le Projet",
     navListen: "Ecouter",
     navChurches: "Eglises",
     navMission: "Mission",
     navSupport: "Soutenir",
     navAbout: "À propos",
+    navPromises: "Promesses",
     navConfessions: "Confessions",
+    navPlayer: "Lecteur",
+    navBible: "Bible",
     navContact: "Contact",
 
     // Project Section
@@ -155,13 +159,17 @@ const translations = {
     totalChristians: "1.8 billion Christians worldwide",
 
     // Navigation
+    navHome: "Home",
     navProject: "The Project",
     navListen: "Listen",
     navChurches: "Churches",
     navMission: "Mission",
     navSupport: "Support",
     navAbout: "About",
+    navPromises: "Promises",
     navConfessions: "Confessions",
+    navPlayer: "Player",
+    navBible: "Bible",
     navContact: "Contact",
 
     // Project Section
@@ -301,13 +309,17 @@ const translations = {
     totalChristians: "1.8 mil millones de cristianos en el mundo",
 
     // Navigation
+    navHome: "Inicio",
     navProject: "El Proyecto",
     navListen: "Escuchar",
     navChurches: "Iglesias",
     navMission: "Misión",
     navSupport: "Apoyar",
     navAbout: "Acerca de",
+    navPromises: "Promesas",
     navConfessions: "Confesiones",
+    navPlayer: "Reproductor",
+    navBible: "Biblia",
     navContact: "Contacto",
 
     // Project Section
@@ -447,13 +459,17 @@ const translations = {
     totalChristians: "1.8 bilhão de cristãos no mundo",
 
     // Navigation
+    navHome: "Início",
     navProject: "O Projeto",
     navListen: "Ouvir",
     navChurches: "Igrejas",
     navMission: "Missão",
     navSupport: "Apoiar",
     navAbout: "Sobre",
+    navPromises: "Promessas",
     navConfessions: "Confissões",
+    navPlayer: "Leitor",
+    navBible: "Bíblia",
     navContact: "Contato",
 
     // Project Section
@@ -1763,6 +1779,8 @@ Object.keys(translations).forEach(lang => {
     t.navHome = "Accueil";
     t.navPromises = "Promesses";
     t.navConfessions = "Confessions";
+    t.navPlayer = "Lecteur";
+    t.navBible = "Bible";
     t.aboutProjectTitle = "À propos du projet";
     t.aboutProjectDesc1 = "Bible Chantée est un projet musical spirituel visant à mettre en musique les 1189 chapitres de la Bible en 12 langues.";
     t.aboutProjectDesc2 = "Toutes les compositions sont originales. Les paroles sont basées sur les textes bibliques du domaine public.";
@@ -1787,6 +1805,8 @@ Object.keys(translations).forEach(lang => {
     t.navHome = "Home";
     t.navPromises = "Promises";
     t.navConfessions = "Confessions";
+    t.navPlayer = "Player";
+    t.navBible = "Bible";
     t.aboutProjectTitle = "About the project";
     t.aboutProjectDesc1 = "Sung Bible is a spiritual music project aiming to set to music the 1189 chapters of the Bible in 12 languages.";
     t.aboutProjectDesc2 = "All compositions are original. The lyrics are based on public domain biblical texts.";
@@ -1811,6 +1831,8 @@ Object.keys(translations).forEach(lang => {
     t.navHome = "Inicio";
     t.navPromises = "Promesas";
     t.navConfessions = "Confesiones";
+    t.navPlayer = "Reproductor";
+    t.navBible = "Biblia";
     t.aboutProjectTitle = "Acerca del proyecto";
     t.aboutProjectDesc1 = "Biblia Cantada es un proyecto de música espiritual que busca poner en música los 1189 capítulos de la Biblia en 12 idiomas.";
     t.aboutProjectDesc2 = "Todas las composiciones son originales. Las letras se basan en textos bíblicos de dominio público.";
@@ -1835,6 +1857,8 @@ Object.keys(translations).forEach(lang => {
     t.navHome = "Início";
     t.navPromises = "Promessas";
     t.navConfessions = "Confissões";
+    t.navPlayer = "Leitor";
+    t.navBible = "Bíblia";
     t.aboutProjectTitle = "Sobre o projeto";
     t.aboutProjectDesc1 = "Bíblia Cantada é um projeto de música espiritual que visa colocar em música os 1189 capítulos da Bíblia em 12 idiomas.";
     t.aboutProjectDesc2 = "Todas as composições são originais. As letras são baseadas em textos bíblicos de domínio público.";
