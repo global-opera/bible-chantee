@@ -26005,7 +26005,7 @@ Dans les fleuves de Ta grâce, nous venons chercher.
 
 [Chorus]  
 Ouvre les portes, élève les linteaux,  
-Entrée du Roi, dans notre cœur, fais-le beau.  
+Entrée du Roi, dans notre cœur, ouvre-le grand.  
 Qui est ce Roi de gloire, qui vient avec puissance ?  
 C’est l’Éternel, notre force, notre espérance.  
 
@@ -26017,7 +26017,7 @@ Dans Ta lumière, notre âme est précieuse.
 
 [Chorus]  
 Ouvre les portes, élève les linteaux,  
-Entrée du Roi, dans notre cœur, fais-le beau.  
+Entrée du Roi, dans notre cœur, ouvre-le grand.  
 Qui est ce Roi de gloire, qui vient avec puissance ?  
 C’est l’Éternel, notre force, notre espérance.  
 
@@ -26029,7 +26029,7 @@ O, Roi des armées, en Ta présence, nous vivons en grâce.
 
 [Chorus]  
 Ouvre les portes, élève les linteaux,  
-Entrée du Roi, dans notre cœur, fais-le beau.  
+Entrée du Roi, dans notre cœur, ouvre-le grand.  
 Qui est ce Roi de gloire, qui vient avec puissance ?  
 C’est l’Éternel, notre force, notre espérance.  
 
@@ -60259,4 +60259,5 @@ Bientôt, nous verrons ta face, notre roi,
 Viens, Seigneur Jésus, pour l'éternité, avec foi.`
     }
 };
+
 
