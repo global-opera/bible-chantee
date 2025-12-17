@@ -70,12 +70,24 @@
       margin-bottom: 40px;
     }
 
-    .language-buttons {
+    .language-buttons-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      max-width: 1100px;
       margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      .language-buttons-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .language-buttons-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .lang-select-btn {
@@ -103,6 +115,38 @@
       border-color: #f5c842;
       background: linear-gradient(135deg, rgba(245, 196, 66, 0.2), rgba(212, 175, 55, 0.2));
       box-shadow: 0 8px 25px rgba(245, 196, 66, 0.4);
+    }
+
+    /* Available languages (green border) */
+    .lang-select-btn.available {
+      border-color: rgba(34, 197, 94, 0.5);
+    }
+
+    .lang-select-btn.available:hover {
+      border-color: #22c55e;
+      box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3);
+    }
+
+    .lang-select-btn.available.active {
+      border-color: #22c55e;
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1));
+    }
+
+    /* Coming soon languages (gray) */
+    .lang-select-btn.coming-soon-btn {
+      border-color: rgba(100, 100, 100, 0.3);
+      opacity: 0.7;
+    }
+
+    .lang-select-btn.coming-soon-btn:hover {
+      border-color: rgba(150, 150, 150, 0.5);
+      opacity: 0.85;
+    }
+
+    .lang-select-btn.coming-soon-btn.active {
+      border-color: rgba(150, 150, 150, 0.6);
+      background: linear-gradient(135deg, rgba(100, 100, 100, 0.2), rgba(100, 100, 100, 0.1));
+      opacity: 1;
     }
 
     .lang-select-btn .flag {
@@ -552,45 +596,80 @@
 
   <!-- Hero -->
   <div class="hero">
-    <h1>🎵 Bible Chantée / Sung Bible</h1>
-    <p>Toute la Parole de Dieu en musique</p>
-    <p class="subtitle">1189 chapitres • 4 langues • 100 chapitres gratuits par langue</p>
+    <h1 data-i18n="hero-title">🎵 Bible Chantée / Sung Bible</h1>
+    <p data-i18n="hero-tagline">Toute la Parole de Dieu en musique</p>
+    <p class="subtitle" data-i18n="hero-subtitle">1189 chapitres • 12 langues • 100 chapitres gratuits par langue</p>
   </div>
 
   <!-- Language Selector -->
   <div class="language-selector-section">
     <div class="container">
-      <h2>🌍 Choisissez votre langue</h2>
-      <div class="language-buttons">
-        <button class="lang-select-btn active" data-lang="fr" onclick="selectLanguage('fr')">
+      <h2 id="lang-selector-title">🌍 Choisissez votre langue</h2>
+      <div class="language-buttons-grid">
+        <!-- Ligne 1: FR, PT, EN, ES -->
+        <button class="lang-select-btn available active" data-lang="fr" onclick="selectLanguage('fr')">
           <span class="flag">🇫🇷</span>
           <span class="lang-name">Français</span>
-          <span class="lang-status">✅ Disponible</span>
+          <span class="lang-status">✅ <span data-i18n="status-available">Disponible</span></span>
         </button>
-        <button class="lang-select-btn" data-lang="pt" onclick="selectLanguage('pt')">
+        <button class="lang-select-btn available" data-lang="pt" onclick="selectLanguage('pt')">
           <span class="flag">🇧🇷</span>
           <span class="lang-name">Português</span>
-          <span class="lang-status">✅ Disponible</span>
+          <span class="lang-status">✅ <span data-i18n="status-available">Disponible</span></span>
         </button>
-        <button class="lang-select-btn" data-lang="en" onclick="selectLanguage('en')">
+        <button class="lang-select-btn available" data-lang="en" onclick="selectLanguage('en')">
           <span class="flag">🇬🇧</span>
           <span class="lang-name">English</span>
-          <span class="lang-status">✅ Available</span>
+          <span class="lang-status">✅ <span data-i18n="status-available">Available</span></span>
         </button>
-        <button class="lang-select-btn" data-lang="es" onclick="selectLanguage('es')">
+        <button class="lang-select-btn coming-soon-btn" data-lang="es" onclick="selectLanguage('es')">
           <span class="flag">🇪🇸</span>
           <span class="lang-name">Español</span>
-          <span class="lang-status">🔜 Bientôt</span>
+          <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
-        <button class="lang-select-btn" data-lang="de" onclick="selectLanguage('de')">
+
+        <!-- Ligne 2: DE, IT, AR, RU -->
+        <button class="lang-select-btn coming-soon-btn" data-lang="de" onclick="selectLanguage('de')">
           <span class="flag">🇩🇪</span>
           <span class="lang-name">Deutsch</span>
-          <span class="lang-status">🔜 Bientôt</span>
+          <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
-        <button class="lang-select-btn" data-lang="it" onclick="selectLanguage('it')">
+        <button class="lang-select-btn coming-soon-btn" data-lang="it" onclick="selectLanguage('it')">
           <span class="flag">🇮🇹</span>
           <span class="lang-name">Italiano</span>
-          <span class="lang-status">🔜 Bientôt</span>
+          <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
+        </button>
+        <button class="lang-select-btn coming-soon-btn" data-lang="ar" onclick="selectLanguage('ar')">
+          <span class="flag">🇸🇦</span>
+          <span class="lang-name">العربية</span>
+          <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
+        </button>
+        <button class="lang-select-btn coming-soon-btn" data-lang="ru" onclick="selectLanguage('ru')">
+          <span class="flag">🇷🇺</span>
+          <span class="lang-name">Русский</span>
+          <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
+        </button>
+
+        <!-- Ligne 3: ZH, HI, TL, SW -->
+        <button class="lang-select-btn coming-soon-btn" data-lang="zh" onclick="selectLanguage('zh')">
+          <span class="flag">🇨🇳</span>
+          <span class="lang-name">中文</span>
+          <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
+        </button>
+        <button class="lang-select-btn coming-soon-btn" data-lang="hi" onclick="selectLanguage('hi')">
+          <span class="flag">🇮🇳</span>
+          <span class="lang-name">हिन्दी</span>
+          <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
+        </button>
+        <button class="lang-select-btn coming-soon-btn" data-lang="tl" onclick="selectLanguage('tl')">
+          <span class="flag">🇵🇭</span>
+          <span class="lang-name">Tagalog</span>
+          <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
+        </button>
+        <button class="lang-select-btn coming-soon-btn" data-lang="sw" onclick="selectLanguage('sw')">
+          <span class="flag">🇰🇪</span>
+          <span class="lang-name">Kiswahili</span>
+          <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
       </div>
     </div>
@@ -599,8 +678,8 @@
   <!-- Demo Audio Samples -->
   <div class="container">
     <div class="section">
-      <h2 id="extraits-title">🎧 Découvrez 3 extraits</h2>
-      <p class="teaser-message">Un aperçu de la qualité sonore et musicale</p>
+      <h2 id="extraits-title" data-i18n="samples-title">🎧 Découvrez 3 extraits</h2>
+      <p class="teaser-message" data-i18n="samples-subtitle">Un aperçu de la qualité sonore et musicale</p>
 
       <div class="demo-grid" id="samples-container">
         <!-- FRANÇAIS - 3 extraits -->
@@ -709,13 +788,13 @@
     <div class="signup-section">
       <div class="signup-container">
         <div class="marketing-message">
-          <h2>🎁 Envie d'en découvrir plus ?</h2>
-          <p class="marketing-subtitle">Pour accéder aux <strong>1189 chapitres complets</strong> dans votre langue, inscrivez-vous gratuitement !</p>
+          <h2 data-i18n="marketing-title">🎁 Envie d'en découvrir plus ?</h2>
+          <p class="marketing-subtitle" data-i18n="marketing-subtitle">Pour accéder aux <strong>1189 chapitres complets</strong> dans votre langue, inscrivez-vous gratuitement !</p>
 
           <div class="benefits-quick">
-            <div class="benefit-item">✅ 100 chapitres gratuits</div>
-            <div class="benefit-item">✅ Réécoute illimitée</div>
-            <div class="benefit-item">✅ Qualité audio professionnelle</div>
+            <div class="benefit-item" data-i18n="benefit-1">✅ 100 chapitres gratuits</div>
+            <div class="benefit-item" data-i18n="benefit-2">✅ Réécoute illimitée</div>
+            <div class="benefit-item" data-i18n="benefit-3">✅ Qualité audio professionnelle</div>
           </div>
         </div>
 
@@ -723,24 +802,25 @@
           <input
             type="email"
             id="email-input"
+            data-i18n-placeholder="email-placeholder"
             placeholder="Votre email pour commencer"
             required
           >
 
           <button type="submit" class="btn-signup">
-            <span id="signup-btn-text">Accéder gratuitement</span>
+            <span id="signup-btn-text" data-i18n="signup-btn">Accéder gratuitement</span>
           </button>
 
-          <p class="form-note">Votre email sera sauvegardé pour restaurer votre progression</p>
+          <p class="form-note" data-i18n="form-note">Votre email sera sauvegardé pour restaurer votre progression</p>
         </form>
 
         <!-- Preorder confirmation (hidden by default) -->
         <div id="preorder-message" class="preorder-message" style="display: none;">
           <div class="preorder-icon">🚀</div>
-          <h3>Merci pour votre intérêt !</h3>
-          <p>Vous serez notifié par email dès que cette langue sera disponible.</p>
-          <p class="preorder-count"><strong id="waiting-count">0</strong> personnes attendent cette version.</p>
-          <button onclick="closePreorderMessage()" class="btn-secondary">Choisir une autre langue</button>
+          <h3 data-i18n="preorder-thanks">Merci pour votre intérêt !</h3>
+          <p data-i18n="preorder-message">Vous serez notifié par email dès que cette langue sera disponible.</p>
+          <p class="preorder-count"><strong id="waiting-count">0</strong> <span data-i18n="preorder-waiting">personnes attendent cette version</span>.</p>
+          <button onclick="closePreorderMessage()" class="btn-secondary" data-i18n="preorder-back">Choisir une autre langue</button>
         </div>
       </div>
     </div>
@@ -856,9 +936,304 @@
     // Currently selected language (default: fr)
     let selectedLanguage = 'fr';
 
+    // Translations for all 12 languages
+    const translations = {
+      fr: {
+        'hero-title': '🎵 Bible Chantée / Sung Bible',
+        'hero-tagline': 'Toute la Parole de Dieu en musique',
+        'hero-subtitle': '1189 chapitres • 12 langues • 100 chapitres gratuits par langue',
+        'lang-selector-title': '🌍 Choisissez votre langue',
+        'status-available': 'Disponible',
+        'status-soon': 'Bientôt',
+        'samples-title': '🎧 Découvrez 3 extraits',
+        'samples-subtitle': 'Un aperçu de la qualité sonore et musicale',
+        'marketing-title': '🎁 Envie d\'en découvrir plus ?',
+        'marketing-subtitle': 'Pour accéder aux <strong>1189 chapitres complets</strong> dans votre langue, inscrivez-vous gratuitement !',
+        'benefit-1': '✅ 100 chapitres gratuits',
+        'benefit-2': '✅ Réécoute illimitée',
+        'benefit-3': '✅ Qualité audio professionnelle',
+        'email-placeholder': 'Votre email pour commencer',
+        'signup-btn': 'Accéder gratuitement',
+        'form-note': 'Votre email sera sauvegardé pour restaurer votre progression',
+        'preorder-thanks': 'Merci pour votre intérêt !',
+        'preorder-message': 'Vous serez notifié par email dès que cette langue sera disponible.',
+        'preorder-waiting': 'personnes attendent cette version',
+        'preorder-back': 'Choisir une autre langue'
+      },
+      pt: {
+        'hero-title': '🎵 Bíblia Cantada / Sung Bible',
+        'hero-tagline': 'Toda a Palavra de Deus em música',
+        'hero-subtitle': '1189 capítulos • 12 línguas • 100 capítulos grátis por língua',
+        'lang-selector-title': '🌍 Escolha seu idioma',
+        'status-available': 'Disponível',
+        'status-soon': 'Em breve',
+        'samples-title': '🎧 Descubra 3 trechos',
+        'samples-subtitle': 'Uma amostra da qualidade sonora e musical',
+        'marketing-title': '🎁 Quer descobrir mais?',
+        'marketing-subtitle': 'Para acessar os <strong>1189 capítulos completos</strong> no seu idioma, inscreva-se gratuitamente!',
+        'benefit-1': '✅ 100 capítulos grátis',
+        'benefit-2': '✅ Reescuta ilimitada',
+        'benefit-3': '✅ Qualidade de áudio profissional',
+        'email-placeholder': 'Seu e-mail para começar',
+        'signup-btn': 'Acessar gratuitamente',
+        'form-note': 'Seu e-mail será salvo para restaurar seu progresso',
+        'preorder-thanks': 'Obrigado pelo seu interesse!',
+        'preorder-message': 'Você será notificado por e-mail assim que este idioma estiver disponível.',
+        'preorder-waiting': 'pessoas aguardam esta versão',
+        'preorder-back': 'Escolher outro idioma'
+      },
+      en: {
+        'hero-title': '🎵 Sung Bible / Bible Chantée',
+        'hero-tagline': 'The entire Word of God in music',
+        'hero-subtitle': '1189 chapters • 12 languages • 100 free chapters per language',
+        'lang-selector-title': '🌍 Choose your language',
+        'status-available': 'Available',
+        'status-soon': 'Coming soon',
+        'samples-title': '🎧 Discover 3 samples',
+        'samples-subtitle': 'A preview of the sound and musical quality',
+        'marketing-title': '🎁 Want to discover more?',
+        'marketing-subtitle': 'To access the <strong>complete 1189 chapters</strong> in your language, sign up for free!',
+        'benefit-1': '✅ 100 free chapters',
+        'benefit-2': '✅ Unlimited replay',
+        'benefit-3': '✅ Professional audio quality',
+        'email-placeholder': 'Your email to get started',
+        'signup-btn': 'Access for free',
+        'form-note': 'Your email will be saved to restore your progress',
+        'preorder-thanks': 'Thank you for your interest!',
+        'preorder-message': 'You will be notified by email as soon as this language is available.',
+        'preorder-waiting': 'people are waiting for this version',
+        'preorder-back': 'Choose another language'
+      },
+      es: {
+        'hero-title': '🎵 Biblia Cantada / Sung Bible',
+        'hero-tagline': 'Toda la Palabra de Dios en música',
+        'hero-subtitle': '1189 capítulos • 12 idiomas • 100 capítulos gratis por idioma',
+        'lang-selector-title': '🌍 Elige tu idioma',
+        'status-available': 'Disponible',
+        'status-soon': 'Próximamente',
+        'samples-title': '🎧 Descubre 3 extractos',
+        'samples-subtitle': 'Una muestra de la calidad sonora y musical',
+        'marketing-title': '🎁 ¿Quieres descubrir más?',
+        'marketing-subtitle': 'Para acceder a los <strong>1189 capítulos completos</strong> en tu idioma, ¡regístrate gratis!',
+        'benefit-1': '✅ 100 capítulos gratis',
+        'benefit-2': '✅ Reproducción ilimitada',
+        'benefit-3': '✅ Calidad de audio profesional',
+        'email-placeholder': 'Tu email para comenzar',
+        'signup-btn': 'Acceder gratis',
+        'form-note': 'Tu email se guardará para restaurar tu progreso',
+        'preorder-thanks': '¡Gracias por tu interés!',
+        'preorder-message': 'Serás notificado por email cuando este idioma esté disponible.',
+        'preorder-waiting': 'personas esperan esta versión',
+        'preorder-back': 'Elegir otro idioma'
+      },
+      de: {
+        'hero-title': '🎵 Gesungene Bibel / Sung Bible',
+        'hero-tagline': 'Das gesamte Wort Gottes in Musik',
+        'hero-subtitle': '1189 Kapitel • 12 Sprachen • 100 kostenlose Kapitel pro Sprache',
+        'lang-selector-title': '🌍 Wählen Sie Ihre Sprache',
+        'status-available': 'Verfügbar',
+        'status-soon': 'Demnächst',
+        'samples-title': '🎧 Entdecken Sie 3 Ausschnitte',
+        'samples-subtitle': 'Eine Vorschau der Klang- und Musikqualität',
+        'marketing-title': '🎁 Möchten Sie mehr entdecken?',
+        'marketing-subtitle': 'Um auf die <strong>vollständigen 1189 Kapitel</strong> in Ihrer Sprache zuzugreifen, melden Sie sich kostenlos an!',
+        'benefit-1': '✅ 100 kostenlose Kapitel',
+        'benefit-2': '✅ Unbegrenzte Wiedergabe',
+        'benefit-3': '✅ Professionelle Audioqualität',
+        'email-placeholder': 'Ihre E-Mail zum Starten',
+        'signup-btn': 'Kostenlos zugreifen',
+        'form-note': 'Ihre E-Mail wird gespeichert, um Ihren Fortschritt wiederherzustellen',
+        'preorder-thanks': 'Vielen Dank für Ihr Interesse!',
+        'preorder-message': 'Sie werden per E-Mail benachrichtigt, sobald diese Sprache verfügbar ist.',
+        'preorder-waiting': 'Personen warten auf diese Version',
+        'preorder-back': 'Andere Sprache wählen'
+      },
+      it: {
+        'hero-title': '🎵 Bibbia Cantata / Sung Bible',
+        'hero-tagline': 'Tutta la Parola di Dio in musica',
+        'hero-subtitle': '1189 capitoli • 12 lingue • 100 capitoli gratuiti per lingua',
+        'lang-selector-title': '🌍 Scegli la tua lingua',
+        'status-available': 'Disponibile',
+        'status-soon': 'Prossimamente',
+        'samples-title': '🎧 Scopri 3 estratti',
+        'samples-subtitle': 'Un\'anteprima della qualità sonora e musicale',
+        'marketing-title': '🎁 Vuoi scoprire di più?',
+        'marketing-subtitle': 'Per accedere ai <strong>1189 capitoli completi</strong> nella tua lingua, iscriviti gratuitamente!',
+        'benefit-1': '✅ 100 capitoli gratuiti',
+        'benefit-2': '✅ Riascolto illimitato',
+        'benefit-3': '✅ Qualità audio professionale',
+        'email-placeholder': 'La tua email per iniziare',
+        'signup-btn': 'Accedi gratuitamente',
+        'form-note': 'La tua email verrà salvata per ripristinare i tuoi progressi',
+        'preorder-thanks': 'Grazie per il tuo interesse!',
+        'preorder-message': 'Sarai avvisato via email non appena questa lingua sarà disponibile.',
+        'preorder-waiting': 'persone stanno aspettando questa versione',
+        'preorder-back': 'Scegli un\'altra lingua'
+      },
+      ar: {
+        'hero-title': '🎵 الكتاب المقدس المُنغَّم / Sung Bible',
+        'hero-tagline': 'كلمة الله كاملة في الموسيقى',
+        'hero-subtitle': '1189 فصلاً • 12 لغة • 100 فصل مجاني لكل لغة',
+        'lang-selector-title': '🌍 اختر لغتك',
+        'status-available': 'متاح',
+        'status-soon': 'قريباً',
+        'samples-title': '🎧 اكتشف 3 مقاطع',
+        'samples-subtitle': 'معاينة للجودة الصوتية والموسيقية',
+        'marketing-title': '🎁 هل تريد اكتشاف المزيد؟',
+        'marketing-subtitle': 'للوصول إلى <strong>1189 فصلاً كاملاً</strong> بلغتك، سجل مجاناً!',
+        'benefit-1': '✅ 100 فصل مجاني',
+        'benefit-2': '✅ إعادة استماع غير محدودة',
+        'benefit-3': '✅ جودة صوت احترافية',
+        'email-placeholder': 'بريدك الإلكتروني للبدء',
+        'signup-btn': 'الوصول مجاناً',
+        'form-note': 'سيتم حفظ بريدك الإلكتروني لاستعادة تقدمك',
+        'preorder-thanks': 'شكراً لاهتمامك!',
+        'preorder-message': 'سيتم إعلامك بالبريد الإلكتروني عندما تتوفر هذه اللغة.',
+        'preorder-waiting': 'أشخاص ينتظرون هذا الإصدار',
+        'preorder-back': 'اختر لغة أخرى'
+      },
+      ru: {
+        'hero-title': '🎵 Библия в песнях / Sung Bible',
+        'hero-tagline': 'Всё Слово Божье в музыке',
+        'hero-subtitle': '1189 глав • 12 языков • 100 бесплатных глав на язык',
+        'lang-selector-title': '🌍 Выберите язык',
+        'status-available': 'Доступно',
+        'status-soon': 'Скоро',
+        'samples-title': '🎧 Откройте 3 отрывка',
+        'samples-subtitle': 'Предпросмотр качества звука и музыки',
+        'marketing-title': '🎁 Хотите узнать больше?',
+        'marketing-subtitle': 'Чтобы получить доступ к <strong>1189 полным главам</strong> на вашем языке, зарегистрируйтесь бесплатно!',
+        'benefit-1': '✅ 100 бесплатных глав',
+        'benefit-2': '✅ Неограниченное прослушивание',
+        'benefit-3': '✅ Профессиональное качество звука',
+        'email-placeholder': 'Ваш email для начала',
+        'signup-btn': 'Получить бесплатно',
+        'form-note': 'Ваш email будет сохранён для восстановления прогресса',
+        'preorder-thanks': 'Спасибо за ваш интерес!',
+        'preorder-message': 'Вы получите уведомление по электронной почте, когда этот язык станет доступен.',
+        'preorder-waiting': 'человек ждут этой версии',
+        'preorder-back': 'Выбрать другой язык'
+      },
+      zh: {
+        'hero-title': '🎵 歌唱圣经 / Sung Bible',
+        'hero-tagline': '整本神的话语以音乐呈现',
+        'hero-subtitle': '1189章 • 12种语言 • 每种语言100章免费',
+        'lang-selector-title': '🌍 选择您的语言',
+        'status-available': '可用',
+        'status-soon': '即将推出',
+        'samples-title': '🎧 探索3个片段',
+        'samples-subtitle': '音质和音乐质量预览',
+        'marketing-title': '🎁 想了解更多？',
+        'marketing-subtitle': '要访问您语言的<strong>完整1189章</strong>，请免费注册！',
+        'benefit-1': '✅ 100章免费',
+        'benefit-2': '✅ 无限重播',
+        'benefit-3': '✅ 专业音频质量',
+        'email-placeholder': '您的电子邮件以开始',
+        'signup-btn': '免费访问',
+        'form-note': '您的电子邮件将被保存以恢复您的进度',
+        'preorder-thanks': '感谢您的兴趣！',
+        'preorder-message': '此语言可用时，您将收到电子邮件通知。',
+        'preorder-waiting': '人正在等待此版本',
+        'preorder-back': '选择另一种语言'
+      },
+      hi: {
+        'hero-title': '🎵 गाया हुआ बाइबिल / Sung Bible',
+        'hero-tagline': 'संगीत में परमेश्वर का सम्पूर्ण वचन',
+        'hero-subtitle': '1189 अध्याय • 12 भाषाएँ • प्रति भाषा 100 मुफ्त अध्याय',
+        'lang-selector-title': '🌍 अपनी भाषा चुनें',
+        'status-available': 'उपलब्ध',
+        'status-soon': 'जल्द आ रहा है',
+        'samples-title': '🎧 3 नमूने खोजें',
+        'samples-subtitle': 'ध्वनि और संगीत गुणवत्ता का पूर्वावलोकन',
+        'marketing-title': '🎁 और अधिक जानना चाहते हैं?',
+        'marketing-subtitle': 'अपनी भाषा में <strong>पूर्ण 1189 अध्यायों</strong> तक पहुँचने के लिए, मुफ्त में साइन अप करें!',
+        'benefit-1': '✅ 100 मुफ्त अध्याय',
+        'benefit-2': '✅ असीमित रीप्ले',
+        'benefit-3': '✅ पेशेवर ऑडियो गुणवत्ता',
+        'email-placeholder': 'शुरू करने के लिए आपका ईमेल',
+        'signup-btn': 'मुफ्त में एक्सेस करें',
+        'form-note': 'आपकी प्रगति को पुनर्स्थापित करने के लिए आपका ईमेल सहेजा जाएगा',
+        'preorder-thanks': 'आपकी रुचि के लिए धन्यवाद!',
+        'preorder-message': 'जैसे ही यह भाषा उपलब्ध होगी, आपको ईमेल द्वारा सूचित किया जाएगा।',
+        'preorder-waiting': 'लोग इस संस्करण की प्रतीक्षा कर रहे हैं',
+        'preorder-back': 'दूसरी भाषा चुनें'
+      },
+      tl: {
+        'hero-title': '🎵 Bibliya na Inawit / Sung Bible',
+        'hero-tagline': 'Ang buong Salita ng Diyos sa musika',
+        'hero-subtitle': '1189 kabanata • 12 wika • 100 libreng kabanata bawat wika',
+        'lang-selector-title': '🌍 Piliin ang iyong wika',
+        'status-available': 'Available',
+        'status-soon': 'Paparating',
+        'samples-title': '🎧 Tuklasin ang 3 sample',
+        'samples-subtitle': 'Isang preview ng kalidad ng tunog at musika',
+        'marketing-title': '🎁 Gusto mo bang matuklasan ang higit pa?',
+        'marketing-subtitle': 'Upang ma-access ang <strong>kumpletong 1189 kabanata</strong> sa iyong wika, mag-sign up nang libre!',
+        'benefit-1': '✅ 100 libreng kabanata',
+        'benefit-2': '✅ Walang limitasyong replay',
+        'benefit-3': '✅ Propesyonal na kalidad ng audio',
+        'email-placeholder': 'Ang iyong email para magsimula',
+        'signup-btn': 'Mag-access nang libre',
+        'form-note': 'Ang iyong email ay ii-save upang maibalik ang iyong progreso',
+        'preorder-thanks': 'Salamat sa iyong interes!',
+        'preorder-message': 'Aabisuhan ka sa pamamagitan ng email kapag available na ang wikang ito.',
+        'preorder-waiting': 'tao ang naghihintay sa bersyong ito',
+        'preorder-back': 'Pumili ng ibang wika'
+      },
+      sw: {
+        'hero-title': '🎵 Biblia Inayoimbiwa / Sung Bible',
+        'hero-tagline': 'Neno la Mungu lote katika muziki',
+        'hero-subtitle': 'Sura 1189 • Lugha 12 • Sura 100 za bure kwa kila lugha',
+        'lang-selector-title': '🌍 Chagua lugha yako',
+        'status-available': 'Inapatikana',
+        'status-soon': 'Inakuja hivi karibuni',
+        'samples-title': '🎧 Gundua sampuli 3',
+        'samples-subtitle': 'Onyesho la awali la ubora wa sauti na muziki',
+        'marketing-title': '🎁 Unataka kugundua zaidi?',
+        'marketing-subtitle': 'Ili kufikia <strong>sura 1189 kamili</strong> katika lugha yako, jisajili bure!',
+        'benefit-1': '✅ Sura 100 za bure',
+        'benefit-2': '✅ Kusikiliza bila kikomo',
+        'benefit-3': '✅ Ubora wa sauti wa kitaaluma',
+        'email-placeholder': 'Barua pepe yako ili kuanza',
+        'signup-btn': 'Pata bure',
+        'form-note': 'Barua pepe yako itahifadhiwa ili kurejesha maendeleo yako',
+        'preorder-thanks': 'Asante kwa maslahi yako!',
+        'preorder-message': 'Utaarifiwa kupitia barua pepe lugha hii itakapopatikana.',
+        'preorder-waiting': 'watu wanasubiri toleo hili',
+        'preorder-back': 'Chagua lugha nyingine'
+      }
+    };
+
+    // Translate entire page to selected language
+    function translatePage(lang) {
+      const t = translations[lang];
+      if (!t) return;
+
+      // Translate all elements with data-i18n
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) {
+          el.innerHTML = t[key];
+        }
+      });
+
+      // Translate placeholders
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (t[key]) {
+          el.setAttribute('placeholder', t[key]);
+        }
+      });
+
+      console.log(`🌍 Page translated to: ${lang.toUpperCase()}`);
+    }
+
     // Select language and filter samples
     function selectLanguage(lang) {
       selectedLanguage = lang;
+
+      // Translate entire page
+      translatePage(lang);
 
       // Update active button
       document.querySelectorAll('.lang-select-btn').forEach(btn => {
