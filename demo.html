@@ -279,6 +279,65 @@
             opacity: 1;
             padding: 1rem;
         }
+        .preorder-section {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .preorder-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+        }
+        .preorder-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            max-width: 400px;
+            padding: 0.8rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.05);
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+        .preorder-btn {
+            padding: 1rem 2.5rem;
+            background: var(--accent-gold);
+            color: #000;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+            margin-top: 0.5rem;
+        }
+        .preorder-btn:hover {
+            transform: scale(1.05);
+        }
+        .preorder-success {
+            background: var(--success-green);
+            color: #000;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -316,7 +375,32 @@
         
         <h2 class="section-title" id="title-listen"></h2>
         <div class="tracks" id="tracks-container"></div>
-        
+
+        <!-- Preorder Section -->
+        <div class="preorder-section">
+            <h2 id="preorder-title"></h2>
+            <p id="preorder-subtitle"></p>
+            <form name="preorder" method="POST" netlify netlify-honeypot="bot-field" id="preorder-form">
+                <input type="hidden" name="form-name" value="preorder">
+                <p style="display:none;">
+                    <label>Don't fill this out: <input name="bot-field"></label>
+                </p>
+                <div class="form-group">
+                    <input type="email" name="email" id="preorder-email-input" required>
+                </div>
+                <div class="form-group">
+                    <select name="language" id="preorder-language-select" required>
+                        <option value="FR">Français</option>
+                        <option value="PT">Português</option>
+                        <option value="EN">English</option>
+                        <option value="ES">Español</option>
+                    </select>
+                </div>
+                <button type="submit" class="preorder-btn" id="preorder-submit-btn"></button>
+            </form>
+            <div class="preorder-success" id="preorder-success" style="display:none;"></div>
+        </div>
+
         <div class="progress-section">
             <h2 id="title-progress"></h2>
             <div class="lang-progress" id="progress-container"></div>
@@ -387,6 +471,12 @@
                 btnHide: "Masquer",
                 lyricsComingSoon: "Paroles bientot disponibles",
                 streamingComingSoon: "Bientot disponible",
+                preorderTitle: "Recevez la Bible Chantee complete",
+                preorderSubtitle: "Inscrivez-vous pour etre notifie des la sortie",
+                preorderEmail: "Votre email",
+                preorderLanguage: "Langue preferee",
+                preorderBtn: "S'inscrire",
+                preorderSuccess: "Merci ! Vous serez notifie.",
                 tracks: [
                     { id: "01_GEN_01_FR", title: "Genese 1", desc: "La Creation" },
                     { id: "19_PSA_23_FR", title: "Psaume 23", desc: "L'Eternel est mon berger" },
@@ -422,6 +512,12 @@
                 btnHide: "Ocultar",
                 lyricsComingSoon: "Letras em breve",
                 streamingComingSoon: "Em breve",
+                preorderTitle: "Receba a Biblia Cantada completa",
+                preorderSubtitle: "Inscreva-se para ser notificado no lancamento",
+                preorderEmail: "Seu email",
+                preorderLanguage: "Idioma preferido",
+                preorderBtn: "Inscrever-se",
+                preorderSuccess: "Obrigado! Voce sera notificado.",
                 tracks: [
                     { id: "01_GEN_01_PT", title: "Genesis 1", desc: "A Criacao" },
                     { id: "19_PSA_23_PT", title: "Salmo 23", desc: "O Senhor e meu pastor" },
@@ -457,6 +553,12 @@
                 btnHide: "Hide",
                 lyricsComingSoon: "Lyrics coming soon",
                 streamingComingSoon: "Coming soon",
+                preorderTitle: "Get the complete Sung Bible",
+                preorderSubtitle: "Subscribe to be notified at launch",
+                preorderEmail: "Your email",
+                preorderLanguage: "Preferred language",
+                preorderBtn: "Subscribe",
+                preorderSuccess: "Thank you! You will be notified.",
                 tracks: [
                     { id: "01_GEN_01_EN", title: "Genesis 1", desc: "The Creation" },
                     { id: "19_PSA_23_EN", title: "Psalm 23", desc: "The Lord is my shepherd" },
@@ -492,6 +594,12 @@
                 btnHide: "Ocultar",
                 lyricsComingSoon: "Letras en breve",
                 streamingComingSoon: "Proximo",
+                preorderTitle: "Reciba la Biblia Cantada completa",
+                preorderSubtitle: "Suscribase para ser notificado en el lanzamiento",
+                preorderEmail: "Su email",
+                preorderLanguage: "Idioma preferido",
+                preorderBtn: "Suscribirse",
+                preorderSuccess: "Gracias! Sera notificado.",
                 tracks: [
                     { id: "01_GEN_01_ES", title: "Genesis 1", desc: "La Creacion" },
                     { id: "19_PSA_23_ES", title: "Salmo 23", desc: "El Senor es mi pastor" },
@@ -570,6 +678,14 @@
             streamingLinks.forEach(link => {
                 link.title = t.streamingComingSoon;
             });
+
+            // Mettre à jour la section précommande
+            document.getElementById('preorder-title').textContent = t.preorderTitle;
+            document.getElementById('preorder-subtitle').textContent = t.preorderSubtitle;
+            document.getElementById('preorder-email-input').placeholder = t.preorderEmail;
+            const languageSelect = document.getElementById('preorder-language-select');
+            languageSelect.options[0].text = t.preorderLanguage + ' - Français';
+            document.getElementById('preorder-submit-btn').textContent = t.preorderBtn;
 
             loadTracks();
             loadProgress();
@@ -675,6 +791,32 @@
                 alert('Chave Pix: ' + pixKey + '\n\nCopie manualmente esta chave.');
             });
         }
+
+        // Gestion du formulaire de précommande
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('preorder-form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const formData = new FormData(form);
+
+                fetch('/', {
+                    method: 'POST',
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams(formData).toString()
+                })
+                .then(() => {
+                    form.style.display = 'none';
+                    const successDiv = document.getElementById('preorder-success');
+                    const t = translations[currentLang];
+                    successDiv.textContent = t.preorderSuccess;
+                    successDiv.style.display = 'block';
+                })
+                .catch((error) => {
+                    alert('Error: ' + error);
+                });
+            });
+        });
 
         updatePage();
     </script>
