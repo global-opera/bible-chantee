@@ -716,6 +716,47 @@
       }
     }
 
+    /* Copyright Section */
+    .copyright-section {
+      background: #1e293b;
+      border-radius: 16px;
+      padding: 40px;
+      margin: 60px 0;
+      text-align: center;
+      border: 2px solid rgba(245, 196, 66, 0.3);
+    }
+
+    .copyright-section h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.8em;
+      color: #f5c842;
+      margin-bottom: 20px;
+    }
+
+    .copyright-section p {
+      color: #cbd5e1;
+      line-height: 1.8;
+      margin-bottom: 15px;
+      font-size: 1em;
+    }
+
+    .copyright-section .copyright-line {
+      font-weight: 600;
+      color: #f5c842;
+      margin-top: 25px;
+      font-size: 1.1em;
+    }
+
+    @media (max-width: 768px) {
+      .copyright-section {
+        padding: 30px 20px;
+      }
+
+      .copyright-section h3 {
+        font-size: 1.5em;
+      }
+    }
+
     /* Footer */
     footer {
       background: #1e3a8a;
@@ -1157,6 +1198,15 @@
         </a>
       </div>
     </div>
+
+    <!-- Copyright Section -->
+    <div class="copyright-section">
+      <h3 data-i18n="copyright-title">🎵 Chants et paroles originales</h3>
+      <p data-i18n="copyright-original">Toutes les compositions musicales et paroles poétiques sont des créations originales.</p>
+      <p data-i18n="copyright-bible">Texte biblique : domaine public (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)</p>
+      <p data-i18n="copyright-music">Musique : générée par IA (Suno) - droits commerciaux acquis</p>
+      <p class="copyright-line" data-i18n="copyright-notice">© 2025 Bible Chantée / Sung Bible - Tous droits réservés</p>
+    </div>
   </div>
 
   <!-- Footer -->
@@ -1221,7 +1271,12 @@
         'support-tier1': '1 chapitre offert à quelqu\'un',
         'support-tier2': '1 livre complet financé',
         'support-tier3': '1 langue accélérée',
-        'support-tier4': 'Partenaire fondateur (nom dans crédits)'
+        'support-tier4': 'Partenaire fondateur (nom dans crédits)',
+        'copyright-title': '🎵 Chants et paroles originales',
+        'copyright-original': 'Toutes les compositions musicales et paroles poétiques sont des créations originales.',
+        'copyright-bible': 'Texte biblique : domaine public (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
+        'copyright-music': 'Musique : générée par IA (Suno) - droits commerciaux acquis',
+        'copyright-notice': '© 2025 Bible Chantée / Sung Bible - Tous droits réservés'
       },
       pt: {
         'hero-title': '🎵 Bíblia Cantada / Sung Bible',
@@ -1264,7 +1319,12 @@
         'support-tier1': '1 capítulo oferecido a alguém',
         'support-tier2': '1 livro completo financiado',
         'support-tier3': '1 língua acelerada',
-        'support-tier4': 'Parceiro fundador (nome nos créditos)'
+        'support-tier4': 'Parceiro fundador (nome nos créditos)',
+        'copyright-title': '🎵 Canções e letras originais',
+        'copyright-original': 'Todas as composições musicais e letras poéticas são criações originais.',
+        'copyright-bible': 'Texto bíblico: domínio público (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
+        'copyright-music': 'Música: gerada por IA (Suno) - direitos comerciais adquiridos',
+        'copyright-notice': '© 2025 Bíblia Cantada / Sung Bible - Todos os direitos reservados'
       },
       en: {
         'hero-title': '🎵 Sung Bible / Bible Chantée',
@@ -1307,7 +1367,12 @@
         'support-tier1': '1 chapter gifted to someone',
         'support-tier2': '1 complete book funded',
         'support-tier3': '1 language accelerated',
-        'support-tier4': 'Founding partner (name in credits)'
+        'support-tier4': 'Founding partner (name in credits)',
+        'copyright-title': '🎵 Original songs and lyrics',
+        'copyright-original': 'All musical compositions and poetic lyrics are original creations.',
+        'copyright-bible': 'Biblical text: public domain (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
+        'copyright-music': 'Music: AI-generated (Suno) - commercial rights acquired',
+        'copyright-notice': '© 2025 Sung Bible / Bible Chantée - All rights reserved'
       },
       es: {
         'hero-title': '🎵 Biblia Cantada / Sung Bible',
@@ -1350,7 +1415,12 @@
         'support-tier1': '1 capítulo regalado a alguien',
         'support-tier2': '1 libro completo financiado',
         'support-tier3': '1 idioma acelerado',
-        'support-tier4': 'Socio fundador (nombre en créditos)'
+        'support-tier4': 'Socio fundador (nombre en créditos)',
+        'copyright-title': '🎵 Canciones y letras originales',
+        'copyright-original': 'Todas las composiciones musicales y letras poéticas son creaciones originales.',
+        'copyright-bible': 'Texto bíblico: dominio público (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
+        'copyright-music': 'Música: generada por IA (Suno) - derechos comerciales adquiridos',
+        'copyright-notice': '© 2025 Biblia Cantada / Sung Bible - Todos los derechos reservados'
       },
       de: {
         'hero-title': '🎵 Gesungene Bibel / Sung Bible',
@@ -1393,7 +1463,12 @@
         'support-tier1': '1 Kapitel für jemanden geschenkt',
         'support-tier2': '1 vollständiges Buch finanziert',
         'support-tier3': '1 Sprache beschleunigt',
-        'support-tier4': 'Gründungspartner (Name im Abspann)'
+        'support-tier4': 'Gründungspartner (Name im Abspann)',
+        'copyright-title': '🎵 Original-Lieder und Texte',
+        'copyright-original': 'Alle musikalischen Kompositionen und poetischen Texte sind Originalschöpfungen.',
+        'copyright-bible': 'Bibeltext: gemeinfrei (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
+        'copyright-music': 'Musik: KI-generiert (Suno) - kommerzielle Rechte erworben',
+        'copyright-notice': '© 2025 Gesungene Bibel / Sung Bible - Alle Rechte vorbehalten'
       },
       it: {
         'hero-title': '🎵 Bibbia Cantata / Sung Bible',
@@ -1436,7 +1511,12 @@
         'support-tier1': '1 capitolo regalato a qualcuno',
         'support-tier2': '1 libro completo finanziato',
         'support-tier3': '1 lingua accelerata',
-        'support-tier4': 'Partner fondatore (nome nei crediti)'
+        'support-tier4': 'Partner fondatore (nome nei crediti)',
+        'copyright-title': '🎵 Canzoni e testi originali',
+        'copyright-original': 'Tutte le composizioni musicali e i testi poetici sono creazioni originali.',
+        'copyright-bible': 'Testo biblico: dominio pubblico (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
+        'copyright-music': 'Musica: generata da IA (Suno) - diritti commerciali acquisiti',
+        'copyright-notice': '© 2025 Bibbia Cantata / Sung Bible - Tutti i diritti riservati'
       },
       ar: {
         'hero-title': '🎵 الكتاب المقدس المُنغَّم / Sung Bible',
@@ -1479,7 +1559,12 @@
         'support-tier1': 'فصل واحد مُهدى لشخص ما',
         'support-tier2': 'كتاب كامل واحد ممول',
         'support-tier3': 'لغة واحدة مُسرَّعة',
-        'support-tier4': 'شريك مؤسس (اسم في الاعتمادات)'
+        'support-tier4': 'شريك مؤسس (اسم في الاعتمادات)',
+        'copyright-title': '🎵 أغاني وكلمات أصلية',
+        'copyright-original': 'جميع المؤلفات الموسيقية والكلمات الشعرية هي إبداعات أصلية.',
+        'copyright-bible': 'النص الكتابي: ملكية عامة (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
+        'copyright-music': 'الموسيقى: مولدة بالذكاء الاصطناعي (Suno) - حقوق تجارية مكتسبة',
+        'copyright-notice': '© 2025 الكتاب المقدس المُنغَّم / Sung Bible - جميع الحقوق محفوظة'
       },
       ru: {
         'hero-title': '🎵 Библия в песнях / Sung Bible',
@@ -1522,7 +1607,12 @@
         'support-tier1': '1 глава подарена кому-то',
         'support-tier2': '1 полная книга профинансирована',
         'support-tier3': '1 язык ускорен',
-        'support-tier4': 'Партнёр-основатель (имя в титрах)'
+        'support-tier4': 'Партнёр-основатель (имя в титрах)',
+        'copyright-title': '🎵 Оригинальные песни и тексты',
+        'copyright-original': 'Все музыкальные композиции и поэтические тексты являются оригинальными произведениями.',
+        'copyright-bible': 'Библейский текст: общественное достояние (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
+        'copyright-music': 'Музыка: создана ИИ (Suno) - коммерческие права приобретены',
+        'copyright-notice': '© 2025 Библия в песнях / Sung Bible - Все права защищены'
       },
       zh: {
         'hero-title': '🎵 歌唱圣经 / Sung Bible',
@@ -1565,7 +1655,12 @@
         'support-tier1': '为某人赠送1章',
         'support-tier2': '资助1本完整的书',
         'support-tier3': '加速1种语言',
-        'support-tier4': '创始合伙人（名字列入致谢）'
+        'support-tier4': '创始合伙人（名字列入致谢）',
+        'copyright-title': '🎵 原创歌曲和歌词',
+        'copyright-original': '所有音乐作品和诗歌歌词均为原创作品。',
+        'copyright-bible': '圣经文本：公有领域 (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
+        'copyright-music': '音乐：AI生成 (Suno) - 已获得商业权利',
+        'copyright-notice': '© 2025 歌唱圣经 / Sung Bible - 版权所有'
       },
       hi: {
         'hero-title': '🎵 गाया हुआ बाइबिल / Sung Bible',
@@ -1608,7 +1703,12 @@
         'support-tier1': 'किसी को 1 अध्याय उपहार में दें',
         'support-tier2': '1 पूर्ण पुस्तक वित्त पोषित',
         'support-tier3': '1 भाषा त्वरित',
-        'support-tier4': 'संस्थापक भागीदार (क्रेडिट में नाम)'
+        'support-tier4': 'संस्थापक भागीदार (क्रेडिट में नाम)',
+        'copyright-title': '🎵 मूल गीत और बोल',
+        'copyright-original': 'सभी संगीत रचनाएँ और काव्यात्मक बोल मूल रचनाएँ हैं।',
+        'copyright-bible': 'बाइबिल पाठ: सार्वजनिक डोमेन (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
+        'copyright-music': 'संगीत: AI द्वारा उत्पन्न (Suno) - वाणिज्यिक अधिकार प्राप्त',
+        'copyright-notice': '© 2025 गाया हुआ बाइबिल / Sung Bible - सर्वाधिकार सुरक्षित'
       },
       tl: {
         'hero-title': '🎵 Bibliya na Inawit / Sung Bible',
@@ -1651,7 +1751,12 @@
         'support-tier1': '1 kabanatang iregalo sa iba',
         'support-tier2': '1 kumpletong aklat na pinondohan',
         'support-tier3': '1 wikang pinabilis',
-        'support-tier4': 'Founding partner (pangalan sa credits)'
+        'support-tier4': 'Founding partner (pangalan sa credits)',
+        'copyright-title': '🎵 Orihinal na mga kanta at lyrics',
+        'copyright-original': 'Lahat ng komposisyong musikal at tulang lyrics ay orihinal na likhain.',
+        'copyright-bible': 'Biblikal na teksto: public domain (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
+        'copyright-music': 'Musika: AI-generated (Suno) - komersyal na karapatan nakuha',
+        'copyright-notice': '© 2025 Bibliya na Inawit / Sung Bible - Lahat ng karapatan nakalaan'
       },
       sw: {
         'hero-title': '🎵 Biblia Inayoimbiwa / Sung Bible',
@@ -1694,7 +1799,12 @@
         'support-tier1': 'Sura 1 kutolewa kwa mtu',
         'support-tier2': 'Kitabu 1 kamili kimefadhiliwa',
         'support-tier3': 'Lugha 1 imeharakishwa',
-        'support-tier4': 'Mshirika wa msingi (jina katika sifa)'
+        'support-tier4': 'Mshirika wa msingi (jina katika sifa)',
+        'copyright-title': '🎵 Nyimbo na maneno asilia',
+        'copyright-original': 'Vielelezo vyote vya muziki na maneno ya kishairi ni viumbuzi asilia.',
+        'copyright-bible': 'Maandiko ya Biblia: mali ya umma (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
+        'copyright-music': 'Muziki: uliozalishwa na AI (Suno) - haki za kibiashara zimenunuliwa',
+        'copyright-notice': '© 2025 Biblia Inayoimbiwa / Sung Bible - Haki zote zimehifadhiwa'
       }
     };
 
