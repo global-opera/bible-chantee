@@ -777,6 +777,9 @@
                 lyricsText = t.lyricsComingSoon;
             }
 
+            // Nettoyer les paroles : supprimer les marqueurs de sections
+            lyricsText = lyricsText.replace(/\[(Verse|Chorus|Bridge|Outro|Intro|Spoken Word|Hook|Pre-Chorus|Post-Chorus|TITRE|LYRICS|Verso|Refrão|Refr[aã]o|Ponte|Outra).*?\]/gi, '\n');
+
             // Afficher les paroles
             lyricsContainer.textContent = lyricsText;
             lyricsContainer.classList.add('show');
