@@ -841,16 +841,23 @@
                 return;
             }
 
-            const increment = end > start ? 1 : -1;
-            const stepTime = Math.abs(Math.floor(duration / range));
+            // Pour les grands nombres, on fait moins d'étapes
+            const steps = Math.min(Math.abs(range), 60); // Max 60 étapes
+            const increment = Math.ceil(Math.abs(range) / steps) * (end > start ? 1 : -1);
+            const stepTime = Math.floor(duration / steps);
             let current = start;
 
             activeTimers[id] = setInterval(() => {
                 current += increment;
-                obj.textContent = current.toLocaleString();
-                if (current === end) {
+
+                // Ne pas dépasser la valeur finale
+                if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+                    current = end;
+                    obj.textContent = current.toLocaleString();
                     clearInterval(activeTimers[id]);
                     delete activeTimers[id];
+                } else {
+                    obj.textContent = current.toLocaleString();
                 }
             }, stepTime);
         }
