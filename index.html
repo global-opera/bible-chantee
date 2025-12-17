@@ -600,11 +600,25 @@
     }
 
     .next-languages {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 15px;
-      justify-content: center;
       margin-top: 30px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+      .next-languages {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .next-languages {
+        grid-template-columns: 1fr;
+      }
     }
 
     .lang-waiting {
@@ -1079,6 +1093,7 @@
         </div>
 
         <div class="next-languages">
+          <!-- Line 1: ES, DE, IT -->
           <div class="lang-waiting">
             🇪🇸 <span data-i18n="support-spanish">Espagnol</span> - <span class="count" id="waiting-es">0</span> <span data-i18n="support-waiting">personnes attendent</span>
           </div>
@@ -1087,6 +1102,28 @@
           </div>
           <div class="lang-waiting">
             🇮🇹 <span data-i18n="support-italian">Italien</span> - <span class="count" id="waiting-it">0</span> <span data-i18n="support-waiting">personnes attendent</span>
+          </div>
+
+          <!-- Line 2: AR, RU, ZH -->
+          <div class="lang-waiting">
+            🇸🇦 <span data-i18n="support-arabic">Arabe</span> - <span class="count" id="waiting-ar">0</span> <span data-i18n="support-waiting">personnes attendent</span>
+          </div>
+          <div class="lang-waiting">
+            🇷🇺 <span data-i18n="support-russian">Russe</span> - <span class="count" id="waiting-ru">0</span> <span data-i18n="support-waiting">personnes attendent</span>
+          </div>
+          <div class="lang-waiting">
+            🇨🇳 <span data-i18n="support-chinese">Chinois</span> - <span class="count" id="waiting-zh">0</span> <span data-i18n="support-waiting">personnes attendent</span>
+          </div>
+
+          <!-- Line 3: HI, TL, SW -->
+          <div class="lang-waiting">
+            🇮🇳 <span data-i18n="support-hindi">Hindi</span> - <span class="count" id="waiting-hi">0</span> <span data-i18n="support-waiting">personnes attendent</span>
+          </div>
+          <div class="lang-waiting">
+            🇵🇭 <span data-i18n="support-tagalog">Tagalog</span> - <span class="count" id="waiting-tl">0</span> <span data-i18n="support-waiting">personnes attendent</span>
+          </div>
+          <div class="lang-waiting">
+            🇰🇪 <span data-i18n="support-swahili">Swahili</span> - <span class="count" id="waiting-sw">0</span> <span data-i18n="support-waiting">personnes attendent</span>
           </div>
         </div>
       </div>
@@ -1173,6 +1210,12 @@
         'support-spanish': 'Espagnol',
         'support-german': 'Allemand',
         'support-italian': 'Italien',
+        'support-arabic': 'Arabe',
+        'support-russian': 'Russe',
+        'support-chinese': 'Chinois',
+        'support-hindi': 'Hindi',
+        'support-tagalog': 'Tagalog',
+        'support-swahili': 'Swahili',
         'support-waiting': 'personnes attendent',
         'support-donate-title': '💝 Soutenir le projet',
         'support-tier1': '1 chapitre offert à quelqu\'un',
@@ -1210,6 +1253,12 @@
         'support-spanish': 'Espanhol',
         'support-german': 'Alemão',
         'support-italian': 'Italiano',
+        'support-arabic': 'Árabe',
+        'support-russian': 'Russo',
+        'support-chinese': 'Chinês',
+        'support-hindi': 'Hindi',
+        'support-tagalog': 'Tagalo',
+        'support-swahili': 'Suaíli',
         'support-waiting': 'pessoas aguardam',
         'support-donate-title': '💝 Apoiar o projeto',
         'support-tier1': '1 capítulo oferecido a alguém',
@@ -1247,6 +1296,12 @@
         'support-spanish': 'Spanish',
         'support-german': 'German',
         'support-italian': 'Italian',
+        'support-arabic': 'Arabic',
+        'support-russian': 'Russian',
+        'support-chinese': 'Chinese',
+        'support-hindi': 'Hindi',
+        'support-tagalog': 'Tagalog',
+        'support-swahili': 'Swahili',
         'support-waiting': 'people waiting',
         'support-donate-title': '💝 Support the project',
         'support-tier1': '1 chapter gifted to someone',
@@ -1284,6 +1339,12 @@
         'support-spanish': 'Español',
         'support-german': 'Alemán',
         'support-italian': 'Italiano',
+        'support-arabic': 'Árabe',
+        'support-russian': 'Ruso',
+        'support-chinese': 'Chino',
+        'support-hindi': 'Hindi',
+        'support-tagalog': 'Tagalo',
+        'support-swahili': 'Suajili',
         'support-waiting': 'personas esperan',
         'support-donate-title': '💝 Apoyar el proyecto',
         'support-tier1': '1 capítulo regalado a alguien',
@@ -1321,6 +1382,12 @@
         'support-spanish': 'Spanisch',
         'support-german': 'Deutsch',
         'support-italian': 'Italienisch',
+        'support-arabic': 'Arabisch',
+        'support-russian': 'Russisch',
+        'support-chinese': 'Chinesisch',
+        'support-hindi': 'Hindi',
+        'support-tagalog': 'Tagalog',
+        'support-swahili': 'Swahili',
         'support-waiting': 'Personen warten',
         'support-donate-title': '💝 Das Projekt unterstützen',
         'support-tier1': '1 Kapitel für jemanden geschenkt',
@@ -1358,6 +1425,12 @@
         'support-spanish': 'Spagnolo',
         'support-german': 'Tedesco',
         'support-italian': 'Italiano',
+        'support-arabic': 'Arabo',
+        'support-russian': 'Russo',
+        'support-chinese': 'Cinese',
+        'support-hindi': 'Hindi',
+        'support-tagalog': 'Tagalog',
+        'support-swahili': 'Swahili',
         'support-waiting': 'persone in attesa',
         'support-donate-title': '💝 Sostenere il progetto',
         'support-tier1': '1 capitolo regalato a qualcuno',
@@ -1395,6 +1468,12 @@
         'support-spanish': 'الإسبانية',
         'support-german': 'الألمانية',
         'support-italian': 'الإيطالية',
+        'support-arabic': 'العربية',
+        'support-russian': 'الروسية',
+        'support-chinese': 'الصينية',
+        'support-hindi': 'الهندية',
+        'support-tagalog': 'التاغالوغية',
+        'support-swahili': 'السواحيلية',
         'support-waiting': 'أشخاص ينتظرون',
         'support-donate-title': '💝 دعم المشروع',
         'support-tier1': 'فصل واحد مُهدى لشخص ما',
@@ -1432,6 +1511,12 @@
         'support-spanish': 'Испанский',
         'support-german': 'Немецкий',
         'support-italian': 'Итальянский',
+        'support-arabic': 'Арабский',
+        'support-russian': 'Русский',
+        'support-chinese': 'Китайский',
+        'support-hindi': 'Хинди',
+        'support-tagalog': 'Тагальский',
+        'support-swahili': 'Суахили',
         'support-waiting': 'человек ждут',
         'support-donate-title': '💝 Поддержать проект',
         'support-tier1': '1 глава подарена кому-то',
@@ -1469,6 +1554,12 @@
         'support-spanish': '西班牙语',
         'support-german': '德语',
         'support-italian': '意大利语',
+        'support-arabic': '阿拉伯语',
+        'support-russian': '俄语',
+        'support-chinese': '中文',
+        'support-hindi': '印地语',
+        'support-tagalog': '他加禄语',
+        'support-swahili': '斯瓦希里语',
         'support-waiting': '人等待',
         'support-donate-title': '💝 支持项目',
         'support-tier1': '为某人赠送1章',
@@ -1506,6 +1597,12 @@
         'support-spanish': 'स्पेनिश',
         'support-german': 'जर्मन',
         'support-italian': 'इतालवी',
+        'support-arabic': 'अरबी',
+        'support-russian': 'रूसी',
+        'support-chinese': 'चीनी',
+        'support-hindi': 'हिन्दी',
+        'support-tagalog': 'तागालोग',
+        'support-swahili': 'स्वाहिली',
         'support-waiting': 'लोग प्रतीक्षा कर रहे हैं',
         'support-donate-title': '💝 परियोजना का समर्थन करें',
         'support-tier1': 'किसी को 1 अध्याय उपहार में दें',
@@ -1543,6 +1640,12 @@
         'support-spanish': 'Espanyol',
         'support-german': 'Aleman',
         'support-italian': 'Italyano',
+        'support-arabic': 'Arabe',
+        'support-russian': 'Ruso',
+        'support-chinese': 'Tsino',
+        'support-hindi': 'Hindi',
+        'support-tagalog': 'Tagalog',
+        'support-swahili': 'Swahili',
         'support-waiting': 'tao ang naghihintay',
         'support-donate-title': '💝 Suportahan ang proyekto',
         'support-tier1': '1 kabanatang iregalo sa iba',
@@ -1580,6 +1683,12 @@
         'support-spanish': 'Kihispania',
         'support-german': 'Kijerumani',
         'support-italian': 'Kiitaliano',
+        'support-arabic': 'Kiarabu',
+        'support-russian': 'Kirusi',
+        'support-chinese': 'Kichina',
+        'support-hindi': 'Kihindi',
+        'support-tagalog': 'Kitagalog',
+        'support-swahili': 'Kiswahili',
         'support-waiting': 'watu wanasubiri',
         'support-donate-title': '💝 Unga mkono mradi',
         'support-tier1': 'Sura 1 kutolewa kwa mtu',
@@ -1651,23 +1760,15 @@
     function updateWaitingCounters() {
       const preorderData = getPreorderData();
 
-      // Update Spanish counter
-      const esCounter = document.getElementById('waiting-es');
-      if (esCounter) {
-        esCounter.textContent = preorderData.es || 0;
-      }
+      // Update all 9 language counters
+      const languages = ['es', 'de', 'it', 'ar', 'ru', 'zh', 'hi', 'tl', 'sw'];
 
-      // Update German counter
-      const deCounter = document.getElementById('waiting-de');
-      if (deCounter) {
-        deCounter.textContent = preorderData.de || 0;
-      }
-
-      // Update Italian counter
-      const itCounter = document.getElementById('waiting-it');
-      if (itCounter) {
-        itCounter.textContent = preorderData.it || 0;
-      }
+      languages.forEach(lang => {
+        const counter = document.getElementById(`waiting-${lang}`);
+        if (counter) {
+          counter.textContent = preorderData[lang] || 0;
+        }
+      });
 
       console.log('📊 Waiting counters updated:', preorderData);
     }
@@ -1693,7 +1794,7 @@
     // Get preorder data from localStorage
     function getPreorderData() {
       const data = localStorage.getItem(PREORDER_KEY);
-      return data ? JSON.parse(data) : { es: 0, de: 0, it: 0, ru: 0, zh: 0 };
+      return data ? JSON.parse(data) : { es: 0, de: 0, it: 0, ar: 0, ru: 0, zh: 0, hi: 0, tl: 0, sw: 0 };
     }
 
     // Save preorder data
