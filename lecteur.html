@@ -809,11 +809,14 @@
             const lyrics = getLyricsForCurrent(window.currentLanguage || 'FR', currentBook, chapterStr);
 
             if (lyrics) {
-                // Supprimer les marqueurs de sections : [Verse], [Chorus], **Couplet**, etc.
+                // Nettoyer les marqueurs et garder espacement
                 let cleanLyrics = String(lyrics)
-                    .replace(/\[([^\]]+)\]\s*/g, '')           // [Verse 1], [Chorus], etc.
-                    .replace(/\*\*[^*]+\*\*\s*/g, '')          // **Couplet 1:**, **Refrain**, etc.
-                    .replace(/^\s*\n/gm, '');                   // Lignes vides en trop
+                    .replace(/\[(Verse|Chorus|Bridge|Outro|Intro|Spoken Word|Hook|Pre-Chorus|Post-Chorus|Refrain|Couplet|TITRE|LYRICS|Verso|Refrão|Refr[aã]o|Ponte|Outra).*?\]\s*/gi, '\n\n')
+                    .replace(/\*\*[^*]+\*\*\s*/g, '\n\n');     // **Couplet 1:**, **Refrain**, etc.
+                // Nettoyer les sauts de ligne multiples (max 2)
+                cleanLyrics = cleanLyrics.replace(/\n{3,}/g, '\n\n');
+                // Trim début/fin
+                cleanLyrics = cleanLyrics.trim();
                 lyricsText.innerHTML = cleanLyrics;
             } else {
                 lyricsText.innerHTML =
