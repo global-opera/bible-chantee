@@ -908,116 +908,55 @@
         let currentPeriod = 'week';
         let currentMap = null;
 
-        // Datasets pour chaque période
+        // Datasets pour chaque période - DONNÉES RÉELLES (Site lancé décembre 2025)
         const periodData = {
             today: {
                 stats: {
-                    visitors: 42,
-                    countries: 8,
-                    audioPlays: 67,
-                    preorders: 3
+                    visitors: 2,
+                    countries: 1,
+                    audioPlays: 3,
+                    preorders: 0
                 },
                 cities: [
-                    { name: 'São Paulo', lat: -23.5505, lon: -46.6333, visitors: 8, country: '🇧🇷 Brésil' },
-                    { name: 'Paris', lat: 48.8566, lon: 2.3522, visitors: 6, country: '🇫🇷 France' },
-                    { name: 'Rio de Janeiro', lat: -22.9068, lon: -43.1729, visitors: 5, country: '🇧🇷 Brésil' },
-                    { name: 'Lausanne', lat: 46.5197, lon: 6.6323, visitors: 4, country: '🇨🇭 Suisse' },
-                    { name: 'Lisbonne', lat: 38.7223, lon: -9.1393, visitors: 3, country: '🇵🇹 Portugal' },
-                    { name: 'Genève', lat: 46.2044, lon: 6.1432, visitors: 3, country: '🇨🇭 Suisse' },
-                    { name: 'Montréal', lat: 45.5017, lon: -73.5673, visitors: 2, country: '🇨🇦 Canada' },
-                    { name: 'Belo Horizonte', lat: -19.9167, lon: -43.9345, visitors: 2, country: '🇧🇷 Brésil' },
-                    { name: 'Madrid', lat: 40.4168, lon: -3.7038, visitors: 2, country: '🇪🇸 Espagne' },
-                    { name: 'Kinshasa', lat: -4.4419, lon: 15.2663, visitors: 1, country: '🇨🇩 RD Congo' }
+                    { name: 'La Tour-de-Peilz', lat: 46.4528, lon: 6.8581, visitors: 2, country: '🇨🇭 Suisse' }
                 ]
             },
             week: {
                 stats: {
-                    visitors: 358,
-                    countries: 23,
-                    audioPlays: 542,
-                    preorders: 18
+                    visitors: 12,
+                    countries: 2,
+                    audioPlays: 18,
+                    preorders: 0
                 },
                 cities: [
-                    { name: 'São Paulo', lat: -23.5505, lon: -46.6333, visitors: 127, country: '🇧🇷 Brésil' },
-                    { name: 'Paris', lat: 48.8566, lon: 2.3522, visitors: 89, country: '🇫🇷 France' },
-                    { name: 'Rio de Janeiro', lat: -22.9068, lon: -43.1729, visitors: 83, country: '🇧🇷 Brésil' },
-                    { name: 'Belo Horizonte', lat: -19.9167, lon: -43.9345, visitors: 57, country: '🇧🇷 Brésil' },
-                    { name: 'Genève', lat: 46.2044, lon: 6.1432, visitors: 45, country: '🇨🇭 Suisse' },
-                    { name: 'Brasília', lat: -15.7939, lon: -47.8828, visitors: 44, country: '🇧🇷 Brésil' },
-                    { name: 'New York', lat: 40.7128, lon: -74.0060, visitors: 41, country: '🇺🇸 USA' },
-                    { name: 'Lausanne', lat: 46.5197, lon: 6.6323, visitors: 38, country: '🇨🇭 Suisse' },
-                    { name: 'Salvador', lat: -12.9714, lon: -38.5014, visitors: 36, country: '🇧🇷 Brésil' },
-                    { name: 'Lyon', lat: 45.7640, lon: 4.8357, visitors: 34, country: '🇫🇷 France' },
-                    { name: 'Londres', lat: 51.5074, lon: -0.1278, visitors: 33, country: '🇬🇧 UK' },
-                    { name: 'Zurich', lat: 47.3769, lon: 8.5417, visitors: 31, country: '🇨🇭 Suisse' },
-                    { name: 'Montréal', lat: 45.5017, lon: -73.5673, visitors: 29, country: '🇨🇦 Canada' },
-                    { name: 'Recife', lat: -8.0476, lon: -34.8770, visitors: 28, country: '🇧🇷 Brésil' },
-                    { name: 'Marseille', lat: 43.2965, lon: 5.3698, visitors: 28, country: '🇫🇷 France' },
-                    { name: 'Lisbonne', lat: 38.7223, lon: -9.1393, visitors: 25, country: '🇵🇹 Portugal' },
-                    { name: 'Kinshasa', lat: -4.4419, lon: 15.2663, visitors: 22, country: '🇨🇩 RD Congo' },
-                    { name: 'Madrid', lat: 40.4168, lon: -3.7038, visitors: 19, country: '🇪🇸 Espagne' },
-                    { name: 'Lagos', lat: 6.5244, lon: 3.3792, visitors: 18, country: '🇳🇬 Nigeria' },
-                    { name: 'Abidjan', lat: 5.3600, lon: -4.0083, visitors: 15, country: '🇨🇮 Côte d\'Ivoire' }
+                    { name: 'La Tour-de-Peilz', lat: 46.4528, lon: 6.8581, visitors: 8, country: '🇨🇭 Suisse' },
+                    { name: 'Lausanne', lat: 46.5197, lon: 6.6323, visitors: 4, country: '🇨🇭 Suisse' }
                 ]
             },
             month: {
                 stats: {
-                    visitors: 1547,
-                    countries: 38,
-                    audioPlays: 2341,
-                    preorders: 67
+                    visitors: 35,
+                    countries: 3,
+                    audioPlays: 47,
+                    preorders: 1
                 },
                 cities: [
-                    { name: 'São Paulo', lat: -23.5505, lon: -46.6333, visitors: 543, country: '🇧🇷 Brésil' },
-                    { name: 'Paris', lat: 48.8566, lon: 2.3522, visitors: 387, country: '🇫🇷 France' },
-                    { name: 'Rio de Janeiro', lat: -22.9068, lon: -43.1729, visitors: 356, country: '🇧🇷 Brésil' },
-                    { name: 'Belo Horizonte', lat: -19.9167, lon: -43.9345, visitors: 245, country: '🇧🇷 Brésil' },
-                    { name: 'Genève', lat: 46.2044, lon: 6.1432, visitors: 194, country: '🇨🇭 Suisse' },
-                    { name: 'Brasília', lat: -15.7939, lon: -47.8828, visitors: 189, country: '🇧🇷 Brésil' },
-                    { name: 'New York', lat: 40.7128, lon: -74.0060, visitors: 176, country: '🇺🇸 USA' },
-                    { name: 'Lausanne', lat: 46.5197, lon: 6.6323, visitors: 163, country: '🇨🇭 Suisse' },
-                    { name: 'Salvador', lat: -12.9714, lon: -38.5014, visitors: 155, country: '🇧🇷 Brésil' },
-                    { name: 'Lyon', lat: 45.7640, lon: 4.8357, visitors: 146, country: '🇫🇷 France' },
-                    { name: 'Londres', lat: 51.5074, lon: -0.1278, visitors: 142, country: '🇬🇧 UK' },
-                    { name: 'Zurich', lat: 47.3769, lon: 8.5417, visitors: 133, country: '🇨🇭 Suisse' },
-                    { name: 'Montréal', lat: 45.5017, lon: -73.5673, visitors: 124, country: '🇨🇦 Canada' },
-                    { name: 'Recife', lat: -8.0476, lon: -34.8770, visitors: 120, country: '🇧🇷 Brésil' },
-                    { name: 'Marseille', lat: 43.2965, lon: 5.3698, visitors: 120, country: '🇫🇷 France' },
-                    { name: 'Lisbonne', lat: 38.7223, lon: -9.1393, visitors: 107, country: '🇵🇹 Portugal' },
-                    { name: 'Kinshasa', lat: -4.4419, lon: 15.2663, visitors: 94, country: '🇨🇩 RD Congo' },
-                    { name: 'Madrid', lat: 40.4168, lon: -3.7038, visitors: 81, country: '🇪🇸 Espagne' },
-                    { name: 'Lagos', lat: 6.5244, lon: 3.3792, visitors: 77, country: '🇳🇬 Nigeria' },
-                    { name: 'Abidjan', lat: 5.3600, lon: -4.0083, visitors: 64, country: '🇨🇮 Côte d\'Ivoire' }
+                    { name: 'La Tour-de-Peilz', lat: 46.4528, lon: 6.8581, visitors: 22, country: '🇨🇭 Suisse' },
+                    { name: 'Lausanne', lat: 46.5197, lon: 6.6323, visitors: 9, country: '🇨🇭 Suisse' },
+                    { name: 'Genève', lat: 46.2044, lon: 6.1432, visitors: 4, country: '🇨🇭 Suisse' }
                 ]
             },
             year: {
                 stats: {
-                    visitors: 18943,
-                    countries: 67,
-                    audioPlays: 28674,
-                    preorders: 823
+                    visitors: 35,
+                    countries: 3,
+                    audioPlays: 47,
+                    preorders: 1
                 },
                 cities: [
-                    { name: 'São Paulo', lat: -23.5505, lon: -46.6333, visitors: 6643, country: '🇧🇷 Brésil' },
-                    { name: 'Paris', lat: 48.8566, lon: 2.3522, visitors: 4732, country: '🇫🇷 France' },
-                    { name: 'Rio de Janeiro', lat: -22.9068, lon: -43.1729, visitors: 4356, country: '🇧🇷 Brésil' },
-                    { name: 'Belo Horizonte', lat: -19.9167, lon: -43.9345, visitors: 2998, country: '🇧🇷 Brésil' },
-                    { name: 'Genève', lat: 46.2044, lon: 6.1432, visitors: 2374, country: '🇨🇭 Suisse' },
-                    { name: 'Brasília', lat: -15.7939, lon: -47.8828, visitors: 2312, country: '🇧🇷 Brésil' },
-                    { name: 'New York', lat: 40.7128, lon: -74.0060, visitors: 2153, country: '🇺🇸 USA' },
-                    { name: 'Lausanne', lat: 46.5197, lon: 6.6323, visitors: 1994, country: '🇨🇭 Suisse' },
-                    { name: 'Salvador', lat: -12.9714, lon: -38.5014, visitors: 1897, country: '🇧🇷 Brésil' },
-                    { name: 'Lyon', lat: 45.7640, lon: 4.8357, visitors: 1786, country: '🇫🇷 France' },
-                    { name: 'Londres', lat: 51.5074, lon: -0.1278, visitors: 1738, country: '🇬🇧 UK' },
-                    { name: 'Zurich', lat: 47.3769, lon: 8.5417, visitors: 1627, country: '🇨🇭 Suisse' },
-                    { name: 'Montréal', lat: 45.5017, lon: -73.5673, visitors: 1518, country: '🇨🇦 Canada' },
-                    { name: 'Recife', lat: -8.0476, lon: -34.8770, visitors: 1469, country: '🇧🇷 Brésil' },
-                    { name: 'Marseille', lat: 43.2965, lon: 5.3698, visitors: 1469, country: '🇫🇷 France' },
-                    { name: 'Lisbonne', lat: 38.7223, lon: -9.1393, visitors: 1309, country: '🇵🇹 Portugal' },
-                    { name: 'Kinshasa', lat: -4.4419, lon: 15.2663, visitors: 1150, country: '🇨🇩 RD Congo' },
-                    { name: 'Madrid', lat: 40.4168, lon: -3.7038, visitors: 991, country: '🇪🇸 Espagne' },
-                    { name: 'Lagos', lat: 6.5244, lon: 3.3792, visitors: 942, country: '🇳🇬 Nigeria' },
-                    { name: 'Abidjan', lat: 5.3600, lon: -4.0083, visitors: 783, country: '🇨🇮 Côte d\'Ivoire' }
+                    { name: 'La Tour-de-Peilz', lat: 46.4528, lon: 6.8581, visitors: 22, country: '🇨🇭 Suisse' },
+                    { name: 'Lausanne', lat: 46.5197, lon: 6.6323, visitors: 9, country: '🇨🇭 Suisse' },
+                    { name: 'Genève', lat: 46.2044, lon: 6.1432, visitors: 4, country: '🇨🇭 Suisse' }
                 ]
             }
         };
