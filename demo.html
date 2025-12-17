@@ -241,7 +241,7 @@
 </head>
 <body>
     <header class="header">
-        <h1>Bible Chantee</h1>
+        <h1 id="main-title">Bible Chantee</h1>
         <p class="subtitle" id="subtitle"></p>
     </header>
     
@@ -317,6 +317,7 @@
     <script>
         const translations = {
             FR: {
+                mainTitle: "Bible Chantee",
                 subtitle: "La Bible entiere mise en musique - 1189 chapitres",
                 statChapters: "Chapitres",
                 statBooks: "Livres",
@@ -347,6 +348,7 @@
                 ]
             },
             PT: {
+                mainTitle: "Biblia Cantada",
                 subtitle: "A Biblia inteira em musica - 1189 capitulos",
                 statChapters: "Capitulos",
                 statBooks: "Livros",
@@ -377,6 +379,7 @@
                 ]
             },
             EN: {
+                mainTitle: "Sung Bible",
                 subtitle: "The entire Bible set to music - 1189 chapters",
                 statChapters: "Chapters",
                 statBooks: "Books",
@@ -407,6 +410,7 @@
                 ]
             },
             ES: {
+                mainTitle: "Biblia Cantada",
                 subtitle: "La Biblia entera en musica - 1189 capitulos",
                 statChapters: "Capitulos",
                 statBooks: "Libros",
@@ -477,6 +481,7 @@
         function updatePage() {
             const t = translations[currentLang];
             
+            document.getElementById('main-title').textContent = t.mainTitle;
             document.getElementById('subtitle').textContent = t.subtitle;
             document.getElementById('stat-chapters').textContent = t.statChapters;
             document.getElementById('stat-books').textContent = t.statBooks;
@@ -549,6 +554,8 @@
     </script>
 </body>
 </html>
+
+
 
 
 
