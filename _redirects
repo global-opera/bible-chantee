@@ -1,3 +1,0 @@
-# Redirection sungbible.world vers demo.html
-https://sungbible.world/* /demo.html 200
-http://sungbible.world/* /demo.html 200
