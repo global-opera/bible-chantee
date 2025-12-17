@@ -218,7 +218,7 @@
     /* Coming soon languages (gray) */
     .lang-select-btn.coming-soon-btn {
       border-color: rgba(100, 100, 100, 0.3);
-      opacity: 0.7;
+      opacity: 0.6;
     }
 
     .lang-select-btn.coming-soon-btn:hover {
@@ -517,44 +517,6 @@
     .audio-card audio {
       width: 100%;
       margin-top: 10px;
-    }
-
-    /* Language Cards */
-    .lang-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-bottom: 40px;
-    }
-
-    .lang-card {
-      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-      border: 2px solid #f5c842;
-      border-radius: 16px;
-      padding: 40px 30px;
-      text-align: center;
-    }
-
-    .lang-card .flag {
-      font-size: 4em;
-      margin-bottom: 15px;
-    }
-
-    .lang-card h3 {
-      font-size: 2em;
-      margin-bottom: 10px;
-      color: #f5c842;
-    }
-
-    .lang-card .status {
-      color: #22c55e;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .lang-card .coming-soon {
-      color: #94a3b8;
-      font-style: italic;
     }
 
     /* How It Works */
@@ -870,10 +832,6 @@
       .section h2 {
         font-size: 2em;
       }
-
-      .lang-card .flag {
-        font-size: 3em;
-      }
     }
   </style>
 </head>
@@ -1127,39 +1085,6 @@
           <p class="preorder-count"><strong id="waiting-count">0</strong> <span data-i18n="preorder-waiting">personnes attendent cette version</span>.</p>
           <button onclick="closePreorderMessage()" class="btn-secondary" data-i18n="preorder-back">Choisir une autre langue</button>
         </div>
-      </div>
-    </div>
-
-    <!-- How it Works (Optional) -->
-    <div class="section">
-      <h2>🌍 Langues disponibles</h2>
-
-      <div class="lang-grid">
-        <!-- FR -->
-        <div class="lang-card">
-          <div class="flag">🇫🇷</div>
-          <h3>Français</h3>
-          <p class="status">✅ 100% complet (1189 chapitres)</p>
-        </div>
-
-        <!-- PT -->
-        <div class="lang-card">
-          <div class="flag">🇧🇷</div>
-          <h3>Português</h3>
-          <p class="status">✅ 100% complet (1189 chapitres)</p>
-        </div>
-
-        <!-- EN -->
-        <div class="lang-card">
-          <div class="flag">🇬🇧</div>
-          <h3>English</h3>
-          <p class="status">✅ 100% complet (1189 chapitres)</p>
-        </div>
-      </div>
-
-      <!-- Coming Soon -->
-      <div style="text-align: center; margin-top: 40px; color: #94a3b8;">
-        <p><strong>À venir :</strong> 🇪🇸 Español • 🇩🇪 Deutsch • 🇮🇹 Italiano • 🇸🇦 العربية • 🇷🇺 Русский • 🇨🇳 中文 • 🇮🇳 हिन्दी • 🇵🇭 Tagalog • 🇰🇪 Swahili</p>
       </div>
     </div>
 
@@ -2129,7 +2054,7 @@
       signupForm.style.display = 'flex';
 
       // Scroll to language section
-      document.querySelector('.lang-grid').scrollIntoView({ behavior: 'smooth' });
+      document.querySelector('.language-selector-section').scrollIntoView({ behavior: 'smooth' });
     }
 
     // Log current preorder stats on page load (debug)
