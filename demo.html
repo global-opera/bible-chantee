@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bible Chantee - Decouvrez le projet</title>
+
+    <!-- Google Analytics 4 -->
+    <!-- TODO: Remplacer 'G-XXXXXXXXXX' par votre vrai Measurement ID -->
+    <!-- Voir le fichier GOOGLE_ANALYTICS_SETUP.md pour obtenir votre ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        // Configuration de base avec tracking géographique
+        gtag('config', 'G-XXXXXXXXXX', {
+            'send_page_view': true,
+            'anonymize_ip': false  // Pour voir les villes exactes
+        });
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="lyrics-data.js"></script>
@@ -727,6 +744,16 @@
                     btn.classList.add('active');
                 }
             });
+
+            // Google Analytics: Track language selection
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'language_change', {
+                    'event_category': 'engagement',
+                    'event_label': lang,
+                    'value': lang
+                });
+            }
+
             updatePage();
         }
         
@@ -796,7 +823,7 @@
                         <div class="track-title">${track.title}</div>
                         <div class="track-desc">${track.desc}</div>
                     </div>
-                    <audio controls preload="none">
+                    <audio controls preload="none" id="audio-${index}" data-track-id="${track.id}">
                         <source src="${base}${track.id}.mp3" type="audio/mpeg">
                     </audio>
                     <button class="lyrics-btn" id="lyrics-btn-${index}" onclick="toggleLyrics('${track.id}', ${index})">
@@ -805,6 +832,22 @@
                     <div class="lyrics-container" id="lyrics-${index}"></div>
                 </div>
             `).join('');
+
+            // Add event listeners for audio play tracking
+            setTimeout(() => {
+                document.querySelectorAll('audio').forEach(audio => {
+                    audio.addEventListener('play', function() {
+                        const trackId = this.getAttribute('data-track-id');
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'audio_play', {
+                                'event_category': 'audio',
+                                'event_label': trackId,
+                                'language': currentLang
+                            });
+                        }
+                    });
+                });
+            }, 100);
         }
         
         function loadProgress() {
@@ -867,6 +910,15 @@
                 return;
             }
 
+            // Google Analytics: Track lyrics view
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'view_lyrics', {
+                    'event_category': 'engagement',
+                    'event_label': trackId,
+                    'language': currentLang
+                });
+            }
+
             // Extraire le numéro de livre et de chapitre de l'ID
             // Format: "01_GEN_01_FR" -> livre: "01", chapitre: 1
             const parts = trackId.split('_');
@@ -916,6 +968,15 @@
                 url: window.location.href
             };
 
+            // Google Analytics: Track share button click
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'share', {
+                    'event_category': 'engagement',
+                    'event_label': 'share_button',
+                    'language': currentLang
+                });
+            }
+
             if (navigator.share) {
                 navigator.share(shareData).catch(err => {
                     console.log('Error sharing:', err);
@@ -938,6 +999,18 @@
                 e.preventDefault();
 
                 const formData = new FormData(form);
+                const email = formData.get('email');
+                const language = formData.get('language');
+
+                // Google Analytics: Track form submission
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'conversion',
+                        'event_label': 'preorder_form',
+                        'language': language,
+                        'value': 1
+                    });
+                }
 
                 fetch('/', {
                     method: 'POST',
@@ -955,6 +1028,48 @@
                     alert('Error: ' + error);
                 });
             });
+
+            // Track review button clicks
+            const reviewLink = document.getElementById('review-link');
+            if (reviewLink) {
+                reviewLink.addEventListener('click', function() {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'click', {
+                            'event_category': 'engagement',
+                            'event_label': 'review_button',
+                            'language': currentLang
+                        });
+                    }
+                });
+            }
+
+            // Track support button clicks
+            const supportBtns = document.querySelectorAll('a[href="crowdfunding.html"]');
+            supportBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'click', {
+                            'event_category': 'engagement',
+                            'event_label': 'support_button',
+                            'language': currentLang
+                        });
+                    }
+                });
+            });
+
+            // Track Pix button clicks
+            const pixBtn = document.getElementById('btn-pix');
+            if (pixBtn) {
+                pixBtn.addEventListener('click', function() {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'click', {
+                            'event_category': 'engagement',
+                            'event_label': 'pix_button',
+                            'language': 'PT'
+                        });
+                    }
+                });
+            }
         });
 
         updatePage();
