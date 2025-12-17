@@ -6,6 +6,8 @@
     <title>Bible Chantee - Decouvrez le projet</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="lyrics-data.js"></script>
+    <script src="lyrics-data-pt.js"></script>
     <style>
         :root {
             --bg-dark: #0a1628;
@@ -237,6 +239,41 @@
             margin: 2rem 0;
             font-family: 'Playfair Display', serif;
         }
+        .lyrics-btn {
+            padding: 0.6rem 1.2rem;
+            background: var(--accent-gold);
+            color: #000;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin-left: 1rem;
+        }
+        .lyrics-btn:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        .lyrics-container {
+            background: rgba(255,255,255,0.08);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            white-space: pre-wrap;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.4s ease-in-out;
+        }
+        .lyrics-container.show {
+            max-height: 2000px;
+            opacity: 1;
+            padding: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -341,6 +378,9 @@
                 statusProgress: "En cours",
                 statusPlanned: "Prevu",
                 chapters: "chapitres",
+                btnLyrics: "Paroles",
+                btnHide: "Masquer",
+                lyricsComingSoon: "Paroles bientot disponibles",
                 tracks: [
                     { id: "01_GEN_01_FR", title: "Genese 1", desc: "La Creation" },
                     { id: "19_PSA_23_FR", title: "Psaume 23", desc: "L'Eternel est mon berger" },
@@ -372,6 +412,9 @@
                 statusProgress: "Em andamento",
                 statusPlanned: "Previsto",
                 chapters: "capitulos",
+                btnLyrics: "Letras",
+                btnHide: "Ocultar",
+                lyricsComingSoon: "Letras em breve",
                 tracks: [
                     { id: "01_GEN_01_PT", title: "Genesis 1", desc: "A Criacao" },
                     { id: "19_PSA_23_PT", title: "Salmo 23", desc: "O Senhor e meu pastor" },
@@ -403,6 +446,9 @@
                 statusProgress: "In progress",
                 statusPlanned: "Planned",
                 chapters: "chapters",
+                btnLyrics: "Lyrics",
+                btnHide: "Hide",
+                lyricsComingSoon: "Lyrics coming soon",
                 tracks: [
                     { id: "01_GEN_01_EN", title: "Genesis 1", desc: "The Creation" },
                     { id: "19_PSA_23_EN", title: "Psalm 23", desc: "The Lord is my shepherd" },
@@ -434,6 +480,9 @@
                 statusProgress: "En curso",
                 statusPlanned: "Previsto",
                 chapters: "capitulos",
+                btnLyrics: "Letras",
+                btnHide: "Ocultar",
+                lyricsComingSoon: "Letras en breve",
                 tracks: [
                     { id: "01_GEN_01_ES", title: "Genesis 1", desc: "La Creacion" },
                     { id: "19_PSA_23_ES", title: "Salmo 23", desc: "El Senor es mi pastor" },
@@ -515,8 +564,8 @@
             const t = translations[currentLang];
             const base = audioBase[currentLang];
             const container = document.getElementById('tracks-container');
-            
-            container.innerHTML = t.tracks.map(track => `
+
+            container.innerHTML = t.tracks.map((track, index) => `
                 <div class="track">
                     <div class="track-info">
                         <div class="track-title">${track.title}</div>
@@ -525,6 +574,10 @@
                     <audio controls preload="none">
                         <source src="${base}${track.id}.mp3" type="audio/mpeg">
                     </audio>
+                    <button class="lyrics-btn" id="lyrics-btn-${index}" onclick="toggleLyrics('${track.id}', ${index})">
+                        ${t.btnLyrics}
+                    </button>
+                    <div class="lyrics-container" id="lyrics-${index}"></div>
                 </div>
             `).join('');
         }
@@ -553,6 +606,50 @@
                     </div>
                 `;
             }).join('');
+        }
+
+        function toggleLyrics(trackId, index) {
+            const t = translations[currentLang];
+            const lyricsContainer = document.getElementById(`lyrics-${index}`);
+            const btn = document.getElementById(`lyrics-btn-${index}`);
+
+            // Si les paroles sont déjà affichées, les masquer
+            if (lyricsContainer.classList.contains('show')) {
+                lyricsContainer.classList.remove('show');
+                btn.textContent = t.btnLyrics;
+                return;
+            }
+
+            // Extraire le numéro de livre et de chapitre de l'ID
+            // Format: "01_GEN_01_FR" -> livre: "01", chapitre: 1
+            const parts = trackId.split('_');
+            const bookNum = parts[0];
+            const chapterNum = parseInt(parts[2]);
+
+            let lyricsText = '';
+
+            // Récupérer les paroles selon la langue
+            if (currentLang === 'FR') {
+                if (window.chapterLyrics && window.chapterLyrics[bookNum] && window.chapterLyrics[bookNum][chapterNum]) {
+                    lyricsText = window.chapterLyrics[bookNum][chapterNum];
+                } else {
+                    lyricsText = t.lyricsComingSoon;
+                }
+            } else if (currentLang === 'PT') {
+                if (window.chapterLyricsPT && window.chapterLyricsPT[bookNum] && window.chapterLyricsPT[bookNum][chapterNum]) {
+                    lyricsText = window.chapterLyricsPT[bookNum][chapterNum];
+                } else {
+                    lyricsText = t.lyricsComingSoon;
+                }
+            } else {
+                // EN ou ES : paroles non disponibles
+                lyricsText = t.lyricsComingSoon;
+            }
+
+            // Afficher les paroles
+            lyricsContainer.textContent = lyricsText;
+            lyricsContainer.classList.add('show');
+            btn.textContent = t.btnHide;
         }
 
         function copyPixKey() {
