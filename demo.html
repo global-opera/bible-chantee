@@ -745,13 +745,19 @@
             // 1. Supprimer [STYLE] et tout ce qui suit
             text = text.replace(/\[STYLE\][\s\S]*/gi, '');
 
-            // 2. Supprimer TOUS les marqueurs entre crochets
+            // 2. Supprimer marqueurs entre crochets [Verse 1], [Chorus], etc.
             text = text.replace(/\[.*?\]/gi, '');
 
-            // 3. Normaliser : exactement 1 ligne vide entre couplets (2 \n = 1 ligne vide)
+            // 3. Supprimer marqueurs Markdown **Couplet 1 :**, **Refrain :**, etc.
+            text = text.replace(/\*\*.*?\*\*/gi, '');
+
+            // 4. Supprimer lignes qui commencent par des marqueurs sans formatage
+            text = text.replace(/^(Verse|Chorus|Bridge|Refrain|Couplet|Outro|Intro|Hook|Pre-Chorus|Conclusão|Conclusion).*?:/gim, '');
+
+            // 5. Normaliser : exactement 1 ligne vide entre couplets
             text = text.replace(/\n{2,}/g, '\n\n');
 
-            // 4. Trim
+            // 6. Trim
             return text.trim();
         }
 
