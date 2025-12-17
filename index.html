@@ -21,7 +21,7 @@
     /* Hero Section */
     .hero {
       background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-      padding: 80px 20px;
+      padding: 80px 20px 40px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -53,7 +53,70 @@
     .hero .subtitle {
       font-size: 1.1em;
       color: #f5c842;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
+    }
+
+    /* Share Buttons */
+    .share-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95em;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .share-btn:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border-color: rgba(255, 255, 255, 0.5);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .share-btn.whatsapp:hover {
+      background: rgba(37, 211, 102, 0.3);
+      border-color: #25d366;
+    }
+
+    .share-btn.facebook:hover {
+      background: rgba(24, 119, 242, 0.3);
+      border-color: #1877f2;
+    }
+
+    .share-btn.twitter:hover {
+      background: rgba(29, 161, 242, 0.3);
+      border-color: #1da1f2;
+    }
+
+    .share-btn.copy:hover {
+      background: rgba(245, 196, 66, 0.3);
+      border-color: #f5c842;
+    }
+
+    @media (max-width: 600px) {
+      .share-buttons {
+        gap: 8px;
+      }
+
+      .share-btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+      }
     }
 
     /* Language Selector Section */
@@ -102,6 +165,26 @@
       cursor: pointer;
       transition: all 0.3s;
       font-family: 'Inter', sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Flag backgrounds with 20% opacity */
+    .lang-select-btn::before {
+      content: attr(data-flag-bg);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 8em;
+      opacity: 0.2;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .lang-select-btn > * {
+      position: relative;
+      z-index: 1;
     }
 
     .lang-select-btn:hover {
@@ -801,6 +884,26 @@
     <h1 data-i18n="hero-title">🎵 Bible Chantée / Sung Bible</h1>
     <p data-i18n="hero-tagline">Toute la Parole de Dieu en musique</p>
     <p class="subtitle" data-i18n="hero-subtitle">1189 chapitres • 12 langues • 100 chapitres gratuits par langue</p>
+
+    <!-- Share Buttons -->
+    <div class="share-buttons">
+      <a href="#" class="share-btn whatsapp" onclick="shareOnWhatsApp(); return false;">
+        <span>📱</span>
+        <span data-i18n="share-whatsapp">WhatsApp</span>
+      </a>
+      <a href="#" class="share-btn facebook" onclick="shareOnFacebook(); return false;">
+        <span>📘</span>
+        <span data-i18n="share-facebook">Facebook</span>
+      </a>
+      <a href="#" class="share-btn twitter" onclick="shareOnTwitter(); return false;">
+        <span>🐦</span>
+        <span data-i18n="share-twitter">Twitter</span>
+      </a>
+      <button class="share-btn copy" onclick="copyLink()">
+        <span>🔗</span>
+        <span data-i18n="share-copy">Copier le lien</span>
+      </button>
+    </div>
   </div>
 
   <!-- Language Selector -->
@@ -809,66 +912,66 @@
       <h2 id="lang-selector-title">🌍 Choisissez votre langue</h2>
       <div class="language-buttons-grid">
         <!-- Ligne 1: FR, PT, EN, ES -->
-        <button class="lang-select-btn available active" data-lang="fr" onclick="selectLanguage('fr')">
+        <button class="lang-select-btn available active" data-lang="fr" data-flag-bg="🇫🇷" onclick="selectLanguage('fr')">
           <span class="flag">🇫🇷</span>
           <span class="lang-name">Français</span>
           <span class="lang-status">✅ <span data-i18n="status-available">Disponible</span></span>
         </button>
-        <button class="lang-select-btn available" data-lang="pt" onclick="selectLanguage('pt')">
+        <button class="lang-select-btn available" data-lang="pt" data-flag-bg="🇧🇷" onclick="selectLanguage('pt')">
           <span class="flag">🇧🇷</span>
           <span class="lang-name">Português</span>
           <span class="lang-status">✅ <span data-i18n="status-available">Disponible</span></span>
         </button>
-        <button class="lang-select-btn available" data-lang="en" onclick="selectLanguage('en')">
+        <button class="lang-select-btn available" data-lang="en" data-flag-bg="🇬🇧" onclick="selectLanguage('en')">
           <span class="flag">🇬🇧</span>
           <span class="lang-name">English</span>
           <span class="lang-status">✅ <span data-i18n="status-available">Available</span></span>
         </button>
-        <button class="lang-select-btn coming-soon-btn" data-lang="es" onclick="selectLanguage('es')">
+        <button class="lang-select-btn coming-soon-btn" data-lang="es" data-flag-bg="🇪🇸" onclick="selectLanguage('es')">
           <span class="flag">🇪🇸</span>
           <span class="lang-name">Español</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
 
         <!-- Ligne 2: DE, IT, AR, RU -->
-        <button class="lang-select-btn coming-soon-btn" data-lang="de" onclick="selectLanguage('de')">
+        <button class="lang-select-btn coming-soon-btn" data-lang="de" data-flag-bg="🇩🇪" onclick="selectLanguage('de')">
           <span class="flag">🇩🇪</span>
           <span class="lang-name">Deutsch</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
-        <button class="lang-select-btn coming-soon-btn" data-lang="it" onclick="selectLanguage('it')">
+        <button class="lang-select-btn coming-soon-btn" data-lang="it" data-flag-bg="🇮🇹" onclick="selectLanguage('it')">
           <span class="flag">🇮🇹</span>
           <span class="lang-name">Italiano</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
-        <button class="lang-select-btn coming-soon-btn" data-lang="ar" onclick="selectLanguage('ar')">
+        <button class="lang-select-btn coming-soon-btn" data-lang="ar" data-flag-bg="🇸🇦" onclick="selectLanguage('ar')">
           <span class="flag">🇸🇦</span>
           <span class="lang-name">العربية</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
-        <button class="lang-select-btn coming-soon-btn" data-lang="ru" onclick="selectLanguage('ru')">
+        <button class="lang-select-btn coming-soon-btn" data-lang="ru" data-flag-bg="🇷🇺" onclick="selectLanguage('ru')">
           <span class="flag">🇷🇺</span>
           <span class="lang-name">Русский</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
 
         <!-- Ligne 3: ZH, HI, TL, SW -->
-        <button class="lang-select-btn coming-soon-btn" data-lang="zh" onclick="selectLanguage('zh')">
+        <button class="lang-select-btn coming-soon-btn" data-lang="zh" data-flag-bg="🇨🇳" onclick="selectLanguage('zh')">
           <span class="flag">🇨🇳</span>
           <span class="lang-name">中文</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
-        <button class="lang-select-btn coming-soon-btn" data-lang="hi" onclick="selectLanguage('hi')">
+        <button class="lang-select-btn coming-soon-btn" data-lang="hi" data-flag-bg="🇮🇳" onclick="selectLanguage('hi')">
           <span class="flag">🇮🇳</span>
           <span class="lang-name">हिन्दी</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
-        <button class="lang-select-btn coming-soon-btn" data-lang="tl" onclick="selectLanguage('tl')">
+        <button class="lang-select-btn coming-soon-btn" data-lang="tl" data-flag-bg="🇵🇭" onclick="selectLanguage('tl')">
           <span class="flag">🇵🇭</span>
           <span class="lang-name">Tagalog</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
-        <button class="lang-select-btn coming-soon-btn" data-lang="sw" onclick="selectLanguage('sw')">
+        <button class="lang-select-btn coming-soon-btn" data-lang="sw" data-flag-bg="🇰🇪" onclick="selectLanguage('sw')">
           <span class="flag">🇰🇪</span>
           <span class="lang-name">Kiswahili</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
@@ -1276,7 +1379,11 @@
         'copyright-original': 'Toutes les compositions musicales et paroles poétiques sont des créations originales.',
         'copyright-bible': 'Texte biblique : domaine public (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
         'copyright-music': 'Musique : générée par IA (Suno) - droits commerciaux acquis',
-        'copyright-notice': '© 2025 Bible Chantée / Sung Bible - Tous droits réservés'
+        'copyright-notice': '© 2025 Bible Chantée / Sung Bible - Tous droits réservés',
+        'share-whatsapp': 'WhatsApp',
+        'share-facebook': 'Facebook',
+        'share-twitter': 'Twitter',
+        'share-copy': 'Copier le lien'
       },
       pt: {
         'hero-title': '🎵 Bíblia Cantada / Sung Bible',
@@ -1324,7 +1431,11 @@
         'copyright-original': 'Todas as composições musicais e letras poéticas são criações originais.',
         'copyright-bible': 'Texto bíblico: domínio público (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
         'copyright-music': 'Música: gerada por IA (Suno) - direitos comerciais adquiridos',
-        'copyright-notice': '© 2025 Bíblia Cantada / Sung Bible - Todos os direitos reservados'
+        'copyright-notice': '© 2025 Bíblia Cantada / Sung Bible - Todos os direitos reservados',
+        'share-whatsapp': 'WhatsApp',
+        'share-facebook': 'Facebook',
+        'share-twitter': 'Twitter',
+        'share-copy': 'Copiar link'
       },
       en: {
         'hero-title': '🎵 Sung Bible / Bible Chantée',
@@ -1372,7 +1483,11 @@
         'copyright-original': 'All musical compositions and poetic lyrics are original creations.',
         'copyright-bible': 'Biblical text: public domain (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
         'copyright-music': 'Music: AI-generated (Suno) - commercial rights acquired',
-        'copyright-notice': '© 2025 Sung Bible / Bible Chantée - All rights reserved'
+        'copyright-notice': '© 2025 Sung Bible / Bible Chantée - All rights reserved',
+        'share-whatsapp': 'WhatsApp',
+        'share-facebook': 'Facebook',
+        'share-twitter': 'Twitter',
+        'share-copy': 'Copy link'
       },
       es: {
         'hero-title': '🎵 Biblia Cantada / Sung Bible',
@@ -1420,7 +1535,11 @@
         'copyright-original': 'Todas las composiciones musicales y letras poéticas son creaciones originales.',
         'copyright-bible': 'Texto bíblico: dominio público (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
         'copyright-music': 'Música: generada por IA (Suno) - derechos comerciales adquiridos',
-        'copyright-notice': '© 2025 Biblia Cantada / Sung Bible - Todos los derechos reservados'
+        'copyright-notice': '© 2025 Biblia Cantada / Sung Bible - Todos los derechos reservados',
+        'share-whatsapp': 'WhatsApp',
+        'share-facebook': 'Facebook',
+        'share-twitter': 'Twitter',
+        'share-copy': 'Copiar enlace'
       },
       de: {
         'hero-title': '🎵 Gesungene Bibel / Sung Bible',
@@ -1468,7 +1587,11 @@
         'copyright-original': 'Alle musikalischen Kompositionen und poetischen Texte sind Originalschöpfungen.',
         'copyright-bible': 'Bibeltext: gemeinfrei (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
         'copyright-music': 'Musik: KI-generiert (Suno) - kommerzielle Rechte erworben',
-        'copyright-notice': '© 2025 Gesungene Bibel / Sung Bible - Alle Rechte vorbehalten'
+        'copyright-notice': '© 2025 Gesungene Bibel / Sung Bible - Alle Rechte vorbehalten',
+        'share-whatsapp': 'WhatsApp',
+        'share-facebook': 'Facebook',
+        'share-twitter': 'Twitter',
+        'share-copy': 'Link kopieren'
       },
       it: {
         'hero-title': '🎵 Bibbia Cantata / Sung Bible',
@@ -1516,7 +1639,11 @@
         'copyright-original': 'Tutte le composizioni musicali e i testi poetici sono creazioni originali.',
         'copyright-bible': 'Testo biblico: dominio pubblico (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
         'copyright-music': 'Musica: generata da IA (Suno) - diritti commerciali acquisiti',
-        'copyright-notice': '© 2025 Bibbia Cantata / Sung Bible - Tutti i diritti riservati'
+        'copyright-notice': '© 2025 Bibbia Cantata / Sung Bible - Tutti i diritti riservati',
+        'share-whatsapp': 'WhatsApp',
+        'share-facebook': 'Facebook',
+        'share-twitter': 'Twitter',
+        'share-copy': 'Copia link'
       },
       ar: {
         'hero-title': '🎵 الكتاب المقدس المُنغَّم / Sung Bible',
@@ -1564,7 +1691,11 @@
         'copyright-original': 'جميع المؤلفات الموسيقية والكلمات الشعرية هي إبداعات أصلية.',
         'copyright-bible': 'النص الكتابي: ملكية عامة (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
         'copyright-music': 'الموسيقى: مولدة بالذكاء الاصطناعي (Suno) - حقوق تجارية مكتسبة',
-        'copyright-notice': '© 2025 الكتاب المقدس المُنغَّم / Sung Bible - جميع الحقوق محفوظة'
+        'copyright-notice': '© 2025 الكتاب المقدس المُنغَّم / Sung Bible - جميع الحقوق محفوظة',
+        'share-whatsapp': 'واتساب',
+        'share-facebook': 'فيسبوك',
+        'share-twitter': 'تويتر',
+        'share-copy': 'نسخ الرابط'
       },
       ru: {
         'hero-title': '🎵 Библия в песнях / Sung Bible',
@@ -1612,7 +1743,11 @@
         'copyright-original': 'Все музыкальные композиции и поэтические тексты являются оригинальными произведениями.',
         'copyright-bible': 'Библейский текст: общественное достояние (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
         'copyright-music': 'Музыка: создана ИИ (Suno) - коммерческие права приобретены',
-        'copyright-notice': '© 2025 Библия в песнях / Sung Bible - Все права защищены'
+        'copyright-notice': '© 2025 Библия в песнях / Sung Bible - Все права защищены',
+        'share-whatsapp': 'WhatsApp',
+        'share-facebook': 'Facebook',
+        'share-twitter': 'Twitter',
+        'share-copy': 'Копировать ссылку'
       },
       zh: {
         'hero-title': '🎵 歌唱圣经 / Sung Bible',
@@ -1660,7 +1795,11 @@
         'copyright-original': '所有音乐作品和诗歌歌词均为原创作品。',
         'copyright-bible': '圣经文本：公有领域 (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
         'copyright-music': '音乐：AI生成 (Suno) - 已获得商业权利',
-        'copyright-notice': '© 2025 歌唱圣经 / Sung Bible - 版权所有'
+        'copyright-notice': '© 2025 歌唱圣经 / Sung Bible - 版权所有',
+        'share-whatsapp': 'WhatsApp',
+        'share-facebook': 'Facebook',
+        'share-twitter': 'Twitter',
+        'share-copy': '复制链接'
       },
       hi: {
         'hero-title': '🎵 गाया हुआ बाइबिल / Sung Bible',
@@ -1708,7 +1847,11 @@
         'copyright-original': 'सभी संगीत रचनाएँ और काव्यात्मक बोल मूल रचनाएँ हैं।',
         'copyright-bible': 'बाइबिल पाठ: सार्वजनिक डोमेन (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
         'copyright-music': 'संगीत: AI द्वारा उत्पन्न (Suno) - वाणिज्यिक अधिकार प्राप्त',
-        'copyright-notice': '© 2025 गाया हुआ बाइबिल / Sung Bible - सर्वाधिकार सुरक्षित'
+        'copyright-notice': '© 2025 गाया हुआ बाइबिल / Sung Bible - सर्वाधिकार सुरक्षित',
+        'share-whatsapp': 'WhatsApp',
+        'share-facebook': 'Facebook',
+        'share-twitter': 'Twitter',
+        'share-copy': 'लिंक कॉपी करें'
       },
       tl: {
         'hero-title': '🎵 Bibliya na Inawit / Sung Bible',
@@ -1756,7 +1899,11 @@
         'copyright-original': 'Lahat ng komposisyong musikal at tulang lyrics ay orihinal na likhain.',
         'copyright-bible': 'Biblikal na teksto: public domain (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
         'copyright-music': 'Musika: AI-generated (Suno) - komersyal na karapatan nakuha',
-        'copyright-notice': '© 2025 Bibliya na Inawit / Sung Bible - Lahat ng karapatan nakalaan'
+        'copyright-notice': '© 2025 Bibliya na Inawit / Sung Bible - Lahat ng karapatan nakalaan',
+        'share-whatsapp': 'WhatsApp',
+        'share-facebook': 'Facebook',
+        'share-twitter': 'Twitter',
+        'share-copy': 'Kopyahin ang link'
       },
       sw: {
         'hero-title': '🎵 Biblia Inayoimbiwa / Sung Bible',
@@ -1804,7 +1951,11 @@
         'copyright-original': 'Vielelezo vyote vya muziki na maneno ya kishairi ni viumbuzi asilia.',
         'copyright-bible': 'Maandiko ya Biblia: mali ya umma (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
         'copyright-music': 'Muziki: uliozalishwa na AI (Suno) - haki za kibiashara zimenunuliwa',
-        'copyright-notice': '© 2025 Biblia Inayoimbiwa / Sung Bible - Haki zote zimehifadhiwa'
+        'copyright-notice': '© 2025 Biblia Inayoimbiwa / Sung Bible - Haki zote zimehifadhiwa',
+        'share-whatsapp': 'WhatsApp',
+        'share-facebook': 'Facebook',
+        'share-twitter': 'Twitter',
+        'share-copy': 'Nakili kiungo'
       }
     };
 
@@ -1993,6 +2144,39 @@
         console.log(`📧 ${lang.toUpperCase()} mailing list: ${count} subscribers`);
       }
     });
+
+    // Share functions
+    function shareOnWhatsApp() {
+      const url = encodeURIComponent(window.location.href);
+      const text = encodeURIComponent('🎵 Découvrez la Bible Chantée - Toute la Parole de Dieu en musique ! 100 chapitres gratuits dans 3 langues.');
+      window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+    }
+
+    function shareOnFacebook() {
+      const url = encodeURIComponent(window.location.href);
+      window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+    }
+
+    function shareOnTwitter() {
+      const url = encodeURIComponent(window.location.href);
+      const text = encodeURIComponent('🎵 Bible Chantée - Toute la Parole de Dieu en musique ! 100 chapitres gratuits.');
+      window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+    }
+
+    function copyLink() {
+      const url = window.location.href;
+      navigator.clipboard.writeText(url).then(() => {
+        const btn = event.target.closest('.share-btn');
+        const originalText = btn.querySelector('[data-i18n]').textContent;
+        btn.querySelector('[data-i18n]').textContent = '✅ Copié!';
+        setTimeout(() => {
+          btn.querySelector('[data-i18n]').textContent = originalText;
+        }, 2000);
+      }).catch(err => {
+        alert('Erreur lors de la copie du lien');
+        console.error('Copy failed:', err);
+      });
+    }
   </script>
 
 </body>
