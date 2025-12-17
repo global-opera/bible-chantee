@@ -56,9 +56,73 @@
       margin-bottom: 40px;
     }
 
+    /* Language Selector Section */
+    .language-selector-section {
+      background: linear-gradient(180deg, #1e3a5f 0%, #0f2744 100%);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .language-selector-section h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.5em;
+      color: #f5c842;
+      margin-bottom: 40px;
+    }
+
+    .language-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .lang-select-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 30px 20px;
+      background: rgba(255,255,255,0.05);
+      border: 3px solid rgba(74, 144, 217, 0.3);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .lang-select-btn:hover {
+      transform: translateY(-5px);
+      border-color: #4a90d9;
+      background: rgba(74, 144, 217, 0.1);
+      box-shadow: 0 8px 25px rgba(74, 144, 217, 0.3);
+    }
+
+    .lang-select-btn.active {
+      border-color: #f5c842;
+      background: linear-gradient(135deg, rgba(245, 196, 66, 0.2), rgba(212, 175, 55, 0.2));
+      box-shadow: 0 8px 25px rgba(245, 196, 66, 0.4);
+    }
+
+    .lang-select-btn .flag {
+      font-size: 3em;
+    }
+
+    .lang-select-btn .lang-name {
+      font-size: 1.3em;
+      font-weight: 600;
+      color: white;
+    }
+
+    .lang-select-btn .lang-status {
+      font-size: 0.9em;
+      color: rgba(255,255,255,0.7);
+    }
+
     /* Signup Section */
     .signup-section {
-      background: linear-gradient(180deg, #1e3a5f 0%, #0f2744 100%);
+      background: linear-gradient(180deg, #0f2744 0%, #1e3a5f 100%);
       padding: 60px 20px;
     }
 
@@ -183,6 +247,90 @@
     @keyframes fadeIn {
       from { opacity: 0; transform: scale(0.9); }
       to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Teaser Message */
+    .teaser-message {
+      text-align: center;
+      color: rgba(255,255,255,0.7);
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+
+    /* Coming Soon Cards */
+    .audio-card.coming-soon {
+      background: linear-gradient(135deg, rgba(100,100,100,0.2), rgba(60,60,60,0.2));
+      border: 2px dashed rgba(255,255,255,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+    }
+
+    .coming-soon-content {
+      text-align: center;
+    }
+
+    .coming-soon-icon {
+      font-size: 3em;
+      margin-bottom: 15px;
+    }
+
+    .coming-soon-content h3 {
+      font-size: 1.5em;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 10px;
+    }
+
+    .coming-soon-content p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9em;
+    }
+
+    /* Marketing Message */
+    .marketing-message {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .marketing-subtitle {
+      font-size: 1.2em;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .benefits-quick {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .benefit-item {
+      background: rgba(74, 144, 217, 0.2);
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 0.95em;
+      color: white;
+      border: 1px solid rgba(74, 144, 217, 0.4);
+    }
+
+    .form-note {
+      text-align: center;
+      font-size: 0.85em;
+      color: rgba(255,255,255,0.6);
+      margin-top: 15px;
+    }
+
+    /* Hide audio cards by default (shown by JS) */
+    .audio-card {
+      display: none;
+    }
+
+    .audio-card.visible {
+      display: block;
     }
 
     /* Container */
@@ -409,44 +557,41 @@
     <p class="subtitle">1189 chapitres • 4 langues • 100 chapitres gratuits par langue</p>
   </div>
 
-  <!-- Signup Section -->
-  <div class="signup-section">
-    <div class="signup-container">
-      <h2>🎁 Commencez gratuitement</h2>
-      <p class="signup-subtitle">Choisissez votre langue et obtenez 100 chapitres gratuits</p>
-
-      <form id="signup-form" class="signup-form">
-        <select id="language-select" required>
-          <option value="">-- Choisissez votre langue --</option>
-          <option value="fr">🇫🇷 Français (Disponible)</option>
-          <option value="pt">🇧🇷 Português (Disponible)</option>
-          <option value="en">🇬🇧 English (Available)</option>
-          <option value="es">🇪🇸 Español (Bientôt disponible)</option>
-          <option value="de">🇩🇪 Deutsch (Bientôt disponible)</option>
-          <option value="it">🇮🇹 Italiano (Bientôt disponible)</option>
-          <option value="ru">🇷🇺 Русский (Bientôt disponible)</option>
-          <option value="zh">🇨🇳 中文 (Bientôt disponible)</option>
-        </select>
-
-        <input
-          type="email"
-          id="email-input"
-          placeholder="Votre email (pour sauvegarder votre progression)"
-          required
-        >
-
-        <button type="submit" class="btn-signup">
-          Commencer maintenant
+  <!-- Language Selector -->
+  <div class="language-selector-section">
+    <div class="container">
+      <h2>🌍 Choisissez votre langue</h2>
+      <div class="language-buttons">
+        <button class="lang-select-btn active" data-lang="fr" onclick="selectLanguage('fr')">
+          <span class="flag">🇫🇷</span>
+          <span class="lang-name">Français</span>
+          <span class="lang-status">✅ Disponible</span>
         </button>
-      </form>
-
-      <!-- Preorder confirmation (hidden by default) -->
-      <div id="preorder-message" class="preorder-message" style="display: none;">
-        <div class="preorder-icon">🚀</div>
-        <h3>Merci pour votre intérêt !</h3>
-        <p>Vous serez notifié par email dès que cette langue sera disponible.</p>
-        <p class="preorder-count"><strong id="waiting-count">0</strong> personnes attendent cette version.</p>
-        <button onclick="closePreorderMessage()" class="btn-secondary">Découvrir les langues disponibles</button>
+        <button class="lang-select-btn" data-lang="pt" onclick="selectLanguage('pt')">
+          <span class="flag">🇧🇷</span>
+          <span class="lang-name">Português</span>
+          <span class="lang-status">✅ Disponible</span>
+        </button>
+        <button class="lang-select-btn" data-lang="en" onclick="selectLanguage('en')">
+          <span class="flag">🇬🇧</span>
+          <span class="lang-name">English</span>
+          <span class="lang-status">✅ Available</span>
+        </button>
+        <button class="lang-select-btn" data-lang="es" onclick="selectLanguage('es')">
+          <span class="flag">🇪🇸</span>
+          <span class="lang-name">Español</span>
+          <span class="lang-status">🔜 Bientôt</span>
+        </button>
+        <button class="lang-select-btn" data-lang="de" onclick="selectLanguage('de')">
+          <span class="flag">🇩🇪</span>
+          <span class="lang-name">Deutsch</span>
+          <span class="lang-status">🔜 Bientôt</span>
+        </button>
+        <button class="lang-select-btn" data-lang="it" onclick="selectLanguage('it')">
+          <span class="flag">🇮🇹</span>
+          <span class="lang-name">Italiano</span>
+          <span class="lang-status">🔜 Bientôt</span>
+        </button>
       </div>
     </div>
   </div>
@@ -454,162 +599,153 @@
   <!-- Demo Audio Samples -->
   <div class="container">
     <div class="section">
-      <h2>🎧 Découvrez des extraits</h2>
+      <h2 id="extraits-title">🎧 Découvrez 3 extraits</h2>
+      <p class="teaser-message">Un aperçu de la qualité sonore et musicale</p>
 
-      <div class="demo-grid">
-        <!-- FR -->
-        <div class="audio-card">
-          <h3>🇫🇷 Genèse 1 (Français)</h3>
+      <div class="demo-grid" id="samples-container">
+        <!-- FRANÇAIS - 3 extraits -->
+        <div class="audio-card" data-lang="fr">
+          <h3>Genèse 1</h3>
           <p>Au commencement, Dieu créa...</p>
           <audio controls>
             <source src="https://archive.org/download/bible-chantee-fr-v2/01_GEN/01_GEN_01_FR.mp3" type="audio/mpeg">
           </audio>
         </div>
 
-        <div class="audio-card">
-          <h3>🇧🇷 Gênesis 1 (Português)</h3>
-          <p>No princípio, Deus criou...</p>
-          <audio controls>
-            <source src="https://archive.org/download/bible-chantee-pt-v2/01_GEN/01_GEN_01_PT.mp3" type="audio/mpeg">
-          </audio>
-        </div>
-
-        <div class="audio-card">
-          <h3>🇬🇧 Genesis 1 (English)</h3>
-          <p>In the beginning, God created...</p>
-          <audio controls>
-            <source src="https://archive.org/download/bible-chantee-en/01_GEN/01_GEN_01_EN.mp3" type="audio/mpeg">
-          </audio>
-        </div>
-
-        <!-- Psaumes -->
-        <div class="audio-card">
-          <h3>🇫🇷 Psaume 23 (Français)</h3>
+        <div class="audio-card" data-lang="fr">
+          <h3>Psaume 23</h3>
           <p>L'Éternel est mon berger...</p>
           <audio controls>
             <source src="https://archive.org/download/bible-chantee-fr-v2/19_PSA/19_PSA_023_FR.mp3" type="audio/mpeg">
           </audio>
         </div>
 
-        <div class="audio-card">
-          <h3>🇧🇷 Salmo 23 (Português)</h3>
-          <p>O Senhor é o meu pastor...</p>
-          <audio controls>
-            <source src="https://archive.org/download/bible-chantee-pt-v2/19_PSA/19_PSA_023_PT.mp3" type="audio/mpeg">
-          </audio>
-        </div>
-
-        <div class="audio-card">
-          <h3>🇬🇧 Psalm 23 (English)</h3>
-          <p>The Lord is my shepherd...</p>
-          <audio controls>
-            <source src="https://archive.org/download/bible-chantee-en/19_PSA/19_PSA_023_EN.mp3" type="audio/mpeg">
-          </audio>
-        </div>
-
-        <!-- Jean / João / John -->
-        <div class="audio-card">
-          <h3>🇫🇷 Jean 3 (Français)</h3>
+        <div class="audio-card" data-lang="fr">
+          <h3>Jean 3</h3>
           <p>Car Dieu a tant aimé le monde...</p>
           <audio controls>
             <source src="https://archive.org/download/bible-chantee-fr-v2/43_JHN/43_JHN_003_FR.mp3" type="audio/mpeg">
           </audio>
         </div>
 
-        <div class="audio-card">
-          <h3>🇧🇷 João 3 (Português)</h3>
+        <!-- PORTUGUÊS - 3 extraits -->
+        <div class="audio-card" data-lang="pt">
+          <h3>Gênesis 1</h3>
+          <p>No princípio, Deus criou...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-pt-v2/01_GEN/01_GEN_01_PT.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="audio-card" data-lang="pt">
+          <h3>Salmo 23</h3>
+          <p>O Senhor é o meu pastor...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-pt-v2/19_PSA/19_PSA_023_PT.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="audio-card" data-lang="pt">
+          <h3>João 3</h3>
           <p>Porque Deus amou o mundo...</p>
           <audio controls>
             <source src="https://archive.org/download/bible-chantee-pt-v2/43_JHN/43_JHN_003_PT.mp3" type="audio/mpeg">
           </audio>
         </div>
 
-        <div class="audio-card">
-          <h3>🇬🇧 John 3 (English)</h3>
+        <!-- ENGLISH - 3 extraits -->
+        <div class="audio-card" data-lang="en">
+          <h3>Genesis 1</h3>
+          <p>In the beginning, God created...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-en/01_GEN/01_GEN_01_EN.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="audio-card" data-lang="en">
+          <h3>Psalm 23</h3>
+          <p>The Lord is my shepherd...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-en/19_PSA/19_PSA_023_EN.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="audio-card" data-lang="en">
+          <h3>John 3</h3>
           <p>For God so loved the world...</p>
           <audio controls>
             <source src="https://archive.org/download/bible-chantee-en/43_JHN/43_JHN_003_EN.mp3" type="audio/mpeg">
           </audio>
         </div>
 
-        <!-- Proverbes / Provérbios / Proverbs -->
-        <div class="audio-card">
-          <h3>🇫🇷 Proverbes 3 (Français)</h3>
-          <p>Confie-toi en l'Éternel...</p>
-          <audio controls>
-            <source src="https://archive.org/download/bible-chantee-fr-v2/20_PRO/20_PRO_003_FR.mp3" type="audio/mpeg">
-          </audio>
+        <!-- ESPAÑOL / DEUTSCH / ITALIANO - Message coming soon -->
+        <div class="audio-card coming-soon" data-lang="es">
+          <div class="coming-soon-content">
+            <div class="coming-soon-icon">🔜</div>
+            <h3>Próximamente</h3>
+            <p>Pronto disponible en español</p>
+          </div>
         </div>
 
-        <div class="audio-card">
-          <h3>🇧🇷 Provérbios 3 (Português)</h3>
-          <p>Confia no Senhor...</p>
-          <audio controls>
-            <source src="https://archive.org/download/bible-chantee-pt-v2/20_PRO/20_PRO_003_PT.mp3" type="audio/mpeg">
-          </audio>
+        <div class="audio-card coming-soon" data-lang="de">
+          <div class="coming-soon-content">
+            <div class="coming-soon-icon">🔜</div>
+            <h3>Demnächst</h3>
+            <p>Bald auf Deutsch verfügbar</p>
+          </div>
         </div>
 
-        <div class="audio-card">
-          <h3>🇬🇧 Proverbs 3 (English)</h3>
-          <p>Trust in the Lord...</p>
-          <audio controls>
-            <source src="https://archive.org/download/bible-chantee-en/20_PRO/20_PRO_003_EN.mp3" type="audio/mpeg">
-          </audio>
-        </div>
-
-        <!-- Matthieu / Mateus / Matthew -->
-        <div class="audio-card">
-          <h3>🇫🇷 Matthieu 5 (Français)</h3>
-          <p>Les Béatitudes...</p>
-          <audio controls>
-            <source src="https://archive.org/download/bible-chantee-fr-v2/40_MAT/40_MAT_005_FR.mp3" type="audio/mpeg">
-          </audio>
-        </div>
-
-        <div class="audio-card">
-          <h3>🇧🇷 Mateus 5 (Português)</h3>
-          <p>As Bem-aventuranças...</p>
-          <audio controls>
-            <source src="https://archive.org/download/bible-chantee-pt-v2/40_MAT/40_MAT_005_PT.mp3" type="audio/mpeg">
-          </audio>
-        </div>
-
-        <div class="audio-card">
-          <h3>🇬🇧 Matthew 5 (English)</h3>
-          <p>The Beatitudes...</p>
-          <audio controls>
-            <source src="https://archive.org/download/bible-chantee-en/40_MAT/40_MAT_005_EN.mp3" type="audio/mpeg">
-          </audio>
-        </div>
-
-        <!-- Apocalypse / Apocalipse / Revelation -->
-        <div class="audio-card">
-          <h3>🇫🇷 Apocalypse 21 (Français)</h3>
-          <p>Un nouveau ciel, une nouvelle terre...</p>
-          <audio controls>
-            <source src="https://archive.org/download/bible-chantee-fr-v2/66_REV/66_REV_021_FR.mp3" type="audio/mpeg">
-          </audio>
-        </div>
-
-        <div class="audio-card">
-          <h3>🇧🇷 Apocalipse 21 (Português)</h3>
-          <p>Novo céu, nova terra...</p>
-          <audio controls>
-            <source src="https://archive.org/download/bible-chantee-pt-v2/66_REV/66_REV_021_PT.mp3" type="audio/mpeg">
-          </audio>
-        </div>
-
-        <div class="audio-card">
-          <h3>🇬🇧 Revelation 21 (English)</h3>
-          <p>A new heaven, a new earth...</p>
-          <audio controls>
-            <source src="https://archive.org/download/bible-chantee-en/66_REV/66_REV_021_EN.mp3" type="audio/mpeg">
-          </audio>
+        <div class="audio-card coming-soon" data-lang="it">
+          <div class="coming-soon-content">
+            <div class="coming-soon-icon">🔜</div>
+            <h3>Prossimamente</h3>
+            <p>Presto disponibile in italiano</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Languages Available -->
+    <!-- Marketing Message + Email Form -->
+    <div class="signup-section">
+      <div class="signup-container">
+        <div class="marketing-message">
+          <h2>🎁 Envie d'en découvrir plus ?</h2>
+          <p class="marketing-subtitle">Pour accéder aux <strong>1189 chapitres complets</strong> dans votre langue, inscrivez-vous gratuitement !</p>
+
+          <div class="benefits-quick">
+            <div class="benefit-item">✅ 100 chapitres gratuits</div>
+            <div class="benefit-item">✅ Réécoute illimitée</div>
+            <div class="benefit-item">✅ Qualité audio professionnelle</div>
+          </div>
+        </div>
+
+        <form id="signup-form" class="signup-form">
+          <input
+            type="email"
+            id="email-input"
+            placeholder="Votre email pour commencer"
+            required
+          >
+
+          <button type="submit" class="btn-signup">
+            <span id="signup-btn-text">Accéder gratuitement</span>
+          </button>
+
+          <p class="form-note">Votre email sera sauvegardé pour restaurer votre progression</p>
+        </form>
+
+        <!-- Preorder confirmation (hidden by default) -->
+        <div id="preorder-message" class="preorder-message" style="display: none;">
+          <div class="preorder-icon">🚀</div>
+          <h3>Merci pour votre intérêt !</h3>
+          <p>Vous serez notifié par email dès que cette langue sera disponible.</p>
+          <p class="preorder-count"><strong id="waiting-count">0</strong> personnes attendent cette version.</p>
+          <button onclick="closePreorderMessage()" class="btn-secondary">Choisir une autre langue</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- How it Works (Optional) -->
     <div class="section">
       <h2>🌍 Langues disponibles</h2>
 
@@ -717,6 +853,42 @@
     // Preorder counters (stored in localStorage)
     const PREORDER_KEY = 'biblePreorders';
 
+    // Currently selected language (default: fr)
+    let selectedLanguage = 'fr';
+
+    // Select language and filter samples
+    function selectLanguage(lang) {
+      selectedLanguage = lang;
+
+      // Update active button
+      document.querySelectorAll('.lang-select-btn').forEach(btn => {
+        if (btn.dataset.lang === lang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // Show only samples for selected language
+      document.querySelectorAll('.audio-card').forEach(card => {
+        if (card.dataset.lang === lang) {
+          card.classList.add('visible');
+        } else {
+          card.classList.remove('visible');
+        }
+      });
+
+      // Scroll to samples
+      document.getElementById('extraits-title').scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      console.log(`✅ Language selected: ${lang.toUpperCase()}`);
+    }
+
+    // Initialize page with French samples
+    document.addEventListener('DOMContentLoaded', () => {
+      selectLanguage('fr');
+    });
+
     // Get preorder data from localStorage
     function getPreorderData() {
       const data = localStorage.getItem(PREORDER_KEY);
@@ -749,11 +921,11 @@
     document.getElementById('signup-form').addEventListener('submit', function(e) {
       e.preventDefault();
 
-      const lang = document.getElementById('language-select').value;
+      const lang = selectedLanguage; // Use globally selected language
       const email = document.getElementById('email-input').value;
 
-      if (!lang || !email) {
-        alert('Veuillez choisir une langue et entrer votre email.');
+      if (!email) {
+        alert('Veuillez entrer votre email.');
         return;
       }
 
