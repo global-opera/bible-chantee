@@ -228,6 +228,11 @@
             color: var(--text-primary);
             text-decoration: none;
         }
+        .streaming-disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
         .footer {
             text-align: center;
             padding: 2rem;
@@ -334,10 +339,10 @@
         
         <h2 class="section-title" id="title-available"></h2>
         <div class="streaming">
-            <a href="#">Spotify</a>
-            <a href="#">Apple Music</a>
-            <a href="#">YouTube Music</a>
-            <a href="#">Amazon Music</a>
+            <a href="#" class="streaming-disabled" data-streaming-link>Spotify</a>
+            <a href="#" class="streaming-disabled" data-streaming-link>Apple Music</a>
+            <a href="#" class="streaming-disabled" data-streaming-link>YouTube Music</a>
+            <a href="#" class="streaming-disabled" data-streaming-link>Amazon Music</a>
         </div>
         
         <div class="cta">
@@ -381,6 +386,7 @@
                 btnLyrics: "Paroles",
                 btnHide: "Masquer",
                 lyricsComingSoon: "Paroles bientot disponibles",
+                streamingComingSoon: "Bientot disponible",
                 tracks: [
                     { id: "01_GEN_01_FR", title: "Genese 1", desc: "La Creation" },
                     { id: "19_PSA_23_FR", title: "Psaume 23", desc: "L'Eternel est mon berger" },
@@ -415,6 +421,7 @@
                 btnLyrics: "Letras",
                 btnHide: "Ocultar",
                 lyricsComingSoon: "Letras em breve",
+                streamingComingSoon: "Em breve",
                 tracks: [
                     { id: "01_GEN_01_PT", title: "Genesis 1", desc: "A Criacao" },
                     { id: "19_PSA_23_PT", title: "Salmo 23", desc: "O Senhor e meu pastor" },
@@ -449,6 +456,7 @@
                 btnLyrics: "Lyrics",
                 btnHide: "Hide",
                 lyricsComingSoon: "Lyrics coming soon",
+                streamingComingSoon: "Coming soon",
                 tracks: [
                     { id: "01_GEN_01_EN", title: "Genesis 1", desc: "The Creation" },
                     { id: "19_PSA_23_EN", title: "Psalm 23", desc: "The Lord is my shepherd" },
@@ -483,6 +491,7 @@
                 btnLyrics: "Letras",
                 btnHide: "Ocultar",
                 lyricsComingSoon: "Letras en breve",
+                streamingComingSoon: "Proximo",
                 tracks: [
                     { id: "01_GEN_01_ES", title: "Genesis 1", desc: "La Creacion" },
                     { id: "19_PSA_23_ES", title: "Salmo 23", desc: "El Senor es mi pastor" },
@@ -555,6 +564,12 @@
             if (pixBtn) {
                 pixBtn.style.display = currentLang === 'PT' ? 'inline-block' : 'none';
             }
+
+            // Mettre à jour les tooltips des liens de streaming
+            const streamingLinks = document.querySelectorAll('[data-streaming-link]');
+            streamingLinks.forEach(link => {
+                link.title = t.streamingComingSoon;
+            });
 
             loadTracks();
             loadProgress();
