@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Bible Chantée / Sung Bible - La Parole de Dieu en musique</title>
+  <meta name="description" content="Découvrez toute la Bible chantée en 4 langues. 100 chapitres gratuits + accès illimité pour $0.99">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="40" opacity="0.08" fill="%23ffffff">&#9835;</text></svg>');
+      background-size: 80px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 3em;
+      margin-bottom: 15px;
+      position: relative;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .hero p {
+      font-size: 1.4em;
+      margin-bottom: 30px;
+      position: relative;
+      opacity: 0.95;
+    }
+
+    .hero .subtitle {
+      font-size: 1.1em;
+      color: #f5c842;
+      margin-bottom: 40px;
+    }
+
+    /* Signup Section */
+    .signup-section {
+      background: linear-gradient(180deg, #1e3a5f 0%, #0f2744 100%);
+      padding: 60px 20px;
+    }
+
+    .signup-container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .signup-container h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.5em;
+      color: #f5c842;
+      margin-bottom: 15px;
+    }
+
+    .signup-subtitle {
+      font-size: 1.2em;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 30px;
+    }
+
+    .signup-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .signup-form select,
+    .signup-form input {
+      padding: 15px;
+      font-size: 1.1em;
+      border: 2px solid #4a90d9;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.05);
+      color: white;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .signup-form select:focus,
+    .signup-form input:focus {
+      outline: none;
+      border-color: #f5c842;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .signup-form select option {
+      background: #0f2744;
+      color: white;
+    }
+
+    .btn-signup {
+      padding: 18px 40px;
+      font-size: 1.3em;
+      font-weight: 600;
+      background: linear-gradient(135deg, #4a90d9, #2563eb);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 10px;
+    }
+
+    .btn-signup:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(74, 144, 217, 0.5);
+      background: linear-gradient(135deg, #5ba0e9, #3b73fb);
+    }
+
+    /* Preorder Message */
+    .preorder-message {
+      background: linear-gradient(135deg, rgba(74, 144, 217, 0.2), rgba(37, 99, 235, 0.2));
+      border: 2px solid #4a90d9;
+      border-radius: 12px;
+      padding: 40px;
+      margin-top: 30px;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .preorder-icon {
+      font-size: 4em;
+      margin-bottom: 20px;
+    }
+
+    .preorder-message h3 {
+      font-size: 2em;
+      color: #f5c842;
+      margin-bottom: 15px;
+    }
+
+    .preorder-message p {
+      font-size: 1.2em;
+      margin-bottom: 15px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .preorder-count {
+      font-size: 1.3em !important;
+      color: #4a90d9 !important;
+      margin-top: 20px !important;
+    }
+
+    .btn-secondary {
+      padding: 15px 30px;
+      font-size: 1.1em;
+      font-weight: 600;
+      background: linear-gradient(135deg, #f5c842, #d4af37);
+      color: #0f2744;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 20px;
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 196, 66, 0.4);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 80px;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #f5c842;
+    }
+
+    /* Demo Audio Player */
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .audio-card {
+      background: #1e293b;
+      border: 1px solid rgba(245, 196, 66, 0.2);
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .audio-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(245, 196, 66, 0.2);
+      border-color: #f5c842;
+    }
+
+    .audio-card h3 {
+      color: #f5c842;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+
+    .audio-card p {
+      color: #94a3b8;
+      font-size: 0.9em;
+      margin-bottom: 15px;
+    }
+
+    .audio-card audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    /* Language Cards */
+    .lang-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .lang-card {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      border: 2px solid #f5c842;
+      border-radius: 16px;
+      padding: 40px 30px;
+      text-align: center;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .lang-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(245, 196, 66, 0.3);
+    }
+
+    .lang-card .flag {
+      font-size: 4em;
+      margin-bottom: 15px;
+    }
+
+    .lang-card h3 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #f5c842;
+    }
+
+    .lang-card .status {
+      color: #22c55e;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .lang-card .coming-soon {
+      color: #94a3b8;
+      font-style: italic;
+    }
+
+    .lang-card .btn {
+      display: inline-block;
+      background: #f5c842;
+      color: #1e3a8a;
+      padding: 12px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: all 0.3s;
+    }
+
+    .lang-card .btn:hover {
+      background: #ffd700;
+      transform: scale(1.05);
+    }
+
+    /* How It Works */
+    .how-it-works {
+      background: #1e293b;
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 60px;
+    }
+
+    .how-it-works h2 {
+      text-align: center;
+      color: #f5c842;
+      margin-bottom: 40px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .step {
+      text-align: center;
+    }
+
+    .step .number {
+      font-size: 3em;
+      color: #f5c842;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .step h3 {
+      color: #f5c842;
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      color: #94a3b8;
+    }
+
+    /* FAQ */
+    .faq-item {
+      background: #1e293b;
+      border-left: 4px solid #f5c842;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .faq-item h3 {
+      color: #f5c842;
+      margin-bottom: 10px;
+    }
+
+    .faq-item p {
+      color: #94a3b8;
+    }
+
+    /* Footer */
+    footer {
+      background: #1e3a8a;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    footer a {
+      color: #f5c842;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+
+      .hero p {
+        font-size: 1.1em;
+      }
+
+      .section h2 {
+        font-size: 2em;
+      }
+
+      .lang-card .flag {
+        font-size: 3em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>🎵 Bible Chantée / Sung Bible</h1>
+    <p>Toute la Parole de Dieu en musique</p>
+    <p class="subtitle">1189 chapitres • 4 langues • 100 chapitres gratuits par langue</p>
+  </div>
+
+  <!-- Signup Section -->
+  <div class="signup-section">
+    <div class="signup-container">
+      <h2>🎁 Commencez gratuitement</h2>
+      <p class="signup-subtitle">Choisissez votre langue et obtenez 100 chapitres gratuits</p>
+
+      <form id="signup-form" class="signup-form">
+        <select id="language-select" required>
+          <option value="">-- Choisissez votre langue --</option>
+          <option value="fr">🇫🇷 Français (Disponible)</option>
+          <option value="pt">🇧🇷 Português (Disponible)</option>
+          <option value="en">🇬🇧 English (Available)</option>
+          <option value="es">🇪🇸 Español (Bientôt disponible)</option>
+          <option value="de">🇩🇪 Deutsch (Bientôt disponible)</option>
+          <option value="it">🇮🇹 Italiano (Bientôt disponible)</option>
+          <option value="ru">🇷🇺 Русский (Bientôt disponible)</option>
+          <option value="zh">🇨🇳 中文 (Bientôt disponible)</option>
+        </select>
+
+        <input
+          type="email"
+          id="email-input"
+          placeholder="Votre email (pour sauvegarder votre progression)"
+          required
+        >
+
+        <button type="submit" class="btn-signup">
+          Commencer maintenant
+        </button>
+      </form>
+
+      <!-- Preorder confirmation (hidden by default) -->
+      <div id="preorder-message" class="preorder-message" style="display: none;">
+        <div class="preorder-icon">🚀</div>
+        <h3>Merci pour votre intérêt !</h3>
+        <p>Vous serez notifié par email dès que cette langue sera disponible.</p>
+        <p class="preorder-count"><strong id="waiting-count">0</strong> personnes attendent cette version.</p>
+        <button onclick="closePreorderMessage()" class="btn-secondary">Découvrir les langues disponibles</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Demo Audio Samples -->
+  <div class="container">
+    <div class="section">
+      <h2>🎧 Découvrez des extraits</h2>
+
+      <div class="demo-grid">
+        <!-- FR -->
+        <div class="audio-card">
+          <h3>🇫🇷 Genèse 1 (Français)</h3>
+          <p>Au commencement, Dieu créa...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-fr-v2/01_GEN/01_GEN_01_FR.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="audio-card">
+          <h3>🇧🇷 Gênesis 1 (Português)</h3>
+          <p>No princípio, Deus criou...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-pt-v2/01_GEN/01_GEN_01_PT.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="audio-card">
+          <h3>🇬🇧 Genesis 1 (English)</h3>
+          <p>In the beginning, God created...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-en/01_GEN/01_GEN_01_EN.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <!-- Psaumes -->
+        <div class="audio-card">
+          <h3>🇫🇷 Psaume 23 (Français)</h3>
+          <p>L'Éternel est mon berger...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-fr-v2/19_PSA/19_PSA_023_FR.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="audio-card">
+          <h3>🇧🇷 Salmo 23 (Português)</h3>
+          <p>O Senhor é o meu pastor...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-pt-v2/19_PSA/19_PSA_023_PT.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="audio-card">
+          <h3>🇬🇧 Psalm 23 (English)</h3>
+          <p>The Lord is my shepherd...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-en/19_PSA/19_PSA_023_EN.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <!-- Jean / João / John -->
+        <div class="audio-card">
+          <h3>🇫🇷 Jean 3 (Français)</h3>
+          <p>Car Dieu a tant aimé le monde...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-fr-v2/43_JHN/43_JHN_003_FR.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="audio-card">
+          <h3>🇧🇷 João 3 (Português)</h3>
+          <p>Porque Deus amou o mundo...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-pt-v2/43_JHN/43_JHN_003_PT.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="audio-card">
+          <h3>🇬🇧 John 3 (English)</h3>
+          <p>For God so loved the world...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-en/43_JHN/43_JHN_003_EN.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <!-- Proverbes / Provérbios / Proverbs -->
+        <div class="audio-card">
+          <h3>🇫🇷 Proverbes 3 (Français)</h3>
+          <p>Confie-toi en l'Éternel...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-fr-v2/20_PRO/20_PRO_003_FR.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="audio-card">
+          <h3>🇧🇷 Provérbios 3 (Português)</h3>
+          <p>Confia no Senhor...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-pt-v2/20_PRO/20_PRO_003_PT.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="audio-card">
+          <h3>🇬🇧 Proverbs 3 (English)</h3>
+          <p>Trust in the Lord...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-en/20_PRO/20_PRO_003_EN.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <!-- Matthieu / Mateus / Matthew -->
+        <div class="audio-card">
+          <h3>🇫🇷 Matthieu 5 (Français)</h3>
+          <p>Les Béatitudes...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-fr-v2/40_MAT/40_MAT_005_FR.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="audio-card">
+          <h3>🇧🇷 Mateus 5 (Português)</h3>
+          <p>As Bem-aventuranças...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-pt-v2/40_MAT/40_MAT_005_PT.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="audio-card">
+          <h3>🇬🇧 Matthew 5 (English)</h3>
+          <p>The Beatitudes...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-en/40_MAT/40_MAT_005_EN.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <!-- Apocalypse / Apocalipse / Revelation -->
+        <div class="audio-card">
+          <h3>🇫🇷 Apocalypse 21 (Français)</h3>
+          <p>Un nouveau ciel, une nouvelle terre...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-fr-v2/66_REV/66_REV_021_FR.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="audio-card">
+          <h3>🇧🇷 Apocalipse 21 (Português)</h3>
+          <p>Novo céu, nova terra...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-pt-v2/66_REV/66_REV_021_PT.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="audio-card">
+          <h3>🇬🇧 Revelation 21 (English)</h3>
+          <p>A new heaven, a new earth...</p>
+          <audio controls>
+            <source src="https://archive.org/download/bible-chantee-en/66_REV/66_REV_021_EN.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <!-- Languages Available -->
+    <div class="section">
+      <h2>🌍 Langues disponibles</h2>
+
+      <div class="lang-grid">
+        <!-- FR -->
+        <div class="lang-card" onclick="window.location.href='/fr/'">
+          <div class="flag">🇫🇷</div>
+          <h3>Français</h3>
+          <p class="status">✅ 100% complet (1189 chapitres)</p>
+          <a href="/fr/" class="btn">Écouter en Français</a>
+        </div>
+
+        <!-- PT -->
+        <div class="lang-card" onclick="window.location.href='/pt/'">
+          <div class="flag">🇧🇷</div>
+          <h3>Português</h3>
+          <p class="status">✅ 100% complet (1189 chapitres)</p>
+          <a href="/pt/" class="btn">Ouvir em Português</a>
+        </div>
+
+        <!-- EN -->
+        <div class="lang-card" onclick="window.location.href='/en/'">
+          <div class="flag">🇬🇧</div>
+          <h3>English</h3>
+          <p class="status">✅ 100% complet (1189 chapitres)</p>
+          <a href="/en/" class="btn">Listen in English</a>
+        </div>
+      </div>
+
+      <!-- Coming Soon -->
+      <div style="text-align: center; margin-top: 40px; color: #94a3b8;">
+        <p><strong>À venir :</strong> 🇪🇸 Español • 🇩🇪 Deutsch • 🇮🇹 Italiano • 🇸🇦 العربية • 🇷🇺 Русский • 🇨🇳 中文 • 🇮🇳 हिन्दी • 🇵🇭 Tagalog • 🇰🇪 Swahili</p>
+      </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="how-it-works">
+      <h2>💡 Comment ça marche ?</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="number">1</div>
+          <h3>100 chapitres gratuits</h3>
+          <p>Choisissez 100 chapitres dans la langue de votre choix. Accès à vie, réécoute illimitée.</p>
+        </div>
+
+        <div class="step">
+          <div class="number">2</div>
+          <h3>Écoutez sans limite</h3>
+          <p>Les chapitres débloqués sont à vous pour toujours. Réécoutez autant que vous voulez.</p>
+        </div>
+
+        <div class="step">
+          <div class="number">3</div>
+          <h3>Tout débloquer : $0.99</h3>
+          <p>Accès illimité aux 1189 chapitres dans UNE langue pour moins qu'un café !</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <h2>❓ Questions fréquentes</h2>
+
+      <div class="faq-item">
+        <h3>C'est vraiment 100 chapitres gratuits ?</h3>
+        <p>Oui ! Vous choisissez 100 chapitres dans la langue de votre choix. Une fois débloqués, ils sont à vous à vie avec réécoute illimitée.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Puis-je débloquer dans plusieurs langues ?</h3>
+        <p>Oui ! Chaque langue a ses propres 100 crédits gratuits. Vous pouvez écouter 100 chapitres en français + 100 en portugais + 100 en anglais.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Comment fonctionne le paiement ?</h3>
+        <p>Paiement sécurisé via PayPal. Après paiement, vous recevez un code par email qui débloque tous les 1189 chapitres dans la langue choisie.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Puis-je télécharger les MP3 ?</h3>
+        <p>Les chapitres sont disponibles en streaming. Pour l'instant, pas de téléchargement disponible.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Est-ce que mes chapitres débloqués sont sauvegardés ?</h3>
+        <p>Oui, dans votre navigateur (localStorage). Si vous effacez vos données, utilisez votre code de déblocage pour restaurer l'accès.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Bible Chantée / Sung Bible</p>
+    <p style="margin-top: 10px;">
+      <a href="mailto:support@sungbible.world">Contact</a> •
+      <a href="/mentions-legales.html">Mentions légales</a>
+    </p>
+  </footer>
+
+  <script>
+    // Available languages (with 100 free credits)
+    const AVAILABLE_LANGS = ['fr', 'pt', 'en'];
+
+    // Preorder counters (stored in localStorage)
+    const PREORDER_KEY = 'biblePreorders';
+
+    // Get preorder data from localStorage
+    function getPreorderData() {
+      const data = localStorage.getItem(PREORDER_KEY);
+      return data ? JSON.parse(data) : { es: 0, de: 0, it: 0, ru: 0, zh: 0 };
+    }
+
+    // Save preorder data
+    function savePreorderData(data) {
+      localStorage.setItem(PREORDER_KEY, JSON.stringify(data));
+    }
+
+    // Save email to mailing list
+    function saveEmailToMailingList(email, lang) {
+      // Get existing emails
+      const mailKey = `mailingList_${lang}`;
+      const existingEmails = localStorage.getItem(mailKey);
+      const emails = existingEmails ? JSON.parse(existingEmails) : [];
+
+      // Add if not already in list
+      if (!emails.includes(email)) {
+        emails.push(email);
+        localStorage.setItem(mailKey, JSON.stringify(emails));
+        console.log(`✉️ Email saved for ${lang.toUpperCase()}: ${email}`);
+      }
+
+      return emails.length;
+    }
+
+    // Handle form submission
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const lang = document.getElementById('language-select').value;
+      const email = document.getElementById('email-input').value;
+
+      if (!lang || !email) {
+        alert('Veuillez choisir une langue et entrer votre email.');
+        return;
+      }
+
+      // Save email
+      const count = saveEmailToMailingList(email, lang);
+
+      // Check if language is available
+      if (AVAILABLE_LANGS.includes(lang)) {
+        // Available language → redirect to language page
+        console.log(`✅ Redirecting to /${lang}/ with 100 credits`);
+        window.location.href = `/${lang}/`;
+      } else {
+        // Not available → show preorder message
+        const preorderData = getPreorderData();
+        preorderData[lang] = (preorderData[lang] || 0) + 1;
+        savePreorderData(preorderData);
+
+        // Hide form
+        document.getElementById('signup-form').style.display = 'none';
+
+        // Show preorder message
+        const preorderMsg = document.getElementById('preorder-message');
+        const waitingCount = document.getElementById('waiting-count');
+        waitingCount.textContent = preorderData[lang];
+        preorderMsg.style.display = 'block';
+
+        // Scroll to message
+        preorderMsg.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+
+    // Close preorder message
+    function closePreorderMessage() {
+      const preorderMsg = document.getElementById('preorder-message');
+      const signupForm = document.getElementById('signup-form');
+
+      preorderMsg.style.display = 'none';
+      signupForm.style.display = 'flex';
+
+      // Scroll to language section
+      document.querySelector('.lang-grid').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Log current preorder stats on page load (debug)
+    console.log('📊 Preorder stats:', getPreorderData());
+
+    // Log current mailing list stats (debug)
+    ['fr', 'pt', 'en', 'es', 'de', 'it', 'ru', 'zh'].forEach(lang => {
+      const mailKey = `mailingList_${lang}`;
+      const emails = localStorage.getItem(mailKey);
+      if (emails) {
+        const count = JSON.parse(emails).length;
+        console.log(`📧 ${lang.toUpperCase()} mailing list: ${count} subscribers`);
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sung Bible - English (1189 chapters)</title>
+    <meta name="description" content="The entire Bible sung in English - 1189 chapters - 100 free + $0.99 to unlock all">
+
+    <!-- Freemium System -->
+    <link rel="stylesheet" href="../assets/freemium.css">
+    <script src="../assets/freemium.js"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(180deg, #0a1628 0%, #0f2744 100%);
+            color: #e5e7eb;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #4a90d9 100%);
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+
+        header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        header .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        header .back-link:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem 3rem;
+        }
+
+        /* Search and Filter */
+        .controls {
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .controls input {
+            flex: 1;
+            min-width: 250px;
+            padding: 0.75rem 1rem;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid #4a90d9;
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .controls input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .controls select {
+            padding: 0.75rem 1rem;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid #4a90d9;
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        /* Audio Player (Fixed Bottom) */
+        .audio-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(180deg, #0f2744 0%, #1a3a5f 100%);
+            padding: 1rem;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
+            z-index: 999;
+            border-top: 2px solid #4a90d9;
+            display: none;
+        }
+
+        .audio-player.active {
+            display: block;
+        }
+
+        .audio-player .player-info {
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .audio-player .player-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #d4af37;
+            margin-bottom: 0.25rem;
+        }
+
+        .audio-player audio {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .audio-player .close-player {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .audio-player .close-player:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.1);
+        }
+
+        /* Bible Books Grid */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 100px; /* Space for fixed player */
+        }
+
+        .book-card {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.3), rgba(15, 39, 68, 0.3));
+            border: 1px solid rgba(74, 144, 217, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .book-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(74, 144, 217, 0.2);
+            border-color: rgba(74, 144, 217, 0.6);
+        }
+
+        .book-card h3 {
+            color: #d4af37;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .book-card .book-info {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .chapters-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .chapter-btn {
+            padding: 0.5rem;
+            background: rgba(74, 144, 217, 0.2);
+            border: 1px solid #4a90d9;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .chapter-btn:hover {
+            background: rgba(74, 144, 217, 0.4);
+            transform: scale(1.05);
+        }
+
+        .chapter-btn.locked {
+            opacity: 0.5;
+            position: relative;
+        }
+
+        .chapter-btn.locked::after {
+            content: '🔒';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.8rem;
+        }
+
+        .chapter-btn.unlocked {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: #d4af37;
+        }
+
+        /* Testament Sections */
+        .testament {
+            margin-bottom: 3rem;
+        }
+
+        .testament h2 {
+            font-size: 2rem;
+            color: #d4af37;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            .controls input, .controls select {
+                width: 100%;
+            }
+
+            .books-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Credits Counter (from freemium.css) -->
+    <div id="credits-counter"></div>
+
+    <!-- Header -->
+    <header>
+        <h1>🎵 Sung Bible - English</h1>
+        <p class="subtitle">1189 chapters • 100 free • $0.99 to unlock all</p>
+        <a href="../" class="back-link">← Back to hub</a>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Search and Filter Controls -->
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="🔍 Search for a book or chapter...">
+            <select id="testament-filter">
+                <option value="all">All testaments</option>
+                <option value="old">Old Testament</option>
+                <option value="new">New Testament</option>
+            </select>
+        </div>
+
+        <!-- Old Testament -->
+        <div class="testament" data-testament="old">
+            <h2>📖 Old Testament</h2>
+            <div class="books-grid" id="old-testament-books"></div>
+        </div>
+
+        <!-- New Testament -->
+        <div class="testament" data-testament="new">
+            <h2>✝️ New Testament</h2>
+            <div class="books-grid" id="new-testament-books"></div>
+        </div>
+    </div>
+
+    <!-- Fixed Audio Player -->
+    <div class="audio-player" id="audio-player">
+        <button class="close-player" onclick="closePlayer()">×</button>
+        <div class="player-info">
+            <div class="player-title" id="player-title">No chapter selected</div>
+        </div>
+        <audio id="audio-element" controls>
+            <source id="audio-source" src="" type="audio/mpeg">
+            Your browser does not support HTML5 audio.
+        </audio>
+    </div>
+
+    <script>
+        // Bible structure (English)
+        const bibleBooks = {
+            old: [
+                { id: '01_GEN', name: 'Genesis', chapters: 50 },
+                { id: '02_EXO', name: 'Exodus', chapters: 40 },
+                { id: '03_LEV', name: 'Leviticus', chapters: 27 },
+                { id: '04_NUM', name: 'Numbers', chapters: 36 },
+                { id: '05_DEU', name: 'Deuteronomy', chapters: 34 },
+                { id: '06_JOS', name: 'Joshua', chapters: 24 },
+                { id: '07_JDG', name: 'Judges', chapters: 21 },
+                { id: '08_RUT', name: 'Ruth', chapters: 4 },
+                { id: '09_1SA', name: '1 Samuel', chapters: 31 },
+                { id: '10_2SA', name: '2 Samuel', chapters: 24 },
+                { id: '11_1KI', name: '1 Kings', chapters: 22 },
+                { id: '12_2KI', name: '2 Kings', chapters: 25 },
+                { id: '13_1CH', name: '1 Chronicles', chapters: 29 },
+                { id: '14_2CH', name: '2 Chronicles', chapters: 36 },
+                { id: '15_EZR', name: 'Ezra', chapters: 10 },
+                { id: '16_NEH', name: 'Nehemiah', chapters: 13 },
+                { id: '17_EST', name: 'Esther', chapters: 10 },
+                { id: '18_JOB', name: 'Job', chapters: 42 },
+                { id: '19_PSA', name: 'Psalms', chapters: 150 },
+                { id: '20_PRO', name: 'Proverbs', chapters: 31 },
+                { id: '21_ECC', name: 'Ecclesiastes', chapters: 12 },
+                { id: '22_SNG', name: 'Song of Solomon', chapters: 8 },
+                { id: '23_ISA', name: 'Isaiah', chapters: 66 },
+                { id: '24_JER', name: 'Jeremiah', chapters: 52 },
+                { id: '25_LAM', name: 'Lamentations', chapters: 5 },
+                { id: '26_EZK', name: 'Ezekiel', chapters: 48 },
+                { id: '27_DAN', name: 'Daniel', chapters: 12 },
+                { id: '28_HOS', name: 'Hosea', chapters: 14 },
+                { id: '29_JOL', name: 'Joel', chapters: 3 },
+                { id: '30_AMO', name: 'Amos', chapters: 9 },
+                { id: '31_OBA', name: 'Obadiah', chapters: 1 },
+                { id: '32_JON', name: 'Jonah', chapters: 4 },
+                { id: '33_MIC', name: 'Micah', chapters: 7 },
+                { id: '34_NAM', name: 'Nahum', chapters: 3 },
+                { id: '35_HAB', name: 'Habakkuk', chapters: 3 },
+                { id: '36_ZEP', name: 'Zephaniah', chapters: 3 },
+                { id: '37_HAG', name: 'Haggai', chapters: 2 },
+                { id: '38_ZEC', name: 'Zechariah', chapters: 14 },
+                { id: '39_MAL', name: 'Malachi', chapters: 4 }
+            ],
+            new: [
+                { id: '40_MAT', name: 'Matthew', chapters: 28 },
+                { id: '41_MRK', name: 'Mark', chapters: 16 },
+                { id: '42_LUK', name: 'Luke', chapters: 24 },
+                { id: '43_JHN', name: 'John', chapters: 21 },
+                { id: '44_ACT', name: 'Acts', chapters: 28 },
+                { id: '45_ROM', name: 'Romans', chapters: 16 },
+                { id: '46_1CO', name: '1 Corinthians', chapters: 16 },
+                { id: '47_2CO', name: '2 Corinthians', chapters: 13 },
+                { id: '48_GAL', name: 'Galatians', chapters: 6 },
+                { id: '49_EPH', name: 'Ephesians', chapters: 6 },
+                { id: '50_PHP', name: 'Philippians', chapters: 4 },
+                { id: '51_COL', name: 'Colossians', chapters: 4 },
+                { id: '52_1TH', name: '1 Thessalonians', chapters: 5 },
+                { id: '53_2TH', name: '2 Thessalonians', chapters: 3 },
+                { id: '54_1TI', name: '1 Timothy', chapters: 6 },
+                { id: '55_2TI', name: '2 Timothy', chapters: 4 },
+                { id: '56_TIT', name: 'Titus', chapters: 3 },
+                { id: '57_PHM', name: 'Philemon', chapters: 1 },
+                { id: '58_HEB', name: 'Hebrews', chapters: 13 },
+                { id: '59_JAS', name: 'James', chapters: 5 },
+                { id: '60_1PE', name: '1 Peter', chapters: 5 },
+                { id: '61_2PE', name: '2 Peter', chapters: 3 },
+                { id: '62_1JN', name: '1 John', chapters: 5 },
+                { id: '63_2JN', name: '2 John', chapters: 1 },
+                { id: '64_3JN', name: '3 John', chapters: 1 },
+                { id: '65_JUD', name: 'Jude', chapters: 1 },
+                { id: '66_REV', name: 'Revelation', chapters: 22 }
+            ]
+        };
+
+        // Initialize freemium system for English
+        let freemium;
+        document.addEventListener('DOMContentLoaded', () => {
+            freemium = new FreemiumSystem('en');
+            console.log('✅ Freemium EN loaded:', freemium.getStats());
+            renderBible();
+        });
+
+        // Render all books and chapters
+        function renderBible() {
+            const oldTestamentContainer = document.getElementById('old-testament-books');
+            const newTestamentContainer = document.getElementById('new-testament-books');
+
+            // Render Old Testament
+            bibleBooks.old.forEach(book => {
+                oldTestamentContainer.appendChild(createBookCard(book));
+            });
+
+            // Render New Testament
+            bibleBooks.new.forEach(book => {
+                newTestamentContainer.appendChild(createBookCard(book));
+            });
+        }
+
+        // Create a book card with chapters
+        function createBookCard(book) {
+            const card = document.createElement('div');
+            card.className = 'book-card';
+            card.dataset.bookName = book.name.toLowerCase();
+
+            const title = document.createElement('h3');
+            title.innerHTML = `📕 ${book.name}`;
+
+            const info = document.createElement('div');
+            info.className = 'book-info';
+            info.textContent = `${book.chapters} chapter${book.chapters > 1 ? 's' : ''}`;
+
+            const chaptersList = document.createElement('div');
+            chaptersList.className = 'chapters-list';
+
+            // Create chapter buttons
+            for (let i = 1; i <= book.chapters; i++) {
+                const chapterBtn = document.createElement('button');
+                chapterBtn.className = 'chapter-btn';
+                chapterBtn.textContent = i;
+
+                const chapterNum = String(i).padStart(2, '0');
+                const chapterId = `${book.id}_${chapterNum}_EN`;
+
+                // Check if unlocked
+                if (freemium && freemium.premium) {
+                    chapterBtn.classList.add('unlocked');
+                } else if (freemium && freemium.unlocked.includes(chapterId)) {
+                    chapterBtn.classList.add('unlocked');
+                } else if (freemium && freemium.credits === 0) {
+                    chapterBtn.classList.add('locked');
+                }
+
+                chapterBtn.onclick = () => playChapter(chapterId, `${book.name} ${i}`);
+                chaptersList.appendChild(chapterBtn);
+            }
+
+            card.appendChild(title);
+            card.appendChild(info);
+            card.appendChild(chaptersList);
+
+            return card;
+        }
+
+        // Play chapter with freemium check
+        function playChapter(chapterId, chapterTitle) {
+            // Check if can play
+            const check = freemium.canPlayChapter(chapterId);
+
+            if (!check.canPlay) {
+                freemium.showPaywall();
+                return;
+            }
+
+            // If needs to unlock
+            if (check.reason === 'will_unlock') {
+                const result = freemium.unlockChapter(chapterId, chapterTitle);
+
+                if (!result.success) {
+                    alert(result.message);
+                    return;
+                }
+
+                // Show notification
+                showNotification(result.message);
+
+                // Re-render to update button states
+                document.getElementById('old-testament-books').innerHTML = '';
+                document.getElementById('new-testament-books').innerHTML = '';
+                renderBible();
+            }
+
+            // Play the audio
+            const audioUrl = getAudioUrl(chapterId);
+            const player = document.getElementById('audio-player');
+            const audioElement = document.getElementById('audio-element');
+            const audioSource = document.getElementById('audio-source');
+            const playerTitle = document.getElementById('player-title');
+
+            audioSource.src = audioUrl;
+            audioElement.load();
+            playerTitle.textContent = chapterTitle;
+            player.classList.add('active');
+            audioElement.play();
+        }
+
+        // Get audio URL from Archive.org
+        function getAudioUrl(chapterId) {
+            const bookCode = chapterId.split('_').slice(0, 2).join('_');
+            return `https://archive.org/download/bible-chantee-en/${bookCode}/${chapterId}.mp3`;
+        }
+
+        // Close player
+        function closePlayer() {
+            const player = document.getElementById('audio-player');
+            const audioElement = document.getElementById('audio-element');
+            audioElement.pause();
+            player.classList.remove('active');
+        }
+
+        // Show notification
+        function showNotification(message) {
+            const notif = document.createElement('div');
+            notif.className = 'unlock-notification';
+            notif.textContent = message;
+            document.body.appendChild(notif);
+
+            setTimeout(() => notif.remove(), 5000);
+        }
+
+        // Search functionality
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const bookCards = document.querySelectorAll('.book-card');
+
+            bookCards.forEach(card => {
+                const bookName = card.dataset.bookName;
+                if (bookName.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Testament filter
+        document.getElementById('testament-filter').addEventListener('change', (e) => {
+            const filter = e.target.value;
+            const testaments = document.querySelectorAll('.testament');
+
+            testaments.forEach(testament => {
+                if (filter === 'all') {
+                    testament.style.display = 'block';
+                } else if (testament.dataset.testament === filter) {
+                    testament.style.display = 'block';
+                } else {
+                    testament.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
