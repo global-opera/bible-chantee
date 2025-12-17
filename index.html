@@ -532,6 +532,176 @@
       color: #94a3b8;
     }
 
+    /* Support Mission Section */
+    .support-mission {
+      background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);
+      border-radius: 16px;
+      padding: 60px 40px;
+      margin: 60px 0;
+      text-align: center;
+      border: 3px solid #f5c842;
+      box-shadow: 0 10px 40px rgba(124, 58, 237, 0.3);
+    }
+
+    .support-mission h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.5em;
+      color: #f5c842;
+      margin-bottom: 20px;
+    }
+
+    .support-mission .bible-verse {
+      font-size: 1.3em;
+      font-style: italic;
+      color: #fde68a;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .support-mission .verse-reference {
+      font-size: 0.9em;
+      color: rgba(253, 230, 138, 0.7);
+      margin-bottom: 30px;
+    }
+
+    .support-mission .mission-text {
+      font-size: 1.2em;
+      color: white;
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+
+    .progress-section {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 40px;
+    }
+
+    .progress-bar-container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      height: 30px;
+      overflow: hidden;
+      margin: 20px 0;
+      border: 2px solid rgba(245, 196, 66, 0.3);
+    }
+
+    .progress-bar-fill {
+      background: linear-gradient(90deg, #22c55e 0%, #10b981 100%);
+      height: 100%;
+      width: 25%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      transition: width 0.5s;
+    }
+
+    .next-languages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .lang-waiting {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(245, 196, 66, 0.5);
+      border-radius: 10px;
+      padding: 15px 25px;
+      color: white;
+      font-size: 1.1em;
+    }
+
+    .lang-waiting .count {
+      color: #fde68a;
+      font-weight: 700;
+    }
+
+    .donation-tiers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .donation-tier {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid #f5c842;
+      border-radius: 12px;
+      padding: 25px 20px;
+      transition: all 0.3s;
+    }
+
+    .donation-tier:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(245, 196, 66, 0.4);
+      border-color: #ffd700;
+    }
+
+    .donation-tier .amount {
+      font-size: 2em;
+      color: #f5c842;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .donation-tier .description {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1em;
+    }
+
+    .payment-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .payment-btn {
+      display: inline-block;
+      background: #f5c842;
+      color: #1e3a8a;
+      padding: 15px 40px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.2em;
+      transition: all 0.3s;
+      border: 3px solid #f5c842;
+    }
+
+    .payment-btn:hover {
+      background: #ffd700;
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(245, 196, 66, 0.5);
+    }
+
+    .payment-btn.pix {
+      background: #00d9a5;
+      color: white;
+      border-color: #00d9a5;
+    }
+
+    .payment-btn.pix:hover {
+      background: #00f5bd;
+      border-color: #00f5bd;
+    }
+
+    @media (max-width: 768px) {
+      .support-mission {
+        padding: 40px 20px;
+      }
+
+      .donation-tiers {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* Footer */
     footer {
       background: #1e3a8a;
@@ -889,6 +1059,67 @@
         <p>Oui, dans votre navigateur (localStorage). Si vous effacez vos données, utilisez votre code de déblocage pour restaurer l'accès.</p>
       </div>
     </div>
+
+    <!-- Support Mission Section -->
+    <div class="support-mission">
+      <h2 data-i18n="support-title">🌍 Portez la Parole à toutes les nations</h2>
+
+      <p class="bible-verse" data-i18n="support-verse">"Allez, faites de toutes les nations des disciples"</p>
+      <p class="verse-reference" data-i18n="support-reference">- Matthieu 28:19</p>
+
+      <div class="mission-text">
+        <p data-i18n="support-text1">La Bible Chantée existe en <strong>3 langues</strong>.</p>
+        <p data-i18n="support-text2">Aidez-nous à atteindre les <strong>12 langues</strong> pour toucher des millions de personnes.</p>
+      </div>
+
+      <div class="progress-section">
+        <h3 data-i18n="support-progress-title">📊 Avancement du projet</h3>
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill">3/12 - 25%</div>
+        </div>
+
+        <div class="next-languages">
+          <div class="lang-waiting">
+            🇪🇸 <span data-i18n="support-spanish">Espagnol</span> - <span class="count" id="waiting-es">0</span> <span data-i18n="support-waiting">personnes attendent</span>
+          </div>
+          <div class="lang-waiting">
+            🇩🇪 <span data-i18n="support-german">Allemand</span> - <span class="count" id="waiting-de">0</span> <span data-i18n="support-waiting">personnes attendent</span>
+          </div>
+          <div class="lang-waiting">
+            🇮🇹 <span data-i18n="support-italian">Italien</span> - <span class="count" id="waiting-it">0</span> <span data-i18n="support-waiting">personnes attendent</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 data-i18n="support-donate-title">💝 Soutenir le projet</h3>
+      <div class="donation-tiers">
+        <div class="donation-tier">
+          <div class="amount">$5</div>
+          <div class="description" data-i18n="support-tier1">1 chapitre offert à quelqu'un</div>
+        </div>
+        <div class="donation-tier">
+          <div class="amount">$20</div>
+          <div class="description" data-i18n="support-tier2">1 livre complet financé</div>
+        </div>
+        <div class="donation-tier">
+          <div class="amount">$50</div>
+          <div class="description" data-i18n="support-tier3">1 langue accélérée</div>
+        </div>
+        <div class="donation-tier">
+          <div class="amount">$100</div>
+          <div class="description" data-i18n="support-tier4">Partenaire fondateur (nom dans crédits)</div>
+        </div>
+      </div>
+
+      <div class="payment-buttons">
+        <a href="https://paypal.me/stephanecassani1" target="_blank" class="payment-btn">
+          💳 PayPal
+        </a>
+        <a href="mailto:scassani@jim.com?subject=Pix%20-%20Soutien%20Bible%20Chantée&body=Bonjour,%0D%0A%0D%0AJe%20souhaite%20soutenir%20le%20projet%20via%20Pix.%0D%0AMerci%20de%20m'envoyer%20les%20informations%20de%20paiement.%0D%0A%0D%0AMontant%20:%20" target="_blank" class="payment-btn pix" id="pix-btn">
+          🇧🇷 Pix
+        </a>
+      </div>
+    </div>
   </div>
 
   <!-- Footer -->
@@ -932,7 +1163,22 @@
         'preorder-thanks': 'Merci pour votre intérêt !',
         'preorder-message': 'Vous serez notifié par email dès que cette langue sera disponible.',
         'preorder-waiting': 'personnes attendent cette version',
-        'preorder-back': 'Choisir une autre langue'
+        'preorder-back': 'Choisir une autre langue',
+        'support-title': '🌍 Portez la Parole à toutes les nations',
+        'support-verse': '"Allez, faites de toutes les nations des disciples"',
+        'support-reference': '- Matthieu 28:19',
+        'support-text1': 'La Bible Chantée existe en <strong>3 langues</strong>.',
+        'support-text2': 'Aidez-nous à atteindre les <strong>12 langues</strong> pour toucher des millions de personnes.',
+        'support-progress-title': '📊 Avancement du projet',
+        'support-spanish': 'Espagnol',
+        'support-german': 'Allemand',
+        'support-italian': 'Italien',
+        'support-waiting': 'personnes attendent',
+        'support-donate-title': '💝 Soutenir le projet',
+        'support-tier1': '1 chapitre offert à quelqu\'un',
+        'support-tier2': '1 livre complet financé',
+        'support-tier3': '1 langue accélérée',
+        'support-tier4': 'Partenaire fondateur (nom dans crédits)'
       },
       pt: {
         'hero-title': '🎵 Bíblia Cantada / Sung Bible',
@@ -954,7 +1200,22 @@
         'preorder-thanks': 'Obrigado pelo seu interesse!',
         'preorder-message': 'Você será notificado por e-mail assim que este idioma estiver disponível.',
         'preorder-waiting': 'pessoas aguardam esta versão',
-        'preorder-back': 'Escolher outro idioma'
+        'preorder-back': 'Escolher outro idioma',
+        'support-title': '🌍 Leve a Palavra a todas as nações',
+        'support-verse': '"Ide, fazei discípulos de todas as nações"',
+        'support-reference': '- Mateus 28:19',
+        'support-text1': 'A Bíblia Cantada existe em <strong>3 línguas</strong>.',
+        'support-text2': 'Ajude-nos a alcançar as <strong>12 línguas</strong> para tocar milhões de pessoas.',
+        'support-progress-title': '📊 Progresso do projeto',
+        'support-spanish': 'Espanhol',
+        'support-german': 'Alemão',
+        'support-italian': 'Italiano',
+        'support-waiting': 'pessoas aguardam',
+        'support-donate-title': '💝 Apoiar o projeto',
+        'support-tier1': '1 capítulo oferecido a alguém',
+        'support-tier2': '1 livro completo financiado',
+        'support-tier3': '1 língua acelerada',
+        'support-tier4': 'Parceiro fundador (nome nos créditos)'
       },
       en: {
         'hero-title': '🎵 Sung Bible / Bible Chantée',
@@ -976,7 +1237,22 @@
         'preorder-thanks': 'Thank you for your interest!',
         'preorder-message': 'You will be notified by email as soon as this language is available.',
         'preorder-waiting': 'people are waiting for this version',
-        'preorder-back': 'Choose another language'
+        'preorder-back': 'Choose another language',
+        'support-title': '🌍 Carry the Word to all nations',
+        'support-verse': '"Go and make disciples of all nations"',
+        'support-reference': '- Matthew 28:19',
+        'support-text1': 'The Sung Bible exists in <strong>3 languages</strong>.',
+        'support-text2': 'Help us reach <strong>12 languages</strong> to touch millions of people.',
+        'support-progress-title': '📊 Project progress',
+        'support-spanish': 'Spanish',
+        'support-german': 'German',
+        'support-italian': 'Italian',
+        'support-waiting': 'people waiting',
+        'support-donate-title': '💝 Support the project',
+        'support-tier1': '1 chapter gifted to someone',
+        'support-tier2': '1 complete book funded',
+        'support-tier3': '1 language accelerated',
+        'support-tier4': 'Founding partner (name in credits)'
       },
       es: {
         'hero-title': '🎵 Biblia Cantada / Sung Bible',
@@ -998,7 +1274,22 @@
         'preorder-thanks': '¡Gracias por tu interés!',
         'preorder-message': 'Serás notificado por email cuando este idioma esté disponible.',
         'preorder-waiting': 'personas esperan esta versión',
-        'preorder-back': 'Elegir otro idioma'
+        'preorder-back': 'Elegir otro idioma',
+        'support-title': '🌍 Lleva la Palabra a todas las naciones',
+        'support-verse': '"Id y haced discípulos a todas las naciones"',
+        'support-reference': '- Mateo 28:19',
+        'support-text1': 'La Biblia Cantada existe en <strong>3 idiomas</strong>.',
+        'support-text2': 'Ayúdanos a alcanzar los <strong>12 idiomas</strong> para tocar millones de personas.',
+        'support-progress-title': '📊 Progreso del proyecto',
+        'support-spanish': 'Español',
+        'support-german': 'Alemán',
+        'support-italian': 'Italiano',
+        'support-waiting': 'personas esperan',
+        'support-donate-title': '💝 Apoyar el proyecto',
+        'support-tier1': '1 capítulo regalado a alguien',
+        'support-tier2': '1 libro completo financiado',
+        'support-tier3': '1 idioma acelerado',
+        'support-tier4': 'Socio fundador (nombre en créditos)'
       },
       de: {
         'hero-title': '🎵 Gesungene Bibel / Sung Bible',
@@ -1020,7 +1311,22 @@
         'preorder-thanks': 'Vielen Dank für Ihr Interesse!',
         'preorder-message': 'Sie werden per E-Mail benachrichtigt, sobald diese Sprache verfügbar ist.',
         'preorder-waiting': 'Personen warten auf diese Version',
-        'preorder-back': 'Andere Sprache wählen'
+        'preorder-back': 'Andere Sprache wählen',
+        'support-title': '🌍 Bringt das Wort zu allen Nationen',
+        'support-verse': '"Geht hin und macht alle Völker zu Jüngern"',
+        'support-reference': '- Matthäus 28:19',
+        'support-text1': 'Die Gesungene Bibel gibt es in <strong>3 Sprachen</strong>.',
+        'support-text2': 'Helfen Sie uns, <strong>12 Sprachen</strong> zu erreichen, um Millionen von Menschen zu berühren.',
+        'support-progress-title': '📊 Projektfortschritt',
+        'support-spanish': 'Spanisch',
+        'support-german': 'Deutsch',
+        'support-italian': 'Italienisch',
+        'support-waiting': 'Personen warten',
+        'support-donate-title': '💝 Das Projekt unterstützen',
+        'support-tier1': '1 Kapitel für jemanden geschenkt',
+        'support-tier2': '1 vollständiges Buch finanziert',
+        'support-tier3': '1 Sprache beschleunigt',
+        'support-tier4': 'Gründungspartner (Name im Abspann)'
       },
       it: {
         'hero-title': '🎵 Bibbia Cantata / Sung Bible',
@@ -1042,7 +1348,22 @@
         'preorder-thanks': 'Grazie per il tuo interesse!',
         'preorder-message': 'Sarai avvisato via email non appena questa lingua sarà disponibile.',
         'preorder-waiting': 'persone stanno aspettando questa versione',
-        'preorder-back': 'Scegli un\'altra lingua'
+        'preorder-back': 'Scegli un\'altra lingua',
+        'support-title': '🌍 Portate la Parola a tutte le nazioni',
+        'support-verse': '"Andate e fate discepoli tutti i popoli"',
+        'support-reference': '- Matteo 28:19',
+        'support-text1': 'La Bibbia Cantata esiste in <strong>3 lingue</strong>.',
+        'support-text2': 'Aiutateci a raggiungere le <strong>12 lingue</strong> per toccare milioni di persone.',
+        'support-progress-title': '📊 Progresso del progetto',
+        'support-spanish': 'Spagnolo',
+        'support-german': 'Tedesco',
+        'support-italian': 'Italiano',
+        'support-waiting': 'persone in attesa',
+        'support-donate-title': '💝 Sostenere il progetto',
+        'support-tier1': '1 capitolo regalato a qualcuno',
+        'support-tier2': '1 libro completo finanziato',
+        'support-tier3': '1 lingua accelerata',
+        'support-tier4': 'Partner fondatore (nome nei crediti)'
       },
       ar: {
         'hero-title': '🎵 الكتاب المقدس المُنغَّم / Sung Bible',
@@ -1064,7 +1385,22 @@
         'preorder-thanks': 'شكراً لاهتمامك!',
         'preorder-message': 'سيتم إعلامك بالبريد الإلكتروني عندما تتوفر هذه اللغة.',
         'preorder-waiting': 'أشخاص ينتظرون هذا الإصدار',
-        'preorder-back': 'اختر لغة أخرى'
+        'preorder-back': 'اختر لغة أخرى',
+        'support-title': '🌍 احملوا الكلمة إلى كل الأمم',
+        'support-verse': '"اذهبوا وتلمذوا جميع الأمم"',
+        'support-reference': '- متى 28:19',
+        'support-text1': 'الكتاب المقدس المُنغَّم متوفر بـ <strong>3 لغات</strong>.',
+        'support-text2': 'ساعدونا للوصول إلى <strong>12 لغة</strong> للمس ملايين الأشخاص.',
+        'support-progress-title': '📊 تقدم المشروع',
+        'support-spanish': 'الإسبانية',
+        'support-german': 'الألمانية',
+        'support-italian': 'الإيطالية',
+        'support-waiting': 'أشخاص ينتظرون',
+        'support-donate-title': '💝 دعم المشروع',
+        'support-tier1': 'فصل واحد مُهدى لشخص ما',
+        'support-tier2': 'كتاب كامل واحد ممول',
+        'support-tier3': 'لغة واحدة مُسرَّعة',
+        'support-tier4': 'شريك مؤسس (اسم في الاعتمادات)'
       },
       ru: {
         'hero-title': '🎵 Библия в песнях / Sung Bible',
@@ -1086,7 +1422,22 @@
         'preorder-thanks': 'Спасибо за ваш интерес!',
         'preorder-message': 'Вы получите уведомление по электронной почте, когда этот язык станет доступен.',
         'preorder-waiting': 'человек ждут этой версии',
-        'preorder-back': 'Выбрать другой язык'
+        'preorder-back': 'Выбрать другой язык',
+        'support-title': '🌍 Несите Слово всем народам',
+        'support-verse': '"Идите и научите все народы"',
+        'support-reference': '- Матфея 28:19',
+        'support-text1': 'Библия в песнях существует на <strong>3 языках</strong>.',
+        'support-text2': 'Помогите нам достичь <strong>12 языков</strong>, чтобы коснуться миллионов людей.',
+        'support-progress-title': '📊 Прогресс проекта',
+        'support-spanish': 'Испанский',
+        'support-german': 'Немецкий',
+        'support-italian': 'Итальянский',
+        'support-waiting': 'человек ждут',
+        'support-donate-title': '💝 Поддержать проект',
+        'support-tier1': '1 глава подарена кому-то',
+        'support-tier2': '1 полная книга профинансирована',
+        'support-tier3': '1 язык ускорен',
+        'support-tier4': 'Партнёр-основатель (имя в титрах)'
       },
       zh: {
         'hero-title': '🎵 歌唱圣经 / Sung Bible',
@@ -1108,7 +1459,22 @@
         'preorder-thanks': '感谢您的兴趣！',
         'preorder-message': '此语言可用时，您将收到电子邮件通知。',
         'preorder-waiting': '人正在等待此版本',
-        'preorder-back': '选择另一种语言'
+        'preorder-back': '选择另一种语言',
+        'support-title': '🌍 将神的话语传到万国',
+        'support-verse': '"你们要去，使万民作我的门徒"',
+        'support-reference': '- 马太福音 28:19',
+        'support-text1': '歌唱圣经目前有 <strong>3种语言</strong>。',
+        'support-text2': '帮助我们达到 <strong>12种语言</strong>，以触及数百万人。',
+        'support-progress-title': '📊 项目进度',
+        'support-spanish': '西班牙语',
+        'support-german': '德语',
+        'support-italian': '意大利语',
+        'support-waiting': '人等待',
+        'support-donate-title': '💝 支持项目',
+        'support-tier1': '为某人赠送1章',
+        'support-tier2': '资助1本完整的书',
+        'support-tier3': '加速1种语言',
+        'support-tier4': '创始合伙人（名字列入致谢）'
       },
       hi: {
         'hero-title': '🎵 गाया हुआ बाइबिल / Sung Bible',
@@ -1130,7 +1496,22 @@
         'preorder-thanks': 'आपकी रुचि के लिए धन्यवाद!',
         'preorder-message': 'जैसे ही यह भाषा उपलब्ध होगी, आपको ईमेल द्वारा सूचित किया जाएगा।',
         'preorder-waiting': 'लोग इस संस्करण की प्रतीक्षा कर रहे हैं',
-        'preorder-back': 'दूसरी भाषा चुनें'
+        'preorder-back': 'दूसरी भाषा चुनें',
+        'support-title': '🌍 सभी राष्ट्रों में वचन ले जाएँ',
+        'support-verse': '"जाओ और सभी राष्ट्रों को शिष्य बनाओ"',
+        'support-reference': '- मत्ती 28:19',
+        'support-text1': 'गाया हुआ बाइबिल <strong>3 भाषाओं</strong> में उपलब्ध है।',
+        'support-text2': 'लाखों लोगों तक पहुँचने के लिए <strong>12 भाषाओं</strong> तक पहुँचने में हमारी मदद करें।',
+        'support-progress-title': '📊 परियोजना की प्रगति',
+        'support-spanish': 'स्पेनिश',
+        'support-german': 'जर्मन',
+        'support-italian': 'इतालवी',
+        'support-waiting': 'लोग प्रतीक्षा कर रहे हैं',
+        'support-donate-title': '💝 परियोजना का समर्थन करें',
+        'support-tier1': 'किसी को 1 अध्याय उपहार में दें',
+        'support-tier2': '1 पूर्ण पुस्तक वित्त पोषित',
+        'support-tier3': '1 भाषा त्वरित',
+        'support-tier4': 'संस्थापक भागीदार (क्रेडिट में नाम)'
       },
       tl: {
         'hero-title': '🎵 Bibliya na Inawit / Sung Bible',
@@ -1152,7 +1533,22 @@
         'preorder-thanks': 'Salamat sa iyong interes!',
         'preorder-message': 'Aabisuhan ka sa pamamagitan ng email kapag available na ang wikang ito.',
         'preorder-waiting': 'tao ang naghihintay sa bersyong ito',
-        'preorder-back': 'Pumili ng ibang wika'
+        'preorder-back': 'Pumili ng ibang wika',
+        'support-title': '🌍 Dalhin ang Salita sa lahat ng bansa',
+        'support-verse': '"Kaya nga humayo kayo at gawin ninyong mga alagad ang lahat ng mga bansa"',
+        'support-reference': '- Mateo 28:19',
+        'support-text1': 'Ang Bibliya na Inawit ay umiiral sa <strong>3 wika</strong>.',
+        'support-text2': 'Tulungan kami na maabot ang <strong>12 wika</strong> upang maabot ang milyun-milyong tao.',
+        'support-progress-title': '📊 Progreso ng proyekto',
+        'support-spanish': 'Espanyol',
+        'support-german': 'Aleman',
+        'support-italian': 'Italyano',
+        'support-waiting': 'tao ang naghihintay',
+        'support-donate-title': '💝 Suportahan ang proyekto',
+        'support-tier1': '1 kabanatang iregalo sa iba',
+        'support-tier2': '1 kumpletong aklat na pinondohan',
+        'support-tier3': '1 wikang pinabilis',
+        'support-tier4': 'Founding partner (pangalan sa credits)'
       },
       sw: {
         'hero-title': '🎵 Biblia Inayoimbiwa / Sung Bible',
@@ -1174,7 +1570,22 @@
         'preorder-thanks': 'Asante kwa maslahi yako!',
         'preorder-message': 'Utaarifiwa kupitia barua pepe lugha hii itakapopatikana.',
         'preorder-waiting': 'watu wanasubiri toleo hili',
-        'preorder-back': 'Chagua lugha nyingine'
+        'preorder-back': 'Chagua lugha nyingine',
+        'support-title': '🌍 Peleka Neno kwa mataifa yote',
+        'support-verse': '"Nendeni mkawafanye wanafunzi mataifa yote"',
+        'support-reference': '- Mathayo 28:19',
+        'support-text1': 'Biblia Inayoimbiwa ipo katika <strong>lugha 3</strong>.',
+        'support-text2': 'Tusaidie kufikia <strong>lugha 12</strong> ili tuguse mamilioni ya watu.',
+        'support-progress-title': '📊 Maendeleo ya mradi',
+        'support-spanish': 'Kihispania',
+        'support-german': 'Kijerumani',
+        'support-italian': 'Kiitaliano',
+        'support-waiting': 'watu wanasubiri',
+        'support-donate-title': '💝 Unga mkono mradi',
+        'support-tier1': 'Sura 1 kutolewa kwa mtu',
+        'support-tier2': 'Kitabu 1 kamili kimefadhiliwa',
+        'support-tier3': 'Lugha 1 imeharakishwa',
+        'support-tier4': 'Mshirika wa msingi (jina katika sifa)'
       }
     };
 
@@ -1227,15 +1638,56 @@
         }
       });
 
+      // Update Pix button visibility (show only for Portuguese)
+      updatePixButton();
+
       // Scroll to samples
       document.getElementById('extraits-title').scrollIntoView({ behavior: 'smooth', block: 'center' });
 
       console.log(`✅ Language selected: ${lang.toUpperCase()}`);
     }
 
+    // Update waiting counters from localStorage
+    function updateWaitingCounters() {
+      const preorderData = getPreorderData();
+
+      // Update Spanish counter
+      const esCounter = document.getElementById('waiting-es');
+      if (esCounter) {
+        esCounter.textContent = preorderData.es || 0;
+      }
+
+      // Update German counter
+      const deCounter = document.getElementById('waiting-de');
+      if (deCounter) {
+        deCounter.textContent = preorderData.de || 0;
+      }
+
+      // Update Italian counter
+      const itCounter = document.getElementById('waiting-it');
+      if (itCounter) {
+        itCounter.textContent = preorderData.it || 0;
+      }
+
+      console.log('📊 Waiting counters updated:', preorderData);
+    }
+
+    // Update Pix button visibility (show only for Portuguese)
+    function updatePixButton() {
+      const pixBtn = document.getElementById('pix-btn');
+      if (pixBtn) {
+        if (selectedLanguage === 'pt') {
+          pixBtn.style.display = 'inline-block';
+        } else {
+          pixBtn.style.display = 'none';
+        }
+      }
+    }
+
     // Initialize page with French samples
     document.addEventListener('DOMContentLoaded', () => {
       selectLanguage('fr');
+      updateWaitingCounters();
     });
 
     // Get preorder data from localStorage
