@@ -60,6 +60,51 @@
             animation: pulse 2s infinite;
         }
 
+        /* Period Toggle */
+        .period-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 2rem auto;
+            max-width: 600px;
+            background: var(--card-bg);
+            padding: 0.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .period-btn {
+            flex: 1;
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            border: 2px solid rgba(74, 144, 217, 0.3);
+            border-radius: 8px;
+            color: rgba(255,255,255,0.6);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .period-btn:hover {
+            border-color: var(--primary);
+            color: rgba(255,255,255,0.9);
+            transform: translateY(-2px);
+        }
+
+        .period-btn.active {
+            background: linear-gradient(135deg, var(--primary), var(--gold));
+            border-color: var(--gold);
+            color: white;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .period-btn .emoji {
+            display: block;
+            font-size: 1.3rem;
+            margin-bottom: 0.25rem;
+        }
+
         @keyframes pulse {
             0%, 100% { opacity: 1; transform: scale(1); }
             50% { opacity: 0.6; transform: scale(1.2); }
@@ -101,6 +146,10 @@
             transform: translateY(-8px);
             box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
             border-color: var(--gold);
+        }
+
+        .stat-card .value {
+            transition: opacity 0.3s ease, transform 0.3s ease;
         }
 
         .stat-card .icon {
@@ -519,6 +568,26 @@
         </p>
     </div>
 
+    <!-- Period Toggle -->
+    <div class="period-toggle">
+        <button class="period-btn" onclick="switchPeriod('today')" data-period="today">
+            <span class="emoji">☀️</span>
+            Aujourd'hui
+        </button>
+        <button class="period-btn active" onclick="switchPeriod('week')" data-period="week">
+            <span class="emoji">📅</span>
+            Cette semaine
+        </button>
+        <button class="period-btn" onclick="switchPeriod('month')" data-period="month">
+            <span class="emoji">📆</span>
+            Ce mois
+        </button>
+        <button class="period-btn" onclick="switchPeriod('year')" data-period="year">
+            <span class="emoji">🗓️</span>
+            Cette année
+        </button>
+    </div>
+
     <div class="container">
         <!-- Stats principales -->
         <div class="stats-grid">
@@ -808,7 +877,125 @@
             document.getElementById('last-update').textContent = now.toLocaleTimeString('fr-FR');
         }
 
-        // World Map Data avec coordonnées GPS réelles
+        // Période active (par défaut: cette semaine)
+        let currentPeriod = 'week';
+        let currentMap = null;
+
+        // Datasets pour chaque période
+        const periodData = {
+            today: {
+                stats: {
+                    visitors: 42,
+                    countries: 8,
+                    audioPlays: 67,
+                    preorders: 3
+                },
+                cities: [
+                    { name: 'São Paulo', lat: -23.5505, lon: -46.6333, visitors: 8, country: '🇧🇷 Brésil' },
+                    { name: 'Paris', lat: 48.8566, lon: 2.3522, visitors: 6, country: '🇫🇷 France' },
+                    { name: 'Rio de Janeiro', lat: -22.9068, lon: -43.1729, visitors: 5, country: '🇧🇷 Brésil' },
+                    { name: 'Lausanne', lat: 46.5197, lon: 6.6323, visitors: 4, country: '🇨🇭 Suisse' },
+                    { name: 'Lisbonne', lat: 38.7223, lon: -9.1393, visitors: 3, country: '🇵🇹 Portugal' },
+                    { name: 'Genève', lat: 46.2044, lon: 6.1432, visitors: 3, country: '🇨🇭 Suisse' },
+                    { name: 'Montréal', lat: 45.5017, lon: -73.5673, visitors: 2, country: '🇨🇦 Canada' },
+                    { name: 'Belo Horizonte', lat: -19.9167, lon: -43.9345, visitors: 2, country: '🇧🇷 Brésil' },
+                    { name: 'Madrid', lat: 40.4168, lon: -3.7038, visitors: 2, country: '🇪🇸 Espagne' },
+                    { name: 'Kinshasa', lat: -4.4419, lon: 15.2663, visitors: 1, country: '🇨🇩 RD Congo' }
+                ]
+            },
+            week: {
+                stats: {
+                    visitors: 358,
+                    countries: 23,
+                    audioPlays: 542,
+                    preorders: 18
+                },
+                cities: [
+                    { name: 'São Paulo', lat: -23.5505, lon: -46.6333, visitors: 127, country: '🇧🇷 Brésil' },
+                    { name: 'Paris', lat: 48.8566, lon: 2.3522, visitors: 89, country: '🇫🇷 France' },
+                    { name: 'Rio de Janeiro', lat: -22.9068, lon: -43.1729, visitors: 83, country: '🇧🇷 Brésil' },
+                    { name: 'Belo Horizonte', lat: -19.9167, lon: -43.9345, visitors: 57, country: '🇧🇷 Brésil' },
+                    { name: 'Genève', lat: 46.2044, lon: 6.1432, visitors: 45, country: '🇨🇭 Suisse' },
+                    { name: 'Brasília', lat: -15.7939, lon: -47.8828, visitors: 44, country: '🇧🇷 Brésil' },
+                    { name: 'New York', lat: 40.7128, lon: -74.0060, visitors: 41, country: '🇺🇸 USA' },
+                    { name: 'Lausanne', lat: 46.5197, lon: 6.6323, visitors: 38, country: '🇨🇭 Suisse' },
+                    { name: 'Salvador', lat: -12.9714, lon: -38.5014, visitors: 36, country: '🇧🇷 Brésil' },
+                    { name: 'Lyon', lat: 45.7640, lon: 4.8357, visitors: 34, country: '🇫🇷 France' },
+                    { name: 'Londres', lat: 51.5074, lon: -0.1278, visitors: 33, country: '🇬🇧 UK' },
+                    { name: 'Zurich', lat: 47.3769, lon: 8.5417, visitors: 31, country: '🇨🇭 Suisse' },
+                    { name: 'Montréal', lat: 45.5017, lon: -73.5673, visitors: 29, country: '🇨🇦 Canada' },
+                    { name: 'Recife', lat: -8.0476, lon: -34.8770, visitors: 28, country: '🇧🇷 Brésil' },
+                    { name: 'Marseille', lat: 43.2965, lon: 5.3698, visitors: 28, country: '🇫🇷 France' },
+                    { name: 'Lisbonne', lat: 38.7223, lon: -9.1393, visitors: 25, country: '🇵🇹 Portugal' },
+                    { name: 'Kinshasa', lat: -4.4419, lon: 15.2663, visitors: 22, country: '🇨🇩 RD Congo' },
+                    { name: 'Madrid', lat: 40.4168, lon: -3.7038, visitors: 19, country: '🇪🇸 Espagne' },
+                    { name: 'Lagos', lat: 6.5244, lon: 3.3792, visitors: 18, country: '🇳🇬 Nigeria' },
+                    { name: 'Abidjan', lat: 5.3600, lon: -4.0083, visitors: 15, country: '🇨🇮 Côte d\'Ivoire' }
+                ]
+            },
+            month: {
+                stats: {
+                    visitors: 1547,
+                    countries: 38,
+                    audioPlays: 2341,
+                    preorders: 67
+                },
+                cities: [
+                    { name: 'São Paulo', lat: -23.5505, lon: -46.6333, visitors: 543, country: '🇧🇷 Brésil' },
+                    { name: 'Paris', lat: 48.8566, lon: 2.3522, visitors: 387, country: '🇫🇷 France' },
+                    { name: 'Rio de Janeiro', lat: -22.9068, lon: -43.1729, visitors: 356, country: '🇧🇷 Brésil' },
+                    { name: 'Belo Horizonte', lat: -19.9167, lon: -43.9345, visitors: 245, country: '🇧🇷 Brésil' },
+                    { name: 'Genève', lat: 46.2044, lon: 6.1432, visitors: 194, country: '🇨🇭 Suisse' },
+                    { name: 'Brasília', lat: -15.7939, lon: -47.8828, visitors: 189, country: '🇧🇷 Brésil' },
+                    { name: 'New York', lat: 40.7128, lon: -74.0060, visitors: 176, country: '🇺🇸 USA' },
+                    { name: 'Lausanne', lat: 46.5197, lon: 6.6323, visitors: 163, country: '🇨🇭 Suisse' },
+                    { name: 'Salvador', lat: -12.9714, lon: -38.5014, visitors: 155, country: '🇧🇷 Brésil' },
+                    { name: 'Lyon', lat: 45.7640, lon: 4.8357, visitors: 146, country: '🇫🇷 France' },
+                    { name: 'Londres', lat: 51.5074, lon: -0.1278, visitors: 142, country: '🇬🇧 UK' },
+                    { name: 'Zurich', lat: 47.3769, lon: 8.5417, visitors: 133, country: '🇨🇭 Suisse' },
+                    { name: 'Montréal', lat: 45.5017, lon: -73.5673, visitors: 124, country: '🇨🇦 Canada' },
+                    { name: 'Recife', lat: -8.0476, lon: -34.8770, visitors: 120, country: '🇧🇷 Brésil' },
+                    { name: 'Marseille', lat: 43.2965, lon: 5.3698, visitors: 120, country: '🇫🇷 France' },
+                    { name: 'Lisbonne', lat: 38.7223, lon: -9.1393, visitors: 107, country: '🇵🇹 Portugal' },
+                    { name: 'Kinshasa', lat: -4.4419, lon: 15.2663, visitors: 94, country: '🇨🇩 RD Congo' },
+                    { name: 'Madrid', lat: 40.4168, lon: -3.7038, visitors: 81, country: '🇪🇸 Espagne' },
+                    { name: 'Lagos', lat: 6.5244, lon: 3.3792, visitors: 77, country: '🇳🇬 Nigeria' },
+                    { name: 'Abidjan', lat: 5.3600, lon: -4.0083, visitors: 64, country: '🇨🇮 Côte d\'Ivoire' }
+                ]
+            },
+            year: {
+                stats: {
+                    visitors: 18943,
+                    countries: 67,
+                    audioPlays: 28674,
+                    preorders: 823
+                },
+                cities: [
+                    { name: 'São Paulo', lat: -23.5505, lon: -46.6333, visitors: 6643, country: '🇧🇷 Brésil' },
+                    { name: 'Paris', lat: 48.8566, lon: 2.3522, visitors: 4732, country: '🇫🇷 France' },
+                    { name: 'Rio de Janeiro', lat: -22.9068, lon: -43.1729, visitors: 4356, country: '🇧🇷 Brésil' },
+                    { name: 'Belo Horizonte', lat: -19.9167, lon: -43.9345, visitors: 2998, country: '🇧🇷 Brésil' },
+                    { name: 'Genève', lat: 46.2044, lon: 6.1432, visitors: 2374, country: '🇨🇭 Suisse' },
+                    { name: 'Brasília', lat: -15.7939, lon: -47.8828, visitors: 2312, country: '🇧🇷 Brésil' },
+                    { name: 'New York', lat: 40.7128, lon: -74.0060, visitors: 2153, country: '🇺🇸 USA' },
+                    { name: 'Lausanne', lat: 46.5197, lon: 6.6323, visitors: 1994, country: '🇨🇭 Suisse' },
+                    { name: 'Salvador', lat: -12.9714, lon: -38.5014, visitors: 1897, country: '🇧🇷 Brésil' },
+                    { name: 'Lyon', lat: 45.7640, lon: 4.8357, visitors: 1786, country: '🇫🇷 France' },
+                    { name: 'Londres', lat: 51.5074, lon: -0.1278, visitors: 1738, country: '🇬🇧 UK' },
+                    { name: 'Zurich', lat: 47.3769, lon: 8.5417, visitors: 1627, country: '🇨🇭 Suisse' },
+                    { name: 'Montréal', lat: 45.5017, lon: -73.5673, visitors: 1518, country: '🇨🇦 Canada' },
+                    { name: 'Recife', lat: -8.0476, lon: -34.8770, visitors: 1469, country: '🇧🇷 Brésil' },
+                    { name: 'Marseille', lat: 43.2965, lon: 5.3698, visitors: 1469, country: '🇫🇷 France' },
+                    { name: 'Lisbonne', lat: 38.7223, lon: -9.1393, visitors: 1309, country: '🇵🇹 Portugal' },
+                    { name: 'Kinshasa', lat: -4.4419, lon: 15.2663, visitors: 1150, country: '🇨🇩 RD Congo' },
+                    { name: 'Madrid', lat: 40.4168, lon: -3.7038, visitors: 991, country: '🇪🇸 Espagne' },
+                    { name: 'Lagos', lat: 6.5244, lon: 3.3792, visitors: 942, country: '🇳🇬 Nigeria' },
+                    { name: 'Abidjan', lat: 5.3600, lon: -4.0083, visitors: 783, country: '🇨🇮 Côte d\'Ivoire' }
+                ]
+            }
+        };
+
+        // Alias pour compatibilité avec code existant (utilise la période active)
         const worldCities = [
             // Brésil
             { name: 'São Paulo', lat: -23.5505, lon: -46.6333, visitors: 127, country: '🇧🇷 Brésil' },
@@ -838,7 +1025,52 @@
             { name: 'Madrid', lat: 40.4168, lon: -3.7038, visitors: 19, country: '🇪🇸 Espagne' }
         ];
 
-        function createWorldMap() {
+        // Fonction pour changer de période
+        function switchPeriod(period) {
+            // Mettre à jour les boutons
+            document.querySelectorAll('.period-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-period="${period}"]`).classList.add('active');
+
+            // Mettre à jour la période active
+            currentPeriod = period;
+
+            // Récupérer les données de la période
+            const data = periodData[period];
+
+            // Animer les stats avec transition
+            const statsCards = document.querySelectorAll('.stat-card .value');
+            statsCards.forEach(card => {
+                card.style.opacity = '0.3';
+                card.style.transform = 'scale(0.95)';
+            });
+
+            setTimeout(() => {
+                // Mettre à jour les valeurs
+                animateValue('visitors-today', 0, data.stats.visitors, 1000);
+                animateValue('countries', 0, data.stats.countries, 1000);
+                animateValue('audio-plays', 0, data.stats.audioPlays, 1000);
+                animateValue('preorders', 0, data.stats.preorders, 1000);
+
+                // Rétablir l'apparence
+                statsCards.forEach(card => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'scale(1)';
+                });
+            }, 200);
+
+            // Recréer la carte avec les nouvelles données
+            if (currentMap) {
+                currentMap.remove();
+            }
+            createWorldMap(data.cities);
+        }
+
+        function createWorldMap(cities = null) {
+            // Utiliser les données passées ou celles de la période active
+            const citiesData = cities || periodData[currentPeriod].cities;
+
             // Initialiser la carte Leaflet
             const map = L.map('leaflet-map', {
                 center: [20, 0],
@@ -849,22 +1081,30 @@
                 attributionControl: false
             });
 
+            // Stocker la référence
+            currentMap = map;
+
             // Ajouter les tuiles OpenStreetMap avec style sombre
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,
                 opacity: 1
             }).addTo(map);
 
+            // Trouver le max de visiteurs pour ajuster les tailles
+            const maxVisitors = Math.max(...citiesData.map(c => c.visitors));
+
             // Ajouter les marqueurs pour chaque ville
-            worldCities.forEach((city, index) => {
-                // Calculer la taille du cercle selon le nombre de visiteurs
+            citiesData.forEach((city, index) => {
+                // Calculer la taille du cercle selon le nombre de visiteurs (adaptatif)
                 let radius;
-                if (city.visitors >= 100) {
-                    radius = 20;
-                } else if (city.visitors >= 50) {
-                    radius = 14;
+                const percentile = city.visitors / maxVisitors;
+
+                if (percentile >= 0.5) {
+                    radius = 20; // Top 50%
+                } else if (percentile >= 0.2) {
+                    radius = 14; // 20-50%
                 } else {
-                    radius = 8;
+                    radius = 8; // Bottom 20%
                 }
 
                 // Créer un cercle lumineux
@@ -912,14 +1152,18 @@
                     });
                 });
             });
+
+            return map;
         }
 
         // Initialisation
         window.addEventListener('load', () => {
-            animateValue('visitors-today', 0, 287, 2000);
-            animateValue('countries', 0, 23, 1500);
-            animateValue('audio-plays', 0, 1047, 2500);
-            animateValue('preorders', 0, 89, 1800);
+            // Utiliser les données de la période par défaut (week)
+            const defaultData = periodData[currentPeriod];
+            animateValue('visitors-today', 0, defaultData.stats.visitors, 2000);
+            animateValue('countries', 0, defaultData.stats.countries, 1500);
+            animateValue('audio-plays', 0, defaultData.stats.audioPlays, 2500);
+            animateValue('preorders', 0, defaultData.stats.preorders, 1800);
             animateBars();
             generateRecentEvents();
             updateTime();
