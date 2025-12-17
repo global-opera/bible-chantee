@@ -742,22 +742,22 @@
         function cleanLyrics(text) {
             if (!text) return '';
 
-            // 1. Supprimer [STYLE] et tout ce qui suit
-            text = text.replace(/\[STYLE\][\s\S]*/gi, '');
+            // 1. Supprimer [STYLE] ou [ESTILO] et tout ce qui suit
+            text = text.replace(/\[(STYLE|ESTILO)\][\s\S]*/gi, '');
 
-            // 2. Supprimer marqueurs entre crochets [Verse 1], [Chorus], etc.
+            // 2. Supprimer TOUS les marqueurs entre crochets
             text = text.replace(/\[.*?\]/gi, '');
 
-            // 3. Supprimer marqueurs Markdown **Couplet 1 :**, **Refrain :**, etc.
-            text = text.replace(/\*\*.*?\*\*/gi, '');
+            // 3. Supprimer TOUS les marqueurs Markdown **...**
+            text = text.replace(/\*\*[^*]+\*\*/g, '');
 
-            // 4. Supprimer lignes qui commencent par des marqueurs sans formatage
-            text = text.replace(/^(Verse|Chorus|Bridge|Refrain|Couplet|Outro|Intro|Hook|Pre-Chorus|Conclusão|Conclusion).*?:/gim, '');
+            // 4. Supprimer lignes de marqueurs seules (sans texte après)
+            text = text.replace(/^[\s]*(Verse|Chorus|Bridge|Refrain|Couplet|Outro|Intro|Hook|Pre-Chorus|Post-Chorus|Conclusão|Conclusion|Ponte|Refrão|Estrofe|Interlude|Solo|Tag|Vamp|Ad-lib|Break|Verset|Verso|Glória|Final)[\s\d]*[:\s]*$/gim, '');
 
             // 5. Normaliser : exactement 1 ligne vide entre couplets
             text = text.replace(/\n{2,}/g, '\n\n');
 
-            // 6. Trim
+            // 6. Supprimer lignes vides au début/fin
             return text.trim();
         }
 
