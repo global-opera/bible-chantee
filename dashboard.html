@@ -821,17 +821,37 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <script>
+        // Stockage des timers d'animation pour pouvoir les arrêter
+        const activeTimers = {};
+
         // Animation des compteurs
         function animateValue(id, start, end, duration) {
             const obj = document.getElementById(id);
+            if (!obj) return;
+
+            // Arrêter l'animation précédente si elle existe
+            if (activeTimers[id]) {
+                clearInterval(activeTimers[id]);
+                delete activeTimers[id];
+            }
+
             const range = end - start;
+            if (range === 0) {
+                obj.textContent = end.toLocaleString();
+                return;
+            }
+
             const increment = end > start ? 1 : -1;
             const stepTime = Math.abs(Math.floor(duration / range));
             let current = start;
-            const timer = setInterval(() => {
+
+            activeTimers[id] = setInterval(() => {
                 current += increment;
                 obj.textContent = current.toLocaleString();
-                if (current === end) clearInterval(timer);
+                if (current === end) {
+                    clearInterval(activeTimers[id]);
+                    delete activeTimers[id];
+                }
             }, stepTime);
         }
 
