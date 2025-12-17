@@ -777,10 +777,15 @@
                 lyricsText = t.lyricsComingSoon;
             }
 
-            // Supprimer marqueurs
-            lyricsText = lyricsText.replace(/\[(Verse|Chorus|Bridge|Outro|Intro|Spoken Word|Hook|Pre-Chorus|Post-Chorus|Refrain|Couplet|TITRE|LYRICS|Verso|Refrão|Refr[aã]o|Ponte|Outra).*?\]/gi, '');
-            // Normaliser : remplacer 2+ sauts de ligne par exactement 2 (= 1 ligne vide)
+            // Supprimer [STYLE] et tout ce qui suit
+            lyricsText = lyricsText.replace(/\[STYLE\][\s\S]*/gi, '');
+
+            // Supprimer tous les marqueurs entre crochets
+            lyricsText = lyricsText.replace(/\[.*?\]/gi, '');
+
+            // Normaliser : exactement 1 ligne vide entre couplets
             lyricsText = lyricsText.replace(/\n{2,}/g, '\n\n');
+
             // Trim
             lyricsText = lyricsText.trim();
 

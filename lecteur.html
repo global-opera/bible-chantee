@@ -809,14 +809,23 @@
             const lyrics = getLyricsForCurrent(window.currentLanguage || 'FR', currentBook, chapterStr);
 
             if (lyrics) {
-                // Supprimer marqueurs
-                let cleanLyrics = String(lyrics)
-                    .replace(/\[(Verse|Chorus|Bridge|Outro|Intro|Spoken Word|Hook|Pre-Chorus|Post-Chorus|Refrain|Couplet|TITRE|LYRICS|Verso|Refrão|Refr[aã]o|Ponte|Outra).*?\]/gi, '')
-                    .replace(/\*\*[^*]+\*\*/g, '');           // **Couplet 1:**, **Refrain**, etc.
-                // Normaliser : remplacer 2+ sauts de ligne par exactement 2 (= 1 ligne vide)
+                let cleanLyrics = String(lyrics);
+
+                // Supprimer [STYLE] et tout ce qui suit
+                cleanLyrics = cleanLyrics.replace(/\[STYLE\][\s\S]*/gi, '');
+
+                // Supprimer tous les marqueurs entre crochets
+                cleanLyrics = cleanLyrics.replace(/\[.*?\]/gi, '');
+
+                // Supprimer les marqueurs ** (Markdown)
+                cleanLyrics = cleanLyrics.replace(/\*\*[^*]+\*\*/g, '');
+
+                // Normaliser : exactement 1 ligne vide entre couplets
                 cleanLyrics = cleanLyrics.replace(/\n{2,}/g, '\n\n');
+
                 // Trim
                 cleanLyrics = cleanLyrics.trim();
+
                 lyricsText.innerHTML = cleanLyrics;
             } else {
                 lyricsText.innerHTML =
