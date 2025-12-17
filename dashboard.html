@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>📊 Dashboard Bible Chantée - Statistiques en temps réel</title>
     <meta http-equiv="refresh" content="300">
+
+    <!-- Leaflet.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -321,24 +325,47 @@
             text-align: right;
         }
 
-        /* World Map Styles */
+        /* World Map Styles - Leaflet */
         .world-map-container {
             position: relative;
             width: 100%;
-            height: 500px;
-            background:
-                repeating-linear-gradient(0deg, rgba(74, 144, 217, 0.03) 0px, rgba(74, 144, 217, 0.03) 1px, transparent 1px, transparent 50px),
-                repeating-linear-gradient(90deg, rgba(74, 144, 217, 0.03) 0px, rgba(74, 144, 217, 0.03) 1px, transparent 1px, transparent 50px),
-                radial-gradient(circle at 50% 50%, #0f2744 0%, #0a1628 100%);
+            height: 600px;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
         }
 
-        .world-map-svg {
+        #leaflet-map {
             width: 100%;
             height: 100%;
-            filter: drop-shadow(0 0 10px rgba(74, 144, 217, 0.3));
+            background: #0a1628;
+            z-index: 1;
+        }
+
+        /* Dark theme pour Leaflet */
+        .leaflet-container {
+            background: #0a1628;
+        }
+
+        .leaflet-tile-pane {
+            filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) invert(1);
+        }
+
+        .leaflet-control-zoom {
+            border: 2px solid var(--gold) !important;
+            border-radius: 8px !important;
+            overflow: hidden;
+        }
+
+        .leaflet-control-zoom a {
+            background: var(--card-bg) !important;
+            color: var(--gold) !important;
+            border: none !important;
+        }
+
+        .leaflet-control-zoom a:hover {
+            background: var(--gold) !important;
+            color: #000 !important;
         }
 
         .map-marker {
@@ -471,7 +498,8 @@
             body { padding: 1rem; }
             .header h1 { font-size: 1.8rem; }
             .stats-grid { grid-template-columns: 1fr; }
-            .world-map-container { height: 350px; }
+            .world-map-container { height: 400px; }
+            #leaflet-map { height: 400px; }
             .map-legend {
                 font-size: 0.75rem;
                 padding: 0.5rem;
@@ -523,59 +551,13 @@
             </div>
         </div>
 
-        <!-- Carte mondiale -->
+        <!-- Carte mondiale Leaflet.js -->
         <div class="chart-section">
             <h2>🗺️ Visiteurs dans le monde</h2>
-            <div class="world-map-container" id="world-map">
-                <svg class="world-map-svg" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid slice">
-                    <defs>
-                        <linearGradient id="continentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:rgba(74, 144, 217, 0.4);stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:rgba(212, 175, 55, 0.3);stop-opacity:1" />
-                        </linearGradient>
-                        <filter id="glow">
-                            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-                            <feMerge>
-                                <feMergeNode in="coloredBlur"/>
-                                <feMergeNode in="SourceGraphic"/>
-                            </feMerge>
-                        </filter>
-                    </defs>
-
-                    <!-- Detailed world map with better visibility -->
-                    <g fill="url(#continentGradient)" stroke="rgba(74, 144, 217, 0.8)" stroke-width="2" filter="url(#glow)">
-                        <!-- AMÉRIQUE DU SUD -->
-                        <path d="M 280 280 L 270 260 L 265 240 L 268 220 L 275 200 L 285 185 L 295 180 L 310 182 L 320 190 L 328 205 L 332 220 L 338 240 L 345 260 L 350 280 L 352 300 L 348 320 L 340 335 L 328 345 L 315 348 L 302 342 L 292 330 L 285 315 L 280 300 Z"/>
-
-                        <!-- AMÉRIQUE DU NORD -->
-                        <path d="M 180 120 L 185 105 L 195 95 L 210 90 L 230 95 L 248 105 L 262 118 L 268 135 L 270 150 L 268 168 L 260 182 L 248 192 L 232 198 L 218 200 L 202 195 L 188 185 L 178 170 L 172 155 L 172 138 Z"/>
-
-                        <!-- AMÉRIQUE CENTRALE -->
-                        <path d="M 230 195 L 238 190 L 248 192 L 255 200 L 258 210 L 254 218 L 246 220 L 238 216 L 232 208 L 230 200 Z"/>
-
-                        <!-- EUROPE -->
-                        <path d="M 480 95 L 495 92 L 512 95 L 528 102 L 542 115 L 548 130 L 548 145 L 542 158 L 530 165 L 515 168 L 498 165 L 485 158 L 475 145 L 472 130 L 475 115 L 480 102 Z"/>
-
-                        <!-- AFRIQUE -->
-                        <path d="M 478 175 L 488 172 L 502 175 L 518 182 L 532 195 L 542 212 L 548 232 L 550 252 L 548 272 L 542 292 L 532 308 L 518 318 L 502 322 L 488 320 L 478 310 L 472 295 L 468 275 L 468 255 L 472 235 L 475 215 L 478 195 Z"/>
-
-                        <!-- ASIE -->
-                        <path d="M 595 115 L 615 110 L 640 112 L 665 118 L 690 128 L 715 138 L 738 148 L 758 160 L 772 175 L 778 192 L 778 208 L 772 222 L 758 232 L 738 238 L 715 238 L 690 232 L 665 222 L 640 208 L 620 192 L 605 175 L 595 158 L 592 140 Z"/>
-
-                        <!-- OCÉANIE -->
-                        <path d="M 778 315 L 792 312 L 808 315 L 822 322 L 835 332 L 842 345 L 842 360 L 835 372 L 822 380 L 808 382 L 792 378 L 780 368 L 775 355 L 775 340 L 778 328 Z"/>
-
-                        <!-- GROENLAND -->
-                        <path d="M 320 45 L 340 42 L 358 45 L 372 52 L 380 65 L 380 78 L 372 88 L 358 92 L 340 90 L 325 82 L 318 70 L 318 58 Z"/>
-                    </g>
-                </svg>
-                <div id="map-markers"></div>
-                <div id="map-tooltip" class="map-tooltip">
-                    <div class="city"></div>
-                    <div class="count"></div>
-                </div>
+            <div class="world-map-container">
+                <div id="leaflet-map"></div>
                 <div class="map-legend">
-                    <div class="map-legend-title">Taille = Visiteurs</div>
+                    <div class="map-legend-title">Visiteurs</div>
                     <div class="map-legend-item">
                         <div class="map-legend-dot" style="width: 20px; height: 20px;"></div>
                         <span>100+ visiteurs</span>
@@ -766,6 +748,9 @@
         🔄 Cette page se rafraîchit automatiquement toutes les 5 minutes
     </div>
 
+    <!-- Leaflet.js JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
     <script>
         // Animation des compteurs
         function animateValue(id, start, end, duration) {
@@ -823,71 +808,109 @@
             document.getElementById('last-update').textContent = now.toLocaleTimeString('fr-FR');
         }
 
-        // World Map Data
+        // World Map Data avec coordonnées GPS réelles
         const worldCities = [
             // Brésil
-            { name: 'São Paulo', x: 30, y: 62, visitors: 127, country: '🇧🇷' },
-            { name: 'Rio de Janeiro', x: 32, y: 60, visitors: 83, country: '🇧🇷' },
-            { name: 'Belo Horizonte', x: 31, y: 59, visitors: 57, country: '🇧🇷' },
-            { name: 'Brasília', x: 30, y: 57, visitors: 44, country: '🇧🇷' },
-            { name: 'Salvador', x: 33, y: 54, visitors: 36, country: '🇧🇷' },
-            { name: 'Recife', x: 35, y: 52, visitors: 28, country: '🇧🇷' },
+            { name: 'São Paulo', lat: -23.5505, lon: -46.6333, visitors: 127, country: '🇧🇷 Brésil' },
+            { name: 'Rio de Janeiro', lat: -22.9068, lon: -43.1729, visitors: 83, country: '🇧🇷 Brésil' },
+            { name: 'Belo Horizonte', lat: -19.9167, lon: -43.9345, visitors: 57, country: '🇧🇷 Brésil' },
+            { name: 'Brasília', lat: -15.7939, lon: -47.8828, visitors: 44, country: '🇧🇷 Brésil' },
+            { name: 'Salvador', lat: -12.9714, lon: -38.5014, visitors: 36, country: '🇧🇷 Brésil' },
+            { name: 'Recife', lat: -8.0476, lon: -34.8770, visitors: 28, country: '🇧🇷 Brésil' },
             // France
-            { name: 'Paris', x: 50, y: 28, visitors: 89, country: '🇫🇷' },
-            { name: 'Lyon', x: 51, y: 31, visitors: 34, country: '🇫🇷' },
-            { name: 'Marseille', x: 51, y: 33, visitors: 28, country: '🇫🇷' },
+            { name: 'Paris', lat: 48.8566, lon: 2.3522, visitors: 89, country: '🇫🇷 France' },
+            { name: 'Lyon', lat: 45.7640, lon: 4.8357, visitors: 34, country: '🇫🇷 France' },
+            { name: 'Marseille', lat: 43.2965, lon: 5.3698, visitors: 28, country: '🇫🇷 France' },
             // Suisse
-            { name: 'Genève', x: 50.5, y: 30, visitors: 45, country: '🇨🇭' },
-            { name: 'Lausanne', x: 50.6, y: 30.2, visitors: 38, country: '🇨🇭' },
-            { name: 'Zurich', x: 51.5, y: 29.5, visitors: 31, country: '🇨🇭' },
+            { name: 'Genève', lat: 46.2044, lon: 6.1432, visitors: 45, country: '🇨🇭 Suisse' },
+            { name: 'Lausanne', lat: 46.5197, lon: 6.6323, visitors: 38, country: '🇨🇭 Suisse' },
+            { name: 'Zurich', lat: 47.3769, lon: 8.5417, visitors: 31, country: '🇨🇭 Suisse' },
             // Afrique
-            { name: 'Kinshasa', x: 53, y: 55, visitors: 22, country: '🇨🇩' },
-            { name: 'Lagos', x: 50, y: 50, visitors: 18, country: '🇳🇬' },
-            { name: 'Abidjan', x: 48, y: 50, visitors: 15, country: '🇨🇮' },
+            { name: 'Kinshasa', lat: -4.4419, lon: 15.2663, visitors: 22, country: '🇨🇩 RD Congo' },
+            { name: 'Lagos', lat: 6.5244, lon: 3.3792, visitors: 18, country: '🇳🇬 Nigeria' },
+            { name: 'Abidjan', lat: 5.3600, lon: -4.0083, visitors: 15, country: '🇨🇮 Côte d\'Ivoire' },
             // Amérique du Nord
-            { name: 'New York', x: 24, y: 32, visitors: 41, country: '🇺🇸' },
-            { name: 'Montréal', x: 23, y: 30, visitors: 29, country: '🇨🇦' },
-            // Autres
-            { name: 'Lisbonne', x: 47, y: 33, visitors: 25, country: '🇵🇹' },
-            { name: 'Londres', x: 49, y: 26, visitors: 33, country: '🇬🇧' },
-            { name: 'Madrid', x: 48, y: 32, visitors: 19, country: '🇪🇸' }
+            { name: 'New York', lat: 40.7128, lon: -74.0060, visitors: 41, country: '🇺🇸 USA' },
+            { name: 'Montréal', lat: 45.5017, lon: -73.5673, visitors: 29, country: '🇨🇦 Canada' },
+            // Europe
+            { name: 'Lisbonne', lat: 38.7223, lon: -9.1393, visitors: 25, country: '🇵🇹 Portugal' },
+            { name: 'Londres', lat: 51.5074, lon: -0.1278, visitors: 33, country: '🇬🇧 UK' },
+            { name: 'Madrid', lat: 40.4168, lon: -3.7038, visitors: 19, country: '🇪🇸 Espagne' }
         ];
 
         function createWorldMap() {
-            const container = document.getElementById('map-markers');
-            const tooltip = document.getElementById('map-tooltip');
+            // Initialiser la carte Leaflet
+            const map = L.map('leaflet-map', {
+                center: [20, 0],
+                zoom: 2,
+                minZoom: 2,
+                maxZoom: 10,
+                zoomControl: true,
+                attributionControl: false
+            });
 
+            // Ajouter les tuiles OpenStreetMap avec style sombre
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                opacity: 1
+            }).addTo(map);
+
+            // Ajouter les marqueurs pour chaque ville
             worldCities.forEach((city, index) => {
-                const marker = document.createElement('div');
-                marker.className = 'map-marker';
-
-                // Size based on visitors
+                // Calculer la taille du cercle selon le nombre de visiteurs
+                let radius;
                 if (city.visitors >= 100) {
-                    marker.classList.add('size-large');
+                    radius = 20;
                 } else if (city.visitors >= 50) {
-                    marker.classList.add('size-medium');
+                    radius = 14;
                 } else {
-                    marker.classList.add('size-small');
+                    radius = 8;
                 }
 
-                marker.style.left = city.x + '%';
-                marker.style.top = city.y + '%';
-                marker.style.animationDelay = (index * 0.1) + 's';
+                // Créer un cercle lumineux
+                const circle = L.circleMarker([city.lat, city.lon], {
+                    radius: radius,
+                    fillColor: '#d4af37',
+                    color: '#4a90d9',
+                    weight: 2,
+                    opacity: 1,
+                    fillOpacity: 0.7
+                }).addTo(map);
 
-                // Hover events
-                marker.addEventListener('mouseenter', (e) => {
-                    tooltip.querySelector('.city').textContent = `${city.country} ${city.name}`;
-                    tooltip.querySelector('.count').textContent = `${city.visitors} visiteurs`;
-                    tooltip.style.left = city.x + '%';
-                    tooltip.style.top = (city.y - 8) + '%';
-                    tooltip.classList.add('show');
+                // Animation de pulsation
+                let growing = true;
+                setInterval(() => {
+                    if (growing) {
+                        circle.setRadius(radius * 1.2);
+                        growing = false;
+                    } else {
+                        circle.setRadius(radius);
+                        growing = true;
+                    }
+                }, 1000 + (index * 100));
+
+                // Popup au clic
+                const popupContent = `
+                    <div class="popup-city">${city.name}</div>
+                    <div class="popup-country">${city.country}</div>
+                    <div class="popup-visitors">${city.visitors} visiteurs</div>
+                `;
+                circle.bindPopup(popupContent);
+
+                // Effet hover
+                circle.on('mouseover', function() {
+                    this.setStyle({
+                        fillOpacity: 1,
+                        weight: 3
+                    });
                 });
 
-                marker.addEventListener('mouseleave', () => {
-                    tooltip.classList.remove('show');
+                circle.on('mouseout', function() {
+                    this.setStyle({
+                        fillOpacity: 0.7,
+                        weight: 2
+                    });
                 });
-
-                container.appendChild(marker);
             });
         }
 
