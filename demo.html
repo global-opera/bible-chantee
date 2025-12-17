@@ -777,11 +777,11 @@
                 lyricsText = t.lyricsComingSoon;
             }
 
-            // Nettoyer les paroles : supprimer les marqueurs et garder espacement
-            lyricsText = lyricsText.replace(/\[(Verse|Chorus|Bridge|Outro|Intro|Spoken Word|Hook|Pre-Chorus|Post-Chorus|Refrain|Couplet|TITRE|LYRICS|Verso|Refrão|Refr[aã]o|Ponte|Outra).*?\]\s*/gi, '\n\n');
-            // Nettoyer les sauts de ligne multiples (max 2)
-            lyricsText = lyricsText.replace(/\n{3,}/g, '\n\n');
-            // Trim début/fin
+            // Supprimer marqueurs
+            lyricsText = lyricsText.replace(/\[(Verse|Chorus|Bridge|Outro|Intro|Spoken Word|Hook|Pre-Chorus|Post-Chorus|Refrain|Couplet|TITRE|LYRICS|Verso|Refrão|Refr[aã]o|Ponte|Outra).*?\]/gi, '');
+            // Normaliser : remplacer 2+ sauts de ligne par exactement 2 (= 1 ligne vide)
+            lyricsText = lyricsText.replace(/\n{2,}/g, '\n\n');
+            // Trim
             lyricsText = lyricsText.trim();
 
             // Afficher les paroles
