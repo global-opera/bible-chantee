@@ -321,10 +321,157 @@
             text-align: right;
         }
 
+        /* World Map Styles */
+        .world-map-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(180deg, rgba(26, 74, 122, 0.3) 0%, rgba(10, 22, 40, 0.5) 100%);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .world-map-svg {
+            width: 100%;
+            height: 100%;
+            opacity: 0.2;
+        }
+
+        .map-marker {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--gold), var(--primary));
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            animation: pulse-marker 2s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+            transition: all 0.3s;
+        }
+
+        .map-marker::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: var(--gold);
+            opacity: 0.3;
+            animation: ripple 2s ease-out infinite;
+        }
+
+        .map-marker:hover {
+            transform: translate(-50%, -50%) scale(1.3);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 1);
+            z-index: 10;
+        }
+
+        .map-marker.size-large {
+            width: 24px;
+            height: 24px;
+        }
+
+        .map-marker.size-medium {
+            width: 16px;
+            height: 16px;
+        }
+
+        .map-marker.size-small {
+            width: 10px;
+            height: 10px;
+        }
+
+        @keyframes pulse-marker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        @keyframes ripple {
+            0% {
+                width: 100%;
+                height: 100%;
+                opacity: 0.3;
+            }
+            100% {
+                width: 200%;
+                height: 200%;
+                opacity: 0;
+            }
+        }
+
+        .map-tooltip {
+            position: absolute;
+            background: var(--card-bg);
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            pointer-events: none;
+            white-space: nowrap;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s;
+            border: 1px solid var(--gold);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+        }
+
+        .map-tooltip.show {
+            opacity: 1;
+        }
+
+        .map-tooltip .city {
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.2rem;
+        }
+
+        .map-tooltip .count {
+            color: var(--primary);
+        }
+
+        .map-legend {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background: rgba(15, 39, 68, 0.9);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(74, 144, 217, 0.3);
+        }
+
+        .map-legend-title {
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .map-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.3rem 0;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .map-legend-dot {
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--gold), var(--primary));
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
         @media (max-width: 768px) {
             body { padding: 1rem; }
             .header h1 { font-size: 1.8rem; }
             .stats-grid { grid-template-columns: 1fr; }
+            .world-map-container { height: 350px; }
+            .map-legend {
+                font-size: 0.75rem;
+                padding: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -369,6 +516,50 @@
                 <div class="label">Précommandes</div>
                 <div class="value" id="preorders">0</div>
                 <div class="change positive">↗ +12 cette semaine</div>
+            </div>
+        </div>
+
+        <!-- Carte mondiale -->
+        <div class="chart-section">
+            <h2>🗺️ Visiteurs dans le monde</h2>
+            <div class="world-map-container" id="world-map">
+                <svg class="world-map-svg" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid slice">
+                    <!-- Simplified world map outline -->
+                    <g fill="rgba(74, 144, 217, 0.15)" stroke="rgba(74, 144, 217, 0.3)" stroke-width="1">
+                        <!-- South America -->
+                        <path d="M 280 280 L 260 240 L 270 200 L 290 180 L 320 190 L 330 220 L 340 250 L 350 290 L 330 340 L 310 320 Z"/>
+                        <!-- North America -->
+                        <path d="M 180 120 L 200 100 L 240 110 L 260 140 L 250 180 L 220 200 L 190 180 L 170 150 Z"/>
+                        <!-- Europe -->
+                        <path d="M 480 100 L 520 110 L 540 140 L 530 160 L 500 150 L 470 130 Z"/>
+                        <!-- Africa -->
+                        <path d="M 480 180 L 520 190 L 540 230 L 550 280 L 530 320 L 500 310 L 480 260 Z"/>
+                        <!-- Asia -->
+                        <path d="M 600 120 L 680 130 L 740 150 L 760 180 L 740 210 L 700 200 L 650 180 L 620 160 Z"/>
+                        <!-- Oceania -->
+                        <path d="M 780 320 L 820 330 L 840 350 L 820 370 L 790 360 Z"/>
+                    </g>
+                </svg>
+                <div id="map-markers"></div>
+                <div id="map-tooltip" class="map-tooltip">
+                    <div class="city"></div>
+                    <div class="count"></div>
+                </div>
+                <div class="map-legend">
+                    <div class="map-legend-title">Taille = Visiteurs</div>
+                    <div class="map-legend-item">
+                        <div class="map-legend-dot" style="width: 20px; height: 20px;"></div>
+                        <span>100+ visiteurs</span>
+                    </div>
+                    <div class="map-legend-item">
+                        <div class="map-legend-dot" style="width: 14px; height: 14px;"></div>
+                        <span>50-99 visiteurs</span>
+                    </div>
+                    <div class="map-legend-item">
+                        <div class="map-legend-dot" style="width: 8px; height: 8px;"></div>
+                        <span>1-49 visiteurs</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -603,6 +794,74 @@
             document.getElementById('last-update').textContent = now.toLocaleTimeString('fr-FR');
         }
 
+        // World Map Data
+        const worldCities = [
+            // Brésil
+            { name: 'São Paulo', x: 30, y: 62, visitors: 127, country: '🇧🇷' },
+            { name: 'Rio de Janeiro', x: 32, y: 60, visitors: 83, country: '🇧🇷' },
+            { name: 'Belo Horizonte', x: 31, y: 59, visitors: 57, country: '🇧🇷' },
+            { name: 'Brasília', x: 30, y: 57, visitors: 44, country: '🇧🇷' },
+            { name: 'Salvador', x: 33, y: 54, visitors: 36, country: '🇧🇷' },
+            { name: 'Recife', x: 35, y: 52, visitors: 28, country: '🇧🇷' },
+            // France
+            { name: 'Paris', x: 50, y: 28, visitors: 89, country: '🇫🇷' },
+            { name: 'Lyon', x: 51, y: 31, visitors: 34, country: '🇫🇷' },
+            { name: 'Marseille', x: 51, y: 33, visitors: 28, country: '🇫🇷' },
+            // Suisse
+            { name: 'Genève', x: 50.5, y: 30, visitors: 45, country: '🇨🇭' },
+            { name: 'Lausanne', x: 50.6, y: 30.2, visitors: 38, country: '🇨🇭' },
+            { name: 'Zurich', x: 51.5, y: 29.5, visitors: 31, country: '🇨🇭' },
+            // Afrique
+            { name: 'Kinshasa', x: 53, y: 55, visitors: 22, country: '🇨🇩' },
+            { name: 'Lagos', x: 50, y: 50, visitors: 18, country: '🇳🇬' },
+            { name: 'Abidjan', x: 48, y: 50, visitors: 15, country: '🇨🇮' },
+            // Amérique du Nord
+            { name: 'New York', x: 24, y: 32, visitors: 41, country: '🇺🇸' },
+            { name: 'Montréal', x: 23, y: 30, visitors: 29, country: '🇨🇦' },
+            // Autres
+            { name: 'Lisbonne', x: 47, y: 33, visitors: 25, country: '🇵🇹' },
+            { name: 'Londres', x: 49, y: 26, visitors: 33, country: '🇬🇧' },
+            { name: 'Madrid', x: 48, y: 32, visitors: 19, country: '🇪🇸' }
+        ];
+
+        function createWorldMap() {
+            const container = document.getElementById('map-markers');
+            const tooltip = document.getElementById('map-tooltip');
+
+            worldCities.forEach((city, index) => {
+                const marker = document.createElement('div');
+                marker.className = 'map-marker';
+
+                // Size based on visitors
+                if (city.visitors >= 100) {
+                    marker.classList.add('size-large');
+                } else if (city.visitors >= 50) {
+                    marker.classList.add('size-medium');
+                } else {
+                    marker.classList.add('size-small');
+                }
+
+                marker.style.left = city.x + '%';
+                marker.style.top = city.y + '%';
+                marker.style.animationDelay = (index * 0.1) + 's';
+
+                // Hover events
+                marker.addEventListener('mouseenter', (e) => {
+                    tooltip.querySelector('.city').textContent = `${city.country} ${city.name}`;
+                    tooltip.querySelector('.count').textContent = `${city.visitors} visiteurs`;
+                    tooltip.style.left = city.x + '%';
+                    tooltip.style.top = (city.y - 8) + '%';
+                    tooltip.classList.add('show');
+                });
+
+                marker.addEventListener('mouseleave', () => {
+                    tooltip.classList.remove('show');
+                });
+
+                container.appendChild(marker);
+            });
+        }
+
         // Initialisation
         window.addEventListener('load', () => {
             animateValue('visitors-today', 0, 287, 2000);
@@ -613,6 +872,7 @@
             generateRecentEvents();
             updateTime();
             setInterval(updateTime, 1000);
+            createWorldMap();
         });
 
         // TODO: Connecter aux vraies données Google Analytics
