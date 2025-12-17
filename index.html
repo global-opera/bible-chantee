@@ -450,13 +450,6 @@
       border-radius: 16px;
       padding: 40px 30px;
       text-align: center;
-      transition: all 0.3s;
-      cursor: pointer;
-    }
-
-    .lang-card:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 20px 40px rgba(245, 196, 66, 0.3);
     }
 
     .lang-card .flag {
@@ -479,22 +472,6 @@
     .lang-card .coming-soon {
       color: #94a3b8;
       font-style: italic;
-    }
-
-    .lang-card .btn {
-      display: inline-block;
-      background: #f5c842;
-      color: #1e3a8a;
-      padding: 12px 30px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: all 0.3s;
-    }
-
-    .lang-card .btn:hover {
-      background: #ffd700;
-      transform: scale(1.05);
     }
 
     /* How It Works */
@@ -831,27 +808,24 @@
 
       <div class="lang-grid">
         <!-- FR -->
-        <div class="lang-card" onclick="window.location.href='/fr/'">
+        <div class="lang-card">
           <div class="flag">🇫🇷</div>
           <h3>Français</h3>
           <p class="status">✅ 100% complet (1189 chapitres)</p>
-          <a href="/fr/" class="btn">Écouter en Français</a>
         </div>
 
         <!-- PT -->
-        <div class="lang-card" onclick="window.location.href='/pt/'">
+        <div class="lang-card">
           <div class="flag">🇧🇷</div>
           <h3>Português</h3>
           <p class="status">✅ 100% complet (1189 chapitres)</p>
-          <a href="/pt/" class="btn">Ouvir em Português</a>
         </div>
 
         <!-- EN -->
-        <div class="lang-card" onclick="window.location.href='/en/'">
+        <div class="lang-card">
           <div class="flag">🇬🇧</div>
           <h3>English</h3>
           <p class="status">✅ 100% complet (1189 chapitres)</p>
-          <a href="/en/" class="btn">Listen in English</a>
         </div>
       </div>
 
