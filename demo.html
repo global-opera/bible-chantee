@@ -285,7 +285,7 @@
             <p id="donation-text1"></p>
             <p id="donation-text2"></p>
             <a href="crowdfunding.html" class="cta-btn" id="btn-support"></a>
-            
+            <button class="cta-btn" id="btn-pix" style="display:none;" onclick="copyPixKey()">Pagar com Pix</button>
         </div>
         
         <div class="description">
@@ -480,7 +480,8 @@
         
         function updatePage() {
             const t = translations[currentLang];
-            
+
+            document.title = t.mainTitle;
             document.getElementById('main-title').textContent = t.mainTitle;
             document.getElementById('subtitle').textContent = t.subtitle;
             document.getElementById('stat-chapters').textContent = t.statChapters;
@@ -493,15 +494,19 @@
             document.getElementById('donation-text1').innerHTML = t.donationText1;
             document.getElementById('donation-text2').innerHTML = t.donationText2;
             document.getElementById('btn-support').textContent = t.btnSupport;
-            document.getElementById('btn-explore').textContent = t.btnExplore;
             document.getElementById('about-title').textContent = t.aboutTitle;
             document.getElementById('about-text1').textContent = t.aboutText1;
             document.getElementById('about-text2').innerHTML = t.aboutText2;
             document.getElementById('title-available').textContent = t.titleAvailable;
             document.getElementById('btn-donate').textContent = t.btnDonate;
-            document.getElementById('btn-listen').textContent = t.btnListen;
             document.getElementById('footer-text').textContent = t.footerText;
-            
+
+            // Afficher/masquer le bouton Pix pour PT uniquement
+            const pixBtn = document.getElementById('btn-pix');
+            if (pixBtn) {
+                pixBtn.style.display = currentLang === 'PT' ? 'inline-block' : 'none';
+            }
+
             loadTracks();
             loadProgress();
         }
@@ -549,7 +554,16 @@
                 `;
             }).join('');
         }
-        
+
+        function copyPixKey() {
+            const pixKey = 'scassani@jim.com';
+            navigator.clipboard.writeText(pixKey).then(() => {
+                alert('Chave Pix copiada: ' + pixKey + '\n\nCole no seu aplicativo de pagamento.');
+            }).catch(err => {
+                alert('Chave Pix: ' + pixKey + '\n\nCopie manualmente esta chave.');
+            });
+        }
+
         updatePage();
     </script>
 </body>
