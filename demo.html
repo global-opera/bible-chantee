@@ -739,6 +739,22 @@
             }).join('');
         }
 
+        function cleanLyrics(text) {
+            if (!text) return '';
+
+            // 1. Supprimer [STYLE] et tout ce qui suit
+            text = text.replace(/\[STYLE\][\s\S]*/gi, '');
+
+            // 2. Supprimer TOUS les marqueurs entre crochets
+            text = text.replace(/\[.*?\]/gi, '');
+
+            // 3. Normaliser : exactement 1 ligne vide entre couplets (2 \n = 1 ligne vide)
+            text = text.replace(/\n{2,}/g, '\n\n');
+
+            // 4. Trim
+            return text.trim();
+        }
+
         function toggleLyrics(trackId, index) {
             const t = translations[currentLang];
             const lyricsContainer = document.getElementById(`lyrics-${index}`);
@@ -777,20 +793,8 @@
                 lyricsText = t.lyricsComingSoon;
             }
 
-            // Supprimer [STYLE] et tout ce qui suit
-            lyricsText = lyricsText.replace(/\[STYLE\][\s\S]*/gi, '');
-
-            // Supprimer tous les marqueurs entre crochets
-            lyricsText = lyricsText.replace(/\[.*?\]/gi, '');
-
-            // Normaliser : exactement 1 ligne vide entre couplets
-            lyricsText = lyricsText.replace(/\n{2,}/g, '\n\n');
-
-            // Trim
-            lyricsText = lyricsText.trim();
-
-            // Afficher les paroles
-            lyricsContainer.textContent = lyricsText;
+            // Afficher les paroles nettoyées
+            lyricsContainer.textContent = cleanLyrics(lyricsText);
             lyricsContainer.classList.add('show');
             btn.textContent = t.btnHide;
         }

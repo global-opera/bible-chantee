@@ -801,6 +801,25 @@
             else contentWrapper.classList.remove('active');
         }
 
+        function cleanLyrics(text) {
+            if (!text) return '';
+
+            // 1. Supprimer [STYLE] et tout ce qui suit
+            text = text.replace(/\[STYLE\][\s\S]*/gi, '');
+
+            // 2. Supprimer TOUS les marqueurs entre crochets
+            text = text.replace(/\[.*?\]/gi, '');
+
+            // 3. Supprimer les marqueurs ** (Markdown)
+            text = text.replace(/\*\*[^*]+\*\*/g, '');
+
+            // 4. Normaliser : exactement 1 ligne vide entre couplets (2 \n = 1 ligne vide)
+            text = text.replace(/\n{2,}/g, '\n\n');
+
+            // 5. Trim
+            return text.trim();
+        }
+
         function updateLyrics() {
             const lyricsText = document.getElementById('lyricsText');
             const lyricsContainer = document.getElementById('lyricsContainer');
@@ -809,24 +828,7 @@
             const lyrics = getLyricsForCurrent(window.currentLanguage || 'FR', currentBook, chapterStr);
 
             if (lyrics) {
-                let cleanLyrics = String(lyrics);
-
-                // Supprimer [STYLE] et tout ce qui suit
-                cleanLyrics = cleanLyrics.replace(/\[STYLE\][\s\S]*/gi, '');
-
-                // Supprimer tous les marqueurs entre crochets
-                cleanLyrics = cleanLyrics.replace(/\[.*?\]/gi, '');
-
-                // Supprimer les marqueurs ** (Markdown)
-                cleanLyrics = cleanLyrics.replace(/\*\*[^*]+\*\*/g, '');
-
-                // Normaliser : exactement 1 ligne vide entre couplets
-                cleanLyrics = cleanLyrics.replace(/\n{2,}/g, '\n\n');
-
-                // Trim
-                cleanLyrics = cleanLyrics.trim();
-
-                lyricsText.innerHTML = cleanLyrics;
+                lyricsText.innerHTML = cleanLyrics(String(lyrics));
             } else {
                 lyricsText.innerHTML =
                     '<div class="no-lyrics">' +
