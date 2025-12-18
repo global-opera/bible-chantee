@@ -20,7 +20,7 @@
 
     /* Hero Section */
     .hero {
-      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      background: linear-gradient(180deg, #0f2744 0%, #1e3a5f 50%, #1e4a8a 100%);
       padding: 80px 20px 40px;
       text-align: center;
       position: relative;
@@ -41,6 +41,7 @@
       margin-bottom: 15px;
       position: relative;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      color: #f5c842;
     }
 
     .hero p {
@@ -54,6 +55,67 @@
       font-size: 1.1em;
       color: #f5c842;
       margin-bottom: 30px;
+    }
+
+    /* Main Share Button */
+    .share-main-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 40px;
+      background: linear-gradient(135deg, #f5c842 0%, #fbbf24 100%);
+      border: none;
+      border-radius: 50px;
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(245, 196, 66, 0.4);
+    }
+
+    .share-main-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(245, 196, 66, 0.5);
+      background: linear-gradient(135deg, #fbbf24 0%, #f5c842 100%);
+    }
+
+    .share-main-btn span:first-child {
+      font-size: 1.3em;
+    }
+
+    /* Community Button */
+    .community-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+      border: none;
+      border-radius: 50px;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-left: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+
+    .community-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+    }
+
+    @media (max-width: 600px) {
+      .community-btn {
+        margin-left: 0;
+        margin-top: 10px;
+      }
     }
 
     /* Share Buttons */
@@ -169,18 +231,7 @@
       overflow: hidden;
     }
 
-    /* Flag backgrounds with 15% opacity */
-    .lang-select-btn::before {
-      content: attr(data-flag-bg);
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 80px;
-      opacity: 0.15;
-      z-index: 0;
-      pointer-events: none;
-    }
+    /* Flag displayed directly in HTML span.flag */
 
     .lang-select-btn > * {
       position: relative;
@@ -202,38 +253,45 @@
 
     /* Available languages (green border) */
     .lang-select-btn.available {
-      border-color: rgba(34, 197, 94, 0.5);
+      border-color: #22c55e;
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));
     }
 
     .lang-select-btn.available:hover {
       border-color: #22c55e;
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.25), rgba(34, 197, 94, 0.15));
       box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3);
     }
 
     .lang-select-btn.available.active {
       border-color: #22c55e;
-      background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1));
+      border-width: 3px;
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.3), rgba(34, 197, 94, 0.15));
     }
 
-    /* Coming soon languages (gray) */
+    /* Coming soon languages (gray background) */
     .lang-select-btn.coming-soon-btn {
-      border-color: rgba(100, 100, 100, 0.3);
-      opacity: 0.6;
+      border-color: rgba(100, 116, 139, 0.4);
+      background: linear-gradient(135deg, rgba(51, 65, 85, 0.8), rgba(30, 41, 59, 0.8));
     }
 
     .lang-select-btn.coming-soon-btn:hover {
-      border-color: rgba(150, 150, 150, 0.5);
-      opacity: 0.85;
+      border-color: rgba(148, 163, 184, 0.6);
+      background: linear-gradient(135deg, rgba(71, 85, 105, 0.8), rgba(51, 65, 85, 0.8));
     }
 
     .lang-select-btn.coming-soon-btn.active {
-      border-color: rgba(150, 150, 150, 0.6);
-      background: linear-gradient(135deg, rgba(100, 100, 100, 0.2), rgba(100, 100, 100, 0.1));
-      opacity: 1;
+      border-color: rgba(148, 163, 184, 0.8);
+      background: linear-gradient(135deg, rgba(71, 85, 105, 0.9), rgba(51, 65, 85, 0.9));
     }
 
     .lang-select-btn .flag {
-      font-size: 3em;
+      width: 48px;
+      height: 36px;
+      display: block;
+      margin: 0 auto 8px auto;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
     .lang-select-btn .lang-name {
@@ -305,8 +363,8 @@
       padding: 18px 40px;
       font-size: 1.3em;
       font-weight: 600;
-      background: linear-gradient(135deg, #4a90d9, #2563eb);
-      color: white;
+      background: linear-gradient(135deg, #f5c842, #fbbf24);
+      color: #0f172a;
       border: none;
       border-radius: 8px;
       cursor: pointer;
@@ -316,8 +374,8 @@
 
     .btn-signup:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(74, 144, 217, 0.5);
-      background: linear-gradient(135deg, #5ba0e9, #3b73fb);
+      box-shadow: 0 8px 25px rgba(245, 200, 66, 0.5);
+      background: linear-gradient(135deg, #fbbf24, #f5c842);
     }
 
     /* Preorder Message */
@@ -579,13 +637,13 @@
 
     /* Support Mission Section */
     .support-mission {
-      background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);
+      background: linear-gradient(135deg, #0f2744 0%, #1e3a5f 50%, #1e4a8a 100%);
       border-radius: 16px;
       padding: 60px 40px;
       margin: 60px 0;
       text-align: center;
       border: 3px solid #f5c842;
-      box-shadow: 0 10px 40px rgba(124, 58, 237, 0.3);
+      box-shadow: 0 10px 40px rgba(15, 39, 68, 0.5);
     }
 
     .support-mission h2 {
@@ -646,15 +704,15 @@
 
     .next-languages {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 15px;
       margin-top: 30px;
-      max-width: 900px;
+      max-width: 1000px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .next-languages {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -664,6 +722,20 @@
       .next-languages {
         grid-template-columns: 1fr;
       }
+    }
+
+    .lang-complete {
+      background: rgba(34, 197, 94, 0.2);
+      border: 2px solid #22c55e;
+      border-radius: 10px;
+      padding: 15px 25px;
+      color: white;
+      font-size: 1.1em;
+    }
+
+    .lang-complete .status {
+      color: #22c55e;
+      font-weight: 700;
     }
 
     .lang-waiting {
@@ -749,6 +821,17 @@
     .payment-btn.pix:hover {
       background: #00f5bd;
       border-color: #00f5bd;
+    }
+
+    .payment-btn.twint {
+      background: #000000;
+      color: white;
+      border-color: #000000;
+    }
+
+    .payment-btn.twint:hover {
+      background: #333333;
+      border-color: #333333;
     }
 
     @media (max-width: 768px) {
@@ -844,6 +927,16 @@
     <p class="subtitle" data-i18n="hero-subtitle">1189 chapitres • 12 langues • 100 chapitres gratuits par langue</p>
 
     <!-- Share Buttons -->
+    <button class="share-main-btn" onclick="shareMain()">
+      <span>↗</span>
+      <span data-i18n="share-main">Partager</span>
+    </button>
+    
+    <a href="https://chat.whatsapp.com/HfXSoLBQpwRCVUtM6eRVUQ" target="_blank" class="community-btn">
+      <span>💬</span>
+      <span data-i18n="join-community">Rejoindre la communauté</span>
+    </a>
+    
     <div class="share-buttons">
       <a href="#" class="share-btn whatsapp" onclick="shareOnWhatsApp(); return false;">
         <span>📱</span>
@@ -870,67 +963,67 @@
       <h2 id="lang-selector-title">🌍 Choisissez votre langue</h2>
       <div class="language-buttons-grid">
         <!-- Ligne 1: FR, PT, EN, ES -->
-        <button class="lang-select-btn available active" data-lang="fr" data-flag-bg="🇫🇷" onclick="selectLanguage('fr')">
-          <span class="flag">🇫🇷</span>
+        <button class="lang-select-btn available active" data-lang="fr" onclick="selectLanguage('fr')">
+          <img class="flag" src="https://flagcdn.com/48x36/fr.png" alt="FR">
           <span class="lang-name">Français</span>
           <span class="lang-status">✅ <span data-i18n="status-available">Disponible</span></span>
         </button>
-        <button class="lang-select-btn available" data-lang="pt" data-flag-bg="🇧🇷" onclick="selectLanguage('pt')">
-          <span class="flag">🇧🇷</span>
+        <button class="lang-select-btn available" data-lang="pt" onclick="selectLanguage('pt')">
+          <img class="flag" src="https://flagcdn.com/48x36/br.png" alt="BR">
           <span class="lang-name">Português</span>
           <span class="lang-status">✅ <span data-i18n="status-available">Disponible</span></span>
         </button>
-        <button class="lang-select-btn available" data-lang="en" data-flag-bg="🇬🇧" onclick="selectLanguage('en')">
-          <span class="flag">🇬🇧</span>
+        <button class="lang-select-btn available" data-lang="en" onclick="selectLanguage('en')">
+          <img class="flag" src="https://flagcdn.com/48x36/gb.png" alt="GB">
           <span class="lang-name">English</span>
           <span class="lang-status">✅ <span data-i18n="status-available">Available</span></span>
         </button>
-        <button class="lang-select-btn coming-soon-btn" data-lang="es" data-flag-bg="🇪🇸" onclick="selectLanguage('es')">
-          <span class="flag">🇪🇸</span>
+        <button class="lang-select-btn coming-soon-btn" data-lang="es" onclick="selectLanguage('es')">
+          <img class="flag" src="https://flagcdn.com/48x36/es.png" alt="ES">
           <span class="lang-name">Español</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
 
         <!-- Ligne 2: DE, IT, AR, RU -->
-        <button class="lang-select-btn coming-soon-btn" data-lang="de" data-flag-bg="🇩🇪" onclick="selectLanguage('de')">
-          <span class="flag">🇩🇪</span>
+        <button class="lang-select-btn coming-soon-btn" data-lang="de" onclick="selectLanguage('de')">
+          <img class="flag" src="https://flagcdn.com/48x36/de.png" alt="DE">
           <span class="lang-name">Deutsch</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
-        <button class="lang-select-btn coming-soon-btn" data-lang="it" data-flag-bg="🇮🇹" onclick="selectLanguage('it')">
-          <span class="flag">🇮🇹</span>
+        <button class="lang-select-btn coming-soon-btn" data-lang="it" onclick="selectLanguage('it')">
+          <img class="flag" src="https://flagcdn.com/48x36/it.png" alt="IT">
           <span class="lang-name">Italiano</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
-        <button class="lang-select-btn coming-soon-btn" data-lang="ar" data-flag-bg="🇸🇦" onclick="selectLanguage('ar')">
-          <span class="flag">🇸🇦</span>
+        <button class="lang-select-btn coming-soon-btn" data-lang="ar" onclick="selectLanguage('ar')">
+          <img class="flag" src="https://flagcdn.com/48x36/sa.png" alt="SA">
           <span class="lang-name">العربية</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
-        <button class="lang-select-btn coming-soon-btn" data-lang="ru" data-flag-bg="🇷🇺" onclick="selectLanguage('ru')">
-          <span class="flag">🇷🇺</span>
+        <button class="lang-select-btn coming-soon-btn" data-lang="ru" onclick="selectLanguage('ru')">
+          <img class="flag" src="https://flagcdn.com/48x36/ru.png" alt="RU">
           <span class="lang-name">Русский</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
 
         <!-- Ligne 3: ZH, HI, TL, SW -->
-        <button class="lang-select-btn coming-soon-btn" data-lang="zh" data-flag-bg="🇨🇳" onclick="selectLanguage('zh')">
-          <span class="flag">🇨🇳</span>
+        <button class="lang-select-btn coming-soon-btn" data-lang="zh" onclick="selectLanguage('zh')">
+          <img class="flag" src="https://flagcdn.com/48x36/cn.png" alt="CN">
           <span class="lang-name">中文</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
-        <button class="lang-select-btn coming-soon-btn" data-lang="hi" data-flag-bg="🇮🇳" onclick="selectLanguage('hi')">
-          <span class="flag">🇮🇳</span>
+        <button class="lang-select-btn coming-soon-btn" data-lang="hi" onclick="selectLanguage('hi')">
+          <img class="flag" src="https://flagcdn.com/48x36/in.png" alt="IN">
           <span class="lang-name">हिन्दी</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
-        <button class="lang-select-btn coming-soon-btn" data-lang="tl" data-flag-bg="🇵🇭" onclick="selectLanguage('tl')">
-          <span class="flag">🇵🇭</span>
+        <button class="lang-select-btn coming-soon-btn" data-lang="tl" onclick="selectLanguage('tl')">
+          <img class="flag" src="https://flagcdn.com/48x36/ph.png" alt="PH">
           <span class="lang-name">Tagalog</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
-        <button class="lang-select-btn coming-soon-btn" data-lang="sw" data-flag-bg="🇰🇪" onclick="selectLanguage('sw')">
-          <span class="flag">🇰🇪</span>
+        <button class="lang-select-btn coming-soon-btn" data-lang="sw" onclick="selectLanguage('sw')">
+          <img class="flag" src="https://flagcdn.com/48x36/ke.png" alt="KE">
           <span class="lang-name">Kiswahili</span>
           <span class="lang-status">🔜 <span data-i18n="status-soon">Bientôt</span></span>
         </button>
@@ -946,7 +1039,7 @@
 
       <div class="demo-grid" id="samples-container">
         <!-- FRANÇAIS - 3 extraits -->
-        <div class="audio-card" data-lang="fr">
+        <div class="audio-card visible" data-lang="fr">
           <h3>Genèse 1</h3>
           <p>Au commencement, Dieu créa...</p>
           <audio controls>
@@ -954,7 +1047,7 @@
           </audio>
         </div>
 
-        <div class="audio-card" data-lang="fr">
+        <div class="audio-card visible" data-lang="fr">
           <h3>Psaume 23</h3>
           <p>L'Éternel est mon berger...</p>
           <audio controls>
@@ -962,7 +1055,7 @@
           </audio>
         </div>
 
-        <div class="audio-card" data-lang="fr">
+        <div class="audio-card visible" data-lang="fr">
           <h3>Jean 3</h3>
           <p>Car Dieu a tant aimé le monde...</p>
           <audio controls>
@@ -1020,30 +1113,6 @@
           </audio>
         </div>
 
-        <!-- ESPAÑOL / DEUTSCH / ITALIANO - Message coming soon -->
-        <div class="audio-card coming-soon" data-lang="es">
-          <div class="coming-soon-content">
-            <div class="coming-soon-icon">🔜</div>
-            <h3>Próximamente</h3>
-            <p>Pronto disponible en español</p>
-          </div>
-        </div>
-
-        <div class="audio-card coming-soon" data-lang="de">
-          <div class="coming-soon-content">
-            <div class="coming-soon-icon">🔜</div>
-            <h3>Demnächst</h3>
-            <p>Bald auf Deutsch verfügbar</p>
-          </div>
-        </div>
-
-        <div class="audio-card coming-soon" data-lang="it">
-          <div class="coming-soon-content">
-            <div class="coming-soon-icon">🔜</div>
-            <h3>Prossimamente</h3>
-            <p>Presto disponibile in italiano</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -1160,41 +1229,6 @@
         <div class="progress-bar-container">
           <div class="progress-bar-fill">3/12 - 25%</div>
         </div>
-
-        <div class="next-languages">
-          <!-- Line 1: ES, DE, IT -->
-          <div class="lang-waiting">
-            🇪🇸 <span data-i18n="support-spanish">Espagnol</span> - <span class="count" id="waiting-es">0</span> <span data-i18n="support-waiting">personnes attendent</span>
-          </div>
-          <div class="lang-waiting">
-            🇩🇪 <span data-i18n="support-german">Allemand</span> - <span class="count" id="waiting-de">0</span> <span data-i18n="support-waiting">personnes attendent</span>
-          </div>
-          <div class="lang-waiting">
-            🇮🇹 <span data-i18n="support-italian">Italien</span> - <span class="count" id="waiting-it">0</span> <span data-i18n="support-waiting">personnes attendent</span>
-          </div>
-
-          <!-- Line 2: AR, RU, ZH -->
-          <div class="lang-waiting">
-            🇸🇦 <span data-i18n="support-arabic">Arabe</span> - <span class="count" id="waiting-ar">0</span> <span data-i18n="support-waiting">personnes attendent</span>
-          </div>
-          <div class="lang-waiting">
-            🇷🇺 <span data-i18n="support-russian">Russe</span> - <span class="count" id="waiting-ru">0</span> <span data-i18n="support-waiting">personnes attendent</span>
-          </div>
-          <div class="lang-waiting">
-            🇨🇳 <span data-i18n="support-chinese">Chinois</span> - <span class="count" id="waiting-zh">0</span> <span data-i18n="support-waiting">personnes attendent</span>
-          </div>
-
-          <!-- Line 3: HI, TL, SW -->
-          <div class="lang-waiting">
-            🇮🇳 <span data-i18n="support-hindi">Hindi</span> - <span class="count" id="waiting-hi">0</span> <span data-i18n="support-waiting">personnes attendent</span>
-          </div>
-          <div class="lang-waiting">
-            🇵🇭 <span data-i18n="support-tagalog">Tagalog</span> - <span class="count" id="waiting-tl">0</span> <span data-i18n="support-waiting">personnes attendent</span>
-          </div>
-          <div class="lang-waiting">
-            🇰🇪 <span data-i18n="support-swahili">Swahili</span> - <span class="count" id="waiting-sw">0</span> <span data-i18n="support-waiting">personnes attendent</span>
-          </div>
-        </div>
       </div>
 
       <h3 data-i18n="support-donate-title">💝 Soutenir le projet</h3>
@@ -1221,7 +1255,10 @@
         <a href="https://paypal.me/stephanecassani1" target="_blank" class="payment-btn">
           💳 PayPal
         </a>
-        <a href="mailto:scassani@jim.com?subject=Pix%20-%20Soutien%20Bible%20Chantée&body=Bonjour,%0D%0A%0D%0AJe%20souhaite%20soutenir%20le%20projet%20via%20Pix.%0D%0AMerci%20de%20m'envoyer%20les%20informations%20de%20paiement.%0D%0A%0D%0AMontant%20:%20" target="_blank" class="payment-btn pix" id="pix-btn">
+        <a href="#" class="payment-btn twint" id="twint-btn" onclick="alert('TWINT: +41 78 212 53 63'); return false;">
+          🇨🇭 TWINT
+        </a>
+        <a href="/cdn-cgi/l/email-protection#483b2b293b3b29262108222125662b2725773b3d2a222d2b3c751821306d7a78656d7a781b273d3c212d266d7a780a212a242d6d7a780b2029263c8be12d6e2a272c31750a272622273d3a646d780c6d78096d780c6d7809022d6d7a783b273d2029213c2d6d7a783b273d3c2d26213a6d7a78242d6d7a78383a27222d3c6d7a783e21296d7a78182130666d780c6d7809052d3a2b216d7a782c2d6d7a78256f2d263e27312d3a6d7a78242d3b6d7a7821262e273a25293c2127263b6d7a782c2d6d7a783829212d252d263c666d780c6d78096d780c6d78090527263c29263c6d7a78726d7a78" target="_blank" class="payment-btn pix" id="pix-btn">
           🇧🇷 Pix
         </a>
       </div>
@@ -1241,12 +1278,12 @@
   <footer>
     <p>&copy; 2025 Bible Chantée / Sung Bible</p>
     <p style="margin-top: 10px;">
-      <a href="mailto:support@sungbible.world">Contact</a> •
+      <a href="/cdn-cgi/l/email-protection#6f1c1a1f1f001d1b2f1c1a01080d060d030a4118001d030b">Contact</a> •
       <a href="/mentions-legales.html">Mentions légales</a>
     </p>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Available languages (with 100 free credits)
     const AVAILABLE_LANGS = ['fr', 'pt', 'en'];
 
@@ -1305,6 +1342,8 @@
         'copyright-bible': 'Texte biblique : domaine public (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
         'copyright-music': 'Musique : générée par IA (Suno) - droits commerciaux acquis',
         'copyright-notice': '© 2025 Bible Chantée / Sung Bible - Tous droits réservés',
+        'share-main': 'Partager',
+        'join-community': 'Rejoindre la communauté',
         'share-whatsapp': 'WhatsApp',
         'share-facebook': 'Facebook',
         'share-twitter': 'Twitter',
@@ -1357,6 +1396,8 @@
         'copyright-bible': 'Texto bíblico: domínio público (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
         'copyright-music': 'Música: gerada por IA (Suno) - direitos comerciais adquiridos',
         'copyright-notice': '© 2025 Bíblia Cantada / Sung Bible - Todos os direitos reservados',
+        'share-main': 'Compartilhar',
+        'join-community': 'Entrar na comunidade',
         'share-whatsapp': 'WhatsApp',
         'share-facebook': 'Facebook',
         'share-twitter': 'Twitter',
@@ -1409,6 +1450,8 @@
         'copyright-bible': 'Biblical text: public domain (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
         'copyright-music': 'Music: AI-generated (Suno) - commercial rights acquired',
         'copyright-notice': '© 2025 Sung Bible / Bible Chantée - All rights reserved',
+        'share-main': 'Share',
+        'join-community': 'Join the community',
         'share-whatsapp': 'WhatsApp',
         'share-facebook': 'Facebook',
         'share-twitter': 'Twitter',
@@ -1461,6 +1504,8 @@
         'copyright-bible': 'Texto bíblico: dominio público (Segond 1910, KJV 1611, Almeida ACF, Reina Valera 1909)',
         'copyright-music': 'Música: generada por IA (Suno) - derechos comerciales adquiridos',
         'copyright-notice': '© 2025 Biblia Cantada / Sung Bible - Todos los derechos reservados',
+        'share-main': 'Compartir',
+        'join-community': 'Únete a la comunidad',
         'share-whatsapp': 'WhatsApp',
         'share-facebook': 'Facebook',
         'share-twitter': 'Twitter',
@@ -1936,6 +1981,9 @@
       // Update Pix button visibility (show only for Portuguese)
       updatePixButton();
 
+      // Update TWINT button visibility (show only for Swiss: FR, DE, IT)
+      updateTwintButton();
+
       // Scroll to samples
       document.getElementById('extraits-title').scrollIntoView({ behavior: 'smooth', block: 'center' });
 
@@ -1967,6 +2015,18 @@
           pixBtn.style.display = 'inline-block';
         } else {
           pixBtn.style.display = 'none';
+        }
+      }
+    }
+
+    // Update TWINT button visibility (show only for Swiss languages: FR, DE, IT)
+    function updateTwintButton() {
+      const twintBtn = document.getElementById('twint-btn');
+      if (twintBtn) {
+        if (['fr', 'de', 'it'].includes(selectedLanguage)) {
+          twintBtn.style.display = 'inline-block';
+        } else {
+          twintBtn.style.display = 'none';
         }
       }
     }
@@ -2070,10 +2130,30 @@
       }
     });
 
+    // Share messages by language
+    const shareMessages = {
+      fr: '🎵 Découvrez la Bible Chantée - Toute la Parole de Dieu en musique ! 100 chapitres gratuits.',
+      pt: '🎵 Descubra a Bíblia Cantada - Toda a Palavra de Deus em música! 100 capítulos grátis.',
+      en: '🎵 Discover the Sung Bible - The Word of God in music! 100 free chapters.',
+      es: '🎵 Descubre la Biblia Cantada - La Palabra de Dios en música! 100 capítulos gratis.',
+      de: '🎵 Entdecken Sie die Gesungene Bibel - Das Wort Gottes in Musik! 100 kostenlose Kapitel.',
+      it: '🎵 Scopri la Bibbia Cantata - La Parola di Dio in musica! 100 capitoli gratuiti.',
+      ar: '🎵 اكتشف الكتاب المقدس المُغنّى - كلمة الله في موسيقى! 100 فصل مجاني.',
+      ru: '🎵 Откройте Поющую Библию - Слово Божье в музыке! 100 бесплатных глав.',
+      zh: '🎵 发现唱诵圣经 - 上帝的话语化为音乐！100个免费章节。',
+      hi: '🎵 गाया हुआ बाइबिल खोजें - संगीत में परमेश्वर का वचन! 100 मुफ्त अध्याय।',
+      tl: '🎵 Tuklasin ang Inaawit na Bibliya - Ang Salita ng Diyos sa musika! 100 libreng kabanata.',
+      sw: '🎵 Gundua Biblia Iliyoimbwa - Neno la Mungu kwa muziki! Sura 100 za bure.'
+    };
+
+    function getShareMessage() {
+      return shareMessages[selectedLanguage] || shareMessages['en'];
+    }
+
     // Share functions
     function shareOnWhatsApp() {
       const url = encodeURIComponent(window.location.href);
-      const text = encodeURIComponent('🎵 Découvrez la Bible Chantée - Toute la Parole de Dieu en musique ! 100 chapitres gratuits dans 3 langues.');
+      const text = encodeURIComponent(getShareMessage());
       window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
     }
 
@@ -2084,25 +2164,29 @@
 
     function shareOnTwitter() {
       const url = encodeURIComponent(window.location.href);
-      const text = encodeURIComponent('🎵 Bible Chantée - Toute la Parole de Dieu en musique ! 100 chapitres gratuits.');
+      const text = encodeURIComponent(getShareMessage());
       window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+    }
+
+    // Main share button - uses Web Share API if available
+    function shareMain() {
+      const shareData = {
+        title: 'Bible Chantée / Sung Bible',
+        text: getShareMessage(),
+        url: window.location.href
+      };
+      
+      if (navigator.share) {
+        navigator.share(shareData).catch(console.error);
+      } else {
+        // Fallback: show share buttons
+        document.querySelector('.share-buttons').style.display = 'flex';
+        document.querySelector('.share-buttons').scrollIntoView({ behavior: 'smooth' });
+      }
     }
 
     function copyLink() {
       const url = window.location.href;
       navigator.clipboard.writeText(url).then(() => {
         const btn = event.target.closest('.share-btn');
-        const originalText = btn.querySelector('[data-i18n]').textContent;
-        btn.querySelector('[data-i18n]').textContent = '✅ Copié!';
-        setTimeout(() => {
-          btn.querySelector('[data-i18n]').textContent = originalText;
-        }, 2000);
-      }).catch(err => {
-        alert('Erreur lors de la copie du lien');
-        console.error('Copy failed:', err);
-      });
-    }
-  </script>
-
-</body>
-</html>
+        const ori
