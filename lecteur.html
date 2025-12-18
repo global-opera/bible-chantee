@@ -249,7 +249,7 @@
         .lyrics-container::-webkit-scrollbar { width: 8px; }
         .lyrics-container::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 4px; }
         .lyrics-container::-webkit-scrollbar-thumb { background: #ffce00; border-radius: 4px; }
-        .lyrics-text { font-size: 0.95em; line-height: 1.4; white-space: pre-wrap; color: #e0e0e0; }
+        .lyrics-text { font-size: 0.95em; line-height: 1.2; white-space: pre-wrap; color: #e0e0e0; }
         .lyrics-text .section-label { color: #ffce00; font-weight: bold; display: block; margin-top: 6px; }
         .no-lyrics { text-align: center; color: #bbb; font-style: italic; padding: 20px; }
 
@@ -816,8 +816,8 @@
             // 4. Supprimer lignes de marqueurs seules (sans texte après)
             text = text.replace(/^[\s]*(Verse|Chorus|Bridge|Refrain|Couplet|Outro|Intro|Hook|Pre-Chorus|Post-Chorus|Conclusão|Conclusion|Ponte|Refrão|Estrofe|Interlude|Solo|Tag|Vamp|Ad-lib|Break|Verset|Verso|Glória|Final)[\s\d]*[:\s]*$/gim, '');
 
-            // 5. Normaliser : exactement 1 ligne vide entre couplets
-            text = text.replace(/\n{2,}/g, '\n\n');
+            // 5. Normaliser : réduire espacement entre couplets (ligne simple au lieu de double)
+            text = text.replace(/\n{2,}/g, '\n');
 
             // 6. Supprimer lignes vides au début/fin
             return text.trim();
