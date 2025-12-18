@@ -438,7 +438,7 @@
         </div>
     </div>
 
-    <script src="/lang-shared.js"></script>
+    <script src="lang-shared.js"></script>
 
     <script src="/lyrics-data.js"></script>
     <script src="/lyrics-data-pt.js"></script>
@@ -476,6 +476,7 @@
     <script src="/sections-promesses.js"></script>
 
     <script>
+        // === INITIALISATION DE LA LANGUE (doit s'exécuter en premier) ===
         (function () {
             const VALID_LANGUAGES = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];
 
@@ -509,19 +510,21 @@
                 try { localStorage.setItem('BC_LANG', lang); } catch (e) {}
             }
 
+            // Lire la langue depuis l'URL en priorité
             const urlLang = getLangFromUrl();
             const baseLang = urlLang || getLangFromBC() || 'FR';
 
             window.currentLanguage = normalizeLang(baseLang) || 'FR';
             setLangToBC(window.currentLanguage);
 
-            if (urlLang && urlLang !== window.currentLanguage) {
+            // Mettre à jour l'URL si nécessaire
+            if (!urlLang || urlLang !== window.currentLanguage) {
                 const u = new URL(window.location.href);
                 u.searchParams.set('lang', window.currentLanguage);
                 window.history.replaceState({}, '', u.toString());
             }
 
-            console.log('[lecteur] Langue initialisée:', window.currentLanguage, '(urlLang=', urlLang, ')');
+            console.log('[lecteur] Langue initialisée depuis URL:', window.currentLanguage, '(param URL:', urlLang, ')');
         })();
     </script>
 
@@ -541,7 +544,8 @@
             KO: ["창세기","출애굽기","레위기","민수기","신명기","여호수아","사사기","룻기","사무엘상","사무엘하","열왕기상","열왕기하","역대상","역대하","에스라","느헤미야","에스더","욥기","시편","잠언","전도서","아가","이사야","예레미야","예레미야애가","에스겔","다니엘","호세아","요엘","아모스","오바댜","요나","미가","나훔","하박국","스바냐","학개","스가랴","말라기","마태복음","마가복음","누가복음","요한복음","사도행전","로마서","고린도전서","고린도후서","갈라디아서","에베소서","빌립보서","골로새서","데살로니가전서","데살로니가후서","디모데전서","디모데후서","디도서","빌레몬서","히브리서","야고보서","베드로전서","베드로후서","요한일서","요한이서","요한삼서","유다서","요한계시록"]
         };
 
-        const currentLanguage = (window.currentLanguage || 'FR').toUpperCase();
+        // Utiliser directement window.currentLanguage (initialisé au-dessus)
+        // NE PAS créer de variable locale qui pourrait être obsolète
 
         const books = [
             { num: "01", name: "Genese", chapters: 50, available: true },
@@ -629,12 +633,14 @@
         document.getElementById('chapters-count').textContent = totalChapters;
 
         function t(key) {
-            return (TRANSLATIONS[currentLanguage] && TRANSLATIONS[currentLanguage][key]) || (TRANSLATIONS.FR && TRANSLATIONS.FR[key]) || null;
+            const lang = window.currentLanguage || 'FR';
+            return (TRANSLATIONS[lang] && TRANSLATIONS[lang][key]) || (TRANSLATIONS.FR && TRANSLATIONS.FR[key]) || null;
         }
 
         function getBookDisplayName(bookNum) {
             const bookIndex = parseInt(bookNum, 10) - 1;
-            const arr = BOOK_NAMES[currentLanguage] || BOOK_NAMES.FR;
+            const lang = window.currentLanguage || 'FR';
+            const arr = BOOK_NAMES[lang] || BOOK_NAMES.FR;
             return arr[bookIndex] || (BOOK_NAMES.FR[bookIndex] || bookNum);
         }
 
@@ -680,7 +686,7 @@
                 return;
             }
 
-            const dataset = getBibleDatasetForLang(currentLanguage);
+            const dataset = getBibleDatasetForLang(window.currentLanguage || 'FR');
             if (!dataset) {
                 alert(t('readerBibleNotAvailableLang') || 'Recherche Bible non disponible dans cette langue');
                 return;
@@ -795,20 +801,37 @@
             else contentWrapper.classList.remove('active');
         }
 
+        function cleanLyrics(text) {
+            if (!text) return '';
+
+            // 1. Supprimer [STYLE] ou [ESTILO] et tout ce qui suit
+            text = text.replace(/\[(STYLE|ESTILO)\][\s\S]*/gi, '');
+
+            // 2. Supprimer TOUS les marqueurs entre crochets
+            text = text.replace(/\[.*?\]/gi, '');
+
+            // 3. Supprimer TOUS les marqueurs Markdown **...**
+            text = text.replace(/\*\*[^*]+\*\*/g, '');
+
+            // 4. Supprimer lignes de marqueurs seules (sans texte après)
+            text = text.replace(/^[\s]*(Verse|Chorus|Bridge|Refrain|Couplet|Outro|Intro|Hook|Pre-Chorus|Post-Chorus|Conclusão|Conclusion|Ponte|Refrão|Estrofe|Interlude|Solo|Tag|Vamp|Ad-lib|Break|Verset|Verso|Glória|Final)[\s\d]*[:\s]*$/gim, '');
+
+            // 5. Normaliser : exactement 1 ligne vide entre couplets
+            text = text.replace(/\n{2,}/g, '\n\n');
+
+            // 6. Supprimer lignes vides au début/fin
+            return text.trim();
+        }
+
         function updateLyrics() {
             const lyricsText = document.getElementById('lyricsText');
             const lyricsContainer = document.getElementById('lyricsContainer');
             const chapterStr = String(currentChapter);
 
-            const lyrics = getLyricsForCurrent(currentLanguage, currentBook, chapterStr);
+            const lyrics = getLyricsForCurrent(window.currentLanguage || 'FR', currentBook, chapterStr);
 
             if (lyrics) {
-                // Supprimer les marqueurs de sections : [Verse], [Chorus], **Couplet**, etc.
-                let cleanLyrics = String(lyrics)
-                    .replace(/\[([^\]]+)\]\s*/g, '')           // [Verse 1], [Chorus], etc.
-                    .replace(/\*\*[^*]+\*\*\s*/g, '')          // **Couplet 1:**, **Refrain**, etc.
-                    .replace(/^\s*\n/gm, '');                   // Lignes vides en trop
-                lyricsText.innerHTML = cleanLyrics;
+                lyricsText.innerHTML = cleanLyrics(String(lyrics));
             } else {
                 lyricsText.innerHTML =
                     '<div class="no-lyrics">' +
@@ -824,7 +847,7 @@
             const bibleContainer = document.getElementById('bibleContainer');
             const chapterStr = String(currentChapter);
 
-            const dataset = getBibleDatasetForLang(currentLanguage);
+            const dataset = getBibleDatasetForLang(window.currentLanguage || 'FR');
 
             if (dataset && dataset[currentBook] && dataset[currentBook][chapterStr]) {
                 const verses = dataset[currentBook][chapterStr];
@@ -878,7 +901,8 @@
             const chapterStr = String(chapter);
 
             let audioSource;
-            const langAudioVar = `audioUrls${currentLanguage}`;
+            const lang = window.currentLanguage || 'FR';
+            const langAudioVar = `audioUrls${lang}`;
 
             if (typeof window[langAudioVar] !== 'undefined') {
                 audioSource = window[langAudioVar];
@@ -891,18 +915,18 @@
             }
 
             if (!url) {
-                alert((t('readerAudioMissing') || 'MP3 introuvable') + ' : ' + currentLanguage + ' ' + currentBook + ' ' + chapterStr);
+                alert((t('readerAudioMissing') || 'MP3 introuvable') + ' : ' + lang + ' ' + currentBook + ' ' + chapterStr);
                 return;
             }
 
             const audio = document.getElementById('audio');
             audio.src = url;
 
-            
+
             audio.load();
             __BC_tryAutoPlay(audio);
 const bookName = getBookDisplayName(currentBook);
-            const chapterWord = (currentLanguage === 'PT') ? 'Cap.' : (t('readerChapterShort') || 'Ch.');
+            const chapterWord = (lang === 'PT') ? 'Cap.' : (t('readerChapterShort') || 'Ch.');
             let displayTitle = bookName + ' - ' + chapterWord + String(chapter).padStart(2, '0');
 
             if (typeof window.chapterTitles !== 'undefined' && window.chapterTitles && window.chapterTitles[currentBook] && window.chapterTitles[currentBook][chapterStr]) {
@@ -1003,12 +1027,14 @@ const bookName = getBookDisplayName(currentBook);
 
         window.goBackToSection = function() {
             if (returnUrl) {
-                window.location.href = returnUrl + (returnUrl.includes('?') ? '&' : '?') + 'lang=' + currentLanguage;
+                const lang = window.currentLanguage || 'FR';
+                window.location.href = returnUrl + (returnUrl.includes('?') ? '&' : '?') + 'lang=' + lang;
             }
         };
 
         function buildSectionUrl(book, chapter) {
-            let url = `lecteur.html?book=${book}&chapter=${chapter}&lang=${currentLanguage}`;
+            const lang = window.currentLanguage || 'FR';
+            let url = `lecteur.html?book=${book}&chapter=${chapter}&lang=${lang}`;
             if (returnUrl) url += `&return=${encodeURIComponent(returnUrl)}`;
             if (sectionParam) url += `&section=${sectionParam}`;
             return url;
@@ -1019,6 +1045,7 @@ const bookName = getBookDisplayName(currentBook);
 
             const backBtn = document.getElementById('sectionBackBtn');
             const isConfessions = returnUrl.toLowerCase().includes('confession');
+            const lang = window.currentLanguage || 'FR';
 
             const backLabels = isConfessions ? {
                 FR: '← Retour à la confession',
@@ -1036,7 +1063,7 @@ const bookName = getBookDisplayName(currentBook);
                 IT: '← Torna alle promesse'
             };
 
-            backBtn.textContent = backLabels[currentLanguage] || backLabels.FR;
+            backBtn.textContent = backLabels[lang] || backLabels.FR;
             backBtn.classList.add('visible');
         }
 
@@ -1045,10 +1072,11 @@ const bookName = getBookDisplayName(currentBook);
 
             if (!sectionParam || !window.PROMESSES_SECTIONS || !window.PROMESSES_SECTIONS[sectionParam]) return;
 
+            const lang = window.currentLanguage || 'FR';
             const chapters = window.PROMESSES_SECTIONS[sectionParam];
-            const labels = (window.PROMESSES_SECTION_LABELS && (window.PROMESSES_SECTION_LABELS[currentLanguage] || window.PROMESSES_SECTION_LABELS.FR)) || {};
+            const labels = (window.PROMESSES_SECTION_LABELS && (window.PROMESSES_SECTION_LABELS[lang] || window.PROMESSES_SECTION_LABELS.FR)) || {};
             const sectionLabel = labels[sectionParam] || sectionParam;
-            const psalmWord = labels.psalm || (currentLanguage === 'PT' ? 'Salmo' : 'Psaume');
+            const psalmWord = labels.psalm || (lang === 'PT' ? 'Salmo' : 'Psaume');
 
             const menuContainer = document.getElementById('sectionMenuContainer');
             const menuTitle = document.getElementById('sectionMenuTitle');
@@ -1060,7 +1088,7 @@ const bookName = getBookDisplayName(currentBook);
             chapters.forEach(ch => {
                 const chNum = parseInt(ch.chapter, 10);
                 const subtitle = window.PSALM_SUBTITLES && window.PSALM_SUBTITLES[chNum]
-                    ? (window.PSALM_SUBTITLES[chNum][currentLanguage] || window.PSALM_SUBTITLES[chNum].FR || '')
+                    ? (window.PSALM_SUBTITLES[chNum][lang] || window.PSALM_SUBTITLES[chNum].FR || '')
                     : '';
 
                 const isActive = ch.book === currentBook && String(ch.chapter) === String(currentChapter);
@@ -1177,24 +1205,37 @@ const bookName = getBookDisplayName(currentBook);
             }
         };
 
-        function applyTranslations(lang) {
-            if (!TRANSLATIONS[lang]) lang = 'FR';
+        function applyTranslations() {
+            const lang = window.currentLanguage || 'FR';
+            const trans = TRANSLATIONS[lang] || TRANSLATIONS.FR;
+
+            if (!trans) {
+                console.error('[lecteur] Traductions non disponibles pour la langue:', lang);
+                return;
+            }
 
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (TRANSLATIONS[lang][key]) el.textContent = TRANSLATIONS[lang][key];
+                if (trans[key]) el.textContent = trans[key];
             });
 
             document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
                 const key = el.getAttribute('data-i18n-placeholder');
-                if (TRANSLATIONS[lang][key]) el.placeholder = TRANSLATIONS[lang][key];
+                if (trans[key]) el.placeholder = trans[key];
             });
 
             renderBooks('old-testament', oldTestament);
             renderBooks('new-testament', newTestament);
+
+            console.log('[lecteur] Traductions appliquées pour la langue:', lang);
         }
 
-        applyTranslations(currentLanguage);
+        // Appliquer les traductions au chargement de la page
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', applyTranslations);
+        } else {
+            applyTranslations();
+        }
 
         
 

@@ -361,18 +361,31 @@
         document.getElementById('prev-ch').onclick = () => { if (currentChapter > 1) loadChapter(currentChapter - 1); };
         document.getElementById('next-ch').onclick = () => { if (currentChapter < currentBook.chapters) loadChapter(currentChapter + 1); };
 
-        // INITIALISATION LANGUE - DOIT être avant renderBooks()
+        // === INITIALISATION LANGUE (priorité: URL > localStorage > FR) ===
         (function(){
           const VALID_LANGUAGES = ['FR','EN','ES','PT','DE','IT','RU','AR','ZH','HI','TL','KO'];
           function normalizeLang(v){ if(!v) return null; const x=String(v).trim().toUpperCase(); return VALID_LANGUAGES.includes(x)?x:null; }
           function getLangFromUrl(){ const p=new URLSearchParams(window.location.search); return normalizeLang(p.get('lang')); }
           function getLangFromStorage(){ try{ return normalizeLang(localStorage.getItem('selectedLanguage')); }catch(e){} return null; }
+
+          // Lire la langue depuis l'URL en PRIORITÉ
           const urlLang = getLangFromUrl();
           const baseLang = urlLang || getLangFromStorage() || 'FR';
           window.currentLanguage = normalizeLang(baseLang) || 'FR';
+
           // Sauvegarder dans localStorage
           try{ localStorage.setItem('selectedLanguage', window.currentLanguage); }catch(e){}
-          console.log('[bible] Langue:', window.currentLanguage);
+
+          // Mettre à jour l'URL si nécessaire
+          if (!urlLang || urlLang !== window.currentLanguage) {
+              try {
+                  const url = new URL(window.location.href);
+                  url.searchParams.set('lang', window.currentLanguage);
+                  window.history.replaceState({}, '', url.toString());
+              } catch(e) {}
+          }
+
+          console.log('[bible] Langue initialisée depuis URL:', window.currentLanguage, '(param URL:', urlLang, ')');
         })();
 
         renderBooks();
@@ -397,6 +410,25 @@
     <!-- i18n Scripts -->
     <script src="translations.js"></script>
     <script src="i18n.js"></script>
+
+    <!-- Initialiser le système i18n après chargement des traductions -->
+    <script>
+        (function() {
+            // Attendre que translations.js et i18n.js soient chargés
+            if (typeof window.translations !== 'undefined' && typeof window.BibleI18n !== 'undefined') {
+                // Initialiser le système i18n
+                const i18nInstance = window.BibleI18n.init();
+                console.log('[bible] Système i18n initialisé pour la langue:', window.currentLanguage);
+
+                // Appliquer les traductions immédiatement
+                if (i18nInstance) {
+                    i18nInstance.applyTranslations(window.currentLanguage || 'FR');
+                }
+            } else {
+                console.error('[bible] Erreur: translations.js ou i18n.js non chargé');
+            }
+        })();
+    </script>
 
     <!-- BC_getBookName helper -->
     <script>
