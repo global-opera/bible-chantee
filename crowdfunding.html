@@ -471,40 +471,40 @@
 
         <!-- Donate Card -->
         <div class="card">
-            <h2><span class="icon">💝</span> Faire un don maintenant</h2>
-            
+            <h2><span class="icon">💝</span> <span data-i18n="donate-title">Faire un don maintenant</span></h2>
+
             <div class="center" style="margin-bottom: 1.5rem;">
                 <a href="https://gofund.me/65145a53b" target="_blank" class="gofundme-btn">
-                    🚀 Donner via GoFundMe
+                    <span data-i18n="donate-gofundme">🚀 Donner via GoFundMe</span>
                 </a>
             </div>
-            
-            <p class="divider">— ou par virement direct (sans frais de plateforme) —</p>
-            
+
+            <p class="divider" data-i18n="donate-or">— ou par virement direct (sans frais de plateforme) —</p>
+
             <div class="payment-grid">
                 <div class="payment-card">
                     <div class="icon">🏦</div>
-                    <h3>Virement bancaire</h3>
+                    <h3 data-i18n="donate-bank">Virement bancaire</h3>
                     <div class="value">CH96 0900 0000 1422 5706 6</div>
                     <div class="note">PostFinance Suisse<br>Stéphane Cassani</div>
-                    <button class="copy-btn" onclick="copyToClipboard('CH9609000000142257066', 'IBAN copié !')">📋 Copier IBAN</button>
+                    <button class="copy-btn" onclick="copyToClipboard('CH9609000000142257066', getTranslation('donate-iban-copied'))">📋 <span data-i18n="donate-copy-iban">Copier IBAN</span></button>
                 </div>
 
                 <div class="payment-card">
                     <div class="icon">📱</div>
                     <h3>Twint</h3>
                     <div class="value">+41 78 212 53 63</div>
-                    <div class="note">Suisse uniquement<br>Scannez ou ajoutez le numéro</div>
-                    <button class="copy-btn" onclick="copyToClipboard('+41782125363', 'Numéro copié !')">📋 Copier numéro</button>
+                    <div class="note" data-i18n="donate-twint-note">Suisse uniquement<br>Scannez ou ajoutez le numéro</div>
+                    <button class="copy-btn" onclick="copyToClipboard('+41782125363', getTranslation('donate-number-copied'))">📋 <span data-i18n="donate-copy-number">Copier numéro</span></button>
                 </div>
 
                 <div class="payment-card">
                     <div class="icon">💳</div>
                     <h3>PayPal</h3>
                     <div class="value">scassani@gmail.com</div>
-                    <div class="note">Paiement mondial sécurisé</div>
-                    <a href="https://www.paypal.me/stephanecassani1" target="_blank" class="payment-btn paypal">💳 Payer avec PayPal</a>
-                    <button class="copy-btn" onclick="copyToClipboard('scassani@gmail.com', 'Email copié !')">📋 Copier email</button>
+                    <div class="note" data-i18n="donate-paypal-note">Paiement mondial sécurisé</div>
+                    <a href="https://www.paypal.me/stephanecassani1" target="_blank" class="payment-btn paypal" data-i18n="donate-paypal-btn">💳 Payer avec PayPal</a>
+                    <button class="copy-btn" onclick="copyToClipboard('scassani@gmail.com', getTranslation('donate-email-copied'))">📋 <span data-i18n="donate-copy-email">Copier email</span></button>
                 </div>
             </div>
             
@@ -591,9 +591,118 @@
     <div class="toast" id="toast"></div>
 
     <script>
+        // ===== I18N SYSTEM =====
+        const translations = {
+            fr: {
+                'donate-title': 'Faire un don maintenant',
+                'donate-gofundme': '🚀 Donner via GoFundMe',
+                'donate-or': '— ou par virement direct (sans frais de plateforme) —',
+                'donate-bank': 'Virement bancaire',
+                'donate-copy-iban': 'Copier IBAN',
+                'donate-iban-copied': 'IBAN copié !',
+                'donate-twint-note': 'Suisse uniquement<br>Scannez ou ajoutez le numéro',
+                'donate-copy-number': 'Copier numéro',
+                'donate-number-copied': 'Numéro copié !',
+                'donate-paypal-note': 'Paiement mondial sécurisé',
+                'donate-paypal-btn': '💳 Payer avec PayPal',
+                'donate-copy-email': 'Copier email',
+                'donate-email-copied': 'Email copié !'
+            },
+            en: {
+                'donate-title': 'Make a donation now',
+                'donate-gofundme': '🚀 Donate via GoFundMe',
+                'donate-or': '— or by direct transfer (no platform fees) —',
+                'donate-bank': 'Bank transfer',
+                'donate-copy-iban': 'Copy IBAN',
+                'donate-iban-copied': 'IBAN copied!',
+                'donate-twint-note': 'Switzerland only<br>Scan or add number',
+                'donate-copy-number': 'Copy number',
+                'donate-number-copied': 'Number copied!',
+                'donate-paypal-note': 'Secure worldwide payment',
+                'donate-paypal-btn': '💳 Pay with PayPal',
+                'donate-copy-email': 'Copy email',
+                'donate-email-copied': 'Email copied!'
+            },
+            pt: {
+                'donate-title': 'Fazer uma doação agora',
+                'donate-gofundme': '🚀 Doar via GoFundMe',
+                'donate-or': '— ou por transferência direta (sem taxas de plataforma) —',
+                'donate-bank': 'Transferência bancária',
+                'donate-copy-iban': 'Copiar IBAN',
+                'donate-iban-copied': 'IBAN copiado!',
+                'donate-twint-note': 'Somente Suíça<br>Escaneie ou adicione o número',
+                'donate-copy-number': 'Copiar número',
+                'donate-number-copied': 'Número copiado!',
+                'donate-paypal-note': 'Pagamento seguro mundial',
+                'donate-paypal-btn': '💳 Pagar com PayPal',
+                'donate-copy-email': 'Copiar email',
+                'donate-email-copied': 'Email copiado!'
+            }
+        };
+
+        let currentLang = 'fr';
+
+        // Detect language from URL, referrer, or localStorage
+        function detectLanguage() {
+            // 1. Check URL parameter (?lang=pt)
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            if (urlLang && translations[urlLang]) {
+                return urlLang;
+            }
+
+            // 2. Check referrer (if coming from /pt/, /en/, /fr/)
+            const referrer = document.referrer;
+            if (referrer.includes('/pt/')) return 'pt';
+            if (referrer.includes('/en/')) return 'en';
+            if (referrer.includes('/fr/')) return 'fr';
+
+            // 3. Check localStorage (from freemium system)
+            try {
+                if (localStorage.getItem('bibleFree_pt')) return 'pt';
+                if (localStorage.getItem('bibleFree_en')) return 'en';
+                if (localStorage.getItem('bibleFree_fr')) return 'fr';
+            } catch (e) {}
+
+            // 4. Default to French
+            return 'fr';
+        }
+
+        // Translate the page
+        function translatePage(lang) {
+            currentLang = lang;
+            const t = translations[lang];
+            if (!t) return;
+
+            // Translate all elements with data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) {
+                    el.innerHTML = t[key];
+                }
+            });
+
+            // Update page lang attribute
+            document.documentElement.lang = lang;
+
+            console.log(`✅ Crowdfunding page translated to: ${lang.toUpperCase()}`);
+        }
+
+        // Get translation for dynamic use
+        function getTranslation(key) {
+            return translations[currentLang][key] || key;
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const detectedLang = detectLanguage();
+            translatePage(detectedLang);
+        });
+
+        // ===== CLIPBOARD FUNCTIONS =====
         function copyToClipboard(text, message) {
             navigator.clipboard.writeText(text).then(() => {
-                showToast(message || 'Copié !');
+                showToast(message || getTranslation('donate-iban-copied'));
             }).catch(() => {
                 // Fallback pour navigateurs plus anciens
                 const textarea = document.createElement('textarea');
@@ -602,7 +711,7 @@
                 textarea.select();
                 document.execCommand('copy');
                 document.body.removeChild(textarea);
-                showToast(message || 'Copié !');
+                showToast(message || getTranslation('donate-iban-copied'));
             });
         }
 
