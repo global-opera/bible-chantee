@@ -67,10 +67,17 @@
             text-decoration: none;
             font-size: 0.95rem;
             transition: color 0.3s;
+            display: inline-block;
+            padding: 0.25rem 0;
         }
 
-        .nav a:hover, .nav a.active {
+        .nav a:hover {
             color: var(--text-primary);
+        }
+
+        .nav a.active {
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--accent-gold);
         }
 
         .container {

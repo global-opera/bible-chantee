@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title data-i18n="contactPageTitle">Contact - Bible Chantée</title>
+  <meta name="description" content="Contactez l'équipe de Bible Chantée pour toute question, suggestion ou partenariat.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="40" opacity="0.08" fill="%23ffffff">&#9835;</text></svg>');
+      background-size: 80px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 3em;
+      margin-bottom: 15px;
+      position: relative;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 1.25em;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.95;
+      position: relative;
+    }
+
+    nav {
+      background: #020617;
+      text-align: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    nav a {
+      color: #93c5fd;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95em;
+      transition: color 0.3s;
+      display: inline-block;
+    }
+
+    nav a:hover { color: #ffffff; }
+    nav a.active { color: #ffffff; border-bottom: 2px solid #93c5fd; }
+
+    main {
+      padding: 50px 20px 70px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .bloc {
+      background: linear-gradient(145deg, #111827, #1e293b);
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.4);
+      border: 1px solid rgba(147, 197, 253, 0.1);
+    }
+
+    h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: #93c5fd;
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-size: 1.8em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2 i { font-size: 0.9em; }
+
+    p { margin-bottom: 15px; color: #cbd5e1; font-size: 1.05em; }
+
+    .contact-methods {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .contact-card {
+      background: rgba(147, 197, 253, 0.05);
+      border: 1px solid rgba(147, 197, 253, 0.2);
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .contact-card:hover {
+      background: rgba(147, 197, 253, 0.1);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(147, 197, 253, 0.2);
+    }
+
+    .contact-card i {
+      font-size: 3em;
+      color: #93c5fd;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .contact-card h3 {
+      color: #93c5fd;
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
+
+    .contact-card a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .contact-card a:hover {
+      color: #93c5fd;
+    }
+
+    .contact-card p {
+      margin-bottom: 0;
+      font-size: 0.95em;
+    }
+
+    .info-box {
+      background: rgba(37, 99, 235, 0.1);
+      border-left: 4px solid #93c5fd;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 25px;
+    }
+
+    .info-box p { margin-bottom: 10px; }
+    .info-box ul { list-style-position: inside; padding-left: 10px; }
+    .info-box li { margin-bottom: 8px; color: #cbd5e1; }
+
+    footer {
+      background: #020617;
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 50px;
+      border-top: 1px solid rgba(147, 197, 253, 0.1);
+    }
+
+    footer p { color: #94a3b8; font-size: 0.9em; margin-bottom: 0; }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2em; }
+      header p { font-size: 1em; }
+      nav a { display: inline-block; margin: 5px 10px; }
+      .contact-methods { grid-template-columns: 1fr; }
+      .bloc { padding: 25px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 data-i18n="siteName">Bible Chantée</h1>
+  <p data-i18n="contactTagline">Contactez-nous</p>
+</header>
+
+<nav>
+  <a href="index.html" data-i18n="navHome">Le Projet</a>
+  <a href="crowdfunding.html" data-i18n="navCrowdfunding">Soutenir</a>
+  <a href="about.html" data-i18n="navAbout">À propos</a>
+  <a href="contact.html" class="active" data-i18n="navContact">Contact</a>
+</nav>
+
+<main>
+  <div class="bloc">
+    <h2><i class="fas fa-envelope"></i> <span data-i18n="contactMainTitle">Nous contacter</span></h2>
+    <p data-i18n="contactIntro">
+      Vous avez une question, une suggestion ou souhaitez établir un partenariat ?
+      N'hésitez pas à nous contacter par l'un des moyens ci-dessous.
+    </p>
+
+    <div class="contact-methods">
+      <div class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <h3 data-i18n="contactEmailTitle">Email</h3>
+        <p>
+          <a href="mailto:contact@biblechantee.com">contact@biblechantee.com</a>
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <i class="fas fa-globe"></i>
+        <h3 data-i18n="contactWebsiteTitle">Site Web</h3>
+        <p>
+          <a href="https://biblechantee.com" target="_blank">biblechantee.com</a>
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <i class="fab fa-github"></i>
+        <h3 data-i18n="contactGithubTitle">GitHub</h3>
+        <p>
+          <a href="https://github.com/biblechantee" target="_blank">@biblechantee</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bloc">
+    <h2><i class="fas fa-question-circle"></i> <span data-i18n="contactReasonsTitle">Raisons de nous contacter</span></h2>
+    <div class="info-box">
+      <ul>
+        <li data-i18n="contactReason1"><strong>Questions générales</strong> sur le projet Bible Chantée</li>
+        <li data-i18n="contactReason2"><strong>Suggestions</strong> d'amélioration ou de nouvelles fonctionnalités</li>
+        <li data-i18n="contactReason3"><strong>Partenariats</strong> avec des églises, organisations ou créateurs</li>
+        <li data-i18n="contactReason4"><strong>Demandes de licence</strong> pour usage commercial</li>
+        <li data-i18n="contactReason5"><strong>Support technique</strong> pour l'utilisation des musiques</li>
+        <li data-i18n="contactReason6"><strong>Traductions</strong> dans d'autres langues</li>
+        <li data-i18n="contactReason7"><strong>Dons et soutien</strong> financier au projet</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bloc">
+    <h2><i class="fas fa-clock"></i> <span data-i18n="contactResponseTitle">Temps de réponse</span></h2>
+    <p data-i18n="contactResponseText">
+      Nous nous efforçons de répondre à tous les messages dans un délai de <strong>48-72 heures</strong>.
+      Si votre demande est urgente, veuillez le mentionner dans l'objet de votre email.
+    </p>
+    <div class="info-box">
+      <p data-i18n="contactLanguages"><strong>Langues :</strong> Français, Anglais, Portugais</p>
+    </div>
+  </div>
+
+  <div class="bloc">
+    <h2><i class="fas fa-heart"></i> <span data-i18n="contactSupportTitle">Soutenir le projet</span></h2>
+    <p data-i18n="contactSupportText">
+      Bible Chantée est un projet gratuit et ouvert. Si vous souhaitez nous soutenir financièrement,
+      vous pouvez faire un don via notre page de financement participatif :
+    </p>
+    <div style="text-align: center; margin-top: 25px;">
+      <a href="crowdfunding.html" style="
+        display: inline-block;
+        padding: 15px 40px;
+        background: linear-gradient(135deg, #2563eb, #1e3a8a);
+        color: white;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 1.1em;
+        transition: all 0.3s;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+      " data-i18n="contactDonateButton">
+        💝 Faire un don
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p data-i18n="contactFooterCopyright">&copy; 2024-2025 Bible Chantée - Tous droits réservés</p>
+</footer>
+
+<!-- Scripts langue et traductions - ARCHITECTURE SIMPLE -->
+<script src="lang-shared.js"></script>
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+
+</body>
+</html>
