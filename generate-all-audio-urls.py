@@ -12,7 +12,7 @@ from collections import defaultdict
 SCRIPT_DIR = Path(__file__).parent
 SOURCE_DIR = Path("G:/Mon Drive/01 BibleChantee/Suno_Output")
 OUTPUT_DIR = SCRIPT_DIR
-ARCHIVE_BASE = "https://archive.org/download/bible-chantee-{lang}-v2"
+ARCHIVE_BASE = "https://archive.org/download/bible-chantee-{lang}"
 
 # 11 target languages + codes
 LANGUAGES = {
@@ -59,7 +59,7 @@ def scan_language_folder(lang_path):
 
                 # Construct Archive.org URL
                 archive_filename = f"{book_code}_{chapter}_{lang_code}.mp3"
-                url = f"{ARCHIVE_BASE.format(lang=lang_code.lower())}/{archive_filename}"
+                url = f"{ARCHIVE_BASE.format(lang=lang_code.lower())}/{book_code}/{archive_filename}"
 
                 books[book_num][chapter_key] = url
                 total_files += 1
