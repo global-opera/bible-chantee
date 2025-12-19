@@ -3,6 +3,12 @@
 
 [[redirects]]
   from = "/"
-  to = "/index.html"
+  to = "/demo.html"
   status = 200
   conditions = {Host = ["sungbible.world"]}
+
+[[redirects]]
+  from = "/"
+  to = "/lecteur.html"
+  status = 200
+  conditions = {Host = ["biblechantee.com"]}
