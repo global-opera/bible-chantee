@@ -10,7 +10,7 @@ from collections import defaultdict
 
 # ========== CONFIGURATION ==========
 SCRIPT_DIR = Path(__file__).parent
-SOURCE_DIR = SCRIPT_DIR / "Suno_Output_V2"
+SOURCE_DIR = Path("G:/Mon Drive/01 BibleChantee/Suno_Output")
 OUTPUT_DIR = SCRIPT_DIR
 ARCHIVE_BASE = "https://archive.org/download/bible-chantee-{lang}-v2"
 
