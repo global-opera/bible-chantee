@@ -816,8 +816,8 @@
             // 4. Supprimer lignes de marqueurs seules (sans texte après)
             text = text.replace(/^[\s]*(Verse|Chorus|Bridge|Refrain|Couplet|Outro|Intro|Hook|Pre-Chorus|Post-Chorus|Conclusão|Conclusion|Ponte|Refrão|Estrofe|Interlude|Solo|Tag|Vamp|Ad-lib|Break|Verset|Verso|Glória|Final)[\s\d]*[:\s]*$/gim, '');
 
-            // 5. Normaliser : réduire espacement entre couplets (ligne simple au lieu de double)
-            text = text.replace(/\n{2,}/g, '\n');
+            // 5. Normaliser : exactement 1 ligne vide entre couplets
+            text = text.replace(/\n{2,}/g, '\n\n');
 
             // 6. Supprimer lignes vides au début/fin
             return text.trim();
