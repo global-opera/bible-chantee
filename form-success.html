@@ -1,81 +1,60 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription réussie - Bible Chantée</title>
-    <style>
-        :root {
-            --bg-dark: #0a1628;
-            --bg-card: #0f2744;
-            --text-primary: #ffffff;
-            --text-secondary: rgba(255, 255, 255, 0.7);
-            --accent-gold: #d4af37;
-            --success-green: #22c55e;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background: linear-gradient(180deg, #1a4a7a 0%, #0a1628 100%);
-            min-height: 100vh;
-            color: var(--text-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
-        .success-container {
-            background: var(--bg-card);
-            border-radius: 16px;
-            padding: 3rem;
-            max-width: 600px;
-            text-align: center;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-        }
-        .success-icon {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-        }
-        h1 {
-            color: var(--success-green);
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        p {
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--accent-gold);
-            color: #000;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: transform 0.3s;
-        }
-        .btn:hover {
-            transform: scale(1.05);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank you! - Sung Bible</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #1a2332;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .container {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      color: #d4a84b;
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    p {
+      color: #ffffff;
+      font-size: 1.3em;
+      margin: 15px 0;
+    }
+    .sub {
+      color: #888888;
+      font-size: 1em;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 15px 50px;
+      background: #d4a84b;
+      color: #1a2332;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #b8943f;
+    }
+  </style>
 </head>
 <body>
-    <div class="success-container">
-        <div class="success-icon">✅</div>
-        <h1>Thank you!</h1>
-        <p>
-            We have received your submission successfully.
-        </p>
-        <p>
-            <strong>Your message has been received.</strong>
-        </p>
-        <a href="/demo.html" class="btn">Back to demo page</a>
-        <br><br>
-        <a href="/" class="btn" style="background: transparent; border: 2px solid var(--accent-gold); color: var(--accent-gold);">Back to homepage</a>
-    </div>
+  <div class="container">
+    <h1>✓ Thank you!</h1>
+    <p>You have been subscribed successfully.</p>
+    <p class="sub">We'll notify you when new content is available.</p>
+    <a href="/" class="btn">Back to Home</a>
+  </div>
 </body>
 </html>
