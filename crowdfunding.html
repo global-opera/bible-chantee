@@ -664,8 +664,11 @@
             if (referrer.includes('/en/')) return 'en';
             if (referrer.includes('/fr/')) return 'fr';
 
-            // 3. Check localStorage (from freemium system)
+            // 3. Check localStorage (from demo page or freemium system)
             try {
+                const savedLang = localStorage.getItem('sungbible_lang');
+                if (savedLang && translations[savedLang]) return savedLang;
+
                 if (localStorage.getItem('bibleFree_pt')) return 'pt';
                 if (localStorage.getItem('bibleFree_en')) return 'en';
                 if (localStorage.getItem('bibleFree_fr')) return 'fr';

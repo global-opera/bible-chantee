@@ -828,6 +828,15 @@
         function setLang(lang) {
             if (lang === 'ES') return;
             currentLang = lang;
+
+            // Save language to localStorage
+            localStorage.setItem('sungbible_lang', lang.toLowerCase());
+
+            // Update crowdfunding links with language parameter
+            document.querySelectorAll('a[href*="crowdfunding.html"]').forEach(link => {
+                link.href = `crowdfunding.html?lang=${lang.toLowerCase()}`;
+            });
+
             document.querySelectorAll('.lang-btn').forEach((btn, i) => {
                 btn.classList.remove('active');
                 if (btn.textContent.includes(lang) || (lang === 'PT' && btn.textContent.includes('BR'))) {
@@ -1088,6 +1097,11 @@
         // Forms now use native Netlify Forms submission
         // No JavaScript handling needed - forms submit directly to Netlify
         document.addEventListener('DOMContentLoaded', function() {
+
+            // Initialize crowdfunding links with default language
+            document.querySelectorAll('a[href*="crowdfunding.html"]').forEach(link => {
+                link.href = `crowdfunding.html?lang=${currentLang.toLowerCase()}`;
+            });
 
             // Track review button clicks
             const reviewLink = document.getElementById('review-link');
