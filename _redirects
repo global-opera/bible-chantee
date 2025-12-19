@@ -1,1 +1,2 @@
-https://sungbible.world/ /demo.html 200!
+# Redirect only root to demo on sungbible.world
+/ /demo.html 200
