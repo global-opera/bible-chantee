@@ -1,34 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" id="html-root">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thank you - Sung Bible</title>
+  <title>Merci - Bible Chantée</title>
   <style>
     body{background:#1a2332;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:sans-serif;margin:0}
     .container{text-align:center;padding:40px}
-    h1{color:#d4a84b;font-size:2.5em}
+    h1{color:#d4a84b;font-size:2.5em;margin-bottom:20px}
     p{color:#fff;font-size:1.2em;margin:20px 0}
-    .sub{color:#aaa}
-    a{display:inline-block;margin-top:30px;padding:15px 40px;background:#d4a84b;color:#1a2332;text-decoration:none;border-radius:25px;font-weight:bold}
+    .sub{color:#aaa;font-size:1em}
+    a{display:inline-block;margin-top:30px;padding:15px 40px;background:#d4a84b;color:#1a2332;text-decoration:none;border-radius:25px;font-weight:bold;transition:transform 0.2s}
+    a:hover{transform:scale(1.05)}
+    .emoji{font-size:3em;margin-bottom:20px}
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Thank you!</h1>
-    <p>You have been subscribed successfully.</p>
-    <p class="sub">We will notify you when new content is available.</p>
+    <div class="emoji">🎵</div>
+    <h1 id="title">Merci !</h1>
+    <p id="message">Vous avez été inscrit avec succès.</p>
+    <p class="sub" id="submessage">Nous vous informerons lorsque du nouveau contenu sera disponible.</p>
     <a href="/lecteur.html" id="access-link">Accéder au site (100 crédits gratuits)</a>
   </div>
+
   <script>
-    // Read selected language from localStorage and add to link
+    // Traductions pour toutes les langues
+    const TRANSLATIONS = {
+      fr: {
+        lang: 'fr',
+        htmlLang: 'fr',
+        title: 'Merci !',
+        message: 'Vous avez été inscrit avec succès.',
+        submessage: 'Nous vous informerons lorsque du nouveau contenu sera disponible.',
+        buttonText: 'Accéder au site (100 crédits gratuits)',
+        pageTitle: 'Merci - Bible Chantée'
+      },
+      en: {
+        lang: 'en',
+        htmlLang: 'en',
+        title: 'Thank you!',
+        message: 'You have been subscribed successfully.',
+        submessage: 'We will notify you when new content is available.',
+        buttonText: 'Access the site (100 free credits)',
+        pageTitle: 'Thank you - Sung Bible'
+      },
+      pt: {
+        lang: 'pt',
+        htmlLang: 'pt',
+        title: 'Obrigado!',
+        message: 'Você foi inscrito com sucesso.',
+        submessage: 'Notificaremos você quando novo conteúdo estiver disponível.',
+        buttonText: 'Acessar o site (100 créditos grátis)',
+        pageTitle: 'Obrigado - Bíblia Cantada'
+      },
+      es: {
+        lang: 'es',
+        htmlLang: 'es',
+        title: '¡Gracias!',
+        message: 'Te has suscrito exitosamente.',
+        submessage: 'Te notificaremos cuando haya nuevo contenido disponible.',
+        buttonText: 'Acceder al sitio (100 créditos gratis)',
+        pageTitle: 'Gracias - Biblia Cantada'
+      },
+      de: {
+        lang: 'de',
+        htmlLang: 'de',
+        title: 'Vielen Dank!',
+        message: 'Sie wurden erfolgreich angemeldet.',
+        submessage: 'Wir werden Sie benachrichtigen, wenn neue Inhalte verfügbar sind.',
+        buttonText: 'Zur Website (100 kostenlose Credits)',
+        pageTitle: 'Danke - Gesungene Bibel'
+      },
+      it: {
+        lang: 'it',
+        htmlLang: 'it',
+        title: 'Grazie!',
+        message: 'Ti sei iscritto con successo.',
+        submessage: 'Ti informeremo quando saranno disponibili nuovi contenuti.',
+        buttonText: 'Accedi al sito (100 crediti gratuiti)',
+        pageTitle: 'Grazie - Bibbia Cantata'
+      }
+    };
+
+    // Lire la langue depuis localStorage (définie lors de l'inscription)
     (function() {
-      const lang = localStorage.getItem('sungbible_lang') || 'fr';
+      const storedLang = localStorage.getItem('sungbible_lang') || 'fr';
+      const lang = storedLang.toLowerCase();
+
+      // Utiliser la traduction correspondante (fallback sur FR si langue inconnue)
+      const t = TRANSLATIONS[lang] || TRANSLATIONS.fr;
+
+      // Mettre à jour tous les éléments de la page
+      document.getElementById('html-root').setAttribute('lang', t.htmlLang);
+      document.title = t.pageTitle;
+      document.getElementById('title').textContent = t.title;
+      document.getElementById('message').textContent = t.message;
+      document.getElementById('submessage').textContent = t.submessage;
+
+      // Mettre à jour le lien avec la langue et le texte traduit
       const link = document.getElementById('access-link');
       if (link) {
-        link.href = `/lecteur.html?lang=${lang}`;
+        link.href = `/lecteur.html?lang=${t.lang}`;
+        link.textContent = t.buttonText;
       }
+
+      console.log(`✅ Thank you page displayed in: ${t.lang.toUpperCase()}`);
+      console.log(`📍 Redirect link: /lecteur.html?lang=${t.lang}`);
     })();
+
+    // Auto-redirect après 5 secondes (optionnel)
+    setTimeout(function() {
+      const link = document.getElementById('access-link');
+      if (link && link.href) {
+        console.log('🔄 Auto-redirecting to lecteur...');
+        window.location.href = link.href;
+      }
+    }, 5000);
   </script>
 </body>
 </html>
