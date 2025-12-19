@@ -485,40 +485,8 @@
     if (typeof chapterTitles !== 'undefined' && !window.chapterTitles) window.chapterTitles = chapterTitles;
     </script>
     <script src="/bible-data.js"></script>
-    <!-- Fix: Expose bible data to window -->
-    <script>
-    if (typeof bibleData !== 'undefined' && !window.bibleData) window.bibleData = bibleData;
-    </script>
-
-    <!-- Multi-language Bible data -->
-    <script src="/bible-data-en.js"></script>
-    <script>
-    if (typeof bibleDataEN !== 'undefined' && !window.bibleDataEN) window.bibleDataEN = bibleDataEN;
-    </script>
-
-    <script src="/bible-data-pt.js"></script>
-    <script>
-    if (typeof bibleDataPT !== 'undefined' && !window.bibleDataPT) window.bibleDataPT = bibleDataPT;
-    </script>
 
     <script src="/sections-promesses.js"></script>
-
-    <script>
-        // === VERIFICATION INSCRIPTION (doit s'exécuter avant tout) ===
-        (function() {
-            const userEmail = localStorage.getItem('sungbible_email');
-            const userLang = localStorage.getItem('sungbible_lang');
-
-            // Si pas d'email enregistré, rediriger vers la page d'accueil
-            if (!userEmail) {
-                console.warn('⚠️ No signup detected, redirecting to homepage...');
-                window.location.href = '/';
-                return;
-            }
-
-            console.log(`✅ User signed up: ${userEmail} (${(userLang || 'fr').toUpperCase()})`);
-        })();
-    </script>
 
     <script>
         // === INITIALISATION DE LA LANGUE (doit s'exécuter en premier) ===
