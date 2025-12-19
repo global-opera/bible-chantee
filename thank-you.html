@@ -18,7 +18,17 @@
     <h1>Thank you!</h1>
     <p>You have been subscribed successfully.</p>
     <p class="sub">We will notify you when new content is available.</p>
-    <a href="/lecteur.html">Accéder au site (100 crédits gratuits)</a>
+    <a href="/lecteur.html" id="access-link">Accéder au site (100 crédits gratuits)</a>
   </div>
+  <script>
+    // Read selected language from localStorage and add to link
+    (function() {
+      const lang = localStorage.getItem('sungbible_lang') || 'fr';
+      const link = document.getElementById('access-link');
+      if (link) {
+        link.href = `/lecteur.html?lang=${lang}`;
+      }
+    })();
+  </script>
 </body>
 </html>

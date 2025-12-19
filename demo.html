@@ -1098,6 +1098,18 @@
         // No JavaScript handling needed - forms submit directly to Netlify
         document.addEventListener('DOMContentLoaded', function() {
 
+            // Store selected language before form submission
+            const subscribeForm = document.querySelector('form[name="subscribe"]');
+            if (subscribeForm) {
+                subscribeForm.addEventListener('submit', function(e) {
+                    const languageSelect = document.getElementById('language-select');
+                    if (languageSelect && languageSelect.value) {
+                        localStorage.setItem('sungbible_lang', languageSelect.value.toLowerCase());
+                    }
+                    // Let the form submit naturally to Netlify
+                });
+            }
+
             // Initialize crowdfunding links with default language
             document.querySelectorAll('a[href*="crowdfunding.html"]').forEach(link => {
                 link.href = `crowdfunding.html?lang=${currentLang.toLowerCase()}`;
