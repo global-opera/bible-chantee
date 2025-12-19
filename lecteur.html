@@ -945,8 +945,19 @@ const bookName = getBookDisplayName(currentBook);
             const chapterWord = (lang === 'PT') ? 'Cap.' : (t('readerChapterShort') || 'Ch.');
             let displayTitle = bookName + ' - ' + chapterWord + String(chapter).padStart(2, '0');
 
-            if (typeof window.chapterTitles !== 'undefined' && window.chapterTitles && window.chapterTitles[currentBook] && window.chapterTitles[currentBook][chapterStr]) {
-                displayTitle += ' - ' + window.chapterTitles[currentBook][chapterStr];
+            // Titres multilingues EN/PT/FR
+            const bookNum = currentBook.slice(0, 2);
+            const chapNum = Number(chapterStr);
+            let chTitle = null;
+            if (window.currentLanguage === 'EN' && window.chapterTitlesEN && window.chapterTitlesEN[bookNum] && window.chapterTitlesEN[bookNum][chapNum]) {
+                chTitle = window.chapterTitlesEN[bookNum][chapNum];
+            } else if (window.currentLanguage === 'PT' && window.chapterTitlesPT && window.chapterTitlesPT[bookNum] && window.chapterTitlesPT[bookNum][chapNum]) {
+                chTitle = window.chapterTitlesPT[bookNum][chapNum];
+            } else if (window.chapterTitles && window.chapterTitles[currentBook] && window.chapterTitles[currentBook][chapterStr]) {
+                chTitle = window.chapterTitles[currentBook][chapterStr];
+            }
+            if (chTitle) {
+                displayTitle += ' - ' + chTitle;
             }
 
             document.getElementById('player-title').textContent = displayTitle;
@@ -1311,8 +1322,12 @@ renderBooks('old-testament', oldTestament);
         }
     </script>
     <script src="/credits-system.js"></script>
+<script src="chapter-titles-en.js"></script>
+<script src="chapter-titles-pt.js"></script>
 </body>
 </html>
+
+
 
 
 
