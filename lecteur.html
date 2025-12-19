@@ -504,6 +504,23 @@
     <script src="/sections-promesses.js"></script>
 
     <script>
+        // === VERIFICATION INSCRIPTION (doit s'exécuter avant tout) ===
+        (function() {
+            const userEmail = localStorage.getItem('sungbible_email');
+            const userLang = localStorage.getItem('sungbible_lang');
+
+            // Si pas d'email enregistré, rediriger vers la page d'accueil
+            if (!userEmail) {
+                console.warn('⚠️ No signup detected, redirecting to homepage...');
+                window.location.href = '/';
+                return;
+            }
+
+            console.log(`✅ User signed up: ${userEmail} (${(userLang || 'fr').toUpperCase()})`);
+        })();
+    </script>
+
+    <script>
         // === INITIALISATION DE LA LANGUE (doit s'exécuter en premier) ===
         (function () {
             const VALID_LANGUAGES = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];

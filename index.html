@@ -3,1156 +3,494 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible Chantee - Decouvrez le projet</title>
-
-    <!-- Google Analytics 4 -->
-    <!-- TODO: Remplacer 'G-XXXXXXXXXX' par votre vrai Measurement ID -->
-    <!-- Voir le fichier GOOGLE_ANALYTICS_SETUP.md pour obtenir votre ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        // Configuration de base avec tracking géographique
-        gtag('config', 'G-XXXXXXXXXX', {
-            'send_page_view': true,
-            'anonymize_ip': false  // Pour voir les villes exactes
-        });
-    </script>
+    <title>Sung Bible - La Bible entière chantée en 5 langues</title>
+    <meta name="description" content="Découvrez toute la Bible en chansons - 1189 chapitres en français, anglais, portugais. 100 chapitres gratuits, puis $0.99 pour tout débloquer.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="lyrics-data.js"></script>
-    <script src="lyrics-data-pt.js"></script>
-    <script src="lyrics-data-en.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --bg-dark: #0a1628;
-            --bg-card: #0f2744;
+            --bg-primary: #0a1628;
+            --bg-secondary: #0f2744;
+            --bg-card: #1a3a5f;
             --text-primary: #ffffff;
-            --text-secondary: rgba(255, 255, 255, 0.7);
+            --text-secondary: rgba(255, 255, 255, 0.8);
+            --text-muted: rgba(255, 255, 255, 0.6);
             --accent-gold: #d4af37;
             --accent-blue: #4a90d9;
             --success-green: #22c55e;
-            --warning-orange: #f59e0b;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(180deg, #1a4a7a 0%, #0a1628 100%);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
             min-height: 100vh;
-            color: var(--text-primary);
         }
-        .header {
-            text-align: center;
-            padding: 2rem;
-            background: linear-gradient(180deg, #2a5a8a 0%, #1a4a7a 100%);
-        }
-        .header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: #a8c8e8;
-            margin-bottom: 0.5rem;
-        }
-        .header .subtitle {
-            font-size: 1.2rem;
-            color: var(--accent-gold);
-        }
-        .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
-        .lang-selector {
+
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
             display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-        .lang-btn {
-            padding: 0.8rem 1.5rem;
-            border: 2px solid var(--accent-gold);
-            background: transparent;
-            color: var(--text-primary);
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: all 0.3s;
-        }
-        .lang-btn:hover, .lang-btn.active {
-            background: var(--accent-gold);
-            color: #000;
-        }
-        .lang-btn.disabled {
-            border-color: #555;
-            color: #555;
-            cursor: not-allowed;
-        }
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-            text-align: center;
-        }
-        .stat-box {
-            background: var(--bg-card);
-            padding: 1.5rem;
-            border-radius: 12px;
-        }
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--accent-gold);
-        }
-        .stat-label { color: var(--text-secondary); font-size: 0.9rem; }
-        .progress-section {
-            background: var(--bg-card);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-        .progress-section h2 {
-            font-family: 'Playfair Display', serif;
-            color: var(--accent-gold);
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-        .lang-progress {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1rem;
-        }
-        .lang-card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 8px;
-            padding: 1rem;
-        }
-        .lang-card-header {
-            display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            margin-bottom: 0.5rem;
-        }
-        .lang-name { font-weight: 600; font-size: 1.1rem; }
-        .lang-status {
-            font-size: 0.8rem;
-            padding: 0.2rem 0.6rem;
-            border-radius: 12px;
-        }
-        .status-complete { background: var(--success-green); color: #000; }
-        .status-progress { background: var(--warning-orange); color: #000; }
-        .status-planned { background: #555; color: #fff; }
-        .progress-bar {
-            height: 8px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 4px;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #1e3a8a 0%, #2d5a9a 50%, #1e3a8a 100%);
+            position: relative;
             overflow: hidden;
-            margin: 0.5rem 0;
         }
-        .progress-fill {
-            height: 100%;
-            background: var(--accent-gold);
-            border-radius: 4px;
-        }
-        .progress-text {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-        .tracks { margin: 2rem 0; }
-        .track {
-            background: var(--bg-card);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        .track-info { flex: 1; min-width: 200px; }
-        .track-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.3rem;
-        }
-        .track-desc { color: var(--text-secondary); font-size: 0.9rem; }
-        .track audio { width: 100%; max-width: 300px; }
-        .donation-appeal {
-            background: linear-gradient(135deg, #1a3a5c 0%, #0f2744 100%);
-            border: 2px solid var(--accent-gold);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem 0;
-            text-align: center;
-        }
-        .donation-appeal h2 {
-            font-family: 'Playfair Display', serif;
-            color: var(--accent-gold);
-            margin-bottom: 1rem;
-        }
-        .donation-appeal p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-        .highlight {
-            color: var(--accent-gold);
-            font-weight: 600;
-        }
-        .description {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            line-height: 1.8;
-        }
-        .description h2 {
-            font-family: 'Playfair Display', serif;
-            color: var(--accent-gold);
-            margin-bottom: 1rem;
-        }
-        .cta {
-            text-align: center;
-            margin: 2rem 0;
-        }
-        .cta-btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--accent-gold);
-            color: #000;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: transform 0.3s;
-            margin: 0.5rem;
-        }
-        .cta-btn:hover { transform: scale(1.05); }
-        .cta-btn.secondary {
-            background: transparent;
-            border: 2px solid var(--accent-gold);
-            color: var(--accent-gold);
-        }
-        .streaming {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-        .streaming a {
-            padding: 0.8rem 1.2rem;
-            background: var(--bg-card);
-            border-radius: 8px;
-            color: var(--text-primary);
-            text-decoration: none;
-        }
-        .streaming-disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(74, 144, 217, 0.1), transparent 50%),
+                        radial-gradient(circle at 70% 50%, rgba(212, 175, 55, 0.1), transparent 50%);
             pointer-events: none;
         }
-        .coming-soon-badge {
-            display: block;
-            font-size: 0.75rem;
-            color: var(--accent-gold);
-            margin-top: 0.3rem;
-            font-weight: 400;
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
         }
-        .streaming-notice {
-            text-align: center;
-            margin-top: 1rem;
-            color: var(--text-secondary);
-            font-style: italic;
-        }
-        .footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        .section-title {
-            text-align: center;
-            margin: 2rem 0;
-            font-family: 'Playfair Display', serif;
-        }
-        .lyrics-btn {
-            padding: 0.6rem 1.2rem;
-            background: var(--accent-gold);
-            color: #000;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: all 0.3s;
-            margin-left: 1rem;
-        }
-        .lyrics-btn:hover {
-            transform: scale(1.05);
-            opacity: 0.9;
-        }
-        .lyrics-container {
-            background: rgba(255,255,255,0.08);
-            border-radius: 8px;
-            padding: 1rem;
-            margin-top: 1rem;
-            white-space: pre-wrap;
-            font-size: 0.9rem;
-            line-height: 1.35;
-            color: var(--text-secondary);
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            transition: all 0.4s ease-in-out;
-        }
-        .lyrics-container.show {
-            max-height: 2000px;
-            opacity: 1;
-            padding: 1rem;
-        }
-        .preorder-section {
-            background: var(--bg-card);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem 0;
-            text-align: center;
-        }
-        .preorder-section h2 {
-            font-family: 'Playfair Display', serif;
-            color: var(--accent-gold);
-            margin-bottom: 0.5rem;
-            font-size: 1.8rem;
-        }
-        .preorder-section p {
-            color: var(--text-secondary);
+
+        .hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
             margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 2px 30px rgba(212, 175, 55, 0.3);
         }
-        .form-group {
+
+        .hero .subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--text-secondary);
             margin-bottom: 1rem;
+            font-weight: 300;
         }
+
+        .hero .tagline {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: var(--accent-gold);
+            margin-bottom: 3rem;
+            font-weight: 500;
+        }
+
+        /* Signup Form */
+        .signup-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin: 0 auto;
+            max-width: 600px;
+            backdrop-filter: blur(10px);
+        }
+
+        .signup-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-gold);
+        }
+
+        .signup-section p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
         .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            max-width: 400px;
-            padding: 0.8rem;
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 8px;
-            background: rgba(255,255,255,0.05);
+        .form-group select {
+            padding: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
             color: var(--text-primary);
             font-size: 1rem;
-            font-family: 'Inter', sans-serif;
+            transition: all 0.3s;
         }
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
+
         .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
+        .form-group select:focus {
             outline: none;
             border-color: var(--accent-gold);
+            background: rgba(255, 255, 255, 0.15);
         }
-        #language-select {
-            background-color: #2a3442;
-            color: #ffffff;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-size: 16px;
+
+        .form-group select option {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
         }
-        #language-select option {
-            background-color: #2a3442;
-            color: #ffffff;
-            padding: 10px;
-        }
-        #language-select option:disabled {
-            color: #666666;
-            font-style: italic;
-        }
-        #language-select optgroup {
-            color: #d4a84b;
-            font-weight: bold;
-        }
-        .preorder-btn {
-            padding: 1rem 2.5rem;
-            background: var(--accent-gold);
+
+        .btn-primary {
+            padding: 1.2rem 3rem;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #d4a84b 100%);
             color: #000;
             border: none;
-            border-radius: 30px;
-            font-weight: 600;
+            border-radius: 50px;
             font-size: 1.1rem;
+            font-weight: 700;
             cursor: pointer;
-            transition: transform 0.3s;
-            margin-top: 0.5rem;
-        }
-        .preorder-btn:hover {
-            transform: scale(1.05);
-        }
-        .preorder-success {
-            background: var(--success-green);
-            color: #000;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            font-weight: 600;
-        }
-        .share-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.8rem 1.5rem;
-            background: transparent;
-            border: 2px solid var(--accent-blue);
-            color: var(--accent-blue);
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
             transition: all 0.3s;
-            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
         }
-        .share-btn:hover {
-            background: var(--accent-blue);
-            color: #fff;
-            transform: scale(1.05);
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.5);
         }
-        .share-icon {
-            font-size: 1.2rem;
+
+        /* Audio Samples Section */
+        .samples-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem;
         }
-        .share-container {
+
+        .samples-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
             text-align: center;
-            margin: 2rem 0;
-        }
-        .review-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.8rem 1.5rem;
-            background: transparent;
-            border: 2px solid var(--accent-gold);
+            margin-bottom: 1rem;
             color: var(--accent-gold);
-            border-radius: 30px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
+        }
+
+        .samples-section .intro {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .samples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .sample-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s;
+        }
+
+        .sample-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .sample-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .sample-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-gold);
+        }
+
+        .sample-card .verse {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .sample-card audio {
+            width: 100%;
+            margin-top: 1rem;
+            border-radius: 10px;
+        }
+
+        /* Features Section */
+        .features-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-box {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-box .emoji {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--accent-gold);
+        }
+
+        .feature-box p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--bg-primary);
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer a {
+            color: var(--accent-gold);
             text-decoration: none;
-            margin: 0.5rem;
         }
-        .review-btn:hover {
-            background: var(--accent-gold);
-            color: #000;
-            transform: scale(1.05);
+
+        footer a:hover {
+            text-decoration: underline;
         }
-        .star-icon {
-            font-size: 1.2rem;
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: auto;
+                padding: 3rem 1.5rem;
+            }
+
+            .signup-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .samples-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <h1 id="main-title">Bible Chantee</h1>
-        <p class="subtitle" id="subtitle"></p>
-    </header>
-    
-    <div class="container">
-        <div class="lang-selector">
-            <button class="lang-btn active" onclick="setLang('FR')">FR Francais</button>
-            <button class="lang-btn" onclick="setLang('PT')">BR Portugues</button>
-            <button class="lang-btn" onclick="setLang('EN')">GB English</button>
-            <button class="lang-btn disabled" onclick="setLang('ES')">ES Espanol</button>
-        </div>
-        
-        <div class="stats">
-            <div class="stat-box">
-                <div class="stat-number">1189</div>
-                <div class="stat-label" id="stat-chapters"></div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>🎵 Sung Bible</h1>
+            <p class="subtitle">La Bible entière transformée en chansons</p>
+            <p class="tagline">1189 chapitres · 5 langues · Émotion et foi réunies</p>
+
+            <!-- Signup Form -->
+            <div class="signup-section">
+                <h2>Commencez gratuitement</h2>
+                <p>Écoutez 100 chapitres gratuitement dans votre langue</p>
+
+                <form id="signup-form" name="subscribe" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="subscribe">
+                    <input type="hidden" name="bot-field">
+
+                    <div class="signup-form">
+                        <div class="form-group">
+                            <label for="email">Votre email</label>
+                            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="language">Choisissez votre langue</label>
+                            <select id="language" name="language" required>
+                                <option value="" disabled selected>Sélectionnez...</option>
+                                <optgroup label="✅ Disponible maintenant">
+                                    <option value="fr">🇫🇷 Français (1189 chapitres)</option>
+                                    <option value="en">🇬🇧 English (1189 chapters)</option>
+                                    <option value="pt">🇧🇷 Português (384 capítulos)</option>
+                                </optgroup>
+                                <optgroup label="🔜 Bientôt disponible">
+                                    <option value="es" disabled>🇪🇸 Español (prochainement)</option>
+                                    <option value="de" disabled>🇩🇪 Deutsch (bald)</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-primary">
+                            🎁 Accéder gratuitement (100 crédits)
+                        </button>
+                    </div>
+                </form>
+
+                <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                    ✨ Aucune carte bancaire requise · 100 chapitres offerts · $0.99 pour tout débloquer
+                </p>
             </div>
-            <div class="stat-box">
-                <div class="stat-number">66</div>
-                <div class="stat-label" id="stat-books"></div>
+        </div>
+    </section>
+
+    <!-- Audio Samples Section -->
+    <section class="samples-section">
+        <h2>Découvrez nos extraits</h2>
+        <p class="intro">Écoutez ces 3 chapitres emblématiques de la Bible</p>
+
+        <div class="samples-grid">
+            <!-- Genesis 1 - Français -->
+            <div class="sample-card">
+                <div class="icon">📖</div>
+                <h3>Genèse 1</h3>
+                <p class="verse">"Au commencement, Dieu créa les cieux et la terre..."</p>
+                <audio controls preload="metadata">
+                    <source src="https://archive.org/download/bible-chantee-fr/01_GEN/01_GEN_01_FR.mp3" type="audio/mpeg">
+                </audio>
             </div>
-            <div class="stat-box">
-                <div class="stat-number">12</div>
-                <div class="stat-label" id="stat-languages"></div>
+
+            <!-- Psalms 23 - English -->
+            <div class="sample-card">
+                <div class="icon">🙏</div>
+                <h3>Psalm 23</h3>
+                <p class="verse">"The LORD is my shepherd, I shall not want..."</p>
+                <audio controls preload="metadata">
+                    <source src="https://archive.org/download/bible-chantee-en/19_PSA/19_PSA_023_EN.mp3" type="audio/mpeg">
+                </audio>
             </div>
-            <div class="stat-box">
-                <div class="stat-number">80+</div>
-                <div class="stat-label" id="stat-hours"></div>
+
+            <!-- John 3 - Português -->
+            <div class="sample-card">
+                <div class="icon">✝️</div>
+                <h3>João 3</h3>
+                <p class="verse">"Porque Deus amou o mundo de tal maneira..."</p>
+                <audio controls preload="metadata">
+                    <source src="https://archive.org/download/bible-chantee-pt/43_JHN/43_JHN_03_PT.mp3" type="audio/mpeg">
+                </audio>
             </div>
         </div>
-        
-        <h2 class="section-title" id="title-listen"></h2>
-        <div class="tracks" id="tracks-container"></div>
+    </section>
 
-        <!-- Share & Review Buttons -->
-        <div class="share-container">
-            <button class="share-btn" onclick="shareProject()">
-                <span class="share-icon">↗</span>
-                <span id="btn-share"></span>
-            </button>
-            <a href="#" class="review-btn" id="review-link" target="_blank" rel="noopener">
-                <span class="star-icon">⭐</span>
-                <span id="btn-review"></span>
-            </a>
-        </div>
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--accent-gold); margin-bottom: 1rem;">
+            Pourquoi Sung Bible ?
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto 2rem;">
+            Une nouvelle façon de découvrir la Parole de Dieu à travers la musique
+        </p>
 
-        <!-- Subscribe Section -->
-        <div class="preorder-section">
-            <h2 id="preorder-title"></h2>
-            <p id="preorder-subtitle"></p>
-            <form name="subscribe" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" value="subscribe">
-                <input type="hidden" name="bot-field">
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Your email" required>
-                </div>
-                <div class="form-group">
-                    <select name="language" id="language-select" required>
-                        <option value="" disabled selected>Choose language</option>
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="emoji">🌍</div>
+                <h3>5 langues</h3>
+                <p>Français, English, Português, Español, Deutsch</p>
+            </div>
 
-                        <optgroup label="✓ Available now">
-                            <option value="fr">🇫🇷 Français</option>
-                            <option value="en">🇬🇧 English</option>
-                            <option value="pt">🇧🇷 Português</option>
-                        </optgroup>
+            <div class="feature-box">
+                <div class="emoji">🎼</div>
+                <h3>1189 chapitres</h3>
+                <p>Toute la Bible transformée en chansons originales</p>
+            </div>
 
-                        <optgroup label="🔜 Coming soon">
-                            <option value="es" disabled>🇪🇸 Español</option>
-                            <option value="de" disabled>🇩🇪 Deutsch</option>
-                            <option value="it" disabled>🇮🇹 Italiano</option>
-                            <option value="ar" disabled>🇸🇦 العربية</option>
-                            <option value="ru" disabled>🇷🇺 Русский</option>
-                            <option value="zh" disabled>🇨🇳 中文</option>
-                            <option value="tl" disabled>🇵🇭 Tagalog</option>
-                            <option value="sw" disabled>🇰🇪 Kiswahili</option>
-                            <option value="hi" disabled>🇮🇳 हिन्दी</option>
-                        </optgroup>
-                    </select>
-                </div>
-                <button type="submit" class="preorder-btn">Subscribe</button>
-            </form>
-        </div>
+            <div class="feature-box">
+                <div class="emoji">💎</div>
+                <h3>100 gratuits</h3>
+                <p>Écoutez 100 chapitres gratuitement, puis $0.99 pour tout</p>
+            </div>
 
-        <!-- Feedback Section -->
-        <div class="preorder-section">
-            <h2>Share your feedback</h2>
-            <p>We'd love to hear your thoughts about the Sung Bible project</p>
-            <form name="feedback" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" value="feedback">
-                <input type="hidden" name="bot-field">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Your name (optional)">
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Your email (optional)">
-                </div>
-                <div class="form-group">
-                    <textarea name="message" placeholder="Your message..." rows="4" required maxlength="500"></textarea>
-                </div>
-                <button type="submit" class="preorder-btn">Send</button>
-            </form>
+            <div class="feature-box">
+                <div class="emoji">🎯</div>
+                <h3>IA émotionnelle</h3>
+                <p>Chaque chapitre adapté avec l'émotion appropriée</p>
+            </div>
         </div>
+    </section>
 
-        <div class="progress-section">
-            <h2 id="title-progress"></h2>
-            <div class="lang-progress" id="progress-container"></div>
-        </div>
-        
-        <div class="donation-appeal">
-            <h2 id="donation-title"></h2>
-            <p id="donation-text1"></p>
-            <p id="donation-text2"></p>
-            <a href="crowdfunding.html" class="cta-btn" id="btn-support"></a>
-            <button class="cta-btn" id="btn-pix" style="display:none;" onclick="copyPixKey()">Pagar com Pix</button>
-        </div>
-        
-        <div class="description">
-            <h2 id="about-title"></h2>
-            <p id="about-text1"></p>
-            <br>
-            <p id="about-text2"></p>
-        </div>
-        
-        <h2 class="section-title" id="title-available"></h2>
-        <div class="streaming">
-            <a href="#" class="streaming-disabled" data-streaming-link>
-                <span>Spotify</span>
-                <small class="coming-soon-badge">Coming soon</small>
-            </a>
-            <a href="#" class="streaming-disabled" data-streaming-link>
-                <span>Apple Music</span>
-                <small class="coming-soon-badge">Coming soon</small>
-            </a>
-            <a href="#" class="streaming-disabled" data-streaming-link>
-                <span>YouTube Music</span>
-                <small class="coming-soon-badge">Coming soon</small>
-            </a>
-            <a href="#" class="streaming-disabled" data-streaming-link>
-                <span>Amazon Music</span>
-                <small class="coming-soon-badge">Coming soon</small>
-            </a>
-        </div>
-        <p class="streaming-notice" id="streaming-notice"></p>
-        
-        <div class="cta">
-            <a href="crowdfunding.html" class="cta-btn" id="btn-donate"></a>
-            
-        </div>
-    </div>
-    
-    <footer class="footer">
-        <p>Bible Chantee - Mania Libris</p>
-        <p id="footer-text"></p>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sung Bible · <a href="/pricing.html">Tarifs</a> · <a href="/lecteur.html">Lecteur</a></p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+            Créé avec ❤️ pour partager la Parole de Dieu
+        </p>
     </footer>
-    
+
     <script>
-        const translations = {
-            FR: {
-                mainTitle: "Bible Chantee",
-                subtitle: "La Bible entiere mise en musique - 1189 chapitres",
-                statChapters: "Chapitres",
-                statBooks: "Livres",
-                statLanguages: "Langues prevues",
-                statHours: "Heures par langue",
-                titleListen: "Ecoutez des extraits",
-                titleProgress: "Avancement du projet - 12 langues",
-                donationTitle: "Vos dons nous permettent de progresser !",
-                donationText1: "Chaque contribution finance la <span class='highlight'>generation de nouveaux chapitres</span>, l'<span class='highlight'>ajout de nouvelles langues</span>, et la <span class='highlight'>diffusion gratuite</span> de la Parole de Dieu.",
-                donationText2: "<strong>10% de tous les revenus sont reverses aux oeuvres missionnaires.</strong>",
-                btnSupport: "Soutenir le projet",
-                btnExplore: "Explorer la Bible Chantee",
-                aboutTitle: "Un projet unique",
-                aboutText1: "La Bible Chantee transforme chaque chapitre de la Bible en une chanson originale, fidele a l'essence des textes bibliques originaux. Chaque piste capture l'essence spirituelle du texte biblique.",
-                aboutText2: "<strong>Notre vision :</strong> Rendre la Parole de Dieu accessible a tous, dans toutes les langues, a travers la puissance de la musique.",
-                titleAvailable: "Bientot disponible sur",
-                streamingNotice: "Disponible prochainement dans les 12 langues",
-                btnDonate: "Faire un don",
-                btnListen: "Ecouter maintenant",
-                footerText: "10% des revenus reverses aux missions",
-                statusComplete: "Complet",
-                statusProgress: "En cours",
-                statusPlanned: "Prevu",
-                chapters: "chapitres",
-                btnLyrics: "Paroles",
-                btnHide: "Masquer",
-                lyricsComingSoon: "Paroles bientot disponibles",
-                streamingComingSoon: "Bientot disponible",
-                preorderTitle: "Recevez la Bible Chantee complete",
-                preorderSubtitle: "Inscrivez-vous pour etre notifie des la sortie",
-                preorderEmail: "Votre email",
-                preorderLanguage: "Langue preferee",
-                preorderBtn: "S'inscrire",
-                preorderSuccess: "Merci ! Vous serez notifie.",
-                btnShare: "Partager",
-                shareText: "Decouvrez la Bible entiere mise en musique - 1189 chapitres !",
-                linkCopied: "Lien copie !",
-                btnReview: "Laisser un avis",
-                tracks: [
-                    { id: "01_GEN_01_FR", title: "Genese 1", desc: "La Creation" },
-                    { id: "19_PSA_23_FR", title: "Psaume 23", desc: "L'Eternel est mon berger" },
-                    { id: "19_PSA_150_FR", title: "Psaume 150", desc: "Louez l'Eternel" }
-                ]
-            },
-            PT: {
-                mainTitle: "Biblia Cantada",
-                subtitle: "A Biblia inteira em musica - 1189 capitulos",
-                statChapters: "Capitulos",
-                statBooks: "Livros",
-                statLanguages: "Idiomas previstos",
-                statHours: "Horas por idioma",
-                titleListen: "Ouca alguns trechos",
-                titleProgress: "Progresso do projeto - 12 idiomas",
-                donationTitle: "Suas doacoes nos ajudam a progredir!",
-                donationText1: "Cada contribuicao financia a <span class='highlight'>geracao de novos capitulos</span>, a <span class='highlight'>adicao de novos idiomas</span> e a <span class='highlight'>distribuicao gratuita</span> da Palavra de Deus.",
-                donationText2: "<strong>10% de toda a receita e destinada a obras missionarias.</strong>",
-                btnSupport: "Apoiar o projeto",
-                btnExplore: "Explorar a Biblia Cantada",
-                aboutTitle: "Um projeto unico",
-                aboutText1: "A Biblia Cantada transforma cada capitulo da Biblia em uma cancao original, fiel a essencia dos textos biblicos originais. Cada faixa captura a essencia espiritual do texto biblico.",
-                aboutText2: "<strong>Nossa visao:</strong> Tornar a Palavra de Deus acessivel a todos, em todos os idiomas, atraves do poder da musica.",
-                titleAvailable: "Em breve disponivel em",
-                streamingNotice: "Disponivel em breve nos 12 idiomas",
-                btnDonate: "Fazer uma doacao",
-                btnListen: "Ouvir agora",
-                footerText: "10% da receita destinada a missoes",
-                statusComplete: "Completo",
-                statusProgress: "Em andamento",
-                statusPlanned: "Previsto",
-                chapters: "capitulos",
-                btnLyrics: "Letras",
-                btnHide: "Ocultar",
-                lyricsComingSoon: "Letras em breve",
-                streamingComingSoon: "Em breve",
-                preorderTitle: "Receba a Biblia Cantada completa",
-                preorderSubtitle: "Inscreva-se para ser notificado no lancamento",
-                preorderEmail: "Seu email",
-                preorderLanguage: "Idioma preferido",
-                preorderBtn: "Inscrever-se",
-                preorderSuccess: "Obrigado! Voce sera notificado.",
-                btnShare: "Compartilhar",
-                shareText: "Descubra a Biblia inteira em musica - 1189 capitulos!",
-                linkCopied: "Link copiado!",
-                btnReview: "Deixar avaliacao",
-                tracks: [
-                    { id: "01_GEN_01_PT", title: "Genesis 1", desc: "A Criacao" },
-                    { id: "19_PSA_23_PT", title: "Salmo 23", desc: "O Senhor e meu pastor" },
-                    { id: "19_PSA_150_PT", title: "Salmo 150", desc: "Louvai ao Senhor" }
-                ]
-            },
-            EN: {
-                mainTitle: "Sung Bible",
-                subtitle: "The entire Bible set to music - 1189 chapters",
-                statChapters: "Chapters",
-                statBooks: "Books",
-                statLanguages: "Languages planned",
-                statHours: "Hours per language",
-                titleListen: "Listen to samples",
-                titleProgress: "Project progress - 12 languages",
-                donationTitle: "Your donations help us progress!",
-                donationText1: "Each contribution funds the <span class='highlight'>generation of new chapters</span>, <span class='highlight'>adding new languages</span>, and the <span class='highlight'>free distribution</span> of God's Word.",
-                donationText2: "<strong>10% of all revenue goes to missionary work.</strong>",
-                btnSupport: "Support the project",
-                btnExplore: "Explore the Sung Bible",
-                aboutTitle: "A unique project",
-                aboutText1: "The Sung Bible transforms each chapter of the Bible into an original song, faithful to the essence of the original biblical texts. Each track captures the spiritual essence of the biblical text.",
-                aboutText2: "<strong>Our vision:</strong> Make God's Word accessible to everyone, in every language, through the power of music.",
-                titleAvailable: "Coming soon on",
-                streamingNotice: "Coming soon in all 12 languages",
-                btnDonate: "Make a donation",
-                btnListen: "Listen now",
-                footerText: "10% of revenue donated to missions",
-                statusComplete: "Complete",
-                statusProgress: "In progress",
-                statusPlanned: "Planned",
-                chapters: "chapters",
-                btnLyrics: "Lyrics",
-                btnHide: "Hide",
-                lyricsComingSoon: "Lyrics coming soon",
-                streamingComingSoon: "Coming soon",
-                preorderTitle: "Get the complete Sung Bible",
-                preorderSubtitle: "Subscribe to be notified at launch",
-                preorderEmail: "Your email",
-                preorderLanguage: "Preferred language",
-                preorderBtn: "Subscribe",
-                preorderSuccess: "Thank you! You will be notified.",
-                btnShare: "Share",
-                shareText: "Discover the entire Bible set to music - 1189 chapters!",
-                linkCopied: "Link copied!",
-                btnReview: "Leave a review",
-                tracks: [
-                    { id: "01_GEN_01_EN", title: "Genesis 1", desc: "The Creation" },
-                    { id: "19_PSA_23_EN", title: "Psalm 23", desc: "The Lord is my shepherd" },
-                    { id: "19_PSA_150_EN", title: "Psalm 150", desc: "Praise the Lord" }
-                ]
-            },
-            ES: {
-                mainTitle: "Biblia Cantada",
-                subtitle: "La Biblia entera en musica - 1189 capitulos",
-                statChapters: "Capitulos",
-                statBooks: "Libros",
-                statLanguages: "Idiomas previstos",
-                statHours: "Horas por idioma",
-                titleListen: "Escucha extractos",
-                titleProgress: "Progreso del proyecto - 12 idiomas",
-                donationTitle: "Tus donaciones nos ayudan a progresar!",
-                donationText1: "Cada contribucion financia la <span class='highlight'>generacion de nuevos capitulos</span>, la <span class='highlight'>adicion de nuevos idiomas</span> y la <span class='highlight'>distribucion gratuita</span> de la Palabra de Dios.",
-                donationText2: "<strong>10% de todos los ingresos se destinan a obras misioneras.</strong>",
-                btnSupport: "Apoyar el proyecto",
-                btnExplore: "Explorar la Biblia Cantada",
-                aboutTitle: "Un proyecto unico",
-                aboutText1: "La Biblia Cantada transforma cada capitulo de la Biblia en una cancion original, fiel a la esencia de los textos biblicos originales. Cada pista captura la esencia espiritual del texto biblico.",
-                aboutText2: "<strong>Nuestra vision:</strong> Hacer accesible la Palabra de Dios a todos, en todos los idiomas, a traves del poder de la musica.",
-                titleAvailable: "Proximo disponible en",
-                streamingNotice: "Proximo disponible en los 12 idiomas",
-                btnDonate: "Hacer una donacion",
-                btnListen: "Escuchar ahora",
-                footerText: "10% de los ingresos destinados a misiones",
-                statusComplete: "Completo",
-                statusProgress: "En curso",
-                statusPlanned: "Previsto",
-                chapters: "capitulos",
-                btnLyrics: "Letras",
-                btnHide: "Ocultar",
-                lyricsComingSoon: "Letras en breve",
-                streamingComingSoon: "Proximo",
-                preorderTitle: "Reciba la Biblia Cantada completa",
-                preorderSubtitle: "Suscribase para ser notificado en el lanzamiento",
-                preorderEmail: "Su email",
-                preorderLanguage: "Idioma preferido",
-                preorderBtn: "Suscribirse",
-                preorderSuccess: "Gracias! Sera notificado.",
-                btnShare: "Compartir",
-                shareText: "Descubre la Biblia entera en musica - 1189 capitulos!",
-                linkCopied: "Enlace copiado!",
-                btnReview: "Dejar resena",
-                tracks: [
-                    { id: "01_GEN_01_ES", title: "Genesis 1", desc: "La Creacion" },
-                    { id: "19_PSA_23_ES", title: "Salmo 23", desc: "El Senor es mi pastor" },
-                    { id: "19_PSA_150_ES", title: "Salmo 150", desc: "Alabad al Senor" }
-                ]
-            }
-        };
-        
-        const audioBase = {
-            FR: "https://archive.org/download/bible-chantee-fr-v2/",
-            PT: "https://archive.org/download/bible-chantee-pt-v2/",
-            EN: "https://archive.org/download/bible-chantee-en-v2/",
-            ES: "https://archive.org/download/bible-chantee-es-v2/"
-        };
-
-        // Google Place ID pour les avis
-        // TODO: Remplacer par votre vrai Place ID depuis Google Business Profile
-        const GOOGLE_PLACE_ID = "VOTRE_PLACE_ID_ICI";
-        const googleReviewUrl = GOOGLE_PLACE_ID !== "VOTRE_PLACE_ID_ICI"
-            ? `https://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}`
-            : "https://www.google.com/maps/search/?api=1&query=Bible+Chantée+La+Tour+de+Peilz";
-        
-        const progressData = [
-            { flag: "FR", name: "Francais", mp3: 1189, total: 1189, status: "complete" },
-            { flag: "BR", name: "Portugues", mp3: 1189, total: 1189, status: "complete" },
-            { flag: "GB", name: "English", mp3: 557, total: 1189, status: "progress" },
-            { flag: "ES", name: "Espanol", mp3: 0, total: 1189, status: "planned" },
-            { flag: "DE", name: "Deutsch", mp3: 0, total: 1189, status: "planned" },
-            { flag: "IT", name: "Italiano", mp3: 0, total: 1189, status: "planned" },
-            { flag: "SA", name: "Arabic", mp3: 0, total: 1189, status: "planned" },
-            { flag: "RU", name: "Russian", mp3: 0, total: 1189, status: "planned" },
-            { flag: "CN", name: "Chinese", mp3: 0, total: 1189, status: "planned" },
-            { flag: "IN", name: "Hindi", mp3: 0, total: 1189, status: "planned" },
-            { flag: "PH", name: "Tagalog", mp3: 0, total: 1189, status: "planned" },
-            { flag: "KE", name: "Kiswahili", mp3: 0, total: 1189, status: "planned" }
-        ];
-        
-        let currentLang = 'FR';
-        
-        function setLang(lang) {
-            if (lang === 'ES') return;
-            currentLang = lang;
-
-            // Save language to localStorage
-            localStorage.setItem('sungbible_lang', lang.toLowerCase());
-
-            // Update crowdfunding links with language parameter
-            document.querySelectorAll('a[href*="crowdfunding.html"]').forEach(link => {
-                link.href = `crowdfunding.html?lang=${lang.toLowerCase()}`;
-            });
-
-            document.querySelectorAll('.lang-btn').forEach((btn, i) => {
-                btn.classList.remove('active');
-                if (btn.textContent.includes(lang) || (lang === 'PT' && btn.textContent.includes('BR'))) {
-                    btn.classList.add('active');
-                }
-            });
-
-            // Google Analytics: Track language selection
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'language_change', {
-                    'event_category': 'engagement',
-                    'event_label': lang,
-                    'value': lang
-                });
-            }
-
-            updatePage();
-        }
-        
-        function updatePage() {
-            const t = translations[currentLang];
-
-            document.title = t.mainTitle;
-            document.getElementById('main-title').textContent = t.mainTitle;
-            document.getElementById('subtitle').textContent = t.subtitle;
-            document.getElementById('stat-chapters').textContent = t.statChapters;
-            document.getElementById('stat-books').textContent = t.statBooks;
-            document.getElementById('stat-languages').textContent = t.statLanguages;
-            document.getElementById('stat-hours').textContent = t.statHours;
-            document.getElementById('title-listen').textContent = t.titleListen;
-            document.getElementById('title-progress').textContent = t.titleProgress;
-            document.getElementById('donation-title').textContent = t.donationTitle;
-            document.getElementById('donation-text1').innerHTML = t.donationText1;
-            document.getElementById('donation-text2').innerHTML = t.donationText2;
-            document.getElementById('btn-support').textContent = t.btnSupport;
-            document.getElementById('about-title').textContent = t.aboutTitle;
-            document.getElementById('about-text1').textContent = t.aboutText1;
-            document.getElementById('about-text2').innerHTML = t.aboutText2;
-            document.getElementById('title-available').textContent = t.titleAvailable;
-            document.getElementById('streaming-notice').textContent = t.streamingNotice;
-            document.getElementById('btn-donate').textContent = t.btnDonate;
-            document.getElementById('footer-text').textContent = t.footerText;
-
-            // Afficher/masquer le bouton Pix pour PT uniquement
-            const pixBtn = document.getElementById('btn-pix');
-            if (pixBtn) {
-                pixBtn.style.display = currentLang === 'PT' ? 'inline-block' : 'none';
-            }
-
-            // Mettre à jour les tooltips des liens de streaming
-            const streamingLinks = document.querySelectorAll('[data-streaming-link]');
-            streamingLinks.forEach(link => {
-                link.title = t.streamingComingSoon;
-            });
-
-            // Update titles for subscribe section
-            document.getElementById('preorder-title').textContent = t.preorderTitle;
-            document.getElementById('preorder-subtitle').textContent = t.preorderSubtitle;
-            document.getElementById('btn-share').textContent = t.btnShare;
-            document.getElementById('btn-review').textContent = t.btnReview;
-
-            // Mettre à jour le lien du bouton avis Google
-            const reviewLink = document.getElementById('review-link');
-            if (reviewLink) {
-                reviewLink.href = googleReviewUrl;
-            }
-
-            loadTracks();
-            loadProgress();
-        }
-        
-        function loadTracks() {
-            const t = translations[currentLang];
-            const base = audioBase[currentLang];
-            const container = document.getElementById('tracks-container');
-
-            container.innerHTML = t.tracks.map((track, index) => `
-                <div class="track">
-                    <div class="track-info">
-                        <div class="track-title">${track.title}</div>
-                        <div class="track-desc">${track.desc}</div>
-                    </div>
-                    <audio controls preload="none" id="audio-${index}" data-track-id="${track.id}">
-                        <source src="${base}${track.id}.mp3" type="audio/mpeg">
-                    </audio>
-                    <button class="lyrics-btn" id="lyrics-btn-${index}" onclick="toggleLyrics('${track.id}', ${index})">
-                        ${t.btnLyrics}
-                    </button>
-                    <div class="lyrics-container" id="lyrics-${index}"></div>
-                </div>
-            `).join('');
-
-            // Add event listeners for audio play tracking
-            setTimeout(() => {
-                document.querySelectorAll('audio').forEach(audio => {
-                    audio.addEventListener('play', function() {
-                        const trackId = this.getAttribute('data-track-id');
-                        if (typeof gtag !== 'undefined') {
-                            gtag('event', 'audio_play', {
-                                'event_category': 'audio',
-                                'event_label': trackId,
-                                'language': currentLang
-                            });
-                        }
-                    });
-                });
-            }, 100);
-        }
-        
-        function loadProgress() {
-            const t = translations[currentLang];
-            const container = document.getElementById('progress-container');
-            
-            container.innerHTML = progressData.map(lang => {
-                const percent = Math.round((lang.mp3 / lang.total) * 100);
-                const statusClass = lang.status === 'complete' ? 'status-complete' : 
-                                   lang.status === 'progress' ? 'status-progress' : 'status-planned';
-                const statusText = lang.status === 'complete' ? t.statusComplete : 
-                                  lang.status === 'progress' ? t.statusProgress : t.statusPlanned;
-                
-                return `
-                    <div class="lang-card">
-                        <div class="lang-card-header">
-                            <span class="lang-name">${lang.flag} ${lang.name}</span>
-                            <span class="lang-status ${statusClass}">${statusText}</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: ${percent}%"></div>
-                        </div>
-                        <div class="progress-text">${lang.mp3} / ${lang.total} ${t.chapters} (${percent}%)</div>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        function cleanLyrics(text) {
-            if (!text) return '';
-
-            // 1. Supprimer [STYLE] ou [ESTILO] et tout ce qui suit
-            text = text.replace(/\[(STYLE|ESTILO)\][\s\S]*/gi, '');
-
-            // 2. Supprimer TOUS les marqueurs entre crochets
-            text = text.replace(/\[.*?\]/gi, '');
-
-            // 3. Supprimer TOUS les marqueurs Markdown **...**
-            text = text.replace(/\*\*[^*]+\*\*/g, '');
-
-            // 4. Supprimer lignes de marqueurs seules (sans texte après)
-            text = text.replace(/^[\s]*(Verse|Chorus|Bridge|Refrain|Couplet|Outro|Intro|Hook|Pre-Chorus|Post-Chorus|Conclusão|Conclusion|Ponte|Refrão|Estrofe|Interlude|Solo|Tag|Vamp|Ad-lib|Break|Verset|Verso|Glória|Final)[\s\d]*[:\s]*$/gim, '');
-
-            // 5. Normaliser : exactement 1 ligne vide entre couplets
-            text = text.replace(/\n{2,}/g, '\n\n');
-
-            // 6. Supprimer lignes vides au début/fin
-            return text.trim();
-        }
-
-        function toggleLyrics(trackId, index) {
-            const t = translations[currentLang];
-            const lyricsContainer = document.getElementById(`lyrics-${index}`);
-            const btn = document.getElementById(`lyrics-btn-${index}`);
-
-            // Si les paroles sont déjà affichées, les masquer
-            if (lyricsContainer.classList.contains('show')) {
-                lyricsContainer.classList.remove('show');
-                btn.textContent = t.btnLyrics;
-                return;
-            }
-
-            // Google Analytics: Track lyrics view
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'view_lyrics', {
-                    'event_category': 'engagement',
-                    'event_label': trackId,
-                    'language': currentLang
-                });
-            }
-
-            // Extraire le numéro de livre et de chapitre de l'ID
-            // Format: "01_GEN_01_FR" -> livre: "01", chapitre: 1
-            const parts = trackId.split('_');
-            const bookNum = parts[0];
-            const chapterNum = parseInt(parts[2]);
-
-            let lyricsText = '';
-
-            // Récupérer les paroles selon la langue
-            if (currentLang === 'FR') {
-                if (window.chapterLyrics && window.chapterLyrics[bookNum] && window.chapterLyrics[bookNum][chapterNum]) {
-                    lyricsText = window.chapterLyrics[bookNum][chapterNum];
-                } else {
-                    lyricsText = t.lyricsComingSoon;
-                }
-            } else if (currentLang === 'PT') {
-                if (window.chapterLyricsPT && window.chapterLyricsPT[bookNum] && window.chapterLyricsPT[bookNum][chapterNum]) {
-                    lyricsText = window.chapterLyricsPT[bookNum][chapterNum];
-                } else {
-                    lyricsText = t.lyricsComingSoon;
-                }
-            } else if (currentLang === 'EN') {
-                if (window.chapterLyricsEN && window.chapterLyricsEN[bookNum] && window.chapterLyricsEN[bookNum][chapterNum]) {
-                    lyricsText = window.chapterLyricsEN[bookNum][chapterNum];
-                } else {
-                    lyricsText = t.lyricsComingSoon;
-                }
-            } else {
-                // ES ou autres : paroles non disponibles
-                lyricsText = t.lyricsComingSoon;
-            }
-
-            // Afficher les paroles nettoyées
-            lyricsContainer.textContent = cleanLyrics(lyricsText);
-            lyricsContainer.classList.add('show');
-            btn.textContent = t.btnHide;
-        }
-
-        function copyPixKey() {
-            const pixKey = 'scassani@jim.com';
-            navigator.clipboard.writeText(pixKey).then(() => {
-                alert('Chave Pix copiada: ' + pixKey + '\n\nCole no seu aplicativo de pagamento.');
-            }).catch(err => {
-                alert('Chave Pix: ' + pixKey + '\n\nCopie manualmente esta chave.');
-            });
-        }
-
-        function shareProject() {
-            const t = translations[currentLang];
-            const shareData = {
-                title: document.title,
-                text: t.shareText,
-                url: window.location.href
-            };
-
-            // Google Analytics: Track share button click
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'share', {
-                    'event_category': 'engagement',
-                    'event_label': 'share_button',
-                    'language': currentLang
-                });
-            }
-
-            if (navigator.share) {
-                navigator.share(shareData).catch(err => {
-                    console.log('Error sharing:', err);
-                });
-            } else {
-                // Fallback: copier le lien
-                navigator.clipboard.writeText(window.location.href).then(() => {
-                    alert(t.linkCopied);
-                }).catch(err => {
-                    // Fallback si clipboard ne fonctionne pas
-                    prompt(t.linkCopied, window.location.href);
-                });
-            }
-        }
-
-        // Forms now use native Netlify Forms submission
-        // No JavaScript handling needed - forms submit directly to Netlify
+        // Store selected language before form submission
         document.addEventListener('DOMContentLoaded', function() {
+            const signupForm = document.getElementById('signup-form');
 
-            // Initialize crowdfunding links with default language
-            document.querySelectorAll('a[href*="crowdfunding.html"]').forEach(link => {
-                link.href = `crowdfunding.html?lang=${currentLang.toLowerCase()}`;
-            });
+            if (signupForm) {
+                signupForm.addEventListener('submit', function(e) {
+                    const email = document.getElementById('email').value;
+                    const language = document.getElementById('language').value;
 
-            // Track review button clicks
-            const reviewLink = document.getElementById('review-link');
-            if (reviewLink) {
-                reviewLink.addEventListener('click', function() {
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'click', {
-                            'event_category': 'engagement',
-                            'event_label': 'review_button',
-                            'language': currentLang
-                        });
+                    if (email && language) {
+                        // Store email and language in localStorage
+                        localStorage.setItem('sungbible_email', email);
+                        localStorage.setItem('sungbible_lang', language.toLowerCase());
+
+                        console.log(`✅ Signup: ${email} · Language: ${language}`);
+                        console.log(`📍 Redirecting to: /thank-you.html`);
+                    } else {
+                        // Fallback
+                        localStorage.setItem('sungbible_lang', 'fr');
                     }
                 });
             }
 
-            // Track support button clicks
-            const supportBtns = document.querySelectorAll('a[href="crowdfunding.html"]');
-            supportBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'click', {
-                            'event_category': 'engagement',
-                            'event_label': 'support_button',
-                            'language': currentLang
-                        });
-                    }
-                });
-            });
-
-            // Track Pix button clicks
-            const pixBtn = document.getElementById('btn-pix');
-            if (pixBtn) {
-                pixBtn.addEventListener('click', function() {
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'click', {
-                            'event_category': 'engagement',
-                            'event_label': 'pix_button',
-                            'language': 'PT'
-                        });
-                    }
-                });
+            // Check if user is already signed up and show alternative CTA
+            const existingEmail = localStorage.getItem('sungbible_email');
+            if (existingEmail) {
+                const signupSection = document.querySelector('.signup-section h2');
+                if (signupSection) {
+                    signupSection.innerHTML = `Bienvenue ! 👋`;
+                }
+                const signupButton = document.querySelector('.btn-primary');
+                if (signupButton) {
+                    signupButton.innerHTML = '🎵 Continuer à écouter';
+                    signupButton.onclick = function(e) {
+                        e.preventDefault();
+                        const lang = localStorage.getItem('sungbible_lang') || 'fr';
+                        window.location.href = `/lecteur.html?lang=${lang}`;
+                    };
+                }
             }
         });
-
-        updatePage();
     </script>
 </body>
 </html>
-
-
-
-
-
-

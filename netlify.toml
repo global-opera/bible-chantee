@@ -3,6 +3,6 @@
 
 [[redirects]]
   from = "/"
-  to = "/demo.html"
+  to = "/index.html"
   status = 200
   conditions = {Host = ["sungbible.world"]}
