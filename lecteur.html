@@ -949,7 +949,14 @@
             }
 
             if (audioSource) {
+                // Format A: audioSource["05_DEU"]["01"]
                 url = audioSource[currentBook] && audioSource[currentBook][chapterStr];
+                // Format B (PT): audioSource["05"]["1"]
+                if (!url) {
+                    const bookNum = currentBook.slice(0, 2);
+                    const chapNum = String(parseInt(chapterStr, 10));
+                    url = audioSource[bookNum] && audioSource[bookNum][chapNum];
+                }
             }
 
             if (!url) {
@@ -1348,6 +1355,7 @@ renderBooks('old-testament', oldTestament);
 <script src="chapter-titles-pt.js"></script>
 </body>
 </html>
+
 
 
 
