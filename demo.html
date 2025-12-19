@@ -447,32 +447,7 @@
         .star-icon {
             font-size: 1.2rem;
         }
-        /* Returning User Banner */
-        #returning-user-banner {
-            text-align: center;
-            padding: 1rem 2rem;
-            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
-            border-bottom: 3px solid #15803d;
-        }
-        #returning-user-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-            padding: 1rem 2.5rem;
-            background: rgba(255, 255, 255, 0.95);
-            color: #15803d;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-        #returning-user-btn:hover {
-            background: #fff;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        }
+        
         #returning-user-icon {
             font-size: 1.5rem;
         }
@@ -487,27 +462,7 @@
         <p class="subtitle" id="subtitle"></p>
     </header>
 
-    <!-- Returning User Button (hidden by default) -->
-    <div id="returning-user-banner" style="display: none;">
-        <a href="/lecteur.html" id="returning-user-btn">
-            <span id="returning-user-icon">🎵</span>
-            <span id="returning-user-text">Accéder au lecteur</span>
-        </a>
-    </div>
-
-    <div class="container">
-        <div class="lang-selector">
-            <button class="lang-btn active" onclick="setLang('FR')">FR Francais</button>
-            <button class="lang-btn" onclick="setLang('PT')">BR Portugues</button>
-            <button class="lang-btn" onclick="setLang('EN')">GB English</button>
-            <button class="lang-btn disabled" onclick="setLang('ES')">ES Espanol</button>
-        </div>
-        
-        <div class="stats">
-            <div class="stat-box">
-                <div class="stat-number">1189</div>
-                <div class="stat-label" id="stat-chapters"></div>
-            </div>
+    
             <div class="stat-box">
                 <div class="stat-number">66</div>
                 <div class="stat-label" id="stat-books"></div>
@@ -1150,36 +1105,7 @@
                 });
             }
 
-            // Check if user already has credits and show returning user button
-            (function() {
-                const credits = localStorage.getItem('sungbible_credits');
-                const unlimited = localStorage.getItem('sungbible_unlimited');
-                const banner = document.getElementById('returning-user-banner');
-                const textSpan = document.getElementById('returning-user-text');
-                const iconSpan = document.getElementById('returning-user-icon');
-
-                if (credits !== null || unlimited === 'true') {
-                    // User has an account, show the banner
-                    if (banner) banner.style.display = 'block';
-
-                    if (unlimited === 'true') {
-                        // Premium user
-                        if (iconSpan) iconSpan.textContent = '♾️';
-                        if (textSpan) textSpan.textContent = 'Accéder au lecteur (Accès illimité)';
-                    } else {
-                        // Free user with credits
-                        const creditsCount = parseInt(credits) || 0;
-                        if (iconSpan) iconSpan.textContent = '🎵';
-                        if (textSpan) {
-                            if (creditsCount > 0) {
-                                textSpan.textContent = `Continuer l'écoute (${creditsCount} crédit${creditsCount > 1 ? 's' : ''} restant${creditsCount > 1 ? 's' : ''})`;
-                            } else {
-                                textSpan.textContent = 'Accéder au lecteur (crédits épuisés)';
-                            }
-                        }
-                    }
-                }
-            })();
+            
 
             // Initialize crowdfunding links with default language
             document.querySelectorAll('a[href*="crowdfunding.html"]').forEach(link => {
@@ -1233,6 +1159,7 @@
     </script>
 </body>
 </html>
+
 
 
 
