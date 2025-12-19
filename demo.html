@@ -318,7 +318,8 @@
             margin-bottom: 1rem;
         }
         .form-group input,
-        .form-group select {
+        .form-group select,
+        .form-group textarea {
             width: 100%;
             max-width: 400px;
             padding: 0.8rem;
@@ -327,9 +328,15 @@
             background: rgba(255,255,255,0.05);
             color: var(--text-primary);
             font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
         }
         .form-group input:focus,
-        .form-group select:focus {
+        .form-group select:focus,
+        .form-group textarea:focus {
             outline: none;
             border-color: var(--accent-gold);
         }
@@ -457,31 +464,49 @@
             </a>
         </div>
 
-        <!-- Preorder Section -->
+        <!-- Subscribe Section -->
         <div class="preorder-section">
             <h2 id="preorder-title"></h2>
             <p id="preorder-subtitle"></p>
-            <form name="commande-bible-chantee" method="POST" action="/form-success.html" data-netlify="true" netlify-honeypot="bot-field" id="preorder-form">
-                <input type="hidden" name="form-name" value="commande-bible-chantee">
-                <p style="display:none;">
-                    <label>Don't fill this out: <input name="bot-field"></label>
-                </p>
+            <form name="subscribe" method="POST" action="/form-success.html" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="subscribe">
+                <input type="hidden" name="bot-field">
                 <div class="form-group">
-                    <input type="email" name="email" id="preorder-email-input" required>
+                    <input type="email" name="email" placeholder="Your email" required>
                 </div>
                 <div class="form-group">
-                    <select name="language" id="preorder-language-select" required>
-                        <option value="FR">Français</option>
-                        <option value="PT">Português</option>
-                        <option value="EN">English</option>
-                        <option value="ES">Español</option>
-                        <option value="DE">Deutsch</option>
-                        <option value="IT">Italiano</option>
+                    <select name="language" required>
+                        <option value="">Choose language</option>
+                        <option value="fr">Français</option>
+                        <option value="pt">Português</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="de">Deutsch</option>
+                        <option value="it">Italiano</option>
                     </select>
                 </div>
-                <button type="submit" class="preorder-btn" id="preorder-submit-btn"></button>
+                <button type="submit" class="preorder-btn">Subscribe</button>
             </form>
-            <div class="preorder-success" id="preorder-success" style="display:none;"></div>
+        </div>
+
+        <!-- Feedback Section -->
+        <div class="preorder-section">
+            <h2>Share your feedback</h2>
+            <p>We'd love to hear your thoughts about the Sung Bible project</p>
+            <form name="feedback" method="POST" action="/form-success.html" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="feedback">
+                <input type="hidden" name="bot-field">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your name (optional)">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your email (optional)">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your message..." rows="4" required maxlength="500"></textarea>
+                </div>
+                <button type="submit" class="preorder-btn">Send</button>
+            </form>
         </div>
 
         <div class="progress-section">
@@ -795,13 +820,9 @@
                 link.title = t.streamingComingSoon;
             });
 
-            // Mettre à jour la section précommande
+            // Update titles for subscribe section
             document.getElementById('preorder-title').textContent = t.preorderTitle;
             document.getElementById('preorder-subtitle').textContent = t.preorderSubtitle;
-            document.getElementById('preorder-email-input').placeholder = t.preorderEmail;
-            const languageSelect = document.getElementById('preorder-language-select');
-            languageSelect.options[0].text = t.preorderLanguage + ' - Français';
-            document.getElementById('preorder-submit-btn').textContent = t.preorderBtn;
             document.getElementById('btn-share').textContent = t.btnShare;
             document.getElementById('btn-review').textContent = t.btnReview;
 
@@ -1001,28 +1022,9 @@
             }
         }
 
-        // Gestion du formulaire de précommande
+        // Forms now use native Netlify Forms submission
+        // No JavaScript handling needed - forms submit directly to Netlify
         document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('preorder-form');
-            form.addEventListener('submit', function(e) {
-                const formData = new FormData(form);
-                const email = formData.get('email');
-                const language = formData.get('language');
-
-                // Google Analytics: Track form submission
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'generate_lead', {
-                        'event_category': 'conversion',
-                        'event_label': 'preorder_form',
-                        'language': language,
-                        'value': 1
-                    });
-                }
-
-                // Let Netlify handle the form submission natively
-                // No e.preventDefault() - form submits normally to Netlify
-                console.log('Form submitted to Netlify with email:', email, 'language:', language);
-            });
 
             // Track review button clicks
             const reviewLink = document.getElementById('review-link');
