@@ -249,7 +249,17 @@
         .lyrics-container::-webkit-scrollbar { width: 8px; }
         .lyrics-container::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 4px; }
         .lyrics-container::-webkit-scrollbar-thumb { background: #ffce00; border-radius: 4px; }
-        .lyrics-text { font-size: 0.95em; line-height: 1.2; white-space: pre-wrap; color: #e0e0e0; }
+        .lyrics-text {
+            font-size: 0.95em;
+            line-height: 1.35;
+            white-space: pre-wrap;
+            color: #e0e0e0;
+        }
+        /* Contrôle précis de l'espacement entre couplets: exactement 1 ligne vide */
+        .lyrics-text p {
+            margin: 0;
+            padding: 0;
+        }
         .lyrics-text .section-label { color: #ffce00; font-weight: bold; display: block; margin-top: 6px; }
         .no-lyrics { text-align: center; color: #bbb; font-style: italic; padding: 20px; }
 
@@ -285,6 +295,7 @@
             .content-wrapper { flex-direction: column; max-height: none; }
             .lyrics-container, .bible-container { max-height: 200px; }
             .player-title { font-size: 1.1em; }
+            .lyrics-text { line-height: 1.3; font-size: 0.9em; }
         }
 
         .section-back-btn {
@@ -442,12 +453,14 @@
 
     <script src="/lyrics-data.js"></script>
     <script src="/lyrics-data-pt.js"></script>
+    <script src="/lyrics-data-en.js"></script>
     <script src="/lyrics-data-v2.js"></script>
     <!-- Fix: Expose lyrics variables to window (const ne s'expose pas automatiquement) -->
     <script>
     if (typeof chapterLyrics !== 'undefined' && !window.chapterLyrics) window.chapterLyrics = chapterLyrics;
     if (typeof chapterLyricsV2 !== 'undefined' && !window.chapterLyricsV2) window.chapterLyricsV2 = chapterLyricsV2;
     if (typeof chapterLyricsPT !== 'undefined' && !window.chapterLyricsPT) window.chapterLyricsPT = chapterLyricsPT;
+    if (typeof chapterLyricsEN !== 'undefined' && !window.chapterLyricsEN) window.chapterLyricsEN = chapterLyricsEN;
     </script>
 
     <script src="/audio-urls.js"></script>
@@ -666,6 +679,10 @@
             if (L === 'PT') {
                 if (typeof window.chapterLyricsPT === 'undefined') return null;
                 return window.chapterLyricsPT[book] && window.chapterLyricsPT[book][chapterStr] ? window.chapterLyricsPT[book][chapterStr] : null;
+            }
+            if (L === 'EN') {
+                if (typeof window.chapterLyricsEN === 'undefined') return null;
+                return window.chapterLyricsEN[book] && window.chapterLyricsEN[book][chapterStr] ? window.chapterLyricsEN[book][chapterStr] : null;
             }
             if (L === 'FR') {
                 if (typeof window.chapterLyrics === 'undefined') return null;

@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="lyrics-data.js"></script>
     <script src="lyrics-data-pt.js"></script>
+    <script src="lyrics-data-en.js"></script>
     <style>
         :root {
             --bg-dark: #0a1628;
@@ -284,7 +285,7 @@
             margin-top: 1rem;
             white-space: pre-wrap;
             font-size: 0.9rem;
-            line-height: 1.6;
+            line-height: 1.35;
             color: var(--text-secondary);
             max-height: 0;
             overflow: hidden;
@@ -940,8 +941,14 @@
                 } else {
                     lyricsText = t.lyricsComingSoon;
                 }
+            } else if (currentLang === 'EN') {
+                if (window.chapterLyricsEN && window.chapterLyricsEN[bookNum] && window.chapterLyricsEN[bookNum][chapterNum]) {
+                    lyricsText = window.chapterLyricsEN[bookNum][chapterNum];
+                } else {
+                    lyricsText = t.lyricsComingSoon;
+                }
             } else {
-                // EN ou ES : paroles non disponibles
+                // ES ou autres : paroles non disponibles
                 lyricsText = t.lyricsComingSoon;
             }
 
