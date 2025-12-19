@@ -1,2 +1,1 @@
-# Redirect only root to demo on sungbible.world
 / /demo.html 200
