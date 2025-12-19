@@ -485,6 +485,10 @@
     if (typeof chapterTitles !== 'undefined' && !window.chapterTitles) window.chapterTitles = chapterTitles;
     </script>
     <script src="/bible-data.js"></script>
+    <!-- Fix: Expose bible data to window -->
+    <script>
+    if (typeof bibleData !== 'undefined' && !window.bibleData) window.bibleData = bibleData;
+    </script>
 
     <script src="/sections-promesses.js"></script>
 
