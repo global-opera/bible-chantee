@@ -1144,14 +1144,7 @@
                 subscribeForm.addEventListener('submit', function(e) {
                     const languageSelect = document.getElementById('language-select');
                     if (languageSelect && languageSelect.value) {
-                        const selectedLang = languageSelect.value.toLowerCase();
-                        localStorage.setItem('sungbible_lang', selectedLang);
-                        console.log(`✅ Language saved to localStorage: ${selectedLang}`);
-                        console.log(`📍 Will redirect to: /thank-you.html (then /lecteur.html?lang=${selectedLang})`);
-                    } else {
-                        // Fallback to FR if no language selected
-                        localStorage.setItem('sungbible_lang', 'fr');
-                        console.warn('⚠️ No language selected, defaulting to FR');
+                        localStorage.setItem('sungbible_lang', languageSelect.value.toLowerCase());
                     }
                     // Let the form submit naturally to Netlify
                 });
