@@ -247,9 +247,22 @@
             text-decoration: none;
         }
         .streaming-disabled {
-            opacity: 0.4;
+            opacity: 0.7;
             cursor: not-allowed;
             pointer-events: none;
+        }
+        .coming-soon-badge {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--accent-gold);
+            margin-top: 0.3rem;
+            font-weight: 400;
+        }
+        .streaming-notice {
+            text-align: center;
+            margin-top: 1rem;
+            color: var(--text-secondary);
+            font-style: italic;
         }
         .footer {
             text-align: center;
@@ -476,13 +489,19 @@
                 </div>
                 <div class="form-group">
                     <select name="language" required>
-                        <option value="">Choose language</option>
+                        <option value="" disabled selected>Choose language</option>
                         <option value="fr">Français</option>
-                        <option value="pt">Português</option>
                         <option value="en">English</option>
+                        <option value="pt">Português</option>
                         <option value="es">Español</option>
                         <option value="de">Deutsch</option>
                         <option value="it">Italiano</option>
+                        <option value="ar">العربية</option>
+                        <option value="ru">Русский</option>
+                        <option value="zh">中文</option>
+                        <option value="tl">Tagalog</option>
+                        <option value="sw">Kiswahili</option>
+                        <option value="hi">हिन्दी</option>
                     </select>
                 </div>
                 <button type="submit" class="preorder-btn">Subscribe</button>
@@ -531,11 +550,24 @@
         
         <h2 class="section-title" id="title-available"></h2>
         <div class="streaming">
-            <a href="#" class="streaming-disabled" data-streaming-link>Spotify</a>
-            <a href="#" class="streaming-disabled" data-streaming-link>Apple Music</a>
-            <a href="#" class="streaming-disabled" data-streaming-link>YouTube Music</a>
-            <a href="#" class="streaming-disabled" data-streaming-link>Amazon Music</a>
+            <a href="#" class="streaming-disabled" data-streaming-link>
+                <span>Spotify</span>
+                <small class="coming-soon-badge">Coming soon</small>
+            </a>
+            <a href="#" class="streaming-disabled" data-streaming-link>
+                <span>Apple Music</span>
+                <small class="coming-soon-badge">Coming soon</small>
+            </a>
+            <a href="#" class="streaming-disabled" data-streaming-link>
+                <span>YouTube Music</span>
+                <small class="coming-soon-badge">Coming soon</small>
+            </a>
+            <a href="#" class="streaming-disabled" data-streaming-link>
+                <span>Amazon Music</span>
+                <small class="coming-soon-badge">Coming soon</small>
+            </a>
         </div>
+        <p class="streaming-notice" id="streaming-notice"></p>
         
         <div class="cta">
             <a href="crowdfunding.html" class="cta-btn" id="btn-donate"></a>
@@ -567,7 +599,8 @@
                 aboutTitle: "Un projet unique",
                 aboutText1: "La Bible Chantee transforme chaque chapitre de la Bible en une chanson originale, fidele a l'essence des textes bibliques originaux. Chaque piste capture l'essence spirituelle du texte biblique.",
                 aboutText2: "<strong>Notre vision :</strong> Rendre la Parole de Dieu accessible a tous, dans toutes les langues, a travers la puissance de la musique.",
-                titleAvailable: "Disponible sur",
+                titleAvailable: "Bientot disponible sur",
+                streamingNotice: "Disponible prochainement dans les 12 langues",
                 btnDonate: "Faire un don",
                 btnListen: "Ecouter maintenant",
                 footerText: "10% des revenus reverses aux missions",
@@ -612,7 +645,8 @@
                 aboutTitle: "Um projeto unico",
                 aboutText1: "A Biblia Cantada transforma cada capitulo da Biblia em uma cancao original, fiel a essencia dos textos biblicos originais. Cada faixa captura a essencia espiritual do texto biblico.",
                 aboutText2: "<strong>Nossa visao:</strong> Tornar a Palavra de Deus acessivel a todos, em todos os idiomas, atraves do poder da musica.",
-                titleAvailable: "Disponivel em",
+                titleAvailable: "Em breve disponivel em",
+                streamingNotice: "Disponivel em breve nos 12 idiomas",
                 btnDonate: "Fazer uma doacao",
                 btnListen: "Ouvir agora",
                 footerText: "10% da receita destinada a missoes",
@@ -657,7 +691,8 @@
                 aboutTitle: "A unique project",
                 aboutText1: "The Sung Bible transforms each chapter of the Bible into an original song, faithful to the essence of the original biblical texts. Each track captures the spiritual essence of the biblical text.",
                 aboutText2: "<strong>Our vision:</strong> Make God's Word accessible to everyone, in every language, through the power of music.",
-                titleAvailable: "Available on",
+                titleAvailable: "Coming soon on",
+                streamingNotice: "Coming soon in all 12 languages",
                 btnDonate: "Make a donation",
                 btnListen: "Listen now",
                 footerText: "10% of revenue donated to missions",
@@ -702,7 +737,8 @@
                 aboutTitle: "Un proyecto unico",
                 aboutText1: "La Biblia Cantada transforma cada capitulo de la Biblia en una cancion original, fiel a la esencia de los textos biblicos originales. Cada pista captura la esencia espiritual del texto biblico.",
                 aboutText2: "<strong>Nuestra vision:</strong> Hacer accesible la Palabra de Dios a todos, en todos los idiomas, a traves del poder de la musica.",
-                titleAvailable: "Disponible en",
+                titleAvailable: "Proximo disponible en",
+                streamingNotice: "Proximo disponible en los 12 idiomas",
                 btnDonate: "Hacer una donacion",
                 btnListen: "Escuchar ahora",
                 footerText: "10% de los ingresos destinados a misiones",
@@ -805,6 +841,7 @@
             document.getElementById('about-text1').textContent = t.aboutText1;
             document.getElementById('about-text2').innerHTML = t.aboutText2;
             document.getElementById('title-available').textContent = t.titleAvailable;
+            document.getElementById('streaming-notice').textContent = t.streamingNotice;
             document.getElementById('btn-donate').textContent = t.btnDonate;
             document.getElementById('footer-text').textContent = t.footerText;
 
