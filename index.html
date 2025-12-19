@@ -498,8 +498,8 @@
     <div class="container">
         <div class="lang-selector">
             <button class="lang-btn active" onclick="setLang('FR')">FR Francais</button>
-            <button class="lang-btn" onclick="setLang('EN')">GB English</button>
             <button class="lang-btn" onclick="setLang('PT')">BR Portugues</button>
+            <button class="lang-btn" onclick="setLang('EN')">GB English</button>
             <button class="lang-btn disabled" onclick="setLang('ES')">ES Espanol</button>
         </div>
         
@@ -1138,24 +1138,15 @@
         // No JavaScript handling needed - forms submit directly to Netlify
         document.addEventListener('DOMContentLoaded', function() {
 
-            // Store email and language before form submission
+            // Store selected language before form submission
             const subscribeForm = document.querySelector('form[name="subscribe"]');
             if (subscribeForm) {
                 subscribeForm.addEventListener('submit', function(e) {
-                    const emailInput = subscribeForm.querySelector('input[name="email"]');
                     const languageSelect = document.getElementById('language-select');
-
-                    // Store email
-                    if (emailInput && emailInput.value) {
-                        localStorage.setItem('sungbible_email', emailInput.value);
-                        console.log(`✅ Email saved: ${emailInput.value}`);
-                    }
-
-                    // Store language
                     if (languageSelect && languageSelect.value) {
                         const selectedLang = languageSelect.value.toLowerCase();
                         localStorage.setItem('sungbible_lang', selectedLang);
-                        console.log(`✅ Language saved: ${selectedLang}`);
+                        console.log(`✅ Language saved to localStorage: ${selectedLang}`);
                         console.log(`📍 Will redirect to: /thank-you.html (then /lecteur.html?lang=${selectedLang})`);
                     } else {
                         // Fallback to FR if no language selected
