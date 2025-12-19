@@ -835,10 +835,10 @@
         };
         
         const audioBase = {
-            FR: "https://archive.org/download/bible-chantee-fr-v2/",
-            PT: "https://archive.org/download/bible-chantee-pt-v2/",
-            EN: "https://archive.org/download/bible-chantee-en-v2/",
-            ES: "https://archive.org/download/bible-chantee-es-v2/"
+            FR: "https://archive.org/download/bible-chantee-fr/",
+            PT: "https://archive.org/download/bible-chantee-pt/",
+            EN: "https://archive.org/download/bible-chantee-en/",
+            ES: "https://archive.org/download/bible-chantee-es/"
         };
 
         // Google Place ID pour les avis
@@ -960,7 +960,7 @@
                         <div class="track-desc">${track.desc}</div>
                     </div>
                     <audio controls preload="none" id="audio-${index}" data-track-id="${track.id}">
-                        <source src="${base}${track.id}.mp3" type="audio/mpeg">
+                        <source src="${base}${track.id.split('_').slice(0,2).join('_')}/${track.id}.mp3" type="audio/mpeg">
                     </audio>
                     <button class="lyrics-btn" id="lyrics-btn-${index}" onclick="toggleLyrics('${track.id}', ${index})">
                         ${t.btnLyrics}
