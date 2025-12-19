@@ -1130,10 +1130,16 @@
           </div>
         </div>
 
-        <form id="signup-form" class="signup-form">
+        <form id="signup-form" class="signup-form" name="signup-bible-chantee" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="signup-bible-chantee">
+          <p style="display:none;">
+            <label>Don't fill this out: <input name="bot-field"></label>
+          </p>
+          <input type="hidden" name="language" id="hidden-language-input" value="">
           <input
             type="email"
             id="email-input"
+            name="email"
             data-i18n-placeholder="email-placeholder"
             placeholder="Votre email pour commencer"
             required
@@ -2077,8 +2083,32 @@
         return;
       }
 
-      // Save email
+      // Update hidden language field for Netlify
+      document.getElementById('hidden-language-input').value = lang;
+
+      // Save email locally
       const count = saveEmailToMailingList(email, lang);
+
+      // Send to Netlify Forms
+      const form = document.getElementById('signup-form');
+      const formData = new FormData(form);
+
+      fetch('/', {
+        method: 'POST',
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
+      })
+      .then(response => {
+        if (!response.ok) {
+          console.warn('Netlify form submission failed:', response.status);
+        } else {
+          console.log('✅ Email sent to Netlify Forms');
+        }
+        return response;
+      })
+      .catch((error) => {
+        console.error('Form submission error:', error);
+      });
 
       // Check if language is available
       if (AVAILABLE_LANGS.includes(lang)) {
