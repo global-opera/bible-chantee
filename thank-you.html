@@ -21,7 +21,7 @@
     <h1 id="title">Merci !</h1>
     <p id="message">Vous avez été inscrit avec succès.</p>
     <p class="sub" id="submessage">Nous vous informerons lorsque du nouveau contenu sera disponible.</p>
-    <a href="/lecteur.html" id="access-link">Accéder au site (100 crédits gratuits)</a>
+    <a href="https://biblechantee.com/lecteur.html" id="access-link">Accéder au site (100 crédits gratuits)</a>
   </div>
 
   <script>
@@ -101,12 +101,12 @@
       // Mettre à jour le lien avec la langue et le texte traduit
       const link = document.getElementById('access-link');
       if (link) {
-        link.href = `/lecteur.html?lang=${t.lang}`;
+        link.href = `https://biblechantee.com/lecteur.html?lang=${t.lang}`;
         link.textContent = t.buttonText;
       }
 
       console.log(`✅ Thank you page displayed in: ${t.lang.toUpperCase()}`);
-      console.log(`📍 Redirect link: /lecteur.html?lang=${t.lang}`);
+      console.log(`📍 Redirect link: https://biblechantee.com/lecteur.html?lang=${t.lang}`);
     })();
 
     // Auto-redirect après 5 secondes (optionnel)
@@ -120,3 +120,6 @@
   </script>
 </body>
 </html>
+
+
+
