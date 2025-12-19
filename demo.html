@@ -461,7 +461,7 @@
         <div class="preorder-section">
             <h2 id="preorder-title"></h2>
             <p id="preorder-subtitle"></p>
-            <form name="commande-bible-chantee" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="preorder-form">
+            <form name="commande-bible-chantee" method="POST" action="/form-success.html" data-netlify="true" netlify-honeypot="bot-field" id="preorder-form">
                 <input type="hidden" name="form-name" value="commande-bible-chantee">
                 <p style="display:none;">
                     <label>Don't fill this out: <input name="bot-field"></label>
@@ -1005,8 +1005,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('preorder-form');
             form.addEventListener('submit', function(e) {
-                e.preventDefault();
-
                 const formData = new FormData(form);
                 const email = formData.get('email');
                 const language = formData.get('language');
@@ -1021,28 +1019,9 @@
                     });
                 }
 
-                fetch('/', {
-                    method: 'POST',
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                    body: new URLSearchParams(formData).toString()
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok: ' + response.status);
-                    }
-                    return response;
-                })
-                .then(() => {
-                    form.style.display = 'none';
-                    const successDiv = document.getElementById('preorder-success');
-                    const t = translations[currentLang];
-                    successDiv.textContent = t.preorderSuccess;
-                    successDiv.style.display = 'block';
-                })
-                .catch((error) => {
-                    console.error('Form submission error:', error);
-                    alert('Error submitting form. Please try again or contact info@biblechantee.com');
-                });
+                // Let Netlify handle the form submission natively
+                // No e.preventDefault() - form submits normally to Netlify
+                console.log('Form submitted to Netlify with email:', email, 'language:', language);
             });
 
             // Track review button clicks
