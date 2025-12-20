@@ -1,29 +1,29 @@
 {
   "total": 1189,
-  "updated_at": "2025-12-21T00:56:33",
+  "updated_at": "2025-12-21T00:59:25",
   "langs": {
     "FR": {
-      "count": 1268,
+      "count": 1134,
       "target": 1189,
-      "percent": 106.6,
+      "percent": 95.4,
       "status": "En cours"
     },
     "EN": {
-      "count": 1189,
+      "count": 1134,
       "target": 1189,
-      "percent": 100.0,
-      "status": "Complet"
+      "percent": 95.4,
+      "status": "En cours"
     },
     "PT": {
-      "count": 1189,
+      "count": 1134,
       "target": 1189,
-      "percent": 100.0,
-      "status": "Complet"
+      "percent": 95.4,
+      "status": "En cours"
     },
     "ES": {
-      "count": 88,
+      "count": 93,
       "target": 1189,
-      "percent": 7.4,
+      "percent": 7.8,
       "status": "En cours"
     }
   }
