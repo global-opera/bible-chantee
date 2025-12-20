@@ -131,6 +131,16 @@
             renderTracks();
         }
 
+        function getAudioUrl(trackId) {
+            const lang = trackId.slice(-2);
+            if (lang === 'EN') {
+                const parts = trackId.split('_');
+                const book = parts[0] + '_' + parts[1];
+                return `https://archive.org/download/bible-chantee-en/${book}/${trackId}.mp3`;
+            }
+            return `demo-audio/${trackId}.mp3`;
+        }
+
         function renderTracks() {
             const container = document.getElementById('tracks');
             container.innerHTML = tracks[currentLang].map(t => `
@@ -148,3 +158,4 @@
     </script>
 </body>
 </html>
+
