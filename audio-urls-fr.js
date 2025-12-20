@@ -1,8 +1,8 @@
 // Audio URLs - Bible Chantée FR - 1189 chapters
-// Standard codes: BOOK_CODES_STANDARD.csv
+// Keys: book number (01, 02, etc.)
 // URL: https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/{BOOK}/{FILE}.mp3
 window.audioUrlsFR = {
-    "01_GEN": {
+    "01": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_03_FR.mp3",
@@ -54,7 +54,7 @@ window.audioUrlsFR = {
         "49": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_49_FR.mp3",
         "50": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_50_FR.mp3"
     },
-    "02_EXO": {
+    "02": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/02_EXO/02_EXO_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/02_EXO/02_EXO_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/02_EXO/02_EXO_03_FR.mp3",
@@ -96,7 +96,7 @@ window.audioUrlsFR = {
         "39": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/02_EXO/02_EXO_39_FR.mp3",
         "40": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/02_EXO/02_EXO_40_FR.mp3"
     },
-    "03_LEV": {
+    "03": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/03_LEV/03_LEV_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/03_LEV/03_LEV_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/03_LEV/03_LEV_03_FR.mp3",
@@ -125,7 +125,7 @@ window.audioUrlsFR = {
         "26": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/03_LEV/03_LEV_26_FR.mp3",
         "27": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/03_LEV/03_LEV_27_FR.mp3"
     },
-    "04_NUM": {
+    "04": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/04_NUM/04_NUM_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/04_NUM/04_NUM_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/04_NUM/04_NUM_03_FR.mp3",
@@ -163,7 +163,7 @@ window.audioUrlsFR = {
         "35": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/04_NUM/04_NUM_35_FR.mp3",
         "36": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/04_NUM/04_NUM_36_FR.mp3"
     },
-    "05_DEU": {
+    "05": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/05_DEU/05_DEU_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/05_DEU/05_DEU_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/05_DEU/05_DEU_03_FR.mp3",
@@ -199,7 +199,7 @@ window.audioUrlsFR = {
         "33": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/05_DEU/05_DEU_33_FR.mp3",
         "34": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/05_DEU/05_DEU_34_FR.mp3"
     },
-    "06_JOS": {
+    "06": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/06_JOS/06_JOS_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/06_JOS/06_JOS_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/06_JOS/06_JOS_03_FR.mp3",
@@ -225,7 +225,7 @@ window.audioUrlsFR = {
         "23": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/06_JOS/06_JOS_23_FR.mp3",
         "24": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/06_JOS/06_JOS_24_FR.mp3"
     },
-    "07_JDG": {
+    "07": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/07_JDG/07_JDG_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/07_JDG/07_JDG_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/07_JDG/07_JDG_03_FR.mp3",
@@ -248,13 +248,13 @@ window.audioUrlsFR = {
         "20": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/07_JDG/07_JDG_20_FR.mp3",
         "21": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/07_JDG/07_JDG_21_FR.mp3"
     },
-    "08_RUT": {
+    "08": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/08_RUT/08_RUT_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/08_RUT/08_RUT_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/08_RUT/08_RUT_03_FR.mp3",
         "4": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/08_RUT/08_RUT_04_FR.mp3"
     },
-    "09_1SAM": {
+    "09": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/09_1SAM/09_1SAM_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/09_1SAM/09_1SAM_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/09_1SAM/09_1SAM_03_FR.mp3",
@@ -287,7 +287,7 @@ window.audioUrlsFR = {
         "30": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/09_1SAM/09_1SAM_30_FR.mp3",
         "31": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/09_1SAM/09_1SAM_31_FR.mp3"
     },
-    "10_2SAM": {
+    "10": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/10_2SAM/10_2SAM_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/10_2SAM/10_2SAM_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/10_2SAM/10_2SAM_03_FR.mp3",
@@ -313,7 +313,7 @@ window.audioUrlsFR = {
         "23": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/10_2SAM/10_2SAM_23_FR.mp3",
         "24": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/10_2SAM/10_2SAM_24_FR.mp3"
     },
-    "11_1KI": {
+    "11": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/11_1KI/11_1KI_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/11_1KI/11_1KI_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/11_1KI/11_1KI_03_FR.mp3",
@@ -337,7 +337,7 @@ window.audioUrlsFR = {
         "21": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/11_1KI/11_1KI_21_FR.mp3",
         "22": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/11_1KI/11_1KI_22_FR.mp3"
     },
-    "12_2KI": {
+    "12": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/12_2KI/12_2KI_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/12_2KI/12_2KI_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/12_2KI/12_2KI_03_FR.mp3",
@@ -364,7 +364,7 @@ window.audioUrlsFR = {
         "24": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/12_2KI/12_2KI_24_FR.mp3",
         "25": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/12_2KI/12_2KI_25_FR.mp3"
     },
-    "13_1CH": {
+    "13": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/13_1CH/13_1CH_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/13_1CH/13_1CH_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/13_1CH/13_1CH_03_FR.mp3",
@@ -395,7 +395,7 @@ window.audioUrlsFR = {
         "28": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/13_1CH/13_1CH_28_FR.mp3",
         "29": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/13_1CH/13_1CH_29_FR.mp3"
     },
-    "14_2CH": {
+    "14": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/14_2CH/14_2CH_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/14_2CH/14_2CH_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/14_2CH/14_2CH_03_FR.mp3",
@@ -433,7 +433,7 @@ window.audioUrlsFR = {
         "35": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/14_2CH/14_2CH_35_FR.mp3",
         "36": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/14_2CH/14_2CH_36_FR.mp3"
     },
-    "15_EZR": {
+    "15": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/15_EZR/15_EZR_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/15_EZR/15_EZR_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/15_EZR/15_EZR_03_FR.mp3",
@@ -445,7 +445,7 @@ window.audioUrlsFR = {
         "9": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/15_EZR/15_EZR_09_FR.mp3",
         "10": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/15_EZR/15_EZR_10_FR.mp3"
     },
-    "16_NEH": {
+    "16": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/16_NEH/16_NEH_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/16_NEH/16_NEH_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/16_NEH/16_NEH_03_FR.mp3",
@@ -460,7 +460,7 @@ window.audioUrlsFR = {
         "12": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/16_NEH/16_NEH_12_FR.mp3",
         "13": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/16_NEH/16_NEH_13_FR.mp3"
     },
-    "17_EST": {
+    "17": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/17_EST/17_EST_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/17_EST/17_EST_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/17_EST/17_EST_03_FR.mp3",
@@ -472,7 +472,7 @@ window.audioUrlsFR = {
         "9": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/17_EST/17_EST_09_FR.mp3",
         "10": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/17_EST/17_EST_10_FR.mp3"
     },
-    "18_JOB": {
+    "18": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/18_JOB/18_JOB_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/18_JOB/18_JOB_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/18_JOB/18_JOB_03_FR.mp3",
@@ -516,7 +516,7 @@ window.audioUrlsFR = {
         "41": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/18_JOB/18_JOB_41_FR.mp3",
         "42": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/18_JOB/18_JOB_42_FR.mp3"
     },
-    "19_PSA": {
+    "19": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/19_PSA/19_PSA_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/19_PSA/19_PSA_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/19_PSA/19_PSA_03_FR.mp3",
@@ -668,7 +668,7 @@ window.audioUrlsFR = {
         "98": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/19_PSA/19_PSA_98_FR.mp3",
         "99": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/19_PSA/19_PSA_99_FR.mp3"
     },
-    "20_PRO": {
+    "20": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/20_PRO/20_PRO_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/20_PRO/20_PRO_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/20_PRO/20_PRO_03_FR.mp3",
@@ -701,7 +701,7 @@ window.audioUrlsFR = {
         "30": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/20_PRO/20_PRO_30_FR.mp3",
         "31": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/20_PRO/20_PRO_31_FR.mp3"
     },
-    "21_ECC": {
+    "21": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/21_ECC/21_ECC_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/21_ECC/21_ECC_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/21_ECC/21_ECC_03_FR.mp3",
@@ -715,7 +715,7 @@ window.audioUrlsFR = {
         "11": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/21_ECC/21_ECC_11_FR.mp3",
         "12": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/21_ECC/21_ECC_12_FR.mp3"
     },
-    "22_SON": {
+    "22": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/22_SON/22_SON_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/22_SON/22_SON_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/22_SON/22_SON_03_FR.mp3",
@@ -725,7 +725,7 @@ window.audioUrlsFR = {
         "7": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/22_SON/22_SON_07_FR.mp3",
         "8": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/22_SON/22_SON_08_FR.mp3"
     },
-    "23_ISA": {
+    "23": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/23_ISA/23_ISA_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/23_ISA/23_ISA_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/23_ISA/23_ISA_03_FR.mp3",
@@ -793,7 +793,7 @@ window.audioUrlsFR = {
         "65": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/23_ISA/23_ISA_65_FR.mp3",
         "66": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/23_ISA/23_ISA_66_FR.mp3"
     },
-    "24_JER": {
+    "24": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/24_JER/24_JER_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/24_JER/24_JER_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/24_JER/24_JER_03_FR.mp3",
@@ -847,14 +847,14 @@ window.audioUrlsFR = {
         "51": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/24_JER/24_JER_51_FR.mp3",
         "52": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/24_JER/24_JER_52_FR.mp3"
     },
-    "25_LAM": {
+    "25": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/25_LAM/25_LAM_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/25_LAM/25_LAM_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/25_LAM/25_LAM_03_FR.mp3",
         "4": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/25_LAM/25_LAM_04_FR.mp3",
         "5": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/25_LAM/25_LAM_05_FR.mp3"
     },
-    "26_EZK": {
+    "26": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/26_EZK/26_EZE_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/26_EZK/26_EZE_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/26_EZK/26_EZE_03_FR.mp3",
@@ -904,7 +904,7 @@ window.audioUrlsFR = {
         "47": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/26_EZK/26_EZE_47_FR.mp3",
         "48": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/26_EZK/26_EZE_48_FR.mp3"
     },
-    "27_DAN": {
+    "27": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/27_DAN/27_DAN_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/27_DAN/27_DAN_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/27_DAN/27_DAN_03_FR.mp3",
@@ -918,7 +918,7 @@ window.audioUrlsFR = {
         "11": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/27_DAN/27_DAN_11_FR.mp3",
         "12": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/27_DAN/27_DAN_12_FR.mp3"
     },
-    "28_HOS": {
+    "28": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/28_HOS/28_HOS_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/28_HOS/28_HOS_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/28_HOS/28_HOS_03_FR.mp3",
@@ -934,12 +934,12 @@ window.audioUrlsFR = {
         "13": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/28_HOS/28_HOS_13_FR.mp3",
         "14": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/28_HOS/28_HOS_14_FR.mp3"
     },
-    "29_JOL": {
+    "29": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/29_JOL/29_JOE_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/29_JOL/29_JOE_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/29_JOL/29_JOE_03_FR.mp3"
     },
-    "30_AMO": {
+    "30": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/30_AMO/30_AMO_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/30_AMO/30_AMO_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/30_AMO/30_AMO_03_FR.mp3",
@@ -950,16 +950,16 @@ window.audioUrlsFR = {
         "8": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/30_AMO/30_AMO_08_FR.mp3",
         "9": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/30_AMO/30_AMO_09_FR.mp3"
     },
-    "31_OBA": {
+    "31": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/31_OBA/31_OBA_01_FR.mp3"
     },
-    "32_JON": {
+    "32": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/32_JON/32_JON_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/32_JON/32_JON_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/32_JON/32_JON_03_FR.mp3",
         "4": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/32_JON/32_JON_04_FR.mp3"
     },
-    "33_MIC": {
+    "33": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/33_MIC/33_MIC_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/33_MIC/33_MIC_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/33_MIC/33_MIC_03_FR.mp3",
@@ -968,26 +968,26 @@ window.audioUrlsFR = {
         "6": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/33_MIC/33_MIC_06_FR.mp3",
         "7": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/33_MIC/33_MIC_07_FR.mp3"
     },
-    "34_NAH": {
+    "34": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/34_NAH/34_NAH_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/34_NAH/34_NAH_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/34_NAH/34_NAH_03_FR.mp3"
     },
-    "35_HAB": {
+    "35": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/35_HAB/35_HAB_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/35_HAB/35_HAB_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/35_HAB/35_HAB_03_FR.mp3"
     },
-    "36_ZEP": {
+    "36": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/36_ZEP/36_ZEP_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/36_ZEP/36_ZEP_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/36_ZEP/36_ZEP_03_FR.mp3"
     },
-    "37_HAG": {
+    "37": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/37_HAG/37_HAG_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/37_HAG/37_HAG_02_FR.mp3"
     },
-    "38_ZEC": {
+    "38": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/38_ZEC/38_ZEC_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/38_ZEC/38_ZEC_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/38_ZEC/38_ZEC_03_FR.mp3",
@@ -1003,13 +1003,13 @@ window.audioUrlsFR = {
         "13": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/38_ZEC/38_ZEC_13_FR.mp3",
         "14": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/38_ZEC/38_ZEC_14_FR.mp3"
     },
-    "39_MAL": {
+    "39": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/39_MAL/39_MAL_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/39_MAL/39_MAL_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/39_MAL/39_MAL_03_FR.mp3",
         "4": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/39_MAL/39_MAL_04_FR.mp3"
     },
-    "40_MAT": {
+    "40": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/40_MAT/40_MAT_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/40_MAT/40_MAT_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/40_MAT/40_MAT_03_FR.mp3",
@@ -1039,7 +1039,7 @@ window.audioUrlsFR = {
         "27": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/40_MAT/40_MAT_27_FR.mp3",
         "28": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/40_MAT/40_MAT_28_FR.mp3"
     },
-    "41_MRK": {
+    "41": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/41_MRK/41_MAR_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/41_MRK/41_MAR_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/41_MRK/41_MAR_03_FR.mp3",
@@ -1057,7 +1057,7 @@ window.audioUrlsFR = {
         "15": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/41_MRK/41_MAR_15_FR.mp3",
         "16": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/41_MRK/41_MAR_16_FR.mp3"
     },
-    "42_LUK": {
+    "42": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/42_LUK/42_LUK_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/42_LUK/42_LUK_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/42_LUK/42_LUK_03_FR.mp3",
@@ -1083,7 +1083,7 @@ window.audioUrlsFR = {
         "23": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/42_LUK/42_LUK_23_FR.mp3",
         "24": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/42_LUK/42_LUK_24_FR.mp3"
     },
-    "43_JHN": {
+    "43": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/43_JHN/43_JHN_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/43_JHN/43_JHN_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/43_JHN/43_JHN_03_FR.mp3",
@@ -1106,7 +1106,7 @@ window.audioUrlsFR = {
         "20": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/43_JHN/43_JHN_20_FR.mp3",
         "21": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/43_JHN/43_JHN_21_FR.mp3"
     },
-    "44_ACT": {
+    "44": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/44_ACT/44_ACT_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/44_ACT/44_ACT_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/44_ACT/44_ACT_03_FR.mp3",
@@ -1136,7 +1136,7 @@ window.audioUrlsFR = {
         "27": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/44_ACT/44_ACT_27_FR.mp3",
         "28": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/44_ACT/44_ACT_28_FR.mp3"
     },
-    "45_ROM": {
+    "45": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/45_ROM/45_ROM_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/45_ROM/45_ROM_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/45_ROM/45_ROM_03_FR.mp3",
@@ -1154,7 +1154,7 @@ window.audioUrlsFR = {
         "15": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/45_ROM/45_ROM_15_FR.mp3",
         "16": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/45_ROM/45_ROM_16_FR.mp3"
     },
-    "46_1CO": {
+    "46": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/46_1CO/46_1CO_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/46_1CO/46_1CO_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/46_1CO/46_1CO_03_FR.mp3",
@@ -1172,7 +1172,7 @@ window.audioUrlsFR = {
         "15": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/46_1CO/46_1CO_15_FR.mp3",
         "16": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/46_1CO/46_1CO_16_FR.mp3"
     },
-    "47_2CO": {
+    "47": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/47_2CO/47_2CO_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/47_2CO/47_2CO_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/47_2CO/47_2CO_03_FR.mp3",
@@ -1187,7 +1187,7 @@ window.audioUrlsFR = {
         "12": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/47_2CO/47_2CO_12_FR.mp3",
         "13": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/47_2CO/47_2CO_13_FR.mp3"
     },
-    "48_GAL": {
+    "48": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/48_GAL/48_GAL_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/48_GAL/48_GAL_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/48_GAL/48_GAL_03_FR.mp3",
@@ -1195,7 +1195,7 @@ window.audioUrlsFR = {
         "5": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/48_GAL/48_GAL_05_FR.mp3",
         "6": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/48_GAL/48_GAL_06_FR.mp3"
     },
-    "49_EPH": {
+    "49": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/49_EPH/49_EPH_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/49_EPH/49_EPH_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/49_EPH/49_EPH_03_FR.mp3",
@@ -1203,31 +1203,31 @@ window.audioUrlsFR = {
         "5": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/49_EPH/49_EPH_05_FR.mp3",
         "6": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/49_EPH/49_EPH_06_FR.mp3"
     },
-    "50_PHP": {
+    "50": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/50_PHP/50_PHP_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/50_PHP/50_PHP_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/50_PHP/50_PHP_03_FR.mp3",
         "4": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/50_PHP/50_PHP_04_FR.mp3"
     },
-    "51_COL": {
+    "51": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/51_COL/51_COL_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/51_COL/51_COL_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/51_COL/51_COL_03_FR.mp3",
         "4": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/51_COL/51_COL_04_FR.mp3"
     },
-    "52_1TH": {
+    "52": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/52_1TH/52_1TH_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/52_1TH/52_1TH_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/52_1TH/52_1TH_03_FR.mp3",
         "4": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/52_1TH/52_1TH_04_FR.mp3",
         "5": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/52_1TH/52_1TH_05_FR.mp3"
     },
-    "53_2TH": {
+    "53": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/53_2TH/53_2TH_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/53_2TH/53_2TH_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/53_2TH/53_2TH_03_FR.mp3"
     },
-    "54_1TI": {
+    "54": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/54_1TI/54_1TI_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/54_1TI/54_1TI_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/54_1TI/54_1TI_03_FR.mp3",
@@ -1235,21 +1235,21 @@ window.audioUrlsFR = {
         "5": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/54_1TI/54_1TI_05_FR.mp3",
         "6": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/54_1TI/54_1TI_06_FR.mp3"
     },
-    "55_2TI": {
+    "55": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/55_2TI/55_2TI_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/55_2TI/55_2TI_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/55_2TI/55_2TI_03_FR.mp3",
         "4": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/55_2TI/55_2TI_04_FR.mp3"
     },
-    "56_TIT": {
+    "56": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/56_TIT/56_TIT_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/56_TIT/56_TIT_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/56_TIT/56_TIT_03_FR.mp3"
     },
-    "57_PHM": {
+    "57": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/57_PHM/57_PHM_01_FR.mp3"
     },
-    "58_HEB": {
+    "58": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/58_HEB/58_HEB_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/58_HEB/58_HEB_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/58_HEB/58_HEB_03_FR.mp3",
@@ -1264,42 +1264,42 @@ window.audioUrlsFR = {
         "12": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/58_HEB/58_HEB_12_FR.mp3",
         "13": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/58_HEB/58_HEB_13_FR.mp3"
     },
-    "59_JAS": {
+    "59": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/59_JAS/59_JAS_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/59_JAS/59_JAS_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/59_JAS/59_JAS_03_FR.mp3",
         "4": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/59_JAS/59_JAS_04_FR.mp3",
         "5": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/59_JAS/59_JAS_05_FR.mp3"
     },
-    "60_1PE": {
+    "60": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/60_1PE/60_1PE_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/60_1PE/60_1PE_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/60_1PE/60_1PE_03_FR.mp3",
         "4": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/60_1PE/60_1PE_04_FR.mp3",
         "5": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/60_1PE/60_1PE_05_FR.mp3"
     },
-    "61_2PE": {
+    "61": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/61_2PE/61_2PE_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/61_2PE/61_2PE_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/61_2PE/61_2PE_03_FR.mp3"
     },
-    "62_1JN": {
+    "62": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/62_1JN/62_1JO_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/62_1JN/62_1JO_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/62_1JN/62_1JO_03_FR.mp3",
         "4": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/62_1JN/62_1JO_04_FR.mp3",
         "5": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/62_1JN/62_1JO_05_FR.mp3"
     },
-    "63_2JN": {
+    "63": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/63_2JN/63_2JO_01_FR.mp3"
     },
-    "64_3JN": {
+    "64": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/64_3JN/64_3JO_01_FR.mp3"
     },
-    "65_JUD": {
+    "65": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/65_JUD/65_JUD_01_FR.mp3"
     },
-    "66_REV": {
+    "66": {
         "1": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/66_REV/66_REV_01_FR.mp3",
         "2": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/66_REV/66_REV_02_FR.mp3",
         "3": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/66_REV/66_REV_03_FR.mp3",
