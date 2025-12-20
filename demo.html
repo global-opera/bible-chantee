@@ -789,12 +789,7 @@
             }
         };
         
-        const audioBase = {
-            FR: "https://archive.org/download/bible-chantee-fr/",
-            PT: "https://archive.org/download/bible-chantee-pt/",
-            EN: "https://archive.org/download/bible-chantee-en/",
-            ES: "https://archive.org/download/bible-chantee-es/"
-        };
+        const audioBase = { FR: 'demo-audio/', PT: 'demo-audio/', EN: 'demo-audio/', ES: 'demo-audio/' };
 
         // Google Place ID pour les avis
         // TODO: Remplacer par votre vrai Place ID depuis Google Business Profile
@@ -905,7 +900,7 @@
         
         function loadTracks() {
             const t = translations[currentLang];
-            const base = audioBase[currentLang];
+            const base = 'demo-audio/';
             const container = document.getElementById('tracks-container');
 
             container.innerHTML = t.tracks.map((track, index) => `
@@ -1159,20 +1154,4 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
