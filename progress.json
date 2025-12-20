@@ -1,1 +1,30 @@
-{"updated": "2025-12-09T19:04:36.444215", "mp3_v1": 1003, "mp3_v2": 0}
+{
+  "total": 1189,
+  "updated_at": "2025-12-21T00:56:33",
+  "langs": {
+    "FR": {
+      "count": 1268,
+      "target": 1189,
+      "percent": 106.6,
+      "status": "En cours"
+    },
+    "EN": {
+      "count": 1189,
+      "target": 1189,
+      "percent": 100.0,
+      "status": "Complet"
+    },
+    "PT": {
+      "count": 1189,
+      "target": 1189,
+      "percent": 100.0,
+      "status": "Complet"
+    },
+    "ES": {
+      "count": 88,
+      "target": 1189,
+      "percent": 7.4,
+      "status": "En cours"
+    }
+  }
+}
