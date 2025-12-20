@@ -915,7 +915,7 @@
                         <div class="track-desc">${track.desc}</div>
                     </div>
                     <audio controls preload="none" id="audio-${index}" data-track-id="${track.id}">
-                        <source src="${base}${track.id.split('_').slice(0,2).join('_')}/${track.id}.mp3" type="audio/mpeg">
+                        <source src="demo-audio/${track.id}.mp3" type="audio/mpeg">
                     </audio>
                     <button class="lyrics-btn" id="lyrics-btn-${index}" onclick="toggleLyrics('${track.id}', ${index})">
                         ${t.btnLyrics}
@@ -1159,6 +1159,7 @@
     </script>
 </body>
 </html>
+
 
 
 
