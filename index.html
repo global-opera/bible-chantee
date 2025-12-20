@@ -148,7 +148,7 @@
                     <div class="track-title">${t.title}</div>
                     <div class="track-desc">${t.desc}</div>
                     <audio controls preload="none">
-                        <source src="demo-audio/${t.id}.mp3" type="audio/mpeg">
+                        <source src="${getAudioUrl(t.id)}" type="audio/mpeg">
                     </audio>
                 </div>
             `).join('');
@@ -158,4 +158,5 @@
     </script>
 </body>
 </html>
+
 
