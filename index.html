@@ -4,131 +4,410 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bible Chantée - Démo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="lyrics-data.js"></script>
+    <script src="lyrics-data-pt.js"></script>
+    <script src="lyrics-data-en.js"></script>
     <style>
+        :root {
+            --bg-dark: #0a1628;
+            --bg-card: #0f2744;
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            --accent-gold: #d4af37;
+            --success-green: #22c55e;
+            --warning-orange: #f59e0b;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Inter', sans-serif;
             background: linear-gradient(180deg, #1a4a7a 0%, #0a1628 100%);
             min-height: 100vh;
-            color: #fff;
+            color: var(--text-primary);
         }
         .header {
             text-align: center;
             padding: 2rem;
             background: linear-gradient(180deg, #2a5a8a 0%, #1a4a7a 100%);
         }
-        h1 { font-size: 2.5rem; color: #d4af37; margin-bottom: 0.5rem; }
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+        }
         .subtitle { color: #a8c8e8; font-size: 1.2rem; }
-        .container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
         .lang-buttons { display: flex; justify-content: center; gap: 1rem; margin: 2rem 0; flex-wrap: wrap; }
         .lang-btn {
             padding: 0.8rem 1.5rem;
-            border: 2px solid #d4af37;
+            border: 2px solid var(--accent-gold);
             background: transparent;
             color: #fff;
             border-radius: 30px;
             cursor: pointer;
             font-size: 1rem;
+            transition: all 0.3s;
         }
-        .lang-btn:hover, .lang-btn.active { background: #d4af37; color: #000; }
+        .lang-btn:hover, .lang-btn.active { background: var(--accent-gold); color: #000; }
+        .lang-btn.disabled { border-color: #555; color: #555; cursor: not-allowed; }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .stat-box {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+        .stat-number { font-size: 2rem; font-weight: 700; color: var(--accent-gold); }
+        .stat-label { color: var(--text-secondary); font-size: 0.9rem; }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--accent-gold);
+            text-align: center;
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+        }
         .track {
-            background: rgba(255,255,255,0.1);
+            background: var(--bg-card);
             border-radius: 12px;
             padding: 1.5rem;
             margin-bottom: 1rem;
         }
-        .track-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; }
-        .track-desc { color: rgba(255,255,255,0.7); margin-bottom: 1rem; }
-        audio { width: 100%; }
+        .track-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+        .track-title { font-size: 1.2rem; font-weight: 600; }
+        .track-desc { color: var(--text-secondary); }
+        audio { width: 100%; margin-bottom: 0.5rem; }
+        .lyrics-btn {
+            padding: 0.5rem 1rem;
+            background: var(--accent-gold);
+            color: #000;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .lyrics-btn:hover { background: #e8c54a; transform: scale(1.05); }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            margin-top: 1rem;
+            white-space: pre-wrap;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--text-secondary);
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 1rem;
+            transition: all 0.3s;
+        }
+        .lyrics-container.show { max-height: 500px; padding: 1rem; overflow-y: auto; }
         .form-section {
-            background: rgba(255,255,255,0.1);
+            background: var(--bg-card);
             border-radius: 12px;
             padding: 2rem;
             margin: 2rem 0;
             text-align: center;
         }
-        .form-section h2 { color: #d4af37; margin-bottom: 1rem; }
+        .form-section h2 { font-family: 'Playfair Display', serif; color: var(--accent-gold); margin-bottom: 0.5rem; }
+        .form-section p { color: var(--text-secondary); margin-bottom: 1rem; }
         input, select {
             width: 100%;
-            max-width: 300px;
+            max-width: 350px;
             padding: 0.8rem;
             margin: 0.5rem 0;
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
             border-radius: 8px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05);
             color: #fff;
             font-size: 1rem;
         }
-        button[type="submit"] {
+        input:focus, select:focus { outline: none; border-color: var(--accent-gold); }
+        .cta-btn {
+            display: inline-block;
             padding: 1rem 2rem;
-            background: #d4af37;
+            background: var(--accent-gold);
             color: #000;
             border: none;
             border-radius: 30px;
             font-size: 1rem;
+            font-weight: 600;
             cursor: pointer;
-            margin-top: 1rem;
+            text-decoration: none;
+            margin: 0.5rem;
+            transition: transform 0.3s;
         }
-        button[type="submit"]:hover { background: #e8c54a; }
+        .cta-btn:hover { transform: scale(1.05); }
+        .cta-btn.secondary { background: transparent; border: 2px solid var(--accent-gold); color: var(--accent-gold); }
+        .donation-section {
+            background: linear-gradient(135deg, #1a3a5c 0%, #0f2744 100%);
+            border: 2px solid var(--accent-gold);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .donation-section h2 { font-family: 'Playfair Display', serif; color: var(--accent-gold); margin-bottom: 1rem; }
+        .donation-section p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem; }
+        .highlight { color: var(--accent-gold); font-weight: 600; }
+        .progress-section {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .lang-progress { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+        .lang-card { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 1rem; }
+        .lang-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; }
+        .lang-name { font-weight: 600; }
+        .lang-status { font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 10px; }
+        .status-complete { background: var(--success-green); color: #000; }
+        .status-progress { background: var(--warning-orange); color: #000; }
+        .status-planned { background: #555; color: #fff; }
+        .progress-bar { height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; margin: 0.5rem 0; }
+        .progress-fill { height: 100%; background: var(--accent-gold); border-radius: 3px; }
+        .progress-text { font-size: 0.8rem; color: var(--text-secondary); }
+        .streaming-section { margin: 2rem 0; }
+        .streaming { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .streaming a {
+            padding: 0.8rem 1.2rem;
+            background: var(--bg-card);
+            border-radius: 8px;
+            color: var(--text-primary);
+            text-decoration: none;
+            text-align: center;
+            min-width: 120px;
+            opacity: 0.7;
+        }
+        .streaming a small { display: block; font-size: 0.75rem; color: var(--accent-gold); margin-top: 0.3rem; }
+        .footer { text-align: center; padding: 2rem; color: var(--text-secondary); font-size: 0.9rem; }
+        @media (max-width: 600px) {
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .header h1 { font-size: 2rem; }
+        }
     </style>
 </head>
 <body>
     <header class="header">
-        <h1>Bible Chantée</h1>
-        <p class="subtitle">La Parole de Dieu en musique</p>
+        <h1 id="main-title">Bible Chantée</h1>
+        <p class="subtitle" id="subtitle">La Parole de Dieu en musique</p>
     </header>
 
     <div class="container">
         <div class="lang-buttons">
-            <button class="lang-btn active" onclick="setLang('FR')">🇫🇷 Français</button>
-            <button class="lang-btn" onclick="setLang('PT')">🇧🇷 Português</button>
-            <button class="lang-btn" onclick="setLang('EN')">🇬🇧 English</button>
+            <button class="lang-btn active" onclick="setLang('FR')">FR Français</button>
+            <button class="lang-btn" onclick="setLang('PT')">BR Português</button>
+            <button class="lang-btn" onclick="setLang('EN')">GB English</button>
+            <button class="lang-btn disabled">ES Español</button>
         </div>
 
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number">1189</div>
+                <div class="stat-label" id="stat-chapters">Chapitres</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">66</div>
+                <div class="stat-label" id="stat-books">Livres</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">12</div>
+                <div class="stat-label" id="stat-languages">Langues prévues</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">80+</div>
+                <div class="stat-label" id="stat-hours">Heures par langue</div>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="title-listen">Écoutez des extraits</h2>
         <div id="tracks"></div>
 
         <div class="form-section">
-            <h2>Accès gratuit - 100 chapitres</h2>
-            <p style="margin-bottom:1rem;color:rgba(255,255,255,0.7);">Inscrivez-vous pour écouter les 1189 chapitres</p>
+            <h2 id="form-title">Recevez la Bible Chantée complète</h2>
+            <p id="form-subtitle">Inscrivez-vous pour être notifié et accéder aux 1189 chapitres</p>
             <form action="/thank-you" method="POST" name="subscribe">
                 <input type="hidden" name="form-name" value="subscribe">
-                <input type="email" name="email" placeholder="Votre email" required><br>
-                <select name="language" required>
-                    <option value="fr">Français</option>
-                    <option value="pt">Português</option>
-                    <option value="en">English</option>
+                <input type="email" name="email" id="email-input" placeholder="Votre email" required><br>
+                <select name="language" id="lang-select" required>
+                    <option value="" disabled selected id="opt-choose">Choisir la langue</option>
+                    <optgroup id="optgroup-available" label="✓ Disponible">
+                        <option value="fr">Français</option>
+                        <option value="en">English</option>
+                        <option value="pt">Português</option>
+                    </optgroup>
+                    <optgroup id="optgroup-soon" label="Bientôt">
+                        <option value="es" disabled>Español</option>
+                        <option value="de" disabled>Deutsch</option>
+                        <option value="it" disabled>Italiano</option>
+                    </optgroup>
                 </select><br>
-                <button type="submit">S'inscrire</button>
+                <button type="submit" class="cta-btn" id="btn-subscribe">S'inscrire</button>
             </form>
+        </div>
+
+        <div class="donation-section">
+            <h2 id="donation-title">Soutenez le projet</h2>
+            <p id="donation-text">Chaque don finance la <span class="highlight">génération de nouveaux chapitres</span> et l'<span class="highlight">ajout de nouvelles langues</span>.</p>
+            <p><strong id="donation-mission">10% des revenus reversés aux missions.</strong></p>
+            <a href="/crowdfunding" class="cta-btn" id="btn-donate">Faire un don</a>
+            <button class="cta-btn secondary" id="btn-pix" style="display:none;" onclick="copyPix()">Payer avec Pix</button>
+        </div>
+
+        <div class="progress-section">
+            <h2 class="section-title" id="title-progress">Avancement du projet - 12 langues</h2>
+            <div class="lang-progress" id="progress-container"></div>
+        </div>
+
+        <div class="streaming-section">
+            <h2 class="section-title" id="title-streaming">Bientôt disponible sur</h2>
+            <div class="streaming">
+                <a href="#"><span>Spotify</span><small>Bientôt</small></a>
+                <a href="#"><span>Apple Music</span><small>Bientôt</small></a>
+                <a href="#"><span>YouTube Music</span><small>Bientôt</small></a>
+                <a href="#"><span>Deezer</span><small>Bientôt</small></a>
+                <a href="#"><span>Amazon Music</span><small>Bientôt</small></a>
+            </div>
         </div>
     </div>
 
+    <footer class="footer">
+        <p>Bible Chantée - Mania Libris</p>
+        <p id="footer-text">10% des revenus reversés aux missions</p>
+    </footer>
+
     <script>
-        const tracks = {
-            FR: [
-                { id: "01_GEN_01_FR", title: "Genèse 1", desc: "La Création" },
-                { id: "19_PSA_23_FR", title: "Psaume 23", desc: "L'Éternel est mon berger" },
-                { id: "19_PSA_150_FR", title: "Psaume 150", desc: "Louez l'Éternel" }
-            ],
-            PT: [
-                { id: "01_GEN_01_PT", title: "Gênesis 1", desc: "A Criação" },
-                { id: "19_PSA_23_PT", title: "Salmo 23", desc: "O Senhor é meu pastor" },
-                { id: "19_PSA_150_PT", title: "Salmo 150", desc: "Louvai ao Senhor" }
-            ],
-            EN: [
-                { id: "01_GEN_01_EN", title: "Genesis 1", desc: "The Creation" },
-                { id: "19_PSA_23_EN", title: "Psalm 23", desc: "The Lord is my shepherd" },
-                { id: "19_PSA_150_EN", title: "Psalm 150", desc: "Praise the Lord" }
-            ]
+        const translations = {
+            FR: {
+                title: "Bible Chantée", subtitle: "La Parole de Dieu en musique",
+                statChapters: "Chapitres", statBooks: "Livres", statLanguages: "Langues prévues", statHours: "Heures par langue",
+                titleListen: "Écoutez des extraits",
+                formTitle: "Recevez la Bible Chantée complète", formSubtitle: "Inscrivez-vous pour être notifié et accéder aux 1189 chapitres",
+                emailPlaceholder: "Votre email", optChoose: "Choisir la langue", optAvailable: "✓ Disponible", optSoon: "Bientôt",
+                btnSubscribe: "S'inscrire",
+                donationTitle: "Soutenez le projet",
+                donationText: "Chaque don finance la <span class='highlight'>génération de nouveaux chapitres</span> et l'<span class='highlight'>ajout de nouvelles langues</span>.",
+                donationMission: "10% des revenus reversés aux missions.",
+                btnDonate: "Faire un don",
+                titleProgress: "Avancement du projet - 12 langues",
+                titleStreaming: "Bientôt disponible sur",
+                footerText: "10% des revenus reversés aux missions",
+                btnLyrics: "Paroles", btnHide: "Masquer", lyricsNA: "Paroles bientôt disponibles",
+                statusComplete: "Complet", statusProgress: "En cours", statusPlanned: "Prévu",
+                tracks: [
+                    { id: "01_GEN_01_FR", title: "Genèse 1", desc: "La Création" },
+                    { id: "19_PSA_23_FR", title: "Psaume 23", desc: "L'Éternel est mon berger" },
+                    { id: "19_PSA_150_FR", title: "Psaume 150", desc: "Louez l'Éternel" }
+                ]
+            },
+            PT: {
+                title: "Bíblia Cantada", subtitle: "A Palavra de Deus em música",
+                statChapters: "Capítulos", statBooks: "Livros", statLanguages: "Línguas previstas", statHours: "Horas por língua",
+                titleListen: "Ouça trechos",
+                formTitle: "Receba a Bíblia Cantada completa", formSubtitle: "Inscreva-se para ser notificado e acessar os 1189 capítulos",
+                emailPlaceholder: "Seu email", optChoose: "Escolher idioma", optAvailable: "✓ Disponível", optSoon: "Em breve",
+                btnSubscribe: "Inscrever-se",
+                donationTitle: "Apoie o projeto",
+                donationText: "Cada doação financia a <span class='highlight'>geração de novos capítulos</span> e a <span class='highlight'>adição de novas línguas</span>.",
+                donationMission: "10% da receita destinada a missões.",
+                btnDonate: "Fazer doação",
+                titleProgress: "Progresso do projeto - 12 línguas",
+                titleStreaming: "Em breve disponível em",
+                footerText: "10% da receita destinada a missões",
+                btnLyrics: "Letras", btnHide: "Ocultar", lyricsNA: "Letras em breve",
+                statusComplete: "Completo", statusProgress: "Em curso", statusPlanned: "Previsto",
+                tracks: [
+                    { id: "01_GEN_01_PT", title: "Gênesis 1", desc: "A Criação" },
+                    { id: "19_PSA_23_PT", title: "Salmo 23", desc: "O Senhor é meu pastor" },
+                    { id: "19_PSA_150_PT", title: "Salmo 150", desc: "Louvai ao Senhor" }
+                ]
+            },
+            EN: {
+                title: "Sung Bible", subtitle: "God's Word in music",
+                statChapters: "Chapters", statBooks: "Books", statLanguages: "Languages planned", statHours: "Hours per language",
+                titleListen: "Listen to samples",
+                formTitle: "Get the complete Sung Bible", formSubtitle: "Subscribe to be notified and access all 1189 chapters",
+                emailPlaceholder: "Your email", optChoose: "Choose language", optAvailable: "✓ Available", optSoon: "Coming soon",
+                btnSubscribe: "Subscribe",
+                donationTitle: "Support the project",
+                donationText: "Each donation funds <span class='highlight'>new chapter generation</span> and <span class='highlight'>new languages</span>.",
+                donationMission: "10% of revenue goes to missions.",
+                btnDonate: "Donate",
+                titleProgress: "Project progress - 12 languages",
+                titleStreaming: "Coming soon on",
+                footerText: "10% of revenue goes to missions",
+                btnLyrics: "Lyrics", btnHide: "Hide", lyricsNA: "Lyrics coming soon",
+                statusComplete: "Complete", statusProgress: "In progress", statusPlanned: "Planned",
+                tracks: [
+                    { id: "01_GEN_01_EN", title: "Genesis 1", desc: "The Creation" },
+                    { id: "19_PSA_23_EN", title: "Psalm 23", desc: "The Lord is my shepherd" },
+                    { id: "19_PSA_150_EN", title: "Psalm 150", desc: "Praise the Lord" }
+                ]
+            }
         };
+
+        const progressData = [
+            { name: "Français", mp3: 1189, total: 1189, status: "complete" },
+            { name: "English", mp3: 1189, total: 1189, status: "complete" },
+            { name: "Português", mp3: 405, total: 1189, status: "progress" },
+            { name: "Español", mp3: 0, total: 1189, status: "progress" },
+            { name: "Deutsch", mp3: 0, total: 1189, status: "planned" },
+            { name: "Italiano", mp3: 0, total: 1189, status: "planned" },
+            { name: "العربية", mp3: 0, total: 1189, status: "planned" },
+            { name: "Русский", mp3: 0, total: 1189, status: "planned" },
+            { name: "中文", mp3: 0, total: 1189, status: "planned" },
+            { name: "हिन्दी", mp3: 0, total: 1189, status: "planned" },
+            { name: "Tagalog", mp3: 0, total: 1189, status: "planned" },
+            { name: "Kiswahili", mp3: 0, total: 1189, status: "planned" }
+        ];
 
         let currentLang = 'FR';
 
         function setLang(lang) {
+            if (lang === 'ES') return;
             currentLang = lang;
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.includes(lang) || (lang === 'PT' && btn.textContent.includes('BR'))) {
+                    btn.classList.add('active');
+                }
+            });
+            document.getElementById('btn-pix').style.display = lang === 'PT' ? 'inline-block' : 'none';
+            updatePage();
+        }
+
+        function updatePage() {
+            const t = translations[currentLang];
+            document.getElementById('main-title').textContent = t.title;
+            document.getElementById('subtitle').textContent = t.subtitle;
+            document.getElementById('stat-chapters').textContent = t.statChapters;
+            document.getElementById('stat-books').textContent = t.statBooks;
+            document.getElementById('stat-languages').textContent = t.statLanguages;
+            document.getElementById('stat-hours').textContent = t.statHours;
+            document.getElementById('title-listen').textContent = t.titleListen;
+            document.getElementById('form-title').textContent = t.formTitle;
+            document.getElementById('form-subtitle').textContent = t.formSubtitle;
+            document.getElementById('email-input').placeholder = t.emailPlaceholder;
+            document.getElementById('opt-choose').textContent = t.optChoose;
+            document.getElementById('optgroup-available').label = t.optAvailable;
+            document.getElementById('optgroup-soon').label = t.optSoon;
+            document.getElementById('btn-subscribe').textContent = t.btnSubscribe;
+            document.getElementById('donation-title').textContent = t.donationTitle;
+            document.getElementById('donation-text').innerHTML = t.donationText;
+            document.getElementById('donation-mission').textContent = t.donationMission;
+            document.getElementById('btn-donate').textContent = t.btnDonate;
+            document.getElementById('title-progress').textContent = t.titleProgress;
+            document.getElementById('title-streaming').textContent = t.titleStreaming;
+            document.getElementById('footer-text').textContent = t.footerText;
             renderTracks();
+            renderProgress();
         }
 
         function getAudioUrl(trackId) {
@@ -142,21 +421,90 @@
         }
 
         function renderTracks() {
-            const container = document.getElementById('tracks');
-            container.innerHTML = tracks[currentLang].map(t => `
+            const t = translations[currentLang];
+            document.getElementById('tracks').innerHTML = t.tracks.map((track, i) => `
                 <div class="track">
-                    <div class="track-title">${t.title}</div>
-                    <div class="track-desc">${t.desc}</div>
+                    <div class="track-header">
+                        <div>
+                            <div class="track-title">${track.title}</div>
+                            <div class="track-desc">${track.desc}</div>
+                        </div>
+                        <button class="lyrics-btn" onclick="toggleLyrics(${i})">${t.btnLyrics}</button>
+                    </div>
                     <audio controls preload="none">
-                        <source src="${getAudioUrl(t.id)}" type="audio/mpeg">
+                        <source src="${getAudioUrl(track.id)}" type="audio/mpeg">
                     </audio>
+                    <div class="lyrics-container" id="lyrics-${i}"></div>
                 </div>
             `).join('');
         }
 
-        renderTracks();
+        function toggleLyrics(index) {
+            const t = translations[currentLang];
+            const container = document.getElementById(`lyrics-${index}`);
+            const btn = container.parentElement.querySelector('.lyrics-btn');
+            
+            if (container.classList.contains('show')) {
+                container.classList.remove('show');
+                btn.textContent = t.btnLyrics;
+                return;
+            }
+            
+            const track = t.tracks[index];
+            const parts = track.id.split('_');
+            const bookNum = parts[0];
+            const chap = parseInt(parts[2]);
+            
+            let lyrics = '';
+            if (currentLang === 'FR' && window.chapterLyrics?.[bookNum]?.[chap]) {
+                lyrics = window.chapterLyrics[bookNum][chap];
+            } else if (currentLang === 'PT' && window.chapterLyricsPT?.[bookNum]?.[chap]) {
+                lyrics = window.chapterLyricsPT[bookNum][chap];
+            } else if (currentLang === 'EN' && window.chapterLyricsEN?.[bookNum]?.[chap]) {
+                lyrics = window.chapterLyricsEN[bookNum][chap];
+            }
+            
+            if (lyrics) {
+                lyrics = lyrics.replace(/\[TITLE\][\s\S]*?\[LYRICS\]\s*/i, '');
+                lyrics = lyrics.replace(/\[TITRE\][\s\S]*?\[LYRICS\]\s*/i, '');
+                lyrics = lyrics.replace(/\[.*?\]/g, '');
+                lyrics = lyrics.replace(/\*\*[^*]+\*\*/g, '');
+                lyrics = lyrics.replace(/^[\uFF0A\*]{2,}\s*/gm, '');
+                lyrics = lyrics.trim();
+            }
+            
+            container.textContent = lyrics || t.lyricsNA;
+            container.classList.add('show');
+            btn.textContent = t.btnHide;
+        }
+
+        function renderProgress() {
+            const t = translations[currentLang];
+            document.getElementById('progress-container').innerHTML = progressData.map(lang => {
+                const pct = Math.round((lang.mp3 / lang.total) * 100);
+                const statusClass = lang.status === 'complete' ? 'status-complete' : lang.status === 'progress' ? 'status-progress' : 'status-planned';
+                const statusKey = 'status' + lang.status.charAt(0).toUpperCase() + lang.status.slice(1);
+                const statusText = t[statusKey] || lang.status;
+                return `
+                    <div class="lang-card">
+                        <div class="lang-card-header">
+                            <span class="lang-name">${lang.name}</span>
+                            <span class="lang-status ${statusClass}">${statusText}</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
+                        <div class="progress-text">${lang.mp3}/${lang.total} (${pct}%)</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function copyPix() {
+            navigator.clipboard.writeText('scassani@jim.com').then(() => {
+                alert('Chave Pix copiada: scassani@jim.com');
+            });
+        }
+
+        updatePage();
     </script>
 </body>
 </html>
-
-
