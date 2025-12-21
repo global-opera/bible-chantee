@@ -338,8 +338,51 @@ window.trackSignup = function(referrer) {
         .verse-number { color: #ffce00; font-weight: bold; margin-right: 5px; }
         .no-bible { text-align: center; color: #bbb; font-style: italic; padding: 20px; }
 
+        /* Mobile content tabs */
+        .content-tabs {
+            display: none;
+            width: 100%;
+            margin: 15px 10px 0 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .tab-btn {
+            flex: 1;
+            padding: 12px;
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+        .tab-btn:hover {
+            background: rgba(255,255,255,0.05);
+        }
+        .tab-btn.active {
+            color: #ffce00;
+            border-bottom-color: #ffce00;
+            background: rgba(255,206,0,0.1);
+        }
+
         footer { text-align: center; padding: 30px 0; color: #666; font-size: 0.85em; margin-bottom: 180px; }
         footer a { color: #ffce00; text-decoration: none; }
+
+        /* Mobile tabs visibility */
+        @media (max-width: 768px) {
+            .content-tabs { display: flex; }
+            .lyrics-container.hidden, .bible-container.hidden { display: none !important; }
+            .content-wrapper { margin-top: 5px; }
+        }
+
+        /* Desktop: hide tabs, show both containers */
+        @media (min-width: 769px) {
+            .content-tabs { display: none !important; }
+            .lyrics-container, .bible-container { display: block !important; }
+        }
 
         @media (max-width: 600px) {
             .books-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
@@ -549,6 +592,11 @@ window.trackSignup = function(referrer) {
         <div class="player-controls" style="margin-top: 10px;">
             <button class="nav-btn" id="forcePlayBtn" style="display:none;">▶ Lancer</button>
             <span id="forcePlayMsg" style="display:none;color:#000080;font-weight:600;"></span>
+        </div>
+        <!-- Mobile content tabs -->
+        <div class="content-tabs" id="contentTabs">
+            <button class="tab-btn active" data-tab="lyrics" data-i18n="readerLyrics">Paroles</button>
+            <button class="tab-btn" data-tab="bible" data-i18n="readerBible">Bible</button>
         </div>
         <div class="content-wrapper" id="contentWrapper">
             <div class="lyrics-container" id="lyricsContainer">
@@ -958,6 +1006,45 @@ window.trackSignup = function(referrer) {
             if (lyricsVisible || bibleVisible) contentWrapper.classList.add('active');
             else contentWrapper.classList.remove('active');
         }
+
+        // Mobile tabs switching
+        function initMobileTabs() {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const lyricsContainer = document.getElementById('lyricsContainer');
+            const bibleContainer = document.getElementById('bibleContainer');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+
+                    const tabType = this.getAttribute('data-tab');
+
+                    if (tabType === 'lyrics') {
+                        // Show lyrics, hide bible
+                        lyricsContainer.classList.remove('hidden');
+                        bibleContainer.classList.add('hidden');
+                    } else if (tabType === 'bible') {
+                        // Show bible, hide lyrics
+                        bibleContainer.classList.remove('hidden');
+                        lyricsContainer.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Initialize: show lyrics by default on mobile
+            if (window.innerWidth <= 768) {
+                lyricsContainer.classList.remove('hidden');
+                bibleContainer.classList.add('hidden');
+            }
+        }
+
+        // Initialize tabs on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initMobileTabs();
+        });
 
         function cleanLyrics(text) {
             if (!text) return '';
