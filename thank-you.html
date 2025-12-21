@@ -101,12 +101,12 @@
       // Mettre à jour le lien avec la langue et le texte traduit
       const link = document.getElementById('access-link');
       if (link) {
-        link.href = `https://biblechantee.com/lecteur.html?lang=${t.lang}`;
+        link.href = `https://biblechantee.com/lecteur.html?lang=${t.lang.toUpperCase()}`;
         link.textContent = t.buttonText;
       }
 
       console.log(`✅ Thank you page displayed in: ${t.lang.toUpperCase()}`);
-      console.log(`📍 Redirect link: https://biblechantee.com/lecteur.html?lang=${t.lang}`);
+      console.log(`📍 Redirect link: https://biblechantee.com/lecteur.html?lang=${t.lang.toUpperCase()}`);
     })();
 
     // Auto-redirect après 5 secondes (optionnel)

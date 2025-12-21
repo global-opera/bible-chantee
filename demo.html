@@ -690,6 +690,22 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(document.body, { childList: true, subtree: true });
 });
 </script>
+
+<script>
+// Sauvegarder la langue choisie AVANT soumission du formulaire
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form[name="subscribe"]');
+    const langSelect = document.getElementById('lang-select');
+
+    if (form && langSelect) {
+        form.addEventListener('submit', function(e) {
+            const selectedLang = langSelect.value || 'fr';
+            localStorage.setItem('sungbible_lang', selectedLang.toLowerCase());
+            console.log('Langue sauvegardee:', selectedLang);
+        });
+    }
+});
+</script>
 </body>
 </html>
 
