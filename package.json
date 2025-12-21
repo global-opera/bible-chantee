@@ -1,7 +1,16 @@
 {
   "name": "bible-chantee",
   "private": true,
+  "version": "1.0.0",
+  "description": "Bible Chantée - Lecteur audio avec analytics",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build step needed'"
+  },
   "dependencies": {
+    "@google-analytics/data": "^4.7.0",
     "@supabase/supabase-js": "^2.45.4"
-  }
+  },
+  "author": "Stéphane CASSANI",
+  "license": "MIT"
 }

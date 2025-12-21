@@ -1,6 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<!-- Google Analytics 4 - Bible Chantee -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TX3ETCKJQZ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-TX3ETCKJQZ');
+
+// Tracking personnalise Bible Chantee
+window.trackEvent = function(action, category, label, value) {
+    gtag('event', action, {
+        event_category: category,
+        event_label: label,
+        value: value || 0
+    });
+};
+
+// Track ecoute audio
+window.trackListen = function(book, chapter, lang) {
+    gtag('event', 'audio_play', {
+        book: book,
+        chapter: chapter,
+        language: lang,
+        content_type: 'bible_chapter'
+    });
+};
+
+// Track partage
+window.trackShare = function(method, content) {
+    gtag('event', 'share', {
+        method: method,
+        content_type: 'chapter',
+        item_id: content
+    });
+};
+
+// Track inscription
+window.trackSignup = function(referrer) {
+    gtag('event', 'sign_up', {
+        method: 'email',
+        referrer_uid: referrer || 'direct'
+    });
+};
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bible Chantée - Démo</title>
