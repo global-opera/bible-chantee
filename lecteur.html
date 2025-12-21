@@ -1534,12 +1534,111 @@ function getUid(){let u=localStorage.getItem("bc_uid");if(!u){u="u_"+Date.now().
 function getShareUrl(){const p=new URLSearchParams(location.search);const b=p.get("book")||"01_GEN";const c=p.get("chapter")||"1";const l=p.get("lang")||"FR";return"https://biblechantee.com/lecteur.html?book="+b+"&chapter="+c+"&lang="+l+"&ref="+getUid()}
 function toggleShare(){const panel=document.getElementById("sharePanel");panel.classList.toggle("open");if(panel.classList.contains("open")){document.getElementById("shareLink").value=getShareUrl()}}
 function toast(m){const t=document.getElementById("shareToast");t.textContent=m;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2500)}
-function copyLink(){const i=document.getElementById("shareLink");i.select();navigator.clipboard.writeText(i.value).then(()=>toast("Lien copie!")).catch(()=>{document.execCommand("copy");toast("Lien copie!")})}
-function shareWA(){window.open("https://wa.me/?text="+encodeURIComponent("Ecoute ce chapitre de la Bible chantee! "+getShareUrl()),"_blank")}
+function copyLink(){
+    trackShare('copy', window.currentBook + '_' + window.currentChapter);const i=document.getElementById("shareLink");i.select();navigator.clipboard.writeText(i.value).then(()=>toast("Lien copie!")).catch(()=>{document.execCommand("copy");toast("Lien copie!")})}
+function shareWA(){
+    trackShare('whatsapp', window.currentBook + '_' + window.currentChapter);window.open("https://wa.me/?text="+encodeURIComponent("Ecoute ce chapitre de la Bible chantee! "+getShareUrl()),"_blank")}
 function shareTG(){window.open("https://t.me/share/url?url="+encodeURIComponent(getShareUrl())+"&text="+encodeURIComponent("Ecoute la Bible chantee!"),"_blank")}
 function shareEmail(){const s=encodeURIComponent("Decouvre la Bible Chantee");const b=encodeURIComponent("Salut!\\n\\nEcoute ce chapitre:\\n"+getShareUrl()+"\\n\\nBonne ecoute!");location.href="mailto:?subject="+s+"&body="+b}
 // Enregistrer parrain
 (function(){const r=new URLSearchParams(location.search).get("ref");if(r&&r!==getUid()&&!localStorage.getItem("bc_ref")){localStorage.setItem("bc_ref",r)}})();
+</script>
+
+<!-- Tracking evenements Bible Chantee -->
+<script>
+// Track ecoute audio
+function trackAudioPlay(book, chapter, lang) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'audio_play', {
+            event_category: 'Audio',
+            book_code: book,
+            chapter: chapter,
+            language: lang,
+            content_id: book + '_' + chapter + '_' + lang
+        });
+        console.log('Track: audio_play', book, chapter, lang);
+    }
+}
+
+// Track partage
+function trackShare(method, content) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'share', {
+            event_category: 'Social',
+            method: method,
+            content_type: 'chapter',
+            item_id: content
+        });
+        console.log('Track: share', method, content);
+    }
+}
+
+// Track inscription parrainage
+function trackSignup(referrer) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'sign_up', {
+            event_category: 'Conversion',
+            method: 'referral',
+            referrer_uid: referrer || 'direct'
+        });
+        console.log('Track: sign_up', referrer);
+    }
+}
+
+// Track affichage paroles
+function trackLyrics(book, chapter, lang) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'view_lyrics', {
+            event_category: 'Engagement',
+            book_code: book,
+            chapter: chapter,
+            language: lang
+        });
+    }
+}
+
+// Track changement langue
+function trackLanguageChange(newLang) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'language_change', {
+            event_category: 'Settings',
+            language: newLang
+        });
+    }
+}
+</script>
+
+<!-- Auto-tracking audio play -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Track quand audio commence
+    var audioElements = document.querySelectorAll('audio');
+    audioElements.forEach(function(audio) {
+        audio.addEventListener('play', function() {
+            var book = window.currentBook || 'unknown';
+            var chapter = window.currentChapter || 0;
+            var lang = window.currentLanguage || 'FR';
+            trackAudioPlay(book, chapter, lang);
+        });
+    });
+    
+    // Observer pour nouveaux elements audio (chargement dynamique)
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            mutation.addedNodes.forEach(function(node) {
+                if (node.tagName === 'AUDIO') {
+                    node.addEventListener('play', function() {
+                        var book = window.currentBook || 'unknown';
+                        var chapter = window.currentChapter || 0;
+                        var lang = window.currentLanguage || 'FR';
+                        trackAudioPlay(book, chapter, lang);
+                    });
+                }
+            });
+        });
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+});
 </script>
 </body>
 </html>

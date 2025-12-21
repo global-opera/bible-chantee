@@ -593,6 +593,103 @@ function copyLink(){const i=document.getElementById("shareLink");i.select();navi
 function shareWA(){window.open("https://wa.me/?text="+encodeURIComponent("Decouvre la Bible chantee! "+getShareUrl()),"_blank")}
 (function(){const r=new URLSearchParams(location.search).get("ref");if(r&&r!==getUid()&&!localStorage.getItem("bc_ref"))localStorage.setItem("bc_ref",r)})();
 </script>
+
+<!-- Tracking evenements Bible Chantee -->
+<script>
+// Track ecoute audio
+function trackAudioPlay(book, chapter, lang) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'audio_play', {
+            event_category: 'Audio',
+            book_code: book,
+            chapter: chapter,
+            language: lang,
+            content_id: book + '_' + chapter + '_' + lang
+        });
+        console.log('Track: audio_play', book, chapter, lang);
+    }
+}
+
+// Track partage
+function trackShare(method, content) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'share', {
+            event_category: 'Social',
+            method: method,
+            content_type: 'chapter',
+            item_id: content
+        });
+        console.log('Track: share', method, content);
+    }
+}
+
+// Track inscription parrainage
+function trackSignup(referrer) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'sign_up', {
+            event_category: 'Conversion',
+            method: 'referral',
+            referrer_uid: referrer || 'direct'
+        });
+        console.log('Track: sign_up', referrer);
+    }
+}
+
+// Track affichage paroles
+function trackLyrics(book, chapter, lang) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'view_lyrics', {
+            event_category: 'Engagement',
+            book_code: book,
+            chapter: chapter,
+            language: lang
+        });
+    }
+}
+
+// Track changement langue
+function trackLanguageChange(newLang) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'language_change', {
+            event_category: 'Settings',
+            language: newLang
+        });
+    }
+}
+</script>
+
+<!-- Auto-tracking audio play -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Track quand audio commence
+    var audioElements = document.querySelectorAll('audio');
+    audioElements.forEach(function(audio) {
+        audio.addEventListener('play', function() {
+            var book = window.currentBook || 'unknown';
+            var chapter = window.currentChapter || 0;
+            var lang = window.currentLanguage || 'FR';
+            trackAudioPlay(book, chapter, lang);
+        });
+    });
+    
+    // Observer pour nouveaux elements audio (chargement dynamique)
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            mutation.addedNodes.forEach(function(node) {
+                if (node.tagName === 'AUDIO') {
+                    node.addEventListener('play', function() {
+                        var book = window.currentBook || 'unknown';
+                        var chapter = window.currentChapter || 0;
+                        var lang = window.currentLanguage || 'FR';
+                        trackAudioPlay(book, chapter, lang);
+                    });
+                }
+            });
+        });
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+});
+</script>
 </body>
 </html>
 
