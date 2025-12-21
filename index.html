@@ -417,6 +417,8 @@ window.trackSignup = function(referrer) {
         function setLang(lang) {
             if (lang === 'ES') return;
             currentLang = lang;
+            // Save language to localStorage for redirect after signup
+            localStorage.setItem('sungbible_lang', lang);
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
                 if (btn.textContent.includes(lang) || (lang === 'PT' && btn.textContent.includes('BR'))) {
@@ -544,6 +546,24 @@ window.trackSignup = function(referrer) {
                 alert('Chave Pix copiada: scassani@jim.com');
             });
         }
+
+        // Restore language from localStorage on page load
+        (function initLanguage() {
+            const savedLang = localStorage.getItem('sungbible_lang');
+            if (savedLang && (savedLang === 'FR' || savedLang === 'EN' || savedLang === 'PT')) {
+                currentLang = savedLang;
+                // Update active button
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.textContent.includes(savedLang) || (savedLang === 'PT' && btn.textContent.includes('BR'))) {
+                        btn.classList.add('active');
+                    }
+                });
+                // Show/hide Pix button for PT
+                const pixBtn = document.getElementById('btn-pix');
+                if (pixBtn) pixBtn.style.display = savedLang === 'PT' ? 'inline-block' : 'none';
+            }
+        })();
 
         updatePage();
     </script>
