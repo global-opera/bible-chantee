@@ -8,8 +8,8 @@
     "build": "echo 'No build step needed'"
   },
   "dependencies": {
-    "@google-analytics/data": "^4.7.0",
-    "@supabase/supabase-js": "^2.45.4"
+    "@supabase/supabase-js": "^2.45.4",
+    "@google-analytics/data": "^4.0.0"
   },
   "author": "Stéphane CASSANI",
   "license": "MIT"
