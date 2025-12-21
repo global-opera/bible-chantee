@@ -596,6 +596,14 @@ window.trackSignup = function(referrer) {
     if (typeof chapterTitles !== 'undefined' && !window.chapterTitles) window.chapterTitles = chapterTitles;
     </script>
     <script src="/bible-data.js"></script>
+    <script src="/bible-data-pt.js"></script>
+    <script src="/bible-data-en.js"></script>
+    <!-- Expose bible data to window -->
+    <script>
+    if (typeof bibleData !== 'undefined' && !window.bibleData) window.bibleData = bibleData;
+    if (typeof bibleDataPT !== 'undefined' && !window.bibleDataPT) window.bibleDataPT = bibleDataPT;
+    if (typeof bibleDataEN !== 'undefined' && !window.bibleDataEN) window.bibleDataEN = bibleDataEN;
+    </script>
 
     <script src="/sections-promesses.js"></script>
 

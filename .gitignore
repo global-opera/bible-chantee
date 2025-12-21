@@ -23,6 +23,8 @@ api_key.py
 *.key
 *_key.txt
 credentials.json
+service-account-key.json
+*-key.json
 
 ########################################
 # Node / NPM
