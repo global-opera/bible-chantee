@@ -781,7 +781,7 @@
                 return;
             }
 
-            const dataset = getBibleDatasetForLang(window.currentLanguage || 'FR');
+            const bookNum = currentBook.split('_')[0]; const dataset = getBibleDatasetForLang(window.currentLanguage || 'FR');
             if (!dataset) {
                 alert(t('readerBibleNotAvailableLang') || 'Recherche Bible non disponible dans cette langue');
                 return;
@@ -942,10 +942,10 @@
             const bibleContainer = document.getElementById('bibleContainer');
             const chapterStr = String(currentChapter);
 
-            const dataset = getBibleDatasetForLang(window.currentLanguage || 'FR');
+            const bookNum = currentBook.split('_')[0]; const dataset = getBibleDatasetForLang(window.currentLanguage || 'FR');
 
-            if (dataset && dataset[currentBook] && dataset[currentBook][chapterStr]) {
-                const verses = dataset[currentBook][chapterStr];
+            if (dataset && dataset[bookNum] && dataset[bookNum][chapterStr]) {
+                const verses = dataset[bookNum][chapterStr];
                 let html = '';
                 verses.forEach(verse => {
                     html += '<div class="verse"><span class="verse-number">' + verse.num + '.</span>' + verse.text + '</div>';
