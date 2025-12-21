@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Inscription - Bible Chantée</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Arial; background:#0b1020; color:#fff; display:flex; min-height:100vh; align-items:center; justify-content:center; padding:24px}
+    .card{width:min(520px,100%); background:#121a33; border:1px solid rgba(255,215,0,.25); border-radius:16px; padding:22px}
+    h1{margin:0 0 12px; font-size:22px}
+    p{margin:0 0 18px; opacity:.85}
+    input{width:100%; padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,.2); background:#0b1020; color:#fff; font-size:16px}
+    button{margin-top:12px; width:100%; padding:12px; border-radius:10px; border:0; font-weight:800; cursor:pointer; background:linear-gradient(135deg,#FFD700,#FFA500); color:#121a33}
+    .small{margin-top:12px; font-size:13px; opacity:.8}
+    .ok{color:#00e676; font-weight:800}
+    .err{color:#ff6b6b; font-weight:800}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Inscription</h1>
+    <p>Créez votre compte. Si vous venez d'un lien partagé, le parrain recevra <b>+10 crédits</b> après votre inscription.</p>
+    <input id="email" type="email" placeholder="Votre email" autocomplete="email"/>
+    <button onclick="signup()">S'inscrire</button>
+    <div id="msg" class="small"></div>
+  </div>
+
+<script>
+function getUid(){
+  let uid = localStorage.getItem('bc_uid');
+  if(!uid){
+    uid = 'u_' + Date.now().toString(36) + Math.random().toString(36).slice(2,8);
+    localStorage.setItem('bc_uid', uid);
+  }
+  return uid;
+}
+
+function getRef(){
+  const p = new URLSearchParams(location.search);
+  const refFromUrl = p.get('ref');
+
+  // PREMIER REF GAGNÉ : ne jamais écraser
+  if(refFromUrl) {
+    const existingRef = localStorage.getItem('bc_ref');
+    if(!existingRef) {
+      localStorage.setItem('bc_ref', refFromUrl);
+    }
+  }
+
+  return localStorage.getItem('bc_ref') || '';
+}
+
+async function signup(){
+  const email = document.getElementById('email').value.trim();
+  const msg = document.getElementById('msg');
+  msg.textContent = '';
+
+  if(!email){
+    msg.innerHTML = '<span class="err">Email requis</span>';
+    return;
+  }
+
+  const uid = getUid();
+  const ref = getRef();
+
+  const res = await fetch('/api/bc_signup', {
+    method:'POST',
+    headers:{'content-type':'application/json'},
+    body: JSON.stringify({ uid, email, ref })
+  });
+
+  const j = await res.json().catch(()=>({ok:false,error:'bad json'}));
+  if(!res.ok || !j.ok){
+    msg.innerHTML = '<span class="err">Erreur:</span> ' + (j.error || res.status);
+    return;
+  }
+
+  msg.innerHTML = '<span class="ok">Inscription OK.</span> ' + (j.awarded ? 'Parrain crédité (+10).' : '');
+
+  // Retour au lecteur sur le morceau si un return= existe
+  const p = new URLSearchParams(location.search);
+  const ret = p.get('return');
+  if(ret){
+    setTimeout(()=>location.href = ret, 700);
+  }
+}
+</script>
+</body>
+</html>

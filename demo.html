@@ -6,9 +6,9 @@
     <title>Bible Chantée - Démo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="lyrics-data.js"></script>
-    <script src="lyrics-data-pt.js"></script>
-    <script src="lyrics-data-en.js"></script>
+    <script src="lyrics-data.js?v=20251221"></script>
+    <script src="lyrics-data-pt.js?v=20251221"></script>
+    <script src="lyrics-data-en.js?v=20251221"></script>
     <style>
         :root {
             --bg-dark: #0a1628;
@@ -192,7 +192,25 @@
             .stats { grid-template-columns: repeat(2, 1fr); }
             .header h1 { font-size: 2rem; }
         }
-    </style>
+    /* Partage Parrainage */
+.share-box{margin:20px auto;max-width:600px;padding:20px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px;border:1px solid #FFD700}
+.share-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.share-btn{display:flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a1a2e;border:none;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer;transition:transform 0.2s}
+.share-btn:hover{transform:scale(1.05)}
+.share-btn svg{width:20px;height:20px}
+.share-reward{color:#FFD700;font-size:14px}
+.share-reward span{display:inline-block;padding:4px 12px;background:linear-gradient(135deg,#00C853,#00E676);color:#fff;border-radius:15px;font-weight:700;margin-right:6px}
+.share-panel{display:none;margin-top:15px;padding:15px;background:rgba(255,215,0,0.1);border-radius:8px}
+.share-panel.open{display:block}
+.share-link{width:100%;padding:12px;background:#0a0a1a;border:1px solid #FFD700;border-radius:6px;color:#fff;font-family:monospace;font-size:13px;margin-bottom:12px}
+.share-actions{display:flex;gap:10px;flex-wrap:wrap}
+.share-actions button{padding:10px 18px;border:none;border-radius:6px;font-weight:600;cursor:pointer;transition:opacity 0.2s}
+.share-actions button:hover{opacity:0.85}
+.btn-copy{background:#4CAF50;color:#fff}
+.btn-whatsapp{background:#25D366;color:#fff}
+.share-toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);background:#4CAF50;color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;opacity:0;transition:all 0.3s;z-index:9999}
+.share-toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+</style>
 </head>
 <body>
     <header class="header">
@@ -503,6 +521,33 @@
 
         updatePage();
     </script>
+<!-- Partage Parrainage -->
+<div class="share-box" id="shareBox">
+  <div class="share-header">
+    <button class="share-btn" onclick="toggleShare()">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+      PARTAGER
+    </button>
+    <div class="share-reward"><span>+10 credits</span> par inscription!</div>
+  </div>
+  <div class="share-panel" id="sharePanel">
+    <input type="text" class="share-link" id="shareLink" readonly onclick="this.select()">
+    <div class="share-actions">
+      <button class="btn-copy" onclick="copyLink()">Copier</button>
+      <button class="btn-whatsapp" onclick="shareWA()">WhatsApp</button>
+    </div>
+  </div>
+</div>
+<div class="share-toast" id="shareToast"></div>
+<script>
+function getUid(){let u=localStorage.getItem("bc_uid");if(!u){u="u_"+Date.now().toString(36)+Math.random().toString(36).substr(2,6);localStorage.setItem("bc_uid",u)}return u}
+function getShareUrl(){return"https://sungbible.world/demo.html?ref="+getUid()}
+function toggleShare(){const p=document.getElementById("sharePanel");p.classList.toggle("open");if(p.classList.contains("open"))document.getElementById("shareLink").value=getShareUrl()}
+function toast(m){const t=document.getElementById("shareToast");t.textContent=m;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2500)}
+function copyLink(){const i=document.getElementById("shareLink");i.select();navigator.clipboard.writeText(i.value).then(()=>toast("Lien copie!")).catch(()=>{document.execCommand("copy");toast("Lien copie!")})}
+function shareWA(){window.open("https://wa.me/?text="+encodeURIComponent("Decouvre la Bible chantee! "+getShareUrl()),"_blank")}
+(function(){const r=new URLSearchParams(location.search).get("ref");if(r&&r!==getUid()&&!localStorage.getItem("bc_ref"))localStorage.setItem("bc_ref",r)})();
+</script>
 </body>
 </html>
 
