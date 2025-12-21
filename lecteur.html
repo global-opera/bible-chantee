@@ -343,29 +343,30 @@ window.trackSignup = function(referrer) {
             display: none;
             width: 100%;
             margin: 15px 10px 0 10px;
-            background: rgba(255,255,255,0.1);
             border-radius: 10px;
             overflow: hidden;
+            border: 2px solid #ffce00;
         }
         .tab-btn {
             flex: 1;
-            padding: 12px;
-            background: transparent;
+            padding: 12px 20px;
             border: none;
+            background: #000080;
             color: #fff;
-            font-size: 1em;
-            font-weight: 600;
+            font-size: 1rem;
+            font-weight: bold;
             cursor: pointer;
             transition: all 0.3s;
-            border-bottom: 3px solid transparent;
         }
-        .tab-btn:hover {
-            background: rgba(255,255,255,0.05);
+        .tab-btn:first-child {
+            border-right: 1px solid #ffce00;
         }
         .tab-btn.active {
-            color: #ffce00;
-            border-bottom-color: #ffce00;
-            background: rgba(255,206,0,0.1);
+            background: #ffce00;
+            color: #000080;
+        }
+        .tab-btn:hover:not(.active) {
+            background: #000066;
         }
 
         footer { text-align: center; padding: 30px 0; color: #666; font-size: 0.85em; margin-bottom: 180px; }
