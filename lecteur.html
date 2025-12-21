@@ -360,7 +360,27 @@
         .section-chapter-label { font-weight: 500; }
         .section-chapter-subtitle { color: #aaa; font-size: 0.85em; }
         .section-chapter-play { color: #ffce00; font-size: 1.2em; }
-    </style>
+    /* Partage Parrainage */
+.share-box{margin:20px 0;padding:20px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px;border:1px solid #FFD700}
+.share-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.share-btn{display:flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a1a2e;border:none;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer;transition:transform 0.2s}
+.share-btn:hover{transform:scale(1.05)}
+.share-btn svg{width:20px;height:20px}
+.share-reward{color:#FFD700;font-size:14px}
+.share-reward span{display:inline-block;padding:4px 12px;background:linear-gradient(135deg,#00C853,#00E676);color:#fff;border-radius:15px;font-weight:700;margin-right:6px}
+.share-panel{display:none;margin-top:15px;padding:15px;background:rgba(255,215,0,0.1);border-radius:8px}
+.share-panel.open{display:block}
+.share-link{width:100%;padding:12px;background:#0a0a1a;border:1px solid #FFD700;border-radius:6px;color:#fff;font-family:monospace;font-size:13px;margin-bottom:12px}
+.share-actions{display:flex;gap:10px;flex-wrap:wrap}
+.share-actions button{padding:10px 18px;border:none;border-radius:6px;font-weight:600;cursor:pointer;transition:opacity 0.2s}
+.share-actions button:hover{opacity:0.85}
+.btn-copy{background:#4CAF50;color:#fff}
+.btn-whatsapp{background:#25D366;color:#fff}
+.btn-telegram{background:#0088cc;color:#fff}
+.btn-email{background:#EA4335;color:#fff}
+.share-toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);background:#4CAF50;color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;opacity:0;transition:all 0.3s;z-index:9999}
+.share-toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+</style>
 </head>
 <body>
     <div class="container">
@@ -392,7 +412,27 @@
         <div class="books-grid" id="old-testament"></div>
 
         <h2 class="section-title" data-i18n="readerNewTestament">Nouveau Testament</h2>
-        <div class="books-grid" id="new-testament"></div>
+        <div class="books-grid" id="new-testament"><!-- Partage Parrainage -->
+<div class="share-box" id="shareBox">
+  <div class="share-header">
+    <button class="share-btn" onclick="toggleShare()">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+      PARTAGER CE CHAPITRE
+    </button>
+    <div class="share-reward"><span>+10 credits</span> par inscription!</div>
+  </div>
+  <div class="share-panel" id="sharePanel">
+    <input type="text" class="share-link" id="shareLink" readonly onclick="this.select()">
+    <div class="share-actions">
+      <button class="btn-copy" onclick="copyLink()">Copier</button>
+      <button class="btn-whatsapp" onclick="shareWA()">WhatsApp</button>
+      <button class="btn-telegram" onclick="shareTG()">Telegram</button>
+      <button class="btn-email" onclick="shareEmail()">Email</button>
+    </div>
+  </div>
+</div>
+<div class="share-toast" id="shareToast"></div>
+</div>
 
         <footer>
             <p data-i18n="readerFooterCopyright">© 2025 Bible Chantée - Stéphane Cassani - Tous droits d'auteur réservés</p>
@@ -429,6 +469,23 @@
                     <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                 </svg>
                 <span data-i18n="readerBible">Bible</span>
+            </button>
+        </div>
+        <div class="player-controls" style="margin-top: 10px;">
+            <button class="lyrics-btn" onclick="shareCurrentChapter()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                    <polyline points="16 6 12 2 8 6"></polyline>
+                    <line x1="12" y1="2" x2="12" y2="15"></line>
+                </svg>
+                <span>Partager (+10 crédits)</span>
+            </button>
+            <button class="lyrics-btn" onclick="goSignup()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <span>S'inscrire</span>
             </button>
         </div>
         <div class="player-controls" style="margin-top: 10px;">
@@ -1353,6 +1410,82 @@ renderBooks('old-testament', oldTestament);
     <script src="/credits-system.js"></script>
 <script src="chapter-titles-en.js"></script>
 <script src="chapter-titles-pt.js"></script>
+
+<!-- REFERRAL SYSTEM -->
+<script>
+function getUserId(){
+  let i = localStorage.getItem('bc_uid');
+  if(!i){
+    i = 'u_' + Date.now().toString(36) + Math.random().toString(36).slice(2,8);
+    localStorage.setItem('bc_uid', i);
+  }
+  return i;
+}
+
+function captureRefFromUrl(){
+  const p = new URLSearchParams(location.search);
+  const r = p.get('ref');
+  if(r && r !== getUserId()){
+    // PREMIER REF GAGNÉ : ne jamais écraser un ref déjà enregistré
+    const existingRef = localStorage.getItem('bc_ref');
+    if(!existingRef) {
+      localStorage.setItem('bc_ref', r);
+      console.log('[Referral] Premier parrain enregistré:', r);
+    } else {
+      console.log('[Referral] Parrain déjà enregistré:', existingRef, '- Nouveau ref ignoré:', r);
+    }
+  }
+}
+captureRefFromUrl();
+
+function getCurrentShareUrl(){
+  const url = new URL(location.href);
+  if(!url.searchParams.get('ref')){
+    url.searchParams.set('ref', getUserId());
+  }
+  return url.toString();
+}
+
+function goSignup(){
+  const ref = localStorage.getItem('bc_ref') || '';
+  const ret = location.href;
+  const u = new URL('/signup.html', location.origin);
+  if(ref) u.searchParams.set('ref', ref);
+  u.searchParams.set('return', ret);
+  location.href = u.toString();
+}
+
+function shareCurrentChapter(){
+  const url = getCurrentShareUrl();
+  if (navigator.share) {
+    navigator.share({
+      title: document.getElementById('player-title').textContent,
+      text: 'Écoute ce chapitre de la Bible en musique !',
+      url: url
+    }).catch(err => console.log('Partage annulé', err));
+  } else {
+    // Fallback: copier dans le presse-papier
+    navigator.clipboard.writeText(url).then(() => {
+      alert('Lien copié ! Partagez-le pour gagner +10 crédits quand quelqu\'un s\'inscrit.');
+    }).catch(err => {
+      alert('Impossible de copier le lien: ' + err);
+    });
+  }
+}
+</script>
+<script>
+// Parrainage
+function getUid(){let u=localStorage.getItem("bc_uid");if(!u){u="u_"+Date.now().toString(36)+Math.random().toString(36).substr(2,6);localStorage.setItem("bc_uid",u)}return u}
+function getShareUrl(){const p=new URLSearchParams(location.search);const b=p.get("book")||"01_GEN";const c=p.get("chapter")||"1";const l=p.get("lang")||"FR";return"https://biblechantee.com/lecteur.html?book="+b+"&chapter="+c+"&lang="+l+"&ref="+getUid()}
+function toggleShare(){const panel=document.getElementById("sharePanel");panel.classList.toggle("open");if(panel.classList.contains("open")){document.getElementById("shareLink").value=getShareUrl()}}
+function toast(m){const t=document.getElementById("shareToast");t.textContent=m;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2500)}
+function copyLink(){const i=document.getElementById("shareLink");i.select();navigator.clipboard.writeText(i.value).then(()=>toast("Lien copie!")).catch(()=>{document.execCommand("copy");toast("Lien copie!")})}
+function shareWA(){window.open("https://wa.me/?text="+encodeURIComponent("Ecoute ce chapitre de la Bible chantee! "+getShareUrl()),"_blank")}
+function shareTG(){window.open("https://t.me/share/url?url="+encodeURIComponent(getShareUrl())+"&text="+encodeURIComponent("Ecoute la Bible chantee!"),"_blank")}
+function shareEmail(){const s=encodeURIComponent("Decouvre la Bible Chantee");const b=encodeURIComponent("Salut!\\n\\nEcoute ce chapitre:\\n"+getShareUrl()+"\\n\\nBonne ecoute!");location.href="mailto:?subject="+s+"&body="+b}
+// Enregistrer parrain
+(function(){const r=new URLSearchParams(location.search).get("ref");if(r&&r!==getUid()&&!localStorage.getItem("bc_ref")){localStorage.setItem("bc_ref",r)}})();
+</script>
 </body>
 </html>
 
