@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Chantee - Biblia Cantada - Sung Bible</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #1a4a7a; color: #fff; margin: 0; padding: 10px; }
+        h1 { color: #d4af37; text-align: center; font-size: 1.5em; margin: 10px 0; }
+        h2 { color: #d4af37; font-size: 1.2em; margin: 10px 0; }
+        p { text-align: center; color: #ccc; margin: 5px 0; }
+        .section { background: rgba(0,0,0,0.3); padding: 15px; margin: 10px 0; border-radius: 10px; }
+        .btn { display: inline-block; padding: 12px 20px; margin: 5px; background: #d4af37; color: #000; text-align: center; text-decoration: none; font-weight: bold; border-radius: 5px; border: none; font-size: 1em; cursor: pointer; }
+        .btn-active { background: #fff; color: #1a4a7a; }
+        .lang-buttons { text-align: center; margin: 15px 0; }
+        audio { width: 100%; margin: 5px 0; }
+        .track { margin: 15px 0; padding: 10px; background: rgba(255,255,255,0.1); border-radius: 5px; }
+        .track-title { font-weight: bold; color: #d4af37; margin-bottom: 5px; }
+        .track-desc { color: #aaa; font-size: 0.9em; margin-bottom: 8px; }
+        input, select { width: 100%; padding: 12px; margin: 8px 0; border-radius: 5px; border: 1px solid #d4af37; font-size: 1em; box-sizing: border-box; }
+        .btn-submit { display: block; width: 100%; padding: 15px; margin: 10px 0; background: #d4af37; color: #000; text-align: center; text-decoration: none; font-weight: bold; border-radius: 5px; border: none; font-size: 1em; cursor: pointer; }
+        .footer { text-align: center; margin: 20px 0; padding: 15px; color: #888; font-size: 0.85em; }
+        .footer a { color: #d4af37; }
+        .hidden { display: none; }
+        .emoji { font-size: 2em; text-align: center; display: block; margin: 10px 0; }
+    </style>
+</head>
+<body>
+
+    <div class="emoji">&#127925;</div>
+    <h1>Bible Chantee</h1>
+    <p>A Palavra de Deus em musica</p>
+    <p>God's Word in music</p>
+
+    <div class="section">
+        <div class="lang-buttons">
+            <button class="btn" id="btn-fr" onclick="showLang('fr')">Francais</button>
+            <button class="btn" id="btn-pt" onclick="showLang('pt')">Portugues</button>
+            <button class="btn" id="btn-en" onclick="showLang('en')">English</button>
+        </div>
+    </div>
+
+    <!-- FRANCAIS -->
+    <div class="section" id="tracks-fr">
+        <h2>&#127467;&#127479; Francais</h2>
+        
+        <div class="track">
+            <div class="track-title">Genese 1</div>
+            <div class="track-desc">La Creation</div>
+            <audio controls preload="none">
+                <source src="https://archive.org/download/bible-chantee-fr/01_GEN_01_FR.mp3" type="audio/mpeg">
+                Votre navigateur ne supporte pas l'audio.
+            </audio>
+        </div>
+        
+        <div class="track">
+            <div class="track-title">Psaume 23</div>
+            <div class="track-desc">L'Eternel est mon berger</div>
+            <audio controls preload="none">
+                <source src="https://archive.org/download/bible-chantee-fr/19_PSA_23_FR.mp3" type="audio/mpeg">
+                Votre navigateur ne supporte pas l'audio.
+            </audio>
+        </div>
+        
+        <div class="track">
+            <div class="track-title">Psaume 91</div>
+            <div class="track-desc">La protection divine</div>
+            <audio controls preload="none">
+                <source src="https://archive.org/download/bible-chantee-fr/19_PSA_91_FR.mp3" type="audio/mpeg">
+                Votre navigateur ne supporte pas l'audio.
+            </audio>
+        </div>
+        
+        <div class="track">
+            <div class="track-title">Psaume 150</div>
+            <div class="track-desc">Louez l'Eternel</div>
+            <audio controls preload="none">
+                <source src="https://archive.org/download/bible-chantee-fr/19_PSA_150_FR.mp3" type="audio/mpeg">
+                Votre navigateur ne supporte pas l'audio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- PORTUGUES -->
+    <div class="section hidden" id="tracks-pt">
+        <h2>&#127463;&#127479; Portugues</h2>
+        
+        <div class="track">
+            <div class="track-title">Genesis 1</div>
+            <div class="track-desc">A Criacao</div>
+            <audio controls preload="none">
+                <source src="https://archive.org/download/bible-chantee-pt-v2/01_GEN_01_PT.mp3" type="audio/mpeg">
+                Seu navegador nao suporta audio.
+            </audio>
+        </div>
+        
+        <div class="track">
+            <div class="track-title">Salmo 23</div>
+            <div class="track-desc">O Senhor e meu pastor</div>
+            <audio controls preload="none">
+                <source src="https://archive.org/download/bible-chantee-pt-v2/19_PSA_23_PT.mp3" type="audio/mpeg">
+                Seu navegador nao suporta audio.
+            </audio>
+        </div>
+        
+        <div class="track">
+            <div class="track-title">Salmo 91</div>
+            <div class="track-desc">A protecao divina</div>
+            <audio controls preload="none">
+                <source src="https://archive.org/download/bible-chantee-pt-v2/19_PSA_91_PT.mp3" type="audio/mpeg">
+                Seu navegador nao suporta audio.
+            </audio>
+        </div>
+        
+        <div class="track">
+            <div class="track-title">Salmo 150</div>
+            <div class="track-desc">Louvai ao Senhor</div>
+            <audio controls preload="none">
+                <source src="https://archive.org/download/bible-chantee-pt-v2/19_PSA_150_PT.mp3" type="audio/mpeg">
+                Seu navegador nao suporta audio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="section hidden" id="tracks-en">
+        <h2>&#127468;&#127463; English</h2>
+        
+        <div class="track">
+            <div class="track-title">Genesis 1</div>
+            <div class="track-desc">The Creation</div>
+            <audio controls preload="none">
+                <source src="https://archive.org/download/bible-chantee-en/01_GEN_01_EN.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
+        </div>
+        
+        <div class="track">
+            <div class="track-title">Psalm 23</div>
+            <div class="track-desc">The Lord is my shepherd</div>
+            <audio controls preload="none">
+                <source src="https://archive.org/download/bible-chantee-en/19_PSA_23_EN.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
+        </div>
+        
+        <div class="track">
+            <div class="track-title">Psalm 91</div>
+            <div class="track-desc">Divine protection</div>
+            <audio controls preload="none">
+                <source src="https://archive.org/download/bible-chantee-en/19_PSA_91_EN.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
+        </div>
+        
+        <div class="track">
+            <div class="track-title">Psalm 150</div>
+            <div class="track-desc">Praise the Lord</div>
+            <audio controls preload="none">
+                <source src="https://archive.org/download/bible-chantee-en/19_PSA_150_EN.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
+        </div>
+    </div>
+
+    <!-- INSCRIPTION -->
+    <div class="section">
+        <h2>&#128231; Inscription / Inscricao / Subscribe</h2>
+        <p style="color:#ccc;font-size:0.9em;">Recevez 100 credits gratuits<br>Receba 100 creditos gratis<br>Get 100 free credits</p>
+        
+        <form action="/thank-you" method="POST" name="subscribe-lite" onsubmit="saveLang()">
+            <input type="hidden" name="form-name" value="subscribe-lite">
+            <input type="email" name="email" placeholder="Email" required>
+            <select name="language" id="lang-select">
+                <option value="fr">Francais</option>
+                <option value="pt">Portugues</option>
+                <option value="en">English</option>
+            </select>
+            <button type="submit" class="btn-submit">OK</button>
+        </form>
+    </div>
+
+    <!-- SITE COMPLET -->
+    <div class="section">
+        <h2>&#127760; Site complet / Site completo / Full site</h2>
+        <p style="margin:10px 0;">
+            <a href="https://biblechantee.com/lecteur.html?lang=FR" class="btn">FR - 1189 chapitres</a>
+        </p>
+        <p style="margin:10px 0;">
+            <a href="https://biblechantee.com/lecteur.html?lang=PT" class="btn">PT - 1189 capitulos</a>
+        </p>
+        <p style="margin:10px 0;">
+            <a href="https://biblechantee.com/lecteur.html?lang=EN" class="btn">EN - 1189 chapters</a>
+        </p>
+    </div>
+
+    <div class="footer">
+        <p>Bible Chantee 2025</p>
+        <p><a href="/demo.html">Version complete</a></p>
+    </div>
+
+    <script>
+        function showLang(lang) {
+            // Cacher tous
+            document.getElementById('tracks-fr').className = 'section hidden';
+            document.getElementById('tracks-pt').className = 'section hidden';
+            document.getElementById('tracks-en').className = 'section hidden';
+            
+            // Retirer active de tous les boutons
+            document.getElementById('btn-fr').className = 'btn';
+            document.getElementById('btn-pt').className = 'btn';
+            document.getElementById('btn-en').className = 'btn';
+            
+            // Afficher la langue choisie
+            document.getElementById('tracks-' + lang).className = 'section';
+            document.getElementById('btn-' + lang).className = 'btn btn-active';
+            
+            // Mettre a jour le select
+            document.getElementById('lang-select').value = lang;
+        }
+        
+        function saveLang() {
+            var lang = document.getElementById('lang-select').value;
+            try {
+                localStorage.setItem('sungbible_lang', lang);
+            } catch(e) {}
+        }
+        
+        // Afficher FR par defaut
+        showLang('fr');
+    </script>
+
+</body>
+</html>
