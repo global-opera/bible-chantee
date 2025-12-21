@@ -1,0 +1,25 @@
+{
+  "name": "Bible Chantée FR",
+  "short_name": "Bible FR",
+  "description": "1189 chapitres de la Bible en musique - Français",
+  "start_url": "/app/fr/",
+  "scope": "/app/fr/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000080",
+  "theme_color": "#000080",
+  "icons": [
+    {
+      "src": "/icons/icon-fr-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-fr-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

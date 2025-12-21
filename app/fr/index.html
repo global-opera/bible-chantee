@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Chantée FR</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000080">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/icons/icon-fr-192.png">
+    <style>
+        body {
+            background: #000080;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    </style>
+    <script>
+        // Forcer langue FR
+        localStorage.setItem('BC_LANG', 'FR');
+        localStorage.setItem('sungbible_lang', 'fr');
+        // Rediriger vers lecteur principal
+        setTimeout(() => {
+            window.location.href = '/lecteur.html?lang=FR&pwa=1';
+        }, 500);
+    </script>
+</head>
+<body>
+    <p>Chargement Bible Chantée FR...</p>
+</body>
+</html>

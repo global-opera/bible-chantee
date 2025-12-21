@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bíblia Cantada PT</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#009739">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/icons/icon-pt-192.png">
+    <style>
+        body {
+            background: #009739;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    </style>
+    <script>
+        // Forcer langue PT
+        localStorage.setItem('BC_LANG', 'PT');
+        localStorage.setItem('sungbible_lang', 'pt');
+        // Rediriger vers lecteur principal
+        setTimeout(() => {
+            window.location.href = '/lecteur.html?lang=PT&pwa=1';
+        }, 500);
+    </script>
+</head>
+<body>
+    <p>Carregando Bíblia Cantada PT...</p>
+</body>
+</html>

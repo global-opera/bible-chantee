@@ -1,0 +1,25 @@
+{
+  "name": "Bíblia Cantada PT",
+  "short_name": "Bíblia PT",
+  "description": "1189 capítulos da Bíblia em música - Português",
+  "start_url": "/app/pt/",
+  "scope": "/app/pt/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000080",
+  "theme_color": "#009739",
+  "icons": [
+    {
+      "src": "/icons/icon-pt-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-pt-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
