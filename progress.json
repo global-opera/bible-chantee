@@ -1,6 +1,6 @@
 {
   "total": 1189,
-  "updated_at": "2025-12-21T01:01:25",
+  "updated_at": "2025-12-21T01:14:48",
   "langs": {
     "FR": {
       "count": 1189,
@@ -21,9 +21,9 @@
       "status": "Complet"
     },
     "ES": {
-      "count": 99,
+      "count": 138,
       "target": 1189,
-      "percent": 8.3,
+      "percent": 11.6,
       "status": "En cours"
     }
   }
