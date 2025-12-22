@@ -492,7 +492,7 @@ window.trackSignup = function(referrer) {
 </head>
 <body>
     <!-- Credits Badge -->
-    <div class="credits-badge" id="creditsBadge">
+    <div class="credits-badge" id="creditsBadge" style="opacity: 0; transition: opacity 0.3s;">
         <span id="creditsIcon">&#127925;</span>
         <span id="creditsCount">3</span>
         <span id="creditsLabel">credits</span>
@@ -1839,12 +1839,25 @@ function updateCreditsDisplay() {
         label.textContent = credits === 1 ? 'credit' : 'credits';
         console.log(`💳 Showing ${credits} credits`);
     }
+
+    // Show badge after initialization (prevent flash)
+    badge.style.opacity = '1';
 }
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
     console.log('📱 Page loaded, initializing credits display...');
     updateCreditsDisplay();
+
+    // Add click event to credits badge
+    const badge = document.getElementById('creditsBadge');
+    if (badge) {
+        badge.style.cursor = 'pointer';
+        badge.addEventListener('click', function() {
+            console.log('💳 Credits badge clicked');
+            CREDITS.showCreditsPopup();
+        });
+    }
 });
 
 // Update when page becomes visible (after returning from payment)

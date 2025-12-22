@@ -930,7 +930,7 @@
                     fillOpacity: 0.6
                 }).addTo(map);
 
-                const cities = country.cities ? country.cities.join(', ') : '';
+                const cities = country.cities ? country.cities.map(c => c.name || c).join(', ') : '';
                 marker.bindPopup(`
                     <div style="text-align:center;">
                         <div style="font-size:1.5rem;">${coords.flag}</div>
@@ -1004,7 +1004,7 @@
             list.innerHTML = countries.slice(0, 10).map((c, i) => {
                 const coords = CONFIG.COUNTRY_COORDS[c.name];
                 const flag = coords ? coords.flag : '🌐';
-                const cities = c.cities ? c.cities.slice(0, 2).join(', ') : '';
+                const cities = c.cities ? c.cities.slice(0, 2).map(city => city.name || city).join(', ') : '';
                 return `
                     <li>
                         <span class="rank">${i + 1}</span>
@@ -1085,10 +1085,11 @@
             countries.forEach(c => {
                 if (c.cities) {
                     c.cities.forEach(city => {
+                        const cityName = city.name || city;
                         activities.push({
                             type: 'visit',
                             title: 'Visiteur',
-                            detail: city + ', ' + c.name,
+                            detail: cityName + ', ' + c.name,
                             time: Math.floor(Math.random() * 30) + 1
                         });
                     });

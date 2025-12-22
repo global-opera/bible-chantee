@@ -21,6 +21,16 @@
     border: none;
 }
 
+.credits-badge.premium #creditsLabel {
+    display: none !important;
+}
+
+.credits-badge.premium #creditsCount {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
 .credits-badge .credits-count {
     font-weight: bold;
     color: #ffce00;
