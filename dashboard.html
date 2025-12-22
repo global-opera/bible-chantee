@@ -558,13 +558,13 @@
 </head>
 <body>
     <div class="header">
-        <h1>📊 Dashboard Bible Chantée</h1>
+        <h1 data-i18n="dashboard-title">📊 Dashboard Bible Chantée</h1>
         <p class="subtitle">
-            Statistiques en temps réel
+            <span data-i18n="dashboard-subtitle">Statistiques en temps réel</span>
             <span class="live-indicator"></span> LIVE
         </p>
         <p style="margin-top: 0.5rem; font-size: 0.9rem;">
-            Dernière mise à jour : <span id="last-update"></span>
+            <span data-i18n="last-update-label">Dernière mise à jour</span> : <span id="last-update"></span>
         </p>
     </div>
 
@@ -572,19 +572,19 @@
     <div class="period-toggle">
         <button class="period-btn" onclick="switchPeriod('today')" data-period="today">
             <span class="emoji">☀️</span>
-            Aujourd'hui
+            <span data-i18n="period-today">Aujourd'hui</span>
         </button>
         <button class="period-btn active" onclick="switchPeriod('week')" data-period="week">
             <span class="emoji">📅</span>
-            Cette semaine
+            <span data-i18n="period-week">Cette semaine</span>
         </button>
         <button class="period-btn" onclick="switchPeriod('month')" data-period="month">
             <span class="emoji">📆</span>
-            Ce mois
+            <span data-i18n="period-month">Ce mois</span>
         </button>
         <button class="period-btn" onclick="switchPeriod('year')" data-period="year">
             <span class="emoji">🗓️</span>
-            Cette année
+            <span data-i18n="period-year">Cette année</span>
         </button>
     </div>
 
@@ -593,28 +593,28 @@
         <div class="stats-grid">
             <div class="stat-card" style="animation-delay: 0.1s;">
                 <div class="icon">👥</div>
-                <div class="label">Visiteurs aujourd'hui</div>
+                <div class="label" data-i18n="stats-visitors-today">Visiteurs aujourd'hui</div>
                 <div class="value" id="visitors-today">0</div>
                 <div class="change positive">↗ +23% vs hier</div>
             </div>
 
             <div class="stat-card" style="animation-delay: 0.2s;">
                 <div class="icon">🌍</div>
-                <div class="label">Pays actifs</div>
+                <div class="label" data-i18n="stats-countries">Pays actifs</div>
                 <div class="value" id="countries">0</div>
                 <div class="change positive">↗ +3 nouveaux</div>
             </div>
 
             <div class="stat-card" style="animation-delay: 0.3s;">
                 <div class="icon">🎵</div>
-                <div class="label">Écoutes audio</div>
+                <div class="label" data-i18n="stats-audio-plays">Écoutes audio</div>
                 <div class="value" id="audio-plays">0</div>
                 <div class="change positive">↗ +45% cette semaine</div>
             </div>
 
             <div class="stat-card" style="animation-delay: 0.4s;">
                 <div class="icon">📧</div>
-                <div class="label">Précommandes</div>
+                <div class="label" data-i18n="stats-preorders">Précommandes</div>
                 <div class="value" id="preorders">0</div>
                 <div class="change positive">↗ +12 cette semaine</div>
             </div>
@@ -622,22 +622,30 @@
             <!-- Stats App Android -->
             <div class="stat-card" style="animation-delay: 0.5s;">
                 <div class="icon">📱</div>
-                <div class="label">Téléchargements App</div>
+                <div class="label" data-i18n="stats-app-downloads">Téléchargements App</div>
                 <div class="value" id="totalDownloads">Bientôt</div>
                 <div class="change">Google Play</div>
             </div>
 
             <div class="stat-card" style="animation-delay: 0.6s;">
                 <div class="icon">⭐</div>
-                <div class="label">Note moyenne</div>
+                <div class="label" data-i18n="stats-app-rating">Note moyenne</div>
                 <div class="value" id="appRating">Bientôt</div>
                 <div class="change">Google Play</div>
             </div>
         </div>
 
+        <!-- Progression MP3 Generation -->
+        <div class="chart-section">
+            <h2 data-i18n="section-mp3-progress">📊 Progression Génération MP3</h2>
+            <div class="language-chart" id="mp3-progress-chart">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+
         <!-- Carte mondiale Leaflet.js -->
         <div class="chart-section">
-            <h2>🗺️ Visiteurs dans le monde</h2>
+            <h2 data-i18n="section-world-map">🗺️ Visiteurs dans le monde</h2>
             <div class="world-map-container">
                 <div id="leaflet-map"></div>
                 <div class="map-legend">
@@ -660,7 +668,7 @@
 
         <!-- Langues populaires -->
         <div class="chart-section">
-            <h2>🌐 Langues préférées</h2>
+            <h2 data-i18n="section-languages">🌐 Langues préférées</h2>
             <div class="language-chart">
                 <div class="lang-bar">
                     <div class="flag">🇧🇷</div>
@@ -699,7 +707,7 @@
 
         <!-- Top villes du Brésil -->
         <div class="chart-section">
-            <h2>🇧🇷 Top 10 Villes du Brésil</h2>
+            <h2 data-i18n="section-cities">🇧🇷 Top 10 Villes du Brésil</h2>
             <div class="cities-grid">
                 <div class="city-item">
                     <div>
@@ -766,7 +774,7 @@
 
         <!-- Chapitres les plus écoutés -->
         <div class="chart-section">
-            <h2>🎵 Top 10 Chapitres les plus écoutés</h2>
+            <h2 data-i18n="section-top-chapters">🎵 Top 10 Chapitres les plus écoutés</h2>
             <div class="audio-chart">
                 <div class="audio-item">
                     <div class="audio-rank">1</div>
@@ -823,13 +831,13 @@
 
         <!-- Activité récente -->
         <div class="chart-section">
-            <h2>⚡ Activité en temps réel</h2>
+            <h2 data-i18n="section-activity">⚡ Activité en temps réel</h2>
             <div class="event-list" id="events"></div>
         </div>
     </div>
 
     <div class="refresh-notice">
-        🔄 Cette page se rafraîchit automatiquement toutes les 5 minutes
+        <span data-i18n="refresh-notice">🔄 Cette page se rafraîchit automatiquement toutes les 5 minutes</span>
     </div>
 
     <!-- Leaflet.js JavaScript -->
@@ -1154,6 +1162,201 @@
 
         // TODO: Connecter aux vraies données Google Analytics
         // Voir GOOGLE_ANALYTICS_SETUP.md pour la configuration
+    </script>
+
+    <!-- i18n + Progress.json Integration -->
+    <script>
+    (function() {
+        // 1. Detect language from localStorage
+        const stored = (localStorage.getItem('bc_lang') || 'FR').toUpperCase();
+        const VALID_LANGS = ['FR', 'EN', 'PT', 'ES'];
+        const currentLang = VALID_LANGS.includes(stored) ? stored : 'FR';
+
+        // 2. Translations
+        const translations = {
+            fr: {
+                'dashboard-title': '📊 Dashboard Bible Chantée',
+                'dashboard-subtitle': 'Statistiques en temps réel',
+                'last-update-label': 'Dernière mise à jour',
+                'period-today': 'Aujourd\'hui',
+                'period-week': 'Cette semaine',
+                'period-month': 'Ce mois',
+                'period-year': 'Cette année',
+                'stats-visitors-today': 'Visiteurs aujourd\'hui',
+                'stats-countries': 'Pays actifs',
+                'stats-audio-plays': 'Écoutes audio',
+                'stats-preorders': 'Précommandes',
+                'stats-app-downloads': 'Téléchargements App',
+                'stats-app-rating': 'Note moyenne',
+                'section-mp3-progress': '📊 Progression Génération MP3',
+                'section-world-map': '🗺️ Visiteurs dans le monde',
+                'section-languages': '🌐 Langues préférées',
+                'section-cities': '🇧🇷 Top 10 Villes du Brésil',
+                'section-top-chapters': '🎵 Top 10 Chapitres les plus écoutés',
+                'section-activity': '⚡ Activité en temps réel',
+                'refresh-notice': '🔄 Cette page se rafraîchit automatiquement toutes les 5 minutes',
+                'lang-french': 'Français',
+                'lang-english': 'English',
+                'lang-portuguese': 'Português',
+                'lang-spanish': 'Español',
+                'status-complete': 'Complet',
+                'status-in-progress': 'En cours'
+            },
+            en: {
+                'dashboard-title': '📊 Sung Bible Dashboard',
+                'dashboard-subtitle': 'Real-time statistics',
+                'last-update-label': 'Last update',
+                'period-today': 'Today',
+                'period-week': 'This week',
+                'period-month': 'This month',
+                'period-year': 'This year',
+                'stats-visitors-today': 'Visitors today',
+                'stats-countries': 'Active countries',
+                'stats-audio-plays': 'Audio plays',
+                'stats-preorders': 'Preorders',
+                'stats-app-downloads': 'App Downloads',
+                'stats-app-rating': 'Average rating',
+                'section-mp3-progress': '📊 MP3 Generation Progress',
+                'section-world-map': '🗺️ Worldwide Visitors',
+                'section-languages': '🌐 Preferred Languages',
+                'section-cities': '🇧🇷 Top 10 Brazilian Cities',
+                'section-top-chapters': '🎵 Top 10 Most Played Chapters',
+                'section-activity': '⚡ Real-time Activity',
+                'refresh-notice': '🔄 This page auto-refreshes every 5 minutes',
+                'lang-french': 'French',
+                'lang-english': 'English',
+                'lang-portuguese': 'Portuguese',
+                'lang-spanish': 'Spanish',
+                'status-complete': 'Complete',
+                'status-in-progress': 'In Progress'
+            },
+            pt: {
+                'dashboard-title': '📊 Painel Bíblia Cantada',
+                'dashboard-subtitle': 'Estatísticas em tempo real',
+                'last-update-label': 'Última atualização',
+                'period-today': 'Hoje',
+                'period-week': 'Esta semana',
+                'period-month': 'Este mês',
+                'period-year': 'Este ano',
+                'stats-visitors-today': 'Visitantes hoje',
+                'stats-countries': 'Países ativos',
+                'stats-audio-plays': 'Reproduções de áudio',
+                'stats-preorders': 'Pré-encomendas',
+                'stats-app-downloads': 'Downloads do App',
+                'stats-app-rating': 'Nota média',
+                'section-mp3-progress': '📊 Progresso da Geração MP3',
+                'section-world-map': '🗺️ Visitantes no Mundo',
+                'section-languages': '🌐 Idiomas Preferidos',
+                'section-cities': '🇧🇷 Top 10 Cidades do Brasil',
+                'section-top-chapters': '🎵 Top 10 Capítulos Mais Ouvidos',
+                'section-activity': '⚡ Atividade em Tempo Real',
+                'refresh-notice': '🔄 Esta página atualiza automaticamente a cada 5 minutos',
+                'lang-french': 'Francês',
+                'lang-english': 'Inglês',
+                'lang-portuguese': 'Português',
+                'lang-spanish': 'Espanhol',
+                'status-complete': 'Completo',
+                'status-in-progress': 'Em Progresso'
+            },
+            es: {
+                'dashboard-title': '📊 Panel Biblia Cantada',
+                'dashboard-subtitle': 'Estadísticas en tiempo real',
+                'last-update-label': 'Última actualización',
+                'period-today': 'Hoy',
+                'period-week': 'Esta semana',
+                'period-month': 'Este mes',
+                'period-year': 'Este año',
+                'stats-visitors-today': 'Visitantes hoy',
+                'stats-countries': 'Países activos',
+                'stats-audio-plays': 'Reproducciones de audio',
+                'stats-preorders': 'Preórdenes',
+                'stats-app-downloads': 'Descargas de App',
+                'stats-app-rating': 'Calificación promedio',
+                'section-mp3-progress': '📊 Progreso de Generación MP3',
+                'section-world-map': '🗺️ Visitantes en el Mundo',
+                'section-languages': '🌐 Idiomas Preferidos',
+                'section-cities': '🇧🇷 Top 10 Ciudades de Brasil',
+                'section-top-chapters': '🎵 Top 10 Capítulos Más Escuchados',
+                'section-activity': '⚡ Actividad en Tiempo Real',
+                'refresh-notice': '🔄 Esta página se actualiza automáticamente cada 5 minutos',
+                'lang-french': 'Francés',
+                'lang-english': 'Inglés',
+                'lang-portuguese': 'Portugués',
+                'lang-spanish': 'Español',
+                'status-complete': 'Completo',
+                'status-in-progress': 'En Progreso'
+            }
+        };
+
+        // 3. Apply translations
+        function translatePage(lang) {
+            const t = translations[lang.toLowerCase()] || translations.fr;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) el.textContent = t[key];
+            });
+            document.documentElement.lang = lang.toLowerCase();
+        }
+
+        // 4. Load progress.json and generate MP3 progress bars
+        function loadProgress() {
+            fetch('/progress.json')
+                .then(res => res.json())
+                .then(data => {
+                    const container = document.getElementById('mp3-progress-chart');
+                    if (!container) return;
+
+                    const t = translations[currentLang.toLowerCase()] || translations.fr;
+                    const langs = [
+                        { code: 'FR', flag: '🇫🇷', key: 'lang-french' },
+                        { code: 'EN', flag: '🇬🇧', key: 'lang-english' },
+                        { code: 'PT', flag: '🇧🇷', key: 'lang-portuguese' },
+                        { code: 'ES', flag: '🇪🇸', key: 'lang-spanish' }
+                    ];
+
+                    container.innerHTML = langs.map(lang => {
+                        const progress = data.langs[lang.code];
+                        if (!progress) return '';
+
+                        const percent = progress.percent;
+                        const height = Math.floor((percent / 100) * 200);
+                        const isComplete = progress.status === 'Complet' || progress.status === 'Complete';
+                        const statusClass = isComplete ? 'status-complete' : 'status-in-progress';
+
+                        return `
+                            <div class="lang-bar">
+                                <div class="flag">${lang.flag}</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="height: ${height}px;"></div>
+                                </div>
+                                <div class="percentage">${percent.toFixed(0)}%</div>
+                                <div class="label">${t[lang.key]}</div>
+                                <div style="font-size: 0.8rem; color: ${isComplete ? 'var(--success)' : 'var(--warning)'}; margin-top: 0.25rem;">
+                                    ${progress.count}/${progress.target}
+                                </div>
+                                <div style="font-size: 0.75rem; color: rgba(255,255,255,0.6); margin-top: 0.1rem;" data-i18n="${statusClass}">
+                                    ${t[statusClass]}
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+                })
+                .catch(err => console.error('Error loading progress.json:', err));
+        }
+
+        // 5. Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            translatePage(currentLang);
+            loadProgress();
+        });
+
+        // 6. Listen for language changes from other tabs
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'bc_lang') {
+                location.reload();
+            }
+        });
+    })();
     </script>
 </body>
 </html>
