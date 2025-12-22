@@ -208,13 +208,36 @@ class CreditsSystem {
     }
 
     showPurchaseModal() {
+        // Anti-spam: show only once per session + 45s cooldown
+        const shown = sessionStorage.getItem('bc_paywall_shown') === '1';
+        if (shown) {
+            console.log('⏭️ Purchase modal already shown this session');
+            return;
+        }
+
+        const last = Number(sessionStorage.getItem('bc_paywall_last') || '0');
+        if (Date.now() - last < 45000) {
+            console.log('⏸️ Purchase modal cooldown active');
+            return;
+        }
+
+        sessionStorage.setItem('bc_paywall_shown', '1');
+        sessionStorage.setItem('bc_paywall_last', String(Date.now()));
+
         const modal = document.getElementById('purchase-modal');
         modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';  // Prevent scroll
     }
 
     hidePurchaseModal() {
         const modal = document.getElementById('purchase-modal');
         modal.style.display = 'none';
+        document.body.style.overflow = '';  // Restore scroll
+        document.body.classList.remove('popup-open');
+
+        // Mark as shown when user closes manually
+        sessionStorage.setItem('bc_paywall_shown', '1');
+        sessionStorage.setItem('bc_paywall_last', String(Date.now()));
     }
 
     handlePurchase() {
