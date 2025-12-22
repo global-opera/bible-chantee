@@ -1,7 +1,7 @@
 {
-  "name": "Bible Chantée",
+  "name": "Bible Chantée - Sung Bible",
   "short_name": "Bible Chantée",
-  "description": "1189 chapitres de la Bible en musique - Multilingual (FR, PT, EN, ES)",
+  "description": "1189 chapitres de la Bible en musique - FR, PT, EN, ES",
   "start_url": "/lecteur.html",
   "scope": "/",
   "display": "standalone",
@@ -10,16 +10,14 @@
   "theme_color": "#000080",
   "icons": [
     {
-      "src": "/icons/icon-192.png",
+      "src": "/icons/icon-fr-192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     },
     {
-      "src": "/icons/icon-512.png",
+      "src": "/icons/icon-fr-512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     }
   ]
 }
