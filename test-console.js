@@ -1,114 +1,153 @@
-/**
- * SCRIPT DE TEST CONSOLE - Bible Chantée Popup Anti-Spam
- *
- * Copier/coller ce script dans la console DevTools (F12)
- * pour valider automatiquement les protections anti-spam
- */
+// ============================================
+// TEST-CONSOLE.JS - Bible Chantée Debug Suite (v2)
+// Coller dans DevTools Console (F12)
+// ============================================
 
-console.log('🧪 === TEST ANTI-SPAM BIBLE CHANTÉE ===\n');
+console.log("🧪 === BIBLE CHANTÉE - TESTS VALIDATION (v2) ===\n");
 
-// Test 1: Vérifier sessionStorage
-console.log('📋 Test 1: Vérification sessionStorage');
-const shown = sessionStorage.getItem('bc_paywall_shown');
-const last = sessionStorage.getItem('bc_paywall_last');
+// Helpers
+const fmtTime = (ms) => {
+  if (ms <= 0) return "0s";
+  const s = Math.floor(ms / 1000);
+  const h = Math.floor(s / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  const r = s % 60;
+  return h ? `${h}h ${m}m ${r}s` : (m ? `${m}m ${r}s` : `${r}s`);
+};
+const isVisible = (el) => {
+  if (!el) return false;
+  const cs = getComputedStyle(el);
+  return cs.display !== "none" && cs.visibility !== "hidden" && cs.opacity !== "0";
+};
+const displayInfo = (el) => {
+  if (!el) return "(absent)";
+  const cs = getComputedStyle(el);
+  return `computed: display=${cs.display}, visibility=${cs.visibility}, opacity=${cs.opacity}`;
+};
+const getFn = (...names) => names.find(n => typeof window[n] === "function");
 
-console.log('  bc_paywall_shown:', shown);
-console.log('  bc_paywall_last:', last);
+// ============================================
+// TEST 1: sessionStorage (cooldowns)
+// ============================================
+console.log("TEST 1: sessionStorage");
+console.log("----------------------");
 
-if (shown === '1') {
-    console.log('  ✅ Flag "shown" posé correctement');
+const paywallShown = sessionStorage.getItem("bc_paywall_shown");
+const paywallLastRaw = sessionStorage.getItem("bc_paywall_last");
+
+console.log("bc_paywall_shown:", paywallShown ?? "(non défini)");
+console.log("bc_paywall_last:", paywallLastRaw ?? "(non défini)");
+
+if (paywallLastRaw && !Number.isNaN(Number(paywallLastRaw))) {
+  const last = Number(paywallLastRaw);
+  const now = Date.now();
+
+  const cd45 = 45 * 1000;
+  const cd24h = 24 * 60 * 60 * 1000;
+
+  const rem45 = cd45 - (now - last);
+  const rem24 = cd24h - (now - last);
+
+  console.log("Cooldown 45s restant:", rem45 > 0 ? fmtTime(rem45) : "expiré ✅");
+  console.log("Cooldown 24h restant:", rem24 > 0 ? fmtTime(rem24) : "expiré ✅");
+
+  if (rem45 > 0) console.log("⏱️ Anti-spam actif (45s).");
+  else console.log("✅ Anti-spam 45s expiré.");
 } else {
-    console.log('  ⚠️ Flag "shown" non posé (popup pas encore déclenché ?)');
+  console.log("Aucun timestamp cooldown actif.");
 }
+console.log("");
 
-if (last && !isNaN(Number(last))) {
-    const timestamp = new Date(Number(last));
-    console.log('  ✅ Cooldown timestamp:', timestamp.toLocaleString());
+// ============================================
+// TEST 2: Overlays / modals
+// ============================================
+console.log("TEST 2: État des overlays");
+console.log("-------------------------");
 
-    const elapsed = Date.now() - Number(last);
-    const remaining = Math.max(0, 45000 - elapsed);
+const creditsOverlay = document.getElementById("creditsOverlay");
+const purchaseModal = document.getElementById("purchase-modal");
 
-    if (remaining > 0) {
-        console.log(`  ⏱️ Cooldown actif: ${Math.ceil(remaining/1000)}s restants`);
-    } else {
-        console.log('  ⏱️ Cooldown expiré (> 45s)');
-    }
+console.log("creditsOverlay:", creditsOverlay ? "présent ✓" : "ABSENT ✗");
+console.log("  - visible:", isVisible(creditsOverlay) ? "OUI ✗ (devrait être NON hors popup)" : "NON ✓");
+console.log("  -", displayInfo(creditsOverlay));
+console.log("  - aria-hidden:", creditsOverlay?.getAttribute("aria-hidden") ?? "(n/a)");
+
+console.log("purchase-modal:", purchaseModal ? "présent ✓" : "ABSENT ✗");
+console.log("  - visible:", isVisible(purchaseModal) ? "OUI ✗ (devrait être NON hors popup)" : "NON ✓");
+console.log("  -", displayInfo(purchaseModal));
+console.log("  - aria-hidden:", purchaseModal?.getAttribute("aria-hidden") ?? "(n/a)");
+console.log("");
+
+// ============================================
+// TEST 3: Scroll / UI lock
+// ============================================
+console.log("TEST 3: Scroll et overflow");
+console.log("--------------------------");
+
+const bodyOverflow = document.body.style.overflow;
+const hasPopupOpen = document.body.classList.contains("popup-open");
+
+console.log("body.style.overflow:", bodyOverflow || "(vide/défaut) ✓");
+console.log("body.classList contient 'popup-open':", hasPopupOpen ? "OUI ✗" : "NON ✓");
+
+// Quick scroll check (non destructif)
+const canScroll = document.documentElement.scrollHeight > window.innerHeight;
+console.log("page scrollable:", canScroll ? "OUI" : "NON (page courte)");
+console.log("");
+
+// ============================================
+// TEST 4: Systèmes crédits
+// ============================================
+console.log("TEST 4: Systèmes de crédits");
+console.log("---------------------------");
+
+if (typeof window.CREDITS !== "undefined") {
+  console.log("CREDITS (credits.js): ✓ DÉTECTÉ");
+  console.log("  - keys:", Object.keys(window.CREDITS).slice(0, 25).join(", "), Object.keys(window.CREDITS).length > 25 ? "..." : "");
+  console.log("  - balance:", window.CREDITS.balance ?? "(n/a)");
 } else {
-    console.log('  ⚠️ Cooldown non initialisé');
+  console.log("CREDITS (credits.js): ✗ NON TROUVÉ");
 }
 
-// Test 2: Vérifier overlay état
-console.log('\n📋 Test 2: État de l\'overlay');
-const overlay = document.getElementById('creditsOverlay');
-const modal = document.getElementById('purchase-modal');
-
-if (overlay) {
-    console.log('  Overlay credits.js:');
-    console.log('    - display:', overlay.style.display);
-    console.log('    - aria-hidden:', overlay.getAttribute('aria-hidden'));
-    console.log('    - visible:', overlay.style.display === 'flex' ? '✅ OUI' : '✅ NON (correct)');
-}
-
-if (modal) {
-    console.log('  Modal credits-system.js:');
-    console.log('    - display:', modal.style.display);
-    console.log('    - visible:', modal.style.display === 'flex' ? '❌ OUI (bloque UI!)' : '✅ NON (correct)');
-}
-
-// Test 3: Vérifier body overflow
-console.log('\n📋 Test 3: Scroll et overflow');
-console.log('  body.style.overflow:', document.body.style.overflow || '(défaut)');
-console.log('  body.classList:', [...document.body.classList].join(', ') || '(aucune)');
-
-if (document.body.style.overflow === 'hidden') {
-    console.log('  ❌ Scroll bloqué! (overflow:hidden actif)');
+if (typeof window.creditsSystem !== "undefined") {
+  console.log("creditsSystem (credits-system.js): ✓ DÉTECTÉ");
+  console.log("  - keys:", Object.keys(window.creditsSystem).slice(0, 25).join(", "), Object.keys(window.creditsSystem).length > 25 ? "..." : "");
 } else {
-    console.log('  ✅ Scroll fonctionnel');
+  console.log("creditsSystem (credits-system.js): ✗ NON TROUVÉ");
 }
+console.log("");
 
-// Test 4: Vérifier systèmes de crédits
-console.log('\n📋 Test 4: Systèmes de crédits détectés');
+// ============================================
+// TEST 5: Fonctions anti-spam (tolérant)
+// ============================================
+console.log("TEST 5: Fonctions anti-spam");
+console.log("---------------------------");
 
-if (typeof CREDITS !== 'undefined') {
-    console.log('  ✅ CREDITS (credits.js) chargé');
-    try {
-        console.log('    - Credits restants:', CREDITS.getCredits());
-        console.log('    - Premium:', CREDITS.isPremium());
-    } catch (e) {
-        console.log('    ⚠️ Erreur:', e.message);
-    }
+const fnMaybe =
+  getFn("bcMaybeShowCreditsPopup", "maybeShowCreditsPopup", "bcShouldShowPaywallOnce", "maybeOpenCreditsBecauseLimit");
+
+console.log("Fonction anti-spam détectée:", fnMaybe ? `✓ ${fnMaybe}()` : "✗ Aucune fonction reconnue");
+console.log("");
+
+// ============================================
+// RÉSUMÉ
+// ============================================
+console.log("🎯 === RÉSUMÉ ===");
+console.log("1) Anti-spam: popup 1x puis plus rien après fermeture.");
+console.log("2) UI: '...' et scroll OK après fermeture.");
+console.log("3) Badge: clic sur 🎵 crédits ouvre le popup volontairement.");
+console.log("");
+
+// ============================================
+// COMMANDES DEBUG (safe)
+// ============================================
+console.log("🧰 === COMMANDES DEBUG ===");
+console.log("Reset session:   sessionStorage.clear(); location.reload()");
+if (fnMaybe) {
+  console.log(`Forcer test:     ${fnMaybe}('test')  (si ton implémentation accepte un param)`);
+} else {
+  console.log("Forcer test:     (non disponible - aucune fonction détectée)");
 }
-
-if (typeof creditsSystem !== 'undefined') {
-    console.log('  ✅ creditsSystem (credits-system.js) chargé');
-    try {
-        console.log('    - Credits restants:', creditsSystem.getCredits());
-        console.log('    - Unlimited:', creditsSystem.hasUnlimitedAccess());
-    } catch (e) {
-        console.log('    ⚠️ Erreur:', e.message);
-    }
-}
-
-// Test 5: Fonctions anti-spam disponibles
-console.log('\n📋 Test 5: Fonctions anti-spam');
-console.log('  bcMaybeShowCreditsPopup:', typeof bcMaybeShowCreditsPopup === 'function' ? '✅' : '❌');
-console.log('  maybeShowCreditsPopup:', typeof maybeShowCreditsPopup === 'function' ? '✅' : '❌');
-
-// Résumé
-console.log('\n🎯 === RÉSUMÉ ===');
-console.log('Pour tester manuellement:');
-console.log('1. Cliquer 10 livres → popup doit apparaître 1 fois max');
-console.log('2. Fermer popup → recliquer 10 livres → aucun popup');
-console.log('3. Tester menu "..." du player → doit s\'ouvrir');
-console.log('4. Scroll page → doit fonctionner');
-console.log('\n✅ Si tout fonctionne = FIX VALIDÉ');
-
-// Utilitaires
-console.log('\n🛠️ === UTILITAIRES ===');
-console.log('Reset session (pour re-tester):');
-console.log('  → sessionStorage.clear(); location.reload()');
-console.log('\nForcer popup (debug):');
-console.log('  → bcMaybeShowCreditsPopup("test")');
-console.log('\nVérifier si modal visible:');
-console.log('  → document.getElementById("creditsOverlay")?.style.display');
-console.log('  → document.getElementById("purchase-modal")?.style.display');
+console.log("Overlay display: getComputedStyle(document.getElementById('creditsOverlay')).display");
+console.log("Modal display:   getComputedStyle(document.getElementById('purchase-modal')).display");
+console.log("\n✅ === FIN DES TESTS ===");
