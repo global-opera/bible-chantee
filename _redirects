@@ -1,0 +1,5 @@
+# Redirection biblechantee.com vers lecteur (pas sungbible.world)
+https://biblechantee.com/ /lecteur.html 302
+https://biblechantee.com/index.html /lecteur.html 302
+https://www.biblechantee.com/ /lecteur.html 302
+https://www.biblechantee.com/index.html /lecteur.html 302
