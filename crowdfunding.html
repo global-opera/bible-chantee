@@ -522,30 +522,31 @@
 
         <!-- Progress Card -->
         <div class="card">
-            <h2><span class="icon">📊</span> Avancement du projet</h2>
+            <h2><span class="icon">📊</span> <span data-i18n="progress-title">Avancement du projet</span></h2>
             <div class="stats-grid">
                 <div class="stat-box">
-                    <div class="number">2378</div>
-                    <div class="label">chapitres générés</div>
+                    <div class="number">4756</div>
+                    <div class="label" data-i18n="stat-chapters">chapitres générés</div>
                 </div>
                 <div class="stat-box">
-                    <div class="number">2</div>
-                    <div class="label">langues complètes</div>
+                    <div class="number">4</div>
+                    <div class="label" data-i18n="stat-languages">langues complètes</div>
                 </div>
                 <div class="stat-box">
                     <div class="number">12</div>
-                    <div class="label">langues prévues</div>
+                    <div class="label" data-i18n="stat-planned">langues prévues</div>
                 </div>
                 <div class="stat-box">
                     <div class="number">100%</div>
-                    <div class="label">gratuit</div>
+                    <div class="label" data-i18n="stat-free">gratuit</div>
                 </div>
             </div>
             <ul class="status-list">
-                <li>Version française : <span class="badge badge-success">Terminée</span></li>
-                <li>Version portugaise : <span class="badge badge-success">Terminée</span></li>
-                <li>Version anglaise : <span class="badge badge-progress">En cours</span></li>
-                <li>10 autres langues : en préparation (espagnol, allemand, russe, arabe, chinois, hindi, tagalog...)</li>
+                <li><span data-i18n="status-fr">Version française</span> : <span class="badge badge-success" data-i18n="status-complete">Terminée</span></li>
+                <li><span data-i18n="status-pt">Version portugaise</span> : <span class="badge badge-success" data-i18n="status-complete">Terminée</span></li>
+                <li><span data-i18n="status-en">Version anglaise</span> : <span class="badge badge-success" data-i18n="status-complete">Terminée</span></li>
+                <li><span data-i18n="status-es">Version espagnole</span> : <span class="badge badge-success" data-i18n="status-complete">Terminée</span></li>
+                <li><span data-i18n="status-other">8 autres langues : en préparation (allemand, italien, russe, arabe, chinois, hindi, tagalog, swahili...)</span></li>
             </ul>
         </div>
 
@@ -601,6 +602,17 @@
         // ===== I18N SYSTEM =====
         const translations = {
             fr: {
+                'progress-title': 'Avancement du projet',
+                'stat-chapters': 'chapitres générés',
+                'stat-languages': 'langues complètes',
+                'stat-planned': 'langues prévues',
+                'stat-free': 'gratuit',
+                'status-fr': 'Version française',
+                'status-pt': 'Version portugaise',
+                'status-en': 'Version anglaise',
+                'status-es': 'Version espagnole',
+                'status-complete': 'Terminée',
+                'status-other': 'autres langues : en préparation (allemand, italien, russe, arabe, chinois, hindi, tagalog, swahili...)',
                 'donate-title': 'Faire un don maintenant',
                 'donate-gofundme': '🚀 Donner via GoFundMe',
                 'donate-or': '— ou par virement direct (sans frais de plateforme) —',
@@ -616,6 +628,17 @@
                 'donate-email-copied': 'Email copié !'
             },
             en: {
+                'progress-title': 'Project Progress',
+                'stat-chapters': 'chapters generated',
+                'stat-languages': 'complete languages',
+                'stat-planned': 'planned languages',
+                'stat-free': 'free',
+                'status-fr': 'French Version',
+                'status-pt': 'Portuguese Version',
+                'status-en': 'English Version',
+                'status-es': 'Spanish Version',
+                'status-complete': 'Complete',
+                'status-other': 'other languages: in preparation (German, Italian, Russian, Arabic, Chinese, Hindi, Tagalog, Swahili...)',
                 'donate-title': 'Make a donation now',
                 'donate-gofundme': '🚀 Donate via GoFundMe',
                 'donate-or': '— or by direct transfer (no platform fees) —',
@@ -631,6 +654,17 @@
                 'donate-email-copied': 'Email copied!'
             },
             pt: {
+                'progress-title': 'Progresso do Projeto',
+                'stat-chapters': 'capítulos gerados',
+                'stat-languages': 'línguas completas',
+                'stat-planned': 'línguas previstas',
+                'stat-free': 'gratuito',
+                'status-fr': 'Versão Francesa',
+                'status-pt': 'Versão Portuguesa',
+                'status-en': 'Versão Inglesa',
+                'status-es': 'Versão Espanhola',
+                'status-complete': 'Completa',
+                'status-other': 'outras línguas: em preparação (alemão, italiano, russo, árabe, chinês, hindi, tagalog, swahili...)',
                 'donate-title': 'Fazer uma doação agora',
                 'donate-gofundme': '🚀 Doar via GoFundMe',
                 'donate-or': '— ou por transferência direta (sem taxas de plataforma) —',
@@ -644,6 +678,32 @@
                 'donate-paypal-btn': '💳 Pagar com PayPal',
                 'donate-copy-email': 'Copiar email',
                 'donate-email-copied': 'Email copiado!'
+            },
+            es: {
+                'progress-title': 'Progreso del Proyecto',
+                'stat-chapters': 'capítulos generados',
+                'stat-languages': 'idiomas completos',
+                'stat-planned': 'idiomas previstos',
+                'stat-free': 'gratuito',
+                'status-fr': 'Versión Francesa',
+                'status-pt': 'Versión Portuguesa',
+                'status-en': 'Versión Inglesa',
+                'status-es': 'Versión Española',
+                'status-complete': 'Completa',
+                'status-other': 'otros idiomas: en preparación (alemán, italiano, ruso, árabe, chino, hindi, tagalo, swahili...)',
+                'donate-title': 'Hacer una donación ahora',
+                'donate-gofundme': '🚀 Donar vía GoFundMe',
+                'donate-or': '— o por transferencia directa (sin comisiones de plataforma) —',
+                'donate-bank': 'Transferencia bancaria',
+                'donate-copy-iban': 'Copiar IBAN',
+                'donate-iban-copied': '¡IBAN copiado!',
+                'donate-twint-note': 'Solo Suiza<br>Escanea o añade el número',
+                'donate-copy-number': 'Copiar número',
+                'donate-number-copied': '¡Número copiado!',
+                'donate-paypal-note': 'Pago seguro mundial',
+                'donate-paypal-btn': '💳 Pagar con PayPal',
+                'donate-copy-email': 'Copiar email',
+                'donate-email-copied': '¡Email copiado!'
             }
         };
 
@@ -666,11 +726,18 @@
 
             // 3. Check localStorage (from demo page or freemium system)
             try {
+                // Check bc_lang (used by demo.html language selector)
+                const bcLang = localStorage.getItem('bc_lang');
+                if (bcLang && translations[bcLang.toLowerCase()]) return bcLang.toLowerCase();
+
+                // Check sungbible_lang (legacy)
                 const savedLang = localStorage.getItem('sungbible_lang');
                 if (savedLang && translations[savedLang]) return savedLang;
 
+                // Check bibleFree_* (freemium system)
                 if (localStorage.getItem('bibleFree_pt')) return 'pt';
                 if (localStorage.getItem('bibleFree_en')) return 'en';
+                if (localStorage.getItem('bibleFree_es')) return 'es';
                 if (localStorage.getItem('bibleFree_fr')) return 'fr';
             } catch (e) {}
 
