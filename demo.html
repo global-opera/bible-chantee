@@ -283,8 +283,8 @@ select { background: #1a1a2e; color: #ffffff; }
                 <div class="stat-label" id="stat-books">Livres</div>
             </div>
             <div class="stat-box">
-                <div class="stat-number">12</div>
-                <div class="stat-label" id="stat-languages">Langues prévues</div>
+                <div class="stat-number">4</div>
+                <div class="stat-label" id="stat-languages">Langues disponibles</div>
             </div>
             <div class="stat-box">
                 <div class="stat-number">80+</div>
@@ -384,6 +384,7 @@ select { background: #1a1a2e; color: #ffffff; }
                 tracks: [
                     { id: "01_GEN_01_FR", title: "Genèse 1", desc: "La Création" },
                     { id: "19_PSA_23_FR", title: "Psaume 23", desc: "L'Éternel est mon berger" },
+                    { id: "19_PSA_91_FR", title: "Psaume 91", desc: "La protection divine" },
                     { id: "19_PSA_150_FR", title: "Psaume 150", desc: "Louez l'Éternel" }
                 ]
             },
@@ -406,6 +407,7 @@ select { background: #1a1a2e; color: #ffffff; }
                 tracks: [
                     { id: "01_GEN_01_PT", title: "Gênesis 1", desc: "A Criação" },
                     { id: "19_PSA_23_PT", title: "Salmo 23", desc: "O Senhor é meu pastor" },
+                    { id: "19_PSA_91_PT", title: "Salmo 91", desc: "A proteção divina" },
                     { id: "19_PSA_150_PT", title: "Salmo 150", desc: "Louvai ao Senhor" }
                 ]
             },
@@ -428,7 +430,31 @@ select { background: #1a1a2e; color: #ffffff; }
                 tracks: [
                     { id: "01_GEN_01_EN", title: "Genesis 1", desc: "The Creation" },
                     { id: "19_PSA_23_EN", title: "Psalm 23", desc: "The Lord is my shepherd" },
+                    { id: "19_PSA_91_EN", title: "Psalm 91", desc: "Divine protection" },
                     { id: "19_PSA_150_EN", title: "Psalm 150", desc: "Praise the Lord" }
+                ]
+            },
+            ES: {
+                title: "Biblia Cantada", subtitle: "La Palabra de Dios en Música",
+                statChapters: "Capítulos", statBooks: "Libros", statLanguages: "Idiomas previstos", statHours: "Horas por idioma",
+                titleListen: "Escucha extractos",
+                formTitle: "Recibe la Biblia Cantada completa", formSubtitle: "Inscríbete para ser notificado y acceder a los 1189 capítulos",
+                emailPlaceholder: "Tu email", optChoose: "Elegir idioma", optAvailable: "✓ Disponible", optSoon: "Próximamente",
+                btnSubscribe: "Inscribirse",
+                donationTitle: "Apoya el proyecto",
+                donationText: "Cada donación financia la <span class='highlight'>generación de nuevos capítulos</span> y la <span class='highlight'>adición de nuevos idiomas</span>.",
+                donationMission: "10% de los ingresos destinados a misiones.",
+                btnDonate: "Donar",
+                titleProgress: "Progreso del proyecto - 12 idiomas",
+                titleStreaming: "Próximamente disponible en",
+                footerText: "10% de los ingresos destinados a misiones",
+                btnLyrics: "Letras", btnHide: "Ocultar", lyricsNA: "Letras próximamente",
+                statusComplete: "Completo", statusProgress: "En progreso", statusPlanned: "Previsto",
+                tracks: [
+                    { id: "01_GEN_01_ES", title: "Génesis 1", desc: "La Creación" },
+                    { id: "19_PSA_23_ES", title: "Salmo 23", desc: "El Señor es mi pastor" },
+                    { id: "19_PSA_91_ES", title: "Salmo 91", desc: "La protección divina" },
+                    { id: "19_PSA_150_ES", title: "Salmo 150", desc: "Alabad al Señor" }
                 ]
             }
         };
@@ -437,7 +463,7 @@ select { background: #1a1a2e; color: #ffffff; }
             { name: "Français", mp3: 1189, total: 1189, status: "complete" },
             { name: "English", mp3: 1189, total: 1189, status: "complete" },
             { name: "Português", mp3: 1189, total: 1189, status: "complete" },
-            { name: "Español", mp3: 0, total: 1189, status: "progress" },
+            { name: "Español", mp3: 1189, total: 1189, status: "complete" },
             { name: "Deutsch", mp3: 0, total: 1189, status: "planned" },
             { name: "Italiano", mp3: 0, total: 1189, status: "planned" },
             { name: "العربية", mp3: 0, total: 1189, status: "planned" },
@@ -451,7 +477,6 @@ select { background: #1a1a2e; color: #ffffff; }
         let currentLang = 'FR';
 
         function setLang(lang) {
-            if (lang === 'ES') return;
             currentLang = lang;
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
