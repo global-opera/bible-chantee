@@ -8,6 +8,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-TX3ETCKJQZ');
+  gtag('config', 'G-H8H3TWSGTF');
 
 // Tracking personnalise Bible Chantee
 window.trackEvent = function(action, category, label, value) {
@@ -48,15 +49,12 @@ window.trackSignup = function(referrer) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bible Chantée - Démo</title>
-
-    <!-- PWA Support -->
-    <link rel="manifest" href="/manifest.json">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="lyrics-data.js"></script>
-    <script src="lyrics-data-pt.js"></script>
-    <script src="lyrics-data-en.js"></script>
+    <script src="lyrics-data.js?v=20251221"></script>
+    <script src="lyrics-data-pt.js?v=20251221"></script>
+    <script src="lyrics-data-en.js?v=20251221"></script>
+    <script src="lyrics-data-es.js?v=20251221"></script>
     <style>
         :root {
             --bg-dark: #0a1628;
@@ -240,7 +238,27 @@ window.trackSignup = function(referrer) {
             .stats { grid-template-columns: repeat(2, 1fr); }
             .header h1 { font-size: 2rem; }
         }
-    </style>
+    /* Partage Parrainage */
+.share-box{margin:20px auto;max-width:600px;padding:20px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px;border:1px solid #FFD700}
+.share-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.share-btn{display:flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a1a2e;border:none;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer;transition:transform 0.2s}
+.share-btn:hover{transform:scale(1.05)}
+.share-btn svg{width:20px;height:20px}
+.share-reward{color:#FFD700;font-size:14px}
+.share-reward span{display:inline-block;padding:4px 12px;background:linear-gradient(135deg,#00C853,#00E676);color:#fff;border-radius:15px;font-weight:700;margin-right:6px}
+.share-panel{display:none;margin-top:15px;padding:15px;background:rgba(255,215,0,0.1);border-radius:8px}
+.share-panel.open{display:block}
+.share-link{width:100%;padding:12px;background:#0a0a1a;border:1px solid #FFD700;border-radius:6px;color:#fff;font-family:monospace;font-size:13px;margin-bottom:12px}
+.share-actions{display:flex;gap:10px;flex-wrap:wrap}
+.share-actions button{padding:10px 18px;border:none;border-radius:6px;font-weight:600;cursor:pointer;transition:opacity 0.2s}
+.share-actions button:hover{opacity:0.85}
+.btn-copy{background:#4CAF50;color:#fff}
+.btn-whatsapp{background:#25D366;color:#fff}
+.share-toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);background:#4CAF50;color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;opacity:0;transition:all 0.3s;z-index:9999}
+.share-toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+select option { background: #1a1a2e; color: #ffffff; }
+select { background: #1a1a2e; color: #ffffff; }
+</style>
 </head>
 <body>
     <header class="header">
@@ -253,7 +271,7 @@ window.trackSignup = function(referrer) {
             <button class="lang-btn active" onclick="setLang('FR')">FR Français</button>
             <button class="lang-btn" onclick="setLang('PT')">BR Português</button>
             <button class="lang-btn" onclick="setLang('EN')">GB English</button>
-            <button class="lang-btn disabled">ES Español</button>
+            <button class="lang-btn" onclick="setLang('ES')">ES Español</button>
         </div>
 
         <div class="stats">
@@ -266,8 +284,8 @@ window.trackSignup = function(referrer) {
                 <div class="stat-label" id="stat-books">Livres</div>
             </div>
             <div class="stat-box">
-                <div class="stat-number">12</div>
-                <div class="stat-label" id="stat-languages">Langues prévues</div>
+                <div class="stat-number">4</div>
+                <div class="stat-label" id="stat-languages">Langues disponibles</div>
             </div>
             <div class="stat-box">
                 <div class="stat-number">80+</div>
@@ -279,7 +297,22 @@ window.trackSignup = function(referrer) {
         <div id="tracks"></div>
 
         <div class="form-section">
-            <h2 id="form-title">Recevez la Bible Chantée complète</h2>
+            
+<!-- Partage Parrainage -->
+<div style="max-width:600px;margin:30px auto;padding:20px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px;border:2px solid #FFD700;text-align:center;">
+  <button onclick="toggleShare()" style="display:inline-flex;align-items:center;gap:8px;padding:15px 30px;background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a1a2e;border:none;border-radius:8px;font-weight:700;font-size:16px;cursor:pointer;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+    PARTAGER (+10 credits)
+  </button>
+  <p style="color:#FFD700;margin-top:10px;font-size:14px;">Partagez et gagnez 10 credits par inscription!</p>
+  <div id="sharePanel" style="display:none;margin-top:15px;">
+    <input type="text" id="shareLink" readonly onclick="this.select()" style="width:100%;padding:10px;background:#0a0a1a;border:1px solid #FFD700;border-radius:6px;color:#fff;font-family:monospace;margin-bottom:10px;">
+    <button onclick="copyLink()" style="padding:10px 20px;background:#4CAF50;color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer;margin-right:10px;">Copier</button>
+    <button onclick="shareWA()" style="padding:10px 20px;background:#25D366;color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer;">WhatsApp</button>
+  </div>
+</div>
+<div id="shareToast" style="position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);background:#4CAF50;color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;opacity:0;transition:all 0.3s;z-index:9999;"></div>
+<h2 id="form-title">Recevez la Bible Chantée complète</h2>
             <p id="form-subtitle">Inscrivez-vous pour être notifié et accéder aux 1189 chapitres</p>
             <form action="/thank-you" method="POST" name="subscribe">
                 <input type="hidden" name="form-name" value="subscribe">
@@ -290,9 +323,9 @@ window.trackSignup = function(referrer) {
                         <option value="fr">Français</option>
                         <option value="en">English</option>
                         <option value="pt">Português</option>
+                        <option value="es">Español</option>
                     </optgroup>
                     <optgroup id="optgroup-soon" label="Bientôt">
-                        <option value="es" disabled>Español</option>
                         <option value="de" disabled>Deutsch</option>
                         <option value="it" disabled>Italiano</option>
                     </optgroup>
@@ -352,6 +385,7 @@ window.trackSignup = function(referrer) {
                 tracks: [
                     { id: "01_GEN_01_FR", title: "Genèse 1", desc: "La Création" },
                     { id: "19_PSA_23_FR", title: "Psaume 23", desc: "L'Éternel est mon berger" },
+                    { id: "19_PSA_91_FR", title: "Psaume 91", desc: "La protection divine" },
                     { id: "19_PSA_150_FR", title: "Psaume 150", desc: "Louez l'Éternel" }
                 ]
             },
@@ -374,6 +408,7 @@ window.trackSignup = function(referrer) {
                 tracks: [
                     { id: "01_GEN_01_PT", title: "Gênesis 1", desc: "A Criação" },
                     { id: "19_PSA_23_PT", title: "Salmo 23", desc: "O Senhor é meu pastor" },
+                    { id: "19_PSA_91_PT", title: "Salmo 91", desc: "A proteção divina" },
                     { id: "19_PSA_150_PT", title: "Salmo 150", desc: "Louvai ao Senhor" }
                 ]
             },
@@ -396,7 +431,31 @@ window.trackSignup = function(referrer) {
                 tracks: [
                     { id: "01_GEN_01_EN", title: "Genesis 1", desc: "The Creation" },
                     { id: "19_PSA_23_EN", title: "Psalm 23", desc: "The Lord is my shepherd" },
+                    { id: "19_PSA_91_EN", title: "Psalm 91", desc: "Divine protection" },
                     { id: "19_PSA_150_EN", title: "Psalm 150", desc: "Praise the Lord" }
+                ]
+            },
+            ES: {
+                title: "Biblia Cantada", subtitle: "La Palabra de Dios en Música",
+                statChapters: "Capítulos", statBooks: "Libros", statLanguages: "Idiomas previstos", statHours: "Horas por idioma",
+                titleListen: "Escucha extractos",
+                formTitle: "Recibe la Biblia Cantada completa", formSubtitle: "Inscríbete para ser notificado y acceder a los 1189 capítulos",
+                emailPlaceholder: "Tu email", optChoose: "Elegir idioma", optAvailable: "✓ Disponible", optSoon: "Próximamente",
+                btnSubscribe: "Inscribirse",
+                donationTitle: "Apoya el proyecto",
+                donationText: "Cada donación financia la <span class='highlight'>generación de nuevos capítulos</span> y la <span class='highlight'>adición de nuevos idiomas</span>.",
+                donationMission: "10% de los ingresos destinados a misiones.",
+                btnDonate: "Donar",
+                titleProgress: "Progreso del proyecto - 12 idiomas",
+                titleStreaming: "Próximamente disponible en",
+                footerText: "10% de los ingresos destinados a misiones",
+                btnLyrics: "Letras", btnHide: "Ocultar", lyricsNA: "Letras próximamente",
+                statusComplete: "Completo", statusProgress: "En progreso", statusPlanned: "Previsto",
+                tracks: [
+                    { id: "01_GEN_01_ES", title: "Génesis 1", desc: "La Creación" },
+                    { id: "19_PSA_23_ES", title: "Salmo 23", desc: "El Señor es mi pastor" },
+                    { id: "19_PSA_91_ES", title: "Salmo 91", desc: "El que habita al abrigo" },
+                    { id: "19_PSA_150_ES", title: "Salmo 150", desc: "¡Aleluya!" }
                 ]
             }
         };
@@ -404,8 +463,8 @@ window.trackSignup = function(referrer) {
         const progressData = [
             { name: "Français", mp3: 1189, total: 1189, status: "complete" },
             { name: "English", mp3: 1189, total: 1189, status: "complete" },
-            { name: "Português", mp3: 405, total: 1189, status: "progress" },
-            { name: "Español", mp3: 0, total: 1189, status: "progress" },
+            { name: "Português", mp3: 1189, total: 1189, status: "complete" },
+            { name: "Español", mp3: 1189, total: 1189, status: "complete" },
             { name: "Deutsch", mp3: 0, total: 1189, status: "planned" },
             { name: "Italiano", mp3: 0, total: 1189, status: "planned" },
             { name: "العربية", mp3: 0, total: 1189, status: "planned" },
@@ -416,22 +475,31 @@ window.trackSignup = function(referrer) {
             { name: "Kiswahili", mp3: 0, total: 1189, status: "planned" }
         ];
 
-        let currentLang = 'FR';
+        let currentLang = (localStorage.getItem('bc_lang') || 'FR').toUpperCase();
 
         function setLang(lang) {
-            if (lang === 'ES') return;
-            currentLang = lang;
-            // Save language to localStorage for redirect after signup
-            localStorage.setItem('sungbible_lang', lang);
+            const L = (lang || 'FR').toUpperCase();
+            currentLang = L;
+            localStorage.setItem('bc_lang', L);
+
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
-                if (btn.textContent.includes(lang) || (lang === 'PT' && btn.textContent.includes('BR'))) {
+                if (btn.textContent.includes(L) || (L === 'PT' && btn.textContent.includes('BR'))) {
                     btn.classList.add('active');
                 }
             });
-            document.getElementById('btn-pix').style.display = lang === 'PT' ? 'inline-block' : 'none';
+
+            const pix = document.getElementById('btn-pix');
+            if (pix) pix.style.display = L === 'PT' ? 'inline-block' : 'none';
+
             updatePage();
+
+            // IMPORTANT: sinon les tracks/audio restent sur l'ancienne langue
+            if (typeof renderTracks === 'function') renderTracks();
+
+            console.log('[LANG]', 'setLang ->', L, 'currentLang=', currentLang);
         }
+        window.setLang = setLang;
 
         function updatePage() {
             const t = translations[currentLang];
@@ -509,6 +577,8 @@ window.trackSignup = function(referrer) {
                 lyrics = window.chapterLyricsPT[bookNum][chap];
             } else if (currentLang === 'EN' && window.chapterLyricsEN?.[bookNum]?.[chap]) {
                 lyrics = window.chapterLyricsEN[bookNum][chap];
+            } else if (currentLang === 'ES' && window.chapterLyricsES?.[bookNum]?.[chap]) {
+                lyrics = window.chapterLyricsES[bookNum][chap];
             }
             
             if (lyrics) {
@@ -551,26 +621,134 @@ window.trackSignup = function(referrer) {
             });
         }
 
-        // Restore language from localStorage on page load
-        (function initLanguage() {
-            const savedLang = localStorage.getItem('sungbible_lang');
-            if (savedLang && (savedLang === 'FR' || savedLang === 'EN' || savedLang === 'PT')) {
-                currentLang = savedLang;
-                // Update active button
-                document.querySelectorAll('.lang-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                    if (btn.textContent.includes(savedLang) || (savedLang === 'PT' && btn.textContent.includes('BR'))) {
-                        btn.classList.add('active');
-                    }
-                });
-                // Show/hide Pix button for PT
-                const pixBtn = document.getElementById('btn-pix');
-                if (pixBtn) pixBtn.style.display = savedLang === 'PT' ? 'inline-block' : 'none';
-            }
-        })();
-
-        updatePage();
+        // Init: activate correct language button on page load
+        setLang(currentLang);
     </script>
+
+<script>
+function getUid(){let u=localStorage.getItem("bc_uid");if(!u){u="u_"+Date.now().toString(36)+Math.random().toString(36).substr(2,6);localStorage.setItem("bc_uid",u)}return u}
+function getShareUrl(){return"https://sungbible.world/demo.html?ref="+getUid()}
+function toggleShare(){const p=document.getElementById("sharePanel");if(p.style.display==="none"||p.style.display===""){p.style.display="block";document.getElementById("shareLink").value=getShareUrl()}else{p.style.display="none"}}
+function toast(m){const t=document.getElementById("shareToast");t.textContent=m;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2500)}
+function copyLink(){const i=document.getElementById("shareLink");i.select();navigator.clipboard.writeText(i.value).then(()=>toast("Lien copie!")).catch(()=>{document.execCommand("copy");toast("Lien copie!")})}
+function shareWA(){window.open("https://wa.me/?text="+encodeURIComponent("Decouvre la Bible chantee! "+getShareUrl()),"_blank")}
+(function(){const r=new URLSearchParams(location.search).get("ref");if(r&&r!==getUid()&&!localStorage.getItem("bc_ref"))localStorage.setItem("bc_ref",r)})();
+</script>
+
+<!-- Tracking evenements Bible Chantee -->
+<script>
+// Track ecoute audio
+function trackAudioPlay(book, chapter, lang) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'audio_play', {
+            event_category: 'Audio',
+            book_code: book,
+            chapter: chapter,
+            language: lang,
+            content_id: book + '_' + chapter + '_' + lang
+        });
+        console.log('Track: audio_play', book, chapter, lang);
+    }
+}
+
+// Track partage
+function trackShare(method, content) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'share', {
+            event_category: 'Social',
+            method: method,
+            content_type: 'chapter',
+            item_id: content
+        });
+        console.log('Track: share', method, content);
+    }
+}
+
+// Track inscription parrainage
+function trackSignup(referrer) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'sign_up', {
+            event_category: 'Conversion',
+            method: 'referral',
+            referrer_uid: referrer || 'direct'
+        });
+        console.log('Track: sign_up', referrer);
+    }
+}
+
+// Track affichage paroles
+function trackLyrics(book, chapter, lang) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'view_lyrics', {
+            event_category: 'Engagement',
+            book_code: book,
+            chapter: chapter,
+            language: lang
+        });
+    }
+}
+
+// Track changement langue
+function trackLanguageChange(newLang) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'language_change', {
+            event_category: 'Settings',
+            language: newLang
+        });
+    }
+}
+</script>
+
+<!-- Auto-tracking audio play -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Track quand audio commence
+    var audioElements = document.querySelectorAll('audio');
+    audioElements.forEach(function(audio) {
+        audio.addEventListener('play', function() {
+            var book = window.currentBook || 'unknown';
+            var chapter = window.currentChapter || 0;
+            var lang = window.currentLanguage || 'FR';
+            trackAudioPlay(book, chapter, lang);
+        });
+    });
+    
+    // Observer pour nouveaux elements audio (chargement dynamique)
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            mutation.addedNodes.forEach(function(node) {
+                if (node.tagName === 'AUDIO') {
+                    node.addEventListener('play', function() {
+                        var book = window.currentBook || 'unknown';
+                        var chapter = window.currentChapter || 0;
+                        var lang = window.currentLanguage || 'FR';
+                        trackAudioPlay(book, chapter, lang);
+                    });
+                }
+            });
+        });
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+});
+</script>
+
+<script>
+// Sauvegarder la langue choisie AVANT soumission du formulaire
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form[name="subscribe"]');
+    const langSelect = document.getElementById('lang-select');
+
+    if (form && langSelect) {
+        form.addEventListener('submit', function(e) {
+            const selectedLang = langSelect.value || 'fr';
+            localStorage.setItem('sungbible_lang', selectedLang.toLowerCase());
+            console.log('Langue sauvegardee:', selectedLang);
+        });
+    }
+});
+</script>
 </body>
 </html>
+
+
 
