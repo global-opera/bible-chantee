@@ -681,6 +681,13 @@ window.trackSignup = function(referrer) {
         (function () {
             const VALID_LANGUAGES = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];
 
+            // Helper: console.log conditionnel (uniquement si localStorage.bc_debug = "1")
+            window.bcLog = function(...args) {
+                if (localStorage.getItem('bc_debug') === '1') {
+                    console.log(...args);
+                }
+            };
+
             function normalizeLang(v) {
                 if (!v) return null;
                 const x = String(v).trim().toUpperCase();
@@ -725,7 +732,7 @@ window.trackSignup = function(referrer) {
                 window.history.replaceState({}, '', u.toString());
             }
 
-            console.log('[lecteur] Langue initialisée depuis URL:', window.currentLanguage, '(param URL:', urlLang, ')');
+            bcLog('[lecteur] Langue initialisée depuis URL:', window.currentLanguage, '(param URL:', urlLang, ')');
         })();
     </script>
 
@@ -1567,7 +1574,7 @@ const bookName = getBookDisplayName(currentBook);
             renderBooks('old-testament', oldTestament);
             renderBooks('new-testament', newTestament);
 
-            console.log('[lecteur] Traductions appliquées pour la langue:', lang);
+            bcLog('[lecteur] Traductions appliquées pour la langue:', lang);
         }
 
         // Appliquer les traductions au chargement de la page
@@ -1967,7 +1974,7 @@ window.addEventListener('focus', function() {
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('/service-worker.js')
-            .then(reg => console.log('[PWA] Service Worker registered:', reg.scope))
+            .then(reg => bcLog('[PWA] Service Worker registered:', reg.scope))
             .catch(err => console.error('[PWA] Service Worker registration failed:', err));
     });
 }
@@ -1975,6 +1982,17 @@ if ('serviceWorker' in navigator) {
 
 <!-- Hard Refresh Button (cache/SW reset) -->
 <a href="#" id="bc-hard-refresh" style="position:fixed;bottom:12px;right:12px;opacity:.25;font-size:12px;z-index:99999;color:#fff;text-decoration:none;background:rgba(0,0,0,0.3);padding:8px 12px;border-radius:6px;transition:opacity .3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.25'">⟳ Rafraîchir</a>
+
+<!-- Debug Link (visible only with ?debug=1) -->
+<a href="/TEST-RECHERCHE-VALIDATION.md" target="_blank" id="bc-debug-link" style="display:none;position:fixed;bottom:12px;right:140px;opacity:.25;font-size:12px;z-index:99999;color:#fff;text-decoration:none;background:rgba(0,0,128,0.3);padding:8px 12px;border-radius:6px;transition:opacity .3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.25'">🔬 Debug</a>
+<script>
+// Show debug link if ?debug=1
+if (new URLSearchParams(location.search).get('debug') === '1') {
+  const debugLink = document.getElementById('bc-debug-link');
+  if (debugLink) debugLink.style.display = 'block';
+}
+</script>
+
 <script>
 (function(){
   const a = document.getElementById('bc-hard-refresh');
@@ -1988,12 +2006,12 @@ if ('serviceWorker' in navigator) {
       if ('serviceWorker' in navigator){
         const regs = await navigator.serviceWorker.getRegistrations();
         await Promise.all(regs.map(r => r.unregister()));
-        console.log('[Hard Refresh] SW unregistered');
+        bcLog('[Hard Refresh] SW unregistered');
       }
       if (window.caches){
         const keys = await caches.keys();
         await Promise.all(keys.map(k => caches.delete(k)));
-        console.log('[Hard Refresh] Caches cleared');
+        bcLog('[Hard Refresh] Caches cleared');
       }
       location.reload(true);
     }catch(err){

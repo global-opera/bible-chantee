@@ -1,3 +1,8 @@
+// Helper: console.log conditionnel (SW ne peut pas accéder à localStorage)
+// On garde les logs critiques (Install/Activate), mais on réduit le verbosity
+const SW_DEBUG = false; // Mettre à true pour debug
+const swLog = (...args) => { if (SW_DEBUG) console.log(...args); };
+
 const CACHE_NAME = 'bible-chantee-v6';
 const STATIC_ASSETS = [
     '/',
@@ -16,10 +21,10 @@ const STATIC_ASSETS = [
 
 // Install
 self.addEventListener('install', event => {
-    console.log('[SW] Install');
+    console.log('[SW] Install v6'); // Log critique: garder
     event.waitUntil(
         caches.open(CACHE_NAME).then(cache => {
-            console.log('[SW] Caching static assets');
+            swLog('[SW] Caching static assets');
             return cache.addAll(STATIC_ASSETS).catch(err => {
                 console.error('[SW] Cache addAll error:', err);
             });
@@ -33,7 +38,7 @@ self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request).then(response => {
             if (response) {
-                console.log('[SW] Cache hit:', event.request.url);
+                swLog('[SW] Cache hit:', event.request.url);
                 return response;
             }
 
@@ -41,7 +46,7 @@ self.addEventListener('fetch', event => {
                 // Cache MP3 files when played
                 if (event.request.url.endsWith('.mp3')) {
                     caches.open(CACHE_NAME).then(cache => {
-                        console.log('[SW] Caching audio:', event.request.url);
+                        swLog('[SW] Caching audio:', event.request.url);
                         cache.put(event.request, fetchResponse.clone());
                     });
                 }
@@ -56,12 +61,12 @@ self.addEventListener('fetch', event => {
 
 // Activate - Clean old caches
 self.addEventListener('activate', event => {
-    console.log('[SW] Activate');
+    console.log('[SW] Activate v6'); // Log critique: garder
     event.waitUntil(
         caches.keys().then(keys => {
             return Promise.all(
                 keys.filter(key => key !== CACHE_NAME).map(key => {
-                    console.log('[SW] Deleting old cache:', key);
+                    swLog('[SW] Deleting old cache:', key);
                     return caches.delete(key);
                 })
             );
