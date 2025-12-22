@@ -1,12 +1,8 @@
-[
-  {
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.biblechantee.twa",
-      "sha256_cert_fingerprints": [
-        "PLACEHOLDER_SHA256_FINGERPRINT_TO_UPDATE"
-      ]
-    }
-  }
-]
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.biblechantee.twa",
+        "sha256_cert_fingerprints": ["7E:A5:E7:44:55:4E:8D:D7:47:3E:42:FA:CD:FA:73:64:AF:F6:01:64:0E:E4:0F:45:DA:EC:51:47:3D:51:27:1B"]
+      }
+    }]
