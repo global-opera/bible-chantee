@@ -2,7 +2,7 @@
 // Dominio Publico
 // Generado automaticamente - No modificar manualmente
 
-const bibleDataES = {
+window.bibleDataES = {
   "01": {
     "1": [
       {

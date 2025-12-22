@@ -1,7 +1,7 @@
 // Données bibliques - Bible Segond 1910
 // Généré automatiquement - Ne pas modifier manuellement
 
-const bibleData = {
+window.bibleData = {
   "01": {
     "1": [
       {

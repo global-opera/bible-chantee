@@ -2,7 +2,7 @@
 // Domínio Público
 // Gerado automaticamente - Não modificar manualmente
 
-const bibleDataPT = {
+window.bibleDataPT = {
   "01": {
     "1": [
       {

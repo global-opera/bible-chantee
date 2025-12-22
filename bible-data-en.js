@@ -2,7 +2,7 @@
 // Public Domain
 // Generated automatically - Do not modify manually
 
-const bibleDataEN = {
+window.bibleDataEN = {
   "01": {
     "1": [
       {
