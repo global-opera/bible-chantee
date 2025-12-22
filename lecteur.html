@@ -630,6 +630,7 @@ window.trackSignup = function(referrer) {
     <script src="/lyrics-data.js"></script>
     <script src="/lyrics-data-pt.js"></script>
     <script src="/lyrics-data-en.js"></script>
+    <script src="/lyrics-data-es.js"></script>
     <script src="/lyrics-data-v2.js"></script>
     <!-- Fix: Expose lyrics variables to window (const ne s'expose pas automatiquement) -->
     <script>
@@ -637,6 +638,7 @@ window.trackSignup = function(referrer) {
     if (typeof chapterLyricsV2 !== 'undefined' && !window.chapterLyricsV2) window.chapterLyricsV2 = chapterLyricsV2;
     if (typeof chapterLyricsPT !== 'undefined' && !window.chapterLyricsPT) window.chapterLyricsPT = chapterLyricsPT;
     if (typeof chapterLyricsEN !== 'undefined' && !window.chapterLyricsEN) window.chapterLyricsEN = chapterLyricsEN;
+    if (typeof chapterLyricsES !== 'undefined' && !window.chapterLyricsES) window.chapterLyricsES = chapterLyricsES;
     </script>
 
     <script src="/audio-urls.js"></script>
@@ -663,11 +665,13 @@ window.trackSignup = function(referrer) {
     <script src="/bible-data.js"></script>
     <script src="/bible-data-pt.js"></script>
     <script src="/bible-data-en.js"></script>
+    <script src="/bible-data-es.js"></script>
     <!-- Expose bible data to window -->
     <script>
     if (typeof bibleData !== 'undefined' && !window.bibleData) window.bibleData = bibleData;
     if (typeof bibleDataPT !== 'undefined' && !window.bibleDataPT) window.bibleDataPT = bibleDataPT;
     if (typeof bibleDataEN !== 'undefined' && !window.bibleDataEN) window.bibleDataEN = bibleDataEN;
+    if (typeof bibleDataES !== 'undefined' && !window.bibleDataES) window.bibleDataES = bibleDataES;
     </script>
 
     <script src="/sections-promesses.js"></script>
@@ -1496,6 +1500,37 @@ const bookName = getBookDisplayName(currentBook);
                 readerNoBibleLang: "Bible text not available in this language for this chapter",
                 readerBibleNotAvailableLang: "Bible search not available in this language",
                 readerAudioMissing: "MP3 not found"
+            },
+            ES: {
+                readerHeading: "Biblia Cantada",
+                readerBackHome: "← Volver inicio",
+                readerAbout: "Acerca de",
+                readerSubtitle: "La Palabra de Dios en música worship española",
+                readerBooksAvailable: "libros disponibles",
+                readerOf: "de",
+                readerChapters: "capítulos",
+                readerSearchPlaceholder: "  una palabra  =  una canción  ",
+                readerSearchButton: "🔍 Buscar",
+                readerOldTestament: "Antiguo Testamento",
+                readerNewTestament: "Nuevo Testamento",
+                readerFooterCopyright: "© 2025 Biblia Cantada - Stéphane Cassani - Todos los derechos reservados",
+                readerPlayBook: "Reproducir libro completo",
+                readerStopBook: "Detener",
+                readerPrevious: "Anterior",
+                readerNext: "Siguiente",
+                readerLyrics: "Letras",
+                readerBible: "Biblia",
+                readerChapter: "Capítulo",
+                readerChapterShort: "Cap.",
+                readerSearchMinChars: "Por favor ingrese al menos 3 caracteres para buscar",
+                readerSearchNoResults: "Sin resultados para",
+                readerSearchFound: "versículo(s) encontrado(s) para",
+                readerSearchShowing: "mostrando los primeros 50",
+                readerSearchUnavailable: "no disponible",
+                readerNoLyricsLang: "Letras no disponibles en este idioma para este capítulo",
+                readerNoBibleLang: "Texto bíblico no disponible en este idioma para este capítulo",
+                readerBibleNotAvailableLang: "Búsqueda bíblica no disponible en este idioma",
+                readerAudioMissing: "MP3 no encontrado"
             }
         };
 
