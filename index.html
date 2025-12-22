@@ -627,7 +627,7 @@ select { background: #1a1a2e; color: #ffffff; }
 
 <script>
 function getUid(){let u=localStorage.getItem("bc_uid");if(!u){u="u_"+Date.now().toString(36)+Math.random().toString(36).substr(2,6);localStorage.setItem("bc_uid",u)}return u}
-function getShareUrl(){return"https://sungbible.world/demo.html?ref="+getUid()}
+function getShareUrl(){return"https://biblechantee.com/lecteur.html?ref="+getUid()}
 function toggleShare(){const p=document.getElementById("sharePanel");if(p.style.display==="none"||p.style.display===""){p.style.display="block";document.getElementById("shareLink").value=getShareUrl()}else{p.style.display="none"}}
 function toast(m){const t=document.getElementById("shareToast");t.textContent=m;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2500)}
 function copyLink(){const i=document.getElementById("shareLink");i.select();navigator.clipboard.writeText(i.value).then(()=>toast("Lien copie!")).catch(()=>{document.execCommand("copy");toast("Lien copie!")})}
@@ -749,6 +749,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body>
 </html>
+
 
 
 

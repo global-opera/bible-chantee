@@ -1,3 +1,4 @@
+/demo*  /lecteur.html  301
 # Redirections API (URLs propres /api/*)
 /api/premium-status  /.netlify/functions/premium-status  200
 /api/premium-claim   /.netlify/functions/premium-claim   200
@@ -9,3 +10,4 @@ https://biblechantee.com/ /lecteur.html 302
 https://biblechantee.com/index.html /lecteur.html 302
 https://www.biblechantee.com/ /lecteur.html 302
 https://www.biblechantee.com/index.html /lecteur.html 302
+
