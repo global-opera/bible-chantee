@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Merci - Bible Chantée</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TX3ETCKJQZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TX3ETCKJQZ');
+    gtag('config', 'G-H8H3TWSGTF');
+  </script>
+
   <style>
     body{background:#1a2332;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:sans-serif;margin:0}
     .container{text-align:center;padding:40px}
@@ -107,6 +118,15 @@
 
       console.log(`✅ Thank you page displayed in: ${t.lang.toUpperCase()}`);
       console.log(`📍 Redirect link: https://biblechantee.com/lecteur.html?lang=${t.lang.toUpperCase()}`);
+
+      // Track signup event to GA4
+      if (typeof gtag === 'function') {
+        gtag('event', 'sign_up', {
+          method: 'netlify_form',
+          lang: t.lang.toUpperCase()
+        });
+        console.log('📊 GA4 event sent: sign_up');
+      }
     })();
 
     // Auto-redirect après 5 secondes (optionnel)

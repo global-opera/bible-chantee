@@ -945,19 +945,32 @@
         }
 
         // =====================================================
-        // API GA4
+        // API GA4 + STATS
         // =====================================================
         async function fetchGA4Data() {
             try {
-                const response = await fetch(CONFIG.STATS_API);
-                if (!response.ok) throw new Error('API Error: ' + response.status);
+                // Appeler les deux endpoints en parallèle
+                const [analyticsResponse, statsResponse] = await Promise.all([
+                    fetch(CONFIG.STATS_API),
+                    fetch('/.netlify/functions/stats')
+                ]);
 
-                const data = await response.json();
-                if (data.error) throw new Error(data.error);
+                if (!analyticsResponse.ok) throw new Error('Analytics API Error: ' + analyticsResponse.status);
+                if (!statsResponse.ok) throw new Error('Stats API Error: ' + statsResponse.status);
 
-                return data;
+                const analyticsData = await analyticsResponse.json();
+                const statsData = await statsResponse.json();
+
+                if (analyticsData.error) throw new Error(analyticsData.error);
+                if (statsData.error) throw new Error(statsData.error);
+
+                // Fusionner les données: garder analytics pour tout, mais remplacer les événements par stats
+                return {
+                    ...analyticsData,
+                    stats: statsData
+                };
             } catch (error) {
-                console.error('Erreur API GA4:', error);
+                console.error('Erreur API:', error);
                 return null;
             }
         }
@@ -978,24 +991,20 @@
             document.getElementById('totalCountries').textContent = countries.length;
             document.getElementById('countriesChange').textContent = countries.length + ' pays actifs';
 
-            // Evenements
-            const events = data.events || {};
-            const audioPlays = events.audio_play || 0;
+            // Evenements (depuis stats.js: Netlify Forms + GA4)
+            const stats = data.stats || {};
+            const listens = stats.listens_total || 0;
+            const shares = stats.shares_total || 0;
+            const signups = stats.signups_total || 0;
 
-            // Mapping: si 'share' n'existe pas, essayer 'click' (partages)
-            const shares = events.share || events.click || 0;
-
-            // Mapping: si 'sign_up' n'existe pas, essayer 'form_submit' (inscriptions)
-            const signups = events.sign_up || events.form_submit || 0;
-
-            document.getElementById('totalListens').textContent = audioPlays.toLocaleString();
-            document.getElementById('listensChange').textContent = 'audio_play GA4';
+            document.getElementById('totalListens').textContent = listens.toLocaleString();
+            document.getElementById('listensChange').textContent = 'GA4 7j';
 
             document.getElementById('totalShares').textContent = shares.toLocaleString();
-            document.getElementById('sharesChange').textContent = 'share GA4';
+            document.getElementById('sharesChange').textContent = 'GA4 7j';
 
             document.getElementById('totalSignups').textContent = signups.toLocaleString();
-            document.getElementById('signupsChange').textContent = 'sign_up GA4';
+            document.getElementById('signupsChange').textContent = 'Netlify Forms';
         }
 
         function updateTopCountries(countries) {
