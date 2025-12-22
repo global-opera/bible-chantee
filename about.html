@@ -184,7 +184,7 @@
 </header>
 
 <nav>
-  <a href="javascript:history.back()" data-i18n="navHome">Retour</a>
+  <a href="/lecteur.html" id="returnLink" data-i18n="navHome">Retour</a>
   <a href="about.html" data-i18n="navAbout">À propos</a>
 </nav>
 
@@ -278,6 +278,34 @@
 <script src="lang-shared.js"></script>
 <script src="translations.js"></script>
 <script src="i18n.js"></script>
+
+<!-- 🔒 Safe return navigation (évite history.back() + valide same origin) -->
+<script>
+(() => {
+  const link = document.getElementById('returnLink');
+  if (!link) return;
+
+  const u = new URL(location.href);
+  const returnUrl = u.searchParams.get('return');
+
+  // Si return= présent, vérifier same origin avant d'utiliser
+  if (returnUrl) {
+    try {
+      const returnUrlObj = new URL(returnUrl, location.origin);
+      if (returnUrlObj.origin === location.origin) {
+        link.href = returnUrl;
+        return;
+      }
+    } catch (e) {
+      console.warn('[About] Invalid return URL, using default');
+    }
+  }
+
+  // Fallback: /lecteur.html avec lang si présent
+  const lang = u.searchParams.get('lang');
+  link.href = lang ? `/lecteur.html?lang=${encodeURIComponent(lang)}` : '/lecteur.html';
+})();
+</script>
 
 </body>
 </html>

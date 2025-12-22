@@ -1,3 +1,5 @@
+/  /lecteur.html  301
+/index.html  /lecteur.html  301
 /demo*  /lecteur.html  301
 # Redirections API (URLs propres /api/*)
 /api/premium-status  /.netlify/functions/premium-status  200
