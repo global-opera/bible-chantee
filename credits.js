@@ -120,8 +120,8 @@ const CREDITS = {
         const popup = document.createElement('div');
         popup.id = 'credits-popup';
         popup.innerHTML = `
-            <div class="credits-overlay" id="creditsOverlay">
-                <div class="credits-modal">
+            <div class="credits-overlay" id="creditsOverlay" style="display: flex;" aria-hidden="false">
+                <div class="credits-modal" id="creditsModal">
                     <button class="credits-close" onclick="CREDITS.hideCreditsPopup()">&times;</button>
                     <h2>Continuez a ecouter</h2>
                     <p>Vous avez utilise vos ${this.DAILY_FREE_PLAYS} ecoutes gratuites du jour.</p>
@@ -159,17 +159,25 @@ const CREDITS = {
         `;
         document.body.appendChild(popup);
 
-        // Remove is-hidden class to ensure overlay is visible
+        // Ensure overlay is visible and accessible
         setTimeout(() => {
             const overlay = document.getElementById('creditsOverlay');
-            if (overlay) overlay.classList.remove('is-hidden');
+            if (overlay) {
+                overlay.style.display = 'flex';
+                overlay.setAttribute('aria-hidden', 'false');
+                overlay.classList.remove('is-hidden');
+            }
         }, 10);
     },
 
     // Cacher popup
     hideCreditsPopup() {
         const overlay = document.getElementById('creditsOverlay');
-        if (overlay) overlay.classList.add('is-hidden');
+        if (overlay) {
+            overlay.style.display = 'none';
+            overlay.setAttribute('aria-hidden', 'true');
+            overlay.classList.add('is-hidden');
+        }
 
         const popup = document.getElementById('credits-popup');
         if (popup) {
