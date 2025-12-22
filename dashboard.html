@@ -981,8 +981,12 @@
             // Evenements
             const events = data.events || {};
             const audioPlays = events.audio_play || 0;
-            const shares = events.share || 0;
-            const signups = events.sign_up || 0;
+
+            // Mapping: si 'share' n'existe pas, essayer 'click' (partages)
+            const shares = events.share || events.click || 0;
+
+            // Mapping: si 'sign_up' n'existe pas, essayer 'form_submit' (inscriptions)
+            const signups = events.sign_up || events.form_submit || 0;
 
             document.getElementById('totalListens').textContent = audioPlays.toLocaleString();
             document.getElementById('listensChange').textContent = 'audio_play GA4';
