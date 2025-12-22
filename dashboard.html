@@ -659,7 +659,7 @@
         // =====================================================
         const CONFIG = {
             // API Netlify Function pour GA4
-            STATS_API: '/.netlify/functions/get-analytics',
+            STATS_API: '/api/get-analytics',
 
             // Intervalle de rafraichissement (ms)
             REFRESH_INTERVAL: 30000,
@@ -952,7 +952,7 @@
                 // Appeler les deux endpoints en parallèle
                 const [analyticsResponse, statsResponse] = await Promise.all([
                     fetch(CONFIG.STATS_API),
-                    fetch('/.netlify/functions/stats')
+                    fetch('/api/stats')
                 ]);
 
                 if (!analyticsResponse.ok) throw new Error('Analytics API Error: ' + analyticsResponse.status);

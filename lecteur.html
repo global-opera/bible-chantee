@@ -760,7 +760,7 @@ window.trackSignup = function(referrer) {
             const token = u.searchParams.get("premium_token");
             if (token) {
                 try {
-                    await fetch(`/.netlify/functions/premium-claim?premium_token=${encodeURIComponent(token)}`, {
+                    await fetch(`/api/premium-claim?premium_token=${encodeURIComponent(token)}`, {
                         credentials: "include"
                     });
                     bcLog('[Premium] Token claimed successfully');
@@ -774,7 +774,7 @@ window.trackSignup = function(referrer) {
 
             // Vérifier le statut premium via serveur
             try {
-                const r = await fetch(`/.netlify/functions/premium-status`, {
+                const r = await fetch(`/api/premium-status`, {
                     credentials: "include"
                 });
                 const j = await r.json();
@@ -2100,8 +2100,21 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
 <script>
 // 🧠 Résout premium-status AVANT d'afficher le badge (anti-flash iOS)
 window.bcBootstrapPremiumStatus = async () => {
+  let timedOut = false;
+
+  // Timeout safe: 1200ms max
+  const timeoutPromise = new Promise((_, reject) => {
+    setTimeout(() => {
+      timedOut = true;
+      reject(new Error('Premium status timeout'));
+    }, 1200);
+  });
+
   try {
-    const r = await fetch('/.netlify/functions/premium-status', { credentials: 'include', cache: 'no-store' });
+    const r = await Promise.race([
+      fetch('/api/premium-status', { credentials: 'include', cache: 'no-store' }),
+      timeoutPromise
+    ]);
     const j = await r.json();
 
     window.bcUser = window.bcUser || {};
