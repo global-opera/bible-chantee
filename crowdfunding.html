@@ -452,28 +452,28 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <h1>Bible Chantée</h1>
-        <p class="subtitle">Toute la Parole de Dieu en musique – 12 langues</p>
+        <h1 data-i18n="page-title">Bible Chantée</h1>
+        <p class="subtitle" data-i18n="page-subtitle">Toute la Parole de Dieu en musique – 12 langues</p>
     </header>
 
     <!-- Navigation -->
     <nav class="nav">
-        <a href="index.html">Le Projet</a>
-        <a href="crowdfunding.html" class="active">Soutenir</a>
-        <a href="about.html">À propos</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" data-i18n="nav-project">Le Projet</a>
+        <a href="crowdfunding.html" class="active" data-i18n="nav-support">Soutenir</a>
+        <a href="about.html" data-i18n="nav-about">À propos</a>
+        <a href="contact.html" data-i18n="nav-contact">Contact</a>
     </nav>
 
     <div class="container">
         <!-- Objectif Card -->
         <div class="card objectif-card">
-            <h2 style="justify-content: center; color: var(--accent-gold);"><span class="icon">🎯</span> Objectif de la collecte</h2>
-            <div class="objectif-amount">CHF 100'000</div>
-            <div class="objectif-label">Pour finaliser les 12 langues et l'application mobile</div>
+            <h2 style="justify-content: center; color: var(--accent-gold);"><span class="icon">🎯</span> <span data-i18n="goal-title">Objectif de la collecte</span></h2>
+            <div class="objectif-amount" data-i18n="goal-amount">CHF 100'000</div>
+            <div class="objectif-label" data-i18n="goal-desc">Pour finaliser les 12 langues et l'application mobile</div>
             <div class="progress-bar-container">
                 <div class="progress-bar"></div>
             </div>
-            <div class="progress-text">Collecte en cours - Chaque don compte !</div>
+            <div class="progress-text" data-i18n="goal-progress">Collecte en cours - Chaque don compte !</div>
         </div>
 
         <!-- Donate Card -->
@@ -552,7 +552,7 @@
 
         <!-- Impact Card -->
         <div class="card">
-            <h2><span class="icon">🌍</span> Votre don permet</h2>
+            <h2><span class="icon">🌍</span> <span data-i18n="impact-title">Votre don permet</span></h2>
             <div class="impact-list">
                 <div class="impact-item">
                     <span class="emoji">👶</span>
@@ -602,6 +602,16 @@
         // ===== I18N SYSTEM =====
         const translations = {
             fr: {
+                'page-title': 'Bible Chantée',
+                'page-subtitle': 'Toute la Parole de Dieu en musique – 12 langues',
+                'nav-project': 'Le Projet',
+                'nav-support': 'Soutenir',
+                'nav-about': 'À propos',
+                'nav-contact': 'Contact',
+                'goal-title': 'Objectif de la collecte',
+                'goal-amount': 'CHF 100\'000',
+                'goal-desc': 'Pour finaliser les 12 langues et l\'application mobile',
+                'goal-progress': 'Collecte en cours - Chaque don compte !',
                 'progress-title': 'Avancement du projet',
                 'stat-chapters': 'chapitres générés',
                 'stat-languages': 'langues complètes',
@@ -613,6 +623,7 @@
                 'status-es': 'Version espagnole',
                 'status-complete': 'Terminée',
                 'status-other': 'autres langues : en préparation (allemand, italien, russe, arabe, chinois, hindi, tagalog, swahili...)',
+                'impact-title': 'Votre don permet',
                 'donate-title': 'Faire un don maintenant',
                 'donate-gofundme': '🚀 Donner via GoFundMe',
                 'donate-or': '— ou par virement direct (sans frais de plateforme) —',
@@ -628,6 +639,16 @@
                 'donate-email-copied': 'Email copié !'
             },
             en: {
+                'page-title': 'Sung Bible',
+                'page-subtitle': 'God\'s Word in music – 12 languages',
+                'nav-project': 'The Project',
+                'nav-support': 'Support',
+                'nav-about': 'About',
+                'nav-contact': 'Contact',
+                'goal-title': 'Fundraising Goal',
+                'goal-amount': 'CHF 100,000',
+                'goal-desc': 'To complete all 12 languages and the mobile app',
+                'goal-progress': 'Fundraising in progress - Every donation counts!',
                 'progress-title': 'Project Progress',
                 'stat-chapters': 'chapters generated',
                 'stat-languages': 'complete languages',
@@ -639,6 +660,7 @@
                 'status-es': 'Spanish Version',
                 'status-complete': 'Complete',
                 'status-other': 'other languages: in preparation (German, Italian, Russian, Arabic, Chinese, Hindi, Tagalog, Swahili...)',
+                'impact-title': 'Your donation enables',
                 'donate-title': 'Make a donation now',
                 'donate-gofundme': '🚀 Donate via GoFundMe',
                 'donate-or': '— or by direct transfer (no platform fees) —',
@@ -654,6 +676,16 @@
                 'donate-email-copied': 'Email copied!'
             },
             pt: {
+                'page-title': 'Bíblia Cantada',
+                'page-subtitle': 'Toda a Palavra de Deus em música – 12 idiomas',
+                'nav-project': 'O Projeto',
+                'nav-support': 'Apoiar',
+                'nav-about': 'Sobre',
+                'nav-contact': 'Contato',
+                'goal-title': 'Objetivo da arrecadação',
+                'goal-amount': 'CHF 100\'000',
+                'goal-desc': 'Para finalizar os 12 idiomas e o aplicativo móvel',
+                'goal-progress': 'Arrecadação em andamento - Cada doação conta!',
                 'progress-title': 'Progresso do Projeto',
                 'stat-chapters': 'capítulos gerados',
                 'stat-languages': 'línguas completas',
@@ -665,6 +697,7 @@
                 'status-es': 'Versão Espanhola',
                 'status-complete': 'Completa',
                 'status-other': 'outras línguas: em preparação (alemão, italiano, russo, árabe, chinês, hindi, tagalog, swahili...)',
+                'impact-title': 'Sua doação permite',
                 'donate-title': 'Fazer uma doação agora',
                 'donate-gofundme': '🚀 Doar via GoFundMe',
                 'donate-or': '— ou por transferência direta (sem taxas de plataforma) —',
@@ -680,6 +713,16 @@
                 'donate-email-copied': 'Email copiado!'
             },
             es: {
+                'page-title': 'Biblia Cantada',
+                'page-subtitle': 'Toda la Palabra de Dios en música – 12 idiomas',
+                'nav-project': 'El Proyecto',
+                'nav-support': 'Apoyar',
+                'nav-about': 'Acerca de',
+                'nav-contact': 'Contacto',
+                'goal-title': 'Objetivo de la recaudación',
+                'goal-amount': 'CHF 100\'000',
+                'goal-desc': 'Para finalizar los 12 idiomas y la aplicación móvil',
+                'goal-progress': '¡Recaudación en curso - Cada donación cuenta!',
                 'progress-title': 'Progreso del Proyecto',
                 'stat-chapters': 'capítulos generados',
                 'stat-languages': 'idiomas completos',
@@ -691,6 +734,7 @@
                 'status-es': 'Versión Española',
                 'status-complete': 'Completa',
                 'status-other': 'otros idiomas: en preparación (alemán, italiano, ruso, árabe, chino, hindi, tagalo, swahili...)',
+                'impact-title': 'Su donación permite',
                 'donate-title': 'Hacer una donación ahora',
                 'donate-gofundme': '🚀 Donar vía GoFundMe',
                 'donate-or': '— o por transferencia directa (sin comisiones de plataforma) —',
