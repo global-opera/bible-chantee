@@ -42,17 +42,19 @@ if (paywallLastRaw && !Number.isNaN(Number(paywallLastRaw))) {
   const last = Number(paywallLastRaw);
   const now = Date.now();
 
+  // Règle appliquée : 45s + 1 fois/session
   const cd45 = 45 * 1000;
-  const cd24h = 24 * 60 * 60 * 1000;
-
   const rem45 = cd45 - (now - last);
-  const rem24 = cd24h - (now - last);
 
-  console.log("Cooldown 45s restant:", rem45 > 0 ? fmtTime(rem45) : "expiré ✅");
-  console.log("Cooldown 24h restant:", rem24 > 0 ? fmtTime(rem24) : "expiré ✅");
+  console.log("Cooldown 45s restant (règle appliquée):", rem45 > 0 ? fmtTime(rem45) : "expiré ✅");
 
   if (rem45 > 0) console.log("⏱️ Anti-spam actif (45s).");
   else console.log("✅ Anti-spam 45s expiré.");
+
+  // Diagnostic optionnel (24h pour debug si modif code)
+  const cd24h = 24 * 60 * 60 * 1000;
+  const rem24 = cd24h - (now - last);
+  console.log("Diagnostic 24h (si modifié):", rem24 > 0 ? fmtTime(rem24) : "expiré");
 } else {
   console.log("Aucun timestamp cooldown actif.");
 }

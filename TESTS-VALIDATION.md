@@ -2,6 +2,20 @@
 
 **Objectif** : Valider que le fix est effectif en production sur tous les devices
 
+## 📋 Règle business appliquée
+
+**Anti-spam popup : 1 fois par session + cooldown 45s**
+
+- Le popup d'achat apparaît **1 seule fois** par session (flag `bc_paywall_shown`)
+- Cooldown de sécurité : **45 secondes** entre tentatives (`bc_paywall_last`)
+- **Session** = jusqu'à fermeture complète de l'onglet/navigateur
+  - ✅ Après F5 (refresh) : popup ne revient pas
+  - ✅ Nouvel onglet/session : popup peut réapparaître (normal)
+- Une fois fermé manuellement, le popup ne revient **jamais** pendant la session
+
+**NE PAS confondre avec** :
+- Reset des 3 écoutes gratuites/jour = système séparé (localStorage), non testé ici
+
 ---
 
 ## ✅ Tests côté utilisateur (4 tests critiques)
