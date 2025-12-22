@@ -73,12 +73,18 @@
     z-index: 10000;
     padding: 20px;
     pointer-events: auto;
+    transition: opacity 0.3s ease;
 }
 
-/* Ensure overlay is removed when popup is hidden */
-#credits-popup:not(.show) {
-    display: none;
-    pointer-events: none;
+/* Credits modal overlay must not block UI when hidden */
+#creditsOverlay.is-hidden {
+    display: none !important;
+    pointer-events: none !important;
+    opacity: 0;
+}
+
+.credits-overlay .credits-modal {
+    pointer-events: auto;
 }
 
 /* Modal */

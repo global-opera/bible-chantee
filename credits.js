@@ -120,7 +120,7 @@ const CREDITS = {
         const popup = document.createElement('div');
         popup.id = 'credits-popup';
         popup.innerHTML = `
-            <div class="credits-overlay">
+            <div class="credits-overlay" id="creditsOverlay">
                 <div class="credits-modal">
                     <button class="credits-close" onclick="CREDITS.hideCreditsPopup()">&times;</button>
                     <h2>Continuez a ecouter</h2>
@@ -158,12 +158,27 @@ const CREDITS = {
             </div>
         `;
         document.body.appendChild(popup);
+
+        // Remove is-hidden class to ensure overlay is visible
+        setTimeout(() => {
+            const overlay = document.getElementById('creditsOverlay');
+            if (overlay) overlay.classList.remove('is-hidden');
+        }, 10);
     },
 
     // Cacher popup
     hideCreditsPopup() {
+        const overlay = document.getElementById('creditsOverlay');
+        if (overlay) overlay.classList.add('is-hidden');
+
         const popup = document.getElementById('credits-popup');
-        if (popup) popup.remove();
+        if (popup) {
+            // Mark as shown when user manually closes
+            sessionStorage.setItem('bc_credits_popup_shown', '1');
+            sessionStorage.setItem('bc_credits_popup_last', String(Date.now()));
+
+            setTimeout(() => popup.remove(), 300); // Delay for animation
+        }
     },
 
     // Formulaire inscription

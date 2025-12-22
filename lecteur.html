@@ -1167,7 +1167,7 @@ window.trackSignup = function(referrer) {
             const check = CREDITS.canPlay(currentBook, chapter);
 
             if (!check.allowed) {
-                maybeShowCreditsPopup();
+                bcMaybeShowCreditsPopup('limit_reached');
                 return false;
             }
 
@@ -1804,9 +1804,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script src="/credits.js"></script>
 <script>
-// Show credits popup only once per session (UX improvement)
-function maybeShowCreditsPopup() {
-    const shown = sessionStorage.getItem('credits_popup_shown');
+// Credits popup: show at most once per session + cooldown
+function bcMaybeShowCreditsPopup(reason = '') {
+    const now = Date.now();
+    const last = Number(sessionStorage.getItem('bc_credits_popup_last') || '0');
+    const shown = sessionStorage.getItem('bc_credits_popup_shown') === '1';
+
+    // 1) Only show once per session
     if (shown) {
         console.log('⏭️ Credits popup already shown this session, pulsing badge instead');
         const badge = document.getElementById('creditsBadge');
@@ -1814,12 +1818,31 @@ function maybeShowCreditsPopup() {
             badge.classList.add('pulse');
             setTimeout(() => badge.classList.remove('pulse'), 3000);
         }
-        return;
+        return false;
     }
 
-    console.log('💳 Showing credits popup (first time this session)');
-    sessionStorage.setItem('credits_popup_shown', '1');
-    CREDITS.showCreditsPopup();
+    // 2) Extra safety cooldown (45s) in case something resets shown
+    if (now - last < 45000) {
+        console.log('⏸️ Credits popup cooldown active');
+        return false;
+    }
+
+    sessionStorage.setItem('bc_credits_popup_shown', '1');
+    sessionStorage.setItem('bc_credits_popup_last', String(now));
+
+    try {
+        console.log('[CREDITS] popup shown', { reason });
+        CREDITS.showCreditsPopup();
+        return true;
+    } catch (e) {
+        console.warn('[CREDITS] show popup failed', e);
+        return false;
+    }
+}
+
+// Alias for backward compatibility
+function maybeShowCreditsPopup(reason) {
+    return bcMaybeShowCreditsPopup(reason);
 }
 
 // Update credits display
