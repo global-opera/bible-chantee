@@ -855,6 +855,17 @@ window.trackSignup = function(referrer) {
             }).join('');
         }
 
+        // Fonction centralisée pour obtenir la langue active (toutes sources)
+        window.getActiveLang = function() {
+            return (
+                (window.currentLanguage) ||
+                (localStorage.getItem('bc_lang')) ||
+                (localStorage.getItem('BC_LANG')) ||
+                (new URLSearchParams(location.search).get('lang')) ||
+                'FR'
+            ).toUpperCase();
+        };
+
         function getBibleDatasetForLang(lang) {
             const L = (lang || 'FR').toUpperCase();
             if (L === 'FR') return (typeof window.bibleData !== 'undefined') ? window.bibleData : null;
@@ -913,7 +924,7 @@ window.trackSignup = function(referrer) {
                 return;
             }
 
-            const bookNum = currentBook.split('_')[0]; const dataset = getBibleDatasetForLang(window.currentLanguage || 'FR');
+            const dataset = getBibleDatasetForLang(window.getActiveLang());
             if (!dataset) {
                 alert(t('readerBibleNotAvailableLang') || 'Recherche Bible non disponible dans cette langue');
                 return;
