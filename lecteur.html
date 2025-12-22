@@ -492,10 +492,10 @@ window.trackSignup = function(referrer) {
 </head>
 <body>
     <!-- Credits Badge -->
-    <div class="credits-badge" id="creditsBadge" style="opacity: 0; transition: opacity 0.3s;">
-        <span id="creditsIcon">&#127925;</span>
-        <span id="creditsCount">3</span>
-        <span id="creditsLabel">credits</span>
+    <div class="credits-badge" id="creditsBadge" style="visibility: hidden; transition: opacity 0.3s;">
+        <span id="creditsIcon"></span>
+        <span id="creditsCount"></span>
+        <span id="creditsLabel"></span>
     </div>
 
     <div class="container">
@@ -1934,6 +1934,7 @@ function updateCreditsDisplay() {
     }
 
     // Show badge after initialization (prevent flash)
+    badge.style.visibility = 'visible';
     badge.style.opacity = '1';
 }
 
