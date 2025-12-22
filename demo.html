@@ -323,9 +323,9 @@ select { background: #1a1a2e; color: #ffffff; }
                         <option value="fr">Français</option>
                         <option value="en">English</option>
                         <option value="pt">Português</option>
+                        <option value="es">Español</option>
                     </optgroup>
                     <optgroup id="optgroup-soon" label="Bientôt">
-                        <option value="es" disabled>Español</option>
                         <option value="de" disabled>Deutsch</option>
                         <option value="it" disabled>Italiano</option>
                     </optgroup>
@@ -621,7 +621,8 @@ select { background: #1a1a2e; color: #ffffff; }
             });
         }
 
-        updatePage();
+        // Init: activate correct language button on page load
+        setLang(currentLang);
     </script>
 
 <script>
