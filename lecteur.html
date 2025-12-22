@@ -1972,6 +1972,37 @@ if ('serviceWorker' in navigator) {
     });
 }
 </script>
+
+<!-- Hard Refresh Button (cache/SW reset) -->
+<a href="#" id="bc-hard-refresh" style="position:fixed;bottom:12px;right:12px;opacity:.25;font-size:12px;z-index:99999;color:#fff;text-decoration:none;background:rgba(0,0,0,0.3);padding:8px 12px;border-radius:6px;transition:opacity .3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.25'">⟳ Rafraîchir</a>
+<script>
+(function(){
+  const a = document.getElementById('bc-hard-refresh');
+  if(!a) return;
+  a.addEventListener('click', async (e) => {
+    e.preventDefault();
+    const confirmed = confirm('Rafraîchir l\'application ?\n\nCela va :\n- Vider le cache\n- Télécharger la dernière version\n- Recharger la page');
+    if (!confirmed) return;
+
+    try{
+      if ('serviceWorker' in navigator){
+        const regs = await navigator.serviceWorker.getRegistrations();
+        await Promise.all(regs.map(r => r.unregister()));
+        console.log('[Hard Refresh] SW unregistered');
+      }
+      if (window.caches){
+        const keys = await caches.keys();
+        await Promise.all(keys.map(k => caches.delete(k)));
+        console.log('[Hard Refresh] Caches cleared');
+      }
+      location.reload(true);
+    }catch(err){
+      console.error('[Hard Refresh] Error:', err);
+      location.reload(true);
+    }
+  });
+})();
+</script>
 </body>
 </html>
 
