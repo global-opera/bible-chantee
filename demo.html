@@ -54,6 +54,7 @@ window.trackSignup = function(referrer) {
     <script src="lyrics-data.js?v=20251221"></script>
     <script src="lyrics-data-pt.js?v=20251221"></script>
     <script src="lyrics-data-en.js?v=20251221"></script>
+    <script src="lyrics-data-es.js?v=20251221"></script>
     <style>
         :root {
             --bg-dark: #0a1628;
@@ -453,8 +454,8 @@ select { background: #1a1a2e; color: #ffffff; }
                 tracks: [
                     { id: "01_GEN_01_ES", title: "Génesis 1", desc: "La Creación" },
                     { id: "19_PSA_23_ES", title: "Salmo 23", desc: "El Señor es mi pastor" },
-                    { id: "19_PSA_91_ES", title: "Salmo 91", desc: "La protección divina" },
-                    { id: "19_PSA_150_ES", title: "Salmo 150", desc: "Alabad al Señor" }
+                    { id: "19_PSA_91_ES", title: "Salmo 91", desc: "El que habita al abrigo" },
+                    { id: "19_PSA_150_ES", title: "Salmo 150", desc: "¡Aleluya!" }
                 ]
             }
         };
@@ -564,6 +565,8 @@ select { background: #1a1a2e; color: #ffffff; }
                 lyrics = window.chapterLyricsPT[bookNum][chap];
             } else if (currentLang === 'EN' && window.chapterLyricsEN?.[bookNum]?.[chap]) {
                 lyrics = window.chapterLyricsEN[bookNum][chap];
+            } else if (currentLang === 'ES' && window.chapterLyricsES?.[bookNum]?.[chap]) {
+                lyrics = window.chapterLyricsES[bookNum][chap];
             }
             
             if (lyrics) {
