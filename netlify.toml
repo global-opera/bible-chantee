@@ -1,20 +1,13 @@
-[build]
-  functions = "netlify/functions"
-  publish = "."
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-
-[[redirects]]
-  from = "/"
-  to = "/demo.html"
-  status = 200
-  conditions = {Host = ["sungbible.world"]}
-
 [[redirects]]
   from = "/"
   to = "/lecteur.html"
-  status = 200
-  conditions = {Host = ["biblechantee.com"]}
+  status = 302
+  force = true
+  conditions = {Host = ["biblechantee.com", "www.biblechantee.com"]}
+
+[[redirects]]
+  from = "/index.html"
+  to = "/lecteur.html"
+  status = 302
+  force = true
+  conditions = {Host = ["biblechantee.com", "www.biblechantee.com"]}

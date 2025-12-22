@@ -487,12 +487,15 @@ window.trackSignup = function(referrer) {
 .btn-email{background:#EA4335;color:#fff}
 .share-toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);background:#4CAF50;color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;opacity:0;transition:all 0.3s;z-index:9999}
 .share-toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+/* 🧊 Anti-flash iOS: cacher le badge crédits jusqu'à premium-status résolu */
+.bc-hide-until-premium-ready { visibility: hidden !important; }
 </style>
 <link rel="stylesheet" href="/credits.css">
 </head>
 <body>
     <!-- Credits Badge -->
-    <div class="credits-badge" id="creditsBadge" style="visibility: hidden; transition: opacity 0.3s;">
+    <div class="credits-badge bc-hide-until-premium-ready" id="creditsBadge" style="transition: opacity 0.3s;">
         <span id="creditsIcon"></span>
         <span id="creditsCount"></span>
         <span id="creditsLabel"></span>
@@ -2012,7 +2015,7 @@ function updateCreditsDisplay() {
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
     bcLog('📱 Page loaded, initializing credits display...');
-    updateCreditsDisplay();
+    // updateCreditsDisplay(); // ⚠️ Désactivé : appelé par bcBootstrapPremiumStatus() après fetch premium-status
 
     // Add click event to credits badge
     const badge = document.getElementById('creditsBadge');
@@ -2092,6 +2095,44 @@ if (new URLSearchParams(location.search).get('debug') === '1') {
     }
   });
 })();
+</script>
+
+<script>
+// 🧠 Résout premium-status AVANT d'afficher le badge (anti-flash iOS)
+window.bcBootstrapPremiumStatus = async () => {
+  try {
+    const r = await fetch('/.netlify/functions/premium-status', { credentials: 'include', cache: 'no-store' });
+    const j = await r.json();
+
+    window.bcUser = window.bcUser || {};
+    window.bcUser.premium = !!j.premium;
+  } catch (e) {
+    console.error('[Premium Bootstrap] Error:', e);
+    window.bcUser = window.bcUser || {};
+    window.bcUser.premium = false;
+  }
+
+  // 1) Mettre à jour l'affichage (une seule fois, état fiable)
+  if (typeof window.updateCreditsDisplay === 'function') {
+    window.updateCreditsDisplay();
+  } else if (typeof updateCreditsDisplay === 'function') {
+    updateCreditsDisplay();
+  }
+
+  // 2) Montrer le badge seulement maintenant
+  document.querySelectorAll('.bc-hide-until-premium-ready')
+    .forEach(el => el.classList.remove('bc-hide-until-premium-ready'));
+};
+
+// Démarrer dès que le DOM est prêt
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    window.bcBootstrapPremiumStatus();
+  });
+} else {
+  // DOM déjà prêt
+  window.bcBootstrapPremiumStatus();
+}
 </script>
 </body>
 </html>
