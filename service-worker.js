@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bible-chantee-v4';
+const CACHE_NAME = 'bible-chantee-v5';
 const STATIC_ASSETS = [
     '/',
     '/lecteur.html',
