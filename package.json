@@ -10,7 +10,8 @@
   "dependencies": {
     "@google-analytics/data": "^4.12.1",
     "@supabase/supabase-js": "^2.45.4",
-    "googleapis": "^128.0.0"
+    "googleapis": "^128.0.0",
+    "jsonwebtoken": "^9.0.3"
   },
   "author": "Stéphane CASSANI",
   "license": "MIT"

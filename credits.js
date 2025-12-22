@@ -22,14 +22,22 @@ const CREDITS = {
         return this.FREE_CHAPTERS.some(c => c.book === book && c.chapter === chap);
     },
 
-    // Verifier si premium
+    // Verifier si premium (source de vérité = window.bcUser.premium via serveur)
     isPremium() {
+        // Source de vérité principale : window.bcUser (rempli par /api/premium-status)
+        if (window.bcUser && typeof window.bcUser.premium === 'boolean') {
+            console.log('🔐 Premium check (serveur):', window.bcUser.premium ? '✅ PREMIUM' : '❌ Non-premium');
+            return window.bcUser.premium;
+        }
+
+        // Fallback localStorage (cache UI uniquement, non fiable après réinstall PWA)
         const user = this.getUser();
         const isPremium = user && user.premium === true;
-        console.log('🔐 Premium check:', {
+        console.log('🔐 Premium check (localStorage fallback):', {
             user: user,
             hasPremium: user ? user.premium : 'no user',
-            result: isPremium
+            result: isPremium,
+            warning: 'localStorage non fiable - attendre window.bcUser'
         });
         return isPremium;
     },

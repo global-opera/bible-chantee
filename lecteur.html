@@ -749,6 +749,54 @@ window.trackSignup = function(referrer) {
     </script>
 
     <script>
+        // 🔒 Premium claim + status check (source de vérité serveur via cookie)
+        (async () => {
+            const u = new URL(location.href);
+
+            // Si premium_token dans URL → claim premium via serveur
+            const token = u.searchParams.get("premium_token");
+            if (token) {
+                try {
+                    await fetch(`/.netlify/functions/premium-claim?premium_token=${encodeURIComponent(token)}`, {
+                        credentials: "include"
+                    });
+                    bcLog('[Premium] Token claimed successfully');
+                } catch (e) {
+                    console.error('[Premium] Claim error:', e);
+                }
+                // Nettoyer l'URL (enlever le token)
+                u.searchParams.delete("premium_token");
+                history.replaceState(null, "", u.toString());
+            }
+
+            // Vérifier le statut premium via serveur
+            try {
+                const r = await fetch(`/.netlify/functions/premium-status`, {
+                    credentials: "include"
+                });
+                const j = await r.json();
+
+                // Stocker dans window.bcUser (source de vérité)
+                window.bcUser = window.bcUser || {};
+                window.bcUser.premium = !!j.premium;
+
+                // Sync avec localStorage (cache UI uniquement, non critique)
+                const localUser = JSON.parse(localStorage.getItem('bc_user') || 'null');
+                if (localUser) {
+                    localUser.premium = !!j.premium;
+                    localStorage.setItem('bc_user', JSON.stringify(localUser));
+                }
+
+                bcLog('[Premium] Status:', window.bcUser.premium ? '✅ PREMIUM' : '❌ Non-premium');
+            } catch (e) {
+                console.error('[Premium] Status check error:', e);
+                window.bcUser = window.bcUser || {};
+                window.bcUser.premium = false;
+            }
+        })();
+    </script>
+
+    <script>
         const BOOK_NAMES = {
             FR: ["Genèse","Exode","Lévitique","Nombres","Deutéronome","Josué","Juges","Ruth","1 Samuel","2 Samuel","1 Rois","2 Rois","1 Chron.","2 Chron.","Esdras","Néhémie","Esther","Job","Psaumes","Proverbes","Ecclésiaste","Cantique","Ésaïe","Jérémie","Lamentations","Ézéchiel","Daniel","Osée","Joël","Amos","Abdias","Jonas","Michée","Nahum","Habacuc","Sophonie","Aggée","Zacharie","Malachie","Matthieu","Marc","Luc","Jean","Actes","Romains","1 Cor.","2 Cor.","Galates","Éphésiens","Philippiens","Colossiens","1 Thess.","2 Thess.","1 Timothée","2 Timothée","Tite","Philémon","Hébreux","Jacques","1 Pierre","2 Pierre","1 Jean","2 Jean","3 Jean","Jude","Apocalypse"],
             PT: ["Gênesis","Êxodo","Levítico","Números","Deuteronômio","Josué","Juízes","Rute","1 Samuel","2 Samuel","1 Reis","2 Reis","1 Crôn.","2 Crôn.","Esdras","Neemias","Ester","Jó","Salmos","Provérbios","Eclesiastes","Cantares","Isaías","Jeremias","Lamentações","Ezequiel","Daniel","Oséias","Joel","Amós","Obadias","Jonas","Miquéias","Naum","Habacuque","Sofonias","Ageu","Zacarias","Malaquias","Mateus","Marcos","Lucas","João","Atos","Romanos","1 Cor.","2 Cor.","Gálatas","Efésios","Filipenses","Colossenses","1 Tess.","2 Tess.","1 Timóteo","2 Timóteo","Tito","Filemom","Hebreus","Tiago","1 Pedro","2 Pedro","1 João","2 João","3 João","Judas","Apocalipse"],
