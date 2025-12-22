@@ -1,12 +1,14 @@
-const CACHE_NAME = 'bible-chantee-v5';
+const CACHE_NAME = 'bible-chantee-v6';
 const STATIC_ASSETS = [
     '/',
     '/lecteur.html',
     '/credits.js',
     '/credits.css',
+    '/credits-system.js',
     '/bible-data.js',
     '/bible-data-pt.js',
     '/bible-data-en.js',
+    '/bible-data-es.js',
     '/lyrics-data.js',
     '/lyrics-data-pt.js',
     '/lyrics-data-en.js'
