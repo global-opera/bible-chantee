@@ -475,19 +475,31 @@ select { background: #1a1a2e; color: #ffffff; }
             { name: "Kiswahili", mp3: 0, total: 1189, status: "planned" }
         ];
 
-        let currentLang = 'FR';
+        let currentLang = (localStorage.getItem('bc_lang') || 'FR').toUpperCase();
 
         function setLang(lang) {
-            currentLang = lang;
+            const L = (lang || 'FR').toUpperCase();
+            currentLang = L;
+            localStorage.setItem('bc_lang', L);
+
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
-                if (btn.textContent.includes(lang) || (lang === 'PT' && btn.textContent.includes('BR'))) {
+                if (btn.textContent.includes(L) || (L === 'PT' && btn.textContent.includes('BR'))) {
                     btn.classList.add('active');
                 }
             });
-            document.getElementById('btn-pix').style.display = lang === 'PT' ? 'inline-block' : 'none';
+
+            const pix = document.getElementById('btn-pix');
+            if (pix) pix.style.display = L === 'PT' ? 'inline-block' : 'none';
+
             updatePage();
+
+            // IMPORTANT: sinon les tracks/audio restent sur l'ancienne langue
+            if (typeof renderTracks === 'function') renderTracks();
+
+            console.log('[LANG]', 'setLang ->', L, 'currentLang=', currentLang);
         }
+        window.setLang = setLang;
 
         function updatePage() {
             const t = translations[currentLang];
