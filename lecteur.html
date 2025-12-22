@@ -1167,7 +1167,7 @@ window.trackSignup = function(referrer) {
             const check = CREDITS.canPlay(currentBook, chapter);
 
             if (!check.allowed) {
-                CREDITS.showCreditsPopup();
+                maybeShowCreditsPopup();
                 return false;
             }
 
@@ -1804,6 +1804,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script src="/credits.js"></script>
 <script>
+// Show credits popup only once per session (UX improvement)
+function maybeShowCreditsPopup() {
+    const shown = sessionStorage.getItem('credits_popup_shown');
+    if (shown) {
+        console.log('⏭️ Credits popup already shown this session, pulsing badge instead');
+        const badge = document.getElementById('creditsBadge');
+        if (badge) {
+            badge.classList.add('pulse');
+            setTimeout(() => badge.classList.remove('pulse'), 3000);
+        }
+        return;
+    }
+
+    console.log('💳 Showing credits popup (first time this session)');
+    sessionStorage.setItem('credits_popup_shown', '1');
+    CREDITS.showCreditsPopup();
+}
+
 // Update credits display
 function updateCreditsDisplay() {
     const badge = document.getElementById('creditsBadge');
