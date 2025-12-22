@@ -71,7 +71,57 @@ window.testSearch = function(lang, word) {
       });
     }
   }
-  return `✅ ${count} versets trouvés avec "${word}" en ${lang}`;
+
+  // PASS/FAIL simple
+  const passCommon = count > 100;
+  const passRare = count >= 20 && count <= 500;
+  const status = passCommon ? '✅ PASS' : (passRare ? '✅ PASS' : (count > 0 ? '⚠️ PARTIEL' : '❌ FAIL'));
+
+  return `${status} ${lang}: "${word}" = ${count} résultats`;
 };
 
-console.log('\n📋 Fonction testSearch() maintenant disponible globalement');
+// Test complet avec mots discriminants
+window.testSearchAll = function() {
+  const tests = [
+    { lang: 'FR', common: 'Dieu', rare: 'Moïse' },
+    { lang: 'EN', common: 'God', rare: 'Moses' },
+    { lang: 'PT', common: 'Deus', rare: 'Moisés' },
+    { lang: 'ES', common: 'Dios', rare: 'Moisés' }
+  ];
+
+  console.log('\n🧪 === TEST COMPLET MULTI-LANGUES ===\n');
+
+  tests.forEach(t => {
+    const ds = getBibleDatasetForLang(t.lang);
+    if (!ds) {
+      console.log(`❌ ${t.lang}: Dataset NULL (scripts pas chargés)`);
+      return;
+    }
+
+    let countCommon = 0, countRare = 0;
+    for (let book in ds) {
+      for (let ch in ds[book]) {
+        ds[book][ch].forEach(v => {
+          const txt = (v.text || '').toLowerCase();
+          if (txt.includes(t.common.toLowerCase())) countCommon++;
+          if (txt.includes(t.rare.toLowerCase())) countRare++;
+        });
+      }
+    }
+
+    const pass1 = countCommon > 100;
+    const pass2 = countRare >= 20 && countRare <= 500;
+    const overall = pass1 && pass2 ? '✅ PASS' : '❌ FAIL';
+
+    console.log(`${overall} ${t.lang}:`);
+    console.log(`  - Mot fréquent "${t.common}": ${countCommon} ${pass1 ? '✅' : '❌'}`);
+    console.log(`  - Mot discriminant "${t.rare}": ${countRare} ${pass2 ? '✅' : '❌'}`);
+  });
+
+  console.log('\n✅ Si tous PASS → Recherche validée');
+  console.log('❌ Si un FAIL → Utiliser bouton "⟳ Rafraîchir" en bas de page');
+};
+
+console.log('\n📋 Fonctions disponibles:');
+console.log('  testSearch("FR", "Dieu")');
+console.log('  testSearchAll()  ← Test complet 4 langues');
