@@ -1776,21 +1776,55 @@ function updateCreditsDisplay() {
     const count = document.getElementById('creditsCount');
     const label = document.getElementById('creditsLabel');
 
-    if (CREDITS.isPremium()) {
+    if (!badge) {
+        console.error('Credits badge not found');
+        return;
+    }
+
+    // Debug logging
+    const user = JSON.parse(localStorage.getItem('bc_user') || 'null');
+    const isPremium = CREDITS.isPremium();
+    console.log('🔍 Credits Display Update:', {
+        user: user,
+        isPremium: isPremium,
+        credits: CREDITS.getCredits()
+    });
+
+    if (isPremium) {
         badge.classList.add('premium');
-        icon.innerHTML = '&#9733;';
+        icon.innerHTML = '&#9733;'; // star
         count.textContent = 'PREMIUM';
         label.textContent = '';
+        console.log('✅ Premium badge activated');
     } else {
         badge.classList.remove('premium');
+        icon.innerHTML = '&#127925;'; // music note
         const credits = CREDITS.getCredits();
         count.textContent = credits;
         label.textContent = credits === 1 ? 'credit' : 'credits';
+        console.log(`💳 Showing ${credits} credits`);
     }
 }
 
 // Initialize on page load
-document.addEventListener('DOMContentLoaded', updateCreditsDisplay);
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('📱 Page loaded, initializing credits display...');
+    updateCreditsDisplay();
+});
+
+// Update when page becomes visible (after returning from payment)
+document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) {
+        console.log('👁️ Page visible again, refreshing credits...');
+        updateCreditsDisplay();
+    }
+});
+
+// Update when window gains focus
+window.addEventListener('focus', function() {
+    console.log('🔄 Window focused, refreshing credits...');
+    updateCreditsDisplay();
+});
 </script>
 
 <!-- Service Worker Registration -->

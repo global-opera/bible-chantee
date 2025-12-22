@@ -25,7 +25,13 @@ const CREDITS = {
     // Verifier si premium
     isPremium() {
         const user = this.getUser();
-        return user && user.premium === true;
+        const isPremium = user && user.premium === true;
+        console.log('🔐 Premium check:', {
+            user: user,
+            hasPremium: user ? user.premium : 'no user',
+            result: isPremium
+        });
+        return isPremium;
     },
 
     // Obtenir utilisateur
