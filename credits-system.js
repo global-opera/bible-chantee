@@ -241,7 +241,7 @@ class CreditsSystem {
     }
 
     handlePurchase() {
-        // Rediriger vers la page de crowdfunding/paiement
+        // Rediriger vers le paiement Stripe (Premium)
         const lang = this.getCurrentLanguage();
         window.location.href = 'https://buy.stripe.com/bJeaEQ8HJfoD3LybIg0Fi01';
     }
@@ -326,5 +326,6 @@ if (typeof window !== 'undefined') {
         console.log('Unlimited access:', creditsSystem.hasUnlimitedAccess());
     });
 }
+
 
 
