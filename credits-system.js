@@ -243,7 +243,7 @@ class CreditsSystem {
     handlePurchase() {
         // Rediriger vers la page de crowdfunding/paiement
         const lang = this.getCurrentLanguage();
-        window.location.href = `/crowdfunding.html?lang=${lang}&source=credits`;
+        window.location.href = 'https://buy.stripe.com/bJeaEQ8HJfoD3LybIg0Fi01';
     }
 
     getCurrentLanguage() {
@@ -326,4 +326,5 @@ if (typeof window !== 'undefined') {
         console.log('Unlimited access:', creditsSystem.hasUnlimitedAccess());
     });
 }
+
 
