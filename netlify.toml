@@ -1,24 +1,27 @@
-[[redirects]]
-  from = "/"
-  to = "/lecteur.html"
-  status = 302
-  force = true
-  conditions = {Host = ["biblechantee.com", "www.biblechantee.com"]}
+[build]
+  publish = "."
 
-[[redirects]]
-  from = "/index.html"
-  to = "/lecteur.html"
-  status = 302
-  force = true
-  conditions = {Host = ["biblechantee.com", "www.biblechantee.com"]}
-
-# Empêcher le cache sur les redirects
-[[headers]]
-  for = "/"
-  [headers.values]
-    Cache-Control = "no-store, no-cache, must-revalidate"
-
-[[headers]]
-  for = "/index.html"
-  [headers.values]
-    Cache-Control = "no-store, no-cache, must-revalidate"
+# ❌ Redirects désactivés temporairement (conflit avec _redirects + index.html)
+# [[redirects]]
+#   from = "/"
+#   to = "/lecteur.html"
+#   status = 302
+#   force = true
+#   conditions = {Host = ["biblechantee.com", "www.biblechantee.com"]}
+#
+# [[redirects]]
+#   from = "/index.html"
+#   to = "/lecteur.html"
+#   status = 302
+#   force = true
+#   conditions = {Host = ["biblechantee.com", "www.biblechantee.com"]}
+#
+# [[headers]]
+#   for = "/"
+#   [headers.values]
+#     Cache-Control = "no-store, no-cache, must-revalidate"
+#
+# [[headers]]
+#   for = "/index.html"
+#   [headers.values]
+#     Cache-Control = "no-store, no-cache, must-revalidate"

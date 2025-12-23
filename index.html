@@ -1,22 +1,13 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="refresh" content="0; url=/lecteur.html" />
-  <title>Redirection</title>
-  <link rel="canonical" href="/lecteur.html" />
-  <meta name="robots" content="noindex,nofollow" />
-  <script>
-    (function () {
-      var target = "/lecteur.html" + (location.search || "") + (location.hash || "");
-      location.replace(target);
-    })();
-  </script>
+  <meta charset="utf-8">
+  <title>Bible Chantée</title>
 </head>
 <body>
-  <noscript>
-    <p>Redirection... <a href="/lecteur.html">Ouvrir le lecteur</a></p>
-  </noscript>
+  <script>
+    // Redirection simple, 1 seule fois
+    location.replace('/lecteur.html');
+  </script>
 </body>
 </html>

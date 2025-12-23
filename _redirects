@@ -1,8 +1,4 @@
-# Redirections principales
-/  /lecteur.html  301!
-/index.html  /lecteur.html  301!
-
-# Redirections API
+# Redirections API (pas de redirect racine !)
 /api/premium-status  /.netlify/functions/premium-status  200
 /api/premium-claim   /.netlify/functions/premium-claim   200
 /api/stats           /.netlify/functions/stats           200
