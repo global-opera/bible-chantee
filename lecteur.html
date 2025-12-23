@@ -2031,15 +2031,13 @@ document.addEventListener('DOMContentLoaded', function() {
 // Update when page becomes visible (after returning from payment)
 document.addEventListener('visibilitychange', function() {
     if (!document.hidden) {
-        console.log('👁️ Page visible again, refreshing credits...');
-        updateCreditsDisplay();
+        console.log('👁️ Page visible again, checking premium...'); if(typeof bcBootstrapPremiumStatus==='function'){bcBootstrapPremiumStatus();}else{updateCreditsDisplay();}
     }
 });
 
 // Update when window gains focus
 window.addEventListener('focus', function() {
-    console.log('🔄 Window focused, refreshing credits...');
-    updateCreditsDisplay();
+    console.log('🔄 Window focused, checking premium...'); if(typeof bcBootstrapPremiumStatus==='function'){bcBootstrapPremiumStatus();}else{updateCreditsDisplay();}
 });
 </script>
 
@@ -2149,6 +2147,7 @@ if (document.readyState === 'loading') {
 </script>
 </body>
 </html>
+
 
 
 
