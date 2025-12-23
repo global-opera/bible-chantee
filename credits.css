@@ -1,3 +1,6 @@
+/* Anti-flash: hide until premium check done */
+.bc-hide-until-premium-ready { display: none !important; }
+
 /* Credits Badge */
 .credits-badge {
     position: fixed;
@@ -295,3 +298,4 @@
     font-size: 0.85rem;
     color: #888;
 }
+
