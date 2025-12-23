@@ -1958,6 +1958,9 @@ Object.keys(translations).forEach(lang => {
     t.readerHeading = "Bible Chantée";
     t.readerBackHome = "← Retour accueil";
     t.readerAbout = "À propos";
+    t.readerHelp = "Aide";
+    t.readerNews = "Nouveautes";
+    t.readerPromises = "Promesses";
     t.readerSubtitle = "La Parole de Dieu en musique worship française";
     t.readerBooksAvailable = "livres disponibles";
     t.readerOf = "sur";
@@ -2146,6 +2149,9 @@ Object.keys(translations).forEach(lang => {
     t.readerHeading = "Sung Bible";
     t.readerBackHome = "← Back home";
     t.readerAbout = "About";
+    t.readerHelp = "Help";
+    t.readerNews = "News";
+    t.readerPromises = "Promises";
     t.readerSubtitle = "God's Word in French worship music";
     t.readerBooksAvailable = "books available";
     t.readerOf = "of";
@@ -2334,6 +2340,9 @@ Object.keys(translations).forEach(lang => {
     t.readerHeading = "Biblia Cantada";
     t.readerBackHome = "← Volver inicio";
     t.readerAbout = "Acerca de";
+    t.readerHelp = "Ayuda";
+    t.readerNews = "Novedades";
+    t.readerPromises = "Promesas";
     t.readerSubtitle = "La Palabra de Dios en música worship francesa";
     t.readerBooksAvailable = "libros disponibles";
     t.readerOf = "de";
@@ -2522,6 +2531,9 @@ Object.keys(translations).forEach(lang => {
     t.readerHeading = "Bíblia Cantada";
     t.readerBackHome = "← Voltar início";
     t.readerAbout = "Sobre";
+    t.readerHelp = "Ajuda";
+    t.readerNews = "Novidades";
+    t.readerPromises = "Promessas";
     t.readerSubtitle = "A Palavra de Deus em música worship francesa";
     t.readerBooksAvailable = "livros disponíveis";
     t.readerOf = "de";
@@ -3836,4 +3848,5 @@ Object.keys(translations).forEach(lang => {
 
 // Export translations to global scope
 window.translations = translations;
+
 
