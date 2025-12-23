@@ -1800,8 +1800,8 @@ function copyLink(){
     trackShare('copy', window.currentBook + '_' + window.currentChapter);const i=document.getElementById("shareLink");i.select();navigator.clipboard.writeText(i.value).then(()=>toast("Lien copie!")).catch(()=>{document.execCommand("copy");toast("Lien copie!")})}
 function shareWA(){
     trackShare('whatsapp', window.currentBook + '_' + window.currentChapter);window.open("https://wa.me/?text="+encodeURIComponent("Ecoute ce chapitre de la Bible chantee! "+getShareUrl()),"_blank")}
-function shareTG(){window.open("https://t.me/share/url?url="+encodeURIComponent(getShareUrl())+"&text="+encodeURIComponent("Ecoute la Bible chantee!"),"_blank")}
-function shareEmail(){const s=encodeURIComponent("Decouvre la Bible Chantee");const b=encodeURIComponent("Salut!\\n\\nEcoute ce chapitre:\\n"+getShareUrl()+"\\n\\nBonne ecoute!");location.href="mailto:?subject="+s+"&body="+b}
+function shareTG(){trackShare('telegram', window.currentBook + '_' + window.currentChapter);window.open("https://t.me/share/url?url="+encodeURIComponent(getShareUrl())+"&text="+encodeURIComponent("Ecoute la Bible chantee!"),"_blank")}
+function shareEmail(){trackShare('email', window.currentBook + '_' + window.currentChapter);const s=encodeURIComponent("Decouvre la Bible Chantee");const b=encodeURIComponent("Salut!\\n\\nEcoute ce chapitre:\\n"+getShareUrl()+"\\n\\nBonne ecoute!");location.href="mailto:?subject="+s+"&body="+b}
 // Enregistrer parrain
 (function(){const r=new URLSearchParams(location.search).get("ref");if(r&&r!==getUid()&&!localStorage.getItem("bc_ref")){localStorage.setItem("bc_ref",r)}})();
 </script>
@@ -2033,6 +2033,7 @@ if (document.readyState === 'loading') {
 </script>
 </body>
 </html>
+
 
 
 
