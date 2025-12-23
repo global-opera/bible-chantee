@@ -1881,41 +1881,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <script>
-// Credits popup: show at most once per session + cooldown
-function bcMaybeShowCreditsPopup(reason = '') {
-    const now = Date.now();
-    const last = Number(sessionStorage.getItem('bc_credits_popup_last') || '0');
-    const shown = sessionStorage.getItem('bc_credits_popup_shown') === '1';
-
-    // 1) Only show once per session
-    if (shown) {
-        console.log('⏭️ Credits popup already shown this session, pulsing badge instead');
-        const badge = document.getElementById('creditsBadge');
-        if (badge) {
-            badge.classList.add('pulse');
-            setTimeout(() => badge.classList.remove('pulse'), 3000);
-        }
-        return false;
-    }
-
-    // 2) Extra safety cooldown (45s) in case something resets shown
-    if (now - last < 45000) {
-        console.log('⏸️ Credits popup cooldown active');
-        return false;
-    }
-
-    sessionStorage.setItem('bc_credits_popup_shown', '1');
-    sessionStorage.setItem('bc_credits_popup_last', String(now));
-
-    try {
-        console.log('[CREDITS] popup shown', { reason });
-        // CREDITS.showCreditsPopup(); // disabled
-        return true;
-    } catch (e) {
-        console.warn('[CREDITS] show popup failed', e);
-        return false;
-    }
-}
+// Credits popup disabled for premium
+function bcMaybeShowCreditsPopup(reason = '') { return false; }
 
 // Alias for backward compatibility
 function maybeShowCreditsPopup(reason) {
@@ -1956,53 +1923,8 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(document.body, { childList: true, subtree: true });
 });
 
-// Update credits display
-function updateCreditsDisplay() {
-    const badge = document.getElementById('creditsBadge');
-    const icon = document.getElementById('creditsIcon');
-    const count = document.getElementById('creditsCount');
-    const label = document.getElementById('creditsLabel');
-
-    if (!badge) {
-        console.error('Credits badge not found');
-        return;
-    }
-
-    // CRITICAL: Never show badge if CREDITS not loaded (anti-regression)
-    if (typeof CREDITS === 'undefined' || !CREDITS.isPremium || !CREDITS.getCredits) {
-        bcLog('⚠️ CREDITS not ready, keeping badge hidden');
-        badge.style.visibility = 'hidden'; // Keep hidden
-        return; // Don't show badge with unknown state
-    }
-
-    // Debug logging
-    const user = JSON.parse(localStorage.getItem('bc_user') || 'null');
-    const isPremium = CREDITS.isPremium();
-    bcLog('🔍 Credits Display Update:', {
-        user: user,
-        isPremium: isPremium,
-        credits: CREDITS.getCredits()
-    });
-
-    if (isPremium) {
-        badge.classList.add('premium');
-        icon.innerHTML = '&#9733;'; // star
-        count.textContent = 'PREMIUM';
-        label.textContent = '';
-        bcLog('✅ Premium badge activated');
-    } else {
-        badge.classList.remove('premium');
-        icon.innerHTML = '&#127925;'; // music note
-        const credits = CREDITS.getCredits();
-        count.textContent = credits;
-        label.textContent = credits === 1 ? 'credit' : 'credits';
-        bcLog(`💳 Showing ${credits} credits`);
-    }
-
-    // Show badge after initialization (prevent flash)
-    badge.style.visibility = 'visible';
-    badge.style.opacity = '1';
-}
+// Update credits display disabled for premium
+function updateCreditsDisplay() { return; }
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
@@ -2137,6 +2059,8 @@ if (document.readyState === 'loading') {
 </script>
 </body>
 </html>
+
+
 
 
 
