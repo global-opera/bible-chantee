@@ -51,6 +51,8 @@ const translations = {
     btnBible: "Bible (66 livres)",
     btnPromises: "Promesses bibliques",
     btnConfessions: "10 Confessions de foi",
+    btnShareCredits: "Partager (+10 credits)",
+    btnSignup: "S'inscrire",
 
     // Churches Section
     churchesTitle: "Pour les églises",
@@ -201,6 +203,8 @@ const translations = {
     btnBible: "Bible (66 books)",
     btnPromises: "Biblical promises",
     btnConfessions: "10 Confessions of faith",
+    btnShareCredits: "Share (+10 credits)",
+    btnSignup: "Sign up",
 
     // Churches Section
     churchesTitle: "For churches",
@@ -351,6 +355,8 @@ const translations = {
     btnBible: "Biblia (66 libros)",
     btnPromises: "Promesas bíblicas",
     btnConfessions: "10 Confesiones de fe",
+    btnShareCredits: "Compartir (+10 creditos)",
+    btnSignup: "Inscribirse",
 
     // Churches Section
     churchesTitle: "Para las iglesias",
@@ -501,6 +507,8 @@ const translations = {
     btnBible: "Bíblia (66 livros)",
     btnPromises: "Promessas bíblicas",
     btnConfessions: "10 Confissões de fé",
+    btnShareCredits: "Compartilhar (+10 creditos)",
+    btnSignup: "Inscrever-se",
 
     // Churches Section
     churchesTitle: "Para as igrejas",
@@ -3828,3 +3836,4 @@ Object.keys(translations).forEach(lang => {
 
 // Export translations to global scope
 window.translations = translations;
+
