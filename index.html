@@ -1,7 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <meta http-equiv="refresh" content="0;url=/lecteur.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bible Chantee - Redirection</title>
+  <script>
+    (async function() {
+      try {
+        const res = await fetch('/api/premium-status', { credentials: 'include' });
+        const data = await res.json();
+        if (data.premium) {
+          window.location.replace('/premium.html' + window.location.search + window.location.hash);
+        } else {
+          window.location.replace('/lecteur.html' + window.location.search + window.location.hash);
+        }
+      } catch (e) {
+        window.location.replace('/lecteur.html' + window.location.search + window.location.hash);
+      }
+    })();
+  </script>
 </head>
-<body></body>
+<body>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=/lecteur.html">
+  </noscript>
+</body>
 </html>
