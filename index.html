@@ -1,5 +1,21 @@
 <!doctype html>
 <html lang="fr">
-<head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Bible Chantee</title></head>
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bible Chantee</title>
+  <script>
+    (function(){
+      try {
+        var c = document.cookie || "";
+        var isPremium = /(?:^|;\s*)bc_premium=1(?:;|$)/.test(c);
+        location.replace(isPremium ? "/premium.html" : "/lecteur.html");
+      } catch(e) {
+        location.replace("/lecteur.html");
+      }
+    })();
+  </script>
+</head>
 <body></body>
 </html>

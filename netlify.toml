@@ -7,23 +7,7 @@
   [headers.values]
     Cache-Control = "no-store"
 
-# Premium d'abord si cookie bc_premium present
-[[redirects]]
-  from = "/"
-  to = "/premium.html"
-  status = 302
-  force = true
-  conditions = {Cookie = ["bc_premium"]}
-
-# Sinon lecteur
-[[redirects]]
-  from = "/"
-  to = "/lecteur.html"
-  status = 302
-  force = true
-
 # --- PROD: block demo/crowdfunding/old pages (strict funnel) ---
-
 [[redirects]]
   from = "/demo*"
   to = "/lecteur.html"
