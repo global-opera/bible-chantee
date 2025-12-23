@@ -284,9 +284,11 @@
     ];
 
     function getLecteurUrl(psalmNum, lang, themeIndex) {
-        const chapterPadded = String(psalmNum).padStart(2, '0');
         const sectionKey = THEME_INDEX_TO_KEY[themeIndex] || 'anxiete';
-        return `lecteur.html?book=19&chapter=${chapterPadded}&lang=${lang}&return=/promesse-detail.html?theme=${themeIndex}&section=${sectionKey}`;
+        const isPremium = (localStorage.getItem('bc_unlimited') === 'true')
+            || /(?:^|;\\s*)bc_premium=1(?:;|$)/.test(document.cookie || '');
+        const page = isPremium ? 'premium.html' : 'lecteur.html';
+        return `${page}?book=19&chapter=${psalmNum}&lang=${lang}&return=/promesse-detail.html?theme=${themeIndex}&section=${sectionKey}`;
     }
 
     function render() {
@@ -343,3 +345,7 @@
     </script>
 </body>
 </html>
+
+
+
+
