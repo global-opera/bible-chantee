@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperer mon acces Premium - Bible Chantee</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: linear-gradient(135deg, #1a1a4e 0%, #0d0d2b 100%); min-height: 100vh; margin: 0; padding: 20px; display: flex; align-items: center; justify-content: center; }
+    .container { background: rgba(255,255,255,0.95); border-radius: 16px; padding: 40px; max-width: 400px; width: 100%; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+    h1 { color: #1a1a4e; margin: 0 0 10px 0; font-size: 1.5rem; text-align: center; }
+    p { color: #666; text-align: center; margin-bottom: 30px; }
+    input[type="email"] { width: 100%; padding: 14px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; margin-bottom: 20px; }
+    button { width: 100%; padding: 14px; background: #ffce00; color: #1a1a4e; border: none; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; }
+    button:disabled { background: #ccc; }
+    .message { margin-top: 20px; padding: 14px; border-radius: 8px; text-align: center; display: none; }
+    .success { background: #d4edda; color: #155724; display: block; }
+    .error { background: #f8d7da; color: #721c24; display: block; }
+    .back-link { display: block; text-align: center; margin-top: 20px; color: #1a1a4e; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Recuperer mon Premium</h1>
+    <p>Entrez l email utilise lors de votre paiement Stripe</p>
+    <form id="recoverForm">
+      <input type="email" id="email" required placeholder="votre@email.com">
+      <button type="submit" id="submitBtn">Recuperer mon acces</button>
+    </form>
+    <div id="message" class="message"></div>
+    <a href="/" class="back-link">Retour a Bible Chantee</a>
+  </div>
+  <script>
+    document.getElementById('recoverForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const btn = document.getElementById('submitBtn');
+      const msg = document.getElementById('message');
+      btn.disabled = true;
+      btn.textContent = 'Verification...';
+      msg.className = 'message';
+      try {
+        const res = await fetch('/api/recover-premium', { method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'include', body: JSON.stringify({ email }) });
+        const data = await res.json();
+        if (data.success) {
+          localStorage.setItem('sungbible_unlimited', 'true');
+          msg.className = 'message success';
+          msg.textContent = data.message + ' Redirection...';
+          setTimeout(() => { window.location.href = '/'; }, 2000);
+        } else {
+          msg.className = 'message error';
+          msg.textContent = data.message;
+          btn.disabled = false;
+          btn.textContent = 'Recuperer mon acces';
+        }
+      } catch (err) {
+        msg.className = 'message error';
+        msg.textContent = 'Erreur de connexion. Reessayez.';
+        btn.disabled = false;
+        btn.textContent = 'Recuperer mon acces';
+      }
+    });
+  </script>
+</body>
+</html>
