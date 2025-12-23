@@ -498,7 +498,7 @@ window.trackSignup = function(referrer) {
   try {
     const map = [
       ["sungbible_unlimited","bc_unlimited"],
-      ["sungbible_lang","bc_lang"],`n      ["sungbible_credits","bc_credits"]
+      ["sungbible_lang","bc_lang"],["sungbible_credits","bc_credits"]
     ];
     map.forEach(([oldK,newK])=>{
       const v = localStorage.getItem(oldK);
@@ -2184,6 +2184,7 @@ if (document.readyState === 'loading') {
 </script>
 </body>
 </html>
+
 
 
 
