@@ -2125,14 +2125,33 @@ window.bcBootstrapPremiumStatus = async () => {
     window.bcUser.premium = false;
   }
 
-  // 1) Mettre à jour l'affichage (une seule fois, état fiable)
+  // 1) Initialiser le système de crédits APRÈS avoir le statut premium
+  if (typeof CreditsSystem !== 'undefined') {
+    if (!window.creditsSystem) {
+      window.creditsSystem = new CreditsSystem();
+    }
+
+    if (window.bcUser?.premium === true) {
+      // Mode PREMIUM : activer l'accès illimité puis init l'UI
+      window.creditsSystem.setUnlimited(true);
+      window.creditsSystem.init();
+      console.log('🔐 Credits System: PREMIUM mode activated');
+    } else {
+      // Mode CRÉDITS : init normalement
+      window.creditsSystem.init();
+      console.log('🎵 Credits System: CREDITS mode (100 free credits)');
+      console.log('Credits remaining:', window.creditsSystem.getCredits());
+    }
+  }
+
+  // 2) Mettre à jour l'affichage (une seule fois, état fiable)
   if (typeof window.updateCreditsDisplay === 'function') {
     window.updateCreditsDisplay();
   } else if (typeof updateCreditsDisplay === 'function') {
     updateCreditsDisplay();
   }
 
-  // 2) Montrer le badge seulement maintenant
+  // 3) Montrer le badge seulement maintenant
   document.querySelectorAll('.bc-hide-until-premium-ready')
     .forEach(el => el.classList.remove('bc-hide-until-premium-ready'));
 };
