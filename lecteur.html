@@ -492,6 +492,22 @@ window.trackSignup = function(referrer) {
 .bc-hide-until-premium-ready { visibility: hidden !important; }
 </style>
 <link rel="stylesheet" href="/credits.css">
+<script>
+// Migrate legacy localStorage keys (sungbible -> bc)
+(function(){
+  try {
+    const map = [
+      ["sungbible_unlimited","bc_unlimited"],
+      ["sungbible_lang","bc_lang"],`n      ["sungbible_credits","bc_credits"]
+    ];
+    map.forEach(([oldK,newK])=>{
+      const v = localStorage.getItem(oldK);
+      if (v !== null && localStorage.getItem(newK) === null) localStorage.setItem(newK, v);
+      if (v !== null) localStorage.removeItem(oldK);
+    });
+  } catch(e) {}
+})();
+</script>
 </head>
 <body>
     <!-- Credits Badge -->
@@ -742,7 +758,7 @@ window.trackSignup = function(referrer) {
                 if (!a) return;
 
                 const u = new URL(location.href);
-                const lang = (u.searchParams.get('lang') || localStorage.getItem('sungbible_lang') || 'fr').toLowerCase();
+                const lang = (u.searchParams.get('lang') || localStorage.getItem('bc_lang') || 'fr').toLowerCase();
 
                 const returnUrl = location.href;
                 a.href = `/about.html?lang=${encodeURIComponent(lang)}&return=${encodeURIComponent(returnUrl)}`;
@@ -784,11 +800,11 @@ window.trackSignup = function(referrer) {
                 window.bcUser = window.bcUser || {};
                 window.bcUser.premium = !!j.premium;
     
-    // Sync avec credits-system (localStorage sungbible_unlimited)
+    // Sync avec credits-system (localStorage bc_unlimited)
     if (j.premium && typeof creditsSystem !== 'undefined') {
       creditsSystem.setUnlimitedAccess();
     } else if (j.premium) {
-      localStorage.setItem('sungbible_unlimited', 'true');
+      localStorage.setItem('bc_unlimited', 'true');
     }
 
                 // Sync avec localStorage (cache UI uniquement, non critique)
@@ -2132,11 +2148,11 @@ window.bcBootstrapPremiumStatus = async () => {
     window.bcUser = window.bcUser || {};
     window.bcUser.premium = !!j.premium;
     
-    // Sync avec credits-system (localStorage sungbible_unlimited)
+    // Sync avec credits-system (localStorage bc_unlimited)
     if (j.premium && typeof creditsSystem !== 'undefined') {
       creditsSystem.setUnlimitedAccess();
     } else if (j.premium) {
-      localStorage.setItem('sungbible_unlimited', 'true');
+      localStorage.setItem('bc_unlimited', 'true');
     }
   } catch (e) {
     console.error('[Premium Bootstrap] Error:', e);
@@ -2168,6 +2184,9 @@ if (document.readyState === 'loading') {
 </script>
 </body>
 </html>
+
+
+
 
 
 

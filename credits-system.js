@@ -6,8 +6,8 @@
 class CreditsSystem {
     constructor() {
         this.INITIAL_CREDITS = 100;
-        this.STORAGE_KEY = 'sungbible_credits';
-        this.UNLIMITED_KEY = 'sungbible_unlimited';
+        this.STORAGE_KEY = 'bc_credits';
+        this.UNLIMITED_KEY = 'bc_unlimited';
         this.init();
     }
 
@@ -252,7 +252,7 @@ class CreditsSystem {
         const urlLang = urlParams.get('lang');
         if (urlLang) return urlLang;
 
-        const storedLang = localStorage.getItem('sungbible_lang');
+        const storedLang = localStorage.getItem('bc_lang');
         return storedLang || 'fr';
     }
 
@@ -326,6 +326,8 @@ if (typeof window !== 'undefined') {
         console.log('Unlimited access:', creditsSystem.hasUnlimitedAccess());
     });
 }
+
+
 
 
 
