@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aide - Bible Chantee</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: linear-gradient(135deg, #1a1a4e 0%, #0d0d2b 100%); min-height: 100vh; color: #fff; padding: 20px; }
+    .container { max-width: 700px; margin: 0 auto; }
+    h1 { text-align: center; margin-bottom: 30px; color: #ffce00; }
+    .section { background: rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+    .section h2 { color: #ffce00; margin-bottom: 15px; font-size: 1.2rem; }
+    .section p, .section li { line-height: 1.6; margin-bottom: 10px; }
+    .section ul { padding-left: 20px; }
+    .section a { color: #ffce00; }
+    .btn { display: inline-block; background: #ffce00; color: #1a1a4e; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 10px; }
+    .btn:hover { transform: scale(1.02); }
+    input[type="email"] { width: 100%; padding: 12px; border: none; border-radius: 8px; font-size: 1rem; margin: 10px 0; }
+    button { width: 100%; padding: 12px; background: #ffce00; color: #1a1a4e; border: none; border-radius: 8px; font-size: 1rem; font-weight: 700; cursor: pointer; }
+    button:disabled { background: #666; }
+    .message { margin-top: 15px; padding: 12px; border-radius: 8px; display: none; }
+    .success { background: #d4edda; color: #155724; display: block; }
+    .error { background: #f8d7da; color: #721c24; display: block; }
+    .back-link { display: block; text-align: center; margin-top: 30px; color: #ffce00; font-size: 1.1rem; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.2); padding: 15px 0; }
+    .faq-item:last-child { border: none; }
+    .faq-q { font-weight: 700; color: #ffce00; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Aide - Bible Chantee</h1>
+
+    <!-- Recuperer Premium -->
+    <div class="section">
+      <h2>Recuperer mon acces Premium</h2>
+      <p>Vous avez deja paye mais vous n'avez plus acces Premium ? Entrez l'email utilise lors du paiement :</p>
+      <form id="recoverForm">
+        <input type="email" id="email" required placeholder="votre@email.com">
+        <button type="submit" id="submitBtn">Recuperer mon acces</button>
+      </form>
+      <div id="message" class="message"></div>
+    </div>
+
+    <!-- Comment ca marche -->
+    <div class="section">
+      <h2>Comment ca marche ?</h2>
+      <ul>
+        <li><strong>Version gratuite :</strong> 3 ecoutes gratuites pour decouvrir</li>
+        <li><strong>Version Premium :</strong> Acces illimite a tous les 1189 chapitres en musique</li>
+        <li><strong>Multi-langues :</strong> Disponible en Francais, Portugais, Anglais, Espagnol</li>
+      </ul>
+    </div>
+
+    <!-- Installer l'application -->
+    <div class="section">
+      <h2>Installer l'application</h2>
+      <p><strong>iPhone (Safari) :</strong></p>
+      <ul>
+        <li>Ouvrez biblechantee.com dans Safari</li>
+        <li>Cliquez sur l'icone Partager (carre avec fleche)</li>
+        <li>Cliquez "Sur l'ecran d'accueil"</li>
+        <li>Cliquez "Ajouter"</li>
+      </ul>
+      <p style="margin-top: 15px;"><strong>Android (Chrome) :</strong></p>
+      <ul>
+        <li>Ouvrez biblechantee.com dans Chrome</li>
+        <li>Cliquez sur les 3 points (menu)</li>
+        <li>Cliquez "Installer l'application"</li>
+      </ul>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <h2>Questions frequentes</h2>
+      
+      <div class="faq-item">
+        <div class="faq-q">J'ai paye mais je vois encore "3 credits" ?</div>
+        <p>Utilisez le formulaire ci-dessus pour recuperer votre acces Premium avec votre email de paiement.</p>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-q">Comment changer de langue ?</div>
+        <p>Cliquez sur le drapeau en haut de la page pour choisir votre langue.</p>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-q">L'application ne fonctionne plus apres mise a jour ?</div>
+        <p>Supprimez l'application, videz le cache de votre navigateur, puis reinstallez depuis biblechantee.com</p>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-q">Comment ecouter hors connexion ?</div>
+        <p>L'application garde en cache les chapitres ecoutes recemment. Avec Premium, vous pouvez ecouter sans limite.</p>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="section">
+      <h2>Contact</h2>
+      <p>Une question ? Un probleme ?</p>
+      <p>Email : <a href="mailto:info@biblechantee.com">info@biblechantee.com</a></p>
+    </div>
+
+    <a href="/" class="back-link">← Retour a Bible Chantee</a>
+  </div>
+
+  <script>
+    document.getElementById('recoverForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const btn = document.getElementById('submitBtn');
+      const msg = document.getElementById('message');
+      btn.disabled = true;
+      btn.textContent = 'Verification...';
+      msg.className = 'message';
+      try {
+        const res = await fetch('/api/recover-premium', { method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'include', body: JSON.stringify({ email }) });
+        const data = await res.json();
+        if (data.success) {
+          localStorage.setItem('sungbible_unlimited', 'true');
+          msg.className = 'message success';
+          msg.textContent = 'Premium recupere ! Redirection...';
+          setTimeout(() => { window.location.href = '/'; }, 2000);
+        } else {
+          msg.className = 'message error';
+          msg.textContent = data.message;
+          btn.disabled = false;
+          btn.textContent = 'Recuperer mon acces';
+        }
+      } catch (err) {
+        msg.className = 'message error';
+        msg.textContent = 'Erreur de connexion. Reessayez.';
+        btn.disabled = false;
+        btn.textContent = 'Recuperer mon acces';
+      }
+    });
+  </script>
+</body>
+</html>
