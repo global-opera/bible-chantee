@@ -301,13 +301,15 @@ const CREDITS = {
         this.saveUser(user);
         
         // Rediriger vers Stripe avec email pre-rempli
-        const stripeUrl = this.STRIPE_LINK + '?prefilled_email=' + encodeURIComponent(email);
+        const sep = this.STRIPE_LINK.includes('?') ? '&' : '?';
+        const stripeUrl = this.STRIPE_LINK + sep + 'prefilled_email=' + encodeURIComponent(email);
         window.location.href = stripeUrl;
         }
 };
 
 // Exposer globalement
 window.CREDITS = CREDITS;
+
 
 
 
