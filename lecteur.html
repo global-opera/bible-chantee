@@ -782,6 +782,13 @@ window.trackSignup = function(referrer) {
                 // Stocker dans window.bcUser (source de vérité)
                 window.bcUser = window.bcUser || {};
                 window.bcUser.premium = !!j.premium;
+    
+    // Sync avec credits-system (localStorage sungbible_unlimited)
+    if (j.premium && typeof creditsSystem !== 'undefined') {
+      creditsSystem.setUnlimitedAccess();
+    } else if (j.premium) {
+      localStorage.setItem('sungbible_unlimited', 'true');
+    }
 
                 // Sync avec localStorage (cache UI uniquement, non critique)
                 const localUser = JSON.parse(localStorage.getItem('bc_user') || 'null');
@@ -2119,6 +2126,13 @@ window.bcBootstrapPremiumStatus = async () => {
 
     window.bcUser = window.bcUser || {};
     window.bcUser.premium = !!j.premium;
+    
+    // Sync avec credits-system (localStorage sungbible_unlimited)
+    if (j.premium && typeof creditsSystem !== 'undefined') {
+      creditsSystem.setUnlimitedAccess();
+    } else if (j.premium) {
+      localStorage.setItem('sungbible_unlimited', 'true');
+    }
   } catch (e) {
     console.error('[Premium Bootstrap] Error:', e);
     window.bcUser = window.bcUser || {};
@@ -2149,6 +2163,7 @@ if (document.readyState === 'loading') {
 </script>
 </body>
 </html>
+
 
 
 
