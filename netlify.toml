@@ -11,3 +11,14 @@
   status = 302
   force = true
   conditions = {Host = ["biblechantee.com", "www.biblechantee.com"]}
+
+# Empêcher le cache sur les redirects
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "no-store, no-cache, must-revalidate"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "no-store, no-cache, must-revalidate"
