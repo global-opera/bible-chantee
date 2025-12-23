@@ -326,3 +326,4 @@ if (typeof window !== 'undefined') {
         console.log('Unlimited access:', creditsSystem.hasUnlimitedAccess());
     });
 }
+
