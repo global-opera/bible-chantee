@@ -992,7 +992,7 @@
             document.getElementById('countriesChange').textContent = countries.length + ' pays actifs';
 
             // Evenements (depuis stats.js: Netlify Forms + GA4)
-            const stats = data.stats || {};
+            const stats = (data && data.stats) ? data.stats : (data || {});
             const listens = stats.listens_total || 0;
             const shares = stats.shares_total || 0;
             const signups = stats.signups_total || 0;
@@ -1219,3 +1219,4 @@
     </script>
 </body>
 </html>
+
