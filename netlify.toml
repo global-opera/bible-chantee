@@ -1,6 +1,12 @@
 [build]
   publish = "."
 
+# Anti-cache pour /index.html (évite de servir une vieille version)
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "no-store"
+
 # ❌ Redirects désactivés temporairement (conflit avec _redirects + index.html)
 # [[redirects]]
 #   from = "/"
