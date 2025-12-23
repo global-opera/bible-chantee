@@ -1,28 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bible Chantee - Redirection</title>
-  <script>
-    (async function() {
-      try {
-        const res = await fetch('/api/premium-status', { credentials: 'include' });
-        const data = await res.json();
-        if (data.premium) {
-          window.location.replace('/premium.html' + window.location.search + window.location.hash);
-        } else {
-          window.location.replace('/lecteur.html' + window.location.search + window.location.hash);
-        }
-      } catch (e) {
-        window.location.replace('/lecteur.html' + window.location.search + window.location.hash);
-      }
-    })();
-  </script>
-</head>
-<body>
-  <noscript>
-    <meta http-equiv="refresh" content="0;url=/lecteur.html">
-  </noscript>
-</body>
+<head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Bible Chantee</title></head>
+<body></body>
 </html>

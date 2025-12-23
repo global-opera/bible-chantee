@@ -45,7 +45,7 @@ exports.handler = async (event) => {
         statusCode: 200,
         headers: {
           'Content-Type': 'application/json',
-          'Set-Cookie': 'bc_premium=1; Path=/; Max-Age=31536000; Secure; SameSite=Lax'
+          'Set-Cookie': 'bc_premium=1; Path=/; Max-Age=31536000; Secure; SameSite=Lax; HttpOnly'
         },
         body: JSON.stringify({ success: true, message: 'Premium restauré!' })
       };
@@ -64,3 +64,4 @@ exports.handler = async (event) => {
     };
   }
 };
+
