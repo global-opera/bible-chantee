@@ -376,7 +376,7 @@ select { background: #1a1a2e; color: #ffffff; }
                 donationTitle: "Soutenez le projet",
                 donationText: "Chaque don finance la <span class='highlight'>génération de nouveaux chapitres</span> et l'<span class='highlight'>ajout de nouvelles langues</span>.",
                 donationMission: "10% des revenus reversés aux missions.",
-                btnDonate: "Faire un don",
+                btnDonate: "Faire un don", btnPix: "Payer avec Pix", pixCopied: "Clé Pix copiée: scassani@jim.com",
                 titleProgress: "Avancement du projet - 12 langues",
                 titleStreaming: "Bientôt disponible sur",
                 footerText: "10% des revenus reversés aux missions",
@@ -399,7 +399,7 @@ select { background: #1a1a2e; color: #ffffff; }
                 donationTitle: "Apoie o projeto",
                 donationText: "Cada doação financia a <span class='highlight'>geração de novos capítulos</span> e a <span class='highlight'>adição de novas línguas</span>.",
                 donationMission: "10% da receita destinada a missões.",
-                btnDonate: "Fazer doação",
+                btnDonate: "Fazer doação", btnPix: "Pagar com Pix", pixCopied: "Chave Pix copiada: scassani@jim.com",
                 titleProgress: "Progresso do projeto - 12 línguas",
                 titleStreaming: "Em breve disponível em",
                 footerText: "10% da receita destinada a missões",
@@ -422,7 +422,7 @@ select { background: #1a1a2e; color: #ffffff; }
                 donationTitle: "Support the project",
                 donationText: "Each donation funds <span class='highlight'>new chapter generation</span> and <span class='highlight'>new languages</span>.",
                 donationMission: "10% of revenue goes to missions.",
-                btnDonate: "Donate",
+                btnDonate: "Donate", btnPix: "Pay with Pix", pixCopied: "Pix key copied: scassani@jim.com",
                 titleProgress: "Project progress - 12 languages",
                 titleStreaming: "Coming soon on",
                 footerText: "10% of revenue goes to missions",
@@ -490,7 +490,7 @@ select { background: #1a1a2e; color: #ffffff; }
             });
 
             const pix = document.getElementById('btn-pix');
-            if (pix) pix.style.display = L === 'PT' ? 'inline-block' : 'none';
+            if (pix) { pix.style.display = L === 'PT' ? 'inline-block' : 'none'; pix.textContent = T[L].btnPix; }
 
             updatePage();
 
@@ -617,7 +617,7 @@ select { background: #1a1a2e; color: #ffffff; }
 
         function copyPix() {
             navigator.clipboard.writeText('scassani@jim.com').then(() => {
-                alert('Chave Pix copiada: scassani@jim.com');
+                alert(T[L].pixCopied);
             });
         }
 
@@ -749,6 +749,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body>
 </html>
+
+
 
 
 
