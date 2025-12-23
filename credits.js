@@ -135,10 +135,10 @@ const CREDITS = {
                     <p>Vous avez utilise vos ${this.DAILY_FREE_PLAYS} ecoutes gratuites du jour.</p>
 
                     <div class="credits-options">
-                        <a href="${this.STRIPE_LINK}" class="credits-btn premium">
+                        <button class="credits-btn premium" onclick="CREDITS.showPremiumEmailForm()">
                             <span class="btn-icon">&#9733;</span>
                             <span class="btn-text">Acces illimite - 0.99 CHF</span>
-                        </a>
+                        </button>
 
                         <button class="credits-btn signup" onclick="CREDITS.showSignupForm()">
                             <span class="btn-icon">&#128231;</span>
@@ -265,5 +265,49 @@ const CREDITS = {
     }
 };
 
+
+    // Formulaire email AVANT paiement Stripe (fix Apple Pay)
+    showPremiumEmailForm() {
+        const modal = document.querySelector('.credits-modal');
+        if (modal) {
+            modal.innerHTML = `
+                <button class="credits-close" onclick="CREDITS.hideCreditsPopup()">&times;</button>
+                <h2>Acces Premium Illimite</h2>
+                <p>Entrez votre email pour recevoir votre confirmation d'achat :</p>
+                <form onsubmit="CREDITS.handlePremiumPurchase(event)" class="signup-form">
+                    <input type="email" id="premium-email" placeholder="Votre email" required>
+                    <button type="submit" class="credits-btn premium">
+                        <span class="btn-icon">&#9733;</span>
+                        <span class="btn-text">Payer 0.99 CHF</span>
+                    </button>
+                </form>
+                <p class="hint" style="font-size: 0.85em; color: #888; margin-top: 1em;">
+                    Cet email servira a recuperer votre acces Premium si necessaire.
+                </p>
+                <button class="back-btn" onclick="CREDITS.showCreditsPopup()">Retour</button>
+            `;
+        }
+    },
+
+    // Traiter achat Premium avec email
+    handlePremiumPurchase(event) {
+        event.preventDefault();
+        const email = document.getElementById('premium-email').value;
+        
+        // Sauvegarder l'email pour recuperation future
+        localStorage.setItem('bc_premium_email', email);
+        
+        // Aussi dans bc_user si existe
+        const user = this.getUser() || {};
+        user.pendingPremiumEmail = email;
+        this.saveUser(user);
+        
+        // Rediriger vers Stripe avec email pre-rempli
+        const stripeUrl = this.STRIPE_LINK + '?prefilled_email=' + encodeURIComponent(email);
+        window.location.href = stripeUrl;
+    },
+
 // Exposer globalement
 window.CREDITS = CREDITS;
+
+
