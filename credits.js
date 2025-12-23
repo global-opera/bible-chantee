@@ -262,9 +262,7 @@ const CREDITS = {
                 <button class="back-btn" onclick="CREDITS.showCreditsPopup()">Retour</button>
             `;
         }
-    }
-};
-
+        },
 
     // Formulaire email AVANT paiement Stripe (fix Apple Pay)
     showPremiumEmailForm() {
@@ -305,9 +303,12 @@ const CREDITS = {
         // Rediriger vers Stripe avec email pre-rempli
         const stripeUrl = this.STRIPE_LINK + '?prefilled_email=' + encodeURIComponent(email);
         window.location.href = stripeUrl;
-    },
+        }
+};
 
 // Exposer globalement
 window.CREDITS = CREDITS;
+
+
 
 
