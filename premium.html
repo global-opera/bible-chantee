@@ -2021,18 +2021,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Update when page becomes visible (after returning from payment)
-document.addEventListener('visibilitychange', function() {
-    if (!document.hidden) {
-        console.log('👁️ Page visible again, refreshing credits...');
-        // updateCreditsDisplay(); // disabled for premium
-    }
-});
-
 // Update when window gains focus
-window.addEventListener('focus', function() {
-    console.log('🔄 Window focused, refreshing credits...');
-    // updateCreditsDisplay(); // disabled for premium
-});
 </script>
 
 <!-- Service Worker Registration -->
@@ -2148,6 +2137,7 @@ if (document.readyState === 'loading') {
 </script>
 </body>
 </html>
+
 
 
 
