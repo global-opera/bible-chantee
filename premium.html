@@ -1243,7 +1243,7 @@ window.trackSignup = function(referrer) {
             // If using a credit (not free, not premium), consume it
             if (check.reason === 'credit') {
                 // CREDITS.useCredit(); // disabled for premium
-                updateCreditsDisplay();
+                // updateCreditsDisplay(); // disabled for premium
             }
 
             let url;
@@ -2007,7 +2007,7 @@ function updateCreditsDisplay() {
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
     bcLog('📱 Page loaded, initializing credits display...');
-    // updateCreditsDisplay(); // ⚠️ Désactivé : appelé par bcBootstrapPremiumStatus() après fetch premium-status
+    // // updateCreditsDisplay(); // disabled for premium // ⚠️ Désactivé : appelé par bcBootstrapPremiumStatus() après fetch premium-status
 
     // Add click event to credits badge
     const badge = document.getElementById('creditsBadge');
@@ -2024,14 +2024,14 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('visibilitychange', function() {
     if (!document.hidden) {
         console.log('👁️ Page visible again, refreshing credits...');
-        updateCreditsDisplay();
+        // updateCreditsDisplay(); // disabled for premium
     }
 });
 
 // Update when window gains focus
 window.addEventListener('focus', function() {
     console.log('🔄 Window focused, refreshing credits...');
-    updateCreditsDisplay();
+    // updateCreditsDisplay(); // disabled for premium
 });
 </script>
 
@@ -2126,9 +2126,9 @@ window.bcBootstrapPremiumStatus = async () => {
 
   // 1) Mettre à jour l'affichage (une seule fois, état fiable)
   if (typeof window.updateCreditsDisplay === 'function') {
-    window.updateCreditsDisplay();
+    window.// updateCreditsDisplay(); // disabled for premium
   } else if (typeof updateCreditsDisplay === 'function') {
-    updateCreditsDisplay();
+    // updateCreditsDisplay(); // disabled for premium
   }
 
   // 2) Montrer le badge seulement maintenant
@@ -2148,6 +2148,7 @@ if (document.readyState === 'loading') {
 </script>
 </body>
 </html>
+
 
 
 
