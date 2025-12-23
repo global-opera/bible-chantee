@@ -2028,18 +2028,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// 🚦 Flag READY: empêche les events de mettre à jour l'affichage avant le check premium
+window.__BC_PREMIUM_READY__ = false;
+
 // Update when page becomes visible (after returning from payment)
 document.addEventListener('visibilitychange', function() {
     if (!document.hidden) {
         console.log('👁️ Page visible again, refreshing credits...');
-        updateCreditsDisplay();
+        if (window.__BC_PREMIUM_READY__) updateCreditsDisplay();
     }
 });
 
 // Update when window gains focus
 window.addEventListener('focus', function() {
     console.log('🔄 Window focused, refreshing credits...');
-    updateCreditsDisplay();
+    if (window.__BC_PREMIUM_READY__) updateCreditsDisplay();
 });
 </script>
 
@@ -2144,14 +2147,17 @@ window.bcBootstrapPremiumStatus = async () => {
     }
   }
 
-  // 2) Mettre à jour l'affichage (une seule fois, état fiable)
+  // 2) Activer le flag READY (débloque focus/visibilitychange)
+  window.__BC_PREMIUM_READY__ = true;
+
+  // 3) Mettre à jour l'affichage (une seule fois, état fiable)
   if (typeof window.updateCreditsDisplay === 'function') {
     window.updateCreditsDisplay();
   } else if (typeof updateCreditsDisplay === 'function') {
     updateCreditsDisplay();
   }
 
-  // 3) Montrer le badge seulement maintenant
+  // 4) Montrer le badge seulement maintenant
   document.querySelectorAll('.bc-hide-until-premium-ready')
     .forEach(el => el.classList.remove('bc-hide-until-premium-ready'));
 };
