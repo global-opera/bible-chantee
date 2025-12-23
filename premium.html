@@ -1889,58 +1889,8 @@ function maybeShowCreditsPopup(reason) {
     return bcMaybeShowCreditsPopup(reason);
 }
 
-// Credits popup event listeners (close with Escape, click outside, etc.)
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        const overlay = document.getElementById('creditsOverlay');
-        if (overlay && overlay.style.display === 'flex') {
-            // CREDITS.hideCreditsPopup(); // disabled
-        }
-    }
-});
-
-document.addEventListener('click', function(e) {
-    const overlay = document.getElementById('creditsOverlay');
-    if (!overlay || overlay.style.display !== 'flex') return;
-
-    // Click on overlay (outside modal) → close
-    if (e.target === overlay) {
-        // CREDITS.hideCreditsPopup(); // disabled
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Prevent clicks inside modal from bubbling to overlay
-    const observer = new MutationObserver(function() {
-        const modal = document.getElementById('creditsModal');
-        if (modal && !modal.dataset.listenerAdded) {
-            modal.addEventListener('click', function(e) {
-                e.stopPropagation();
-            }, { passive: true });
-            modal.dataset.listenerAdded = 'true';
-        }
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
-});
-
 // Update credits display disabled for premium
 function updateCreditsDisplay() { return; }
-
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', function() {
-    bcLog('📱 Page loaded, initializing credits display...');
-    // // updateCreditsDisplay(); // disabled for premium // ⚠️ Désactivé : appelé par bcBootstrapPremiumStatus() après fetch premium-status
-
-    // Add click event to credits badge
-    const badge = document.getElementById('creditsBadge');
-    if (badge) {
-        badge.style.cursor = 'pointer';
-        badge.addEventListener('click', function() {
-            console.log('💳 Credits badge clicked');
-            // CREDITS.showCreditsPopup(); // disabled
-        });
-    }
-});
 
 // Update when page becomes visible (after returning from payment)
 // Update when window gains focus
@@ -2059,6 +2009,8 @@ if (document.readyState === 'loading') {
 </script>
 </body>
 </html>
+
+
 
 
 
