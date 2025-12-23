@@ -490,7 +490,31 @@ window.trackSignup = function(referrer) {
 
 /* 🧊 Anti-flash iOS: cacher le badge crédits jusqu'à premium-status résolu */
 .bc-hide-until-premium-ready { visibility: hidden !important; }
-</style>
+
+        /* Header links responsive */
+        .header-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 10px 0 5px 0;
+        }
+        .header-links .back-link {
+            margin-left: 0 !important;
+            margin-bottom: 0 !important;
+            padding: 8px 14px;
+            line-height: 1.1;
+        }
+        @media (max-width: 600px) {
+            .header-links {
+                gap: 8px;
+            }
+            .header-links .back-link {
+                padding: 8px 12px;
+                font-size: 0.95em;
+            }
+        }
+        </style>
 <link rel="stylesheet" href="/credits.css">
 <script>
 // Migrate legacy localStorage keys (sungbible -> bc)
@@ -529,10 +553,10 @@ window.trackSignup = function(referrer) {
 
         <header>
             <h1 data-i18n="readerHeading">Bible Chantée</h1>
-            <a id="aboutLink" href="/about.html" class="back-link" style="margin-left: 15px;" data-i18n="readerAbout">À propos</a>
+            <nav class="header-links"><a id="aboutLink" href="/about.html" class="back-link" style="margin-left: 15px;" data-i18n="readerAbout">À propos</a>
             <a id="helpLink" href="/aide.html" class="back-link" style="margin-left: 15px;" data-i18n="readerHelp">Aide</a>
             <a id="newsLink" href="/nouveautes.html" class="back-link" style="margin-left: 15px;" data-i18n="readerNews">Nouveautes</a>
-            <a id="promisesLink" href="/promesses.html" class="back-link" style="margin-left: 15px;" data-i18n="readerPromises">Promesses</a>
+            <a id="promisesLink" href="/promesses.html" class="back-link" style="margin-left: 15px;" data-i18n="readerPromises">Promesses</a></nav>
             <p class="subtitle" data-i18n="readerSubtitle">La Parole de Dieu en musique worship française</p>
             <div class="stats">
                 <span id="available-count">0</span> <span data-i18n="readerBooksAvailable">livres disponibles</span> <span data-i18n="readerOf">sur</span> 66 |
@@ -2186,6 +2210,7 @@ if (document.readyState === 'loading') {
 </script>
 </body>
 </html>
+
 
 
 
