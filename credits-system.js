@@ -8,8 +8,7 @@ class CreditsSystem {
         this.INITIAL_CREDITS = 100;
         this.STORAGE_KEY = 'sungbible_credits';
         this.UNLIMITED_KEY = 'sungbible_unlimited';
-        // ❌ Ne pas auto-init dans le constructor
-        // L'init sera appelé manuellement après le check premium
+        this.init();
     }
 
     init() {
@@ -44,10 +43,6 @@ class CreditsSystem {
 
     setUnlimitedAccess() {
         localStorage.setItem(this.UNLIMITED_KEY, 'true');
-    }
-
-    setUnlimited(value) {
-        localStorage.setItem(this.UNLIMITED_KEY, value ? 'true' : 'false');
     }
 
     canPlay() {
@@ -317,18 +312,17 @@ class CreditsSystem {
     }
 }
 
-// ❌ AUTO-INIT DÉSACTIVÉ : l'init est maintenant fait APRÈS bcBootstrapPremiumStatus()
-// (sinon race condition : le système de crédits démarre avant de connaître le statut premium)
+// Initialiser le système automatiquement
 let creditsSystem;
-// if (typeof window !== 'undefined') {
-//     document.addEventListener('DOMContentLoaded', () => {
-//         creditsSystem = new CreditsSystem();
-//
-//         // Exposer pour le debug en console
-//         window.creditsSystem = creditsSystem;
-//
-//         console.log('🎵 Credits System initialized');
-//         console.log('Credits remaining:', creditsSystem.getCredits());
-//         console.log('Unlimited access:', creditsSystem.hasUnlimitedAccess());
-//     });
-// }
+if (typeof window !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', () => {
+        creditsSystem = new CreditsSystem();
+
+        // Exposer pour le debug en console
+        window.creditsSystem = creditsSystem;
+
+        console.log('🎵 Credits System initialized');
+        console.log('Credits remaining:', creditsSystem.getCredits());
+        console.log('Unlimited access:', creditsSystem.hasUnlimitedAccess());
+    });
+}
