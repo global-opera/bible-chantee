@@ -1,3 +1,9 @@
+/* Anti-flash: ne jamais afficher le badge tant que premium-status pas résolu */
+.bc-hide-until-premium-ready {
+  display: none !important;
+  visibility: hidden !important;
+}
+
 /* Anti-flash: hide until premium check done */
 .bc-hide-until-premium-ready { display: none !important; }
 
@@ -298,4 +304,5 @@
     font-size: 0.85rem;
     color: #888;
 }
+
 

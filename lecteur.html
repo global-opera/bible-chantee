@@ -2133,6 +2133,7 @@ window.bcBootstrapPremiumStatus = async () => {
   }
 
   // 2) Montrer le badge seulement maintenant
+  window.__BC_PREMIUM_READY__ = true;
   document.querySelectorAll('.bc-hide-until-premium-ready')
     .forEach(el => el.classList.remove('bc-hide-until-premium-ready'));
 };
@@ -2147,8 +2148,23 @@ if (document.readyState === 'loading') {
   window.bcBootstrapPremiumStatus();
 }
 </script>
+<script>
+// Anti-flash global guard: bloque les rendus credits avant premium-status resolu
+window.__BC_PREMIUM_READY__ = false;
+
+(function(){
+  const orig = window.updateCreditsDisplay;
+  if (typeof orig !== 'function') return;
+
+  window.updateCreditsDisplay = function(){
+    if (!window.__BC_PREMIUM_READY__) return;
+    return orig.apply(this, arguments);
+  };
+})();
+</script>
 </body>
 </html>
+
 
 
 
