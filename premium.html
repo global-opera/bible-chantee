@@ -1233,7 +1233,7 @@ window.trackSignup = function(referrer) {
             currentChapter = chapter;
 
             // Check credits before playing
-            const check = CREDITS.canPlay(currentBook, chapter);
+            const check = { allowed: true, reason: 'premium' };
 
             if (!check.allowed) {
                 bcMaybeShowCreditsPopup('limit_reached');
@@ -1879,7 +1879,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<script src="/credits.js"></script>
+
 <script>
 // Credits popup: show at most once per session + cooldown
 function bcMaybeShowCreditsPopup(reason = '') {
@@ -2148,6 +2148,8 @@ if (document.readyState === 'loading') {
 </script>
 </body>
 </html>
+
+
 
 
 
