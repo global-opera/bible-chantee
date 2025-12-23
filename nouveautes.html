@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nouveautes - Bible Chantee</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: linear-gradient(135deg, #1a1a4e 0%, #0d0d2b 100%); min-height: 100vh; color: #fff; padding: 20px; }
+    .container { max-width: 700px; margin: 0 auto; }
+    h1 { text-align: center; margin-bottom: 10px; color: #ffce00; }
+    .subtitle { text-align: center; margin-bottom: 30px; opacity: 0.8; }
+    .version { background: rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #ffce00; }
+    .version.current { border-left-color: #00ff88; background: rgba(0,255,136,0.1); }
+    .version-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+    .version-title { color: #ffce00; font-size: 1.2rem; font-weight: 700; }
+    .version.current .version-title { color: #00ff88; }
+    .version-date { font-size: 0.85rem; opacity: 0.7; }
+    .version-badge { background: #00ff88; color: #000; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; }
+    .change-list { list-style: none; }
+    .change-list li { padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start; gap: 10px; }
+    .change-list li:last-child { border: none; }
+    .change-icon { font-size: 1.2rem; }
+    .change-text { flex: 1; }
+    .change-tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; margin-left: 8px; }
+    .tag-new { background: #00ff88; color: #000; }
+    .tag-fix { background: #ff6b6b; color: #fff; }
+    .tag-improve { background: #4ecdc4; color: #000; }
+    .back-link { display: block; text-align: center; margin-top: 30px; color: #ffce00; font-size: 1.1rem; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; }
+    .stats { text-align: center; margin: 30px 0; padding: 20px; background: rgba(255,206,0,0.1); border-radius: 12px; }
+    .stats-title { color: #ffce00; margin-bottom: 10px; }
+    .stats-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+    .stat-item { text-align: center; }
+    .stat-value { font-size: 2rem; font-weight: 700; color: #ffce00; }
+    .stat-label { font-size: 0.85rem; opacity: 0.8; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Nouveautes</h1>
+    <p class="subtitle">Historique des mises a jour de Bible Chantee</p>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stats-title">Progression du projet</div>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-value">1189</div>
+          <div class="stat-label">chapitres FR</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">1189</div>
+          <div class="stat-label">chapitres EN</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">~400</div>
+          <div class="stat-label">chapitres PT</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Version actuelle -->
+    <div class="version current">
+      <div class="version-header">
+        <span class="version-title">Version 2.0</span>
+        <span class="version-badge">ACTUEL</span>
+      </div>
+      <div class="version-date">Decembre 2025</div>
+      <ul class="change-list">
+        <li>
+          <span class="change-icon">🧹</span>
+          <span class="change-text">Bouton "Vider le cache" dans la page Aide<span class="change-tag tag-new">Nouveau</span></span>
+        </li>
+        <li>
+          <span class="change-icon">⭐</span>
+          <span class="change-text">Page Premium separee (experience optimisee)<span class="change-tag tag-new">Nouveau</span></span>
+        </li>
+        <li>
+          <span class="change-icon">📧</span>
+          <span class="change-text">Recuperation Premium par email Stripe<span class="change-tag tag-new">Nouveau</span></span>
+        </li>
+        <li>
+          <span class="change-icon">🎁</span>
+          <span class="change-text">100 ecoutes gratuites (au lieu de 3)<span class="change-tag tag-improve">Ameliore</span></span>
+        </li>
+        <li>
+          <span class="change-icon">🔒</span>
+          <span class="change-text">Paiement Stripe securise direct<span class="change-tag tag-improve">Ameliore</span></span>
+        </li>
+        <li>
+          <span class="change-icon">📱</span>
+          <span class="change-text">Corrections affichage iOS/Safari<span class="change-tag tag-fix">Corrige</span></span>
+        </li>
+        <li>
+          <span class="change-icon">🚀</span>
+          <span class="change-text">Performance amelioree (cache optimise)<span class="change-tag tag-improve">Ameliore</span></span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Version precedente -->
+    <div class="version">
+      <div class="version-header">
+        <span class="version-title">Version 1.5</span>
+      </div>
+      <div class="version-date">Novembre 2025</div>
+      <ul class="change-list">
+        <li>
+          <span class="change-icon">🇫🇷</span>
+          <span class="change-text">Francais 100% complete (1189 chapitres)</span>
+        </li>
+        <li>
+          <span class="change-icon">🇬🇧</span>
+          <span class="change-text">Anglais 100% complete (1189 chapitres)</span>
+        </li>
+        <li>
+          <span class="change-icon">🇧🇷</span>
+          <span class="change-text">Portugais en cours (34%)</span>
+        </li>
+        <li>
+          <span class="change-icon">📲</span>
+          <span class="change-text">Application installable (PWA)</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Version initiale -->
+    <div class="version">
+      <div class="version-header">
+        <span class="version-title">Version 1.0</span>
+      </div>
+      <div class="version-date">Octobre 2025</div>
+      <ul class="change-list">
+        <li>
+          <span class="change-icon">🎵</span>
+          <span class="change-text">Lancement Bible Chantee</span>
+        </li>
+        <li>
+          <span class="change-icon">🎧</span>
+          <span class="change-text">Lecteur audio avec paroles synchronisees</span>
+        </li>
+        <li>
+          <span class="change-icon">🔍</span>
+          <span class="change-text">Recherche par mot-cle</span>
+        </li>
+        <li>
+          <span class="change-icon">💳</span>
+          <span class="change-text">Systeme Premium (0.99 EUR)</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- A venir -->
+    <div class="version" style="border-left-color: #9b59b6; opacity: 0.8;">
+      <div class="version-header">
+        <span class="version-title" style="color: #9b59b6;">A venir</span>
+      </div>
+      <div class="version-date">2026</div>
+      <ul class="change-list">
+        <li>
+          <span class="change-icon">🇪🇸</span>
+          <span class="change-text">Espagnol (en preparation)</span>
+        </li>
+        <li>
+          <span class="change-icon">🇩🇪</span>
+          <span class="change-text">Allemand (planifie)</span>
+        </li>
+        <li>
+          <span class="change-icon">🎤</span>
+          <span class="change-text">Mode karaoke</span>
+        </li>
+        <li>
+          <span class="change-icon">📴</span>
+          <span class="change-text">Mode hors-ligne complet</span>
+        </li>
+      </ul>
+    </div>
+
+    <a href="/" class="back-link">← Retour a Bible Chantee</a>
+  </div>
+</body>
+</html>
