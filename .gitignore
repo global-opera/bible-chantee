@@ -135,3 +135,6 @@ sections-promesses.js.bak*
 # CSV / exports divers
 ########################################
 query-results.csv
+
+*.bak_mp3fix
+
