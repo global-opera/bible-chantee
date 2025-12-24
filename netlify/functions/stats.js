@@ -26,21 +26,35 @@ exports.handler = async (event) => {
                     const subscribeForm = forms.find(f => f.name === 'subscribe');
 
                     if (subscribeForm && subscribeForm.id) {
-                        // Récupérer les submissions
-                        const submissionsResponse = await fetch(
-                            `https://api.netlify.com/api/v1/forms/${subscribeForm.id}/submissions`,
-                            {
-                                headers: {
-                                    'Authorization': `Bearer ${netlifyToken}`,
-                                    'Content-Type': 'application/json'
-                                }
-                            }
-                        );
+                        // Récupérer TOUTES les submissions avec pagination
+                        let allSubmissions = [];
+                        let page = 1;
+                        let hasMore = true;
 
-                        if (submissionsResponse.ok) {
-                            const submissions = await submissionsResponse.json();
-                            signups_total = submissions.length;
+                        while (hasMore) {
+                            const submissionsResponse = await fetch(
+                                `https://api.netlify.com/api/v1/forms/${subscribeForm.id}/submissions?per_page=100&page=${page}`,
+                                {
+                                    headers: {
+                                        'Authorization': `Bearer ${netlifyToken}`,
+                                        'Content-Type': 'application/json'
+                                    }
+                                }
+                            );
+
+                            if (submissionsResponse.ok) {
+                                const submissions = await submissionsResponse.json();
+                                allSubmissions = allSubmissions.concat(submissions);
+
+                                // Si moins de 100 résultats, c'est la dernière page
+                                hasMore = submissions.length === 100;
+                                page++;
+                            } else {
+                                hasMore = false;
+                            }
                         }
+
+                        signups_total = allSubmissions.length;
                     }
                 }
             } catch (netlifyError) {
