@@ -12,3 +12,6 @@
 /premium.html    https://biblechantee.com/premium.html    301
 /premium.html*   https://biblechantee.com/premium.html    301
 /bible.html      https://biblechantee.com/lecteur.html    301
+
+# Page merci
+/thank-you    /thank-you.html    200
