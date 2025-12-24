@@ -11,7 +11,7 @@ const CREDITS = {
     ],
 
     // Configuration
-    DAILY_FREE_PLAYS: 3,
+    DAILY_FREE_PLAYS: 100,
     SIGNUP_BONUS: 10,
     REFERRAL_BONUS: 10,
     STRIPE_LINK: 'https://buy.stripe.com/bJeaEQ8HJfoD3LybIg0Fi01',
@@ -309,6 +309,7 @@ const CREDITS = {
 
 // Exposer globalement
 window.CREDITS = CREDITS;
+
 
 
 
