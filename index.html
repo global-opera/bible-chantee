@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="fr">
 <head>
+  <script>
+    // Redirect to demo on staging (sungbible.world)
+    if (window.location.hostname === 'sungbible.world') {
+      window.location.replace('/demo.html' + window.location.search);
+    }
+  </script>
   <meta charset="utf-8">
   <meta name="robots" content="noindex">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,3 +25,4 @@
 </head>
 <body></body>
 </html>
+
