@@ -1,13 +1,14 @@
-/demo*  /lecteur.html  301
-# Redirections API (URLs propres /api/*)
+# Site DEMO sungbible.world - Redirections
+
+# API
 /api/premium-status  /.netlify/functions/premium-status  200
 /api/premium-claim   /.netlify/functions/premium-claim   200
 /api/stats           /.netlify/functions/stats           200
 /api/get-analytics   /.netlify/functions/get-analytics   200
 
-# Redirection biblechantee.com vers lecteur (pas sungbible.world)
-https://biblechantee.com/ /lecteur.html 302
-https://biblechantee.com/index.html /lecteur.html 302
-https://www.biblechantee.com/ /lecteur.html 302
-https://www.biblechantee.com/index.html /lecteur.html 302
-
+# Rediriger pages "completes" vers biblechantee.com
+/lecteur.html    https://biblechantee.com/lecteur.html    301
+/lecteur.html*   https://biblechantee.com/lecteur.html    301
+/premium.html    https://biblechantee.com/premium.html    301
+/premium.html*   https://biblechantee.com/premium.html    301
+/bible.html      https://biblechantee.com/lecteur.html    301
