@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Bible Chantée</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .stat-card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .stat-card .value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .stat-card .label {
+            color: #666;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .panel {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .panel h2 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            border: none;
+            background: #f5f5f5;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .tab.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .tab:hover {
+            transform: translateY(-2px);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        th {
+            background: #f9f9f9;
+            color: #333;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        td {
+            color: #666;
+        }
+
+        tr:hover {
+            background: #f9f9f9;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .badge.premium {
+            background: #ffd700;
+            color: #333;
+        }
+
+        .badge.free {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .badge.credits {
+            background: #667eea;
+            color: white;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .empty-state .icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            opacity: 0.3;
+        }
+
+        .refresh-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+        .refresh-btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .loading::after {
+            content: '...';
+            animation: dots 1.5s infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
+        }
+
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .note strong {
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Admin Dashboard - Bible Chantée</h1>
+            <p>Statistiques et gestion des utilisateurs</p>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="icon">📧</div>
+                <div class="value" id="totalInscrits">-</div>
+                <div class="label">Inscrits Total</div>
+            </div>
+            <div class="stat-card">
+                <div class="icon">👑</div>
+                <div class="value" id="totalPremium">-</div>
+                <div class="label">Utilisateurs Premium</div>
+            </div>
+            <div class="stat-card">
+                <div class="icon">💎</div>
+                <div class="value" id="total100Credits">-</div>
+                <div class="label">100+ Crédits</div>
+            </div>
+            <div class="stat-card">
+                <div class="icon">🌍</div>
+                <div class="value" id="totalLangues">-</div>
+                <div class="label">Langues</div>
+            </div>
+        </div>
+
+        <!-- Main Panel -->
+        <div class="panel">
+            <h2>📋 Listes des utilisateurs</h2>
+
+            <button class="refresh-btn" onclick="loadData()">🔄 Actualiser</button>
+
+            <div class="tabs">
+                <button class="tab active" onclick="switchTab('all')">Tous les inscrits</button>
+                <button class="tab" onclick="switchTab('premium')">Premium</button>
+                <button class="tab" onclick="switchTab('credits')">100+ Crédits</button>
+            </div>
+
+            <!-- Tab: Tous -->
+            <div id="tab-all" class="tab-content active">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Langue</th>
+                            <th>Date d'inscription</th>
+                            <th>Statut</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-all">
+                        <tr><td colspan="4" class="loading">Chargement des données</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tab: Premium -->
+            <div id="tab-premium" class="tab-content">
+                <div class="empty-state">
+                    <div class="icon">👑</div>
+                    <p><strong>Système localStorage actuel</strong></p>
+                    <p>Les données Premium sont stockées localement sur les navigateurs des utilisateurs.</p>
+                    <p>Migration vers Supabase nécessaire pour afficher ces données.</p>
+                </div>
+            </div>
+
+            <!-- Tab: 100+ Crédits -->
+            <div id="tab-credits" class="tab-content">
+                <div class="empty-state">
+                    <div class="icon">💎</div>
+                    <p><strong>Système localStorage actuel</strong></p>
+                    <p>Les crédits sont stockés localement sur les navigateurs des utilisateurs.</p>
+                    <p>Migration vers Supabase nécessaire pour afficher ces données.</p>
+                </div>
+            </div>
+
+            <div class="note">
+                <strong>⚠️ Note importante :</strong>
+                Actuellement, seuls les emails inscrits via Netlify Forms sont disponibles.
+                Pour afficher les catégories Premium et Crédits, une migration vers Supabase est nécessaire.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let allData = null;
+
+        // Charger les données
+        async function loadData() {
+            try {
+                document.getElementById('table-all').innerHTML = '<tr><td colspan="4" class="loading">Chargement des données</td></tr>';
+
+                // Appeler la Netlify Function pour récupérer les inscrits
+                const response = await fetch('/.netlify/functions/export-subscribers');
+                const data = await response.json();
+
+                if (data.success) {
+                    allData = data;
+                    updateStats();
+                    updateTable();
+                } else {
+                    throw new Error('Erreur lors de la récupération des données');
+                }
+            } catch (error) {
+                console.error('Erreur:', error);
+                document.getElementById('table-all').innerHTML =
+                    '<tr><td colspan="4" style="text-align:center;color:#dc3545;">❌ Erreur de chargement. Réessayez.</td></tr>';
+            }
+        }
+
+        // Mettre à jour les stats
+        function updateStats() {
+            document.getElementById('totalInscrits').textContent = allData.total;
+            document.getElementById('totalPremium').textContent = '0'; // localStorage
+            document.getElementById('total100Credits').textContent = '0'; // localStorage
+
+            const languages = Object.keys(allData.summary.byLanguage);
+            document.getElementById('totalLangues').textContent = languages.length;
+        }
+
+        // Mettre à jour le tableau
+        function updateTable() {
+            const tbody = document.getElementById('table-all');
+            tbody.innerHTML = '';
+
+            allData.subscribers.forEach(sub => {
+                const row = document.createElement('tr');
+
+                const date = new Date(sub.created_at);
+                const dateStr = date.toLocaleDateString('fr-FR') + ' ' + date.toLocaleTimeString('fr-FR');
+
+                row.innerHTML = `
+                    <td>${sub.email}</td>
+                    <td>${sub.language.toUpperCase()}</td>
+                    <td>${dateStr}</td>
+                    <td><span class="badge free">Inscrit</span></td>
+                `;
+
+                tbody.appendChild(row);
+            });
+        }
+
+        // Changer de tab
+        function switchTab(tab) {
+            // Update tabs
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Update content
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.getElementById('tab-' + tab).classList.add('active');
+        }
+
+        // Charger au démarrage
+        loadData();
+    </script>
+</body>
+</html>
