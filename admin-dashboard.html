@@ -282,7 +282,7 @@
                     <thead>
                         <tr>
                             <th>Email</th>
-                            <th>Langue</th>
+                            <th>Crédits</th>
                             <th>Date d'inscription</th>
                             <th>Statut</th>
                         </tr>
@@ -295,28 +295,41 @@
 
             <!-- Tab: Premium -->
             <div id="tab-premium" class="tab-content">
-                <div class="empty-state">
-                    <div class="icon">👑</div>
-                    <p><strong>Système localStorage actuel</strong></p>
-                    <p>Les données Premium sont stockées localement sur les navigateurs des utilisateurs.</p>
-                    <p>Migration vers Supabase nécessaire pour afficher ces données.</p>
-                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Crédits</th>
+                            <th>Date d'inscription</th>
+                            <th>Statut</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-premium">
+                        <tr><td colspan="4" class="loading">Chargement des données</td></tr>
+                    </tbody>
+                </table>
             </div>
 
             <!-- Tab: 100+ Crédits -->
             <div id="tab-credits" class="tab-content">
-                <div class="empty-state">
-                    <div class="icon">💎</div>
-                    <p><strong>Système localStorage actuel</strong></p>
-                    <p>Les crédits sont stockés localement sur les navigateurs des utilisateurs.</p>
-                    <p>Migration vers Supabase nécessaire pour afficher ces données.</p>
-                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Crédits</th>
+                            <th>Date d'inscription</th>
+                            <th>Statut</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-credits">
+                        <tr><td colspan="4" class="loading">Chargement des données</td></tr>
+                    </tbody>
+                </table>
             </div>
 
             <div class="note">
-                <strong>⚠️ Note importante :</strong>
-                Actuellement, seuls les emails inscrits via Netlify Forms sont disponibles.
-                Pour afficher les catégories Premium et Crédits, une migration vers Supabase est nécessaire.
+                <strong>✅ Données en direct depuis Supabase !</strong>
+                Les statistiques sont synchronisées avec la base de données. Les 13 premiers inscrits ont reçu 100 crédits et le statut "Early Adopter".
             </div>
         </div>
     </div>
@@ -324,55 +337,73 @@
     <script>
         let allData = null;
 
-        // Charger les données
+        // Charger les données depuis Supabase
         async function loadData() {
             try {
-                document.getElementById('table-all').innerHTML = '<tr><td colspan="4" class="loading">Chargement des données</td></tr>';
+                document.getElementById('table-all').innerHTML = '<tr><td colspan="5" class="loading">Chargement des données</td></tr>';
 
-                // Appeler la Netlify Function pour récupérer les inscrits
-                const response = await fetch('/.netlify/functions/export-subscribers');
+                // Appeler la Netlify Function pour récupérer les données Supabase
+                const response = await fetch('/.netlify/functions/export-supabase-stats');
                 const data = await response.json();
 
                 if (data.success) {
                     allData = data;
                     updateStats();
-                    updateTable();
+                    updateAllTables();
                 } else {
                     throw new Error('Erreur lors de la récupération des données');
                 }
             } catch (error) {
                 console.error('Erreur:', error);
                 document.getElementById('table-all').innerHTML =
-                    '<tr><td colspan="4" style="text-align:center;color:#dc3545;">❌ Erreur de chargement. Réessayez.</td></tr>';
+                    '<tr><td colspan="5" style="text-align:center;color:#dc3545;">❌ Erreur de chargement. Réessayez.</td></tr>';
             }
         }
 
         // Mettre à jour les stats
         function updateStats() {
-            document.getElementById('totalInscrits').textContent = allData.total;
-            document.getElementById('totalPremium').textContent = '0'; // localStorage
-            document.getElementById('total100Credits').textContent = '0'; // localStorage
+            document.getElementById('totalInscrits').textContent = allData.stats.total;
+            document.getElementById('totalPremium').textContent = allData.stats.premium;
+            document.getElementById('total100Credits').textContent = allData.stats.with100Credits;
 
-            const languages = Object.keys(allData.summary.byLanguage);
-            document.getElementById('totalLangues').textContent = languages.length;
+            // Compter les langues uniques
+            const languages = new Set(allData.allUsers.map(u => u.preferredLanguage || 'fr'));
+            document.getElementById('totalLangues').textContent = languages.size;
         }
 
-        // Mettre à jour le tableau
-        function updateTable() {
-            const tbody = document.getElementById('table-all');
+        // Mettre à jour tous les tableaux
+        function updateAllTables() {
+            updateTable('all', allData.allUsers);
+            updateTable('premium', allData.lists.premium);
+            updateTable('credits', allData.lists.with100Credits);
+        }
+
+        // Mettre à jour un tableau spécifique
+        function updateTable(tabName, users) {
+            const tbody = document.getElementById('table-' + tabName);
             tbody.innerHTML = '';
 
-            allData.subscribers.forEach(sub => {
-                const row = document.createElement('tr');
+            if (users.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" class="empty-state"><div class="icon">📭</div><p>Aucun utilisateur dans cette catégorie</p></td></tr>';
+                return;
+            }
 
-                const date = new Date(sub.created_at);
+            users.forEach(user => {
+                const row = document.createElement('tr');
+                const date = new Date(user.createdAt);
                 const dateStr = date.toLocaleDateString('fr-FR') + ' ' + date.toLocaleTimeString('fr-FR');
 
+                const statusBadge = user.isPremium
+                    ? '<span class="badge premium">👑 Premium</span>'
+                    : user.earlyAdopter
+                    ? '<span class="badge credits">🌟 Early Adopter</span>'
+                    : '<span class="badge free">Gratuit</span>';
+
                 row.innerHTML = `
-                    <td>${sub.email}</td>
-                    <td>${sub.language.toUpperCase()}</td>
+                    <td>${user.email}</td>
+                    <td><span class="badge credits">${user.credits} crédits</span></td>
                     <td>${dateStr}</td>
-                    <td><span class="badge free">Inscrit</span></td>
+                    <td>${statusBadge}</td>
                 `;
 
                 tbody.appendChild(row);
