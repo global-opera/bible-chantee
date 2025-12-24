@@ -1,0 +1,95 @@
+{
+  "success": true,
+  "total": 13,
+  "totalSubmissions": 40,
+  "formName": "subscribe",
+  "formId": "6945776461320e0009aa7e4c",
+  "subscribers": [
+    {
+      "email": "yves.glardon@swissonline.ch",
+      "language": "fr",
+      "created_at": "2025-12-22T19:11:50.374Z",
+      "id": "694997f665c48ef29c1daa3a"
+    },
+    {
+      "email": "scassani@protonmail.com",
+      "language": "pt",
+      "created_at": "2025-12-21T18:47:52.582Z",
+      "id": "694840d8631132e1890d3f4c"
+    },
+    {
+      "email": "riviervaudoise@gmail.com",
+      "language": "pt",
+      "created_at": "2025-12-21T18:47:01.148Z",
+      "id": "694840a5fe1762e6cd23693c"
+    },
+    {
+      "email": "scassani@gmail.com",
+      "language": "pt",
+      "created_at": "2025-12-21T18:43:57.724Z",
+      "id": "69483fed799d1fe09279b76c"
+    },
+    {
+      "email": "duc.maryco@gmail.com",
+      "language": "fr",
+      "created_at": "2025-12-21T17:35:26.034Z",
+      "id": "69482fde4b5caac087671986"
+    },
+    {
+      "email": "vohgirl@yahoo.fr",
+      "language": "fr",
+      "created_at": "2025-12-21T15:42:58.616Z",
+      "id": "694815824b5caa983a671988"
+    },
+    {
+      "email": "yanin.sergey69@gmail.com",
+      "language": "fr",
+      "created_at": "2025-12-21T11:52:18.762Z",
+      "id": "6947df72ec4a634d75692271"
+    },
+    {
+      "email": "stefan.fuchser@gmail.com",
+      "language": "fr",
+      "created_at": "2025-12-20T10:39:54.933Z",
+      "id": "69467cfa544206f4c43c192a"
+    },
+    {
+      "email": "info@biblechantee.com",
+      "language": "fr",
+      "created_at": "2025-12-20T01:25:55.201Z",
+      "id": "6945fb23e87004434a07e526"
+    },
+    {
+      "email": "test@example.com",
+      "language": "FR",
+      "created_at": "2025-12-20T00:58:03.880Z",
+      "id": "6945f49ba8e56f38d4dd63de"
+    },
+    {
+      "email": "s.cassani@dao-express.ch",
+      "language": "pt",
+      "created_at": "2025-12-19T22:39:18.291Z",
+      "id": "6945d416335053096af30cf5"
+    },
+    {
+      "email": "etiennecassani2007@gmail.com",
+      "language": "fr",
+      "created_at": "2025-12-19T22:22:05.695Z",
+      "id": "6945d00d9ce7eb04898fe9d8"
+    },
+    {
+      "email": "rivieravaudoise@gmail.com",
+      "language": "fr",
+      "created_at": "2025-12-19T21:54:04.560Z",
+      "id": "6945c97c4a03dc35243c2a15"
+    }
+  ],
+  "summary": {
+    "total": 13,
+    "byLanguage": {
+      "fr": 8,
+      "pt": 4,
+      "FR": 1
+    }
+  }
+}
