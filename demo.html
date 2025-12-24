@@ -272,6 +272,7 @@ select { background: #1a1a2e; color: #ffffff; }
             <button class="lang-btn" onclick="setLang('PT')">BR Português</button>
             <button class="lang-btn" onclick="setLang('EN')">GB English</button>
             <button class="lang-btn" onclick="setLang('ES')">ES Español</button>
+            <button class="lang-btn" onclick="setLang('DE')">DE Deutsch</button>
         </div>
 
         <div class="stats">
@@ -324,9 +325,10 @@ select { background: #1a1a2e; color: #ffffff; }
                         <option value="en">English</option>
                         <option value="pt">Português</option>
                         <option value="es">Español</option>
+                        <option value="de">Deutsch</option>
                     </optgroup>
                     <optgroup id="optgroup-soon" label="Bientôt">
-                        <option value="de" disabled>Deutsch</option>
+                        
                         <option value="it" disabled>Italiano</option>
                     </optgroup>
                 </select><br>
@@ -456,6 +458,29 @@ select { background: #1a1a2e; color: #ffffff; }
                     { id: "19_PSA_23_ES", title: "Salmo 23", desc: "El Señor es mi pastor" },
                     { id: "19_PSA_91_ES", title: "Salmo 91", desc: "El que habita al abrigo" },
                     { id: "19_PSA_150_ES", title: "Salmo 150", desc: "¡Aleluya!" }
+                                ]
+                        },
+            DE: {
+                title: "Gesungene Bibel", subtitle: "Gottes Wort in Musik",
+                statChapters: "Kapitel", statBooks: "Bücher", statLanguages: "Geplante Sprachen", statHours: "Stunden pro Sprache",
+                titleListen: "Hörproben",
+                formTitle: "Erhalten Sie die komplette Gesungene Bibel", formSubtitle: "Abonnieren Sie, um benachrichtigt zu werden und Zugang zu allen 1189 Kapiteln zu erhalten",
+                emailPlaceholder: "Ihre E-Mail", optChoose: "Sprache wählen", optAvailable: "✓ Verfügbar", optSoon: "Demnächst",
+                btnSubscribe: "Abonnieren",
+                donationTitle: "Unterstützen Sie das Projekt",
+                donationText: "Jede Spende finanziert <span class='highlight'>neue Kapitel</span> und <span class='highlight'>neue Sprachen</span>.",
+                donationMission: "10% der Einnahmen gehen an Missionen.",
+                btnDonate: "Spenden",
+                titleProgress: "Projektfortschritt - 12 Sprachen",
+                titleStreaming: "Demnächst verfügbar auf",
+                footerText: "10% der Einnahmen gehen an Missionen",
+                btnLyrics: "Text", btnHide: "Ausblenden", lyricsNA: "Text demnächst verfügbar",
+                statusComplete: "Vollständig", statusProgress: "In Arbeit", statusPlanned: "Geplant",
+                tracks: [
+                    { id: "01_GEN_01_DE", title: "1. Mose 1", desc: "Die Schöpfung" },
+                    { id: "19_PSA_23_DE", title: "Psalm 23", desc: "Der Herr ist mein Hirte" },
+                    { id: "19_PSA_91_DE", title: "Psalm 91", desc: "Göttlicher Schutz" },
+                    { id: "19_PSA_150_DE", title: "Psalm 150", desc: "Lobet den Herrn" }
                 ]
             }
         };
@@ -465,7 +490,7 @@ select { background: #1a1a2e; color: #ffffff; }
             { name: "English", mp3: 1189, total: 1189, status: "complete" },
             { name: "Português", mp3: 1189, total: 1189, status: "complete" },
             { name: "Español", mp3: 1189, total: 1189, status: "complete" },
-            { name: "Deutsch", mp3: 0, total: 1189, status: "planned" },
+            { name: "Deutsch", mp3: 413, total: 1189, status: "progress" },
             { name: "Italiano", mp3: 0, total: 1189, status: "planned" },
             { name: "العربية", mp3: 0, total: 1189, status: "planned" },
             { name: "Русский", mp3: 0, total: 1189, status: "planned" },
@@ -749,6 +774,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body>
 </html>
+
+
+
 
 
 
