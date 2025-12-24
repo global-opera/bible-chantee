@@ -518,6 +518,13 @@ select { background: #1a1a2e; color: #ffffff; }
             currentLang = L;
             localStorage.setItem('bc_lang', L);
 
+            // Synchroniser le select du formulaire avec la langue active
+            const langSelect = document.getElementById('lang-select');
+            if (langSelect) {
+                const langMap = { 'FR': 'fr', 'PT': 'pt', 'EN': 'en', 'ES': 'es', 'DE': 'de' };
+                if (langMap[L]) langSelect.value = langMap[L];
+            }
+
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
                 if (btn.textContent.includes(L) || (L === 'PT' && btn.textContent.includes('BR'))) {
@@ -850,5 +857,6 @@ function openTwint() {
 
 
 <!-- FORCE-REDEPLOY 2025-12-24T16:42:04 -->
+
 
 
