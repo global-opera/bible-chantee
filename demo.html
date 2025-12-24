@@ -342,6 +342,7 @@ select { background: #1a1a2e; color: #ffffff; }
             <p><strong id="donation-mission">10% des revenus reversés aux missions.</strong></p>
             <a href="/crowdfunding" class="cta-btn" id="btn-donate">Faire un don</a>
             <button class="cta-btn secondary" id="btn-pix" style="display:none;" onclick="copyPix()"></button>
+            <button class="cta-btn secondary" id="btn-twint" style="display:none;" onclick="openTwint()">Twint</button>
         </div>
 
         <div class="progress-section">
@@ -516,6 +517,9 @@ select { background: #1a1a2e; color: #ffffff; }
 
             const pix = document.getElementById('btn-pix');
             if (pix) { pix.style.display = L === 'PT' ? 'inline-block' : 'none'; pix.textContent = T[L].btnPix; }
+
+            const twint = document.getElementById('btn-twint');
+            if (twint) { twint.style.display = (L === 'FR' || L === 'DE') ? 'inline-block' : 'none'; }
 
             updatePage();
 
@@ -801,9 +805,14 @@ document.getElementById('clearCacheBtn').addEventListener('click', async () => {
         btn.disabled = false;
     }
 });
+function openTwint() {
+    window.open('https://pay.raisenow.io/ksptl', '_blank');
+}
 </script>
 </body>
 </html>
+
+
 
 
 
