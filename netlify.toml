@@ -11,3 +11,9 @@
   status = 302
   force = true
   conditions = {Host = ["biblechantee.com", "www.biblechantee.com"]}
+
+[[redirects]]
+  from = "/thank-you*"
+  to = "/thank-you.html"
+  status = 301
+  force = true
