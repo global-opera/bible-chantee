@@ -59,8 +59,9 @@
     status = 302
     force = true
 
+
 [[redirects]]
-  from = "/thank-you"
+  from = "/thank-you*"
   to = "/thank-you.html"
   status = 301
   force = true
