@@ -272,6 +272,8 @@ select { background: #1a1a2e; color: #ffffff; }
             <button class="lang-btn" onclick="setLang('PT')">BR Português</button>
             <button class="lang-btn" onclick="setLang('EN')">GB English</button>
             <button class="lang-btn" onclick="setLang('ES')">ES Español</button>
+            <button class="lang-btn" onclick="setLang('DE')">DE Deutsch</button>
+            <button id="clearCacheBtn" style="background:#e74c3c;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:12px;" onclick="clearCache()">Vider cache</button>
         </div>
 
         <div class="stats">
@@ -302,9 +304,9 @@ select { background: #1a1a2e; color: #ffffff; }
 <div style="max-width:600px;margin:30px auto;padding:20px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px;border:2px solid #FFD700;text-align:center;">
   <button onclick="toggleShare()" style="display:inline-flex;align-items:center;gap:8px;padding:15px 30px;background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a1a2e;border:none;border-radius:8px;font-weight:700;font-size:16px;cursor:pointer;">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
-    PARTAGER (+10 credits)
+    PARTAGER
   </button>
-  <p style="color:#FFD700;margin-top:10px;font-size:14px;">Partagez et gagnez 10 credits par inscription!</p>
+  <p style="color:#FFD700;margin-top:10px;font-size:14px;">Partagez la Bible Chantee!</p>
   <div id="sharePanel" style="display:none;margin-top:15px;">
     <input type="text" id="shareLink" readonly onclick="this.select()" style="width:100%;padding:10px;background:#0a0a1a;border:1px solid #FFD700;border-radius:6px;color:#fff;font-family:monospace;margin-bottom:10px;">
     <button onclick="copyLink()" style="padding:10px 20px;background:#4CAF50;color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer;margin-right:10px;">Copier</button>
@@ -314,7 +316,7 @@ select { background: #1a1a2e; color: #ffffff; }
 <div id="shareToast" style="position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);background:#4CAF50;color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;opacity:0;transition:all 0.3s;z-index:9999;"></div>
 <h2 id="form-title">Recevez la Bible Chantée complète</h2>
             <p id="form-subtitle">Inscrivez-vous pour être notifié et accéder aux 1189 chapitres</p>
-            <form action="/thank-you" method="POST" name="subscribe">
+            <form action="/thank-you" method="POST" name="subscribe" data-netlify="true" netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="subscribe">
                 <input type="email" name="email" id="email-input" placeholder="Votre email" required><br>
                 <select name="language" id="lang-select" required>
@@ -324,9 +326,10 @@ select { background: #1a1a2e; color: #ffffff; }
                         <option value="en">English</option>
                         <option value="pt">Português</option>
                         <option value="es">Español</option>
+                        <option value="de">Deutsch</option>
                     </optgroup>
                     <optgroup id="optgroup-soon" label="Bientôt">
-                        <option value="de" disabled>Deutsch</option>
+                        
                         <option value="it" disabled>Italiano</option>
                     </optgroup>
                 </select><br>
@@ -339,7 +342,8 @@ select { background: #1a1a2e; color: #ffffff; }
             <p id="donation-text">Chaque don finance la <span class="highlight">génération de nouveaux chapitres</span> et l'<span class="highlight">ajout de nouvelles langues</span>.</p>
             <p><strong id="donation-mission">10% des revenus reversés aux missions.</strong></p>
             <a href="/crowdfunding" class="cta-btn" id="btn-donate">Faire un don</a>
-            <button class="cta-btn secondary" id="btn-pix" style="display:none;" onclick="copyPix()">Payer avec Pix</button>
+            
+            
         </div>
 
         <div class="progress-section">
@@ -376,7 +380,7 @@ select { background: #1a1a2e; color: #ffffff; }
                 donationTitle: "Soutenez le projet",
                 donationText: "Chaque don finance la <span class='highlight'>génération de nouveaux chapitres</span> et l'<span class='highlight'>ajout de nouvelles langues</span>.",
                 donationMission: "10% des revenus reversés aux missions.",
-                btnDonate: "Faire un don", btnPix: "Payer avec Pix", pixCopied: "Clé Pix copiée: scassani@jim.com",
+                btnDonate: "Faire un don",
                 titleProgress: "Avancement du projet - 12 langues",
                 titleStreaming: "Bientôt disponible sur",
                 footerText: "10% des revenus reversés aux missions",
@@ -422,7 +426,7 @@ select { background: #1a1a2e; color: #ffffff; }
                 donationTitle: "Support the project",
                 donationText: "Each donation funds <span class='highlight'>new chapter generation</span> and <span class='highlight'>new languages</span>.",
                 donationMission: "10% of revenue goes to missions.",
-                btnDonate: "Donate", btnPix: "Pay with Pix", pixCopied: "Pix key copied: scassani@jim.com",
+                btnDonate: "Donate",
                 titleProgress: "Project progress - 12 languages",
                 titleStreaming: "Coming soon on",
                 footerText: "10% of revenue goes to missions",
@@ -456,6 +460,29 @@ select { background: #1a1a2e; color: #ffffff; }
                     { id: "19_PSA_23_ES", title: "Salmo 23", desc: "El Señor es mi pastor" },
                     { id: "19_PSA_91_ES", title: "Salmo 91", desc: "El que habita al abrigo" },
                     { id: "19_PSA_150_ES", title: "Salmo 150", desc: "¡Aleluya!" }
+                                ]
+                        },
+            DE: {
+                title: "Gesungene Bibel", subtitle: "Gottes Wort in Musik",
+                statChapters: "Kapitel", statBooks: "Bücher", statLanguages: "Geplante Sprachen", statHours: "Stunden pro Sprache",
+                titleListen: "Hörproben",
+                formTitle: "Erhalten Sie die komplette Gesungene Bibel", formSubtitle: "Abonnieren Sie, um benachrichtigt zu werden und Zugang zu allen 1189 Kapiteln zu erhalten",
+                emailPlaceholder: "Ihre E-Mail", optChoose: "Sprache wählen", optAvailable: "✓ Verfügbar", optSoon: "Demnächst",
+                btnSubscribe: "Abonnieren",
+                donationTitle: "Unterstützen Sie das Projekt",
+                donationText: "Jede Spende finanziert <span class='highlight'>neue Kapitel</span> und <span class='highlight'>neue Sprachen</span>.",
+                donationMission: "10% der Einnahmen gehen an Missionen.",
+                btnDonate: "Spenden",
+                titleProgress: "Projektfortschritt - 12 Sprachen",
+                titleStreaming: "Demnächst verfügbar auf",
+                footerText: "10% der Einnahmen gehen an Missionen",
+                btnLyrics: "Text", btnHide: "Ausblenden", lyricsNA: "Text demnächst verfügbar",
+                statusComplete: "Vollständig", statusProgress: "In Arbeit", statusPlanned: "Geplant",
+                tracks: [
+                    { id: "01_GEN_01_DE", title: "1. Mose 1", desc: "Die Schöpfung" },
+                    { id: "19_PSA_23_DE", title: "Psalm 23", desc: "Der Herr ist mein Hirte" },
+                    { id: "19_PSA_91_DE", title: "Psalm 91", desc: "Göttlicher Schutz" },
+                    { id: "19_PSA_150_DE", title: "Psalm 150", desc: "Lobet den Herrn" }
                 ]
             }
         };
@@ -465,7 +492,7 @@ select { background: #1a1a2e; color: #ffffff; }
             { name: "English", mp3: 1189, total: 1189, status: "complete" },
             { name: "Português", mp3: 1189, total: 1189, status: "complete" },
             { name: "Español", mp3: 1189, total: 1189, status: "complete" },
-            { name: "Deutsch", mp3: 0, total: 1189, status: "planned" },
+            { name: "Deutsch", mp3: 413, total: 1189, status: "progress" },
             { name: "Italiano", mp3: 0, total: 1189, status: "planned" },
             { name: "العربية", mp3: 0, total: 1189, status: "planned" },
             { name: "Русский", mp3: 0, total: 1189, status: "planned" },
@@ -491,6 +518,9 @@ select { background: #1a1a2e; color: #ffffff; }
 
             const pix = document.getElementById('btn-pix');
             if (pix) { pix.style.display = L === 'PT' ? 'inline-block' : 'none'; pix.textContent = T[L].btnPix; }
+
+            const twint = document.getElementById('btn-twint');
+            if (twint) { twint.style.display = (L === 'FR' || L === 'DE') ? 'inline-block' : 'none'; }
 
             updatePage();
 
@@ -554,7 +584,18 @@ select { background: #1a1a2e; color: #ffffff; }
             `).join('');
         }
 
-        function toggleLyrics(index) {
+        async function ensureLyricsLoaded(lang) {
+            const L = (lang || 'FR').toUpperCase();
+            const storeName = 'chapterLyrics' + L;
+            if (window[storeName]) return;
+            
+            const url = /lyrics/ + L + .json?v=1;
+            const res = await fetch(url, { cache: 'no-store' });
+            if (!res.ok) throw new Error('Lyrics not found: ' + url);
+            window[storeName] = await res.json();
+        }
+
+        async function toggleLyrics(index) {
             const t = translations[currentLang];
             const container = document.getElementById(`lyrics-${index}`);
             const btn = container.parentElement.querySelector('.lyrics-btn');
@@ -568,19 +609,20 @@ select { background: #1a1a2e; color: #ffffff; }
             const track = t.tracks[index];
             const parts = track.id.split('_');
             const bookNum = parts[0];
-            const chap = parseInt(parts[2]);
-            
+            const chap = parseInt(parts[2]);            // Lazy-load lyrics
+            try { await ensureLyricsLoaded(currentLang); } catch(e) { console.warn(e); }
+
+            const storeName = 'chapterLyrics' + currentLang;
+            const store = window[storeName];
+            const frLegacy = (currentLang === 'FR') ? window.chapterLyrics : null;
+
             let lyrics = '';
-            if (currentLang === 'FR' && window.chapterLyrics?.[bookNum]?.[chap]) {
-                lyrics = window.chapterLyrics[bookNum][chap];
-            } else if (currentLang === 'PT' && window.chapterLyricsPT?.[bookNum]?.[chap]) {
-                lyrics = window.chapterLyricsPT[bookNum][chap];
-            } else if (currentLang === 'EN' && window.chapterLyricsEN?.[bookNum]?.[chap]) {
-                lyrics = window.chapterLyricsEN[bookNum][chap];
-            } else if (currentLang === 'ES' && window.chapterLyricsES?.[bookNum]?.[chap]) {
-                lyrics = window.chapterLyricsES[bookNum][chap];
+            if (store?.[bookNum]?.[chap]) {
+                lyrics = store[bookNum][chap];
+            } else if (frLegacy?.[bookNum]?.[chap]) {
+                lyrics = frLegacy[bookNum][chap];
             }
-            
+
             if (lyrics) {
                 lyrics = lyrics.replace(/\[TITLE\][\s\S]*?\[LYRICS\]\s*/i, '');
                 lyrics = lyrics.replace(/\[TITRE\][\s\S]*?\[LYRICS\]\s*/i, '');
@@ -630,8 +672,9 @@ function getUid(){let u=localStorage.getItem("bc_uid");if(!u){u="u_"+Date.now().
 function getShareUrl(){return"https://sungbible.world/demo.html?ref="+getUid()}
 function toggleShare(){const p=document.getElementById("sharePanel");if(p.style.display==="none"||p.style.display===""){p.style.display="block";document.getElementById("shareLink").value=getShareUrl()}else{p.style.display="none"}}
 function toast(m){const t=document.getElementById("shareToast");t.textContent=m;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2500)}
-function copyLink(){const i=document.getElementById("shareLink");i.select();navigator.clipboard.writeText(i.value).then(()=>toast("Lien copie!")).catch(()=>{document.execCommand("copy");toast("Lien copie!")})}
-function shareWA(){window.open("https://wa.me/?text="+encodeURIComponent("Decouvre la Bible chantee! "+getShareUrl()),"_blank")}
+function copyLink(){trackShare('copy', 'demo');const i=document.getElementById("shareLink");i.select();navigator.clipboard.writeText(i.value).then(()=>toast("Lien copie!")).catch(()=>{document.execCommand("copy");toast("Lien copie!")})}
+function shareWA(){trackShare('whatsapp', 'demo');window.open("https://wa.me/?text="+encodeURIComponent("Decouvre la Bible chantee! "+getShareUrl()),"_blank")}
+async function clearCache(){const btn=document.getElementById('clearCacheBtn');btn.disabled=true;btn.textContent='Nettoyage...';try{const premium=localStorage.getItem('bc_unlimited');const premiumCookie=document.cookie.includes('bc_premium');localStorage.clear();if(premium==='true'||premiumCookie){localStorage.setItem('bc_unlimited','true');}sessionStorage.clear();if('serviceWorker' in navigator){const regs=await navigator.serviceWorker.getRegistrations();for(const reg of regs){await reg.unregister();}}if('caches' in window){const names=await caches.keys();for(const name of names){await caches.delete(name);}}btn.textContent='Cache vide!';setTimeout(()=>{location.href='/?nocache='+Date.now();},1000);}catch(err){btn.textContent='Erreur';btn.disabled=false;}}
 (function(){const r=new URLSearchParams(location.search).get("ref");if(r&&r!==getUid()&&!localStorage.getItem("bc_ref"))localStorage.setItem("bc_ref",r)})();
 </script>
 
@@ -747,8 +790,40 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+<script>
+
+function openTwint() {
+    window.open('https://pay.raisenow.io/ksptl', '_blank');
+}
+</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
