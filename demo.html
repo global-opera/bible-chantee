@@ -517,7 +517,7 @@ select { background: #1a1a2e; color: #ffffff; }
             });
 
             const pix = document.getElementById('btn-pix');
-            if (pix) { pix.style.display = L === 'PT' ? 'inline-block' : 'none'; pix.textContent = T[L].btnPix; }
+            if (pix) { pix.style.display = L === 'PT' ? 'inline-block' : 'none'; pix.textContent = translations[L]?.btnPix || ''; }
 
             const twint = document.getElementById('btn-twint');
             if (twint) { twint.style.display = (L === 'FR' || L === 'DE') ? 'inline-block' : 'none'; }
@@ -589,7 +589,7 @@ select { background: #1a1a2e; color: #ffffff; }
             const storeName = 'chapterLyrics' + L;
             if (window[storeName]) return;
             
-            const url = /lyrics/ + L + .json?v=1;
+            const url = `/lyrics/${L}.json?v=1`;
             const res = await fetch(url, { cache: 'no-store' });
             if (!res.ok) throw new Error('Lyrics not found: ' + url);
             window[storeName] = await res.json();
@@ -798,6 +798,7 @@ function openTwint() {
 </script>
 </body>
 </html>
+
 
 
 
