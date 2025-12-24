@@ -1343,6 +1343,37 @@ const translations = {
     recoverVerifying: "Überprüfung läuft...",
     recoverRedirecting: "Weiterleitung läuft...",
     recoverError: "Verbindungsfehler. Versuchen Sie es erneut.",
+
+    // About Page (about.html)
+    navHome: "Zurück",
+    aboutPageTitle: "Über uns - Gesungene Bibel",
+    aboutTagline: "Das Wort Gottes in Musik",
+    aboutProjectTitle: "Über das Projekt",
+    aboutProjectDesc1: "<strong>Gesungene Bibel</strong> ist ein spirituelles Musikprojekt, das darauf abzielt, die <strong>1189 Kapitel der Bibel</strong> in <strong>12 Sprachen</strong> zu vertonen.",
+    aboutProjectDesc2: "Alle Kompositionen sind original. Die Texte basieren auf biblischen Texten aus dem öffentlichen Bereich.",
+    aboutListenTitle: "Hören Sie Gesungene Bibel (bald verfügbar)",
+    aboutListenDesc: "Finden Sie unsere Musik auf Ihren bevorzugten Streaming-Plattformen:",
+    aboutUsageTitle: "Genehmigte Nutzung",
+    aboutUsageDesc: "Sie dürfen diese Musik frei verwenden in:",
+    aboutUsageSpiritual: "Spirituellem Rahmen",
+    aboutUsageSpiritualDetail: "(Kirchen, Gottesdienste, Meditationen)",
+    aboutUsageEducational: "Bildungsrahmen",
+    aboutUsageEducationalDetail: "(Kurse, Bibelstudien)",
+    aboutUsagePersonal: "Persönlichem Rahmen",
+    aboutUsagePersonalDetail: "(nicht-kommerzielle Videos)",
+    aboutUsageCondition: "Ohne Angst vor Blockierung, solange die Nutzung <strong>nicht-kommerziell</strong> bleibt und den Bedingungen der Plattformen entspricht.",
+    aboutTranslationsTitle: "Verwendete Bibelübersetzungen",
+    aboutTranslationsDesc: "Die Lieder basieren auf den folgenden Bibelübersetzungen:",
+    aboutTranslationFR: "<strong>FR (Französisch):</strong> Louis Segond (LSG)",
+    aboutTranslationEN: "<strong>EN (Englisch):</strong> King James Version (KJV)",
+    aboutTranslationPT: "<strong>PT (Portugiesisch):</strong> Almeida Revista e Corrigida (ARC)",
+    aboutTranslationES: "<strong>ES (Spanisch):</strong> Reina Valera (RVR)",
+    aboutTranslationDE: "<strong>DE (Deutsch):</strong> Luther Bibel (LUT)",
+    aboutTranslationIT: "<strong>IT (Italienisch):</strong> Nuova Riveduta (NR)",
+    aboutTranslationsNote: "Diese klassischen und anerkannten Übersetzungen garantieren Treue zu den biblischen Originaltexten.",
+    contactTitle: "Kontakt",
+    aboutContactEmail: "E-Mail:",
+    aboutFooterCopyright: "© 2024-2025 Gesungene Bibel - Alle Rechte vorbehalten",
     },
 
   IT: {
@@ -2393,6 +2424,16 @@ Object.keys(translations).forEach(lang => {
     t.aboutUsagePersonal = "Personnel";
     t.aboutUsagePersonalDetail = "(vidéos non commerciales)";
     t.aboutUsageCondition = "Sans crainte de blocage, tant que l'usage reste non commercial et conforme aux conditions des plateformes.";
+    t.aboutTranslationsTitle = "Traductions bibliques utilisées";
+    t.aboutTranslationsDesc = "Les chansons sont basées sur les traductions bibliques suivantes :";
+    t.aboutTranslationFR = "<strong>FR (Français) :</strong> Louis Segond (LSG)";
+    t.aboutTranslationEN = "<strong>EN (English) :</strong> King James Version (KJV)";
+    t.aboutTranslationPT = "<strong>PT (Português) :</strong> Almeida Revista e Corrigida (ARC)";
+    t.aboutTranslationES = "<strong>ES (Español) :</strong> Reina Valera (RVR)";
+    t.aboutTranslationDE = "<strong>DE (Deutsch) :</strong> Luther Bibel (LUT)";
+    t.aboutTranslationIT = "<strong>IT (Italiano) :</strong> Nuova Riveduta (NR)";
+    t.aboutTranslationsNote = "Ces traductions classiques et reconnues garantissent la fidélité aux textes bibliques originaux.";
+    t.contactTitle = "Contact";
     t.aboutContactEmail = "Email :";
     t.aboutContactWebsite = "Site web :";
     t.aboutFooterCopyright = "© 2024-2025 Bible Chantée - Tous droits réservés";
@@ -2419,6 +2460,16 @@ Object.keys(translations).forEach(lang => {
     t.aboutUsagePersonal = "Personal";
     t.aboutUsagePersonalDetail = "(non-commercial videos)";
     t.aboutUsageCondition = "Without fear of blocking, as long as the use remains non-commercial and complies with platform conditions.";
+    t.aboutTranslationsTitle = "Biblical translations used";
+    t.aboutTranslationsDesc = "The songs are based on the following biblical translations:";
+    t.aboutTranslationFR = "<strong>FR (French):</strong> Louis Segond (LSG)";
+    t.aboutTranslationEN = "<strong>EN (English):</strong> King James Version (KJV)";
+    t.aboutTranslationPT = "<strong>PT (Portuguese):</strong> Almeida Revista e Corrigida (ARC)";
+    t.aboutTranslationES = "<strong>ES (Spanish):</strong> Reina Valera (RVR)";
+    t.aboutTranslationDE = "<strong>DE (German):</strong> Luther Bible (LUT)";
+    t.aboutTranslationIT = "<strong>IT (Italian):</strong> Nuova Riveduta (NR)";
+    t.aboutTranslationsNote = "These classic and recognized translations guarantee faithfulness to the original biblical texts.";
+    t.contactTitle = "Contact";
     t.aboutContactEmail = "Email:";
     t.aboutContactWebsite = "Website:";
     t.aboutFooterCopyright = "© 2024-2025 Sung Bible - All rights reserved";
@@ -2445,6 +2496,16 @@ Object.keys(translations).forEach(lang => {
     t.aboutUsagePersonal = "Personal";
     t.aboutUsagePersonalDetail = "(videos no comerciales)";
     t.aboutUsageCondition = "Sin temor a bloqueos, siempre que el uso siga siendo no comercial y cumpla con las condiciones de las plataformas.";
+    t.aboutTranslationsTitle = "Traducciones bíblicas utilizadas";
+    t.aboutTranslationsDesc = "Las canciones se basan en las siguientes traducciones bíblicas:";
+    t.aboutTranslationFR = "<strong>FR (Francés):</strong> Louis Segond (LSG)";
+    t.aboutTranslationEN = "<strong>EN (Inglés):</strong> King James Version (KJV)";
+    t.aboutTranslationPT = "<strong>PT (Portugués):</strong> Almeida Revista e Corrigida (ARC)";
+    t.aboutTranslationES = "<strong>ES (Español):</strong> Reina Valera (RVR)";
+    t.aboutTranslationDE = "<strong>DE (Alemán):</strong> Luther Bibel (LUT)";
+    t.aboutTranslationIT = "<strong>IT (Italiano):</strong> Nuova Riveduta (NR)";
+    t.aboutTranslationsNote = "Estas traducciones clásicas y reconocidas garantizan la fidelidad a los textos bíblicos originales.";
+    t.contactTitle = "Contacto";
     t.aboutContactEmail = "Correo electrónico:";
     t.aboutContactWebsite = "Sitio web:";
     t.aboutFooterCopyright = "© 2024-2025 Biblia Cantada - Todos los derechos reservados";
@@ -2471,6 +2532,16 @@ Object.keys(translations).forEach(lang => {
     t.aboutUsagePersonal = "Pessoal";
     t.aboutUsagePersonalDetail = "(vídeos não comerciais)";
     t.aboutUsageCondition = "Sem medo de bloqueio, desde que o uso permaneça não comercial e cumpra as condições das plataformas.";
+    t.aboutTranslationsTitle = "Traduções bíblicas utilizadas";
+    t.aboutTranslationsDesc = "As músicas são baseadas nas seguintes traduções bíblicas:";
+    t.aboutTranslationFR = "<strong>FR (Francês):</strong> Louis Segond (LSG)";
+    t.aboutTranslationEN = "<strong>EN (Inglês):</strong> King James Version (KJV)";
+    t.aboutTranslationPT = "<strong>PT (Português):</strong> Almeida Revista e Corrigida (ARC)";
+    t.aboutTranslationES = "<strong>ES (Espanhol):</strong> Reina Valera (RVR)";
+    t.aboutTranslationDE = "<strong>DE (Alemão):</strong> Luther Bibel (LUT)";
+    t.aboutTranslationIT = "<strong>IT (Italiano):</strong> Nuova Riveduta (NR)";
+    t.aboutTranslationsNote = "Estas traduções clássicas e reconhecidas garantem fidelidade aos textos bíblicos originais.";
+    t.contactTitle = "Contato";
     t.aboutContactEmail = "E-mail:";
     t.aboutContactWebsite = "Site:";
     t.aboutFooterCopyright = "© 2024-2025 Bíblia Cantada - Todos os direitos reservados";

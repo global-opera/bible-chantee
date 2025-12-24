@@ -166,6 +166,11 @@
 
     footer p { color: #94a3b8; font-size: 0.9em; margin-bottom: 0; }
 
+    .lang-selector { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+    .lang-btn { background: rgba(255,255,255,0.1); border: 2px solid #93c5fd; color: #93c5fd; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; margin-left: 5px; transition: all 0.3s; border: none; }
+    .lang-btn.active { background: #93c5fd; color: #0f172a; }
+    .lang-btn:hover { transform: translateY(-2px); }
+
     @media (max-width: 768px) {
       header h1 { font-size: 2em; }
       header p { font-size: 1em; }
@@ -177,6 +182,14 @@
   </style>
 </head>
 <body>
+
+<div class="lang-selector">
+  <button class="lang-btn" onclick="setLanguage('FR')">FR</button>
+  <button class="lang-btn" onclick="setLanguage('EN')">EN</button>
+  <button class="lang-btn" onclick="setLanguage('PT')">PT</button>
+  <button class="lang-btn" onclick="setLanguage('ES')">ES</button>
+  <button class="lang-btn" onclick="setLanguage('DE')">DE</button>
+</div>
 
 <header>
   <h1 data-i18n="siteName">Bible Chantée</h1>
@@ -249,12 +262,12 @@
     <p data-i18n="aboutTranslationsDesc">Les chansons sont basées sur les traductions bibliques suivantes :</p>
     <div class="usage-list">
       <ul>
-        <li><strong>FR (Français) :</strong> Louis Segond (LSG)</li>
-        <li><strong>EN (English) :</strong> King James Version (KJV)</li>
-        <li><strong>PT (Português) :</strong> Almeida Revista e Corrigida (ARC)</li>
-        <li><strong>ES (Español) :</strong> Reina Valera (RVR)</li>
-        <li><strong>DE (Deutsch) :</strong> Luther Bibel (LUT)</li>
-        <li><strong>IT (Italiano) :</strong> Nuova Riveduta (NR)</li>
+        <li data-i18n="aboutTranslationFR"><strong>FR (Français) :</strong> Louis Segond (LSG)</li>
+        <li data-i18n="aboutTranslationEN"><strong>EN (English) :</strong> King James Version (KJV)</li>
+        <li data-i18n="aboutTranslationPT"><strong>PT (Português) :</strong> Almeida Revista e Corrigida (ARC)</li>
+        <li data-i18n="aboutTranslationES"><strong>ES (Español) :</strong> Reina Valera (RVR)</li>
+        <li data-i18n="aboutTranslationDE"><strong>DE (Deutsch) :</strong> Luther Bibel (LUT)</li>
+        <li data-i18n="aboutTranslationIT"><strong>IT (Italiano) :</strong> Nuova Riveduta (NR)</li>
       </ul>
     </div>
     <p style="margin-top: 20px;" data-i18n="aboutTranslationsNote">
@@ -278,6 +291,18 @@
 <script src="lang-shared.js"></script>
 <script src="translations.js"></script>
 <script src="i18n.js"></script>
+
+<script>
+// Update active language button
+function updateLangButtons() {
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.textContent === window.currentLanguage);
+  });
+}
+// Initialize on load and language change
+if (window.currentLanguage) updateLangButtons();
+window.addEventListener('languageChanged', updateLangButtons);
+</script>
 
 <!-- 🔒 Safe return navigation (évite history.back() + valide same origin) -->
 <script>
