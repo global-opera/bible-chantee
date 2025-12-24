@@ -3,10 +3,13 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Inscription - Bible Chantée</title>
+  <title data-i18n="signupPageTitle">Inscription - Bible Chantée</title>
   <style>
     body{font-family:system-ui,Segoe UI,Arial; background:#0b1020; color:#fff; display:flex; min-height:100vh; align-items:center; justify-content:center; padding:24px}
     .card{width:min(520px,100%); background:#121a33; border:1px solid rgba(255,215,0,.25); border-radius:16px; padding:22px}
+    .lang-selector{position:fixed; top:20px; right:20px; z-index:1000}
+    .lang-btn{background:rgba(255,255,255,.1); border:2px solid #FFD700; color:#FFD700; padding:8px 16px; border-radius:8px; cursor:pointer; font-size:14px; margin-left:5px}
+    .lang-btn.active{background:#FFD700; color:#0b1020}
     h1{margin:0 0 12px; font-size:22px}
     p{margin:0 0 18px; opacity:.85}
     input{width:100%; padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,.2); background:#0b1020; color:#fff; font-size:16px}
@@ -17,11 +20,19 @@
   </style>
 </head>
 <body>
+  <div class="lang-selector">
+    <button class="lang-btn" onclick="setLanguage('FR')">FR</button>
+    <button class="lang-btn" onclick="setLanguage('EN')">EN</button>
+    <button class="lang-btn" onclick="setLanguage('PT')">PT</button>
+    <button class="lang-btn" onclick="setLanguage('ES')">ES</button>
+    <button class="lang-btn" onclick="setLanguage('DE')">DE</button>
+  </div>
+
   <div class="card">
-    <h1>Inscription</h1>
-    <p>Créez votre compte. Si vous venez d'un lien partagé, le parrain recevra <b>+10 crédits</b> après votre inscription.</p>
-    <input id="email" type="email" placeholder="Votre email" autocomplete="email"/>
-    <button onclick="signup()">S'inscrire</button>
+    <h1 data-i18n="signupHeading">Inscription</h1>
+    <p data-i18n="signupDesc">Créez votre compte. Si vous venez d'un lien partagé, le parrain recevra <b>+10 crédits</b> après votre inscription.</p>
+    <input id="email" type="email" data-i18n-placeholder="signupEmailPlaceholder" placeholder="Votre email" autocomplete="email"/>
+    <button onclick="signup()" data-i18n="signupButton">S'inscrire</button>
     <div id="msg" class="small"></div>
   </div>
 
@@ -53,10 +64,11 @@ function getRef(){
 async function signup(){
   const email = document.getElementById('email').value.trim();
   const msg = document.getElementById('msg');
+  const t = window.translations?.[window.currentLanguage] || window.translations?.FR || {};
   msg.textContent = '';
 
   if(!email){
-    msg.innerHTML = '<span class="err">Email requis</span>';
+    msg.innerHTML = '<span class="err">' + (t.signupEmailRequired || 'Email requis') + '</span>';
     return;
   }
 
@@ -71,11 +83,11 @@ async function signup(){
 
   const j = await res.json().catch(()=>({ok:false,error:'bad json'}));
   if(!res.ok || !j.ok){
-    msg.innerHTML = '<span class="err">Erreur:</span> ' + (j.error || res.status);
+    msg.innerHTML = '<span class="err">' + (t.signupError || 'Erreur:') + '</span> ' + (j.error || res.status);
     return;
   }
 
-  msg.innerHTML = '<span class="ok">Inscription OK.</span> ' + (j.awarded ? 'Parrain crédité (+10).' : '');
+  msg.innerHTML = '<span class="ok">' + (t.signupSuccess || 'Inscription OK.') + '</span> ' + (j.awarded ? (t.signupReferralRewarded || 'Parrain crédité (+10).') : '');
 
   // Retour au lecteur sur le morceau si un return= existe
   const p = new URLSearchParams(location.search);
@@ -84,6 +96,24 @@ async function signup(){
     setTimeout(()=>location.href = ret, 700);
   }
 }
+</script>
+
+<script src="lang-shared.js"></script>
+<script src="translations.js"></script>
+<script>
+  // Initialize i18n
+  if (typeof window.translations !== 'undefined' && typeof window.BibleI18n !== 'undefined') {
+    window.BibleI18n.init();
+  }
+
+  // Update active language button
+  function updateLangButtons() {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.textContent === window.currentLanguage);
+    });
+  }
+  updateLangButtons();
+  window.addEventListener('languageChanged', updateLangButtons);
 </script>
 </body>
 </html>

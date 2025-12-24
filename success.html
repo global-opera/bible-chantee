@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paiement reussi - Bible Chantee</title>
+    <title data-i18n="successPageTitle">Paiement reussi - Bible Chantee</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TX3ETCKJQZ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -76,17 +76,45 @@
             font-weight: bold;
             margin-top: 20px;
         }
+        .lang-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .lang-btn {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid #ffce00;
+            color: #ffce00;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 5px;
+        }
+        .lang-btn.active {
+            background: #ffce00;
+            color: #000080;
+        }
     </style>
 </head>
 <body>
+    <div class="lang-selector">
+        <button class="lang-btn" onclick="setLanguage('FR')">FR</button>
+        <button class="lang-btn" onclick="setLanguage('EN')">EN</button>
+        <button class="lang-btn" onclick="setLanguage('PT')">PT</button>
+        <button class="lang-btn" onclick="setLanguage('ES')">ES</button>
+        <button class="lang-btn" onclick="setLanguage('DE')">DE</button>
+    </div>
+
     <div class="success-box">
         <div class="checkmark">&#10003;</div>
-        <h1>Merci pour votre achat !</h1>
-        <p>Votre acces <span class="highlight">Premium illimite</span> a Bible Chantee est maintenant actif.</p>
-        <p>Profitez des <span class="highlight">1189 chapitres</span> dans toutes les langues, sans aucune limite.</p>
-        <div class="premium-badge">&#9733; PREMIUM ACTIVE</div>
+        <h1 data-i18n="successHeading">Merci pour votre achat !</h1>
+        <p data-i18n="successText1">Votre acces <span class="highlight">Premium illimite</span> a Bible Chantee est maintenant actif.</p>
+        <p data-i18n="successText2">Profitez des <span class="highlight">1189 chapitres</span> dans toutes les langues, sans aucune limite.</p>
+        <div class="premium-badge" data-i18n="successBadge">&#9733; PREMIUM ACTIVE</div>
         <br>
-        <a href="/lecteur.html" class="btn">Commencer a ecouter</a>
+        <a href="/lecteur.html" class="btn" data-i18n="successButton">Commencer a ecouter</a>
     </div>
     <script>
         // Activer premium dans localStorage
@@ -104,6 +132,24 @@
         });
 
         console.log('Premium active!', user);
+    </script>
+
+    <script src="lang-shared.js"></script>
+    <script src="translations.js"></script>
+    <script>
+        // Initialize i18n
+        if (typeof window.translations !== 'undefined' && typeof window.BibleI18n !== 'undefined') {
+            window.BibleI18n.init();
+        }
+
+        // Update active language button
+        function updateLangButtons() {
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent === window.currentLanguage);
+            });
+        }
+        updateLangButtons();
+        window.addEventListener('languageChanged', updateLangButtons);
     </script>
 </body>
 </html>

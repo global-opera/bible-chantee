@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recuperer mon acces Premium - Bible Chantee</title>
+  <title data-i18n="recoverPageTitle">Recuperer mon acces Premium - Bible Chantee</title>
   <style>
     * { box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: linear-gradient(135deg, #1a1a4e 0%, #0d0d2b 100%); min-height: 100vh; margin: 0; padding: 20px; display: flex; align-items: center; justify-content: center; }
@@ -17,18 +17,29 @@
     .success { background: #d4edda; color: #155724; display: block; }
     .error { background: #f8d7da; color: #721c24; display: block; }
     .back-link { display: block; text-align: center; margin-top: 20px; color: #1a1a4e; }
+    .lang-selector { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+    .lang-btn { background: rgba(255,255,255,0.9); border: 2px solid #1a1a4e; color: #1a1a4e; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; margin-left: 5px; }
+    .lang-btn.active { background: #1a1a4e; color: #fff; }
   </style>
 </head>
 <body>
+  <div class="lang-selector">
+    <button class="lang-btn" onclick="setLanguage('FR')">FR</button>
+    <button class="lang-btn" onclick="setLanguage('EN')">EN</button>
+    <button class="lang-btn" onclick="setLanguage('PT')">PT</button>
+    <button class="lang-btn" onclick="setLanguage('ES')">ES</button>
+    <button class="lang-btn" onclick="setLanguage('DE')">DE</button>
+  </div>
+
   <div class="container">
-    <h1>Recuperer mon Premium</h1>
-    <p>Entrez l email utilise lors de votre paiement Stripe</p>
+    <h1 data-i18n="recoverHeading">Recuperer mon Premium</h1>
+    <p data-i18n="recoverDesc">Entrez l email utilise lors de votre paiement Stripe</p>
     <form id="recoverForm">
-      <input type="email" id="email" required placeholder="votre@email.com">
-      <button type="submit" id="submitBtn">Recuperer mon acces</button>
+      <input type="email" id="email" required data-i18n-placeholder="recoverEmailPlaceholder" placeholder="votre@email.com">
+      <button type="submit" id="submitBtn" data-i18n="recoverButton">Recuperer mon acces</button>
     </form>
     <div id="message" class="message"></div>
-    <a href="/" class="back-link">Retour a Bible Chantee</a>
+    <a href="/" class="back-link" data-i18n="recoverBackLink">Retour a Bible Chantee</a>
   </div>
   <script>
     document.getElementById('recoverForm').addEventListener('submit', async (e) => {
@@ -36,8 +47,10 @@
       const email = document.getElementById('email').value.trim();
       const btn = document.getElementById('submitBtn');
       const msg = document.getElementById('message');
+      const t = window.translations?.[window.currentLanguage] || window.translations?.FR || {};
+
       btn.disabled = true;
-      btn.textContent = 'Verification...';
+      btn.textContent = t.recoverVerifying || 'Verification...';
       msg.className = 'message';
       try {
         const res = await fetch('/api/recover-premium', { method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'include', body: JSON.stringify({ email }) });
@@ -45,21 +58,39 @@
         if (data.success) {
           localStorage.setItem('sungbible_unlimited', 'true');
           msg.className = 'message success';
-          msg.textContent = data.message + ' Redirection...';
+          msg.textContent = data.message + ' ' + (t.recoverRedirecting || 'Redirection...');
           setTimeout(() => { window.location.href = '/'; }, 2000);
         } else {
           msg.className = 'message error';
           msg.textContent = data.message;
           btn.disabled = false;
-          btn.textContent = 'Recuperer mon acces';
+          btn.textContent = t.recoverButton || 'Recuperer mon acces';
         }
       } catch (err) {
         msg.className = 'message error';
-        msg.textContent = 'Erreur de connexion. Reessayez.';
+        msg.textContent = t.recoverError || 'Erreur de connexion. Reessayez.';
         btn.disabled = false;
-        btn.textContent = 'Recuperer mon acces';
+        btn.textContent = t.recoverButton || 'Recuperer mon acces';
       }
     });
+  </script>
+
+  <script src="lang-shared.js"></script>
+  <script src="translations.js"></script>
+  <script>
+    // Initialize i18n
+    if (typeof window.translations !== 'undefined' && typeof window.BibleI18n !== 'undefined') {
+      window.BibleI18n.init();
+    }
+
+    // Update active language button
+    function updateLangButtons() {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent === window.currentLanguage);
+      });
+    }
+    updateLangButtons();
+    window.addEventListener('languageChanged', updateLangButtons);
   </script>
 </body>
 </html>
