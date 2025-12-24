@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aide - Bible Chantee</title>
+  <title data-i18n="helpPageTitle">Aide - Bible Chantee</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: linear-gradient(135deg, #1a1a4e 0%, #0d0d2b 100%); min-height: 100vh; color: #fff; padding: 20px; }
@@ -26,159 +26,196 @@
     .faq-item { border-bottom: 1px solid rgba(255,255,255,0.2); padding: 15px 0; }
     .faq-item:last-child { border: none; }
     .faq-q { font-weight: 700; color: #ffce00; margin-bottom: 8px; }
+    .lang-selector { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+    .lang-btn { background: rgba(255,255,255,0.1); border: 2px solid #ffce00; color: #ffce00; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; margin-left: 5px; }
+    .lang-btn.active { background: #ffce00; color: #1a1a4e; }
   </style>
 </head>
 <body>
+  <div class="lang-selector">
+    <button class="lang-btn" onclick="setLanguage('FR')">FR</button>
+    <button class="lang-btn" onclick="setLanguage('EN')">EN</button>
+    <button class="lang-btn" onclick="setLanguage('PT')">PT</button>
+    <button class="lang-btn" onclick="setLanguage('ES')">ES</button>
+    <button class="lang-btn" onclick="setLanguage('DE')">DE</button>
+  </div>
+
   <div class="container">
-    <h1>Aide - Bible Chantee</h1>
+    <h1 data-i18n="helpHeading">Aide - Bible Chantee</h1>
 
     <!-- Problemes d'affichage -->
     <div class="section">
-      <h2>Problemes d'affichage ?</h2>
-      <p>Si la page ne s'affiche pas correctement ou si vous voyez une ancienne version :</p>
-      <button type="button" id="clearCacheBtn" style="background: #e74c3c; margin-top: 15px;">Vider le cache et recharger</button>
-      <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">Cela supprime les donnees temporaires et recharge l'application.</p>
+      <h2 data-i18n="helpDisplayIssues">Problemes d'affichage ?</h2>
+      <p data-i18n="helpDisplayDesc">Si la page ne s'affiche pas correctement ou si vous voyez une ancienne version :</p>
+      <button type="button" id="clearCacheBtn" style="background: #e74c3c; margin-top: 15px;" data-i18n="helpClearCache">Vider le cache et recharger</button>
+      <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;" data-i18n="helpClearCacheDesc">Cela supprime les donnees temporaires et recharge l'application.</p>
     </div>
-<!-- Recuperer Premium -->
+
+    <!-- Recuperer Premium -->
     <div class="section">
-      <h2>Recuperer mon acces Premium</h2>
-      <p>Vous avez deja paye mais vous n'avez plus acces Premium ? Entrez l'email utilise lors du paiement :</p>
+      <h2 data-i18n="helpRecoverPremium">Recuperer mon acces Premium</h2>
+      <p data-i18n="helpRecoverDesc">Vous avez deja paye mais vous n'avez plus acces Premium ? Entrez l'email utilise lors du paiement :</p>
       <form id="recoverForm">
-        <input type="email" id="email" required placeholder="votre@email.com">
-        <button type="submit" id="submitBtn">Recuperer mon acces</button>
+        <input type="email" id="email" required data-i18n-placeholder="helpEmailPlaceholder">
+        <button type="submit" id="submitBtn" data-i18n="helpRecoverButton">Recuperer mon acces</button>
       </form>
       <div id="message" class="message"></div>
     </div>
 
     <!-- Comment ca marche -->
     <div class="section">
-      <h2>Comment ca marche ?</h2>
+      <h2 data-i18n="helpHowWorks">Comment ca marche ?</h2>
       <ul>
-        <li><strong>Version gratuite :</strong> 3 ecoutes gratuites pour decouvrir</li>
-        <li><strong>Version Premium :</strong> Acces illimite a tous les 1189 chapitres en musique</li>
-        <li><strong>Multi-langues :</strong> Disponible en Francais, Portugais, Anglais, Espagnol</li>
+        <li><strong data-i18n="helpFreeVersion">Version gratuite :</strong> <span data-i18n="helpFreeDesc">3 ecoutes gratuites pour decouvrir</span></li>
+        <li><strong data-i18n="helpPremiumVersion">Version Premium :</strong> <span data-i18n="helpPremiumDesc">Acces illimite a tous les 1189 chapitres en musique</span></li>
+        <li><strong data-i18n="helpMultiLang">Multi-langues :</strong> <span data-i18n="helpMultiLangDesc">Disponible en Francais, Portugais, Anglais, Espagnol</span></li>
       </ul>
     </div>
 
     <!-- Installer l'application -->
     <div class="section">
-      <h2>Installer l'application</h2>
-      <p><strong>iPhone (Safari) :</strong></p>
+      <h2 data-i18n="helpInstallApp">Installer l'application</h2>
+      <p><strong data-i18n="helpInstallIPhone">iPhone (Safari) :</strong></p>
       <ul>
-        <li>Ouvrez biblechantee.com dans Safari</li>
-        <li>Cliquez sur l'icone Partager (carre avec fleche)</li>
-        <li>Cliquez "Sur l'ecran d'accueil"</li>
-        <li>Cliquez "Ajouter"</li>
+        <li data-i18n="helpInstallIPhone1">Ouvrez biblechantee.com dans Safari</li>
+        <li data-i18n="helpInstallIPhone2">Cliquez sur l'icone Partager (carre avec fleche)</li>
+        <li data-i18n="helpInstallIPhone3">Cliquez "Sur l'ecran d'accueil"</li>
+        <li data-i18n="helpInstallIPhone4">Cliquez "Ajouter"</li>
       </ul>
-      <p style="margin-top: 15px;"><strong>Android (Chrome) :</strong></p>
+      <p style="margin-top: 15px;"><strong data-i18n="helpInstallAndroid">Android (Chrome) :</strong></p>
       <ul>
-        <li>Ouvrez biblechantee.com dans Chrome</li>
-        <li>Cliquez sur les 3 points (menu)</li>
-        <li>Cliquez "Installer l'application"</li>
+        <li data-i18n="helpInstallAndroid1">Ouvrez biblechantee.com dans Chrome</li>
+        <li data-i18n="helpInstallAndroid2">Cliquez sur les 3 points (menu)</li>
+        <li data-i18n="helpInstallAndroid3">Cliquez "Installer l'application"</li>
       </ul>
     </div>
 
     <!-- FAQ -->
     <div class="section">
-      <h2>Questions frequentes</h2>
-      
+      <h2 data-i18n="helpFAQ">Questions frequentes</h2>
+
       <div class="faq-item">
-        <div class="faq-q">J'ai paye mais je vois encore "100 credits" ?</div>
-        <p>Utilisez le formulaire ci-dessus pour recuperer votre acces Premium avec votre email de paiement.</p>
+        <div class="faq-q" data-i18n="helpFAQ1Q">J'ai paye mais je vois encore "100 credits" ?</div>
+        <p data-i18n="helpFAQ1A">Utilisez le formulaire ci-dessus pour recuperer votre acces Premium avec votre email de paiement.</p>
       </div>
-      
+
       <div class="faq-item">
-        <div class="faq-q">Comment changer de langue ?</div>
-        <p>Cliquez sur le drapeau en haut de la page pour choisir votre langue.</p>
+        <div class="faq-q" data-i18n="helpFAQ2Q">Comment changer de langue ?</div>
+        <p data-i18n="helpFAQ2A">Cliquez sur le drapeau en haut de la page pour choisir votre langue.</p>
       </div>
-      
+
       <div class="faq-item">
-        <div class="faq-q">L'application ne fonctionne plus apres mise a jour ?</div>
-        <p>Supprimez l'application, videz le cache de votre navigateur, puis reinstallez depuis biblechantee.com</p>
+        <div class="faq-q" data-i18n="helpFAQ3Q">L'application ne fonctionne plus apres mise a jour ?</div>
+        <p data-i18n="helpFAQ3A">Supprimez l'application, videz le cache de votre navigateur, puis reinstallez depuis biblechantee.com</p>
       </div>
-      
+
       <div class="faq-item">
-        <div class="faq-q">Comment ecouter hors connexion ?</div>
-        <p>L'application garde en cache les chapitres ecoutes recemment. Avec Premium, vous pouvez ecouter sans limite.</p>
+        <div class="faq-q" data-i18n="helpFAQ4Q">Comment ecouter hors connexion ?</div>
+        <p data-i18n="helpFAQ4A">L'application garde en cache les chapitres ecoutes recemment. Avec Premium, vous pouvez ecouter sans limite.</p>
       </div>
     </div>
 
     <!-- Contact -->
     <div class="section">
-      <h2>Contact</h2>
-      <p>Une question ? Un probleme ?</p>
+      <h2 data-i18n="helpContact">Contact</h2>
+      <p data-i18n="helpContactDesc">Une question ? Un probleme ?</p>
       <p>Email : <a href="mailto:info@biblechantee.com">info@biblechantee.com</a></p>
     </div>
 
-    <a href="/" class="back-link">← Retour a Bible Chantee</a>
+    <a href="/" class="back-link" data-i18n="helpBackHome">← Retour a Bible Chantee</a>
   </div>
 
+  <script src="lang-shared.js"></script>
+  <script src="translations.js"></script>
   <script>
+    // Initialize i18n
+    if (typeof window.translations !== 'undefined' && typeof window.BibleI18n !== 'undefined') {
+      window.BibleI18n.init();
+    }
+
+    // Update active language button
+    function updateLangButtons() {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent === window.currentLanguage);
+      });
+    }
+    updateLangButtons();
+    window.addEventListener('languageChanged', updateLangButtons);
+
+    // Recover premium form
     document.getElementById('recoverForm').addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = document.getElementById('email').value.trim();
       const btn = document.getElementById('submitBtn');
       const msg = document.getElementById('message');
+      const t = window.translations[window.currentLanguage] || window.translations.FR;
+
       btn.disabled = true;
-      btn.textContent = 'Verification...';
+      btn.textContent = t.helpVerifying || 'Verification...';
       msg.className = 'message';
+
       try {
-        const res = await fetch('/api/recover-premium', { method: 'POST', headers: { 'Content-Type': 'application/json' }, credentials: 'include', body: JSON.stringify({ email }) });
+        const res = await fetch('/api/recover-premium', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
+          body: JSON.stringify({ email })
+        });
         const data = await res.json();
+
         if (data.success) {
           localStorage.setItem('bc_unlimited', 'true');
           msg.className = 'message success';
-          msg.textContent = 'Premium recupere ! Redirection...';
+          msg.textContent = t.helpRecoverSuccess || 'Premium recupere ! Redirection...';
           setTimeout(() => { window.location.href = '/'; }, 2000);
         } else {
           msg.className = 'message error';
           msg.textContent = data.message;
           btn.disabled = false;
-          btn.textContent = 'Recuperer mon acces';
+          btn.textContent = t.helpRecoverButton || 'Recuperer mon acces';
         }
       } catch (err) {
         msg.className = 'message error';
-        msg.textContent = 'Erreur de connexion. Reessayez.';
+        msg.textContent = t.helpError || 'Erreur de connexion. Reessayez.';
         btn.disabled = false;
-        btn.textContent = 'Recuperer mon acces';
+        btn.textContent = t.helpRecoverButton || 'Recuperer mon acces';
       }
     });
-      // Bouton vider cache
+
+    // Clear cache button
     document.getElementById('clearCacheBtn').addEventListener('click', async () => {
       const btn = document.getElementById('clearCacheBtn');
+      const t = window.translations[window.currentLanguage] || window.translations.FR;
+
       btn.disabled = true;
-      btn.textContent = 'Nettoyage en cours...';
+      btn.textContent = t.helpClearing || 'Nettoyage en cours...';
+
       try {
-        // 1. Vider localStorage (sauf premium)
         const premium = localStorage.getItem('bc_unlimited');
         const premiumCookie = document.cookie.includes('bc_premium');
         localStorage.clear();
         if (premium === 'true' || premiumCookie) {
           localStorage.setItem('bc_unlimited', 'true');
         }
-        // 2. Vider sessionStorage
         sessionStorage.clear();
-        // 3. Desincrire Service Workers
+
         if ('serviceWorker' in navigator) {
           const regs = await navigator.serviceWorker.getRegistrations();
           for (const reg of regs) { await reg.unregister(); }
         }
-        // 4. Vider caches
+
         if ('caches' in window) {
           const names = await caches.keys();
           for (const name of names) { await caches.delete(name); }
         }
-        btn.textContent = 'Cache vide ! Rechargement...';
+
+        btn.textContent = t.helpCacheCleared || 'Cache vide ! Rechargement...';
         setTimeout(() => { location.href = '/?nocache=' + Date.now(); }, 1000);
       } catch (err) {
-        btn.textContent = 'Erreur - Reessayez';
+        btn.textContent = t.helpErrorRetry || 'Erreur - Reessayez';
         btn.disabled = false;
       }
     });
   </script>
 </body>
 </html>
-
-
-
-
