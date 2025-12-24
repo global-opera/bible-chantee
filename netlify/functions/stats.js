@@ -72,10 +72,10 @@ exports.handler = async (event) => {
         if (credentials && propertyId) {
             const client = new BetaAnalyticsDataClient({ credentials });
 
-            // Événements 7 derniers jours
+            // Événements TOTAL historique (depuis le lancement)
             const [eventsResponse] = await client.runReport({
                 property: `properties/${propertyId}`,
-                dateRanges: [{ startDate: '7daysAgo', endDate: 'today' }],
+                dateRanges: [{ startDate: '2024-01-01', endDate: 'today' }],
                 dimensions: [{ name: 'eventName' }],
                 metrics: [{ name: 'eventCount' }]
             });
