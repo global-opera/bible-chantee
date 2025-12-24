@@ -317,7 +317,7 @@ select { background: #1a1a2e; color: #ffffff; }
 <div id="shareToast" style="position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);background:#4CAF50;color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;opacity:0;transition:all 0.3s;z-index:9999;"></div>
 <h2 id="form-title">Recevez la Bible Chantée complète</h2>
             <p id="form-subtitle">Inscrivez-vous pour être notifié et accéder aux 1189 chapitres</p>
-            <form action="/thank-you" method="POST" name="subscribe" data-netlify="true" netlify-honeypot="bot-field">
+            <form action="/thank-you.html" method="POST" name="subscribe" data-netlify="true" netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="subscribe">
                 <input type="email" name="email" id="email-input" placeholder="Votre email" required><br>
                 <select name="language" id="lang-select" required>
@@ -799,6 +799,8 @@ function openTwint() {
 </script>
 </body>
 </html>
+
+
 
 
 
