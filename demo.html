@@ -772,8 +772,39 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+<script>
+// Bouton vider cache
+document.getElementById('clearCacheBtn').addEventListener('click', async () => {
+    const btn = document.getElementById('clearCacheBtn');
+    btn.disabled = true;
+    btn.textContent = 'Nettoyage...';
+    try {
+        const premium = localStorage.getItem('bc_unlimited');
+        const premiumCookie = document.cookie.includes('bc_premium');
+        localStorage.clear();
+        if (premium === 'true' || premiumCookie) {
+            localStorage.setItem('bc_unlimited', 'true');
+        }
+        sessionStorage.clear();
+        if ('serviceWorker' in navigator) {
+            const regs = await navigator.serviceWorker.getRegistrations();
+            for (const reg of regs) { await reg.unregister(); }
+        }
+        if ('caches' in window) {
+            const names = await caches.keys();
+            for (const name of names) { await caches.delete(name); }
+        }
+        btn.textContent = 'OK! Rechargement...';
+        setTimeout(() => { location.href = '/?nocache=' + Date.now(); }, 1000);
+    } catch (err) {
+        btn.textContent = 'Erreur - Reessayez';
+        btn.disabled = false;
+    }
+});
+</script>
 </body>
 </html>
+
 
 
 
