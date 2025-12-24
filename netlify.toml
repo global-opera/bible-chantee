@@ -1,57 +1,60 @@
 [build]
   publish = "."
 
-# Anti-cache pour index.html
 [[headers]]
   for = "/index.html"
   [headers.values]
     Cache-Control = "no-store"
 
-# --- PROD: block demo/crowdfunding/old pages (strict funnel) ---
-[[redirects]]
-  from = "/demo*"
-  to = "/lecteur.html"
-  status = 302
-  force = true
+# -------------------------
+# PRODUCTION ONLY (funnel)
+# -------------------------
+[context.production]
 
-[[redirects]]
-  from = "/crowdfunding*"
-  to = "/lecteur.html"
-  status = 302
-  force = true
+  [[context.production.redirects]]
+    from = "/demo*"
+    to = "/lecteur.html"
+    status = 302
+    force = true
 
-[[redirects]]
-  from = "/contact*"
-  to = "/lecteur.html"
-  status = 302
-  force = true
+  [[context.production.redirects]]
+    from = "/crowdfunding*"
+    to = "/lecteur.html"
+    status = 302
+    force = true
 
-[[redirects]]
-  from = "/pricing*"
-  to = "/lecteur.html"
-  status = 302
-  force = true
+  [[context.production.redirects]]
+    from = "/contact*"
+    to = "/lecteur.html"
+    status = 302
+    force = true
 
-[[redirects]]
-  from = "/html%20old/*"
-  to = "/lecteur.html"
-  status = 302
-  force = true
+  [[context.production.redirects]]
+    from = "/pricing*"
+    to = "/lecteur.html"
+    status = 302
+    force = true
 
-[[redirects]]
-  from = "/Scripts/*"
-  to = "/lecteur.html"
-  status = 302
-  force = true
+  [[context.production.redirects]]
+    from = "/html%20old/*"
+    to = "/lecteur.html"
+    status = 302
+    force = true
 
-[[redirects]]
-  from = "/mnt/*"
-  to = "/lecteur.html"
-  status = 302
-  force = true
+  [[context.production.redirects]]
+    from = "/Scripts/*"
+    to = "/lecteur.html"
+    status = 302
+    force = true
 
-[[redirects]]
-  from = "/bible-chantee-fr-site/*"
-  to = "/lecteur.html"
-  status = 302
-  force = true
+  [[context.production.redirects]]
+    from = "/mnt/*"
+    to = "/lecteur.html"
+    status = 302
+    force = true
+
+  [[context.production.redirects]]
+    from = "/bible-chantee-fr-site/*"
+    to = "/lecteur.html"
+    status = 302
+    force = true
