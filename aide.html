@@ -26,20 +26,9 @@
     .faq-item { border-bottom: 1px solid rgba(255,255,255,0.2); padding: 15px 0; }
     .faq-item:last-child { border: none; }
     .faq-q { font-weight: 700; color: #ffce00; margin-bottom: 8px; }
-    .lang-selector { position: fixed; top: 20px; right: 20px; z-index: 1000; }
-    .lang-btn { background: rgba(255,255,255,0.1); border: 2px solid #ffce00; color: #ffce00; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; margin-left: 5px; }
-    .lang-btn.active { background: #ffce00; color: #1a1a4e; }
   </style>
 </head>
 <body>
-  <div class="lang-selector">
-    <button class="lang-btn" onclick="setLanguage('FR')">FR</button>
-    <button class="lang-btn" onclick="setLanguage('EN')">EN</button>
-    <button class="lang-btn" onclick="setLanguage('PT')">PT</button>
-    <button class="lang-btn" onclick="setLanguage('ES')">ES</button>
-    <button class="lang-btn" onclick="setLanguage('DE')">DE</button>
-  </div>
-
   <div class="container">
     <h1 data-i18n="helpHeading">Aide - Bible Chantee</h1>
 
@@ -132,15 +121,6 @@
     if (typeof window.translations !== 'undefined' && typeof window.BibleI18n !== 'undefined') {
       window.BibleI18n.init();
     }
-
-    // Update active language button
-    function updateLangButtons() {
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.textContent === window.currentLanguage);
-      });
-    }
-    updateLangButtons();
-    window.addEventListener('languageChanged', updateLangButtons);
 
     // Recover premium form
     document.getElementById('recoverForm').addEventListener('submit', async (e) => {

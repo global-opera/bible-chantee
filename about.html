@@ -166,11 +166,6 @@
 
     footer p { color: #94a3b8; font-size: 0.9em; margin-bottom: 0; }
 
-    .lang-selector { position: fixed; top: 20px; right: 20px; z-index: 1000; }
-    .lang-btn { background: rgba(255,255,255,0.1); border: 2px solid #93c5fd; color: #93c5fd; padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; margin-left: 5px; transition: all 0.3s; border: none; }
-    .lang-btn.active { background: #93c5fd; color: #0f172a; }
-    .lang-btn:hover { transform: translateY(-2px); }
-
     @media (max-width: 768px) {
       header h1 { font-size: 2em; }
       header p { font-size: 1em; }
@@ -182,14 +177,6 @@
   </style>
 </head>
 <body>
-
-<div class="lang-selector">
-  <button class="lang-btn" onclick="setLanguage('FR')">FR</button>
-  <button class="lang-btn" onclick="setLanguage('EN')">EN</button>
-  <button class="lang-btn" onclick="setLanguage('PT')">PT</button>
-  <button class="lang-btn" onclick="setLanguage('ES')">ES</button>
-  <button class="lang-btn" onclick="setLanguage('DE')">DE</button>
-</div>
 
 <header>
   <h1 data-i18n="siteName">Bible Chantée</h1>
@@ -291,18 +278,6 @@
 <script src="lang-shared.js"></script>
 <script src="translations.js"></script>
 <script src="i18n.js"></script>
-
-<script>
-// Update active language button
-function updateLangButtons() {
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.textContent === window.currentLanguage);
-  });
-}
-// Initialize on load and language change
-if (window.currentLanguage) updateLangButtons();
-window.addEventListener('languageChanged', updateLangButtons);
-</script>
 
 <!-- 🔒 Safe return navigation (évite history.back() + valide same origin) -->
 <script>
