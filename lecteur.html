@@ -551,6 +551,9 @@
     </div>
 
     <script src="/lang-shared.js"></script>
+    <script src="/translations.js"></script>
+    <script src="/translations-extra.js"></script>
+    <script src="/i18n.js"></script>
 
     <script src="/lyrics-data.js"></script>
     <script src="/lyrics-data-pt.js"></script>
@@ -747,7 +750,13 @@
         document.getElementById('chapters-count').textContent = totalChapters;
 
         function t(key) {
-            return (TRANSLATIONS[currentLanguage] && TRANSLATIONS[currentLanguage][key]) || (TRANSLATIONS.FR && TRANSLATIONS.FR[key]) || null;
+            // Try global translations first, then inline TRANSLATIONS
+            const lang = currentLanguage || 'FR';
+            return (window.translations && window.translations[lang] && window.translations[lang][key]) ||
+                   (TRANSLATIONS[lang] && TRANSLATIONS[lang][key]) ||
+                   (window.translations && window.translations.FR && window.translations.FR[key]) ||
+                   (TRANSLATIONS.FR && TRANSLATIONS.FR[key]) ||
+                   null;
         }
 
         function getBookDisplayName(bookNum) {
@@ -1321,16 +1330,24 @@ const bookName = getBookDisplayName(currentBook);
         };
 
         function applyTranslations(lang) {
-            if (!TRANSLATIONS[lang]) lang = (window.BC_LANG ? BC_LANG.resolveLang() : 'EN');
+            // Use global translations from translations.js if available, fallback to inline
+            const translations = window.translations || TRANSLATIONS;
+
+            if (!translations[lang]) lang = (window.BC_LANG ? BC_LANG.resolveLang() : 'EN');
 
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (TRANSLATIONS[lang][key]) el.textContent = TRANSLATIONS[lang][key];
+                // Try global translations first, then inline TRANSLATIONS
+                const text = (window.translations && window.translations[lang] && window.translations[lang][key]) ||
+                             (TRANSLATIONS[lang] && TRANSLATIONS[lang][key]);
+                if (text) el.textContent = text;
             });
 
             document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
                 const key = el.getAttribute('data-i18n-placeholder');
-                if (TRANSLATIONS[lang][key]) el.placeholder = TRANSLATIONS[lang][key];
+                const text = (window.translations && window.translations[lang] && window.translations[lang][key]) ||
+                             (TRANSLATIONS[lang] && TRANSLATIONS[lang][key]);
+                if (text) el.placeholder = text;
             });
 
             renderBooks('old-testament', oldTestament);
