@@ -2616,6 +2616,7 @@ Object.keys(translations).forEach(lang => {
 
     // Lecteur (Reader) page
     t.readerPageTitle = "Bible Chantée - Lecteur Audio";
+    t.premiumPageTitle = "Bible Chantée Premium";
     t.readerHeading = "Bible Chantée";
     t.readerBackHome = "← Retour accueil";
     t.readerAbout = "À propos";
@@ -2807,6 +2808,7 @@ Object.keys(translations).forEach(lang => {
 
     // Lecteur (Reader) page
     t.readerPageTitle = "Sung Bible - Audio Player";
+    t.premiumPageTitle = "Sung Bible Premium";
     t.readerHeading = "Sung Bible";
     t.readerBackHome = "← Back home";
     t.readerAbout = "About";
@@ -2998,6 +3000,7 @@ Object.keys(translations).forEach(lang => {
 
     // Lecteur (Reader) page
     t.readerPageTitle = "Biblia Cantada - Reproductor de Audio";
+    t.premiumPageTitle = "Biblia Cantada Premium";
     t.readerHeading = "Biblia Cantada";
     t.readerBackHome = "← Volver inicio";
     t.readerAbout = "Acerca de";
@@ -3189,6 +3192,7 @@ Object.keys(translations).forEach(lang => {
 
     // Lecteur (Reader) page
     t.readerPageTitle = "Bíblia Cantada - Reprodutor de Áudio";
+    t.premiumPageTitle = "Bíblia Cantada Premium";
     t.readerHeading = "Bíblia Cantada";
     t.readerBackHome = "← Voltar início";
     t.readerAbout = "Sobre";
@@ -3542,6 +3546,7 @@ Object.keys(translations).forEach(lang => {
 
     // Reader page
     t.readerPageTitle = "Gesungene Bibel - Audio-Player";
+    t.premiumPageTitle = "Gesungene Bibel Premium";
     t.readerHeading = "Gesungene Bibel";
     t.readerBackHome = "← Zurück zur Startseite";
     t.readerAbout = "Über uns";

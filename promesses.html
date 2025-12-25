@@ -361,7 +361,8 @@
     function render(lang) {
         currentLang = lang;
         const d = DATA[lang] || DATA.FR;
-        
+
+        document.title = d.title;
         document.getElementById('pageTitle').textContent = d.title;
         document.getElementById('backLink').textContent = d.back;
         document.getElementById('subtitle').textContent = d.subtitle;

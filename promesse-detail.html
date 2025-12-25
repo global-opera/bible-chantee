@@ -171,6 +171,7 @@
     const THEMES_DATA = {
         FR: {
             back: "Retour aux themes",
+            siteName: "Bible Chantee",
             psalmWord: "Psaume",
             listenLabel: "Ecouter dans le lecteur",
             comingSoon: "Audio bientot disponible",
@@ -189,6 +190,7 @@
         },
         EN: {
             back: "Back to themes",
+            siteName: "Sung Bible",
             psalmWord: "Psalm",
             listenLabel: "Listen in player",
             comingSoon: "Audio coming soon",
@@ -207,6 +209,7 @@
         },
         PT: {
             back: "Voltar aos temas",
+            siteName: "Biblia Cantada",
             psalmWord: "Salmo",
             listenLabel: "Ouvir no leitor",
             comingSoon: "Audio em breve",
@@ -225,6 +228,7 @@
         },
         ES: {
             back: "Volver a los temas",
+            siteName: "Biblia Cantada",
             psalmWord: "Salmo",
             listenLabel: "Escuchar en el reproductor",
             comingSoon: "Audio proximamente",
@@ -312,7 +316,7 @@
         document.getElementById('themeIcon').textContent = theme.icon;
         document.getElementById('themeName').textContent = theme.name;
         document.getElementById('themeDesc').textContent = theme.desc;
-        document.title = `${theme.name} - Bible Chantee`;
+        document.title = `${theme.name} - ${langData.siteName}`;
         
         // Build psalms list
         const listContainer = document.getElementById('psalmsList');
