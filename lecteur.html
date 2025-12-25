@@ -554,12 +554,16 @@
 
     <script src="/lyrics-data.js"></script>
     <script src="/lyrics-data-pt.js"></script>
+    <script src="/lyrics-data-en.js"></script>
+    <script src="/lyrics-data-es.js"></script>
     <script src="/lyrics-data-v2.js"></script>
     <!-- Fix: Expose lyrics variables to window (const ne s'expose pas automatiquement) -->
     <script>
     if (typeof chapterLyrics !== 'undefined' && !window.chapterLyrics) window.chapterLyrics = chapterLyrics;
     if (typeof chapterLyricsV2 !== 'undefined' && !window.chapterLyricsV2) window.chapterLyricsV2 = chapterLyricsV2;
     if (typeof chapterLyricsPT !== 'undefined' && !window.chapterLyricsPT) window.chapterLyricsPT = chapterLyricsPT;
+    if (typeof chapterLyricsEN !== 'undefined' && !window.chapterLyricsEN) window.chapterLyricsEN = chapterLyricsEN;
+    if (typeof chapterLyricsES !== 'undefined' && !window.chapterLyricsES) window.chapterLyricsES = chapterLyricsES;
     </script>
 
     <script src="/audio-urls.js"></script>
@@ -579,6 +583,8 @@
     <script src="/audio-urls-ko.js"></script>
 
     <script src="/chapter-titles.js"></script>
+    <script src="/chapter-titles-en.js"></script>
+    <script src="/chapter-titles-pt.js"></script>
     <!-- Fix: Expose chapter titles to window -->
     <script>
     if (typeof chapterTitles !== 'undefined' && !window.chapterTitles) window.chapterTitles = chapterTitles;
@@ -769,16 +775,33 @@
 
         function getLyricsForCurrent(lang, book, chapterStr) {
             const L = (lang || 'en').toUpperCase();
+
+            // Portuguese
             if (L === 'PT') {
                 if (typeof window.chapterLyricsPT === 'undefined') return null;
                 return window.chapterLyricsPT[book] && window.chapterLyricsPT[book][chapterStr] ? window.chapterLyricsPT[book][chapterStr] : null;
             }
+
+            // French
             if (L === 'FR') {
                 if (typeof window.chapterLyrics === 'undefined') return null;
                 const v2 = (typeof window.chapterLyricsV2 !== 'undefined') && window.chapterLyricsV2[book] && window.chapterLyricsV2[book][chapterStr];
                 const v1 = window.chapterLyrics[book] && window.chapterLyrics[book][chapterStr];
                 return v2 ? window.chapterLyricsV2[book][chapterStr] : (v1 ? window.chapterLyrics[book][chapterStr] : null);
             }
+
+            // English
+            if (L === 'EN') {
+                if (typeof window.chapterLyricsEN === 'undefined') return null;
+                return window.chapterLyricsEN[book] && window.chapterLyricsEN[book][chapterStr] ? window.chapterLyricsEN[book][chapterStr] : null;
+            }
+
+            // Spanish
+            if (L === 'ES') {
+                if (typeof window.chapterLyricsES === 'undefined') return null;
+                return window.chapterLyricsES[book] && window.chapterLyricsES[book][chapterStr] ? window.chapterLyricsES[book][chapterStr] : null;
+            }
+
             return null;
         }
 
@@ -1016,8 +1039,17 @@ const bookName = getBookDisplayName(currentBook);
             const chapterWord = (currentLanguage === 'PT') ? 'Cap.' : (t('readerChapterShort') || 'Ch.');
             let displayTitle = bookName + ' - ' + chapterWord + String(chapter).padStart(2, '0');
 
-            if (typeof window.chapterTitles !== 'undefined' && window.chapterTitles && window.chapterTitles[currentBook] && window.chapterTitles[currentBook][chapterStr]) {
-                displayTitle += ' - ' + window.chapterTitles[currentBook][chapterStr];
+            // Get chapter titles for current language
+            const L = (currentLanguage || 'FR').toUpperCase();
+            let chapterTitlesForLang = window.chapterTitles; // Default FR
+            if (L === 'EN' && typeof window.chapterTitlesEN !== 'undefined') {
+                chapterTitlesForLang = window.chapterTitlesEN;
+            } else if (L === 'PT' && typeof window.chapterTitlesPT !== 'undefined') {
+                chapterTitlesForLang = window.chapterTitlesPT;
+            }
+
+            if (chapterTitlesForLang && chapterTitlesForLang[currentBook] && chapterTitlesForLang[currentBook][chapterStr]) {
+                displayTitle += ' - ' + chapterTitlesForLang[currentBook][chapterStr];
             }
 
             document.getElementById('player-title').textContent = displayTitle;
