@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#1a5f7a">
+    <title>SC Bus</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #1a5f7a 0%, #2d8a6e 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            padding-top: 40px;
+            color: white;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 360px;
+            width: 100%;
+        }
+        
+        .icon {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .launch-btn {
+            display: block;
+            width: 100%;
+            padding: 16px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a5f7a;
+            background: white;
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            transition: all 0.2s ease;
+            margin-bottom: 25px;
+        }
+        
+        .launch-btn:active {
+            transform: scale(0.97);
+        }
+        
+        .home-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+            transition: all 0.2s ease;
+            margin-bottom: 12px;
+        }
+        
+        .home-btn:active {
+            transform: scale(0.97);
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.5);
+        }
+        
+        .home-icon {
+            font-size: 28px;
+        }
+        
+        .home-text {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        
+        .home-label {
+            font-size: 12px;
+            font-weight: 500;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .home-stop {
+            font-size: 17px;
+            font-weight: 700;
+        }
+        
+        .map-btn {
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 15px;
+            font-weight: 600;
+            color: white;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 12px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            margin-bottom: 20px;
+        }
+        
+        .map-btn:active {
+            background: rgba(255,255,255,0.9);
+            color: #1a5f7a;
+        }
+        
+        .work-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+            transition: all 0.2s ease;
+            margin-bottom: 12px;
+        }
+        
+        .work-btn:active {
+            transform: scale(0.97);
+        }
+        
+        .work-icon {
+            font-size: 24px;
+        }
+        
+        .work-text {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        
+        .work-label {
+            font-size: 11px;
+            font-weight: 500;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .work-dest {
+            font-size: 15px;
+            font-weight: 700;
+        }
+        
+        .return-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+            transition: all 0.2s ease;
+            margin-bottom: 12px;
+        }
+        
+        .return-btn:active {
+            transform: scale(0.97);
+        }
+        
+        .return-icon {
+            font-size: 24px;
+        }
+        
+        .return-text {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        
+        .return-label {
+            font-size: 11px;
+            font-weight: 500;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .return-dest {
+            font-size: 15px;
+            font-weight: 700;
+        }
+        
+        .section-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.7;
+            margin-bottom: 12px;
+        }
+        
+        .lines {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .line-badge {
+            background: rgba(255,255,255,0.15);
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+            transition: all 0.2s ease;
+            border: 2px solid transparent;
+        }
+        
+        .line-badge:hover, .line-badge:active {
+            background: rgba(255,255,255,0.95);
+            color: #1a5f7a;
+            transform: scale(1.05);
+        }
+        
+        .line-badge:active {
+            transform: scale(0.95);
+        }
+        
+        .line-badge.night {
+            background: rgba(100,100,180,0.4);
+        }
+        
+        .line-badge.regional {
+            background: rgba(180,100,100,0.4);
+        }
+        
+        .info-section {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .info-btn {
+            flex: 1;
+            padding: 12px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        
+        .info-btn:active {
+            background: rgba(255,255,255,0.9);
+            color: #1a5f7a;
+        }
+        
+        .info-btn .emoji {
+            font-size: 20px;
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .footer {
+            margin-top: 20px;
+            font-size: 11px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🚌</div>
+        <h1>Bus Riviera</h1>
+        <p class="subtitle">Carte interactive VMCV</p>
+        
+        <a href="https://www.sbb.ch/fr/acheter/pages/fahrplan/fahrplan.xhtml?von=La%20Tour-de-Peilz,%20Ile-Heureuse" 
+           class="home-btn">
+            <span class="home-icon">🏠</span>
+            <span class="home-text">
+                <span class="home-label">Mon domicile</span>
+                <span class="home-stop">Ile-Heureuse • Prochains départs</span>
+            </span>
+        </a>
+        
+        <a href="https://www.sbb.ch/fr/acheter/pages/fahrplan/fahrplan.xhtml?von=La%20Tour-de-Peilz,%20Ile-Heureuse&nach=Vevey,%20Avenue%20Nestl%C3%A9%2055" 
+           class="work-btn">
+            <span class="work-icon">💼</span>
+            <span class="work-text">
+                <span class="work-label">Aller travail</span>
+                <span class="work-dest">Ile-Heureuse → Nestlé 55</span>
+            </span>
+        </a>
+        
+        <a href="https://www.sbb.ch/fr/acheter/pages/fahrplan/fahrplan.xhtml?von=Vevey,%20Avenue%20Nestl%C3%A9%2055&nach=La%20Tour-de-Peilz,%20Ile-Heureuse" 
+           class="return-btn">
+            <span class="return-icon">🏠</span>
+            <span class="return-text">
+                <span class="return-label">Retour maison</span>
+                <span class="return-dest">Nestlé 55 → Ile-Heureuse</span>
+            </span>
+        </a>
+        
+        <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_arret_bus=true&tree_enable_tp_ligne_bus_212=true&tree_enable_tp_ligne_bus=false" 
+           class="map-btn">
+            🗺️ Carte • Ligne 212
+        </a>
+        
+        <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&tree_group_layers_accrochage_dessin_mesure=&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_vmcv_infos_trafic_futures=true&tree_enable_vmcv_infos_trafic_en_cours=true&tree_enable_points_vente_vmcv=true&tree_enable_tp_ligne_bus_201=true&tree_enable_tp_ligne_bus_202=true&tree_enable_tp_ligne_bus_203=true&tree_enable_tp_ligne_bus_204=true&tree_enable_tp_ligne_bus_205=true&tree_enable_tp_ligne_bus_206=true&tree_enable_tp_ligne_bus_207=true&tree_enable_tp_ligne_bus_209=true&tree_enable_tp_ligne_bus_210=true&tree_enable_tp_ligne_bus_211=true&tree_enable_tp_ligne_bus_213=true&tree_enable_tp_ligne_bus_215=true&tree_enable_tp_ligne_bus_216=true&tree_enable_tp_ligne_bus_217=true&tree_enable_tp_ligne_bus_218=true&tree_enable_tp_ligne_bus_220=true&tree_enable_tp_ligne_bus_111=true&tree_enable_tp_ligne_bus_120=true&tree_enable_tp_ligne_bus_121=true&tree_enable_tp_ligne_bus_492=true&tree_enable_tp_ligne_bus_nuit=true&tree_enable_tp_ligne_bus_290=true&tree_enable_tp_ligne_bus_291=true&tree_enable_tp_ligne_bus=false&tree_enable_tp_ligne_bus_212=true&tree_enable_tp_arret_train=false&tree_enable_tp_ligne_train=false" 
+           class="launch-btn">
+            🗺️ Toutes les lignes
+        </a>
+        
+        <p class="section-title">Lignes urbaines</p>
+        <div class="lines">
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_201=true&tree_enable_tp_ligne_bus=false" class="line-badge">201</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_202=true&tree_enable_tp_ligne_bus=false" class="line-badge">202</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_203=true&tree_enable_tp_ligne_bus=false" class="line-badge">203</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_204=true&tree_enable_tp_ligne_bus=false" class="line-badge">204</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_205=true&tree_enable_tp_ligne_bus=false" class="line-badge">205</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_206=true&tree_enable_tp_ligne_bus=false" class="line-badge">206</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_207=true&tree_enable_tp_ligne_bus=false" class="line-badge">207</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_209=true&tree_enable_tp_ligne_bus=false" class="line-badge">209</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_210=true&tree_enable_tp_ligne_bus=false" class="line-badge">210</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_211=true&tree_enable_tp_ligne_bus=false" class="line-badge">211</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_212=true&tree_enable_tp_ligne_bus=false" class="line-badge">212</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_213=true&tree_enable_tp_ligne_bus=false" class="line-badge">213</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_215=true&tree_enable_tp_ligne_bus=false" class="line-badge">215</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_216=true&tree_enable_tp_ligne_bus=false" class="line-badge">216</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_217=true&tree_enable_tp_ligne_bus=false" class="line-badge">217</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_218=true&tree_enable_tp_ligne_bus=false" class="line-badge">218</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_220=true&tree_enable_tp_ligne_bus=false" class="line-badge">220</a>
+        </div>
+        
+        <p class="section-title">Lignes régionales</p>
+        <div class="lines">
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_111=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">111</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_120=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">120</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_121=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">121</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_290=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">290</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_291=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">291</a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_492=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">492</a>
+        </div>
+        
+        <p class="section-title">Bus de nuit</p>
+        <div class="lines">
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_nuit=true&tree_enable_tp_ligne_bus=false" class="line-badge night">🌙 Nuit</a>
+        </div>
+        
+        <div class="info-section">
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_vmcv_infos_trafic_en_cours=true&tree_enable_vmcv_infos_trafic_futures=true&tree_enable_tp_ligne_bus=false" class="info-btn">
+                <span class="emoji">⚠️</span>
+                Infos trafic
+            </a>
+            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_points_vente_vmcv=true&tree_enable_tp_ligne_bus=false" class="info-btn">
+                <span class="emoji">🎫</span>
+                Points de vente
+            </a>
+        </div>
+        
+        <p class="footer">
+            Ajouter à l'écran d'accueil pour un accès rapide
+        </p>
+    </div>
+</body>
+</html>
