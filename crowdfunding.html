@@ -3,23 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="page-title-tag">Soutenir - Bible Chantée</title>
+    <title>Soutenir Bible Chantée - Crowdfunding</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg-dark: #0a1628;
-            --bg-card: #0f2744;
-            --bg-card-hover: #153352;
-            --text-primary: #ffffff;
-            --text-secondary: rgba(255, 255, 255, 0.7);
-            --accent-blue: #4a90d9;
-            --accent-gold: #d4af37;
-            --success-green: #22c55e;
-            --border-color: rgba(255, 255, 255, 0.1);
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -27,349 +15,227 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(180deg, #1a4a7a 0%, #0a1628 100%);
-            min-height: 100vh;
-            color: var(--text-primary);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
         }
 
-        .header {
-            text-align: center;
+        .hero {
+            background: linear-gradient(135deg, #1a1a6e 0%, #2d2d8a 100%);
+            color: white;
             padding: 3rem 2rem;
-            background: linear-gradient(180deg, #2a5a8a 0%, #1a4a7a 100%);
+            text-align: center;
         }
 
-        .header h1 {
+        .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: #a8c8e8;
-            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
-        .header .subtitle {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-        }
-
-        .nav {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            padding: 1rem;
-            background: var(--bg-dark);
-            border-bottom: 1px solid var(--border-color);
-            flex-wrap: wrap;
-        }
-
-        .nav a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-            display: inline-block;
-            padding: 0.25rem 0;
-        }
-
-        .nav a:hover {
-            color: var(--text-primary);
-        }
-
-        .nav a.active {
-            color: var(--text-primary);
-            border-bottom: 2px solid var(--accent-gold);
-        }
-
-        /* Language Dropdown */
-        .lang-dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .lang-btn-cf {
-            background: transparent;
-            border: 1px solid var(--border-color);
-            color: var(--text-secondary);
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-        }
-
-        .lang-btn-cf:hover {
-            border-color: var(--accent-gold);
-            color: var(--text-primary);
-        }
-
-        .lang-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            min-width: 180px;
-            margin-top: 0.5rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            z-index: 1000;
-        }
-
-        .lang-menu.active {
-            display: block;
-        }
-
-        .lang-menu-item {
-            padding: 0.75rem 1rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: background 0.2s;
-            color: var(--text-primary);
-        }
-
-        .lang-menu-item:hover {
-            background: var(--bg-card-hover);
-        }
-
-        .lang-menu-item .checkmark {
-            color: var(--accent-gold);
-            font-weight: bold;
-            margin-left: 8px;
+        .hero .subtitle {
+            font-size: 1.2rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        .card {
-            background: var(--bg-card);
-            border-radius: 16px;
+        .section {
+            background: white;
             padding: 2rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid var(--border-color);
-        }
-
-        .card h2 {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 1.4rem;
-            color: var(--accent-blue);
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-
-        .card h2 .icon {
-            font-size: 1.5rem;
-        }
-
-        /* Objectif Card */
-        .objectif-card {
-            background: linear-gradient(135deg, #1e3a5f 0%, #0f2744 100%);
-            border: 2px solid var(--accent-gold);
-            text-align: center;
-            padding: 2.5rem;
-        }
-
-        .objectif-amount {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--accent-gold);
-            margin: 1rem 0;
-        }
-
-        .objectif-label {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-        }
-
-        .progress-bar-container {
-            background: rgba(0,0,0,0.3);
-            border-radius: 10px;
-            height: 20px;
             margin: 1.5rem 0;
-            overflow: hidden;
-        }
-
-        .progress-bar {
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent-gold), #f5d742);
-            border-radius: 10px;
-            width: 2%;
-            transition: width 0.5s;
-        }
-
-        .progress-text {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        /* Stats Grid */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .stat-box {
-            background: rgba(0, 0, 0, 0.2);
             border-radius: 12px;
-            padding: 1.5rem;
-            text-align: center;
-            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        .stat-box .number {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--accent-blue);
+        .section h2 {
             font-family: 'Playfair Display', serif;
+            color: #1a1a6e;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
 
-        .stat-box .label {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-top: 0.3rem;
-        }
-
-        /* GoFundMe Button */
         .gofundme-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            display: block;
+            background: linear-gradient(135deg, #00b964 0%, #00a857 100%);
             color: white;
-            padding: 1.2rem 3rem;
+            padding: 1.2rem 2rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            text-align: center;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
-            margin: 0.5rem;
+            box-shadow: 0 8px 25px rgba(0, 185, 100, 0.3);
+            max-width: 400px;
+            margin: 1.5rem auto;
         }
 
         .gofundme-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 185, 100, 0.4);
         }
 
-        .center {
-            text-align: center;
-        }
-
-        .divider {
-            text-align: center;
-            color: var(--text-secondary);
-            margin: 1.5rem 0;
-            font-size: 0.95rem;
-        }
-
-        /* Payment Grid */
         .payment-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
         .payment-card {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
+            background: #f8f9fa;
             padding: 1.5rem;
+            border-radius: 10px;
             text-align: center;
-            border: 1px solid var(--border-color);
+            border: 2px solid #e0e0e0;
             transition: all 0.3s ease;
         }
 
         .payment-card:hover {
-            border-color: var(--accent-blue);
+            border-color: #1a1a6e;
             transform: translateY(-3px);
         }
 
         .payment-card .icon {
             font-size: 2.5rem;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
         }
 
         .payment-card h3 {
-            color: var(--text-primary);
-            font-size: 1.1rem;
-            margin-bottom: 0.75rem;
+            color: #1a1a6e;
+            margin-bottom: 0.5rem;
         }
 
         .payment-card .value {
             font-family: monospace;
-            font-size: 0.95rem;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 0.6rem;
-            border-radius: 8px;
-            color: var(--text-primary);
+            font-size: 1rem;
+            background: white;
+            padding: 0.5rem;
+            border-radius: 5px;
             word-break: break-all;
+            border: 1px solid #ddd;
         }
 
         .payment-card .note {
             font-size: 0.85rem;
-            color: var(--text-secondary);
+            color: #666;
             margin-top: 0.5rem;
-        }
-
-        .payment-btn {
-            display: inline-block;
-            background: var(--accent-blue);
-            color: white;
-            border: none;
-            padding: 0.6rem 1.5rem;
-            border-radius: 25px;
-            cursor: pointer;
-            margin-top: 0.75rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .payment-btn:hover {
-            background: #5aa0e9;
-            transform: scale(1.05);
-        }
-
-        .payment-btn.paypal {
-            background: #0070ba;
-        }
-
-        .payment-btn.paypal:hover {
-            background: #003087;
         }
 
         .copy-btn {
-            background: transparent;
-            color: var(--accent-blue);
-            border: 1px solid var(--accent-blue);
+            background: #1a1a6e;
+            color: white;
+            border: none;
             padding: 0.4rem 1rem;
-            border-radius: 20px;
+            border-radius: 5px;
             cursor: pointer;
             margin-top: 0.5rem;
-            font-size: 0.8rem;
-            transition: all 0.3s;
+            font-size: 0.85rem;
         }
 
         .copy-btn:hover {
-            background: var(--accent-blue);
-            color: white;
+            background: #2d2d8a;
         }
 
-        /* Missionary Note */
+        .impact-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .impact-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .impact-list li:last-child {
+            border-bottom: none;
+        }
+
+        .impact-list .emoji {
+            font-size: 1.5rem;
+        }
+
+        .progress-section {
+            text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4a 100%);
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .progress-section h3 {
+            color: #1a1a6e;
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .stat-item {
+            background: rgba(255,255,255,0.8);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a1a6e;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        .quote {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            padding: 1.5rem;
+            border-left: 4px solid #ffd700;
+            background: #fffef5;
+            margin: 1.5rem 0;
+        }
+
+        .quote .verse {
+            font-weight: 600;
+            color: #1a1a6e;
+            margin-top: 0.5rem;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .back-link a {
+            color: #1a1a6e;
+            text-decoration: none;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
         .missionary-note {
-            background: rgba(212, 175, 55, 0.1);
-            border-left: 4px solid var(--accent-gold);
+            background: linear-gradient(135deg, #fff8dc 0%, #fffef5 100%);
+            border-left: 4px solid #ffd700;
             padding: 1rem 1.5rem;
             border-radius: 0 8px 8px 0;
             margin-top: 1.5rem;
@@ -377,627 +243,122 @@
         }
 
         .missionary-note strong {
-            color: var(--accent-gold);
+            color: #1a1a6e;
         }
 
-        /* Impact List */
-        .impact-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1rem;
-        }
-
-        .impact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 0.8rem;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-        }
-
-        .impact-item .emoji {
-            font-size: 1.5rem;
-        }
-
-        .impact-item p {
-            margin: 0;
-            font-size: 0.95rem;
-        }
-
-        /* Quote */
-        .quote-card {
-            text-align: center;
-            font-style: italic;
-            color: var(--text-secondary);
-            padding: 2rem;
-        }
-
-        .quote-card .verse {
-            color: var(--accent-gold);
-            font-weight: 600;
-            margin-top: 1rem;
-            font-style: normal;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border-color);
-            margin-top: 2rem;
-        }
-
-        .footer a {
-            color: var(--accent-blue);
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Badge */
-        .badge {
-            display: inline-block;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .badge-success {
-            background: var(--success-green);
-            color: white;
-        }
-
-        .badge-progress {
-            background: #f59e0b;
-            color: white;
-        }
-
-        /* Status List */
-        .status-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .status-list li {
-            padding: 0.6rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        /* Toast notification */
-        .toast {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--success-green);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 10px;
-            display: none;
-            z-index: 1000;
-            font-weight: 600;
-        }
-
-        .toast.show {
-            display: block;
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateX(-50%) translateY(20px); }
-            to { opacity: 1; transform: translateX(-50%) translateY(0); }
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-            .objectif-amount {
-                font-size: 2.5rem;
-            }
-            .nav {
-                gap: 1rem;
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8rem;
             }
             .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
+            }
+            .payment-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <h1 data-i18n="page-title">Bible Chantée</h1>
-        <p class="subtitle" data-i18n="page-subtitle">Toute la Parole de Dieu en musique – 12 langues</p>
-    </header>
-
-    <!-- Navigation -->
-    <nav class="nav">
-        <a href="index.html" data-i18n="nav-project">Le Projet</a>
-        <a href="crowdfunding.html" class="active" data-i18n="nav-support">Soutenir</a>
-        <a href="about.html" data-i18n="nav-about">À propos</a>
-        <a href="contact.html" data-i18n="nav-contact">Contact</a>
-
-        <div class="lang-dropdown">
-            <button class="lang-btn-cf" id="langBtn" onclick="toggleLangMenu()">
-                <span id="langFlag">🇫🇷</span>
-                <span id="langCode">FR</span>
-                <span>▼</span>
-            </button>
-            <div class="lang-menu" id="langMenu">
-                <div class="lang-menu-item" onclick="changeLang('fr')">
-                    <span>🇫🇷 Français</span> <span class="checkmark" id="check-fr">✓</span>
-                </div>
-                <div class="lang-menu-item" onclick="changeLang('en')">
-                    <span>🇬🇧 English</span> <span class="checkmark" id="check-en"></span>
-                </div>
-                <div class="lang-menu-item" onclick="changeLang('pt')">
-                    <span>🇧🇷 Português</span> <span class="checkmark" id="check-pt"></span>
-                </div>
-                <div class="lang-menu-item" onclick="changeLang('es')">
-                    <span>🇪🇸 Español</span> <span class="checkmark" id="check-es"></span>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <div class="hero">
+        <h1>🎵 Soutenez Bible Chantée</h1>
+        <p class="subtitle">La Bible en musique, gratuite pour le monde entier</p>
+    </div>
 
     <div class="container">
-        <!-- Objectif Card -->
-        <div class="card objectif-card">
-            <h2 style="justify-content: center; color: var(--accent-gold);"><span class="icon">🎯</span> <span data-i18n="goal-title">Objectif de la collecte</span></h2>
-            <div class="objectif-amount" data-i18n="goal-amount">CHF 100'000</div>
-            <div class="objectif-label" data-i18n="goal-desc">Pour finaliser les 12 langues et l'application mobile</div>
-            <div class="progress-bar-container">
-                <div class="progress-bar"></div>
-            </div>
-            <div class="progress-text" data-i18n="goal-progress">Collecte en cours - Chaque don compte !</div>
-        </div>
-
-        <!-- Donate Card -->
-        <div class="card">
-            <h2><span class="icon">💝</span> <span data-i18n="donate-title">Faire un don maintenant</span></h2>
-
-            <div class="center" style="margin-bottom: 1.5rem;">
-                <a href="https://gofund.me/65145a53b" target="_blank" class="gofundme-btn">
-                    <span data-i18n="donate-gofundme">🚀 Donner via GoFundMe</span>
-                </a>
+        <div class="section">
+            <div class="progress-section">
+                <h3>📊 Déjà accompli</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">2378</div>
+                        <div class="stat-label">Chapitres générés</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Langues complètes</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Langues prévues</div>
+                    </div>
+                </div>
             </div>
 
-            <p class="divider" data-i18n="donate-or">— ou par virement direct (sans frais de plateforme) —</p>
+            <h2>💝 Faire un don</h2>
+            
+            <a href="https://gofund.me/65145a53b" target="_blank" class="gofundme-btn">
+                🚀 Donner via GoFundMe
+            </a>
+
+            <p style="text-align: center; color: #666; margin: 1rem 0;">ou par virement direct (sans frais)</p>
 
             <div class="payment-grid">
                 <div class="payment-card">
                     <div class="icon">🏦</div>
-                    <h3 data-i18n="donate-bank">Virement bancaire</h3>
-                    <div class="value">CH96 0900 0000 1422 5706 6</div>
-                    <div class="note">PostFinance Suisse<br>Stéphane Cassani</div>
-                    <button class="copy-btn" onclick="copyToClipboard('CH9609000000142257066', getTranslation('donate-iban-copied'))">📋 <span data-i18n="donate-copy-iban">Copier IBAN</span></button>
+                    <h3>Virement IBAN</h3>
+                    <div class="value">BE60 9670 3365 9770</div>
+                    <div class="note">BIC: TRWIBEB1XXX<br>Stéphane Jean Cassani</div>
+                    <button class="copy-btn" onclick="copyToClipboard('BE60967033659770')">Copier IBAN</button>
                 </div>
 
                 <div class="payment-card">
                     <div class="icon">📱</div>
                     <h3>Twint</h3>
                     <div class="value">+41 78 212 53 63</div>
-                    <div class="note" data-i18n="donate-twint-note">Suisse uniquement<br>Scannez ou ajoutez le numéro</div>
-                    <button class="copy-btn" onclick="copyToClipboard('+41782125363', getTranslation('donate-number-copied'))">📋 <span data-i18n="donate-copy-number">Copier numéro</span></button>
+                    <div class="note">Suisse uniquement</div>
+                    <button class="copy-btn" onclick="copyToClipboard('+41782125363')">Copier</button>
                 </div>
 
                 <div class="payment-card">
                     <div class="icon">💳</div>
                     <h3>PayPal</h3>
                     <div class="value">scassani@gmail.com</div>
-                    <div class="note" data-i18n="donate-paypal-note">Paiement mondial sécurisé</div>
-                    <a href="https://www.paypal.me/stephanecassani1" target="_blank" class="payment-btn paypal" data-i18n="donate-paypal-btn">💳 Payer avec PayPal</a>
-                    <button class="copy-btn" onclick="copyToClipboard('scassani@gmail.com', getTranslation('donate-email-copied'))">📋 <span data-i18n="donate-copy-email">Copier email</span></button>
+                    <div class="note">Mondial</div>
+                    <button class="copy-btn" onclick="copyToClipboard('scassani@gmail.com')">Copier</button>
                 </div>
             </div>
-            
+
             <div class="missionary-note">
                 🙏 <strong>10% de tous les dons seront reversés à des œuvres missionnaires chrétiennes.</strong>
             </div>
         </div>
 
-        <!-- Progress Card -->
-        <div class="card">
-            <h2><span class="icon">📊</span> <span data-i18n="progress-title">Avancement du projet</span></h2>
-            <div class="stats-grid">
-                <div class="stat-box">
-                    <div class="number">4756</div>
-                    <div class="label" data-i18n="stat-chapters">chapitres générés</div>
-                </div>
-                <div class="stat-box">
-                    <div class="number">4</div>
-                    <div class="label" data-i18n="stat-languages">langues complètes</div>
-                </div>
-                <div class="stat-box">
-                    <div class="number">12</div>
-                    <div class="label" data-i18n="stat-planned">langues prévues</div>
-                </div>
-                <div class="stat-box">
-                    <div class="number">100%</div>
-                    <div class="label" data-i18n="stat-free">gratuit</div>
-                </div>
-            </div>
-            <ul class="status-list">
-                <li><span data-i18n="status-fr">Version française</span> : <span class="badge badge-success" data-i18n="status-complete">Terminée</span></li>
-                <li><span data-i18n="status-pt">Version portugaise</span> : <span class="badge badge-success" data-i18n="status-complete">Terminée</span></li>
-                <li><span data-i18n="status-en">Version anglaise</span> : <span class="badge badge-success" data-i18n="status-complete">Terminée</span></li>
-                <li><span data-i18n="status-es">Version espagnole</span> : <span class="badge badge-success" data-i18n="status-complete">Terminée</span></li>
-                <li><span data-i18n="status-other">8 autres langues : en préparation (allemand, italien, russe, arabe, chinois, hindi, tagalog, swahili...)</span></li>
+        <div class="section">
+            <h2>🌍 Votre don permet</h2>
+            <ul class="impact-list">
+                <li><span class="emoji">👶</span> Aux enfants d'apprendre la Bible en chantant</li>
+                <li><span class="emoji">📖</span> Aux non-lecteurs de découvrir la Parole de Dieu</li>
+                <li><span class="emoji">⛪</span> Aux églises persécutées d'accéder aux Écritures</li>
+                <li><span class="emoji">👨‍👩‍👧</span> Aux familles de prier ensemble en musique</li>
+                <li><span class="emoji">🌐</span> À 12 langues d'être générées gratuitement</li>
+                <li><span class="emoji">📱</span> À l'application mobile d'être développée</li>
             </ul>
         </div>
 
-        <!-- Impact Card -->
-        <div class="card">
-            <h2><span class="icon">🌍</span> <span data-i18n="impact-title">Votre don permet</span></h2>
-            <div class="impact-list">
-                <div class="impact-item">
-                    <span class="emoji">👶</span>
-                    <p>Aux enfants d'apprendre la Bible en chantant</p>
-                </div>
-                <div class="impact-item">
-                    <span class="emoji">📖</span>
-                    <p>Aux non-lecteurs de découvrir la Parole de Dieu</p>
-                </div>
-                <div class="impact-item">
-                    <span class="emoji">⛪</span>
-                    <p>Aux églises persécutées d'accéder aux Écritures</p>
-                </div>
-                <div class="impact-item">
-                    <span class="emoji">👨‍👩‍👧</span>
-                    <p>Aux familles de prier ensemble en musique</p>
-                </div>
-                <div class="impact-item">
-                    <span class="emoji">🌐</span>
-                    <p>À 12 langues d'être générées gratuitement</p>
-                </div>
-                <div class="impact-item">
-                    <span class="emoji">📱</span>
-                    <p>À l'application mobile d'être développée</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Quote Card -->
-        <div class="card quote-card">
+        <div class="quote">
             "Chantez à l'Éternel un cantique nouveau !<br>
             Chantez à l'Éternel, vous tous, habitants de la terre !"
             <div class="verse">— Psaume 96:1</div>
         </div>
+
+        <div class="back-link">
+            <a href="/">← Retour à Bible Chantée</a>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>© 2025 Bible Chantée - Stéphane Cassani. Tous droits réservés.</p>
-        <p><a href="index.html">← Retour à l'accueil</a></p>
-    </footer>
-
-    <!-- Toast notification -->
-    <div class="toast" id="toast"></div>
-
     <script>
-        // ===== I18N SYSTEM =====
-        const translations = {
-            fr: {
-                'page-title-tag': 'Soutenir - Bible Chantée',
-                'page-title': 'Bible Chantée',
-                'page-subtitle': 'Toute la Parole de Dieu en musique – 12 langues',
-                'nav-project': 'Le Projet',
-                'nav-support': 'Soutenir',
-                'nav-about': 'À propos',
-                'nav-contact': 'Contact',
-                'goal-title': 'Objectif de la collecte',
-                'goal-amount': 'CHF 100\'000',
-                'goal-desc': 'Pour finaliser les 12 langues et l\'application mobile',
-                'goal-progress': 'Collecte en cours - Chaque don compte !',
-                'progress-title': 'Avancement du projet',
-                'stat-chapters': 'chapitres générés',
-                'stat-languages': 'langues complètes',
-                'stat-planned': 'langues prévues',
-                'stat-free': 'gratuit',
-                'status-fr': 'Version française',
-                'status-pt': 'Version portugaise',
-                'status-en': 'Version anglaise',
-                'status-es': 'Version espagnole',
-                'status-complete': 'Terminée',
-                'status-other': 'autres langues : en préparation (allemand, italien, russe, arabe, chinois, hindi, tagalog, swahili...)',
-                'impact-title': 'Votre don permet',
-                'donate-title': 'Faire un don maintenant',
-                'donate-gofundme': '🚀 Donner via GoFundMe',
-                'donate-or': '— ou par virement direct (sans frais de plateforme) —',
-                'donate-bank': 'Virement bancaire',
-                'donate-copy-iban': 'Copier IBAN',
-                'donate-iban-copied': 'IBAN copié !',
-                'donate-twint-note': 'Suisse uniquement<br>Scannez ou ajoutez le numéro',
-                'donate-copy-number': 'Copier numéro',
-                'donate-number-copied': 'Numéro copié !',
-                'donate-pix-note': 'Bresil uniquement',
-                'donate-copy-pix': 'Copier cle Pix',
-                'donate-pix-copied': 'Cle Pix copiee !',
-                'donate-paypal-note': 'Paiement mondial sécurisé',
-                'donate-paypal-btn': '💳 Payer avec PayPal',
-                'donate-copy-email': 'Copier email',
-                'donate-email-copied': 'Email copié !'
-            },
-            en: {
-                'page-title-tag': 'Support - Sung Bible',
-                'page-title': 'Sung Bible',
-                'page-subtitle': 'God\'s Word in music – 12 languages',
-                'nav-project': 'The Project',
-                'nav-support': 'Support',
-                'nav-about': 'About',
-                'nav-contact': 'Contact',
-                'goal-title': 'Fundraising Goal',
-                'goal-amount': 'CHF 100,000',
-                'goal-desc': 'To complete all 12 languages and the mobile app',
-                'goal-progress': 'Fundraising in progress - Every donation counts!',
-                'progress-title': 'Project Progress',
-                'stat-chapters': 'chapters generated',
-                'stat-languages': 'complete languages',
-                'stat-planned': 'planned languages',
-                'stat-free': 'free',
-                'status-fr': 'French Version',
-                'status-pt': 'Portuguese Version',
-                'status-en': 'English Version',
-                'status-es': 'Spanish Version',
-                'status-complete': 'Complete',
-                'status-other': 'other languages: in preparation (German, Italian, Russian, Arabic, Chinese, Hindi, Tagalog, Swahili...)',
-                'impact-title': 'Your donation enables',
-                'donate-title': 'Make a donation now',
-                'donate-gofundme': '🚀 Donate via GoFundMe',
-                'donate-or': '— or by direct transfer (no platform fees) —',
-                'donate-bank': 'Bank transfer',
-                'donate-copy-iban': 'Copy IBAN',
-                'donate-iban-copied': 'IBAN copied!',
-                'donate-twint-note': 'Switzerland only<br>Scan or add number',
-                'donate-copy-number': 'Copy number',
-                'donate-number-copied': 'Number copied!',
-                'donate-pix-note': 'Brazil only',
-                'donate-copy-pix': 'Copy Pix key',
-                'donate-pix-copied': 'Pix key copied!',
-                'donate-paypal-note': 'Secure worldwide payment',
-                'donate-paypal-btn': '💳 Pay with PayPal',
-                'donate-copy-email': 'Copy email',
-                'donate-email-copied': 'Email copied!'
-            },
-            pt: {
-                'page-title-tag': 'Apoiar - Bíblia Cantada',
-                'page-title': 'Bíblia Cantada',
-                'page-subtitle': 'Toda a Palavra de Deus em música – 12 idiomas',
-                'nav-project': 'O Projeto',
-                'nav-support': 'Apoiar',
-                'nav-about': 'Sobre',
-                'nav-contact': 'Contato',
-                'goal-title': 'Objetivo da arrecadação',
-                'goal-amount': 'CHF 100\'000',
-                'goal-desc': 'Para finalizar os 12 idiomas e o aplicativo móvel',
-                'goal-progress': 'Arrecadação em andamento - Cada doação conta!',
-                'progress-title': 'Progresso do Projeto',
-                'stat-chapters': 'capítulos gerados',
-                'stat-languages': 'línguas completas',
-                'stat-planned': 'línguas previstas',
-                'stat-free': 'gratuito',
-                'status-fr': 'Versão Francesa',
-                'status-pt': 'Versão Portuguesa',
-                'status-en': 'Versão Inglesa',
-                'status-es': 'Versão Espanhola',
-                'status-complete': 'Completa',
-                'status-other': 'outras línguas: em preparação (alemão, italiano, russo, árabe, chinês, hindi, tagalog, swahili...)',
-                'impact-title': 'Sua doação permite',
-                'donate-title': 'Fazer uma doação agora',
-                'donate-gofundme': '🚀 Doar via GoFundMe',
-                'donate-or': '— ou por transferência direta (sem taxas de plataforma) —',
-                'donate-bank': 'Transferência bancária',
-                'donate-copy-iban': 'Copiar IBAN',
-                'donate-iban-copied': 'IBAN copiado!',
-                'donate-twint-note': 'Somente Suíça<br>Escaneie ou adicione o número',
-                'donate-copy-number': 'Copiar número',
-                'donate-number-copied': 'Número copiado!',
-                'donate-pix-note': 'Somente Brasil',
-                'donate-copy-pix': 'Copiar chave Pix',
-                'donate-pix-copied': 'Chave Pix copiada!',
-                'donate-paypal-note': 'Pagamento seguro mundial',
-                'donate-paypal-btn': '💳 Pagar com PayPal',
-                'donate-copy-email': 'Copiar email',
-                'donate-email-copied': 'Email copiado!'
-            },
-            es: {
-                'page-title-tag': 'Apoyar - Biblia Cantada',
-                'page-title': 'Biblia Cantada',
-                'page-subtitle': 'Toda la Palabra de Dios en música – 12 idiomas',
-                'nav-project': 'El Proyecto',
-                'nav-support': 'Apoyar',
-                'nav-about': 'Acerca de',
-                'nav-contact': 'Contacto',
-                'goal-title': 'Objetivo de la recaudación',
-                'goal-amount': 'CHF 100\'000',
-                'goal-desc': 'Para finalizar los 12 idiomas y la aplicación móvil',
-                'goal-progress': '¡Recaudación en curso - Cada donación cuenta!',
-                'progress-title': 'Progreso del Proyecto',
-                'stat-chapters': 'capítulos generados',
-                'stat-languages': 'idiomas completos',
-                'stat-planned': 'idiomas previstos',
-                'stat-free': 'gratuito',
-                'status-fr': 'Versión Francesa',
-                'status-pt': 'Versión Portuguesa',
-                'status-en': 'Versión Inglesa',
-                'status-es': 'Versión Española',
-                'status-complete': 'Completa',
-                'status-other': 'otros idiomas: en preparación (alemán, italiano, ruso, árabe, chino, hindi, tagalo, swahili...)',
-                'impact-title': 'Su donación permite',
-                'donate-title': 'Hacer una donación ahora',
-                'donate-gofundme': '🚀 Donar vía GoFundMe',
-                'donate-or': '— o por transferencia directa (sin comisiones de plataforma) —',
-                'donate-bank': 'Transferencia bancaria',
-                'donate-copy-iban': 'Copiar IBAN',
-                'donate-iban-copied': '¡IBAN copiado!',
-                'donate-twint-note': 'Solo Suiza<br>Escanea o añade el número',
-                'donate-copy-number': 'Copiar número',
-                'donate-number-copied': '¡Número copiado!',
-                'donate-pix-note': 'Solo Brasil',
-                'donate-copy-pix': 'Copiar clave Pix',
-                'donate-pix-copied': 'Clave Pix copiada!',
-                'donate-paypal-note': 'Pago seguro mundial',
-                'donate-paypal-btn': '💳 Pagar con PayPal',
-                'donate-copy-email': 'Copiar email',
-                'donate-email-copied': '¡Email copiado!'
-            }
-        };
-
-        let currentLang = 'fr';
-
-        // Detect language from URL, referrer, or localStorage
-        function detectLanguage() {
-            // 1. Check URL parameter (?lang=pt)
-            const urlParams = new URLSearchParams(window.location.search);
-            const urlLang = urlParams.get('lang');
-            if (urlLang && translations[urlLang]) {
-                return urlLang;
-            }
-
-            // 2. Check referrer (if coming from /pt/, /en/, /fr/)
-            const referrer = document.referrer;
-            if (referrer.includes('/pt/')) return 'pt';
-            if (referrer.includes('/en/')) return 'en';
-            if (referrer.includes('/fr/')) return 'fr';
-
-            // 3. Check localStorage (from demo page or freemium system)
-            try {
-                // Check bc_lang (used by demo.html language selector)
-                const bcLang = localStorage.getItem('bc_lang');
-                if (bcLang && translations[bcLang.toLowerCase()]) return bcLang.toLowerCase();
-
-                // Check sungbible_lang (legacy)
-                const savedLang = localStorage.getItem('sungbible_lang');
-                if (savedLang && translations[savedLang]) return savedLang;
-
-                // Check bibleFree_* (freemium system)
-                if (localStorage.getItem('bibleFree_pt')) return 'pt';
-                if (localStorage.getItem('bibleFree_en')) return 'en';
-                if (localStorage.getItem('bibleFree_es')) return 'es';
-                if (localStorage.getItem('bibleFree_fr')) return 'fr';
-            } catch (e) {}
-
-            // 4. Default to French
-            return 'fr';
-        }
-
-        // Translate the page
-        function translatePage(lang) {
-            currentLang = lang;
-            const t = translations[lang];
-            if (!t) return;
-
-            // Translate all elements with data-i18n
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (t[key]) {
-                    if (el.tagName === 'TITLE') {
-                        el.textContent = t[key];
-                    } else {
-                        el.innerHTML = t[key];
-                    }
-                }
-            });
-
-            // Update language dropdown button
-            if (typeof updateLangButton === 'function') updateLangButton();
-
-            // Update page lang attribute
-            document.documentElement.lang = lang;
-
-            console.log(`✅ Crowdfunding page translated to: ${lang.toUpperCase()}`);
-        }
-
-        // Get translation for dynamic use
-        function getTranslation(key) {
-            return translations[currentLang][key] || key;
-        }
-
-        // Language dropdown functions
-        function toggleLangMenu() {
-            const menu = document.getElementById('langMenu');
-            menu.classList.toggle('active');
-            if (menu.classList.contains('active')) {
-                setTimeout(() => {
-                    document.addEventListener('click', closeLangMenuOutside);
-                }, 0);
-            }
-        }
-
-        function closeLangMenuOutside(e) {
-            const menu = document.getElementById('langMenu');
-            const btn = document.getElementById('langBtn');
-            if (menu && !menu.contains(e.target) && !btn.contains(e.target)) {
-                menu.classList.remove('active');
-                document.removeEventListener('click', closeLangMenuOutside);
-            }
-        }
-
-        function changeLang(newLang) {
-            const menu = document.getElementById('langMenu');
-            menu.classList.remove('active');
-            document.removeEventListener('click', closeLangMenuOutside);
-            translatePage(newLang);
-            localStorage.setItem('bc_lang', newLang.toUpperCase());
-        }
-
-        function updateLangButton() {
-            const flags = { fr: '🇫🇷', en: '🇬🇧', pt: '🇧🇷', es: '🇪🇸' };
-            document.getElementById('langFlag').textContent = flags[currentLang] || '🇫🇷';
-            document.getElementById('langCode').textContent = currentLang.toUpperCase();
-
-            // Update checkmarks
-            ['fr', 'en', 'pt', 'es'].forEach(lang => {
-                const check = document.getElementById(`check-${lang}`);
-                if (check) check.textContent = lang === currentLang ? '✓' : '';
-            });
-        }
-
-        // Initialize on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            const detectedLang = detectLanguage();
-            translatePage(detectedLang);
-        });
-
-        // ===== CLIPBOARD FUNCTIONS =====
-        function copyToClipboard(text, message) {
+        function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
-                showToast(message || getTranslation('donate-iban-copied'));
-            }).catch(() => {
-                // Fallback pour navigateurs plus anciens
-                const textarea = document.createElement('textarea');
-                textarea.value = text;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textarea);
-                showToast(message || getTranslation('donate-iban-copied'));
+                alert('Copié : ' + text);
             });
         }
 
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            toast.textContent = message;
-            toast.classList.add('show');
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 2000);
-        }
+        // Gestion multilingue
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'FR';
+        
+        // TODO: Ajouter traductions EN, ES, PT, etc.
     </script>
 </body>
 </html>
-
-
-
-
-
-

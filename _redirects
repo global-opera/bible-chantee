@@ -1,7 +1,26 @@
-# Redirections API (pas de redirect racine !)
-/api/premium-status  /.netlify/functions/premium-status  200
-/api/premium-claim   /.netlify/functions/premium-claim   200
-/api/stats           /.netlify/functions/stats           200
-/api/get-analytics   /.netlify/functions/get-analytics   200
+# Canonical routes (Netlify keeps query params by default)
 
-/api/recover-premium  /.netlify/functions/recover-premium  200
+# Legacy PT → FR canonical
+/promessas       /promesses.html 301
+/promessas/      /promesses.html 301
+
+# Promesses (canonical FR)
+/promesses       /promesses.html 301
+/promesses/      /promesses.html 301
+
+# Lecteur
+/lecteur         /lecteur.html 301
+/lecteur/        /lecteur.html 301
+
+# Confessions
+/confessions     /confessions.html 301
+/confessions/    /confessions.html 301
+
+# Bible (66 livres)
+/bible           /bible.html 301
+/bible/          /bible.html 301
+
+# Security: block non-prod
+/Scripts/*       /index.html 404
+/Lyrics/*        /index.html 404
+/.git-hooks/*    /index.html 404

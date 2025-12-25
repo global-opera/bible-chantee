@@ -1,62 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- Google Analytics 4 - Bible Chantee -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TX3ETCKJQZ"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-TX3ETCKJQZ');
-
-// Tracking personnalise Bible Chantee
-window.trackEvent = function(action, category, label, value) {
-    gtag('event', action, {
-        event_category: category,
-        event_label: label,
-        value: value || 0
-    });
-};
-
-// Track ecoute audio
-window.trackListen = function(book, chapter, lang) {
-    gtag('event', 'audio_play', {
-        book: book,
-        chapter: chapter,
-        language: lang,
-        content_type: 'bible_chapter'
-    });
-};
-
-// Track partage
-window.trackShare = function(method, content) {
-    gtag('event', 'share', {
-        method: method,
-        content_type: 'chapter',
-        item_id: content
-    });
-};
-
-// Track inscription
-window.trackSignup = function(referrer) {
-    gtag('event', 'sign_up', {
-        method: 'email',
-        referrer_uid: referrer || 'direct'
-    });
-};
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="/">
-    <title data-i18n="readerPageTitle">Bible Chantee - 100 ecoutes gratuites</title>
-
-    <!-- PWA Support -->
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#000080">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
-
+    <title data-i18n-title="readerPageTitle">Bible Chantée - Lecteur</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -264,17 +212,6 @@ window.trackSignup = function(referrer) {
             border-radius: 15px;
         }
         .chapter-select { padding: 8px; border-radius: 5px; background: #333; color: #fff; border: 1px solid #555; }
-
-        /* Fix dropdown: texte lisible sur fond blanc */
-        .chapter-select option {
-            color: #111 !important;
-            background: #fff !important;
-        }
-        .chapter-select:focus {
-            outline: none;
-            box-shadow: 0 0 0 2px rgba(255,215,120,0.35);
-        }
-
         .version-toggle { display: none; }
 
         .lyrics-btn, .bible-btn {
@@ -312,18 +249,8 @@ window.trackSignup = function(referrer) {
         .lyrics-container::-webkit-scrollbar { width: 8px; }
         .lyrics-container::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 4px; }
         .lyrics-container::-webkit-scrollbar-thumb { background: #ffce00; border-radius: 4px; }
-        .lyrics-text {
-            font-size: 0.95em;
-            line-height: 1.35;
-            white-space: pre-wrap;
-            color: #e0e0e0;
-        }
-        /* Contrôle précis de l'espacement entre couplets: exactement 1 ligne vide */
-        .lyrics-text p {
-            margin: 0;
-            padding: 0;
-        }
-        .lyrics-text .section-label { color: #ffce00; font-weight: bold; display: block; margin-top: 6px; }
+        .lyrics-text { font-size: 0.95em; line-height: 1.8; white-space: pre-wrap; color: #e0e0e0; }
+        .lyrics-text .section-label { color: #ffce00; font-weight: bold; display: block; margin-top: 10px; }
         .no-lyrics { text-align: center; color: #bbb; font-style: italic; padding: 20px; }
 
         .bible-container {
@@ -341,57 +268,13 @@ window.trackSignup = function(referrer) {
         .bible-container::-webkit-scrollbar { width: 8px; }
         .bible-container::-webkit-scrollbar-track { background: rgba(255,255,255,0.1); border-radius: 4px; }
         .bible-container::-webkit-scrollbar-thumb { background: #ffce00; border-radius: 4px; }
-        .bible-text { font-size: 0.95em; line-height: 1.4; color: #e0e0e0; }
-        .verse { margin-bottom: 5px; }
+        .bible-text { font-size: 0.95em; line-height: 1.8; color: #e0e0e0; }
+        .verse { margin-bottom: 10px; }
         .verse-number { color: #ffce00; font-weight: bold; margin-right: 5px; }
         .no-bible { text-align: center; color: #bbb; font-style: italic; padding: 20px; }
 
-        /* Mobile content tabs */
-        .content-tabs {
-            display: none;
-            width: 100%;
-            margin: 15px 10px 0 10px;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 2px solid #ffce00;
-        }
-        .tab-btn {
-            flex: 1;
-            padding: 12px 20px;
-            border: none;
-            background: #000080;
-            color: #fff;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .tab-btn:first-child {
-            border-right: 1px solid #ffce00;
-        }
-        .tab-btn.active {
-            background: #ffce00;
-            color: #000080;
-        }
-        .tab-btn:hover:not(.active) {
-            background: #000066;
-        }
-
         footer { text-align: center; padding: 30px 0; color: #666; font-size: 0.85em; margin-bottom: 180px; }
         footer a { color: #ffce00; text-decoration: none; }
-
-        /* Mobile tabs visibility */
-        @media (max-width: 768px) {
-            .content-tabs { display: flex; }
-            .lyrics-container.hidden, .bible-container.hidden { display: none !important; }
-            .content-wrapper { margin-top: 5px; }
-        }
-
-        /* Desktop: hide tabs, show both containers */
-        @media (min-width: 769px) {
-            .content-tabs { display: none !important; }
-            .lyrics-container, .bible-container { display: block !important; }
-        }
 
         @media (max-width: 600px) {
             .books-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
@@ -402,7 +285,6 @@ window.trackSignup = function(referrer) {
             .content-wrapper { flex-direction: column; max-height: none; }
             .lyrics-container, .bible-container { max-height: 200px; }
             .player-title { font-size: 1.1em; }
-            .lyrics-text { line-height: 1.3; font-size: 0.9em; }
         }
 
         .section-back-btn {
@@ -467,215 +349,9 @@ window.trackSignup = function(referrer) {
         .section-chapter-label { font-weight: 500; }
         .section-chapter-subtitle { color: #aaa; font-size: 0.85em; }
         .section-chapter-play { color: #ffce00; font-size: 1.2em; }
-    /* Partage Parrainage */
-.share-box{margin:20px 0;padding:20px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px;border:1px solid #FFD700}
-.share-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.share-btn{display:flex;align-items:center;gap:8px;padding:12px 24px;background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a1a2e;border:none;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer;transition:transform 0.2s}
-.share-btn:hover{transform:scale(1.05)}
-.share-btn svg{width:20px;height:20px}
-.share-reward{color:#FFD700;font-size:14px}
-.share-reward span{display:inline-block;padding:4px 12px;background:linear-gradient(135deg,#00C853,#00E676);color:#fff;border-radius:15px;font-weight:700;margin-right:6px}
-.share-panel{display:none;margin-top:15px;padding:15px;background:rgba(255,215,0,0.1);border-radius:8px}
-.share-panel.open{display:block}
-.share-link{width:100%;padding:12px;background:#0a0a1a;border:1px solid #FFD700;border-radius:6px;color:#fff;font-family:monospace;font-size:13px;margin-bottom:12px}
-.share-actions{display:flex;gap:10px;flex-wrap:wrap}
-.share-actions button{padding:10px 18px;border:none;border-radius:6px;font-weight:600;cursor:pointer;transition:opacity 0.2s}
-.share-actions button:hover{opacity:0.85}
-.btn-copy{background:#4CAF50;color:#fff}
-.btn-whatsapp{background:#25D366;color:#fff}
-.btn-telegram{background:#0088cc;color:#fff}
-.btn-email{background:#EA4335;color:#fff}
-.share-toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);background:#4CAF50;color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;opacity:0;transition:all 0.3s;z-index:9999}
-.share-toast.show{transform:translateX(-50%) translateY(0);opacity:1}
-
-/* 🧊 Anti-flash iOS: cacher le badge crédits jusqu'à premium-status résolu */
-.bc-hide-until-premium-ready { visibility: hidden !important; }
-
-        /* Header links responsive */
-        .header-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin: 10px 0 5px 0;
-        }
-        .header-links .back-link {
-            margin-left: 0 !important;
-            margin-bottom: 0 !important;
-            padding: 8px 14px;
-            line-height: 1.1;
-        }
-        @media (max-width: 600px) {
-            .header-links {
-                gap: 8px;
-            }
-            .header-links .back-link {
-                padding: 8px 12px;
-                font-size: 0.95em;
-            }
-        }
-
-        /* Language Dropdown Menu */
-        .lang-dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .lang-btn {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.3);
-            color: #fff;
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.95em;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.3s;
-        }
-        .lang-btn:hover {
-            background: rgba(255,206,0,0.2);
-            border-color: #ffce00;
-        }
-        .lang-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: #1a1a3e;
-            border: 1px solid #ffce00;
-            border-radius: 8px;
-            margin-top: 5px;
-            min-width: 160px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            z-index: 1000;
-        }
-        .lang-menu.active { display: block; }
-        .lang-menu-item {
-            padding: 10px 16px;
-            cursor: pointer;
-            transition: background 0.2s;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .lang-menu-item:hover {
-            background: rgba(255,206,0,0.2);
-        }
-        .lang-menu-item.current {
-            background: rgba(255,206,0,0.15);
-            font-weight: bold;
-        }
-        .lang-menu-item.current::after {
-            content: '✓';
-            margin-left: auto;
-            color: #ffce00;
-        }
-
-        /* iOS Install Popup */
-        .ios-popup {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(135deg, #1a1a3e, #000080);
-            border-top: 2px solid #ffce00;
-            padding: 20px;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
-            z-index: 2000;
-            transform: translateY(100%);
-            transition: transform 0.4s ease-out;
-        }
-        .ios-popup.show {
-            transform: translateY(0);
-        }
-        .ios-popup-content {
-            max-width: 500px;
-            margin: 0 auto;
-            color: #fff;
-        }
-        .ios-popup-title {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 15px;
-            color: #ffce00;
-        }
-        .ios-popup-steps {
-            margin: 15px 0;
-            line-height: 1.8;
-        }
-        .ios-popup-step {
-            margin: 8px 0;
-            padding-left: 5px;
-        }
-        .ios-popup-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 15px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .ios-popup-checkbox {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9em;
-        }
-        .ios-popup-btn {
-            background: #ffce00;
-            color: #000080;
-            border: none;
-            padding: 10px 24px;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        .ios-popup-btn:hover {
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 600px) {
-            .lang-btn {
-                padding: 6px 12px;
-                font-size: 0.9em;
-            }
-            .ios-popup {
-                padding: 15px;
-            }
-            .ios-popup-title {
-                font-size: 1.1em;
-            }
-        }
-        </style>
-<link rel="stylesheet" href="/credits.css">
-<script>
-// Migrate legacy localStorage keys (sungbible -> bc)
-(function(){
-  try {
-    const map = [
-      ["sungbible_unlimited","bc_unlimited"],
-      ["sungbible_lang","bc_lang"],["sungbible_credits","bc_credits"]
-    ];
-    map.forEach(([oldK,newK])=>{
-      const v = localStorage.getItem(oldK);
-      if (v !== null && localStorage.getItem(newK) === null) localStorage.setItem(newK, v);
-      if (v !== null) localStorage.removeItem(oldK);
-    });
-  } catch(e) {}
-})();
-</script>
+    </style>
 </head>
 <body>
-    <!-- Credits Badge -->
-    <div class="credits-badge bc-hide-until-premium-ready" id="creditsBadge" style="transition: opacity 0.3s;">
-        <span id="creditsIcon"></span>
-        <span id="creditsCount"></span>
-        <span id="creditsLabel"></span>
-    </div>
-
     <div class="container">
         <div style="text-align: center;">
             <button class="section-back-btn" id="sectionBackBtn" onclick="goBackToSection()">← Retour</button>
@@ -688,38 +364,8 @@ window.trackSignup = function(referrer) {
 
         <header>
             <h1 data-i18n="readerHeading">Bible Chantée</h1>
-            <nav class="header-links">
-                <a id="aboutLink" href="/about.html" class="back-link" data-i18n="readerAbout">À propos</a>
-                <a id="helpLink" href="/aide.html" class="back-link" data-i18n="readerHelp">Aide</a>
-                <a id="newsLink" href="/nouveautes.html" class="back-link" data-i18n="readerNews">Nouveautes</a>
-                <a id="promisesLink" href="/promesses.html" class="back-link" data-i18n="readerPromises">Promesses</a>
-
-                <!-- Language Dropdown -->
-                <div class="lang-dropdown">
-                    <button class="lang-btn back-link" id="langBtn" onclick="toggleLangMenu()">
-                        <span id="langFlag">🇫🇷</span>
-                        <span id="langCode">FR</span>
-                        <span>▼</span>
-                    </button>
-                    <div class="lang-menu" id="langMenu">
-                        <div class="lang-menu-item" data-lang="FR" onclick="changeLang('FR')">
-                            <span>🇫🇷</span> Français
-                        </div>
-                        <div class="lang-menu-item" data-lang="EN" onclick="changeLang('EN')">
-                            <span>🇬🇧</span> English
-                        </div>
-                        <div class="lang-menu-item" data-lang="PT" onclick="changeLang('PT')">
-                            <span>🇧🇷</span> Português
-                        </div>
-                        <div class="lang-menu-item" data-lang="ES" onclick="changeLang('ES')">
-                            <span>🇪🇸</span> Español
-                        </div>
-                        <div class="lang-menu-item" data-lang="DE" onclick="changeLang('DE')">
-                            <span>🇩🇪</span> Deutsch
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <a href="/index.html" class="back-link" data-i18n="readerBackHome">← Retour accueil</a>
+            <a href="/about.html" class="back-link" style="margin-left: 15px;" data-i18n="readerAbout">À propos</a>
             <p class="subtitle" data-i18n="readerSubtitle">La Parole de Dieu en musique worship française</p>
             <div class="stats">
                 <span id="available-count">0</span> <span data-i18n="readerBooksAvailable">livres disponibles</span> <span data-i18n="readerOf">sur</span> 66 |
@@ -736,27 +382,7 @@ window.trackSignup = function(referrer) {
         <div class="books-grid" id="old-testament"></div>
 
         <h2 class="section-title" data-i18n="readerNewTestament">Nouveau Testament</h2>
-        <div class="books-grid" id="new-testament"><!-- Partage Parrainage -->
-<div class="share-box" id="shareBox">
-  <div class="share-header">
-    <button class="share-btn" onclick="toggleShare()">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
-      PARTAGER CE CHAPITRE
-    </button>
-    <div class="share-reward"><span>+10 credits</span> par inscription!</div>
-  </div>
-  <div class="share-panel" id="sharePanel">
-    <input type="text" class="share-link" id="shareLink" readonly onclick="this.select()">
-    <div class="share-actions">
-      <button class="btn-copy" onclick="copyLink()">Copier</button>
-      <button class="btn-whatsapp" onclick="shareWA()">WhatsApp</button>
-      <button class="btn-telegram" onclick="shareTG()">Telegram</button>
-      <button class="btn-email" onclick="shareEmail()">Email</button>
-    </div>
-  </div>
-</div>
-<div class="share-toast" id="shareToast"></div>
-</div>
+        <div class="books-grid" id="new-testament"></div>
 
         <footer>
             <p data-i18n="readerFooterCopyright">© 2025 Bible Chantée - Stéphane Cassani - Tous droits d'auteur réservés</p>
@@ -796,33 +422,11 @@ window.trackSignup = function(referrer) {
             </button>
         </div>
         <div class="player-controls" style="margin-top: 10px;">
-            <button class="lyrics-btn" onclick="shareCurrentChapter()">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
-                    <polyline points="16 6 12 2 8 6"></polyline>
-                    <line x1="12" y1="2" x2="12" y2="15"></line>
-                </svg>
-                <span data-i18n="btnShareCredits">Partager (+10 crédits)</span>
-            </button>
-            <button class="lyrics-btn" onclick="goSignup()">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-                <span data-i18n="btnSignup">S'inscrire</span>
-            </button>
-        </div>
-        <div class="player-controls" style="margin-top: 10px;">
             <audio id="audio" controls></audio>
         </div>
         <div class="player-controls" style="margin-top: 10px;">
             <button class="nav-btn" id="forcePlayBtn" style="display:none;">▶ Lancer</button>
             <span id="forcePlayMsg" style="display:none;color:#000080;font-weight:600;"></span>
-        </div>
-        <!-- Mobile content tabs -->
-        <div class="content-tabs" id="contentTabs">
-            <button class="tab-btn active" data-tab="lyrics" data-i18n="readerLyrics">Paroles</button>
-            <button class="tab-btn" data-tab="bible" data-i18n="readerBible">Bible</button>
         </div>
         <div class="content-wrapper" id="contentWrapper">
             <div class="lyrics-container" id="lyricsContainer">
@@ -834,20 +438,16 @@ window.trackSignup = function(referrer) {
         </div>
     </div>
 
-    <script src="lang-shared.js"></script>
+    <script src="/lang-shared.js"></script>
 
     <script src="/lyrics-data.js"></script>
     <script src="/lyrics-data-pt.js"></script>
-    <script src="/lyrics-data-en.js"></script>
-    <script src="/lyrics-data-es.js"></script>
     <script src="/lyrics-data-v2.js"></script>
     <!-- Fix: Expose lyrics variables to window (const ne s'expose pas automatiquement) -->
     <script>
     if (typeof chapterLyrics !== 'undefined' && !window.chapterLyrics) window.chapterLyrics = chapterLyrics;
     if (typeof chapterLyricsV2 !== 'undefined' && !window.chapterLyricsV2) window.chapterLyricsV2 = chapterLyricsV2;
     if (typeof chapterLyricsPT !== 'undefined' && !window.chapterLyricsPT) window.chapterLyricsPT = chapterLyricsPT;
-    if (typeof chapterLyricsEN !== 'undefined' && !window.chapterLyricsEN) window.chapterLyricsEN = chapterLyricsEN;
-    if (typeof chapterLyricsES !== 'undefined' && !window.chapterLyricsES) window.chapterLyricsES = chapterLyricsES;
     </script>
 
     <script src="/audio-urls.js"></script>
@@ -872,30 +472,12 @@ window.trackSignup = function(referrer) {
     if (typeof chapterTitles !== 'undefined' && !window.chapterTitles) window.chapterTitles = chapterTitles;
     </script>
     <script src="/bible-data.js"></script>
-    <script src="/bible-data-pt.js"></script>
-    <script src="/bible-data-en.js"></script>
-    <script src="/bible-data-es.js"></script>
-    <!-- Expose bible data to window -->
-    <script>
-    if (typeof bibleData !== 'undefined' && !window.bibleData) window.bibleData = bibleData;
-    if (typeof bibleDataPT !== 'undefined' && !window.bibleDataPT) window.bibleDataPT = bibleDataPT;
-    if (typeof bibleDataEN !== 'undefined' && !window.bibleDataEN) window.bibleDataEN = bibleDataEN;
-    if (typeof bibleDataES !== 'undefined' && !window.bibleDataES) window.bibleDataES = bibleDataES;
-    </script>
 
     <script src="/sections-promesses.js"></script>
 
     <script>
-        // === INITIALISATION DE LA LANGUE (doit s'exécuter en premier) ===
         (function () {
             const VALID_LANGUAGES = ['FR', 'EN', 'ES', 'PT', 'DE', 'IT', 'RU', 'AR', 'ZH', 'HI', 'TL', 'KO'];
-
-            // Helper: console.log conditionnel (uniquement si localStorage.bc_debug = "1")
-            window.bcLog = function(...args) {
-                if (localStorage.getItem('bc_debug') === '1') {
-                    console.log(...args);
-                }
-            };
 
             function normalizeLang(v) {
                 if (!v) return null;
@@ -927,98 +509,29 @@ window.trackSignup = function(referrer) {
                 try { localStorage.setItem('BC_LANG', lang); } catch (e) {}
             }
 
-            // Lire la langue depuis l'URL en priorité
             const urlLang = getLangFromUrl();
             const baseLang = urlLang || getLangFromBC() || 'FR';
 
             window.currentLanguage = normalizeLang(baseLang) || 'FR';
             setLangToBC(window.currentLanguage);
 
-            // Mettre à jour l'URL si nécessaire
-            if (!urlLang || urlLang !== window.currentLanguage) {
+            if (urlLang && urlLang !== window.currentLanguage) {
                 const u = new URL(window.location.href);
                 u.searchParams.set('lang', window.currentLanguage);
                 window.history.replaceState({}, '', u.toString());
             }
 
-            // 🔗 Force le lien "À propos" à conserver la langue + URL de retour
-            (() => {
-                const a = document.getElementById('aboutLink');
-                if (!a) return;
-
-                const u = new URL(location.href);
-                const lang = (u.searchParams.get('lang') || localStorage.getItem('bc_lang') || 'fr').toLowerCase();
-
-                const returnUrl = location.href;
-                a.href = `/about.html?lang=${encodeURIComponent(lang)}&return=${encodeURIComponent(returnUrl)}`;
-            })();
-
-            bcLog('[lecteur] Langue initialisée depuis URL:', window.currentLanguage, '(param URL:', urlLang, ')');
-        })();
-    </script>
-
-    <script>
-        // 🔒 Premium claim + status check (source de vérité serveur via cookie)
-        (async () => {
-            const u = new URL(location.href);
-
-            // Si premium_token dans URL → claim premium via serveur
-            const token = u.searchParams.get("premium_token");
-            if (token) {
-                try {
-                    await fetch(`/api/premium-claim?premium_token=${encodeURIComponent(token)}`, {
-                        credentials: "include"
-                    });
-                    bcLog('[Premium] Token claimed successfully');
-                } catch (e) {
-                    console.error('[Premium] Claim error:', e);
-                }
-                // Nettoyer l'URL (enlever le token)
-                u.searchParams.delete("premium_token");
-                history.replaceState(null, "", u.toString());
-            }
-
-            // Vérifier le statut premium via serveur
-            try {
-                const r = await fetch(`/api/premium-status`, {
-                    credentials: "include"
-                });
-                const j = await r.json();
-
-                // Stocker dans window.bcUser (source de vérité)
-                window.bcUser = window.bcUser || {};
-                window.bcUser.premium = !!j.premium;
-    
-    // Sync avec credits-system (localStorage bc_unlimited)
-    if (j.premium && typeof creditsSystem !== 'undefined') {
-      creditsSystem.setUnlimitedAccess();
-    } else if (j.premium) {
-      localStorage.setItem('bc_unlimited', 'true');
-    }
-
-                // Sync avec localStorage (cache UI uniquement, non critique)
-                const localUser = JSON.parse(localStorage.getItem('bc_user') || 'null');
-                if (localUser) {
-                    localUser.premium = !!j.premium;
-                    localStorage.setItem('bc_user', JSON.stringify(localUser));
-                }
-
-                bcLog('[Premium] Status:', window.bcUser.premium ? '✅ PREMIUM' : '❌ Non-premium');
-            } catch (e) {
-                console.error('[Premium] Status check error:', e);
-                window.bcUser = window.bcUser || {};
-                window.bcUser.premium = false;
-            }
+            console.log('[lecteur] Langue initialisée:', window.currentLanguage, '(urlLang=', urlLang, ')');
         })();
     </script>
 
     <script>
         const BOOK_NAMES = {
-            FR: ["Genèse","Exode","Lévitique","Nombres","Deutéronome","Josué","Juges","Ruth","1 Samuel","2 Samuel","1 Rois","2 Rois","1 Chron.","2 Chron.","Esdras","Néhémie","Esther","Job","Psaumes","Proverbes","Ecclésiaste","Cantique","Ésaïe","Jérémie","Lamentations","Ézéchiel","Daniel","Osée","Joël","Amos","Abdias","Jonas","Michée","Nahum","Habacuc","Sophonie","Aggée","Zacharie","Malachie","Matthieu","Marc","Luc","Jean","Actes","Romains","1 Cor.","2 Cor.","Galates","Éphésiens","Philippiens","Colossiens","1 Thess.","2 Thess.","1 Timothée","2 Timothée","Tite","Philémon","Hébreux","Jacques","1 Pierre","2 Pierre","1 Jean","2 Jean","3 Jean","Jude","Apocalypse"],
-            PT: ["Gênesis","Êxodo","Levítico","Números","Deuteronômio","Josué","Juízes","Rute","1 Samuel","2 Samuel","1 Reis","2 Reis","1 Crôn.","2 Crôn.","Esdras","Neemias","Ester","Jó","Salmos","Provérbios","Eclesiastes","Cantares","Isaías","Jeremias","Lamentações","Ezequiel","Daniel","Oséias","Joel","Amós","Obadias","Jonas","Miquéias","Naum","Habacuque","Sofonias","Ageu","Zacarias","Malaquias","Mateus","Marcos","Lucas","João","Atos","Romanos","1 Cor.","2 Cor.","Gálatas","Efésios","Filipenses","Colossenses","1 Tess.","2 Tess.","1 Timóteo","2 Timóteo","Tito","Filemom","Hebreus","Tiago","1 Pedro","2 Pedro","1 João","2 João","3 João","Judas","Apocalipse"],
-            EN: ["Genesis","Exodus","Leviticus","Numbers","Deuteronomy","Joshua","Judges","Ruth","1 Samuel","2 Samuel","1 Kings","2 Kings","1 Chron.","2 Chron.","Ezra","Nehemiah","Esther","Job","Psalms","Proverbs","Ecclesiastes","Song of Solomon","Isaiah","Jeremiah","Lamentations","Ezekiel","Daniel","Hosea","Joel","Amos","Obadiah","Jonah","Micah","Nahum","Habakkuk","Zephaniah","Haggai","Zechariah","Malachi","Matthew","Mark","Luke","John","Acts","Romans","1 Cor.","2 Cor.","Galatians","Ephesians","Philippians","Colossians","1 Thess.","2 Thess.","1 Timothy","2 Timothy","Titus","Philemon","Hebrews","James","1 Peter","2 Peter","1 John","2 John","3 John","Jude","Revelation"],
-            ES: ["Génesis","Éxodo","Levítico","Números","Deuteronomio","Josué","Jueces","Rut","1 Samuel","2 Samuel","1 Reyes","2 Reyes","1 Crón.","2 Crón.","Esdras","Nehemías","Ester","Job","Salmos","Proverbios","Eclesiastés","Cantares","Isaías","Jeremías","Lamentaciones","Ezequiel","Daniel","Oseas","Joel","Amós","Abdías","Jonás","Miqueas","Nahúm","Habacuc","Sofonías","Hageo","Zacarías","Malaquías","Mateo","Marcos","Lucas","Juan","Hechos","Romanos","1 Cor.","2 Cor.","Gálatas","Efesios","Filipenses","Colosenses","1 Tes.","2 Tes.","1 Timoteo","2 Timoteo","Tito","Filemón","Hebreos","Santiago","1 Pedro","2 Pedro","1 Juan","2 Juan","3 Juan","Judas","Apocalipsis"],
-            DE: ["Genesis","Exodus","Levitikus","Numeri","5. Mose","Josua","Richter","Rut","1 Samuel","2 Samuel","1 Könige","2 Könige","1 Chronik","2 Chronik","Esra","Nehemia","Ester","Hiob","Psalmen","Sprüche","Prediger","Hohelied","Jesaja","Jeremia","Klagelieder","Hesekiel","Daniel","Hosea","Joel","Amos","Obadja","Jona","Micha","Nahum","Habakuk","Zefanja","Haggai","Sacharja","Maleachi","Matthäus","Markus","Lukas","Johannes","Apostelg.","Römer","1 Korinther","2 Korinther","Galater","Epheser","Philipper","Kolosser","1 Thess","2 Thess","1 Timotheus","2 Timotheus","Titus","Philemon","Hebräer","Jakobus","1 Petrus","2 Petrus","1 Johannes","2 Johannes","3 Johannes","Judas","Offenbarung"],
+            FR: ["Genèse","Exode","Lévitique","Nombres","Deutéronome","Josué","Juges","Ruth","1 Samuel","2 Samuel","1 Rois","2 Rois","1 Chroniques","2 Chroniques","Esdras","Néhémie","Esther","Job","Psaumes","Proverbes","Ecclésiaste","Cantique","Ésaïe","Jérémie","Lamentations","Ézéchiel","Daniel","Osée","Joël","Amos","Abdias","Jonas","Michée","Nahum","Habacuc","Sophonie","Aggée","Zacharie","Malachie","Matthieu","Marc","Luc","Jean","Actes","Romains","1 Corinthiens","2 Corinthiens","Galates","Éphésiens","Philippiens","Colossiens","1 Thessaloniciens","2 Thessaloniciens","1 Timothée","2 Timothée","Tite","Philémon","Hébreux","Jacques","1 Pierre","2 Pierre","1 Jean","2 Jean","3 Jean","Jude","Apocalypse"],
+            PT: ["Gênesis","Êxodo","Levítico","Números","Deuteronômio","Josué","Juízes","Rute","1 Samuel","2 Samuel","1 Reis","2 Reis","1 Crônicas","2 Crônicas","Esdras","Neemias","Ester","Jó","Salmos","Provérbios","Eclesiastes","Cantares","Isaías","Jeremias","Lamentações","Ezequiel","Daniel","Oséias","Joel","Amós","Obadias","Jonas","Miquéias","Naum","Habacuque","Sofonias","Ageu","Zacarias","Malaquias","Mateus","Marcos","Lucas","João","Atos","Romanos","1 Coríntios","2 Coríntios","Gálatas","Efésios","Filipenses","Colossenses","1 Tessalonicenses","2 Tessalonicenses","1 Timóteo","2 Timóteo","Tito","Filemom","Hebreus","Tiago","1 Pedro","2 Pedro","1 João","2 João","3 João","Judas","Apocalipse"],
+            EN: ["Genesis","Exodus","Leviticus","Numbers","Deuteronomy","Joshua","Judges","Ruth","1 Samuel","2 Samuel","1 Kings","2 Kings","1 Chronicles","2 Chronicles","Ezra","Nehemiah","Esther","Job","Psalms","Proverbs","Ecclesiastes","Song of Solomon","Isaiah","Jeremiah","Lamentations","Ezekiel","Daniel","Hosea","Joel","Amos","Obadiah","Jonah","Micah","Nahum","Habakkuk","Zephaniah","Haggai","Zechariah","Malachi","Matthew","Mark","Luke","John","Acts","Romans","1 Corinthians","2 Corinthians","Galatians","Ephesians","Philippians","Colossians","1 Thessalonians","2 Thessalonians","1 Timothy","2 Timothy","Titus","Philemon","Hebrews","James","1 Peter","2 Peter","1 John","2 John","3 John","Jude","Revelation"],
+            ES: ["Génesis","Éxodo","Levítico","Números","Deuteronomio","Josué","Jueces","Rut","1 Samuel","2 Samuel","1 Reyes","2 Reyes","1 Crónicas","2 Crónicas","Esdras","Nehemías","Ester","Job","Salmos","Proverbios","Eclesiastés","Cantares","Isaías","Jeremías","Lamentaciones","Ezequiel","Daniel","Oseas","Joel","Amós","Abdías","Jonás","Miqueas","Nahúm","Habacuc","Sofonías","Hageo","Zacarías","Malaquías","Mateo","Marcos","Lucas","Juan","Hechos","Romanos","1 Corintios","2 Corintios","Gálatas","Efesios","Filipenses","Colosenses","1 Tesalonicenses","2 Tesalonicenses","1 Timoteo","2 Timoteo","Tito","Filemón","Hebreos","Santiago","1 Pedro","2 Pedro","1 Juan","2 Juan","3 Juan","Judas","Apocalipsis"],
+            DE: ["Genesis","Exodus","Levitikus","Numeri","Deuteronomium","Josua","Richter","Rut","1 Samuel","2 Samuel","1 Könige","2 Könige","1 Chronik","2 Chronik","Esra","Nehemia","Ester","Hiob","Psalmen","Sprüche","Prediger","Hohelied","Jesaja","Jeremia","Klagelieder","Hesekiel","Daniel","Hosea","Joel","Amos","Obadja","Jona","Micha","Nahum","Habakuk","Zefanja","Haggai","Sacharja","Maleachi","Matthäus","Markus","Lukas","Johannes","Apostelgeschichte","Römer","1 Korinther","2 Korinther","Galater","Epheser","Philipper","Kolosser","1 Thessalonicher","2 Thessalonicher","1 Timotheus","2 Timotheus","Titus","Philemon","Hebräer","Jakobus","1 Petrus","2 Petrus","1 Johannes","2 Johannes","3 Johannes","Judas","Offenbarung"],
             IT: ["Genesi","Esodo","Levitico","Numeri","Deuteronomio","Giosuè","Giudici","Rut","1 Samuele","2 Samuele","1 Re","2 Re","1 Cronache","2 Cronache","Esdra","Neemia","Ester","Giobbe","Salmi","Proverbi","Ecclesiaste","Cantico","Isaia","Geremia","Lamentazioni","Ezechiele","Daniele","Osea","Gioele","Amos","Abdia","Giona","Michea","Naum","Abacuc","Sofonia","Aggeo","Zaccaria","Malachia","Matteo","Marco","Luca","Giovanni","Atti","Romani","1 Corinzi","2 Corinzi","Galati","Efesini","Filippesi","Colossesi","1 Tessalonicesi","2 Tessalonicesi","1 Timoteo","2 Timoteo","Tito","Filemone","Ebrei","Giacomo","1 Pietro","2 Pietro","1 Giovanni","2 Giovanni","3 Giovanni","Giuda","Apocalisse"],
             RU: ["Бытие","Исход","Левит","Числа","Второзаконие","Иисус Навин","Судьи","Руфь","1 Царств","2 Царств","3 Царств","4 Царств","1 Паралипоменон","2 Паралипоменон","Ездра","Неемия","Есфирь","Иов","Псалтирь","Притчи","Екклесиаст","Песня Песней","Исаия","Иеремия","Плач Иеремии","Иезекииль","Даниил","Осия","Иоиль","Амос","Авдий","Иона","Михей","Наум","Аввакум","Софония","Аггей","Захария","Малахия","Матфей","Марк","Лука","Иоанн","Деяния","Римлянам","1 Коринфянам","2 Коринфянам","Галатам","Ефесянам","Филиппийцам","Колоссянам","1 Фессалоникийцам","2 Фессалоникийцам","1 Тимофею","2 Тимофею","Титу","Филимону","Евреям","Иакова","1 Петра","2 Петра","1 Иоанна","2 Иоанна","3 Иоанна","Иуды","Откровение"],
             AR: ["التكوين","الخروج","اللاويين","العدد","التثنية","يشوع","القضاة","راعوث","صموئيل الأول","صموئيل الثاني","الملوك الأول","الملوك الثاني","أخبار الأيام الأول","أخبار الأيام الثاني","عزرا","نحميا","أستير","أيوب","المزامير","الأمثال","الجامعة","نشيد الأنشاد","إشعياء","إرميا","مراثي إرميا","حزقيال","دانيال","هوشع","يوئيل","عاموس","عوبديا","يونان","ميخا","ناحوم","حبقوق","صفنيا","حجي","زكريا","ملاخي","متى","مرقس","لوقا","يوحنا","أعمال الرسل","رومية","كورنثوس الأولى","كورنثوس الثانية","غلاطية","أفسس","فيلبي","كولوسي","تسالونيكي الأولى","تسالونيكي الثانية","تيموثاوس الأولى","تيموثاوس الثانية","تيطس","فليمون","العبرانيين","يعقوب","بطرس الأولى","بطرس الثانية","يوحنا الأولى","يوحنا الثانية","يوحنا الثالثة","يهوذا","الرؤيا"],
@@ -1028,8 +541,7 @@ window.trackSignup = function(referrer) {
             KO: ["창세기","출애굽기","레위기","민수기","신명기","여호수아","사사기","룻기","사무엘상","사무엘하","열왕기상","열왕기하","역대상","역대하","에스라","느헤미야","에스더","욥기","시편","잠언","전도서","아가","이사야","예레미야","예레미야애가","에스겔","다니엘","호세아","요엘","아모스","오바댜","요나","미가","나훔","하박국","스바냐","학개","스가랴","말라기","마태복음","마가복음","누가복음","요한복음","사도행전","로마서","고린도전서","고린도후서","갈라디아서","에베소서","빌립보서","골로새서","데살로니가전서","데살로니가후서","디모데전서","디모데후서","디도서","빌레몬서","히브리서","야고보서","베드로전서","베드로후서","요한일서","요한이서","요한삼서","유다서","요한계시록"]
         };
 
-        // Utiliser directement window.currentLanguage (initialisé au-dessus)
-        // NE PAS créer de variable locale qui pourrait être obsolète
+        const currentLanguage = (window.currentLanguage || 'FR').toUpperCase();
 
         const books = [
             { num: "01", name: "Genese", chapters: 50, available: true },
@@ -1117,14 +629,12 @@ window.trackSignup = function(referrer) {
         document.getElementById('chapters-count').textContent = totalChapters;
 
         function t(key) {
-            const lang = window.currentLanguage || 'FR';
-            return (TRANSLATIONS[lang] && TRANSLATIONS[lang][key]) || (TRANSLATIONS.FR && TRANSLATIONS.FR[key]) || null;
+            return (TRANSLATIONS[currentLanguage] && TRANSLATIONS[currentLanguage][key]) || (TRANSLATIONS.FR && TRANSLATIONS.FR[key]) || null;
         }
 
         function getBookDisplayName(bookNum) {
             const bookIndex = parseInt(bookNum, 10) - 1;
-            const lang = window.currentLanguage || 'FR';
-            const arr = BOOK_NAMES[lang] || BOOK_NAMES.FR;
+            const arr = BOOK_NAMES[currentLanguage] || BOOK_NAMES.FR;
             return arr[bookIndex] || (BOOK_NAMES.FR[bookIndex] || bookNum);
         }
 
@@ -1138,17 +648,6 @@ window.trackSignup = function(referrer) {
             }).join('');
         }
 
-        // Fonction centralisée pour obtenir la langue active (toutes sources)
-        window.getActiveLang = function() {
-            return (
-                (window.currentLanguage) ||
-                (localStorage.getItem('bc_lang')) ||
-                (localStorage.getItem('BC_LANG')) ||
-                (new URLSearchParams(location.search).get('lang')) ||
-                'FR'
-            ).toUpperCase();
-        };
-
         function getBibleDatasetForLang(lang) {
             const L = (lang || 'FR').toUpperCase();
             if (L === 'FR') return (typeof window.bibleData !== 'undefined') ? window.bibleData : null;
@@ -1160,33 +659,7 @@ window.trackSignup = function(referrer) {
             const L = (lang || 'FR').toUpperCase();
             if (L === 'PT') {
                 if (typeof window.chapterLyricsPT === 'undefined') return null;
-
-                const bookNum = book.slice(0, 2);
-                const chapNum = parseInt(chapterStr, 10);
-
-                let lyr = null;
-
-                // Format A (ancien): chapterLyricsPT["05_DEU"]["01"]
-                if (window.chapterLyricsPT[book] && window.chapterLyricsPT[book][chapterStr]) {
-                    lyr = window.chapterLyricsPT[book][chapterStr];
-                }
-                // Format B (numérique): chapterLyricsPT["05"][1]
-                else if (window.chapterLyricsPT[bookNum] && window.chapterLyricsPT[bookNum][chapNum]) {
-                    lyr = window.chapterLyricsPT[bookNum][chapNum];
-                }
-
-                if (lyr) {
-                    lyr = lyr.replace(/\[TITLE\][\s\S]*?\[LYRICS\]\s*/i, '');
-                    lyr = lyr.replace(/\[TITRE\][\s\S]*?\[LYRICS\]\s*/i, '');
-                    lyr = lyr.replace(/\[(Verso|Refrão|Coro|Bridge|Outro|Intro|Couplet|Refrain|Pré-Refrain)\s*\d*\]\s*/gi, '');
-                    lyr = lyr.replace(/^[\uFF0A\*]{2,}\s*/gm, '');
-                }
-
-                return lyr;
-            }
-            if (L === 'EN') {
-                if (typeof window.chapterLyricsEN === 'undefined') return null;
-                return window.chapterLyricsEN[book] && window.chapterLyricsEN[book][chapterStr] ? window.chapterLyricsEN[book][chapterStr] : null;
+                return window.chapterLyricsPT[book] && window.chapterLyricsPT[book][chapterStr] ? window.chapterLyricsPT[book][chapterStr] : null;
             }
             if (L === 'FR') {
                 if (typeof window.chapterLyrics === 'undefined') return null;
@@ -1207,7 +680,7 @@ window.trackSignup = function(referrer) {
                 return;
             }
 
-            const dataset = getBibleDatasetForLang(window.getActiveLang());
+            const dataset = getBibleDatasetForLang(currentLanguage);
             if (!dataset) {
                 alert(t('readerBibleNotAvailableLang') || 'Recherche Bible non disponible dans cette langue');
                 return;
@@ -1322,76 +795,19 @@ window.trackSignup = function(referrer) {
             else contentWrapper.classList.remove('active');
         }
 
-        // Mobile tabs switching
-        function initMobileTabs() {
-            const tabs = document.querySelectorAll('.tab-btn');
-            const lyricsContainer = document.getElementById('lyricsContainer');
-            const bibleContainer = document.getElementById('bibleContainer');
-
-            tabs.forEach(tab => {
-                tab.addEventListener('click', function() {
-                    // Remove active class from all tabs
-                    tabs.forEach(t => t.classList.remove('active'));
-                    // Add active class to clicked tab
-                    this.classList.add('active');
-
-                    const tabType = this.getAttribute('data-tab');
-
-                    if (tabType === 'lyrics') {
-                        // Show lyrics, hide bible
-                        lyricsContainer.classList.remove('hidden');
-                        bibleContainer.classList.add('hidden');
-                    } else if (tabType === 'bible') {
-                        // Show bible, hide lyrics
-                        bibleContainer.classList.remove('hidden');
-                        lyricsContainer.classList.add('hidden');
-                    }
-                });
-            });
-
-            // Initialize: show lyrics by default on mobile
-            if (window.innerWidth <= 768) {
-                lyricsContainer.classList.remove('hidden');
-                bibleContainer.classList.add('hidden');
-            }
-        }
-
-        // Initialize tabs on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            initMobileTabs();
-        });
-
-        function cleanLyrics(text) {
-            if (!text) return '';
-
-            // 1. Supprimer [STYLE] ou [ESTILO] et tout ce qui suit
-            text = text.replace(/\[(STYLE|ESTILO)\][\s\S]*/gi, '');
-
-            // 2. Supprimer TOUS les marqueurs entre crochets
-            text = text.replace(/\[.*?\]/gi, '');
-
-            // 3. Supprimer TOUS les marqueurs Markdown **...**
-            text = text.replace(/\*\*[^*]+\*\*/g, '');
-
-            // 4. Supprimer lignes de marqueurs seules (sans texte après)
-            text = text.replace(/^[\s]*(Verse|Chorus|Bridge|Refrain|Couplet|Outro|Intro|Hook|Pre-Chorus|Post-Chorus|Conclusão|Conclusion|Ponte|Refrão|Estrofe|Interlude|Solo|Tag|Vamp|Ad-lib|Break|Verset|Verso|Glória|Final)[\s\d]*[:\s]*$/gim, '');
-
-            // 5. Normaliser : exactement 1 ligne vide entre couplets
-            text = text.replace(/\n{2,}/g, '\n\n');
-
-            // 6. Supprimer lignes vides au début/fin
-            return text.trim();
-        }
-
         function updateLyrics() {
             const lyricsText = document.getElementById('lyricsText');
             const lyricsContainer = document.getElementById('lyricsContainer');
             const chapterStr = String(currentChapter);
 
-            const lyrics = getLyricsForCurrent(window.currentLanguage || 'FR', currentBook, chapterStr);
+            const lyrics = getLyricsForCurrent(currentLanguage, currentBook, chapterStr);
 
             if (lyrics) {
-                lyricsText.innerHTML = cleanLyrics(String(lyrics));
+                // Supprimer les marqueurs de sections mais garder l'espacement
+                let cleanLyrics = String(lyrics)
+                    .replace(/\[([^\]]+)\]\s*/g, '\n')         // [Verse 1], [Chorus] -> saut de ligne
+                    .replace(/\*\*[^*]+\*\*\s*/g, '\n');       // **Couplet 1:** -> saut de ligne
+                lyricsText.innerHTML = cleanLyrics;
             } else {
                 lyricsText.innerHTML =
                     '<div class="no-lyrics">' +
@@ -1407,10 +823,10 @@ window.trackSignup = function(referrer) {
             const bibleContainer = document.getElementById('bibleContainer');
             const chapterStr = String(currentChapter);
 
-            const bookNum = currentBook.split('_')[0]; const dataset = getBibleDatasetForLang(window.currentLanguage || 'FR');
+            const dataset = getBibleDatasetForLang(currentLanguage);
 
-            if (dataset && dataset[bookNum] && dataset[bookNum][chapterStr]) {
-                const verses = dataset[bookNum][chapterStr];
+            if (dataset && dataset[currentBook] && dataset[currentBook][chapterStr]) {
+                const verses = dataset[currentBook][chapterStr];
                 let html = '';
                 verses.forEach(verse => {
                     html += '<div class="verse"><span class="verse-number">' + verse.num + '.</span>' + verse.text + '</div>';
@@ -1457,26 +873,11 @@ window.trackSignup = function(referrer) {
         function playChapter(chapter) {
             currentChapter = chapter;
 
-            // Check credits before playing
-            const check = CREDITS.canPlay(currentBook, chapter);
-
-            if (!check.allowed) {
-                bcMaybeShowCreditsPopup('limit_reached');
-                return false;
-            }
-
-            // If using a credit (not free, not premium), consume it
-            if (check.reason === 'credit') {
-                CREDITS.useCredit();
-                updateCreditsDisplay();
-            }
-
             let url;
             const chapterStr = String(chapter);
 
             let audioSource;
-            const lang = window.currentLanguage || 'FR';
-            const langAudioVar = `audioUrls${lang}`;
+            const langAudioVar = `audioUrls${currentLanguage}`;
 
             if (typeof window[langAudioVar] !== 'undefined') {
                 audioSource = window[langAudioVar];
@@ -1485,44 +886,26 @@ window.trackSignup = function(referrer) {
             }
 
             if (audioSource) {
-                // Format A: audioSource["05_DEU"]["01"]
                 url = audioSource[currentBook] && audioSource[currentBook][chapterStr];
-                // Format B (PT): audioSource["05"]["1"]
-                if (!url) {
-                    const bookNum = currentBook.slice(0, 2);
-                    const chapNum = String(parseInt(chapterStr, 10));
-                    url = audioSource[bookNum] && audioSource[bookNum][chapNum];
-                }
             }
 
             if (!url) {
-                alert((t('readerAudioMissing') || 'MP3 introuvable') + ' : ' + lang + ' ' + currentBook + ' ' + chapterStr);
+                alert((t('readerAudioMissing') || 'MP3 introuvable') + ' : ' + currentLanguage + ' ' + currentBook + ' ' + chapterStr);
                 return;
             }
 
             const audio = document.getElementById('audio');
             audio.src = url;
 
-
+            
             audio.load();
             __BC_tryAutoPlay(audio);
 const bookName = getBookDisplayName(currentBook);
-            const chapterWord = (lang === 'PT') ? 'Cap.' : (t('readerChapterShort') || 'Ch.');
+            const chapterWord = (currentLanguage === 'PT') ? 'Cap.' : (t('readerChapterShort') || 'Ch.');
             let displayTitle = bookName + ' - ' + chapterWord + String(chapter).padStart(2, '0');
 
-            // Titres multilingues EN/PT/FR
-            const bookNum = currentBook.slice(0, 2);
-            const chapNum = Number(chapterStr);
-            let chTitle = null;
-            if (window.currentLanguage === 'EN' && window.chapterTitlesEN && window.chapterTitlesEN[bookNum] && window.chapterTitlesEN[bookNum][chapNum]) {
-                chTitle = window.chapterTitlesEN[bookNum][chapNum];
-            } else if (window.currentLanguage === 'PT' && window.chapterTitlesPT && window.chapterTitlesPT[bookNum] && window.chapterTitlesPT[bookNum][chapNum]) {
-                chTitle = window.chapterTitlesPT[bookNum][chapNum];
-            } else if (window.chapterTitles && window.chapterTitles[currentBook] && window.chapterTitles[currentBook][chapterStr]) {
-                chTitle = window.chapterTitles[currentBook][chapterStr];
-            }
-            if (chTitle) {
-                displayTitle += ' - ' + chTitle;
+            if (typeof window.chapterTitles !== 'undefined' && window.chapterTitles && window.chapterTitles[currentBook] && window.chapterTitles[currentBook][chapterStr]) {
+                displayTitle += ' - ' + window.chapterTitles[currentBook][chapterStr];
             }
 
             document.getElementById('player-title').textContent = displayTitle;
@@ -1619,14 +1002,12 @@ const bookName = getBookDisplayName(currentBook);
 
         window.goBackToSection = function() {
             if (returnUrl) {
-                const lang = window.currentLanguage || 'FR';
-                window.location.href = returnUrl + (returnUrl.includes('?') ? '&' : '?') + 'lang=' + lang;
+                window.location.href = returnUrl + (returnUrl.includes('?') ? '&' : '?') + 'lang=' + currentLanguage;
             }
         };
 
         function buildSectionUrl(book, chapter) {
-            const lang = window.currentLanguage || 'FR';
-            let url = `lecteur.html?book=${book}&chapter=${chapter}&lang=${lang}`;
+            let url = `lecteur.html?book=${book}&chapter=${chapter}&lang=${currentLanguage}`;
             if (returnUrl) url += `&return=${encodeURIComponent(returnUrl)}`;
             if (sectionParam) url += `&section=${sectionParam}`;
             return url;
@@ -1637,7 +1018,6 @@ const bookName = getBookDisplayName(currentBook);
 
             const backBtn = document.getElementById('sectionBackBtn');
             const isConfessions = returnUrl.toLowerCase().includes('confession');
-            const lang = window.currentLanguage || 'FR';
 
             const backLabels = isConfessions ? {
                 FR: '← Retour à la confession',
@@ -1655,7 +1035,7 @@ const bookName = getBookDisplayName(currentBook);
                 IT: '← Torna alle promesse'
             };
 
-            backBtn.textContent = backLabels[lang] || backLabels.FR;
+            backBtn.textContent = backLabels[currentLanguage] || backLabels.FR;
             backBtn.classList.add('visible');
         }
 
@@ -1664,11 +1044,10 @@ const bookName = getBookDisplayName(currentBook);
 
             if (!sectionParam || !window.PROMESSES_SECTIONS || !window.PROMESSES_SECTIONS[sectionParam]) return;
 
-            const lang = window.currentLanguage || 'FR';
             const chapters = window.PROMESSES_SECTIONS[sectionParam];
-            const labels = (window.PROMESSES_SECTION_LABELS && (window.PROMESSES_SECTION_LABELS[lang] || window.PROMESSES_SECTION_LABELS.FR)) || {};
+            const labels = (window.PROMESSES_SECTION_LABELS && (window.PROMESSES_SECTION_LABELS[currentLanguage] || window.PROMESSES_SECTION_LABELS.FR)) || {};
             const sectionLabel = labels[sectionParam] || sectionParam;
-            const psalmWord = labels.psalm || (lang === 'PT' ? 'Salmo' : 'Psaume');
+            const psalmWord = labels.psalm || (currentLanguage === 'PT' ? 'Salmo' : 'Psaume');
 
             const menuContainer = document.getElementById('sectionMenuContainer');
             const menuTitle = document.getElementById('sectionMenuTitle');
@@ -1680,7 +1059,7 @@ const bookName = getBookDisplayName(currentBook);
             chapters.forEach(ch => {
                 const chNum = parseInt(ch.chapter, 10);
                 const subtitle = window.PSALM_SUBTITLES && window.PSALM_SUBTITLES[chNum]
-                    ? (window.PSALM_SUBTITLES[chNum][lang] || window.PSALM_SUBTITLES[chNum].FR || '')
+                    ? (window.PSALM_SUBTITLES[chNum][currentLanguage] || window.PSALM_SUBTITLES[chNum].FR || '')
                     : '';
 
                 const isActive = ch.book === currentBook && String(ch.chapter) === String(currentChapter);
@@ -1706,7 +1085,6 @@ const bookName = getBookDisplayName(currentBook);
                 readerHeading: "Bible Chantée",
                 readerBackHome: "← Retour accueil",
                 readerAbout: "À propos",
-                readerHelp: "Aide",
                 readerSubtitle: "La Parole de Dieu en musique worship française",
                 readerBooksAvailable: "livres disponibles",
                 readerOf: "sur",
@@ -1732,19 +1110,12 @@ const bookName = getBookDisplayName(currentBook);
                 readerNoLyricsLang: "Paroles non disponibles dans cette langue pour ce chapitre",
                 readerNoBibleLang: "Texte biblique non disponible dans cette langue pour ce chapitre",
                 readerBibleNotAvailableLang: "Recherche Bible non disponible dans cette langue",
-                readerAudioMissing: "MP3 introuvable",
-                iosInstallTitle: "📱 Installer Bible Chantée",
-                iosInstallStep1: "1. 📤 Appuyez sur <strong>Partager</strong>",
-                iosInstallStep2: "2. ➕ <strong>Sur l'écran d'accueil</strong>",
-                iosInstallStep3: "3. ✅ <strong>Ajouter</strong>",
-                iosInstallDontShow: "Ne plus afficher",
-                iosInstallGotIt: "Compris"
+                readerAudioMissing: "MP3 introuvable"
             },
             PT: {
                 readerHeading: "Bíblia Cantada",
                 readerBackHome: "← Voltar início",
                 readerAbout: "Sobre",
-                readerHelp: "Ajuda",
                 readerSubtitle: "A Palavra de Deus em música worship portuguesa",
                 readerBooksAvailable: "livros disponíveis",
                 readerOf: "de",
@@ -1770,19 +1141,12 @@ const bookName = getBookDisplayName(currentBook);
                 readerNoLyricsLang: "Letras indisponíveis nesta língua para este capítulo",
                 readerNoBibleLang: "Texto bíblico indisponível nesta língua para este capítulo",
                 readerBibleNotAvailableLang: "Pesquisa bíblica indisponível nesta língua",
-                readerAudioMissing: "MP3 não encontrado",
-                iosInstallTitle: "📱 Instalar Bible Chantée",
-                iosInstallStep1: "1. 📤 Toque em <strong>Compartilhar</strong>",
-                iosInstallStep2: "2. ➕ <strong>Adicionar à Tela de Início</strong>",
-                iosInstallStep3: "3. ✅ <strong>Adicionar</strong>",
-                iosInstallDontShow: "Não mostrar novamente",
-                iosInstallGotIt: "Entendi"
+                readerAudioMissing: "MP3 não encontrado"
             },
             EN: {
                 readerHeading: "Sung Bible",
                 readerBackHome: "← Back home",
                 readerAbout: "About",
-                readerHelp: "Help",
                 readerSubtitle: "God's Word in worship music",
                 readerBooksAvailable: "books available",
                 readerOf: "of",
@@ -1808,126 +1172,28 @@ const bookName = getBookDisplayName(currentBook);
                 readerNoLyricsLang: "Lyrics not available in this language for this chapter",
                 readerNoBibleLang: "Bible text not available in this language for this chapter",
                 readerBibleNotAvailableLang: "Bible search not available in this language",
-                readerAudioMissing: "MP3 not found",
-                iosInstallTitle: "📱 Install Bible Chantée",
-                iosInstallStep1: "1. 📤 Tap <strong>Share</strong>",
-                iosInstallStep2: "2. ➕ <strong>Add to Home Screen</strong>",
-                iosInstallStep3: "3. ✅ <strong>Add</strong>",
-                iosInstallDontShow: "Don't show again",
-                iosInstallGotIt: "Got it"
-            },
-            ES: {
-                readerHeading: "Biblia Cantada",
-                readerBackHome: "← Volver inicio",
-                readerAbout: "Acerca de",
-                readerHelp: "Ayuda",
-                readerSubtitle: "La Palabra de Dios en música worship española",
-                readerBooksAvailable: "libros disponibles",
-                readerOf: "de",
-                readerChapters: "capítulos",
-                readerSearchPlaceholder: "  una palabra  =  una canción  ",
-                readerSearchButton: "🔍 Buscar",
-                readerOldTestament: "Antiguo Testamento",
-                readerNewTestament: "Nuevo Testamento",
-                readerFooterCopyright: "© 2025 Biblia Cantada - Stéphane Cassani - Todos los derechos reservados",
-                readerPlayBook: "Reproducir libro completo",
-                readerStopBook: "Detener",
-                readerPrevious: "Anterior",
-                readerNext: "Siguiente",
-                readerLyrics: "Letras",
-                readerBible: "Biblia",
-                readerChapter: "Capítulo",
-                readerChapterShort: "Cap.",
-                readerSearchMinChars: "Por favor ingrese al menos 3 caracteres para buscar",
-                readerSearchNoResults: "Sin resultados para",
-                readerSearchFound: "versículo(s) encontrado(s) para",
-                readerSearchShowing: "mostrando los primeros 50",
-                readerSearchUnavailable: "no disponible",
-                readerNoLyricsLang: "Letras no disponibles en este idioma para este capítulo",
-                readerNoBibleLang: "Texto bíblico no disponible en este idioma para este capítulo",
-                readerBibleNotAvailableLang: "Búsqueda bíblica no disponible en este idioma",
-                readerAudioMissing: "MP3 no encontrado",
-                iosInstallTitle: "📱 Instalar Bible Chantée",
-                iosInstallStep1: "1. 📤 Toca <strong>Compartir</strong>",
-                iosInstallStep2: "2. ➕ <strong>Añadir a pantalla de inicio</strong>",
-                iosInstallStep3: "3. ✅ <strong>Añadir</strong>",
-                iosInstallDontShow: "No mostrar de nuevo",
-                iosInstallGotIt: "Entendido"
-            },
-            DE: {
-                readerHeading: "Gesungene Bibel",
-                readerBackHome: "← Zurück",
-                readerAbout: "Über uns",
-                readerHelp: "Hilfe",
-                readerNews: "Neuigkeiten",
-                readerPromises: "Verheißungen",
-                readerSubtitle: "Gottes Wort in Musik",
-                readerBooksAvailable: "Bücher verfügbar",
-                readerOf: "von",
-                readerChapters: "Kapitel",
-                readerSearchPlaceholder: "  ein Wort  =  ein Lied  ",
-                readerSearchButton: "🔍 Suchen",
-                readerOldTestament: "Altes Testament",
-                readerNewTestament: "Neues Testament",
-                readerPremium: "Premium",
-                readerPlayChapter: "Kapitel abspielen",
-                readerPause: "Pause",
-                readerPlayBook: "Ganzes Buch abspielen",
-                readerPrevious: "Vorherige",
-                readerNext: "Nächste",
-                readerLyrics: "Texte",
-                readerBible: "Bibel",
-                readerBoth: "Beide",
-                readerChapterShort: "Kap.",
-                readerSearchMinChars: "Bitte geben Sie mindestens 3 Zeichen ein",
-                readerSearchNoResults: "Keine Ergebnisse für",
-                readerSearchFound: "Vers(e) gefunden für",
-                readerSearchShowing: "Anzeige der ersten 50",
-                readerSearchUnavailable: "nicht verfügbar",
-                readerNoLyricsLang: "Texte in dieser Sprache für dieses Kapitel nicht verfügbar",
-                readerNoBibleLang: "Bibeltext in dieser Sprache für dieses Kapitel nicht verfügbar",
-                readerBibleNotAvailableLang: "Bibelsuche in dieser Sprache nicht verfügbar",
-                readerAudioMissing: "MP3 nicht gefunden",
-                iosInstallTitle: "📱 Bible Chantée installieren",
-                iosInstallStep1: "1. 📤 Tippen Sie auf <strong>Teilen</strong>",
-                iosInstallStep2: "2. ➕ <strong>Zum Home-Bildschirm</strong>",
-                iosInstallStep3: "3. ✅ <strong>Hinzufügen</strong>",
-                iosInstallDontShow: "Nicht mehr anzeigen",
-                iosInstallGotIt: "Verstanden"
+                readerAudioMissing: "MP3 not found"
             }
         };
 
-        function applyTranslations() {
-            const lang = window.currentLanguage || 'FR';
-            const trans = TRANSLATIONS[lang] || TRANSLATIONS.FR;
-
-            if (!trans) {
-                console.error('[lecteur] Traductions non disponibles pour la langue:', lang);
-                return;
-            }
+        function applyTranslations(lang) {
+            if (!TRANSLATIONS[lang]) lang = 'FR';
 
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (trans[key]) el.textContent = trans[key];
+                if (TRANSLATIONS[lang][key]) el.textContent = TRANSLATIONS[lang][key];
             });
 
             document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
                 const key = el.getAttribute('data-i18n-placeholder');
-                if (trans[key]) el.placeholder = trans[key];
+                if (TRANSLATIONS[lang][key]) el.placeholder = TRANSLATIONS[lang][key];
             });
 
             renderBooks('old-testament', oldTestament);
             renderBooks('new-testament', newTestament);
-
-            bcLog('[lecteur] Traductions appliquées pour la langue:', lang);
         }
 
-        // Appliquer les traductions au chargement de la page
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', applyTranslations);
-        } else {
-            applyTranslations();
-        }
+        applyTranslations(currentLanguage);
 
         
 
@@ -1986,585 +1252,7 @@ renderBooks('old-testament', oldTestament);
             }
         }
     </script>
-    <script src="/credits-system.js"></script>
-<script src="chapter-titles-en.js"></script>
-<script src="chapter-titles-pt.js"></script>
-
-<!-- REFERRAL SYSTEM -->
-<script>
-function getUserId(){
-  let i = localStorage.getItem('bc_uid');
-  if(!i){
-    i = 'u_' + Date.now().toString(36) + Math.random().toString(36).slice(2,8);
-    localStorage.setItem('bc_uid', i);
-  }
-  return i;
-}
-
-function captureRefFromUrl(){
-  const p = new URLSearchParams(location.search);
-  const r = p.get('ref');
-  if(r && r !== getUserId()){
-    // PREMIER REF GAGNÉ : ne jamais écraser un ref déjà enregistré
-    const existingRef = localStorage.getItem('bc_ref');
-    if(!existingRef) {
-      localStorage.setItem('bc_ref', r);
-      console.log('[Referral] Premier parrain enregistré:', r);
-    } else {
-      console.log('[Referral] Parrain déjà enregistré:', existingRef, '- Nouveau ref ignoré:', r);
-    }
-  }
-}
-captureRefFromUrl();
-
-function getCurrentShareUrl(){
-  const url = new URL(location.href);
-  if(!url.searchParams.get('ref')){
-    url.searchParams.set('ref', getUserId());
-  }
-  return url.toString();
-}
-
-function goSignup(){
-  const ref = localStorage.getItem('bc_ref') || '';
-  const ret = location.href;
-  const u = new URL('/signup.html', location.origin);
-  if(ref) u.searchParams.set('ref', ref);
-  u.searchParams.set('return', ret);
-  location.href = u.toString();
-}
-
-function shareCurrentChapter(){
-  const url = getCurrentShareUrl();
-  const content = window.currentBook + '_' + window.currentChapter;
-  if (navigator.share) {
-    navigator.share({
-      title: document.getElementById('player-title').textContent,
-      text: 'Écoute ce chapitre de la Bible en musique !',
-      url: url
-    }).then(() => {
-      trackShare('web_share', content);
-    }).catch(err => console.log('Partage annulé', err));
-  } else {
-    // Fallback: copier dans le presse-papier
-    navigator.clipboard.writeText(url).then(() => {
-      trackShare('copy_link', content);
-      alert('Lien copié ! Partagez-le pour gagner +10 crédits quand quelqu\'un s\'inscrit.');
-    }).catch(err => {
-      alert('Impossible de copier le lien: ' + err);
-    });
-  }
-}
-</script>
-<script>
-// Parrainage
-function getUid(){let u=localStorage.getItem("bc_uid");if(!u){u="u_"+Date.now().toString(36)+Math.random().toString(36).substr(2,6);localStorage.setItem("bc_uid",u)}return u}
-function getShareUrl(){const p=new URLSearchParams(location.search);const b=p.get("book")||"01_GEN";const c=p.get("chapter")||"1";const l=p.get("lang")||"FR";return"https://biblechantee.com/lecteur.html?book="+b+"&chapter="+c+"&lang="+l+"&ref="+getUid()}
-function toggleShare(){const panel=document.getElementById("sharePanel");panel.classList.toggle("open");if(panel.classList.contains("open")){document.getElementById("shareLink").value=getShareUrl()}}
-function toast(m){const t=document.getElementById("shareToast");t.textContent=m;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2500)}
-function copyLink(){
-    trackShare('copy', window.currentBook + '_' + window.currentChapter);const i=document.getElementById("shareLink");i.select();navigator.clipboard.writeText(i.value).then(()=>toast("Lien copie!")).catch(()=>{document.execCommand("copy");toast("Lien copie!")})}
-function shareWA(){
-    trackShare('whatsapp', window.currentBook + '_' + window.currentChapter);window.open("https://wa.me/?text="+encodeURIComponent("Ecoute ce chapitre de la Bible chantee! "+getShareUrl()),"_blank")}
-function shareTG(){trackShare('telegram', window.currentBook + '_' + window.currentChapter);window.open("https://t.me/share/url?url="+encodeURIComponent(getShareUrl())+"&text="+encodeURIComponent("Ecoute la Bible chantee!"),"_blank")}
-function shareEmail(){trackShare('email', window.currentBook + '_' + window.currentChapter);const s=encodeURIComponent("Decouvre la Bible Chantee");const b=encodeURIComponent("Salut!\\n\\nEcoute ce chapitre:\\n"+getShareUrl()+"\\n\\nBonne ecoute!");location.href="mailto:?subject="+s+"&body="+b}
-// Enregistrer parrain
-(function(){const r=new URLSearchParams(location.search).get("ref");if(r&&r!==getUid()&&!localStorage.getItem("bc_ref")){localStorage.setItem("bc_ref",r)}})();
-</script>
-
-<!-- Tracking evenements Bible Chantee -->
-<script>
-// Track ecoute audio
-function trackAudioPlay(book, chapter, lang) {
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'audio_play', {
-            event_category: 'Audio',
-            book_code: book,
-            chapter: chapter,
-            language: lang,
-            content_id: book + '_' + chapter + '_' + lang
-        });
-        console.log('Track: audio_play', book, chapter, lang);
-    }
-}
-
-// Track partage
-function trackShare(method, content) {
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'share', {
-            event_category: 'Social',
-            method: method,
-            content_type: 'chapter',
-            item_id: content
-        });
-        console.log('Track: share', method, content);
-    }
-}
-
-// Track inscription parrainage
-function trackSignup(referrer) {
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'sign_up', {
-            event_category: 'Conversion',
-            method: 'referral',
-            referrer_uid: referrer || 'direct'
-        });
-        console.log('Track: sign_up', referrer);
-    }
-}
-
-// Track affichage paroles
-function trackLyrics(book, chapter, lang) {
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'view_lyrics', {
-            event_category: 'Engagement',
-            book_code: book,
-            chapter: chapter,
-            language: lang
-        });
-    }
-}
-
-// Track changement langue
-function trackLanguageChange(newLang) {
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'language_change', {
-            event_category: 'Settings',
-            language: newLang
-        });
-    }
-}
-</script>
-
-<!-- Auto-tracking audio play -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Track quand audio commence
-    var audioElements = document.querySelectorAll('audio');
-    audioElements.forEach(function(audio) {
-        audio.addEventListener('play', function() {
-            var book = window.currentBook || 'unknown';
-            var chapter = window.currentChapter || 0;
-            var lang = window.currentLanguage || 'FR';
-            trackAudioPlay(book, chapter, lang);
-        });
-    });
-    
-    // Observer pour nouveaux elements audio (chargement dynamique)
-    var observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            mutation.addedNodes.forEach(function(node) {
-                if (node.tagName === 'AUDIO') {
-                    node.addEventListener('play', function() {
-                        var book = window.currentBook || 'unknown';
-                        var chapter = window.currentChapter || 0;
-                        var lang = window.currentLanguage || 'FR';
-                        trackAudioPlay(book, chapter, lang);
-                    });
-                }
-            });
-        });
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
-});
-</script>
-
-<script src="/credits.js"></script>
-<script>
-// Credits popup: show at most once per session + cooldown
-function bcMaybeShowCreditsPopup(reason = '') {
-    const now = Date.now();
-    const last = Number(sessionStorage.getItem('bc_credits_popup_last') || '0');
-    const shown = sessionStorage.getItem('bc_credits_popup_shown') === '1';
-
-    // 1) Only show once per session
-    if (shown) {
-        console.log('⏭️ Credits popup already shown this session, pulsing badge instead');
-        const badge = document.getElementById('creditsBadge');
-        if (badge) {
-            badge.classList.add('pulse');
-            setTimeout(() => badge.classList.remove('pulse'), 3000);
-        }
-        return false;
-    }
-
-    // 2) Extra safety cooldown (45s) in case something resets shown
-    if (now - last < 45000) {
-        console.log('⏸️ Credits popup cooldown active');
-        return false;
-    }
-
-    sessionStorage.setItem('bc_credits_popup_shown', '1');
-    sessionStorage.setItem('bc_credits_popup_last', String(now));
-
-    try {
-        console.log('[CREDITS] popup shown', { reason });
-        CREDITS.showCreditsPopup();
-        return true;
-    } catch (e) {
-        console.warn('[CREDITS] show popup failed', e);
-        return false;
-    }
-}
-
-// Alias for backward compatibility
-function maybeShowCreditsPopup(reason) {
-    return bcMaybeShowCreditsPopup(reason);
-}
-
-// Credits popup event listeners (close with Escape, click outside, etc.)
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        const overlay = document.getElementById('creditsOverlay');
-        if (overlay && overlay.style.display === 'flex') {
-            CREDITS.hideCreditsPopup();
-        }
-    }
-});
-
-document.addEventListener('click', function(e) {
-    const overlay = document.getElementById('creditsOverlay');
-    if (!overlay || overlay.style.display !== 'flex') return;
-
-    // Click on overlay (outside modal) → close
-    if (e.target === overlay) {
-        CREDITS.hideCreditsPopup();
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Prevent clicks inside modal from bubbling to overlay
-    const observer = new MutationObserver(function() {
-        const modal = document.getElementById('creditsModal');
-        if (modal && !modal.dataset.listenerAdded) {
-            modal.addEventListener('click', function(e) {
-                e.stopPropagation();
-            }, { passive: true });
-            modal.dataset.listenerAdded = 'true';
-        }
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
-});
-
-// Update credits display
-function updateCreditsDisplay() {
-    const badge = document.getElementById('creditsBadge');
-    const icon = document.getElementById('creditsIcon');
-    const count = document.getElementById('creditsCount');
-    const label = document.getElementById('creditsLabel');
-
-    if (!badge) {
-        console.error('Credits badge not found');
-        return;
-    }
-
-    // CRITICAL: Never show badge if CREDITS not loaded (anti-regression)
-    if (typeof CREDITS === 'undefined' || !CREDITS.isPremium || !CREDITS.getCredits) {
-        bcLog('⚠️ CREDITS not ready, keeping badge hidden');
-        badge.style.visibility = 'hidden'; // Keep hidden
-        return; // Don't show badge with unknown state
-    }
-
-    // Debug logging
-    const user = JSON.parse(localStorage.getItem('bc_user') || 'null');
-    const isPremium = CREDITS.isPremium();
-    bcLog('🔍 Credits Display Update:', {
-        user: user,
-        isPremium: isPremium,
-        credits: CREDITS.getCredits()
-    });
-
-    if (isPremium) {
-        badge.classList.add('premium');
-        icon.innerHTML = '&#9733;'; // star
-        count.textContent = 'PREMIUM';
-        label.textContent = '';
-        bcLog('✅ Premium badge activated');
-    } else {
-        badge.classList.remove('premium');
-        icon.innerHTML = '&#127925;'; // music note
-        const credits = CREDITS.getCredits();
-        count.textContent = credits;
-        label.textContent = credits === 1 ? 'credit' : 'credits';
-        bcLog(`💳 Showing ${credits} credits`);
-    }
-
-    // Show badge after initialization (prevent flash)
-    badge.style.visibility = 'visible';
-    badge.style.opacity = '1';
-}
-
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', function() {
-    bcLog('📱 Page loaded, initializing credits display...');
-    // updateCreditsDisplay(); // ⚠️ Désactivé : appelé par bcBootstrapPremiumStatus() après fetch premium-status
-
-    // Add click event to credits badge
-    const badge = document.getElementById('creditsBadge');
-    if (badge) {
-        badge.style.cursor = 'pointer';
-        badge.addEventListener('click', function() {
-            console.log('💳 Credits badge clicked');
-            CREDITS.showCreditsPopup();
-        });
-    }
-});
-
-// Update when page becomes visible (after returning from payment)
-document.addEventListener('visibilitychange', function() {
-    if (!document.hidden) {
-        console.log('👁️ Page visible again, refreshing credits...');
-        updateCreditsDisplay();
-    }
-});
-
-// Update when window gains focus
-window.addEventListener('focus', function() {
-    console.log('🔄 Window focused, refreshing credits...');
-    updateCreditsDisplay();
-});
-</script>
-
-<!-- Service Worker Registration -->
-<script>
-// Register Service Worker
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
-            .then(reg => bcLog('[PWA] Service Worker registered:', reg.scope))
-            .catch(err => console.error('[PWA] Service Worker registration failed:', err));
-    });
-}
-</script>
-
-<!-- Hard Refresh Button (cache/SW reset) -->
-<a href="#" id="bc-hard-refresh" style="position:fixed;bottom:12px;right:12px;opacity:.25;font-size:12px;z-index:99999;color:#fff;text-decoration:none;background:rgba(0,0,0,0.3);padding:8px 12px;border-radius:6px;transition:opacity .3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.25'">⟳ Rafraîchir</a>
-
-<!-- Debug Link (visible only with ?debug=1) -->
-<a href="/TEST-RECHERCHE-VALIDATION.md" target="_blank" id="bc-debug-link" style="display:none;position:fixed;bottom:12px;right:140px;opacity:.25;font-size:12px;z-index:99999;color:#fff;text-decoration:none;background:rgba(0,0,128,0.3);padding:8px 12px;border-radius:6px;transition:opacity .3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='.25'">🔬 Debug</a>
-<script>
-// Show debug link if ?debug=1
-if (new URLSearchParams(location.search).get('debug') === '1') {
-  const debugLink = document.getElementById('bc-debug-link');
-  if (debugLink) debugLink.style.display = 'block';
-}
-</script>
-
-<script>
-(function(){
-  const a = document.getElementById('bc-hard-refresh');
-  if(!a) return;
-  a.addEventListener('click', async (e) => {
-    e.preventDefault();
-    const confirmed = confirm('Rafraîchir l\'application ?\n\nCela va :\n- Vider le cache\n- Télécharger la dernière version\n- Recharger la page');
-    if (!confirmed) return;
-
-    try{
-      if ('serviceWorker' in navigator){
-        const regs = await navigator.serviceWorker.getRegistrations();
-        await Promise.all(regs.map(r => r.unregister()));
-        bcLog('[Hard Refresh] SW unregistered');
-      }
-      if (window.caches){
-        const keys = await caches.keys();
-        await Promise.all(keys.map(k => caches.delete(k)));
-        bcLog('[Hard Refresh] Caches cleared');
-      }
-      location.reload(true);
-    }catch(err){
-      console.error('[Hard Refresh] Error:', err);
-      location.reload(true);
-    }
-  });
-})();
-</script>
-
-<script>
-// 🧠 Résout premium-status AVANT d'afficher le badge (anti-flash iOS)
-window.bcBootstrapPremiumStatus = async () => {
-  let timedOut = false;
-
-  // Timeout safe: 1200ms max
-  const timeoutPromise = new Promise((_, reject) => {
-    setTimeout(() => {
-      timedOut = true;
-      reject(new Error('Premium status timeout'));
-    }, 1200);
-  });
-
-  try {
-    const r = await Promise.race([
-      fetch('/api/premium-status', { credentials: 'include', cache: 'no-store' }),
-      timeoutPromise
-    ]);
-    const j = await r.json();
-
-    window.bcUser = window.bcUser || {};
-    window.bcUser.premium = !!j.premium;
-    
-    // Sync avec credits-system (localStorage bc_unlimited)
-    if (j.premium && typeof creditsSystem !== 'undefined') {
-      creditsSystem.setUnlimitedAccess();
-    } else if (j.premium) {
-      localStorage.setItem('bc_unlimited', 'true');
-    }
-  } catch (e) {
-    console.error('[Premium Bootstrap] Error:', e);
-    window.bcUser = window.bcUser || {};
-    window.bcUser.premium = false;
-  }
-
-  // 1) Mettre à jour l'affichage (une seule fois, état fiable)
-  if (typeof window.updateCreditsDisplay === 'function') {
-    window.updateCreditsDisplay();
-  } else if (typeof updateCreditsDisplay === 'function') {
-    updateCreditsDisplay();
-  }
-
-  // 2) Montrer le badge seulement maintenant
-  document.querySelectorAll('.bc-hide-until-premium-ready')
-    .forEach(el => el.classList.remove('bc-hide-until-premium-ready'));
-};
-
-// Démarrer dès que le DOM est prêt
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    window.bcBootstrapPremiumStatus();
-  });
-} else {
-  // DOM déjà prêt
-  window.bcBootstrapPremiumStatus();
-}
-
-// ============================================
-// LANGUAGE DROPDOWN MENU
-// ============================================
-function toggleLangMenu() {
-  const menu = document.getElementById('langMenu');
-  menu.classList.toggle('active');
-
-  // Close menu when clicking outside
-  if (menu.classList.contains('active')) {
-    setTimeout(() => {
-      document.addEventListener('click', closeLangMenuOutside);
-    }, 0);
-  }
-}
-
-function closeLangMenuOutside(e) {
-  const menu = document.getElementById('langMenu');
-  const btn = document.getElementById('langBtn');
-  if (!menu.contains(e.target) && !btn.contains(e.target)) {
-    menu.classList.remove('active');
-    document.removeEventListener('click', closeLangMenuOutside);
-  }
-}
-
-function changeLang(newLang) {
-  const params = new URLSearchParams(window.location.search);
-  params.set('lang', newLang);
-  window.location.search = params.toString();
-}
-
-function updateLangButton() {
-  const params = new URLSearchParams(window.location.search);
-  const currentLang = params.get('lang') || 'FR';
-
-  const flags = { FR: '🇫🇷', EN: '🇬🇧', PT: '🇧🇷', ES: '🇪🇸', DE: '🇩🇪' };
-
-  document.getElementById('langFlag').textContent = flags[currentLang] || '🇫🇷';
-  document.getElementById('langCode').textContent = currentLang;
-
-  // Mark current language in menu
-  document.querySelectorAll('.lang-menu-item').forEach(item => {
-    if (item.dataset.lang === currentLang) {
-      item.classList.add('current');
-    } else {
-      item.classList.remove('current');
-    }
-  });
-}
-
-// ============================================
-// iOS INSTALL POPUP
-// ============================================
-function showIOSPopup() {
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-  const isInStandaloneMode = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-  const hasSeenPrompt = localStorage.getItem('iosPromptSeen');
-
-  if (isIOS && !isInStandaloneMode && !hasSeenPrompt) {
-    setTimeout(() => {
-      document.getElementById('iosPopup').classList.add('show');
-    }, 2000); // Show after 2 seconds
-  }
-}
-
-function closeIOSPopup() {
-  const dontShow = document.getElementById('iosPopupDontShow').checked;
-  if (dontShow) {
-    localStorage.setItem('iosPromptSeen', 'true');
-  }
-  document.getElementById('iosPopup').classList.remove('show');
-}
-
-// Initialize on page load
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    updateLangButton();
-    showIOSPopup();
-  });
-} else {
-  updateLangButton();
-  showIOSPopup();
-}
-</script>
-
-<!-- iOS Install Popup -->
-<div class="ios-popup" id="iosPopup">
-    <div class="ios-popup-content">
-        <div class="ios-popup-title" data-i18n="iosInstallTitle">📱 Installer Bible Chantée</div>
-        <div class="ios-popup-steps">
-            <div class="ios-popup-step" data-i18n="iosInstallStep1">1. 📤 Appuyez sur <strong>Partager</strong></div>
-            <div class="ios-popup-step" data-i18n="iosInstallStep2">2. ➕ <strong>Sur l'écran d'accueil</strong></div>
-            <div class="ios-popup-step" data-i18n="iosInstallStep3">3. ✅ <strong>Ajouter</strong></div>
-        </div>
-        <div class="ios-popup-footer">
-            <label class="ios-popup-checkbox">
-                <input type="checkbox" id="iosPopupDontShow">
-                <span data-i18n="iosInstallDontShow">Ne plus afficher</span>
-            </label>
-            <button class="ios-popup-btn" onclick="closeIOSPopup()" data-i18n="iosInstallGotIt">Compris</button>
-        </div>
-    </div>
-</div>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

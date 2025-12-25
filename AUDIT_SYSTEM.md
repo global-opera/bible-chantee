@@ -222,7 +222,7 @@ Avec `audit_global.py` exit code 0, vous avez la garantie:
 2. ✅ **Liens valides** - Tous pointent vers fichiers existants (repo + PROD)
 3. ✅ **Nommage cohérent** - Lowercase, pas de collisions, pas d'espaces
 4. ✅ **PROD fonctionnel** - 40+ pages crawlées, 100% accessibles
-5. ✅ **Redirects OK** - /promessas → /promessas.html (301)
+5. ✅ **Redirects OK** - /promesses → /promesses.html (301)
 6. ✅ **Assets trackés** - MP3/lyrics avec langue explicite
 
 ---
@@ -274,3 +274,4 @@ python audit_global.py --max-pages 150 --delay-ms 100
 
 **Dernière mise à jour:** 2025-12-15
 **Auteur:** Claude Code (Sonnet 4.5)
+
