@@ -550,10 +550,10 @@
         </div>
     </div>
 
-    <script src="/lang-shared.js"></script>
     <script src="/translations.js"></script>
     <script src="/translations-extra.js"></script>
     <script src="/i18n.js"></script>
+    <script src="/lang-shared.js"></script>
 
     <script src="/lyrics-data.js"></script>
     <script src="/lyrics-data-pt.js"></script>
@@ -1356,7 +1356,21 @@ const bookName = getBookDisplayName(currentBook);
 
         applyTranslations(currentLanguage);
 
-        
+        // Re-apply translations when language changes
+        window.addEventListener('languageChanged', (e) => {
+            if (e.detail && e.detail.lang) {
+                window.currentLanguage = e.detail.lang;
+                currentLanguage = e.detail.lang;
+                applyTranslations(e.detail.lang);
+            }
+        });
+
+        // Apply translations after DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            applyTranslations(window.currentLanguage || currentLanguage);
+        });
+
+
 
         function __BC_showForcePlay(msg) {
             const b = document.getElementById("forcePlayBtn");
