@@ -117,14 +117,12 @@
     <a href="/" class="back-link" data-i18n="helpBackHome">← Retour a Bible Chantee</a>
   </div>
 
-  <script src="lang-shared.js"></script>
-  <script src="translations.js"></script>
-<script src="translations-extra.js"></script>
+  <script src="/translations.js"></script>
+  <script src="/translations-extra.js"></script>
+  <script src="/i18n.js"></script>
+  <script src="/lang-shared.js"></script>
   <script>
-    // Initialize i18n
-    if (typeof window.translations !== 'undefined' && typeof window.BibleI18n !== 'undefined') {
-      window.BibleI18n.init();
-    }
+    // Auto-initialization happens in lang-shared.js
 
     // Recover premium form
     document.getElementById('recoverForm').addEventListener('submit', async (e) => {
