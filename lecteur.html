@@ -595,9 +595,13 @@
     <script src="/chapter-titles.js"></script>
     <script src="/chapter-titles-en.js"></script>
     <script src="/chapter-titles-pt.js"></script>
+    <script src="/chapter-titles-de.js"></script>
     <!-- Fix: Expose chapter titles to window -->
     <script>
     if (typeof chapterTitles !== 'undefined' && !window.chapterTitles) window.chapterTitles = chapterTitles;
+    if (typeof chapterTitlesEN !== 'undefined' && !window.chapterTitlesEN) window.chapterTitlesEN = chapterTitlesEN;
+    if (typeof chapterTitlesPT !== 'undefined' && !window.chapterTitlesPT) window.chapterTitlesPT = chapterTitlesPT;
+    if (typeof chapterTitlesDE !== 'undefined' && !window.chapterTitlesDE) window.chapterTitlesDE = chapterTitlesDE;
     </script>
     <script src="/bible-data.js"></script>
 
@@ -1068,6 +1072,8 @@ const bookName = getBookDisplayName(currentBook);
                 chapterTitlesForLang = window.chapterTitlesEN;
             } else if (L === 'PT' && typeof window.chapterTitlesPT !== 'undefined') {
                 chapterTitlesForLang = window.chapterTitlesPT;
+            } else if (L === 'DE' && typeof window.chapterTitlesDE !== 'undefined') {
+                chapterTitlesForLang = window.chapterTitlesDE;
             }
 
             if (chapterTitlesForLang && chapterTitlesForLang[currentBook] && chapterTitlesForLang[currentBook][chapterStr]) {

@@ -1491,6 +1491,8 @@ const bookName = getBookDisplayName(currentBook);
                 chTitle = window.chapterTitlesEN[bookNum][chapNum];
             } else if (window.currentLanguage === 'PT' && window.chapterTitlesPT && window.chapterTitlesPT[bookNum] && window.chapterTitlesPT[bookNum][chapNum]) {
                 chTitle = window.chapterTitlesPT[bookNum][chapNum];
+            } else if (window.currentLanguage === 'DE' && window.chapterTitlesDE && window.chapterTitlesDE[bookNum] && window.chapterTitlesDE[bookNum][chapNum]) {
+                chTitle = window.chapterTitlesDE[bookNum][chapNum];
             } else if (window.chapterTitles && window.chapterTitles[currentBook] && window.chapterTitles[currentBook][chapterStr]) {
                 chTitle = window.chapterTitles[currentBook][chapterStr];
             }
@@ -1961,6 +1963,7 @@ renderBooks('old-testament', oldTestament);
     
 <script src="chapter-titles-en.js"></script>
 <script src="chapter-titles-pt.js"></script>
+<script src="chapter-titles-de.js"></script>
 
 <!-- REFERRAL SYSTEM -->
 <script>
