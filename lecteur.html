@@ -1365,7 +1365,7 @@ const bookName = getBookDisplayName(currentBook);
 
         // Apply translations after DOM is fully loaded
         document.addEventListener('DOMContentLoaded', () => {
-            applyTranslations(window.currentLanguage || currentLanguage);
+            applyTranslations(window.currentLanguage || (window.BC_LANG && window.BC_LANG.current) || "EN");
         });
 
 
