@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soutenir - Bible Chantée</title>
+    <title data-i18n="page-title-tag">Soutenir - Bible Chantée</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -78,6 +78,69 @@
         .nav a.active {
             color: var(--text-primary);
             border-bottom: 2px solid var(--accent-gold);
+        }
+
+        /* Language Dropdown */
+        .lang-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .lang-btn-cf {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .lang-btn-cf:hover {
+            border-color: var(--accent-gold);
+            color: var(--text-primary);
+        }
+
+        .lang-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            min-width: 180px;
+            margin-top: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        .lang-menu.active {
+            display: block;
+        }
+
+        .lang-menu-item {
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.2s;
+            color: var(--text-primary);
+        }
+
+        .lang-menu-item:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .lang-menu-item .checkmark {
+            color: var(--accent-gold);
+            font-weight: bold;
+            margin-left: 8px;
         }
 
         .container {
@@ -462,6 +525,28 @@
         <a href="crowdfunding.html" class="active" data-i18n="nav-support">Soutenir</a>
         <a href="about.html" data-i18n="nav-about">À propos</a>
         <a href="contact.html" data-i18n="nav-contact">Contact</a>
+
+        <div class="lang-dropdown">
+            <button class="lang-btn-cf" id="langBtn" onclick="toggleLangMenu()">
+                <span id="langFlag">🇫🇷</span>
+                <span id="langCode">FR</span>
+                <span>▼</span>
+            </button>
+            <div class="lang-menu" id="langMenu">
+                <div class="lang-menu-item" onclick="changeLang('fr')">
+                    <span>🇫🇷 Français</span> <span class="checkmark" id="check-fr">✓</span>
+                </div>
+                <div class="lang-menu-item" onclick="changeLang('en')">
+                    <span>🇬🇧 English</span> <span class="checkmark" id="check-en"></span>
+                </div>
+                <div class="lang-menu-item" onclick="changeLang('pt')">
+                    <span>🇧🇷 Português</span> <span class="checkmark" id="check-pt"></span>
+                </div>
+                <div class="lang-menu-item" onclick="changeLang('es')">
+                    <span>🇪🇸 Español</span> <span class="checkmark" id="check-es"></span>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <div class="container">
@@ -602,6 +687,7 @@
         // ===== I18N SYSTEM =====
         const translations = {
             fr: {
+                'page-title-tag': 'Soutenir - Bible Chantée',
                 'page-title': 'Bible Chantée',
                 'page-subtitle': 'Toute la Parole de Dieu en musique – 12 langues',
                 'nav-project': 'Le Projet',
@@ -642,6 +728,7 @@
                 'donate-email-copied': 'Email copié !'
             },
             en: {
+                'page-title-tag': 'Support - Sung Bible',
                 'page-title': 'Sung Bible',
                 'page-subtitle': 'God\'s Word in music – 12 languages',
                 'nav-project': 'The Project',
@@ -682,6 +769,7 @@
                 'donate-email-copied': 'Email copied!'
             },
             pt: {
+                'page-title-tag': 'Apoiar - Bíblia Cantada',
                 'page-title': 'Bíblia Cantada',
                 'page-subtitle': 'Toda a Palavra de Deus em música – 12 idiomas',
                 'nav-project': 'O Projeto',
@@ -722,6 +810,7 @@
                 'donate-email-copied': 'Email copiado!'
             },
             es: {
+                'page-title-tag': 'Apoyar - Biblia Cantada',
                 'page-title': 'Biblia Cantada',
                 'page-subtitle': 'Toda la Palabra de Dios en música – 12 idiomas',
                 'nav-project': 'El Proyecto',
@@ -811,9 +900,16 @@
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (t[key]) {
-                    el.innerHTML = t[key];
+                    if (el.tagName === 'TITLE') {
+                        el.textContent = t[key];
+                    } else {
+                        el.innerHTML = t[key];
+                    }
                 }
             });
+
+            // Update language dropdown button
+            if (typeof updateLangButton === 'function') updateLangButton();
 
             // Update page lang attribute
             document.documentElement.lang = lang;
@@ -824,6 +920,46 @@
         // Get translation for dynamic use
         function getTranslation(key) {
             return translations[currentLang][key] || key;
+        }
+
+        // Language dropdown functions
+        function toggleLangMenu() {
+            const menu = document.getElementById('langMenu');
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) {
+                setTimeout(() => {
+                    document.addEventListener('click', closeLangMenuOutside);
+                }, 0);
+            }
+        }
+
+        function closeLangMenuOutside(e) {
+            const menu = document.getElementById('langMenu');
+            const btn = document.getElementById('langBtn');
+            if (menu && !menu.contains(e.target) && !btn.contains(e.target)) {
+                menu.classList.remove('active');
+                document.removeEventListener('click', closeLangMenuOutside);
+            }
+        }
+
+        function changeLang(newLang) {
+            const menu = document.getElementById('langMenu');
+            menu.classList.remove('active');
+            document.removeEventListener('click', closeLangMenuOutside);
+            translatePage(newLang);
+            localStorage.setItem('bc_lang', newLang.toUpperCase());
+        }
+
+        function updateLangButton() {
+            const flags = { fr: '🇫🇷', en: '🇬🇧', pt: '🇧🇷', es: '🇪🇸' };
+            document.getElementById('langFlag').textContent = flags[currentLang] || '🇫🇷';
+            document.getElementById('langCode').textContent = currentLang.toUpperCase();
+
+            // Update checkmarks
+            ['fr', 'en', 'pt', 'es'].forEach(lang => {
+                const check = document.getElementById(`check-${lang}`);
+                if (check) check.textContent = lang === currentLang ? '✓' : '';
+            });
         }
 
         // Initialize on page load

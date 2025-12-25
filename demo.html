@@ -49,7 +49,7 @@ window.trackSignup = function(referrer) {
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible Chantée - Démo</title>
+    <title data-i18n="demoPageTitle">Bible Chantée - Démo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="lyrics-data.js?v=20251221"></script>
@@ -239,6 +239,88 @@ window.trackSignup = function(referrer) {
             .stats { grid-template-columns: repeat(2, 1fr); }
             .header h1 { font-size: 2rem; }
         }
+
+    /* Navigation */
+    .header-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 15px;
+        padding: 10px 0;
+    }
+    .nav-link {
+        color: rgba(255,255,255,0.9);
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        transition: all 0.3s;
+    }
+    .nav-link:hover {
+        background: rgba(255,206,0,0.2);
+        color: #fff;
+    }
+
+    /* Language Dropdown */
+    .lang-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .lang-btn-new {
+        background: rgba(255,255,255,0.1);
+        border: 1px solid rgba(255,255,255,0.3);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.95em;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.3s;
+    }
+    .lang-btn-new:hover {
+        background: rgba(255,206,0,0.2);
+        border-color: #ffce00;
+    }
+    .lang-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #1a4a7a;
+        border: 1px solid #ffce00;
+        border-radius: 8px;
+        margin-top: 5px;
+        min-width: 160px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        z-index: 1000;
+    }
+    .lang-menu.active { display: block; }
+    .lang-menu-item {
+        padding: 10px 16px;
+        cursor: pointer;
+        transition: background 0.2s;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .lang-menu-item:hover {
+        background: rgba(255,206,0,0.2);
+    }
+    .lang-menu-item.current {
+        background: rgba(255,206,0,0.15);
+        font-weight: bold;
+    }
+    .lang-menu-item.current::after {
+        content: '✓';
+        margin-left: auto;
+        color: #ffce00;
+    }
+
     /* Partage Parrainage */
 .share-box{margin:20px auto;max-width:600px;padding:20px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px;border:1px solid #FFD700}
 .share-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
@@ -271,40 +353,65 @@ select { background: #1a1a2e; color: #ffffff; }
   <input name="bot-field" />
 </form>
 <header class="header">
-        <h1 id="main-title">Bible Chantée</h1>
-        <p class="subtitle" id="subtitle">La Parole de Dieu en musique</p>
+        <h1 id="main-title" data-i18n="demoHeading">Bible Chantée</h1>
+        <p class="subtitle" id="subtitle" data-i18n="demoSubtitle">La Parole de Dieu en musique</p>
+
+        <nav class="header-nav">
+            <a href="/about.html" class="nav-link" data-i18n="navAbout">À propos</a>
+            <a href="/aide.html" class="nav-link" data-i18n="navHelp">Aide</a>
+            <a href="/nouveautes.html" class="nav-link" data-i18n="navNews">Nouveautés</a>
+            <a href="/promesses.html" class="nav-link" data-i18n="navPromises">Promesses</a>
+
+            <div class="lang-dropdown">
+                <button class="lang-btn-new" id="langBtn" onclick="toggleLangMenu()">
+                    <span id="langFlag">🇫🇷</span>
+                    <span id="langCode">FR</span>
+                    <span>▼</span>
+                </button>
+                <div class="lang-menu" id="langMenu">
+                    <div class="lang-menu-item" data-lang="FR" onclick="changeLang('FR')">
+                        <span>🇫🇷</span> Français <span class="checkmark" id="check-FR">✓</span>
+                    </div>
+                    <div class="lang-menu-item" data-lang="EN" onclick="changeLang('EN')">
+                        <span>🇬🇧</span> English <span class="checkmark" id="check-EN"></span>
+                    </div>
+                    <div class="lang-menu-item" data-lang="PT" onclick="changeLang('PT')">
+                        <span>🇧🇷</span> Português <span class="checkmark" id="check-PT"></span>
+                    </div>
+                    <div class="lang-menu-item" data-lang="ES" onclick="changeLang('ES')">
+                        <span>🇪🇸</span> Español <span class="checkmark" id="check-ES"></span>
+                    </div>
+                    <div class="lang-menu-item" data-lang="DE" onclick="changeLang('DE')">
+                        <span>🇩🇪</span> Deutsch <span class="checkmark" id="check-DE"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <div class="container">
-        <div class="lang-buttons">
-            <button class="lang-btn active" onclick="setLang('FR')">FR Français</button>
-            <button class="lang-btn" onclick="setLang('PT')">BR Português</button>
-            <button class="lang-btn" onclick="setLang('EN')">GB English</button>
-            <button class="lang-btn" onclick="setLang('ES')">ES Español</button>
-            <button class="lang-btn" onclick="setLang('DE')">DE Deutsch</button>
-            <button id="clearCacheBtn" style="background:#e74c3c;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:12px;" onclick="clearCache()">Vider cache</button>
-        </div>
+        <button id="clearCacheBtn" style="background:#e74c3c;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer;font-size:12px;margin-bottom:20px;" onclick="clearCache()" data-i18n="demoClearCache">Vider cache</button>
 
         <div class="stats">
             <div class="stat-box">
                 <div class="stat-number">1189</div>
-                <div class="stat-label" id="stat-chapters">Chapitres</div>
+                <div class="stat-label" id="stat-chapters" data-i18n="demoStatChapters">Chapitres</div>
             </div>
             <div class="stat-box">
                 <div class="stat-number">66</div>
-                <div class="stat-label" id="stat-books">Livres</div>
+                <div class="stat-label" id="stat-books" data-i18n="demoStatBooks">Livres</div>
             </div>
             <div class="stat-box">
-                <div class="stat-number">4</div>
-                <div class="stat-label" id="stat-languages">Langues disponibles</div>
+                <div class="stat-number">5</div>
+                <div class="stat-label" id="stat-languages" data-i18n="demoStatLanguages">Langues disponibles</div>
             </div>
             <div class="stat-box">
                 <div class="stat-number">80+</div>
-                <div class="stat-label" id="stat-hours">Heures par langue</div>
+                <div class="stat-label" id="stat-hours" data-i18n="demoStatHours">Heures par langue</div>
             </div>
         </div>
 
-        <h2 class="section-title" id="title-listen">Écoutez des extraits</h2>
+        <h2 class="section-title" id="title-listen" data-i18n="demoTitleListen">Écoutez des extraits</h2>
         <div id="tracks"></div>
 
         <div class="form-section">
@@ -313,76 +420,79 @@ select { background: #1a1a2e; color: #ffffff; }
 <div style="max-width:600px;margin:30px auto;padding:20px;background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:12px;border:2px solid #FFD700;text-align:center;">
   <button onclick="toggleShare()" style="display:inline-flex;align-items:center;gap:8px;padding:15px 30px;background:linear-gradient(135deg,#FFD700,#FFA500);color:#1a1a2e;border:none;border-radius:8px;font-weight:700;font-size:16px;cursor:pointer;">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
-    PARTAGER
+    <span data-i18n="demoShareBtn">PARTAGER</span>
   </button>
-  <p style="color:#FFD700;margin-top:10px;font-size:14px;">Partagez la Bible Chantee!</p>
+  <p style="color:#FFD700;margin-top:10px;font-size:14px;" data-i18n="demoShareText">Partagez la Bible Chantee!</p>
   <div id="sharePanel" style="display:none;margin-top:15px;">
     <input type="text" id="shareLink" readonly onclick="this.select()" style="width:100%;padding:10px;background:#0a0a1a;border:1px solid #FFD700;border-radius:6px;color:#fff;font-family:monospace;margin-bottom:10px;">
-    <button onclick="copyLink()" style="padding:10px 20px;background:#4CAF50;color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer;margin-right:10px;">Copier</button>
-    <button onclick="shareWA()" style="padding:10px 20px;background:#25D366;color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer;">WhatsApp</button>
+    <button onclick="copyLink()" style="padding:10px 20px;background:#4CAF50;color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer;margin-right:10px;" data-i18n="demoShareCopy">Copier</button>
+    <button onclick="shareWA()" style="padding:10px 20px;background:#25D366;color:#fff;border:none;border-radius:6px;font-weight:600;cursor:pointer;" data-i18n="demoShareWhatsApp">WhatsApp</button>
   </div>
 </div>
 <div id="shareToast" style="position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(80px);background:#4CAF50;color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;opacity:0;transition:all 0.3s;z-index:9999;"></div>
-<h2 id="form-title">Recevez la Bible Chantée complète</h2>
-            <p id="form-subtitle">Inscrivez-vous pour être notifié et accéder aux 1189 chapitres</p>
+<h2 id="form-title" data-i18n="demoFormTitle">Recevez la Bible Chantée complète</h2>
+            <p id="form-subtitle" data-i18n="demoFormSubtitle">Inscrivez-vous pour être notifié et accéder aux 1189 chapitres</p>
             <form action="/thank-you.html" method="POST" name="subscribe" data-netlify="true" netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="subscribe">
-                <input type="email" name="email" id="email-input" placeholder="Votre email" required><br>
+                <input type="email" name="email" id="email-input" data-i18n-placeholder="demoEmailPlaceholder" placeholder="Votre email" required><br>
                 <select name="language" id="lang-select" required>
-                    <option value="" disabled selected id="opt-choose">Choisir la langue</option>
-                    <optgroup id="optgroup-available" label="✓ Disponible">
+                    <option value="" disabled selected id="opt-choose" data-i18n="demoOptChoose">Choisir la langue</option>
+                    <optgroup id="optgroup-available" data-i18n-label="demoOptAvailable" label="✓ Disponible">
                         <option value="fr">Français</option>
                         <option value="en">English</option>
                         <option value="pt">Português</option>
                         <option value="es">Español</option>
                         <option value="de">Deutsch</option>
                     </optgroup>
-                    <optgroup id="optgroup-soon" label="Bientôt">
-                        
+                    <optgroup id="optgroup-soon" data-i18n-label="demoOptSoon" label="Bientôt">
+
                         <option value="it" disabled>Italiano</option>
                     </optgroup>
                 </select><br>
-                <button type="submit" class="cta-btn" id="btn-subscribe">S'inscrire</button>
+                <button type="submit" class="cta-btn" id="btn-subscribe" data-i18n="demoBtnSubscribe">S'inscrire</button>
             </form>
         </div>
 
         <div class="donation-section">
-            <h2 id="donation-title">Soutenez le projet</h2>
-            <p id="donation-text">Chaque don finance la <span class="highlight">génération de nouveaux chapitres</span> et l'<span class="highlight">ajout de nouvelles langues</span>.</p>
-            <p><strong id="donation-mission">10% des revenus reversés aux missions.</strong></p>
-            <a href="/crowdfunding" class="cta-btn" id="btn-donate">Faire un don</a>
+            <h2 id="donation-title" data-i18n="demoDonationTitle">Soutenez le projet</h2>
+            <p id="donation-text" data-i18n="demoDonationText">Chaque don finance la <span class="highlight">génération de nouveaux chapitres</span> et l'<span class="highlight">ajout de nouvelles langues</span>.</p>
+            <p><strong id="donation-mission" data-i18n="demoDonationMission">10% des revenus reversés aux missions.</strong></p>
+            <a href="/crowdfunding" class="cta-btn" id="btn-donate" data-i18n="demoBtnDonate">Faire un don</a>
             
             
         </div>
 
         <div class="progress-section">
-            <h2 class="section-title" id="title-progress">Avancement du projet - 12 langues</h2>
+            <h2 class="section-title" id="title-progress" data-i18n="demoTitleProgress">Avancement du projet - 12 langues</h2>
             <div class="lang-progress" id="progress-container"></div>
         </div>
 
         <div class="streaming-section">
-            <h2 class="section-title" id="title-streaming">Bientôt disponible sur</h2>
+            <h2 class="section-title" id="title-streaming" data-i18n="demoTitleStreaming">Bientôt disponible sur</h2>
             <div class="streaming">
-                <a href="#"><span>Spotify</span><small>Bientôt</small></a>
-                <a href="#"><span>Apple Music</span><small>Bientôt</small></a>
-                <a href="#"><span>YouTube Music</span><small>Bientôt</small></a>
-                <a href="#"><span>Deezer</span><small>Bientôt</small></a>
-                <a href="#"><span>Amazon Music</span><small>Bientôt</small></a>
+                <a href="#"><span>Spotify</span><small data-i18n="demoStreamingSoon">Bientôt</small></a>
+                <a href="#"><span>Apple Music</span><small data-i18n="demoStreamingSoon">Bientôt</small></a>
+                <a href="#"><span>YouTube Music</span><small data-i18n="demoStreamingSoon">Bientôt</small></a>
+                <a href="#"><span>Deezer</span><small data-i18n="demoStreamingSoon">Bientôt</small></a>
+                <a href="#"><span>Amazon Music</span><small data-i18n="demoStreamingSoon">Bientôt</small></a>
             </div>
         </div>
     </div>
 
     <footer class="footer">
-        <p>Bible Chantée - Mania Libris</p>
-        <p id="footer-text">10% des revenus reversés aux missions</p>
+        <p data-i18n="demoFooterCompany">Bible Chantée - Mania Libris</p>
+        <p id="footer-text" data-i18n="demoFooterMission">10% des revenus reversés aux missions</p>
     </footer>
 
     <script>
         const translations = {
             FR: {
+                pageTitle: "Bible Chantée - Démo",
                 title: "Bible Chantée", subtitle: "La Parole de Dieu en musique",
-                statChapters: "Chapitres", statBooks: "Livres", statLanguages: "Langues prévues", statHours: "Heures par langue",
+                clearCache: "Vider cache",
+                statChapters: "Chapitres", statBooks: "Livres", statLanguages: "Langues disponibles", statHours: "Heures par langue",
                 titleListen: "Écoutez des extraits",
+                shareBtn: "PARTAGER", shareText: "Partagez la Bible Chantee!", shareCopy: "Copier", shareWhatsApp: "WhatsApp",
                 formTitle: "Recevez la Bible Chantée complète", formSubtitle: "Inscrivez-vous pour être notifié et accéder aux 1189 chapitres",
                 emailPlaceholder: "Votre email", optChoose: "Choisir la langue", optAvailable: "✓ Disponible", optSoon: "Bientôt",
                 btnSubscribe: "S'inscrire",
@@ -391,8 +501,8 @@ select { background: #1a1a2e; color: #ffffff; }
                 donationMission: "10% des revenus reversés aux missions.",
                 btnDonate: "Faire un don",
                 titleProgress: "Avancement du projet - 12 langues",
-                titleStreaming: "Bientôt disponible sur",
-                footerText: "10% des revenus reversés aux missions",
+                titleStreaming: "Bientôt disponible sur", streamingSoon: "Bientôt",
+                footerCompany: "Bible Chantée - Mania Libris", footerText: "10% des revenus reversés aux missions",
                 btnLyrics: "Paroles", btnHide: "Masquer", lyricsNA: "Paroles bientôt disponibles",
                 statusComplete: "Complet", statusProgress: "En cours", statusPlanned: "Prévu",
                 tracks: [
@@ -403,9 +513,12 @@ select { background: #1a1a2e; color: #ffffff; }
                 ]
             },
             PT: {
+                pageTitle: "Bíblia Cantada - Demo",
                 title: "Bíblia Cantada", subtitle: "A Palavra de Deus em música",
-                statChapters: "Capítulos", statBooks: "Livros", statLanguages: "Línguas previstas", statHours: "Horas por língua",
+                clearCache: "Limpar cache",
+                statChapters: "Capítulos", statBooks: "Livros", statLanguages: "Línguas disponíveis", statHours: "Horas por língua",
                 titleListen: "Ouça trechos",
+                shareBtn: "COMPARTILHAR", shareText: "Compartilhe a Bíblia Cantada!", shareCopy: "Copiar", shareWhatsApp: "WhatsApp",
                 formTitle: "Receba a Bíblia Cantada completa", formSubtitle: "Inscreva-se para ser notificado e acessar os 1189 capítulos",
                 emailPlaceholder: "Seu email", optChoose: "Escolher idioma", optAvailable: "✓ Disponível", optSoon: "Em breve",
                 btnSubscribe: "Inscrever-se",
@@ -414,8 +527,8 @@ select { background: #1a1a2e; color: #ffffff; }
                 donationMission: "10% da receita destinada a missões.",
                 btnDonate: "Fazer doação", btnPix: "Pagar com Pix", pixCopied: "Chave Pix copiada: scassani@jim.com",
                 titleProgress: "Progresso do projeto - 12 línguas",
-                titleStreaming: "Em breve disponível em",
-                footerText: "10% da receita destinada a missões",
+                titleStreaming: "Em breve disponível em", streamingSoon: "Em breve",
+                footerCompany: "Bíblia Cantada - Mania Libris", footerText: "10% da receita destinada a missões",
                 btnLyrics: "Letras", btnHide: "Ocultar", lyricsNA: "Letras em breve",
                 statusComplete: "Completo", statusProgress: "Em curso", statusPlanned: "Previsto",
                 tracks: [
@@ -426,9 +539,12 @@ select { background: #1a1a2e; color: #ffffff; }
                 ]
             },
             EN: {
+                pageTitle: "Sung Bible - Demo",
                 title: "Sung Bible", subtitle: "God's Word in music",
-                statChapters: "Chapters", statBooks: "Books", statLanguages: "Languages planned", statHours: "Hours per language",
+                clearCache: "Clear cache",
+                statChapters: "Chapters", statBooks: "Books", statLanguages: "Languages available", statHours: "Hours per language",
                 titleListen: "Listen to samples",
+                shareBtn: "SHARE", shareText: "Share the Sung Bible!", shareCopy: "Copy", shareWhatsApp: "WhatsApp",
                 formTitle: "Get the complete Sung Bible", formSubtitle: "Subscribe to be notified and access all 1189 chapters",
                 emailPlaceholder: "Your email", optChoose: "Choose language", optAvailable: "✓ Available", optSoon: "Coming soon",
                 btnSubscribe: "Subscribe",
@@ -437,8 +553,8 @@ select { background: #1a1a2e; color: #ffffff; }
                 donationMission: "10% of revenue goes to missions.",
                 btnDonate: "Donate",
                 titleProgress: "Project progress - 12 languages",
-                titleStreaming: "Coming soon on",
-                footerText: "10% of revenue goes to missions",
+                titleStreaming: "Coming soon on", streamingSoon: "Coming soon",
+                footerCompany: "Sung Bible - Mania Libris", footerText: "10% of revenue goes to missions",
                 btnLyrics: "Lyrics", btnHide: "Hide", lyricsNA: "Lyrics coming soon",
                 statusComplete: "Complete", statusProgress: "In progress", statusPlanned: "Planned",
                 tracks: [
@@ -449,9 +565,12 @@ select { background: #1a1a2e; color: #ffffff; }
                 ]
             },
             ES: {
+                pageTitle: "Biblia Cantada - Demo",
                 title: "Biblia Cantada", subtitle: "La Palabra de Dios en Música",
-                statChapters: "Capítulos", statBooks: "Libros", statLanguages: "Idiomas previstos", statHours: "Horas por idioma",
+                clearCache: "Limpiar caché",
+                statChapters: "Capítulos", statBooks: "Libros", statLanguages: "Idiomas disponibles", statHours: "Horas por idioma",
                 titleListen: "Escucha extractos",
+                shareBtn: "COMPARTIR", shareText: "¡Comparte la Biblia Cantada!", shareCopy: "Copiar", shareWhatsApp: "WhatsApp",
                 formTitle: "Recibe la Biblia Cantada completa", formSubtitle: "Inscríbete para ser notificado y acceder a los 1189 capítulos",
                 emailPlaceholder: "Tu email", optChoose: "Elegir idioma", optAvailable: "✓ Disponible", optSoon: "Próximamente",
                 btnSubscribe: "Inscribirse",
@@ -460,8 +579,8 @@ select { background: #1a1a2e; color: #ffffff; }
                 donationMission: "10% de los ingresos destinados a misiones.",
                 btnDonate: "Donar",
                 titleProgress: "Progreso del proyecto - 12 idiomas",
-                titleStreaming: "Próximamente disponible en",
-                footerText: "10% de los ingresos destinados a misiones",
+                titleStreaming: "Próximamente disponible en", streamingSoon: "Próximamente",
+                footerCompany: "Biblia Cantada - Mania Libris", footerText: "10% de los ingresos destinados a misiones",
                 btnLyrics: "Letras", btnHide: "Ocultar", lyricsNA: "Letras próximamente",
                 statusComplete: "Completo", statusProgress: "En progreso", statusPlanned: "Previsto",
                 tracks: [
@@ -472,9 +591,12 @@ select { background: #1a1a2e; color: #ffffff; }
                                 ]
                         },
             DE: {
+                pageTitle: "Gesungene Bibel - Demo",
                 title: "Gesungene Bibel", subtitle: "Gottes Wort in Musik",
-                statChapters: "Kapitel", statBooks: "Bücher", statLanguages: "Geplante Sprachen", statHours: "Stunden pro Sprache",
+                clearCache: "Cache leeren",
+                statChapters: "Kapitel", statBooks: "Bücher", statLanguages: "Verfügbare Sprachen", statHours: "Stunden pro Sprache",
                 titleListen: "Hörproben",
+                shareBtn: "TEILEN", shareText: "Teilen Sie die Gesungene Bibel!", shareCopy: "Kopieren", shareWhatsApp: "WhatsApp",
                 formTitle: "Erhalten Sie die komplette Gesungene Bibel", formSubtitle: "Abonnieren Sie, um benachrichtigt zu werden und Zugang zu allen 1189 Kapiteln zu erhalten",
                 emailPlaceholder: "Ihre E-Mail", optChoose: "Sprache wählen", optAvailable: "✓ Verfügbar", optSoon: "Demnächst",
                 btnSubscribe: "Abonnieren",
@@ -483,8 +605,8 @@ select { background: #1a1a2e; color: #ffffff; }
                 donationMission: "10% der Einnahmen gehen an Missionen.",
                 btnDonate: "Spenden",
                 titleProgress: "Projektfortschritt - 12 Sprachen",
-                titleStreaming: "Demnächst verfügbar auf",
-                footerText: "10% der Einnahmen gehen an Missionen",
+                titleStreaming: "Demnächst verfügbar auf", streamingSoon: "Demnächst",
+                footerCompany: "Gesungene Bibel - Mania Libris", footerText: "10% der Einnahmen gehen an Missionen",
                 btnLyrics: "Text", btnHide: "Ausblenden", lyricsNA: "Text demnächst verfügbar",
                 statusComplete: "Vollständig", statusProgress: "In Arbeit", statusPlanned: "Geplant",
                 tracks: [
@@ -525,12 +647,8 @@ select { background: #1a1a2e; color: #ffffff; }
                 if (langMap[L]) langSelect.value = langMap[L];
             }
 
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.textContent.includes(L) || (L === 'PT' && btn.textContent.includes('BR'))) {
-                    btn.classList.add('active');
-                }
-            });
+            // Update language dropdown button
+            updateLangButton();
 
             const pix = document.getElementById('btn-pix');
             if (pix) { pix.style.display = L === 'PT' ? 'inline-block' : 'none'; pix.textContent = translations[L]?.btnPix || ''; }
@@ -547,15 +665,61 @@ select { background: #1a1a2e; color: #ffffff; }
         }
         window.setLang = setLang;
 
+        // Language dropdown functions
+        function toggleLangMenu() {
+            const menu = document.getElementById('langMenu');
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) {
+                setTimeout(() => {
+                    document.addEventListener('click', closeLangMenuOutside);
+                }, 0);
+            }
+        }
+
+        function closeLangMenuOutside(e) {
+            const menu = document.getElementById('langMenu');
+            const btn = document.getElementById('langBtn');
+            if (menu && !menu.contains(e.target) && !btn.contains(e.target)) {
+                menu.classList.remove('active');
+                document.removeEventListener('click', closeLangMenuOutside);
+            }
+        }
+
+        function changeLang(newLang) {
+            const menu = document.getElementById('langMenu');
+            menu.classList.remove('active');
+            document.removeEventListener('click', closeLangMenuOutside);
+            setLang(newLang);
+            trackLanguageChange(newLang);
+        }
+
+        function updateLangButton() {
+            const flags = { FR: '🇫🇷', EN: '🇬🇧', PT: '🇧🇷', ES: '🇪🇸', DE: '🇩🇪' };
+            document.getElementById('langFlag').textContent = flags[currentLang] || '🇫🇷';
+            document.getElementById('langCode').textContent = currentLang;
+
+            // Update checkmarks
+            ['FR', 'EN', 'PT', 'ES', 'DE'].forEach(lang => {
+                const check = document.getElementById(`check-${lang}`);
+                if (check) check.textContent = lang === currentLang ? '✓' : '';
+            });
+        }
+
         function updatePage() {
             const t = translations[currentLang];
+            document.title = t.pageTitle;
             document.getElementById('main-title').textContent = t.title;
             document.getElementById('subtitle').textContent = t.subtitle;
+            document.getElementById('clearCacheBtn').textContent = t.clearCache;
             document.getElementById('stat-chapters').textContent = t.statChapters;
             document.getElementById('stat-books').textContent = t.statBooks;
             document.getElementById('stat-languages').textContent = t.statLanguages;
             document.getElementById('stat-hours').textContent = t.statHours;
             document.getElementById('title-listen').textContent = t.titleListen;
+            document.querySelectorAll('[data-i18n="demoShareBtn"]').forEach(el => el.textContent = t.shareBtn);
+            document.querySelectorAll('[data-i18n="demoShareText"]').forEach(el => el.textContent = t.shareText);
+            document.querySelectorAll('[data-i18n="demoShareCopy"]').forEach(el => el.textContent = t.shareCopy);
+            document.querySelectorAll('[data-i18n="demoShareWhatsApp"]').forEach(el => el.textContent = t.shareWhatsApp);
             document.getElementById('form-title').textContent = t.formTitle;
             document.getElementById('form-subtitle').textContent = t.formSubtitle;
             document.getElementById('email-input').placeholder = t.emailPlaceholder;
@@ -569,6 +733,8 @@ select { background: #1a1a2e; color: #ffffff; }
             document.getElementById('btn-donate').textContent = t.btnDonate;
             document.getElementById('title-progress').textContent = t.titleProgress;
             document.getElementById('title-streaming').textContent = t.titleStreaming;
+            document.querySelectorAll('[data-i18n="demoStreamingSoon"]').forEach(el => el.textContent = t.streamingSoon);
+            document.querySelectorAll('[data-i18n="demoFooterCompany"]').forEach(el => el.textContent = t.footerCompany);
             document.getElementById('footer-text').textContent = t.footerText;
             renderTracks();
             renderProgress();
