@@ -937,7 +937,11 @@
     let selectedLanguage = 'fr';
 
     // Translations for all 12 languages
-    const translations = {
+// I18N_INLINE_INDEXNEW_DISABLED
+if (window.translations && (window.currentLanguage || (window.BC_LANG && window.BC_LANG.current))) {
+  console.log('[index-new] global i18n present -> skip inline translator');
+} else {
+
       fr: {
         'hero-title': '🎵 Bible Chantée / Sung Bible',
         'hero-tagline': 'Toute la Parole de Dieu en musique',
@@ -1357,7 +1361,8 @@
       }
     });
   </script>
+}
 
-</body>
 </html>
+
 
