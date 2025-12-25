@@ -2872,6 +2872,13 @@ Object.keys(translations).forEach(lang => {
     t.crowdQuoteVerse = "— Psaume 96:1";
     t.crowdBackLink = "← Retour à Bible Chantée";
     t.crowdCopied = "Copié : ";
+
+    // Install page
+    t.installTitle = "Installer Bible Chantée";
+    t.installHeader = "📱 Installer Bible Chantée";
+    t.installSubtitle = "Écoutez la Bible en musique - Offline & sans publicité";
+    t.installFooterCopyright = "Bible Chantée © 2025";
+    t.installFooterBackLink = "← Retour au site";
   } else if (lang === 'EN') {
     t.cfPageTitle = "Support Sung Bible - Crowdfunding";
     t.cfHeading = "Support Sung Bible";
@@ -3159,6 +3166,13 @@ Object.keys(translations).forEach(lang => {
     t.crowdQuoteVerse = "— Psalm 96:1";
     t.crowdBackLink = "← Back to Sung Bible";
     t.crowdCopied = "Copied: ";
+
+    // Install page
+    t.installTitle = "Install Sung Bible";
+    t.installHeader = "📱 Install Sung Bible";
+    t.installSubtitle = "Listen to the Bible in music - Offline & ad-free";
+    t.installFooterCopyright = "Sung Bible © 2025";
+    t.installFooterBackLink = "← Back to site";
   } else if (lang === 'ES') {
     t.cfPageTitle = "Apoyar Biblia Cantada - Crowdfunding";
     t.cfHeading = "Apoyar Biblia Cantada";
@@ -3446,6 +3460,13 @@ Object.keys(translations).forEach(lang => {
     t.crowdQuoteVerse = "— Salmo 96:1";
     t.crowdBackLink = "← Volver a Biblia Cantada";
     t.crowdCopied = "Copiado: ";
+
+    // Install page
+    t.installTitle = "Instalar Biblia Cantada";
+    t.installHeader = "📱 Instalar Biblia Cantada";
+    t.installSubtitle = "Escucha la Biblia en música - Offline y sin publicidad";
+    t.installFooterCopyright = "Biblia Cantada © 2025";
+    t.installFooterBackLink = "← Volver al sitio";
   } else if (lang === 'PT') {
     t.cfPageTitle = "Apoiar Bíblia Cantada - Crowdfunding";
     t.cfHeading = "Apoiar Bíblia Cantada";
@@ -3879,6 +3900,13 @@ Object.keys(translations).forEach(lang => {
     t.creditsFooterCopyright = "© 2025 Bíblia Cantada";
     t.creditsFooterAuthor = "Stephane Cassani - Suíça";
     t.creditsFooterFormat = "Documento imprimível - Formato folder A4 paisagem";
+
+    // Install page
+    t.installTitle = "Instalar Bíblia Cantada";
+    t.installHeader = "📱 Instalar Bíblia Cantada";
+    t.installSubtitle = "Ouça a Bíblia em música - Offline e sem anúncios";
+    t.installFooterCopyright = "Bíblia Cantada © 2025";
+    t.installFooterBackLink = "← Voltar ao site";
   }
   else if (lang === 'DE') {
     // Promesses page
@@ -4108,6 +4136,13 @@ Object.keys(translations).forEach(lang => {
     t.crowdQuoteVerse = "— Psalm 96:1";
     t.crowdBackLink = "← Zurück zu Gesungene Bibel";
     t.crowdCopied = "Kopiert: ";
+
+    // Install page
+    t.installTitle = "Gesungene Bibel installieren";
+    t.installHeader = "📱 Gesungene Bibel installieren";
+    t.installSubtitle = "Hören Sie die Bibel in Musik - Offline & werbefrei";
+    t.installFooterCopyright = "Gesungene Bibel © 2025";
+    t.installFooterBackLink = "← Zurück zur Website";
   }
   else if (lang === 'IT') {
     // Promesses page

@@ -370,8 +370,8 @@
 
           // Lire la langue depuis l'URL en PRIORITÉ
           const urlLang = getLangFromUrl();
-          const baseLang = urlLang || getLangFromStorage() || 'FR';
-          window.currentLanguage = normalizeLang(baseLang) || 'FR';
+          const baseLang = urlLang || getLangFromStorage() || 'EN';
+          window.currentLanguage = normalizeLang(baseLang) || 'EN';
 
           // Sauvegarder dans localStorage
           try{ localStorage.setItem('selectedLanguage', window.currentLanguage); }catch(e){}
@@ -423,7 +423,7 @@
 
                 // Appliquer les traductions immédiatement
                 if (i18nInstance) {
-                    i18nInstance.applyTranslations(window.currentLanguage || 'FR');
+                    i18nInstance.applyTranslations(window.currentLanguage || 'EN');
                 }
             } else {
                 console.error('[bible] Erreur: translations.js ou i18n.js non chargé');
@@ -445,6 +445,7 @@
     </script>
 </body>
 </html>
+
 
 
 

@@ -298,7 +298,7 @@
     function render() {
         const urlParams = new URLSearchParams(window.location.search);
         const themeIndex = parseInt(urlParams.get('theme')) || 0;
-        const lang = urlParams.get('lang') || localStorage.getItem('selectedLang') || 'FR';
+        const lang = urlParams.get('lang') || localStorage.getItem('selectedLang') || 'EN';
         
         const langData = THEMES_DATA[lang] || THEMES_DATA.FR;
         const theme = langData.themes[themeIndex];
@@ -349,6 +349,7 @@
     </script>
 </body>
 </html>
+
 
 
 

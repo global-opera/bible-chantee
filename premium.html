@@ -657,7 +657,7 @@ window.trackSignup = function(referrer) {
   try {
     const map = [
       ["sungbible_unlimited","bc_unlimited"],
-      ["sungbible_lang","bc_lang"],["sungbible_credits","bc_credits"]
+      ["bc_lang","bc_lang"],["sungbible_credits","bc_credits"]
     ];
     map.forEach(([oldK,newK])=>{
       const v = localStorage.getItem(oldK);
@@ -891,9 +891,9 @@ window.trackSignup = function(referrer) {
 
             // Lire la langue depuis l'URL en priorité
             const urlLang = getLangFromUrl();
-            const baseLang = urlLang || getLangFromBC() || 'FR';
+            const baseLang = urlLang || getLangFromBC() || 'EN';
 
-            window.currentLanguage = normalizeLang(baseLang) || 'FR';
+            window.currentLanguage = normalizeLang(baseLang) || 'EN';
             setLangToBC(window.currentLanguage);
 
             // Mettre à jour l'URL si nécessaire
@@ -1079,13 +1079,13 @@ window.trackSignup = function(referrer) {
         document.getElementById('chapters-count').textContent = totalChapters;
 
         function t(key) {
-            const lang = window.currentLanguage || 'FR';
+            const lang = window.currentLanguage || 'EN';
             return (TRANSLATIONS[lang] && TRANSLATIONS[lang][key]) || (TRANSLATIONS.FR && TRANSLATIONS.FR[key]) || null;
         }
 
         function getBookDisplayName(bookNum) {
             const bookIndex = parseInt(bookNum, 10) - 1;
-            const lang = window.currentLanguage || 'FR';
+            const lang = window.currentLanguage || 'EN';
             const arr = BOOK_NAMES[lang] || BOOK_NAMES.FR;
             return arr[bookIndex] || (BOOK_NAMES.FR[bookIndex] || bookNum);
         }
@@ -1106,8 +1106,7 @@ window.trackSignup = function(referrer) {
                 (window.currentLanguage) ||
                 (localStorage.getItem('bc_lang')) ||
                 (localStorage.getItem('bc_lang')) ||
-                (new URLSearchParams(location.search).get('lang')) ||
-                'FR'
+                (new URLSearchParams(location.search).get('lang')) || 'EN'
             ).toUpperCase();
         };
 
@@ -1350,7 +1349,7 @@ window.trackSignup = function(referrer) {
             const lyricsContainer = document.getElementById('lyricsContainer');
             const chapterStr = String(currentChapter);
 
-            const lyrics = getLyricsForCurrent(window.currentLanguage || 'FR', currentBook, chapterStr);
+            const lyrics = getLyricsForCurrent(window.currentLanguage || 'EN', currentBook, chapterStr);
 
             if (lyrics) {
                 lyricsText.innerHTML = cleanLyrics(String(lyrics));
@@ -1437,7 +1436,7 @@ window.trackSignup = function(referrer) {
             const chapterStr = String(chapter);
 
             let audioSource;
-            const lang = window.currentLanguage || 'FR';
+            const lang = window.currentLanguage || 'EN';
             const langAudioVar = `audioUrls${lang}`;
 
             if (typeof window[langAudioVar] !== 'undefined') {
@@ -1581,13 +1580,13 @@ const bookName = getBookDisplayName(currentBook);
 
         window.goBackToSection = function() {
             if (returnUrl) {
-                const lang = window.currentLanguage || 'FR';
+                const lang = window.currentLanguage || 'EN';
                 window.location.href = returnUrl + (returnUrl.includes('?') ? '&' : '?') + 'lang=' + lang;
             }
         };
 
         function buildSectionUrl(book, chapter) {
-            const lang = window.currentLanguage || 'FR';
+            const lang = window.currentLanguage || 'EN';
             let url = `lecteur.html?book=${book}&chapter=${chapter}&lang=${lang}`;
             if (returnUrl) url += `&return=${encodeURIComponent(returnUrl)}`;
             if (sectionParam) url += `&section=${sectionParam}`;
@@ -1599,7 +1598,7 @@ const bookName = getBookDisplayName(currentBook);
 
             const backBtn = document.getElementById('sectionBackBtn');
             const isConfessions = returnUrl.toLowerCase().includes('confession');
-            const lang = window.currentLanguage || 'FR';
+            const lang = window.currentLanguage || 'EN';
 
             const backLabels = isConfessions ? {
                 FR: '← Retour à la confession',
@@ -1626,7 +1625,7 @@ const bookName = getBookDisplayName(currentBook);
 
             if (!sectionParam || !window.PROMESSES_SECTIONS || !window.PROMESSES_SECTIONS[sectionParam]) return;
 
-            const lang = window.currentLanguage || 'FR';
+            const lang = window.currentLanguage || 'EN';
             const chapters = window.PROMESSES_SECTIONS[sectionParam];
             const labels = (window.PROMESSES_SECTION_LABELS && (window.PROMESSES_SECTION_LABELS[lang] || window.PROMESSES_SECTION_LABELS.FR)) || {};
             const sectionLabel = labels[sectionParam] || sectionParam;
@@ -1859,7 +1858,7 @@ const bookName = getBookDisplayName(currentBook);
         };
 
         function applyTranslations() {
-            const lang = window.currentLanguage || 'FR';
+            const lang = window.currentLanguage || 'EN';
             const trans = TRANSLATIONS[lang] || TRANSLATIONS.FR;
 
             if (!trans) {
@@ -2106,7 +2105,7 @@ document.addEventListener('DOMContentLoaded', function() {
         audio.addEventListener('play', function() {
             var book = window.currentBook || 'unknown';
             var chapter = window.currentChapter || 0;
-            var lang = window.currentLanguage || 'FR';
+            var lang = window.currentLanguage || 'EN';
             trackAudioPlay(book, chapter, lang);
         });
     });
@@ -2119,7 +2118,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     node.addEventListener('play', function() {
                         var book = window.currentBook || 'unknown';
                         var chapter = window.currentChapter || 0;
-                        var lang = window.currentLanguage || 'FR';
+                        var lang = window.currentLanguage || 'EN';
                         trackAudioPlay(book, chapter, lang);
                     });
                 }
@@ -2290,7 +2289,7 @@ function changeLang(newLang) {
 
 function updateLangButton() {
   const params = new URLSearchParams(window.location.search);
-  const currentLang = params.get('lang') || 'FR';
+  const currentLang = params.get('lang') || 'EN';
 
   const flags = { FR: '🇫🇷', EN: '🇬🇧', PT: '🇧🇷', ES: '🇪🇸', DE: '🇩🇪' };
 
@@ -2363,6 +2362,7 @@ if (document.readyState === 'loading') {
 
 </body>
 </html>
+
 
 
 

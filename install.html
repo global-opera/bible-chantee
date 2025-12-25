@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Installer Bible Chantée</title>
+    <title data-i18n="installTitle">Installer Bible Chantée</title>
+
+    <!-- I18n System -->
+    <script src="lang-shared.js"></script>
+    <script src="translations.js"></script>
+    <script src="translations-extra.js"></script>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -90,11 +96,48 @@
             color: #ddd;
             margin: 5px 0;
         }
+
+        /* Language Selector */
+        .lang-selector {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .lang-selector select {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #ffce00;
+            color: #fff;
+            border-radius: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .lang-selector select:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .lang-selector select option {
+            background: #000080;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
-    <h1>📱 Installer Bible Chantée</h1>
-    <p class="subtitle">Écoutez la Bible en musique - Offline & sans publicité</p>
+    <!-- Language Selector -->
+    <div class="lang-selector">
+        <select id="langSelect" onchange="window.setLanguage(this.value); location.reload();">
+            <option value="FR">🇫🇷 Français</option>
+            <option value="EN">🇬🇧 English</option>
+            <option value="PT">🇧🇷 Português</option>
+            <option value="ES">🇪🇸 Español</option>
+            <option value="DE">🇩🇪 Deutsch</option>
+        </select>
+    </div>
+
+    <h1 data-i18n="installHeader">📱 Installer Bible Chantée</h1>
+    <p class="subtitle" data-i18n="installSubtitle">Écoutez la Bible en musique - Offline & sans publicité</p>
 
     <div class="lang-card">
         <h2><span class="flag">🇫🇷</span> Bible Chantée FR</h2>
@@ -177,9 +220,73 @@
     </div>
 
     <div style="text-align: center; margin-top: 40px; padding: 20px; color: #aaa; font-size: 0.9rem;">
-        <p>Bible Chantée © 2025</p>
-        <p><a href="/" style="color: #ffce00;">← Retour au site</a></p>
+        <p data-i18n="installFooterCopyright">Bible Chantée © 2025</p>
+        <p><a href="/" style="color: #ffce00;" data-i18n="installFooterBackLink">← Retour au site</a></p>
     </div>
+
+    <!-- I18n Initialization -->
+    <script>
+        // Initialize BibleI18n system
+        const BibleI18n = {
+            currentLang: window.currentLanguage || 'FR',
+
+            init() {
+                this.currentLang = window.currentLanguage || 'FR';
+
+                // Update <html lang> attribute for SEO/accessibility
+                if (window.updateHtmlLang) {
+                    window.updateHtmlLang(this.currentLang);
+                }
+
+                this.updatePageTitle();
+                this.translatePage();
+                this.updateLangSelector();
+            },
+
+            updatePageTitle() {
+                const t = window.translations?.[this.currentLang];
+                if (t?.installTitle) {
+                    document.title = t.installTitle;
+                }
+            },
+
+            translatePage() {
+                const t = window.translations?.[this.currentLang];
+                if (!t) return;
+
+                // Translate all elements with data-i18n
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (t[key]) {
+                        if (el.tagName === 'TITLE') {
+                            el.textContent = t[key];
+                        } else {
+                            el.textContent = t[key];
+                        }
+                    }
+                });
+            },
+
+            updateLangSelector() {
+                const selector = document.getElementById('langSelect');
+                if (selector) {
+                    selector.value = this.currentLang;
+                }
+            }
+        };
+
+        // Initialize on DOM ready
+        document.addEventListener('DOMContentLoaded', () => {
+            BibleI18n.init();
+            console.log('✅ Install page i18n initialized:', BibleI18n.currentLang);
+        });
+
+        // Re-translate on language change
+        window.addEventListener('languageChanged', (e) => {
+            BibleI18n.currentLang = e.detail.lang;
+            BibleI18n.init();
+        });
+    </script>
 </body>
 </html>
 
