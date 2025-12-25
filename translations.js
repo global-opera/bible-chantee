@@ -2879,6 +2879,13 @@ Object.keys(translations).forEach(lang => {
     t.installSubtitle = "Écoutez la Bible en musique - Offline & sans publicité";
     t.installFooterCopyright = "Bible Chantée © 2025";
     t.installFooterBackLink = "← Retour au site";
+
+    // Thank you page
+    t.thankYouPageTitle = "Merci - Bible Chantée";
+    t.thankYouTitle = "Merci !";
+    t.thankYouMessage = "Vous avez été inscrit avec succès.";
+    t.thankYouSubmessage = "Nous vous informerons lorsque du nouveau contenu sera disponible.";
+    t.thankYouButton = "Accéder au site (100 crédits gratuits)";
   } else if (lang === 'EN') {
     t.cfPageTitle = "Support Sung Bible - Crowdfunding";
     t.cfHeading = "Support Sung Bible";
@@ -3173,6 +3180,13 @@ Object.keys(translations).forEach(lang => {
     t.installSubtitle = "Listen to the Bible in music - Offline & ad-free";
     t.installFooterCopyright = "Sung Bible © 2025";
     t.installFooterBackLink = "← Back to site";
+
+    // Thank you page
+    t.thankYouPageTitle = "Thank you - Sung Bible";
+    t.thankYouTitle = "Thank you!";
+    t.thankYouMessage = "You have been subscribed successfully.";
+    t.thankYouSubmessage = "We will notify you when new content is available.";
+    t.thankYouButton = "Access the site (100 free credits)";
   } else if (lang === 'ES') {
     t.cfPageTitle = "Apoyar Biblia Cantada - Crowdfunding";
     t.cfHeading = "Apoyar Biblia Cantada";
@@ -3467,6 +3481,13 @@ Object.keys(translations).forEach(lang => {
     t.installSubtitle = "Escucha la Biblia en música - Offline y sin publicidad";
     t.installFooterCopyright = "Biblia Cantada © 2025";
     t.installFooterBackLink = "← Volver al sitio";
+
+    // Thank you page
+    t.thankYouPageTitle = "Gracias - Biblia Cantada";
+    t.thankYouTitle = "¡Gracias!";
+    t.thankYouMessage = "Te has suscrito exitosamente.";
+    t.thankYouSubmessage = "Te notificaremos cuando haya nuevo contenido disponible.";
+    t.thankYouButton = "Acceder al sitio (100 créditos gratis)";
   } else if (lang === 'PT') {
     t.cfPageTitle = "Apoiar Bíblia Cantada - Crowdfunding";
     t.cfHeading = "Apoiar Bíblia Cantada";
@@ -3907,6 +3928,13 @@ Object.keys(translations).forEach(lang => {
     t.installSubtitle = "Ouça a Bíblia em música - Offline e sem anúncios";
     t.installFooterCopyright = "Bíblia Cantada © 2025";
     t.installFooterBackLink = "← Voltar ao site";
+
+    // Thank you page
+    t.thankYouPageTitle = "Obrigado - Bíblia Cantada";
+    t.thankYouTitle = "Obrigado!";
+    t.thankYouMessage = "Você foi inscrito com sucesso.";
+    t.thankYouSubmessage = "Notificaremos você quando novo conteúdo estiver disponível.";
+    t.thankYouButton = "Acessar o site (100 créditos grátis)";
   }
   else if (lang === 'DE') {
     // Promesses page
@@ -4143,6 +4171,13 @@ Object.keys(translations).forEach(lang => {
     t.installSubtitle = "Hören Sie die Bibel in Musik - Offline & werbefrei";
     t.installFooterCopyright = "Gesungene Bibel © 2025";
     t.installFooterBackLink = "← Zurück zur Website";
+
+    // Thank you page
+    t.thankYouPageTitle = "Danke - Gesungene Bibel";
+    t.thankYouTitle = "Vielen Dank!";
+    t.thankYouMessage = "Sie wurden erfolgreich angemeldet.";
+    t.thankYouSubmessage = "Wir werden Sie benachrichtigen, wenn neue Inhalte verfügbar sind.";
+    t.thankYouButton = "Zur Website (100 kostenlose Credits)";
   }
   else if (lang === 'IT') {
     // Promesses page

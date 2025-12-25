@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" id="html-root">
+<html lang="fr" id="html-root">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Merci - Bible Chantée</title>
+  <title data-i18n="thankYouPageTitle">Merci - Bible Chantée</title>
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TX3ETCKJQZ"></script>
@@ -33,114 +33,104 @@
 <body>
   <div class="container">
     <div class="emoji">🎵</div>
-    <h1 id="title">Merci !</h1>
-    <p id="message">Vous avez été inscrit avec succès.</p>
-    <p class="sub" id="submessage">Nous vous informerons lorsque du nouveau contenu sera disponible.</p>
-    <a href="https://biblechantee.com/lecteur.html" id="access-link">Accéder au site (100 crédits gratuits)</a>
+    <h1 id="title" data-i18n="thankYouTitle">Merci !</h1>
+    <p id="message" data-i18n="thankYouMessage">Vous avez été inscrit avec succès.</p>
+    <p class="sub" id="submessage" data-i18n="thankYouSubmessage">Nous vous informerons lorsque du nouveau contenu sera disponible.</p>
+    <a href="https://biblechantee.com/lecteur.html" id="access-link" data-i18n="thankYouButton">Accéder au site (100 crédits gratuits)</a>
   </div>
 
   <script>
-    // Traductions pour toutes les langues
-    const TRANSLATIONS = {
-      fr: {
-        lang: 'fr',
-        htmlLang: 'fr',
-        title: 'Merci !',
-        message: 'Vous avez été inscrit avec succès.',
-        submessage: 'Nous vous informerons lorsque du nouveau contenu sera disponible.',
-        buttonText: 'Accéder au site (100 crédits gratuits)',
-        pageTitle: 'Merci - Bible Chantée'
+    // Initialize BibleI18n system
+    const BibleI18n = {
+      currentLang: window.currentLanguage || 'FR',
+
+      init() {
+        // Read language from localStorage (backward compatibility with bc_lang)
+        const storedLang = localStorage.getItem('bc_lang');
+        if (storedLang) {
+          this.currentLang = String(storedLang).toUpperCase();
+        } else {
+          this.currentLang = window.currentLanguage || 'FR';
+        }
+
+        // Update <html lang> attribute for SEO/accessibility
+        if (window.updateHtmlLang) {
+          window.updateHtmlLang(this.currentLang);
+        }
+
+        this.updatePageTitle();
+        this.translatePage();
+        this.updateAccessLink();
+        this.trackSignup();
+        this.setupAutoRedirect();
       },
-      en: {
-        lang: 'en',
-        htmlLang: 'en',
-        title: 'Thank you!',
-        message: 'You have been subscribed successfully.',
-        submessage: 'We will notify you when new content is available.',
-        buttonText: 'Access the site (100 free credits)',
-        pageTitle: 'Thank you - Sung Bible'
+
+      updatePageTitle() {
+        const t = window.translations?.[this.currentLang];
+        if (t?.thankYouPageTitle) {
+          document.title = t.thankYouPageTitle;
+        }
       },
-      pt: {
-        lang: 'pt',
-        htmlLang: 'pt',
-        title: 'Obrigado!',
-        message: 'Você foi inscrito com sucesso.',
-        submessage: 'Notificaremos você quando novo conteúdo estiver disponível.',
-        buttonText: 'Acessar o site (100 créditos grátis)',
-        pageTitle: 'Obrigado - Bíblia Cantada'
+
+      translatePage() {
+        const t = window.translations?.[this.currentLang];
+        if (!t) return;
+
+        // Translate all elements with data-i18n
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (t[key]) {
+            if (el.tagName === 'TITLE') {
+              el.textContent = t[key];
+            } else {
+              el.textContent = t[key];
+            }
+          }
+        });
       },
-      es: {
-        lang: 'es',
-        htmlLang: 'es',
-        title: '¡Gracias!',
-        message: 'Te has suscrito exitosamente.',
-        submessage: 'Te notificaremos cuando haya nuevo contenido disponible.',
-        buttonText: 'Acceder al sitio (100 créditos gratis)',
-        pageTitle: 'Gracias - Biblia Cantada'
+
+      updateAccessLink() {
+        const link = document.getElementById('access-link');
+        if (link) {
+          link.href = `https://biblechantee.com/lecteur.html?lang=${this.currentLang}`;
+          console.log(`✅ Thank you page displayed in: ${this.currentLang}`);
+          console.log(`📍 Redirect link: ${link.href}`);
+        }
       },
-      de: {
-        lang: 'de',
-        htmlLang: 'de',
-        title: 'Vielen Dank!',
-        message: 'Sie wurden erfolgreich angemeldet.',
-        submessage: 'Wir werden Sie benachrichtigen, wenn neue Inhalte verfügbar sind.',
-        buttonText: 'Zur Website (100 kostenlose Credits)',
-        pageTitle: 'Danke - Gesungene Bibel'
+
+      trackSignup() {
+        // Track signup event to GA4
+        if (typeof gtag === 'function') {
+          gtag('event', 'sign_up', {
+            method: 'netlify_form',
+            lang: this.currentLang
+          });
+          console.log('📊 GA4 event sent: sign_up');
+        }
       },
-      it: {
-        lang: 'it',
-        htmlLang: 'it',
-        title: 'Grazie!',
-        message: 'Ti sei iscritto con successo.',
-        submessage: 'Ti informeremo quando saranno disponibili nuovi contenuti.',
-        buttonText: 'Accedi al sito (100 crediti gratuiti)',
-        pageTitle: 'Grazie - Bibbia Cantata'
+
+      setupAutoRedirect() {
+        // Auto-redirect after 5 seconds
+        setTimeout(() => {
+          const link = document.getElementById('access-link');
+          if (link && link.href) {
+            console.log('🔄 Auto-redirecting to lecteur...');
+            window.location.href = link.href;
+          }
+        }, 5000);
       }
     };
 
-    // Lire la langue depuis localStorage (définie lors de l'inscription)
-    (function() {
-      const storedLang = localStorage.getItem('bc_lang') || 'EN';
-      const lang = String(storedLang || 'EN').toLowerCase();
+    // Initialize on DOM ready
+    document.addEventListener('DOMContentLoaded', () => {
+      BibleI18n.init();
+    });
 
-      // Utiliser la traduction correspondante (fallback sur FR si langue inconnue)
-      const t = TRANSLATIONS[lang] || TRANSLATIONS.fr;
-
-      // Mettre à jour tous les éléments de la page
-      document.getElementById('html-root').setAttribute('lang', t.htmlLang);
-      document.title = t.pageTitle;
-      document.getElementById('title').textContent = t.title;
-      document.getElementById('message').textContent = t.message;
-      document.getElementById('submessage').textContent = t.submessage;
-
-      // Mettre à jour le lien avec la langue et le texte traduit
-      const link = document.getElementById('access-link');
-      if (link) {
-        link.href = `https://biblechantee.com/lecteur.html?lang=${t.lang.toUpperCase()}`;
-        link.textContent = t.buttonText;
-      }
-
-      console.log(`✅ Thank you page displayed in: ${t.lang.toUpperCase()}`);
-      console.log(`📍 Redirect link: https://biblechantee.com/lecteur.html?lang=${t.lang.toUpperCase()}`);
-
-      // Track signup event to GA4
-      if (typeof gtag === 'function') {
-        gtag('event', 'sign_up', {
-          method: 'netlify_form',
-          lang: t.lang.toUpperCase()
-        });
-        console.log('📊 GA4 event sent: sign_up');
-      }
-    })();
-
-    // Auto-redirect après 5 secondes (optionnel)
-    setTimeout(function() {
-      const link = document.getElementById('access-link');
-      if (link && link.href) {
-        console.log('🔄 Auto-redirecting to lecteur...');
-        window.location.href = link.href;
-      }
-    }, 5000);
+    // Re-translate on language change
+    window.addEventListener('languageChanged', (e) => {
+      BibleI18n.currentLang = e.detail.lang;
+      BibleI18n.init();
+    });
   </script>
 </body>
 </html>
