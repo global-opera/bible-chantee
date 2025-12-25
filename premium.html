@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <!-- Google Analytics 4 - Bible Chantee -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TX3ETCKJQZ"></script>
@@ -872,8 +872,8 @@ window.trackSignup = function(referrer) {
 
             function getLangFromBC() {
                 try {
-                    if (window.BC_LANG && typeof BC_LANG.getCurrentLanguage === 'function') {
-                        return normalizeLang(BC_LANG.getCurrentLanguage());
+                    if (window.BC_LANG && typeof BC_LANG.resolveLang === 'function') {
+                        return normalizeLang(BC_LANG.resolveLang());
                     }
                 } catch (e) {}
                 return null;
@@ -881,12 +881,12 @@ window.trackSignup = function(referrer) {
 
             function setLangToBC(lang) {
                 try {
-                    if (window.BC_LANG && typeof BC_LANG.setCurrentLanguage === 'function') {
-                        BC_LANG.setCurrentLanguage(lang);
+                    if (window.BC_LANG && typeof BC_LANG.setLang === 'function') {
+                        BC_LANG.setLang(lang);
                         return;
                     }
                 } catch (e) {}
-                try { localStorage.setItem('BC_LANG', lang); } catch (e) {}
+                try { localStorage.setItem('bc_lang', String(lang).toUpperCase()); } catch (e) {}
             }
 
             // Lire la langue depuis l'URL en priorité
@@ -909,7 +909,7 @@ window.trackSignup = function(referrer) {
                 if (!a) return;
 
                 const u = new URL(location.href);
-                const lang = (u.searchParams.get('lang') || localStorage.getItem('bc_lang') || 'fr').toLowerCase();
+                const lang = (u.searchParams.get('lang') || localStorage.getItem('bc_lang') || 'en').toLowerCase();
 
                 const returnUrl = location.href;
                 a.href = `/about.html?lang=${encodeURIComponent(lang)}&return=${encodeURIComponent(returnUrl)}`;
@@ -1105,21 +1105,21 @@ window.trackSignup = function(referrer) {
             return (
                 (window.currentLanguage) ||
                 (localStorage.getItem('bc_lang')) ||
-                (localStorage.getItem('BC_LANG')) ||
+                (localStorage.getItem('bc_lang')) ||
                 (new URLSearchParams(location.search).get('lang')) ||
                 'FR'
             ).toUpperCase();
         };
 
         function getBibleDatasetForLang(lang) {
-            const L = (lang || 'FR').toUpperCase();
+            const L = (lang || 'en').toUpperCase();
             if (L === 'FR') return (typeof window.bibleData !== 'undefined') ? window.bibleData : null;
             const varName = `bibleData${L}`;
             return (typeof window[varName] !== 'undefined') ? window[varName] : null;
         }
 
         function getLyricsForCurrent(lang, book, chapterStr) {
-            const L = (lang || 'FR').toUpperCase();
+            const L = (lang || 'en').toUpperCase();
             if (L === 'PT') {
                 if (typeof window.chapterLyricsPT === 'undefined') return null;
 
@@ -1369,7 +1369,7 @@ window.trackSignup = function(referrer) {
             const bibleContainer = document.getElementById('bibleContainer');
             const chapterStr = String(currentChapter);
 
-            const bookNum = currentBook.split('_')[0]; const dataset = getBibleDatasetForLang(window.currentLanguage || 'FR');
+            const bookNum = currentBook.split('_')[0]; const dataset = getBibleDatasetForLang(window.currentLanguage || 'en');
 
             if (dataset && dataset[bookNum] && dataset[bookNum][chapterStr]) {
                 const verses = dataset[bookNum][chapterStr];
@@ -2363,6 +2363,10 @@ if (document.readyState === 'loading') {
 
 </body>
 </html>
+
+
+
+
 
 
 

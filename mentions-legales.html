@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -65,7 +65,9 @@ Geneve, Suisse<br>
 <div class="back"><a href="index.html" data-i18n="legalBackHome">&larr; Retour a l'accueil</a></div>
 <footer data-i18n="legalFooter">&copy; 2025 Stephane Cassani - Tous droits reserves</footer>
 </div>
-<!-- Load translations and i18n system --><script src="translations.js"></script><script src="i18n.js"></script>
+<!-- Load translations and i18n system --><script src="translations.js"></script>
+<script src="translations-extra.js"></script>
+<script src="lang-shared.js"></script><script src="i18n.js"></script>
 
 <!-- Language switching -->
 <script>
@@ -78,7 +80,7 @@ function setLanguage(lang) {
 
 // Mark active language button
 const urlParams = new URLSearchParams(window.location.search);
-const currentLang = urlParams.get('lang') || window.i18nInstance?.getCurrentLanguage() || 'FR';
+const currentLang = (urlParams.get('lang') || (window.BC_LANG ? BC_LANG.resolveLang() : (window.currentLanguage || 'EN')));
 document.querySelectorAll('.lang-btn').forEach(btn => {
     if (btn.dataset.lang === currentLang) {
         btn.classList.add('active');
@@ -95,3 +97,7 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 </script>
 </body>
 </html>
+
+
+
+

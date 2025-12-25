@@ -2777,6 +2777,101 @@ Object.keys(translations).forEach(lang => {
     t.legalLawDesc = "Le présent site et ses mentions légales sont régis par le droit suisse. Tout litige sera soumis aux tribunaux compétents de Genève, Suisse.";
     t.legalBackHome = "← Retour à l'accueil";
     t.legalFooter = "© 2025 Stéphane Cassani - Tous droits réservés";
+
+    // === PRICING PAGE ===
+    t.pricingTitle = "Tarifs - Bible Chantée";
+    t.pricingMetaDesc = "Débloquez l'accès complet à la Bible chantée - 1189 chapitres pour seulement $0.99";
+    t.pricingHeader = "💰 Tarifs Sung Bible";
+    t.pricingSubtitle = "Débloquez l'accès complet à toute la Bible chantée";
+    t.pricingBackLink = "← Retour à l'accueil";
+
+    // Intro
+    t.pricingIntroTitle = "Choisissez votre formule";
+    t.pricingIntroDesc = "Vous avez déjà écouté vos 100 chapitres gratuits ? Débloquez l'accès complet pour moins qu'un café !";
+
+    // Free Plan
+    t.pricingFreePlan = "Gratuit";
+    t.pricingFreeDesc = "Parfait pour découvrir";
+    t.pricingFreeFeature1 = "100 chapitres gratuits";
+    t.pricingFreeFeature2 = "Accès à toutes les langues";
+    t.pricingFreeFeature3 = "Écoute illimitée des chapitres débloqués";
+    t.pricingFreeFeature4 = "Aucune carte requise";
+    t.pricingFreeCTA = "🎵 Commencer gratuitement";
+
+    // Premium Plan
+    t.pricingRecommended = "⭐ RECOMMANDÉ";
+    t.pricingPremiumPlan = "Accès Complet";
+    t.pricingPremiumDesc = "🔥 Le meilleur rapport qualité-prix!";
+    t.pricingPremiumFeature1 = "1189 chapitres débloqués";
+    t.pricingPremiumFeature2 = "Toute la Bible (Ancien + Nouveau Testament)";
+    t.pricingPremiumFeature3 = "Écoute illimitée à vie";
+    t.pricingPremiumFeature4 = "Support de toutes les langues";
+    t.pricingPremiumFeature5 = "Aucun abonnement";
+    t.pricingPremiumPayPal = "💳 Payer avec PayPal";
+    t.pricingPremiumTWINT = "📱 Payer avec TWINT";
+    t.pricingPremiumPIX = "🇧🇷 Pagar com PIX";
+
+    // Supporter Plan
+    t.pricingSupporterPlan = "Supporter";
+    t.pricingSupporterDesc = "Soutenez le projet";
+    t.pricingSupporterFeature1 = "Tout du plan Accès Complet";
+    t.pricingSupporterFeature2 = "Soutenez la création de nouvelles langues";
+    t.pricingSupporterFeature3 = "Accès anticipé aux nouveautés";
+    t.pricingSupporterFeature4 = "Badge \"Supporter\" (bientôt)";
+    t.pricingSupporterCTA5 = "💝 Soutenir avec $5";
+    t.pricingSupporterCTA10 = "⭐ Soutenir avec $10";
+
+    // FAQ
+    t.pricingFAQTitle = "Questions fréquentes";
+    t.pricingFAQQ1 = "💳 Quels moyens de paiement acceptez-vous?";
+    t.pricingFAQA1 = "Nous acceptons PayPal, TWINT (Suisse), et PIX (Brésil). PayPal permet aussi de payer par carte bancaire sans créer de compte.";
+    t.pricingFAQQ2 = "🔐 Comment recevoir mon accès après paiement?";
+    t.pricingFAQA2 = "Après paiement, vous recevrez un email avec un code de déblocage. Entrez ce code dans le lecteur pour activer l'accès illimité.";
+    t.pricingFAQQ3 = "🌍 L'accès est-il valable pour toutes les langues?";
+    t.pricingFAQA3 = "Oui! Le plan Accès Complet débloque TOUTES les langues disponibles (FR, EN, PT, et les futures langues).";
+    t.pricingFAQQ4 = "♾️ Est-ce un abonnement?";
+    t.pricingFAQA4 = "Non! C'est un paiement unique. Une fois payé, vous avez l'accès à vie, sans renouvellement.";
+    t.pricingFAQQ5 = "📱 Puis-je écouter sur plusieurs appareils?";
+    t.pricingFAQA5 = "Oui! Votre accès fonctionne sur tous vos appareils. Il suffit d'utiliser le même email et code de déblocage.";
+    t.pricingFAQQ6 = "❓ J'ai perdu mon code de déblocage, que faire?";
+    t.pricingFAQA6 = "Contactez-nous à support@sungbible.world avec votre email PayPal et nous vous renverrons votre code.";
+
+    // Footer
+    t.pricingFooterHome = "Accueil";
+    t.pricingFooterPlayer = "Lecteur";
+    t.pricingFooterTagline = "Créé avec ❤️ pour partager la Parole de Dieu";
+
+    // Crowdfunding page (new complete version)
+    t.crowdPageTitle = "Soutenir Bible Chantée - Crowdfunding";
+    t.crowdHeroTitle = "🎵 Soutenez Bible Chantée";
+    t.crowdHeroSubtitle = "La Bible en musique, gratuite pour le monde entier";
+    t.crowdProgressTitle = "📊 Déjà accompli";
+    t.crowdStatChapters = "Chapitres générés";
+    t.crowdStatLangsComplete = "Langues complètes";
+    t.crowdStatLangsPlanned = "Langues prévues";
+    t.crowdDonateTitle = "💝 Faire un don";
+    t.crowdDonateBtn = "🚀 Donner via GoFundMe";
+    t.crowdDonateOr = "ou par virement direct (sans frais)";
+    t.crowdPaymentIBAN = "Virement IBAN";
+    t.crowdPaymentIBANNote = "BIC: TRWIBEB1XXX<br>Stéphane Jean Cassani";
+    t.crowdPaymentCopyIBAN = "Copier IBAN";
+    t.crowdPaymentTwint = "Twint";
+    t.crowdPaymentTwintNote = "Suisse uniquement";
+    t.crowdPaymentCopy = "Copier";
+    t.crowdPaymentPayPal = "PayPal";
+    t.crowdPaymentPayPalNote = "Mondial";
+    t.crowdMissionaryNote = "🙏 <strong>10% de tous les dons seront reversés à des œuvres missionnaires chrétiennes.</strong>";
+    t.crowdImpactTitle = "🌍 Votre don permet";
+    t.crowdImpact1 = "Aux enfants d'apprendre la Bible en chantant";
+    t.crowdImpact2 = "Aux non-lecteurs de découvrir la Parole de Dieu";
+    t.crowdImpact3 = "Aux églises persécutées d'accéder aux Écritures";
+    t.crowdImpact4 = "Aux familles de prier ensemble en musique";
+    t.crowdImpact5 = "À 12 langues d'être générées gratuitement";
+    t.crowdImpact6 = "À l'application mobile d'être développée";
+    t.crowdQuoteText = "Chantez à l'Éternel un cantique nouveau !<br>Chantez à l'Éternel, vous tous, habitants de la terre !";
+    t.crowdQuoteVerse = "— Psaume 96:1";
+    t.crowdBackLink = "← Retour à Bible Chantée";
+    t.crowdCopied = "Copié : ";
   } else if (lang === 'EN') {
     t.cfPageTitle = "Support Sung Bible - Crowdfunding";
     t.cfHeading = "Support Sung Bible";
@@ -2969,6 +3064,101 @@ Object.keys(translations).forEach(lang => {
     t.legalLawDesc = "This site and its legal notices are governed by Swiss law. Any dispute will be submitted to the competent courts of Geneva, Switzerland.";
     t.legalBackHome = "← Back home";
     t.legalFooter = "© 2025 Stéphane Cassani - All rights reserved";
+
+    // === PRICING PAGE ===
+    t.pricingTitle = "Pricing - Sung Bible";
+    t.pricingMetaDesc = "Unlock full access to the Sung Bible - 1189 chapters for only $0.99";
+    t.pricingHeader = "💰 Sung Bible Pricing";
+    t.pricingSubtitle = "Unlock full access to the entire Sung Bible";
+    t.pricingBackLink = "← Back home";
+
+    // Intro
+    t.pricingIntroTitle = "Choose your plan";
+    t.pricingIntroDesc = "Already listened to your 100 free chapters? Unlock full access for less than a coffee!";
+
+    // Free Plan
+    t.pricingFreePlan = "Free";
+    t.pricingFreeDesc = "Perfect to discover";
+    t.pricingFreeFeature1 = "100 free chapters";
+    t.pricingFreeFeature2 = "Access to all languages";
+    t.pricingFreeFeature3 = "Unlimited listening of unlocked chapters";
+    t.pricingFreeFeature4 = "No card required";
+    t.pricingFreeCTA = "🎵 Start for free";
+
+    // Premium Plan
+    t.pricingRecommended = "⭐ RECOMMENDED";
+    t.pricingPremiumPlan = "Full Access";
+    t.pricingPremiumDesc = "🔥 Best value for money!";
+    t.pricingPremiumFeature1 = "1189 chapters unlocked";
+    t.pricingPremiumFeature2 = "The whole Bible (Old + New Testament)";
+    t.pricingPremiumFeature3 = "Lifetime unlimited listening";
+    t.pricingPremiumFeature4 = "Support for all languages";
+    t.pricingPremiumFeature5 = "No subscription";
+    t.pricingPremiumPayPal = "💳 Pay with PayPal";
+    t.pricingPremiumTWINT = "📱 Pay with TWINT";
+    t.pricingPremiumPIX = "🇧🇷 Pay with PIX";
+
+    // Supporter Plan
+    t.pricingSupporterPlan = "Supporter";
+    t.pricingSupporterDesc = "Support the project";
+    t.pricingSupporterFeature1 = "Everything from Full Access plan";
+    t.pricingSupporterFeature2 = "Support creation of new languages";
+    t.pricingSupporterFeature3 = "Early access to new features";
+    t.pricingSupporterFeature4 = "\"Supporter\" badge (coming soon)";
+    t.pricingSupporterCTA5 = "💝 Support with $5";
+    t.pricingSupporterCTA10 = "⭐ Support with $10";
+
+    // FAQ
+    t.pricingFAQTitle = "Frequently asked questions";
+    t.pricingFAQQ1 = "💳 What payment methods do you accept?";
+    t.pricingFAQA1 = "We accept PayPal, TWINT (Switzerland), and PIX (Brazil). PayPal also allows you to pay by credit card without creating an account.";
+    t.pricingFAQQ2 = "🔐 How do I receive my access after payment?";
+    t.pricingFAQA2 = "After payment, you will receive an email with an unlock code. Enter this code in the player to activate unlimited access.";
+    t.pricingFAQQ3 = "🌍 Is access valid for all languages?";
+    t.pricingFAQA3 = "Yes! The Full Access plan unlocks ALL available languages (FR, EN, PT, and future languages).";
+    t.pricingFAQQ4 = "♾️ Is this a subscription?";
+    t.pricingFAQA4 = "No! It's a one-time payment. Once paid, you have lifetime access, without renewal.";
+    t.pricingFAQQ5 = "📱 Can I listen on multiple devices?";
+    t.pricingFAQA5 = "Yes! Your access works on all your devices. Just use the same email and unlock code.";
+    t.pricingFAQQ6 = "❓ I lost my unlock code, what should I do?";
+    t.pricingFAQA6 = "Contact us at support@sungbible.world with your PayPal email and we will resend your code.";
+
+    // Footer
+    t.pricingFooterHome = "Home";
+    t.pricingFooterPlayer = "Player";
+    t.pricingFooterTagline = "Created with ❤️ to share the Word of God";
+
+    // Crowdfunding page (new complete version)
+    t.crowdPageTitle = "Support Sung Bible - Crowdfunding";
+    t.crowdHeroTitle = "🎵 Support Sung Bible";
+    t.crowdHeroSubtitle = "The Bible in music, free for the whole world";
+    t.crowdProgressTitle = "📊 Already accomplished";
+    t.crowdStatChapters = "Chapters generated";
+    t.crowdStatLangsComplete = "Complete languages";
+    t.crowdStatLangsPlanned = "Planned languages";
+    t.crowdDonateTitle = "💝 Make a donation";
+    t.crowdDonateBtn = "🚀 Donate via GoFundMe";
+    t.crowdDonateOr = "or by direct transfer (no fees)";
+    t.crowdPaymentIBAN = "IBAN Transfer";
+    t.crowdPaymentIBANNote = "BIC: TRWIBEB1XXX<br>Stéphane Jean Cassani";
+    t.crowdPaymentCopyIBAN = "Copy IBAN";
+    t.crowdPaymentTwint = "Twint";
+    t.crowdPaymentTwintNote = "Switzerland only";
+    t.crowdPaymentCopy = "Copy";
+    t.crowdPaymentPayPal = "PayPal";
+    t.crowdPaymentPayPalNote = "Worldwide";
+    t.crowdMissionaryNote = "🙏 <strong>10% of all donations will be given to Christian missionary works.</strong>";
+    t.crowdImpactTitle = "🌍 Your donation enables";
+    t.crowdImpact1 = "Children to learn the Bible through singing";
+    t.crowdImpact2 = "Non-readers to discover God's Word";
+    t.crowdImpact3 = "Persecuted churches to access the Scriptures";
+    t.crowdImpact4 = "Families to pray together with music";
+    t.crowdImpact5 = "12 languages to be generated for free";
+    t.crowdImpact6 = "The mobile app to be developed";
+    t.crowdQuoteText = "Sing to the LORD a new song!<br>Sing to the LORD, all the earth!";
+    t.crowdQuoteVerse = "— Psalm 96:1";
+    t.crowdBackLink = "← Back to Sung Bible";
+    t.crowdCopied = "Copied: ";
   } else if (lang === 'ES') {
     t.cfPageTitle = "Apoyar Biblia Cantada - Crowdfunding";
     t.cfHeading = "Apoyar Biblia Cantada";
@@ -3161,6 +3351,101 @@ Object.keys(translations).forEach(lang => {
     t.legalLawDesc = "Este sitio y sus avisos legales se rigen por la ley suiza. Cualquier disputa se someterá a los tribunales competentes de Ginebra, Suiza.";
     t.legalBackHome = "← Volver inicio";
     t.legalFooter = "© 2025 Stéphane Cassani - Todos los derechos reservados";
+
+    // === PRICING PAGE ===
+    t.pricingTitle = "Precios - Biblia Cantada";
+    t.pricingMetaDesc = "Desbloquea acceso completo a la Biblia Cantada - 1189 capítulos por solo $0.99";
+    t.pricingHeader = "💰 Precios Sung Bible";
+    t.pricingSubtitle = "Desbloquea acceso completo a toda la Biblia Cantada";
+    t.pricingBackLink = "← Volver inicio";
+
+    // Intro
+    t.pricingIntroTitle = "Elige tu plan";
+    t.pricingIntroDesc = "¿Ya escuchaste tus 100 capítulos gratis? ¡Desbloquea acceso completo por menos que un café!";
+
+    // Free Plan
+    t.pricingFreePlan = "Gratis";
+    t.pricingFreeDesc = "Perfecto para descubrir";
+    t.pricingFreeFeature1 = "100 capítulos gratis";
+    t.pricingFreeFeature2 = "Acceso a todos los idiomas";
+    t.pricingFreeFeature3 = "Escucha ilimitada de capítulos desbloqueados";
+    t.pricingFreeFeature4 = "No se requiere tarjeta";
+    t.pricingFreeCTA = "🎵 Empezar gratis";
+
+    // Premium Plan
+    t.pricingRecommended = "⭐ RECOMENDADO";
+    t.pricingPremiumPlan = "Acceso Completo";
+    t.pricingPremiumDesc = "🔥 ¡Mejor relación calidad-precio!";
+    t.pricingPremiumFeature1 = "1189 capítulos desbloqueados";
+    t.pricingPremiumFeature2 = "Toda la Biblia (Antiguo + Nuevo Testamento)";
+    t.pricingPremiumFeature3 = "Escucha ilimitada de por vida";
+    t.pricingPremiumFeature4 = "Soporte de todos los idiomas";
+    t.pricingPremiumFeature5 = "Sin suscripción";
+    t.pricingPremiumPayPal = "💳 Pagar con PayPal";
+    t.pricingPremiumTWINT = "📱 Pagar con TWINT";
+    t.pricingPremiumPIX = "🇧🇷 Pagar con PIX";
+
+    // Supporter Plan
+    t.pricingSupporterPlan = "Patrocinador";
+    t.pricingSupporterDesc = "Apoya el proyecto";
+    t.pricingSupporterFeature1 = "Todo del plan Acceso Completo";
+    t.pricingSupporterFeature2 = "Apoya la creación de nuevos idiomas";
+    t.pricingSupporterFeature3 = "Acceso anticipado a novedades";
+    t.pricingSupporterFeature4 = "Insignia \"Patrocinador\" (próximamente)";
+    t.pricingSupporterCTA5 = "💝 Apoyar con $5";
+    t.pricingSupporterCTA10 = "⭐ Apoyar con $10";
+
+    // FAQ
+    t.pricingFAQTitle = "Preguntas frecuentes";
+    t.pricingFAQQ1 = "💳 ¿Qué métodos de pago aceptan?";
+    t.pricingFAQA1 = "Aceptamos PayPal, TWINT (Suiza) y PIX (Brasil). PayPal también permite pagar con tarjeta sin crear cuenta.";
+    t.pricingFAQQ2 = "🔐 ¿Cómo recibo mi acceso después del pago?";
+    t.pricingFAQA2 = "Después del pago, recibirás un email con un código de desbloqueo. Ingresa este código en el reproductor para activar acceso ilimitado.";
+    t.pricingFAQQ3 = "🌍 ¿El acceso es válido para todos los idiomas?";
+    t.pricingFAQA3 = "¡Sí! El plan Acceso Completo desbloquea TODOS los idiomas disponibles (FR, EN, PT y futuros idiomas).";
+    t.pricingFAQQ4 = "♾️ ¿Es una suscripción?";
+    t.pricingFAQA4 = "¡No! Es un pago único. Una vez pagado, tienes acceso de por vida, sin renovación.";
+    t.pricingFAQQ5 = "📱 ¿Puedo escuchar en varios dispositivos?";
+    t.pricingFAQA5 = "¡Sí! Tu acceso funciona en todos tus dispositivos. Solo usa el mismo email y código de desbloqueo.";
+    t.pricingFAQQ6 = "❓ Perdí mi código de desbloqueo, ¿qué hago?";
+    t.pricingFAQA6 = "Contáctanos en support@sungbible.world con tu email de PayPal y te reenviaremos tu código.";
+
+    // Footer
+    t.pricingFooterHome = "Inicio";
+    t.pricingFooterPlayer = "Reproductor";
+    t.pricingFooterTagline = "Creado con ❤️ para compartir la Palabra de Dios";
+
+    // Crowdfunding page (new complete version)
+    t.crowdPageTitle = "Apoyar Biblia Cantada - Crowdfunding";
+    t.crowdHeroTitle = "🎵 Apoya Biblia Cantada";
+    t.crowdHeroSubtitle = "La Biblia en música, gratis para todo el mundo";
+    t.crowdProgressTitle = "📊 Ya logrado";
+    t.crowdStatChapters = "Capítulos generados";
+    t.crowdStatLangsComplete = "Idiomas completos";
+    t.crowdStatLangsPlanned = "Idiomas previstos";
+    t.crowdDonateTitle = "💝 Hacer una donación";
+    t.crowdDonateBtn = "🚀 Donar vía GoFundMe";
+    t.crowdDonateOr = "o por transferencia directa (sin comisiones)";
+    t.crowdPaymentIBAN = "Transferencia IBAN";
+    t.crowdPaymentIBANNote = "BIC: TRWIBEB1XXX<br>Stéphane Jean Cassani";
+    t.crowdPaymentCopyIBAN = "Copiar IBAN";
+    t.crowdPaymentTwint = "Twint";
+    t.crowdPaymentTwintNote = "Solo Suiza";
+    t.crowdPaymentCopy = "Copiar";
+    t.crowdPaymentPayPal = "PayPal";
+    t.crowdPaymentPayPalNote = "Mundial";
+    t.crowdMissionaryNote = "🙏 <strong>El 10% de todas las donaciones se destinará a obras misioneras cristanas.</strong>";
+    t.crowdImpactTitle = "🌍 Su donación permite";
+    t.crowdImpact1 = "Que los niños aprendan la Biblia cantando";
+    t.crowdImpact2 = "Que los no lectores descubran la Palabra de Dios";
+    t.crowdImpact3 = "Que las iglesias perseguidas accedan a las Escrituras";
+    t.crowdImpact4 = "Que las familias oren juntas con música";
+    t.crowdImpact5 = "Que 12 idiomas se generen gratuitamente";
+    t.crowdImpact6 = "Que la aplicación móvil sea desarrollada";
+    t.crowdQuoteText = "¡Cantad al SEÑOR un cántico nuevo!<br>¡Cantad al SEÑOR, toda la tierra!";
+    t.crowdQuoteVerse = "— Salmo 96:1";
+    t.crowdBackLink = "← Volver a Biblia Cantada";
+    t.crowdCopied = "Copiado: ";
   } else if (lang === 'PT') {
     t.cfPageTitle = "Apoiar Bíblia Cantada - Crowdfunding";
     t.cfHeading = "Apoiar Bíblia Cantada";
@@ -3353,6 +3638,101 @@ Object.keys(translations).forEach(lang => {
     t.legalLawDesc = "Este site e seus avisos legais são regidos pela lei suíça. Qualquer disputa será submetida aos tribunais competentes de Genebra, Suíça.";
     t.legalBackHome = "← Voltar início";
     t.legalFooter = "© 2025 Stéphane Cassani - Todos os direitos reservados";
+
+    // === PRICING PAGE ===
+    t.pricingTitle = "Preços - Bíblia Cantada";
+    t.pricingMetaDesc = "Desbloqueie acesso completo à Bíblia Cantada - 1189 capítulos por apenas $0.99";
+    t.pricingHeader = "💰 Preços Sung Bible";
+    t.pricingSubtitle = "Desbloqueie acesso completo a toda a Bíblia Cantada";
+    t.pricingBackLink = "← Voltar início";
+
+    // Intro
+    t.pricingIntroTitle = "Escolha seu plano";
+    t.pricingIntroDesc = "Já ouviu seus 100 capítulos grátis? Desbloqueie acesso completo por menos que um café!";
+
+    // Free Plan
+    t.pricingFreePlan = "Grátis";
+    t.pricingFreeDesc = "Perfeito para descobrir";
+    t.pricingFreeFeature1 = "100 capítulos grátis";
+    t.pricingFreeFeature2 = "Acesso a todos os idiomas";
+    t.pricingFreeFeature3 = "Audição ilimitada de capítulos desbloqueados";
+    t.pricingFreeFeature4 = "Nenhum cartão necessário";
+    t.pricingFreeCTA = "🎵 Começar grátis";
+
+    // Premium Plan
+    t.pricingRecommended = "⭐ RECOMENDADO";
+    t.pricingPremiumPlan = "Acesso Completo";
+    t.pricingPremiumDesc = "🔥 Melhor custo-benefício!";
+    t.pricingPremiumFeature1 = "1189 capítulos desbloqueados";
+    t.pricingPremiumFeature2 = "Toda a Bíblia (Antigo + Novo Testamento)";
+    t.pricingPremiumFeature3 = "Audição ilimitada vitalícia";
+    t.pricingPremiumFeature4 = "Suporte a todos os idiomas";
+    t.pricingPremiumFeature5 = "Sem assinatura";
+    t.pricingPremiumPayPal = "💳 Pagar com PayPal";
+    t.pricingPremiumTWINT = "📱 Pagar com TWINT";
+    t.pricingPremiumPIX = "🇧🇷 Pagar com PIX";
+
+    // Supporter Plan
+    t.pricingSupporterPlan = "Apoiador";
+    t.pricingSupporterDesc = "Apoie o projeto";
+    t.pricingSupporterFeature1 = "Tudo do plano Acesso Completo";
+    t.pricingSupporterFeature2 = "Apoie a criação de novos idiomas";
+    t.pricingSupporterFeature3 = "Acesso antecipado a novidades";
+    t.pricingSupporterFeature4 = "Distintivo \"Apoiador\" (em breve)";
+    t.pricingSupporterCTA5 = "💝 Apoiar com $5";
+    t.pricingSupporterCTA10 = "⭐ Apoiar com $10";
+
+    // FAQ
+    t.pricingFAQTitle = "Perguntas frequentes";
+    t.pricingFAQQ1 = "💳 Quais métodos de pagamento vocês aceitam?";
+    t.pricingFAQA1 = "Aceitamos PayPal, TWINT (Suíça) e PIX (Brasil). PayPal também permite pagar com cartão sem criar conta.";
+    t.pricingFAQQ2 = "🔐 Como recebo meu acesso após o pagamento?";
+    t.pricingFAQA2 = "Após o pagamento, você receberá um email com um código de desbloqueio. Insira este código no player para ativar acesso ilimitado.";
+    t.pricingFAQQ3 = "🌍 O acesso é válido para todos os idiomas?";
+    t.pricingFAQA3 = "Sim! O plano Acesso Completo desbloqueia TODOS os idiomas disponíveis (FR, EN, PT e futuros idiomas).";
+    t.pricingFAQQ4 = "♾️ É uma assinatura?";
+    t.pricingFAQA4 = "Não! É um pagamento único. Uma vez pago, você tem acesso vitalício, sem renovação.";
+    t.pricingFAQQ5 = "📱 Posso ouvir em vários dispositivos?";
+    t.pricingFAQA5 = "Sim! Seu acesso funciona em todos os seus dispositivos. Basta usar o mesmo email e código de desbloqueio.";
+    t.pricingFAQQ6 = "❓ Perdi meu código de desbloqueio, o que fazer?";
+    t.pricingFAQA6 = "Entre em contato conosco em support@sungbible.world com seu email do PayPal e reenviaremos seu código.";
+
+    // Footer
+    t.pricingFooterHome = "Início";
+    t.pricingFooterPlayer = "Player";
+    t.pricingFooterTagline = "Criado com ❤️ para compartilhar a Palavra de Deus";
+
+    // Crowdfunding page (new complete version)
+    t.crowdPageTitle = "Apoiar Bíblia Cantada - Crowdfunding";
+    t.crowdHeroTitle = "🎵 Apoie Bíblia Cantada";
+    t.crowdHeroSubtitle = "A Bíblia em música, gratuita para o mundo inteiro";
+    t.crowdProgressTitle = "📊 Já realizado";
+    t.crowdStatChapters = "Capítulos gerados";
+    t.crowdStatLangsComplete = "Idiomas completos";
+    t.crowdStatLangsPlanned = "Idiomas previstos";
+    t.crowdDonateTitle = "💝 Fazer uma doação";
+    t.crowdDonateBtn = "🚀 Doar via GoFundMe";
+    t.crowdDonateOr = "ou por transferência direta (sem taxas)";
+    t.crowdPaymentIBAN = "Transferência IBAN";
+    t.crowdPaymentIBANNote = "BIC: TRWIBEB1XXX<br>Stéphane Jean Cassani";
+    t.crowdPaymentCopyIBAN = "Copiar IBAN";
+    t.crowdPaymentTwint = "Twint";
+    t.crowdPaymentTwintNote = "Apenas Suíça";
+    t.crowdPaymentCopy = "Copiar";
+    t.crowdPaymentPayPal = "PayPal";
+    t.crowdPaymentPayPalNote = "Mundial";
+    t.crowdMissionaryNote = "🙏 <strong>10% de todas as doações serão destinadas a obras missionárias cristãs.</strong>";
+    t.crowdImpactTitle = "🌍 Sua doação permite";
+    t.crowdImpact1 = "Que as crianças aprendam a Bíblia cantando";
+    t.crowdImpact2 = "Que os não leitores descubram a Palavra de Deus";
+    t.crowdImpact3 = "Que as igrejas perseguidas acessem as Escrituras";
+    t.crowdImpact4 = "Que as famílias orem juntas com música";
+    t.crowdImpact5 = "Que 12 idiomas sejam gerados gratuitamente";
+    t.crowdImpact6 = "Que o aplicativo móvel seja desenvolvido";
+    t.crowdQuoteText = "Cantai ao SENHOR um cântico novo!<br>Cantai ao SENHOR, toda a terra!";
+    t.crowdQuoteVerse = "— Salmo 96:1";
+    t.crowdBackLink = "← Voltar para Bíblia Cantada";
+    t.crowdCopied = "Copiado: ";
   }
 });
 
@@ -3633,6 +4013,101 @@ Object.keys(translations).forEach(lang => {
     t.legalLawDesc = "Diese Website und ihre rechtlichen Hinweise unterliegen schweizerischem Recht. Streitigkeiten werden den zuständigen Gerichten in Genf, Schweiz, vorgelegt.";
     t.legalBackHome = "← Zurück zur Startseite";
     t.legalFooter = "© 2025 Stéphane Cassani - Alle Rechte vorbehalten";
+
+    // === PRICING PAGE ===
+    t.pricingTitle = "Preise - Gesungene Bibel";
+    t.pricingMetaDesc = "Schalten Sie vollen Zugang zur Gesungenen Bibel frei - 1189 Kapitel für nur $0.99";
+    t.pricingHeader = "💰 Sung Bible Preise";
+    t.pricingSubtitle = "Schalten Sie vollen Zugang zur gesamten Gesungenen Bibel frei";
+    t.pricingBackLink = "← Zurück zur Startseite";
+
+    // Intro
+    t.pricingIntroTitle = "Wählen Sie Ihren Plan";
+    t.pricingIntroDesc = "Haben Sie bereits Ihre 100 kostenlosen Kapitel gehört? Schalten Sie vollen Zugang für weniger als einen Kaffee frei!";
+
+    // Free Plan
+    t.pricingFreePlan = "Kostenlos";
+    t.pricingFreeDesc = "Perfekt zum Entdecken";
+    t.pricingFreeFeature1 = "100 kostenlose Kapitel";
+    t.pricingFreeFeature2 = "Zugang zu allen Sprachen";
+    t.pricingFreeFeature3 = "Unbegrenztes Hören freigeschalteter Kapitel";
+    t.pricingFreeFeature4 = "Keine Karte erforderlich";
+    t.pricingFreeCTA = "🎵 Kostenlos beginnen";
+
+    // Premium Plan
+    t.pricingRecommended = "⭐ EMPFOHLEN";
+    t.pricingPremiumPlan = "Vollzugang";
+    t.pricingPremiumDesc = "🔥 Bestes Preis-Leistungs-Verhältnis!";
+    t.pricingPremiumFeature1 = "1189 Kapitel freigeschaltet";
+    t.pricingPremiumFeature2 = "Die ganze Bibel (Altes + Neues Testament)";
+    t.pricingPremiumFeature3 = "Lebenslang unbegrenztes Hören";
+    t.pricingPremiumFeature4 = "Unterstützung aller Sprachen";
+    t.pricingPremiumFeature5 = "Kein Abonnement";
+    t.pricingPremiumPayPal = "💳 Mit PayPal bezahlen";
+    t.pricingPremiumTWINT = "📱 Mit TWINT bezahlen";
+    t.pricingPremiumPIX = "🇧🇷 Mit PIX bezahlen";
+
+    // Supporter Plan
+    t.pricingSupporterPlan = "Unterstützer";
+    t.pricingSupporterDesc = "Unterstützen Sie das Projekt";
+    t.pricingSupporterFeature1 = "Alles vom Vollzugang-Plan";
+    t.pricingSupporterFeature2 = "Unterstützen Sie die Erstellung neuer Sprachen";
+    t.pricingSupporterFeature3 = "Früher Zugang zu Neuigkeiten";
+    t.pricingSupporterFeature4 = "\"Unterstützer\" Abzeichen (bald)";
+    t.pricingSupporterCTA5 = "💝 Mit $5 unterstützen";
+    t.pricingSupporterCTA10 = "⭐ Mit $10 unterstützen";
+
+    // FAQ
+    t.pricingFAQTitle = "Häufig gestellte Fragen";
+    t.pricingFAQQ1 = "💳 Welche Zahlungsmethoden akzeptieren Sie?";
+    t.pricingFAQA1 = "Wir akzeptieren PayPal, TWINT (Schweiz) und PIX (Brasilien). PayPal ermöglicht auch die Zahlung per Kreditkarte ohne Konto.";
+    t.pricingFAQQ2 = "🔐 Wie erhalte ich nach der Zahlung meinen Zugang?";
+    t.pricingFAQA2 = "Nach der Zahlung erhalten Sie eine E-Mail mit einem Freischaltcode. Geben Sie diesen Code im Player ein, um unbegrenzten Zugang zu aktivieren.";
+    t.pricingFAQQ3 = "🌍 Ist der Zugang für alle Sprachen gültig?";
+    t.pricingFAQA3 = "Ja! Der Vollzugang-Plan schaltet ALLE verfügbaren Sprachen frei (FR, EN, PT und zukünftige Sprachen).";
+    t.pricingFAQQ4 = "♾️ Ist dies ein Abonnement?";
+    t.pricingFAQA4 = "Nein! Es ist eine einmalige Zahlung. Einmal bezahlt, haben Sie lebenslangen Zugang ohne Verlängerung.";
+    t.pricingFAQQ5 = "📱 Kann ich auf mehreren Geräten hören?";
+    t.pricingFAQA5 = "Ja! Ihr Zugang funktioniert auf allen Ihren Geräten. Verwenden Sie einfach dieselbe E-Mail und denselben Freischaltcode.";
+    t.pricingFAQQ6 = "❓ Ich habe meinen Freischaltcode verloren, was soll ich tun?";
+    t.pricingFAQA6 = "Kontaktieren Sie uns unter support@sungbible.world mit Ihrer PayPal-E-Mail und wir senden Ihnen Ihren Code erneut zu.";
+
+    // Footer
+    t.pricingFooterHome = "Startseite";
+    t.pricingFooterPlayer = "Player";
+    t.pricingFooterTagline = "Mit ❤️ erstellt, um das Wort Gottes zu teilen";
+
+    // Crowdfunding page (new complete version)
+    t.crowdPageTitle = "Gesungene Bibel unterstützen - Crowdfunding";
+    t.crowdHeroTitle = "🎵 Unterstützen Sie Gesungene Bibel";
+    t.crowdHeroSubtitle = "Die Bibel in Musik, kostenlos für die ganze Welt";
+    t.crowdProgressTitle = "📊 Bereits erreicht";
+    t.crowdStatChapters = "Generierte Kapitel";
+    t.crowdStatLangsComplete = "Vollständige Sprachen";
+    t.crowdStatLangsPlanned = "Geplante Sprachen";
+    t.crowdDonateTitle = "💝 Spenden";
+    t.crowdDonateBtn = "🚀 Über GoFundMe spenden";
+    t.crowdDonateOr = "oder per Direktüberweisung (keine Gebühren)";
+    t.crowdPaymentIBAN = "IBAN-Überweisung";
+    t.crowdPaymentIBANNote = "BIC: TRWIBEB1XXX<br>Stéphane Jean Cassani";
+    t.crowdPaymentCopyIBAN = "IBAN kopieren";
+    t.crowdPaymentTwint = "Twint";
+    t.crowdPaymentTwintNote = "Nur Schweiz";
+    t.crowdPaymentCopy = "Kopieren";
+    t.crowdPaymentPayPal = "PayPal";
+    t.crowdPaymentPayPalNote = "Weltweit";
+    t.crowdMissionaryNote = "🙏 <strong>10% aller Spenden werden an christliche Missionswerke weitergegeben.</strong>";
+    t.crowdImpactTitle = "🌍 Ihre Spende ermöglicht";
+    t.crowdImpact1 = "Kindern, die Bibel singend zu lernen";
+    t.crowdImpact2 = "Nichtlesern, Gottes Wort zu entdecken";
+    t.crowdImpact3 = "Verfolgten Kirchen, Zugang zu den Schriften zu erhalten";
+    t.crowdImpact4 = "Familien, gemeinsam mit Musik zu beten";
+    t.crowdImpact5 = "12 Sprachen kostenlos zu generieren";
+    t.crowdImpact6 = "Die mobile App zu entwickeln";
+    t.crowdQuoteText = "Singet dem HERRN ein neues Lied!<br>Singet dem HERRN, alle Lande!";
+    t.crowdQuoteVerse = "— Psalm 96:1";
+    t.crowdBackLink = "← Zurück zu Gesungene Bibel";
+    t.crowdCopied = "Kopiert: ";
   }
   else if (lang === 'IT') {
     // Promesses page
@@ -4547,6 +5022,7 @@ Object.keys(translations).forEach(lang => {
 });
 
 // Export translations to global scope
-window.translations = translations;
+if (typeof window !== "undefined") window.translations = translations;
+
 
 

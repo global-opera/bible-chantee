@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" id="html-root">
+<html lang="en" id="html-root">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,6 +25,10 @@
     a:hover{transform:scale(1.05)}
     .emoji{font-size:3em;margin-bottom:20px}
   </style>
+  <script src="translations.js"></script>
+  <script src="translations-extra.js"></script>
+  <script src="i18n.js"></script>
+  <script src="lang-shared.js"></script>
 </head>
 <body>
   <div class="container">
@@ -96,8 +100,8 @@
 
     // Lire la langue depuis localStorage (définie lors de l'inscription)
     (function() {
-      const storedLang = localStorage.getItem('sungbible_lang') || 'fr';
-      const lang = storedLang.toLowerCase();
+      const storedLang = localStorage.getItem('bc_lang') || 'EN';
+      const lang = String(storedLang || 'EN').toLowerCase();
 
       // Utiliser la traduction correspondante (fallback sur FR si langue inconnue)
       const t = TRANSLATIONS[lang] || TRANSLATIONS.fr;
@@ -140,6 +144,9 @@
   </script>
 </body>
 </html>
+
+
+
 
 
 

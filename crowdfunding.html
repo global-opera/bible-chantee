@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soutenir Bible Chantée - Crowdfunding</title>
+    <title data-i18n="crowdPageTitle">Soutenir Bible Chantée - Crowdfunding</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -246,6 +246,44 @@
             color: #1a1a6e;
         }
 
+        /* Language selector */
+        .lang-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            color: #ffd700;
+            border: 2px solid #ffd700;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255,215,0,0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255,215,0,0.3);
+        }
+
+        .lang-btn.active {
+            background: #ffd700;
+            color: #1a1a6e;
+            font-weight: 700;
+        }
+
         @media (max-width: 600px) {
             .hero h1 {
                 font-size: 1.8rem;
@@ -256,109 +294,153 @@
             .payment-grid {
                 grid-template-columns: 1fr;
             }
+            .lang-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+                min-width: 50px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="hero">
-        <h1>🎵 Soutenez Bible Chantée</h1>
-        <p class="subtitle">La Bible en musique, gratuite pour le monde entier</p>
+        <!-- Language selector -->
+        <div class="lang-bar">
+            <button class="lang-btn" data-lang="FR">🇫🇷 FR</button>
+            <button class="lang-btn" data-lang="EN">🇬🇧 EN</button>
+            <button class="lang-btn" data-lang="PT">🇵🇹 PT</button>
+            <button class="lang-btn" data-lang="ES">🇪🇸 ES</button>
+            <button class="lang-btn" data-lang="DE">🇩🇪 DE</button>
+        </div>
+
+        <h1 data-i18n="crowdHeroTitle">🎵 Soutenez Bible Chantée</h1>
+        <p class="subtitle" data-i18n="crowdHeroSubtitle">La Bible en musique, gratuite pour le monde entier</p>
     </div>
 
     <div class="container">
         <div class="section">
             <div class="progress-section">
-                <h3>📊 Déjà accompli</h3>
+                <h3 data-i18n="crowdProgressTitle">📊 Déjà accompli</h3>
                 <div class="stats-grid">
                     <div class="stat-item">
                         <div class="stat-number">2378</div>
-                        <div class="stat-label">Chapitres générés</div>
+                        <div class="stat-label" data-i18n="crowdStatChapters">Chapitres générés</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">2</div>
-                        <div class="stat-label">Langues complètes</div>
+                        <div class="stat-label" data-i18n="crowdStatLangsComplete">Langues complètes</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">12</div>
-                        <div class="stat-label">Langues prévues</div>
+                        <div class="stat-label" data-i18n="crowdStatLangsPlanned">Langues prévues</div>
                     </div>
                 </div>
             </div>
 
-            <h2>💝 Faire un don</h2>
-            
-            <a href="https://gofund.me/65145a53b" target="_blank" class="gofundme-btn">
+            <h2 data-i18n="crowdDonateTitle">💝 Faire un don</h2>
+
+            <a href="https://gofund.me/65145a53b" target="_blank" class="gofundme-btn" data-i18n="crowdDonateBtn">
                 🚀 Donner via GoFundMe
             </a>
 
-            <p style="text-align: center; color: #666; margin: 1rem 0;">ou par virement direct (sans frais)</p>
+            <p style="text-align: center; color: #666; margin: 1rem 0;" data-i18n="crowdDonateOr">ou par virement direct (sans frais)</p>
 
             <div class="payment-grid">
                 <div class="payment-card">
                     <div class="icon">🏦</div>
-                    <h3>Virement IBAN</h3>
+                    <h3 data-i18n="crowdPaymentIBAN">Virement IBAN</h3>
                     <div class="value">BE60 9670 3365 9770</div>
-                    <div class="note">BIC: TRWIBEB1XXX<br>Stéphane Jean Cassani</div>
-                    <button class="copy-btn" onclick="copyToClipboard('BE60967033659770')">Copier IBAN</button>
+                    <div class="note" data-i18n="crowdPaymentIBANNote">BIC: TRWIBEB1XXX<br>Stéphane Jean Cassani</div>
+                    <button class="copy-btn" onclick="copyToClipboard('BE60967033659770')" data-i18n="crowdPaymentCopyIBAN">Copier IBAN</button>
                 </div>
 
                 <div class="payment-card">
                     <div class="icon">📱</div>
-                    <h3>Twint</h3>
+                    <h3 data-i18n="crowdPaymentTwint">Twint</h3>
                     <div class="value">+41 78 212 53 63</div>
-                    <div class="note">Suisse uniquement</div>
-                    <button class="copy-btn" onclick="copyToClipboard('+41782125363')">Copier</button>
+                    <div class="note" data-i18n="crowdPaymentTwintNote">Suisse uniquement</div>
+                    <button class="copy-btn" onclick="copyToClipboard('+41782125363')" data-i18n="crowdPaymentCopy">Copier</button>
                 </div>
 
                 <div class="payment-card">
                     <div class="icon">💳</div>
-                    <h3>PayPal</h3>
+                    <h3 data-i18n="crowdPaymentPayPal">PayPal</h3>
                     <div class="value">scassani@gmail.com</div>
-                    <div class="note">Mondial</div>
-                    <button class="copy-btn" onclick="copyToClipboard('scassani@gmail.com')">Copier</button>
+                    <div class="note" data-i18n="crowdPaymentPayPalNote">Mondial</div>
+                    <button class="copy-btn" onclick="copyToClipboard('scassani@gmail.com')" data-i18n="crowdPaymentCopy">Copier</button>
                 </div>
             </div>
 
-            <div class="missionary-note">
+            <div class="missionary-note" data-i18n="crowdMissionaryNote">
                 🙏 <strong>10% de tous les dons seront reversés à des œuvres missionnaires chrétiennes.</strong>
             </div>
         </div>
 
         <div class="section">
-            <h2>🌍 Votre don permet</h2>
+            <h2 data-i18n="crowdImpactTitle">🌍 Votre don permet</h2>
             <ul class="impact-list">
-                <li><span class="emoji">👶</span> Aux enfants d'apprendre la Bible en chantant</li>
-                <li><span class="emoji">📖</span> Aux non-lecteurs de découvrir la Parole de Dieu</li>
-                <li><span class="emoji">⛪</span> Aux églises persécutées d'accéder aux Écritures</li>
-                <li><span class="emoji">👨‍👩‍👧</span> Aux familles de prier ensemble en musique</li>
-                <li><span class="emoji">🌐</span> À 12 langues d'être générées gratuitement</li>
-                <li><span class="emoji">📱</span> À l'application mobile d'être développée</li>
+                <li><span class="emoji">👶</span> <span data-i18n="crowdImpact1">Aux enfants d'apprendre la Bible en chantant</span></li>
+                <li><span class="emoji">📖</span> <span data-i18n="crowdImpact2">Aux non-lecteurs de découvrir la Parole de Dieu</span></li>
+                <li><span class="emoji">⛪</span> <span data-i18n="crowdImpact3">Aux églises persécutées d'accéder aux Écritures</span></li>
+                <li><span class="emoji">👨‍👩‍👧</span> <span data-i18n="crowdImpact4">Aux familles de prier ensemble en musique</span></li>
+                <li><span class="emoji">🌐</span> <span data-i18n="crowdImpact5">À 12 langues d'être générées gratuitement</span></li>
+                <li><span class="emoji">📱</span> <span data-i18n="crowdImpact6">À l'application mobile d'être développée</span></li>
             </ul>
         </div>
 
         <div class="quote">
-            "Chantez à l'Éternel un cantique nouveau !<br>
-            Chantez à l'Éternel, vous tous, habitants de la terre !"
-            <div class="verse">— Psaume 96:1</div>
+            <span data-i18n="crowdQuoteText">"Chantez à l'Éternel un cantique nouveau !<br>
+            Chantez à l'Éternel, vous tous, habitants de la terre !"</span>
+            <div class="verse" data-i18n="crowdQuoteVerse">— Psaume 96:1</div>
         </div>
 
         <div class="back-link">
-            <a href="/">← Retour à Bible Chantée</a>
+            <a href="/" data-i18n="crowdBackLink">← Retour à Bible Chantée</a>
         </div>
     </div>
 
+    <!-- Load translations and i18n system -->
+    <script src="translations.js"></script>
+<script src="translations-extra.js"></script>
+    <script src="i18n.js"></script>
+
     <script>
         function copyToClipboard(text) {
+            // Get current language for alert message
+            const currentLang = window.i18nInstance?.getCurrentLanguage() || 'FR';
+            const trans = window.translations[currentLang] || window.translations['FR'] || {};
+            const copiedMsg = trans.crowdCopied || 'Copié : ';
+
             navigator.clipboard.writeText(text).then(() => {
-                alert('Copié : ' + text);
+                alert(copiedMsg + text);
             });
         }
 
-        // Gestion multilingue
+        // Language switching
+        function setLanguage(lang) {
+            const url = new URL(window.location.href);
+            url.searchParams.set('lang', lang);
+            window.location.href = url.toString();
+        }
+
+        // Mark active language button
         const urlParams = new URLSearchParams(window.location.search);
-        const lang = urlParams.get('lang') || 'FR';
-        
-        // TODO: Ajouter traductions EN, ES, PT, etc.
+        const currentLang = urlParams.get('lang') || window.i18nInstance?.getCurrentLanguage() || 'FR';
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            if (btn.dataset.lang === currentLang) {
+                btn.classList.add('active');
+            }
+        });
+
+        // Add click listeners to language buttons
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const lang = this.dataset.lang;
+                setLanguage(lang);
+            });
+        });
     </script>
 </body>
 </html>
+
+

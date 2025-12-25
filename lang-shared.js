@@ -33,7 +33,7 @@
     // === FONCTION UTILITAIRE : Mettre à jour l'attribut lang de <html> ===
     function updateHtmlLang(langCode) {
         const htmlElement = document.documentElement;
-        const isoCode = LANG_ISO_MAP[langCode] || 'fr';
+        const isoCode = LANG_ISO_MAP[langCode] || 'en';
         if (htmlElement) {
             htmlElement.setAttribute('lang', isoCode);
         }
@@ -42,37 +42,65 @@
     // === INITIALISATION LANGUE ===
     // Priorité : URL param > localStorage > défaut FR
     function initLanguage() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const urlLang = urlParams.get('lang');
-        
-        if (urlLang && window.AVAILABLE_LANGUAGES.includes(urlLang.toUpperCase())) {
-            window.currentLanguage = urlLang.toUpperCase();
-            localStorage.setItem('selectedLanguage', window.currentLanguage);
-        } else {
-            const saved = localStorage.getItem('selectedLanguage');
-            if (saved && window.AVAILABLE_LANGUAGES.includes(saved)) {
-                window.currentLanguage = saved;
-            } else {
-                window.currentLanguage = 'FR';
-            }
-        }
-        
-        // Mettre à jour l'URL si pas de param lang
-        if (!urlLang) {
-            try {
-                const url = new URL(window.location.href);
-                url.searchParams.set('lang', window.currentLanguage);
-                history.replaceState({}, '', url);
-            } catch (e) {
-                // Ignorer dans les environnements restreints
-            }
-        }
-
-        // Mettre à jour l'attribut lang de <html> pour SEO et accessibilité
-        updateHtmlLang(window.currentLanguage);
-
-        return window.currentLanguage;
+    function normalizeLang(x) {
+        if (!x) return null;
+        x = String(x).trim();
+        if (!x) return null;
+        x = x.replace('_','-');
+        const up = x.toUpperCase();
+        const two = up.slice(0,2);
+        if (window.AVAILABLE_LANGUAGES.includes(up)) return up;
+        if (window.AVAILABLE_LANGUAGES.includes(two)) return two;
+        return null;
     }
+
+    function getUrlLang() {
+        try {
+            const urlParams = new URLSearchParams(window.location.search);
+            return normalizeLang(urlParams.get('lang'));
+        } catch(e) { return null; }
+    }
+
+    function getStoredLang() {
+        try {
+            return normalizeLang(localStorage.getItem('bc_lang') || localStorage.getItem('selectedLanguage'));
+        } catch(e) { return null; }
+    }
+
+    function getHtmlLang() {
+        try {
+            const h = document.documentElement.getAttribute('lang');
+            return normalizeLang(h);
+        } catch(e) { return null; }
+    }
+
+    function getBrowserLang() {
+        try {
+            return normalizeLang(navigator.language || (navigator.languages && navigator.languages[0]));
+        } catch(e) { return null; }
+    }
+
+    const lang = getUrlLang() || getStoredLang() || getHtmlLang() || getBrowserLang() || 'EN';
+
+    window.currentLanguage = lang;
+
+    try {
+        localStorage.setItem('bc_lang', lang);
+        localStorage.setItem('selectedLanguage', lang);
+    } catch(e) {}
+
+    // Mettre à jour l'URL si pas de param lang
+    try {
+        const url = new URL(window.location.href);
+        if (!url.searchParams.get('lang')) {
+            url.searchParams.set('lang', lang);
+            history.replaceState({}, '', url);
+        }
+    } catch(e) {}
+
+    updateHtmlLang(lang);
+    return window.currentLanguage;
+}
 
     // === CHANGER LANGUE ===
     window.setLanguage = function(lang) {
@@ -115,6 +143,30 @@
     };
 
     // Initialiser au chargement
+        // === BC_LANG : API unifiée (URL > storage > html > navigateur > EN) ===
+    window.BC_LANG = {
+        SUPPORTED: window.AVAILABLE_LANGUAGES,
+        normalizeLang: function(x) {
+            if (!x) return null;
+            x = String(x).trim();
+            if (!x) return null;
+            x = x.replace('_','-');
+            const up = x.toUpperCase();
+            const two = up.slice(0,2);
+            if (window.AVAILABLE_LANGUAGES.includes(up)) return up;
+            if (window.AVAILABLE_LANGUAGES.includes(two)) return two;
+            return null;
+        },
+        resolveLang: function() {
+            return window.currentLanguage || initLanguage() || 'EN';
+        },
+        setLang: function(lang) {
+            const L = this.normalizeLang(lang) || 'EN';
+            if (typeof window.setLanguage === 'function') window.setLanguage(L);
+            try { localStorage.setItem('bc_lang', L); localStorage.setItem('selectedLanguage', L); } catch(e) {}
+            return L;
+        }
+    };
     initLanguage();
     
     console.log('[lang-shared] Langue initialisée:', window.currentLanguage);
@@ -122,3 +174,6 @@
     // Alias pour compatibilité avec book-names.js
     window.BC_BOOK_NAMES = window.BOOK_NAMES;
 })();
+
+
+

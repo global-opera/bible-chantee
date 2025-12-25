@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- DEPLOY_STAMP main 4fa6d0b 2025-12-24 15:06:30 -->
-<html lang="fr">
+<html lang="en">
 <head>
 <!-- Google Analytics 4 - Bible Chantee -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TX3ETCKJQZ"></script>
@@ -342,6 +342,10 @@ window.trackSignup = function(referrer) {
 select option { background: #1a1a2e; color: #ffffff; }
 select { background: #1a1a2e; color: #ffffff; }
 </style>
+  <script src="translations.js"></script>
+  <script src="translations-extra.js"></script>
+  <script src="i18n.js"></script>
+  <script src="lang-shared.js"></script>
 </head>
 <body>
 
@@ -633,10 +637,10 @@ select { background: #1a1a2e; color: #ffffff; }
             { name: "Kiswahili", mp3: 0, total: 1189, status: "planned" }
         ];
 
-        let currentLang = (localStorage.getItem('bc_lang') || 'FR').toUpperCase();
+        let currentLang = (window.BC_LANG ? BC_LANG.resolveLang() : (localStorage.getItem('bc_lang') || 'EN')).toUpperCase();
 
         function setLang(lang) {
-            const L = (lang || 'FR').toUpperCase();
+            const L = (lang || (window.BC_LANG ? BC_LANG.resolveLang() : 'EN')).toUpperCase();
             currentLang = L;
             localStorage.setItem('bc_lang', L);
 
@@ -767,7 +771,7 @@ select { background: #1a1a2e; color: #ffffff; }
         }
 
         async function ensureLyricsLoaded(lang) {
-            const L = (lang || 'FR').toUpperCase();
+            const L = (lang || (window.BC_LANG ? BC_LANG.resolveLang() : 'EN')).toUpperCase();
             const storeName = 'chapterLyrics' + L;
             if (window[storeName]) return;
             
@@ -933,7 +937,7 @@ document.addEventListener('DOMContentLoaded', function() {
         audio.addEventListener('play', function() {
             var book = window.currentBook || 'unknown';
             var chapter = window.currentChapter || 0;
-            var lang = window.currentLanguage || 'FR';
+            var lang = (window.BC_LANG ? BC_LANG.resolveLang() : (window.currentLanguage || 'EN'));
             trackAudioPlay(book, chapter, lang);
         });
     });
@@ -946,7 +950,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     node.addEventListener('play', function() {
                         var book = window.currentBook || 'unknown';
                         var chapter = window.currentChapter || 0;
-                        var lang = window.currentLanguage || 'FR';
+                        var lang = (window.BC_LANG ? BC_LANG.resolveLang() : (window.currentLanguage || 'EN'));
                         trackAudioPlay(book, chapter, lang);
                     });
                 }
@@ -965,8 +969,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (form && langSelect) {
         form.addEventListener('submit', function(e) {
-            const selectedLang = langSelect.value || 'fr';
-            localStorage.setItem('sungbible_lang', selectedLang.toLowerCase());
+            const selectedLang = langSelect.value || 'en';
+            localStorage.setItem('bc_lang', String(selectedLang).toUpperCase());
             console.log('Langue sauvegardee:', selectedLang);
         });
     }
@@ -1023,6 +1027,9 @@ function openTwint() {
 
 
 <!-- FORCE-REDEPLOY 2025-12-24T16:42:04 -->
+
+
+
 
 
 

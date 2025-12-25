@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -367,7 +367,7 @@
     ];
 
     const ICONS = ["😊", "🤍", "💪", "🏆", "🌱", "🙏", "⭐", "🎵", "🙌", "❤️"];
-    let currentLang = 'FR';
+    let currentLang = (window.BC_LANG ? BC_LANG.resolveLang() : 'EN');
 
     function render(lang) {
         currentLang = lang;
@@ -405,3 +405,5 @@
     </script>
 </body>
 </html>
+
+

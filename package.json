@@ -11,6 +11,7 @@
     "@google-analytics/data": "^4.12.1",
     "@supabase/supabase-js": "^2.45.4",
     "googleapis": "^128.0.0",
+    "jsdom": "^27.3.0",
     "jsonwebtoken": "^9.0.3",
     "stripe": "^20.1.0"
   },

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -604,8 +604,8 @@
 
             function getLangFromBC() {
                 try {
-                    if (window.BC_LANG && typeof BC_LANG.getCurrentLanguage === 'function') {
-                        return normalizeLang(BC_LANG.getCurrentLanguage());
+                    if (window.BC_LANG && typeof BC_LANG.resolveLang === 'function') {
+                        return normalizeLang(BC_LANG.resolveLang());
                     }
                 } catch (e) {}
                 return null;
@@ -613,12 +613,12 @@
 
             function setLangToBC(lang) {
                 try {
-                    if (window.BC_LANG && typeof BC_LANG.setCurrentLanguage === 'function') {
-                        BC_LANG.setCurrentLanguage(lang);
+                    if (window.BC_LANG && typeof BC_LANG.setLang === 'function') {
+                        BC_LANG.setLang(lang);
                         return;
                     }
                 } catch (e) {}
-                try { localStorage.setItem('BC_LANG', lang); } catch (e) {}
+                try { localStorage.setItem('bc_lang', String(lang).toUpperCase()); } catch (e) {}
             }
 
             const urlLang = getLangFromUrl();
@@ -653,7 +653,7 @@
             KO: ["창세기","출애굽기","레위기","민수기","신명기","여호수아","사사기","룻기","사무엘상","사무엘하","열왕기상","열왕기하","역대상","역대하","에스라","느헤미야","에스더","욥기","시편","잠언","전도서","아가","이사야","예레미야","예레미야애가","에스겔","다니엘","호세아","요엘","아모스","오바댜","요나","미가","나훔","하박국","스바냐","학개","스가랴","말라기","마태복음","마가복음","누가복음","요한복음","사도행전","로마서","고린도전서","고린도후서","갈라디아서","에베소서","빌립보서","골로새서","데살로니가전서","데살로니가후서","디모데전서","디모데후서","디도서","빌레몬서","히브리서","야고보서","베드로전서","베드로후서","요한일서","요한이서","요한삼서","유다서","요한계시록"]
         };
 
-        const currentLanguage = (window.currentLanguage || 'FR').toUpperCase();
+        const currentLanguage = (window.currentLanguage || 'en').toUpperCase();
 
         const books = [
             { num: "01", name: "Genese", chapters: 50, available: true },
@@ -761,14 +761,14 @@
         }
 
         function getBibleDatasetForLang(lang) {
-            const L = (lang || 'FR').toUpperCase();
+            const L = (lang || 'en').toUpperCase();
             if (L === 'FR') return (typeof window.bibleData !== 'undefined') ? window.bibleData : null;
             const varName = `bibleData${L}`;
             return (typeof window[varName] !== 'undefined') ? window[varName] : null;
         }
 
         function getLyricsForCurrent(lang, book, chapterStr) {
-            const L = (lang || 'FR').toUpperCase();
+            const L = (lang || 'en').toUpperCase();
             if (L === 'PT') {
                 if (typeof window.chapterLyricsPT === 'undefined') return null;
                 return window.chapterLyricsPT[book] && window.chapterLyricsPT[book][chapterStr] ? window.chapterLyricsPT[book][chapterStr] : null;
@@ -1289,7 +1289,7 @@ const bookName = getBookDisplayName(currentBook);
         };
 
         function applyTranslations(lang) {
-            if (!TRANSLATIONS[lang]) lang = 'FR';
+            if (!TRANSLATIONS[lang]) lang = (window.BC_LANG ? BC_LANG.resolveLang() : 'EN');
 
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
@@ -1387,7 +1387,7 @@ renderBooks('old-testament', oldTestament);
                 'DE': '🇩🇪'
             };
 
-            const currentLang = (window.currentLanguage || 'FR').toUpperCase();
+            const currentLang = (window.currentLanguage || 'en').toUpperCase();
             const langFlag = document.getElementById('langFlag');
             const langCode = document.getElementById('langCode');
 
@@ -1423,5 +1423,9 @@ renderBooks('old-testament', oldTestament);
     </script>
 </body>
 </html>
+
+
+
+
 
 

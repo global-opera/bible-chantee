@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -750,8 +750,8 @@
         // I18N (FR / EN / PT / ES)
         // =====================================================
         const SUPPORTED_LANGS = ['FR','EN','PT','ES'];
-        let UI_LANG = (localStorage.getItem('bc_lang') || 'FR').toUpperCase();
-        if (!SUPPORTED_LANGS.includes(UI_LANG)) UI_LANG = 'FR';
+        let UI_LANG = (window.BC_LANG ? BC_LANG.resolveLang() : (localStorage.getItem('bc_lang') || 'EN')).toUpperCase();
+        if (!SUPPORTED_LANGS.includes(UI_LANG)) UI_LANG = (window.BC_LANG ? BC_LANG.resolveLang() : 'EN');
 
         const I18N = {
             FR: {
@@ -1336,5 +1336,8 @@
     </script>
 </body>
 </html>
+
+
+
 
 

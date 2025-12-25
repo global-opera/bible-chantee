@@ -1,0 +1,567 @@
+benefit-1	FR	✅ 100 chapitres gratuits
+benefit-1	EN	✅ 100 chapitres gratuits
+benefit-1	PT	✅ 100 chapitres gratuits
+benefit-1	ES	✅ 100 chapitres gratuits
+benefit-1	DE	✅ 100 chapitres gratuits
+benefit-2	FR	✅ Réécoute illimitée
+benefit-2	EN	✅ Réécoute illimitée
+benefit-2	PT	✅ Réécoute illimitée
+benefit-2	ES	✅ Réécoute illimitée
+benefit-2	DE	✅ Réécoute illimitée
+benefit-3	FR	✅ Qualité audio professionnelle
+benefit-3	EN	✅ Qualité audio professionnelle
+benefit-3	PT	✅ Qualité audio professionnelle
+benefit-3	ES	✅ Qualité audio professionnelle
+benefit-3	DE	✅ Qualité audio professionnelle
+contactDonateButton	FR	💝 Faire un don
+contactDonateButton	EN	💝 Faire un don
+contactDonateButton	PT	💝 Faire un don
+contactDonateButton	ES	💝 Faire un don
+contactDonateButton	DE	💝 Faire un don
+contactEmailTitle	FR	Email
+contactEmailTitle	EN	Email
+contactEmailTitle	PT	Email
+contactEmailTitle	ES	Email
+contactEmailTitle	DE	Email
+contactFooterCopyright	FR	&copy; 2024-2025 Bible Chantée - Tous droits réservés
+contactFooterCopyright	EN	&copy; 2024-2025 Bible Chantée - Tous droits réservés
+contactFooterCopyright	PT	&copy; 2024-2025 Bible Chantée - Tous droits réservés
+contactFooterCopyright	ES	&copy; 2024-2025 Bible Chantée - Tous droits réservés
+contactFooterCopyright	DE	&copy; 2024-2025 Bible Chantée - Tous droits réservés
+contactIntro	FR	Vous avez une question, une suggestion ou souhaitez établir un partenariat ?
+      N'hésitez pas à nous contacter par l'un des moyens ci-dessous.
+contactIntro	EN	Vous avez une question, une suggestion ou souhaitez établir un partenariat ?
+      N'hésitez pas à nous contacter par l'un des moyens ci-dessous.
+contactIntro	PT	Vous avez une question, une suggestion ou souhaitez établir un partenariat ?
+      N'hésitez pas à nous contacter par l'un des moyens ci-dessous.
+contactIntro	ES	Vous avez une question, une suggestion ou souhaitez établir un partenariat ?
+      N'hésitez pas à nous contacter par l'un des moyens ci-dessous.
+contactIntro	DE	Vous avez une question, une suggestion ou souhaitez établir un partenariat ?
+      N'hésitez pas à nous contacter par l'un des moyens ci-dessous.
+contactLanguages	FR	contactLanguages
+contactLanguages	EN	contactLanguages
+contactLanguages	PT	contactLanguages
+contactLanguages	ES	contactLanguages
+contactLanguages	DE	contactLanguages
+contactMainTitle	FR	Nous contacter
+contactMainTitle	EN	Nous contacter
+contactMainTitle	PT	Nous contacter
+contactMainTitle	ES	Nous contacter
+contactMainTitle	DE	Nous contacter
+contactPageTitle	FR	Contact - Bible Chantée
+contactPageTitle	EN	Contact - Bible Chantée
+contactPageTitle	PT	Contact - Bible Chantée
+contactPageTitle	ES	Contact - Bible Chantée
+contactPageTitle	DE	Contact - Bible Chantée
+contactReason1	FR	contactReason1
+contactReason1	EN	contactReason1
+contactReason1	PT	contactReason1
+contactReason1	ES	contactReason1
+contactReason1	DE	contactReason1
+contactReason2	FR	contactReason2
+contactReason2	EN	contactReason2
+contactReason2	PT	contactReason2
+contactReason2	ES	contactReason2
+contactReason2	DE	contactReason2
+contactReason3	FR	contactReason3
+contactReason3	EN	contactReason3
+contactReason3	PT	contactReason3
+contactReason3	ES	contactReason3
+contactReason3	DE	contactReason3
+contactReason4	FR	contactReason4
+contactReason4	EN	contactReason4
+contactReason4	PT	contactReason4
+contactReason4	ES	contactReason4
+contactReason4	DE	contactReason4
+contactReason5	FR	contactReason5
+contactReason5	EN	contactReason5
+contactReason5	PT	contactReason5
+contactReason5	ES	contactReason5
+contactReason5	DE	contactReason5
+contactReason6	FR	contactReason6
+contactReason6	EN	contactReason6
+contactReason6	PT	contactReason6
+contactReason6	ES	contactReason6
+contactReason6	DE	contactReason6
+contactReason7	FR	contactReason7
+contactReason7	EN	contactReason7
+contactReason7	PT	contactReason7
+contactReason7	ES	contactReason7
+contactReason7	DE	contactReason7
+contactReasonsTitle	FR	Raisons de nous contacter
+contactReasonsTitle	EN	Raisons de nous contacter
+contactReasonsTitle	PT	Raisons de nous contacter
+contactReasonsTitle	ES	Raisons de nous contacter
+contactReasonsTitle	DE	Raisons de nous contacter
+contactResponseText	FR	Nous nous efforçons de répondre à tous les messages dans un délai de
+contactResponseText	EN	Nous nous efforçons de répondre à tous les messages dans un délai de
+contactResponseText	PT	Nous nous efforçons de répondre à tous les messages dans un délai de
+contactResponseText	ES	Nous nous efforçons de répondre à tous les messages dans un délai de
+contactResponseText	DE	Nous nous efforçons de répondre à tous les messages dans un délai de
+contactResponseTitle	FR	Temps de réponse
+contactResponseTitle	EN	Temps de réponse
+contactResponseTitle	PT	Temps de réponse
+contactResponseTitle	ES	Temps de réponse
+contactResponseTitle	DE	Temps de réponse
+contactSupportText	FR	contactSupportText
+contactSupportText	EN	contactSupportText
+contactSupportText	PT	contactSupportText
+contactSupportText	ES	contactSupportText
+contactSupportText	DE	contactSupportText
+contactSupportTitle	FR	Soutenir le projet
+contactSupportTitle	EN	Soutenir le projet
+contactSupportTitle	PT	Soutenir le projet
+contactSupportTitle	ES	Soutenir le projet
+contactSupportTitle	DE	Soutenir le projet
+contactTagline	FR	Contactez-nous
+contactTagline	EN	Contactez-nous
+contactTagline	PT	Contactez-nous
+contactTagline	ES	Contactez-nous
+contactTagline	DE	Contactez-nous
+contactWebsiteTitle	FR	Site Web
+contactWebsiteTitle	EN	Site Web
+contactWebsiteTitle	PT	Site Web
+contactWebsiteTitle	ES	Site Web
+contactWebsiteTitle	DE	Site Web
+creditsAboutDesc	DE	creditsAboutDesc
+creditsAboutTitle	DE	A propos du Projet
+creditsBackHome	DE	← Retour Accueil
+creditsCharacteristics	DE	Caracteristiques
+creditsCopyrightTitle	DE	Droits d'Auteur
+creditsExperienceFull	DE	Une experience unique : Chaque chapitre biblique est mis en musique avec une qualite professionnelle et des paroles poetiques originales.
+creditsFeature1	DE	Musique worship contemporaine IA
+creditsFeature2	DE	Paroles poetiques originales
+creditsFeature3	DE	Accessible en ligne gratuitement
+creditsFeature4	DE	Compatible mobile et desktop
+creditsFooterAuthor	DE	Stephane Cassani - Suisse
+creditsFooterCopyright	DE	&copy; 2025 Bible Chantee
+creditsFooterFormat	DE	Document imprimable - Format depliant A4 paysage
+creditsIPLyrics	DE	creditsIPLyrics
+creditsIPMusic	DE	creditsIPMusic
+creditsIPWebsite	DE	creditsIPWebsite
+creditsIntellectualProperty	DE	Propriete Intellectuelle
+creditsLanguageList	DE	FR, EN, ES, PT, DE, RU, AR, ZH, HI, TL, IT, KO
+creditsMissionAudience	DE	creditsMissionAudience
+creditsMissionGoal	DE	creditsMissionGoal
+creditsMissionImpact	DE	creditsMissionImpact
+creditsMissionaryProject	DE	Projet Missionnaire
+creditsPageTitle	DE	Bible Chantee - Presentation du Projet
+creditsSiteName	DE	Bible Chantee
+creditsStatBooks	DE	Livres bibliques
+creditsStatChapters	DE	Chapitres
+creditsStatMP3	DE	MP3 Total (FR+PT)
+creditsStatProgress	DE	Progression 12 langues
+creditsTagline	DE	La Parole de Dieu en musique worship
+creditsTargetLanguages	DE	Langues Cibles
+creditsTechDesc	DE	Production musicale Suno AI V5, interface web responsive.
+creditsTechTitle	DE	Technologie
+data-connecting	FR	Connexion a Google Analytics 4...
+data-connecting	EN	Connexion a Google Analytics 4...
+data-connecting	PT	Connexion a Google Analytics 4...
+data-connecting	ES	Connexion a Google Analytics 4...
+data-connecting	DE	Connexion a Google Analytics 4...
+demoBtnDonate	FR	Faire un don
+demoBtnDonate	EN	Faire un don
+demoBtnDonate	PT	Faire un don
+demoBtnDonate	ES	Faire un don
+demoBtnDonate	DE	Faire un don
+demoBtnSubscribe	FR	S'inscrire
+demoBtnSubscribe	EN	S'inscrire
+demoBtnSubscribe	PT	S'inscrire
+demoBtnSubscribe	ES	S'inscrire
+demoBtnSubscribe	DE	S'inscrire
+demoClearCache	FR	Vider cache
+demoClearCache	EN	Vider cache
+demoClearCache	PT	Vider cache
+demoClearCache	ES	Vider cache
+demoClearCache	DE	Vider cache
+demoDonationMission	FR	10% des revenus reversés aux missions.
+demoDonationMission	EN	10% des revenus reversés aux missions.
+demoDonationMission	PT	10% des revenus reversés aux missions.
+demoDonationMission	ES	10% des revenus reversés aux missions.
+demoDonationMission	DE	10% des revenus reversés aux missions.
+demoDonationText	FR	Chaque don finance la
+demoDonationText	EN	Chaque don finance la
+demoDonationText	PT	Chaque don finance la
+demoDonationText	ES	Chaque don finance la
+demoDonationText	DE	Chaque don finance la
+demoDonationTitle	FR	Soutenez le projet
+demoDonationTitle	EN	Soutenez le projet
+demoDonationTitle	PT	Soutenez le projet
+demoDonationTitle	ES	Soutenez le projet
+demoDonationTitle	DE	Soutenez le projet
+demoEmailPlaceholder	FR	Votre email
+demoEmailPlaceholder	EN	Votre email
+demoEmailPlaceholder	PT	Votre email
+demoEmailPlaceholder	ES	Votre email
+demoEmailPlaceholder	DE	Votre email
+demoFooterCompany	FR	Bible Chantée - Mania Libris
+demoFooterCompany	EN	Bible Chantée - Mania Libris
+demoFooterCompany	PT	Bible Chantée - Mania Libris
+demoFooterCompany	ES	Bible Chantée - Mania Libris
+demoFooterCompany	DE	Bible Chantée - Mania Libris
+demoFooterMission	FR	10% des revenus reversés aux missions
+demoFooterMission	EN	10% des revenus reversés aux missions
+demoFooterMission	PT	10% des revenus reversés aux missions
+demoFooterMission	ES	10% des revenus reversés aux missions
+demoFooterMission	DE	10% des revenus reversés aux missions
+demoFormSubtitle	FR	Inscrivez-vous pour être notifié et accéder aux 1189 chapitres
+demoFormSubtitle	EN	Inscrivez-vous pour être notifié et accéder aux 1189 chapitres
+demoFormSubtitle	PT	Inscrivez-vous pour être notifié et accéder aux 1189 chapitres
+demoFormSubtitle	ES	Inscrivez-vous pour être notifié et accéder aux 1189 chapitres
+demoFormSubtitle	DE	Inscrivez-vous pour être notifié et accéder aux 1189 chapitres
+demoFormTitle	FR	Recevez la Bible Chantée complète
+demoFormTitle	EN	Recevez la Bible Chantée complète
+demoFormTitle	PT	Recevez la Bible Chantée complète
+demoFormTitle	ES	Recevez la Bible Chantée complète
+demoFormTitle	DE	Recevez la Bible Chantée complète
+demoHeading	FR	Bible Chantée
+demoHeading	EN	Bible Chantée
+demoHeading	PT	Bible Chantée
+demoHeading	ES	Bible Chantée
+demoHeading	DE	Bible Chantée
+demoOptChoose	FR	Choisir la langue
+demoOptChoose	EN	Choisir la langue
+demoOptChoose	PT	Choisir la langue
+demoOptChoose	ES	Choisir la langue
+demoOptChoose	DE	Choisir la langue
+demoPageTitle	FR	Bible Chantée - Démo
+demoPageTitle	EN	Bible Chantée - Démo
+demoPageTitle	PT	Bible Chantée - Démo
+demoPageTitle	ES	Bible Chantée - Démo
+demoPageTitle	DE	Bible Chantée - Démo
+demoShareBtn	FR	PARTAGER
+demoShareBtn	EN	PARTAGER
+demoShareBtn	PT	PARTAGER
+demoShareBtn	ES	PARTAGER
+demoShareBtn	DE	PARTAGER
+demoShareCopy	FR	Copier
+demoShareCopy	EN	Copier
+demoShareCopy	PT	Copier
+demoShareCopy	ES	Copier
+demoShareCopy	DE	Copier
+demoShareText	FR	Partagez la Bible Chantee!
+demoShareText	EN	Partagez la Bible Chantee!
+demoShareText	PT	Partagez la Bible Chantee!
+demoShareText	ES	Partagez la Bible Chantee!
+demoShareText	DE	Partagez la Bible Chantee!
+demoShareWhatsApp	FR	WhatsApp
+demoShareWhatsApp	EN	WhatsApp
+demoShareWhatsApp	PT	WhatsApp
+demoShareWhatsApp	ES	WhatsApp
+demoShareWhatsApp	DE	WhatsApp
+demoStatBooks	FR	Livres
+demoStatBooks	EN	Livres
+demoStatBooks	PT	Livres
+demoStatBooks	ES	Livres
+demoStatBooks	DE	Livres
+demoStatChapters	FR	Chapitres
+demoStatChapters	EN	Chapitres
+demoStatChapters	PT	Chapitres
+demoStatChapters	ES	Chapitres
+demoStatChapters	DE	Chapitres
+demoStatHours	FR	Heures par langue
+demoStatHours	EN	Heures par langue
+demoStatHours	PT	Heures par langue
+demoStatHours	ES	Heures par langue
+demoStatHours	DE	Heures par langue
+demoStatLanguages	FR	Langues disponibles
+demoStatLanguages	EN	Langues disponibles
+demoStatLanguages	PT	Langues disponibles
+demoStatLanguages	ES	Langues disponibles
+demoStatLanguages	DE	Langues disponibles
+demoStreamingSoon	FR	Bientôt
+demoStreamingSoon	EN	Bientôt
+demoStreamingSoon	PT	Bientôt
+demoStreamingSoon	ES	Bientôt
+demoStreamingSoon	DE	Bientôt
+demoSubtitle	FR	La Parole de Dieu en musique
+demoSubtitle	EN	La Parole de Dieu en musique
+demoSubtitle	PT	La Parole de Dieu en musique
+demoSubtitle	ES	La Parole de Dieu en musique
+demoSubtitle	DE	La Parole de Dieu en musique
+demoTitleListen	FR	Écoutez des extraits
+demoTitleListen	EN	Écoutez des extraits
+demoTitleListen	PT	Écoutez des extraits
+demoTitleListen	ES	Écoutez des extraits
+demoTitleListen	DE	Écoutez des extraits
+demoTitleProgress	FR	Avancement du projet - 12 langues
+demoTitleProgress	EN	Avancement du projet - 12 langues
+demoTitleProgress	PT	Avancement du projet - 12 langues
+demoTitleProgress	ES	Avancement du projet - 12 langues
+demoTitleProgress	DE	Avancement du projet - 12 langues
+demoTitleStreaming	FR	Bientôt disponible sur
+demoTitleStreaming	EN	Bientôt disponible sur
+demoTitleStreaming	PT	Bientôt disponible sur
+demoTitleStreaming	ES	Bientôt disponible sur
+demoTitleStreaming	DE	Bientôt disponible sur
+email-placeholder	FR	Votre email pour commencer
+email-placeholder	EN	Votre email pour commencer
+email-placeholder	PT	Votre email pour commencer
+email-placeholder	ES	Votre email pour commencer
+email-placeholder	DE	Votre email pour commencer
+footer-brand	FR	Bible Chantée
+footer-brand	EN	Bible Chantée
+footer-brand	PT	Bible Chantée
+footer-brand	ES	Bible Chantée
+footer-brand	DE	Bible Chantée
+footer-ga4	FR	Donnees Google Analytics 4
+footer-ga4	EN	Donnees Google Analytics 4
+footer-ga4	PT	Donnees Google Analytics 4
+footer-ga4	ES	Donnees Google Analytics 4
+footer-ga4	DE	Donnees Google Analytics 4
+footer-refresh	FR	Rafraichissement toutes les 30 secondes
+footer-refresh	EN	Rafraichissement toutes les 30 secondes
+footer-refresh	PT	Rafraichissement toutes les 30 secondes
+footer-refresh	ES	Rafraichissement toutes les 30 secondes
+footer-refresh	DE	Rafraichissement toutes les 30 secondes
+form-note	FR	Votre email sera sauvegardé pour restaurer votre progression
+form-note	EN	Votre email sera sauvegardé pour restaurer votre progression
+form-note	PT	Votre email sera sauvegardé pour restaurer votre progression
+form-note	ES	Votre email sera sauvegardé pour restaurer votre progression
+form-note	DE	Votre email sera sauvegardé pour restaurer votre progression
+header-subtitle	FR	Statistiques mondiales en temps reel
+header-subtitle	EN	Statistiques mondiales en temps reel
+header-subtitle	PT	Statistiques mondiales en temps reel
+header-subtitle	ES	Statistiques mondiales en temps reel
+header-subtitle	DE	Statistiques mondiales en temps reel
+header-title	FR	Dashboard Bible Chantee
+header-title	EN	Dashboard Bible Chantee
+header-title	PT	Dashboard Bible Chantee
+header-title	ES	Dashboard Bible Chantee
+header-title	DE	Dashboard Bible Chantee
+hero-subtitle	FR	1189 chapitres • 12 langues • 100 chapitres gratuits par langue
+hero-subtitle	EN	1189 chapitres • 12 langues • 100 chapitres gratuits par langue
+hero-subtitle	PT	1189 chapitres • 12 langues • 100 chapitres gratuits par langue
+hero-subtitle	ES	1189 chapitres • 12 langues • 100 chapitres gratuits par langue
+hero-subtitle	DE	1189 chapitres • 12 langues • 100 chapitres gratuits par langue
+hero-tagline	FR	Toute la Parole de Dieu en musique
+hero-tagline	EN	Toute la Parole de Dieu en musique
+hero-tagline	PT	Toute la Parole de Dieu en musique
+hero-tagline	ES	Toute la Parole de Dieu en musique
+hero-tagline	DE	Toute la Parole de Dieu en musique
+hero-title	FR	🎵 Bible Chantée / Sung Bible
+hero-title	EN	🎵 Bible Chantée / Sung Bible
+hero-title	PT	🎵 Bible Chantée / Sung Bible
+hero-title	ES	🎵 Bible Chantée / Sung Bible
+hero-title	DE	🎵 Bible Chantée / Sung Bible
+iosInstallDontShow	FR	Ne plus afficher
+iosInstallDontShow	EN	Ne plus afficher
+iosInstallDontShow	PT	Ne plus afficher
+iosInstallDontShow	ES	Ne plus afficher
+iosInstallDontShow	DE	Ne plus afficher
+iosInstallGotIt	FR	Compris
+iosInstallGotIt	EN	Compris
+iosInstallGotIt	PT	Compris
+iosInstallGotIt	ES	Compris
+iosInstallGotIt	DE	Compris
+iosInstallStep1	FR	1. 📤 Appuyez sur
+iosInstallStep1	EN	1. 📤 Appuyez sur
+iosInstallStep1	PT	1. 📤 Appuyez sur
+iosInstallStep1	ES	1. 📤 Appuyez sur
+iosInstallStep1	DE	1. 📤 Appuyez sur
+iosInstallStep2	FR	2. ➕
+iosInstallStep2	EN	2. ➕
+iosInstallStep2	PT	2. ➕
+iosInstallStep2	ES	2. ➕
+iosInstallStep2	DE	2. ➕
+iosInstallStep3	FR	3. ✅
+iosInstallStep3	EN	3. ✅
+iosInstallStep3	PT	3. ✅
+iosInstallStep3	ES	3. ✅
+iosInstallStep3	DE	3. ✅
+iosInstallTitle	FR	📱 Installer Bible Chantée
+iosInstallTitle	EN	📱 Installer Bible Chantée
+iosInstallTitle	PT	📱 Installer Bible Chantée
+iosInstallTitle	ES	📱 Installer Bible Chantée
+iosInstallTitle	DE	📱 Installer Bible Chantée
+lang-de	FR	Deutsch
+lang-de	EN	Deutsch
+lang-de	PT	Deutsch
+lang-de	ES	Deutsch
+lang-de	DE	Deutsch
+lang-en	FR	English
+lang-en	EN	English
+lang-en	PT	English
+lang-en	ES	English
+lang-en	DE	English
+lang-es	FR	Espanol
+lang-es	EN	Espanol
+lang-es	PT	Espanol
+lang-es	ES	Espanol
+lang-es	DE	Espanol
+lang-fr	FR	Francais
+lang-fr	EN	Francais
+lang-fr	PT	Francais
+lang-fr	ES	Francais
+lang-fr	DE	Francais
+lang-it	FR	Italiano
+lang-it	EN	Italiano
+lang-it	PT	Italiano
+lang-it	ES	Italiano
+lang-it	DE	Italiano
+lang-pt	FR	Portugues
+lang-pt	EN	Portugues
+lang-pt	PT	Portugues
+lang-pt	ES	Portugues
+lang-pt	DE	Portugues
+legend-high	FR	100+ visiteurs
+legend-high	EN	100+ visiteurs
+legend-high	PT	100+ visiteurs
+legend-high	ES	100+ visiteurs
+legend-high	DE	100+ visiteurs
+legend-low	FR	1-49 visiteurs
+legend-low	EN	1-49 visiteurs
+legend-low	PT	1-49 visiteurs
+legend-low	ES	1-49 visiteurs
+legend-low	DE	1-49 visiteurs
+legend-medium	FR	50-99 visiteurs
+legend-medium	EN	50-99 visiteurs
+legend-medium	PT	50-99 visiteurs
+legend-medium	ES	50-99 visiteurs
+legend-medium	DE	50-99 visiteurs
+marketing-subtitle	FR	Pour accéder aux
+marketing-subtitle	EN	Pour accéder aux
+marketing-subtitle	PT	Pour accéder aux
+marketing-subtitle	ES	Pour accéder aux
+marketing-subtitle	DE	Pour accéder aux
+marketing-title	FR	🎁 Envie d'en découvrir plus ?
+marketing-title	EN	🎁 Envie d'en découvrir plus ?
+marketing-title	PT	🎁 Envie d'en découvrir plus ?
+marketing-title	ES	🎁 Envie d'en découvrir plus ?
+marketing-title	DE	🎁 Envie d'en découvrir plus ?
+period-24h	FR	24h
+period-24h	EN	24h
+period-24h	PT	24h
+period-24h	ES	24h
+period-24h	DE	24h
+period-30days	FR	30 jours
+period-30days	EN	30 jours
+period-30days	PT	30 jours
+period-30days	ES	30 jours
+period-30days	DE	30 jours
+period-7days	FR	7 jours
+period-7days	EN	7 jours
+period-7days	PT	7 jours
+period-7days	ES	7 jours
+period-7days	DE	7 jours
+period-all	FR	Tout
+period-all	EN	Tout
+period-all	PT	Tout
+period-all	ES	Tout
+period-all	DE	Tout
+period-label	FR	Période:
+period-label	EN	Période:
+period-label	PT	Période:
+period-label	ES	Période:
+period-label	DE	Période:
+preorder-back	FR	Choisir une autre langue
+preorder-back	EN	Choisir une autre langue
+preorder-back	PT	Choisir une autre langue
+preorder-back	ES	Choisir une autre langue
+preorder-back	DE	Choisir une autre langue
+preorder-message	FR	Vous serez notifié par email dès que cette langue sera disponible.
+preorder-message	EN	Vous serez notifié par email dès que cette langue sera disponible.
+preorder-message	PT	Vous serez notifié par email dès que cette langue sera disponible.
+preorder-message	ES	Vous serez notifié par email dès que cette langue sera disponible.
+preorder-message	DE	Vous serez notifié par email dès que cette langue sera disponible.
+preorder-thanks	FR	Merci pour votre intérêt !
+preorder-thanks	EN	Merci pour votre intérêt !
+preorder-thanks	PT	Merci pour votre intérêt !
+preorder-thanks	ES	Merci pour votre intérêt !
+preorder-thanks	DE	Merci pour votre intérêt !
+preorder-waiting	FR	personnes attendent cette version
+preorder-waiting	EN	personnes attendent cette version
+preorder-waiting	PT	personnes attendent cette version
+preorder-waiting	ES	personnes attendent cette version
+preorder-waiting	DE	personnes attendent cette version
+readerPlayBook	FR	Lire tout le livre
+readerPlayBook	EN	Lire tout le livre
+readerPlayBook	PT	Lire tout le livre
+readerPlayBook	ES	Lire tout le livre
+readerPlayBook	DE	Lire tout le livre
+recoverBackLink	FR	Retour a Bible Chantee
+recoverBackLink	EN	Retour a Bible Chantee
+recoverBackLink	PT	Retour a Bible Chantee
+recoverBackLink	ES	Retour a Bible Chantee
+recoverBackLink	DE	Retour a Bible Chantee
+samples-subtitle	FR	Un aperçu de la qualité sonore et musicale
+samples-subtitle	EN	Un aperçu de la qualité sonore et musicale
+samples-subtitle	PT	Un aperçu de la qualité sonore et musicale
+samples-subtitle	ES	Un aperçu de la qualité sonore et musicale
+samples-subtitle	DE	Un aperçu de la qualité sonore et musicale
+samples-title	FR	🎧 Découvrez 3 extraits
+samples-title	EN	🎧 Découvrez 3 extraits
+samples-title	PT	🎧 Découvrez 3 extraits
+samples-title	ES	🎧 Découvrez 3 extraits
+samples-title	DE	🎧 Découvrez 3 extraits
+section-activity	FR	Activite recente
+section-activity	EN	Activite recente
+section-activity	PT	Activite recente
+section-activity	ES	Activite recente
+section-activity	DE	Activite recente
+section-events	FR	Evenements GA4
+section-events	EN	Evenements GA4
+section-events	PT	Evenements GA4
+section-events	ES	Evenements GA4
+section-events	DE	Evenements GA4
+section-progress	FR	Progression Generation MP3
+section-progress	EN	Progression Generation MP3
+section-progress	PT	Progression Generation MP3
+section-progress	ES	Progression Generation MP3
+section-progress	DE	Progression Generation MP3
+section-top-countries	FR	Top Pays
+section-top-countries	EN	Top Pays
+section-top-countries	PT	Top Pays
+section-top-countries	ES	Top Pays
+section-top-countries	DE	Top Pays
+section-top-pages	FR	Pages les plus vues
+section-top-pages	EN	Pages les plus vues
+section-top-pages	PT	Pages les plus vues
+section-top-pages	ES	Pages les plus vues
+section-top-pages	DE	Pages les plus vues
+section-world	FR	Visiteurs dans le monde
+section-world	EN	Visiteurs dans le monde
+section-world	PT	Visiteurs dans le monde
+section-world	ES	Visiteurs dans le monde
+section-world	DE	Visiteurs dans le monde
+signup-btn	FR	Accéder gratuitement
+signup-btn	EN	Accéder gratuitement
+signup-btn	PT	Accéder gratuitement
+signup-btn	ES	Accéder gratuitement
+signup-btn	DE	Accéder gratuitement
+stat-audio-plays	FR	Ecoutes audio
+stat-audio-plays	EN	Ecoutes audio
+stat-audio-plays	PT	Ecoutes audio
+stat-audio-plays	ES	Ecoutes audio
+stat-audio-plays	DE	Ecoutes audio
+stat-countries-active	FR	Pays actifs
+stat-countries-active	EN	Pays actifs
+stat-countries-active	PT	Pays actifs
+stat-countries-active	ES	Pays actifs
+stat-countries-active	DE	Pays actifs
+stat-shares	FR	Partages
+stat-shares	EN	Partages
+stat-shares	PT	Partages
+stat-shares	ES	Partages
+stat-shares	DE	Partages
+stat-signups	FR	Inscriptions
+stat-signups	EN	Inscriptions
+stat-signups	PT	Inscriptions
+stat-signups	ES	Inscriptions
+stat-signups	DE	Inscriptions
+stat-visitors-today	FR	Visiteurs aujourd'hui
+stat-visitors-today	EN	Visiteurs aujourd'hui
+stat-visitors-today	PT	Visiteurs aujourd'hui
+stat-visitors-today	ES	Visiteurs aujourd'hui
+stat-visitors-today	DE	Visiteurs aujourd'hui
+status-available	FR	Disponible
+status-available	EN	Disponible
+status-available	PT	Disponible
+status-available	ES	Disponible
+status-available	DE	Disponible
+status-soon	FR	Bientôt
+status-soon	EN	Bientôt
+status-soon	PT	Bientôt
+status-soon	ES	Bientôt
+status-soon	DE	Bientôt
