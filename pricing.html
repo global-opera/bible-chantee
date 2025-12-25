@@ -489,16 +489,6 @@
                 console.log(`💰 Payment initiated: ${plan}`);
             });
         });
-
-        // Show current user info if available
-        document.addEventListener('DOMContentLoaded', function() {
-            const email = localStorage.getItem('sungbible_email');
-            const lang = localStorage.getItem('sungbible_lang');
-
-            if (email && lang) {
-                console.log(`👤 Current user: ${email} (${lang.toUpperCase()})`);
-            }
-        });
     </script>
 
     <!-- I18n Initialization -->
@@ -509,6 +499,12 @@
 
             init() {
                 this.currentLang = window.currentLanguage || 'FR';
+
+                // Update <html lang> attribute for SEO/accessibility
+                if (window.updateHtmlLang) {
+                    window.updateHtmlLang(this.currentLang);
+                }
+
                 this.updatePageTitle();
                 this.translatePage();
                 this.updateLangSelector();
