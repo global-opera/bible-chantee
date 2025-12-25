@@ -802,6 +802,7 @@ window.trackSignup = function(referrer) {
     <script src="/lyrics-data-pt.js"></script>
     <script src="/lyrics-data-en.js"></script>
     <script src="/lyrics-data-es.js"></script>
+    <script src="/lyrics-data-de.js"></script>
     <script src="/lyrics-data-v2.js"></script>
     <!-- Fix: Expose lyrics variables to window (const ne s'expose pas automatiquement) -->
     <script>
@@ -810,6 +811,7 @@ window.trackSignup = function(referrer) {
     if (typeof chapterLyricsPT !== 'undefined' && !window.chapterLyricsPT) window.chapterLyricsPT = chapterLyricsPT;
     if (typeof chapterLyricsEN !== 'undefined' && !window.chapterLyricsEN) window.chapterLyricsEN = chapterLyricsEN;
     if (typeof chapterLyricsES !== 'undefined' && !window.chapterLyricsES) window.chapterLyricsES = chapterLyricsES;
+    if (typeof chapterLyricsDE !== 'undefined' && !window.chapterLyricsDE) window.chapterLyricsDE = chapterLyricsDE;
     </script>
 
     <script src="/audio-urls.js"></script>
@@ -1154,6 +1156,16 @@ window.trackSignup = function(referrer) {
                 const v2 = (typeof window.chapterLyricsV2 !== 'undefined') && window.chapterLyricsV2[book] && window.chapterLyricsV2[book][chapterStr];
                 const v1 = window.chapterLyrics[book] && window.chapterLyrics[book][chapterStr];
                 return v2 ? window.chapterLyricsV2[book][chapterStr] : (v1 ? window.chapterLyrics[book][chapterStr] : null);
+            }
+            if (L === 'ES') {
+                if (typeof window.chapterLyricsES === 'undefined') return null;
+                return window.chapterLyricsES[book] && window.chapterLyricsES[book][chapterStr] ? window.chapterLyricsES[book][chapterStr] : null;
+            }
+            if (L === 'DE') {
+                if (typeof window.chapterLyricsDE === 'undefined') return null;
+                const bookNum = book.slice(0, 2);
+                const chapNum = parseInt(chapterStr, 10);
+                return (window.chapterLyricsDE[bookNum] && window.chapterLyricsDE[bookNum][chapNum]) ? window.chapterLyricsDE[bookNum][chapNum] : null;
             }
             return null;
         }

@@ -564,6 +564,7 @@
     <script src="/lyrics-data-pt.js"></script>
     <script src="/lyrics-data-en.js"></script>
     <script src="/lyrics-data-es.js"></script>
+    <script src="/lyrics-data-de.js"></script>
     <script src="/lyrics-data-v2.js"></script>
     <!-- Fix: Expose lyrics variables to window (const ne s'expose pas automatiquement) -->
     <script>
@@ -572,6 +573,7 @@
     if (typeof chapterLyricsPT !== 'undefined' && !window.chapterLyricsPT) window.chapterLyricsPT = chapterLyricsPT;
     if (typeof chapterLyricsEN !== 'undefined' && !window.chapterLyricsEN) window.chapterLyricsEN = chapterLyricsEN;
     if (typeof chapterLyricsES !== 'undefined' && !window.chapterLyricsES) window.chapterLyricsES = chapterLyricsES;
+    if (typeof chapterLyricsDE !== 'undefined' && !window.chapterLyricsDE) window.chapterLyricsDE = chapterLyricsDE;
     </script>
 
     <script src="/audio-urls.js"></script>
@@ -814,6 +816,12 @@
             if (L === 'ES') {
                 if (typeof window.chapterLyricsES === 'undefined') return null;
                 return window.chapterLyricsES[book] && window.chapterLyricsES[book][chapterStr] ? window.chapterLyricsES[book][chapterStr] : null;
+            }
+
+            // German
+            if (L === 'DE') {
+                if (typeof window.chapterLyricsDE === 'undefined') return null;
+                return window.chapterLyricsDE[book] && window.chapterLyricsDE[book][chapterStr] ? window.chapterLyricsDE[book][chapterStr] : null;
             }
 
             return null;
