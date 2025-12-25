@@ -514,6 +514,141 @@ window.trackSignup = function(referrer) {
                 font-size: 0.95em;
             }
         }
+
+        /* Language Dropdown Menu */
+        .lang-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .lang-btn {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.95em;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s;
+        }
+        .lang-btn:hover {
+            background: rgba(255,206,0,0.2);
+            border-color: #ffce00;
+        }
+        .lang-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: #1a1a3e;
+            border: 1px solid #ffce00;
+            border-radius: 8px;
+            margin-top: 5px;
+            min-width: 160px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+        .lang-menu.active { display: block; }
+        .lang-menu-item {
+            padding: 10px 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .lang-menu-item:hover {
+            background: rgba(255,206,0,0.2);
+        }
+        .lang-menu-item.current {
+            background: rgba(255,206,0,0.15);
+            font-weight: bold;
+        }
+        .lang-menu-item.current::after {
+            content: '✓';
+            margin-left: auto;
+            color: #ffce00;
+        }
+
+        /* iOS Install Popup */
+        .ios-popup {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #1a1a3e, #000080);
+            border-top: 2px solid #ffce00;
+            padding: 20px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
+            z-index: 2000;
+            transform: translateY(100%);
+            transition: transform 0.4s ease-out;
+        }
+        .ios-popup.show {
+            transform: translateY(0);
+        }
+        .ios-popup-content {
+            max-width: 500px;
+            margin: 0 auto;
+            color: #fff;
+        }
+        .ios-popup-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #ffce00;
+        }
+        .ios-popup-steps {
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+        .ios-popup-step {
+            margin: 8px 0;
+            padding-left: 5px;
+        }
+        .ios-popup-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .ios-popup-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9em;
+        }
+        .ios-popup-btn {
+            background: #ffce00;
+            color: #000080;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .ios-popup-btn:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            .lang-btn {
+                padding: 6px 12px;
+                font-size: 0.9em;
+            }
+            .ios-popup {
+                padding: 15px;
+            }
+            .ios-popup-title {
+                font-size: 1.1em;
+            }
+        }
         </style>
 <link rel="stylesheet" href="/credits.css">
 <script>
@@ -553,10 +688,38 @@ window.trackSignup = function(referrer) {
 
         <header>
             <h1 data-i18n="readerHeading">Bible Chantée</h1>
-            <nav class="header-links"><a id="aboutLink" href="/about.html" class="back-link" data-i18n="readerAbout">À propos</a>
-            <a id="helpLink" href="/aide.html" class="back-link" data-i18n="readerHelp">Aide</a>
-            <a id="newsLink" href="/nouveautes.html" class="back-link" data-i18n="readerNews">Nouveautes</a>
-            <a id="promisesLink" href="/promesses.html" class="back-link" data-i18n="readerPromises">Promesses</a></nav>
+            <nav class="header-links">
+                <a id="aboutLink" href="/about.html" class="back-link" data-i18n="readerAbout">À propos</a>
+                <a id="helpLink" href="/aide.html" class="back-link" data-i18n="readerHelp">Aide</a>
+                <a id="newsLink" href="/nouveautes.html" class="back-link" data-i18n="readerNews">Nouveautes</a>
+                <a id="promisesLink" href="/promesses.html" class="back-link" data-i18n="readerPromises">Promesses</a>
+
+                <!-- Language Dropdown -->
+                <div class="lang-dropdown">
+                    <button class="lang-btn back-link" id="langBtn" onclick="toggleLangMenu()">
+                        <span id="langFlag">🇫🇷</span>
+                        <span id="langCode">FR</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="lang-menu" id="langMenu">
+                        <div class="lang-menu-item" data-lang="FR" onclick="changeLang('FR')">
+                            <span>🇫🇷</span> Français
+                        </div>
+                        <div class="lang-menu-item" data-lang="EN" onclick="changeLang('EN')">
+                            <span>🇬🇧</span> English
+                        </div>
+                        <div class="lang-menu-item" data-lang="PT" onclick="changeLang('PT')">
+                            <span>🇧🇷</span> Português
+                        </div>
+                        <div class="lang-menu-item" data-lang="ES" onclick="changeLang('ES')">
+                            <span>🇪🇸</span> Español
+                        </div>
+                        <div class="lang-menu-item" data-lang="DE" onclick="changeLang('DE')">
+                            <span>🇩🇪</span> Deutsch
+                        </div>
+                    </div>
+                </div>
+            </nav>
             <p class="subtitle" data-i18n="readerSubtitle">La Parole de Dieu en musique worship française</p>
             <div class="stats">
                 <span id="available-count">0</span> <span data-i18n="readerBooksAvailable">livres disponibles</span> <span data-i18n="readerOf">sur</span> 66 |
@@ -1569,7 +1732,13 @@ const bookName = getBookDisplayName(currentBook);
                 readerNoLyricsLang: "Paroles non disponibles dans cette langue pour ce chapitre",
                 readerNoBibleLang: "Texte biblique non disponible dans cette langue pour ce chapitre",
                 readerBibleNotAvailableLang: "Recherche Bible non disponible dans cette langue",
-                readerAudioMissing: "MP3 introuvable"
+                readerAudioMissing: "MP3 introuvable",
+                iosInstallTitle: "📱 Installer Bible Chantée",
+                iosInstallStep1: "1. 📤 Appuyez sur <strong>Partager</strong>",
+                iosInstallStep2: "2. ➕ <strong>Sur l'écran d'accueil</strong>",
+                iosInstallStep3: "3. ✅ <strong>Ajouter</strong>",
+                iosInstallDontShow: "Ne plus afficher",
+                iosInstallGotIt: "Compris"
             },
             PT: {
                 readerHeading: "Bíblia Cantada",
@@ -1601,7 +1770,13 @@ const bookName = getBookDisplayName(currentBook);
                 readerNoLyricsLang: "Letras indisponíveis nesta língua para este capítulo",
                 readerNoBibleLang: "Texto bíblico indisponível nesta língua para este capítulo",
                 readerBibleNotAvailableLang: "Pesquisa bíblica indisponível nesta língua",
-                readerAudioMissing: "MP3 não encontrado"
+                readerAudioMissing: "MP3 não encontrado",
+                iosInstallTitle: "📱 Instalar Bible Chantée",
+                iosInstallStep1: "1. 📤 Toque em <strong>Compartilhar</strong>",
+                iosInstallStep2: "2. ➕ <strong>Adicionar à Tela de Início</strong>",
+                iosInstallStep3: "3. ✅ <strong>Adicionar</strong>",
+                iosInstallDontShow: "Não mostrar novamente",
+                iosInstallGotIt: "Entendi"
             },
             EN: {
                 readerHeading: "Sung Bible",
@@ -1633,7 +1808,13 @@ const bookName = getBookDisplayName(currentBook);
                 readerNoLyricsLang: "Lyrics not available in this language for this chapter",
                 readerNoBibleLang: "Bible text not available in this language for this chapter",
                 readerBibleNotAvailableLang: "Bible search not available in this language",
-                readerAudioMissing: "MP3 not found"
+                readerAudioMissing: "MP3 not found",
+                iosInstallTitle: "📱 Install Bible Chantée",
+                iosInstallStep1: "1. 📤 Tap <strong>Share</strong>",
+                iosInstallStep2: "2. ➕ <strong>Add to Home Screen</strong>",
+                iosInstallStep3: "3. ✅ <strong>Add</strong>",
+                iosInstallDontShow: "Don't show again",
+                iosInstallGotIt: "Got it"
             },
             ES: {
                 readerHeading: "Biblia Cantada",
@@ -1665,7 +1846,54 @@ const bookName = getBookDisplayName(currentBook);
                 readerNoLyricsLang: "Letras no disponibles en este idioma para este capítulo",
                 readerNoBibleLang: "Texto bíblico no disponible en este idioma para este capítulo",
                 readerBibleNotAvailableLang: "Búsqueda bíblica no disponible en este idioma",
-                readerAudioMissing: "MP3 no encontrado"
+                readerAudioMissing: "MP3 no encontrado",
+                iosInstallTitle: "📱 Instalar Bible Chantée",
+                iosInstallStep1: "1. 📤 Toca <strong>Compartir</strong>",
+                iosInstallStep2: "2. ➕ <strong>Añadir a pantalla de inicio</strong>",
+                iosInstallStep3: "3. ✅ <strong>Añadir</strong>",
+                iosInstallDontShow: "No mostrar de nuevo",
+                iosInstallGotIt: "Entendido"
+            },
+            DE: {
+                readerHeading: "Gesungene Bibel",
+                readerBackHome: "← Zurück",
+                readerAbout: "Über uns",
+                readerHelp: "Hilfe",
+                readerNews: "Neuigkeiten",
+                readerPromises: "Verheißungen",
+                readerSubtitle: "Gottes Wort in Musik",
+                readerBooksAvailable: "Bücher verfügbar",
+                readerOf: "von",
+                readerChapters: "Kapitel",
+                readerSearchPlaceholder: "  ein Wort  =  ein Lied  ",
+                readerSearchButton: "🔍 Suchen",
+                readerOldTestament: "Altes Testament",
+                readerNewTestament: "Neues Testament",
+                readerPremium: "Premium",
+                readerPlayChapter: "Kapitel abspielen",
+                readerPause: "Pause",
+                readerPlayBook: "Ganzes Buch abspielen",
+                readerPrevious: "Vorherige",
+                readerNext: "Nächste",
+                readerLyrics: "Texte",
+                readerBible: "Bibel",
+                readerBoth: "Beide",
+                readerChapterShort: "Kap.",
+                readerSearchMinChars: "Bitte geben Sie mindestens 3 Zeichen ein",
+                readerSearchNoResults: "Keine Ergebnisse für",
+                readerSearchFound: "Vers(e) gefunden für",
+                readerSearchShowing: "Anzeige der ersten 50",
+                readerSearchUnavailable: "nicht verfügbar",
+                readerNoLyricsLang: "Texte in dieser Sprache für dieses Kapitel nicht verfügbar",
+                readerNoBibleLang: "Bibeltext in dieser Sprache für dieses Kapitel nicht verfügbar",
+                readerBibleNotAvailableLang: "Bibelsuche in dieser Sprache nicht verfügbar",
+                readerAudioMissing: "MP3 nicht gefunden",
+                iosInstallTitle: "📱 Bible Chantée installieren",
+                iosInstallStep1: "1. 📤 Tippen Sie auf <strong>Teilen</strong>",
+                iosInstallStep2: "2. ➕ <strong>Zum Home-Bildschirm</strong>",
+                iosInstallStep3: "3. ✅ <strong>Hinzufügen</strong>",
+                iosInstallDontShow: "Nicht mehr anzeigen",
+                iosInstallGotIt: "Verstanden"
             }
         };
 
@@ -2207,7 +2435,110 @@ if (document.readyState === 'loading') {
   // DOM déjà prêt
   window.bcBootstrapPremiumStatus();
 }
+
+// ============================================
+// LANGUAGE DROPDOWN MENU
+// ============================================
+function toggleLangMenu() {
+  const menu = document.getElementById('langMenu');
+  menu.classList.toggle('active');
+
+  // Close menu when clicking outside
+  if (menu.classList.contains('active')) {
+    setTimeout(() => {
+      document.addEventListener('click', closeLangMenuOutside);
+    }, 0);
+  }
+}
+
+function closeLangMenuOutside(e) {
+  const menu = document.getElementById('langMenu');
+  const btn = document.getElementById('langBtn');
+  if (!menu.contains(e.target) && !btn.contains(e.target)) {
+    menu.classList.remove('active');
+    document.removeEventListener('click', closeLangMenuOutside);
+  }
+}
+
+function changeLang(newLang) {
+  const params = new URLSearchParams(window.location.search);
+  params.set('lang', newLang);
+  window.location.search = params.toString();
+}
+
+function updateLangButton() {
+  const params = new URLSearchParams(window.location.search);
+  const currentLang = params.get('lang') || 'FR';
+
+  const flags = { FR: '🇫🇷', EN: '🇬🇧', PT: '🇧🇷', ES: '🇪🇸', DE: '🇩🇪' };
+
+  document.getElementById('langFlag').textContent = flags[currentLang] || '🇫🇷';
+  document.getElementById('langCode').textContent = currentLang;
+
+  // Mark current language in menu
+  document.querySelectorAll('.lang-menu-item').forEach(item => {
+    if (item.dataset.lang === currentLang) {
+      item.classList.add('current');
+    } else {
+      item.classList.remove('current');
+    }
+  });
+}
+
+// ============================================
+// iOS INSTALL POPUP
+// ============================================
+function showIOSPopup() {
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+  const isInStandaloneMode = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+  const hasSeenPrompt = localStorage.getItem('iosPromptSeen');
+
+  if (isIOS && !isInStandaloneMode && !hasSeenPrompt) {
+    setTimeout(() => {
+      document.getElementById('iosPopup').classList.add('show');
+    }, 2000); // Show after 2 seconds
+  }
+}
+
+function closeIOSPopup() {
+  const dontShow = document.getElementById('iosPopupDontShow').checked;
+  if (dontShow) {
+    localStorage.setItem('iosPromptSeen', 'true');
+  }
+  document.getElementById('iosPopup').classList.remove('show');
+}
+
+// Initialize on page load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    updateLangButton();
+    showIOSPopup();
+  });
+} else {
+  updateLangButton();
+  showIOSPopup();
+}
 </script>
+
+<!-- iOS Install Popup -->
+<div class="ios-popup" id="iosPopup">
+    <div class="ios-popup-content">
+        <div class="ios-popup-title" data-i18n="iosInstallTitle">📱 Installer Bible Chantée</div>
+        <div class="ios-popup-steps">
+            <div class="ios-popup-step" data-i18n="iosInstallStep1">1. 📤 Appuyez sur <strong>Partager</strong></div>
+            <div class="ios-popup-step" data-i18n="iosInstallStep2">2. ➕ <strong>Sur l'écran d'accueil</strong></div>
+            <div class="ios-popup-step" data-i18n="iosInstallStep3">3. ✅ <strong>Ajouter</strong></div>
+        </div>
+        <div class="ios-popup-footer">
+            <label class="ios-popup-checkbox">
+                <input type="checkbox" id="iosPopupDontShow">
+                <span data-i18n="iosInstallDontShow">Ne plus afficher</span>
+            </label>
+            <button class="ios-popup-btn" onclick="closeIOSPopup()" data-i18n="iosInstallGotIt">Compris</button>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
 
