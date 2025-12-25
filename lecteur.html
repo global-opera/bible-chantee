@@ -432,6 +432,11 @@
             }
         }
     </style>
+
+<script src="translations.js"></script>
+<script src="translations-extra.js"></script>
+<script src="translations-browser.js"></script>
+<script src="i18n-init.js"></script>
 </head>
 <body>
     <div class="container">
@@ -751,7 +756,7 @@
 
         function t(key) {
             // Try global translations first, then inline TRANSLATIONS
-            const lang = currentLanguage || 'FR';
+            const lang = currentLanguage || (window.BC_LANG && window.BC_LANG.current) || 'EN';
             return (window.translations && window.translations[lang] && window.translations[lang][key]) ||
                    (TRANSLATIONS[lang] && TRANSLATIONS[lang][key]) ||
                    (window.translations && window.translations.FR && window.translations.FR[key]) ||
@@ -1049,7 +1054,7 @@ const bookName = getBookDisplayName(currentBook);
             let displayTitle = bookName + ' - ' + chapterWord + String(chapter).padStart(2, '0');
 
             // Get chapter titles for current language
-            const L = (currentLanguage || 'FR').toUpperCase();
+            const L = (currentLanguage || (window.BC_LANG && window.BC_LANG.current) || 'EN').toUpperCase();
             let chapterTitlesForLang = window.chapterTitles; // Default FR
             if (L === 'EN' && typeof window.chapterTitlesEN !== 'undefined') {
                 chapterTitlesForLang = window.chapterTitlesEN;
@@ -1484,6 +1489,7 @@ renderBooks('old-testament', oldTestament);
     </script>
 </body>
 </html>
+
 
 
 

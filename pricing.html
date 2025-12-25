@@ -10,11 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- I18n System -->
-    <script src="lang-shared.js"></script>
-    <script src="translations.js"></script>
-<script src="translations-extra.js"></script>
-
-    <style>
+<style>
         :root {
             --bg-primary: #0a1628;
             --bg-secondary: #0f2744;
@@ -335,6 +331,11 @@
             }
         }
     </style>
+
+<script src="translations.js"></script>
+<script src="translations-extra.js"></script>
+<script src="translations-browser.js"></script>
+<script src="i18n-init.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -495,10 +496,10 @@
     <script>
         // Initialize BibleI18n system
         const BibleI18n = {
-            currentLang: window.currentLanguage || 'FR',
+            currentLang: window.currentLanguage || (window.BC_LANG && window.BC_LANG.current) || 'EN',
 
             init() {
-                this.currentLang = window.currentLanguage || 'FR';
+                this.currentLang = window.currentLanguage || (window.BC_LANG && window.BC_LANG.current) || 'EN';
 
                 // Update <html lang> attribute for SEO/accessibility
                 if (window.updateHtmlLang) {
@@ -564,6 +565,7 @@
     </script>
 </body>
 </html>
+
 
 
 
