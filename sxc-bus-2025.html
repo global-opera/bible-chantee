@@ -317,6 +317,22 @@
             font-size: 11px;
             opacity: 0.5;
         }
+        
+        #installBtn {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.4);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        #installBtn:active {
+            background: rgba(255,255,255,0.9);
+            color: #1a5f7a;
+        }
     </style>
 </head>
 <body>
@@ -325,7 +341,7 @@
         <h1>Bus Riviera</h1>
         <p class="subtitle">Carte interactive VMCV</p>
         
-        <a href="https://www.sbb.ch/fr/acheter/pages/fahrplan/fahrplan.xhtml?von=La%20Tour-de-Peilz,%20Ile-Heureuse" 
+        <a target="_blank" href="https://www.sbb.ch/fr/acheter/pages/fahrplan/fahrplan.xhtml?von=La%20Tour-de-Peilz,%20Ile-Heureuse" 
            class="home-btn">
             <span class="home-icon">🏠</span>
             <span class="home-text">
@@ -334,7 +350,7 @@
             </span>
         </a>
         
-        <a href="https://www.sbb.ch/fr/acheter/pages/fahrplan/fahrplan.xhtml?von=La%20Tour-de-Peilz,%20Ile-Heureuse&nach=Vevey,%20Avenue%20Nestl%C3%A9%2055" 
+        <a target="_blank" href="https://www.sbb.ch/fr/acheter/pages/fahrplan/fahrplan.xhtml?von=La%20Tour-de-Peilz,%20Ile-Heureuse&nach=Vevey,%20Avenue%20Nestl%C3%A9%2055" 
            class="work-btn">
             <span class="work-icon">💼</span>
             <span class="work-text">
@@ -343,7 +359,7 @@
             </span>
         </a>
         
-        <a href="https://www.sbb.ch/fr/acheter/pages/fahrplan/fahrplan.xhtml?von=Vevey,%20Avenue%20Nestl%C3%A9%2055&nach=La%20Tour-de-Peilz,%20Ile-Heureuse" 
+        <a target="_blank" href="https://www.sbb.ch/fr/acheter/pages/fahrplan/fahrplan.xhtml?von=Vevey,%20Avenue%20Nestl%C3%A9%2055&nach=La%20Tour-de-Peilz,%20Ile-Heureuse" 
            class="return-btn">
             <span class="return-icon">🏠</span>
             <span class="return-text">
@@ -352,66 +368,88 @@
             </span>
         </a>
         
-        <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_arret_bus=true&tree_enable_tp_ligne_bus_212=true&tree_enable_tp_ligne_bus=false" 
+        <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_arret_bus=true&tree_enable_tp_ligne_bus_212=true&tree_enable_tp_ligne_bus=false" 
            class="map-btn">
             🗺️ Carte • Ligne 212
         </a>
         
-        <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&tree_group_layers_accrochage_dessin_mesure=&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_vmcv_infos_trafic_futures=true&tree_enable_vmcv_infos_trafic_en_cours=true&tree_enable_points_vente_vmcv=true&tree_enable_tp_ligne_bus_201=true&tree_enable_tp_ligne_bus_202=true&tree_enable_tp_ligne_bus_203=true&tree_enable_tp_ligne_bus_204=true&tree_enable_tp_ligne_bus_205=true&tree_enable_tp_ligne_bus_206=true&tree_enable_tp_ligne_bus_207=true&tree_enable_tp_ligne_bus_209=true&tree_enable_tp_ligne_bus_210=true&tree_enable_tp_ligne_bus_211=true&tree_enable_tp_ligne_bus_213=true&tree_enable_tp_ligne_bus_215=true&tree_enable_tp_ligne_bus_216=true&tree_enable_tp_ligne_bus_217=true&tree_enable_tp_ligne_bus_218=true&tree_enable_tp_ligne_bus_220=true&tree_enable_tp_ligne_bus_111=true&tree_enable_tp_ligne_bus_120=true&tree_enable_tp_ligne_bus_121=true&tree_enable_tp_ligne_bus_492=true&tree_enable_tp_ligne_bus_nuit=true&tree_enable_tp_ligne_bus_290=true&tree_enable_tp_ligne_bus_291=true&tree_enable_tp_ligne_bus=false&tree_enable_tp_ligne_bus_212=true&tree_enable_tp_arret_train=false&tree_enable_tp_ligne_train=false" 
+        <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&tree_group_layers_accrochage_dessin_mesure=&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_vmcv_infos_trafic_futures=true&tree_enable_vmcv_infos_trafic_en_cours=true&tree_enable_points_vente_vmcv=true&tree_enable_tp_ligne_bus_201=true&tree_enable_tp_ligne_bus_202=true&tree_enable_tp_ligne_bus_203=true&tree_enable_tp_ligne_bus_204=true&tree_enable_tp_ligne_bus_205=true&tree_enable_tp_ligne_bus_206=true&tree_enable_tp_ligne_bus_207=true&tree_enable_tp_ligne_bus_209=true&tree_enable_tp_ligne_bus_210=true&tree_enable_tp_ligne_bus_211=true&tree_enable_tp_ligne_bus_213=true&tree_enable_tp_ligne_bus_215=true&tree_enable_tp_ligne_bus_216=true&tree_enable_tp_ligne_bus_217=true&tree_enable_tp_ligne_bus_218=true&tree_enable_tp_ligne_bus_220=true&tree_enable_tp_ligne_bus_111=true&tree_enable_tp_ligne_bus_120=true&tree_enable_tp_ligne_bus_121=true&tree_enable_tp_ligne_bus_492=true&tree_enable_tp_ligne_bus_nuit=true&tree_enable_tp_ligne_bus_290=true&tree_enable_tp_ligne_bus_291=true&tree_enable_tp_ligne_bus=false&tree_enable_tp_ligne_bus_212=true&tree_enable_tp_arret_train=false&tree_enable_tp_ligne_train=false" 
            class="launch-btn">
             🗺️ Toutes les lignes
         </a>
         
         <p class="section-title">Lignes urbaines</p>
         <div class="lines">
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_201=true&tree_enable_tp_ligne_bus=false" class="line-badge">201</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_202=true&tree_enable_tp_ligne_bus=false" class="line-badge">202</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_203=true&tree_enable_tp_ligne_bus=false" class="line-badge">203</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_204=true&tree_enable_tp_ligne_bus=false" class="line-badge">204</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_205=true&tree_enable_tp_ligne_bus=false" class="line-badge">205</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_206=true&tree_enable_tp_ligne_bus=false" class="line-badge">206</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_207=true&tree_enable_tp_ligne_bus=false" class="line-badge">207</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_209=true&tree_enable_tp_ligne_bus=false" class="line-badge">209</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_210=true&tree_enable_tp_ligne_bus=false" class="line-badge">210</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_211=true&tree_enable_tp_ligne_bus=false" class="line-badge">211</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_212=true&tree_enable_tp_ligne_bus=false" class="line-badge">212</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_213=true&tree_enable_tp_ligne_bus=false" class="line-badge">213</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_215=true&tree_enable_tp_ligne_bus=false" class="line-badge">215</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_216=true&tree_enable_tp_ligne_bus=false" class="line-badge">216</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_217=true&tree_enable_tp_ligne_bus=false" class="line-badge">217</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_218=true&tree_enable_tp_ligne_bus=false" class="line-badge">218</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_220=true&tree_enable_tp_ligne_bus=false" class="line-badge">220</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_201=true&tree_enable_tp_ligne_bus=false" class="line-badge">201</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_202=true&tree_enable_tp_ligne_bus=false" class="line-badge">202</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_203=true&tree_enable_tp_ligne_bus=false" class="line-badge">203</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_204=true&tree_enable_tp_ligne_bus=false" class="line-badge">204</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_205=true&tree_enable_tp_ligne_bus=false" class="line-badge">205</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_206=true&tree_enable_tp_ligne_bus=false" class="line-badge">206</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_207=true&tree_enable_tp_ligne_bus=false" class="line-badge">207</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_209=true&tree_enable_tp_ligne_bus=false" class="line-badge">209</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_210=true&tree_enable_tp_ligne_bus=false" class="line-badge">210</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_211=true&tree_enable_tp_ligne_bus=false" class="line-badge">211</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_212=true&tree_enable_tp_ligne_bus=false" class="line-badge">212</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_213=true&tree_enable_tp_ligne_bus=false" class="line-badge">213</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_215=true&tree_enable_tp_ligne_bus=false" class="line-badge">215</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_216=true&tree_enable_tp_ligne_bus=false" class="line-badge">216</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_217=true&tree_enable_tp_ligne_bus=false" class="line-badge">217</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_218=true&tree_enable_tp_ligne_bus=false" class="line-badge">218</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_220=true&tree_enable_tp_ligne_bus=false" class="line-badge">220</a>
         </div>
         
         <p class="section-title">Lignes régionales</p>
         <div class="lines">
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_111=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">111</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_120=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">120</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_121=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">121</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_290=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">290</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_291=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">291</a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_492=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">492</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_111=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">111</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_120=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">120</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_121=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">121</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_290=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">290</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_291=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">291</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_492=true&tree_enable_tp_ligne_bus=false" class="line-badge regional">492</a>
         </div>
         
         <p class="section-title">Bus de nuit</p>
         <div class="lines">
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_nuit=true&tree_enable_tp_ligne_bus=false" class="line-badge night">🌙 Nuit</a>
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_tp_ligne_bus_nuit=true&tree_enable_tp_ligne_bus=false" class="line-badge night">🌙 Nuit</a>
         </div>
         
         <div class="info-section">
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_vmcv_infos_trafic_en_cours=true&tree_enable_vmcv_infos_trafic_futures=true&tree_enable_tp_ligne_bus=false" class="info-btn">
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_vmcv_infos_trafic_en_cours=true&tree_enable_vmcv_infos_trafic_futures=true&tree_enable_tp_ligne_bus=false" class="info-btn">
                 <span class="emoji">⚠️</span>
                 Infos trafic
             </a>
-            <a href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_points_vente_vmcv=true&tree_enable_tp_ligne_bus=false" class="info-btn">
+            <a target="_blank" href="https://map.cartoriviera.ch/theme/mobilite?lang=fr&map_x=2555200&map_y=1145318&map_zoom=8&baselayer_ref=orthos_2025_mobile&baselayer_opacity=0&theme=mobilite&tree_groups=mobilite&tree_enable_points_vente_vmcv=true&tree_enable_tp_ligne_bus=false" class="info-btn">
                 <span class="emoji">🎫</span>
                 Points de vente
             </a>
         </div>
         
         <p class="footer">
-            Ajouter à l'écran d'accueil pour un accès rapide
+            <button id="installBtn" onclick="installApp()">📲 Ajouter à l'écran d'accueil</button>
         </p>
     </div>
+    
+    <script>
+        let deferredPrompt;
+        const installBtn = document.getElementById('installBtn');
+        
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installBtn.style.display = 'block';
+        });
+        
+        function installApp() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    deferredPrompt = null;
+                });
+            } else {
+                alert('Pour ajouter à l\'écran d\'accueil:\n\n1. Ouvre Chrome (pas cette app)\n2. Va sur biblechantee.com/sxc-bus-2025.html\n3. Menu ⋮ → Ajouter à l\'écran d\'accueil');
+            }
+        }
+    </script>
 </body>
 </html>
