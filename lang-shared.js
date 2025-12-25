@@ -23,6 +23,22 @@
     // === LANGUES DISPONIBLES ===
     window.AVAILABLE_LANGUAGES = ['FR', 'EN', 'PT', 'ES', 'DE', 'IT', 'AR', 'RU', 'ZH', 'HI', 'TL', 'KO'];
 
+    // === MAPPING CODE LANGUE → CODE ISO 639-1 ===
+    const LANG_ISO_MAP = {
+        'FR': 'fr', 'EN': 'en', 'PT': 'pt', 'ES': 'es', 'DE': 'de',
+        'IT': 'it', 'RU': 'ru', 'AR': 'ar', 'ZH': 'zh', 'HI': 'hi',
+        'TL': 'tl', 'KO': 'ko'
+    };
+
+    // === FONCTION UTILITAIRE : Mettre à jour l'attribut lang de <html> ===
+    function updateHtmlLang(langCode) {
+        const htmlElement = document.documentElement;
+        const isoCode = LANG_ISO_MAP[langCode] || 'fr';
+        if (htmlElement) {
+            htmlElement.setAttribute('lang', isoCode);
+        }
+    }
+
     // === INITIALISATION LANGUE ===
     // Priorité : URL param > localStorage > défaut FR
     function initLanguage() {
@@ -51,24 +67,30 @@
                 // Ignorer dans les environnements restreints
             }
         }
-        
+
+        // Mettre à jour l'attribut lang de <html> pour SEO et accessibilité
+        updateHtmlLang(window.currentLanguage);
+
         return window.currentLanguage;
     }
 
     // === CHANGER LANGUE ===
     window.setLanguage = function(lang) {
         if (!window.AVAILABLE_LANGUAGES.includes(lang)) return;
-        
+
         window.currentLanguage = lang;
         localStorage.setItem('selectedLanguage', lang);
-        
+
         // Mettre à jour URL
         try {
             const url = new URL(window.location.href);
             url.searchParams.set('lang', lang);
             history.pushState({}, '', url);
         } catch (e) {}
-        
+
+        // Mettre à jour l'attribut lang de <html>
+        updateHtmlLang(lang);
+
         // Déclencher événement pour les listeners
         window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang: lang } }));
     };

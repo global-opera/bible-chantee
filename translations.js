@@ -23,6 +23,7 @@ const translations = {
     navPlayer: "Lecteur",
     navBible: "Bible",
     navContact: "Contact",
+    navCrowdfunding: "Soutenir",
 
     // Project Section
     projectTitle: "Le projet",
@@ -296,6 +297,7 @@ const translations = {
     navPlayer: "Player",
     navBible: "Bible",
     navContact: "Contact",
+    navCrowdfunding: "Support",
 
     // Project Section
     projectTitle: "The project",
@@ -568,6 +570,7 @@ const translations = {
     navConfessions: "Confesiones",
     navPlayer: "Reproductor",
     navBible: "Biblia",
+    navCrowdfunding: "Apoyar",
     navContact: "Contacto",
 
     // Project Section
@@ -840,6 +843,7 @@ const translations = {
     navPromises: "Promessas",
     navConfessions: "Confissões",
     navPlayer: "Leitor",
+    navCrowdfunding: "Apoiar",
     navBible: "Bíblia",
     navContact: "Contato",
 
@@ -1112,6 +1116,7 @@ const translations = {
     navNews: "Neuigkeiten",
     navPromises: "Verheißungen",
     navConfessions: "Bekenntnisse",
+    navCrowdfunding: "Unterstützen",
     navPlayer: "Spieler",
     navBible: "Bibel",
     navContact: "Kontakt",
@@ -1410,6 +1415,7 @@ const translations = {
     navAbout: "Chi siamo",
     navConfessions: "Confessioni",
     navContact: "Contatto",
+    navCrowdfunding: "Sostenere",
 
     // Project Section
     projectTitle: "Il progetto",
@@ -1555,6 +1561,7 @@ const translations = {
     navAbout: "О нас",
     navConfessions: "Исповедания",
     navContact: "Контакты",
+    navCrowdfunding: "Поддержать",
 
     // Project Section
     projectTitle: "Проект",
@@ -1700,6 +1707,7 @@ const translations = {
     navAbout: "حول",
     navConfessions: "اعترافات",
     navContact: "اتصل",
+    navCrowdfunding: "يدعم",
 
     // Project Section
     projectTitle: "المشروع",
@@ -1845,6 +1853,7 @@ const translations = {
     navAbout: "关于",
     navConfessions: "宣告",
     navContact: "联系",
+    navCrowdfunding: "支持",
 
     // Project Section
     projectTitle: "项目",
@@ -1990,6 +1999,7 @@ const translations = {
     navAbout: "हमारे बारे में",
     navConfessions: "घोषणाएं",
     navContact: "संपर्क",
+    navCrowdfunding: "समर्थन",
 
     // Project Section
     projectTitle: "परियोजना",
@@ -2135,6 +2145,7 @@ const translations = {
     navAbout: "Tungkol",
     navConfessions: "Mga Pahayag",
     navContact: "Makipag-ugnayan",
+    navCrowdfunding: "Suportahan",
 
     // Project Section
     projectTitle: "Ang proyekto",
@@ -2280,6 +2291,7 @@ const translations = {
     navAbout: "소개",
     navConfessions: "신앙고백",
     navContact: "연락처",
+    navCrowdfunding: "지원하다",
 
     // Project Section
     projectTitle: "프로젝트",
