@@ -1354,8 +1354,6 @@ const bookName = getBookDisplayName(currentBook);
             renderBooks('new-testament', newTestament);
         }
 
-        applyTranslations(currentLanguage);
-
         // Re-apply translations when language changes
         window.addEventListener('languageChanged', (e) => {
             if (e.detail && e.detail.lang) {
