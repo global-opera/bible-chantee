@@ -10,7 +10,7 @@ const DISPOSABLE_DOMAINS = [
 exports.handler = async (event) => {
   try {
     if (event.httpMethod !== "POST") {
-      return { statusCode: 405, body: "Method Not Allowed" };
+      return { statusCode: 405, body: JSON.stringify({ ok: false, error: "Method Not Allowed" }) };
     }
 
     let { uid, email, ref } = JSON.parse(event.body || "{}");
@@ -44,7 +44,7 @@ exports.handler = async (event) => {
 
     // 1) Vérifier si l'utilisateur existe déjà
     const { data: existingUser } = await supabase
-      .from("bc_users")
+      .from("users")
       .select("uid, email")
       .eq("uid", uid)
       .maybeSingle();
@@ -65,7 +65,7 @@ exports.handler = async (event) => {
 
     // 2) Créer le nouvel utilisateur (INSERT seulement, pas UPSERT)
     const { error: insertUserErr } = await supabase
-      .from("bc_users")
+      .from("users")
       .insert({ uid, email, credits: 0 });
 
     if (insertUserErr) {
@@ -97,7 +97,7 @@ exports.handler = async (event) => {
 
     // 3) Return current user credits (optional)
     const { data: me } = await supabase
-      .from("bc_users")
+      .from("users")
       .select("uid,email,credits")
       .eq("uid", uid)
       .maybeSingle();
