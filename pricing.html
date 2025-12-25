@@ -489,39 +489,22 @@
                 console.log(`💰 Payment initiated: ${plan}`);
             });
         });
-<<<<<<< HEAD
-=======
-
-        // Show current user info if available
-        document.addEventListener('DOMContentLoaded', function() {
-            const email = localStorage.getItem('sungbible_email');
-            const lang = localStorage.getItem('bc_lang');
-
-            if (email && lang) {
-                console.log(`👤 Current user: ${email} (${lang.toUpperCase()})`);
-            }
-        });
->>>>>>> c213410 (TOOLS: restore-from-tag + fix forbidden patterns (prod audit green))
     </script>
 
     <!-- I18n Initialization -->
     <script>
         // Initialize BibleI18n system
         const BibleI18n = {
-            currentLang: window.currentLanguage || 'EN',
+            currentLang: window.currentLanguage || 'FR',
 
             init() {
-<<<<<<< HEAD
-                this.currentLang = window.currentLanguage || 'EN';
+                this.currentLang = window.currentLanguage || 'FR';
 
                 // Update <html lang> attribute for SEO/accessibility
                 if (window.updateHtmlLang) {
                     window.updateHtmlLang(this.currentLang);
                 }
 
-=======
-                this.currentLang = window.currentLanguage || 'EN';
->>>>>>> c213410 (TOOLS: restore-from-tag + fix forbidden patterns (prod audit green))
                 this.updatePageTitle();
                 this.translatePage();
                 this.updateLangSelector();
