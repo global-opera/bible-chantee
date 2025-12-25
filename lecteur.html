@@ -349,6 +349,88 @@
         .section-chapter-label { font-weight: 500; }
         .section-chapter-subtitle { color: #aaa; font-size: 0.85em; }
         .section-chapter-play { color: #ffce00; font-size: 1.2em; }
+
+        /* Header Navigation */
+        .header-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        /* Language Dropdown */
+        .lang-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 2px solid #ffce00;
+            color: #ffce00;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+
+        .lang-btn:hover {
+            background: #ffce00;
+            color: #000080;
+        }
+
+        .lang-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: #001a4d;
+            border: 2px solid #ffce00;
+            border-radius: 10px;
+            min-width: 180px;
+            margin-top: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        .lang-menu.active {
+            display: block;
+        }
+
+        .lang-menu-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: background 0.2s;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lang-menu-item:hover {
+            background: rgba(255, 206, 0, 0.2);
+        }
+
+        .lang-menu-item:first-child {
+            border-radius: 8px 8px 0 0;
+        }
+
+        .lang-menu-item:last-child {
+            border-radius: 0 0 8px 8px;
+        }
+
+        @media (max-width: 600px) {
+            .header-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -364,8 +446,38 @@
 
         <header>
             <h1 data-i18n="readerHeading">Bible Chantée</h1>
-            <a href="/index.html" class="back-link" data-i18n="readerBackHome">← Retour accueil</a>
-            <a href="/about.html" class="back-link" style="margin-left: 15px;" data-i18n="readerAbout">À propos</a>
+            <nav class="header-links">
+                <a id="aboutLink" href="/about.html" class="back-link" data-i18n="readerAbout">À propos</a>
+                <a id="helpLink" href="/aide.html" class="back-link" data-i18n="readerHelp">Aide</a>
+                <a id="newsLink" href="/nouveautes.html" class="back-link" data-i18n="readerNews">Nouveautes</a>
+                <a id="promisesLink" href="/promesses.html" class="back-link" data-i18n="readerPromises">Promesses</a>
+
+                <!-- Language Dropdown -->
+                <div class="lang-dropdown">
+                    <button class="lang-btn back-link" id="langBtn" onclick="toggleLangMenu()">
+                        <span id="langFlag">🇫🇷</span>
+                        <span id="langCode">FR</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="lang-menu" id="langMenu">
+                        <div class="lang-menu-item" data-lang="FR" onclick="changeLang('FR')">
+                            <span>🇫🇷</span> Français
+                        </div>
+                        <div class="lang-menu-item" data-lang="EN" onclick="changeLang('EN')">
+                            <span>🇬🇧</span> English
+                        </div>
+                        <div class="lang-menu-item" data-lang="PT" onclick="changeLang('PT')">
+                            <span>🇧🇷</span> Português
+                        </div>
+                        <div class="lang-menu-item" data-lang="ES" onclick="changeLang('ES')">
+                            <span>🇪🇸</span> Español
+                        </div>
+                        <div class="lang-menu-item" data-lang="DE" onclick="changeLang('DE')">
+                            <span>🇩🇪</span> Deutsch
+                        </div>
+                    </div>
+                </div>
+            </nav>
             <p class="subtitle" data-i18n="readerSubtitle">La Parole de Dieu en musique worship française</p>
             <div class="stats">
                 <span id="available-count">0</span> <span data-i18n="readerBooksAvailable">livres disponibles</span> <span data-i18n="readerOf">sur</span> 66 |
@@ -1251,6 +1363,63 @@ renderBooks('old-testament', oldTestament);
                 }, 100);
             }
         }
+
+        // Language dropdown functions
+        function toggleLangMenu() {
+            const menu = document.getElementById('langMenu');
+            if (menu) {
+                menu.classList.toggle('active');
+            }
+        }
+
+        function changeLang(newLang) {
+            const url = new URLSearchParams(window.location.search);
+            url.set('lang', newLang);
+            window.location.search = url.toString();
+        }
+
+        function updateLangButton() {
+            const langFlags = {
+                'FR': '🇫🇷',
+                'EN': '🇬🇧',
+                'PT': '🇧🇷',
+                'ES': '🇪🇸',
+                'DE': '🇩🇪'
+            };
+
+            const currentLang = (window.currentLanguage || 'FR').toUpperCase();
+            const langFlag = document.getElementById('langFlag');
+            const langCode = document.getElementById('langCode');
+
+            if (langFlag) langFlag.textContent = langFlags[currentLang] || '🇫🇷';
+            if (langCode) langCode.textContent = currentLang;
+
+            // Add checkmarks to current language in menu
+            document.querySelectorAll('.lang-menu-item').forEach(item => {
+                const itemLang = item.getAttribute('data-lang');
+                const hasCheckmark = item.textContent.includes('✓');
+
+                if (itemLang === currentLang && !hasCheckmark) {
+                    item.innerHTML = item.innerHTML + ' <span style="color: #ffce00;">✓</span>';
+                } else if (itemLang !== currentLang && hasCheckmark) {
+                    item.innerHTML = item.innerHTML.replace(' <span style="color: #ffce00;">✓</span>', '');
+                }
+            });
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.querySelector('.lang-dropdown');
+            const menu = document.getElementById('langMenu');
+
+            if (dropdown && menu && !dropdown.contains(event.target)) {
+                menu.classList.remove('active');
+            }
+        });
+
+        // Initialize language button on page load
+        document.addEventListener('DOMContentLoaded', updateLangButton);
+        updateLangButton();
     </script>
 </body>
 </html>
