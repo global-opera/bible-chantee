@@ -5,7 +5,9 @@
   "description": "Bible Chantée - Lecteur audio avec analytics",
   "scripts": {
     "dev": "netlify dev",
-    "build": "echo 'No build step needed'"
+    "build": "echo 'No build step needed'",
+    "audit:i18n": "pwsh -NoProfile -Command ./RUN_AUDIT.ps1",
+    "test:i18n": "npx playwright test _audit/i18n.e2e.spec.js"
   },
   "dependencies": {
     "@google-analytics/data": "^4.12.1",
@@ -16,5 +18,8 @@
     "stripe": "^20.1.0"
   },
   "author": "Stéphane CASSANI",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0"
+  }
 }

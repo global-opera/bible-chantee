@@ -16,7 +16,23 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Run audit
+      - name: Install deps
+        run: |
+          npm ci || npm i
+
+      - name: Run static audit
         shell: pwsh
         run: |
           pwsh -NoProfile -Command "./RUN_AUDIT.ps1"
+
+      - name: Install Playwright (Chromium)
+        run: |
+          npx playwright install --with-deps chromium
+
+      - name: Start server
+        run: |
+          nohup node -e "require('http').createServer((req,res)=>{require('fs').readFile('.'+(req.url==='/'?'/index.html':req.url),(e,d)=>{if(e){res.statusCode=404;res.end('not found');}else{res.end(d);}})}).listen(4177,'127.0.0.1',()=>console.log('server 4177'))" &
+
+      - name: E2E i18n
+        run: |
+          npx playwright test _audit/i18n.e2e.spec.js
