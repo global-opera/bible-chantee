@@ -25,15 +25,25 @@
       if (urlLang) {
         const langCode = urlLang.toUpperCase();
         if (validLangs.includes(langCode)) {
-          // Save to localStorage for future visits
+          // Save to localStorage for future visits (unified on bc_lang)
+          localStorage.setItem('bc_lang', langCode);
+          // Sync with selectedLanguage for backward compatibility
           localStorage.setItem('selectedLanguage', langCode);
           return langCode;
         }
       }
 
       // Priority 2: localStorage (user's previous choice)
-      const saved = localStorage.getItem('selectedLanguage');
+      // Read from bc_lang (primary) or selectedLanguage (fallback for compatibility)
+      const saved = localStorage.getItem('bc_lang') || localStorage.getItem('selectedLanguage');
       if (saved && validLangs.includes(saved)) {
+        // Ensure both keys are synced
+        if (!localStorage.getItem('bc_lang')) {
+          localStorage.setItem('bc_lang', saved);
+        }
+        if (!localStorage.getItem('selectedLanguage')) {
+          localStorage.setItem('selectedLanguage', saved);
+        }
         return saved;
       }
 
