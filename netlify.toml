@@ -11,6 +11,18 @@
 # -------------------------
 [context.production]
 
+
+  [[context.production.redirects]]
+    from = "/lecteur"
+    to = "/lecteur.html"
+    status = 200
+    force = true
+
+  [[context.production.redirects]]
+    from = "/lecteur/*"
+    to = "/lecteur.html"
+    status = 200
+    force = true
   [[context.production.redirects]]
     from = "/demo*"
     to = "/lecteur.html"
@@ -70,4 +82,16 @@
   from = "/thank-you*"
   to = "/thank-you.html"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/lecteur"
+  to = "/lecteur.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/lecteur/*"
+  to = "/lecteur.html"
+  status = 200
   force = true
