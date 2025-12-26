@@ -3,7 +3,7 @@
 const SW_DEBUG = false; // Mettre à true pour debug
 const swLog = (...args) => { if (SW_DEBUG) console.log(...args); };
 
-const CACHE_NAME = 'bible-chantee-v8';
+const CACHE_NAME = 'bible-chantee-v9';
 const STATIC_ASSETS = [
     '/',
     '/lecteur.html',
