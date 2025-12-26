@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Chantée - La Parole de Dieu en Musique</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2d4a 50%, #0d1a2d 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        
+        .lang-selector {
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .lang-selector:hover {
+            background: #d4af37;
+            color: #0a1628;
+        }
+        
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .title h1 {
+            font-size: 3rem;
+            color: #d4af37;
+            font-style: italic;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+        }
+        
+        .title .subtitle {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            font-style: italic;
+        }
+        
+        .announcement {
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid #d4af37;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .announcement h2 {
+            color: #d4af37;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .announcement p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #e0e0e0;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-box {
+            background: rgba(26, 45, 74, 0.8);
+            border: 1px solid #2a4a6a;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .stat-box .number {
+            font-size: 2rem;
+            color: #d4af37;
+            font-weight: bold;
+        }
+        
+        .stat-box .label {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+            margin-top: 5px;
+        }
+        
+        .languages {
+            background: rgba(26, 45, 74, 0.6);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .languages h3 {
+            color: #d4af37;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .lang-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        
+        .lang-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 15px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .lang-item:hover {
+            background: rgba(212, 175, 55, 0.3);
+        }
+        
+        .lang-item.active {
+            background: rgba(212, 175, 55, 0.4);
+            border: 1px solid #d4af37;
+        }
+        
+        .lang-item .flag {
+            width: 24px;
+            height: 18px;
+            border-radius: 2px;
+        }
+        
+        .lang-item .lang-name {
+            flex: 1;
+        }
+        
+        .lang-item .status {
+            font-size: 0.8rem;
+            padding: 3px 8px;
+            border-radius: 10px;
+        }
+        
+        .status.complete {
+            background: #2e7d32;
+            color: #fff;
+        }
+        
+        .status.best {
+            background: #d4af37;
+            color: #0a1628;
+            font-weight: bold;
+        }
+        
+        .qr-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .qr-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .qr-card h4 {
+            color: #d4af37;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .qr-code-container {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+            min-height: 150px;
+            min-width: 150px;
+        }
+        
+        .qr-url {
+            color: #a0a0a0;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .qr-url a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+        
+        .qr-url a:hover {
+            text-decoration: underline;
+        }
+        
+        .qr-description {
+            color: #808080;
+            font-size: 0.8rem;
+            margin-top: 8px;
+        }
+        
+        .current-lang-badge {
+            display: inline-block;
+            background: #d4af37;
+            color: #0a1628;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .review-section {
+            background: rgba(212, 175, 55, 0.1);
+            border: 2px solid #d4af37;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .review-section h3 {
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+        
+        .review-text {
+            color: #a0a0a0;
+            margin-bottom: 15px;
+        }
+        
+        .review-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #4285f4;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .review-btn:hover {
+            background: #5a9cff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(66, 133, 244, 0.4);
+        }
+        
+        .review-btn .stars {
+            color: #ffd700;
+            font-size: 1.2rem;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #2a4a6a;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 600px) {
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .lang-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .qr-section {
+                grid-template-columns: 1fr;
+            }
+            .title h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <select class="lang-selector" id="langSelect" onchange="changeLanguage()">
+                <option value="FR">FR - Français</option>
+                <option value="EN">EN - English</option>
+                <option value="PT">PT - Português</option>
+                <option value="ES">ES - Español</option>
+                <option value="DE">DE - Deutsch</option>
+                <option value="IT">IT - Italiano</option>
+            </select>
+        </div>
+        
+        <div class="title">
+            <h1>Bible Chantée</h1>
+            <p class="subtitle" data-i18n="subtitle">La Parole de Dieu en musique worship</p>
+        </div>
+        
+        <div class="announcement">
+            <h2 data-i18n="announcement-title">🎵 Un projet unique au monde</h2>
+            <p data-i18n="announcement-text">
+                Les 66 livres de la Bible transformés en musique worship. 
+                1189 chapitres chantés dans 6 langues, générés par intelligence artificielle 
+                avec des styles musicaux adaptés à chaque culture. 
+                Plus de 480 heures de contenu audio pour méditer la Parole de Dieu.
+            </p>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-box">
+                <div class="number">66</div>
+                <div class="label" data-i18n="stat-books">Livres</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">7134</div>
+                <div class="label" data-i18n="stat-chapters">Chapitres</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">6</div>
+                <div class="label" data-i18n="stat-languages">Langues</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">480+</div>
+                <div class="label" data-i18n="stat-hours">Heures</div>
+            </div>
+        </div>
+        
+        <div class="languages">
+            <h3 data-i18n="languages-title">🌍 Langues disponibles</h3>
+            <div class="lang-grid">
+                <div class="lang-item" data-lang="FR" onclick="selectLanguage('FR')">
+                    <img class="flag" src="https://flagcdn.com/24x18/fr.png" alt="FR">
+                    <span class="lang-name">Français</span>
+                    <span class="status complete">100%</span>
+                </div>
+                <div class="lang-item" data-lang="EN" onclick="selectLanguage('EN')">
+                    <img class="flag" src="https://flagcdn.com/24x18/gb.png" alt="EN">
+                    <span class="lang-name">English</span>
+                    <span class="status complete">100%</span>
+                </div>
+                <div class="lang-item" data-lang="PT" onclick="selectLanguage('PT')">
+                    <img class="flag" src="https://flagcdn.com/24x18/br.png" alt="PT">
+                    <span class="lang-name">Português</span>
+                    <span class="status complete">100%</span>
+                </div>
+                <div class="lang-item" data-lang="ES" onclick="selectLanguage('ES')">
+                    <img class="flag" src="https://flagcdn.com/24x18/es.png" alt="ES">
+                    <span class="lang-name">Español</span>
+                    <span class="status complete">100%</span>
+                </div>
+                <div class="lang-item" data-lang="DE" onclick="selectLanguage('DE')">
+                    <img class="flag" src="https://flagcdn.com/24x18/de.png" alt="DE">
+                    <span class="lang-name">Deutsch</span>
+                    <span class="status complete">100%</span>
+                </div>
+                <div class="lang-item" data-lang="IT" onclick="selectLanguage('IT')">
+                    <img class="flag" src="https://flagcdn.com/24x18/it.png" alt="IT">
+                    <span class="lang-name">Italiano</span>
+                    <span class="status best">⭐ 100%</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- QR Codes -->
+        <div class="qr-section">
+            <div class="qr-card">
+                <h4>🎧 <span data-i18n="qr-main">Lecteur complet</span></h4>
+                <div class="current-lang-badge" id="badge-lecteur">🇫🇷 FR</div>
+                <div class="qr-code-container" id="qr-biblechantee"></div>
+                <p class="qr-url"><a href="#" id="link-lecteur" target="_blank">biblechantee.com/lecteur.html?lang=FR</a></p>
+                <p class="qr-description" data-i18n="qr-main-desc">Accès aux 1189 chapitres</p>
+            </div>
+            <div class="qr-card">
+                <h4>🌐 <span data-i18n="qr-demo">Démo gratuite</span></h4>
+                <div class="current-lang-badge" id="badge-demo">🇫🇷 FR</div>
+                <div class="qr-code-container" id="qr-sungbible"></div>
+                <p class="qr-url"><a href="#" id="link-demo" target="_blank">sungbible.world/demo.html?lang=FR</a></p>
+                <p class="qr-description" data-i18n="qr-demo-desc">Découvrir des extraits</p>
+            </div>
+        </div>
+        
+        <!-- Google Reviews -->
+        <div class="review-section">
+            <h3 data-i18n="review-title">⭐ Donnez votre avis</h3>
+            <p class="review-text" data-i18n="review-text">Vous aimez Bible Chantée ? Laissez un avis sur Google !</p>
+            <a href="https://g.page/r/CRS2SxDSLo65ECA/review" target="_blank" class="review-btn">
+                <span class="stars">★★★★★</span>
+                <span data-i18n="review-btn">Laisser un avis Google</span>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 Bible Chantée - Stéphane Cassani</p>
+            <p data-i18n="footer-rights">Tous droits réservés</p>
+        </div>
+    </div>
+    
+    <script>
+        let qrLecteur = null;
+        let qrDemo = null;
+        let currentLang = 'FR';
+        
+        const langFlags = {
+            'FR': '🇫🇷',
+            'EN': '🇬🇧',
+            'PT': '🇧🇷',
+            'ES': '🇪🇸',
+            'DE': '🇩🇪',
+            'IT': '🇮🇹'
+        };
+        
+        const translations = {
+            FR: {
+                subtitle: "La Parole de Dieu en musique worship",
+                "announcement-title": "🎵 Un projet unique au monde",
+                "announcement-text": "Les 66 livres de la Bible transformés en musique worship. 1189 chapitres chantés dans 6 langues, générés par intelligence artificielle avec des styles musicaux adaptés à chaque culture. Plus de 480 heures de contenu audio pour méditer la Parole de Dieu.",
+                "stat-books": "Livres",
+                "stat-chapters": "Chapitres",
+                "stat-languages": "Langues",
+                "stat-hours": "Heures",
+                "languages-title": "🌍 Langues disponibles",
+                "qr-main": "Lecteur complet",
+                "qr-demo": "Démo gratuite",
+                "qr-main-desc": "Accès aux 1189 chapitres",
+                "qr-demo-desc": "Découvrir des extraits",
+                "review-title": "⭐ Donnez votre avis",
+                "review-text": "Vous aimez Bible Chantée ? Laissez un avis sur Google !",
+                "review-btn": "Laisser un avis Google",
+                "footer-rights": "Tous droits réservés"
+            },
+            EN: {
+                subtitle: "God's Word in worship music",
+                "announcement-title": "🎵 A unique project worldwide",
+                "announcement-text": "The 66 books of the Bible transformed into worship music. 1189 chapters sung in 6 languages, generated by artificial intelligence with musical styles adapted to each culture. Over 480 hours of audio content to meditate on God's Word.",
+                "stat-books": "Books",
+                "stat-chapters": "Chapters",
+                "stat-languages": "Languages",
+                "stat-hours": "Hours",
+                "languages-title": "🌍 Available languages",
+                "qr-main": "Full player",
+                "qr-demo": "Free demo",
+                "qr-main-desc": "Access to 1189 chapters",
+                "qr-demo-desc": "Discover excerpts",
+                "review-title": "⭐ Leave a review",
+                "review-text": "Do you like Bible Chantée? Leave a review on Google!",
+                "review-btn": "Leave a Google review",
+                "footer-rights": "All rights reserved"
+            },
+            PT: {
+                subtitle: "A Palavra de Deus em música worship",
+                "announcement-title": "🎵 Um projeto único no mundo",
+                "announcement-text": "Os 66 livros da Bíblia transformados em música worship. 1189 capítulos cantados em 6 idiomas, gerados por inteligência artificial com estilos musicais adaptados a cada cultura. Mais de 480 horas de conteúdo de áudio para meditar na Palavra de Deus.",
+                "stat-books": "Livros",
+                "stat-chapters": "Capítulos",
+                "stat-languages": "Idiomas",
+                "stat-hours": "Horas",
+                "languages-title": "🌍 Idiomas disponíveis",
+                "qr-main": "Player completo",
+                "qr-demo": "Demo gratuita",
+                "qr-main-desc": "Acesso aos 1189 capítulos",
+                "qr-demo-desc": "Descobrir trechos",
+                "review-title": "⭐ Deixe sua avaliação",
+                "review-text": "Você gosta da Bíblia Cantada? Deixe uma avaliação no Google!",
+                "review-btn": "Avaliar no Google",
+                "footer-rights": "Todos os direitos reservados"
+            },
+            ES: {
+                subtitle: "La Palabra de Dios en música worship",
+                "announcement-title": "🎵 Un proyecto único en el mundo",
+                "announcement-text": "Los 66 libros de la Biblia transformados en música worship. 1189 capítulos cantados en 6 idiomas, generados por inteligencia artificial con estilos musicales adaptados a cada cultura. Más de 480 horas de contenido de audio para meditar en la Palabra de Dios.",
+                "stat-books": "Libros",
+                "stat-chapters": "Capítulos",
+                "stat-languages": "Idiomas",
+                "stat-hours": "Horas",
+                "languages-title": "🌍 Idiomas disponibles",
+                "qr-main": "Reproductor completo",
+                "qr-demo": "Demo gratuita",
+                "qr-main-desc": "Acceso a 1189 capítulos",
+                "qr-demo-desc": "Descubrir extractos",
+                "review-title": "⭐ Deja tu opinión",
+                "review-text": "¿Te gusta Biblia Cantada? ¡Deja una reseña en Google!",
+                "review-btn": "Dejar reseña en Google",
+                "footer-rights": "Todos los derechos reservados"
+            },
+            DE: {
+                subtitle: "Gottes Wort in Worship-Musik",
+                "announcement-title": "🎵 Ein weltweit einzigartiges Projekt",
+                "announcement-text": "Die 66 Bücher der Bibel in Worship-Musik verwandelt. 1189 Kapitel in 6 Sprachen gesungen, von künstlicher Intelligenz mit kulturell angepassten Musikstilen generiert. Über 480 Stunden Audioinhalte, um über Gottes Wort zu meditieren.",
+                "stat-books": "Bücher",
+                "stat-chapters": "Kapitel",
+                "stat-languages": "Sprachen",
+                "stat-hours": "Stunden",
+                "languages-title": "🌍 Verfügbare Sprachen",
+                "qr-main": "Vollständiger Player",
+                "qr-demo": "Kostenlose Demo",
+                "qr-main-desc": "Zugang zu 1189 Kapiteln",
+                "qr-demo-desc": "Auszüge entdecken",
+                "review-title": "⭐ Bewertung abgeben",
+                "review-text": "Gefällt Ihnen Bible Chantée? Hinterlassen Sie eine Bewertung bei Google!",
+                "review-btn": "Google-Bewertung abgeben",
+                "footer-rights": "Alle Rechte vorbehalten"
+            },
+            IT: {
+                subtitle: "La Parola di Dio in musica worship",
+                "announcement-title": "🎵 Un progetto unico al mondo",
+                "announcement-text": "I 66 libri della Bibbia trasformati in musica worship. 1189 capitoli cantati in 6 lingue, generati dall'intelligenza artificiale con stili musicali adattati a ogni cultura. Oltre 480 ore di contenuti audio per meditare sulla Parola di Dio.",
+                "stat-books": "Libri",
+                "stat-chapters": "Capitoli",
+                "stat-languages": "Lingue",
+                "stat-hours": "Ore",
+                "languages-title": "🌍 Lingue disponibili",
+                "qr-main": "Lettore completo",
+                "qr-demo": "Demo gratuita",
+                "qr-main-desc": "Accesso a 1189 capitoli",
+                "qr-demo-desc": "Scopri gli estratti",
+                "review-title": "⭐ Lascia una recensione",
+                "review-text": "Ti piace Bibbia Cantata? Lascia una recensione su Google!",
+                "review-btn": "Recensione su Google",
+                "footer-rights": "Tutti i diritti riservati"
+            }
+        };
+        
+        function generateQRCodes(lang) {
+            const urlLecteur = `https://biblechantee.com/lecteur.html?lang=${lang}`;
+            const urlDemo = `https://sungbible.world/demo.html?lang=${lang}`;
+            
+            // Clear existing QR codes
+            document.getElementById('qr-biblechantee').innerHTML = '';
+            document.getElementById('qr-sungbible').innerHTML = '';
+            
+            // Generate new QR codes
+            qrLecteur = new QRCode(document.getElementById("qr-biblechantee"), {
+                text: urlLecteur,
+                width: 120,
+                height: 120,
+                colorDark: "#0a1628",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            
+            qrDemo = new QRCode(document.getElementById("qr-sungbible"), {
+                text: urlDemo,
+                width: 120,
+                height: 120,
+                colorDark: "#0a1628",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            
+            // Update links
+            document.getElementById('link-lecteur').href = urlLecteur;
+            document.getElementById('link-lecteur').textContent = `biblechantee.com?lang=${lang}`;
+            document.getElementById('link-demo').href = urlDemo;
+            document.getElementById('link-demo').textContent = `sungbible.world?lang=${lang}`;
+            
+            // Update badges with flag images
+            const flagCodes = { 'FR': 'fr', 'EN': 'gb', 'PT': 'br', 'ES': 'es', 'DE': 'de', 'IT': 'it' };
+            const flagImg = `<img src="https://flagcdn.com/20x15/${flagCodes[lang]}.png" style="width:20px;height:15px;vertical-align:middle;margin-right:5px;">`;
+            document.getElementById('badge-lecteur').innerHTML = `${flagImg}${lang}`;
+            document.getElementById('badge-demo').innerHTML = `${flagImg}${lang}`;
+        }
+        
+        function applyTranslations(lang) {
+            const t = translations[lang];
+            if (!t) return;
+            
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) {
+                    el.textContent = t[key];
+                }
+            });
+        }
+        
+        function updateActiveLang(lang) {
+            document.querySelectorAll('.lang-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-lang') === lang) {
+                    item.classList.add('active');
+                }
+            });
+        }
+        
+        function selectLanguage(lang) {
+            currentLang = lang;
+            document.getElementById('langSelect').value = lang;
+            applyTranslations(lang);
+            generateQRCodes(lang);
+            updateActiveLang(lang);
+            document.documentElement.lang = lang.toLowerCase();
+        }
+        
+        function changeLanguage() {
+            const lang = document.getElementById('langSelect').value;
+            selectLanguage(lang);
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            selectLanguage('FR');
+        });
+    </script>
+</body>
+</html>
