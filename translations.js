@@ -5093,6 +5093,4 @@ Object.keys(translations).forEach(lang => {
 
 // Export translations to global scope
 if (typeof window !== "undefined") window.translations = translations;
-
-
-
+});
