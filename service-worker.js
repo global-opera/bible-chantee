@@ -35,21 +35,25 @@ self.addEventListener('install', event => {
 
 // Fetch - Cache first, then network
 self.addEventListener('fetch', event => {
-    event.respondWith(
-        caches.match(event.request).then(response => {
-            if (response) {
-                swLog('[SW] Cache hit:', event.request.url);
-                return response;
-            }
+  const req = event.request;
 
-            return fetch(event.request).then(fetchResponse => {
-                // Cache MP3 files when played
-                if (event.request.url.endsWith('.mp3')) {
-                    caches.open(CACHE_NAME).then(cache => {
-                        swLog('[SW] Caching audio:', event.request.url);
-                        cache.put(event.request, fetchResponse.clone());
-                    });
-                }
+  if (req.method !== 'GET') return;
+
+  event.respondWith(
+    fetch(req)
+      .then(res => {
+        // CLONE AVANT TOUTE UTILISATION
+        const resClone = res.clone();
+
+        caches.open('bc-cache-v2').then(cache => {
+          if (res.ok) cache.put(req, resClone);
+        });
+
+        return res;
+      })
+      .catch(() => caches.match(req))
+  );
+});}
                 return fetchResponse;
             }).catch(err => {
                 console.error('[SW] Fetch error:', err);
