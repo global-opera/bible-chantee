@@ -1,5 +1,5 @@
-// Lyrics DE - Gesungene Bibel (German)
-// Auto-generated: 1094 chapters
+// Lyrics DE - Deutsch (German)
+// Auto-generated: 2025-12-26
 window.chapterLyricsDE = {
 
     "01": {
@@ -631,7 +631,50 @@ So bauen wir Altäre, in Deinem Namen hier,
 In der Gemeinschaft des Glaubens, sind wir eins mit Dir.  
 Die Wege sind viele, doch Du bleibst stets treu,  
 In Deinem Herzen, sind wir immer neu.`,
-        14: ``,
+        14: `[TITLE]  
+Gott der Höchste, Herr der Heere
+
+[Verse 1]  
+In Tagen von Kämpfen, Königreich und Streit,  
+Die Könige zogen, das Böse bereit.  
+Im Tal Siddim, wo die Flüsse verwehen,  
+Fiel Sodom und Gomorra, das Licht war verweht.
+
+[Chorus]  
+Gott der Höchste, Herr der Heere,  
+Du schenkst uns den Sieg, oh, Du bist der Weg.  
+In der Dunkelheit, bist Du unser Licht,  
+Wir preisen Dich, Herr, für Dein heiliges Licht.
+
+[Verse 2]  
+Abram, der Fremde, hörte die Kunde,  
+Sein Herz voller Liebe, er kämpfte für die Runde.  
+Mit treuen Gefährten, er zog in den Krieg,  
+Um Lot zu befreien, er folgte dem Sieg.
+
+[Chorus]  
+Gott der Höchste, Herr der Heere,  
+Du schenkst uns den Sieg, oh, Du bist der Weg.  
+In der Dunkelheit, bist Du unser Licht,  
+Wir preisen Dich, Herr, für Dein heiliges Licht.
+
+[Bridge]  
+Melchisedek kam, Brot und Wein in der Hand,  
+Ein Priester des Höchsten, im heiligen Land.  
+„Gesegnet seist du, Abram, in Gottes Gewalt,  
+Der deine Feinde in Deine Hand hält, so bald.“
+
+[Chorus]  
+Gott der Höchste, Herr der Heere,  
+Du schenkst uns den Sieg, oh, Du bist der Weg.  
+In der Dunkelheit, bist Du unser Licht,  
+Wir preisen Dich, Herr, für Dein heiliges Licht.
+
+[Outro]  
+Oh, wir heben die Hände, zu Dir, Gott der Macht,  
+In Deinem Namen, wird alles vollbracht.  
+Du schaffst das Leben, Du schaffst die Zeit,  
+Mit Dir, oh Herr, sind wir bereit.`,
         15: `### Titel: "Du bist mein Schild"
 
 [Verse 1]  
@@ -836,7 +879,58 @@ Dein Wort erfüllt, die Zeit ist nah,
 Im Glauben fest, ich bin da.  
 Amen, Amen, so sei es,  
 Deine Verheißung bleibt stets gewiss.`,
-        19: ``,
+        19: `[TITLE]  
+Errette mich, o Herr
+
+[Verse 1]  
+In der Dunkelheit, Sodom ruft,  
+Die Engel kommen, in der Nacht,  
+Lot, er sieht und kniet nieder,  
+„Bleibt bei mir, gebt mir eure Acht.“  
+Sein Herz schlägt laut, die Stadt verloren,  
+Doch in der Gnade, da ist Hoffnung neu,  
+„Eilt, verlasst den Ort der Sünde,  
+Die Zeit ist nah, der Zorn ist treu.“
+
+[Chorus]  
+Errette mich, o Herr, aus dieser Nacht,  
+Führe mich, Dein Licht, das mir erwacht.  
+In Deiner Hand, da find ich Frieden,  
+Gib mir die Kraft, lass mich nicht fliehen.
+
+[Verse 2]  
+Die Menschen drängen, fordern laut,  
+„Gib uns die Männer, wir sind bereit!“  
+Lot, er kämpft, sein Herz zerbricht,  
+„Tut ihnen nichts, gebt mir die Zeit!“  
+Die Engel ziehen ihn zurück,  
+Mit blinder Macht, sie schützen ihn,  
+„Hast du hier noch, die dir nah sind?  
+Verlass die Stadt, bevor der Tag beginnt.“
+
+[Chorus]  
+Errette mich, o Herr, aus dieser Nacht,  
+Führe mich, Dein Licht, das mir erwacht.  
+In Deiner Hand, da find ich Frieden,  
+Gib mir die Kraft, lass mich nicht fliehen.
+
+[Bridge]  
+Sieh nicht zurück, lass alles los,  
+Vor Dir allein, da ist mein Trost.  
+Die Sonne steigt, der Morgen bricht,  
+In Deiner Gnade, da find ich Licht.
+
+[Chorus]  
+Errette mich, o Herr, aus dieser Nacht,  
+Führe mich, Dein Licht, das mir erwacht.  
+In Deiner Hand, da find ich Frieden,  
+Gib mir die Kraft, lass mich nicht fliehen.
+
+[Outro]  
+O Herr, sei mein Schild, meine Zuflucht stets,  
+In Dir allein, da stehe ich fest.  
+Die Stadt vergeht, doch Deine Liebe bleibt,  
+Errette mich, o Herr, bis in die Ewigkeit.`,
         20: `[Verse 1]  
 Abraham zog, fern von seinem Land,  
 Ein Fremdling in Gerar, von Gott gelenkt,  
@@ -878,7 +972,70 @@ Der Gott, der heilt, der Barmherzigkeit bringt,
 Seine Treue uns stets umringt,  
 In jedem Schritt, in jedem Lied,  
 Sein Wort ist das Leben, das nie verglüht.`,
-        21: ``,
+        21: `[TITLE]: „Gott des Lachens“
+
+[Verse 1]  
+In den Tagen der Verheißung,  
+Suchte Gott die Herzen heim,  
+Sara lachte, voller Freude,  
+Ein Sohn soll unser sein.  
+Hundert Jahre, doch der Glaube,  
+Hat das Unmögliche gesehen,  
+Isaak, du bist Gottes Wunder,  
+In dir wird Segen wehen.  
+
+[Chorus]  
+Gott des Lachens, hör unser Rufen,  
+Du schenkst Hoffnung, du schenkst Licht.  
+In der Wüste, wo wir suchen,  
+Lässt du Quellen sprudeln,  
+Zeigst dein Angesicht.  
+
+[Verse 2]  
+Hagar weint in stiller Trauer,  
+Unter Sträuchern, fern und allein,  
+Doch der Engel spricht zu ihr,  
+„Fürchte dich nicht, lass den Schmerz sein.“  
+Gott erhört das Kind im Schatten,  
+Öffnet Augen, zeigt den Grund,  
+Wasserflut aus Felsen sprudeln,  
+Gott, du schenkst uns neuen Schwund.  
+
+[Chorus]  
+Gott des Lachens, hör unser Rufen,  
+Du schenkst Hoffnung, du schenkst Licht.  
+In der Wüste, wo wir suchen,  
+Lässt du Quellen sprudeln,  
+Zeigst dein Angesicht.  
+
+[Bridge]  
+Du machst uns stark, auch wenn wir schwach sind,  
+Du bist der Bund, der ewig bleibt.  
+In jedem Sturm, in jeder Wunde,  
+Führst du uns heim, wo Liebe gedeiht.  
+
+[Verse 3]  
+Abraham, der Freund des HERRN,  
+Schließt den Bund, im Glauben fest,  
+In Beer-Seba, an dem Brunnen,  
+Wo der Frieden uns besetzt.  
+Gott, du bist der treue Hüter,  
+In der Fremde bist du nah,  
+Dein Wort bleibt ewig, treu und sicher,  
+Du bist unser, immerdar.  
+
+[Chorus]  
+Gott des Lachens, hör unser Rufen,  
+Du schenkst Hoffnung, du schenkst Licht.  
+In der Wüste, wo wir suchen,  
+Lässt du Quellen sprudeln,  
+Zeigst dein Angesicht.  
+
+[Outro]  
+Gott des Lachens, wir beten an,  
+In deiner Nähe, Herr, da blüht das Land.  
+Du bist der Schöpfer, unser Licht,  
+In dir, oh Gott, da lebt die Sicht.`,
         22: `(Verse 1)  
 Gott sprach zu Abraham, er hörte,  
 „Nimm deinen Sohn, den du so liebst,  
@@ -975,7 +1132,62 @@ In der Höhle, die eine Heimat gibt,
 Abraham ruht, die Hoffnung nicht stirbt,  
 Im Land der Verheißung, da beten wir,  
 Mit Dir, oh Herr, sind wir ewig hier.`,
-        24: ``,
+        24: `[TITLE]  
+Gott der Treue, führe mich
+
+[Verse 1]  
+Abraham, alt und gesegnet,  
+Du sprachst zu deinem Knecht voll Vertrauen,  
+"Gehe, suche ein Weib für meinen Sohn,  
+Von meinem Volk, das soll er nehmen."  
+Die Engel Gottes gehen mit dir,  
+Dich führen zum Ziel, in der Treue hier.
+
+[Chorus]  
+Gott der Treue, Du bist mein Licht,  
+Führ mich, wo Du willst, in Deine Pflicht.  
+In der Dunkelheit, Du bleibst mein Ziel,  
+Dein Wort, mein Halt, in Deinem Willen spielt.
+
+[Verse 2]  
+Am Brunnen, die Frauen, sie schöpfen Wasser,  
+Der Knecht, er betet, er sucht die Antwort.  
+„Wenn sie sagt: Trinke, und auch die Kamele,  
+Das sei das Zeichen, das Du mir gebest.“  
+Und Rebekka kommt, schön und rein,  
+Sie gibt ihm zu trinken, so soll es sein.
+
+[Chorus]  
+Gott der Treue, Du bist mein Licht,  
+Führ mich, wo Du willst, in Deine Pflicht.  
+In der Dunkelheit, Du bleibst mein Ziel,  
+Dein Wort, mein Halt, in Deinem Willen spielt.
+
+[Bridge]  
+Komm, lass uns ziehen, im Glauben voran,  
+Die Wege des Herrn, sie führen uns an.  
+Rebekka folgt, mit mutigem Herz,  
+Sie lässt alles hinter, folgt ohne Schmerz.
+
+[Verse 3]  
+Isaak betet auf dem Feld,  
+Sein Herz sehnt nach Liebe, die er nicht hält.  
+Da sieht er die Kamele, die kommen heran,  
+Rebekka, die Braut, die er lieben kann.  
+In der Hütte der Mutter, die Liebe erblüht,  
+Gott hat erfüllt, was Er uns verspricht.
+
+[Chorus]  
+Gott der Treue, Du bist mein Licht,  
+Führ mich, wo Du willst, in Deine Pflicht.  
+In der Dunkelheit, Du bleibst mein Ziel,  
+Dein Wort, mein Halt, in Deinem Willen spielt.
+
+[Outro]  
+Oh, Gott der Treue, ich folge Dir nach,  
+In Deinem Bund, da liegt meine Schmach.  
+Du segnest mein Leben, Du führst mich zum Licht,  
+Für immer bei Dir, verlässt Du mich nicht.`,
         25: `[Verse 1]  
 In der Stille des Morgens, ein Herz voller Glauben,  
 Abraham, der Vater, in Gottes Händen gehoben.  
@@ -1023,7 +1235,50 @@ Abraham, unser Vater, in der Ewigkeit vereint,
 Dein Segen fließt weiter, in jedem, der weint.  
 Wir loben Deinen Namen, in Freude und Schmerz,  
 In Abrahams Erbe, lebt unser Herz.`,
-        26: ``,
+        26: `[TITLE]  
+Gott des Bundes
+
+[Verse 1]  
+In der Zeit der Teuerung, fiel die Angst uns schwer,  
+Aber Du, o Herr, sprachst, bleibe hier, weiche nicht mehr.  
+„Sei ein Fremdling, hier in diesem Land,  
+Ich segne dich, und halte meine Hand.“
+
+[Chorus]  
+Du bist mit mir, o Herr, ich fürchte mich nicht,  
+Du schenkst mir Frieden, Du bist mein Licht.  
+Wie die Sterne am Himmel, so zahlreich Dein Wort,  
+Durch Deinen Bund, von hier bis zum Ort.
+
+[Verse 2]  
+Isaak, der wanderte, durch die Wüste allein,  
+Fand Wasser in Brunnen, ließ Deinen Segen rein.  
+Esek und Sitna, die Kämpfe der Zeit,  
+Doch Rehoboth kam, und ich fand die Weite.
+
+[Chorus]  
+Du bist mit mir, o Herr, ich fürchte mich nicht,  
+Du schenkst mir Frieden, Du bist mein Licht.  
+Wie die Sterne am Himmel, so zahlreich Dein Wort,  
+Durch Deinen Bund, von hier bis zum Ort.
+
+[Bridge]  
+Du bist der Gott, der verspricht und erfüllt,  
+Im Schatten der Zweifel, Dein Licht uns umhüllt.  
+Du schaffst Frieden, wo Kämpfe einst waren,  
+In Deinem Namen, lass uns nie erfahren.
+
+[Chorus]  
+Du bist mit mir, o Herr, ich fürchte mich nicht,  
+Du schenkst mir Frieden, Du bist mein Licht.  
+Wie die Sterne am Himmel, so zahlreich Dein Wort,  
+Durch Deinen Bund, von hier bis zum Ort.
+
+[Outro]  
+O Herr, wir bauen Altäre, singen Dein Lob,  
+In der Fülle des Lebens, erheben wir Dich hoch.  
+Segne die Völker, durch unsern Samen,  
+In Deinem Namen, Amen, Amen.`,
         27: `"Der Segen der Vorväter"
 
 [Verse 1]  
@@ -1131,9 +1386,155 @@ In jedem Schritt, du führst uns, Herr.
 Die Leiter ragt, die Engel singen,  
 In deinem Namen, lass uns dir bringen.  
 Amen.`,
-        29: ``,
-        30: ``,
-        31: ``,
+        29: `[TITLE]  
+„Der Brunnen der Verheißung“
+
+[LYRICS]
+
+(Vers 1)  
+Jakob wanderte, auf der Suche nach Licht,  
+In das Land, wo die Morgenröte bricht.  
+Ein Brunnen dort, mit Wasser so klar,  
+Die Herden versammelt, die Herzen so wahr.  
+„Woher seid ihr, Brüder, sagt mir doch,  
+Kennt ihr Laban? Ist er wohl noch froh?“  
+
+(Chorus)  
+Oh, Brunnen des Lebens, fließend und rein,  
+Du schenkst uns Hoffnung, du lässt uns gedeih’n.  
+In deiner Nähe blüht die Sehnsucht auf,  
+Du stillst unser Durst, du gibst uns den Glauben,  
+In dir finden wir unsern neuen Lauf.  
+
+(Vers 2)  
+Da kam Rahel, mit Schafen so zart,  
+Jakobs Herz schlug, die Liebe ward smart.  
+Er wälzte den Stein, das Wasser floss,  
+Tränkte die Herden, und sein Herz war groß.  
+„Ich diene dir, Laban, um Rahel zu gewinnen,  
+Sieben Jahre, um mit ihr zu beginnen.“  
+
+(Chorus)  
+Oh, Brunnen des Lebens, fließend und rein,  
+Du schenkst uns Hoffnung, du lässt uns gedeih’n.  
+In deiner Nähe blüht die Sehnsucht auf,  
+Du stillst unser Durst, du gibst uns den Glauben,  
+In dir finden wir unsern neuen Lauf.  
+
+(Bridge)  
+Doch die Wege sind nicht immer klar,  
+Verheißung und Zweifel, die Liebe ist rar.  
+Gott sieht unser Elend, er kennt unser Leid,  
+In der Dunkelheit führt er uns, stets bereit.  
+Lea gebar Söhne, das Herz war geteilt,  
+Doch Juda, der Lobpreis, der uns stets verweilt.  
+
+(Chorus)  
+Oh, Brunnen des Lebens, fließend und rein,  
+Du schenkst uns Hoffnung, du lässt uns gedeih’n.  
+In deiner Nähe blüht die Sehnsucht auf,  
+Du stillst unser Durst, du gibst uns den Glauben,  
+In dir finden wir unsern neuen Lauf.  
+
+(Outro)  
+So kommen wir her, mit Herzen voll Dank,  
+Für Wasser des Lebens, für den heiligen Klang.  
+In deinem Brunnen, da finden wir Ruh,  
+Oh, Herr, sei gepriesen, wir loben nur dich zu.`,
+        30: `[TITLE]  
+Gott hat gehört
+
+[Verse 1]  
+In der Stille, wo der Wunsch erwacht,  
+Rahel seufzt, die Hoffnung schlummert sacht.  
+„Gib mir Kinder, o Herr, ich flehe,“  
+Doch der Himmel bleibt still, die Antwort nicht zu sehen.
+
+[Chorus]  
+Gott hat gehört, in der Dunkelheit,  
+Sein Licht bricht durch, in der Einsamkeit.  
+Er wendet sich, nimmt die Schmach von mir,  
+Sein Segen fließt, durch das, was ich verlier.
+
+[Verse 2]  
+Bilha, die Magd, wird zum Zeichen der Gnade,  
+Zwei Söhne kommen, durch Gottes Gnaden.  
+Dan und Naphthali, Hoffnung blüht,  
+Gott spricht zu mir, wenn mein Herz nach ihm zieht.
+
+[Chorus]  
+Gott hat gehört, in der Dunkelheit,  
+Sein Licht bricht durch, in der Einsamkeit.  
+Er wendet sich, nimmt die Schmach von mir,  
+Sein Segen fließt, durch das, was ich verlier.
+
+[Bridge]  
+Oft kämpfen wir, oft fühlen wir uns klein,  
+Doch Gottes Treue wird immer bei uns sein.  
+Die Liebe, die er gibt, wird niemals enden,  
+In seinen Armen, dort kann ich mich wenden.
+
+[Verse 3]  
+Lea gebärt, und das Herz wird weit,  
+Sechs Söhne, ein Erbe, in der Dunkelheit.  
+Gott hat wohl beraten, er führt uns heim,  
+Durch alle Stürme, sein Licht wird unser sein.
+
+[Chorus]  
+Gott hat gehört, in der Dunkelheit,  
+Sein Licht bricht durch, in der Einsamkeit.  
+Er wendet sich, nimmt die Schmach von mir,  
+Sein Segen fließt, durch das, was ich verlier.
+
+[Outro]  
+Gott hat gehört, unser Schreien, unser Flehen,  
+In seiner Liebe werden wir nie untergehen.  
+Sein Wort bleibt wahr, sein Bund ist fest,  
+In ihm finden wir Frieden, in ihm sind wir gesegnet.`,
+        31: `[TITLE]  
+Gott, Der Mich Begleitet
+
+[Verse 1]  
+In der Nacht, als ich träumte, sah ich deine Macht,  
+Du sprachst zu mir, Jakob, mit Liebe und mit Pacht.  
+„Zieh zurück in dein Land, wo deine Wurzeln sind,  
+Ich bin bei dir, mein Kind, wie ein treuer Wind.“
+
+[Chorus]  
+Gott, der mich begleitet, stets in meiner Zeit,  
+In der Dunkelheit und Freude, du schenkst mir dein Geleit.  
+Kein Schatten kann mich halten, kein Sturm mich je entfremden,  
+Denn du, o HERR, bist bei mir, wirst mich nie verlassen.
+
+[Verse 2]  
+Laban sah mich an, sein Herz war gegen mich,  
+Doch du, mein Gott, hast stets für meine Freiheit gesprochen,  
+Zehnmal hat er meinen Lohn verändert und gebrochen,  
+Doch du hast mir die Fülle, die reiche Ernte versprochen.
+
+[Chorus]  
+Gott, der mich begleitet, stets in meiner Zeit,  
+In der Dunkelheit und Freude, du schenkst mir dein Geleit.  
+Kein Schatten kann mich halten, kein Sturm mich je entfremden,  
+Denn du, o HERR, bist bei mir, wirst mich nie verlassen.
+
+[Bridge]  
+Hebe die Augen, schau hinauf,  
+Sieh die Böcke, sprenklig, bunt, sie tragen die Hoffnung auf.  
+Du bist der Gott von Beth-El, der mich ruft,  
+In jedem Schritt, den ich gehe, spür ich deine Kraft und deinen Duft.
+
+[Chorus]  
+Gott, der mich begleitet, stets in meiner Zeit,  
+In der Dunkelheit und Freude, du schenkst mir dein Geleit.  
+Kein Schatten kann mich halten, kein Sturm mich je entfremden,  
+Denn du, o HERR, bist bei mir, wirst mich nie verlassen.
+
+[Outro]  
+Wenn die Nacht zu Ende geht, und das Licht neu beginnt,  
+Werde ich singen von deiner Treue, die für alle Zeit gewinnt.  
+Gott, der mich begleitet, ich vertraue dir voll und ganz,  
+In deiner Liebe, HERR, tanze ich im Glaubenskranz.`,
         32: `[LYRICS]
 [LYRICS]
 
@@ -1237,7 +1638,64 @@ Ein Altar, wir rufen aus:
 Dein Angesicht, es strahlt zu mir.“  
 In der Gemeinschaft, stark und weise,  
 Leben wir in deiner Gnade, oh, so leise.`,
-        34: ``,
+        34: `[TITLE]  
+Gnade in der Dunkelheit
+
+[Verse 1]  
+Oh Dina, Tochter der Verheißung,  
+Dein Herz in der Stille gebrochen,  
+In einem Land, wo Schatten wohnen,  
+Hast du die Liebe trügerisch gefunden.  
+Die Stimme ruft, die Herzen beben,  
+Ein schmerzhaft Schicksal, das wir leben.  
+
+[Chorus]  
+Gott, du bist unser Licht,  
+In der Dunkelheit, wo Hoffnung bricht.  
+Du siehst den Schmerz, du hörst das Weinen,  
+In deiner Gnade dürfen wir uns vereinen.  
+Erlösung kommt, wenn wir dich suchen,  
+Du bist der Weg, der uns stets ruft.
+
+[Verse 2]  
+Sichem, du hast in Lust gegriffen,  
+Hast in der Nacht ein Unrecht geschrieben.  
+Die Brüder kamen, mit Zorn im Herzen,  
+Für ihre Schwester, in tiefem Schmerzen.  
+Doch in der Wut, in der Trauer,  
+Wuchs eine Kraft, wie eine blühende Blume.
+
+[Chorus]  
+Gott, du bist unser Licht,  
+In der Dunkelheit, wo Hoffnung bricht.  
+Du siehst den Schmerz, du hörst das Weinen,  
+In deiner Gnade dürfen wir uns vereinen.  
+Erlösung kommt, wenn wir dich suchen,  
+Du bist der Weg, der uns stets ruft.
+
+[Bridge]  
+Wenn die Nacht uns umhüllt,  
+Führst du uns, bis der Morgen erfüllt.  
+Die Ketten brechen, die Schatten weichen,  
+In deinem Namen, Herr, wollen wir erreichen.  
+Die Hoffnung blüht in jedem Wort,  
+Du bist der Frieden an jedem Ort.
+
+[Chorus]  
+Gott, du bist unser Licht,  
+In der Dunkelheit, wo Hoffnung bricht.  
+Du siehst den Schmerz, du hörst das Weinen,  
+In deiner Gnade dürfen wir uns vereinen.  
+Erlösung kommt, wenn wir dich suchen,  
+Du bist der Weg, der uns stets ruft.
+
+[Outro]  
+Oh Dina, wir stehen hier,  
+In deinem Namen, Herr, führen wir.  
+Gemeinsam stark in Licht und Schatten,  
+Dein Bund mit uns wird ewig halten.  
+In der Dunkelheit, strahlt dein Licht,  
+Du bist der Gott, der uns nie vergisst.`,
         35: `(Verse 1)  
 Gott sprach zu Jakob, mach dich auf,  
 Zieh gen Beth-El, lass alles sein,  
@@ -1633,7 +2091,56 @@ Von der Not und der Gnade, die Gott ihnen tut.
 "Fürchtet euch nicht, der Herr ist hier,  
 Er führt uns, er liebt uns, das glauben wir."  
 Amen.`,
-        43: ``,
+        43: `[TITLE]  
+"Die Reise in Deine Güte"
+
+[Verse 1]  
+In der Dunkelheit, die Not drückt schwer,  
+Vater, wir suchen nach Brot, nach mehr.  
+Die Last der Sorgen, die Herzen so bang,  
+Doch Du bist der Weg, der uns wieder empfang.
+
+[Chorus]  
+Oh Gott, Du bist die Hoffnung in der Nacht,  
+Deine Güte führt uns, wenn der Sturm erwacht.  
+Mit offenen Armen, nimmst Du uns auf,  
+In Dir finden wir Frieden, Du bist unser Lauf.
+
+[Verse 2]  
+Juda spricht mutig, er bietet sich dar,  
+Für seinen Bruder, er trägt die Gefahr.  
+Vater, lass uns gehen, wir müssen es wagen,  
+In Deiner Barmherzigkeit, werden wir tragen.
+
+[Chorus]  
+Oh Gott, Du bist die Hoffnung in der Nacht,  
+Deine Güte führt uns, wenn der Sturm erwacht.  
+Mit offenen Armen, nimmst Du uns auf,  
+In Dir finden wir Frieden, Du bist unser Lauf.
+
+[Bridge]  
+Du hast uns versorgt, die Gaben sind groß,  
+In unserem Mangel, bist Du unser Trost.  
+Wenn die Furcht uns drückt, sei unser Licht,  
+In Deiner Nähe, fürchten wir nicht.
+
+[Verse 3]  
+Joseph, er weint, die Brüder sind hier,  
+Die Liebe erwacht, es fließt wie ein Bier.  
+Gott sei Dir gnädig, das Herz voller Brauch,  
+In der tiefsten Dunkelheit, führst Du uns auch.
+
+[Chorus]  
+Oh Gott, Du bist die Hoffnung in der Nacht,  
+Deine Güte führt uns, wenn der Sturm erwacht.  
+Mit offenen Armen, nimmst Du uns auf,  
+In Dir finden wir Frieden, Du bist unser Lauf.
+
+[Outro]  
+Die Reise zu Dir, sie führt uns zum Licht,  
+In Deiner Barmherzigkeit, fürchten wir nicht.  
+Oh Herr, lass uns singen, Dein Lob erklingt,  
+In der Liebe, die Du schenkst, unser Herz springt.`,
         44: `[Verse 1]  
 In der Dunkelheit, wo Zweifel regiert,  
 Steht ein Mann, der das Herz berührt.  
@@ -1722,7 +2229,50 @@ Ja, Joseph, unser Bruder, wir danken dir,
 Für die Rettung, für die Liebe, für das Leben hier,  
 In den Höhen und Tiefen, du bleibst bei uns,  
 Gott ist treu, unser Herz ist voll von Dank.`,
-        46: ``,
+        46: `[TITLE]  
+"Im Land der Verheißung"
+
+[Verse 1]  
+Israel zog mit Glauben, treu und stark,  
+Zu Beer-Seba, wo sein Herz er sprach.  
+Gott rief im Dunkel, Jakob, hör’ mein Wort,  
+Fürchte dich nicht, ich bin an diesem Ort.  
+
+[Chorus]  
+Komm, o Gott, geh mit uns, durch Nacht und Licht,  
+In Ägypten werden wir zum großen Volk,  
+Du bist der Gott, der nie vergisst,  
+Hältst unser Leben in deiner Hand, oh Licht.  
+
+[Verse 2]  
+Die Kinder Israels, sie folgten ihm,  
+Mit ihren Weibern und den Kindern, so schön.  
+In Gosen finden wir Frieden, so weit,  
+Denn du bist unser Führer, in jeder Zeit.  
+
+[Chorus]  
+Komm, o Gott, geh mit uns, durch Nacht und Licht,  
+In Ägypten werden wir zum großen Volk,  
+Du bist der Gott, der nie vergisst,  
+Hältst unser Leben in deiner Hand, oh Licht.  
+
+[Bridge]  
+Jakob sah Joseph, die Tränen flossen,  
+Ein Vater, der seinen Sohn nun genoss.  
+Lebendig bist du, in jedem Schmerz,  
+Du schenkst uns Hoffnung, du berührst unser Herz.  
+
+[Chorus]  
+Komm, o Gott, geh mit uns, durch Nacht und Licht,  
+In Ägypten werden wir zum großen Volk,  
+Du bist der Gott, der nie vergisst,  
+Hältst unser Leben in deiner Hand, oh Licht.  
+
+[Outro]  
+Im Land der Verheißung, wo du uns führst,  
+Ewige Treue, die niemals verliert.  
+Mit dir, o Gott, in der Dunkelheit,  
+Bringt unser Leben in die Herrlichkeit.`,
         47: `[Verse 1]  
 In der Dunkelheit, wo die Not regiert,  
 Kamen wir her, wo das Leben versiegt.  
@@ -1932,7 +2482,6 @@ In jeder Dunkelheit, bleibst Du bei mir.
 Durch die Zeiten, die kommen und gehen,  
 In Deinem Licht, werden wir stehen.`,
     },
-
     "02": {
         1: `[Verse 1]  
 In Ägyptens Land, wo Dunkelheit regiert,  
@@ -2085,7 +2634,75 @@ Mit jedem Schritt, den wir in Glauben gehen,
 Wirst du uns leiten, uns nie stehen lassen.  
 Oh, du bist der Gott, der uns führt,  
 In deinem Namen, da finden wir Ruh.`,
-        4: ``,
+        4: `[TITLE]  
+Gott der Wunder
+
+[Verse 1]  
+In der Wüste sprach der Herr,  
+„Mose, was hältst du in der Hand?  
+Ein Stab, ein Zeichen meiner Macht,  
+Wirf ihn hin, er wird verwandelt sein.  
+Die Schlange flieht, du fürchtest dich,  
+Doch greif sie, so wird sie neu,  
+Die Angst soll schwinden, der Glaube blüht,  
+Ich bin der Gott, der dich befreit.“
+
+[Chorus]  
+Glaubt, ihr Völker, hört die Stimme,  
+Der Herr, der Gott der Väter spricht.  
+Er wird euch führen, durch die Dunkelheit,  
+Mit Zeichen, Wundern, in das Licht.  
+Erhebt euch, kommt, lasst uns danken,  
+Für die Freiheit, die Er bringt,  
+Der Herr, der Gott von Abraham,  
+Er ist es, der uns singt.
+
+[Verse 2]  
+„Stecke deine Hand in deinen Busen,  
+Sieh das Zeichen, das ich dir gab.  
+Die Krankheit wird weichen,  
+Und du wirst sehen, ich bin der, der heilt.  
+Wenn sie nicht glauben, nimm das Wasser,  
+Es wird Blut auf dem trocknen Land.  
+Ich bin der Schöpfer, der dir das Leben gab,  
+Dein Mund wird reden, wenn du’s nicht kannst.“
+
+[Chorus]  
+Glaubt, ihr Völker, hört die Stimme,  
+Der Herr, der Gott der Väter spricht.  
+Er wird euch führen, durch die Dunkelheit,  
+Mit Zeichen, Wundern, in das Licht.  
+Erhebt euch, kommt, lasst uns danken,  
+Für die Freiheit, die Er bringt,  
+Der Herr, der Gott von Abraham,  
+Er ist es, der uns singt.
+
+[Bridge]  
+Mose, sein Herz war voller Zweifel,  
+Doch der Herr sprach: „Fürchte dich nicht,  
+Ich bin bei dir, ich gebe Kraft,  
+Mit deinem Bruder, er wird dir helfen.  
+Zusammen werden wir das Volk befreien,  
+Von der Last, dem Schmerz, der Pein,  
+Glaube, denn ich bin der Herr,  
+Ewig treu, in Liebe rein.“
+
+[Chorus]  
+Glaubt, ihr Völker, hört die Stimme,  
+Der Herr, der Gott der Väter spricht.  
+Er wird euch führen, durch die Dunkelheit,  
+Mit Zeichen, Wundern, in das Licht.  
+Erhebt euch, kommt, lasst uns danken,  
+Für die Freiheit, die Er bringt,  
+Der Herr, der Gott von Abraham,  
+Er ist es, der uns singt.
+
+[Outro]  
+Neigt euch nieder, betet an,  
+Der Gott, der euch befreit.  
+Sein Wort wird leben, seine Liebe bleibt,  
+In unsrem Herzen, ewig Zeit.  
+Amen.`,
         5: `[Verse 1]  
 In Ägyptens Nacht, so schwer wie Blei,  
 Ruft der Herr, sein Volk sei frei.  
@@ -2221,7 +2838,58 @@ Oh, der Herr, unser Gott, er bleibt uns treu,
 Sein Wort ist das Licht, das uns leitet,  
 In Dunkelheit und Angst, er gibt uns neu,  
 Freiheit und Frieden, die er uns bereitet.`,
-        8: ``,
+        8: `[TITLE]  
+*Herr, lass dein Volk ziehen*
+
+[LYRICS]
+
+Strophe 1:  
+In Ägyptens Nacht, das Volk gefangen,  
+Pharao hält es, sein Herz verhärtet.  
+Der Herr sprach zu Mose, "Geh und befreie,  
+Lass mein Volk ziehen, damit es mir diene."
+
+Refrain:  
+Herr, du bist der Gott der Wunder,  
+Dein Finger zeigt die Macht der Freiheit.  
+Mit Fröschen und mit Zeichen,  
+Du bringst das Licht in Dunkelheit.
+
+Strophe 2:  
+Die Wasser wimmeln, Frösche überall,  
+In Häusern und in Schlafgemächern,  
+Die Zauberer versuchten, doch konnten nicht siegen,  
+Der Herr allein, der kann uns befrieden.
+
+Refrain:  
+Herr, du bist der Gott der Wunder,  
+Dein Finger zeigt die Macht der Freiheit.  
+Mit Fröschen und mit Zeichen,  
+Du bringst das Licht in Dunkelheit.
+
+Bridge:  
+Und wenn das Ungeziefer uns umringt,  
+Du schaffst Erlösung, das Lied erklingt.  
+In Gosen bleibt dein Volk bewahrt,  
+Du bist der Herr, der nie versagt.
+
+Strophe 3:  
+Mose bat den Herrn, voller Vertrauen,  
+„Nimm das Ungeziefer, lass uns nicht dauern.“  
+Doch Pharao hörte nicht auf deine Stimme,  
+Sein Herz verhärtet, in finsterer Grimme.
+
+Refrain:  
+Herr, du bist der Gott der Wunder,  
+Dein Finger zeigt die Macht der Freiheit.  
+Mit Fröschen und mit Zeichen,  
+Du bringst das Licht in Dunkelheit.
+
+Outro:  
+O Herr, lass dein Volk ziehen,  
+In Freiheit tanzen, in deinem Licht.  
+Wir beten, vertrauen, dir allein,  
+Du bist der Gott, der immer bei uns sein.`,
         9: `[Verse 1]  
 Der HERR sprach zu Mose,  
 „Geh hin zu Pharao,  
@@ -2277,7 +2945,56 @@ Dein Name sei erhaben,
 Für alle Zeit, im Glaubensklang.  
 „Lass mein Volk, lass mein Volk,  
 Die Freiheit ruft, die Hoffnung lebt!“`,
-        10: ``,
+        10: `[TITLE]  
+Gott, der Herr der Freiheit
+
+[Verse 1]  
+In Ägyptens Dunkelheit, hörn wir den Ruf,  
+Ein Volk in Knechtschaft, verloren im Fluch.  
+Mose tritt ein, mit dem Wort des Herrn,  
+„Lass mein Volk ziehen, ich will sie befrein!“
+
+[Chorus]  
+Gott, der Herr der Freiheit,  
+Dein Licht bricht durch die Nacht.  
+Du führst uns aus der Dunkelheit,  
+In deine Herrlichkeit, oh Herr, wir sind bereit.  
+Dein Name sei gepriesen, auf ewig, Amen,  
+Denn du bist der Gott, der uns niemals verlässt.
+
+[Verse 2]  
+Pharaos Herzen verhärtet, er hört nicht auf dich,  
+Die Heuschrecken kommen, und die Erde zerbricht.  
+Doch in der Finsternis strahlt unser Licht,  
+Die Kinder Israels, geborgen in dir, oh Licht.
+
+[Chorus]  
+Gott, der Herr der Freiheit,  
+Dein Licht bricht durch die Nacht.  
+Du führst uns aus der Dunkelheit,  
+In deine Herrlichkeit, oh Herr, wir sind bereit.  
+Dein Name sei gepriesen, auf ewig, Amen,  
+Denn du bist der Gott, der uns niemals verlässt.
+
+[Bridge]  
+Du hörst unser Schreien, du siehst unser Leid,  
+Du gibst uns die Hoffnung, du bist bereit.  
+In jeder Prüfung, in jedem Sturm,  
+Du bist unser Fels, du hältst uns in Schwung.
+
+[Chorus]  
+Gott, der Herr der Freiheit,  
+Dein Licht bricht durch die Nacht.  
+Du führst uns aus der Dunkelheit,  
+In deine Herrlichkeit, oh Herr, wir sind bereit.  
+Dein Name sei gepriesen, auf ewig, Amen,  
+Denn du bist der Gott, der uns niemals verlässt.
+
+[Outro]  
+So lasst uns singen, ein neues Lied,  
+Für den Gott, der uns führt, der uns nie vergibt.  
+In deinem Namen, oh Herr, sind wir frei,  
+Von der Dunkelheit, in dein Licht, oh sei dabei.`,
         11: `[Verse 1]  
 In der Nacht, die Finsternis bricht,  
 Hör, o Herr, das Volk, das ruft,  
@@ -2547,7 +3264,50 @@ Immer und ewig, Amen,
 Lass uns dem HERRN singen,  
 Sein Lob, das bleibt bestehen.  
 Amen.`,
-        16: ``,
+        16: `[TITLE]  
+Wunderbares Brot des Himmels
+
+[Verse 1]  
+In der Wüste sind wir gezogen,  
+Hunger quält uns, wir sind verloren.  
+„Wollt’ Gott, wir wären in Ägypten geblieben,  
+Bei Fleisch und Brot, das uns gegeben.“  
+
+[Chorus]  
+Doch Du, Herr, hörst unser Murren,  
+Deine Gnade wird uns führen.  
+Brot vom Himmel, Fleisch in der Nacht,  
+Du bist der Gott, der für uns wacht.  
+
+[Verse 2]  
+Mose sprach, der Herr wird geben,  
+Brot und Fleisch, das Leben leben.  
+In der Wolke, Deine Herrlichkeit,  
+Für uns, Herr, bist Du bereit.  
+
+[Chorus]  
+Doch Du, Herr, hörst unser Murren,  
+Deine Gnade wird uns führen.  
+Brot vom Himmel, Fleisch in der Nacht,  
+Du bist der Gott, der für uns wacht.  
+
+[Bridge]  
+Man, so süß wie Honigtraum,  
+Gibst Du uns, Herr, in Deinem Raum.  
+Vierzig Jahre, Deine Treue bleibt,  
+In jedem Schritt, den Du uns leitest.  
+
+[Chorus]  
+Doch Du, Herr, hörst unser Murren,  
+Deine Gnade wird uns führen.  
+Brot vom Himmel, Fleisch in der Nacht,  
+Du bist der Gott, der für uns wacht.  
+
+[Outro]  
+So lass uns danken, Herr, für Dein Brot,  
+Die Wüste wird zum heiligen Ort.  
+Mit jedem Bissen, jedem Tag,  
+Singen wir, was Du uns gabst.`,
         17: `(Verse 1)  
 In der Wüste, trocken und leer,  
 Sahen wir nur Schatten und mehr,  
@@ -2595,8 +3355,108 @@ Der Herr ist mein Panier,
 Er führt uns durch jedes Jahr,  
 Sein Name erstrahlt, in der Dunkelheit,  
 Mit Dir, Herr, sind wir bereit.`,
-        18: ``,
-        19: ``,
+        18: `[TITLE]  
+Gott der Rettung
+
+[Verse 1]  
+In der Wüste, wo der Wind weht,  
+Hört Jethro, was der Herr bewegt.  
+Gott hat Israel aus Ägypten befreit,  
+Seine Hand führt uns in die Freiheit.  
+
+[Chorus]  
+Gelobt sei der Herr, der uns erlöst,  
+Von der Finsternis in das Licht,  
+Er ist größer als alle Götter,  
+Sein Name strahlt in unsern Herzen,  
+Wir beten an, wir beten an.
+
+[Verse 2]  
+Mose, müde von der Last,  
+Hört die Stimme, die ihm Rast.  
+Jethro spricht mit weiser Kraft,  
+Teile die Last, die Gott dir schafft.  
+
+[Chorus]  
+Gelobt sei der Herr, der uns erlöst,  
+Von der Finsternis in das Licht,  
+Er ist größer als alle Götter,  
+Sein Name strahlt in unsern Herzen,  
+Wir beten an, wir beten an.
+
+[Bridge]  
+Er wählt die Redlichen, die Ihn fürchten,  
+Lehrt den Weg, den wir gehen sollen.  
+In Gemeinschaft, stark und mutig,  
+Führen wir, die Seinen, in die Freiheit.  
+
+[Chorus]  
+Gelobt sei der Herr, der uns erlöst,  
+Von der Finsternis in das Licht,  
+Er ist größer als alle Götter,  
+Sein Name strahlt in unsern Herzen,  
+Wir beten an, wir beten an.
+
+[Outro]  
+In der Wüste, wo der Wind weht,  
+Hört Jethro, was der Herr bewegt.  
+Mit Glauben gehen wir voran,  
+Gott der Rettung, unser Lebensbahn.`,
+        19: `[TITLE] Auf Adlerflügeln getragen
+
+[Verse 1]  
+In der Wüste Sinai, da kamen wir,  
+Von Raphidim, dem Ort, wo wir waren,  
+Mose stieg hinauf, zum Gott so nah,  
+Der Herr sprach zu ihm, mit Macht und Klarheit.
+
+[Chorus]  
+Ihr seid mein Volk, auf Adlerflügeln getragen,  
+Hört die Stimme, die euch ruft zum Licht,  
+Ein heiliges Volk, ein Königreich der Gnaden,  
+Der ganze Erde Herr, führt uns in die Sicht.
+
+[Verse 2]  
+„Was ich taten kann, habt ihr gesehen,  
+Die Ägypter gefallen, ich hab euch befreit,  
+Seid bereit, was ich euch gebefehl’n,  
+Wascht eure Kleider, die Zeit ist bereit.“
+
+[Chorus]  
+Ihr seid mein Volk, auf Adlerflügeln getragen,  
+Hört die Stimme, die euch ruft zum Licht,  
+Ein heiliges Volk, ein Königreich der Gnaden,  
+Der ganze Erde Herr, führt uns in die Sicht.
+
+[Bridge]  
+Und am dritten Tag, da kam die Posaune,  
+Donner und Blitz, der Berg so erbebt,  
+Gott spricht zu uns, durch Mose die Stimme,  
+„Fürchtet euch nicht, denn ich bin euer Leben.“
+
+[Chorus]  
+Ihr seid mein Volk, auf Adlerflügeln getragen,  
+Hört die Stimme, die euch ruft zum Licht,  
+Ein heiliges Volk, ein Königreich der Gnaden,  
+Der ganze Erde Herr, führt uns in die Sicht.
+
+[Verse 3]  
+Mose stieg hinauf, der Herr ließ ihn hören,  
+Sein Wort, das uns leitet, in Dunkelheit Licht,  
+Seid heilig und rein, so fordert er uns,  
+Denn er ist der Gott, der unser Herz spricht.
+
+[Chorus]  
+Ihr seid mein Volk, auf Adlerflügeln getragen,  
+Hört die Stimme, die euch ruft zum Licht,  
+Ein heiliges Volk, ein Königreich der Gnaden,  
+Der ganze Erde Herr, führt uns in die Sicht.
+
+[Outro]  
+Auf Adlerflügeln, so hoch, so weit,  
+In der Wüste Sinai, gibt er uns die Freiheit.  
+Ein heiliges Volk, in seinem Namen vereint,  
+Der Herr ist bei uns, für alle Zeit.`,
         20: `[Verse 1]  
 Du sprachst, Herr, so klar und deutlich,  
 „Ich bin der HERR, dein Gott, der dich führt.  
@@ -2702,8 +3562,100 @@ Ewige Freiheit, du schenkst uns dein Licht,
 In dir, Herr, finden wir unser Gesicht.  
 Du bist stets bei uns, in Freude und Leid,  
 Ewig verbunden, in deiner Heiligkeit.`,
-        22: ``,
-        23: ``,
+        22: `[TITLE]  
+Gott der Gerechtigkeit
+
+[Verse 1]  
+Du bist der Herr, der sieht und weiß,  
+In Deinem Licht wird alles klar,  
+Die Herzen der Menschen, die Taten so klein,  
+Du schaffst Gerechtigkeit, Du bist uns nah.
+
+[Chorus]  
+O Herr, wir kommen zu Dir,  
+In Deiner Gnade finden wir hier,  
+Dein Wort gibt uns Trost, macht uns frei,  
+Du bist der Weg, die Wahrheit, das Leben, oh Heiliger Geist.
+
+[Verse 2]  
+Wenn wir verletzen, wenn wir stehlen,  
+Du forderst das Beste zurück,  
+Deine Liebe lässt uns nie alleine,  
+In der Dunkelheit schenkst Du unser Glück.
+
+[Chorus]  
+O Herr, wir kommen zu Dir,  
+In Deiner Gnade finden wir hier,  
+Dein Wort gibt uns Trost, macht uns frei,  
+Du bist der Weg, die Wahrheit, das Leben, oh Heiliger Geist.
+
+[Bridge]  
+Du sprichst zu uns, wenn wir uns verlieren,  
+Dein Zorn ergrimmt, doch Du bist barmherzig,  
+Witwen und Waisen, Du hörst ihr Schreien,  
+In Deinem Namen finden wir Frieden, oh Herr.
+
+[Chorus]  
+O Herr, wir kommen zu Dir,  
+In Deiner Gnade finden wir hier,  
+Dein Wort gibt uns Trost, macht uns frei,  
+Du bist der Weg, die Wahrheit, das Leben, oh Heiliger Geist.
+
+[Outro]  
+Gott der Gerechtigkeit, wir loben Dich,  
+In Deiner Gegenwart, da sind wir eins,  
+Du schenkst uns Hoffnung, Du schenkst uns Licht,  
+Ewig in Deinem Wort, in Deinem Heil.`,
+        23: `[TITLE]  
+Gehorsam in Deinem Licht
+
+[Verse 1]  
+Du sollst nicht glauben, was die Welt spricht,  
+Denn Falsches führt nur in die Dunkelheit.  
+Vor Gericht, im Streit, bleib treu,  
+Die Stimme des Rechten sei der Weg, der uns befreit.
+
+[Chorus]  
+Oh Herr, führ uns auf Deinem Pfad,  
+Lass uns hören, was Du sagst.  
+Wir sind Fremde in dieser Welt,  
+Doch in Deinem Wort, da finden wir Halt.
+
+[Verse 2]  
+Sieh den Geringen, der um Hilfe fleht,  
+Sein Herz ist schwer, sein Weg so weit.  
+Hilf ihm auf, wenn er zu Boden fällt,  
+In Deiner Liebe, oh Herr, sind wir vereint.
+
+[Chorus]  
+Oh Herr, führ uns auf Deinem Pfad,  
+Lass uns hören, was Du sagst.  
+Wir sind Fremde in dieser Welt,  
+Doch in Deinem Wort, da finden wir Halt.
+
+[Bridge]  
+Du sendest Deinen Engel vor uns her,  
+Er schützt uns, wo wir auch gehen.  
+Seinen Namen solln wir niemals vergessen,  
+In Dir, oh Herr, wird unser Leben geschehen.
+
+[Verse 3]  
+Sechs Jahre arbeiten, doch der siebte sei Dir,  
+Ein Fest der Ruhe, ein Fest für die Armen hier.  
+Dein Brot und Wasser, gesegnet sei unser Teil,  
+In Deiner Nähe, oh Herr, wird alles heil.
+
+[Chorus]  
+Oh Herr, führ uns auf Deinem Pfad,  
+Lass uns hören, was Du sagst.  
+Wir sind Fremde in dieser Welt,  
+Doch in Deinem Wort, da finden wir Halt.
+
+[Outro]  
+Lass uns stehen, fest in Deinem Licht,  
+Die Wahrheit bewahren, nie aus dem Blick.  
+Oh Herr, Du bist unser Ziel,  
+In Deinem Namen finden wir unser Spiel.`,
         24: `[Verse 1]  
 Du riefst zu Mose, komm herauf zu mir,  
 Mit Aaron, Nadab, und den Ältesten hier.  
@@ -2810,7 +3762,74 @@ Heiligtum, oh Heiligtum,
 Für immer werden wir sein,  
 In Deinem Licht, in Deinem Wort,  
 Oh Herr, Du bist allein.`,
-        26: ``,
+        26: `[TITLE]  
+Die Wohnung deiner Nähe
+
+[LYRICS]
+
+[Verse 1]  
+In der Stille der Nacht,  
+Baust du deine Wohnung auf,  
+Mit Teppichen aus Licht,  
+Und Cherubim, die uns schaun.  
+Blau und rot, die Farben leuchten,  
+Weißes Leinwand, rein und klar,  
+Fünfzig Haken, die uns bündeln,  
+In deiner Nähe, nah und wahr.
+
+[Chorus]  
+Komm, Herr, wir stehen hier,  
+In deiner Gegenwart,  
+Du bist das Licht, das uns führt,  
+In deinem heiligen Raum,  
+Wir beten an, wir sind vereint,  
+In der Wohnung deiner Nähe,  
+Wo dein Geist uns stets vereint.
+
+[Verse 2]  
+Zehn Bretter fest verbunden,  
+In deinem Namen stehen wir,  
+Mit gold'nen Riegeln, stark und treu,  
+Bauen wir die Hütte hier.  
+Der Vorhang trennt das Heilige,  
+Doch du bist der Gnadenstuhl,  
+In der Dunkelheit erstrahlst du,  
+Du bist unser Lebensziel.
+
+[Chorus]  
+Komm, Herr, wir stehen hier,  
+In deiner Gegenwart,  
+Du bist das Licht, das uns führt,  
+In deinem heiligen Raum,  
+Wir beten an, wir sind vereint,  
+In der Wohnung deiner Nähe,  
+Wo dein Geist uns stets vereint.
+
+[Bridge]  
+Du bist der sichere Ort,  
+Wo unsere Seelen ruh’n,  
+Die Liebe, die uns trägt,  
+Lässt uns in dir blüh’n.  
+Die Farben deiner Treue,  
+Sie leuchten hell und klar,  
+Mit jedem Atemzug,  
+Sind wir dir so nah.
+
+[Chorus]  
+Komm, Herr, wir stehen hier,  
+In deiner Gegenwart,  
+Du bist das Licht, das uns führt,  
+In deinem heiligen Raum,  
+Wir beten an, wir sind vereint,  
+In der Wohnung deiner Nähe,  
+Wo dein Geist uns stets vereint.
+
+[Outro]  
+In der Wohnung deiner Nähe,  
+Bleiben wir für alle Zeit,  
+Du bist unser Licht, oh Herr,  
+In dir finden wir die Freiheit.  
+Amen.`,
         27: `[Verse 1]  
 Du hast uns gerufen, oh Herr, in dein Licht,  
 Ein Altar aus Akazienholz, stark und schlicht.  
@@ -2911,8 +3930,100 @@ In deinem Licht, Herr, bleiben wir,
 Heilig dem Herrn, dir sei das Lob.  
 Für immer, ewig, in deiner Gnade,  
 Eingehüllt in dein göttliches Wort.`,
-        29: ``,
-        30: ``,
+        29: `[TITLE]  
+Weihe und Bund
+
+[Verse 1]  
+Vor Dir, oh Herr, kommen wir heran,  
+Mit Herzen voll Glauben, so gut wir's nur kann.  
+Ein junger Farren, zwei Widder, bereit,  
+Für die Weihe, die Du uns bereitest im Geleit.
+
+[Chorus]  
+Heilig, heilig, Herr, wir bringen Dir Lob,  
+Mit Brot und mit Öl, in Deinem heiligen Stob.  
+Aaron und Söhne, sie stehen hier,  
+Im Dienst vor Dir, oh Herr, wir ehren Dich hier.
+
+[Verse 2]  
+Wasche die Hände, kleide uns neu,  
+Mit Purpur und Gold, oh Herr, wir sind treu.  
+Das Salböl fließt, ein Zeichen der Macht,  
+In Deiner Gegenwart wird alles vollbracht.
+
+[Chorus]  
+Heilig, heilig, Herr, wir bringen Dir Lob,  
+Mit Brot und mit Öl, in Deinem heiligen Stob.  
+Aaron und Söhne, sie stehen hier,  
+Im Dienst vor Dir, oh Herr, wir ehren Dich hier.
+
+[Bridge]  
+Das Blut des Opfers, es spricht von Verzeihn,  
+Ein ewiger Bund, Herr, wir gehören allein.  
+Du wohnst unter uns, als unser Gott,  
+Führst uns aus Dunkelheit, schenkst Licht und Trott.
+
+[Chorus]  
+Heilig, heilig, Herr, wir bringen Dir Lob,  
+Mit Brot und mit Öl, in Deinem heiligen Stob.  
+Aaron und Söhne, sie stehen hier,  
+Im Dienst vor Dir, oh Herr, wir ehren Dich hier.
+
+[TAG]  
+Heilig, heilig, Herr, wir bringen Dir Lob,  
+In unserem Herzen, da schlägt Dein Gebot.  
+Du bist unser Gott, der uns führt und leitet,  
+In Deiner Herrlichkeit, die nie uns scheidet.`,
+        30: `[TITLE]  
+Heiliges Räuchwerk
+
+[Verse 1]  
+Vor dem Vorhang, wo Du sprichst,   
+Ein Altar aus Gold, der Frieden bringt.  
+Die Räucherwolken steigen empor,   
+Ein Zeichen Deiner Gegenwart, oh Herr, wir verehren Dich hier.  
+
+[Chorus]  
+Heilig, heilig, sei Dein Name,  
+In diesem Raum, da spüren wir Deine Nähe.  
+Mit jedem Duft, der aufsteigt zum Thron,  
+Versöhnung, Frieden, in Dir sind wir froh.  
+
+[Verse 2]  
+Aaron bringt das Räuchwerk dar,  
+Jeden Morgen, so wunderbar.  
+Im Licht der Lampen, das Feuer brennt,  
+Ein ewiges Opfer, das nie enden kann.  
+
+[Chorus]  
+Heilig, heilig, sei Dein Name,  
+In diesem Raum, da spüren wir Deine Nähe.  
+Mit jedem Duft, der aufsteigt zum Thron,  
+Versöhnung, Frieden, in Dir sind wir froh.  
+
+[Bridge]  
+Wasche unsere Hände rein,  
+Mit Wasser, klar und heilig soll es sein.  
+Die Salbe fließt, ein Zeichen von Dir,  
+Du schenkst uns Leben, Du bist bei uns hier.  
+
+[Verse 3]  
+Das Räuchwerk, das wir bringen,  
+Mixe die Spezerei, lass uns singen.  
+Edelste Myrrhe, Zimt und Kalmus,  
+In Deinem Licht, da finden wir Trost.  
+
+[Chorus]  
+Heilig, heilig, sei Dein Name,  
+In diesem Raum, da spüren wir Deine Nähe.  
+Mit jedem Duft, der aufsteigt zum Thron,  
+Versöhnung, Frieden, in Dir sind wir froh.  
+
+[Outro]  
+Heilig, heilig, sei Dein Name,  
+In Ewigkeit, wir preisen Deine Liebe,  
+Ein Hochheiliges Opfer, in allem was wir tun,  
+Herr, wir kommen zu Dir, um in Dir zu ruhn.`,
         31: `[Verse 1]  
 Hör, o Herr, Dein Wort erklingt,  
 Mit Weisheit hast Du uns gesandt,  
@@ -2964,8 +4075,94 @@ Hör, o Herr, Dein Wort erklingt,
 Ein ewiger Bund, der nie zerbricht.  
 Mit Dir, o Gott, in Treue verbunden,  
 In Deinem Licht, sind wir gefunden.`,
-        32: ``,
-        33: ``,
+        32: `[TITLE]  
+Götzen und Barmherzigkeit  
+
+[Verse 1]  
+Das Volk, es sah, dass Mose verweilt,  
+In Zweifel fiel ihr Herz, das ihnen nicht verweilt.  
+Sie baten Aaron: "Mach uns ein Bild,  
+Ein Gott, der uns führt, wenn der Weg uns entglüht."  
+
+[Chorus]  
+Oh Herr, du bist unser Fels, unser Licht,  
+In Zeiten des Zweifels verlierst du uns nicht.  
+Vergib uns den Irrweg, den wir gingen,  
+Mit Liebe und Gnade wirst du uns bringen.  
+
+[Verse 2]  
+Sie gaben ihr Gold, und das Kalb ward gemacht,  
+Ein Zeichen des Glaubens in finsterer Nacht.  
+Doch Mose, er flehte, er bat um Verzeih’n,  
+"Vergib, o mein Gott, lass uns nicht allein."  
+
+[Chorus]  
+Oh Herr, du bist unser Fels, unser Licht,  
+In Zeiten des Zweifels verlierst du uns nicht.  
+Vergib uns den Irrweg, den wir gingen,  
+Mit Liebe und Gnade wirst du uns bringen.  
+
+[Bridge]  
+Die Tafeln zerbrochen, das Volk fiel in Scham,  
+Doch du, o Herr, bist barmherzig und nah.  
+Wir kehren zurück, wir suchen dein Licht,  
+In dir finden wir Hoffnung, dein Angesicht.  
+
+[Chorus]  
+Oh Herr, du bist unser Fels, unser Licht,  
+In Zeiten des Zweifels verlierst du uns nicht.  
+Vergib uns den Irrweg, den wir gingen,  
+Mit Liebe und Gnade wirst du uns bringen.  
+
+[Outro]  
+So führe uns weiter, o Gott, unser Ziel,  
+In Treue und Glauben, das ist unser Spiel.  
+Wir stehen vereint in deinem Namen,  
+Dein Volk, deine Kinder, dir stets zu nahen.`,
+        33: `[TITLE]  
+"Vor Deinem Angesicht"
+
+[Verse 1]  
+Du sprachst zu Mose, sandtest ihn aus,  
+In das Land, wo Milch und Honig fließt,  
+Dein Engel geht voran, führt uns hinaus,  
+Doch ohne Dein Angesicht, wer sind wir, wie gering?
+
+[Chorus]  
+Oh, Herr, lass Deine Herrlichkeit sehen,  
+Leite uns mit Deiner Gnade,  
+Inmitten der Stürme, beim Gehen,  
+Mit Dir, oh Gott, sind wir bereit.
+
+[Verse 2]  
+Das Volk trug Leid, sie legten den Schmuck,  
+Halsstarrig, doch Du sprichst mit Freundschaftsband,  
+Mose sucht Deinen Weg, gibt sich voll und ganz,  
+Weil nur Du uns führst, in das verheißene Land.
+
+[Chorus]  
+Oh, Herr, lass Deine Herrlichkeit sehen,  
+Leite uns mit Deiner Gnade,  
+Inmitten der Stürme, beim Gehen,  
+Mit Dir, oh Gott, sind wir bereit.
+
+[Bridge]  
+In der Felskluft hältst Du uns sicher,  
+Dein Angesicht verborgen, doch wir wissen,  
+Du bist hier, Du bist bei uns,  
+In jedem Schritt, in jedem Atemzug.
+
+[Chorus]  
+Oh, Herr, lass Deine Herrlichkeit sehen,  
+Leite uns mit Deiner Gnade,  
+Inmitten der Stürme, beim Gehen,  
+Mit Dir, oh Gott, sind wir bereit.
+
+[Outro]  
+Wir neigen uns, sehen Deine Wolkensäule,  
+Du bist unser Gott, wir folgen Dir,  
+In Deinem Licht, in Deiner Treue,  
+Für alle Zeit, bist Du bei uns hier.`,
         34: `[Verse 1]  
 In der Stille, hoch am Berg,  
 Ruft der Herr, sein Wort ist stark.  
@@ -3246,9 +4443,63 @@ Heilig dem Herrn, in Ewigkeit,
 In Deinem Namen, sind wir bereit.  
 Die Hütte, die Kleider, das Werk vollbracht,  
 Wir stehen in Dank, in Deiner Pracht.`,
-        40: ``,
-    },
+        40: `[TITLE]  
+Die Wolke Deiner Herrlichkeit  
 
+[Verse 1]  
+Du sprachst, oh Herr, zu Mose klar,  
+„Errichte mein Haus am ersten Tag,  
+Die Lade des Zeugnisses bring herbei,  
+Vor dem Vorhang sollst Du sie legen, oh so treu.“  
+
+[Verse 2]  
+Der Tisch, die Lampen, der Altar aus Gold,  
+Die Räucherwerk-Duft, den Du uns hold,  
+Mit Wasser waschen, rein und heilig sein,  
+Aaron und seine Söhne, Priester Dein.  
+
+[Chorus]  
+Deine Wolke, oh Herr, sie deckt uns ein,  
+In Deiner Herrlichkeit, lass uns bei Dir sein.  
+Du führst uns durch die Nacht, den Tag im Licht,  
+Wir stehen in Deinem Haus, voller Zuversicht.  
+
+[Verse 3]  
+Mose tat alles, wie Du es sprachst,  
+Die Hütte errichtet, im Herzen so stark.  
+Brot auf dem Tisch, das Licht leuchtet hell,  
+Dein Volk folgt der Wolke, oh Herr, unser Quell.  
+
+[Verse 4]  
+Wenn die Wolke sich hebt, ziehen wir mit,  
+Wenn sie bleibt, verweilen wir, in Deinem Schritt.  
+Deine Gegenwart, unser Weg und Ziel,  
+In Deiner Nähe, da finden wir viel.  
+
+[Chorus]  
+Deine Wolke, oh Herr, sie deckt uns ein,  
+In Deiner Herrlichkeit, lass uns bei Dir sein.  
+Du führst uns durch die Nacht, den Tag im Licht,  
+Wir stehen in Deinem Haus, voller Zuversicht.  
+
+[Bridge]  
+Oh, Heiligkeit, die uns umgibt,  
+Die Herrlichkeit, die nie versiegt.  
+Du bist unser Gott, unser Licht,  
+In Deiner Nähe, da fürchten wir nicht.  
+
+[Chorus]  
+Deine Wolke, oh Herr, sie deckt uns ein,  
+In Deiner Herrlichkeit, lass uns bei Dir sein.  
+Du führst uns durch die Nacht, den Tag im Licht,  
+Wir stehen in Deinem Haus, voller Zuversicht.  
+
+[Outro]  
+Wir beten, wir loben, in Deinem Namen,  
+Die Wolke Deiner Liebe, sie bleibt uns nah.  
+Oh Herr, wir preisen, was Du uns gibst,  
+In Deiner Wohnung, wo unser Herz lebt.`,
+    },
     "03": {
         1: `[Verse 1]  
 Höre, o Herr, Dein Ruf erschallt,  
@@ -3523,7 +4774,50 @@ Oh Herr, Dein Wort bleibt ewig wahr,
 In Dir, oh Jesus, sind wir klar.  
 Für immer, Herr, in Deiner Macht,  
 Erneuerst Du uns, Tag und Nacht.`,
-        7: ``,
+        7: `[TITLE]  
+Das Hochheilige Opfer
+
+[Verse 1]  
+Im Schatten des Altars, das Blut, das fließt,  
+Ein Hochheiliges Opfer, der Preis, der hier liegt.  
+Die Flamme, die züngelt, der Rauch steigt empor,  
+Ein Zeichen der Hoffnung, ein Bund mit dem Herrscher vor.
+
+[Chorus]  
+Heilig, heilig, der Herr ist heilig,  
+Sein Wort gibt uns Leben, Sein Geist macht uns frei.  
+Dank sei Dir, o Herr, für das Opfer, das lebt,  
+In Deinem Licht, wo die Dunkelheit verweht.
+
+[Verse 2]  
+Die Brust und die Schulter, sie gehören Dir,  
+In Dankopfer bringen wir, was wir haben hier.  
+Vereint in der Anbetung, bei Dir sind wir eins,  
+Die Liebe, die uns leitet, sie strömt wie der Wein.
+
+[Chorus]  
+Heilig, heilig, der Herr ist heilig,  
+Sein Wort gibt uns Leben, Sein Geist macht uns frei.  
+Dank sei Dir, o Herr, für das Opfer, das lebt,  
+In Deinem Licht, wo die Dunkelheit verweht.
+
+[Bridge]  
+Wir bringen Dir Lob, unser Herz ist bereit,  
+In der Stille Deiner Nähe, da findet die Seele Geleit.  
+Ewige Wahrheit, in Dir sind wir ganz,  
+In Deinem Namen, o Herr, tanzen wir den Dank.
+
+[Chorus]  
+Heilig, heilig, der Herr ist heilig,  
+Sein Wort gibt uns Leben, Sein Geist macht uns frei.  
+Dank sei Dir, o Herr, für das Opfer, das lebt,  
+In Deinem Licht, wo die Dunkelheit verweht.
+
+[Outro]  
+Im Schatten des Altars, das Blut, das fließt,  
+Ein Hochheiliges Opfer, das ewig nie vergißt.  
+In Deiner Gegenwart, da finden wir Ruh,  
+In Dank und Anbetung, o Herr, sei Dir Lob, sei Dir Lob!`,
         8: `[Verse 1]  
 O Herr, Du sprichst zu mir,  
 Versammle Dein Volk hier,  
@@ -3638,8 +4932,123 @@ Erscheinung Deiner Herrlichkeit,
 In unserer Mitte, für alle Zeit.  
 Die Freude des Herrn, sie führt uns zu Dir,  
 In Anbetung, oh Herr, stehen wir hier.`,
-        10: ``,
-        11: ``,
+        10: `[TITLE] Heilig, Heilig ist der HERR
+
+[VERS 1]  
+In der Stille, in der Nacht,  
+Nahmen Söhne Aarons, was nicht bedacht.  
+Fremdes Feuer, nicht vom Herrn gesandt,  
+Ein Opfer, das die Heiligkeit verbannt.  
+Das Feuer fiel, die Glut ergriff,  
+Vor dem HERRN, der heilig ist und spricht.
+
+[Chorus]  
+Heilig, heilig, heilig ist der HERR,  
+Er zeigt sich in Herrlichkeit,  
+Sein Wort ist Licht, sein Weg ist klar,  
+Führ uns in die Ewigkeit.  
+In der Stille, in der Nacht,  
+Sein Erbarmen uns bewacht.
+
+[VERS 2]  
+Mose sprach mit ernster Stimm’,  
+"Seht, der HERR ist heilig, komm zu ihm!"  
+Die Trauer wehte durch das Land,  
+Brüder weinend, Hand in Hand.  
+Doch Aaron, still, sein Herz gebrochen,  
+In der Dunkelheit, die Worte gesprochen.
+
+[Chorus]  
+Heilig, heilig, heilig ist der HERR,  
+Er zeigt sich in Herrlichkeit,  
+Sein Wort ist Licht, sein Weg ist klar,  
+Führ uns in die Ewigkeit.  
+In der Stille, in der Nacht,  
+Sein Erbarmen uns bewacht.
+
+[Bridge]  
+Lass uns erkennen, was heilig und rein,  
+Die Stimme des HERRN, in uns soll sein.  
+Lehre uns, oh HERR, das Gute zu tun,  
+In deiner Nähe dürfen wir ruh'n.
+
+[VERS 3]  
+Das Sündopfer, das uns versöhnt,  
+In der Stille, wo dein Geist lebt, wohnt.  
+Nimm die Last von uns, oh HERR,  
+Ewige Liebe, du bist unser Stern.  
+Aaron sprach, im Schmerz vereint,  
+Das Herz des Vaters, das uns nie weint.
+
+[Chorus]  
+Heilig, heilig, heilig ist der HERR,  
+Er zeigt sich in Herrlichkeit,  
+Sein Wort ist Licht, sein Weg ist klar,  
+Führ uns in die Ewigkeit.  
+In der Stille, in der Nacht,  
+Sein Erbarmen uns bewacht.
+
+[Outro]  
+Heilig, heilig, heilig, unser HERR,  
+In deinem Licht, da leben wir mehr.  
+Führe uns, oh HERR, auf deinem Pfad,  
+In Ewigkeit, wo dein Geist uns lad'.`,
+        11: `[TITLE]  
+Heilig, Heilig, Herr der Herrlichkeit
+
+[Verse 1]  
+Du sprichst zu uns, Herr, mit sanfter Stimme,  
+Lehrst uns den Weg, den wir gehen sollen,  
+Was rein und unrein, gibst Du uns zu wissen,  
+Dein Wort ist Licht, das unsere Schritte lenken kann.
+
+[Chorus]  
+Heilig, heilig, Herr der Herrlichkeit,  
+Du führst uns in die Wahrheit, allezeit.  
+Wir heiligen uns, vor Dir stehen wir,  
+In Deinem Licht, da finden wir zu Dir.
+
+[Verse 2]  
+Die Tiere der Erde, die Vögel der Lüfte,  
+Du schenkst uns Weisheit, lässt uns unterscheiden,  
+Was wir essen sollen, was unrein ist,  
+In Deinem Gesetz, da finden wir den Frieden.
+
+[Chorus]  
+Heilig, heilig, Herr der Herrlichkeit,  
+Du führst uns in die Wahrheit, allezeit.  
+Wir heiligen uns, vor Dir stehen wir,  
+In Deinem Licht, da finden wir zu Dir.
+
+[Bridge]  
+Denn Du bist der Gott, der uns befreit hat,  
+Aus der Dunkelheit, in Dein heiliges Land.  
+Wir erheben Deine Stimme,  
+Denn Du bist heilig, wir sind Dein Volk.
+
+[Chorus]  
+Heilig, heilig, Herr der Herrlichkeit,  
+Du führst uns in die Wahrheit, allezeit.  
+Wir heiligen uns, vor Dir stehen wir,  
+In Deinem Licht, da finden wir zu Dir.
+
+[Verse 3]  
+Die Schöpfung spricht, Dein Name sei gepriesen,  
+In jedem Tier und in jedem Wort,  
+Wir folgen Dir, Herr, mit reinen Herzen,  
+In Deinem Plan, da finden wir den Ort.
+
+[Chorus]  
+Heilig, heilig, Herr der Herrlichkeit,  
+Du führst uns in die Wahrheit, allezeit.  
+Wir heiligen uns, vor Dir stehen wir,  
+In Deinem Licht, da finden wir zu Dir.
+
+[ENDING]  
+Heilig, heilig, Herr, wir kommen zu Dir,  
+In Deiner Gegenwart, da sind wir hier.  
+Heilig, heilig, Herr der Herrlichkeit,  
+Für immer verbunden in Ewigkeit.`,
         12: `[Verse 1]  
 Du sprachst zu Mose, o Herr,  
 Ein Wort für Dein Volk, so klar,  
@@ -3729,7 +5138,56 @@ Heiliger Gott, Du reinigst die Herzen,
 Deine Gnade fließt, wie ein sanfter Strom.  
 Wir kommen zu Dir, mit all unseren Schmerzen,  
 In Deiner Nähe finden wir unser Zuhause.`,
-        14: ``,
+        14: `[TITLE]  
+Reinheit in Dir
+
+[Verse 1]  
+Wenn der Herr zu uns spricht,  
+Mit Liebe, die uns heilt,  
+Ein Vogel fliegt, die Freiheit ruft,  
+Das Mal der Sünde weicht.
+
+[Chorus]  
+Oh, Herr, Du machst uns rein,  
+In Deinem Blut, da bin ich frei,  
+Zedernholz und scharlachrot,  
+Deine Gnade, die uns trägt.
+
+[Verse 2]  
+Der Priester kommt, er sieht das Licht,  
+In unserem Herzen, er spricht,  
+„Du bist rein, dein Fleisch ist neu,  
+In der Liebe, die uns befreit.“
+
+[Chorus]  
+Oh, Herr, Du machst uns rein,  
+In Deinem Blut, da bin ich frei,  
+Zedernholz und scharlachrot,  
+Deine Gnade, die uns trägt.
+
+[Bridge]  
+Siebenmal besprengst Du mich,  
+Mit Wasser, das Leben spricht,  
+Und der lebendige Vogel fliegt,  
+In die Weite, wo Freiheit wiegt.
+
+[Verse 3]  
+Das Haus, das Du bewohnst,  
+Wird rein, das Heil ist hier,  
+Die Wände singen Loblied,  
+Deine Gegenwart, sie führt uns zu Dir.
+
+[Chorus]  
+Oh, Herr, Du machst uns rein,  
+In Deinem Blut, da bin ich frei,  
+Zedernholz und scharlachrot,  
+Deine Gnade, die uns trägt.
+
+[Outro]  
+Oh, Herr, Du machst uns rein,  
+In Dir allein, in Dir allein.  
+Wir kommen heim, wir kommen heim,  
+In Deine Liebe, in Dein Sein.`,
         15: `[Verse 1]  
 Inmitten der Schatten, da sprichst Du zu mir,  
 Dein Wort bringt das Licht, reinigt mein Herz hier.  
@@ -3778,7 +5236,50 @@ Reinheit und Frieden, das ist, was ich will.
 Für immer verbunden, in Dir bin ich frei,  
 Dein Wort ist mein Leben, mein Herz, es schreit:  
 Du machst mich rein!`,
-        16: ``,
+        16: `[TITLE]  
+Versöhnung in der Wüste
+
+[Verse 1]  
+Du sprachst zu Mose, in der Stille der Nacht,  
+Ein Wort der Hoffnung, das die Dunkelheit bricht.  
+Aaron, dein Bruder, soll kommen zu Dir,  
+Mit Opfer und Reue, sein Herz voller Zier.
+
+[Chorus]  
+Oh, Herr, wir kommen, vor Deinen Thron,  
+In der Wolke Deiner Herrlichkeit,  
+Reinige uns, oh Gott, von aller Schuld,  
+Versöhne unser Herz, in Deiner Treue, in der Zeit.
+
+[Verse 2]  
+Zwei Böcke stehen, eins für Dich, das andere flieht,  
+Ein Zeichen der Hoffnung, dass das Leben siegt.  
+Das Blut, das fließt, reinigt unsere Wunden,  
+In Deinem heiligen Namen, sind wir neu verbunden.
+
+[Chorus]  
+Oh, Herr, wir kommen, vor Deinen Thron,  
+In der Wolke Deiner Herrlichkeit,  
+Reinige uns, oh Gott, von aller Schuld,  
+Versöhne unser Herz, in Deiner Treue, in der Zeit.
+
+[Bridge]  
+Du trägst die Last, von all unserer Pein,  
+Die Sünde, die uns drückt, darf nicht länger sein.  
+In der Wüste, wo der Bock entflohn,  
+Erleben wir Freiheit, in Deinem Sohn.
+
+[Chorus]  
+Oh, Herr, wir kommen, vor Deinen Thron,  
+In der Wolke Deiner Herrlichkeit,  
+Reinige uns, oh Gott, von aller Schuld,  
+Versöhne unser Herz, in Deiner Treue, in der Zeit.
+
+[Outro]  
+Ein ewiges Recht, in Deinen Händen,  
+Versöhnung und Frieden, lass uns nicht enden.  
+Mit dankbarem Herzen, singen wir Dir,  
+Oh, Herr, unsere Hoffnung, wir vertrauen auf Dir.`,
         17: `[Verse 1]  
 Du sprachst, o Herr, zu Deinem Volk,  
 „Bringt eure Opfer vor die Tür,  
@@ -4055,7 +5556,74 @@ Du hast uns befreit, aus Ägyptenland,
 Sei unser Gott, und führe uns, oh HERR, in dein Land.  
 Geheiligt sei dein Name, für immer und ewig,  
 Du bist der HERR, der unsere Seelen regiert.`,
-        23: ``,
+        23: `[TITLE] Feste des HERRN
+
+[VERS 1]  
+Du sprachst zu uns, o HERR,  
+Versammeln soll'n wir uns hier,  
+Die Feste, die Du uns gabst,  
+Heilig, Herr, in Deinem Licht.  
+Sechs Tage arbeiten wir,  
+Doch der siebte, ein Ruhetag,  
+Heilig ist der Sabbat,  
+Vereint in Deinem Namen, stark.
+
+[Chorus]  
+O, lass uns kommen, lass uns singen,  
+Unsere Herzen Dir bringen,  
+Im Licht Deiner Feste, oh HERR,  
+Feiern wir, denn Du bist nah.  
+In Dankbarkeit und in Freude,  
+Huldigen wir Dir, der uns leitet,  
+Die Feste des HERRN, wir ehren Dich,  
+Ewiglich, o HERR, bist Du bei uns hier.
+
+[VERS 2]  
+Am Passah, unser Gedächtnis,  
+Befreit aus der Sklaverei,  
+Die ungesäuerten Brote,  
+Zeichen Deiner Treue, oh HERR.  
+Mit Erstlingen bringen wir,  
+Dank für all das Gute hier,  
+Du schenkst uns Überfluss,  
+Lass uns leben in Deinem Licht.
+
+[Chorus]  
+O, lass uns kommen, lass uns singen,  
+Unsere Herzen Dir bringen,  
+Im Licht Deiner Feste, oh HERR,  
+Feiern wir, denn Du bist nah.  
+In Dankbarkeit und in Freude,  
+Huldigen wir Dir, der uns leitet,  
+Die Feste des HERRN, wir ehren Dich,  
+Ewiglich, o HERR, bist Du bei uns hier.
+
+[Bridge]  
+Wir zählen die Tage,  
+Bis zur Ernte, die Du schenkst,  
+Sieben Wochen voller Gnade,  
+In Dir, o HERR, sind wir vereint.  
+Die Laubhütten, Erinnerung,  
+An Deine Liebe, die uns führt,  
+Wir wohnen in Deinem Schatten,  
+Du bist bei uns, unser Licht.
+
+[Chorus]  
+O, lass uns kommen, lass uns singen,  
+Unsere Herzen Dir bringen,  
+Im Licht Deiner Feste, oh HERR,  
+Feiern wir, denn Du bist nah.  
+In Dankbarkeit und in Freude,  
+Huldigen wir Dir, der uns leitet,  
+Die Feste des HERRN, wir ehren Dich,  
+Ewiglich, o HERR, bist Du bei uns hier.
+
+[Outro]  
+O HERR, Du bist heilig,  
+In Deinen Wegen bleiben wir,  
+Die Feste des HERRN, ein Zeichen,  
+Deine Liebe leitet uns hier.  
+Amen.`,
         24: `[Verse 1]  
 Du sprachst, o Herr, zu Mose klar,  
 Bring uns das Öl, das leuchtet wahr.  
@@ -4098,7 +5666,56 @@ Vor dein Angesicht, wir stehen hier,
 Ein einheitliches Recht, der Fremdling und wir,  
 Denn du, o Herr, bist unser Gott,  
 Für immer und ewig, in deinem Licht.`,
-        25: ``,
+        25: `[TITLE]  
+Das Halljahr des Herrn
+
+[VERS 1]  
+Auf dem Berg Sinai, sprach der Herr zu mir,  
+„Mein Volk, komm und höre, was ich dir geb.  
+Wenn ihr in das Land kommt, das ich euch geb,  
+Feiert den Sabbat, der für euch lebt.“
+
+[Chorus]  
+Sabbat des Landes, Ruhe der Seele,  
+In deinem Frieden, Herr, find ich mein Ziel.  
+Wir essen die Früchte, die du uns gibst,  
+In deinem Halljahr, wo Freiheit lebt.
+
+[VERS 2]  
+Sechs Jahre die Felder, die Trauben geerntet,  
+Doch im siebten Jahr, wird das Land gesegnet.  
+Was von selbst wächst, lass uns nicht ernten,  
+Für alle, die hungern, lass du uns lernen.
+
+[Chorus]  
+Sabbat des Landes, Ruhe der Seele,  
+In deinem Frieden, Herr, find ich mein Ziel.  
+Wir essen die Früchte, die du uns gibst,  
+In deinem Halljahr, wo Freiheit lebt.
+
+[Bridge]  
+Und wenn wir verarmen, lass uns nicht fallen,  
+Nehmt auf die Bedürftigen, die in dir hallen.  
+Denn wir sind deine Knechte, geführt aus der Nacht,  
+In deinem Licht, Herr, wird alles neu gemacht.
+
+[VERS 3]  
+Zählt die Sabbatjahre, sieben mal sieben,  
+Fünfzig Jahre, die Freiheit uns geben.  
+Ein Ruf durch das Land, die Posaune erklingt,  
+Das Halljahr des Herrn, das neue Leben bringt.
+
+[Chorus]  
+Sabbat des Landes, Ruhe der Seele,  
+In deinem Frieden, Herr, find ich mein Ziel.  
+Wir essen die Früchte, die du uns gibst,  
+In deinem Halljahr, wo Freiheit lebt.
+
+[Outro]  
+Wir sind Fremdlinge, doch du nimmst uns an,  
+In deinem Reich, Herr, fängt alles neu an.  
+Halleluja, wir singen dir Lob,  
+Im Halljahr des Herrn, finden wir Trost.`,
         26: `[Verse 1]  
 Höret, o Volk, die Stimme des Herrn,  
 Er spricht zu uns, in Liebe und Ehr.  
@@ -4200,7 +5817,6 @@ In jedem Schritt, in jeder Lage.
 Heilig ist der HERR, unser Gott, unser Licht,  
 In seiner Gegenwart, da fürchten wir nicht.`,
     },
-
     "04": {
         1: `[Verse 1]  
 In der Wüste, wo du sprichst,  
@@ -4313,8 +5929,116 @@ Mit Dir, o Herr, kein Weg ist weit.
 Unter Paniere, stark und klar,  
 In Deiner Treue, sind wir wahr.  
 Amen.`,
-        3: ``,
-        4: ``,
+        3: `[TITLE]  
+Gott, Du hast uns berufen
+
+[Verse 1]  
+Auf dem Berg Sinai, hörten wir Deine Stimme,  
+Du riefst Aaron, Deinen Treuen,  
+Mit Nadab, Abihu, Eleasar und Ithamar,  
+Die Priester, die Du gesalbt hast, oh Gott, wunderbar.  
+
+[Chorus]  
+Gott, Du hast uns berufen,  
+Uns zu dienen, Dir zu weih’n,  
+Die Leviten in Deinem Namen,  
+Lass uns treu und heilig sein.  
+Du bist unser Licht, Du bist unser Leben,  
+In Deinem Haus will ich verweilen,  
+Du hast uns auserwählt, oh Herr,  
+In Deinem Dienst, da will ich gedeihen.  
+
+[Verse 2]  
+Mit jedem Schritt, in Deinem Heiligtum,  
+Warten wir auf Deine Stimme,  
+Der Gersoniter lagern im Abendlicht,  
+Kahath und Merari, in Deinem Angesicht.  
+
+[Chorus]  
+Gott, Du hast uns berufen,  
+Uns zu dienen, Dir zu weih’n,  
+Die Leviten in Deinem Namen,  
+Lass uns treu und heilig sein.  
+Du bist unser Licht, Du bist unser Leben,  
+In Deinem Haus will ich verweilen,  
+Du hast uns auserwählt, oh Herr,  
+In Deinem Dienst, da will ich gedeihen.  
+
+[Bridge]  
+Mit jedem Opfer, das wir bringen,  
+Fremdes Feuer, das verwehrt,  
+Du schenkst uns Deinen Frieden,  
+In Deiner Nähe, da sind wir geehrt.  
+Wir zählen unsere Tage,  
+Und bringen Dir, was recht ist,  
+Du, der Höchste, unser Gott,  
+Führ uns in den himmlischen Licht.  
+
+[Chorus]  
+Gott, Du hast uns berufen,  
+Uns zu dienen, Dir zu weih’n,  
+Die Leviten in Deinem Namen,  
+Lass uns treu und heilig sein.  
+Du bist unser Licht, Du bist unser Leben,  
+In Deinem Haus will ich verweilen,  
+Du hast uns auserwählt, oh Herr,  
+In Deinem Dienst, da will ich gedeihen.  
+
+[Outro]  
+Gott, Du hast uns berufen,  
+In Deinem Dienst, oh Herr,  
+Wir stehen hier in Deiner Gnade,  
+Für immer, für immer, oh Herr.`,
+        4: `[TITLE]  
+Gott der Ordnung, Herr der Kraft
+
+[Verse 1]  
+In der Stille, hör' ich Deine Stimme,  
+Du rufst die Kinder Levi,  
+Von dreissig bis fünfzig, bereit zum Dienst,  
+Für Dein Heiligtum, oh, Herr, so nah.  
+
+[Chorus]  
+Gott der Ordnung, Herr der Kraft,  
+Du leitest uns, durch Deine Macht.  
+In Deiner Nähe, da sind wir stark,  
+Im Dienst für Dich, ein heiliges Werk.  
+
+[Verse 2]  
+Aaron und seine Söhne, sie decken,  
+Das Hochheilige, mit Ehre und Licht,  
+Die Lade des Zeugnisses, in Farben gehüllt,  
+Ein Bild Deiner Treue, das nie zerbricht.  
+
+[Chorus]  
+Gott der Ordnung, Herr der Kraft,  
+Du leitest uns, durch Deine Macht.  
+In Deiner Nähe, da sind wir stark,  
+Im Dienst für Dich, ein heiliges Werk.  
+
+[Bridge]  
+Die Kinder Kahath, die Last ist groß,  
+Doch Du bist bei uns, und wir sind bloß,  
+Werkzeuge Deiner Gnade, in Treue vereint,  
+Wir tragen Dein Licht, bis das Dunkel weicht.  
+
+[Verse 3]  
+Die Gersoniter, mit Teppichen und Tuch,  
+Sie schützen den Raum, in Deinem Bau,  
+Die Merariter tragen die Bretter, die Last,  
+Gemeinsam verwoben, in Deinem Verband.  
+
+[Chorus]  
+Gott der Ordnung, Herr der Kraft,  
+Du leitest uns, durch Deine Macht.  
+In Deiner Nähe, da sind wir stark,  
+Im Dienst für Dich, ein heiliges Werk.  
+
+[Outro]  
+So folgen wir Dir, mit Herzen bereit,  
+Für Deine Herrlichkeit, in jeder Zeit.  
+Gott der Ordnung, Herr der Kraft,  
+In Deinem Dienst, sind wir lebendig und stark.`,
         5: `Verse 1:  
 Du sprichst, o Herr, zu mir,  
 In deinem Wort, da find' ich hier  
@@ -4417,7 +6141,53 @@ Heilig, heilig, Herr der Herrlichkeit,
 In deinem Namen, leben wir bereit,  
 Für alle Zeiten, dir geweiht,  
 In deinem Frieden, Herr, sind wir befreit.`,
-        7: ``,
+        7: `[TITLE]  
+Einweihung des Altars
+
+[LYRICS]
+
+(Verse 1)  
+Mose, er stellte die Wohnung auf,  
+Geheiligtes Haus, wo wir dich loben,  
+Die Fürsten opferten, mit Herzen voll Glauben,  
+Vor dem Altar, in deinem Licht,  
+Bringen wir Gaben, Herr, dir zum Dienst.
+
+(Chorus)  
+Heiliger Gott, wir erheben dein Name,  
+In deiner Nähe, da fließt unser Leben,  
+Ein Altar der Dankbarkeit, voller Gnade,  
+Du bist das Licht, das uns führt, das uns hebt.
+
+(Verse 2)  
+Die Wagen und Rinder, die Gaben so groß,  
+Für die Leviten, du schenkst uns den Trost,  
+Mit silbernen Schalen, gefüllt mit dem Brot,  
+Und Räuchwerk, das du nimmst, du bist unser Gott.
+
+(Chorus)  
+Heiliger Gott, wir erheben dein Name,  
+In deiner Nähe, da fließt unser Leben,  
+Ein Altar der Dankbarkeit, voller Gnade,  
+Du bist das Licht, das uns führt, das uns hebt.
+
+(Bridge)  
+Wir kommen zusammen, die Stämme vereint,  
+In deiner Wohnung, wo deine Liebe scheint,  
+Mit jedem Opfer, mit jedem Gebet,  
+Seh’n wir das Wunder, das in uns lebt.
+
+(Chorus)  
+Heiliger Gott, wir erheben dein Name,  
+In deiner Nähe, da fließt unser Leben,  
+Ein Altar der Dankbarkeit, voller Gnade,  
+Du bist das Licht, das uns führt, das uns hebt.
+
+(Outro)  
+Mose hörte die Stimme, die zu ihm spricht,  
+Von der Lade des Zeugnisses, in deinem Licht,  
+Ein heiliges Volk, für dich bereit,  
+In deinem Bund, für alle Zeit.`,
         8: `[Verse 1]  
 Du sprachst zu Mose, Herr, so klar,  
 Ruf Aaron, lass ihn hören,  
@@ -4770,8 +6540,141 @@ Mit dir an unserer Seite, da sind wir vereint,
 In deinem Frieden, der niemals verpreist.  
 Amen, Amen, du bist unser Gott,  
 Für immer und ewig, du trägst unser Schicksal.`,
-        15: ``,
-        16: ``,
+        15: `[TITLE]  
+Euer Gott, der HERR
+
+[Verse 1]  
+In das Land, das Du uns gibst,  
+Führen uns Deine Hände,  
+Ein Opfer bringen wir Dir dar,  
+Ein süßer Duft in engen Wenden.  
+Mit Weizen, Öl und Wein,  
+Bringen wir, was Du verlangst,  
+Die Herzen voller Dankbarkeit,  
+In Deinem Licht, das stets uns umhangt.
+
+[Chorus]  
+Euer Gott, der HERR,  
+Er führt uns, Tag für Tag,  
+Sein Wort, das niemals endet,  
+Seine Liebe, die stets trägt.  
+Heilig sei der Name,  
+Der uns aus der Dunkelheit befreit,  
+Euer Gott, der HERR,  
+In Ewigkeit, in Herrlichkeit.
+
+[Verse 2]  
+Wenn wir aus Versehen fallen,  
+In der Dunkelheit verirrt,  
+Lass uns zu Dir kommen,  
+Im Glauben, dass Du uns führst.  
+Ein Ziegenbock für unser Leid,  
+Der Priester bringt das Opfer dar,  
+Deine Gnade, sie bleibt bereit,  
+Vergebung, wie ein Stern so klar.
+
+[Chorus]  
+Euer Gott, der HERR,  
+Er führt uns, Tag für Tag,  
+Sein Wort, das niemals endet,  
+Seine Liebe, die stets trägt.  
+Heilig sei der Name,  
+Der uns aus der Dunkelheit befreit,  
+Euer Gott, der HERR,  
+In Ewigkeit, in Herrlichkeit.
+
+[Bridge]  
+So schaut auf die Quasten,  
+Die Zeichen uns erinnern,  
+An Deine Gebote,  
+Die unser Leben gewinnen.  
+Wir halten fest am Glauben,  
+In Deinem Licht, oh HERR,  
+Gemeinsam stark im Glauben,  
+Für immer, immer mehr.
+
+[Chorus]  
+Euer Gott, der HERR,  
+Er führt uns, Tag für Tag,  
+Sein Wort, das niemals endet,  
+Seine Liebe, die stets trägt.  
+Heilig sei der Name,  
+Der uns aus der Dunkelheit befreit,  
+Euer Gott, der HERR,  
+In Ewigkeit, in Herrlichkeit.
+
+[Outro]  
+Euer Gott, der HERR,  
+In Ewigkeit bei uns,  
+Euer Gott, der HERR,  
+Erfüllt uns mit dem Frieden,  
+In seinem Licht, in seinem Wort,  
+Für alle Zeit, an jedem Ort.`,
+        16: `[TITLE]  
+Gott der Geister, höre unser Flehen
+
+[Verse 1]  
+In der Wüste, voller Klage,  
+Korah erhebt sich, sein Herz so schwer.  
+„Warum, Mose, führst du uns hierher?  
+Wir sind das Volk, das dir vertraut,  
+Doch in der Dunkelheit, da schreit die Trauer laut.  
+
+[Chorus]  
+O Herr, du Gott, der Herzen kennt,  
+Zeige uns den Weg, den du uns sendest.  
+Heiliger, der du uns erwählt,  
+Führe uns, wo dein Licht uns hält.  
+
+[Verse 2]  
+Mose fiel nieder, so voller Angst,  
+„Gott, du bist der, der uns hier rangt.  
+Wer ist heilig, wer darf nah’n?  
+Du allein, Herr, wirst uns erwählen,  
+Deine Stimme wird uns niemals fehlen.  
+
+[Chorus]  
+O Herr, du Gott, der Herzen kennt,  
+Zeige uns den Weg, den du uns sendest.  
+Heiliger, der du uns erwählt,  
+Führe uns, wo dein Licht uns hält.  
+
+[Bridge]  
+Wir weichen von dem Bösen,  
+Von Korah und seinem Zorn,  
+Wir suchen nur dein Angesicht,  
+Führe uns zum neuen Morgen.  
+Aaron trägt die Räucherschale,  
+Stellt sich zwischen Tod und Leben,  
+Gott, du hörst unser Rufen,  
+Lass uns in dein Licht streben.  
+
+[Chorus]  
+O Herr, du Gott, der Herzen kennt,  
+Zeige uns den Weg, den du uns sendest.  
+Heiliger, der du uns erwählt,  
+Führe uns, wo dein Licht uns hält.  
+
+[Verse 3]  
+In deiner Nähe, da finden wir Frieden,  
+Dein Wort ist unser Licht, das nie wird fliehen.  
+Die Wolke deiner Herrlichkeit,  
+Füllt unseren Raum, bringt uns Bereitschaft.  
+Wir preisen dich, für deine Treue,  
+In dir allein, da finden wir Freude.  
+
+[Chorus]  
+O Herr, du Gott, der Herzen kennt,  
+Zeige uns den Weg, den du uns sendest.  
+Heiliger, der du uns erwählt,  
+Führe uns, wo dein Licht uns hält.  
+
+[Outro]  
+Gott der Geister, hör unser Flehen,  
+In deiner Liebe dürfen wir stehen.  
+Führe uns, Herr, auf deinen Wegen,  
+In deiner Wahrheit, da sind wir erregt.  
+Amen.`,
         17: `1. Vers  
 In der Hütte, still und heilig,  
 Legte Mose die Stecken nieder,  
@@ -5119,7 +7022,74 @@ Mit Glauben und Hoffnung, wir beten.
 Segnet, o Herr, Dein Volk,  
 In Ewigkeit, in Deinem Licht,  
 Sind wir geborgen, sind wir geborgen.`,
-        24: ``,
+        24: `[TITLE]  
+Segnungen in der Wüste
+
+[Verse 1]  
+In der Stille der Wüste,  
+Hebt Bileam sein Blick,  
+Gott hat Israel gesegnet,  
+Sein Volk, ein heiliges Stück.  
+Die Hütten blühen in Pracht,  
+Wie Gärten an Wasserquell,  
+Die Freude des Herrn entfacht,  
+Sein Segen strahlt so hell.
+
+[Chorus]  
+Oh, wie fein sind deine Wege,  
+Du Gott, der uns begleitet,  
+In der Wüste, in der Freude,  
+Sein Licht uns stets geleitet.  
+Ein Stern, er wird erstrahlen,  
+Ein Zepter wird sich heben,  
+In den Herzen, in den Seelen,  
+Leben wir für dein Streben.
+
+[Verse 2]  
+Wie ein Löwe, stark und kühn,  
+In der Dunkelheit, da wacht,  
+Der König wird uns nie versauen,  
+Sein Wort, das uns entfacht.  
+Die Völker werden hören,  
+Sein Name wird erstrahlen,  
+In der Kette seiner Liebe,  
+Wird sein Volk niemals fallen.
+
+[Chorus]  
+Oh, wie fein sind deine Wege,  
+Du Gott, der uns begleitet,  
+In der Wüste, in der Freude,  
+Sein Licht uns stets geleitet.  
+Ein Stern, er wird erstrahlen,  
+Ein Zepter wird sich heben,  
+In den Herzen, in den Seelen,  
+Leben wir für dein Streben.
+
+[Bridge]  
+Wer kann gegen dich bestehen?  
+Wer kann deinen Plan zerstören?  
+Du bist treu in allen Wegen,  
+Dein Wort wird nie verfehlen.  
+Der Segen fließt wie Wasser,  
+Das uns still und sanft umhüllt,  
+In dir finden wir die Freiheit,  
+Die dein Geist uns immer füllt.
+
+[Chorus]  
+Oh, wie fein sind deine Wege,  
+Du Gott, der uns begleitet,  
+In der Wüste, in der Freude,  
+Sein Licht uns stets geleitet.  
+Ein Stern, er wird erstrahlen,  
+Ein Zepter wird sich heben,  
+In den Herzen, in den Seelen,  
+Leben wir für dein Streben.
+
+[Outro]  
+In der Wüste, in der Pracht,  
+Gott führt uns durch die Nacht,  
+Sein Segen, unser Erbe,  
+Für immer in seiner Stärke.`,
         25: `[Verse 1]  
 In Sittim, dort geschah es,  
 Das Volk fiel ab, dem Baal geweiht,  
@@ -5183,7 +7153,62 @@ Ewiger Bund, du bist der Grund,
 Für unser Leben, für die Stund',  
 In dir allein, da finden wir Frieden,  
 Ewig in dir, für alle Zeiten beschieden.`,
-        26: ``,
+        26: `[TITLE]  
+Gott, Du führst uns durch die Zeit  
+
+[Verse 1]  
+In der Wüste, fern und weit,  
+Zählst Du, Herr, Dein Volk bereit.  
+Von Ruben bis zu Josephs Spross,  
+Jeder Name, jeder Schoss.  
+Du hast uns aus Ägypten befreit,  
+Mit Deiner Kraft, in Deiner Zeit.  
+
+[Chorus]  
+Du bist unser Erbe, unser Licht,  
+Weisheit und Frieden, Du verlässt uns nicht.  
+Durch die Weiten des Lebens,  
+Führst Du uns, Herr, in Dein verheiß'nes Land.  
+Mit jedem Schritt, den wir gehen,  
+Hältst Du uns fest in Deiner Hand.  
+
+[Verse 2]  
+Die Kinder Simeons, in ihren Reihen,  
+Hör'n Deine Stimme, die uns leiten.  
+So viele Stämme, so viele Lieder,  
+Ein vereintes Volk, wir stehen wieder.  
+Du zählst die Herzen, Du siehst uns an,  
+Deine Treue bleibt, so wie sie begann.  
+
+[Chorus]  
+Du bist unser Erbe, unser Licht,  
+Weisheit und Frieden, Du verlässt uns nicht.  
+Durch die Weiten des Lebens,  
+Führst Du uns, Herr, in Dein verheiß'nes Land.  
+Mit jedem Schritt, den wir gehen,  
+Hältst Du uns fest in Deiner Hand.  
+
+[Bridge]  
+Und wenn der Sturm uns umgibt,  
+Deine Worte, die uns lieben.  
+Aus der Dunkelheit, ins Licht,  
+Gibt es Hoffnung, die nicht bricht.  
+Du bist der Gott, der uns befreit,  
+In Deinem Namen, für alle Zeit.  
+
+[Chorus]  
+Du bist unser Erbe, unser Licht,  
+Weisheit und Frieden, Du verlässt uns nicht.  
+Durch die Weiten des Lebens,  
+Führst Du uns, Herr, in Dein verheiß'nes Land.  
+Mit jedem Schritt, den wir gehen,  
+Hältst Du uns fest in Deiner Hand.  
+
+[Outro]  
+Gott, Du führst uns, sei gepriesen,  
+In Deinem Namen, sei es entschieden.  
+Wir sind Dein Volk, für alle Zeit,  
+In Deiner Liebe, sind wir bereit.`,
         27: `[Verse 1]  
 Die Töchter kamen, voller Mut,  
 Vor Mose, dem Priester, in der Glut,  
@@ -5271,7 +7296,58 @@ Kommt zusammen, singt den neuen Gesang,
 Für den, der uns trägt, für den, der uns fangt.  
 In jedem Opfer, in jedem Gebet,  
 Bleibt Dein Licht bei uns, bis die Ewigkeit besteht.`,
-        29: ``,
+        29: `[TITLE]  
+Heilig ist der Tag des Herrn
+
+[LYRICS]
+
+[Verse 1]  
+In der Stille des heiligen Morgens,  
+Versammeln wir uns, Herr, zu Dir,  
+Ein Brandopfer bringen wir vor Deinen Altar,  
+Ein junger Farren, unser Lob sei Dir.
+
+[Chorus]  
+Heilig, heilig, Herr der Herrlichkeit,  
+Wir feiern Dich in Einigkeit,  
+Mit loderndem Feuer, das unsere Herzen wärmt,  
+Du nimmst das Opfer, das Du so sehr begehrst.
+
+[Verse 2]  
+Sieben Lämmer, rein und ohne Fehl,  
+Zusammen stehen wir, in Deinem Licht,  
+Mit Speisopfern, die Du wohlgefällig nennst,  
+Ein Trankopfer, das Deine Liebe spricht.
+
+[Chorus]  
+Heilig, heilig, Herr der Herrlichkeit,  
+Wir feiern Dich in Einigkeit,  
+Mit loderndem Feuer, das unsere Herzen wärmt,  
+Du nimmst das Opfer, das Du so sehr begehrst.
+
+[Bridge]  
+Am zehnten Tag, wir kasteien uns,  
+In Demut kommen wir, voller Vertrauen,  
+Du versöhnst uns, Du schenkst uns Frieden,  
+In Deiner Nähe lässt Du uns erbauen.
+
+[Verse 3]  
+Die Feste feiern, sieben Tage lang,  
+Wir bringen Dir, was unser Herz bewegt,  
+Ein Ziegenbock für unsere Sündenlast,  
+Deine Gnade, die uns ewig prägt.
+
+[Chorus]  
+Heilig, heilig, Herr der Herrlichkeit,  
+Wir feiern Dich in Einigkeit,  
+Mit loderndem Feuer, das unsere Herzen wärmt,  
+Du nimmst das Opfer, das Du so sehr begehrst.
+
+[Outro]  
+So bringen wir Dir, was Du uns gegeben,  
+Lob und Dank sei Dir, o Herr, für unser Leben,  
+Heilig ist der Tag, den Du uns schenkst,  
+Für immer, o Herr, unser Herz Dir lenkt.`,
         30: `[Verse 1]  
 Du rufst mich, Herr, in Stille,  
 Dein Wort, es führt mich heim.  
@@ -5384,7 +7460,62 @@ In der Stille, nach dem Streit,
 Bist Du der Frieden, der uns befreit.  
 Wir bringen das Gold, als Zeichen des Lebens,  
 Für all das Gute, das Du uns gegeben.`,
-        32: `###`,
+        32: `### [TITLE]
+Das Land des Segens
+
+### [LYRICS]
+
+[Verse 1]  
+In der Ferne, das Land, das blüht,  
+Wo der HERR uns Gnade gibt.  
+Die Kinder Gad und Ruben sahn,  
+Ein Ort, der für das Vieh erblühn kann.  
+Doch die Stimme ruft uns weiter,  
+In das verheiß'ne Land, das uns erfreut.  
+
+[Chorus]  
+Wir ziehen heran, dem HERRN vertrau'n,  
+Mit Mut und Glauben, wir werden bau’n.  
+In die Weiten, in die Freiheit,  
+Das Land, das Du, o HERR, bereitest.  
+Ein Erbe für uns, stark und rein,  
+Du bist das Licht, das ewig scheint.  
+
+[Verse 2]  
+Mose sprach: „Seid treu und stark,  
+Lasst nicht ab von diesem Pfad.  
+Denn wo ihr weicht, da weicht auch er,  
+Die Verheißung, die wir erbat’n.“  
+Doch voller Eifer, bereit zum Streit,  
+Wollen wir gehen, in die Geleit.  
+
+[Chorus]  
+Wir ziehen heran, dem HERRN vertrau'n,  
+Mit Mut und Glauben, wir werden bau’n.  
+In die Weiten, in die Freiheit,  
+Das Land, das Du, o HERR, bereitest.  
+Ein Erbe für uns, stark und rein,  
+Du bist das Licht, das ewig scheint.  
+
+[Bridge]  
+Du schenkst uns Frieden, Du schenkst uns Kraft,  
+In Dir allein, o HERR, sind wir geschafft.  
+Die Städte, die wir bauen, für unsere Kind',  
+In Deinem Namen, der uns verbindet.  
+
+[Chorus]  
+Wir ziehen heran, dem HERRN vertrau'n,  
+Mit Mut und Glauben, wir werden bau’n.  
+In die Weiten, in die Freiheit,  
+Das Land, das Du, o HERR, bereitest.  
+Ein Erbe für uns, stark und rein,  
+Du bist das Licht, das ewig scheint.  
+
+[Outro]  
+So leitet uns der HERR,  
+In das Land des Segens, fern und nah.  
+Für Generationen, für alle Zeit,  
+In Dir, o HERR, finden wir die Freiheit.`,
         33: `[Verse 1]  
 Aus Ägypten zog das Volk,  
 Frei von Last, von Sklaverei,  
@@ -5572,7 +7703,6 @@ Denn in Deinen Händen, Herr, ist unser Saft.
 Ein Erbe, das bleibt, für alle Zeit,  
 In Dir, oh Herr, finden wir unser Geleit.`,
     },
-
     "05": {
         1: `[Verse 1]  
 Mose sprach zu uns, in der Wüste,  
@@ -5627,7 +7757,63 @@ Der Weg des Glaubens, wir gehen voran,
 Mit Gott an unserer Seite, unser Leben, unser Plan.  
 In der Wüste und im Kampf, er bleibt unser Lied,  
 Seine Liebe trägt uns, wenn die Hoffnung siegt.`,
-        2: ``,
+        2: `[TITLE]  
+Auf der Reise durch die Wüste
+
+[VERS 1]  
+Wir wandten uns zur Wüste,  
+Auf dem Pfad, den Du uns zeigtest,  
+Mit den Brüdern, den Kindern Esau,  
+Die Angst lag in ihren Herzen,  
+Doch Du gabst uns Deinen Frieden,  
+Für unsern Weg, oh Herr, wir beten.
+
+[Chorus]  
+Du, der Herr, bist mit uns,  
+In der Wüste, in der Not,  
+Deine Hand führt uns stets,  
+In Deinem Licht, da leben wir,  
+Du hast uns nicht verlassen,  
+In Deiner Treue, oh Herr, sind wir geborgen.
+
+[VERS 2]  
+Jahrelang durch diese Wüste,  
+Hast Du uns stets geleitet,  
+Kein Mangel war zu finden,  
+Deine Gnade uns begleitet.  
+Wenn die Stürme uns umgeben,  
+Halt uns fest, oh Herr, wir leben.
+
+[Chorus]  
+Du, der Herr, bist mit uns,  
+In der Wüste, in der Not,  
+Deine Hand führt uns stets,  
+In Deinem Licht, da leben wir,  
+Du hast uns nicht verlassen,  
+In Deiner Treue, oh Herr, sind wir geborgen.
+
+[Bridge]  
+So zieh’n wir weiter,  
+Durch das Land, das Du uns gibst,  
+Wir vertrauen auf Dein Wort,  
+Du bist unser Schild, unser Licht.  
+In jedem Kampf, in jedem Schritt,  
+Hast Du uns stark gemacht, oh Herr,  
+Wir loben Dich, wir loben Dich!
+
+[Chorus]  
+Du, der Herr, bist mit uns,  
+In der Wüste, in der Not,  
+Deine Hand führt uns stets,  
+In Deinem Licht, da leben wir,  
+Du hast uns nicht verlassen,  
+In Deiner Treue, oh Herr, sind wir geborgen.
+
+[Outro]  
+Auf der Reise durch die Wüste,  
+Mit Dir, Herr, gehen wir voran,  
+Deine Liebe, unser Fundament,  
+Für alle Zeit, Amen, Amen.`,
         3: `### Titel: "Fürchte dich nicht"
 
 #### Strophe 1
@@ -5834,7 +8020,50 @@ In allen Tagen, er trägt uns im Brot.
 Sein Wort, unser Schild, sein Geist, unser Licht,  
 Für alle Zeiten, verlier’n wir nicht.  
 Amen.`,
-        7: ``,
+        7: `[TITLE]  
+Heiliges Volk, Erklärte Treue
+
+[Verse 1]  
+Du bringst uns in das Land, o Herr,  
+Wo Ströme fließen, reich und leer.  
+Die Völker fallen, stark und groß,  
+Doch Du bist mit uns, unser Trost.
+
+[Chorus]  
+Heiliges Volk, das Du erwählt,  
+In Deiner Liebe, die niemals fehlt.  
+Wir stehen fest, in Deinem Licht,  
+Du bist der Gott, der niemals bricht.
+
+[Verse 2]  
+Die Altäre der Götzen brechen wir,  
+Zerreißen Ketten, kommen zu Dir.  
+Die Stimmen der Welt, sie schallen laut,  
+Doch in Dir, Herr, ist unser Braut.
+
+[Chorus]  
+Heiliges Volk, das Du erwählt,  
+In Deiner Liebe, die niemals fehlt.  
+Wir stehen fest, in Deinem Licht,  
+Du bist der Gott, der niemals bricht.
+
+[Bridge]  
+In großer Not, in dunkler Zeit,  
+Erinnern wir uns, Du bist stets bereit.  
+Mit mächtiger Hand, hast Du uns befreit,  
+Dein Treue bleibt uns, in Ewigkeit.
+
+[Chorus]  
+Heiliges Volk, das Du erwählt,  
+In Deiner Liebe, die niemals fehlt.  
+Wir stehen fest, in Deinem Licht,  
+Du bist der Gott, der niemals bricht.
+
+[Outro]  
+So halten wir fest, was Du uns gabst,  
+In Deinem Bund, den Du uns erlabt.  
+Gesegnet und stark, in Deinem Namen,  
+Heiliges Volk, wir werden nicht klagen.`,
         8: `[Verse 1]  
 In der Wüste geführt, durch die Nacht,  
 Dein Weg, oh Herr, hat uns stets bewacht.  
@@ -5988,7 +8217,60 @@ Dein Wort, o Herr, ist unser Leben,
 In dir allein, wird unser Herz streben.  
 Wir danken dir, für deine Treue,  
 In deinem Licht, finden wir die Freude.`,
-        11: ``,
+        11: `[TITLE]  
+Gehorche Deinem Gott
+
+[Verse 1]  
+Wir kommen, Herr, mit Herzen rein,  
+Leben lang soll uns Dein Gesetz sein.  
+In der Wüste, Du gabst uns Licht,  
+Deine Wunder, Herr, vergess’ ich nicht.  
+
+Die Ägypter fielen, Deine Hand war stark,  
+Führst uns sicher durch den dunklen Park.  
+Glauben, Hoffnung, in Dir allein,  
+Mit Dir, o Herr, will ich stets sein.  
+
+[Chorus]  
+Oh, höre, oh, höre, was der Herr uns spricht,  
+Liebe, gehorche, lass die Wahrheit nicht.  
+Sein Segen fließt, wie Milch und Honig,  
+In Deinem Wort, da find’ ich Frieden, ewiglich.  
+
+[Verse 2]  
+Schau, das Land, das Du uns gibst,  
+Wo Deine Augen stets uns lieben.  
+Regen sendest Du, zur rechten Zeit,  
+In Deiner Nähe, da ist Freude, da ist Freiheit.  
+
+Lehre uns, o Herr, Deine Gebote,  
+Für unsere Kinder, für jede Note.  
+Wenn wir sitzen, gehen, niederknien,  
+Lass uns Deine Wege stets verziehen.  
+
+[Chorus]  
+Oh, höre, oh, höre, was der Herr uns spricht,  
+Liebe, gehorche, lass die Wahrheit nicht.  
+Sein Segen fließt, wie Milch und Honig,  
+In Deinem Wort, da find’ ich Frieden, ewiglich.  
+
+[Bridge]  
+Du schenkst uns Kraft, wenn wir Dir vertrauen,  
+Mit jedem Schritt, wirst Du uns erbauen.  
+Furcht weicht, wenn Dein Licht uns umgibt,  
+In Deinem Namen, der uns liebt.  
+
+[Chorus]  
+Oh, höre, oh, höre, was der Herr uns spricht,  
+Liebe, gehorche, lass die Wahrheit nicht.  
+Sein Segen fließt, wie Milch und Honig,  
+In Deinem Wort, da find’ ich Frieden, ewiglich.  
+
+[Outro]  
+So gehen wir in das Land, das Du uns schenkst,  
+Mit Dir, o Herr, sind wir niemals gesenkt.  
+Halleluja, für all Deine Taten,  
+In Deinem Namen, werden wir leben in Frieden.`,
         12: `[Verse 1]  
 Du hast uns geboten, oh Herr, zu geh’n,  
 In das Land, das Du uns gibst, um zu steh’n.  
@@ -6184,7 +8466,56 @@ Erlaßjahr des Herrn, ein Lied für die Welt,
 In deinem Namen, der Hoffnung gefällt.  
 Gib uns die Kraft, in Liebe zu geh’n,  
 Mit dir, Herr, werden wir nie mehr steh’n.`,
-        16: ``,
+        16: `[TITLE]  
+Gedenke, o Israel
+
+[Verse 1]  
+Im Monat Abib, so spricht der Herr,  
+Du führtest uns aus Ägypten, ganz und gar.  
+Mit Furcht und Schrecken, in der Nacht,  
+Hast Du uns befreit, hast Du uns bewacht.
+
+[Chorus]  
+Gedenke, o Israel, an Deine Taten,  
+Dein Name, o Herr, wird immer bestehen.  
+Im Fest der Wochen, im Lied der Freude,  
+Wir bringen Dir Opfer, um Dich zu erheben.
+
+[Verse 2]  
+Schlacht das Passah, so wie Du’s gebotst,  
+An dem Ort, wo Dein Name wohnt,  
+Kein Gesäuertes soll unser Herz trüben,  
+Wir danken Dir, Herr, für all Deine Lieben.
+
+[Chorus]  
+Gedenke, o Israel, an Deine Taten,  
+Dein Name, o Herr, wird immer bestehen.  
+Im Fest der Wochen, im Lied der Freude,  
+Wir bringen Dir Opfer, um Dich zu erheben.
+
+[Bridge]  
+Sieben Tage der Freude, in Deinem Licht,  
+Wir feiern das Leben, in Deinem Angesicht.  
+Fremdlinge, Waisen, sie finden bei Dir,  
+In der Mitte der Gemeinde, da bist Du hier.
+
+[Verse 3]  
+Rechte richten, das Volk in Einigkeit,  
+Mit Liebe und Gnade, Du schenkst uns die Zeit.  
+Das Land, das Du gibst, mit Händen voll Segen,  
+Wir danken Dir, Herr, für all Deine Wegen.
+
+[Chorus]  
+Gedenke, o Israel, an Deine Taten,  
+Dein Name, o Herr, wird immer bestehen.  
+Im Fest der Wochen, im Lied der Freude,  
+Wir bringen Dir Opfer, um Dich zu erheben.
+
+[Outro]  
+O Herr, wir kommen, vor Dich, in Demut,  
+Mit Herzen, die singen, in heiliger Glut.  
+Gedenke, o Israel, und freu dich daran,  
+Dein Gott ist bei Dir, er führt Dich voran.`,
         17: `[Verse 1]  
 In deinem Licht, oh Herr, da steh’n wir,  
 Kein Fehl, kein Böses soll unser Opfer sein.  
@@ -6409,7 +8740,49 @@ Gott, Du bist mit uns,
 Du bist unser Licht,  
 In jedem Sturm, in jedem Krieg,  
 Fürchten wir uns nicht.`,
-        21: ``,
+        21: `[TITLE] Erbarmen für dein Volk
+
+[Verse 1]  
+In der Stille des Feldes, wo das Blut vergossen,  
+Ein unschuldiges Leben, von der Welt vergessen.  
+Die Ältesten treten vor, mit Händen voller Reue,  
+Waschend ihre Hände, den Schmerz in der Treue.  
+
+[Chorus]  
+Sei gnädig, o HERR, deinem Volk, das du führst,  
+Erlöse dein Israel, das du nie verlierst.  
+Leg nicht das unschuldige Blut auf uns nieder,  
+Wir bitten um Gnade, für immer und wieder.  
+
+[Verse 2]  
+Wenn die Feinde uns umgeben und die Dunkelheit naht,  
+Gib uns Sieg in der Schlacht, wie du es verheißt,  
+Ein Herz voller Liebe, auch für die, die gefangen,  
+Führen wir sie heim, mit Tränen und Bangen.  
+
+[Chorus]  
+Sei gnädig, o HERR, deinem Volk, das du führst,  
+Erlöse dein Israel, das du nie verlierst.  
+Leg nicht das unschuldige Blut auf uns nieder,  
+Wir bitten um Gnade, für immer und wieder.  
+
+[Bridge]  
+Wenn wir fallen in Sünde, und der Stolz uns regiert,  
+Ruf uns zurück zu deinem Weg, der uns erleuchtet.  
+Du bist der Erbarmer, der uns stets vergibt,  
+In deinem Licht, HERR, ist die Freiheit, die liebt.  
+
+[Chorus]  
+Sei gnädig, o HERR, deinem Volk, das du führst,  
+Erlöse dein Israel, das du nie verlierst.  
+Leg nicht das unschuldige Blut auf uns nieder,  
+Wir bitten um Gnade, für immer und wieder.  
+
+[Outro]  
+So führen wir die Trauer, in dein heiliges Licht,  
+Ein Volk, das dir dient, in der Hoffnung auf dich.  
+Erlöse, o HERR, all die Seelen, die rufen,  
+In deinem Namen, o HERR, lass uns leben und lieben.`,
         22: `Rückkehr zur Liebe
 
 [Verse 1]  
@@ -6453,7 +8826,68 @@ Führe uns, Herr, auf dem Weg des Lichts,
 In der Dunkelheit, du bist unser Gedicht.  
 Gemeinsam vereint, in deinem Namen,  
 Leben wir Liebe, ohne zu erlahmen.`,
-        23: ``,
+        23: `[TITLE]  
+Heilige Gemeinschaft
+
+[Verse 1]  
+Du rufst uns in Deine Nähe,  
+In die heilige Gemeinde,  
+Kein Zerstoßener soll kommen,  
+Denn Du schenkst uns Deine Liebe.  
+Die Fremden, die einst fern waren,  
+Laden wir nun herzlich ein,  
+Denn Dein Licht, es wird uns leiten,  
+In der Wahrheit, die uns eint.
+
+[Chorus]  
+Heiliger Gott, wir beten Dich an,  
+In Deiner Gegenwart, da stehen wir fest.  
+Du wandelst Fluch in Segen,  
+Mit Dir sind wir gesegnet,  
+Du bist unser Frieden,  
+In Deiner Liebe leben wir.
+
+[Verse 2]  
+Edelmut und Treue lehren,  
+Brüderlichkeit lässt uns gedeihen,  
+Die Dunkelheit kann uns nicht trennen,  
+Wenn wir in Deinem Licht verweilen.  
+Die Wunden, die uns einst begleiteten,  
+Heilst Du mit Deiner Hand,  
+Wir sind hier, um Dich zu loben,  
+In dem neuen, heiligen Land.
+
+[Chorus]  
+Heiliger Gott, wir beten Dich an,  
+In Deiner Gegenwart, da stehen wir fest.  
+Du wandelst Fluch in Segen,  
+Mit Dir sind wir gesegnet,  
+Du bist unser Frieden,  
+In Deiner Liebe leben wir.
+
+[Bridge]  
+Wenn wir kämpfen, bleibst Du nah,  
+Du schenkst uns Kraft für jeden Tag.  
+Dein Wort, es führt uns weiter,  
+Wir vertrauen, unser Gott ist da.  
+Der Himmel öffnet sich,  
+Deine Gnade fließt zu uns,  
+Wir sind ein Volk, das Dich erhebt,  
+In der Einheit singen wir.
+
+[Chorus]  
+Heiliger Gott, wir beten Dich an,  
+In Deiner Gegenwart, da stehen wir fest.  
+Du wandelst Fluch in Segen,  
+Mit Dir sind wir gesegnet,  
+Du bist unser Frieden,  
+In Deiner Liebe leben wir.
+
+[Outro]  
+Heiliger Gott, wir beten Dich an,  
+In Deiner Liebe leben wir.  
+Heiliger Gott, wir beten Dich an,  
+In Deiner Liebe leben wir.`,
         24: `[Verse 1]  
 In der Wüste, Du hast uns befreit,  
 Hast uns geleitet, durch Dunkelheit.  
@@ -6623,8 +9057,106 @@ Oh, Herr, wir kommen, mit Herzen so rein,
 In Deine Gegenwart, dort wollen wir sein.  
 Dein Wort ist unser Licht, unser Leben,  
 Für alle Zeit, Dir sei Ehre gegeben.`,
-        28: ``,
-        29: ``,
+        28: `[TITLE]  
+Gesegnet Sei, O Herr
+
+[Verse 1]  
+Wenn ich höre, Herr, Dein Wort,  
+Und folge Dir, dem treuen Gott,  
+Dann kommen Segnungen wie Licht,  
+In Stadt und Feld, Du schenkst mir Sicht.  
+
+[Chorus]  
+Gesegnet bin ich, wenn ich ein- und ausgehe,  
+Gesegnet in der Fülle, die Du mir gibst.  
+Dein Name sei gepriesen, in Ewigkeit,  
+Du machst mich stark, und niemand mir widersteht.  
+
+[Verse 2]  
+Die Frucht des Landes blüht für mich,  
+Die Tiere, sie gedeihen, Herr, durch Dich.  
+In allem, was ich tue, bist Du nah,  
+Du schenkst mir Frieden, machst alles wahr.  
+
+[Chorus]  
+Gesegnet bin ich, wenn ich ein- und ausgehe,  
+Gesegnet in der Fülle, die Du mir gibst.  
+Dein Name sei gepriesen, in Ewigkeit,  
+Du machst mich stark, und niemand mir widersteht.  
+
+[Bridge]  
+Du bist mein Schild, mein Fels, mein Licht,  
+In Deiner Nähe fürcht’ ich mich nicht.  
+Wenn Feinde kommen, treibst Du sie fort,  
+Du bist der Herr, mein sicherer Ort.  
+
+[Verse 3]  
+Wenn ich halte fest an Deinem Wort,  
+Wirst Du mich führen, zu jedem Ort.  
+Du schenkst mir Überfluss, Tag für Tag,  
+In Deiner Liebe, Herr, ich steh’ und frag.  
+
+[Chorus]  
+Gesegnet bin ich, wenn ich ein- und ausgehe,  
+Gesegnet in der Fülle, die Du mir gibst.  
+Dein Name sei gepriesen, in Ewigkeit,  
+Du machst mich stark, und niemand mir widersteht.  
+
+[Outro]  
+O Herr, ich preise Deinen Namen,  
+In Dir allein, da kann ich leben.  
+Gesegnet sei, o Herr, mein Gott,  
+In Ewigkeit, schenk mir Deinen Trost.`,
+        29: `[TITLE]  
+Bund und Treue
+
+[Verse 1]  
+Du, Herr, hast uns geführt, durch die Wüste,  
+Mit Zeichen und Wundern, zeigte Deine Güte.  
+Vierzig Jahre lang, hast Du uns gelehrt,  
+Unsere Kleider blieben neu, kein Schuh uns beschwert.  
+
+[Chorus]  
+Wir treten ein in Deinen Bund,  
+Mit Herzen rein, oh, heilig’ Grund.  
+Du bist unser Gott, wir sind Dein Volk,  
+In Treue stehen wir, Dein Wort erfüllt, oh, voll.  
+
+[Verse 2]  
+In Ägypten waren wir, verloren und klein,  
+Doch Du hast uns befreit, für uns hast Du geweint.  
+Die Götzen dieser Welt, sie können uns nichts tun,  
+Denn in Dir, oh Herr, können wir ruhn.  
+
+[Chorus]  
+Wir treten ein in Deinen Bund,  
+Mit Herzen rein, oh, heilig’ Grund.  
+Du bist unser Gott, wir sind Dein Volk,  
+In Treue stehen wir, Dein Wort erfüllt, oh, voll.  
+
+[Bridge]  
+So lass uns hören, lass uns sehen,  
+Die Worte des Lebens, die uns bewegen.  
+Im Glauben fest, mit Augen weit,  
+Gemeinsam schreiten wir in Deine Zeit.  
+
+[Verse 3]  
+Wenn die Plagen kommen, die uns umgeben,  
+Halten wir fest an dem, was wir leben.  
+Wir beten und danken, für Deine Verheißung,  
+Dein Zorn wendet sich nicht, wenn wir in Deinem Kreis sind.  
+
+[Chorus]  
+Wir treten ein in Deinen Bund,  
+Mit Herzen rein, oh, heilig’ Grund.  
+Du bist unser Gott, wir sind Dein Volk,  
+In Treue stehen wir, Dein Wort erfüllt, oh, voll.  
+
+[Outro]  
+Das Geheimnis, oh Herr, ist bei Dir verborgen,  
+Doch offenbart in uns, für alle Morgen.  
+Wir tun, was Du gebietest, mit aller Macht,  
+In Deinem Namen, der in uns wacht.`,
         30: `[Verse 1]  
 Wenn die Schatten kommen,  
 und der Fluch dich trifft,  
@@ -6735,7 +9267,56 @@ Der Herr, unser Gott, er wandelt mit uns,
 Er hält uns in der Treue, in jedem Sturm, in jedem Schwung.  
 Sei getrost, sei unverzagt,  
 Denn er wird nie von uns weichen, unser Herz ist stark.`,
-        32: ``,
+        32: `[TITLE]  
+Du bist unser Fels
+
+[Verse 1]  
+Merkt auf, ihr Himmel, hört mein Wort,  
+Die Erde lauscht dem Klang, der uns führt,  
+Seine Lehre fließt wie Regen,  
+Seine Gnade gibt uns Mut, uns zu leben.  
+
+[Chorus]  
+Du bist unser Fels, oh Herr,  
+In dir finden wir Geborgenheit,  
+Treu und gerecht, dein Name klingt,  
+Ewige Liebe, die uns stets umringt.  
+
+[Verse 2]  
+In der Wüste hast du uns gefunden,  
+Hast uns umarmt, uns nie verlassen,  
+Wie ein Adler, der seine Jungen trägt,  
+So führst du uns, wenn unser Herz schlägt.  
+
+[Chorus]  
+Du bist unser Fels, oh Herr,  
+In dir finden wir Geborgenheit,  
+Treu und gerecht, dein Name klingt,  
+Ewige Liebe, die uns stets umringt.  
+
+[Bridge]  
+Gedenke, was er tat,  
+Frage die Alten, die wissen, wo er ist,  
+Er hat dich gemacht, hat dich bereitet,  
+Sein Antlitz leuchtet, wenn die Dunkelheit schreitet.  
+
+[Verse 3]  
+Doch wir sind oft blind, vergessen deinen Namen,  
+Haben Götzen gesucht, die uns nicht tragen,  
+Doch du rufst uns zurück, zu deinem Herzen,  
+Lass uns hören, die Stimme, die heilt unsere Schmerzen.  
+
+[Chorus]  
+Du bist unser Fels, oh Herr,  
+In dir finden wir Geborgenheit,  
+Treu und gerecht, dein Name klingt,  
+Ewige Liebe, die uns stets umringt.  
+
+[Outro]  
+Jauchzet und singt, ihr Kinder des Lichts,  
+Denn in dir, oh Herr, gibt es kein Verzicht.  
+Du bist unser Fels, für alle Zeit,  
+Mit dir an unserer Seite, herrscht nur Freude und Heiligkeit.`,
         33: `[Verse 1]  
 Mose, der Mann Gottes, spricht ein Wort,  
 Der Herr ist gekommen, von ferne, von Ort.  
@@ -6825,7 +9406,6 @@ Mit Herzen voll Hoffnung, die Dunkelheit wacht.
 Das Erbe, das Du gibst, wird ewig bestehen,  
 Im Glauben, im Vertrauen, werden wir gehen.`,
     },
-
     "06": {
         1: `[Verse 1]  
 Nach Moses Tod, du sprichst zu mir,  
@@ -7080,9 +9660,180 @@ Herr, sei unser Ziel,
 Wir kommen zu Dir, Herr, unser Schild.  
 Gilgal, unser Ort,  
 Hier finden wir Frieden, hier führt uns Dein Wort.`,
-        6: ``,
-        7: ``,
-        8: ``,
+        6: `[TITLE]  
+*Jericho fällt*
+
+[Verse 1]  
+In der Stille um die Stadt,  
+Jericho, stark und fest,  
+Doch der HERR sprach zu Josua,  
+„Ich geb' dir, was du begehrst.“  
+Sechs Tage, still und treu,  
+Sie gingen, das Volk vereint,  
+Mit Posaunen in der Hand,  
+Der Glaube, der uns eint.
+
+[Chorus]  
+Halleluja, die Mauern fallen,  
+In deinem Namen, oh Herr,  
+Wir erheben unser Schreien,  
+Der Sieg ist nah, er ist nicht schwer.  
+Halleluja, wir stehen hier,  
+Mit Vertrauen in dein Wort,  
+Jericho, du fällst vor mir,  
+Der HERR führt uns an diesen Ort.
+
+[Verse 2]  
+Am siebten Tag, der Morgen bricht,  
+Siebenmal um die Stadt,  
+Die Posaunen ertönen laut,  
+Ein Feldgeschrei, das alles hat.  
+Der Glaube, er bewegt die Macht,  
+Die Mauern stürzen, stark und schnell,  
+Die Stadt, sie gibt uns ihren Schatz,  
+Und wir preisen dich, oh Stell.
+
+[Chorus]  
+Halleluja, die Mauern fallen,  
+In deinem Namen, oh Herr,  
+Wir erheben unser Schreien,  
+Der Sieg ist nah, er ist nicht schwer.  
+Halleluja, wir stehen hier,  
+Mit Vertrauen in dein Wort,  
+Jericho, du fällst vor mir,  
+Der HERR führt uns an diesen Ort.
+
+[Bridge]  
+Rahab, du bist gerettet,  
+Ein Zeichen deiner Treu’,  
+Inmitten dieser Kämpfe,  
+Gibt der HERR uns neue Freiheit.  
+Lass uns auf dein Wort vertrauen,  
+Dein Versprechen bleibt bestehen,  
+Mit dir, oh Gott, an unserer Seite,  
+Wird kein Feind uns je verwehen.
+
+[Chorus]  
+Halleluja, die Mauern fallen,  
+In deinem Namen, oh Herr,  
+Wir erheben unser Schreien,  
+Der Sieg ist nah, er ist nicht schwer.  
+Halleluja, wir stehen hier,  
+Mit Vertrauen in dein Wort,  
+Jericho, du fällst vor mir,  
+Der HERR führt uns an diesen Ort.
+
+[Outro]  
+Jericho, du fällst, oh Herr,  
+Mit Glaube und in Ruh,  
+Wir preisen dich mit voller Kraft,  
+In deinem Namen, Amen, ich weiß es zu tun.`,
+        7: `[TITLE]  
+Der Ruf zur Heiligkeit
+
+[Verse 1]  
+In der Nacht, als die Herzen bangten,  
+Josua fiel, die Kleider zerrissen,  
+„Warum, Herr, hast du uns geführt,  
+In die Hände der Feinde, wo wir verloren sind?  
+Ein Bann liegt über uns, wir sind gebrochen,  
+Vor dir, o Gott, sind wir verloren.“
+
+[Chorus]  
+Heiliger Gott, erhebe uns neu,  
+Reinige unser Herz, mach uns frei.  
+Wir kommen zu dir, in Demut und Licht,  
+In deinem Namen, Herr, zeige dein Gesicht.  
+Heiligt uns, Herr, für deinen Namen,  
+Gib uns die Kraft, lass uns nicht lahmen.
+
+[Verse 2]  
+Achan nahm, was nicht sein sollte,  
+Ein Mantel, Silber, er hat gestohlen,  
+In der Dunkelheit, da war sein Verlangen,  
+Das Volk erliegt, in der Schuld gefangen.  
+Doch der Herr sprach, „Stehe auf, mein Sohn,  
+Heilige das Volk, mach die Sünde davon.“
+
+[Chorus]  
+Heiliger Gott, erhebe uns neu,  
+Reinige unser Herz, mach uns frei.  
+Wir kommen zu dir, in Demut und Licht,  
+In deinem Namen, Herr, zeige dein Gesicht.  
+Heiligt uns, Herr, für deinen Namen,  
+Gib uns die Kraft, lass uns nicht lahmen.
+
+[Bridge]  
+O, Herr, wir beugen uns nieder,  
+In der Stille, du sprichst zu uns wieder.  
+Wir bringen die Last, unsere Sünden zu dir,  
+Erneuere uns, Herr, wir vertrauen dir.  
+Im Tal Achor, wo der Zorn weicht,  
+Zeigst du Gnade, wo die Dunkelheit weicht.
+
+[Chorus]  
+Heiliger Gott, erhebe uns neu,  
+Reinige unser Herz, mach uns frei.  
+Wir kommen zu dir, in Demut und Licht,  
+In deinem Namen, Herr, zeige dein Gesicht.  
+Heiligt uns, Herr, für deinen Namen,  
+Gib uns die Kraft, lass uns nicht lahmen.
+
+[Outro]  
+In deinem Namen, wir stehen vereint,  
+Heiliger Gott, du bist uns vereint.  
+In dir allein, finden wir Frieden,  
+Mit dir, o Herr, sind wir nie besiegt.`,
+        8: `[TITLE]
+"Fürchte dich nicht, ich bin bei dir"
+
+[Verse 1]  
+Der Herr sprach zu Josua,  
+„Fürchte dich nicht, sei stark und mutig,  
+Ich gebe dir die Stadt in deine Hand,  
+Die Mauern fallen, dein Glaube ist der Stand.  
+
+[Chorus]  
+Fürchte dich nicht, ich bin bei dir,  
+In der Schlacht, ich führe dich hier.  
+Meine Kraft ist stark, mein Wort ist klar,  
+Du bist mein Volk, ich bin für euch da.  
+
+[Verse 2]  
+Mit dem Kriegsvolk zieht er voran,  
+Die Herzen brennen, ein neuer Tag begann.  
+Der Hinterhalt ist bereit,  
+Der Feind wird fallen, der Sieg ist geweiht.  
+
+[Chorus]  
+Fürchte dich nicht, ich bin bei dir,  
+In der Schlacht, ich führe dich hier.  
+Meine Kraft ist stark, mein Wort ist klar,  
+Du bist mein Volk, ich bin für euch da.  
+
+[Bridge]  
+Sende die Lanze, erhebe sie hoch,  
+Der Rauch der Stadt steigt auf zum Gott.  
+Die Mauern brechen, die Ketten zerreißen,  
+In deinem Namen, lass uns sie preisen.  
+
+[Verse 3]  
+Der König fiel, die Stadt brennt hell,  
+Dein Wort erfüllt sich, du bist der Held.  
+Ein Altar erbaut auf heiligem Grund,  
+Die Ehre sei dir, du schenkst uns den Bund.  
+
+[Chorus]  
+Fürchte dich nicht, ich bin bei dir,  
+In der Schlacht, ich führe dich hier.  
+Meine Kraft ist stark, mein Wort ist klar,  
+Du bist mein Volk, ich bin für euch da.  
+
+[Outro]  
+Fürchte dich nicht, ich bin bei dir,  
+Deine Treue führt uns, jetzt und hier.  
+In jedem Kampf bist du unser Licht,  
+Für immer, oh Herr, verlässt du uns nicht.`,
         9: `Verse 1:  
 In der Ferne hörte man von dir,  
 Von Wundern, die du tatest, Herr, so klar.  
@@ -7138,7 +9889,66 @@ Ein Bund, der ewig uns vereint,
 In deiner Gnade, die nie weint.  
 Amen, Amen, du bist der Weg,  
 In dir, o Herr, sind wir bewegt.`,
-        10: ``,
+        10: `[TITLE]  
+Herr, Du kämpfst für uns
+
+[Verse 1]  
+In der Dunkelheit, wenn Furcht uns drückt,  
+Hör’n wir den Ruf, der uns erquickt.  
+Gibeon ruft, die Feinde nah,  
+Doch Du, Herr, bist stets für uns da.  
+
+[Chorus]  
+Herr, Du kämpfst für uns,  
+Dein Licht bricht durch die Nacht.  
+Sonne, steh still,  
+Wenn Du uns den Sieg gibst,  
+Wir vertrauen Dir, Herr,  
+Du bist unser Schild,  
+Mit Deinen Händen führt uns der Weg,  
+Herr, Du kämpfst für uns.
+
+[Verse 2]  
+Josua fiel auf die Knie,  
+Mit den Worten, die Du ihm gabst,  
+„Fürchte dich nicht, ich bin hier,  
+Deine Gegner fallen, ich bin bei dir.“  
+
+[Chorus]  
+Herr, Du kämpfst für uns,  
+Dein Licht bricht durch die Nacht.  
+Sonne, steh still,  
+Wenn Du uns den Sieg gibst,  
+Wir vertrauen Dir, Herr,  
+Du bist unser Schild,  
+Mit Deinen Händen führt uns der Weg,  
+Herr, Du kämpfst für uns.
+
+[Bridge]  
+Kein Tag war wie der heutige,  
+Du hörst das Flehen eines Mannes,  
+Die Wolken brechen, der Sturm weicht,  
+Denn Du, Herr, bist der, der für uns streitet.  
+In der Schlacht und in der Ruh,  
+Finden wir Frieden nur in Dir,  
+Du bist der König, stark und treu,  
+Uns zu führen, Herr, Du bist das Licht.
+
+[Chorus]  
+Herr, Du kämpfst für uns,  
+Dein Licht bricht durch die Nacht.  
+Sonne, steh still,  
+Wenn Du uns den Sieg gibst,  
+Wir vertrauen Dir, Herr,  
+Du bist unser Schild,  
+Mit Deinen Händen führt uns der Weg,  
+Herr, Du kämpfst für uns.
+
+[Outro]  
+So ziehen wir voran, im Glauben stark,  
+Mit Dir, Herr, sind wir bereit,  
+In jedem Kampf, in jedem Tag,  
+Herr, Du kämpfst für uns, für alle Zeit.`,
         11: `[Verse 1]  
 Als die Könige sich versammelten,  
 Sie trugen Macht und Stolz in ihren Herzen.  
@@ -7233,7 +10043,52 @@ Könige fallen, das Volk befreit,
 In dir, o Herr, ist unsere Zeit.  
 Ein Lied der Freiheit, ein Schrei der Ehr',  
 Wir beten dich an, o Herr, unser Wehr.`,
-        13: ``,
+        13: `[TITLE]  
+Erbe des Glaubens
+
+[LYRICS]
+
+1. Strophe  
+In diesen Tagen, Josua stand,  
+Der Herr sprach zu ihm, mit fester Hand.  
+Du hast gekämpft, du hast gesiegt,  
+Doch das Land, das dir noch liegt.  
+
+[Chorus]  
+Erbe des Glaubens, wir nehmen's an,  
+Mit Mut und Vertrauen, im Glauben voran.  
+Die Grenzen des Landes, die Du uns gibst,  
+In Dir, oh Herr, sind wir, was wir sind.  
+
+2. Strophe  
+Von Gessur bis zum Libanon,  
+Dein Wort, Herr, führt uns, wie ein Lichtstrahl schon.  
+Die Städte der Philister, sie fallen,  
+Wenn wir uns auf Deine Stimme verlassen.  
+
+[Chorus]  
+Erbe des Glaubens, wir nehmen's an,  
+Mit Mut und Vertrauen, im Glauben voran.  
+Die Grenzen des Landes, die Du uns gibst,  
+In Dir, oh Herr, sind wir, was wir sind.  
+
+[Bridge]  
+Die Leviten, sie preisen, im Dienst für Dich,  
+Ihr Erbteil ist Liebe, Dein Licht bricht durch.  
+So lass uns gehen, die Stämme vereint,  
+Mit Dir, oh Herr, wird das Dunkel verneint.  
+
+[Chorus]  
+Erbe des Glaubens, wir nehmen's an,  
+Mit Mut und Vertrauen, im Glauben voran.  
+Die Grenzen des Landes, die Du uns gibst,  
+In Dir, oh Herr, sind wir, was wir sind.  
+
+[Outro]  
+In jedem Kampf, in jedem Streit,  
+Du bist unsere Stärke, Du schenkst uns Geleit.  
+Erbe des Glaubens, wir stehen vereint,  
+In Deinem Namen, der ewiglich scheint.`,
         14: `[Verse 1]  
 In Kanaan, das Land so weit,  
 Die Kinder Israel stehen bereit.  
@@ -7295,7 +10150,56 @@ In Kanaan, das Land so weit,
 Treu dem Herrn gefolgt, in jeder Zeit.  
 Sein Wort ist unser Licht,  
 In Dunkelheit, er verlässt uns nicht.`,
-        15: ``,
+        15: `[TITLE]  
+Grenzen des Glaubens
+
+[Verse 1]  
+In der Wüste, wo du sprichst,  
+Die Kinder Juda, ihr Erbe blüht.  
+Grenzen gesetzt, vom HERRN geleitet,  
+Ein Land des Segens, das du uns bereitest.  
+
+[Chorus]  
+Du bist unser Erbe, du bist unser Licht,  
+In der Dunkelheit strahlst du so klar.  
+Wir stehen fest auf deinem Wort,  
+Du führst uns, HERR, an jeden Ort.  
+
+[Verse 2]  
+Kaleb, mutig, mit Glauben voll,  
+Vertrieb die Feinde, sein Herz war toll.  
+Er bat um Wasser, ein Segen kam,  
+Quellen des Lebens, du bist der Same.  
+
+[Chorus]  
+Du bist unser Erbe, du bist unser Licht,  
+In der Dunkelheit strahlst du so klar.  
+Wir stehen fest auf deinem Wort,  
+Du führst uns, HERR, an jeden Ort.  
+
+[Bridge]  
+Die Städte blühen, die Dörfer gedeihen,  
+Wir singen Loblieder, die Herzen befreien.  
+Im Tal des Hinnom, in der Höhe der Macht,  
+Du bist bei uns, HERR, Tag und Nacht.  
+
+[Verse 3]  
+Grenzen des Glaubens, wir schreiten voran,  
+Mit deiner Kraft, HERR, in deinem Plan.  
+Ewig verbunden, durch deinen Geist,  
+Du bist unser Frieden, der niemals verweist.  
+
+[Chorus]  
+Du bist unser Erbe, du bist unser Licht,  
+In der Dunkelheit strahlst du so klar.  
+Wir stehen fest auf deinem Wort,  
+Du führst uns, HERR, an jeden Ort.  
+
+[Outro]  
+In den Städten und Dörfern,  
+Deine Liebe bleibt,  
+HERR, du bist unser Erbe,  
+Für immer bereit.`,
         16: `[Vers 1]  
 Du führst uns, Herr, durch Wüste und Tal,  
 Vom Jordan bis Jericho, Deine Liebe bleibt wahr.  
@@ -7686,11 +10590,128 @@ Sieh, ich gehe und höre die Stimme,
 Die uns ruft, in der Liebe, in der Stille,  
 Der HERR ist treu, sein Wort bleibt stehen,  
 In Seinem Licht, werden wir nie mehr gehen.`,
-        24: ``,
-    },
+        24: `[TITLE]  
+*Euer Gott, unser Herr*
 
+[VERS 1]  
+In Sichem versammelt, die Stämme vereint,  
+Joshua spricht, der Herr ist bereit.  
+„Seid treu in dem Glauben, verlasst nicht den Weg,  
+Eure Väter dienten Göttern, doch er ist es, der lebt.  
+
+[VERS 2]  
+Ich nahm Abraham, führte ihn weit,  
+Durch Kanaan, dem Land der Verheißung bereit.  
+Mit Isaak und Jakob, die Söhne der Treue,  
+In Ägypten befreit, ich gab euch die Freude.  
+
+[Chorus]  
+So fürchtet den Herrn, dient ihm allein,  
+Lasst die Götter der Welt, die Fremden, sein.  
+Wir wählen den Herrn, unser Leben ihm weih’n,  
+Er führt uns, er heilt uns, er lässt uns nie allein.  
+
+[VERS 3]  
+Durch Wasser und Dunkel, ich war an eurer Seit’,  
+Die Ägypter verfolgend, ich gab euch die Freiheit.  
+Die Bürger von Jericho, sie stritten so hart,  
+Doch ich gab euch das Land, das war meine Art.  
+
+[VERS 4]  
+Bileam wollte fluchen, doch ich segnete euch,  
+Die Feinde zerbrachen, ich war euer Zeug.  
+Städte, die ihr nicht baute, Weinberge, die ihr nicht sah,  
+So kommt, lasst uns dienen, dem Herrn, unserm Ja.  
+
+[Chorus]  
+So fürchtet den Herrn, dient ihm allein,  
+Lasst die Götter der Welt, die Fremden, sein.  
+Wir wählen den Herrn, unser Leben ihm weih’n,  
+Er führt uns, er heilt uns, er lässt uns nie allein.  
+
+[Bridge]  
+Wir sind Zeugen des Herrn, wir bekennen uns klar,  
+Sein Bund mit uns ewig, so wunderbar.  
+Die Steine, sie sprechen, von Liebe und Licht,  
+Wir dienen dem Herrn, sein Wort ist unser Pflicht.  
+
+[Chorus]  
+So fürchtet den Herrn, dient ihm allein,  
+Lasst die Götter der Welt, die Fremden, sein.  
+Wir wählen den Herrn, unser Leben ihm weih’n,  
+Er führt uns, er heilt uns, er lässt uns nie allein.  
+
+[Outro]  
+Joshua sprach zu uns, wir sind sein Geschlecht,  
+In Treue und Glauben, er schenkt uns sein Recht.  
+So lasst uns zusammen, im Glauben vereint,  
+Dem Herrn, unserem Gott, der ewig erscheint.`,
+    },
     "07": {
-        1: ``,
+        1: `[TITLE]  
+Sieg und Verheißung
+
+[Verse 1]  
+Nach Josuas Tod, in dunkler Nacht,  
+Fragte Israel, wer uns wacht?  
+Der HERR sprach: Juda, zieh hinauf,  
+In deine Hand geb’ ich das Land, nimm es in Lauf.
+
+[Chorus]  
+Sieg über die Feinde,  
+Wir stehen zusammen,  
+Mit Glauben und Hoffnung,  
+Im Namen des Herrn.  
+Juda, zieh hinauf,  
+Wir kämpfen für Dein Wort,  
+Mit Gott an unserer Seite,  
+Führt uns der Herr fort.
+
+[Verse 2]  
+Mit Simeon, Bruder an meiner Hand,  
+Gemeinsam erobern wir das Land.  
+Die Kanaaniter fallen, die Stadt brennt,  
+Bis unser Gott uns den Sieg sendet.
+
+[Chorus]  
+Sieg über die Feinde,  
+Wir stehen zusammen,  
+Mit Glauben und Hoffnung,  
+Im Namen des Herrn.  
+Juda, zieh hinauf,  
+Wir kämpfen für Dein Wort,  
+Mit Gott an unserer Seite,  
+Führt uns der Herr fort.
+
+[Bridge]  
+Gib mir Wasserquellen,  
+Segne mein Land,  
+Wie Du’s verheißen hast,  
+In Deiner Hand.  
+Kämpfen wir zusammen,  
+Die Dunkelheit weicht,  
+Mit Mut und Vertrauen,  
+Wird das Licht erreicht.
+
+[Chorus]  
+Sieg über die Feinde,  
+Wir stehen zusammen,  
+Mit Glauben und Hoffnung,  
+Im Namen des Herrn.  
+Juda, zieh hinauf,  
+Wir kämpfen für Dein Wort,  
+Mit Gott an unserer Seite,  
+Führt uns der Herr fort.
+
+[Outro]  
+So ziehen wir weiter,  
+In die Verheißung rein,  
+Mit Gott an der Spitze,  
+Wird der Sieg unser sein.  
+Sieg über die Feinde,  
+Wir stehen vereint,  
+In seinen Händen,  
+Sein Volk, das niemals weint.`,
         2: `Verse 1:  
 Du führtest uns aus Ägypten,  
 Durch die Wüste, in das Land,  
@@ -7900,7 +10921,56 @@ So heben wir die Stimmen, im Lobpreis vereint,
 Die Feinde müssen weichen, wenn Dein Licht erscheint.  
 Lobpreis dem HERRN, in Ewigkeit,  
 Für alle, die auf Dich hoffen, in jeder Zeit.`,
-        6: ``,
+        6: `[TITLE]  
+Gideons Ruf
+
+[Verse 1]  
+In Zeiten der Dunkelheit, oh Herr,  
+hat Israel geschrien, wir sind verloren,  
+Die Midianiter kamen, die Felder verwüstet,  
+Dein Volk, in Angst, von Freude entblüht.
+
+[Chorus]  
+Doch Du bist der Gott, der uns befreit,  
+Mit Deiner Kraft, die uns begleitet.  
+Du rufst uns, wie Gideon, stark und mutig,  
+In der Dunkelheit, bist Du unser Licht.
+
+[Verse 2]  
+Ein Engel sprach zu Gideon, so klar,  
+„Der Herr ist mit dir, du streitbarer Held!  
+Geh in dieser Kraft, befreie dein Volk,  
+Fürchte dich nicht, ich bin bei dir, alle Zeit!“
+
+[Chorus]  
+Doch Du bist der Gott, der uns befreit,  
+Mit Deiner Kraft, die uns begleitet.  
+Du rufst uns, wie Gideon, stark und mutig,  
+In der Dunkelheit, bist Du unser Licht.
+
+[Bridge]  
+Baue einen Altar, nimm das Opfer dar,  
+Der Herr ist Frieden, er ist nah.  
+Wenn Zweifel kommt, lass uns vertrauen,  
+In Deinem Namen werden wir nicht scheitern.
+
+[Verse 3]  
+Die Trompeten erklingen, der Geist erfüllt,  
+Mit Glauben in den Herzen, die Furcht wird still.  
+Wir stehen zusammen, in Deinem Licht,  
+Wie Gideon, Herr, kämpfen wir für Dich.
+
+[Chorus]  
+Denn Du bist der Gott, der uns befreit,  
+Mit Deiner Kraft, die uns begleitet.  
+Du rufst uns, wie Gideon, stark und mutig,  
+In der Dunkelheit, bist Du unser Licht.
+
+[Outro]  
+In der Dunkelheit, bist Du unser Licht,  
+Oh Herr, Du führst uns, fürchtet euch nicht.  
+Wir vertrauen auf Dich, Du bist unser Held,  
+Gideons Ruf, er hallt in dieser Welt.`,
         7: `[Verse 1]  
 In der Dunkelheit, der Feind ist nah,  
 Gideon hörte, was der HERR sprach klar.  
@@ -8476,8 +11546,106 @@ Führe uns auf dem Weg, der zur Wahrheit führt,
 In deinem Namen, wo der Glaube regiert.  
 Möge unser Leben, wie das Licht erstrahlen,  
 In deinem Frieden, Herr, werden wir nicht fallen.`,
-        18: ``,
-        19: ``,
+        18: `[TITLE]  
+*Gott, unser Erbe*  
+
+[Verse 1]  
+In der Zeit, wo kein König regiert,  
+Suchte der Stamm, was ihm gebührt.  
+Fünf Männer zogen aus, das Land zu erkunden,  
+Gott, Du bist der, der uns mit Frieden verbunden.  
+
+[Chorus]  
+Komm, führe uns, Herr, auf dem rechten Weg,  
+In Deiner Hand, da sind wir lebendig und stark.  
+Schau, wie das Land blüht, weit und breit,  
+Du gibst uns das Erbe, Du schenkst uns die Zeit.  
+
+[Verse 2]  
+Sie fanden das Volk, sicher und still,  
+Gottes Plan war es, dass alles so sein will.  
+Mit Mut und Glauben, sie zogen hinein,  
+In das Land der Verheißung, wo Freude kann sein.  
+
+[Chorus]  
+Komm, führe uns, Herr, auf dem rechten Weg,  
+In Deiner Hand, da sind wir lebendig und stark.  
+Schau, wie das Land blüht, weit und breit,  
+Du gibst uns das Erbe, Du schenkst uns die Zeit.  
+
+[Bridge]  
+Ehre sei Dir, o Gott, in der Dunkelheit,  
+Wenn wir kämpfen und wandern, Du bist stets bereit.  
+Dein Wort ist ein Licht, das uns leitet,  
+In Deiner Gegenwart, da wird alles bereitet.  
+
+[Chorus]  
+Komm, führe uns, Herr, auf dem rechten Weg,  
+In Deiner Hand, da sind wir lebendig und stark.  
+Schau, wie das Land blüht, weit und breit,  
+Du gibst uns das Erbe, Du schenkst uns die Zeit.  
+
+[Outro]  
+So ziehen wir weiter, in Deinen Frieden hinein,  
+Gott, unser Erbe, Du lässt uns nie allein.  
+Mit jedem Schritt, den wir wagen im Leben,  
+Hältst Du uns fest, o Herr, Du wirst uns geben.`,
+        19: `[TITLE]  
+Das Lied der Rückkehr
+
+[Verse 1]  
+In dunkler Zeit, kein König thront,  
+Ein Levit wanderte, ganz allein,  
+Sein Herz war schwer, die Liebe zerbrochen,  
+Zu Bethlehem-Juda, das war sein Heim.  
+
+[Verse 2]  
+Sie floh von ihm, doch er folgte schnell,  
+Mit Eseln und Hoffnung, das Herz voller Licht,  
+Der Schwiegervater empfing ihn so gern,  
+In Gemeinschaft und Frieden, das Dunkel zerbricht.  
+
+[Chorus]  
+Komm zurück, oh Herz, in die Arme der Liebe,  
+Gott führt den Weg, wenn die Nacht uns umhüllt.  
+In der Dunkelheit, ist sein Licht die Triebe,  
+Er ruft uns zurück, sein Wort uns erfüllt.  
+
+[Verse 3]  
+Doch der Weg war lang, in die Stadt der Fremden,  
+Die Nacht brach herein, die Sorgen so schwer,  
+Ein alter Mann sah, den Reisenden kommen,  
+Gab ihm ein Zuhause, für ihn war’s nicht leer.  
+
+[Verse 4]  
+Doch Böses naht, die Dunkelheit drängt,  
+Die Stadt war verdorben, die Schreie so laut,  
+Doch er stand für den Freund, für Gerechtigkeit,  
+Er schützte sein Herz, das Vertrauen erbaut.  
+
+[Chorus]  
+Komm zurück, oh Herz, in die Arme der Liebe,  
+Gott führt den Weg, wenn die Nacht uns umhüllt.  
+In der Dunkelheit, ist sein Licht die Triebe,  
+Er ruft uns zurück, sein Wort uns erfüllt.  
+
+[Bridge]  
+Oh, wie lange, Herr, wird die Nacht dauern?  
+Könnte die Dunkelheit je weichen für Licht?  
+In der Trauer, in Schmerz, du bist unser Retter,  
+Führ uns zurück, in die Hoffnung, ins Licht.  
+
+[Chorus]  
+Komm zurück, oh Herz, in die Arme der Liebe,  
+Gott führt den Weg, wenn die Nacht uns umhüllt.  
+In der Dunkelheit, ist sein Licht die Triebe,  
+Er ruft uns zurück, sein Wort uns erfüllt.  
+
+[Outro]  
+Wir bringen die Stücke, die einst zerbrochen,  
+Die Liebe erweckt, was verloren war,  
+In seinem Namen, die Hoffnung erwacht,  
+Komm, lass uns gehen, in sein Licht, fürwahr.`,
         20: `[Verse 1]  
 In Mizpa versammelt, ein Ruf, der erklingt,  
 Die Kinder Israels, wie ein Mann, sie sind vereint.  
@@ -8570,7 +11738,6 @@ In unseren Kämpfen, Du bist uns nah.
 Wir heben die Stimmen, im Glauben vereint,  
 In Dir finden wir, was nie verweht.`,
     },
-
     "08": {
         1: `[Verse 1]  
 In Zeiten der Dunkelheit, oh Herr,  
@@ -8785,7 +11952,6 @@ In Deiner Liebe, die niemals vergibt.
 Schau, wie das Leben neu erwacht,  
 In Dir, o Herr, erstrahlt die Pracht.`,
     },
-
     "09": {
         1: `[Verse 1]  
 In Silo, wo das Licht erstrahlt,  
@@ -8846,7 +12012,56 @@ In Silo, wo das Licht erstrahlt,
 Hanna’s Glaube, der niemals verhallt.  
 In dir, oh Herr, finden wir Frieden,  
 Ewige Liebe, die uns stets umgeben.`,
-        2: ``,
+        2: `[TITLE]  
+Erhöht sei der HERR
+
+[Verse 1]  
+Mein Herz ist fröhlich, Herr, ich lobe Dich,  
+In Deiner Gnade find' ich Trost und Licht.  
+Mein Horn erhöht, durch Dich bin ich befreit,  
+Du schenkst mir Heil, Du bist stets bereit.  
+
+[Chorus]  
+Es ist niemand heilig wie der HERR,  
+Kein Hort, kein Schutz, wie Du, oh Gott, mehr.  
+Du zerbrichst die Starken, gibst den Schwachen Kraft,  
+In Deiner Nähe sind wir neu erschafft.  
+
+[Verse 2]  
+Die Hungernden werden nun gesättigt sein,  
+Die Unfruchtbare bringt Frucht, so rein.  
+Du erhebst die Dürftigen, setzt sie zu den Fürsten,  
+In Deinem Reich, da wird die Freude stärken.  
+
+[Chorus]  
+Es ist niemand heilig wie der HERR,  
+Kein Hort, kein Schutz, wie Du, oh Gott, mehr.  
+Du zerbrichst die Starken, gibst den Schwachen Kraft,  
+In Deiner Nähe sind wir neu erschafft.  
+
+[Bridge]  
+Du bist der Richter, der die Welt regiert,  
+Dein Wort ist Wahrheit, das uns inspiriert.  
+In Dunkelheit, da lässt Du uns nicht allein,  
+Du schenkst uns Hoffnung, lässt uns Sieger sein.  
+
+[Verse 3]  
+Die Füße Deiner Heiligen bewahrst Du treu,  
+Die Gottlosen enden – in Finsternis, so scheu.  
+Doch wir erheben unser Lob zu Dir,  
+In Deinem Namen, Herr, sind wir hier.  
+
+[Chorus]  
+Es ist niemand heilig wie der HERR,  
+Kein Hort, kein Schutz, wie Du, oh Gott, mehr.  
+Du zerbrichst die Starken, gibst den Schwachen Kraft,  
+In Deiner Nähe sind wir neu erschafft.  
+
+[Outro]  
+Erhöht sei der HERR, unser Gott, unser Licht,  
+In jedem Kampf, in jedem Gedicht.  
+Wir danken Dir, für alle Gnade,  
+Für Deine Treue, für jede Gnade.`,
         3: `[Verse 1]  
 Im Tempel, wo die Lampe brennt,  
 Ein Junge, der auf deinen Ruf wartet,  
@@ -9589,7 +12804,74 @@ Oh, singt von dem König, der kommt und regiert,
 Der HERR ist mit ihm, sein Volk wird er führen.  
 David, der Gesalbte, der Hirte, der Held,  
 In deinem Namen, o HERR, wird die Welt erhellt.`,
-        17: ``,
+        17: `[TITLE]  
+Goliath fiel vor dem Herrn
+
+[Verse 1]  
+In der Talebene, dort stehen wir,  
+Die Feinde rufen, die Angst regiert.  
+Ein Riese naht, sein Name bekannt,  
+Goliath, stark, mit drohendem Gewand.  
+Doch in uns brennt das Licht von Gott,  
+Seine Kraft in uns, er macht uns mutig,  
+Wir stehen auf, im Glauben vereint,  
+Die Furcht weicht, wenn sein Wort uns vereint.
+
+[Chorus]  
+Der Herr, unser Schild, er ist hier,  
+Mit seinem Namen kämpfen wir.  
+Goliath fiel, die Ketten zerbrach,  
+Im Glauben siegen wir, auf seinem Pfad.  
+Der Herr, unser Schild, er ist hier,  
+Mit seinem Namen kämpfen wir.  
+Goliath fiel, die Ketten zerbrach,  
+Im Glauben siegen wir, auf seinem Pfad.
+
+[Verse 2]  
+David trat vor, ein Junge so klein,  
+Mit Steinen und Mut, im Herzen so rein.  
+„Wer ist dieser Riese, der Gott verhöhnt?  
+Mein Gott ist stark, er hat mich erhöhnt.“  
+Ein Stein flog durch die Luft, so leicht,  
+Die Furcht verflog, der Glaube erreicht.  
+Und als der Stein sein Ziel erreichte,  
+Fiel der Riese, der das Volk beschwerte.
+
+[Chorus]  
+Der Herr, unser Schild, er ist hier,  
+Mit seinem Namen kämpfen wir.  
+Goliath fiel, die Ketten zerbrach,  
+Im Glauben siegen wir, auf seinem Pfad.  
+Der Herr, unser Schild, er ist hier,  
+Mit seinem Namen kämpfen wir.  
+Goliath fiel, die Ketten zerbrach,  
+Im Glauben siegen wir, auf seinem Pfad.
+
+[Bridge]  
+Und wir rufen: „Halleluja!“  
+Für den, der uns befreit.  
+Seine Macht ist unendlich,  
+In ihm sind wir bereit.  
+Die Feinde mögen kommen,  
+Doch in ihm sind wir stark.  
+Mit Glauben, der uns führt,  
+Gehen wir auf seinen Pfad.
+
+[Chorus]  
+Der Herr, unser Schild, er ist hier,  
+Mit seinem Namen kämpfen wir.  
+Goliath fiel, die Ketten zerbrach,  
+Im Glauben siegen wir, auf seinem Pfad.  
+Der Herr, unser Schild, er ist hier,  
+Mit seinem Namen kämpfen wir.  
+Goliath fiel, die Ketten zerbrach,  
+Im Glauben siegen wir, auf seinem Pfad.
+
+[Outro]  
+In der Talebene, dort stehen wir,  
+Der Herr ist mit uns, sein Wort regiert.  
+Wir sind die Sieger, in ihm vereint,  
+Goliath fiel, sein Sieg uns vereint.`,
         18: `[Verse 1]  
 In der Stille, Herz an Herz,  
 Jonathan und David, ein Bund so stark.  
@@ -9935,7 +13217,74 @@ So schwöre ich, bei deinem Namen,
 Werde treu, in all meinen Jahren.  
 Du bist der Weg, die Wahrheit, das Licht,  
 In deiner Liebe, fürchte ich nicht.`,
-        25: ``,
+        25: `[TITLE]  
+Gottes Gnade in der Wüste
+
+[Verse 1]  
+Samuel fiel in die Stille,  
+Ganz Israel trauert um ihn,  
+David zieht in die Wüste,  
+Sein Herz voll Mut, das Ziel ist klar.  
+Ein Mann von großem Reichtum,  
+Nabal, sein Name, hart wie Stein,  
+Doch er kennt nicht die Gnade,  
+Die in Gottes Hand kann sein.
+
+[Chorus]  
+Oh, Herr, sei unser Schild,  
+In der Wüste, in der Not,  
+Deine Gnade, sie erfüllt,  
+Uns mit Frieden, wenn's uns droht.  
+Führe uns durch Nacht und Tag,  
+Wie ein Licht auf unserm Weg,  
+Gib uns Kraft in jedem Kampf,  
+In der Wüste, Herr, erhebe uns!
+
+[Verse 2]  
+Abigail, die weise Frau,  
+Sie sieht das Unglück nah,  
+Eilt mit Gaben, voller Mut,  
+Vor David kniet sie, fleht um Ruh.  
+„Lass nicht Zorn dein Herz zerreißen,  
+Führe deinen Weg mit Licht,  
+Hör auf Gottes Stimme leise,  
+Die die Dunkelheit durchbricht.“
+
+[Chorus]  
+Oh, Herr, sei unser Schild,  
+In der Wüste, in der Not,  
+Deine Gnade, sie erfüllt,  
+Uns mit Frieden, wenn's uns droht.  
+Führe uns durch Nacht und Tag,  
+Wie ein Licht auf unserm Weg,  
+Gib uns Kraft in jedem Kampf,  
+In der Wüste, Herr, erhebe uns!
+
+[Bridge]  
+David, er hört die Stimme,  
+Gott hat Gnade dir geschenkt,  
+Er schützt vor blut’ger Schande,  
+Sein Wort, das niemand lenkt.  
+Lob dem Herrn, der uns befreit,  
+Von der Dunkelheit zum Licht,  
+Seine Liebe, sie bleibt ewig,  
+In der Wüste, Herr, verlass uns nicht!
+
+[Chorus]  
+Oh, Herr, sei unser Schild,  
+In der Wüste, in der Not,  
+Deine Gnade, sie erfüllt,  
+Uns mit Frieden, wenn's uns droht.  
+Führe uns durch Nacht und Tag,  
+Wie ein Licht auf unserm Weg,  
+Gib uns Kraft in jedem Kampf,  
+In der Wüste, Herr, erhebe uns!
+
+[Outro]  
+In der Wüste, Herr, erhebe uns,  
+Deine Gnade, unser Trost,  
+Führ uns weiter, gib uns Mut,  
+In deinem Namen, Herr, da blüht die Glut.`,
         26: `[Verse 1]  
 In der Wüste, fern von Ruh,  
 David wandelt, hält sich treu.  
@@ -10214,7 +13563,6 @@ In jedem Kampf, verlässt Du uns nicht.
 Auf dem Berg von Gilboa, wo der Fall geschah,  
 In Deinem Namen, Herr, stehen wir da.`,
     },
-
     "10": {
         1: `[Verse 1]  
 Nach dem Kampf, der Helden fiel,  
@@ -10263,7 +13611,49 @@ So singen wir Lieder, von Glauben und Mut,
 Von Saul und Jonathan, in Gottes Glut.  
 Die Helden gefallen, doch die Liebe bleibt,  
 In Ewigkeit, in Gnade, die unser Herz treibt.`,
-        2: ``,
+        2: `[TITLE] König David in Hebron
+
+[Verse 1]  
+In den Städten Juda’s, hörte ich den Ruf,  
+Gott sprach zu mir, „Zieh hinauf, folge mir nur.“  
+Hebron, mein Ziel, die Menschen vereint,  
+Die Salbung des Königs, das Licht, das uns scheint.
+
+[Chorus]  
+Gesegnet sei der HERR, der uns führt,  
+Inmitten von Kämpfen, er uns nie verliert.  
+Euer Glaube sei stark, eure Herzen erquickt,  
+Denn der König ist da, der uns das Leben schickt.
+
+[Verse 2]  
+Saul ist gefallen, sein Weg ist nun klar,  
+Die Barmherzigkeit Gottes, sie bleibt immer wahr.  
+Jabes in Gilead, ihr habt treu gehandelt,  
+Eure Liebe zu Saul, in Erinnerung behandelt.
+
+[Chorus]  
+Gesegnet sei der HERR, der uns führt,  
+Inmitten von Kämpfen, er uns nie verliert.  
+Euer Glaube sei stark, eure Herzen erquickt,  
+Denn der König ist da, der uns das Leben schickt.
+
+[Bridge]  
+Abner und Joab, die Schwerter erhoben,  
+In der Dunkelheit, wo Brüder sich droben.  
+Die Posaune ertönt, der Streit muss enden,  
+Die Einheit des Volkes, möge sie senden.
+
+[Chorus]  
+Gesegnet sei der HERR, der uns führt,  
+Inmitten von Kämpfen, er uns nie verliert.  
+Euer Glaube sei stark, eure Herzen erquickt,  
+Denn der König ist da, der uns das Leben schickt.
+
+[Outro]  
+So lasst uns vereint, in Liebe und Licht,  
+David, unser König, er führt uns zum Gericht.  
+Mit ihm an der Spitze, da sind wir nicht allein,  
+In Hebron, in Frieden, dürfen wir sein.`,
         3: `### Titel: Ein König in der Dunkelheit
 
 [Verse 1]  
@@ -10806,8 +14196,124 @@ So lasst uns kommen, mit offenen Herzen,
 In Deiner Gnade finden wir Frieden.  
 Du bist unser König, unser Licht,  
 Für immer bei Dir, verlässt Du uns nicht.`,
-        13: ``,
-        14: ``,
+        13: `[TITLE]  
+„Thamar’s Klage“
+
+[VERS 1]  
+In den Schatten des Palastes,  
+Ein Herz, das voller Liebe schlägt,  
+Doch die Dunkelheit kam leise,  
+Als das Böse sich bewegt.  
+Thamar, du warst so rein,  
+In den Hallen, so allein,  
+Dein Schmerz, er schreit zum Himmel,  
+Sein Haß, er war so gemein.
+
+[Chorus]  
+Herr, höre unser Weinen,  
+In der Nacht, wo die Tränen fließen,  
+Du bist der Gott des Trostes,  
+In der Dunkelheit wirst Du uns führen.  
+Wir rufen zu Dir,  
+Heiliger Vater, nimm uns in Deine Hand,  
+Sei unser Licht im Sturm,  
+In Deiner Liebe sind wir gebannt.
+
+[VERS 2]  
+Amnon, von Sehnsucht getrieben,  
+Hörte nicht auf das Wort der Warne,  
+Die Torheit schien ihm süß,  
+Doch die Seele war in Gefahr.  
+Thamar sprach, „Komm nicht,  
+Es ist nicht recht, was du tust,  
+Doch die Stimme, sie verstummte,  
+In der Dunkelheit, wo die Liebe ruht.“
+
+[Chorus]  
+Herr, höre unser Weinen,  
+In der Nacht, wo die Tränen fließen,  
+Du bist der Gott des Trostes,  
+In der Dunkelheit wirst Du uns führen.  
+Wir rufen zu Dir,  
+Heiliger Vater, nimm uns in Deine Hand,  
+Sei unser Licht im Sturm,  
+In Deiner Liebe sind wir gebannt.
+
+[Bridge]  
+Oh, Thamar, deine Klage,  
+Erhebt sich bis zum Himmel hoch,  
+Die Schreie der Verzweiflung,  
+Die Liebe wurde zum Fluch.  
+Aber Du, Herr, bist der Heiler,  
+Du verwandelst Trauer in Licht,  
+In das Dunkel bringst Du Hoffnung,  
+Deine Gnade erlischt nicht.
+
+[Chorus]  
+Herr, höre unser Weinen,  
+In der Nacht, wo die Tränen fließen,  
+Du bist der Gott des Trostes,  
+In der Dunkelheit wirst Du uns führen.  
+Wir rufen zu Dir,  
+Heiliger Vater, nimm uns in Deine Hand,  
+Sei unser Licht im Sturm,  
+In Deiner Liebe sind wir gebannt.
+
+[Outro]  
+Thamar, du bist nicht allein,  
+Der Herr hört deine Stimme,  
+Sein Licht wird dich umhüllen,  
+In der Dunkelheit wird es strahlen.  
+Amen.`,
+        14: `[TITLE] Rückkehr des Verlorenen
+
+[Verse 1]  
+In Trauer gehüllt, das Herz voller Leid,  
+Ein weinendes Weib, ohne Hoffnung, allein.  
+Sie fleht zum König, ihr Ruf ist so klar,  
+„Hilf mir, o Herr, lass mich nicht so leer!“  
+
+[Chorus]  
+König, du bist wie ein Engel,  
+Gib Hoffnung in die Dunkelheit,  
+Bring zurück, was verloren,  
+Erwecke die Seele, die weint.  
+In deiner Gnade, da finde ich Frieden,  
+Gib mir das Leben, das du mir beschieden.  
+
+[Verse 2]  
+Zwei Söhne, ein Streit, der die Liebe zerbricht,  
+Ein Schatten des Todes, der die Herzen zerquetscht.  
+Doch deine Stimme, sie heilt die Wunden,  
+Gib dem Verstoßenen, was neu gefunden.  
+
+[Chorus]  
+König, du bist wie ein Engel,  
+Gib Hoffnung in die Dunkelheit,  
+Bring zurück, was verloren,  
+Erwecke die Seele, die weint.  
+In deiner Gnade, da finde ich Frieden,  
+Gib mir das Leben, das du mir beschieden.  
+
+[Bridge]  
+O Herr, du lebst, du nimmst nicht das Leben,  
+Du schenkst uns die Liebe, die ewig bleibt.  
+Lass die Verstoßenen wieder zurückkehren,  
+In deine Arme, die voller Barmherzigkeit.  
+
+[Chorus]  
+König, du bist wie ein Engel,  
+Gib Hoffnung in die Dunkelheit,  
+Bring zurück, was verloren,  
+Erwecke die Seele, die weint.  
+In deiner Gnade, da finde ich Frieden,  
+Gib mir das Leben, das du mir beschieden.  
+
+[Outro]  
+O König, mein Herz ruft zu dir,  
+In deiner Liebe, da bin ich hier.  
+Hör mein Flehen, erbarme dich,  
+Bring mich zurück, o König, zu dir.`,
         15: `[Verse 1]  
 In Zeiten der Dunkelheit, wo das Herz zerbricht,  
 Absalom, der Verführer, stiehlt das Licht.  
@@ -11014,7 +14520,56 @@ König David, er ruft, voller Liebe und Leid,
 „Mein Sohn, mein Sohn, du bist nie allein.“  
 Die Hoffnung lebt weiter, in der Ewigkeit,  
 In Gottes Händen, da findest du Freiheit.`,
-        19: ``,
+        19: `[TITLE]  
+König der Trauer
+
+[Verse 1]  
+Sieh, der König weint, um seinen Sohn,  
+Absalom, mein Sohn, mein Herz ist voll Leid.  
+Der Sieg des Tages, doch die Freude verloren,  
+Das Volk flieht in Schatten, der Schmerz ist bereit.  
+
+[Chorus]  
+Komm, Heiliger Geist, tröste unser Herz,  
+In der Dunkelheit, sei unser Licht,  
+Du bist der König, der in Trauer spricht,  
+Du kennst unser Leid, du fühlst unser Schmerz.  
+
+[Verse 2]  
+Joab spricht zu David, “Steh auf, oh König,  
+Du hast die Deinen in den Kampf geführt.  
+Warum liebst du die, die dir schaden wollen?  
+Lass die Freude zurück, die Trauer verführt.”  
+
+[Chorus]  
+Komm, Heiliger Geist, tröste unser Herz,  
+In der Dunkelheit, sei unser Licht,  
+Du bist der König, der in Trauer spricht,  
+Du kennst unser Leid, du fühlst unser Schmerz.  
+
+[Bridge]  
+Und wenn die Stürme toben, und die Feinde nah’n,  
+Gib uns deine Stärke, lass uns nicht allein steh’n.  
+Denn du bist unser König, unser Schutz, unser Licht,  
+In dir finden wir Frieden, in dir finden wir Sicht.  
+
+[Verse 3]  
+David ruft zu Simei, vergib die Missetat,  
+“Du sollst nicht sterben, ich nehme es nicht schwer.  
+Komm zurück, oh Volk, lass uns gemeinsam geh’n,  
+Wir tragen die Last, wir stehen zusammen hier.”  
+
+[Chorus]  
+Komm, Heiliger Geist, tröste unser Herz,  
+In der Dunkelheit, sei unser Licht,  
+Du bist der König, der in Trauer spricht,  
+Du kennst unser Leid, du fühlst unser Schmerz.  
+
+[Outro]  
+König der Trauer, König der Nacht,  
+In deinem Namen, wird das Licht entfacht.  
+Komm, Heiliger Geist, erwecke die Glut,  
+In uns lebt die Hoffnung, du tust alles gut.`,
         20: `[Verse 1]  
 In den Schatten der Dunkelheit,  
 Ein Ruf, der die Stille bricht,  
@@ -11070,7 +14625,78 @@ In der Stille der Nacht, in der Freude des Tags,
 Wir heben die Stimme, der König uns fragt:  
 „Bist du bereit, für das Leben zu streiten?  
 In der Treue vereint, werden wir ihn begleiten.“`,
-        21: ``,
+        21: `[TITLE]  
+"Versöhnung im Schatten der Ernte"
+
+[VERS 1]  
+In der Dunkelheit der Zeit,  
+David sucht das Angesicht,  
+Um Frieden zu bringen,  
+Inmitten von Leid und Licht.  
+Er hörte die Klage,  
+Der Gibeoniter, oh so schwer,  
+Ein Erbe der Trauer,  
+Der Ruf hallt widerher.  
+
+[Chorus]  
+Oh, Herr, bring uns zurück,  
+Zu Deinem heiligen Ort,  
+Versöhne unser Land,  
+Mit Deinem starken Wort.  
+Die Ernte ruft, die Zeit ist nah,  
+In Deinem Namen, oh, ich komm zu Dir,  
+Lass uns leben, lass uns segnen,  
+In Deinem Licht, hier und hier.
+
+[VERS 2]  
+Rizpa, voller Trauer,  
+Sie wacht über die Gebeine,  
+Ein Zeichen der Hoffnung,  
+Inmitten von Schmerzen und Pein.  
+David kommt mit Ehre,  
+Er holt heim, was verloren,  
+Die Knochen, die zerstreut,  
+Werd’n in Liebe erkoren.  
+
+[Chorus]  
+Oh, Herr, bring uns zurück,  
+Zu Deinem heiligen Ort,  
+Versöhne unser Land,  
+Mit Deinem starken Wort.  
+Die Ernte ruft, die Zeit ist nah,  
+In Deinem Namen, oh, ich komm zu Dir,  
+Lass uns leben, lass uns segnen,  
+In Deinem Licht, hier und hier.
+
+[Bridge]  
+Wenn die Kriege toben,  
+Und die Dunkelheit sich zeigt,  
+Gib uns Kraft, oh Herr,  
+Dass unser Herz nicht schweigt.  
+Wir stehen fest im Glauben,  
+Gemeinsam in Deinem Licht,  
+Mit Dir an unserer Seite,  
+Verliert sich die Dunkelheit im Nichts.
+
+[Chorus]  
+Oh, Herr, bring uns zurück,  
+Zu Deinem heiligen Ort,  
+Versöhne unser Land,  
+Mit Deinem starken Wort.  
+Die Ernte ruft, die Zeit ist nah,  
+In Deinem Namen, oh, ich komm zu Dir,  
+Lass uns leben, lass uns segnen,  
+In Deinem Licht, hier und hier.
+
+[Outro]  
+Versöhnung in der Stille,  
+Die Herzen werden neu,  
+In Deinem Namen, oh, wir kommen,  
+Frei und voller Treu.  
+Die Ernte blüht in Freude,  
+Ein neues Leben sprießt,  
+Oh, Herr, wir beten,  
+Dass dein Frieden nie versiegt.`,
         22: `[Verse 1]  
 Du bist mein Fels, mein Retter, oh Herr,  
 In Stürmen der Angst, bist Du immer für mich da.  
@@ -11212,7 +14838,6 @@ In der Stille, im Frieden, Deine Nähe spür'n,
 Durch Deine Güte, werden wir regier’n.  
 Amen.`,
     },
-
     "11": {
         1: `[Vers 1]  
 In der Dunkelheit, wo Schatten weilen,  
@@ -11261,7 +14886,66 @@ So lasst uns vereint, im Lobpreis erklingen,
 Der König, der kommt, wird Frieden uns bringen.  
 Halleluja, Halleluja, unser König ist hier,  
 Salomo, der Herr, führt uns stets zu dir.`,
-        2: ``,
+        2: `[TITLE]  
+Der Weg des Glaubens
+
+[Verse 1]  
+Wenn die Zeit des Abschieds naht,  
+Dein Wort, oh Herr, gibt mir Kraft,  
+Wie David sprach zu Salomo,  
+Sei stark und treu, bleib in der Nacht.  
+In Deinen Wegen will ich wandeln,  
+Dein Gesetz soll mein Herz erhellen,  
+Deine Sitten, oh Gott, mein Licht,  
+Führe mich durch das Dunkel, durch die Pflicht.
+
+[Chorus]  
+Du bist der Weg, die Wahrheit, das Leben,  
+In Deinen Händen will ich stehn.  
+Kein Herz soll weichen, kein Schritt vergebens,  
+Dein Wort wird ewig bestehen.  
+Oh Herr, ich vertraue, für immer bei Dir,  
+In der Stille und im Kampf, führe mich hier.
+
+[Verse 2]  
+Wenn die Feinde um mich stehen,  
+Und die Schatten mich umhüllen,  
+Erinnere mich an Deine Treue,  
+Die Du stets in mir erfüllst.  
+Wie David sprach von Barmherzigkeit,  
+So will ich leben, in Deiner Zeit,  
+Die Wege des Lebens, sie führen mich heim,  
+Zu Deinem Tisch, oh, lass mich sein.
+
+[Chorus]  
+Du bist der Weg, die Wahrheit, das Leben,  
+In Deinen Händen will ich stehn.  
+Kein Herz soll weichen, kein Schritt vergebens,  
+Dein Wort wird ewig bestehen.  
+Oh Herr, ich vertraue, für immer bei Dir,  
+In der Stille und im Kampf, führe mich hier.
+
+[Bridge]  
+Die Bosheit, die uns umgibt,  
+Zahlst Du mit Liebe, die nie versiegt.  
+Mit ganzem Herzen, von Seele und Kraft,  
+Führe uns, Herr, bis die Dunkelheit schafft.  
+Dein Königreich, es wird bestehen,  
+In jedem Schritt, oh Herr, lass uns gehen.
+
+[Chorus]  
+Du bist der Weg, die Wahrheit, das Leben,  
+In Deinen Händen will ich stehn.  
+Kein Herz soll weichen, kein Schritt vergebens,  
+Dein Wort wird ewig bestehen.  
+Oh Herr, ich vertraue, für immer bei Dir,  
+In der Stille und im Kampf, führe mich hier.
+
+[Outro]  
+So sei getrost, mein Herz, so sei bereit,  
+In Deinem Licht, oh Herr, find ich die Zeit.  
+Die Wege des Glaubens, sie führen zum Ziel,  
+In Deiner Liebe, oh Herr, find ich mein Spiel.`,
         3: `[Verse 1]  
 In der Nacht, du sprachst zu mir,  
 Gib mir, Herr, ein weises Herz,  
@@ -11397,7 +15081,50 @@ Ein Haus für den Herrn, wir bringen es dar,
 In Dank und im Glauben, für immer, fürwahr.  
 Mit Herzen vereint, in der Liebe so rein,  
 Ein Haus für den Herrn, lass uns sein, lass uns sein.`,
-        6: ``,
+        6: `[TITLE]  
+Der Tempel Deiner Herrlichkeit
+
+[VERS 1]  
+Im Jahr des Segens, Herr, baust Du Dein Haus,  
+Sechzig Ellen lang, ein Ort für uns, für Dich,  
+Mit Zedern und Gold, Du schaffst das Licht,  
+Hier beten wir, vor Deinem Angesicht.
+
+[Chorus]  
+O Herr, wir heben unsere Herzen,  
+In Deinem Haus, da wohnen wir,  
+Du bist der Gott, der nie uns verlässt,  
+In Deinem Tempel, hier sind wir bei Dir.
+
+[VERS 2]  
+Die Cherubim breiten ihre Flügel weit,  
+Ein Zeichen Deiner Herrschaft, Deiner Heiligkeit,  
+Du sprichst zu uns, in Deinem Wort,  
+Du bleibst bei uns, an jedem Ort.
+
+[Chorus]  
+O Herr, wir heben unsere Herzen,  
+In Deinem Haus, da wohnen wir,  
+Du bist der Gott, der nie uns verlässt,  
+In Deinem Tempel, hier sind wir bei Dir.
+
+[Bridge]  
+Wir stehen hier, in Ehrfurcht und in Dank,  
+Dein Wort, es führt uns, Du bist unser Klang,  
+Inmitten der Stille, hören wir Dein Ruf,  
+Du baust in uns, in jedem Lebenslauf.
+
+[Chorus]  
+O Herr, wir heben unsere Herzen,  
+In Deinem Haus, da wohnen wir,  
+Du bist der Gott, der nie uns verlässt,  
+In Deinem Tempel, hier sind wir bei Dir.
+
+[Outro]  
+Im Jahr des Segens, Herr, baust Du Dein Haus,  
+In Deiner Herrlichkeit, da finden wir den Frieden aus.  
+Mit Zedern und Gold, in Deiner Nähe sein,  
+Wir beten, wir loben, lass uns für immer Dein.`,
         7: `[Verse 1]  
 In der Stille des Waldes, da baute er,  
 Salomo, der König, mit Weisheit so schwer.  
@@ -11445,8 +15172,111 @@ Salomos Haus, ein Ort der Gebet,
 Komm, heiliger Geist, wo die Liebe weht.  
 In der Anbetung, da finden wir Ruh,  
 Oh, Herr, in Deinem Tempel, da leben wir zu!`,
-        8: ``,
-        9: ``,
+        8: `[TITLE]  
+König der Ehre
+
+[Verse 1]  
+Versammelt sind die Ältesten,  
+In Jerusalem, zu dir, oh Herr.  
+Die Lade des Bundes, sie bringen wir,  
+In den Tempel, Dein heiliges Begehr.  
+Mit Opfergaben, so viele wie der Sand,  
+Halleluja, in Deinem heiligen Land.
+
+[Chorus]  
+Du bist der König, Du bist der Gott,  
+In Deinem Haus, da wohnen wir,  
+Ewige Treue, Du schenkst uns Licht,  
+Führe uns, oh Herr, zu Deinem Gesicht.  
+König der Ehre, wir beten Dich an,  
+Dein Name, oh Herr, unser Leben begann.
+
+[Verse 2]  
+Die Priester heben die Lade,  
+Unter Cherubim, die Flügel weit,  
+Die Herrlichkeit erfüllt den Raum,  
+Wir stehen staunend, in Deiner Zeit.  
+Ein Haus für Dich, ein Ort der Anbetung,  
+In dieser Stille, spüren wir die Bewegung.
+
+[Chorus]  
+Du bist der König, Du bist der Gott,  
+In Deinem Haus, da wohnen wir,  
+Ewige Treue, Du schenkst uns Licht,  
+Führe uns, oh Herr, zu Deinem Gesicht.  
+König der Ehre, wir beten Dich an,  
+Dein Name, oh Herr, unser Leben begann.
+
+[Bridge]  
+Wenn wir fallen, hörst Du unser Flehen,  
+In der Dunkelheit bist Du unser Licht.  
+Du vergibst, Du schenkst uns Frieden,  
+Gott der Verheißung, Du verlässt uns nicht.  
+Alle Völker sollen Dich erkennen,  
+Dein Name soll heilig sein, für alle Zeit.
+
+[Chorus]  
+Du bist der König, Du bist der Gott,  
+In Deinem Haus, da wohnen wir,  
+Ewige Treue, Du schenkst uns Licht,  
+Führe uns, oh Herr, zu Deinem Gesicht.  
+König der Ehre, wir beten Dich an,  
+Dein Name, oh Herr, unser Leben begann.
+
+[Outro]  
+König der Ehre, wir bringen Dir Lob,  
+Dein Volk, oh Herr, in Deiner Hand,  
+Führ uns, bewahre uns, bis ans Ende der Zeit,  
+In Deinem Haus, da leben wir, in Ewigkeit.  
+Amen.`,
+        9: `[TITLE]  
+Ewige Treue
+
+[VERS 1]  
+Herr, Du hast Dein Haus erbaut,  
+Inmitten von uns, so stark und laut.  
+Salomo, in Weisheit und Licht,  
+Baute für Dich, das heilige Gericht.  
+Dein Name, Herr, bleibt ewig hier,  
+In unseren Herzen, bei Dir regier’.
+
+[Chorus]  
+Du bist der Gott, der niemals weicht,  
+In Deinem Licht, da haben wir erreicht,  
+Ewige Treue, in Dir sind wir frei,  
+Mit ganzem Herzen, Herr, stehen wir bei.  
+
+[VERS 2]  
+Du hörst das Flehen, hörst unser Gebet,  
+In der Dunkelheit, wenn der Sturm weht.  
+Dein Herz und Deine Augen sind hier,  
+In diesem Haus, Herr, sind wir bei Dir.  
+Gib uns die Kraft, so wie David zu sein,  
+Mit aufrichtigem Herzen, in Deinem Reim.  
+
+[Chorus]  
+Du bist der Gott, der niemals weicht,  
+In Deinem Licht, da haben wir erreicht,  
+Ewige Treue, in Dir sind wir frei,  
+Mit ganzem Herzen, Herr, stehen wir bei.  
+
+[Bridge]  
+Wenn wir uns abwenden, vergiss uns nicht,  
+Führe uns zurück, schenk uns Dein Licht.  
+Wir beten Dich an, nur Dir sei die Ehre,  
+In Deinem Namen, sind wir die Lehre.  
+
+[Chorus]  
+Du bist der Gott, der niemals weicht,  
+In Deinem Licht, da haben wir erreicht,  
+Ewige Treue, in Dir sind wir frei,  
+Mit ganzem Herzen, Herr, stehen wir bei.  
+
+[Outro]  
+O Herr, wir bauen auf Dein Wort,  
+In jedem Kampf, an jedem Ort.  
+Ewig Dein Name, ewig Dein Licht,  
+In dieser Treue, verlässt Du uns nicht.`,
         10: `[Verse 1]  
 In Jerusalem, der König thront,  
 Sein Herz erfüllt von Weisheit, die er lohnt.  
@@ -11553,7 +15383,61 @@ König, mein Herz gehört Dir allein,
 In Deinen Wegen will ich sein.  
 Führe mich, Herr, durch Sturm und Nacht,  
 Bis ich in Deinem Licht erwacht.`,
-        12: ``,
+        12: `[TITLE] Das Joch des Herrn
+
+[Verse 1]  
+In Sichem, wo die Stimmen wehen,  
+Ein König, der das Volk will sehen.  
+Rehabeam, der Thron in deiner Hand,  
+Doch hörst du nicht das Herz, das brennt.  
+
+[Verse 2]  
+Jerobeam, aus Ägypten zurück,  
+Ruft die Menschen, gibt ihnen Glück.  
+„Das Joch ist schwer, es drückt uns nieder,  
+Mach es leicht, so folgen wir dir wieder.“  
+
+[Chorus]  
+Oh, Herr, gib uns Weisheit,  
+In der Dunkelheit, lass uns nicht allein.  
+Wende unser Herz zu dir zurück,  
+Das Licht der Wahrheit führt uns zurück.  
+
+[Verse 3]  
+Die Ältesten raten, mit sanften Worten,  
+Doch er wählt den Weg der harten Torten.  
+„Mein Finger dicker, das Joch noch schwerer,  
+Ich werde züchtigen, wie nie zuvor, ja, mehr.“  
+
+[Verse 4]  
+Das Volk enttäuscht, wendet sich ab,  
+„Was haben wir mit David? Es ist kein Grab.“  
+Sie kehren heim, die Hoffnung zerbricht,  
+Die Stimme des Herrn, die leise spricht.  
+
+[Chorus]  
+Oh, Herr, gib uns Weisheit,  
+In der Dunkelheit, lass uns nicht allein.  
+Wende unser Herz zu dir zurück,  
+Das Licht der Wahrheit führt uns zurück.  
+
+[Bridge]  
+Amen, wir hören dein Wort,  
+Du führst uns heim, an diesen Ort.  
+Du bist der König, der nie vergeht,  
+In deinem Licht, da leben wir, steht.  
+
+[Chorus]  
+Oh, Herr, gib uns Weisheit,  
+In der Dunkelheit, lass uns nicht allein.  
+Wende unser Herz zu dir zurück,  
+Das Licht der Wahrheit führt uns zurück.  
+
+[Outro]  
+In Sichem, wo die Stimmen wehen,  
+Lass uns folgen, niemals vergehn.  
+Mit dir, oh Herr, an dieser Stätte,  
+Sind wir vereint, in deiner Kette.`,
         13: `[Verse 1]  
 Ein Mann Gottes, gesandt aus dem Land,  
 Mit dem Wort des Herrn, die Wahrheit er fand.  
@@ -11607,8 +15491,106 @@ Oh, lass uns folgen, dem Ruf, der nicht schweigt,
 In deinem Wort, Herr, sind wir vereint.  
 Altar, Altar, wir beten zu dir,  
 Dein Name sei heilig, für immer bei mir.`,
-        14: ``,
-        15: ``,
+        14: `[TITLE]  
+Die Stimme des Herrn
+
+[Verse 1]  
+In Silo, wo der Prophet wohnt,  
+Kommst du, oh Weib, in Angst und Not.  
+Der Knabe leidet, das Herz so schwer,  
+Der Herr spricht durch Ahia, er ist hier, so nah.
+
+[Chorus]  
+Oh, höre die Stimme des Herrn,  
+Er spricht zu uns, unser Licht so fern.  
+In Zeiten der Dunkelheit, er bleibt bei uns,  
+Führt uns durch Sturm und durch jeden Kranz.
+
+[Verse 2]  
+Jerobeam, du hast dich gewandt,  
+Von den Wegen, die Gott dir sandt.  
+Die Götzen rufen, doch die Seelen weinen,  
+Die Liebe des Vaters, sie kann uns vereinen.
+
+[Chorus]  
+Oh, höre die Stimme des Herrn,  
+Er spricht zu uns, unser Licht so fern.  
+In Zeiten der Dunkelheit, er bleibt bei uns,  
+Führt uns durch Sturm und durch jeden Kranz.
+
+[Bridge]  
+Der Herr hat gesprochen, sein Wort ist wahr,  
+Er wird uns führen, nah und klar.  
+In der Nacht, wenn die Schatten ziehn,  
+Halten wir fest, an dem, was wir seh’n.
+
+[Verse 3]  
+Für den, der leidet, gibt es Hoffnung hier,  
+Die Tränen trocknet der Vater, er ist bei dir.  
+Ein König wird kommen, die Stämme vereint,  
+In seiner Gnade, die Liebe scheint.
+
+[Chorus]  
+Oh, höre die Stimme des Herrn,  
+Er spricht zu uns, unser Licht so fern.  
+In Zeiten der Dunkelheit, er bleibt bei uns,  
+Führt uns durch Sturm und durch jeden Kranz.
+
+[Outro]  
+Die Stimme des Herrn, sie ruft uns heim,  
+In seinem Licht, da sind wir eins.  
+Halleluja, wir erheben den Lob,  
+Für den, der uns führt, in des Lebens Trost.`,
+        15: `[TITLE]  
+König Asa, der Glaubensheld
+
+[Verse 1]  
+Im Königreich, wo Sünden blühn,  
+Die Herrschaft fiel, das Licht verglühn,  
+Doch Asa trat mit festem Mut,  
+Er tat, was recht, das Herz so gut.  
+
+[Chorus]  
+O Herr, Du bist mein Licht,  
+In Dunkelheit, da führst Du mich.  
+Wie Asa, stark im Glauben stehn,  
+Dein Wort, mein Schild, mein Weg, mein Geh’n.  
+
+[Verse 2]  
+Die Höhe fiel, die Götzen zerbrochen,  
+Die Stimme laut, dem Herrn versprochen.  
+Er kämpfte treu, sein Herz so rein,  
+Für Deinen Ruhm, im Glauben sein.  
+
+[Chorus]  
+O Herr, Du bist mein Licht,  
+In Dunkelheit, da führst Du mich.  
+Wie Asa, stark im Glauben stehn,  
+Dein Wort, mein Schild, mein Weg, mein Geh’n.  
+
+[Bridge]  
+In jedem Kampf, in jedem Streit,  
+Vertraue ich auf Deine Zeit.  
+Du bist mein Fels, mein Gott, mein Freund,  
+In Dir allein, mein Herz vereint.  
+
+[Verse 3]  
+Die Stimme ruft, die Feinde nah,  
+Doch Asa wusste, Du bist da.  
+Mit Silber, Gold, den Schätzen klar,  
+Er wandte sich, oh Herr, zu Dir, so wahr.  
+
+[Chorus]  
+O Herr, Du bist mein Licht,  
+In Dunkelheit, da führst Du mich.  
+Wie Asa, stark im Glauben stehn,  
+Dein Wort, mein Schild, mein Weg, mein Geh’n.  
+
+[Outro]  
+So stehe fest, im Glauben stark,  
+Wie Asa, der das Licht bewahrt.  
+O Herr, Du bist mein Licht,  
+In Dir, da find’ ich mein Gesicht.`,
         16: `[Verse 1]  
 In dunkler Nacht, der Herr spricht klar,  
 Zu Jehu, dem Propheten, so wunderbar.  
@@ -11697,7 +15679,53 @@ Nun erkenne ich, dass Du ein Gott bist,
 Dein Wort ist die Wahrheit, und Du bist mein Licht.  
 In der Dürre und Not, bist Du immer bei mir,  
 Ich werde vertrauen, oh Herr, zu Dir.`,
-        18: ``,
+        18: `[TITLE]  
+Der Herr ist Gott
+
+[Verse 1]  
+In der Dürre, die das Land belastet,  
+Wo Hoffnung schwindet, und die Herzen klagen.  
+Elia steht, ein Prophet des Herrn,  
+Er ruft und spricht, "Der Herr wird uns tragen."
+
+[Chorus]  
+Der Herr ist Gott, wir rufen zu dir,  
+Lass Feuer fallen, zeig deine Herrlichkeit hier.  
+Vereint stehen wir, im Glauben stark,  
+Du, der die Finsternis mit Licht durchbricht,  
+Der Herr ist Gott, er führt uns zum Sieg.
+
+[Verse 2]  
+Ahab sucht, verloren in der Nacht,  
+Doch Elia zeigt den Weg, der zum Leben führt.  
+Die Propheten Baals, sie rufen laut,  
+Doch kein Feuer kommt, kein Licht, das sie berührt.
+
+[Chorus]  
+Der Herr ist Gott, wir rufen zu dir,  
+Lass Feuer fallen, zeig deine Herrlichkeit hier.  
+Vereint stehen wir, im Glauben stark,  
+Du, der die Finsternis mit Licht durchbricht,  
+Der Herr ist Gott, er führt uns zum Sieg.
+
+[Bridge]  
+Oh, Herr, wir bitten, lass uns erkennen,  
+Die Kraft deines Wortes, das Leben bringt.  
+Wir bauen den Altar, in deinem Namen,  
+Mit Wasser und Glauben, das Feuer erklingt.
+
+[Chorus]  
+Der Herr ist Gott, wir rufen zu dir,  
+Lass Feuer fallen, zeig deine Herrlichkeit hier.  
+Vereint stehen wir, im Glauben stark,  
+Du, der die Finsternis mit Licht durchbricht,  
+Der Herr ist Gott, er führt uns zum Sieg.
+
+[Outro]  
+Die Wolken ziehen, der Regen naht,  
+Sein Segen kommt und erfüllt unser Land.  
+Der Herr ist Gott, wir loben ihn laut,  
+In seiner Treue, die niemals vergeht.`,
         19: `[Verse 1]  
 Wenn Stürme toben, die Berge zerbrechen,  
 Wenn Dunkelheit kommt und kein Licht mehr spricht,  
@@ -11911,7 +15939,6 @@ Sein Wort ist die Wahrheit, er gibt uns die Kraft.
 
 ###`,
     },
-
     "12": {
         1: `[Verse 1]  
 In einer Zeit der Dunkelheit,  
@@ -12068,8 +16095,117 @@ So beten wir, in Deinem Namen,
 Mit jedem Schritt, in Deinen Planen.  
 O HERR, Du bist unser Licht,  
 Für immer bei uns, verlässt uns nicht.`,
-        4: ``,
-        5: ``,
+        4: `[TITLE]  
+Gott des Wunders
+
+[Verse 1]  
+In der Dunkelheit schreit eine Seele,  
+Die Last der Trauer, ihr Herz ist schwer,  
+Mein Mann, mein Halt, er ist gegangen,  
+Der Schuldherr kommt, nimmt mir die Ehr.  
+
+[Chorus]  
+Gott des Wunders, Du bringst das Licht,  
+Füllst unsere Krüge, gibst Hoffnung zurück.  
+In der Not, wenn der Glaube bricht,  
+Stehst Du uns bei, Du bist unser Glück.  
+
+[Verse 2]  
+Elisa sprach: "Bring leere Gefäße,  
+Schließe die Tür, vertraue dem Herrn.  
+Das Öl wird fließen, die Fülle wird kommen,  
+In stiller Hoffnung, Dein Herz wird nicht fern."  
+
+[Chorus]  
+Gott des Wunders, Du bringst das Licht,  
+Füllst unsere Krüge, gibst Hoffnung zurück.  
+In der Not, wenn der Glaube bricht,  
+Stehst Du uns bei, Du bist unser Glück.  
+
+[Bridge]  
+Oft ist das Leben ein Kampf, ein Streiten,  
+Doch Deine Liebe wird nie versiegen.  
+Wie die Sunamitin, fest entschlossen,  
+Lass mich nicht los, bis Deine Stimme siegt.  
+
+[Verse 3]  
+Ein Sohn geboren, das Herz voller Freude,  
+Doch die Dunkelheit bringt Kummer zurück.  
+Sie sucht den Propheten, gibt niemals auf,  
+Ihr Glaube bleibt stark, kein Blick zurück.  
+
+[Chorus]  
+Gott des Wunders, Du bringst das Licht,  
+Füllst unsere Krüge, gibst Hoffnung zurück.  
+In der Not, wenn der Glaube bricht,  
+Stehst Du uns bei, Du bist unser Glück.  
+
+[Outro]  
+Heiliger Gott, Du bist unser Licht,  
+In jedem Sturm, Du verlässt uns nicht.  
+Wir heben die Hände, wir singen im Klang,  
+Gott des Wunders, Dein Lob ist unser Gesang.`,
+        5: `[TITLE] Heilsame Wasser
+
+[Verse 1]  
+In Syrien war ein Held,  
+Naeman, stark und voller Mut,  
+Doch ein Leiden ihn quält,  
+Ein Aussatz, der ihm nicht ruht.  
+Eine Dirne sprach von Hoffnung,  
+Von einem Mann in Israel,  
+Der heilt, wenn man sich ihm neigt,  
+Der Herr, der Wunder wirkt, so schnell.
+
+[Chorus]  
+Heilsame Wasser, fließend und klar,  
+Im Jordan, wo die Freiheit war.  
+Wasche mich rein, Herr, ganz neu,  
+Lass mich sein, wie ein Kind, so frei.  
+Du, der die Ketten bricht,  
+In deinem Licht, da lebe ich!
+
+[Verse 2]  
+Der König sprach, entsetzt und bang,  
+„Bin ich Gott, der Leben gibt?“  
+Doch Elisa, treu und wahr,  
+Rief: „Lass ihn kommen, der voller Leid!“  
+Naeman kam mit Mut und Zorn,  
+Wollte mehr als nur ein Wort,  
+Doch die Stimme seiner Knechte,  
+Erinnerte ihn an Gottes Ort.
+
+[Chorus]  
+Heilsame Wasser, fließend und klar,  
+Im Jordan, wo die Freiheit war.  
+Wasche mich rein, Herr, ganz neu,  
+Lass mich sein, wie ein Kind, so frei.  
+Du, der die Ketten bricht,  
+In deinem Licht, da lebe ich!
+
+[Bridge]  
+Sieben mal, Herr, will ich tauchen,  
+Um in deinem Namen zu glauben.  
+Die Wellen tragen all mein Leid,  
+In deinem Wasser, da bin ich bereit.  
+Du schenkst mir neues Leben,  
+Von Dunkelheit in dein Licht gehoben.
+
+[Chorus]  
+Heilsame Wasser, fließend und klar,  
+Im Jordan, wo die Freiheit war.  
+Wasche mich rein, Herr, ganz neu,  
+Lass mich sein, wie ein Kind, so frei.  
+Du, der die Ketten bricht,  
+In deinem Licht, da lebe ich!
+
+[Outro]  
+Naeman fiel vor dir nieder,  
+„Es gibt keinen Gott wie dich,  
+Dein Name, Herr, leuchtet weiter,  
+Für alle Zeit, für die Ewigkeit.“  
+Heilsame Wasser, fließend und klar,  
+Im Jordan, wo die Freiheit war.`,
         6: `Vers 1:  
 In der Dunkelheit, wo die Sorgen lasten,  
 Fühl ich die Last, die mich niederdrückt,  
@@ -12330,7 +16466,50 @@ Mit jedem Schritt, den wir wagen,
 Vertrauen wir auf dich, in allen Fragen.  
 Euer König, unser Herr,  
 Für immer, für immer, wir stehen bereit!`,
-        11: ``,
+        11: `[TITLE]  
+König der Verheißung
+
+[Verse 1]  
+In dunkler Nacht, die Schatten zieh’n,  
+Ein Kind verborgen, das Licht wird blüh’n.  
+Joseba, stark, bewahrt das Leben,  
+Im Haus des Herrn, ein Zeichen gegeben.  
+
+[Chorus]  
+Erhebt den König, der kommt in Macht,  
+Die Freude strahlt, die Finsternis weicht.  
+Sein Name leuchtet, die Hoffnung blüht,  
+Wir singen laut, bis die Welt verglüht.  
+
+[Verse 2]  
+Im siebten Jahr, die Stimme ruft,  
+Ein Bund mit dem Volk, in Gottes Kraft,  
+Die Obersten, sie stehen bereit,  
+Für den König, in Herrlichkeit.  
+
+[Chorus]  
+Erhebt den König, der kommt in Macht,  
+Die Freude strahlt, die Finsternis weicht.  
+Sein Name leuchtet, die Hoffnung blüht,  
+Wir singen laut, bis die Welt verglüht.  
+
+[Bridge]  
+Die Trompeten blasen, das Volk ist vereint,  
+Zerbrochen die Altäre, die Lügen verweht.  
+Wir folgen dem König, der Herr ist hier,  
+Ein neues Leben, unser Herz, es regiert.  
+
+[Chorus]  
+Erhebt den König, der kommt in Macht,  
+Die Freude strahlt, die Finsternis weicht.  
+Sein Name leuchtet, die Hoffnung blüht,  
+Wir singen laut, bis die Welt verglüht.  
+
+[Outro]  
+König der Verheißung, wir beten dich an,  
+In deinem Licht, da fängt alles an.  
+Ewige Hoffnung, unser Herz schlägt für dich,  
+Wir leben für deinen Ruhm, für dein Licht.`,
         12: `[Verse 1]  
 Im siebenten Jahr, Joas, du regierst,  
 Ein König, der mit Herz für Gott hier steht.  
@@ -12419,7 +16598,61 @@ So heben wir die Augen, richten uns auf dich,
 Du bist unser Heiland, du verlässt uns nicht.  
 Ein Pfeil des Heils, durch alle Zeit,  
 Mit dir an der Seite, in der Ewigkeit.`,
-        14: ``,
+        14: `[TITLE] König Amazja
+
+[Verse 1]  
+In Jerusalem regierte, ein König, jung und stark,  
+Amazja, Sohn des Joas, trug das Licht wie einen Park.  
+Er tat, was dir gefiel, o Herr, doch nicht ganz rein,  
+Die Höhen blieben stehen, das Volk opferte allein.
+
+[Chorus]  
+Komm, oh Herr, schau herab,  
+Stärke uns im Glauben,  
+Lass uns kämpfen, lass uns leben,  
+In deinem Licht, in deinem Segen.  
+König der Könige, du bist unser Ziel,  
+Führe uns im Streit, durch dein heiliges Spiel.
+
+[Verse 2]  
+Er schlug die Edomiter, im Salztal fiel der Feind,  
+Doch der Stolz stieg in ihm auf, wo er doch Sieger scheint.  
+Ein Ruf nach Joas, die Herausforderung klang,  
+Doch der Dornstrauch blieb klein, der Zeder war so lang.
+
+[Chorus]  
+Komm, oh Herr, schau herab,  
+Stärke uns im Glauben,  
+Lass uns kämpfen, lass uns leben,  
+In deinem Licht, in deinem Segen.  
+König der Könige, du bist unser Ziel,  
+Führe uns im Streit, durch dein heiliges Spiel.
+
+[Bridge]  
+Du bist der Gott, der das Leben gibt,  
+In der Dunkelheit, dein Licht uns umgibt.  
+Halt uns fest, wenn der Sturm uns bedroht,  
+In deinem Namen, da finden wir Trost.
+
+[Verse 3]  
+So fiel der Kampf, und Juda floh geschwind,  
+Die Mauern wurden niedergerissen, der Feind war wie der Wind.  
+Doch in deiner Treue, o Herr, bleibst du stets,  
+Dein Wort erfüllt sich, wenn das Herz sich bewegt.
+
+[Chorus]  
+Komm, oh Herr, schau herab,  
+Stärke uns im Glauben,  
+Lass uns kämpfen, lass uns leben,  
+In deinem Licht, in deinem Segen.  
+König der Könige, du bist unser Ziel,  
+Führe uns im Streit, durch dein heiliges Spiel.
+
+[Outro]  
+So leben wir für dich, in Treue und in Licht,  
+König Amazja, zeige uns dein Angesicht.  
+Für immer in deinem Reich, o Herr, das ist unser Lied,  
+In deinem Namen, da blüht das Leben, da wächst der Friede.`,
         15: `[LYRICS]
 [LYRICS]
 
@@ -12511,8 +16744,106 @@ So singe ich von Hoffnung, die nicht vergeht,
 In Dir finde ich Frieden, der nie verweht.  
 Oh, Herr, sei mein Licht, für alle Zeit,  
 In Deinem Namen, finde ich die Freiheit.`,
-        17: ``,
-        18: ``,
+        17: `[TITLE]  
+Ruf Zur Umkehr  
+
+[Verse 1]  
+In dunklen Zeiten, als das Volk fiel,  
+Hosea rief, doch die Herzen blieben kalt.  
+Die Götzen schimmerten, die Höhen waren voll,  
+Das Wort des Herrn, es hallte durch den Wald.  
+
+[Chorus]  
+Kehret um, kehr zurück,  
+Zu dem Gott, der uns befreit.  
+Sein Licht erstrahlt in bitterer Nacht,  
+Er führt uns heim, in die Ewigkeit.  
+
+[Verse 2]  
+Die Könige führten das Volk in die Nacht,  
+Vater, vergib uns, wir haben versagt.  
+Wir schmückten die Höhen, wir beteten fremd,  
+Doch Du, Herr, bleibst uns ewig verwandt.  
+
+[Chorus]  
+Kehret um, kehr zurück,  
+Zu dem Gott, der uns befreit.  
+Sein Licht erstrahlt in bitterer Nacht,  
+Er führt uns heim, in die Ewigkeit.  
+
+[Bridge]  
+Du hast uns befreit, aus Ägyptens Hand,  
+Mit starkem Arm, führst Du uns ins Land.  
+Wir wollen uns wenden, dem Alten versagen,  
+In Deinem Namen, Herr, wollen wir tragen.  
+
+[Verse 3]  
+Die Löwen riefen, das Volk war verloren,  
+Die Wege des Herrn waren uns nicht mehr klar.  
+Doch Du, unser Gott, Du hörst unser Flehen,  
+Bring uns zurück, mach uns wunderbar.  
+
+[Chorus]  
+Kehret um, kehr zurück,  
+Zu dem Gott, der uns befreit.  
+Sein Licht erstrahlt in bitterer Nacht,  
+Er führt uns heim, in die Ewigkeit.  
+
+[Outro]  
+Kehret um, oh Volk,  
+Der Herr ist nah, er lädt euch ein.  
+Lasst uns gemeinsam, in Einheit stehen,  
+Für immer bei Dir, O Herr, unser Sein.`,
+        18: `[TITLE]  
+Vertraue auf den Herrn
+
+[Verse 1]  
+In der Zeit von Hiskia, König der Treue,  
+Mit David's Herz, tat er, was wohlgefiel.  
+Höhen zerbrach er, die Ascherabilder,  
+Dem Herrn vertraute er, in jedem Spiel.
+
+[Chorus]  
+Oh, Hiskia, du hast den Glauben bewahrt,  
+Die Stadt Jerusalem, du hast sie nicht verraten.  
+Der Herr war mit dir, in jeder Gefahr,  
+Vertrauend auf ihn, wirst du nie verloren gehen.
+
+[Verse 2]  
+Die Feinde kamen, Sanherib war nah,  
+Doch Hiskia betete, voller Mut und Kraft.  
+„Gott, hör mein Flehen, schütze unser Land,  
+Du bist unser Schild, der uns bewacht.“
+
+[Chorus]  
+Oh, Hiskia, du hast den Glauben bewahrt,  
+Die Stadt Jerusalem, du hast sie nicht verraten.  
+Der Herr war mit dir, in jeder Gefahr,  
+Vertrauend auf ihn, wirst du nie verloren gehen.
+
+[Bridge]  
+Wo sind die Götter, die nicht hören?  
+Wo sind die Könige, die nicht befreien?  
+Doch du, Herr, bist treu und wahr,  
+In dir allein, da ist kein Vergleich.
+
+[Verse 3]  
+Die Worte des Feindes, sie klangen so laut,  
+„Verlass dich nicht auf Gott, er kann euch nicht retten!“  
+Doch Hiskia stand fest, sein Herz war vertraut,  
+„Oh Herr, das ist unser Schwur, wir werden nicht vergessen.“
+
+[Chorus]  
+Oh, Hiskia, du hast den Glauben bewahrt,  
+Die Stadt Jerusalem, du hast sie nicht verraten.  
+Der Herr war mit dir, in jeder Gefahr,  
+Vertrauend auf ihn, wirst du nie verloren gehen.
+
+[Outro]  
+Der Herr wird uns führen, sein Licht ist der Weg,  
+In Stürmen des Lebens, er gibt uns den Sieg.  
+Vertraue auf den Herrn, er ist unser Schild,  
+In der Dunkelheit leuchtet sein Licht, das nie still.`,
         19: `"Hiskias Gebet"
 
 Verse 1:  
@@ -12709,7 +17040,58 @@ König Josia, dein Erbe bleibt hier,
 Ein Volk, das dir folgt, mit Glauben und Zier.  
 In Einheit und Frieden, erheben wir’s Lob,  
 Ein Herz voller Freude, in Gottes Beruf.`,
-        23: ``,
+        23: `[TITLE]  
+König Josia's Bund
+
+[Verse 1]  
+Der König trat zum HERRN, mit Volk versammelt groß,  
+In seinem Haus, da hörten sie das Wort, so heilig und so groß.  
+Die Herzen wurden weich, die Seelen aufgerichtet,  
+Ein Bund vor dir, o Herr, in Treue uns verpflichtet.
+
+[Chorus]  
+Wir wandeln in deinem Licht,  
+Dein Wort führt uns, verlässt uns nicht.  
+Mit ganzem Herzen, voller Kraft,  
+Halten wir, was du uns gabst.  
+O Herr, wir kommen, unser Gott,  
+In dir allein, da blüht der Trott.
+
+[Verse 2]  
+Die Götzen fallen nieder, die Altäre brennen heiß,  
+Die Opfer, die wir bringen, sind die, die du verheißt.  
+Die Höhen sind verunreinigt, die Schatten weichen nun,  
+In deinem Licht, o Herr, kann unser Herz nun ruhn.
+
+[Chorus]  
+Wir wandeln in deinem Licht,  
+Dein Wort führt uns, verlässt uns nicht.  
+Mit ganzem Herzen, voller Kraft,  
+Halten wir, was du uns gabst.  
+O Herr, wir kommen, unser Gott,  
+In dir allein, da blüht der Trott.
+
+[Bridge]  
+Komm, König, lass uns leben,  
+In deinem Namen, stark und rein.  
+Die Dunkelheit wird weichen,  
+Wenn wir bei dir sind, ganz allein.  
+Von Herzen beten wir zu dir,  
+Ein neues Leben, Herr, in dir.
+
+[Chorus]  
+Wir wandeln in deinem Licht,  
+Dein Wort führt uns, verlässt uns nicht.  
+Mit ganzem Herzen, voller Kraft,  
+Halten wir, was du uns gabst.  
+O Herr, wir kommen, unser Gott,  
+In dir allein, da blüht der Trott.
+
+[Outro]  
+König Josia, du bist treu,  
+In deinem Bund, da blüht das Neu.  
+Wir singen dir, o Herr, ein Lied,  
+In deinem Licht, da sind wir nie allein, nie allein.`,
         24: `[Verse 1]  
 In dunkler Zeit, wo Schatten stehen,  
 Der König fiel, das Volk verließ,  
@@ -12802,7 +17184,6 @@ Führ uns durch die Schatten, verlässt uns nicht.
 Gott, unser Schutz, unser Licht in der Nacht,  
 Wir beten und preisen, für Deine große Macht.`,
     },
-
     "13": {
         1: `[Verse 1]  
 In der Dunkelheit der Zeiten,  
@@ -13076,8 +17457,121 @@ Du bist unser Gott, unser Vater,
 Für alle Zeit, bei dir sind wir.  
 Gott, du bist unser Schild,  
 In deinem Licht sind wir erfüllt.`,
-        6: ``,
-        7: ``,
+        6: `[TITLE]  
+Die Kinder Levi
+
+[Verse 1]  
+In den Hallen des Glaubens, wo die Stimmen erklingen,  
+Die Kinder Levis, sie singen, sie bringen,  
+Gerson, Kahath, Merari, vereint in dem Lied,  
+Von der Treue des Herrn, die niemals verflieht.  
+
+[Chorus]  
+Halleluja, erhebt euch, singt,  
+Von Aaron zu Mose, die Gnade, die springt,  
+Die Linien des Lebens, sie führen zu dir,  
+Oh, Herr, in deinem Licht, sind wir hier.  
+
+[Verse 2]  
+Eleasar, Pinehas, sie stehen bereit,  
+Im Tempel des Lebens, in Heiligkeit,  
+Mit jedem gesungenen Wort, wird der Bund neu,  
+Die Geschichte des Glaubens, voller Freude und Treu.  
+
+[Chorus]  
+Halleluja, erhebt euch, singt,  
+Von Aaron zu Mose, die Gnade, die springt,  
+Die Linien des Lebens, sie führen zu dir,  
+Oh, Herr, in deinem Licht, sind wir hier.  
+
+[Bridge]  
+Jozadak, gefangen, doch Hoffnung bleibt,  
+Durch Nebukadnezar, der Glaube treibt,  
+Die Kinder des Herzens, sie stehen vereint,  
+In der Dunkelheit leuchtet, was uns vereint.  
+
+[Verse 3]  
+Glaubensgeschichten, sie leben fort,  
+In den Herzen der Gläubigen, an jedem Ort,  
+Mit jedem Generationen, ein Lied, das bleibt,  
+Die Treue des Herrn, die uns stets beschreibt.  
+
+[Chorus]  
+Halleluja, erhebt euch, singt,  
+Von Aaron zu Mose, die Gnade, die springt,  
+Die Linien des Lebens, sie führen zu dir,  
+Oh, Herr, in deinem Licht, sind wir hier.  
+
+[Outro]  
+Die Kinder Levis, sie singen und tanzen,  
+In deinem Namen, wir finden die Chancen,  
+Die Geschichte des Glaubens, sie lebt weiter fort,  
+Oh, Herr, unser Licht, unser Heiliger Ort.`,
+        7: `[TITLE]  
+Krieger des Glaubens
+
+[VERSES]  
+In den Tagen, als das Land erblühte,  
+Die Kinder Isaschars, stark und treu,  
+Thola, Phua, Jasub, Simron,  
+In Einheit zogen sie, in Gottes Treu.  
+
+Häupter in ihren Häusern,  
+Gewaltige Männer im Streit,  
+Mit Mut und Glauben, vereint im Herzen,  
+Für das Königreich bereit.
+
+[Chorus]  
+Krieger des Glaubens, erhebt euch,  
+In Gottes Kraft, stehen wir vereint,  
+Mit jedem Schritt, den wir gehen,  
+Sein Licht führt uns, sein Wort vereint.  
+Oh, Krieger des Glaubens, erhebt euch,  
+Lasst uns kämpfen, bis der Sieg erscheint.
+
+[VERSES]  
+Die Kinder Benjamins, stark wie der Wind,  
+Bela, Becher und Jediael,  
+In der Dunkelheit, unser Licht,  
+Glaube, der niemals zerbricht.
+
+Die Kinder Ephraims, voller Mut,  
+Tragen die Last, in Leid und Not,  
+Doch Gottes Trost, der uns umhüllt,  
+In seinen Armen, unser Herz erfüllt.
+
+[Chorus]  
+Krieger des Glaubens, erhebt euch,  
+In Gottes Kraft, stehen wir vereint,  
+Mit jedem Schritt, den wir gehen,  
+Sein Licht führt uns, sein Wort vereint.  
+Oh, Krieger des Glaubens, erhebt euch,  
+Lasst uns kämpfen, bis der Sieg erscheint.
+
+[Bridge]  
+Mit jedem Namen, der auf den Lippen,  
+Erinnern wir uns, an die, die vor uns gingen,  
+Sie kämpften für die Wahrheit, für das Licht,  
+In unsern Herzen brennt ihr Licht.
+
+Die Kinder Asser, stark und weise,  
+Gemeinsam stehen wir, in Gottes Reise,  
+Von Generation zu Generation,  
+Erhebt sich unser Lob, in voller Passion.
+
+[Chorus]  
+Krieger des Glaubens, erhebt euch,  
+In Gottes Kraft, stehen wir vereint,  
+Mit jedem Schritt, den wir gehen,  
+Sein Licht führt uns, sein Wort vereint.  
+Oh, Krieger des Glaubens, erhebt euch,  
+Lasst uns kämpfen, bis der Sieg erscheint.
+
+[Outro]  
+In den Tagen, wenn Kämpfe toben,  
+Halten wir fest, an dem, der uns liebt,  
+Krieger des Glaubens, in ihm geborgen,  
+Ein Volk von Hoffnung, das nie versiegt.`,
         8: `[Verse 1]  
 In der Dunkelheit, wo Schatten weilen,  
 Erblüht ein Licht, das uns vereint.  
@@ -13472,8 +17966,117 @@ In der Stadt Davids, wo die Hoffnung blüht,
 Die Lade des Herrn, die ewig erglüht.  
 Mit jedem Schritt, der Glaube erträgt,  
 Die Liebe des Vaters, die niemals vergeht.`,
-        16: ``,
-        17: ``,
+        16: `[TITLE]  
+*Danket dem HERRN*
+
+[Verse 1]  
+Wir bringen dir, o Gott, die Lade,  
+in deiner Hütte, hier bei dir,  
+opfern Lob und Dank in Gnade,  
+dein Name strahlt, so fern und nah.
+
+[Chorus]  
+Danket dem HERRN, verkündet sein Heil,  
+unter allen Völkern, sein Licht erstrahlt.  
+Singet und spielt, von Wundern voll,  
+er ist unser Gott, er macht uns wohl.
+
+[Verse 2]  
+David segnete das Volk, so treu,  
+das Brot, das Fleisch, den Wein bereit.  
+Leviten preisen, voller Freude,  
+dein heiliges Wort, es bleibt uns stets.
+
+[Chorus]  
+Danket dem HERRN, verkündet sein Heil,  
+unter allen Völkern, sein Licht erstrahlt.  
+Singet und spielt, von Wundern voll,  
+er ist unser Gott, er macht uns wohl.
+
+[Bridge]  
+Gedenket seiner Wunder,  
+seiner Macht, die nie vergeht.  
+Er führt uns durch das Dunkel,  
+bis unser Herz ihm ewig lebt.
+
+[Verse 3]  
+Weit über Länder, weit über Meer,  
+deine Ehre leuchtet, wir danken dir sehr.  
+Du bist der HERR, der alles regiert,  
+dein Name bleibt, und niemand verliert.
+
+[Chorus]  
+Danket dem HERRN, verkündet sein Heil,  
+unter allen Völkern, sein Licht erstrahlt.  
+Singet und spielt, von Wundern voll,  
+er ist unser Gott, er macht uns wohl.
+
+[Outro]  
+Gelobet sei der HERR, von Ewigkeit zu Ewigkeit,  
+alle Völker rufen: Lobe den HERRN,  
+dein Königreich, es naht,  
+und wir sind dein Volk, für alle Zeit.`,
+        17: `[TITLE] Du bist mein Gott
+
+[Verse 1]  
+In Zedernhaus, da wohnte ich,  
+Die Lade tief verborgen,  
+Doch du, Herr, sprachst zu mir,  
+„Bau mir kein Haus, ich bin bei dir.“  
+Von Schafen hast du mich genommen,  
+Um dein Volk zu leiten,  
+Durch dunkle Täler und durch die Stürme,  
+Wirst du mich stets begleiten.
+
+[Chorus]  
+Wer bin ich, o Herr, mein Gott?  
+Was ist mein Haus, dass du mich liebst?  
+Deine Barmherzigkeit, sie bleibt,  
+Ewig wird dein Wort, o Herr, erfüllt.  
+Du bist mein Gott, mein Licht, mein Ort,  
+Dein Name groß und ewig bleibt!
+
+[Verse 2]  
+Kein König auf Erden, kein Gott wie du,  
+Hast Wunder getan, das Volk befreit.  
+Du hast mir versprochen, ein Haus zu bau’n,  
+Für alle Zeiten, in Ewigkeit.  
+Die Feinde fallen vor dir nieder,  
+Du schenkst mir Kraft in jedem Streit,  
+Du bist der Fels, mein Schild, mein Führer,  
+In dir allein find’ ich die Zeit.
+
+[Chorus]  
+Wer bin ich, o Herr, mein Gott?  
+Was ist mein Haus, dass du mich liebst?  
+Deine Barmherzigkeit, sie bleibt,  
+Ewig wird dein Wort, o Herr, erfüllt.  
+Du bist mein Gott, mein Licht, mein Ort,  
+Dein Name groß und ewig bleibt!
+
+[Bridge]  
+Und wenn die Schatten kommen,  
+Wenn Zweifel mich umhüllt,  
+Erinnere mich an deinen Bund,  
+Der niemals zerbricht, niemals verstummt.  
+O Herr, mein Herz ist dir ergeben,  
+In dir allein find’ ich das Leben.
+
+[Chorus]  
+Wer bin ich, o Herr, mein Gott?  
+Was ist mein Haus, dass du mich liebst?  
+Deine Barmherzigkeit, sie bleibt,  
+Ewig wird dein Wort, o Herr, erfüllt.  
+Du bist mein Gott, mein Licht, mein Ort,  
+Dein Name groß und ewig bleibt!
+
+[Outro]  
+Nun segne, Herr, das Haus deines Knechts,  
+Die Zeit, die du mir schenkst, sie bleibt.  
+Was du, o Herr, segnest, ist gesegnet,  
+In deinem Licht, da find’ ich die Freiheit.  
+Du bist mein Gott, mein Licht, mein Ort,  
+Ewig bleibt dein Name, ewig bleibt dein Wort!`,
         18: `Strophe 1:  
 In dunkler Nacht, wenn Feinde nah'n,  
 Mit Mut und Kraft, will ich nicht klag'n.  
@@ -13628,7 +18231,68 @@ So ziehen wir aus, mit dir an der Front,
 Kämpfer in deinem Namen, unser Herz ist verbunden.  
 Die Siegeskrone, die du uns gibst,  
 Für immer in deinem Namen, Herr, sind wir lieb.`,
-        21: ``,
+        21: `[TITLE]  
+Hör' mein Rufen, Herr
+
+[Verse 1]  
+Der Satan stand und reizte mich,  
+Ein Zählen, was ich nicht tun darf,  
+In meiner Angst, ich hör' nicht auf,  
+Die Stimme, die mich treu bewahrt.  
+Joab sprach: "Lass es, König, halt ein,  
+Denn alle sind dein, sie sind dein!  
+Doch mein Herz war schwer, ich tat es doch,  
+Das Volk gezählt, ich fiel in den Schock.  
+
+[Chorus]  
+Hör’ mein Rufen, Herr, ich bin verloren,  
+In meiner Schuld, von Angst umgeben.  
+Doch deine Barmherzigkeit, so groß und rein,  
+Lass mich nicht fallen, lass mich leben.  
+Du bist mein Licht in finsterer Nacht,  
+Dein Wort, das mich führt, wenn alles zerbricht.  
+
+[Verse 2]  
+Seventy Tausend fielen, Herr,  
+Die Plage kam, ich sah das Gericht,  
+David, der Sünder, fiel nieder,  
+Vor dir, oh Gott, in bitterem Licht.  
+„Was haben diese Schafe getan?“  
+Mein Volk, mein Volk, ich flehe zu dir an.  
+Lass deine Hand nicht über sie sein,  
+Wende das Übel und lass sie frei.  
+
+[Chorus]  
+Hör’ mein Rufen, Herr, ich bin verloren,  
+In meiner Schuld, von Angst umgeben.  
+Doch deine Barmherzigkeit, so groß und rein,  
+Lass mich nicht fallen, lass mich leben.  
+Du bist mein Licht in finsterer Nacht,  
+Dein Wort, das mich führt, wenn alles zerbricht.  
+
+[Bridge]  
+Ich baue dir einen Altar,  
+An diesem Platz, wo du mich hörst.  
+Mit vollem Herzen, voller Dank,  
+Das Feuer vom Himmel, das du mir schenkst.  
+Der Engel des Herrn, er kehrt sich ab,  
+Dein Licht, oh Gott, gibt mir neuen Mut.  
+Ich opfere dir, was ich kann,  
+Mit Glauben, Herr, nimm meine Hand.  
+
+[Chorus]  
+Hör’ mein Rufen, Herr, ich bin verloren,  
+In meiner Schuld, von Angst umgeben.  
+Doch deine Barmherzigkeit, so groß und rein,  
+Lass mich nicht fallen, lass mich leben.  
+Du bist mein Licht in finsterer Nacht,  
+Dein Wort, das mich führt, wenn alles zerbricht.  
+
+[Outro]  
+Hör’ mein Rufen, Herr, ich flehe zu dir,  
+In deiner Nähe, da will ich sein.  
+Du bist mein Gott, mein Retter, mein Licht,  
+In dir allein, da find' ich Frieden und Sicht.`,
         22: `"Das Haus des HERRN"
 
 [Verse 1]  
@@ -13831,8 +18495,110 @@ In den Tagen Davids, und auch heut’ noch hier,
 Loben wir ewig, den König, oh Herr, zu dir.  
 Mit Harfen und Zimbeln, das Lob steigt empor,  
 Im Haus des Herrn singen wir, jetzt und für immer dar.`,
-        26: ``,
-        27: ``,
+        26: `[TITLE]  
+Die Ordnungen des Herrn
+
+[VERS 1]  
+In den Hallen des Heiligen, da stehen wir,  
+Mit den Kindern der Treue, wir folgen Dir.  
+Meselemja ruft, der Wächter am Tor,  
+Sacharja, der Weise, sein Rat führt empor.
+
+[Chorus]  
+Du bist unser Fels, in der Dunkelheit,  
+Dein Licht strahlt hell, in der Ewigkeit.  
+Mit Obed-Edom stehen wir in Deinem Haus,  
+Geheiligte Schätze, wir bringen sie aus.
+
+[VERS 2]  
+Semaja und seine Brüder, tüchtige Leute,  
+Mit Kraft und mit Ehre, in Deiner Gebe.  
+Hilf uns, oh Herr, in den Kämpfen des Lebens,  
+Die Ordnungen des Glaubens, uns stets zu erheben.
+
+[Chorus]  
+Du bist unser Fels, in der Dunkelheit,  
+Dein Licht strahlt hell, in der Ewigkeit.  
+Mit Obed-Edom stehen wir in Deinem Haus,  
+Geheiligte Schätze, wir bringen sie aus.
+
+[Bridge]  
+Von Morgen bis Abend, wir loben Dich,  
+In jeder Stunde, lebendig und frisch.  
+Fürst über die Schätze, Du bist unser Ziel,  
+In Dir finden wir Frieden, in Dir unser Spiel.
+
+[Chorus]  
+Du bist unser Fels, in der Dunkelheit,  
+Dein Licht strahlt hell, in der Ewigkeit.  
+Mit Obed-Edom stehen wir in Deinem Haus,  
+Geheiligte Schätze, wir bringen sie aus.
+
+[Outro]  
+Oh, Herr, wir beten, mit Herzen so rein,  
+In Deinem Namen, lass uns immer Dein sein.  
+Die Ordnungen des Herrs, sie führen uns weit,  
+In Deinem Licht, finden wir die Zeit.`,
+        27: `[TITLE]  
+Göttervolk in Einheit
+
+[Verse 1]  
+In der Nacht, wenn Zweifel naht,  
+Zähl' ich die Sterne, die Du schufst,  
+Wie das Volk, das Du uns gabst,  
+Israel, in Deiner Liebe ruft.  
+Jeder Name, jeder Ort,  
+Ein Teil Deines Plans, ein himmlisch' Wort.  
+Führ uns, Herr, durch jedes Tal,  
+In Deiner Macht, da sind wir all.
+
+[Chorus]  
+Du bist der König, unser Licht,  
+In Deinem Namen, da fürcht' ich nicht.  
+Halleluja, wir stehen hier,  
+Ein Volk vereint, wir loben Dir.  
+Unsere Herzen, sie schlagen laut,  
+In Deiner Gnade, da sind wir vertraut.
+
+[Verse 2]  
+Sieben Monate, die Garde marschiert,  
+Jeder Held, der für Dich kämpft,  
+Wie Benaja, der stark regiert,  
+In Deinem Namen, der alles kennt.  
+Von Ruben bis zu Benjamin,  
+Führst Du uns sicher, Du bist unser Sinn.  
+Jeder Stamm, er hebt die Stimme,  
+In Deinem Licht, da blüht die Blume.
+
+[Chorus]  
+Du bist der König, unser Licht,  
+In Deinem Namen, da fürcht' ich nicht.  
+Halleluja, wir stehen hier,  
+Ein Volk vereint, wir loben Dir.  
+Unsere Herzen, sie schlagen laut,  
+In Deiner Gnade, da sind wir vertraut.
+
+[Bridge]  
+Oh, Herr, du zählst die Sterne,  
+Jeder Glanz, ein Zeichen Deiner Ehre.  
+In der Dunkelheit bist Du das Licht,  
+Deine Verheißung, die nie bricht.  
+Komm und führe uns voran,  
+In dem Kampf, der niemals begann.
+
+[Chorus]  
+Du bist der König, unser Licht,  
+In Deinem Namen, da fürcht' ich nicht.  
+Halleluja, wir stehen hier,  
+Ein Volk vereint, wir loben Dir.  
+Unsere Herzen, sie schlagen laut,  
+In Deiner Gnade, da sind wir vertraut.
+
+[Outro]  
+Ein Volk in Einheit, stark und frei,  
+In Deiner Liebe, da sind wir dabei.  
+Du bist der König, unser Licht,  
+Für immer, Herr, vergiss uns nicht.`,
         28: `[Verse 1]  
 David rief, versammelte die,  
 Die Obersten, die stark und treu,  
@@ -13942,7 +18708,6 @@ Für immer sei Dein Name groß und lieb.
 Wir bauen für Dich, für Dich allein,  
 Ein Haus, das ewig soll Dein sein.`,
     },
-
     "14": {
         1: `[LYRICS]
 [LYRICS]
@@ -14825,7 +19590,60 @@ Josaphat, er zeigt uns klar,
 Mit Gott an unserer Seite, wunderbar.  
 Die Krone blüht, sein Reich erblüht,  
 In dir allein, wo Frieden glüht.`,
-        18: ``,
+        18: `[TITLE]  
+Höre dein Wort, o Herr
+
+[Verse 1]  
+In Dunkelheit, wenn Zweifel naht,  
+Fragt Josaphat, was du ihm sagst.  
+„Frag den Herrn, lass uns hören,  
+Sein Wort, das uns wird leiten.“
+
+[Chorus]  
+Höre dein Wort, o Herr,  
+In der Schlacht, du bist bei mir.  
+Dein Geist führt uns, wo wir steh’n,  
+In deinem Licht, da kann ich geh’n.
+
+[Verse 2]  
+Vierhundert Propheten, sie sprechen laut,  
+„Zieh hinauf, Gott gibt dir Kraft!“  
+Doch Micha ruft: „Hört des Herrn Wort,  
+Der König wird fallen, so spricht der Herr!“
+
+[Chorus]  
+Höre dein Wort, o Herr,  
+In der Schlacht, du bist bei mir.  
+Dein Geist führt uns, wo wir steh’n,  
+In deinem Licht, da kann ich geh’n.
+
+[Bridge]  
+Wenn die Pfeile fliegen,  
+Und die Dunkelheit naht,  
+In deinem Namen,  
+Stehen wir, nie allein.  
+Du bist unser Schild,  
+Du kämpfst für uns,  
+In der Wahrheit,  
+Da finden wir Ruh.
+
+[Verse 3]  
+Josaphat ruft: „Der Herr hilft uns,  
+In deiner Gnade, da finden wir Frieden.“  
+Der Kampf mag hart sein, doch wir wissen,  
+Du bist der König, der uns nie verlässt.
+
+[Chorus]  
+Höre dein Wort, o Herr,  
+In der Schlacht, du bist bei mir.  
+Dein Geist führt uns, wo wir steh’n,  
+In deinem Licht, da kann ich geh’n.
+
+[Outro]  
+Höre dein Wort, o Herr,  
+In der Dunkelheit, du bist Licht,  
+In jedem Kampf, in jedem Streit,  
+Lass uns wandeln in deiner Herrlichkeit.`,
         19: `[Verse 1]  
 Wenn der Sturm uns umgibt,  
 und Zweifel uns beschleicht,  
@@ -14893,7 +19711,56 @@ mit dir, Herr, an unserer Seite,
 gewinnen wir das Geleit.  
 Amen, Amen,  
 du bist unser Licht, unser Heil.`,
-        20: ``,
+        20: `[TITLE]  
+Gott, Du bist unser Schild
+
+[Verse 1]  
+In der Dunkelheit, wenn Angst uns umfängt,  
+Kommen wir, Herr, mit Herzen, die brennen.  
+Josaphat sprach zu Dir, voller Vertrauen,  
+„Gott, in Deiner Hand, lass uns nicht zerbrechen.“
+
+[Chorus]  
+Du bist unser Schild, in der Schlacht,  
+Du kämpfst für uns, in Deiner Macht.  
+Wir stehen hier, voller Glauben und Mut,  
+Dein Name ist stark, Du gibst uns den Schwung.  
+
+[Verse 2]  
+Die Feinde nahen, wir hören ihr Rufen,  
+Doch unser Blick, Herr, richtet sich auf Dich.  
+Mit Lob und Gesang, kommen wir zusammen,  
+In Deinem Namen finden wir Licht.  
+
+[Chorus]  
+Du bist unser Schild, in der Schlacht,  
+Du kämpfst für uns, in Deiner Macht.  
+Wir stehen hier, voller Glauben und Mut,  
+Dein Name ist stark, Du gibst uns den Schwung.  
+
+[Bridge]  
+Wir vertrauen auf Dich, in der Not,  
+Wenn der Sturm tobt, bist Du unser Brot.  
+„Fürchtet euch nicht!“ hast Du uns gesagt,  
+Du bist der Gott, der uns nie versagt.  
+
+[Verse 3]  
+Die Sonne steigt, der Morgen bricht an,  
+Mit Freude ziehen wir in Dein Land.  
+Im Lobetal, da feiern wir Dich,  
+Denn Du hast uns befreit, Du bist ewiglich.  
+
+[Chorus]  
+Du bist unser Schild, in der Schlacht,  
+Du kämpfst für uns, in Deiner Macht.  
+Wir stehen hier, voller Glauben und Mut,  
+Dein Name ist stark, Du gibst uns den Schwung.  
+
+[Outro]  
+In aller Stille, sei Ehre Dir,  
+Für Deine Treue, oh Herr, danken wir.  
+Du bist der König, wir lauschen dem Klang,  
+Ewige Freude, in Deinem Gesang.`,
         21: `[Verse 1]  
 In der Stadt Davids, wo die Könige ruh’n,  
 Josaphat entschlief, sein Erbe nun blüh’n.  
@@ -15057,7 +19924,50 @@ Wir sind dein Volk, oh Herr, das bekennen wir hier,
 In deinem Namen, vereint, kommen wir zu dir.  
 Mit Jubel und Dank, in deinem Licht,  
 König der Herrlichkeit, du bist unser Licht.`,
-        24: ``,
+        24: `[TITLE]  
+Erneuerung deines Hauses
+
+[Verse 1]  
+König Joas, so jung und rein,  
+Regierte mit Herz, im Licht des Scheins.  
+Sein Vater Jojada, ein weiser Mann,  
+Lehrte ihn, wie man Gott vertrauen kann.  
+
+[Verse 2]  
+Er sprach zu den Priestern, versammelte das Volk,  
+„Lasst uns bauen, was der Herr uns versprochen soll!“  
+Die Lade voll, das Herz so weit,  
+Gemeinsam für Gott, bereit zur Zeit.  
+
+[Chorus]  
+Oh, Herr, wir kommen, um zu bauen,  
+Dein Haus der Ehre, wir werden vertrauen.  
+In Einigkeit, in deinem Licht,  
+Erneuere uns, gib uns dein Gesicht.  
+
+[Verse 3]  
+Doch kam der Tag, die Stimme verstummt,  
+Die Obersten kamen, der Glaube verrinnt.  
+Sie verließen den Herrn, den Gott der Treue,  
+Und folgten den Götzen, der dunklen Reue.  
+
+[Bridge]  
+Doch du bist der Gott, der ruft und vergibt,  
+Der uns zurückholt, wenn unsere Hoffnung schwindet.  
+Komm, o Geist, erfülle unser Herz,  
+Bring zurück die Freude, weg mit dem Schmerz.  
+
+[Chorus]  
+Oh, Herr, wir kommen, um zu bauen,  
+Dein Haus der Ehre, wir werden vertrauen.  
+In Einigkeit, in deinem Licht,  
+Erneuere uns, gib uns dein Gesicht.  
+
+[Outro]  
+König Joas, ein Bild von uns heut’,  
+Komm, erneuere uns, wir stehen bereit.  
+In deinem Namen, oh Herr, so klar,  
+Bauen wir dein Haus, für immerdar.`,
         25: `Verse 1:  
 In der Stadt Jerusalem, ein König stand,  
 Amazja hieß er, mit Mut und Verstand.  
@@ -15419,7 +20329,56 @@ O Herr, wir danken, für deine Treue,
 In jedem Moment, du bist unsere Freude.  
 Gemeinsam vereint, sind wir stark in dir,  
 Lob sei dir, Herr, für immer, hier!`,
-        32: ``,
+        32: `[TITLE]  
+Der Größere mit Uns
+
+[Verse 1]  
+Die Stadt umgeben, die Feinde nah,  
+Sanherib droht, sein Zorn ist klar.  
+Doch Hiskia spricht, mit Mut im Herzen,  
+„Fürchtet euch nicht, lasst uns nicht schmerzen.  
+
+[Chorus]  
+Denn der HERR, unser Gott, ist stark und treu,  
+Er führt uns durch, macht unser Herz neu.  
+Mit uns ist der Größere, der Herr des Lebens,  
+Er lässt uns siegen, wenn wir Ihm eben.  
+
+[Verse 2]  
+Die Brunnen sind verborgen, die Mauern fest,  
+Gemeinsam stehen wir, im Glauben best.  
+„Seid getrost, vertraut!“, ruft er laut,  
+Ein Gott der Hilfe, der niemals versaut.  
+
+[Chorus]  
+Denn der HERR, unser Gott, ist stark und treu,  
+Er führt uns durch, macht unser Herz neu.  
+Mit uns ist der Größere, der Herr des Lebens,  
+Er lässt uns siegen, wenn wir Ihm eben.  
+
+[Bridge]  
+Wenn die Stimmen flüstern, Zweifel wecken,  
+Erlösung kommt, um uns zu entdecken.  
+Ein Engel sendet Freiheit, die Nacht wird hell,  
+Sanheribs Macht zerbricht, sein Stolz fällt schnell.  
+
+[Verse 3]  
+Wir beten und flehen, die Herzen vereint,  
+Gott hört unser Rufen, Sein Licht vereint.  
+Die Siege des Glaubens, sie werden bekannt,  
+Wir bringen Geschenke, dem König, dem Land.  
+
+[Chorus]  
+Denn der HERR, unser Gott, ist stark und treu,  
+Er führt uns durch, macht unser Herz neu.  
+Mit uns ist der Größere, der Herr des Lebens,  
+Er lässt uns siegen, wenn wir Ihm eben.  
+
+[Outro]  
+So stehen wir fest, in Seiner Kraft,  
+Ein Volk, das glaubt, das in Ihm schafft.  
+Die Mauern fallen, die Freiheit ruft,  
+Im Namen des HERRN, der uns alle liebt.`,
         33: `[Verse 1]  
 In dunkler Nacht, da fiel der König,  
 Manasse, der vom Weg abkam,  
@@ -15480,8 +20439,124 @@ In Dir allein find ich mein Heim.
 Führ uns zurück, zu Dir, oh Gott,  
 In Dir ist Frieden, in Dir ist Brot.  
 Amen.`,
-        34: ``,
-        35: ``,
+        34: `[TITLE]  
+Der König Josia
+
+[VERS 1]  
+Acht Jahre alt, er trat hervor,  
+Ein König, der das Volk erkor.  
+Mit Herz und Stärke suchte er,  
+Den Gott von David, treu und mehr.  
+Die Höhen fielen, Götzen zerbrach,  
+In Jerusalem, sein mutiger Schlag.  
+Mit reinem Herzen, voller Macht,  
+Hat er den Herrn in uns entfacht.
+
+[Chorus]  
+Oh, Josia, du treuer Held,  
+Du hast das Licht in uns erhellt.  
+Wir folgen dir, dem Herrn zur Ehr,  
+In deinem Namen, stehen wir hier.  
+Wir singen laut, wir beten ein,  
+Für Freiheit, Liebe, lass uns sein.  
+Oh, Josia, du König, stark und weise,  
+Du führst uns auf der heiligen Reise.
+
+[VERS 2]  
+Das Gesetz gefunden, oh welch ein Licht,  
+Die Worte des Herrn, sie zeigen die Sicht.  
+Sein Herz war weich, er weinte sehr,  
+Vor Gott dem Herrn, dem treuen Heer.  
+Er sandte Botschaft, die Hoffnung spricht,  
+Die Flüche weichen, er bringt das Licht.  
+Ein Bund für alle, wir stehen fest,  
+Im Glauben vereint, im Herzen der Rest.
+
+[Chorus]  
+Oh, Josia, du treuer Held,  
+Du hast das Licht in uns erhellt.  
+Wir folgen dir, dem Herrn zur Ehr,  
+In deinem Namen, stehen wir hier.  
+Wir singen laut, wir beten ein,  
+Für Freiheit, Liebe, lass uns sein.  
+Oh, Josia, du König, stark und weise,  
+Du führst uns auf der heiligen Reise.
+
+[Bridge]  
+Und so bringen wir, in Einigkeit,  
+Die Anbetung, in seiner Zeit.  
+Die Altäre neu, die Herzen rein,  
+Im Geist des Herrn, lass uns vereint sein.  
+Wir kämpfen nicht, mit Schwert und Stein,  
+Doch in der Liebe, stark und rein.  
+Oh, Josia, der Weg ist klar,  
+Wir ehren dich, der Herr ist nah.
+
+[Chorus]  
+Oh, Josia, du treuer Held,  
+Du hast das Licht in uns erhellt.  
+Wir folgen dir, dem Herrn zur Ehr,  
+In deinem Namen, stehen wir hier.  
+Wir singen laut, wir beten ein,  
+Für Freiheit, Liebe, lass uns sein.  
+Oh, Josia, du König, stark und weise,  
+Du führst uns auf der heiligen Reise.
+
+[Outro]  
+Oh, Josia, wir stehen hier,  
+Im Glauben fest, im Herzen dir.  
+Der Herr ist gut, sein Wort ist klar,  
+In unsrem Leben, wunderbar.`,
+        35: `[TITLE]  
+*Der König des Passah*
+
+[Verse 1]  
+In Jerusalem, das Licht erstrahlt,  
+Josia ruft, der Herr uns malt,  
+Die Priester stehen, Herzen rein,  
+Das Passah-Lamm, es soll unser sein.  
+
+[Verse 2]  
+Mit den Leviten, stark und treu,  
+Folgen wir dem Ruf, oh Herr, oh neu,  
+In heiligem Dienst, so stehen wir,  
+Mit Herzen voller Dank, kommen wir zu Dir.  
+
+[Chorus]  
+Heilig ist der Tag, das Fest sei groß,  
+Wir opfern Dir, Herr, in Deinem Schoß.  
+Das Blut des Lammes, es reinigt uns,  
+In Dir, oh Jesus, finden wir den Schwung.  
+
+[Verse 3]  
+Die Gaben fließen, von Herzen frei,  
+Dreitausend Rinder, wir bringen herbei.  
+Jeder Schritt in Ehrfurcht, wir folgen dem Licht,  
+Das Passah, es leuchtet, führt uns in die Sicht.  
+
+[Chorus]  
+Heilig ist der Tag, das Fest sei groß,  
+Wir opfern Dir, Herr, in Deinem Schoß.  
+Das Blut des Lammes, es reinigt uns,  
+In Dir, oh Jesus, finden wir den Schwung.  
+
+[Bridge]  
+Der König fiel, doch sein Herz bleibt hier,  
+Sein Erbe lebt in jedem von uns zu Dir.  
+In der Dunkelheit, Dein Licht erstrahlt,  
+Deine Liebe, Herr, die uns niemals verhallt.  
+
+[Chorus]  
+Heilig ist der Tag, das Fest sei groß,  
+Wir opfern Dir, Herr, in Deinem Schoß.  
+Das Blut des Lammes, es reinigt uns,  
+In Dir, oh Jesus, finden wir den Schwung.  
+
+[Outro]  
+In Jerusalem, wir kommen vereint,  
+Dein Wort, oh Herr, das uns ewig vereint.  
+Das Passah, es lebt, in uns, in der Nacht,  
+Dank sei Dir, Herr, für die Liebe, die wacht.`,
         36: `[Verse 1]  
 In der Dunkelheit, wo das Volk fiel,  
 Joahas regierte, doch das Herz war kalt,  
@@ -15531,7 +20606,6 @@ Erhebt sich der Glaube, der nie vergeht,
 Du bist der Herr, der treu uns führt,  
 Bis in die Ewigkeit, wir beten für Dich.`,
     },
-
     "15": {
         1: `[Verse 1]  
 Im Jahr des Königs Kores,  
@@ -15736,8 +20810,120 @@ So stehen wir fest, in Deinem Namen,
 Die Stadt wird erblühen, wir hören die Stimmen.  
 Für Dich, o Herr, bauen wir mit Kraft,  
 In der Liebe vereint, bis die Erde erschlafft.`,
-        5: ``,
-        6: ``,
+        5: `[TITLE]  
+"Das Haus des Herrn"
+
+[VERS 1]  
+In Tagen der Dunkelheit,  
+Da sprach der Herr durch Haggai,  
+„Steh auf, mein Volk, bau' mein Haus,  
+In Jerusalem soll es erstrahlen,  
+Mit Stein und Holz, auf festem Grund,  
+Ich bin mit euch, gebt euch nicht auf.“
+
+[Chorus]  
+Wir sind Knechte des Höchsten,  
+Bauen für den Gott der Erde,  
+Mit Glauben, stark und kühn,  
+Das Werk wird vollbracht, wir werden nicht ruh'n.  
+Oh Herr, Dein Licht leuchtet hell,  
+In unsrem Herzen, in dieser Stell'.
+
+[VERS 2]  
+Die Stimmen der Feinde dringen heran,  
+„Wer hat euch befohlen, fangt ihr hier an?“  
+Doch wir antworten mit festem Mut,  
+„Der Herr, unser Gott, gibt uns Kraft und Gut.“  
+Die Mauern erheben sich, Stein für Stein,  
+Wir bauen Dein Haus, wir werden nicht allein.
+
+[Chorus]  
+Wir sind Knechte des Höchsten,  
+Bauen für den Gott der Erde,  
+Mit Glauben, stark und kühn,  
+Das Werk wird vollbracht, wir werden nicht ruh'n.  
+Oh Herr, Dein Licht leuchtet hell,  
+In unsrem Herzen, in dieser Stell'.
+
+[Bridge]  
+König Darius, hör uns an,  
+Lass die Schätze fließen, so fangen wir an,  
+Denn im ersten Jahr des großen Königs,  
+Wurde befohlen, das Werk der Gesegneten.  
+Die Gefäße des Tempels, sie kehren zurück,  
+In Deine Gegenwart, oh Gott, unser Glück.
+
+[Chorus]  
+Wir sind Knechte des Höchsten,  
+Bauen für den Gott der Erde,  
+Mit Glauben, stark und kühn,  
+Das Werk wird vollbracht, wir werden nicht ruh'n.  
+Oh Herr, Dein Licht leuchtet hell,  
+In unsrem Herzen, in dieser Stell'.
+
+[Outro]  
+So lasst uns bauen, mit Freude und Lied,  
+Das Haus des Herrn, wo der Geist uns zieht.  
+In Einheit, im Glauben, wir stehen bereit,  
+Für die Ehre des Herrn, für alle Zeit.`,
+        6: `[TITLE]  
+*Das Haus des Herrn*
+
+[Verse 1]  
+In der Dunkelheit der Nacht,  
+Hörte der König, der sprach:  
+„Sucht in den Schätzen der Zeit,  
+Ein Haus für Gott, das bereit.  
+Sechzig Ellen hoch soll es stehen,  
+Ein Ort des Opfers, das wir sehen.“
+
+[Chorus]  
+Wir bauen das Haus des Herrn,  
+In Einigkeit, mit Glauben fern,  
+Die Steine, sie rufen, die Zeit ist nun,  
+Wir bringen den Lobgesang, wir kommen zum Tun.  
+Halleluja, der Herr ist da,  
+Er führt uns mit Macht, er ist wunderbar.
+
+[Verse 2]  
+Thathnai, hör' den Befehl,  
+Baut das Haus, lasst das Werk nicht fehlen.  
+Die Priester rein, in Einheit vereint,  
+Bringen Opfer, die Herzen gemeint.  
+Mit Freude erheben wir unsern Gesang,  
+Für das Leben des Königs, wir geben den Klang.
+
+[Chorus]  
+Wir bauen das Haus des Herrn,  
+In Einigkeit, mit Glauben fern,  
+Die Steine, sie rufen, die Zeit ist nun,  
+Wir bringen den Lobgesang, wir kommen zum Tun.  
+Halleluja, der Herr ist da,  
+Er führt uns mit Macht, er ist wunderbar.
+
+[Bridge]  
+Oft in der Gefangenschaft waren wir,  
+Doch der Herr gab uns neues Ziel,  
+Er hat das Herz des Königs gewandt,  
+Stärkt uns im Werk, mit seiner Hand.  
+Wir feiern das Fest, mit Freude erfüllt,  
+Die Ungeheuren hat er gestillt.
+
+[Chorus]  
+Wir bauen das Haus des Herrn,  
+In Einigkeit, mit Glauben fern,  
+Die Steine, sie rufen, die Zeit ist nun,  
+Wir bringen den Lobgesang, wir kommen zum Tun.  
+Halleluja, der Herr ist da,  
+Er führt uns mit Macht, er ist wunderbar.
+
+[Outro]  
+Das Haus des Herrn, das stehen bleibt,  
+In Treue und Liebe, in Ewigkeitszeit.  
+Mit Herzen vereint, in Anbetung wir steh’n,  
+Im Haus des Herrn, da wird Freude gescheh’n.  
+Halleluja, der Herr ist da,  
+Für immer und ewig, wunderbar!`,
         7: `[Verse 1]  
 Aus Babel zog Esra her,  
 Ein Schriftgelehrter, weise und klar.  
@@ -15892,9 +21078,57 @@ Du bist unser Licht, oh Herr,
 Wir werden nicht fallen,  
 Denn du bist bei uns, immer hier.  
 Amen.`,
-        10: ``,
-    },
+        10: `[TITLE]  
+"Ein Bund mit unserem Gott"
 
+[Verse 1]  
+Esra kniet im Staub, die Tränen fließen,  
+Vor dem Haus des Herrn, in tiefer Not,  
+Die Gemeinde kommt, sie fühlt das Leiden,  
+Ein Ruf zur Buße, ein Weg zu Gott.
+
+[Chorus]  
+Oh Herr, wir kommen, wir bekennen,  
+Unser Herz ist schwer, doch voller Licht,  
+Wir suchen deine Gnade, dein Erbarmen,  
+Ein Bund mit dir, du bist unser Licht.
+
+[Verse 2]  
+Wir haben uns verirrt, in fremde Wege,  
+Fremde Stimmen einnahmen unseren Sinn,  
+Doch du, oh Gott, du schenkst uns Hoffnung,  
+Lass uns zurückkehren, wo wir einst waren.
+
+[Chorus]  
+Oh Herr, wir kommen, wir bekennen,  
+Unser Herz ist schwer, doch voller Licht,  
+Wir suchen deine Gnade, dein Erbarmen,  
+Ein Bund mit dir, du bist unser Licht.
+
+[Bridge]  
+Steh auf, oh Esra, führe uns zurück,  
+Der Zorn ist groß, doch deine Liebe siegt,  
+Mit mutigem Herzen, mit festem Blick,  
+Wir streben nach dir, wo Hoffnung wiegt.
+
+[Verse 3]  
+Die Zeit ist kurz, wir müssen handeln,  
+Gemeinsam stehen wir, in deinem Namen,  
+Zerbrich die Ketten, die uns gefangen,  
+In deiner Wahrheit finden wir Frieden.
+
+[Chorus]  
+Oh Herr, wir kommen, wir bekennen,  
+Unser Herz ist schwer, doch voller Licht,  
+Wir suchen deine Gnade, dein Erbarmen,  
+Ein Bund mit dir, du bist unser Licht.
+
+[Outro]  
+Ein Bund mit dir, Herr, für alle Zeit,  
+Führ uns auf deinem Weg, in die Herrlichkeit.  
+Amen, Amen, wir beugen uns nieder,  
+In deinem Namen, Herr, bist du unser Frieden.`,
+    },
     "16": {
         1: `[Verse 1]  
 Im Monat Chislev, in der Dunkelheit,  
@@ -16123,7 +21357,50 @@ Mit dir an unserer Seite,
 Nichts kann uns trennen, du bist die Freiheit.  
 Halleluja, wir erheben dich,  
 Du bist unser Licht, unser Sieg.`,
-        5: ``,
+        5: `[TITLE]  
+"Ein Schrei aus dem Volk"
+
+[Verse 1]  
+In der Dunkelheit, das Schreien erklingt,  
+Brüder und Schwestern, die Hoffnung zerspringt.  
+Unsere Kinder, die Last ist so schwer,  
+Lass uns leben, O Herr, wir flehen zu dir mehr.
+
+[Chorus]  
+Gott, höre unser Schreien,  
+Erbarme dich, wir bitten dich.  
+Lass die Ketten brechen,  
+Und führe uns zurück zu dir.
+
+[Verse 2]  
+Die Äcker verkauft, die Weinberge leer,  
+Wir stehen hier, der Schmerz ist so schwer.  
+Doch du gibst uns Mut, du schenkst uns dein Licht,  
+In der Furcht vor dir, erheben wir unser Gesicht.
+
+[Chorus]  
+Gott, höre unser Schreien,  
+Erbarme dich, wir bitten dich.  
+Lass die Ketten brechen,  
+Und führe uns zurück zu dir.
+
+[Bridge]  
+In der Dunkelheit, Erhebt sich dein Wort,  
+Die Gemeinde spricht: Amen! Du bist unser Ort.  
+Wir geben zurück, was uns nicht gehört,  
+In deinem Namen, Herr, wird neu uns gehört.
+
+[Chorus]  
+Gott, höre unser Schreien,  
+Erbarme dich, wir bitten dich.  
+Lass die Ketten brechen,  
+Und führe uns zurück zu dir.
+
+[Outro]  
+Gedenke, mein Gott, all unser Tun,  
+In der Liebe vereint, lass uns in dir ruhn.  
+Für deine Ehre, in Glauben vereint,  
+Ein Schrei aus dem Volk, unser Herz dir neigt.`,
         6: `[Verse 1]  
 In Zeiten der Not, wenn die Feinde uns drohen,  
 Stehst du fest an meiner Seite, Herr, so unbestritten.  
@@ -16344,7 +21621,50 @@ So bringen wir, was uns das Herz bewegt,
 In der Gemeinschaft, die niemals vergeht.  
 Für die Ehre des Vaters, in Liebe vereint,  
 Ewige Treue, die unser Leben meint.`,
-        11: ``,
+        11: `[TITLE]  
+Die heilige Stadt
+
+[Verse 1]  
+In der heiligen Stadt, wo die Treuen wohnen,  
+Die Obersten des Volkes, ihr Herz ist erkoren.  
+Ein Teil zog nach Jerusalem, dem Licht so nah,  
+In der Gemeinschaft der Gläubigen, ist Gott immer da.
+
+[Chorus]  
+Heiliger Gott, Du bist unser Licht,  
+In der Stadt des Friedens, verlässt Du uns nicht.  
+Wir erheben unsere Herzen, in Einigkeit,  
+In Deinem Namen leben wir, in der Heiligkeit.
+
+[Verse 2]  
+Die Kinder Judäas, stark und voller Mut,  
+Sie wohnen in Deinem Haus, das gibt uns neuen Schwung.  
+Die Priester und Leviten, sie dienen Dir treu,  
+Mit Dank und Lobpreis bringen sie Freude herbei.
+
+[Chorus]  
+Heiliger Gott, Du bist unser Licht,  
+In der Stadt des Friedens, verlässt Du uns nicht.  
+Wir erheben unsere Herzen, in Einigkeit,  
+In Deinem Namen leben wir, in der Heiligkeit.
+
+[Bridge]  
+Von Geba bis Beer-Seba, Dein Volk ist versammelt,  
+Mit jedem Schritt, den wir gehen, sind wir in Deiner Hand.  
+Du bist der Fels, auf dem wir stehen,  
+In der heiligen Stadt, werden wir bestehen.
+
+[Chorus]  
+Heiliger Gott, Du bist unser Licht,  
+In der Stadt des Friedens, verlässt Du uns nicht.  
+Wir erheben unsere Herzen, in Einigkeit,  
+In Deinem Namen leben wir, in der Heiligkeit.
+
+[Outro]  
+O Jerusalem, Du strahlendes Licht,  
+In Deinem Schatten finden wir die Sicht.  
+Die Treuen werden kommen, in Deiner Nähe sein,  
+In der heiligen Stadt, wird unser Herz eins sein.`,
         12: `[Verse 1]  
 Wir kommen zusammen, ein Volk in Einigkeit,  
 Mit Serubabel, Jesua, bereit zum Lobpreis,  
@@ -16440,7 +21760,6 @@ Für deine Ehre, lass uns fest stehen,
 In deinem Herzen, sei unser Verlangen,  
 Wir beten und hoffen, in dir, o Herr, leben.`,
     },
-
     "17": {
         1: `[Verse 1]  
 In der Pracht des Königsthrones,  
@@ -16550,7 +21869,50 @@ In der Geschichte der Zeit, wird dein Name klingen,
 Ein Zeichen des Glaubens, lass uns Lieder singen.  
 Oh Esther, du leuchtest, ein Licht in der Nacht,  
 Dein Glaube hat gesiegt, in der Dunkelheit wacht.`,
-        3: ``,
+        3: `[TITLE]  
+Der Mut des Mardochai
+
+[Verse 1]  
+In der Stadt von Susan, wo Schatten sich drehn,  
+Ein Volk, das verachtet, in Angst und in Wehn.  
+Haman, der Stolze, erhebt sich zum Thron,  
+Doch Mardochai widersteht ihm, allein, ganz ohne Lohn.
+
+[Chorus]  
+Steh auf, o Volk, erhebe dein Haupt,  
+Gott ist bei uns, wenn der Feind uns umschaut.  
+In Dunkelheit blüht der Glaube so klar,  
+Sein Licht führt uns sicher, er ist immer da.
+
+[Verse 2]  
+Die Briefe, sie fliegen, das Urteil so schwer,  
+Doch Mardochai ruft: “Wir fürchten uns nicht mehr!”  
+Ein Bund, der uns trägt, in der Not, in der Zeit,  
+Die Hoffnung, sie lebt, in der Ewigkeit.
+
+[Chorus]  
+Steh auf, o Volk, erhebe dein Haupt,  
+Gott ist bei uns, wenn der Feind uns umschaut.  
+In Dunkelheit blüht der Glaube so klar,  
+Sein Licht führt uns sicher, er ist immer da.
+
+[Bridge]  
+Der König gibt Macht, doch wir sind nicht allein,  
+Gott schreibt die Geschichten, wir werden befreit.  
+Mit jedem Gebet, mit jedem Schrei,  
+Brechen wir Ketten, mit Glauben so frei.
+
+[Chorus]  
+Steh auf, o Volk, erhebe dein Haupt,  
+Gott ist bei uns, wenn der Feind uns umschaut.  
+In Dunkelheit blüht der Glaube so klar,  
+Sein Licht führt uns sicher, er ist immer da.
+
+[Outro]  
+So heben wir Stimmen, im Glauben vereint,  
+Für das Volk der Verheißung, das Gott uns vereint.  
+Mit Mut und mit Kraft, gehen wir voran,  
+Denn unser Erlöser, er führt uns daran.`,
         4: `Vers 1:  
 In Sack und Asche, Mardochai weint,  
 Die Stimme der Trauer, sie hallt durch die Zeit.  
@@ -16875,7 +22237,6 @@ Für sein Volk, in Einigkeit.
 Wir tragen Hoffnung, wir tragen Licht,  
 Für die Ehre, für die Ehre, die Du versprichst.`,
     },
-
     "18": {
         1: `[Verse 1]  
 In Uz lebte ein Mann, gottesfürchtig und rein,  
@@ -18286,7 +23647,50 @@ Ich weiß, dass Du bei mir bist,
 Mein König, mein Gott, mein Licht,  
 In jedem Sturm, in jeder Nacht,  
 Führst Du mich, bis der Morgen lacht.`,
-        30: ``,
+        30: `[TITLE]  
+In der Dunkelheit
+
+[Verse 1]  
+In der Dunkelheit, o Herr, rufe ich zu dir,  
+Hör mein Weinen, meine Seele klagt,  
+Verloren in der Trauer, in der Einsamkeit,  
+Wie ein Schatten geh ich, in der Nacht so stark.  
+
+[Chorus]  
+Du bist meine Hoffnung, mein Licht in der Nacht,  
+Wenn die Welt zerbricht, bist du bei mir,  
+In der tiefsten Not, wenn die Seele wacht,  
+Herr, führe mich heim, zu dir, zu dir.
+
+[Verse 2]  
+Die Spötter um mich, sie lachen und spotten,  
+In der Einsamkeit, fühle ich deinen Schmerz,  
+Die Tränen fließen, wie ein Strom der Sorgen,  
+Doch du bist mein Halt, du kennst mein Herz.  
+
+[Chorus]  
+Du bist meine Hoffnung, mein Licht in der Nacht,  
+Wenn die Welt zerbricht, bist du bei mir,  
+In der tiefsten Not, wenn die Seele wacht,  
+Herr, führe mich heim, zu dir, zu dir.
+
+[Bridge]  
+Die Schakale heulen, die Nacht ist so kalt,  
+Doch deine Liebe umhüllt mich, sie bleibt nie bald.  
+Ich suche nach dir, in der Dunkelheit,  
+Du bist mein Retter, du gibst mir Zeit.  
+
+[Chorus]  
+Du bist meine Hoffnung, mein Licht in der Nacht,  
+Wenn die Welt zerbricht, bist du bei mir,  
+In der tiefsten Not, wenn die Seele wacht,  
+Herr, führe mich heim, zu dir, zu dir.
+
+[Outro]  
+In der Dunkelheit, o Herr, rufe ich zu dir,  
+Hör mein Weinen, führe mich zu dir.  
+Du bist meine Hoffnung, mein Licht in der Nacht,  
+In deiner Nähe, finde ich die Kraft.`,
         31: `"Gott, höre mein Flehen"
 
 [Verse 1]  
@@ -18631,7 +24035,64 @@ Gott, der Schöpfer, ich lobe dich,
 In deinem Frieden, da find' ich mich.  
 In deinem Licht, da ruh' ich nun,  
 Du bist mein Halt, mein Leben, mein Ruhn.`,
-        39: ``,
+        39: `[TITLE]  
+*Gott, der Schöpfer der Zeit*
+
+[Verse 1]  
+Weißt du, wenn die Gemsen gebären,  
+Wann die Hinden in der Stille verweilen?  
+Hast du die Monden gezählt, die sie tragen,  
+In der Natur, wo sie sanft verweilen?  
+Gott, Du schaffst das Leben,  
+In jedem Herz, in jedem Sein,  
+Lässt uns wachsen, lässt uns leben,  
+In Deiner Liebe, stark und rein.
+
+[Chorus]  
+Du bist der Gott, der Freiheit schenkt,  
+Der Wildesel, der die Wüste lenkt.  
+Du schaffst die Berge, die Weide grün,  
+Deine Weisheit, Herr, lässt uns blüh’n.  
+In Deiner Hand, da liegt die Zeit,  
+Du führst uns sicher, stets bereit.
+
+[Verse 2]  
+Sieh den Strauß, der seine Eier vergisst,  
+Und doch gibt’s einen, der ihn stets beschützt.  
+Gott, Du kennst unser Herz und unser Streben,  
+Du schenkst uns Kraft, das Leben zu leben.  
+Kannst Du dem Ross die Stärke geben,  
+Es springt und tobt in freudigem Spiel?  
+Du schaffst die Macht, das Leben zu erleben,  
+In Deiner Nähe, da ist unser Ziel.
+
+[Chorus]  
+Du bist der Gott, der Freiheit schenkt,  
+Der Wildesel, der die Wüste lenkt.  
+Du schaffst die Berge, die Weide grün,  
+Deine Weisheit, Herr, lässt uns blüh’n.  
+In Deiner Hand, da liegt die Zeit,  
+Du führst uns sicher, stets bereit.
+
+[Bridge]  
+Hoch, wie der Adler, flieg ich zu Dir,  
+In den Höhen bist Du, ich spür’ Dein Licht hier.  
+Du schauest weit, siehst in mein Herz hinein,  
+Lass mich leben, Herr, lass mich Dein Kind sein.
+
+[Chorus]  
+Du bist der Gott, der Freiheit schenkt,  
+Der Wildesel, der die Wüste lenkt.  
+Du schaffst die Berge, die Weide grün,  
+Deine Weisheit, Herr, lässt uns blüh’n.  
+In Deiner Hand, da liegt die Zeit,  
+Du führst uns sicher, stets bereit.
+
+[Outro]  
+In Deiner Liebe, Herr, sind wir geborgen,  
+Du schaffst das Leben, vergibst unsere Sorgen.  
+Mit jedem Atemzug, lass uns Dich ehren,  
+In Deinem Namen, Herr, lass uns nicht verwehren.`,
         40: `[Verse 1]  
 Vor Dir, o Herr, ich trete ein,  
 Mit einem Herzen, demütig, klein.  
@@ -18760,7 +24221,6 @@ In Dir find' ich mein Ziel.
 Mit jedem Atemzug,  
 Vertraue ich Dir, mein Heil.`,
     },
-
     "19": {
         1: `[Verse 1]  
 Wohl dem, der nicht wandelt,  
@@ -19617,7 +25077,50 @@ Ich will schauen dein Antlitz,
 in der Gerechtigkeit, oh, HERR, bei dir.  
 Satt will ich werden an deinem Bilde,  
 dein Licht erhellt mein Herz, hier bei dir.`,
-        18: ``,
+        18: `[TITLE]  
+Du bist mein Fels
+
+[Verse 1]  
+Herzlich lieb, oh Herr, mein Gott,  
+Meine Stärke, mein Fels, mein Hort,  
+In der Dunkelheit, da ruf ich dich,  
+Du hörst mein Schreien, du bist für mich.
+
+[Chorus]  
+Du bist mein Schutz, mein Erretter,  
+Von Feinden befreit, du machst mich heiter.  
+Du neigst den Himmel, kommst herab,  
+In deiner Nähe, da find ich Lab.
+
+[Verse 2]  
+Die Bänder des Todes umfingen mich,  
+Doch du, oh Herr, hast mich befreit.  
+Wenn Angst mich drückt, ruf ich zu dir,  
+Du hörst mein Flehen, du bist hier.
+
+[Chorus]  
+Du bist mein Schutz, mein Erretter,  
+Von Feinden befreit, du machst mich heiter.  
+Du neigst den Himmel, kommst herab,  
+In deiner Nähe, da find ich Lab.
+
+[Bridge]  
+Mit dir kann ich Berge überwinden,  
+In deiner Kraft wird mein Herz gesunden.  
+Du gibst mir Stärke, du machst mich groß,  
+In dir allein, da find ich Trost.
+
+[Chorus]  
+Du bist mein Schutz, mein Erretter,  
+Von Feinden befreit, du machst mich heiter.  
+Du neigst den Himmel, kommst herab,  
+In deiner Nähe, da find ich Lab.
+
+[Outro]  
+Darum will ich dir danken, Herr,  
+Unter den Heiden, du bist so nah.  
+Dein Name sei gelobt, für alle Zeit,  
+In dir, oh Herr, da find ich Freiheit.`,
         19: `[Verse 1]  
 Die Himmel singen, ehren Dich,  
 Deine Werke, sie zeigen sich.  
@@ -19766,7 +25269,56 @@ In Deiner Kraft, wir singen,
 Ewiglich, wir loben,  
 In Deinem Namen, lass uns bringen.  
 Amen.`,
-        22: ``,
+        22: `[TITLE]  
+Mein Gott, mein Gott
+
+[Verse 1]  
+Mein Gott, mein Gott, warum hast du mich verlassen?  
+In der Dunkelheit, ruf' ich nach dir,  
+Die Tage vergehen, doch meine Hoffnung bleibt,  
+Du bist heilig, du bist hier.
+
+[Chorus]  
+Sei nicht ferne, hör mein Schreien,  
+In der Angst, du bist mein Licht.  
+Du hast meine Seele einst befreit,  
+Komm und heil' mich, Herr, vergiss mich nicht.
+
+[Verse 2]  
+Väter hofften, sie fanden deinen Frieden,  
+In der Not, hast du sie nie verlassen.  
+Ich bin ein Wurm, und doch voller Verlangen,  
+Nach deiner Nähe, lass mich nicht verblassen.
+
+[Chorus]  
+Sei nicht ferne, hör mein Schreien,  
+In der Angst, du bist mein Licht.  
+Du hast meine Seele einst befreit,  
+Komm und heil' mich, Herr, vergiss mich nicht.
+
+[Bridge]  
+Die Hunde umringen, die Stiere brüllen,  
+Doch du bist meine Zuflucht, mein Leben.  
+Errette mich, o Herr, aus der tiefsten Nacht,  
+Ich will deinen Namen in der Gemeinde bekennen.
+
+[Verse 3]  
+Die Elenden werden satt,  
+Die nach dir fragen, werden leben.  
+Du bist der König, der über alles herrscht,  
+Vor dir beugen alle Knie, erheben.
+
+[Chorus]  
+Sei nicht ferne, hör mein Schreien,  
+In der Angst, du bist mein Licht.  
+Du hast meine Seele einst befreit,  
+Komm und heil' mich, Herr, vergiss mich nicht.
+
+[Outro]  
+Ich will dich preisen, in der großen Gemeinde,  
+Mein Gelübde will ich halten, in deiner Nähe,  
+Denn du hast gehört, du hast mich erhört,  
+Mein Gott, mein Gott, ich lob' dich ewig mehr.`,
         23: `[Verse 1]  
 Du bist mein Hirte, ich folge Dir,  
 In grünen Auen, da bist Du hier.  
@@ -21033,7 +26585,56 @@ Gott, wie Dein Name, so ist Dein Ruhm,
 Bis an der Welt Enden, da blüht der Traum.  
 Du bist unser Gott, jetzt und für alle Zeit,  
 In Deiner Nähe finden wir das Licht.`,
-        49: ``,
+        49: `[TITLE]  
+Erlösung in der Dunkelheit
+
+[Verse 1]  
+Höret zu, ihr Völker, hört den Ruf,  
+Weisheit spricht, mein Herz ist voller Mut.  
+In bösen Tagen, wenn die Furcht mich drängt,  
+Vertraue ich auf Dich, der alle Dinge lenkt.
+
+[Chorus]  
+Gott, Du bist mein Licht,  
+Erlösung in der Nacht.  
+Kein Reichtum kann mich halten,  
+Deine Liebe wird nie falten.  
+Wenn die Welt in Schatten gehüllt,  
+Halt' ich fest, dass Du mich stillt.
+
+[Verse 2]  
+Die Toren prahlen, doch ihr Leben flieht,  
+Wie Vieh, das stirbt und niemals den Frieden sieht.  
+Ewige Güter, die sie fest umklammern,  
+Können nicht retten, nur Deine Gnade flammen.
+
+[Chorus]  
+Gott, Du bist mein Licht,  
+Erlösung in der Nacht.  
+Kein Reichtum kann mich halten,  
+Deine Liebe wird nie falten.  
+Wenn die Welt in Schatten gehüllt,  
+Halt' ich fest, dass Du mich stillt.
+
+[Bridge]  
+In der Hölle, wo die Schatten wohnen,  
+Wirst Du meine Seele neu belohnen.  
+Denn Du hast mich angenommen,  
+Für immer in Deinem Herzen, nie verloren.
+
+[Chorus]  
+Gott, Du bist mein Licht,  
+Erlösung in der Nacht.  
+Kein Reichtum kann mich halten,  
+Deine Liebe wird nie falten.  
+Wenn die Welt in Schatten gehüllt,  
+Halt' ich fest, dass Du mich stillt.
+
+[Outro]  
+Meine Hoffnung, mein Halt,  
+In Dir allein, so bin ich bald,  
+Erlöst aus der Dunkelheit,  
+In Deiner Nähe, ewig bereit.`,
         50: `Verse 1:  
 Gott, der HERR, der Mächtige,  
 Ruft die Welt mit seiner Stimme,  
@@ -21297,8 +26898,106 @@ Hilf mir, Gott, durch deinen Namen,
 In Deiner Liebe find' ich Frieden.  
 Du bist mein Trost, mein Leben,  
 Für immer will ich Dir vertrauen, o Herr.`,
-        55: ``,
-        56: ``,
+        55: `[TITLE] Hoffnung in der Dunkelheit
+
+[Verse 1]  
+Gott, erhöre mein Gebet,  
+In der Nacht, wenn ich flehe.  
+Merke auf mein klägliches Rufen,  
+Lass mich nicht in der Angst stehen.  
+Die Schatten drücken schwer auf mein Herz,  
+Der Feind umzingelt mich, voller Schmerz.
+
+[Chorus]  
+Ich rufe zu dir, oh Herr,  
+Du bist mein Freund, mein Licht,  
+In der Dunkelheit bist du nah,  
+Deine Liebe bricht das Licht.  
+Meine Seele ruht in dir,  
+Du schaffst mir Frieden hier.
+
+[Verse 2]  
+Furcht und Zittern überfallen mich,  
+O hätte ich Flügel, um zu fliehen.  
+Doch ich weiß, du bist bei mir,  
+In der Wüste wirst du mich sehen.  
+Die Lügen um mich, sie schmerzen sehr,  
+Doch deine Wahrheit bleibt immer mehr.
+
+[Chorus]  
+Ich rufe zu dir, oh Herr,  
+Du bist mein Freund, mein Licht,  
+In der Dunkelheit bist du nah,  
+Deine Liebe bricht das Licht.  
+Meine Seele ruht in dir,  
+Du schaffst mir Frieden hier.
+
+[Bridge]  
+Ich lege mein Anliegen in deine Hand,  
+Du wirst versorgen, du bist mein Band.  
+In der Stille höre ich dein Wort,  
+Du bist mein Schutz, mein sicherer Ort.  
+Gott, du bist treu, du bleibst immer hier,  
+Ich hoffe auf dich, ja, ich hoffe auf dich.
+
+[Chorus]  
+Ich rufe zu dir, oh Herr,  
+Du bist mein Freund, mein Licht,  
+In der Dunkelheit bist du nah,  
+Deine Liebe bricht das Licht.  
+Meine Seele ruht in dir,  
+Du schaffst mir Frieden hier.
+
+[Outro]  
+Gott, erhöre mein Gebet,  
+In dir finde ich mein Leben,  
+Du bist mein Halt, mein Licht,  
+Für immer will ich dir leben.  
+Amen.`,
+        56: `[TITLE]  
+Gott, du bist mein Licht  
+
+[Verse 1]  
+In der Dunkelheit, wenn Angst mich umgibt,  
+Schau ich zu dir, Herr, der alles liebt.  
+Die Feinde schnauben, doch ich bleib nicht allein,  
+In deinen Armen, da kann ich sicher sein.  
+
+[Chorus]  
+Ich will rühmen deines Namens Licht,  
+Auf dich, mein Gott, verlasse ich mich.  
+Was können mir die Menschen tun?  
+Du bist mein Schutz, mein Lebensruhm.  
+
+[Verse 2]  
+Zähle meine Tränen, nimm sie auf in dein Herz,  
+Du hörst mein Flehen, spürst jeden Schmerz.  
+Wenn ich fürchte, Herr, dann ruf ich nach dir,  
+Du bist mein Halt, mein Weg zu dir.  
+
+[Chorus]  
+Ich will rühmen deines Namens Licht,  
+Auf dich, mein Gott, verlasse ich mich.  
+Was können mir die Menschen tun?  
+Du bist mein Schutz, mein Lebensruhm.  
+
+[Bridge]  
+Gott, du zählst meine Wege,  
+Du kennst mein Herz, mein Leben.  
+Wenn ich rufe, kehren sie zurück,  
+Denn du bist mein Gott, mein größtes Glück.  
+
+[Chorus]  
+Ich will rühmen deines Namens Licht,  
+Auf dich, mein Gott, verlasse ich mich.  
+Was können mir die Menschen tun?  
+Du bist mein Schutz, mein Lebensruhm.  
+
+[Outro]  
+Denn du hast meine Seele errettet,  
+Vor dem Tod, hast du mich geleitet.  
+Ich wandre im Licht, vor dem Lebendigen,  
+In deinem Frieden, will ich singen.`,
         57: `Strophe 1:  
 Sei mir gnädig, Gott, ich rufe zu Dir,  
 Unter Deinen Flügeln finde ich Zuflucht hier.  
@@ -21391,7 +27090,50 @@ Oh, Herr, wir warten auf Dein Gericht,
 In Dir finden wir unser Licht.  
 Du bist der Richter, der niemals schweigt,  
 In Deiner Wahrheit sei unser Geleit.`,
-        59: ``,
+        59: `[TITLE]  
+Du bist mein Schutz
+
+[Verse 1]  
+Errette mich, mein Gott, von meinen Feinden,  
+Sie lauern auf meine Seele, oh, wie sie scheinen.  
+Starke kommen ohne Schuld zu mir,  
+Doch du, Herr, bist bei mir, ich fürchte mich nicht hier.
+
+[Chorus]  
+Gott, du bist mein Schild, mein Hort in der Not,  
+In deiner Güte finde ich Trost und Gebot.  
+Vor deinen Augen, Herr, sing ich dein Lied,  
+Du bist mein Licht, mein Leben, mein Frieden, der nie flieht.
+
+[Verse 2]  
+Des Abends heulen sie wie Hunde in der Nacht,  
+Doch ich schau zu dir, du hast Macht und Pracht.  
+Lass mich singen von deiner Treue, so klar,  
+Du bist mein Schutz, mein Retter, für immer wahr.
+
+[Chorus]  
+Gott, du bist mein Schild, mein Hort in der Not,  
+In deiner Güte finde ich Trost und Gebot.  
+Vor deinen Augen, Herr, sing ich dein Lied,  
+Du bist mein Licht, mein Leben, mein Frieden, der nie flieht.
+
+[Bridge]  
+Ich will von deiner Macht singen,  
+Des Morgens rühmen deine Güte,  
+Du schenkst mir Freude, du gibst mir Kraft,  
+In deiner Nähe, Herr, finde ich die wahre Saft.
+
+[Chorus]  
+Gott, du bist mein Schild, mein Hort in der Not,  
+In deiner Güte finde ich Trost und Gebot.  
+Vor deinen Augen, Herr, sing ich dein Lied,  
+Du bist mein Licht, mein Leben, mein Frieden, der nie flieht.
+
+[Outro]  
+Du bist mein Schutz, mein gnädiger Gott,  
+In deiner Liebe finde ich meinen Platz,  
+Sei du geehrt, oh Herr, ewiglich,  
+In deinem Namen, Jesus, preise ich dich.`,
         60: `[Verse 1]  
 Du hast uns einst zerstreut,  
 In Zorn hast Du uns geführt,  
@@ -21780,7 +27522,50 @@ Gott sei uns gnädig, lass dein Licht scheinen,
 Segne uns, o Gott, in deinen Händen.  
 Amen, Amen, wir danken dir,  
 In alle Ewigkeit, bei dir sein wir hier.`,
-        68: ``,
+        68: `[TITLE]  
+Gott, Du bist unser Licht
+
+[Verse 1]  
+Steh auf, o Herr, vertreib die Nacht,  
+Deine Feinde fliehen, wenn Du lachst.  
+Wie Rauch verweht und Wachs schmilzt schnell,  
+So fallen die Gottlosen, vor Dir, oh Stell.  
+
+[Chorus]  
+Singet dem Herrn, lobsinget Sein Name,  
+Freut euch vor Ihm, der uns mit Liebe umrahmt.  
+Der Vater der Waisen, der Richter der Witwen,  
+In seiner Heiligkeit, wird unser Lob erblühen.  
+
+[Verse 2]  
+In der Wüste zogst Du mit uns einher,  
+Die Erde bebte, der Himmel war leer.  
+Doch Du gabst uns Regen, erquicktest das Land,  
+Deine Güte, oh Gott, wird niemals verbannt.  
+
+[Chorus]  
+Singet dem Herrn, lobsinget Sein Name,  
+Freut euch vor Ihm, der uns mit Liebe umrahmt.  
+Der Vater der Waisen, der Richter der Witwen,  
+In seiner Heiligkeit, wird unser Lob erblühen.  
+
+[Bridge]  
+Dein Reich ist aufgerichtet, Herr,  
+Gib uns Kraft, stärke uns mehr.  
+Die Könige bringen Dir Gaben dar,  
+Wir loben Dich, denn Du bist wunderbar.  
+
+[Chorus]  
+Singet dem Herrn, lobsinget Sein Name,  
+Freut euch vor Ihm, der uns mit Liebe umrahmt.  
+Der Vater der Waisen, der Richter der Witwen,  
+In seiner Heiligkeit, wird unser Lob erblühen.  
+
+[Outro]  
+Gott, Du bist unser Licht,  
+In Deiner Nähe, da fürcht' ich mich nicht.  
+Gelobt sei der Herr, in Ewigkeit,  
+Seine Herrlichkeit, unsere Zuversicht.`,
         69: `[Verse 1]  
 Gott, hilf mir in der Dunkelheit,  
 Das Wasser steigt, ich fühl' mich klein.  
@@ -22228,7 +28013,74 @@ In der Dunkelheit, Du verlässt uns nicht.
 Wir beten an, in Ehrfurcht und Laut,  
 Du, o Herr, bist unser Gott, darauf vertrau’n wir gut.  
 (Oh, darauf vertrau’n wir gut.)`,
-        77: ``,
+        77: `[TITLE]  
+Gott, Du bist mein Halt  
+
+[Verse 1]  
+Ich schreie mit meiner Stimme,  
+Zu Dir, o Herr, so nah.  
+In der Nacht, wenn die Dunkelheit,  
+Mein Herz mit Ängsten schlägt.  
+Die Hände ausgebreitet,  
+Halt mich fest in Deiner Kraft,  
+Denn meine Seele sucht Trost,  
+In Deiner Liebe, die nie versagt.  
+
+[Chorus]  
+Gott, Dein Weg ist heilig,  
+Wo ist ein Gott wie Du?  
+In der Stille, in der Not,  
+Ruf ich laut zu Dir,  
+Du hörst mich, Du verlassest mich nie,  
+Deine Wunder, sie sind wahr,  
+Du bist der Weg, der mich führt,  
+Mein Herz, es ruht in Dir.  
+
+[Verse 2]  
+Ich denke an die alten Tage,  
+Die Wunder, die Du tatst.  
+Dein Licht, es leuchtet in der Dunkelheit,  
+Mein Geist forscht, ruft zu Dir.  
+Wird Deine Gnade ewig weichen,  
+Sind Deine Verheißungen verloren?  
+Doch Deine rechte Hand, sie kann,  
+Die Finsternis vertreiben, oh Herr.  
+
+[Chorus]  
+Gott, Dein Weg ist heilig,  
+Wo ist ein Gott wie Du?  
+In der Stille, in der Not,  
+Ruf ich laut zu Dir,  
+Du hörst mich, Du verlassest mich nie,  
+Deine Wunder, sie sind wahr,  
+Du bist der Weg, der mich führt,  
+Mein Herz, es ruht in Dir.  
+
+[Bridge]  
+Die Wasser sahen Dich, oh Herr,  
+Und sie fürchteten sich,  
+Die Wolken donnerten,  
+Doch Du bist bei mir,  
+Du führst mich durch die Stürme,  
+Wie ein Hirte, der mich leitet,  
+Ich vertraue auf Dein Wort,  
+Denn Du bist mein Licht, mein Leben.  
+
+[Chorus]  
+Gott, Dein Weg ist heilig,  
+Wo ist ein Gott wie Du?  
+In der Stille, in der Not,  
+Ruf ich laut zu Dir,  
+Du hörst mich, Du verlassest mich nie,  
+Deine Wunder, sie sind wahr,  
+Du bist der Weg, der mich führt,  
+Mein Herz, es ruht in Dir.  
+
+[Outro]  
+Gott, ich schau zu Dir,  
+Mein Herz, es ruht in Dir.  
+In der Stille, in der Not,  
+Du bist mein Halt, mein Gott.`,
         78: `[Verse 1]  
 Höre, mein Volk, das Gesetz des Herrn,  
 Neigt eure Ohren, lasst die Worte fern.  
@@ -22709,7 +28561,62 @@ In der Dunkelheit rufe ich zu dir,
 Mein Heiland, bleibe nah zu mir.  
 In jedem Schmerz, in jedem Leid,  
 Deine Liebe, Herr, macht mich bereit.`,
-        89: ``,
+        89: `[TITLE]  
+Ewige Gnade
+
+[Verse 1]  
+Ich will singen von der Gnade,  
+Die du, Herr, uns ewig schenkst.  
+Deine Wahrheit, treu und heilig,  
+In meinem Herzen immer klingt.  
+Himmel preisen deine Wunder,  
+In der Gemeinde strahlt dein Licht,  
+Wem, o Herr, ist gleich zu finden,  
+In deiner Macht, da glänzt dein Gesicht.
+
+[Chorus]  
+Ewige Gnade, du bist unser Schild,  
+Du erhebst uns, wenn der Sturm uns quält.  
+In deinem Namen finden wir Frieden,  
+Du, der uns für immer erhält.
+
+[Verse 2]  
+Du hast einen Bund gegeben,  
+Mit deinem treuen Knecht, o Gott.  
+David, unser Held, er lebt,  
+Sein Stuhl, er bleibt, die Hoffnung blüht.  
+Du stillst die Wellen, Herr der Stürme,  
+Du schaffst, was niemand sonst vermag,  
+In deiner Nähe, voller Liebe,  
+Ist jeder Schmerz und Kummer schwach.
+
+[Chorus]  
+Ewige Gnade, du bist unser Schild,  
+Du erhebst uns, wenn der Sturm uns quält.  
+In deinem Namen finden wir Frieden,  
+Du, der uns für immer erhält.
+
+[Bridge]  
+Wie lange, Herr, willst du verborgen sein?  
+In deiner Wahrheit uns zu führen,  
+Gedenke an die Schmach, die wir tragen,  
+Doch deine Gnade wird nie verlieren.  
+Du bist unser Vater, unser Hort,  
+Und stets wird unser Lob dir gelten.  
+Dein Licht, es führt uns an jeden Ort,  
+Ewige Gnade, wir werden dir erzählen.
+
+[Chorus]  
+Ewige Gnade, du bist unser Schild,  
+Du erhebst uns, wenn der Sturm uns quält.  
+In deinem Namen finden wir Frieden,  
+Du, der uns für immer erhält.
+
+[Outro]  
+Gelobt sei der Herr, ewiglich,  
+Sein Wort bleibt wahr, sein Licht bricht durch.  
+Ewige Gnade, für uns bereit,  
+In dir, o Herr, finden wir die Zeit.`,
         90: `[Verse 1]  
 HERR, du bist unsere Zuflucht,  
 Von Ewigkeit zu Ewigkeit,  
@@ -24092,7 +29999,56 @@ Danket dem HERRN, denn er ist freundlich,
 Seine Güte währt, ewiglich, ewiglich.  
 O HERR, hilf uns, lass wohl gelingen,  
 In deinem Namen, lasst uns fröhlich singen.`,
-        119: ``,
+        119: `[TITLE]  
+Dein Wort, mein Licht
+
+[Verse 1]  
+Wohl denen, die ohne Tadel leben,  
+Im Gesetz des HERRN, da möchte ich streben.  
+Von ganzem Herzen such’ ich Dein Gesicht,  
+Führ’ mich, oh HERR, in Dein heiliges Licht.
+
+[Chorus]  
+Oh, lehr mich Deine Rechte,  
+Dein Wort, mein Trost und mein Licht.  
+In der Dunkelheit bist Du bei mir,  
+Du bist die Hoffnung, die ich spür’.
+
+[Verse 2]  
+Ich halte Deine Gebote,  
+In meinem Herzen sind sie mein Brot.  
+Wenn die Stolzen mir Spott und Schmach bringen,  
+Lass mich in Deinem Wort weiter singen.
+
+[Chorus]  
+Oh, lehr mich Deine Rechte,  
+Dein Wort, mein Trost und mein Licht.  
+In der Dunkelheit bist Du bei mir,  
+Du bist die Hoffnung, die ich spür’.
+
+[Bridge]  
+Erquicke mich nach Deinem Wort,  
+Du bist mein Schild, mein sicherer Ort.  
+In der Nacht ruf’ ich nach Dir,  
+Hör’ mein Flehen, oh HERR, sei mir hier.
+
+[Verse 3]  
+Ich bin ein Gast auf dieser Erde,  
+Verbieg’ nicht Deine Gebote, oh HERR, ich werde.  
+Meine Seele verlangt nach Deinem Heil,  
+In Deinem Wort finde ich mein Teil.
+
+[Chorus]  
+Oh, lehr mich Deine Rechte,  
+Dein Wort, mein Trost und mein Licht.  
+In der Dunkelheit bist Du bei mir,  
+Du bist die Hoffnung, die ich spür’.
+
+[Outro]  
+Ich bin verloren, such’ nach Deinem Licht,  
+Leite mich, HERR, bis ans Ende der Sicht.  
+Dein Wort bleibt ewig, meine Seele singt,  
+In Deiner Nähe, oh HERR, Frieden bringt.`,
         120: `Vers 1:  
 In meiner Not, Herr, ruf ich zu Dir,  
 Du hörst mein Flehen, oh, ich danke Dir.  
@@ -25607,7 +31563,6 @@ Lobet den HERRN, für immer, in ihm sind wir schlicht.
 Alles, was Odem hat, lobe den HERRN!  
 Halleluja, Halleluja, Amen!`,
     },
-
     "20": {
         1: `Strophe 1:  
 In der Stille hör' ich Dich,  
@@ -27150,7 +33105,6 @@ In jedem Schritt, in jedem Tag.
 O Herr, führe uns hier zu dir,  
 In deiner Liebe, die nie vergeht.`,
     },
-
     "21": {
         1: `[Verse 1]  
 König der Herzen, ich such' nach dem Sinn,  
@@ -27767,7 +33721,6 @@ In jedem Augenblick,
 Dein Wort ist mein Licht,  
 In dir, Herr, find' ich Glück.`,
     },
-
     "22": {
         1: `[Verse 1]  
 Er küsse mich mit Liebe,  
@@ -28156,7 +34109,6 @@ In Deinen Armen will ich ruhig stehen.
 O, dass Du mir gleich einem Bruder wärest,  
 Für immer in Deinem Frieden leben.`,
     },
-
     "23": {
         1: `[Verse 1]  
 Höret, ihr Himmel, der Herr spricht,  
@@ -29332,7 +35284,62 @@ Heulet, ihr Schiffe, doch Hoffnung erblüht,
 In der Umkehr zu Dir, wo die Liebe besteht.  
 Die Schätze des Himmels sind uns nun gegeben,  
 In Deinem Licht, Herr, finden wir unser Leben.`,
-        24: ``,
+        24: `[TITLE]  
+Die Erde bebt
+
+[VERS 1]  
+Siehe, der HERR macht das Land leer,  
+Die Freude schwindet, die Herzen schwer.  
+Priester und Volk, sie stehen gleich,  
+In der Wüste sind wir, ganz allein und bleich.  
+
+[Chorus]  
+Doch wir erheben unsere Stimme,  
+Lob singen in der Dunkelheit.  
+HERR, Du bist unser Licht und Frieden,  
+In Dir allein ist die Herrlichkeit.  
+
+[VERS 2]  
+Die Tore stehen leer, die Stadt ist still,  
+Die Freude des Landes, sie schwindet, wo ist der Wille?  
+Die Weinernte ist aus, die Trauben verdorren,  
+Die Klage der Menschen ergreift uns in Sorgen.  
+
+[Chorus]  
+Doch wir erheben unsere Stimme,  
+Lob singen in der Dunkelheit.  
+HERR, Du bist unser Licht und Frieden,  
+In Dir allein ist die Herrlichkeit.  
+
+[Bridge]  
+Wir rufen, HERR, komm und heile,  
+Die Wunden der Erde, die Herzen vereint.  
+Du bist der König, der ewig regiert,  
+Wenn der Mond sich schämt und die Sonne verliert.  
+
+[Chorus]  
+Doch wir erheben unsere Stimme,  
+Lob singen in der Dunkelheit.  
+HERR, Du bist unser Licht und Frieden,  
+In Dir allein ist die Herrlichkeit.  
+
+[VERS 3]  
+Die Fenster der Höhe sind aufgetan,  
+Die Grundfesten beben, wir stehen nicht dran.  
+Doch Deine Verheißung, sie bleibt bestehen,  
+Du wirst uns besuchen, wirst mit uns gehen.  
+
+[Chorus]  
+So erheben wir unsere Stimme,  
+Lob singen in der Dunkelheit.  
+HERR, Du bist unser Licht und Frieden,  
+In Dir allein ist die Herrlichkeit.  
+
+[Outro]  
+In Zion regierst Du, in Herrlichkeit,  
+Die Erde bebt, doch wir sind bereit.  
+HERR Zebaoth, Du bist unser Lob,  
+In Dir allein finden wir unser Brot.`,
         25: `[Verse 1]  
 Herr, Du bist mein Gott, ich preise Deinen Namen,  
 Wunder tust Du, treu und wahrhaftig,  
@@ -29510,9 +35517,184 @@ Auf dem heiligen Berge,
 In Jerusalem, wir beten an,  
 Mit einem Herzen, das Dir singt,  
 O Herr, Du bist, was unser Leben bringt.`,
-        28: ``,
-        29: ``,
-        30: ``,
+        28: `[TITLE]  
+Kronen und Flüsse  
+
+[VERSES]  
+Weh der Krone, die hoch erblüht,  
+In der Traube, die taumelt, sie zieht.  
+Ein Sturm des HERRN wird sie brechen,  
+In der Nacht, da wird er sprechen.  
+
+Die Blume welkt, die Pracht vergeht,  
+Die Stärke, die uns bald verweht.  
+Doch in Zion, ein Grundstein fest,  
+Wer glaubt, der findet Ruhe, den Rest.  
+
+[Chorus]  
+Halleluja, unser HERR,  
+Deine Gnade ist immer mehr.  
+Komm, oh Geist, führ uns zum Licht,  
+In dem Dunkel bist Du unser Sicht.  
+
+[VERSES]  
+Die Priester taumeln, der Wein verführt,  
+Die Wahrheit oft in Dunkelheit regiert.  
+Doch Deine Stimme ruft aus der Ferne,  
+Ein Wort des Lebens, die Liebe der Sterne.  
+
+Hört, ihr Spötter, gebt acht und versteht,  
+Eure Verträge, sie brechen das Gebet.  
+Ein Stein, bewährt, wird uns führen,  
+In die Freiheit, die wir spüren.  
+
+[Chorus]  
+Halleluja, unser HERR,  
+Deine Gnade ist immer mehr.  
+Komm, oh Geist, führ uns zum Licht,  
+In dem Dunkel bist Du unser Sicht.  
+
+[Bridge]  
+Pflügt zur Saat, bringt das Gute hervor,  
+Dein Werk, oh HERR, öffnet jedes Tor.  
+In der Not, da bist Du der Halt,  
+Zeichen und Wunder, die Du uns bald bald.  
+
+[Chorus]  
+Halleluja, unser HERR,  
+Deine Gnade ist immer mehr.  
+Komm, oh Geist, führ uns zum Licht,  
+In dem Dunkel bist Du unser Sicht.  
+
+[Outro]  
+Komm, oh HERR, steh auf und zeig,  
+Deine Herrschaft, sie bleibt nicht klein.  
+In jedem Sturm, in jedem Streit,  
+Seid unsere Hoffnung, für alle Zeit.`,
+        29: `[TITLE]  
+Ariel, Stadt des Lagers
+
+[VERS 1]  
+Weh Ariel, du Stadt des Lagers,  
+In Dunkelheit und voller Pein,  
+Die Feste feiert ihr immerdar,  
+Doch du bleibst traurig, ganz allein.  
+Die Feinde kommen, um dich zu quälen,  
+Doch der Herr wird dich nicht lassen steh’n,  
+Inmitten von Angst und aller Stille,  
+Wird seine Stimme bald zu dir weh’n.
+
+[Chorus]  
+O Herr, erwecke uns aus dem Schlaf,  
+Öffne unsere Augen, mach uns klar,  
+Dein Licht durchdringt die finst're Nacht,  
+Wir beten zu dir, du bist uns nah.  
+Die Stimme der Schwachen erhebt sich jetzt,  
+In deinem Namen, was du sprichst, geschieht.  
+Halleluja, du bist der Gott,  
+Der uns erhebt, der uns nie verlässt.
+
+[VERS 2]  
+Die Tyrannen, sie werden verwehen,  
+Wie Spreu im Wind, so schnell vorbei,  
+Die Elenden jubeln, der Herr ist da,  
+Seine Kraft befreit, so macht uns frei.  
+In Staub und Dunkelheit, da murmeln wir,  
+Und spüren, wie dein Geist uns leitet,  
+Die Blinden sehen, das Wort wird klar,  
+Wenn du uns rufst, dann sind wir bereit.
+
+[Chorus]  
+O Herr, erwecke uns aus dem Schlaf,  
+Öffne unsere Augen, mach uns klar,  
+Dein Licht durchdringt die finst're Nacht,  
+Wir beten zu dir, du bist uns nah.  
+Die Stimme der Schwachen erhebt sich jetzt,  
+In deinem Namen, was du sprichst, geschieht.  
+Halleluja, du bist der Gott,  
+Der uns erhebt, der uns nie verlässt.
+
+[Bridge]  
+Du bist der Meister, der Töpfer, der uns formt,  
+Verbirg uns nicht, lass uns sehen,  
+Wir wollen dir folgen, mit Herzen, die brennen,  
+In deiner Liebe, lass uns stehen.  
+Erhebe dein Volk, lass uns hören dein Wort,  
+Im Sturm und in Frieden, du bist unser Ort.
+
+[Chorus]  
+O Herr, erwecke uns aus dem Schlaf,  
+Öffne unsere Augen, mach uns klar,  
+Dein Licht durchdringt die finst're Nacht,  
+Wir beten zu dir, du bist uns nah.  
+Die Stimme der Schwachen erhebt sich jetzt,  
+In deinem Namen, was du sprichst, geschieht.  
+Halleluja, du bist der Gott,  
+Der uns erhebt, der uns nie verlässt.
+
+[ENDING]  
+Ariel, du Stadt des Lebens,  
+In dir wird der Herr uns neu beleben,  
+Lass uns singen in deinem Licht,  
+Halleluja, du bist unser Licht!`,
+        30: `[TITLE]  
+"Hoffnung in Trübsal"
+
+[Verse 1]  
+Weh den abtrünnigen Kindern,  
+Die ohne Dich Pläne schmieden,  
+Suchen Schutz bei mächtigen Schatten,  
+Doch finden nur Schande in ihren Taten.  
+Ägyptens Macht, ein flüchtiger Traum,  
+Verführt den Geist, zerbricht den Raum.
+
+[Chorus]  
+Komm, Herr, erbarme Dich über uns,  
+In der Dunkelheit sind wir verloren,  
+Wir rufen zu Dir, Du bist unser Licht,  
+Gib uns Hoffnung, in der Nacht,  
+Hilf uns still zu sein und zu hoffen,  
+Denn bei Dir sind wir geborgen.
+
+[Verse 2]  
+Dein Wort, es ruft uns zurück,  
+Zu Dir, dem Heiligen, dem großen Glück.  
+Wir wollen hören, was Du sprichst,  
+Der Weg, den Du uns zeigst, ist der, der siegt.  
+Lass uns entweihen, was uns hält,  
+Die Götzen, die uns von Dir fernstellt.
+
+[Chorus]  
+Komm, Herr, erbarme Dich über uns,  
+In der Dunkelheit sind wir verloren,  
+Wir rufen zu Dir, Du bist unser Licht,  
+Gib uns Hoffnung, in der Nacht,  
+Hilf uns still zu sein und zu hoffen,  
+Denn bei Dir sind wir geborgen.
+
+[Bridge]  
+Siehe, Dein Name kommt, Herr, so nah,  
+Dein Zorn brennt, doch Deine Liebe ist klar.  
+Die Stimme des Herrn, sie wird erschallen,  
+Lass uns singen, wenn wir die Freiheit erlangen.  
+Du wirst die Wunden Deines Volkes heilen,  
+In Dir, Herr, können wir verweilen.
+
+[Chorus]  
+Komm, Herr, erbarme Dich über uns,  
+In der Dunkelheit sind wir verloren,  
+Wir rufen zu Dir, Du bist unser Licht,  
+Gib uns Hoffnung, in der Nacht,  
+Hilf uns still zu sein und zu hoffen,  
+Denn bei Dir sind wir geborgen.
+
+[Outro]  
+In der Nacht eines heiligen Festes,  
+Singen wir von Deiner Treue, Herr, das Beste.  
+Mit Flöten und Herzen, zum Berg des Herrn,  
+Dein Volk, das findet, was es so sehr gern.  
+Amen, Amen, wir kommen zu Dir,  
+In der Hoffnung, dass Du hörst unser Lied hier.`,
         31: `[Verse 1]  
 Weh denen, die Hilfe suchen,  
 In Ägyptens Schatten, fern von Dir.  
@@ -29626,7 +35808,55 @@ König der Gerechtigkeit,
 Führe uns in deine Zeit,  
 In dir, Herr, sind wir geborgen,  
 Gesegnet heute und an allen Morgen.`,
-        33: ``,
+        33: `[TITLE] Erhebe dich, o Herr
+
+[VERS 1]  
+Weh dir, Verstörer, der du raubst,  
+Doch in deiner Dunkelheit, da bleibt kein Trost.  
+Der Herr, er erhebt sich, Macht wird sein,  
+In der Trübsal, Herr, lass uns bei dir sein.
+
+[Chorus]  
+Sei uns gnädig, o Herr, wir harren auf dich,  
+Du bist unser Heil, unser Licht, unser Licht.  
+Die Völker fliehen, wenn du dich erhebst,  
+Bei dir, o Herr, wird die Angst verweht.
+
+[VERS 2]  
+Siehe, die Helden schreien, die Boten weinen,  
+Die Straßen sind wüst, die Städte allein.  
+Doch du, o Herr, du bist unser Gericht,  
+In deinem Licht blüht das Leben, das Licht.
+
+[Chorus]  
+Sei uns gnädig, o Herr, wir harren auf dich,  
+Du bist unser Heil, unser Licht, unser Licht.  
+Die Völker fliehen, wenn du dich erhebst,  
+Bei dir, o Herr, wird die Angst verweht.
+
+[Bridge]  
+Wer wandelt in Gerechtigkeit,  
+Wird wohnen bei dir, in deiner Herrlichkeit.  
+Sein Brot wird gegeben, sein Wasser gewiss,  
+In deiner Nähe, o Herr, da ist Frieden, da ist Licht.
+
+[VERS 3]  
+Zion, du Stadt voller Pracht,  
+Deine Schönheit, o Herr, die uns wacht.  
+Du bist unser Richter, unser König, so treu,  
+In deiner Gnade, da blüht unser neu.
+
+[Chorus]  
+Sei uns gnädig, o Herr, wir harren auf dich,  
+Du bist unser Heil, unser Licht, unser Licht.  
+Die Völker fliehen, wenn du dich erhebst,  
+Bei dir, o Herr, wird die Angst verweht.
+
+[Outro]  
+Erhebe dich, o Herr, deine Macht sei bekannt,  
+In dir finden wir Frieden, ein sicheres Land.  
+Wir loben und preisen, in deinem Namen,  
+In deiner Gegenwart, da leben wir, Amen.`,
         34: `[Verse 1]  
 Kommt herzu, ihr Völker, hört die Stimme,  
 Die Erde zittert, der Himmel weint.  
@@ -29753,7 +35983,50 @@ In jedem Sturm, Du bist unser Frieden,
 Wir heben die Augen, auf Dich, unser Leben.  
 Du bist der Retter, der niemals versagt,  
 Für immer, oh Herr, in Dir, unser Tag.`,
-        37: ``,
+        37: `[TITLE]  
+*Hör mein Flehen, Herr*  
+
+[Verse 1]  
+Wenn die Schatten kommen, die Furcht uns umgibt,  
+In der Dunkelheit, wo kein Licht mehr blüht.  
+Hiskia zerriss die Kleider, voller Schmerz,  
+Doch du bist der Gott, der heilt unser Herz.  
+
+[Chorus]  
+Hör mein Flehen, Herr, schau herab auf uns,  
+Nimm die Worte des Feindes, mach sie zu Staub,  
+Du bist der lebendige Gott, unser Licht,  
+In dir ist die Hoffnung, in dir das Gesicht.  
+
+[Verse 2]  
+Die Könige der Welt, sie spotten und lästern,  
+Doch du, Herr, bist der Fels, der nie wird schwächer.  
+Du hörst unser Rufen, du kennst unser Leid,  
+In der Zeit der Trübsal, bist du stets bereit.  
+
+[Chorus]  
+Hör mein Flehen, Herr, schau herab auf uns,  
+Nimm die Worte des Feindes, mach sie zu Staub,  
+Du bist der lebendige Gott, unser Licht,  
+In dir ist die Hoffnung, in dir das Gesicht.  
+
+[Bridge]  
+Wie ein Engel, der kommt, mit Feuer und Macht,  
+Schützt du deine Stadt, in der tiefen Nacht.  
+Wir stehen im Glauben, wir fürchten uns nicht,  
+Du bist der Gott Israels, du bist unser Licht.  
+
+[Chorus]  
+Hör mein Flehen, Herr, schau herab auf uns,  
+Nimm die Worte des Feindes, mach sie zu Staub,  
+Du bist der lebendige Gott, unser Licht,  
+In dir ist die Hoffnung, in dir das Gesicht.  
+
+[Outro]  
+Hör mein Flehen, Herr, du bist unser Heil,  
+In dir finden wir Frieden, unser Glaubenszeil.  
+Du bist der Gott, der uns nie verlässt,  
+In dir, oh Herr, sind wir stets gesegnet.`,
         38: `[Verse 1]  
 In der Dunkelheit, da rief ich zu Dir,  
 Hiskia weint, sein Herz voller Zier.  
@@ -29842,7 +36115,74 @@ In Frieden und Treue, solange ich leb’,
 Dein Wort, Herr, ist das, was mich erhebt.  
 Du bist mein Schatz, mein Herz, mein Licht,  
 Für immer in Dir, mein ewiges Gesicht.`,
-        40: ``,
+        40: `[TITLE]  
+Du bist unser Gott
+
+[Verse 1]  
+Tröstet, tröstet, spricht der Herr,  
+Erhebt die Stimme, ruft es laut,  
+Inmitten aller Trauer schwer,  
+Endet die Nacht, der Morgen schaut.  
+Zion, du Predigerin, steig auf,  
+Hebe die Stimme, fürchte dich nicht,  
+Seht, euer Gott, der Herr von Macht,  
+Sein Licht erstrahlt, das Dunkel bricht.
+
+[Chorus]  
+Halleluja, wir loben dich,  
+Der Herr, er kommt mit Kraft zu uns,  
+Sein Wort bleibt ewig, ewiglich,  
+In dir, oh Gott, sind wir vereint,  
+Wir heben hoch, was du getan,  
+Du bist unser Gott, unser Leben,  
+Die Hoffnung blüht, der Glaube fängt,  
+In dir allein, oh Herr, wir streben.
+
+[Verse 2]  
+Die Täler heben sich, die Berge sinken,  
+Gleichheit schafft dein heilig’ Wort,  
+Was krumm ist, wird nun wieder winken,  
+Du schaffst den Weg, du bist der Ort.  
+Die Blumen welken, das Gras vergeht,  
+Doch deine Wahrheit bleibt bestehen,  
+Die Gläubigen, sie werden sehen,  
+Wie deine Herrlichkeit besteht.
+
+[Chorus]  
+Halleluja, wir loben dich,  
+Der Herr, er kommt mit Kraft zu uns,  
+Sein Wort bleibt ewig, ewiglich,  
+In dir, oh Gott, sind wir vereint,  
+Wir heben hoch, was du getan,  
+Du bist unser Gott, unser Leben,  
+Die Hoffnung blüht, der Glaube fängt,  
+In dir allein, oh Herr, wir streben.
+
+[Bridge]  
+Hebt eure Augen, schaut zum Herrn,  
+Er spricht zu uns, sein Geist erleuchtet,  
+Die Müden finden Trost in dir,  
+Neue Kraft, die uns begleitet.  
+Wie Adler steigen wir empor,  
+In deiner Liebe, oh Herr, sind wir geborgen,  
+Wir laufen und wir werden nicht müde,  
+In dir, oh Gott, ist unser Morgen.
+
+[Chorus]  
+Halleluja, wir loben dich,  
+Der Herr, er kommt mit Kraft zu uns,  
+Sein Wort bleibt ewig, ewiglich,  
+In dir, oh Gott, sind wir vereint,  
+Wir heben hoch, was du getan,  
+Du bist unser Gott, unser Leben,  
+Die Hoffnung blüht, der Glaube fängt,  
+In dir allein, oh Herr, wir streben.
+
+[Outro]  
+Tröstet, tröstet, unser Gott,  
+In dir, Herr, finden wir unser Licht,  
+Die Herrlichkeit, sie zeigt sich jetzt,  
+Wir loben dich, für alle Zeit.`,
         41: `[Verse 1]  
 Laß die Völker schweigen,  
 Die Inseln sich stärken,  
@@ -30482,7 +36822,74 @@ So heben wir die Stimmen hoch,
 In Dank und Lob, für Dich allein,  
 Du bist der Weg, die Wahrheit, Licht,  
 Für immer lass uns bei Dir sein.`,
-        54: ``,
+        54: `[TITLE]  
+Der Gott der Gnade
+
+[Verse 1]  
+Rühme, du Unfruchtbare,  
+Freue dich, du Einsame,  
+Denn der Herr spricht zu dir,  
+Dein Herz wird voller Freude sein.  
+Mache weit den Raum deiner Hütte,  
+Breite aus, spare nicht!  
+Dein Same wird die Heiden erben,  
+Die verwüsteten Städte werden neu erstehen.  
+
+[Chorus]  
+Fürchte dich nicht, du Elende,  
+Denn der Herr, dein Gott, ist hier!  
+Seine Gnade wird dich umhüllen,  
+Sein Licht vertreibt die Nacht.  
+In seiner Treue wirst du leben,  
+Die Schande wird vergessen sein.  
+Sein Bund des Friedens bleibt bestehen,  
+Der Gott der Gnade ist dein Teil!  
+
+[Verse 2]  
+Ich habe dich nicht vergessen,  
+Wie ein Weib, das leidet still.  
+Doch mit großer Barmherzigkeit,  
+Werd' ich dich sammeln, so wie ich will.  
+Dein Grund wird mit Saphiren glänzen,  
+Und deine Tore werden strahlen hell,  
+Deine Kinder gelehrt vom HERRN,  
+In Frieden leben sie, im neuen Licht.  
+
+[Chorus]  
+Fürchte dich nicht, du Elende,  
+Denn der Herr, dein Gott, ist hier!  
+Seine Gnade wird dich umhüllen,  
+Sein Licht vertreibt die Nacht.  
+In seiner Treue wirst du leben,  
+Die Schande wird vergessen sein.  
+Sein Bund des Friedens bleibt bestehen,  
+Der Gott der Gnade ist dein Teil!  
+
+[Bridge]  
+Siehe, die Berge werden weichen,  
+Doch seine Gnade bleibt!  
+Die Waffen, die uns schaden wollen,  
+Werden fallen, wie der Staub.  
+Kein Schreck soll dich erreichen,  
+Denn der HERR ist an deiner Seite,  
+Vertraue ihm, er wird dich führen,  
+In seiner Liebe bist du geborgen!  
+
+[Chorus]  
+Fürchte dich nicht, du Elende,  
+Denn der Herr, dein Gott, ist hier!  
+Seine Gnade wird dich umhüllen,  
+Sein Licht vertreibt die Nacht.  
+In seiner Treue wirst du leben,  
+Die Schande wird vergessen sein.  
+Sein Bund des Friedens bleibt bestehen,  
+Der Gott der Gnade ist dein Teil!  
+
+[Outro]  
+Der Gott der Gnade,  
+Der Herr, der alles sieht,  
+In ihm bist du geborgen,  
+Seine Liebe bleibt ewig hier.`,
         55: `[Verse 1]  
 Wohlan, ihr, die ihr durstig seid,  
 Kommt her, lasst uns zu Wasser geh’n.  
@@ -31113,7 +37520,6 @@ Sein Zorn wird heilen, die Dunkelheit zerbricht.
 Ich werde kommen und sammeln, die Völker um dich,  
 In deinem Hause, o HERR, finde ich Frieden und Licht.`,
     },
-
     "24": {
         1: `[Verse 1]  
 Du kanntest mich, oh Herr,  
@@ -31156,7 +37562,66 @@ Oh Herr, ich sehe den Zweig, der erwacht,
 Du bist der Gott, der wacht über sein Wort,  
 In Deiner Treue, in Deiner Macht,  
 Lass uns gehen, zu dem, was Du uns gebort.`,
-        2: ``,
+        2: `[TITLE]  
+*Ruf zu dir, Herr*
+
+[Verse 1]  
+Herr, dein Wort spricht zu mir,  
+Mit Liebe und Gnade, du führst uns hier.  
+In der Wüste der Einsamkeit,  
+Hast du uns geführt, in der Dunkelheit.  
+Wir waren dein Volk, die erste Frucht,  
+Doch wir wanderten fern, in Treue gebrochen,  
+Wo ist der Herr, der uns befreit?  
+Wir rufen zu dir, in der Dunkelheit.
+
+[Chorus]  
+Ruf uns zurück zu deinem Herzen,  
+Zeige uns den Weg, Herr, wir kehren um.  
+Lass uns nicht fallen, lass uns nicht irren,  
+In deiner Liebe finden wir Ruhm.  
+Du bist die Quelle, lebendig und rein,  
+Wir geben dir alles, lass uns dein sein.
+
+[Verse 2]  
+Wir suchen die Götzen, die nichts uns geben,  
+Verlassen das Licht, das uns führt zum Leben.  
+Wie der Dieb, der Schande erfährt,  
+So ist unser Volk, das dich verzehrt.  
+Wir flehen zu dir, Herr der Herrscharen,  
+Erbarme dich uns, wir wollen nicht sparen.  
+Wo sind die Götzen, die uns nicht hören?  
+Wir kommen zu dir, lass uns nicht verlieren.
+
+[Chorus]  
+Ruf uns zurück zu deinem Herzen,  
+Zeige uns den Weg, Herr, wir kehren um.  
+Lass uns nicht fallen, lass uns nicht irren,  
+In deiner Liebe finden wir Ruhm.  
+Du bist die Quelle, lebendig und rein,  
+Wir geben dir alles, lass uns dein sein.
+
+[Bridge]  
+Herr, wir kehren um, lassen alles zurück,  
+In deiner Gnade finden wir unser Glück.  
+Jedes Wort, das du sprichst, führt uns heim,  
+In deinem Licht, da wollen wir sein.  
+Zerschlage die Ketten, die uns halten zurück,  
+Mit jedem Schritt, Herr, führen wir dich.
+
+[Chorus]  
+Ruf uns zurück zu deinem Herzen,  
+Zeige uns den Weg, Herr, wir kehren um.  
+Lass uns nicht fallen, lass uns nicht irren,  
+In deiner Liebe finden wir Ruhm.  
+Du bist die Quelle, lebendig und rein,  
+Wir geben dir alles, lass uns dein sein.
+
+[Outro]  
+Ruf uns zurück, Herr, wir sind bereit,  
+In deiner Nähe finden wir die Zeit.  
+In deinem Wort, da sind wir frei,  
+Wir erheben dich, Herr, für alle Zeit.`,
         3: `[Verse 1]  
 Wenn die Herzen sich von dir wenden,  
 In die Schatten der hohen Bäume,  
@@ -31323,7 +37788,53 @@ Lass uns umkehren, zu dir, oh Herr,
 In Einheit und Liebe, wir suchen dich sehr.  
 Die Wellen mögen toben, doch wir stehn fest,  
 Mit dir, oh Herr, sind wir wirklich gesegnet.`,
-        6: ``,
+        6: `[TITLE]  
+Die Stimme des Herrn
+
+[LYRICS]
+
+[Verse 1]  
+Fliehet, ihr Kinder, aus Jerusalem,  
+Die Drommete blasen, die Nacht bricht herein.  
+Ein Unglück naht, von Mitternacht,  
+Die Tochter Zion, in Kummer und Leid.
+
+[Chorus]  
+O Herr, wir hören Deine Stimme,  
+Rufe uns zurück, zu Deinem Licht.  
+Die Schatten wachsen, die Dunkelheit naht,  
+Gib uns Kraft, dass wir nicht fallen.
+
+[Verse 2]  
+Die Hirten rufen, zum Krieg, zum Streit,  
+Doch wir beten, in stiller Zeit.  
+Die Gerechtigkeit, sie ruft uns laut,  
+In Deinem Namen, Herr, sei unser Zelt gebaut.
+
+[Chorus]  
+O Herr, wir hören Deine Stimme,  
+Rufe uns zurück, zu Deinem Licht.  
+Die Schatten wachsen, die Dunkelheit naht,  
+Gib uns Kraft, dass wir nicht fallen.
+
+[Bridge]  
+Auf den alten Wegen, da finden wir Ruh,  
+In der Stille, in der Wahrheit,  
+Wir kehren um zu Dir,  
+Lass uns nicht mehr umherirren,  
+O Herr, wir sehnen uns nach Dir.
+
+[Chorus]  
+O Herr, wir hören Deine Stimme,  
+Rufe uns zurück, zu Deinem Licht.  
+Die Schatten wachsen, die Dunkelheit naht,  
+Gib uns Kraft, dass wir nicht fallen.
+
+[Outro]  
+Die Stimme des Herrn, sie ruft uns heim,  
+In Deinem Frieden, da solln wir sein.  
+Komm, o Herr, und schütze Dein Volk,  
+Wir vertrauen Dir, in Dir sind wir ganz.`,
         7: `[Verse 1]  
 Höret, ihr Menschen, das Wort des Herrn,  
 In diesem Haus, wo wir anbeten,  
@@ -31411,7 +37922,58 @@ Outro:
 Gib uns die Kraft, du allein, unser Gott.  
 Heilung in Gilead, lass uns nie mehr weichen,  
 In deiner Liebe, Herr, werden wir erreichen.“`,
-        9: ``,
+        9: `[TITLE]  
+Weinen für das Volk
+
+[Verse 1]  
+Ach, Herr, mein Herz ist schwer,  
+Tränen fließen wie ein Meer,  
+Für die Erschlagenen, oh mein Volk,  
+Wir stehen in der Dunkelheit, ohne Trost, ohne Licht.
+
+[Chorus]  
+Klage, oh Jerusalem,  
+Hör die Stimme, die ruft zum Gebet,  
+Die Lüge schleicht sich heimlich ein,  
+Doch Du, Herr, bleibst treu und rein.  
+Wir kehren um zu Dir, oh Gott,  
+In Deiner Gnade, da gibt es Trost.
+
+[Verse 2]  
+Falsche Zungen schießen wie Pfeile,  
+Freundschaft zerbricht, es bleibt nur Eile,  
+Brüder verraten, in Dunkelheit gehüllt,  
+Doch Du, Herr, bist der, der uns erfüllt.
+
+[Chorus]  
+Klage, oh Jerusalem,  
+Hör die Stimme, die ruft zum Gebet,  
+Die Lüge schleicht sich heimlich ein,  
+Doch Du, Herr, bleibst treu und rein.  
+Wir kehren um zu Dir, oh Gott,  
+In Deiner Gnade, da gibt es Trost.
+
+[Bridge]  
+In der Wüste rufen wir,  
+Heiliger Geist, sei hier,  
+Weise uns den Weg zurück,  
+Zu Deinem Wort, zu Deinem Glück.  
+Wir beugen uns, wir kommen heim,  
+In deiner Nähe, da sind wir eins.
+
+[Chorus]  
+Klage, oh Jerusalem,  
+Hör die Stimme, die ruft zum Gebet,  
+Die Lüge schleicht sich heimlich ein,  
+Doch Du, Herr, bleibst treu und rein.  
+Wir kehren um zu Dir, oh Gott,  
+In Deiner Gnade, da gibt es Trost.
+
+[Outro]  
+Ach, Herr, wir bitten Dich,  
+Mach unser Herz rein, vergib uns nicht,  
+In Deiner Barmherzigkeit, da leben wir,  
+Du bist unser Licht, unser Weg zu Dir.`,
         10: `[Verse 1]  
 Höret, was der HERR spricht,  
 Von Israel, dem Volk, das er liebt.  
@@ -31778,7 +38340,50 @@ Darum kommen wir, in Demut und Dank,
 Sein Name sei gepriesen, in jedem Gesang.  
 Der HERR ist unsere Stärke, unser Frieden,  
 In Seiner Gegenwart, sind wir ewig beschieden.`,
-        17: ``,
+        17: `[TITLE]  
+Hoffnung in der Wüste  
+
+[Verse 1]  
+Die Sünde, Herr, ist tief in uns geschrieben,  
+Mit eisernen Griffeln, spitzigen Demanten,  
+Doch du, o Herr, du siehst unser Streben,  
+Führst uns zurück, zu dir, dem lebend'gen Quell.  
+
+[Chorus]  
+Heile mich, o Herr, und ich werde heil,  
+Du bist mein Ruhm, meine Hoffnung, mein Teil.  
+In der Dürre, in der Wüste, bleibe ich nicht stehen,  
+Denn du bist der Baum, der Frucht bringt, wohin ich gehe.  
+
+[Verse 2]  
+Verflucht der Mann, der sich auf Menschen verlässt,  
+Wie die Heide, die in der Wüste verweht.  
+Doch gesegnet ist, der auf dich vertraut,  
+Wurzelt tief, auch wenn die Hitze uns bedroht.  
+
+[Chorus]  
+Heile mich, o Herr, und ich werde heil,  
+Du bist mein Ruhm, meine Hoffnung, mein Teil.  
+In der Dürre, in der Wüste, bleibe ich nicht stehen,  
+Denn du bist der Baum, der Frucht bringt, wohin ich gehe.  
+
+[Bridge]  
+Dein Wort, Herr, bleibt fest, ewiglich,  
+In der Stille hör ich, du sprichst zu mir.  
+Die Last der Welt, lass ich hier zurück,  
+In deine Arme flieh ich, finde neuen Blick.  
+
+[Chorus]  
+Heile mich, o Herr, und ich werde heil,  
+Du bist mein Ruhm, meine Hoffnung, mein Teil.  
+In der Dürre, in der Wüste, bleibe ich nicht stehen,  
+Denn du bist der Baum, der Frucht bringt, wohin ich gehe.  
+
+[Outro]  
+Hoffnung in der Wüste, Licht in der Nacht,  
+Du, Herr, bist bei mir, gibst mir Kraft.  
+In deinen Armen find ich Ruh,  
+Heiliger Geist, ich komm zu dir, ich komm zu dir.`,
         18: `[Verse 1]  
 Du rufst mich, Herr, in dein Werk hinein,  
 Wie der Töpfer, der formt den Ton,  
@@ -32273,7 +38878,50 @@ So rufen wir laut, in Einheit und Kraft,
 Du bist der HERR, der uns neu erschafft.  
 Die Ketten zerbrochen, wir stehen hier frei,  
 In deinem Namen, Herr, sind wir bereit!`,
-        29: ``,
+        29: `[TITLE]  
+Gott, du bist mein Frieden
+
+[Verse 1]  
+In der Dunkelheit, wo die Träume zerbrachen,  
+Rufst du uns, Herr, aus dem Schatten heraus.  
+Bauet Häuser, pflanzt Gärten,  
+Denn du bist da, du gibst uns das Leben.
+
+[Chorus]  
+Du bist der Gott des Friedens,  
+Deine Gedanken sind gut,  
+Wenn wir dich suchen von ganzem Herzen,  
+Wirst du uns finden, das ist dein Wort.
+
+[Verse 2]  
+In der Fremde, wo die Seele weint,  
+Finden wir Trost in deinem Licht.  
+Betet für die Stadt, die du uns gegeben,  
+Denn in deinem Wohl, da finden wir Leben.
+
+[Chorus]  
+Du bist der Gott des Friedens,  
+Deine Gedanken sind gut,  
+Wenn wir dich suchen von ganzem Herzen,  
+Wirst du uns finden, das ist dein Wort.
+
+[Bridge]  
+Du sammelst die Zerstreuten,  
+Bringst uns heim, gibst uns neuen Mut.  
+In der Stille hör’ ich deinen Ruf,  
+Du schenkst uns Hoffnung, du bist unser Gut.
+
+[Chorus]  
+Du bist der Gott des Friedens,  
+Deine Gedanken sind gut,  
+Wenn wir dich suchen von ganzem Herzen,  
+Wirst du uns finden, das ist dein Wort.
+
+[Outro]  
+Gott, du bist mein Frieden,  
+In dir find' ich mein Ziel.  
+Du führst uns durch die Zeiten,  
+Ewige Liebe, das ist dein Spiel.`,
         30: `Strophe 1:  
 In der Dunkelheit, wo Schrecken wohnt,  
 Ruft der HERR, sein Wort ist der Grund.  
@@ -32321,7 +38969,74 @@ Zion, erhebe dich, der HERR ist da,
 Sein Wort wird wahr, sein Frieden naht.  
 Die Freude wird kommen, die Dunkelheit flieht,  
 In Deinem Namen, o HERR, leben wir sie.`,
-        31: ``,
+        31: `[TITLE]  
+Komm, Volk des Herrn
+
+[Verse 1]  
+Du, Herr, hast uns einst gerufen,  
+Dein Volk, das Du liebst, oh, so treu.  
+In der Wüste fanden wir Gnade,  
+Deine Güte führt uns, Du bist neu.  
+Israel, erhebe deine Stimme,  
+Denn Du bist der Gott, der uns heilt.  
+In den Tälern und in der Trauer,  
+Wirst Du unser Herz stets erfreuen.
+
+[Chorus]  
+Komm, wir jubeln, erhebt die Stimme,  
+Zu Zion, dem Berg, wo Du bist.  
+Halleluja, wir tanzen mit Freude,  
+Denn der Herr hat uns erlöst.  
+Seine Liebe, sie bleibt für immer,  
+Er führt uns in unser Land.  
+Komm, wir singen, voller Vertrauen,  
+Denn unser Gott hält uns in der Hand.
+
+[Verse 2]  
+Hör, die Blinden und Lahmen rufen,  
+Du sammelst sie ein, aus fernem Land.  
+Die Trauernde findet Trost, Herr,  
+In Deinem Licht, das uns neu verband.  
+Du schenkst uns Weinen in Freude,  
+Die Traurigkeit wird weichen, oh, so klar.  
+Du bist der Hirte, der uns leitet,  
+An stillen Wassern führt uns Deine Spur.
+
+[Chorus]  
+Komm, wir jubeln, erhebt die Stimme,  
+Zu Zion, dem Berg, wo Du bist.  
+Halleluja, wir tanzen mit Freude,  
+Denn der Herr hat uns erlöst.  
+Seine Liebe, sie bleibt für immer,  
+Er führt uns in unser Land.  
+Komm, wir singen, voller Vertrauen,  
+Denn unser Gott hält uns in der Hand.
+
+[Bridge]  
+Siehe, die Zeit, die Du verheißen,  
+Ein neuer Bund, in unserm Herzen.  
+Die Missetat vergibst Du, oh Herr,  
+Und wir sind Dein Volk, ein neues Leben.  
+Komm, wir bauen auf Deinen Wegen,  
+Die Straßen, die Du uns gezeigt.  
+In Deiner Nähe, Herr, da finden,  
+Wir das Leben, das Du uns gibst.
+
+[Chorus]  
+Komm, wir jubeln, erhebt die Stimme,  
+Zu Zion, dem Berg, wo Du bist.  
+Halleluja, wir tanzen mit Freude,  
+Denn der Herr hat uns erlöst.  
+Seine Liebe, sie bleibt für immer,  
+Er führt uns in unser Land.  
+Komm, wir singen, voller Vertrauen,  
+Denn unser Gott hält uns in der Hand.
+
+[Outro]  
+Komm, wir jubeln, erhebt die Stimme,  
+Zu Zion, dem Berg, wo Du bist.  
+In Deiner Liebe, oh Herr, wir leben,  
+Für alle Zeit, unser Herz ist Dein.`,
         32: `[Verse 1]  
 In der Dunkelheit, wenn alles vergeht,  
 Spricht dein Wort, du bist hier, Herr, du verstehst.  
@@ -32404,7 +39119,56 @@ Rufe mich an, oh Herr, ich vertraue dir ganz,
 In deinem Licht, da erblüht unser Kranz.  
 Du bist der Gott, der das Gefängnis wendet,  
 In deiner Liebe, da wird alles beendet.`,
-        34: ``,
+        34: `[TITLE]  
+Freiheit im Herrn
+
+[Verse 1]  
+Hör, o Zedekia, das Wort des Herrn,  
+Er spricht zu dir in der Dunkelheit fern.  
+Die Stadt, die du liebst, wird fallen und brennen,  
+Doch Frieden für dich wird der Herr senden.  
+
+[Chorus]  
+Du bist der Gott, der uns ruft,  
+In der Nacht, in der Stille,  
+Du schenkst uns Frieden und Trost,  
+Wenn das Feuer die Städte erfüllt.  
+
+[Verse 2]  
+Ein Bund hast du mit uns gemacht,  
+Aus Ägypten hast du uns gebracht.  
+Im siebten Jahr, lass Freiheit erklingen,  
+Dein Wort, oh Herr, wird uns bringen.  
+
+[Chorus]  
+Du bist der Gott, der uns ruft,  
+In der Nacht, in der Stille,  
+Du schenkst uns Frieden und Trost,  
+Wenn das Feuer die Städte erfüllt.  
+
+[Bridge]  
+Wir kehren um, wir hören dein Wort,  
+Befreie uns, Herr, an diesem Ort.  
+Wir brechen die Ketten, die uns halten,  
+In deinem Licht, Herr, werden wir walten.  
+
+[Verse 3]  
+Doch wehe, wenn wir zurückkehren,  
+Die Freiheit verlieren, die wir nicht ehren.  
+Der Bund, den wir brachen, führt uns zum Leid,  
+O Herr, lass uns stehen in deiner Geleit.  
+
+[Chorus]  
+Du bist der Gott, der uns ruft,  
+In der Nacht, in der Stille,  
+Du schenkst uns Frieden und Trost,  
+Wenn das Feuer die Städte erfüllt.  
+
+[Outro]  
+In deinen Händen, Herr, sind wir geborgen,  
+Kein Feind kann uns trennen von dir, dem Morgen.  
+Mit Herzen, die brennen, erheben wir Lob,  
+Freiheit in dir, unser ewiger Trost.`,
         35: `Gehorchen in Treue
 
 Verse 1:  
@@ -32845,7 +39609,56 @@ Die Stimme des Herrn, sie ruft uns,
 In die Freiheit, die du bringst.  
 Wir folgen dir, oh Herr, in Glauben,  
 Für immer, bis zum Ende der Zeit.`,
-        44: ``,
+        44: `[TITLE]  
+Euer Wort, Herr, ist Wahrheit
+
+[Verse 1]  
+Du sprichst zu uns, oh Herr der Heerscharen,  
+Sieh, das Land ist wüst, deine Stadt ist leer.  
+Wir haben gesündigt, dir nicht gehorcht,  
+Die Götter dieser Welt, sie führten uns her.
+
+[Chorus]  
+Wir kehren um, oh Herr, zu dir,  
+Lass nicht zu, dass wir verloren geh’n.  
+In deinem Wort, da finden wir,  
+Die Hoffnung, die uns neu erweckt, oh schau nicht weiter weg.
+
+[Verse 2]  
+Die Schreie der Väter, die Klage der Mütter,  
+Erinnern uns an das, was wir taten.  
+Wir räucherten fremden Göttern,  
+Und die Stimme des Lebens, sie schien zu verhärten.
+
+[Chorus]  
+Wir kehren um, oh Herr, zu dir,  
+Lass nicht zu, dass wir verloren geh’n.  
+In deinem Wort, da finden wir,  
+Die Hoffnung, die uns neu erweckt, oh schau nicht weiter weg.
+
+[Bridge]  
+Mit einem Mund, wir rufen zu dir,  
+Gib uns ein Herz, das dir ewig giert.  
+Lass nicht unser Gelübde zerbrechen,  
+Hilf uns, dir treu zu sein, in allen Ecken.
+
+[Verse 3]  
+Du hast uns gerufen, die Liebe zu suchen,  
+Doch wir wandten uns ab, in der Nacht.  
+Jetzt kommen wir wieder, in dem Licht deiner Wahrheit,  
+Lass uns stehen, Herr, in deiner Macht.
+
+[Chorus]  
+Wir kehren um, oh Herr, zu dir,  
+Lass nicht zu, dass wir verloren geh’n.  
+In deinem Wort, da finden wir,  
+Die Hoffnung, die uns neu erweckt, oh schau nicht weiter weg.
+
+[Outro]  
+Euer Wort, Herr, ist Wahrheit,  
+Wir hören und folgen dir nach.  
+In dir allein, da finden wir Frieden,  
+Oh, Herr, du bist unser Licht, unser Tag.`,
         45: `(Strophe 1)  
 Herr, Du sprichst zu mir, wie Baruch einst sprach,  
 In Dunkelheit und Schmerz, wo ich mich verlor,  
@@ -32887,7 +39700,62 @@ In Deiner Hand, Herr, bin ich geborgen,
 Meine Seele, sie ruht, in Deinem Namen.  
 Du bist mein Gott, ich will Dir singen,  
 In Deiner Liebe, Herr, bin ich angekommen.`,
-        46: ``,
+        46: `[TITLE]  
+*Der Tag des HERRN*
+
+[Verse 1]  
+Dies ist das Wort, das Du sprichst,  
+Wider alle Völker, die Du siehst.  
+Rüstet Schild, in den Streit hinein,  
+Wir stehen fest, für Dich allein.  
+
+[PRE-CHORUS]  
+Die Wellen steigen, wie der Nil,  
+Doch Du bist unser sicherer Schild.  
+Wer kann uns trennen von Deiner Hand?  
+Du bleibst der Fels in diesem Land.  
+
+[Chorus]  
+Fürchte dich nicht, Jakob, mein Knecht,  
+Denn ich bin bei dir, ich schütze dich echt.  
+Der Tag des HERRN, er kommt in Macht,  
+Die Dunkelheit wird er zerbrechen in Pracht.  
+
+[Verse 2]  
+Mit Helden, die fallen, und Schrecken, die zieh’n,  
+Doch Du, HERR, wirst uns nie verlassen,  
+Die Stärke der Heiden wird schwach wie der Wind,  
+Wenn Du Deine Gerechtigkeit sendest, so geschwind.  
+
+[PRE-CHORUS]  
+Der Schlächter naht, die Angst wird groß,  
+Doch Du bist unser Licht, und wir vertrauen bloß.  
+Die Zeit der Heimsuchung, sie ist nicht umsonst,  
+Wir stehen vereint, in Deiner Gunst.  
+
+[Chorus]  
+Fürchte dich nicht, Jakob, mein Knecht,  
+Denn ich bin bei dir, ich schütze dich echt.  
+Der Tag des HERRN, er kommt in Macht,  
+Die Dunkelheit wird er zerbrechen in Pracht.  
+
+[Bridge]  
+Du sprichst ein Wort, das Frieden bringt,  
+Ein neues Leben, das in uns springt.  
+Die Ketten brechen, der Gefangene befreit,  
+In Dir, HERR, sind wir bereit.  
+
+[Chorus]  
+Fürchte dich nicht, Jakob, mein Knecht,  
+Denn ich bin bei dir, ich schütze dich echt.  
+Der Tag des HERRN, er kommt in Macht,  
+Die Dunkelheit wird er zerbrechen in Pracht.  
+
+[Outro]  
+Der HERR Zebaoth, er ist unser Teil,  
+In Seiner Nähe ist unser Heil.  
+Wir rufen laut, wir preisen Dich,  
+Für immer, HERR, vertrauen wir auf Dich.`,
         47: `[Verse 1]  
 Das Wort des HERRN, es klingt in der Nacht,  
 Prophet Jeremia, sein Ruf ist erwacht.  
@@ -32931,8 +39799,109 @@ O HERR, du bist da, in der Zeit der Not,
 Wir hoffen auf dich, unser Retter, unser Gott.  
 Die Fluten mögen kommen, doch wir stehen fest,  
 Denn in dir allein, sind wir ewig gesegnet.`,
-        48: ``,
-        49: ``,
+        48: `[TITLE]  
+Weh dem Volk Moabs
+
+[Verse 1]  
+Herr, Du sprichst von Zorn und Klage,  
+Moab fällt, verzehrt im Leid.  
+Städte wanken, Festen brechen,  
+Dein Gericht, es kommt zur Zeit.
+
+[Chorus]  
+Weh dir, Moab, in der Dürre,  
+Deine Stärke, sie vergeht.  
+Dein Hochmut, wie die Heide,  
+Die im Wüstensand verweht.  
+Oh, Herr, wir flehen,  
+Lass uns hören,  
+Was Du sprichst, Dein Wort bleibt wahr.
+
+[Verse 2]  
+Hört die Schreie, weint um Moab,  
+Die Kleinen klagen, niemand bleibt.  
+In der Nacht ist die Dunkelheit,  
+Wo ist Freude, wo ist Licht?  
+Komm und sieh, o Herr der Heere,  
+Wie die Hoffnung schwindet hier.
+
+[Chorus]  
+Weh dir, Moab, in der Dürre,  
+Deine Stärke, sie vergeht.  
+Dein Hochmut, wie die Heide,  
+Die im Wüstensand verweht.  
+Oh, Herr, wir flehen,  
+Lass uns hören,  
+Was Du sprichst, Dein Wort bleibt wahr.
+
+[Bridge]  
+Doch Du, Herr, in Deiner Gnade,  
+Wendest auch das Unglück um.  
+Moab wird in Tränen singen,  
+Wenn Dein Licht den Schatten bricht.  
+Bring die Herzen, die zerbrochen,  
+Zurück in Deinen Frieden, Herr.
+
+[Chorus]  
+Weh dir, Moab, in der Dürre,  
+Deine Stärke, sie vergeht.  
+Dein Hochmut, wie die Heide,  
+Die im Wüstensand verweht.  
+Oh, Herr, wir flehen,  
+Lass uns hören,  
+Was Du sprichst, Dein Wort bleibt wahr.
+
+[Outro]  
+Und wenn das letzte Wort gesprochen,  
+Wird Dein Volk in Freiheit stehen.  
+Moab wird sich wieder freuen,  
+Wenn wir Dir im Glauben gehen.  
+Amen, Amen, Herr der Heere,  
+Dein Wort bleibt ewig, fest und klar.`,
+        49: `[TITLE]  
+Der Herr Zebaoth spricht
+
+[Verse 1]  
+Heule, o Hesbon, in Trauer gewandet,  
+Die Klage erhebt sich, die Stadt ist verwandet.  
+Milkom, dein Hochmut, wird fallen und schwinden,  
+Das Land, das du besitzt, wird wir in Frieden finden.  
+
+[Chorus]  
+Denn der Herr Zebaoth, er spricht mit Macht,  
+Sein Wort ist ein Feuer, das Dunkelheit wacht.  
+Er bringt das Gefängnis der Kinder zurück,  
+In seiner Gnade finden wir unser Glück.  
+
+[Verse 2]  
+Edom, du stolz bist, doch die Weisheit entglitten,  
+In Felsen und Höhen, dein Herz ist beschritten.  
+Doch siehe, der Löwe erhebt sich in Zorn,  
+Dein Hochmut wird fallen, wie der Tag sich geborn.  
+
+[Chorus]  
+Denn der Herr Zebaoth, er spricht mit Macht,  
+Sein Wort ist ein Feuer, das Dunkelheit wacht.  
+Er bringt das Gefängnis der Kinder zurück,  
+In seiner Gnade finden wir unser Glück.  
+
+[Bridge]  
+Dammaskus, du Stadt, in Angst und in Schmerzen,  
+Dein Schreien wird hören die Menschen mit Herzen.  
+Doch der Herr wird das Feuer entzünden,  
+Die Mauern der Städte in Glanz neu verbinden.  
+
+[Chorus]  
+Denn der Herr Zebaoth, er spricht mit Macht,  
+Sein Wort ist ein Feuer, das Dunkelheit wacht.  
+Er bringt das Gefängnis der Kinder zurück,  
+In seiner Gnade finden wir unser Glück.  
+
+[Outro]  
+Oh, Herr, wir vertrauen, in dir ist das Licht,  
+In der Dunkelheit, du verlässt uns nicht.  
+Die Zeit wird kommen, wir werden sehen,  
+Die Herrschaft des Vaters, wir werden stehen.`,
         50: `[Verse 1]  
 Hört, wie der Herr spricht, durch Jeremia,  
 Ein Wort der Warnung, ein Ruf in die Nacht.  
@@ -33024,12 +39993,198 @@ Die Zeit ist gekommen, der Ruf hallt herein,
 Lasst uns zusammen, im Geist sein vereint.  
 Die Mauern von Babel, sie stürzen zu Boden,  
 In dir, Herr, finden wir Frieden und Trost.`,
-        52: ``,
-    },
+        52: `[TITLE]  
+"In der Dunkelheit der Nacht"
 
+[Verse 1]  
+Zedekia, König in der Stadt,  
+Regierte mit Zorn und fiel in die Nacht.  
+Sein Herz wandte sich ab vom Licht,  
+Der Herr verwarf ihn, sein Angesicht.  
+
+[Chorus]  
+In der Dunkelheit der Nacht,  
+Rufst du, Herr, nach uns,  
+Hörst du unsern Schmerz,  
+In der Schlacht, in der Flucht,  
+Gib uns Hoffnung, gib uns Kraft,  
+In dir finden wir die Ruh.  
+
+[Verse 2]  
+Nebukadnezar kam mit Macht,  
+Die Mauern wankten, die Stadt in der Nacht.  
+Hunger fraß das Volk, die Furcht war nah,  
+Doch du, Herr, bleibst treu, bist immer da.  
+
+[Chorus]  
+In der Dunkelheit der Nacht,  
+Rufst du, Herr, nach uns,  
+Hörst du unsern Schmerz,  
+In der Schlacht, in der Flucht,  
+Gib uns Hoffnung, gib uns Kraft,  
+In dir finden wir die Ruh.  
+
+[Bridge]  
+Du zerbrichst die Ketten,  
+Drehst die Nacht ins Licht,  
+Du erhebst die Schwachen,  
+Gibst uns dein Gesicht.  
+Ewig in deiner Treue,  
+Ewig in deinem Wort,  
+Wir vertrauen dir, Herr,  
+Du bist unser Ort.  
+
+[Chorus]  
+In der Dunkelheit der Nacht,  
+Rufst du, Herr, nach uns,  
+Hörst du unsern Schmerz,  
+In der Schlacht, in der Flucht,  
+Gib uns Hoffnung, gib uns Kraft,  
+In dir finden wir die Ruh.  
+
+[Outro]  
+Zedekia, König gefallen,  
+Doch du, Herr, bleibst in uns allen.  
+In der Dunkelheit, sei unser Licht,  
+Führe uns, Herr, in dein Angesicht.`,
+    },
     "25": {
-        1: ``,
-        2: ``,
+        1: `[TITLE]  
+Schau, o Herr, mein Elend
+
+[VERS 1]  
+Wie liegt die Stadt so wüst,  
+die einst voll Freude war,  
+Eine Witwe, traurig, verstört,  
+Königin, verloren, so klar.  
+Ihre Tränen fließen,  
+keiner, der sie tröstet,  
+Unter Feinden gefangen,  
+in Elend, das nie endet.
+
+[Chorus]  
+Ach, Herr, sieh an mein Elend,  
+mein Herz seufzt in der Nacht.  
+Die Schatten meiner Sünden,  
+haben mir das Licht gebracht.  
+Zion, du rufst nach Frieden,  
+Doch niemand hört dein Klagen,  
+Oh, Herr, komm, sei unser Tröster,  
+lass uns nicht länger versagen.
+
+[VERS 2]  
+Die Straßen sind verlassen,  
+keine Feste, nur der Schmerz,  
+Priester seufzen, Jungfrauen klagen,  
+in der Stille, sie tragen das Herz.  
+Die Feinde lachen, spotten,  
+in der Dunkelheit verloren,  
+Doch in mir brennt die Hoffnung,  
+auf den, der uns erboren.
+
+[Chorus]  
+Ach, Herr, sieh an mein Elend,  
+mein Herz seufzt in der Nacht.  
+Die Schatten meiner Sünden,  
+haben mir das Licht gebracht.  
+Zion, du rufst nach Frieden,  
+Doch niemand hört dein Klagen,  
+Oh, Herr, komm, sei unser Tröster,  
+lass uns nicht länger versagen.
+
+[Bridge]  
+Sieh, wie ich leide,  
+wie mein Herz zerbricht,  
+Die Strafe meiner Taten,  
+bringt Dunkelheit ins Licht.  
+Doch du bist gerecht, o Herr,  
+ich beuge mich vor dir,  
+Lass kommen deinen Tag,  
+und führe uns zurück zu dir.
+
+[Chorus]  
+Ach, Herr, sieh an mein Elend,  
+mein Herz seufzt in der Nacht.  
+Die Schatten meiner Sünden,  
+haben mir das Licht gebracht.  
+Zion, du rufst nach Frieden,  
+Doch niemand hört dein Klagen,  
+Oh, Herr, komm, sei unser Tröster,  
+lass uns nicht länger versagen.
+
+[Outro]  
+Schau, o Herr, mein Elend,  
+hör das Seufzen, das ich bring,  
+In deiner Gnade, Herr, erwecke,  
+uns, die wir für dich singen.`,
+        2: `[TITLE]  
+Zion, weine um deinen Schmerz
+
+[VERS 1]  
+Wie hat der HERR dich überschüttet,  
+Tochter Zion, voller Zorn,  
+Seine Glorie fiel vom Himmel,  
+Der Fußschemel, unberührt, verloren.  
+Die Festen sind gebrochen,  
+Die Mauern stehen kläglich da,  
+In der Dunkelheit, die Herzen klagen,  
+Kein Trost, nur Trauer, nur Gefahr.
+
+[Chorus]  
+O Herr, wir rufen zu dir,  
+Sieh die Tränen, die fließen,  
+Zion, du weinst um deinen Schmerz,  
+Dein Herz schreit nach Frieden.  
+Bring Heilung in unser Land,  
+Lass deinen Geist uns umfangen,  
+O Höchster, erbarme dich jetzt,  
+Lass uns wieder zu dir gelangen.
+
+[VERS 2]  
+Die Ältesten liegen, voller Staub,  
+Die Jungfrauen senken den Blick,  
+Wo ist Brot und wo ist Wein?  
+In der Stadt, da herrscht das Geschick.  
+Die Stimmen der Schwachen, sie rufen,  
+In den Gassen, die Kälte nagt,  
+O Herr, höre unser Schreien,  
+Vor dir wird der Mut verklagt.
+
+[Chorus]  
+O Herr, wir rufen zu dir,  
+Sieh die Tränen, die fließen,  
+Zion, du weinst um deinen Schmerz,  
+Dein Herz schreit nach Frieden.  
+Bring Heilung in unser Land,  
+Lass deinen Geist uns umfangen,  
+O Höchster, erbarme dich jetzt,  
+Lass uns wieder zu dir gelangen.
+
+[Bridge]  
+In deinem Zorn, o Herr, wir sind klein,  
+Doch wir kommen, um zu beten,  
+Du, der die Wunden heilen kann,  
+Erhebe uns aus den Tränen.  
+Schau herab, o Gott der Treue,  
+Sieh die Not, die uns zerbricht,  
+Lass uns aufstehen im Glauben,  
+In deinem Licht, das uns verspricht.
+
+[Chorus]  
+O Herr, wir rufen zu dir,  
+Sieh die Tränen, die fließen,  
+Zion, du weinst um deinen Schmerz,  
+Dein Herz schreit nach Frieden.  
+Bring Heilung in unser Land,  
+Lass deinen Geist uns umfangen,  
+O Höchster, erbarme dich jetzt,  
+Lass uns wieder zu dir gelangen.
+
+[Outro]  
+Tochter Zion, erhebe dein Haupt,  
+Der Herr ist nah und hört dein Klagen,  
+In seiner Gnade wirst du finden,  
+Ein neues Lied, das Freude trägt.`,
         3: `Strophe 1:  
 In der Dunkelheit, so schwer und kalt,  
 Oh Herr, ich fühle mich so elend und bald,  
@@ -33128,9 +40283,2586 @@ Erbarme Dich, Herr, unser Ruf,
 Führe uns zurück, bring neuen Schwung.  
 In der Dunkelheit, sei unser Licht,  
 Erbarme Dich, Herr, und schenk uns Sicht.`,
-        5: ``,
-    },
+        5: `[TITLE]  
+*Erneuere uns, o Herr*
 
+[Verse 1]  
+Gedenke, Herr, wie's uns geht,  
+In Schmach und Tränen sind wir hier,  
+Fremde nehmen unser Erbe,  
+Waisen klagen, wo bist du, Herr?
+
+[Chorus]  
+Bringe uns, Herr, zurück zu dir,  
+Erneuere unsere Tage, oh, so wie einst,  
+In der Wüste schreien wir nach Brot,  
+Doch nur du, o Herr, schenkst uns Trost.
+
+[Verse 2]  
+Wir sind gebrochen, unsere Haut wie Glut,  
+Die Alten schweigen, die Freude ist tot,  
+Die Jünglinge tragen schwere Lasten,  
+In der Dunkelheit suchen wir nach Licht.
+
+[Chorus]  
+Bringe uns, Herr, zurück zu dir,  
+Erneuere unsere Tage, oh, so wie einst,  
+In der Wüste schreien wir nach Brot,  
+Doch nur du, o Herr, schenkst uns Trost.
+
+[Bridge]  
+Du, der ewig bleibt,  
+Schaue auf uns in unserer Not,  
+Warum hast du uns vergessen,  
+Gib uns Hoffnung, gib uns Mut.  
+Lass die Krone wieder leuchten,  
+Führe uns zurück in dein Licht,  
+Wir kehren um, wir kommen heim,  
+Herr, erneuere unser Herz, unser Sein.
+
+[Chorus]  
+Bringe uns, Herr, zurück zu dir,  
+Erneuere unsere Tage, oh, so wie einst,  
+In der Wüste schreien wir nach Brot,  
+Doch nur du, o Herr, schenkst uns Trost.
+
+[Outro]  
+Erneuere uns, o Herr,  
+Führe uns zurück zu dir,  
+In deinem Namen, in deiner Kraft,  
+Lass uns leben, lass uns sein.`,
+    },
+    "26": {
+        1: `[Vers 1]  
+Im finstern Tal, am Wasser Chebar,  
+Der Himmel öffnet sich, ich seh’ es klar.  
+Ein Wind von Norden, ungestüm und frei,  
+Gott zeigt mir Visionen, ich bin dabei.  
+
+[Chorus]  
+Heilig, heilig, Herr der Herrlichkeit,  
+Dein Licht umgibt mich, in Ewigkeit.  
+Mit Feuer und Blitz, so stark und rein,  
+Du bist der Gott, der immer bei mir sein.  
+
+[Vers 2]  
+Vier Wesen voller Kraft, sie stehen hier,  
+Mit Angesichtern, die strahlen wie das Bier.  
+Ein Mensch, ein Löwe, ein Ochse, ein Adler,  
+Sie gehorchen Deinem Ruf, werden nie müder.  
+
+[Chorus]  
+Heilig, heilig, Herr der Herrlichkeit,  
+Dein Licht umgibt mich, in Ewigkeit.  
+Mit Feuer und Blitz, so stark und rein,  
+Du bist der Gott, der immer bei mir sein.  
+
+[Bridge]  
+Wie der Regenbogen, der nach dem Sturm erscheint,  
+So glänzt Deine Herrlichkeit, die nie verweilt.  
+Ich falle nieder, in Ehrfurcht und Staunen,  
+Dein Geist führt mich, ich kann mich nicht trauen.  
+
+[Chorus]  
+Heilig, heilig, Herr der Herrlichkeit,  
+Dein Licht umgibt mich, in Ewigkeit.  
+Mit Feuer und Blitz, so stark und rein,  
+Du bist der Gott, der immer bei mir sein.  
+
+[Outro]  
+Ich höre Deine Stimme, sie hallt in mir,  
+Du bist mein Gott, ich folge Dir.  
+Die Herrlichkeit des Herrn, sie umgibt mich hier,  
+In Deinem Licht, da lebe ich für Dir.`,
+        2: `[Verse 1]  
+Du rufst mich, o Herr, auf meine Füße,  
+In deiner Nähe find' ich Frieden,  
+Du sprichst zu mir, mit sanfter Stimme,  
+In meiner Schwachheit bist du der Weg.
+
+[Chorus]  
+So spricht der HERR, der treue Gott,  
+In dir, o Menschenkind, find' ich Mut.  
+Egal wie hart, das Herz der Menschen,  
+Dein Wort bleibt wahr, es heilt und ruft.
+
+[Verse 2]  
+Gesandt zu denen, die weit von dir,  
+Ein Volk, das oft in Dunkelheit lebt.  
+Doch ich fürchte mich nicht, deine Worte,  
+Sie sind mein Licht, mein starker Halt.
+
+[Chorus]  
+So spricht der HERR, der treue Gott,  
+In dir, o Menschenkind, find' ich Mut.  
+Egal wie hart, das Herz der Menschen,  
+Dein Wort bleibt wahr, es heilt und ruft.
+
+[Bridge]  
+Ich öffne meinen Mund,  
+Und nehme auf, was du mir gibst.  
+Klage, Ach und Wehe,  
+Doch auch Hoffnung, die bleibt.
+
+[Chorus]  
+So spricht der HERR, der treue Gott,  
+In dir, o Menschenkind, find' ich Mut.  
+Egal wie hart, das Herz der Menschen,  
+Dein Wort bleibt wahr, es heilt und ruft.
+
+[Outro]  
+Du Menschenkind, sei stark und frei,  
+Denn du bist nie allein,  
+Mit jedem Wort, das du verkündest,  
+Bringst du das Licht in die Dunkelheit hinein.`,
+        3: `[Verse 1]  
+Du sprachst zu mir, o Herr, mein Gott,  
+Nimm diesen Brief, du Menschenkind,  
+Mit süßem Klang, wie Honigbrot,  
+Dein Wort, es heilt, es führt mich hin.  
+Zu einem Volk, das schwer verhärtet,  
+Sie hören nicht, doch ich bleibe treu,  
+Mit harter Stirn, wie Du es sagtest,  
+In Dunkelheit bring’ ich Dein Licht neu.
+
+[Chorus]  
+Dein Wort ist meine Speise,  
+In mir brennt Deine Wahrheit,  
+O Herr, ich will verkünden,  
+Was Du mir gabst für alle Zeit.  
+Die Stimme, die Du mir gabst,  
+Die Freiheit, die Du schenkst,  
+Ich werde es nicht schweigen,  
+Bis jeder von Dir denkt.
+
+[Verse 2]  
+Zu den Gefangenen sende mich,  
+Mit Liebe will ich warnen,  
+Wenn der Gottlose vom Weg abbricht,  
+Möge Dein Licht ihn erlangen.  
+In bitterer Zeit, wenn Herzen brechen,  
+Mit jedem Wort, das Du gibst,  
+Werd’ ich nicht ruhen, nicht weichen,  
+Denn Du, o Herr, bist, der mir liebt.
+
+[Chorus]  
+Dein Wort ist meine Speise,  
+In mir brennt Deine Wahrheit,  
+O Herr, ich will verkünden,  
+Was Du mir gabst für alle Zeit.  
+Die Stimme, die Du mir gabst,  
+Die Freiheit, die Du schenkst,  
+Ich werde es nicht schweigen,  
+Bis jeder von Dir denkt.
+
+[Bridge]  
+Dein Geist, er hebt mich, führt mich,  
+In Stille, in der Dunkelheit,  
+Du schenkst mir Kraft, Du schenkst mir Mut,  
+Ich folge Dir, in Ewigkeit.  
+Mit harter Stirn und fester Hand,  
+Verkünd’ ich Dir, das Heilandland.
+
+[Chorus]  
+Dein Wort ist meine Speise,  
+In mir brennt Deine Wahrheit,  
+O Herr, ich will verkünden,  
+Was Du mir gabst für alle Zeit.  
+Die Stimme, die Du mir gabst,  
+Die Freiheit, die Du schenkst,  
+Ich werde es nicht schweigen,  
+Bis jeder von Dir denkt.
+
+[Outro]  
+So komme, Herr, und sprich zu mir,  
+Ich öffne mein Herz für Dich,  
+In jedem Wort, da bist Du hier,  
+Mein Leben, Herr, gehört nur Dir.  
+Amen.`,
+        4: `[Verse 1]  
+Du, O Menschenkind, nimm den Ziegel,  
+Vor dir die Stadt, die du entwirfst,  
+Jerusalem, von Mauer umgeben,  
+In der Dunkelheit, wo das Licht verblasst.  
+Du baust ein Bollwerk, ein Zeichen der Not,  
+Ein Heerlager, das die Hoffnung bedroht.  
+
+[Chorus]  
+O Herr, wir bitten, öffne unser Herz,  
+In der Stille hören wir den Schmerz.  
+Mit Tränen und Kummer, wir tragen die Last,  
+Lass uns erkennen, was die Zeit uns verpasst.  
+
+[Verse 2]  
+Auf deiner Seite, die Missetat lasten,  
+Dreihundertneunzig Tage in Dunkelheit,  
+Dein Arm erhoben, das Angesicht gewandt,  
+Wir stehen in Trauer, in deinem Verstand.  
+So viele Tage, die wir tragen,  
+Die Sünde der Welt, die wir nicht ertragen.  
+
+[Chorus]  
+O Herr, wir bitten, öffne unser Herz,  
+In der Stille hören wir den Schmerz.  
+Mit Tränen und Kummer, wir tragen die Last,  
+Lass uns erkennen, was die Zeit uns verpasst.  
+
+[Bridge]  
+Mach uns rein, Herr, aus Staub und Elend,  
+Lass uns essen, was du uns sendest.  
+In der Not, die dein Wort uns zeigt,  
+Sei unser Licht, wenn die Dunkelheit schweigt.  
+
+[Verse 3]  
+Das Wasser, das wir messen mit Kummer,  
+Das Brot, das wir brechen, ist voller Trauer.  
+Doch in der Pein, da ist Hoffnung,  
+Ein neuer Morgen, ein neuer Klang.  
+Das Brot, das wir teilen, auch in der Nacht,  
+Wird zum Zeichen, das unser Herz entfacht.  
+
+[Chorus]  
+O Herr, wir bitten, öffne unser Herz,  
+In der Stille hören wir den Schmerz.  
+Mit Tränen und Kummer, wir tragen die Last,  
+Lass uns erkennen, was die Zeit uns verpasst.  
+
+[Outro]  
+So nimm, O Herr, unser Gebet,  
+In der Dunkelheit, wo dein Licht besteht.  
+Wir stehen vereint, in deinem Namen,  
+Bis die Missetat weicht und wir dich erahnen.`,
+        5: `[Verse 1]  
+Du rufst mich, Herr, in deine Gegenwart,  
+Mit einem Schwert, so scharf und klar.  
+Ich höre deinen Ruf, ich höre dein Wort,  
+Du zeigst mir, was du bist, und wo du bist,  
+Ein Gott der Gerechtigkeit, der nie vergisst.
+
+[Chorus]  
+Oh, Herr, schau auf dein Volk,  
+Inmitten der Heiden, wir stehen vor dir.  
+Reinige unser Herz, mach uns neu,  
+Lass dein Feuer brennen, in uns, oh Herr.
+
+[Verse 2]  
+Dein Gesetz, es leuchtet, wie ein Licht in der Nacht,  
+Doch wir haben es verworfen, und die Dunkelheit entfacht.  
+Verzeih uns, Herr, für unsern Stolz und Zorn,  
+Lass uns zurückkehren, zu dem, was wir verloren.
+
+[Chorus]  
+Oh, Herr, schau auf dein Volk,  
+Inmitten der Heiden, wir stehen vor dir.  
+Reinige unser Herz, mach uns neu,  
+Lass dein Feuer brennen, in uns, oh Herr.
+
+[Bridge]  
+In der Wüste, die du schaffst,  
+Wirst du uns leiten, uns niemals lassen.  
+Komm, Herr, mit deinem Zorn,  
+Doch lass uns finden, Gnade in deinem Licht.
+
+[Chorus]  
+Oh, Herr, schau auf dein Volk,  
+Inmitten der Heiden, wir stehen vor dir.  
+Reinige unser Herz, mach uns neu,  
+Lass dein Feuer brennen, in uns, oh Herr.
+
+[Outro]  
+So wahr du lebst, wir kommen zu dir,  
+Mit gebrochenen Herzen, sind wir hier.  
+Gott der Gerechtigkeit, du bist unser Licht,  
+In dir allein, vertrauen wir, in deinem Wort,  
+Vollenden wir die Hoffnung, bis du kommst zurück.`,
+        6: `[Verse 1]  
+Hört, ihr Berge, hört das Wort des Herrn,  
+Er spricht zu euch, in Dunkelheit und fern.  
+Zerschmettert die Altäre, zerbrochen die Götzen,  
+Die Bosheit der Menschen wird nicht mehr verletzen.  
+
+[Chorus]  
+Weh über die Greuel, die in uns wohnen,  
+Wir kehren um, zu Dir, Herr, wir beten und drohnen.  
+Zeige uns Deine Herrlichkeit, lass uns erkennen,  
+Du bist der Herr, wir wollen Dich brennen.  
+
+[Verse 2]  
+In den Tälern der Tränen, wo der Hunger regiert,  
+Erinnern wir uns, wie Dein Wort uns verführt.  
+Du zerschlägst unser Herz, das abgöttisch war,  
+Und führst uns zurück, oh, Herr, mach uns klar.  
+
+[Chorus]  
+Weh über die Greuel, die in uns wohnen,  
+Wir kehren um, zu Dir, Herr, wir beten und drohnen.  
+Zeige uns Deine Herrlichkeit, lass uns erkennen,  
+Du bist der Herr, wir wollen Dich brennen.  
+
+[Bridge]  
+Mit zerschlagenen Herzen, erheben wir den Schrei,  
+Führe uns zurück, oh Herr, sei uns stets einerlei.  
+In der Wüste des Lebens, wo die Hoffnung zerbricht,  
+Zeige uns Deine Wege, erleuchte unser Licht.  
+
+[Chorus]  
+Weh über die Greuel, die in uns wohnen,  
+Wir kehren um, zu Dir, Herr, wir beten und drohnen.  
+Zeige uns Deine Herrlichkeit, lass uns erkennen,  
+Du bist der Herr, wir wollen Dich brennen.  
+
+[Outro]  
+Die Stimme der Berge, sie ruft uns zurück,  
+In der Gegenwart Deiner Liebe finden wir unser Glück.  
+Oh, Herr, sei gepriesen, wir geben Dir die Ehre,  
+Du bist der Herr, und wir preisen Deine Lehre.`,
+        7: `[Verse 1]  
+Hör, o Mensch, das Wort des Herrn,  
+Ein Ruf, der durch die Länder fährt,  
+Das Ende naht, das Dunkel bricht,  
+Sein Zorn, er kommt, das Licht erlischt.  
+
+[Chorus]  
+Kommt, lasst uns schauen, was er spricht,  
+Sein Auge sieht, sein Wort bricht Licht,  
+Die Posaune klingt, der Tag naht her,  
+Der Herr, er ruft, die Herzen schwer.  
+
+[Verse 2]  
+In Städten voller Blutschuld,  
+Die Hoffart schwindet, der Stolz erkalte,  
+Die Rute schlägt, die Frevel blühen,  
+Die Seelen schreien, sie werden fliehen.  
+
+[Chorus]  
+Kommt, lasst uns schauen, was er spricht,  
+Sein Auge sieht, sein Wort bricht Licht,  
+Die Posaune klingt, der Tag naht her,  
+Der Herr, er ruft, die Herzen schwer.  
+
+[Bridge]  
+Schaut auf die Berge, kein Lied erklingt,  
+Die Zeit des Jammers, die Furcht uns bringt,  
+Doch in der Dunkelheit, sein Licht bleibt wahr,  
+Der Herr, der spricht, er ist uns nah.  
+
+[Verse 3]  
+Die Hoffnung schwindet, die Knechte stehen,  
+Im Angesicht des Zorns, wird niemand überstehen,  
+Doch wer auf ihn vertraut, wird nicht verloren,  
+Sein Wort ist stark, der Herr ist erkoren.  
+
+[Chorus]  
+Kommt, lasst uns schauen, was er spricht,  
+Sein Auge sieht, sein Wort bricht Licht,  
+Die Posaune klingt, der Tag naht her,  
+Der Herr, er ruft, die Herzen schwer.  
+
+[Outro]  
+O Herr, wir kommen, wir suchen dein Antlitz,  
+In der Finsternis, du bringst uns die Sicht,  
+Der Tag des Zorns, doch wir stehen fest,  
+In deinem Namen, in dir sind wir echt.`,
+        8: `Strophe 1:  
+Im Licht Deiner Herrlichkeit,  
+Sieh, ich komme, Herr, zu Dir.  
+Dein Geist führt mich durch die Nacht,  
+Um zu sehen, was verborgen hier.  
+Die Greuel, die die Menschen tun,  
+Die Herzen fern, die Augen blind,  
+Doch du rufst mich, führe mich nun,  
+Zu den Orten, wo dein Licht beginnt.
+
+Refrain:  
+Ehre sei Dir, Herr der Heerscharen,  
+Du, der die Dunkelheit kennt.  
+Lass uns aufstehen, lass uns erfahren,  
+Was Dein heiliges Wort verbrennt.  
+Ehre sei Dir, Herr der Heerscharen,  
+Unser Lob sei Dir geschenkt.  
+Führe uns, Herr, durch all die Fragen,  
+In die Wahrheit, die Du lenkst.
+
+Strophe 2:  
+Schau, die Ältesten beten im Schatten,  
+Die Götzen stehen um sie herum.  
+Sie sagen: „Der Herr sieht uns nicht“,  
+Doch Du bist hier, in jedem Raum.  
+Du sprichst in das stille Gewimmer,  
+Und Dein Ruf hallt durch die Nacht.  
+Die Wunden stehen uns so immer,  
+Doch Dein Licht, es bringt die Macht.
+
+Refrain:  
+Ehre sei Dir, Herr der Heerscharen,  
+Du, der die Dunkelheit kennt.  
+Lass uns aufstehen, lass uns erfahren,  
+Was Dein heiliges Wort verbrennt.  
+Ehre sei Dir, Herr der Heerscharen,  
+Unser Lob sei Dir geschenkt.  
+Führe uns, Herr, durch all die Fragen,  
+In die Wahrheit, die Du lenkst.
+
+Bridge:  
+Wir kommen, Herr, mit offenen Herzen,  
+Erwecke uns aus diesem Traum.  
+Die Schatten brechen, wir wollen lernen,  
+Dein Licht zu tragen, in jedem Raum.  
+Die Wunden heilen, die Ketten brechen,  
+Komm, Herr, und fülle unsern Sinn.  
+Die Welt erblickt, was wir entdecken,  
+In Deinem Namen, da fängt es an.
+
+Refrain:  
+Ehre sei Dir, Herr der Heerscharen,  
+Du, der die Dunkelheit kennt.  
+Lass uns aufstehen, lass uns erfahren,  
+Was Dein heiliges Wort verbrennt.  
+Ehre sei Dir, Herr der Heerscharen,  
+Unser Lob sei Dir geschenkt.  
+Führe uns, Herr, durch all die Fragen,  
+In die Wahrheit, die Du lenkst.
+
+Outro:  
+Ehre sei Dir, Herr der Heerscharen,  
+Dein Licht, es leuchtet, ewig klar.  
+In dieser Nacht, in all den Jahren,  
+Sei Du der Weg, der immer war.  
+Ehre sei Dir, unser König, Herr,  
+In Deiner Nähe, da sind wir befreit.  
+Führe uns, Herr, so nah und mehr,  
+In die Herrlichkeit, in die Ewigkeit.`,
+        9: `Verse 1:  
+In der Stadt, die schreit vor Schmerz,  
+Die Seufzer dringen tief ins Herz,  
+Sei geehrt, oh Herr der Welt,  
+Dein Wort, das uns die Hoffnung stellt.  
+
+Chorus:  
+Zeichne uns, oh Herr, mit deinem Licht,  
+In der Dunkelheit, führ uns zum Gericht.  
+Die Missetat, sie schreit zu dir,  
+Doch wer dein Zeichen trägt, bleibt hier.  
+
+Verse 2:  
+Sechs Männer ziehn’ mit schädlichen Waffen,  
+Doch du, oh Herr, lässt uns nicht straffen.  
+Die Augen sehen, doch wir stehen still,  
+Ruf uns, Herr, dass du uns erfüllen willst.  
+
+Chorus:  
+Zeichne uns, oh Herr, mit deinem Licht,  
+In der Dunkelheit, führ uns zum Gericht.  
+Die Missetat, sie schreit zu dir,  
+Doch wer dein Zeichen trägt, bleibt hier.  
+
+Bridge:  
+Du sprichst, oh Gott, dein Wort ist klar,  
+Die Schuld der Städte, sie ist offenbar.  
+Doch wir beten, dass dein Zorn vergeht,  
+Mit deinem Zeichen, das in uns steht.  
+
+Chorus:  
+Zeichne uns, oh Herr, mit deinem Licht,  
+In der Dunkelheit, führ uns zum Gericht.  
+Die Missetat, sie schreit zu dir,  
+Doch wer dein Zeichen trägt, bleibt hier.  
+
+Outro:  
+Und wenn der Sturm um uns tobt,  
+Bleiben wir, wo dein Geist uns lobt.  
+In deiner Gnade, fest verwurzelt,  
+Mit deinem Zeichen, das uns umhüllt.`,
+        10: `[Verse 1]  
+In der Höhe, über Cherubim,  
+Ein Saphirthron, so strahlend und rein,  
+Die Wolke erfüllt den innern Raum,  
+Die Herrlichkeit Gottes, unser Traum.
+
+[Chorus]  
+Heilig, heilig, der Herr der Heerscharen,  
+Seine Stimme, mächtig und klar,  
+Die Flügel rauschen, wie Wind in den Haaren,  
+Wir beten an, hier ist unser Jahr.
+
+[Verse 2]  
+Zwischen Rädern, glühende Kohlen,  
+Er sendet uns, seine Flamme zu tragen,  
+Die Stadt wird erleuchtet, in Licht gehüllt,  
+Seine Gegenwart, die Herzen erfüllt.
+
+[Chorus]  
+Heilig, heilig, der Herr der Heerscharen,  
+Seine Stimme, mächtig und klar,  
+Die Flügel rauschen, wie Wind in den Haaren,  
+Wir beten an, hier ist unser Jahr.
+
+[Bridge]  
+Die Räder drehen, sie bleiben nicht stehen,  
+In alle Richtungen, sie werden uns führen,  
+Die Cherubim schwingen, erheben sich hoch,  
+Der Geist des Lebens, unser Ruf ist groß.
+
+[Chorus]  
+Heilig, heilig, der Herr der Heerscharen,  
+Seine Stimme, mächtig und klar,  
+Die Flügel rauschen, wie Wind in den Haaren,  
+Wir beten an, hier ist unser Jahr.
+
+[Outro]  
+Die Herrlichkeit Gottes, der König der Zeit,  
+In unserem Lobpreis, sind wir bereit,  
+Erhebe dich, Herr, in unserem Gesang,  
+Die Cherubim preisen, für immer, so lang.`,
+        11: `Verse 1:  
+Du führst uns zu Deinem Tor,  
+Wo Herzen brechen, wo Hoffnung wohnt,  
+Du kennst die Gedanken, die wir tragen,  
+In dieser Stadt, die uns oft bedroht.  
+Die Stimmen rufen: „Baut euch ein Haus!“  
+Doch Du sprichst, Herr, und zeigst uns den Weg,  
+In der Dunkelheit bist Du unser Licht,  
+Du erhebst uns, wenn der Zweifel schlägt.
+
+Chorus:  
+Gott, Du sammelst uns, Du schenkst ein neues Herz,  
+Aus den Völkern rufst Du uns, in der Trauer und im Schmerz.  
+Wir kommen, wir bringen alles vor Dich,  
+Du bist unser Gott, in Dir find’ ich Licht.
+
+Verse 2:  
+Der Geist des HERRN fällt auf uns nieder,  
+Erneuerung fließt durch unser Leben,  
+Von steinernem Herz zu fleischlichem Herz,  
+Die Schatten weichen, Du wirst uns erheben.  
+Die Schreie der Verlorenen hörst Du klar,  
+In den Gassen, wo die Toten liegen,  
+Du bist der Heiland, der uns sammelt,  
+Mit jedem Wort gibst Du uns Flügel zum Fliegen.
+
+Chorus:  
+Gott, Du sammelst uns, Du schenkst ein neues Herz,  
+Aus den Völkern rufst Du uns, in der Trauer und im Schmerz.  
+Wir kommen, wir bringen alles vor Dich,  
+Du bist unser Gott, in Dir find’ ich Licht.
+
+Bridge:  
+Die Herrlichkeit erhebt sich,  
+Dein Geist weht über uns,  
+Du führst uns in die Freiheit,  
+In Deinen Armen finden wir Ruh'.  
+Wir legen ab die Last,  
+Du nimmst sie von uns weg,  
+In Dir sind wir verbunden,  
+In Deinem Namen, Herr, sind wir echt.
+
+Chorus:  
+Gott, Du sammelst uns, Du schenkst ein neues Herz,  
+Aus den Völkern rufst Du uns, in der Trauer und im Schmerz.  
+Wir kommen, wir bringen alles vor Dich,  
+Du bist unser Gott, in Dir find’ ich Licht.
+
+Outro:  
+Du bist unser Gott, wir stehen hier vereint,  
+In der Hoffnung, die Du schenkst,  
+In Deinem Sein, Herr, sind wir befreit.  
+Gott, Du sammelst uns, für immer, oh mein Gott,  
+Dein Volk, Dein Licht, unser Herz, das brennt.`,
+        12: `[Vers 1]  
+Du Menschenkind, hör, was spricht,  
+Das Wort des Herrn, es bleibt nicht still.  
+In einem ungehorsamen Haus,  
+Die Augen sehn', doch wollen nicht,  
+Die Ohren hören, doch sind blind.
+
+[Chorus]  
+Herr, wir kommen vor Dein Angesicht,  
+In Sorgen und in Dunkelheit,  
+Dein Wort, es gibt uns Licht,  
+Wir vertrauen Dir, Du bist bereit.  
+Oh, lass uns hören, oh, lass uns sehen,  
+Was Du uns sagst, wir wollen gehen.
+
+[Vers 2]  
+Nimm Dein Gerät, zieh aus dem Land,  
+Vor ihren Augen, dass sie’s erkennen,  
+Die Nacht bricht an, das Dunkel naht,  
+Doch Du bist bei uns, Du bist die Hand,  
+Die uns führt in alle Zeiten.
+
+[Chorus]  
+Herr, wir kommen vor Dein Angesicht,  
+In Sorgen und in Dunkelheit,  
+Dein Wort, es gibt uns Licht,  
+Wir vertrauen Dir, Du bist bereit.  
+Oh, lass uns hören, oh, lass uns sehen,  
+Was Du uns sagst, wir wollen gehen.
+
+[Bridge]  
+Die Zeit ist nah, das Wort geschieht,  
+Kein falsches Wort, kein leeres Lied.  
+Du bist der Herr, der spricht und wirkt,  
+In unsrem Herzen, das bleibt unberührt.  
+Wir sind das Zeichen, das Du uns gibst,  
+In Deinem Namen, der uns liebt.
+
+[Chorus]  
+Herr, wir kommen vor Dein Angesicht,  
+In Sorgen und in Dunkelheit,  
+Dein Wort, es gibt uns Licht,  
+Wir vertrauen Dir, Du bist bereit.  
+Oh, lass uns hören, oh, lass uns sehen,  
+Was Du uns sagst, wir wollen gehen.
+
+[Outro]  
+Das Wort des Herrn, es bleibt nicht still,  
+Es erfüllt uns jetzt, nach Deinem Will'.  
+In jedem Schritt, in jedem Fall,  
+Dein Wort, oh Herr, es bleibt uns wohl.  
+Amen, Amen, wir folgen Dir,  
+In Licht und Dunkel, hier sind wir.`,
+        13: `[Verse 1]  
+Du Menschensohn, erhör das Wort,  
+Die Propheten reden oft nicht fort.  
+Sie folgen nur dem eigenen Geist,  
+Verwirrung, wo die Wahrheit verweist.  
+
+[Pre-Chorus]  
+O Israel, wo ist der Frieden,  
+Wenn eure Worte nur Lügen bieten?  
+Die Wände, die ihr baut mit Kalk,  
+Werden fallen, wie ein scharfes Schalk.  
+
+[Chorus]  
+Höret des HERRN Wort,  
+Er ruft zu uns von weit her,  
+Euer Weg führt nur ins Dunkel,  
+Doch Er bringt Licht, so stark und schwer.  
+Höret des HERRN Wort,  
+Er ist der, der uns befreit,  
+Lasst uns stehen in der Wahrheit,  
+Sein Wort bleibt ewig, für alle Zeit.  
+
+[Verse 2]  
+Die Seelen fangt ihr, wohl bedacht,  
+Mit leeren Versprechen, die ihr macht.  
+Doch der HERR wird euch nicht lassen,  
+Sein Zorn wird bald eure Pläne fassen.  
+
+[Pre-Chorus]  
+O Volk, wo ist der wahre Halt,  
+Wenn euer Herz von Lügen bald erhalt?  
+Die Kissen, die ihr unterlegt,  
+Werden abfallen, wenn der Sturm bewegt.  
+
+[Chorus]  
+Höret des HERRN Wort,  
+Er ruft zu uns von weit her,  
+Euer Weg führt nur ins Dunkel,  
+Doch Er bringt Licht, so stark und schwer.  
+Höret des HERRN Wort,  
+Er ist der, der uns befreit,  
+Lasst uns stehen in der Wahrheit,  
+Sein Wort bleibt ewig, für alle Zeit.  
+
+[Bridge]  
+Er wird die Wände niederreißen,  
+Die falschen Träume wird Er weisen.  
+Gott der Wahrheit, stark und klar,  
+Du bist der Grund, so wunderbar.  
+Lass uns hören, lass uns sehen,  
+In deiner Nähe, da wollen wir stehen.  
+
+[Chorus]  
+Höret des HERRN Wort,  
+Er ruft zu uns von weit her,  
+Euer Weg führt nur ins Dunkel,  
+Doch Er bringt Licht, so stark und schwer.  
+Höret des HERRN Wort,  
+Er ist der, der uns befreit,  
+Lasst uns stehen in der Wahrheit,  
+Sein Wort bleibt ewig, für alle Zeit.  
+
+[Outro]  
+Höret, höret, was der HERR spricht,  
+In seiner Liebe, da gibt es Licht.  
+Ewig bleibt sein Wort bestehen,  
+In ihm allein, da wollen wir gehen.`,
+        14: `[TITLE]  
+Kehret um, Volk Gottes
+
+[LYRICS]
+
+[Verse 1]  
+Vor dir, oh Herr, kommen wir,  
+Die Herzen schwer von Götzenlast,  
+Wir suchen dich, in Nöten hier,  
+Doch halten fest, was uns vergaß.  
+Du sprichst zu uns, durch deinen Geist,  
+Kehret um, von Dunkelheit,  
+Lass uns erkennen, was uns speist,  
+In deinem Licht, in Ewigkeit.
+
+[Chorus]  
+Kehret um, Volk Gottes,  
+Von euren Götzen, wendet euch!  
+Der Herr ruft laut: "Kommt heim zu mir,  
+In meiner Gnade findet ihr Frieden,  
+In meiner Liebe, die nie vergeht,  
+Kehret um, und lebt in mir."
+
+[Verse 2]  
+Wir hören deinen Ruf, oh Herr,  
+Inmitten von der Missetat,  
+Du schickst dein Wort, so klar und schwer,  
+Um uns zu retten, uns zu laden.  
+Wie Noah, Daniel und Hiob einst,  
+Sie blieben treu in schwerer Zeit,  
+So lass auch uns dein Wort vereint,  
+In dir allein, in dir befreit.
+
+[Chorus]  
+Kehret um, Volk Gottes,  
+Von euren Götzen, wendet euch!  
+Der Herr ruft laut: "Kommt heim zu mir,  
+In meiner Gnade findet ihr Frieden,  
+In meiner Liebe, die nie vergeht,  
+Kehret um, und lebt in mir."
+
+[Bridge]  
+Oh Herr, wir kehren um zu dir,  
+Verlass die Schatten, komm ins Licht!  
+Mit reinem Herzen, voller Kraft,  
+Erneuerung in deinem Blick.  
+Die Stimme ruft, die Hoffnung lebt,  
+Dein Weg ist wahr, dein Wort besteht.  
+Ein Volk, das dir in Ehrfurcht dient,  
+Vor dir, oh Gott, der uns verzieht.
+
+[Chorus]  
+Kehret um, Volk Gottes,  
+Von euren Götzen, wendet euch!  
+Der Herr ruft laut: "Kommt heim zu mir,  
+In meiner Gnade findet ihr Frieden,  
+In meiner Liebe, die nie vergeht,  
+Kehret um, und lebt in mir."
+
+[Outro]  
+Kehret um, wir kommen heim,  
+In deinem Licht, in deinem Sein.  
+Oh Herr, wir danken dir für Gnade,  
+In deiner Nähe, in deiner Wahrheit.  
+Kehret um, und lebt in mir,  
+Oh Herr, wir kommen heim zu dir.`,
+        15: `[Verse 1]  
+Herr, Dein Wort, es kam zu mir,  
+Fragend: Was ist der Weinstock hier?  
+Ein Holz, das vor anderem nicht steht,  
+Im Feuer, das alles verzehrt und verweht.  
+Was kann es geben, was kann es tun,  
+Wenn es dem Flammenschein begegnen muss?  
+
+[Chorus]  
+Du bist der Herr, der alles sieht,  
+In Deiner Gnade, da lebe ich.  
+Verzehr mich nicht, Herr, in Deiner Glut,  
+Mach mich zum Werkzeug, schenk mir Mut.  
+Lass mich nicht brennen, lass mich nicht geh’n,  
+Hilf mir, in Deinem Licht zu stehen.  
+
+[Verse 2]  
+Die Glut frisst Holz, der Weinstock verdirbt,  
+Das Angesicht des Herren, das uns verwehrt.  
+Doch ich suche Dich, mein Herz wird rein,  
+In Deiner Nähe will ich sein.  
+Lass nicht das Feuer meine Hoffnung rauben,  
+Schenke mir Kraft, lass mich glauben.  
+
+[Chorus]  
+Du bist der Herr, der alles sieht,  
+In Deiner Gnade, da lebe ich.  
+Verzehr mich nicht, Herr, in Deiner Glut,  
+Mach mich zum Werkzeug, schenk mir Mut.  
+Lass mich nicht brennen, lass mich nicht geh’n,  
+Hilf mir, in Deinem Licht zu stehen.  
+
+[Bridge]  
+Wenn Du Dein Angesicht mir zeigst,  
+Erleuchte Dunkelheit, die mich umkreist.  
+Lass mich erkennen, was Du willst tun,  
+In Deinem Willen will ich ruhn.  
+Du bist mein Halt, mein Lebenslicht,  
+In der Stille höre ich Dein Wort, so schlicht.  
+
+[Chorus]  
+Du bist der Herr, der alles sieht,  
+In Deiner Gnade, da lebe ich.  
+Verzehr mich nicht, Herr, in Deiner Glut,  
+Mach mich zum Werkzeug, schenk mir Mut.  
+Lass mich nicht brennen, lass mich nicht geh’n,  
+Hilf mir, in Deinem Licht zu stehen.  
+
+[Outro]  
+Herr, Dein Wort, es bleibt bestehen,  
+In Deinem Feuer, lass mich leben.  
+Die Hoffnung blüht, wenn Du mich führst,  
+In Deinem Licht, mein Herz berührt.`,
+        16: `[TITLE] Du bist mein Erbarmen
+
+[Verse 1]  
+Du, Stadt Jerusalem, hör' das Wort,  
+Die Greuel, die dich trugen, sind nicht fern,  
+Dein Ursprung in der Dunkelheit,  
+Verlassen lagst du, ganz allein und leer.  
+
+[Chorus]  
+Doch ich sah dich, in deinem Blut,  
+Ich sprach: "Du sollst leben, du bist mein Gut!"  
+Ich gab dir Schönheit, ich gab dir Kleid,  
+Ich bin dein Gott, für alle Zeit.  
+
+[Verse 2]  
+Du wuchst und blühtest, schön wie der Tag,  
+Doch vergaßest, wer dich einst getragen,  
+Du gabst dich hin, der Welt zum Spiel,  
+Und opfertest deine Kinder, ohne Ziel.  
+
+[Chorus]  
+Doch ich sah dich, in deinem Blut,  
+Ich sprach: "Du sollst leben, du bist mein Gut!"  
+Ich gab dir Schönheit, ich gab dir Kleid,  
+Ich bin dein Gott, für alle Zeit.  
+
+[Bridge]  
+In deiner Schande, ich will dich heilen,  
+Mein Bund mit dir, wird niemals verweilen.  
+Erinnere dich, an die Zeit der Jugend,  
+Ich bin der HERR, der dir neues Leben gibt.  
+
+[Chorus]  
+Denn ich sah dich, in deinem Blut,  
+Ich sprach: "Du sollst leben, du bist mein Gut!"  
+Ich gab dir Schönheit, ich gab dir Kleid,  
+Ich bin dein Gott, für alle Zeit.  
+
+[Outro]  
+Du bist mein Erbarmen, mein ewiger Bund,  
+In meiner Liebe, findest du deinen Grund.  
+Schäme dich nicht, komm zu mir zurück,  
+Ich bin der HERR, ich geb' dir dein Glück.`,
+        17: `[Verse 1]  
+Herr, Dein Wort spricht zu mir,  
+In Rätseln und Gleichnissen, so klar,  
+Ein Adler, stark und majestätisch,  
+Nimmt die Zeder, bringt sie weit und fern.  
+Du pflanzt uns in gutes Land,  
+Mit Wasser, das fließt, so überreich,  
+Wir wachsen, blühen, stark verbunden,  
+Doch das Herz sucht nur das, was nicht bleibt.
+
+[Chorus]  
+Du bist der Gott, der hält den Bund,  
+Selbst wenn wir fallen, bleibst Du treu,  
+In Deinen Händen sind wir geborgen,  
+Du erhebst den Niedrigen, machst uns neu.  
+Dein Wort, Herr, gibt uns Kraft und Licht,  
+In der Dunkelheit bist Du unser Sicht.
+
+[Verse 2]  
+Ein anderer Adler naht,  
+Die Wurzeln strecken sich,  
+Doch der Wind, er bläst so rau,  
+Verdorren wird, was nicht auf Dich baut.  
+Wir vergessen oft, was Du gesprochen,  
+Suchen Hilfe in fremden Ländern,  
+Doch Du, Herr, bist unser Schild,  
+Du bist es, der uns wirklich hält.
+
+[Chorus]  
+Du bist der Gott, der hält den Bund,  
+Selbst wenn wir fallen, bleibst Du treu,  
+In Deinen Händen sind wir geborgen,  
+Du erhebst den Niedrigen, machst uns neu.  
+Dein Wort, Herr, gibt uns Kraft und Licht,  
+In der Dunkelheit bist Du unser Sicht.
+
+[Bridge]  
+Oh, Herr, wir kehren um zu Dir,  
+Die Wurzeln stark, fest in Dir,  
+Du nimmst den hohen Baum und machst ihn klein,  
+Erhebst den Niedrigen, lässt uns sein.  
+Die Vögel finden Schatten hier,  
+In Deinem Reich, oh Herr, bei Dir.
+
+[Chorus]  
+Du bist der Gott, der hält den Bund,  
+Selbst wenn wir fallen, bleibst Du treu,  
+In Deinen Händen sind wir geborgen,  
+Du erhebst den Niedrigen, machst uns neu.  
+Dein Wort, Herr, gibt uns Kraft und Licht,  
+In der Dunkelheit bist Du unser Sicht.
+
+[Outro]  
+So sprechen wir, Herr, von Deinem Wort,  
+Du bist der Gott, der uns führt an jeden Ort,  
+Mit jedem Schritt, bei Dir sind wir gebannt,  
+In Deinem Licht, Herr, sind wir gebannt.`,
+        18: `[Verse 1]  
+Herr, Dein Wort spricht zu mir,  
+Was treibt ihr, Volk, in Dunkelheit?  
+Eure Väter trugen die Schuld,  
+Doch die Kinder tragen das Licht.  
+Du rufst uns in Gerechtigkeit,  
+Zu leben in Deiner Heiligkeit,  
+Die Seelen gehören Dir allein,  
+In Dir, oh Herr, sind wir rein.
+
+[Chorus]  
+Kehre um, Volk, von deinem Weg,  
+Wende dich, wo die Gnade schlägt.  
+Lass Deine Taten einen neuen Geist,  
+Denn Du bist der, der uns befreit.  
+Lebe, oh Seele, in Deinem Licht,  
+Denn der Herr hat uns verspricht:  
+„Ich habe keinen Gefallen am Tod,  
+Kehre um, komm, finde den Trost.“
+
+[Verse 2]  
+Der Gerechte lebt durch Glauben,  
+Sein Herz in Deine Hände gelegt.  
+Er teilt sein Brot, er kleidet den Nackten,  
+Hält Deine Gebote, die uns tragen.  
+Der Gottlose kehrt um, erkennt sein Leid,  
+Lässt hinter sich die Dunkelheit,  
+In Dir, oh Herr, findet er Frieden,  
+Die Gnade, die uns neu beschieden.
+
+[Chorus]  
+Kehre um, Volk, von deinem Weg,  
+Wende dich, wo die Gnade schlägt.  
+Lass Deine Taten einen neuen Geist,  
+Denn Du bist der, der uns befreit.  
+Lebe, oh Seele, in Deinem Licht,  
+Denn der Herr hat uns verspricht:  
+„Ich habe keinen Gefallen am Tod,  
+Kehre um, komm, finde den Trost.“
+
+[Bridge]  
+Neues Herz, neuer Geist,  
+Wir werfen ab, was uns zerreißt.  
+Du schenkst uns Leben, Du schenkst uns Licht,  
+In Dir, oh Herr, vergeht die Furcht.  
+Komm, Heiliger Geist, erfüll uns neu,  
+Unsere Herzen sind Dir treu.  
+Wir beugen uns, wir hören zu,  
+In Deinem Wort finden wir Ruh.
+
+[Chorus]  
+Kehre um, Volk, von deinem Weg,  
+Wende dich, wo die Gnade schlägt.  
+Lass Deine Taten einen neuen Geist,  
+Denn Du bist der, der uns befreit.  
+Lebe, oh Seele, in Deinem Licht,  
+Denn der Herr hat uns verspricht:  
+„Ich habe keinen Gefallen am Tod,  
+Kehre um, komm, finde den Trost.“
+
+[Outro]  
+Kehre um, oh Volk,  
+Finde Frieden im Herrn,  
+Denn er liebt Dich,  
+Er liebt Dich,  
+Er liebt Dich,  
+Kehre um!`,
+        19: `[Verse 1]  
+Oh, höre die Stimme, die weint,  
+Über die Fürsten, die verloren, vereint.  
+Wie die Löwin, die schwach,  
+Unter den Löwen, in finsterer Nacht.  
+Die Hoffnung schwand, das Licht erlosch,  
+Die Stadt zerbrach, das Herz so groß.
+
+[Chorus]  
+Wo sind die starken, die einst erblühten,  
+Die Reben, die in Gnade blühten?  
+In der Wüste, da rufen wir,  
+Heiliger Geist, komm zu uns hier.  
+Bring uns zurück, lass uns nicht vergehn,  
+In deiner Nähe, lass uns bestehen.
+
+[Verse 2]  
+Ein junger Löwe, er wurde gefangen,  
+Sein Brüllen verstummt, das Volk klagt, so bangen.  
+Die Paläste verwüstet, die Städte zerfallen,  
+Die Erde erbebt, wir hören die Wahlen.  
+Die Hoffnung verloren, die Träume verweht,  
+Doch deine Liebe, sie bleibt, sie besteht.
+
+[Chorus]  
+Wo sind die starken, die einst erblühten,  
+Die Reben, die in Gnade blühten?  
+In der Wüste, da rufen wir,  
+Heiliger Geist, komm zu uns hier.  
+Bring uns zurück, lass uns nicht vergehn,  
+In deiner Nähe, lass uns bestehen.
+
+[Bridge]  
+Heilige Flamme, entzünde das Herz,  
+Lass uns leben, trotz Schmerz und Scherz.  
+Du bist der Weinberg, du schenkst uns die Kraft,  
+In der Dürre, wo deine Liebe schafft.  
+Wir erheben die Stimme, wir klagen und singen,  
+In deiner Gegenwart, da wird Freude bringen.
+
+[Chorus]  
+Wo sind die starken, die einst erblühten,  
+Die Reben, die in Gnade blühten?  
+In der Wüste, da rufen wir,  
+Heiliger Geist, komm zu uns hier.  
+Bring uns zurück, lass uns nicht vergehn,  
+In deiner Nähe, lass uns bestehen.
+
+[Outro]  
+Oh, höre die Stimme, die weint,  
+Du bist der Löwe, der immer vereint.  
+Auf den Bergen Israels, lass uns brüllen,  
+In dir allein, werden wir erfüllen.  
+Heiliger Geist, wir erwarten dich,  
+In der Dunkelheit, bring das Licht zu uns, für dich.`,
+        20: `[TITLE]  
+*HERR, Du bist unser Gott*
+
+[Verse 1]  
+In der Wüste, unter Deinem Wort,  
+Hast Du uns geführt, oh HERR, unser Gott.  
+Die Greuel der Väter, wir lassen sie los,  
+Denn Du hast uns erwählt, in Liebe so groß.  
+
+[Chorus]  
+HERR, Du bist unser Gott,  
+Wir werfen die Götzen hinweg,  
+Mit ausgestrecktem Arm,  
+Führst Du uns zum Licht,  
+Dein Name sei heilig,  
+In uns, für alle Zeit.  
+
+[Verse 2]  
+Du hast Deine Hand erhoben,  
+Uns aus Ägypten befreit,  
+In einem Land voller Milch,  
+Hast Du uns geheiligt, bereit.  
+Wir hören Dein Wort und kehren um,  
+Lass uns leben, oh HERR, in Deinem Ruhm.  
+
+[Chorus]  
+HERR, Du bist unser Gott,  
+Wir werfen die Götzen hinweg,  
+Mit ausgestrecktem Arm,  
+Führst Du uns zum Licht,  
+Dein Name sei heilig,  
+In uns, für alle Zeit.  
+
+[Bridge]  
+Wir kommen in die Wüste,  
+Vor Deinem Angesicht,  
+Du sprichst zu uns,  
+Lass uns hören,  
+Was Du uns versprichst.  
+Wir beugen uns nieder,  
+Vor Deiner Heiligkeit,  
+Du bist unser Erlöser,  
+Für alle Ewigkeit.  
+
+[Chorus]  
+HERR, Du bist unser Gott,  
+Wir werfen die Götzen hinweg,  
+Mit ausgestrecktem Arm,  
+Führst Du uns zum Licht,  
+Dein Name sei heilig,  
+In uns, für alle Zeit.  
+
+[Outro]  
+HERR, Du bist unser Gott,  
+Wir loben Deinen Namen,  
+In Deiner Gegenwart,  
+Finden wir unser Leben.  
+Amen, Amen,  
+Du bist unser Gott,  
+Für alle Zeit.`,
+        21: `[LYRICS]
+[LYRICS]
+
+[Verse 1]  
+Oh, Herr, Dein Wort, es ruft zu mir,  
+Zu Jerusalem, das Heilige hier.  
+Die Schreie hallen, Herzen verzagen,  
+Schwert des Gerichts, es wird uns plagen.  
+
+[Chorus]  
+Komm, Herr, und sprich zu Deinem Volk,  
+Lass uns hören, was Du uns sagst.  
+In der Dunkelheit, sei unser Licht,  
+Führ uns durch das, was vor uns bricht.  
+
+[Verse 2]  
+Inmitten der Kämpfe, wir seufzen laut,  
+Die Hände sinken, der Mut verwaut.  
+Doch Deine Stimme, sie wird nicht schweigen,  
+Du wirst das Herz derer erreichen.  
+
+[Chorus]  
+Komm, Herr, und sprich zu Deinem Volk,  
+Lass uns hören, was Du uns sagst.  
+In der Dunkelheit, sei unser Licht,  
+Führ uns durch das, was vor uns bricht.  
+
+[Bridge]  
+Und wenn die Krone fällt, die Macht vergeht,  
+Ewiger König, der in uns lebt.  
+Erhöhe uns, wenn wir uns beugen,  
+In Deiner Gnade, lass uns träumen.  
+
+[Chorus]  
+Komm, Herr, und sprich zu Deinem Volk,  
+Lass uns hören, was Du uns sagst.  
+In der Dunkelheit, sei unser Licht,  
+Führ uns durch das, was vor uns bricht.  
+
+[Outro]  
+Oh, Herr, Dein Wort, es ruft zu mir,  
+In der Stille, da bist Du hier.  
+Mit jedem Schritt, den wir jetzt wagen,  
+Lass uns treu sein, Herr, Deinen Fragen.`,
+        22: `[Verse 1]  
+Herr, Dein Wort spricht laut zu mir,  
+Die Stadt, die blutet, voller Gier.  
+Die Greuel, die sie heimlich lebt,  
+Der Schrecken, der in ihr verweht.
+
+[Chorus]  
+O komm, o Herr, und reinige,  
+Die Herzen, die in Dunkelheit,  
+Mach uns zu Licht, das strahlt und blüht,  
+Dass Deine Herrlichkeit uns führt.
+
+[Verse 2]  
+Die Waisen schreien, Witwen weinen,  
+In dieser Stadt, wo viele scheinen.  
+Die Götzen, die sie sich gemacht,  
+Haben uns von Dir entfacht.
+
+[Chorus]  
+O komm, o Herr, und reinige,  
+Die Herzen, die in Dunkelheit,  
+Mach uns zu Licht, das strahlt und blüht,  
+Dass Deine Herrlichkeit uns führt.
+
+[Bridge]  
+Du sammelst uns im Feuer Deines Zorns,  
+Zerschmelze unser Herz, mach neu,  
+Lass uns nicht fallen, lass uns nicht gehen,  
+Führe uns zurück zu Dir, o treuer Gott!
+
+[Chorus]  
+O komm, o Herr, und reinige,  
+Die Herzen, die in Dunkelheit,  
+Mach uns zu Licht, das strahlt und blüht,  
+Dass Deine Herrlichkeit uns führt.
+
+[Outro]  
+Heiliger Zorn, Dein Wort erfüllt,  
+Die Stadt, die weint, die sich verhüllt,  
+Lass uns stehen, als Deine Kraft,  
+In Dir allein, die neue Schaft.`,
+        23: `[Verse 1]  
+Hör, oh Volk, der Herr ruft laut,  
+In der Dunkelheit, die uns umschaut.  
+Ohola und Oholiba, in ihrer Lust,  
+Haben vergessen, was Wahrheit ist, die Brust.  
+
+[Chorus]  
+Kehre um, kehre um, zur Quelle des Lebens,  
+Lass die Götzen, lass das Streben,  
+Der Herr ist treu, er ruft dich heim,  
+In seiner Liebe, lass dich ganz sein.  
+
+[Verse 2]  
+Sie jagten Schatten, vergaßen den Lichtstrahl,  
+Mit jedem Schritt, verloren sie die Wahl.  
+Die Fürsten der Welt, sie lockten und zogen,  
+Doch ihre Seelen waren in Ketten geflogen.  
+
+[Chorus]  
+Kehre um, kehre um, zur Quelle des Lebens,  
+Lass die Götzen, lass das Streben,  
+Der Herr ist treu, er ruft dich heim,  
+In seiner Liebe, lass dich ganz sein.  
+
+[Bridge]  
+Oh, Herr, wir kommen, wir bringen dir unser Herz,  
+Heiliger Geist, heile unseren Schmerz.  
+In den Ruinen der Unzucht, finden wir dich,  
+Du bist der Weg, das Leben - der einzige Licht.  
+
+[Chorus]  
+Kehre um, kehre um, zur Quelle des Lebens,  
+Lass die Götzen, lass das Streben,  
+Der Herr ist treu, er ruft dich heim,  
+In seiner Liebe, lass dich ganz sein.  
+
+[Outro]  
+Kehre um, oh Volk, der Herr ist hier,  
+In seiner Gnade, er führt dich zu ihm.  
+Sein Wort bleibt stehen, unerschütterlich klar,  
+Komm, lass uns suchen, was ewig war.`,
+        24: `Strophe 1:  
+Hör, o HERR, Dein Wort zu mir,  
+In dieser Stadt, so voller Zorn,  
+Die Unreinheit, sie hält uns fest,  
+Wie ein Topf, der niemals rein werden kann.  
+Dein Urteil, es trifft uns tief,  
+Doch in der Dunkelheit, da schimmert Licht.
+
+Refrain:  
+Im Feuer der Reinigung,  
+Lass uns brennen, lass uns sein,  
+Die Ketten der Sünde brechen,  
+In Deiner Gnade, HERR, so rein.  
+Wir stehen vor Deinem Altar,  
+Erneuert, geheiligt, wunderbar.
+
+Strophe 2:  
+Sieh, o HERR, die Herzen klagen,  
+Über das Blut, das vergossen ward,  
+Doch Du forderst uns auf zu stehen,  
+Und den Schmuck des Lebens zu tragen.  
+Mit jedem Schmerz, den wir erleiden,  
+Wirst Du uns führen, uns begleiten.
+
+Refrain:  
+Im Feuer der Reinigung,  
+Lass uns brennen, lass uns sein,  
+Die Ketten der Sünde brechen,  
+In Deiner Gnade, HERR, so rein.  
+Wir stehen vor Deinem Altar,  
+Erneuert, geheiligt, wunderbar.
+
+Bridge:  
+Du nimmst die Lust unserer Augen,  
+Und doch in Dir finden wir Trost,  
+In der Trauer, in der Plage,  
+Zeigst Du uns, dass Du der HERR bist.  
+Wir werden nicht klagen, nicht weinen,  
+Sondern in Hoffnung uns vereinen.
+
+Refrain:  
+Im Feuer der Reinigung,  
+Lass uns brennen, lass uns sein,  
+Die Ketten der Sünde brechen,  
+In Deiner Gnade, HERR, so rein.  
+Wir stehen vor Deinem Altar,  
+Erneuert, geheiligt, wunderbar.
+
+Outro:  
+O HERR, Dein Wort ist unser Licht,  
+In der Dunkelheit, da bist Du nah.  
+Wir vertrauen auf Deine Macht,  
+Im Feuer der Reinigung, da sind wir klar.  
+Amen.`,
+        25: `Verse 1:
+Höret, ihr Völker, hört die Stimme,  
+Der HERR spricht zu uns, sein Wort erfüllt das Land.  
+Ammon, du hast das Heiligtum entweiht,  
+Mit Hochmut und Spott, so hast du dich verleitet.  
+
+Chorus:
+Denn ich bin der HERR,  
+Der dich richten wird,  
+Mit einer Hand, die ausstreckt,  
+Und dem Zorn, der nicht schweigt.  
+Du wirst erfahren, ich bin der HERR,  
+Deine Taten werden nicht vergessen,  
+Ich bin der HERR, der dich führt,  
+In Gerechtigkeit und Licht.  
+
+Verse 2:
+Moab, du sprichst, gleich wie die Heiden,  
+Doch mein Recht wird kommen, es wird nicht verweilen.  
+Die Städte werden fallen, das Land wird geteilt,  
+Die Wahrheit des HERRN wird über die Nationen verweilt.  
+
+Chorus:
+Denn ich bin der HERR,  
+Der dich richten wird,  
+Mit einer Hand, die ausstreckt,  
+Und dem Zorn, der nicht schweigt.  
+Du wirst erfahren, ich bin der HERR,  
+Deine Taten werden nicht vergessen,  
+Ich bin der HERR, der dich führt,  
+In Gerechtigkeit und Licht.  
+
+Bridge:
+Edom, Philister, ihr seid nicht verborgen,  
+Mein Volk wird aufstehen, in der Kraft des Himmels.  
+Die Rache des HERRN wird sich zeigen,  
+In der Dunkelheit wird das Licht aufsteigen.  
+
+Chorus:
+Denn ich bin der HERR,  
+Der dich richten wird,  
+Mit einer Hand, die ausstreckt,  
+Und dem Zorn, der nicht schweigt.  
+Du wirst erfahren, ich bin der HERR,  
+Deine Taten werden nicht vergessen,  
+Ich bin der HERR, der dich führt,  
+In Gerechtigkeit und Licht.  
+
+Outro:
+Höret, ihr Völker, hört die Stimme,  
+Der HERR ist gerecht, sein Wort wird nicht schweigen.  
+In ihm finden wir Frieden, in ihm unser Ziel,  
+Halleluja, der HERR, er ist unser Spiel.`,
+        26: `[TITLE]  
+Die Stadt der Trauer
+
+[Verse 1]  
+Du, die du einst so hoch erhoben,  
+Zerbrochen ist dein stolzes Tor,  
+Die Völker weinen um dein Fallen,  
+Die Wellen kommen, hören nicht mehr vor.  
+
+[Chorus]  
+Denn so spricht der Herr, der Allmächtige,  
+Ich mache dich zum Stein, zum Fels,  
+Die Melodie des Lebens schweigt,  
+Die Stadt des Ruhms, sie fällt ins Dunkel,  
+Ach, wie bist du so gar wüst geworden,  
+O Tyrus, deine Zeit ist nun erfüllt.  
+
+[Verse 2]  
+Die Fürsten stehen, voller Schrecken,  
+Ihre Mächte sind wie Staub verweht,  
+Die Inseln klagen, in der Ferne,  
+Dein Ende nah, das niemand versteht.  
+
+[Chorus]  
+Denn so spricht der Herr, der Allmächtige,  
+Ich mache dich zum Stein, zum Fels,  
+Die Melodie des Lebens schweigt,  
+Die Stadt des Ruhms, sie fällt ins Dunkel,  
+Ach, wie bist du so gar wüst geworden,  
+O Tyrus, deine Zeit ist nun erfüllt.  
+
+[Bridge]  
+Ewige Wüste, kein Leben mehr,  
+Der Stolz der Menschen wird gebrochen,  
+In der Stille hör ich die Klage,  
+Der Herr spricht, und es ist vollbracht.  
+
+[Chorus]  
+Denn so spricht der Herr, der Allmächtige,  
+Ich mache dich zum Stein, zum Fels,  
+Die Melodie des Lebens schweigt,  
+Die Stadt des Ruhms, sie fällt ins Dunkel,  
+Ach, wie bist du so gar wüst geworden,  
+O Tyrus, deine Zeit ist nun erfüllt.  
+
+[Outro]  
+O Tyrus, deine Zeit ist nun erfüllt,  
+Im Schatten der Ewigkeit,  
+Die Herrlichkeit verweht, und bleibt,  
+Der Herr allein bleibt, der Herr allein bleibt.`,
+        27: `[TITLE]  
+Die Klage über Tyrus
+
+[Verse 1]  
+O Tyrus, schön und stolz,  
+Dein Glanz gefiel den Völkern all,  
+Eure Schiffe segelten weit,  
+Geknüpft am Meer, im Handel vereint.  
+Zypressen, Zedern, aus Libanon,  
+Dein Reichtum blühte, kein Halt, kein Lohn.  
+
+[Chorus]  
+Doch nun, o Tyrus, die Wellen brechen,  
+Dein Handel, dein Ruhm, sie werden zerbrechen.  
+Die Stimmen der Trauer, sie hallen so laut,  
+In Asche und Staub, da liegt dein Stolz, o traut.  
+
+[Verse 2]  
+Die Händler aus Saba, Gold und Gewand,  
+Die Reichen der Erde, sie hielten dein Band.  
+Doch der Wind, er weht, ein Sturm zieht heran,  
+Die Tiefen des Meeres, sie bringen dich dran.  
+Oft hast du gelebt in Überfluss und Macht,  
+Doch die Stunde des Fallens hat nun vollbracht.  
+
+[Chorus]  
+Doch nun, o Tyrus, die Wellen brechen,  
+Dein Handel, dein Ruhm, sie werden zerbrechen.  
+Die Stimmen der Trauer, sie hallen so laut,  
+In Asche und Staub, da liegt dein Stolz, o traut.  
+
+[Bridge]  
+Wehklage über dich, o Stadt voller Pracht,  
+Die Ältesten weinen in der dunklen Nacht.  
+Was einst so erblühte, wird nun schnell verwehen,  
+Vor dem HERRN, dem Mächtigen, wird alles geschehen.  
+
+[Chorus]  
+Doch nun, o Tyrus, die Wellen brechen,  
+Dein Handel, dein Ruhm, sie werden zerbrechen.  
+Die Stimmen der Trauer, sie hallen so laut,  
+In Asche und Staub, da liegt dein Stolz, o traut.  
+
+[Outro]  
+O Tyrus, du bist gefallen,  
+Die Könige schauen, sie werden verhallen.  
+Erschrecken und zittern, die Völker sind stumm,  
+Denn der HERR spricht: "Euer Ende ist drum."`,
+        28: `[Verse 1]  
+Du, Herr, der ewig thronet,  
+Schau auf die Herzen der Menschen,  
+In Stolz und Macht verstrickt,  
+Doch Du allein bist Gott,  
+Und wir sind nur Staub,  
+Verleih uns Demut, Herr,  
+In Deiner heiligen Pracht.
+
+[Chorus]  
+Du bist der Herr, der Ehre gibt,  
+In Deinem Licht, da leben wir,  
+Du schaffst aus Asche neues Leben,  
+Deine Wahrheit führt uns heim.  
+Der Herr ist Gott, der Herr ist Gott,  
+Kein Mensch wird je so sein.
+
+[Verse 2]  
+Wie der König von Tyrus,  
+In Hochmut und in Glanz,  
+Wurden einst die Herzen gehärtet,  
+Doch Du schickst die Fremden,  
+Um uns zu erinnern,  
+Dass ohne Dich, o Herr,  
+Wir nichts sind, nichts werden.
+
+[Chorus]  
+Du bist der Herr, der Ehre gibt,  
+In Deinem Licht, da leben wir,  
+Du schaffst aus Asche neues Leben,  
+Deine Wahrheit führt uns heim.  
+Der Herr ist Gott, der Herr ist Gott,  
+Kein Mensch wird je so sein.
+
+[Bridge]  
+O Herr, lass die Welt erkennen,  
+In Deiner Gnade stehen wir.  
+Lass Deine Herrschaft uns regieren,  
+Und zeige, dass Du heilig bist.  
+Wir kehren um zu Dir,  
+In Dir finden wir die Freiheit,  
+In Deinem Namen, Heiliger,  
+Leben wir in Ewigkeit.
+
+[Chorus]  
+Du bist der Herr, der Ehre gibt,  
+In Deinem Licht, da leben wir,  
+Du schaffst aus Asche neues Leben,  
+Deine Wahrheit führt uns heim.  
+Der Herr ist Gott, der Herr ist Gott,  
+Kein Mensch wird je so sein.
+
+[Outro]  
+Der Herr ist Gott, der Herr ist Gott,  
+In Deinem Licht, da leben wir.  
+Du allein, o Herr, bist Gott,  
+Wir beten an, für immer hier.  
+Amen.`,
+        29: `Verse 1:  
+Im Schatten der Ägypten, wo der Drache thront,  
+Die Wasser flüstern leise, doch der Stolz sie belohnt.  
+„Mein Strom, mein Reich!“ ruft er, doch das Wort kommt klar,  
+Der HERR spricht: „Ich komme, nimm deinen Platz wahr!“  
+
+Chorus:  
+Du bist der HERR, der alles sieht,  
+In der Wüste, wo der Glaube blüht.  
+Dein Wort wird stehen, deine Macht ist groß,  
+Du führst dein Volk, du bist unser Trost.  
+
+Verse 2:  
+Fische an den Schuppen, die in Wasser schwimmen,  
+Doch der HERR wird sie ziehen, das Licht wird erbringen.  
+Die Wüste ruft den Namen, den die Völker hören,  
+In der Einsamkeit der Stille, werden Herzen sich bekehren.  
+
+Chorus:  
+Du bist der HERR, der alles sieht,  
+In der Wüste, wo der Glaube blüht.  
+Dein Wort wird stehen, deine Macht ist groß,  
+Du führst dein Volk, du bist unser Trost.  
+
+Bridge:  
+Zerstreut, doch gesammelt, nach vierzig Jahren,  
+Die Hoffnung blüht auf, du wirst uns nicht sparen.  
+Du machst uns klein, doch stark in dir,  
+Wir verlassen uns auf dich, O HERR, hier sind wir!  
+
+Chorus:  
+Du bist der HERR, der alles sieht,  
+In der Wüste, wo der Glaube blüht.  
+Dein Wort wird stehen, deine Macht ist groß,  
+Du führst dein Volk, du bist unser Trost.  
+
+Outro:  
+So sprechen wir deinen Namen, voller Ehrfurcht und Licht,  
+Du bist der HERR, der nie vergisst.  
+In jeder Prüfung, in jedem Schmerz,  
+Wir preisen dich, mit ganzem Herzen.  
+
+(Ende)
+
+Diese Liedertexte sind inspiriert von den biblischen Passagen und tragen die Botschaft der Hoffnung und der Treue Gottes in schwierigen Zeiten.`,
+        30: `Vers 1:  
+O weine, mein Volk, der Tag ist nahe,  
+Die Finsternis zieht auf, die Stille schmerzt,  
+Die Worte des HERRN, sie rufen laut,  
+In Ägypten bricht das Unheil auf,  
+Ein Schwert, das über Länder zieht,  
+Dein Stolz wird fallen, das Ende kommt.
+
+Chorus:  
+Denn ich bin der HERR, der alles sieht,  
+In der Dunkelheit, da bin ich Licht,  
+Ich führe die, die treu zu mir stehn,  
+Mein Wort erfüllt, mein Heil wird gehn.  
+O Ägypten, erkenne, ich bin der HERR,  
+Mein Feuer brennt, ich schütze dich schwer.
+
+Vers 2:  
+Die Götzen fallen, die Macht zerbricht,  
+Die Städte wüst, kein Mensch spricht,  
+Doch ich werde sammeln die zerstreuten Herzen,  
+Und alle Tränen, sie werden schwinden,  
+Denn ich zerbrich das Joch der Pein,  
+Die Freiheit kommt, mein Volk wird sein.
+
+Chorus:  
+Denn ich bin der HERR, der alles sieht,  
+In der Dunkelheit, da bin ich Licht,  
+Ich führe die, die treu zu mir stehn,  
+Mein Wort erfüllt, mein Heil wird gehn.  
+O Ägypten, erkenne, ich bin der HERR,  
+Mein Feuer brennt, ich schütze dich schwer.
+
+Bridge:  
+Heiliger Gott, du bist der Fels,  
+In der Not, da bist du unser Held.  
+Jede Stimme, die ruft zu dir,  
+Hört dein Wort, das Leben hier.  
+O HERR, wir beugen uns vor dir,  
+Die Hoffnung lebt, wir danken dir.
+
+Chorus:  
+Denn ich bin der HERR, der alles sieht,  
+In der Dunkelheit, da bin ich Licht,  
+Ich führe die, die treu zu mir stehn,  
+Mein Wort erfüllt, mein Heil wird gehn.  
+O Ägypten, erkenne, ich bin der HERR,  
+Mein Feuer brennt, ich schütze dich schwer.
+
+Outro:  
+O weine, mein Volk, der Tag ist nahe,  
+Doch ich, der HERR, ich bin bei dir,  
+In der Dunkelheit, führe ich dich heim,  
+Mein Licht, mein Wort, für alle Zeit.`,
+        31: `[TITLE]  
+“Die Höhe und die Tiefe”
+
+[Verse 1]  
+Im elften Jahr, am dritten Tag,  
+Spricht der Herr, sein Wort ist klar,  
+„Du Pharao, was meinst du wohl,  
+Dein Glanz ist nichts, dein Stolz ist hohl.  
+Wie ein Zeder, hoch und schön,  
+Doch Wasser fließen, um dich zu seh’n.  
+Die Wurzeln stark, doch hoch der Geist,  
+Vergiss nicht, dass der Fall dich kreist.“
+
+[Chorus]  
+Herr, du bist der Höchste,  
+Kein Baum kann dir das Wasser nehmen.  
+In deiner Nähe, kann ich leben,  
+Du bist der Weg, der uns erhebt.  
+Die Völker fliehen, doch wir stehen fest,  
+Unter deinem Schatten, der uns nie verlässt.  
+
+[Verse 2]  
+Die Tiere ruhen unter Zweigen,  
+Wo einst die Stolzen sich bewegten,  
+Die Ströme still, die Höhen leer,  
+Wenn der Herr spricht, ist nichts mehr schwer.  
+In der Tiefe, da ist Trauer,  
+Denn die Flüsse fließen nicht mehr,  
+Die großen Bäume, die einst prahlten,  
+Müssen nun mit den Toten walten.
+
+[Chorus]  
+Herr, du bist der Höchste,  
+Kein Baum kann dir das Wasser nehmen.  
+In deiner Nähe, kann ich leben,  
+Du bist der Weg, der uns erhebt.  
+Die Völker fliehen, doch wir stehen fest,  
+Unter deinem Schatten, der uns nie verlässt.  
+
+[Bridge]  
+Wie groß ist der Mensch, wenn er sich erhebt?  
+Doch unter deinem Blick, wird alles verweht.  
+Die Lustigen Bäume, sie fallen und weinen,  
+In deiner Gnade, lass uns vereinen.  
+Die Erde bebt, die Macht zerbricht,  
+Doch du, Herr, bleibst unser Licht.
+
+[Chorus]  
+Herr, du bist der Höchste,  
+Kein Baum kann dir das Wasser nehmen.  
+In deiner Nähe, kann ich leben,  
+Du bist der Weg, der uns erhebt.  
+Die Völker fliehen, doch wir stehen fest,  
+Unter deinem Schatten, der uns nie verlässt.  
+
+[Outro]  
+So sprich, Herr, wir hören,  
+Dein Wort gibt uns Halt, lässt uns nicht verwehren.  
+In der Höhe und in der Tiefe,  
+Bleibst du unser Gott, der uns führt in die Liebe.  
+Amen, Amen, wir preisen den Namen,  
+In deiner Gegenwart, können wir leben und träumen.`,
+        32: `"In deiner Finsternis, Herr"
+
+Strophe 1:
+Im Schatten des Löwen, in Ägyptens Macht,  
+Die Ströme verwirrt, die Dunkelheit wacht.  
+Du hast dein Wort gesprochen, Herr, so klar,  
+Die Welt wird sich fürchten, denn du bist nah.  
+
+Refrain:  
+O Herr, mach das Licht in der Finsternis,  
+Zeige uns deinen Weg, dein heiliges Licht.  
+Wenn die Völker erzittern, wenn die Herzen brechen,  
+Lass uns stehen in deiner Wahrheit, in deinem Licht.  
+
+Strophe 2:  
+Die Schwerter blitzen, die Helden fallen,  
+In der Grube der Unbeschnittenen hallen.  
+Doch du, o Herr, bist unser Schild,  
+Die Dunkelheit flieht, wenn dein Licht uns erfüllt.  
+
+Refrain:  
+O Herr, mach das Licht in der Finsternis,  
+Zeige uns deinen Weg, dein heiliges Licht.  
+Wenn die Völker erzittern, wenn die Herzen brechen,  
+Lass uns stehen in deiner Wahrheit, in deinem Licht.  
+
+Bridge:  
+Wenn die Wasser rot werden, und die Berge beben,  
+Wenn die Schreie der Verzweiflung in die Höhlen leben,  
+Wirst du uns führen, durch die Nacht zum Tag,  
+Denn du bist der Herr, der uns stets tragen mag.  
+
+Refrain:  
+O Herr, mach das Licht in der Finsternis,  
+Zeige uns deinen Weg, dein heiliges Licht.  
+Wenn die Völker erzittern, wenn die Herzen brechen,  
+Lass uns stehen in deiner Wahrheit, in deinem Licht.  
+
+Outro:  
+In deiner Finsternis, Herr, sind wir bereit,  
+Eingehüllt in dein Wort, in der Ewigkeit.  
+Die Dunkelheit weicht, wenn dein Licht uns erreicht,  
+O Herr, du bist stark, du bist der, der uns zeigt.`,
+        33: `Verse 1:  
+Herr, Dein Wort, es klingt zu mir,  
+Ein Ruf, der Herzen erweckt.  
+Du schickst mich, oh Gott, zu Dir,  
+Warnend, wo das Leben weckt.  
+Ein Schwert, das über uns zieht,  
+Die Stimmen, die uns rufen,  
+Wir hören nicht, wie’s uns geschieht,  
+Doch Du, o Herr, bleibst in uns wohnen.
+
+Chorus:  
+Kehre um, du Volk, kehre um,  
+Der Herr ruft dich in Licht und Ruhm.  
+Er will nicht, dass du stirbst, so sprich,  
+Wende dich zu Ihm, vergib dein Ich.  
+Kehre um, du Volk, kehre um,  
+Das Leben ist in Seiner Stund’ so klug.  
+Er will dich leben sehen, oh Mensch,  
+Komm, lass die Dunkelheit hinter dich.
+
+Verse 2:  
+Gerechte, die vom Weg abweichen,  
+Gottloses Herz, es ruft nach Dir.  
+Du schickst uns, damit wir erreichen,  
+Die Seelen, die verloren hier.  
+Ein Lied, das in die Wüste klingt,  
+Die Hoffnung, die uns führt,  
+Ein neuer Tag, der zu uns bringt,  
+Die Gnade, die uns nie verwehrt.
+
+Chorus:  
+Kehre um, du Volk, kehre um,  
+Der Herr ruft dich in Licht und Ruhm.  
+Er will nicht, dass du stirbst, so sprich,  
+Wende dich zu Ihm, vergib dein Ich.  
+Kehre um, du Volk, kehre um,  
+Das Leben ist in Seiner Stund’ so klug.  
+Er will dich leben sehen, oh Mensch,  
+Komm, lass die Dunkelheit hinter dich.
+
+Bridge:  
+Oh, Herr, Dein Wort bleibt ewig wahr,  
+Kein Blut soll fließen, wo Du bist,  
+Die Gnade ruft, sie ist so nah,  
+Erwecke uns zu Deiner Sicht.  
+Wir hören Dein Wort, wir hören den Klang,  
+Wir strecken uns aus, wir geben Dir Dank.  
+Komm, oh Heiliger Geist, führe uns heim,  
+In Deinem Licht, da sind wir vereint.
+
+Chorus:  
+Kehre um, du Volk, kehre um,  
+Der Herr ruft dich in Licht und Ruhm.  
+Er will nicht, dass du stirbst, so sprich,  
+Wende dich zu Ihm, vergib dein Ich.  
+Kehre um, du Volk, kehre um,  
+Das Leben ist in Seiner Stund’ so klug.  
+Er will dich leben sehen, oh Mensch,  
+Komm, lass die Dunkelheit hinter dich.
+
+Outro:  
+Kehre um, kehre um, oh Volk des Herrn,  
+In Deiner Umarmung, da brennt unser Stern.  
+Die Dunkelheit flieht, das Licht wird wahr,  
+Komm, lass uns leben, so nah, so klar.`,
+        34: `"Der Gute Hirte"
+
+[Verse 1]  
+Herr, Dein Wort spricht zu mir,  
+Weh den Hirten, die sich selbst weiden.  
+Die Schafe sind zerstreut, ohne Dich hier,  
+Verirrte Seelen, die nach Führung leiden.  
+
+[Chorus]  
+Du bist unser Hirte,  
+Suchst das Verlorene,  
+In der Dunkelheit,  
+Führst Du uns sicher heim.  
+Du schenkst uns Frieden,  
+Und das Leben neu,  
+In Deinen Armen,  
+Sind wir frei und rein.  
+
+[Verse 2]  
+Die Schwachen warten, die Kranken heilen,  
+Du bist der, der uns verbindet,  
+Mit sanften Händen, die uns nicht entzweien,  
+In Deiner Liebe, die nie verschwindet.  
+
+[Chorus]  
+Du bist unser Hirte,  
+Suchst das Verlorene,  
+In der Dunkelheit,  
+Führst Du uns sicher heim.  
+Du schenkst uns Frieden,  
+Und das Leben neu,  
+In Deinen Armen,  
+Sind wir frei und rein.  
+
+[Bridge]  
+Wir hören Dein Wort, Herr,  
+Du richtest zwischen Schaf und Schaf,  
+Du schenkst uns die beste Weide,  
+Füllst unsere Seelen mit Kraft.  
+Wir vertrauen auf Dich,  
+In der Stille und im Sturm,  
+Du bist der gute Hirte,  
+Halt uns in Deinem Arm.  
+
+[Chorus]  
+Du bist unser Hirte,  
+Suchst das Verlorene,  
+In der Dunkelheit,  
+Führst Du uns sicher heim.  
+Du schenkst uns Frieden,  
+Und das Leben neu,  
+In Deinen Armen,  
+Sind wir frei und rein.  
+
+[Outro]  
+Ja, Du bist unser Gott,  
+Und wir sind Dein Volk,  
+In Deiner Gegenwart,  
+Sind wir stets geborgen und heil.  
+Amen.`,
+        35: `[Verse 1]  
+Höret, ihr Berge, die ihr steht,  
+Der Herr spricht, sein Wort verweht.  
+Seir, du Berg, dein Stolz bricht bald,  
+Denn Gottes Hand wird stark und bald.
+
+[Chorus]  
+Der Herr, er wird sich offenbaren,  
+In Wüsten, wo einst Freude war.  
+Sein Zorn, er wird die Feindschaft klären,  
+Ich weiß, dass er der Herr ist, ja!
+
+[Verse 2]  
+Die Städte müssen still verwehen,  
+Sein Wort wird Hartes auferstehen.  
+Ew'ge Feindschaft, die ihr tragt,  
+Gott selbst hat eure Zeit verklagt.
+
+[Chorus]  
+Der Herr, er wird sich offenbaren,  
+In Wüsten, wo einst Freude war.  
+Sein Zorn, er wird die Feindschaft klären,  
+Ich weiß, dass er der Herr ist, ja!
+
+[Bridge]  
+Du hast dich über uns erfreut,  
+Doch nun wird dein Hass nicht gedeihn.  
+Der Herr wird richten, was er spricht,  
+In Dunkelheit bringt er das Licht.
+
+[Chorus]  
+Der Herr, er wird sich offenbaren,  
+In Wüsten, wo einst Freude war.  
+Sein Zorn, er wird die Feindschaft klären,  
+Ich weiß, dass er der Herr ist, ja!
+
+[Outro]  
+Oh, Berge, höret seine Stimme,  
+Er wird uns führen, aus der Stille.  
+Der Herr, er ist mein Zeuge hier,  
+In ihm, in ihm, da ruht mein Ziel.`,
+        36: `[TITLE]  
+Heiliger Gott, du sprichst zu uns
+
+[Verse 1]  
+Du, Menschenkind, hör das Wort,  
+Zu den Bergen, zu den Höh’n,  
+Sprich zu ihnen, dass sie hör’n,  
+Was der Herr verheißt und steh’n.  
+Denn die Feinde rühmen sich,  
+Doch dein Reich, das bleibt in Licht,  
+Schmach und Spott, sie sollen geh’n,  
+Denn du wirst uns wieder seh’n.
+
+[Chorus]  
+Heiliger Gott, du sprichst zu uns,  
+Dein Eifer brennt wie Feuer,  
+Wir erheben unser Lob,  
+Du machst neu, was war teuer.  
+Du bringst Leben in das Land,  
+Hebst die Wunden, reichst die Hand,  
+Heiliger Gott, wir glauben fest,  
+In dir finden wir den Rest.
+
+[Verse 2]  
+Du hast uns aus den Heiden geholt,  
+Uns gereinigt, neu gemacht,  
+Ein neues Herz, das für dich schlägt,  
+In der Dunkelheit das Licht entfacht.  
+Die Wüsten blühen wieder auf,  
+Wie der Garten Eden, so schön,  
+Jede Stadt, die einst war leer,  
+Wird zum Ort, wo Menschen steh’n.
+
+[Chorus]  
+Heiliger Gott, du sprichst zu uns,  
+Dein Eifer brennt wie Feuer,  
+Wir erheben unser Lob,  
+Du machst neu, was war teuer.  
+Du bringst Leben in das Land,  
+Hebst die Wunden, reichst die Hand,  
+Heiliger Gott, wir glauben fest,  
+In dir finden wir den Rest.
+
+[Bridge]  
+Und wir werden nicht mehr schamrot sein,  
+Wenn dein Geist in uns wohnt,  
+Du schenkst uns Frieden, du machst uns rein,  
+In deiner Liebe, die uns lohnt.  
+Wir sind dein Volk, du unser Gott,  
+Du baust auf, was zerbrochen,  
+In dir allein, da gibt es Trost,  
+Dein Wort, das bleibt ungebrochen.
+
+[Chorus]  
+Heiliger Gott, du sprichst zu uns,  
+Dein Eifer brennt wie Feuer,  
+Wir erheben unser Lob,  
+Du machst neu, was war teuer.  
+Du bringst Leben in das Land,  
+Hebst die Wunden, reichst die Hand,  
+Heiliger Gott, wir glauben fest,  
+In dir finden wir den Rest.
+
+[Outro]  
+So sprichst du, Herr, mit mächt’ger Kraft,  
+Dein Name wird geheiligt,  
+In jedem Herz, das neu erschafft,  
+Wirst du gepriesen, ewig heilig.  
+Amen, so sei es, wir vertrauen,  
+Du bist der Gott, der stets erbaut.`,
+        37: `[TITLE]  
+*Auferstehung der Hoffnung*
+
+[Verse 1]  
+In der Stille spricht der Herr,  
+Zu mir, Sein Wort erfüllt die Luft,  
+„Du Menschenkind, sieh die Gebeine,  
+Verdorrt und verloren in der Gruft.  
+Doch ich werde Odem bringen,  
+Leben neu in euch entfalten.  
+Hört, ihr verdorrten Gebeine,  
+Seht, wie meine Stimme heilt.“
+
+[Chorus]  
+Halleluja, O Herr, Du bist mein Leben,  
+Bringst das Licht in die Dunkelheit.  
+Halleluja, Du Gott der Verheißung,  
+Weckst den Geist in mir, Machst mich bereit.  
+Du öffnest die Gräber, schenkst mir neues Leben,  
+Dein Reich wird kommen, Du bist hier,  
+Wir stehen auf, ein großes Heer,  
+Du bist der Herr, wir sind bei Dir.
+
+[Verse 2]  
+In der Ferne höre ich die Stimme,  
+„Weissage, du Menschenkind, zum Wind,  
+Kommt herbei, aus allen Himmelsrichtungen,  
+Blase die Lebensgeister, macht sie geschwind.  
+Denn ich hole mein Volk zurück,  
+Aus der Finsternis ins Licht,  
+Ich öffne die Türen, bringe die Hoffnung,  
+Mein Geist wird wohnen, ewiglich.“
+
+[Chorus]  
+Halleluja, O Herr, Du bist mein Leben,  
+Bringst das Licht in die Dunkelheit.  
+Halleluja, Du Gott der Verheißung,  
+Weckst den Geist in mir, Machst mich bereit.  
+Du öffnest die Gräber, schenkst mir neues Leben,  
+Dein Reich wird kommen, Du bist hier,  
+Wir stehen auf, ein großes Heer,  
+Du bist der Herr, wir sind bei Dir.
+
+[Bridge]  
+Ewig sei Dein Heiligtum,  
+In uns, oh Herr, bleibst Du.  
+Ein Bund des Friedens schenkst Du uns,  
+Wir wandeln in Deinem Licht,  
+Wir sind Dein Volk, Du unser Gott,  
+Ewig, ewig, Halleluja!
+
+[Chorus]  
+Halleluja, O Herr, Du bist mein Leben,  
+Bringst das Licht in die Dunkelheit.  
+Halleluja, Du Gott der Verheißung,  
+Weckst den Geist in mir, Machst mich bereit.  
+Du öffnest die Gräber, schenkst mir neues Leben,  
+Dein Reich wird kommen, Du bist hier,  
+Wir stehen auf, ein großes Heer,  
+Du bist der Herr, wir sind bei Dir.`,
+        38: `[Verse 1]  
+Oh, Herr, Dein Wort spricht zu mir,  
+Gog wird kommen, das Ende naht hier.  
+In Mesech und Thubal, der Stolz, der sich regt,  
+Doch Du, o Herr, bist der, der bewegt.  
+
+[Chorus]  
+Du bist der Herrscher, der über uns wacht,  
+In der Dunkelheit bringst Du Licht und die Macht.  
+Dein Zorn wird erweckt, die Berge erzittern,  
+Du bist der Gott, der die Völker beschützten.  
+
+[Verse 2]  
+Die Heiden hören, was Du sagst,  
+Von Deinem Zorn, der über uns lag.  
+Die Wolken ziehen, die Stürme erheben,  
+Doch wir, Dein Volk, werden ewig leben.  
+
+[Chorus]  
+Du bist der Herrscher, der über uns wacht,  
+In der Dunkelheit bringst Du Licht und die Macht.  
+Dein Zorn wird erweckt, die Berge erzittern,  
+Du bist der Gott, der die Völker beschützten.  
+
+[Bridge]  
+Mit Feuer und Schwefel, das Urteil spricht,  
+Doch in Deiner Gnade, da seh'n wir das Licht.  
+O Herr, Du bist heilig, bekannt unter den Völkern,  
+Die Welt wird erkennen, dass Du der Herr bist, unser Helfer.  
+
+[Chorus]  
+Du bist der Herrscher, der über uns wacht,  
+In der Dunkelheit bringst Du Licht und die Macht.  
+Dein Zorn wird erweckt, die Berge erzittern,  
+Du bist der Gott, der die Völker beschützten.  
+
+[Outro]  
+So kommen wir, beten an,  
+Daß Du, o Herr, uns führen kannst.  
+Dein Wort ist die Wahrheit, die nie vergeht,  
+In Dir, o Gott, wird die Hoffnung bestehen.`,
+        39: `[TITLE] Herrlichkeit in der Dunkelheit
+
+[VERSES]  
+Du, Jehova, sprichst in der Nacht,  
+Gegen Gog, der die Dunkelheit entfacht.  
+Mit Macht aus dem Norden, so sollst du kommen,  
+Auf den Bergen Israels, wo die Gläubigen wohnen.  
+
+Die Pfeile zerbrochen, der Bogen zerlegt,  
+Die Waffen der Krieger, die du weglegt.  
+Du zeigst deine Herrlichkeit, das Gericht ist nah,  
+Die Vögel und Tiere, sie hören dein Wort klar.  
+
+[Chorus]  
+Halleluja, wir erheben deinen Namen,  
+In der Stille, in der Schlacht, wirst du uns nicht schamen.  
+Du bist der Heilige, der Gott von Israel,  
+Deine Herrschaft wird sichtbar, über die ganze Welt.  
+
+[Verse 2]  
+Sieben Jahre lang, das Feuer wird brennen,  
+Die Schmach wird genommen, wir dürfen uns kennen.  
+Du bringst uns zurück, aus der Dunkelheit Licht,  
+Du führst uns zum Leben, du verlässt uns nicht.  
+
+Die Völker erfahren, dein Urteil ist klar,  
+Du bist unser Gott, du bist uns nah.  
+In deinem Namen werden wir stehen,  
+Die Herrlichkeit wird in uns auferstehen.  
+
+[Chorus]  
+Halleluja, wir erheben deinen Namen,  
+In der Stille, in der Schlacht, wirst du uns nicht schamen.  
+Du bist der Heilige, der Gott von Israel,  
+Deine Herrschaft wird sichtbar, über die ganze Welt.  
+
+[Bridge]  
+O Herr, wir warten, auf deine Zeit,  
+Die Hoffnung erneuert, in Dunkelheit.  
+Du schenkst uns Frieden, du hebst uns empor,  
+In deinem Licht, da leben wir vor.  
+
+[Chorus]  
+Halleluja, wir erheben deinen Namen,  
+In der Stille, in der Schlacht, wirst du uns nicht schamen.  
+Du bist der Heilige, der Gott von Israel,  
+Deine Herrschaft wird sichtbar, über die ganze Welt.  
+
+[Outro]  
+Denn du bist der Gott, der uns erlöst,  
+In deinem Angesicht, da sind wir getröst'.  
+Halleluja, dein Reich wird bestehen,  
+Der Herr, der Heilige, wird nie von uns gehen.`,
+        40: `[TITLE]  
+"Der Weg zum Heiligtum"
+
+[Verse 1]  
+Im Jahr der Gefangenschaft,  
+Kam Deine Hand zu mir, oh Herr,  
+Du führtest mich ins Land, das Du verheißen hast,  
+Auf einen Berg, hoch und hehr.
+
+[Verse 2]  
+Wie eine Stadt, so schön und klar,  
+Ein Mann stand dort, sein Blick wie Erz,  
+Mit Schnur und Rute maß er sorgsam,  
+Die Herrlichkeit, die Du uns schenkst.
+
+[Chorus]  
+Oh, führe uns zum Heiligtum,  
+Zeige uns die Stufen, die zu Dir führen,  
+In Deinem Haus, da ist der Raum,  
+Wo wir in Anbetung Dir begegnen.  
+Im Licht Deiner Herrlichkeit,  
+Lass uns stehen, voller Ehrfurcht,  
+Du bist heilig, Du bist heilig,  
+In Deinem Namen kommen wir.
+
+[Verse 3]  
+Die Mauer, stark und voller Kraft,  
+Sie schützt das heilige Land,  
+Die Tore weit, die Fenster klar,  
+Deine Liebe hält uns in Deiner Hand.
+
+[Verse 4]  
+Die Halle strahlt im Morgenlicht,  
+Die Stufen führen uns zu Dir,  
+In diesen Räumen spüren wir,  
+Wie nahe Du, o Herr, zu uns bist.
+
+[Chorus]  
+Oh, führe uns zum Heiligtum,  
+Zeige uns die Stufen, die zu Dir führen,  
+In Deinem Haus, da ist der Raum,  
+Wo wir in Anbetung Dir begegnen.  
+Im Licht Deiner Herrlichkeit,  
+Lass uns stehen, voller Ehrfurcht,  
+Du bist heilig, Du bist heilig,  
+In Deinem Namen kommen wir.
+
+[Bridge]  
+Die Priester stehen bereit,  
+Im Dienst für Dich, o Gott,  
+Die Opfer werden gebracht,  
+Für die Reinheit und das Licht.  
+Zadoks Kinder, fest in Dir,  
+Vor Dir wollen wir stehen,  
+In der Stille hören wir,  
+Dein Ruf, der uns erhebt.
+
+[Chorus]  
+Oh, führe uns zum Heiligtum,  
+Zeige uns die Stufen, die zu Dir führen,  
+In Deinem Haus, da ist der Raum,  
+Wo wir in Anbetung Dir begegnen.  
+Im Licht Deiner Herrlichkeit,  
+Lass uns stehen, voller Ehrfurcht,  
+Du bist heilig, Du bist heilig,  
+In Deinem Namen kommen wir.
+
+[Outro]  
+Im Heiligtum, da ist der Frieden,  
+In Deiner Nähe, Herr, sind wir vereint.  
+Du bist unser Ziel, unser Leben,  
+In Dir, o Gott, sind wir befreit.`,
+        41: `[TITLE]  
+Heiliges Haus
+
+[VERS 1]  
+Du führst mich, Herr, in Dein heiliges Haus,  
+Die Wände stark, die Pfeiler fest und treu.  
+Sechs Ellen breit, Deine Liebe ist so groß,  
+In Deinem Tempel fühle ich mich neu.  
+
+[PRE-CHORUS]  
+Die Tür, so weit, öffnet sich für mich,  
+In Deinem Licht, da finde ich mein Glück.  
+Allerheiligstes, wo Du wohnst, oh Gott,  
+Hier spür' ich Frieden, hier bleib ich in der Nacht.
+
+[Chorus]  
+Heilig, heilig, heilig, Herr der Herrlichkeit,  
+In Deinem Haus sind wir geborgen,  
+Ewigkeit, die nie vergeht,  
+Dein Wort, es lebt, erfüllt die Morgen.  
+
+[VERS 2]  
+Die Gänge weit, die Gemächer voller Licht,  
+Dreißig Räume, jeder voller Gnade,  
+Hier wird mein Herz, es schlägt im gleichen Takt,  
+Du bist mein Halt, mein Fels, mein starker Vater.  
+
+[PRE-CHORUS]  
+Die Wände hoch, umgeben von Cherubim,  
+Dein Angesicht, es strahlt in unsern Herzen.  
+Die Palmen blühen, zeigen Deine Macht,  
+In Deiner Nähe, Herr, erblühen wir zur Nacht.
+
+[Chorus]  
+Heilig, heilig, heilig, Herr der Herrlichkeit,  
+In Deinem Haus sind wir geborgen,  
+Ewigkeit, die nie vergeht,  
+Dein Wort, es lebt, erfüllt die Morgen.  
+
+[Bridge]  
+Von Grund auf, baust Du in uns,  
+Ein Heiligtum, stark und fest,  
+Wir heben unsere Stimmen,  
+In Anbetung, Herr, wir sind gesegnet.  
+Komm, Heiliger Geist, erfülle diesen Ort,  
+Deine Gegenwart, unser größter Hort.  
+
+[Chorus]  
+Heilig, heilig, heilig, Herr der Herrlichkeit,  
+In Deinem Haus sind wir geborgen,  
+Ewigkeit, die nie vergeht,  
+Dein Wort, es lebt, erfüllt die Morgen.  
+
+[Outro]  
+Heiliges Haus, wir stehen hier vereint,  
+Deine Liebe überströmt, unser Herz vereint.  
+Heilig, heilig, heilig, Herr, Du bist hier,  
+In Deinem Tempel, da spüren wir Dir.`,
+        42: `[TITLE] Heilige Kammern
+
+[VERS 1]  
+Du führst mich, Herr, in Deinen Raum,  
+Vor Deinem Heiligtum, so rein und klar,  
+Die Kammern heilig, voll Ehrfurcht und Traum,  
+Hier naht der Priester, oh, wie wunderbar.  
+
+[Chorus]  
+Heilige Stätte, wo Dein Geist wohnt,  
+Wir bringen Opfer, unsere Herzen sind fromm.  
+Lass uns beten, in der Stille, die thront,  
+In den heiligen Kammern, bei Dir, oh, Sohn.  
+
+[VERS 2]  
+Die Mauer umgibt, was Du berührst,  
+Fünfzig Ellen, die Grenze so klar,  
+Hier wo die Liebe des Vaters regiert,  
+Und der Glanz Deiner Herrlichkeit offenbar.  
+
+[Chorus]  
+Heilige Stätte, wo Dein Geist wohnt,  
+Wir bringen Opfer, unsere Herzen sind fromm.  
+Lass uns beten, in der Stille, die thront,  
+In den heiligen Kammern, bei Dir, oh, Sohn.  
+
+[Bridge]  
+Die Kleider legen wir nieder,  
+Die Heiligkeit ruft uns zu Dir,  
+Lass uns stehen, in Deiner Nähe,  
+Für immer verbunden in Dir, oh Herr.  
+
+[Chorus]  
+Heilige Stätte, wo Dein Geist wohnt,  
+Wir bringen Opfer, unsere Herzen sind fromm.  
+Lass uns beten, in der Stille, die thront,  
+In den heiligen Kammern, bei Dir, oh, Sohn.  
+
+[Outro]  
+Fünfhundert Ruten, die Mauer steht fest,  
+Heiliges und Unheiliges, so klar getrennt,  
+In Deinem Licht sind wir jetzt gesegnet,  
+In den heiligen Kammern, wo Deine Liebe brennt.`,
+        43: `[TITLE]  
+Herrlichkeit des Morgens  
+
+[LYRICS]  
+
+(Strophe 1)  
+Du führst mich, Herr, zum Tor des Lebens,  
+Von Morgen strahlt Dein Licht so klar,  
+Die Herrlichkeit, sie kommt von oben,  
+Wie Wasser, das die Erde labt, oh, ja.  
+
+(Refrain)  
+Ehre sei Dir, Herr, in Deinem Heiligtum,  
+Du wohnst in uns, wir erheben Deinen Namen,  
+Die Stadt erhebt sich, rein vor Deinem Thron,  
+In Deinem Licht, da finden wir unser Sein.  
+
+(Strophe 2)  
+Ich fiel nieder, voller Ehrfurcht,  
+Dein Wort, es spricht durch die Stille,  
+Der Ort, wo Du bei uns verweilst,  
+In uns, Herr, erfüllst Du Deine Wille.  
+
+(Refrain)  
+Ehre sei Dir, Herr, in Deinem Heiligtum,  
+Du wohnst in uns, wir erheben Deinen Namen,  
+Die Stadt erhebt sich, rein vor Deinem Thron,  
+In Deinem Licht, da finden wir unser Sein.  
+
+(Bridge)  
+Wir bringen Dir, oh Herr, ein Opfer,  
+Ein reines Herz, ein Leben voll Hingabe.  
+Dein Name, heilig, wird nicht verunreinigt,  
+Wir warten auf die neue Morgenröte, ja!  
+
+(Refrain)  
+Ehre sei Dir, Herr, in Deinem Heiligtum,  
+Du wohnst in uns, wir erheben Deinen Namen,  
+Die Stadt erhebt sich, rein vor Deinem Thron,  
+In Deinem Licht, da finden wir unser Sein.  
+
+(Outro)  
+Herrlichkeit des Morgens,  
+Du bist da, Du bist hier,  
+In Deiner Nähe, Herr,  
+Finden wir unser Ziel.`,
+        44: `[TITLE]  
+Heilige Pforten
+
+[Verse 1]  
+Führe mich, Herr, zu Deinem Heiligtum,  
+Vor dem Morgen, wo die Sonne bricht.  
+Das Tor bleibt verschlossen, Dein Wort ist wahr,  
+Du bist der Gott, auf den ich seh’ und warte.
+
+[Chorus]  
+Heilige Pforten, wir treten ein,  
+In Deine Gegenwart, oh Herr, so rein.  
+Deine Herrlichkeit erfüllt den Raum,  
+Wir fallen nieder, in Deinem Traum.
+
+[Verse 2]  
+Gib mir oh Herr, ein reines Herz,  
+Zeig mir die Wege, die führen zum Licht.  
+Die Sitten Deiner Liebe, die Wahrheit spricht,  
+Lehre mich, Herr, in Deinem Haus, ich bin bereit.
+
+[Chorus]  
+Heilige Pforten, wir treten ein,  
+In Deine Gegenwart, oh Herr, so rein.  
+Deine Herrlichkeit erfüllt den Raum,  
+Wir fallen nieder, in Deinem Traum.
+
+[Bridge]  
+Öffne die Augen, lass uns sehen,  
+Was Du uns zeigst, in Deinem Gehen.  
+Leite uns, Herr, durch Dein Wort,  
+Wir bringen Dir Ehre an diesem Ort.
+
+[Verse 3]  
+Die Priester stehen, bereit zu dienen,  
+Im heiligen Raum, wo die Engel fliegen.  
+Wir heben die Hände, beten und singen,  
+In Deiner Nähe, Herr, ist Leben, das springt.
+
+[Chorus]  
+Heilige Pforten, wir treten ein,  
+In Deine Gegenwart, oh Herr, so rein.  
+Deine Herrlichkeit erfüllt den Raum,  
+Wir fallen nieder, in Deinem Traum.
+
+[Outro]  
+Heilige Pforten, wir kommen zurück,  
+Mit Herzen, die brennen, im Glaubens-Glück.  
+Du bist der HERR, der uns zusammenführt,  
+In Deiner Liebe, wo die Seele berührt.`,
+        45: `[TITLE] Heiliges Land, heiliges Herz
+
+[LYRICS]
+
+[Verse 1]  
+Du hast uns ein Land gegeben,  
+Ein Erbe, das heilig ist,  
+Dort, wo Dein Heiligtum steht,  
+Inmitten von Licht und Frieden.  
+Fünfzig Ellen umrahmen,  
+Das heilige Herz schlägt hier,  
+Priester, die vor Dich treten,  
+In Ehrfurcht und in Dir.
+
+[Chorus]  
+Heilig, heilig, Herr, wir beten,  
+Dein Volk, es kommt zu Dir,  
+Mit Opfer und mit Freude,  
+In Dir, o Herr, sind wir hier.  
+Heilig, heilig, unser Gott,  
+Dein Wort führt uns auf den Weg,  
+Wir bringen Dir unser Herz,  
+In der Stille, in dem Gebet.
+
+[Verse 2]  
+Fürsten, hört die Stimme,  
+Lasst ab von Frevel und Gewalt,  
+Tut, was recht und gut ist,  
+Seid Zeugen Deiner Macht.  
+Das Hebopfer, das wir bringen,  
+Ein Zeichen unserer Treue,  
+In Einigkeit und Liebe,  
+Gehen wir den heiligen Weg.
+
+[Chorus]  
+Heilig, heilig, Herr, wir beten,  
+Dein Volk, es kommt zu Dir,  
+Mit Opfer und mit Freude,  
+In Dir, o Herr, sind wir hier.  
+Heilig, heilig, unser Gott,  
+Dein Wort führt uns auf den Weg,  
+Wir bringen Dir unser Herz,  
+In der Stille, in dem Gebet.
+
+[Bridge]  
+Am ersten Tag, wir kommen,  
+Ein Farren ohne Fehl,  
+Das Passah feiern wir,  
+Mit Dank und Lob im Herz.  
+Die Festtage erstrahlen,  
+In Deinem Licht, o Herr,  
+Wir bringen Dir die Ehre,  
+Für alle Zeit, für immer mehr.
+
+[Chorus]  
+Heilig, heilig, Herr, wir beten,  
+Dein Volk, es kommt zu Dir,  
+Mit Opfer und mit Freude,  
+In Dir, o Herr, sind wir hier.  
+Heilig, heilig, unser Gott,  
+Dein Wort führt uns auf den Weg,  
+Wir bringen Dir unser Herz,  
+In der Stille, in dem Gebet.
+
+(Outro)  
+Heiliges Land, heiliges Herz,  
+Wir stehen hier in Deiner Nähe,  
+Für immer zusammen,  
+In Deinem Licht, in Deiner Treue.`,
+        46: `[TITLE]  
+Tor der Anbetung
+
+[Verse 1]  
+So spricht der Herr, das Tor sei offen,  
+Am Sabbat und Neumond, zu dir kommen wir.  
+Mit Lämmern und Widdern, opfern wir Freude,  
+In deinem Licht, Herr, sind wir hier.
+
+[Chorus]  
+Öffne die Tore, lass uns einziehen,  
+Vor dir anbeten, dir Ehre geben.  
+In deiner Gegenwart, da finden wir Frieden,  
+Du bist der Weg, den wir lieben.
+
+[Verse 2]  
+Der Fürst tritt vor, am Tor stehenbleiben,  
+Sein Herz voll Dank, in Demut er kommt.  
+Die Priester opfern, das Feuer entfacht,  
+Heilig ist unser Gott, der nie uns verlässt.
+
+[Chorus]  
+Öffne die Tore, lass uns einziehen,  
+Vor dir anbeten, dir Ehre geben.  
+In deiner Gegenwart, da finden wir Frieden,  
+Du bist der Weg, den wir lieben.
+
+[Bridge]  
+Wir kommen mit Herzen, die dir huldigen,  
+Mit jedem Schritt, spüren wir dein Licht.  
+In den Ecken deines Heiligtums,  
+Wirst du uns führen, bis in die Nacht.
+
+[Chorus]  
+Öffne die Tore, lass uns einziehen,  
+Vor dir anbeten, dir Ehre geben.  
+In deiner Gegenwart, da finden wir Frieden,  
+Du bist der Weg, den wir lieben.
+
+[Outro]  
+So beten wir, Herr, in deinem Namen,  
+Für immer und ewig, du bleibst bei uns.  
+Die Türen des Himmels, sie öffnen sich weit,  
+In deiner Liebe, finden wir die Zeit.`,
+        47: `[Verse 1]  
+Führe mich, Herr, zu Deinem Heiligtum,  
+Wo Ströme fließen, voller Leben,  
+Unter der Schwelle, da sprudelt der Fluss,  
+Deine Gnade, sie wird uns erheben.  
+
+[Chorus]  
+Wasser des Lebens, strömend so weit,  
+Heilung und Hoffnung, in Ewigkeit.  
+Wo dieser Strom fließt, dort blüht das Land,  
+Du bist der Ursprung, Du hältst uns in Deiner Hand.  
+
+[Verse 2]  
+Tausend Ellen, ich geh' durch das Nass,  
+An Knöcheln, an Knien, ich fühl' Deinen Fluss,  
+Er trägt mich hoch, immer weiter hinaus,  
+In Deiner Gegenwart, da find' ich mein Haus.  
+
+[Chorus]  
+Wasser des Lebens, strömend so weit,  
+Heilung und Hoffnung, in Ewigkeit.  
+Wo dieser Strom fließt, dort blüht das Land,  
+Du bist der Ursprung, Du hältst uns in Deiner Hand.  
+
+[Bridge]  
+Bäume des Lebens, an Ufern so grün,  
+Ihre Blätter zur Heilung, sie werden blüh'n.  
+Fischer im Netz, die Fülle ist groß,  
+In Deinem Namen, da leben wir los.  
+
+[Chorus]  
+Wasser des Lebens, strömend so weit,  
+Heilung und Hoffnung, in Ewigkeit.  
+Wo dieser Strom fließt, dort blüht das Land,  
+Du bist der Ursprung, Du hältst uns in Deiner Hand.  
+
+[Outro]  
+Führe uns weiter, durch Deine Macht,  
+In das verheißene Land, in die neue Pracht.  
+Wasser des Lebens, unermüdlich und klar,  
+Du bist die Quelle, für immer, für immer, oh, Herr.`,
+        48: `[TITLE]  
+"Hier ist der HERR"
+
+[Verse 1]  
+In den Stämmen, die Du teilst,  
+Von Morgen bis zum Abend,  
+Jeder Teil, ein heil'ger Ort,  
+Wo Dein Licht uns neu erleuchtet.  
+Dan, Asser, Naphthali,  
+Manasse, Ephraim, so treu,  
+Ruben und Juda, Hand in Hand,  
+In Deinem Namen, Gott, vereint.
+
+[Chorus]  
+Hier ist der HERR, in unserer Mitte,  
+Heilig das Land, das Du uns gegeben,  
+Dein Heiligtum, unsere Zuflucht,  
+Wir loben Dich, wir erheben!  
+Hier ist der HERR, der für uns kämpft,  
+In Deinem Licht, da sind wir eins,  
+Wir preisen Dich, Herr,  
+Im Glauben stark, in Deinem Sein.
+
+[Verse 2]  
+Die Priester stehen, treu und klar,  
+Zadoks Kinder, in Deinem Gehorsam,  
+Heilig ist der Teil, den Du uns schenkst,  
+Ein Ort des Lebens, wo der Geist nicht schwankt.  
+Lebendig fließt die Strömung,  
+Die Stadt, ein Licht in Dunkelheit,  
+Gott, Du bist unser Erbe,  
+In Dir finden wir die Freiheit.
+
+[Chorus]  
+Hier ist der HERR, in unserer Mitte,  
+Heilig das Land, das Du uns gegeben,  
+Dein Heiligtum, unsere Zuflucht,  
+Wir loben Dich, wir erheben!  
+Hier ist der HERR, der für uns kämpft,  
+In Deinem Licht, da sind wir eins,  
+Wir preisen Dich, Herr,  
+Im Glauben stark, in Deinem Sein.
+
+[Bridge]  
+Die Tore öffnen sich weit,  
+Für alle, die suchen, die kommen,  
+Ruben, Juda, Levi, Joseph,  
+Wir treten ein, in Deine Gnade.  
+Simeon, Isaschar, Sebulon,  
+Gad, Asser, Naphthali,  
+Die Stadt, die Du gebaut hast,  
+Hier ist unser Herz, hier sind wir frei.
+
+[Chorus]  
+Hier ist der HERR, in unserer Mitte,  
+Heilig das Land, das Du uns gegeben,  
+Dein Heiligtum, unsere Zuflucht,  
+Wir loben Dich, wir erheben!  
+Hier ist der HERR, der für uns kämpft,  
+In Deinem Licht, da sind wir eins,  
+Wir preisen Dich, Herr,  
+Im Glauben stark, in Deinem Sein.
+
+[Outro]  
+Hier ist der HERR, unser Leben,  
+Hier ist der HERR, wir kommen heim,  
+In Deinem Licht, da sind wir eins,  
+Hier ist der HERR, für alle Zeit.`,
+    },
     "27": {
         1: `[Verse 1]  
 Im Land der Dunkelheit, gefangen und allein,  
@@ -33173,9 +42905,147 @@ In der Dunkelheit, dein Licht strahlt hell,
 Wir preisen deinen Namen, für immer, oh so schnell.  
 Die Welt mag uns testen, doch wir sind frei,  
 In dir, oh Herr, sind wir ewig dabei.`,
-        2: ``,
-        3: ``,
-        4: ``,
+        2: `[TITLE]  
+Ewiger Gott, der verborgene Dinge offenbarst  
+
+[Verse 1]  
+Im Traum, oh König, schrecklich und groß,  
+Dein Herz war erfüllt von Angst und von Trost.  
+Die Weisen der Welt, sie konnten nicht steh’n,  
+Doch Du, oh Herr, wirst Deine Herrschaft dreh’n.
+
+[Chorus]  
+Gelobt sei der Name, der ewig besteht,  
+Der Gott des Himmels, der alle Macht hebt.  
+Weisheit und Stärke, in Dir sind sie vereint,  
+Du bringst Licht in die Dunkelheit, die uns vereint.
+
+[Verse 2]  
+Du offenbarst das Verborgene, so klar,  
+Ein Königreich, das kommt, das ist offenbar.  
+Wie Eisen und Gold, so stark und so schwach,  
+Doch Dein Reich, oh Herr, baut niemals ab.
+
+[Chorus]  
+Gelobt sei der Name, der ewig besteht,  
+Der Gott des Himmels, der alle Macht hebt.  
+Weisheit und Stärke, in Dir sind sie vereint,  
+Du bringst Licht in die Dunkelheit, die uns vereint.
+
+[Bridge]  
+Du bist der Stein, der die Welt zerschlägt,  
+In Dir wird alles neu, was je bewegt.  
+Wir danken Dir, Gott, für Deine Gnade,  
+Ein Königreich, das bleibt, in ewiger Freude!
+
+[Chorus]  
+Gelobt sei der Name, der ewig besteht,  
+Der Gott des Himmels, der alle Macht hebt.  
+Weisheit und Stärke, in Dir sind sie vereint,  
+Du bringst Licht in die Dunkelheit, die uns vereint.
+
+[Outro]  
+Oh, ewiger Gott, der die Zukunft kennt,  
+Dein Reich wird bestehen, bis der letzte Tag brennt.  
+Wir beten und loben, in Ehrfurcht und Licht,  
+Du bist unser König, wir folgen Dir dicht.`,
+        3: `[TITLE]  
+Gott der Rettung
+
+[Verse 1]  
+Im Tal von Dura, erhob sich ein Bild,  
+Der König befahl, dass man es anbetet,  
+Doch drei Männer standen, voller Mut und Willen,  
+Sie folgten dem Ruf, den der Herr ihnen gab.
+
+[Chorus]  
+Du bist der Gott, der uns errettet,  
+Im Feuer, da bist Du bei uns,  
+Kein gold’nes Bild kann uns binden,  
+Wir beten nur Dich an, o Herr, unser Licht!
+
+[Verse 2]  
+Die Posaunen erklangen, der Ruf hallt wider,  
+Die Völker fielen nieder, doch wir blieben stehen,  
+Sadrach, Mesach und Abed-Nego,  
+Die treu Dich ehren, im Herzen das Feuer.
+
+[Chorus]  
+Du bist der Gott, der uns errettet,  
+Im Feuer, da bist Du bei uns,  
+Kein gold’nes Bild kann uns binden,  
+Wir beten nur Dich an, o Herr, unser Licht!
+
+[Bridge]  
+Sie warfen uns ins Feuer, doch wir fürchten nicht,  
+Denn Du, o Gott, bist mit uns, in dieser Nacht,  
+Der König sah das Wunder, vier Männer im Glühen,  
+Du schickst Deine Engel, die uns nie verlassen.
+
+[Chorus]  
+Du bist der Gott, der uns errettet,  
+Im Feuer, da bist Du bei uns,  
+Kein gold’nes Bild kann uns binden,  
+Wir beten nur Dich an, o Herr, unser Licht!
+
+[Outro]  
+Gelobt sei der Gott, der uns befreit,  
+Kein anderer kann uns so retten,  
+Wir stehen in Deinem Licht,  
+Für immer beten wir nur Dich an.`,
+        4: `[TITLE] Der Höchste regiert
+
+[Verse 1]  
+In der Dunkelheit, da rief ein Traum,  
+Ein Baum so hoch, der schien wie ein Raum.  
+Seine Äste breiteten sich weit aus,  
+Schatten spendend, Leben in jedem Strauß.  
+Doch eine Stimme, stark und klar,  
+Haut den Baum um, das ist, was ich sah.  
+Der Höchste spricht, sein Wort ist Macht,  
+Sein Reich bleibt ewig, er hat uns bewacht.
+
+[Chorus]  
+Lob sei dir, o Höchster, König der Zeit,  
+Du gibst den Menschen Macht und auch die Geleit.  
+Dein Wille geschieht, deine Wege sind recht,  
+Du demütigst den Stolzen, und bleibst dabei echt.
+
+[Verse 2]  
+Nebukadnezar, voller Ruhm und Pracht,  
+Sah seine Herrschaft, doch bald kam die Nacht.  
+Er sprach mit Stolz, das ist mein Werk,  
+Doch das Wort vom Himmel, es brach sein Herz.  
+Die Tiere um ihn, das Gras sein Mahl,  
+Bis er erkennt, die Wahrheit ist die Wahl.  
+Der Höchste regiert, in der Höhe und hier,  
+Sein Reich, unveränderlich, ewig bei dir.
+
+[Chorus]  
+Lob sei dir, o Höchster, König der Zeit,  
+Du gibst den Menschen Macht und auch die Geleit.  
+Dein Wille geschieht, deine Wege sind recht,  
+Du demütigst den Stolzen, und bleibst dabei echt.
+
+[Bridge]  
+Ich hebe meine Augen, zum Himmel hinauf,  
+In deiner Herrlichkeit, da finde ich den Lauf.  
+Du gibst mir die Einsicht, du führst mich zurück,  
+Zu meiner Ehre, zu deinem Licht, mein Glück.  
+Ewig bleibe ich in deinem Lob,  
+Der Höchste regiert, davor neig' ich mein Haupt.
+
+[Chorus]  
+Lob sei dir, o Höchster, König der Zeit,  
+Du gibst den Menschen Macht und auch die Geleit.  
+Dein Wille geschieht, deine Wege sind recht,  
+Du demütigst den Stolzen, und bleibst dabei echt.
+
+[Outro]  
+O Höchster, wir preisen, deine Wege sind klar,  
+Du bist der König, der immer war.  
+In deinem Namen, Herr, erheben wir die Stimm',  
+In Ewigkeit, o Herr, dir gebührt unser Hymn.`,
         5: `[Verse 1]  
 Im Saal des Königs, festlich und voll,  
 Goldene Gefäße, der Hochmut rollt.  
@@ -33529,7 +43399,6 @@ Am Ende der Tage wirst du dein Erbteil finden.
 Aufstehen, aufstehen, zur Ewigkeit,  
 In deinem Glanz, Herr, sind wir bereit.`,
     },
-
     "28": {
         1: `1. Vers  
 Wir hören Deinen Ruf, o Herr,  
@@ -33706,7 +43575,58 @@ Komm, Herr, und führe uns heim,
 Lass uns leben, lass uns sein.  
 In deinem Namen, in deiner Kraft,  
 Erwecke uns, dass neues Leben schafft.`,
-        5: ``,
+        5: `[TITLE]  
+Kehret Um zu Deinem Angesicht
+
+[Verse 1]  
+So hört, ihr Priester, hört die Stimme,  
+Das Haus Israel, ihr seid in Not.  
+Ein Strick und Netz, das uns umschlingt,  
+Die Strafe naht, der Zorn, der droht.  
+Ephraim, unrein, von Herzen weit,  
+Kehrt euch zurück, oh, erkennt die Zeit.
+
+[Chorus]  
+Wir rufen zu Dir, Herr, in unserer Pein,  
+Kehret um, kehre um, lass uns nicht allein.  
+Wir suchen Dein Angesicht,  
+In Dunkelheit, bring Licht.
+
+[Verse 2]  
+Eure Hoffart schreit, die Sünde zeugt,  
+Die Herzen fern, der Geist verweht.  
+Mit Schafen, Rindern, kommt ihr herbei,  
+Doch ohne Dich, was bleibt dabei?  
+Die Wunden tief, die Krankheit groß,  
+Ephraim, Juda, wir bitten um Trost.
+
+[Chorus]  
+Wir rufen zu Dir, Herr, in unserer Pein,  
+Kehret um, kehre um, lass uns nicht allein.  
+Wir suchen Dein Angesicht,  
+In Dunkelheit, bring Licht.
+
+[Bridge]  
+Wie der Löwe, der brüllt,  
+So rufst Du uns zurück.  
+In der Wüste, in der Nacht,  
+Führen uns Deine Liebe und Glück.  
+Wir erkennen unsere Schuld,  
+Wenn's uns übel geht,  
+Dann suchen wir Dich, Herr,  
+Und bitten um Dein Wort.
+
+[Chorus]  
+Wir rufen zu Dir, Herr, in unserer Pein,  
+Kehret um, kehre um, lass uns nicht allein.  
+Wir suchen Dein Angesicht,  
+In Dunkelheit, bring Licht.
+
+[Outro]  
+Kehret um zu Deinem Angesicht,  
+Euer Ruf ergeht, Herr, zu Dir.  
+In Demut kommen wir,  
+Finde uns, wir suchen Dich hier.`,
         6: `Strophe 1:  
 Kommt, wir wollen wieder zum HERRN,  
 Er, der uns zerriss, wird uns heilen,  
@@ -34190,7 +44110,153 @@ In Dir finden wir Frieden, in Dir brennt unser Stern.
 Amen, Amen, wir kommen zu Dir,  
 Kehre zurück, oh Herr, wir suchen nach Dir.`,
     },
+    "29": {
+        1: `[Verse 1]  
+Höret, ihr Ältesten, hört den Ruf,  
+Von Gott, der spricht durch alle Zeit.  
+Seht, das Land liegt in Trauer und Not,  
+Die Freude ist uns genommen, weit und breit.  
 
+[Chorus]  
+Komm, lasst uns weinen, lasst uns klagen,  
+Um unser Land, um unser Herz.  
+Rufet zum HERRN, lasst uns zusammen tragen,  
+Die Last der Sünde, den Schmerz.  
+
+[Verse 2]  
+Die Raupen fressen, die Heuschrecken zieh’n,  
+Zerstörung breitet sich aus über Feld und Flur.  
+Der Weinstock weint, die Bäume vergeh’n,  
+Wo einst Freude war, ist jetzt nur die Flur.  
+
+[Chorus]  
+Komm, lasst uns weinen, lasst uns klagen,  
+Um unser Land, um unser Herz.  
+Rufet zum HERRN, lasst uns zusammen tragen,  
+Die Last der Sünde, den Schmerz.  
+
+[Bridge]  
+Heiliget ein Fasten, ruft die Gemeinde,  
+Die Priester klagen, im Sack und im Staub.  
+Der Tag des HERRN, er naht mit der Schmerzenswende,  
+Lasst uns zurückkehren, mit Glauben, mit Glaub'.  
+
+[Verse 3]  
+O HERR, wir rufen, hör unser Schreien,  
+Die Flüsse sind trocken, das Land ist so leer.  
+Lass deinen Geist kommen, lass uns nicht weinen,  
+Sende Erneuerung, wir bitten dich sehr.  
+
+[Chorus]  
+Komm, lasst uns weinen, lasst uns klagen,  
+Um unser Land, um unser Herz.  
+Rufet zum HERRN, lasst uns zusammen tragen,  
+Die Last der Sünde, den Schmerz.  
+
+[Outro]  
+O HERR, wir kommen, in Demut und Treue,  
+Ruf uns zurück, zu dir, unser Licht.  
+Lass uns erwachen, lass uns nicht scheuen,  
+In dir finden wir, das wahre Gesicht.`,
+        2: `[Verse 1]  
+Blaset mit der Posaune, ruft aus voller Brust,  
+Der Tag des HERRN naht, in seiner heiligen Lust.  
+Ein finstrer Tag, ein dunkler Schein,  
+Das Volk wird erbeben, wie ein Sturm so rein.  
+
+[Chorus]  
+Fürchtet euch nicht, das Land sei fröhlich,  
+Der HERR ist bei uns, sein Wort ist ewig.  
+Bekehrt euch zu ihm, von Herzen rein,  
+Sein Geist wird über uns, wie Regen sein.  
+
+[Verse 2]  
+Vor ihm lodert Feuer, brennend und klar,  
+Die Völker erzittern, sein Heer ist wunderbar.  
+Die Mauern werden fallen, die Stadt wird befreit,  
+Wer den Namen des HERRN ruft, der findet die Zeit.  
+
+[Chorus]  
+Fürchtet euch nicht, das Land sei fröhlich,  
+Der HERR ist bei uns, sein Wort ist ewig.  
+Bekehrt euch zu ihm, von Herzen rein,  
+Sein Geist wird über uns, wie Regen sein.  
+
+[Bridge]  
+O HERR, wir kommen, mit Tränen und Klagen,  
+Zerreißt unsere Herzen, lass uns deinen Segen tragen.  
+Erneuere uns, in deiner Gnade,  
+Und zeige uns deinen Weg, durch jede Gefahr.  
+
+[Chorus]  
+Fürchtet euch nicht, das Land sei fröhlich,  
+Der HERR ist bei uns, sein Wort ist ewig.  
+Bekehrt euch zu ihm, von Herzen rein,  
+Sein Geist wird über uns, wie Regen sein.  
+
+[Outro]  
+O Zion, erhebe dein Haupt,  
+Der HERR wird sein Volk nicht mehr schänden.  
+Sein Geist wird fließen, die Freude wird kommen,  
+In seiner Liebe, sind wir neu geboren.`,
+        3: `Strophe 1:  
+Siehe, Herr, Du wirst richten,  
+Im Tal Josaphat, da stehst Du,  
+Die Völker sammeln sich,  
+Vor Deinem heiligen Thron,  
+Gerechtigkeit wird siegen,  
+Die Dunkelheit weicht vor Dir,  
+Die Zeit ist gekommen,  
+Wir rufen, Herr, zu Dir.
+
+Refrain:  
+Oh, komm und zeige Deine Stärke,  
+In der Stille hören wir Dein Wort,  
+Verwandle unser Herz,  
+Mach uns rein, oh Herr,  
+Wir beten, dass Dein Licht uns führt,  
+Im Tal des Urteils, hier sind wir.
+
+Strophe 2:  
+Die Ernte ist reif, die Zeit ist nah,  
+Die Kelter fließt über, das Böse ist groß,  
+Du bist unser Zufluchtsort,  
+In Dir finden wir Trost,  
+Die Sonne wird sich verfinstern,  
+Die Sterne schweigen vor Dir,  
+Doch wir stehen vor Deinem Angesicht,  
+In Ehrfurcht, Herr, zu Dir.
+
+Refrain:  
+Oh, komm und zeige Deine Stärke,  
+In der Stille hören wir Dein Wort,  
+Verwandle unser Herz,  
+Mach uns rein, oh Herr,  
+Wir beten, dass Dein Licht uns führt,  
+Im Tal des Urteils, hier sind wir.
+
+Bridge:  
+Erwecke uns, oh Heiliges Volk,  
+Lass uns stark sein in Deinem Namen,  
+Wir rufen, wir beten, wir stehen vereint,  
+Du bist unser Gott, unser Licht,  
+In der Dunkelheit, da bist Du hier,  
+Die Hoffnung lebt, in Dir sind wir frei.
+
+Refrain:  
+Oh, komm und zeige Deine Stärke,  
+In der Stille hören wir Dein Wort,  
+Verwandle unser Herz,  
+Mach uns rein, oh Herr,  
+Wir beten, dass Dein Licht uns führt,  
+Im Tal des Urteils, hier sind wir.
+
+Outro:  
+Wir beten, dass Dein Licht uns führt,  
+Im Tal des Urteils, hier sind wir.  
+Oh, Herr, hier sind wir.  
+Amen.`,
+    },
     "30": {
         1: `[Verse 1]  
 Hör, o Herr, Dein Volk schreit,  
@@ -34443,7 +44509,68 @@ Suchet den Herrn, hört sein Wort,
 Er führt uns heim, er ist unser Ort.  
 Sein Licht wird scheinen, die Nacht vergeht,  
 Suchet den Herrn, wo er euch versteht.`,
-        6: ``,
+        6: `[TITLE]  
+Ruf zur Umkehr
+
+[Verse 1]  
+Weh den Stolzen, die sich rühmen,  
+In Zion, in Samarias Glanz,  
+Die Vornehmen, die sich träumen,  
+In Sicherheit, im Überfluss ganz.  
+Ihr eßt die Lämmer, schlaft in Prunk,  
+Doch euer Herz, es bleibt so kalt,  
+Verdrängt den Schmerz von Josephs Dunk,  
+Die Stimme Gottes, die euch bald entfällt.
+
+[Chorus]  
+Ruf zur Umkehr, zu dir, o Herr,  
+Wir kommen, bitten dich um Licht,  
+Erlöse uns von Stolz und Schmerz,  
+Und zeige uns dein Angesicht.  
+Ruf zur Umkehr, oh, lass uns hören,  
+Dein Wort, das uns zur Wahrheit führt,  
+In Demut wollen wir uns lehren,  
+Bis jeder Stolz in uns verliert.
+
+[Verse 2]  
+Die Häuser brechen, Risse zeigen,  
+Die kleinen Lücken, unser Leid,  
+Ihr fragt: Sind wir nicht stark im Reigen?  
+Doch Gerechtigkeit bleibt weit.  
+Die Frucht der Sorge wird zu Galle,  
+Die Stärke, die uns droht zu blenden,  
+Doch du, o Herr, bist unser Alle,  
+Lass uns in deinen Wegen landen.
+
+[Chorus]  
+Ruf zur Umkehr, zu dir, o Herr,  
+Wir kommen, bitten dich um Licht,  
+Erlöse uns von Stolz und Schmerz,  
+Und zeige uns dein Angesicht.  
+Ruf zur Umkehr, oh, lass uns hören,  
+Dein Wort, das uns zur Wahrheit führt,  
+In Demut wollen wir uns lehren,  
+Bis jeder Stolz in uns verliert.
+
+[Bridge]  
+Du hast geschworen, Herr der Heerscharen,  
+Dein Wort bleibt wahr, es wird nicht enden,  
+Erwecke ein Volk, das dir kann vertrauen,  
+Von Hamath bis zum Wüstenbenden.  
+Ruf uns zurück, zu dir, o Gott,  
+Lass uns die Hoffnung neu finden,  
+In deinem Licht, wo Liebe blüht,  
+Lass uns die Gnade überwindend.
+
+[Chorus]  
+Ruf zur Umkehr, zu dir, o Herr,  
+Wir kommen, bitten dich um Licht,  
+Erlöse uns von Stolz und Schmerz,  
+Und zeige uns dein Angesicht.  
+Ruf zur Umkehr, oh, lass uns hören,  
+Dein Wort, das uns zur Wahrheit führt,  
+In Demut wollen wir uns lehren,  
+Bis jeder Stolz in uns verliert.`,
         7: `[Verse 1]  
 Hör, o Herr, das Flehen,  
 Die Heuschrecken kommen nah,  
@@ -34602,7 +44729,6 @@ In Deinem Namen, o Herr, folgen wir Dir treu.
 Deine Augen, o Herr, sehen uns an,  
 In Gnade und Gericht führst Du uns voran.`,
     },
-
     "31": {
         1: `Verse 1:
 Hör, o Volk, die Stimme ruft,  
@@ -34646,9 +44772,62 @@ Das Königreich des HERRN, wir werden es nicht vernichten.
 Kommt, lasst uns beugen, in Demut und Licht,  
 Der Tag des HERRN, er bringt uns die Sicht.`,
     },
-
     "32": {
-        1: ``,
+        1: `[TITLE] Ruf der Umkehr
+
+[Verse 1]  
+Du sprachst zu Jona, Herr, in deiner Macht,  
+„Geh und predige, die Bosheit wacht.  
+In Ninive, die Stadt, wo Dunkelheit regiert,  
+Dein Wort soll leuchten, die Wahrheit, die verführt."
+
+[Chorus]  
+Herr, wir kommen zu dir,  
+In der Stille, im Sturm,  
+Mach unser Herz rein,  
+Lass uns hören, was du sprichst,  
+Wir kehren um, oh Herr,  
+Zu deinem Licht, das nie versiegt.
+
+[Verse 2]  
+Doch Jona floh, verborgen im Schiff,  
+Die Wellen tobten, das Meer war so tief.  
+Die Seeleute schrie’n, beteten um Ruh,  
+„Was sollen wir tun? Wo bist du, oh du?“
+
+[Chorus]  
+Herr, wir kommen zu dir,  
+In der Stille, im Sturm,  
+Mach unser Herz rein,  
+Lass uns hören, was du sprichst,  
+Wir kehren um, oh Herr,  
+Zu deinem Licht, das nie versiegt.
+
+[Bridge]  
+In der Dunkelheit, in der Tiefe der Nacht,  
+Rufst du uns, dass dein Licht erwacht.  
+Wir werfen ab, was uns hält zurück,  
+In deine Arme, Herr, finden wir Glück.
+
+[Verse 3]  
+Der Fisch war gesandt, ein Zeichen der Gnade,  
+Drei Tage und Nächte, in Stille, in Klage.  
+Doch du hörst unser Rufen, wenn wir dich suchen,  
+In der Umkehr finden wir, was wir erhoffen.
+
+[Chorus]  
+Herr, wir kommen zu dir,  
+In der Stille, im Sturm,  
+Mach unser Herz rein,  
+Lass uns hören, was du sprichst,  
+Wir kehren um, oh Herr,  
+Zu deinem Licht, das nie versiegt.
+
+[Outro]  
+Ruf uns zur Umkehr, oh Herr, wir sind bereit,  
+In deiner Barmherzigkeit finden wir die Zeit.  
+Dein Wort ist unser Leben, du schenkst uns Mut,  
+In deiner Nähe, Herr, wird alles gut.`,
         2: `[Verse 1]  
 In der Dunkelheit, da rief ich laut,  
 In meiner Angst, Herr, hast Du mich gehört.  
@@ -34780,7 +44959,6 @@ Deine Liebe zu suchen, in dir zu verwehren.
 In der Dunkelheit, dein Licht erstrahlt,  
 Herr, du bist barmherzig, dein Wort niemals verweht.`,
     },
-
     "33": {
         1: `[Verse 1]  
 Hört, alle Völker, der HERR spricht,  
@@ -35021,10 +45199,138 @@ Kriegerin, rüste dich, die Zeit ist nah,
 In deiner Stärke, stehen wir bereit,  
 Du bist unser Friede, du bist unser Licht,  
 Für immer und ewig, in deiner Herrlichkeit.`,
-        6: ``,
-        7: ``,
-    },
+        6: `[TITLE]  
+Höret, was der HERR spricht
 
+[Verse 1]  
+Höret, was der HERR spricht,  
+Mache dich auf, erhebe die Stimme,  
+Vor den Bergen, den Hügeln,  
+Sein Wort wird uns erreichen.  
+Was hast du getan, mein Volk,  
+Gott ruft dich, hör sein Klagen,  
+Aus Ägypten führte er dich,  
+Sein Licht soll in dir tragen.
+
+[Chorus]  
+O Herr, wir kommen zu dir,  
+Mit Herzen, die zerbrochen sind,  
+Wir suchen dein Angesicht,  
+In Demut, Herr, vergebe uns.  
+Lass uns hören, was du sagst,  
+In deiner Liebe, die uns trägt,  
+Erneuere uns, o HERR,  
+Führe uns zurück zu dir.
+
+[Verse 2]  
+Denke an das Gute, das er tat,  
+Von Sittim bis nach Gilgal,  
+Die Gnade, die uns stets umhüllt,  
+In deiner Treue sind wir heil.  
+Doch wir fragen, was du willst,  
+Nicht Brandopfer, die uns trügen,  
+Im Herzen, Herr, mach uns rein,  
+Lass uns deine Wege fliegen.
+
+[Chorus]  
+O Herr, wir kommen zu dir,  
+Mit Herzen, die zerbrochen sind,  
+Wir suchen dein Angesicht,  
+In Demut, Herr, vergebe uns.  
+Lass uns hören, was du sagst,  
+In deiner Liebe, die uns trägt,  
+Erneuere uns, o HERR,  
+Führe uns zurück zu dir.
+
+[Bridge]  
+Die Stimme des HERRN ruft laut,  
+In der Stadt, wo wir stehen,  
+Wer deinen Namen fürchtet,  
+Wird finden, was er fleht.  
+Wir kehren um von unserm Weg,  
+Lass uns leben in deinem Licht,  
+In Wahrheit und in Gerechtigkeit,  
+Erneuere unser Gesicht.
+
+[Chorus]  
+O Herr, wir kommen zu dir,  
+Mit Herzen, die zerbrochen sind,  
+Wir suchen dein Angesicht,  
+In Demut, Herr, vergebe uns.  
+Lass uns hören, was du sagst,  
+In deiner Liebe, die uns trägt,  
+Erneuere uns, o HERR,  
+Führe uns zurück zu dir.
+
+[Outro]  
+Höret, was der HERR spricht,  
+Sein Wort ist unser Licht,  
+Führe uns auf deinem Weg,  
+O Herr, bleibe bei uns, komm und leb.`,
+        7: `[TITLE]  
+In deiner Gnade
+
+[Verse 1]  
+Ach, ich suche nach Früchten,  
+Im Weinberg, wo Trauben blüh'n,  
+Die frommen Herzen sind verschwunden,  
+Die Gerechten, sie sind nicht hier.  
+Die Welt ist voller Dunkelheit,  
+Doch ich will auf dich schauen, Herr,  
+In der Finsternis bist du mein Licht,  
+Du hörst mein Rufen, bleib bei mir.
+
+[Chorus]  
+Wo ist ein Gott, wie du bist,  
+Der Sünde vergibt und die Missetat löscht?  
+Du bist barmherzig, du gibst uns Frieden,  
+In deiner Gnade, Herr, will ich leben.  
+Du wirst uns wieder aufrichten,  
+Wie in der Zeit, als du uns befreitest,  
+Ich vertraue auf deine Treue,  
+In deiner Liebe, Herr, bin ich geborgen.
+
+[Verse 2]  
+Die Feinde um mich, sie spotten,  
+Wo ist dein Gott, so rufen sie laut?  
+Doch ich werde nicht fallen,  
+Denn du bist mein Schild und mein Haupt.  
+Ich trage dein Zorn, doch bringst mich zum Licht,  
+Dein Wort wird mich leiten, ich hoffe auf dich,  
+Du weidest dein Volk mit deinem Stab,  
+In der Wüste, da bist du mein Grab.
+
+[Chorus]  
+Wo ist ein Gott, wie du bist,  
+Der Sünde vergibt und die Missetat löscht?  
+Du bist barmherzig, du gibst uns Frieden,  
+In deiner Gnade, Herr, will ich leben.  
+Du wirst uns wieder aufrichten,  
+Wie in der Zeit, als du uns befreitest,  
+Ich vertraue auf deine Treue,  
+In deiner Liebe, Herr, bin ich geborgen.
+
+[Bridge]  
+Du hast geschworen, uns nicht zu verlassen,  
+In der Dunkelheit, du bist unser Licht.  
+Wie du Jakob die Treue gabst,  
+So schenkst du uns Gnade, Herr, in dir find' ich mich.
+
+[Chorus]  
+Wo ist ein Gott, wie du bist,  
+Der Sünde vergibt und die Missetat löscht?  
+Du bist barmherzig, du gibst uns Frieden,  
+In deiner Gnade, Herr, will ich leben.  
+Du wirst uns wieder aufrichten,  
+Wie in der Zeit, als du uns befreitest,  
+Ich vertraue auf deine Treue,  
+In deiner Liebe, Herr, bin ich geborgen.
+
+[Outro]  
+In deiner Gnade, Herr, will ich leben,  
+Du bist mein Licht, mein Gott, mein Leben.  
+Amen.`,
+    },
     "34": {
         1: `[Verse 1]  
 Dies ist die Last, die uns trifft,  
@@ -35137,9 +45443,69 @@ In jedem Sturm, in jedem Kampf,
 Sein Wort bleibt wahr, sein Licht erstrahlt,  
 Der Herr Zebaoth, unser Lebensstrahl.  
 Amen.`,
-        3: ``,
-    },
+        3: `[TITLE]  
+Die Stimme des Gerichts
 
+[Verse 1]  
+Weh dir, Stadt der Lügen,  
+Die mit Raub und List regiert,  
+Dein Stolz wird dich zerbrechen,  
+Wenn das Gericht dich berührt.  
+Die Geißeln hör'n wir klappen,  
+Die Räder rasseln laut,  
+In deiner Nacht der Sünde,  
+Hast du dich selbst beraubt.
+
+[Chorus]  
+Oh Herr, schau her, wir kommen zu dir,  
+In Buße und in Ehrfurcht,  
+Wir bitten um dein Licht,  
+Führe uns zurück zu dir.  
+Oh Herr, schau her, wir flehen zu dir,  
+Bringe Heil und Frieden,  
+Lass uns nicht verloren sein,  
+Erbarme dich, oh Herr, erbarme dich.
+
+[Verse 2]  
+Die Leichname der Hoffnung,  
+Sie häufen sich um dich,  
+Die Schönheit deiner Hurerei,  
+Hat die Völker gebrochen, sprich!  
+Siehe, du wirst zerbrochen,  
+Die Feinde klopfen schon,  
+Deine Macht ist wie die Feigen,  
+Die fallen in den Sturm davon.
+
+[Chorus]  
+Oh Herr, schau her, wir kommen zu dir,  
+In Buße und in Ehrfurcht,  
+Wir bitten um dein Licht,  
+Führe uns zurück zu dir.  
+Oh Herr, schau her, wir flehen zu dir,  
+Bringe Heil und Frieden,  
+Lass uns nicht verloren sein,  
+Erbarme dich, oh Herr, erbarme dich.
+
+[Bridge]  
+Wecke uns, oh Herr, aus diesem Schlaf,  
+Lass uns suchen dein Angesicht,  
+In der Dunkelheit, dein Licht sei klar,  
+Rette uns, unser Gott und König!
+
+[Chorus]  
+Oh Herr, schau her, wir kommen zu dir,  
+In Buße und in Ehrfurcht,  
+Wir bitten um dein Licht,  
+Führe uns zurück zu dir.  
+Oh Herr, schau her, wir flehen zu dir,  
+Bringe Heil und Frieden,  
+Lass uns nicht verloren sein,  
+Erbarme dich, oh Herr, erbarme dich.
+
+[Outro]  
+Erbarme dich, oh Herr, erbarme dich,  
+Führe uns zurück, wir kommen zu dir.`,
+    },
     "35": {
         1: `Verse 1:  
 Hör mein Schreien, Herr, ich komme zu Dir,  
@@ -35273,7 +45639,6 @@ Du bist mein Gott, mein Retter, mein Wald.
 Halleluja, ich singe dir,  
 Für immer bleibst du bei mir.`,
     },
-
     "36": {
         1: `Verse 1:
 Dies ist das Wort, das zu uns spricht,  
@@ -35357,9 +45722,51 @@ Oh HERR, wir kommen, hör unser Flehen,
 In Deiner Gnade, lass uns bestehen.  
 Suchet den HERRN, bis der Morgen bricht,  
 In Deinem Licht, in Deinem Licht.`,
-        3: ``,
-    },
+        3: `[TITLE]  
+HERR, Du bist unser Heil  
 
+[Verse 1]  
+Weh der Stadt, die sich von Dir abwandt,  
+In Unrecht und Stolz, auf Sand sie stand.  
+Die Löwen brüllen, die Wölfe nacht,  
+Doch Du, HERR, bringst Licht in die Nacht.  
+
+[Chorus]  
+Jauchze, Tochter Zion, freu dich von Herzen,  
+Der HERR hat deine Feinde besiegt.  
+Zion, erhebe dein Lob, lass es erklingen,  
+Denn unser Gott ist stark, er wird uns befried'.  
+
+[Verse 2]  
+Die Propheten lehren ohne Furcht,  
+Doch Du bist gerecht, gibst uns die Kraft.  
+Erfülle uns mit reinem Herzen,  
+Lass uns leben in Deinem Licht, in Deinem Saft.  
+
+[Chorus]  
+Jauchze, Tochter Zion, freu dich von Herzen,  
+Der HERR hat deine Feinde besiegt.  
+Zion, erhebe dein Lob, lass es erklingen,  
+Denn unser Gott ist stark, er wird uns befried'.  
+
+[Bridge]  
+Fürchte dich nicht, der HERR ist hier,  
+Ein starker Heiland, immer bei dir.  
+Er wird sich freuen, uns vergeben,  
+Im Jubel der Erlösung, lass uns leben.  
+
+[Chorus]  
+Jauchze, Tochter Zion, freu dich von Herzen,  
+Der HERR hat deine Feinde besiegt.  
+Zion, erhebe dein Lob, lass es erklingen,  
+Denn unser Gott ist stark, er wird uns befried'.  
+
+[Outro]  
+Kommt, lasst uns einander anrufen,  
+Euer Gefängnis wird er wenden,  
+In allen Völkern Lob und Ehre,  
+Der HERR, unser Gott, wird uns senden.`,
+    },
     "37": {
         1: `Vers 1:  
 Im Land, wo Du uns führst,  
@@ -35474,7 +45881,6 @@ In seiner Nähe, da gibt's kein Verlier'n.
 Sein Wort bleibt bestehen, in Ewigkeit,  
 Euer Gott, der HERR, er gibt euch Geleit.`,
     },
-
     "38": {
         1: `Vers 1:
 Im Schatten der Myrten, wo Stille verweilt,  
@@ -35564,7 +45970,50 @@ Jerusalem, du Stadt des Lichts,
 Der Herr kommt bald, er verlässt dich nicht.  
 Seine Herrlichkeit wird bei dir sein,  
 Ewig in dir, du Stadt, du rein.`,
-        3: ``,
+        3: `[TITLE]  
+Der Hohepriester Josua
+
+[Verse 1]  
+Vor dem Engel stehend, Josua, oh Licht,  
+Satan zu seiner Seite, mit finsterem Gesicht.  
+Doch der Herr spricht klar, in seinem heiligen Wort:  
+„Der Herr schelte dich, du Widersacher, fort!“
+
+[Chorus]  
+Wird der Hohepriester wandeln in deinem Licht?  
+Die unreinen Kleider, die er trägt, sie fallen nicht.  
+Du nimmst die Sünde, kleidest neu, oh Herr,  
+Mit Feierkleidern, voller Gnade, wunderbar!
+
+[Verse 2]  
+„Siehe, ich habe deine Sünde von dir genommen,  
+Ein reiner Hut, der dir das Leben hat gewonnen.  
+Wirst du in meinen Wegen treu und wahrhaft sein,  
+So sollst du regieren, mein Haus, mein heil’ger Schein.“
+
+[Chorus]  
+Wird der Hohepriester wandeln in deinem Licht?  
+Die unreinen Kleider, die er trägt, sie fallen nicht.  
+Du nimmst die Sünde, kleidest neu, oh Herr,  
+Mit Feierkleidern, voller Gnade, wunderbar!
+
+[Bridge]  
+Sieben Augen auf dem Stein, du siehst uns an,  
+Die Sünde weggenommen, ein neuer Anfang kann.  
+Unter Weinstock, Feigenbaum, wird Frieden blühen,  
+Deine Liebe, Herr, lässt unsere Seelen ruhen.
+
+[Chorus]  
+Wird der Hohepriester wandeln in deinem Licht?  
+Die unreinen Kleider, die er trägt, sie fallen nicht.  
+Du nimmst die Sünde, kleidest neu, oh Herr,  
+Mit Feierkleidern, voller Gnade, wunderbar!
+
+[Outro]  
+Oh, Josua, erhoben, in deinem heiligen Plan,  
+Wir stehen hier vereint, in deinem Namen, Amen.  
+Erneuerung durch Gnade, das ist unser Teil,  
+In dir, oh Herr, erleben wir den heiligen Heil.`,
         4: `[Verse 1]  
 Weck mich auf, Herr, aus meinem Schlaf,  
 Lass mich sehen, was Du mir gabst.  
@@ -35912,7 +46361,68 @@ Herr, wir wandeln in Deinem Namen,
 In Deiner Kraft, da leben wir neu.  
 Erbarme Dich, Herr, wir beten zu Dir,  
 Führe uns, bis wir bei Dir sind.`,
-        11: ``,
+        11: `[TITLE]  
+Hirten, die verloren  
+
+[Verse 1]  
+Öffne Türen, Libanon,  
+Das Feuer brennt, wo Zedern steh’n.  
+Heulet, Tannen, in der Nacht,  
+Denn die Herrlichkeit ist nun zerbrochen,  
+Die Eichen weinen, der Wald ist klein,  
+Der HERR spricht: „Seht, was wird gescheh’n.“
+
+[Chorus]  
+Oh, Hirten, die verloren,  
+Eure Herde ruft nach dir.  
+Lasst uns umkehren, Herzen heilen,  
+Komm, Herr, und führe uns zu dir.  
+Oh, Hirten, die verloren,  
+Hört das Rufen, hört das Leid.  
+Schau auf uns, du treuer Gott,  
+Führe uns durch die Dunkelheit.  
+
+[Verse 2]  
+Die Schafe, die verloren geh’n,  
+Die Herren schlachten, ohne Scham.  
+Segen ruft, und doch sind sie blind,  
+In der Gier, wo Liebe zerbricht,  
+Der HERR spricht: „Ich werde nicht mehr schonen,  
+Die Völker sind in Dunkelheit.“
+
+[Chorus]  
+Oh, Hirten, die verloren,  
+Eure Herde ruft nach dir.  
+Lasst uns umkehren, Herzen heilen,  
+Komm, Herr, und führe uns zu dir.  
+Oh, Hirten, die verloren,  
+Hört das Rufen, hört das Leid.  
+Schau auf uns, du treuer Gott,  
+Führe uns durch die Dunkelheit.  
+
+[Bridge]  
+Dreißig Silberlinge, das ist mein Preis,  
+Für das, was ich wert bin, doch ich bleibe dir treu.  
+Zerbrochene Stäbe, der Bund ist in Gefahr,  
+Doch du bist der HIRT, der uns stets bewahrt.  
+Komm, o Herr, und führe uns heim,  
+Lass uns finden in dir den Frieden, den Heil.  
+
+[Chorus]  
+Oh, Hirten, die verloren,  
+Eure Herde ruft nach dir.  
+Lasst uns umkehren, Herzen heilen,  
+Komm, Herr, und führe uns zu dir.  
+Oh, Hirten, die verloren,  
+Hört das Rufen, hört das Leid.  
+Schau auf uns, du treuer Gott,  
+Führe uns durch die Dunkelheit.  
+
+[Outro]  
+Führe uns, oh HERR, durch die Nacht,  
+In deiner Liebe finden wir Macht.  
+Die verlorenen Schafe, wir kehren heim,  
+In deinen Armen, o Herr, da sind wir eins.`,
         12: `[Verse 1]  
 Du, der Himmel ausbreitet,  
 Die Erde fest gegründet,  
@@ -36061,7 +46571,6 @@ Führ uns durch die Nacht, bis der Morgen bricht.
 In Deinem Namen, lass uns stehen,  
 Für immer in Deinem Reich, in Freude und Segen.`,
     },
-
     "39": {
         1: `[Verse 1]  
 Du sprichst, o Herr, mit voller Macht,  
@@ -36254,7 +46763,6 @@ Komm, oh Herr, sei unser Teil,
 Wir erwarten dein Erscheinen,  
 In deinem Licht, für alle Zeit.`,
     },
-
     "40": {
         1: `Strophe 1:  
 In der Nacht, so still und klar,  
@@ -36448,8 +46956,116 @@ In jedem Schritt, bist du bei mir,
 Dein Wort gibt mir Halt, ich hör' nicht auf,  
 Mit dir an der Seite, da leb' ich für dich,  
 Ewiges Leben, in dir find' ich's auch.`,
-        5: ``,
-        6: ``,
+        5: `[TITLE]  
+Selig sind die Sanftmütigen
+
+[Verse 1]  
+Wenn das Volk leidet, wenn die Herzen brechen,  
+Kommst Du herab, um Trost zu sprechen.  
+Selig, die arm sind im Geiste, oh Herr,  
+Denn das Himmelreich, es gehört ihnen, so sehr.  
+
+[Chorus]  
+Selig, oh selig, die Barmherzigen,  
+Sie werden finden, was wir nötig haben.  
+Lass uns leuchten wie Sterne im Dunkel der Nacht,  
+Mit Liebe und Frieden, hast Du uns erwacht.  
+
+[Verse 2]  
+Wenn die Tränen fallen, wenn wir uns verlieren,  
+Komm, Heiliger Geist, lass uns nicht frieren.  
+Selig, die sanftmütig, sie werden das Erdreich,  
+In Deinen Armen sind wir geborgen und weich.  
+
+[Chorus]  
+Selig, oh selig, die Barmherzigen,  
+Sie werden finden, was wir nötig haben.  
+Lass uns leuchten wie Sterne im Dunkel der Nacht,  
+Mit Liebe und Frieden, hast Du uns erwacht.  
+
+[Bridge]  
+Wenn wir verfolgt werden, um Deinetwillen,  
+Lass uns fröhlich sein, lass uns nicht stillen.  
+Denn im Himmel, oh Herr, wartet die Freude,  
+Die Belohnung für alle, die folgen der Meide.  
+
+[Chorus]  
+Selig, oh selig, die Barmherzigen,  
+Sie werden finden, was wir nötig haben.  
+Lass uns leuchten wie Sterne im Dunkel der Nacht,  
+Mit Liebe und Frieden, hast Du uns erwacht.  
+
+[Outro]  
+Selig sind die, die hungern nach Dir,  
+Du stillst unsere Seelen, Du bist hier.  
+Selig, o Herr, in Deinem Licht,  
+Lass uns leben, um Deine Ehre zu richten.`,
+        6: `[TITLE]  
+Verborgene Schätze
+
+[Verse 1]  
+In der Stille, oh mein Vater,  
+Höre ich dein sanftes Wort,  
+Gib mir Kraft, mein Herz zu geben,  
+Nicht für Ruhm, nicht für den Ort.  
+Almosen, die im Verborgenen blühen,  
+Werden von dir einst belohnt,  
+Dein Wille, der uns führt,  
+In deinem Licht, das uns erhofft.
+
+[Chorus]  
+Dein Name werde geheiligt,  
+Dein Reich komme, oh Herr,  
+In der Dunkelheit, die uns umgibt,  
+Sei unser Licht, unser Begehr.  
+Vergib uns, wie wir vergeben,  
+Führe uns auf deinem Weg,  
+Vertraue dir, mein Leben,  
+Du bist alles, was ich schaff’.
+
+[Verse 2]  
+Seht die Vögel, die fliegen,  
+Sorgen nicht um Brot und Kleid,  
+Du versorgst sie, oh mein Vater,  
+In deiner Treue, weit und breit.  
+Lilien blühen, die Schönheit zeugen,  
+In deiner Gnade, die nie vergeht,  
+Lass mich suchen, was ewig bleibt,  
+In deinem Reich, wo Liebe steht.
+
+[Chorus]  
+Dein Name werde geheiligt,  
+Dein Reich komme, oh Herr,  
+In der Dunkelheit, die uns umgibt,  
+Sei unser Licht, unser Begehr.  
+Vergib uns, wie wir vergeben,  
+Führe uns auf deinem Weg,  
+Vertraue dir, mein Leben,  
+Du bist alles, was ich schaff’.
+
+[Bridge]  
+Sammelt Schätze im Himmel,  
+Wo nichts vergeht, wo alles blüht,  
+Dein Wort ist mein Licht,  
+Dein Geist ist der Frieden,  
+In dir, Herr, ruhen wir.
+
+[Chorus]  
+Dein Name werde geheiligt,  
+Dein Reich komme, oh Herr,  
+In der Dunkelheit, die uns umgibt,  
+Sei unser Licht, unser Begehr.  
+Vergib uns, wie wir vergeben,  
+Führe uns auf deinem Weg,  
+Vertraue dir, mein Leben,  
+Du bist alles, was ich schaff’.
+
+[Outro]  
+In der Stille, oh mein Vater,  
+Höre ich dein sanftes Wort,  
+Führe mich, mein Herz, oh Vater,  
+Zu den Schätzen, die du schenkst,  
+In dir allein, in dir allein.`,
         7: `1. Strophe:  
 Herr, lehre uns die Liebe,  
 lass uns nicht richten,  
@@ -36509,8 +47125,92 @@ Auf dem Felsen, fest gegründet,
 in deiner Liebe sind wir vereint.  
 Du bist unser Licht, unser Leben,  
 für immer, Herr, in dir vereint.`,
-        8: ``,
-        9: ``,
+        8: `[TITLE] Du bist der Heiler
+
+[Verse 1]  
+Vom Berg herab, das Volk folgt dir,  
+Ein Aussätziger, so voller Gier,  
+„Herr, wenn du willst, reinige mich!“  
+Die Hand, die greift, befreit mich von Pflicht.
+
+[Chorus]  
+Du bist der Heiler, du machst mich frei,  
+In deiner Nähe, da bin ich dabei.  
+Mit Glauben komm ich, zu dir, oh Herr,  
+Du sprichst ein Wort, und ich bin nicht mehr schwer.
+
+[Verse 2]  
+Ein Hauptmann naht, in großer Not,  
+„Mein Knecht leidet, Herr, ich flehe um Brot.  
+Sprich nur ein Wort, so wird er gesund,“  
+Dein Glaube erstaunt, in dieser Stund’.
+
+[Chorus]  
+Du bist der Heiler, du machst mich frei,  
+In deiner Nähe, da bin ich dabei.  
+Mit Glauben komm ich, zu dir, oh Herr,  
+Du sprichst ein Wort, und ich bin nicht mehr schwer.
+
+[Bridge]  
+Du nimmst die Schwachen, das Fieber weicht,  
+Die Dunkelheit flieht, dein Licht erreicht.  
+Du stillst die Stürme, ich hör’ dein Wort,  
+In dir ist Frieden, du bist mein Ort.
+
+[Chorus]  
+Du bist der Heiler, du machst mich frei,  
+In deiner Nähe, da bin ich dabei.  
+Mit Glauben komm ich, zu dir, oh Herr,  
+Du sprichst ein Wort, und ich bin nicht mehr schwer.
+
+[Outro]  
+Oh, Herr, ich folge, egal wo du bist,  
+Dein Wort gibt Leben, in dir find’ ich Rast.  
+Du bist der Heiler, mein Herz schlägt für dich,  
+In deiner Liebe, da finde ich Licht.`,
+        9: `[TITLE] Der Sohn des Menschen
+
+[Verse 1]  
+In der Stille kamst du, Herr,  
+Zu mir, dem Gichtbrüchigen,  
+Du sahst den Glauben, der hier war,  
+Und sprachst: „Sei getrost, mein Sohn!“
+
+[Chorus]  
+Du vergibst, du heilst, du schenkst das Leben,  
+Dein Wort gibt Hoffnung, deine Liebe bleibt.  
+Du bist der Arzt, der uns befreit,  
+Der Sohn des Menschen, du bist hier bei mir.
+
+[Verse 2]  
+Die Zöllner und Sünder, sie kamen zu dir,  
+Du saßt mit ihnen, sprachst: „Komm, folge mir!“  
+In deiner Nähe, da geht es mir gut,  
+Die Liebe, die heilt, gibt uns neuen Mut.
+
+[Chorus]  
+Du vergibst, du heilst, du schenkst das Leben,  
+Dein Wort gibt Hoffnung, deine Liebe bleibt.  
+Du bist der Arzt, der uns befreit,  
+Der Sohn des Menschen, du bist hier bei mir.
+
+[Bridge]  
+Oh, die Ernte ist groß, doch die Arbeiter sind wenig,  
+Wir bitten zu dir, sende uns, Herr, in dein Reich.  
+Lass uns leuchten, wie Sterne in der Nacht,  
+Deine Gnade erweckt uns, gibt uns Kraft.
+
+[Chorus]  
+Du vergibst, du heilst, du schenkst das Leben,  
+Dein Wort gibt Hoffnung, deine Liebe bleibt.  
+Du bist der Arzt, der uns befreit,  
+Der Sohn des Menschen, du bist hier bei mir.
+
+[Outro]  
+Du bist hier bei mir, Herr,  
+Dein Licht erhellt den Weg,  
+In deiner Nähe find ich Frieden,  
+Der Sohn des Menschen, du bist hier bei mir.`,
         10: `Strophe 1:  
 Du riefst uns, Herr, in deiner Macht,  
 Die Dunkelheit, sie weicht der Nacht.  
@@ -36897,7 +47597,49 @@ In deinem Licht, wir finden Ruh,
 Ewig bei dir, oh Herr, in dir sind wir neu.  
 Verklärt in Licht, durch Glauben vereint,  
 Jesus, du bist unser Herz, das ewig scheint.`,
-        18: ``,
+        18: `[TITLE] Der Größte im Himmelreich
+
+[Verse 1]  
+Komm, oh Herr, wir treten ein,  
+In dein Licht, so rein und fein.  
+Wie die Kinder, klein und schwach,  
+Sollen wir kommen, im Glauben wach.  
+
+[Chorus]  
+Denn du bist der Größte, der Liebe voll,  
+In deinem Reich, da finden wir Trost.  
+Lass uns vergeben, so wie du es tust,  
+In deinem Namen sind wir geborgen, in dir, oh Jesus, sind wir neu geboren.  
+
+[Verse 2]  
+Such das Verlorene, ganz allein,  
+Lässt die Neunundneunzig hier zurück,  
+Deine Liebe führt uns heim,  
+Jeder ist wertvoll, in deinem Blick.  
+
+[Chorus]  
+Denn du bist der Größte, der Liebe voll,  
+In deinem Reich, da finden wir Trost.  
+Lass uns vergeben, so wie du es tust,  
+In deinem Namen sind wir geborgen, in dir, oh Jesus, sind wir neu geboren.  
+
+[Bridge]  
+Wenn wir uns erniedrigen, so wie du,  
+Wird unser Herz erfüllt von deiner Ruh.  
+Lass uns leuchten, ein Licht in der Nacht,  
+In Gemeinschaft, wo dein Geist uns entfacht.  
+
+[Chorus]  
+Denn du bist der Größte, der Liebe voll,  
+In deinem Reich, da finden wir Trost.  
+Lass uns vergeben, so wie du es tust,  
+In deinem Namen sind wir geborgen, in dir, oh Jesus, sind wir neu geboren.  
+
+[Outro]  
+Komm, oh Herr, in unser Herz hinein,  
+Mach uns wie Kinder, lass uns klein sein.  
+Denn im Kleinsten, da bist du da,  
+In deinem Reich, oh Herr, sind wir wahr.`,
         19: `Verse 1:  
 In Galiläa, wo die Herzen weinen,  
 Kamen Menschen, um Trost zu finden.  
@@ -36956,9 +47698,190 @@ Komm, folge mir nach,
 Der Weg ist voller Licht,  
 Jesus, unser Leben,  
 In dir finden wir die Sicht.`,
-        20: ``,
-        21: ``,
-        22: ``,
+        20: `[TITLE]  
+Im Weinberg der Gnade  
+
+[Verse 1]  
+Du rufst uns, Herr, in Deinen Weinberg,  
+Wo Arbeiter auf Dich warten, still und leer.  
+Am Morgen kommst Du, gibst uns Lohn,  
+Ein Groschen für die Treue, ein Lebenslohn.  
+
+[Chorus]  
+Oh, Herr, wir kommen, unser Herz ist bereit,  
+In Deinem Reich ist Gnade, in Deiner Nähe die Zeit.  
+Die Letzten werden Erste, Dein Wort ist wahr,  
+Im Weinberg Deiner Liebe, sind wir für immer da.  
+
+[Verse 2]  
+Nicht unsere Taten, nicht unser Verdienst,  
+Doch Deine Güte, die uns verbindet, wie ein Band,  
+Die, die lange arbeiten, und die, die spät kommen,  
+In Deiner Umarmung, sind wir alle willkommen.  
+
+[Chorus]  
+Oh, Herr, wir kommen, unser Herz ist bereit,  
+In Deinem Reich ist Gnade, in Deiner Nähe die Zeit.  
+Die Letzten werden Erste, Dein Wort ist wahr,  
+Im Weinberg Deiner Liebe, sind wir für immer da.  
+
+[Bridge]  
+Du bist der Diener, der uns lehrt,  
+Die Liebe gibt, die niemals verzehrt.  
+In der Dunkelheit, in der Einsamkeit,  
+Rufst Du uns zu Dir, in Deine Herrlichkeit.  
+
+[Chorus]  
+Oh, Herr, wir kommen, unser Herz ist bereit,  
+In Deinem Reich ist Gnade, in Deiner Nähe die Zeit.  
+Die Letzten werden Erste, Dein Wort ist wahr,  
+Im Weinberg Deiner Liebe, sind wir für immer da.  
+
+[Outro]  
+Erbarme Dich, Herr, wie Du es tatst,  
+Für die Blinden, die zu Dir kamen,  
+Öffne unsere Augen, lass uns sehen,  
+In Deinem Licht, Herr, wollen wir gehen.`,
+        21: `[TITLE] Hosianna, unser König
+
+[Verse 1]  
+Wenn wir nahen Jerusalem,  
+Dein sanftes Kommen spür'n,  
+Auf einem Esel reitest Du,  
+Die Herzen lass' erblüh'n.  
+Die Kleider liegen auf dem Weg,  
+Die Zweige wehen sacht,  
+Hosianna, Sohn Davids,  
+Du bringst uns Licht und Macht.
+
+[Chorus]  
+Hosianna in der Höhe,  
+Gelobt sei, der kommt herbei.  
+Dein Haus, oh Herr, sei heilig,  
+In Dir ist Freiheit, neu und frei.  
+Hosianna, unser König,  
+Du schenkst uns Trost und Licht,  
+Wir erheben Deine Stimme,  
+In Dankbarkeit, oh Herr, für Dich.
+
+[Verse 2]  
+Im Tempel heil'st Du Blinde,  
+Die Lahmen finden Rast,  
+Du treibst das Böse von uns fort,  
+Die Liebe, die Du hast.  
+Die Kinder singen voller Freude,  
+Die Stimme hebt sich laut,  
+Hosianna, unser Retter,  
+Auf Dich vertrauen wir, oh Gott.
+
+[Chorus]  
+Hosianna in der Höhe,  
+Gelobt sei, der kommt herbei.  
+Dein Haus, oh Herr, sei heilig,  
+In Dir ist Freiheit, neu und frei.  
+Hosianna, unser König,  
+Du schenkst uns Trost und Licht,  
+Wir erheben Deine Stimme,  
+In Dankbarkeit, oh Herr, für Dich.
+
+[Bridge]  
+Du bist der Stein, der leben kann,  
+In uns, da wirst Du groß.  
+Mit Glauben rufen wir zu Dir,  
+Dein Wort, es bleibt nicht bloß.  
+Wir kommen, Herr, mit offenen Herzen,  
+In Deinem Namen, stark und klar,  
+Hosianna, unser König,  
+Ewige Hoffnung, wunderbar.
+
+[Chorus]  
+Hosianna in der Höhe,  
+Gelobt sei, der kommt herbei.  
+Dein Haus, oh Herr, sei heilig,  
+In Dir ist Freiheit, neu und frei.  
+Hosianna, unser König,  
+Du schenkst uns Trost und Licht,  
+Wir erheben Deine Stimme,  
+In Dankbarkeit, oh Herr, für Dich.
+
+[Outro]  
+Hosianna, Hosianna,  
+In der Höhe, Lob sei Dir,  
+Du bist unser König,  
+Für immer bei uns hier.`,
+        22: `[TITLE] Kommt zur Hochzeit
+
+[STROPHEN]  
+1.  
+Vater, Du rufst uns,  
+In Deine Liebe,  
+Die Feier bereitet,  
+Dein Licht strahlt hell.  
+Die Tische sind gedeckt,  
+Die Herzen sind weit,  
+Komm, lass uns feiern,  
+In Deiner Herrlichkeit.
+
+[Chorus]  
+Kommt zur Hochzeit,  
+Die Einladung gilt,  
+Seht, der König wartet,  
+Seine Gnade erfüllt.  
+Böse und Gute,  
+Er ruft uns zu sich,  
+In Deiner Umarmung,  
+Gibt’s neues Licht.
+
+[STROPHEN]  
+2.  
+Die Knechte gehen,  
+Auf den Straßen der Stadt,  
+So viele verachtet,  
+Die Liebe, die Du hast.  
+Doch alle, die kommen,  
+Die finden den Frieden,  
+In Deiner Nähe,  
+Wird der Zweifel fliegen.
+
+[Chorus]  
+Kommt zur Hochzeit,  
+Die Einladung gilt,  
+Seht, der König wartet,  
+Seine Gnade erfüllt.  
+Böse und Gute,  
+Er ruft uns zu sich,  
+In Deiner Umarmung,  
+Gibt’s neues Licht.
+
+[Bridge]  
+Du hast uns berufen,  
+Mit Liebe und Macht,  
+Wir wollen Dich ehren,  
+In dieser Pracht.  
+Kein Kleid, das wir tragen,  
+Kann uns wert machen,  
+Doch Deine Gnade,  
+Sie lässt uns erwachen.
+
+[Chorus]  
+Kommt zur Hochzeit,  
+Die Einladung gilt,  
+Seht, der König wartet,  
+Seine Gnade erfüllt.  
+Böse und Gute,  
+Er ruft uns zu sich,  
+In Deiner Umarmung,  
+Gibt’s neues Licht.
+
+[Outro]  
+Kommt zur Hochzeit,  
+Die Liebe vereint,  
+In Deiner Gegenwart,  
+Sind wir nie allein.  
+Die Tische sind gedeckt,  
+Die Herzen sind weit,  
+Komm, lass uns feiern,  
+In Deiner Herrlichkeit.`,
         23: `Verse 1:  
 Du, der in Liebe spricht,  
 Zeigst uns den Weg ins Licht.  
@@ -37091,8 +48014,112 @@ Oh, lass uns wachen, lass uns bereit sein,
 In deiner Nähe, oh Herr, da sind wir frei.  
 Du bist der Bräutigam, wir sind dein Licht,  
 Ewig verbunden, in deiner Sicht.`,
-        26: ``,
-        27: ``,
+        26: `[TITLE]  
+Im Schatten des Kreuzes  
+
+[VERS 1]  
+In der Nacht, als der Verrat begann,  
+Jesus bat, in stiller Pein,  
+„Wacht mit mir, seid treu und nah,  
+Der Geist ist willig, das Fleisch ist schwach, oh, mein Freund, bleib bei mir.“
+
+[Chorus]  
+Oh, Jesus, du bist mein Licht,  
+In der Dunkelheit, mein Herz spricht,  
+Dein Blut, das für mich floss,  
+Erlösung, du bist groß.  
+Im Schatten des Kreuzes, da find' ich Frieden,  
+In deinen Wunden, sind wir besiegt.
+
+[VERS 2]  
+Eine Frau, in der Liebe stark,  
+Salbte deinen Kopf mit kostbarem Öl,  
+Die Jünger schauten voller Zorn,  
+Doch du sahst in ihr ein gutes Werk, oh, mein Herr, du bist so gut.
+
+[Chorus]  
+Oh, Jesus, du bist mein Licht,  
+In der Dunkelheit, mein Herz spricht,  
+Dein Blut, das für mich floss,  
+Erlösung, du bist groß.  
+Im Schatten des Kreuzes, da find' ich Frieden,  
+In deinen Wunden, sind wir besiegt.
+
+[Bridge]  
+Halt' mich fest, wenn die Welt zerbricht,  
+Deine Liebe hält, in jedem Licht.  
+Du trägst die Last, du nimmst die Schuld,  
+In dir allein, find' ich meine Ruh.  
+Wenn der Hahn kräht, und ich wein' vor dir,  
+Vergib mir, Herr, ich kehr' zurück zu dir.
+
+[Chorus]  
+Oh, Jesus, du bist mein Licht,  
+In der Dunkelheit, mein Herz spricht,  
+Dein Blut, das für mich floss,  
+Erlösung, du bist groß.  
+Im Schatten des Kreuzes, da find' ich Frieden,  
+In deinen Wunden, sind wir besiegt.
+
+[Outro]  
+Im Schatten des Kreuzes, da find' ich Frieden,  
+In deinen Wunden, sind wir besiegt.  
+Oh, Herr, du bist mein Licht,  
+In dir allein, find' ich mein Licht.`,
+        27: `[TITLE]  
+Dein Blut, O Jesus
+
+[Verse 1]  
+Am Morgen, voller Trauer,  
+Die Priester hielten Rat,  
+Verkaufen deinen Frieden,  
+Für Silber, das niemand hat.  
+Judas, voller Reue,  
+Brachte den Preis zurück,  
+Doch sie schauten nur vorüber,  
+Und sprachen: „Was geht uns das Glück?“
+
+[Chorus]  
+Dein Blut, O Jesus, fließt für uns,  
+Die Liebe, die uns neu entfacht.  
+Du trägst das Kreuz, dein Herz so rein,  
+In Dunkelheit, da bist du Licht und Kraft.
+
+[Verse 2]  
+Vor Pilatus stehst du schweigend,  
+Die Menge ruft: „Kreuzige!“  
+Du trägst die Schuld der Welt,  
+Und niemand sieht die Liebe, die in dir blieb.  
+Barabbas wird befreit,  
+Dein Weg führt uns zum Ziel,  
+Die Dornenkrone zeugt von Schmerz,  
+Doch du schenkst uns dein Gefühl.
+
+[Chorus]  
+Dein Blut, O Jesus, fließt für uns,  
+Die Liebe, die uns neu entfacht.  
+Du trägst das Kreuz, dein Herz so rein,  
+In Dunkelheit, da bist du Licht und Kraft.
+
+[Bridge]  
+Eli, Eli, warum hast du mich verlassen?  
+Doch in der Nacht, da kam dein Licht.  
+Die Erde bebte, der Vorhang riss,  
+Dein Opfer bringt uns Leben,  
+Du schenkst uns deinen Frieden.
+
+[Chorus]  
+Dein Blut, O Jesus, fließt für uns,  
+Die Liebe, die uns neu entfacht.  
+Du trägst das Kreuz, dein Herz so rein,  
+In Dunkelheit, da bist du Licht und Kraft.
+
+[Outro]  
+Amen, Amen, du bist der Weg,  
+Die Wahrheit, die uns immer trägt.  
+In deinem Namen finden wir Ruh,  
+O Jesus, wir vertrauen dir, du bist die Wahrheit, die wir suchen,  
+In dir allein, in dir allein.`,
         28: `Strophe 1:
 Maria kam zum Grab in stiller Nacht,  
 Die Dunkelheit umhüllt die Trauer, die sie bracht'.  
@@ -37135,7 +48162,838 @@ Die Liebe des Vaters wird nie verschwinden.“
 In Galiläa, da wirst du uns sehen,  
 Mit dir, Herr, werden wir nie mehr gehen.`,
     },
+    "41": {
+        1: `[TITLE]  
+"Der Weg des Herrn"
 
+[Verse 1]  
+In der Wüste, hör die Stimme,  
+Die den Weg des Herrn uns zeigt.  
+Johannes ruft zur Buße,  
+Die Herzen werden weit.  
+Der Engel geht voran,  
+Bereitet unsern Pfad,  
+Mit Wasser tauft er uns,  
+Ein neuer Anfang naht.
+
+[Chorus]  
+Komm, folge dem Licht,  
+Jesus, unser König,  
+Du bist der Sohn, der uns befreit,  
+In Dir finden wir das Leben,  
+In Dir, o Herr, sind wir bereit.  
+Komm, folge dem Licht,  
+Jesus, unser König,  
+Du bist der Weg, die Wahrheit, die Zeit.
+
+[Verse 2]  
+Er tauchte in den Jordan,  
+Der Himmel öffnete sich,  
+Der Geist fiel wie die Taube,  
+Ein Zeichen für dich und mich.  
+„Du bist mein lieber Sohn“,  
+Die Stimme ruft so klar,  
+In der Wüste und im Leben,  
+Bist Du uns immer nah.  
+
+[Chorus]  
+Komm, folge dem Licht,  
+Jesus, unser König,  
+Du bist der Sohn, der uns befreit,  
+In Dir finden wir das Leben,  
+In Dir, o Herr, sind wir bereit.  
+Komm, folge dem Licht,  
+Jesus, unser König,  
+Du bist der Weg, die Wahrheit, die Zeit.
+
+[Bridge]  
+In der Dunkelheit, Du bist unser Licht,  
+Wenn die Stürme kommen, verlässt Du uns nicht.  
+Du heilest die Schwachen, Du gibst uns die Kraft,  
+In Deinen Armen finden wir die wahre Macht.
+
+[Chorus]  
+Komm, folge dem Licht,  
+Jesus, unser König,  
+Du bist der Sohn, der uns befreit,  
+In Dir finden wir das Leben,  
+In Dir, o Herr, sind wir bereit.  
+Komm, folge dem Licht,  
+Jesus, unser König,  
+Du bist der Weg, die Wahrheit, die Zeit.
+
+[Outro]  
+Komm, folge dem Licht,  
+Komm, folge dem Licht,  
+In Dir, o Herr, sind wir bereit.  
+In Dir, o Herr, sind wir bereit.`,
+        2: `[Verse 1]  
+In Kapernaum, wo Du einst warst,  
+Versammelten sich viele, die Hoffnung trugen,  
+Ein Gichtbrüchiger, von Freunden getragen,  
+Durch das Dach, zu Dir, um Heilung zu suchen.
+
+[Chorus]  
+Heiliger, komm zu mir,  
+Vergib mir, mach mich neu,  
+Du bist der Weg, die Wahrheit hier,  
+In Dir find’ ich Frieden, oh, mein Gott, ich schrei.
+
+[Verse 2]  
+„Deine Sünden sind dir vergeben,“ sprachst Du,  
+Die Schriftgelehrten murmelten, voller Zweifel,  
+Doch Du sahst in ihre Herzen, voller Licht,  
+Komm, steh auf, nimm dein Bett, und geh in die Sicht.
+
+[Chorus]  
+Heiliger, komm zu mir,  
+Vergib mir, mach mich neu,  
+Du bist der Weg, die Wahrheit hier,  
+In Dir find’ ich Frieden, oh, mein Gott, ich schrei.
+
+[Bridge]  
+Jesus, Du bist der Bräutigam,  
+In Deiner Nähe, da blüht mein Herz,  
+Für die Sünder, für die Kranken,  
+Rufst Du sie alle, nimmst all unseren Schmerz.
+
+[Verse 3]  
+Die Jünger fasteten, fragten nach Dir,  
+Doch Deine Liebe erfüllt uns hier,  
+Der Sabbat ist für uns, ein Geschenk von Dir,  
+Du bist der Herr, der uns führt, stets zu Dir.
+
+[Chorus]  
+Heiliger, komm zu mir,  
+Vergib mir, mach mich neu,  
+Du bist der Weg, die Wahrheit hier,  
+In Dir find’ ich Frieden, oh, mein Gott, ich schrei.
+
+[Outro]  
+Heiliger, komm, wir beten zu Dir,  
+Deine Liebe, sie bleibt hier,  
+In jedem Herz, in jedem Klang,  
+Du bist die Hoffnung, unser Lobgesang.`,
+        3: `(Verse 1)  
+In der Stille, in der Nacht,  
+Wo der Mensch mit der Hand wacht,  
+Jesus ruft, tritt hervor,  
+Heilung fließt von deinem Ohr.  
+
+(Pre-Chorus)  
+Sabbat, der Tag der Ruh,  
+Doch du tust das Gute, so wie du,  
+Mit Zorn und Trauer in deinem Blick,  
+Heilung bringst du, das ist dein Glück.  
+
+(Chorus)  
+Deine Hand, o Herr, sie heilt,  
+In der Dunkelheit, dein Licht verweilt.  
+Du schaffst das Leben neu,  
+Ewige Hoffnung, du machst uns frei.  
+
+(Verse 2)  
+Die Menge kommt, sie folgt dir nach,  
+Aus Judäa und Galiläa, wie ein schwangerer Bach.  
+Die Plagen fliehen, die Dämonen schreien,  
+Du bist der Sohn, sie können nicht verweilen.  
+
+(Pre-Chorus)  
+Und du rufst die deinen her,  
+Ordnest sie und sendest sie mehr,  
+Um zu predigen und zu heilen,  
+Die Herzen neu zu teilen.  
+
+(Chorus)  
+Deine Hand, o Herr, sie heilt,  
+In der Dunkelheit, dein Licht verweilt.  
+Du schaffst das Leben neu,  
+Ewige Hoffnung, du machst uns frei.  
+
+(Bridge)  
+Wer tut den Willen Gottes, oh Herr,  
+Der ist mein Bruder, Schwester, mehr.  
+Deine Liebe, sie vereint,  
+In deinem Reich, wo niemand weint.  
+
+(Chorus)  
+Deine Hand, o Herr, sie heilt,  
+In der Dunkelheit, dein Licht verweilt.  
+Du schaffst das Leben neu,  
+Ewige Hoffnung, du machst uns frei.  
+
+(Outro)  
+In der Stille, in der Nacht,  
+Heilung fließt, dein Wort voll Macht.  
+Deine Hand, o Herr, sie heilt,  
+Mit dir, o Jesus, unser Herz verweilt.`,
+        4: `1. Strophe:  
+Am Ufer lehrt er, das Volk versammelt,  
+Ein Sämann geht, sein Wort entfaltet.  
+Die Saat des Lebens, sie fällt auf den Grund,  
+In Herzen, die hören, wird Frucht wohl gesund.  
+
+Refrain:  
+Höret zu, ihr Menschen, das Wort des Herrn,  
+Die Liebe, die heilt, sie brennt wie ein Stern.  
+Im Schatten des Zweiges, da wohnen wir nun,  
+Das Reich Gottes wächst, wir dürfen es tun.  
+
+2. Strophe:  
+Ein Same in Steinen, er kämpft um das Licht,  
+Doch wenn die Sonne scheint, vergeht seine Sicht.  
+Die Sorgen der Welt, sie ersticken das Wort,  
+Doch du, Herr, bist da, gibst Hoffnung an Ort.  
+
+Refrain:  
+Höret zu, ihr Menschen, das Wort des Herrn,  
+Die Liebe, die heilt, sie brennt wie ein Stern.  
+Im Schatten des Zweiges, da wohnen wir nun,  
+Das Reich Gottes wächst, wir dürfen es tun.  
+
+Bridge:  
+Wenn der Sturm tobt, und Zweifel uns drängt,  
+Sprichst du zu den Wellen, dass Frieden uns schenkt.  
+Wer Ohren hat, höre, der Glaube bleibt fest,  
+In deiner Umarmung, da finden wir Rast.  
+
+Refrain:  
+Höret zu, ihr Menschen, das Wort des Herrn,  
+Die Liebe, die heilt, sie brennt wie ein Stern.  
+Im Schatten des Zweiges, da wohnen wir nun,  
+Das Reich Gottes wächst, wir dürfen es tun.  
+
+Outro:  
+Sämann und Licht, du führst uns zum Ziel,  
+In deinem Wort finden wir unser Spiel.  
+So lass uns erblühen, in Liebe gedeih’n,  
+Im Reich deiner Gnade, da dürfen wir sein.`,
+        5: `[TITLE]  
+Du, der uns befreit
+
+[Verse 1]  
+Wenn der Sturm um mich tobt,  
+und die Nacht mich umhüllt,  
+kommst du, Herr, und du sprichst,  
+dass die Dunkelheit still wird.  
+Der Besessene, der schrie,  
+im Grab war sein Schmerz,  
+doch als er dich sah,  
+fiel er nieder, voll Ehrfurcht und Herz.
+
+[Chorus]  
+Du, der uns befreit,  
+du bringst Licht in die Nacht,  
+heilst die Wunden,  
+gibst Hoffnung, die wacht.  
+In deinem Namen,  
+find' ich Frieden und Ruh,  
+Jesus, du bist hier,  
+ich vertraue nur dir zu.
+
+[Verse 2]  
+Die Frau, die verzweifelt,  
+ihr Herz schwer wie Stein,  
+berührt deinen Mantel,  
+und sie wird ganz frei sein.  
+Du spürst die Kraft fließen,  
+der Glaube, er heilt,  
+und du sprichst zu ihr:  
+„Gehe hin, dein Glaube verweilt.“
+
+[Chorus]  
+Du, der uns befreit,  
+du bringst Licht in die Nacht,  
+heilst die Wunden,  
+gibst Hoffnung, die wacht.  
+In deinem Namen,  
+find' ich Frieden und Ruh,  
+Jesus, du bist hier,  
+ich vertraue nur dir zu.
+
+[Bridge]  
+Wenn der Tod uns umgibt,  
+und die Angst uns zerreißt,  
+sprichst du: „Fürchte dich nicht,  
+denn ich bin da, ich weiß.“  
+Du rufst die Toten,  
+und sie stehen wieder auf,  
+deine Liebe, sie bleibt,  
+und gibt uns neuen Lauf.
+
+[Chorus]  
+Du, der uns befreit,  
+du bringst Licht in die Nacht,  
+heilst die Wunden,  
+gibst Hoffnung, die wacht.  
+In deinem Namen,  
+find' ich Frieden und Ruh,  
+Jesus, du bist hier,  
+ich vertraue nur dir zu.
+
+[Outro]  
+Du, der uns befreit,  
+in dir ist das Leben,  
+mit jedem Atemzug,  
+will ich dir Lob erheben.  
+In deinem Namen,  
+find' ich Frieden und Ruh,  
+Jesus, du bist hier,  
+ich vertraue nur dir zu.`,
+        6: `[TITLE]  
+*Der Zimmermann aus Nazareth*
+
+[Verse 1]  
+In deiner Stadt, oh Jesus, hier,  
+Inmitten der Menschen, wir hören dir.  
+Die Weisheit strahlt aus deinem Wort,  
+Du heilst die Kranken, trittst an ihren Ort.  
+
+[Chorus]  
+Oh, du bist der Herr, der heilt und befreit,  
+Dein Licht scheint hell in der Dunkelheit.  
+Wir kommen zu dir, voller Glauben und Mut,  
+Mit dir an unserer Seite, da finden wir Ruh.  
+
+[Verse 2]  
+Die Jünger gesandt, zwei und zwei,  
+Die Botschaft des Lebens, sie tragen, oh wie frei.  
+In jedem Haus, wo sie eintraten,  
+Ein Zeichen der Liebe, wo Herzen erblühten.  
+
+[Chorus]  
+Oh, du bist der Herr, der heilt und befreit,  
+Dein Licht scheint hell in der Dunkelheit.  
+Wir kommen zu dir, voller Glauben und Mut,  
+Mit dir an unserer Seite, da finden wir Ruh.  
+
+[Bridge]  
+Wenn der Wind tobt und die Wellen uns schrecken,  
+Seid getrost, ich bin hier, ich werde euch decken.  
+Mit einem Wort hast du Frieden gebracht,  
+In deiner Nähe, da blüht die Macht.  
+
+[Verse 3]  
+Auf dem grünen Gras, die Brote geteilt,  
+Fünf Tausend genährt, dein Wunder verweilt.  
+Der Saum deines Kleides, die Hoffnung so nah,  
+Alle, die dich berühren, werden gesund, oh ja.  
+
+[Chorus]  
+Oh, du bist der Herr, der heilt und befreit,  
+Dein Licht scheint hell in der Dunkelheit.  
+Wir kommen zu dir, voller Glauben und Mut,  
+Mit dir an unserer Seite, da finden wir Ruh.  
+
+[Outro]  
+Der Zimmermann aus Nazareth,  
+In dir finden wir unser Leben, unser Licht.  
+Deine Liebe, oh Herr, sie bleibt für alle Zeit,  
+Wir beten zu dir, in Dankbarkeit und Freud.`,
+        7: `Vers 1:  
+Pharisäer kamen, fragten nach dem Brot,  
+Mit ungewaschenen Händen, oh wie groß die Not.  
+Doch Du sprachst von Herzen, von dem, was zählt,  
+Was aus uns herausgeht, das die Seele quält.
+
+Chorus:  
+Ehre sei Dir, Herr, in Deinem Licht,  
+Du schenkst uns Leben, gibst uns Zuversicht.  
+Nichts kann uns trennen von Deiner Liebe,  
+In Deiner Nähe, Herr, dort find ich Frieden.
+
+Vers 2:  
+Eure Lehren sind schwer, doch Du machst sie leicht,  
+Du zeigst uns den Weg, der zum Leben erreicht.  
+Von innen kommt der Kampf, böse Gedanken,  
+Doch Du reinigst das Herz, lässt uns nicht wanken.
+
+Chorus:  
+Ehre sei Dir, Herr, in Deinem Licht,  
+Du schenkst uns Leben, gibst uns Zuversicht.  
+Nichts kann uns trennen von Deiner Liebe,  
+In Deiner Nähe, Herr, dort find ich Frieden.
+
+Bridge:  
+Hephatha, Tu Dich auf,  
+Die Stummen hören, die Blinden seh'n,  
+In Deiner Gegenwart, da wird alles neu,  
+Herr, komm und erfülle uns, mach uns frei.
+
+Chorus:  
+Ehre sei Dir, Herr, in Deinem Licht,  
+Du schenkst uns Leben, gibst uns Zuversicht.  
+Nichts kann uns trennen von Deiner Liebe,  
+In Deiner Nähe, Herr, dort find ich Frieden.
+
+Outro:  
+Pharisäer fragen, doch wir wissen es jetzt,  
+Du bist der Weg, der nie uns verletzt.  
+In Deinem Namen, Herr, da finden wir Ruh,  
+Mit dir an unserer Seite, da leben wir in Du.`,
+        8: `### Titel: "Du sättigst mein Herz"
+
+[Verse 1]  
+In der Wüste, Herr, bist Du,  
+Deine Liebe, sie bleibt treu.  
+Viertausend Seelen, hungrig und schwach,  
+Du schenkst uns Brot, machst uns stark.
+
+[Chorus]  
+Du sättigst mein Herz, o Jesus, mein Licht,  
+Mit Deiner Gnade, schenkst Du mir Sicht.  
+In der Dunkelheit, bist Du mein Stern,  
+Du nimmst all meine Sorgen, ich vertraue Dir gern.
+
+[Verse 2]  
+Sie fragten, woher, gibt’s Brot in der Nacht,  
+Doch Du nimmst die Last, und Du gibst uns die Kraft.  
+Sieben Brote, Du dankst und brichst,  
+Jede Seele, die hungert, in Dir findet Licht.
+
+[Chorus]  
+Du sättigst mein Herz, o Jesus, mein Licht,  
+Mit Deiner Gnade, schenkst Du mir Sicht.  
+In der Dunkelheit, bist Du mein Stern,  
+Du nimmst all meine Sorgen, ich vertraue Dir gern.
+
+[Bridge]  
+Du bist der Weg, die Wahrheit, das Leben,  
+In Dir, Herr, kann ich alles erheben.  
+Wenn ich falle, bist Du mein Halt,  
+In Deiner Nähe, da wird mein Herz bald.
+
+[Verse 3]  
+Wenn die Zweifel mich quälen, und ich nicht mehr weiß,  
+Erinnerst Du mich, Du bist der Preis.  
+Nimm mein Kreuz, ich folge Dir nach,  
+In Deiner Liebe find’ ich den Frieden, den ich brauch.
+
+[Chorus]  
+Du sättigst mein Herz, o Jesus, mein Licht,  
+Mit Deiner Gnade, schenkst Du mir Sicht.  
+In der Dunkelheit, bist Du mein Stern,  
+Du nimmst all meine Sorgen, ich vertraue Dir gern.
+
+[Outro]  
+Du sättigst mein Herz, Du nimmst meine Angst,  
+In Deiner Umarmung, wo alles beginnt.  
+Du bist mein Leben, mein Trost und mein Ziel,  
+In Dir finde ich Ruhe, mein ewiges Spiel.`,
+        9: `Vers 1:  
+Du rufst uns, Herr, in Deine Nähe,  
+Wo Licht und Liebe strahlen klar.  
+Auf dem Berg, in Deiner Herrlichkeit,  
+Zeigst Du uns, wer Du wirklich bist, so wunderbar.  
+Mose und Elia, sie sprechen von Dir,  
+Das Volk voller Fragen, doch wir sind hier.
+
+Chorus:  
+In Deiner Herrlichkeit, Herr, erheben wir den Blick,  
+Du bist der Sohn, der uns führt, kein Schritt zurück.  
+Glaube erweckt in uns, während wir Dich hören,  
+O Herr, hilf uns, lass uns in Dir leben und nicht verwehren.
+
+Vers 2:  
+Im Schatten der Wolke, hörn wir Deine Stimme,  
+„Dies ist mein Sohn, hört auf Ihn!“ klingt es hell.  
+Du nimmst die Schwachen, erhebst sie im Glauben,  
+Mit Tränen im Herzen, rufen wir zu Dir, unser Held.  
+„Ich glaube, Herr, hilf meinem Unglauben!“  
+Dein Wort ist Leben, lass uns in Deinem Licht wohnen.
+
+Chorus:  
+In Deiner Herrlichkeit, Herr, erheben wir den Blick,  
+Du bist der Sohn, der uns führt, kein Schritt zurück.  
+Glaube erweckt in uns, während wir Dich hören,  
+O Herr, hilf uns, lass uns in Dir leben und nicht verwehren.
+
+Bridge:  
+Du hast gesagt, das Reich Gottes kommt,  
+In jedem Herzen, das sich Dir beugt.  
+Mit jedem Schritt, den wir in Dir gehen,  
+Wächst Deine Liebe, lässt uns nie stehen.  
+In Deinem Namen, Herr, sind wir vereint,  
+Mit jedem Atemzug, der unsere Herzen vereint.
+
+Chorus:  
+In Deiner Herrlichkeit, Herr, erheben wir den Blick,  
+Du bist der Sohn, der uns führt, kein Schritt zurück.  
+Glaube erweckt in uns, während wir Dich hören,  
+O Herr, hilf uns, lass uns in Dir leben und nicht verwehren.
+
+Outro:  
+In Deiner Herrlichkeit, bei Dir sind wir frei,  
+Du bist der Weg, die Wahrheit, das Leben für uns dabei.  
+O Herr, lass uns wandeln, in Licht und in Liebe,  
+In Deiner Herrlichkeit, für immer und ewig.`,
+        10: `[Verse 1]  
+Du kamst zu uns, Herr, voller Liebe,  
+In deinen Worten, da finden wir Frieden.  
+Du lehrst uns, zu leben, einander zu tragen,  
+In der Einheit, die wir in Dir haben.  
+
+[Chorus]  
+Was Du zusammenfügst, soll nicht getrennt sein,  
+In Deinem Licht, Herr, sind wir nie allein.  
+Mit Herzen so rein, wie die Kinder, die kommen,  
+Führen wir Dich, Herr, in unser Leben, so fromm.  
+
+[Verse 2]  
+Du sahst den Blinden, der rief nach Dir,  
+In seiner Dunkelheit, gabst Du ihm Licht, oh Herr.  
+Du fragst uns, was wir von Dir wollen,  
+In Deinem Namen, lass unsere Seelen schwollen.  
+
+[Chorus]  
+Was Du zusammenfügst, soll nicht getrennt sein,  
+In Deinem Licht, Herr, sind wir nie allein.  
+Mit Herzen so rein, wie die Kinder, die kommen,  
+Führen wir Dich, Herr, in unser Leben, so fromm.  
+
+[Bridge]  
+Wir folgen Dir nach, mit Glauben und Mut,  
+Egal, was geschieht, Herr, in Dir ist es gut.  
+Deine Liebe, sie trägt uns, durch Nacht und durch Tag,  
+In Deiner Umarmung, wo ich immer lag.  
+
+[Chorus]  
+Was Du zusammenfügst, soll nicht getrennt sein,  
+In Deinem Licht, Herr, sind wir nie allein.  
+Mit Herzen so rein, wie die Kinder, die kommen,  
+Führen wir Dich, Herr, in unser Leben, so fromm.  
+
+[Outro]  
+Eins mit Dir, oh Herr, in Deinem Licht,  
+In der Ewigkeit, verlier ich Dich nicht.  
+Eins mit Dir, oh Herr, in Deinem Licht,  
+In der Ewigkeit, verlier ich Dich nicht.`,
+        11: `Hosianna in der Höhe
+
+[Verse 1]  
+Näher komm' ich dir, oh Herr,  
+an den Ölberg, wo ich stehen kann,  
+Die Kleider fallen, Herzen schreien,  
+„Hosianna, komm, du Sohn des Mannes!“
+
+[Chorus]  
+Hosianna, gelobt sei dein Name,  
+im Namen des Herrn, der uns errettet hat.  
+Hosianna, dein Reich komme her,  
+Wir preisen dich, du bist unser Licht.
+
+[Verse 2]  
+Das Füllen, unberührt, bereit,  
+wird zu dir gebracht, oh Herr der Zeit.  
+Die Menschen bringen Maien,  
+und die Freude kann nicht schweigen.
+
+[Chorus]  
+Hosianna, gelobt sei dein Name,  
+im Namen des Herrn, der uns errettet hat.  
+Hosianna, dein Reich komme her,  
+Wir preisen dich, du bist unser Licht.
+
+[Bridge]  
+Du lehrst uns, im Glauben zu leben,  
+Die Berge versetzen, wenn wir beten,  
+Vergib uns, wenn wir fallen,  
+Lass uns treu in deinem Willen wallen.
+
+[Verse 3]  
+Im Tempel, wo dein Wort erklingt,  
+Lässt du die Furcht der Menschen sinken.  
+Kein Handel hier, nur Lobgesang,  
+Du bist der Grund, warum ich sing.
+
+[Chorus]  
+Hosianna, gelobt sei dein Name,  
+im Namen des Herrn, der uns errettet hat.  
+Hosianna, dein Reich komme her,  
+Wir preisen dich, du bist unser Licht.
+
+[Outro]  
+Hosianna, in der Höhe,  
+Dein Name sei erhoben,  
+Für alle Zeit, für alle Völker,  
+Hosianna, wir kommen zu dir, Herr.`,
+        12: `[TITLE]  
+Der Weinberg Deines Herzens
+
+[Verse 1]  
+Du pflanzt, o Herr, in unsern Herzen,  
+Ein Weinberg voller Gnade,  
+Mit Zaun der Liebe, stark und treu,  
+Ein Ort, wo Deine Frucht gedeiht.  
+Du sandtest Knechte, um zu sehen,  
+Die Ernte, die Du uns gegeben,  
+Doch oft verkannten wir Dein Wort,  
+Und ließen Dich verstoßen dort.  
+
+[Chorus]  
+Oh, lass uns hören, Herr, Dein Ruf,  
+Dein Sohn, der für uns starb, in Liebe,  
+Wir bringen alles, was wir haben,  
+Und geben Dir, was für uns lebt.  
+Der Stein, den die Bauleute verwarfen,  
+Wurde zum Eckstein, Du bist der Weg.  
+
+[Verse 2]  
+Du sprichst von Liebe, die uns leitet,  
+Von Nächstenliebe, die uns vereint,  
+Mit ganzem Herzen, mit aller Kraft,  
+In Deinem Licht, das neu entfacht.  
+Die Witwe gab, aus tiefem Glauben,  
+Ihr ganzes Leben, nichts zu rauben,  
+Lass uns so leben, ganz für Dich,  
+In jedem Atemzug, in Deinem Licht.  
+
+[Chorus]  
+Oh, lass uns hören, Herr, Dein Ruf,  
+Dein Sohn, der für uns starb, in Liebe,  
+Wir bringen alles, was wir haben,  
+Und geben Dir, was für uns lebt.  
+Der Stein, den die Bauleute verwarfen,  
+Wurde zum Eckstein, Du bist der Weg.  
+
+[Bridge]  
+Du bist der Gott der Lebendigen,  
+In Dir ist Hoffnung, in Dir das Leben,  
+Wir erheben unsere Stimmen,  
+Für Dich allein, o Herr, wir streben.  
+In Deinem Reich, da blüht die Liebe,  
+Wir sind vereint, in Deinem Namen,  
+Du bist der Herr, der alles gibt,  
+In Dir allein, da sind wir lebendig.  
+
+[Chorus]  
+Oh, lass uns hören, Herr, Dein Ruf,  
+Dein Sohn, der für uns starb, in Liebe,  
+Wir bringen alles, was wir haben,  
+Und geben Dir, was für uns lebt.  
+Der Stein, den die Bauleute verwarfen,  
+Wurde zum Eckstein, Du bist der Weg.  
+
+[Outro]  
+In Deinem Weinberg, Herr, da blühen wir,  
+Mit Dir in Einheit, leben wir hier.  
+Sei unser Licht, unser Ziel, unser Traum,  
+In Deinem Weinberg, o Herr, da blühen wir kaum.`,
+        13: `[TITLE] Wachet und Betet
+
+[VERS 1]  
+Wenn der Tempel fällt und die Steine zerbrechen,  
+Seh' ich deine Worte, Herr, sie werden nicht schwächen.  
+Kriege und Schrecken, die Welt voller Leid,  
+Doch du bist mein Licht, du bist meine Zeit.  
+
+[Chorus]  
+Wachet und betet, die Nacht ist nicht fern,  
+Du bist unser Halt, du bist unser Stern.  
+Wenn Zeichen erscheinen, und die Wolken sich neigen,  
+In deiner Gegenwart, Herr, lass uns verweilen.  
+
+[VERS 2]  
+Hass und Verfolgung, die Herzen so schwer,  
+Doch du trägst uns, Herr, du bist immer sehr nah.  
+Gib uns die Kraft, bis ans Ende zu stehen,  
+Deine Treue, Herr, lässt uns nie mehr verwehen.  
+
+[Chorus]  
+Wachet und betet, die Nacht ist nicht fern,  
+Du bist unser Halt, du bist unser Stern.  
+Wenn Zeichen erscheinen, und die Wolken sich neigen,  
+In deiner Gegenwart, Herr, lass uns verweilen.  
+
+[Bridge]  
+Wenn die Sonne erlischt und der Mond nicht mehr scheint,  
+Sieh, der Menschensohn kommt, seine Liebe vereint.  
+Wir erheben die Stimmen, in der Nacht voller Licht,  
+Du bist unser Retter, du verlässt uns nicht.  
+
+[Chorus]  
+Wachet und betet, die Nacht ist nicht fern,  
+Du bist unser Halt, du bist unser Stern.  
+Wenn Zeichen erscheinen, und die Wolken sich neigen,  
+In deiner Gegenwart, Herr, lass uns verweilen.  
+
+[Outro]  
+Wachet, oh wachet, die Stimme ruft laut,  
+In der Dunkelheit, Herr, bist du unser Vertrauen.  
+Wachet und betet, wir singen für dich,  
+In der Ewigkeit, Herr, bist du unser Licht.`,
+        14: `[TITLE]  
+Der Weg zum Kreuz
+
+[Verse 1]  
+In Bethanien, da saß der Herr,  
+Ein Weib kam mit Narden, so kostbar und schwer.  
+Sie brach das Glas, die Salbe floss,  
+Ein Zeichen der Liebe, das Herz, das sich schloss.  
+
+[Chorus]  
+Oh, lass uns kommen, dir zu geben,  
+Was unser Herz in Dank erheben.  
+Du, der für uns das Leben gab,  
+In dir, oh Herr, ist unser Grab.  
+
+[Verse 2]  
+Die Jünger fragten, wo es sein wird,  
+Das Osterlamm, das uns führt.  
+Der Meister sprach: „Folgt dem Wasser,  
+Für uns bereitet, in stiller Nacht, das Festmahl, das wir hatten.“  
+
+[Chorus]  
+Oh, lass uns kommen, dir zu geben,  
+Was unser Herz in Dank erheben.  
+Du, der für uns das Leben gab,  
+In dir, oh Herr, ist unser Grab.  
+
+[Bridge]  
+Und in der Dunkelheit, wo Zweifel bricht,  
+Bist du das Licht, das uns verspricht.  
+Wenn wir fallen, sei du nah,  
+Du trägst uns, wie ein Vater, immer dar.  
+
+[Chorus]  
+Oh, lass uns kommen, dir zu geben,  
+Was unser Herz in Dank erheben.  
+Du, der für uns das Leben gab,  
+In dir, oh Herr, ist unser Grab.  
+
+[Verse 3]  
+Am Ölberg kniet er, betet so schwer,  
+„Vater, dein Wille, nicht mein, ich fleh zu dir her.“  
+Der Verräter küsst, mit einem Zeichen,  
+Doch deine Liebe wird uns erreichen.  
+
+[Chorus]  
+Oh, lass uns kommen, dir zu geben,  
+Was unser Herz in Dank erheben.  
+Du, der für uns das Leben gab,  
+In dir, oh Herr, ist unser Grab.  
+
+[Outro]  
+Oh, Jesus, unser Heiland, unser Licht,  
+In dir, oh Herr, verlässt uns nie die Sicht.  
+Für immer verbunden, durch dein Blut,  
+Lebendig in dir, du tust uns gut.`,
+        15: `[TITLE]  
+König der Juden
+
+[LYRICS]
+
+1. Strophe  
+In der Dunkelheit, die Nacht bricht an,  
+Hohenpriester, die voller Neid,  
+Vor Pilatus stehend, unschuldig er,  
+Jesus, der König, voller Leid.  
+
+[Chorus]  
+Kreuzige ihn, rufen die Massen,  
+Doch sein Herz schlägt für uns,  
+Für unsere Sünden, trägt er die Last,  
+Eli, Eli, warum hast du mich verlassen?  
+
+2. Strophe  
+Simon von Kyrene, das Kreuz auf dem Weg,  
+Golgatha ruft, die Welt ist kalt,  
+Sein Leben gegeben, für dich und mich,  
+Im Schmerz, der die Liebe entfaltet.  
+
+[Chorus]  
+Kreuzige ihn, rufen die Massen,  
+Doch sein Herz schlägt für uns,  
+Für unsere Sünden, trägt er die Last,  
+Eli, Eli, warum hast du mich verlassen?  
+
+[Bridge]  
+Der Vorhang zerreißt, der Weg ist nun frei,  
+Sohn Gottes, du bist der Heiland,  
+In der Dunkelheit leuchtet dein Licht,  
+Deine Liebe, sie bleibt, sie bleibt.  
+
+[Chorus]  
+Kreuzige ihn, rufen die Massen,  
+Doch sein Herz schlägt für uns,  
+Für unsere Sünden, trägt er die Last,  
+Eli, Eli, warum hast du mich verlassen?  
+
+[Outro]  
+König der Juden, du bist unser Licht,  
+In der Finsternis, zeigst du das Gesicht,  
+Deine Gnade umhüllt uns,  
+Für immer in deinem Licht.`,
+        16: `Vers 1:
+Der Sabbat ist vergangen,  
+Die Frauen kommen früh,  
+Mit Herzen voll der Hoffnung,  
+Suchen sie den, der nie  
+In einem Grab verweilte,  
+Der Stein, er war so schwer,  
+Doch siehe, er ist weggeweht,  
+Der Herr ist nicht mehr hier.
+
+Refrain:
+Auferstanden in Herrlichkeit,  
+Der Tod hat nicht gesiegt,  
+Wir singen dir, o Jesus,  
+Für immer bist du unser Licht.  
+Die Dunkelheit ist weichen,  
+Dein Leben strahlt so rein,  
+Oh, auferstand'ner Heiland,  
+In dir sind wir vereint.
+
+Vers 2:
+Ein Engel sprach zu ihnen,  
+„Fürchtet euch nicht, seid froh!  
+Ihr sucht den Gekreuzigten,  
+Doch er lebt, er ist nun so!  
+Geht hin und sagt den Jüngern,  
+Er wird euch vorangehn,  
+In Galiläa wird er sein,  
+Lasst uns zu ihm stehn.“
+
+Refrain:
+Auferstanden in Herrlichkeit,  
+Der Tod hat nicht gesiegt,  
+Wir singen dir, o Jesus,  
+Für immer bist du unser Licht.  
+Die Dunkelheit ist weichen,  
+Dein Leben strahlt so rein,  
+Oh, auferstand'ner Heiland,  
+In dir sind wir vereint.
+
+Bridge:
+Und wenn der Zweifel kommt,  
+Und unser Glaube wankt,  
+Du sprichst zu uns, o Herr,  
+Und unser Herz dir dankt.  
+In deinem Namen, Jesus,  
+Sind wir stark und frei,  
+Die Zeichen deiner Liebe,  
+Sie ziehen uns zu dir.
+
+Refrain:
+Auferstanden in Herrlichkeit,  
+Der Tod hat nicht gesiegt,  
+Wir singen dir, o Jesus,  
+Für immer bist du unser Licht.  
+Die Dunkelheit ist weichen,  
+Dein Leben strahlt so rein,  
+Oh, auferstand'ner Heiland,  
+In dir sind wir vereint.
+
+Outro:
+Die Welt wird dir verkünden,  
+Von deinem großen Werk,  
+Auferstanden, o Heiland,  
+Du bist unser Herz.  
+In dir finden wir Frieden,  
+Und Hoffnung blüht so schön,  
+Oh, auferstand'ner Heiland,  
+Mit dir wollen wir gehn.`,
+    },
     "42": {
         1: `"Gnade in der Dunkelheit"
 
@@ -37205,7 +49063,74 @@ Für die Liebe, die uns trägt.
 In der Dunkelheit wirst du leuchten,  
 Ewig bleibt dein Licht bestehen.  
 Amen.`,
-        2: ``,
+        2: `[TITLE]  
+„Der Heiland ist geboren“
+
+[Verse 1]  
+In der Nacht, die still und heilig,  
+Kam der Retter, unser Licht.  
+Maria hielt das Kind in Händen,  
+Gottes Liebe, die uns spricht.  
+Hirten hören, Engel singen,  
+Freude, die der Herr uns bringt.  
+Ehre sei dem Höchsten, Halleluja,  
+Frieden, den der Heiland bringt.
+
+[Chorus]  
+Ehre sei Gott in der Höhe,  
+Frieden auf der Erde weit.  
+Uns ist heute der Heiland geboren,  
+In der Krippe, voll Heiligkeit.  
+Ehre sei Gott in der Höhe,  
+Lob und Dank ihm alle Zeit.  
+Er ist unsere Hoffnung, unser Leben,  
+In ihm finden wir die Freiheit.
+
+[Verse 2]  
+Joseph führt die Familie,  
+Nach Bethlehem, dem Ort der Wahl.  
+Ein Licht für alle Völker,  
+Er erfüllt das Wort der Wahl.  
+Simeon spricht mit ergreifender Freude,  
+„Dein Heiland, Herr, ich seh' ihn hier.“  
+Ein Licht, das leuchtet für die Heiden,  
+Ein Zeichen, das uns führt zu dir.
+
+[Chorus]  
+Ehre sei Gott in der Höhe,  
+Frieden auf der Erde weit.  
+Uns ist heute der Heiland geboren,  
+In der Krippe, voll Heiligkeit.  
+Ehre sei Gott in der Höhe,  
+Lob und Dank ihm alle Zeit.  
+Er ist unsere Hoffnung, unser Leben,  
+In ihm finden wir die Freiheit.
+
+[Bridge]  
+Komm, vertraue, fühl die Liebe,  
+Die das Herz in Freude bringt.  
+Jesus, du bist unser Leben,  
+In dir singen wir, was du versprichst.  
+Halleluja, wir erheben,  
+Dein Name sei für immer groß.  
+In der Dunkelheit, du Licht der Welt,  
+Du bist unser Trost, du bist unser Trost.
+
+[Chorus]  
+Ehre sei Gott in der Höhe,  
+Frieden auf der Erde weit.  
+Uns ist heute der Heiland geboren,  
+In der Krippe, voll Heiligkeit.  
+Ehre sei Gott in der Höhe,  
+Lob und Dank ihm alle Zeit.  
+Er ist unsere Hoffnung, unser Leben,  
+In ihm finden wir die Freiheit.  
+
+[Outro]  
+In der Nacht, die still und heilig,  
+Komm, wir preisen seinen Namen,  
+Ewiger Gott, du bist das Licht,  
+In dir finden wir den Frieden.`,
         3: `[Verse 1]  
 In der Wüste ruft eine Stimme,  
 Bereitet den Weg des Herrn,  
@@ -37265,15 +49190,503 @@ Alle Menschen werden dich sehen,
 Du bist der Weg, die Wahrheit, das Leben,  
 In deiner Gnade, in deinem Frieden,  
 Lass uns in dir, oh Herr, leben.`,
-        4: ``,
-        5: ``,
-        6: ``,
-        7: ``,
-        8: ``,
-        9: ``,
-        10: ``,
-        11: ``,
-        12: ``,
+        4: `[TITLE] Der Geist des HERRN
+
+[Verse 1]  
+Du kamst, o Herr, in die Wüste,  
+voll Heiligen Geistes, stark und rein.  
+Vierzig Tage, hungersam,  
+doch Dein Wort, es bleibt allein.  
+„Nicht vom Brot allein,  
+lebt der Mensch, oh, Herr, bei Dir!“  
+
+[Chorus]  
+Du, der Geist des HERRN, bist bei mir,  
+Heilung bringst Du, Trost und Licht.  
+In der Dunkelheit bist Du mein Ziel,  
+Deine Liebe, mein Gesicht.  
+Oh, ich will Dir begegnen,  
+Herr, ich nehm' Dich an,  
+Dein Wort gibt mir Leben,  
+in Dir bin ich gebannt.  
+
+[Verse 2]  
+Der Teufel sprach: „Komm, bete an,  
+alle Reiche sind Dir gegeben.“  
+Doch Du antwortetest mit Kraft,  
+„Gott allein will ich erstreben.“  
+„Du sollst nicht versuchen,  
+den HERRN, deinen Gott!“
+
+[Chorus]  
+Du, der Geist des HERRN, bist bei mir,  
+Heilung bringst Du, Trost und Licht.  
+In der Dunkelheit bist Du mein Ziel,  
+Deine Liebe, mein Gesicht.  
+Oh, ich will Dir begegnen,  
+Herr, ich nehm' Dich an,  
+Dein Wort gibt mir Leben,  
+in Dir bin ich gebannt.  
+
+[Bridge]  
+Du bist der Heiland, der zu mir spricht,  
+bringst Hoffnung in die Nacht.  
+Befreiung für die gebrochenen Herzen,  
+Gnade, die uns neu entfacht.  
+Ich will hören, was Du sagst,  
+Dein Wille sei mein Weg.  
+Heute erfüllt das Wort der Propheten,  
+in Deinem Licht, da bin ich rege.  
+
+[Chorus]  
+Du, der Geist des HERRN, bist bei mir,  
+Heilung bringst Du, Trost und Licht.  
+In der Dunkelheit bist Du mein Ziel,  
+Deine Liebe, mein Gesicht.  
+Oh, ich will Dir begegnen,  
+Herr, ich nehm' Dich an,  
+Dein Wort gibt mir Leben,  
+in Dir bin ich gebannt.  
+
+[Outro]  
+In der Wüste, in der Fülle,  
+Du bist bei mir, ich bleibe hier.  
+Dein Wort ist mein Leben,  
+O Herr, ich will nur Dir.  
+Amen.`,
+        5: `[TITLE]  
+Dein Wort führt mich
+
+[Verse 1]  
+Am See von Genezareth, das Volk kam nah,  
+Um zu hören von dir, Herr, so wunderbar.  
+Die Fischer waren müde, die Netze leer,  
+Doch du sprachst zu Simon, „Werf aus, wage mehr.“
+
+[Chorus]  
+Auf dein Wort, Herr, will ich gehen,  
+Wo du führst, da will ich stehen.  
+Du bist der Arzt, der heilt mein Herz,  
+In deiner Nähe spür ich keinen Schmerz.
+
+[Verse 2]  
+Ein Mann voll Aussatz, fiel nieder zu dir,  
+„Herr, wenn du willst, mach mich rein von mir.“  
+Du strecktest die Hand aus, sprachst „Sei geheilt!“  
+Und die Dunkelheit, sie wurde nie geteilt.
+
+[Chorus]  
+Auf dein Wort, Herr, will ich gehen,  
+Wo du führst, da will ich stehen.  
+Du bist der Arzt, der heilt mein Herz,  
+In deiner Nähe spür ich keinen Schmerz.
+
+[Bridge]  
+„Fürchte dich nicht“, so sprichst du zu mir,  
+„Von nun an, Mensch, wirst du fangen für mich.“  
+Ich folge dir nach, lass alles zurück,  
+In deinem Licht finde ich mein Glück.
+
+[Chorus]  
+Auf dein Wort, Herr, will ich gehen,  
+Wo du führst, da will ich stehen.  
+Du bist der Arzt, der heilt mein Herz,  
+In deiner Nähe spür ich keinen Schmerz.
+
+[Outro]  
+Dein Wort gibt mir Hoffnung, dein Wort gibt mir Kraft,  
+In jedem Sturm, Herr, bist du meine Leidenschaft.  
+Ich werde dir folgen, mein Leben dir weih’n,  
+Dein Wort, Herr, ist mein Licht, mein Sein.`,
+        6: `[TITLE]  
+*Herr des Sabbats*
+
+[Verse 1]  
+In des Lebens schweren Tagen,  
+Such ich Trost, wo kannst du sein?  
+Jesus, der uns stets umgibt,  
+Heilst uns, wenn wir schwach und klein.  
+Deine Jünger, hungrig, müde,  
+Raufen Ähren, suchen Brot.  
+Doch die Pharisäer fragen,  
+Warum brecht ihr das Gebot?  
+
+[Chorus]  
+Du bist der Herr des Sabbats,  
+Bringst Licht in unsere Nacht.  
+In dir, O Herr, sind wir frei,  
+Dein Wort gibt uns neue Kraft.  
+Selig die, die hungern, weinen,  
+Denn du schenkst uns Freude, Trost.  
+In der Stille, in der Nähe,  
+Finden wir, was du uns bloßst.  
+
+[Verse 2]  
+Ein Mensch steht da mit dürrer Hand,  
+Die Schriftgelehrten lauern still.  
+Was ist gut, was ist verbannt?  
+Du fragst, Herr, was ist dein Will?  
+„Strecke aus, was dir gebrochen,  
+Glaub an mich, ich mache neu.“  
+Deine Liebe, sie durchbricht,  
+Jede Mauer, jeden Scheu.  
+
+[Chorus]  
+Du bist der Herr des Sabbats,  
+Bringst Licht in unsere Nacht.  
+In dir, O Herr, sind wir frei,  
+Dein Wort gibt uns neue Kraft.  
+Selig die, die hungern, weinen,  
+Denn du schenkst uns Freude, Trost.  
+In der Stille, in der Nähe,  
+Finden wir, was du uns bloßt.  
+
+[Bridge]  
+Lass uns lieben, wie du liebst,  
+Barmherzig sein, wie du vergibst.  
+Die Feinde segnen, für sie beten,  
+In deinem Licht will ich leben.  
+Du bist der Grund, ich baue fest,  
+Auf deinem Wort, mein Herz in Rest.  
+Wenn Stürme kommen, bleib ich hier,  
+In deiner Nähe, Herr, bei dir.  
+
+[Chorus]  
+Du bist der Herr des Sabbats,  
+Bringst Licht in unsere Nacht.  
+In dir, O Herr, sind wir frei,  
+Dein Wort gibt uns neue Kraft.  
+Selig die, die hungern, weinen,  
+Denn du schenkst uns Freude, Trost.  
+In der Stille, in der Nähe,  
+Finden wir, was du uns bloßt.  
+
+[Outro]  
+Herr, du bist der Weg zum Leben,  
+In dir finden wir den Frieden.  
+Komm, erfülle unser Herz,  
+Mit deiner Liebe, ohne Schmerz.`,
+        7: `[TITLE]  
+Wort des Lebens
+
+[VERS 1]  
+In Kapernaum, der Hauptmann stand,  
+Sein Knecht lag krank, in Not und Angst.  
+Er sprach: „Herr, sprich nur ein Wort,  
+Und Heilung kommt von Deinem Ort.  
+
+[VERS 2]  
+Die Ältesten baten, voller Mut,  
+Denn er hat unser Volk so gut.  
+„Nicht wert, dass Du zu mir kommst,  
+Doch Dein Wort, es heilt, so stark und fromm.“
+
+[Chorus]  
+Oh, Jesus, Du bist hier,  
+Dein Wort gibt Leben, es heilt die Gier.  
+In Dir find ich Frieden, in Dir find ich Licht,  
+Du bist der Weg, die Wahrheit, das Leben, mein Licht.  
+
+[VERS 3]  
+In Nain, die Witwe weint,  
+Ihr Sohn, er ruht, die Trauer keimt.  
+Doch Du, Herr, siehst voller Mitleid,  
+Sprichst: „Weine nicht, ich geb dir Zeit.“  
+
+[VERS 4]  
+Du rührst den Sarg, die Trauer schweigt,  
+Der Tote steht auf, das Leben zeigt.  
+Die Menschen staunen, loben laut,  
+Ein großer Prophet, der Gott vertraut.  
+
+[Chorus]  
+Oh, Jesus, Du bist hier,  
+Dein Wort gibt Leben, es heilt die Gier.  
+In Dir find ich Frieden, in Dir find ich Licht,  
+Du bist der Weg, die Wahrheit, das Leben, mein Licht.  
+
+[Bridge]  
+Dein Glaube, er hilft, so stark und rein,  
+Die Sünder kommen, Du machst sie Dein.  
+Vergib uns, Herr, was uns bindet,  
+In Deiner Liebe, die nie verschwindet.  
+
+[Chorus]  
+Oh, Jesus, Du bist hier,  
+Dein Wort gibt Leben, es heilt die Gier.  
+In Dir find ich Frieden, in Dir find ich Licht,  
+Du bist der Weg, die Wahrheit, das Leben, mein Licht.  
+
+[Outro]  
+In Deiner Nähe, Herr, da blüh ich auf,  
+Mit jedem Wort, da nehm ich's auf.  
+Du schenkst mir Frieden, Du schenkst mir Licht,  
+Jesus, mein Retter, Du bist mein Gedicht.`,
+        8: `[TITLE]  
+Im Licht Deiner Liebe
+
+[VERS 1]  
+Du reist durch die Städte, durch Dörfer und Zeit,  
+Verkündigst das Reich, bringst Hoffnung und Freiheit.  
+Die Seele der Traurigen, die Herzen so schwer,  
+Heilung bringst Du uns, oh, Jesus, wir fleh’n mehr.
+
+[Chorus]  
+Im Licht Deiner Liebe, da finden wir Ruh,  
+Du sprichst zu uns leise, und wir hören zu.  
+Vertraut in Dein Wort, das in uns neu blüht,  
+In Geduld bringen wir Frucht, weil Du uns nie fliehst.
+
+[VERS 2]  
+Der Same des Lebens, Dein Wort in uns lebt,  
+Die Sorgen und Nöte, sie können uns nicht verweh’n.  
+Auf gutem Boden, da wächst unser Glaube,  
+In Deinem Schatten blühen wir, Du bist unsere Traube.
+
+[Chorus]  
+Im Licht Deiner Liebe, da finden wir Ruh,  
+Du sprichst zu uns leise, und wir hören zu.  
+Vertraut in Dein Wort, das in uns neu blüht,  
+In Geduld bringen wir Frucht, weil Du uns nie fliehst.
+
+[Bridge]  
+Wo der Sturm tobt, bist Du unser Halt,  
+Mit einem Wort bringst Du Frieden, der strahlt.  
+Wir fürchten uns nicht, denn Du bist hier,  
+In Deinem Namen, oh Herr, bringen wir Dir.
+
+[Chorus]  
+Im Licht Deiner Liebe, da finden wir Ruh,  
+Du sprichst zu uns leise, und wir hören zu.  
+Vertraut in Dein Wort, das in uns neu blüht,  
+In Geduld bringen wir Frucht, weil Du uns nie fliehst.
+
+[Outro]  
+Jesus, Du bist unser Licht in der Nacht,  
+Dein Wort, das uns leitet, uns Kraft und Mut macht.  
+Wir kommen zu Dir, mit Herzen so rein,  
+Im Licht Deiner Liebe, da dürfen wir sein.`,
+        9: `[TITLE] Du bist der Christus
+
+[Verse 1]  
+Du rufst uns, Herr, zu gehen,  
+Mit Kraft und Macht erfüllt,  
+Die Dunkelheit zu brechen,  
+Dein Licht, das uns umhüllt.  
+In Wüsten und in Städten,  
+Verkündest Du das Wort,  
+Die Kranken werden heilen,  
+Durch Deinen heil'gen Ort.
+
+[Chorus]  
+Du bist der Christus, unser König,  
+Wir folgen Dir, in Deiner Nähe.  
+Dein Reich, es wächst in unsrem Herzen,  
+Und Deine Liebe, die nie vergeht.  
+Gib uns die Stärke, Herr, zu leben,  
+Für Dich allein, in jedem Schritt,  
+Du bist der Christus, unser Retter,  
+Wir geben Dir, was unser Herz beraubt.
+
+[Verse 2]  
+Du speisest uns mit Gnade,  
+Mit Broten, die nie enden,  
+In Deiner Nähe finden wir,  
+Was wir im Leben senden.  
+Du schenkst uns neue Hoffnung,  
+Wenn wir den Weg nicht seh’n,  
+Du führst uns in die Freiheit,  
+Lässt uns mit Dir geh’n.
+
+[Chorus]  
+Du bist der Christus, unser König,  
+Wir folgen Dir, in Deiner Nähe.  
+Dein Reich, es wächst in unsrem Herzen,  
+Und Deine Liebe, die nie vergeht.  
+Gib uns die Stärke, Herr, zu leben,  
+Für Dich allein, in jedem Schritt,  
+Du bist der Christus, unser Retter,  
+Wir geben Dir, was unser Herz beraubt.
+
+[Bridge]  
+In Deiner Herrlichkeit,  
+Seh’n wir die Wahrheit,  
+Du bist der Weg, die Wahrheit, das Leben,  
+Wir erheben Deinen Namen,  
+Du schämst Dich nicht für uns,  
+Lass uns, Herr, Dir nachfolgen,  
+Mit jedem Schritt, den wir tun.
+
+[Chorus]  
+Du bist der Christus, unser König,  
+Wir folgen Dir, in Deiner Nähe.  
+Dein Reich, es wächst in unsrem Herzen,  
+Und Deine Liebe, die nie vergeht.  
+Gib uns die Stärke, Herr, zu leben,  
+Für Dich allein, in jedem Schritt,  
+Du bist der Christus, unser Retter,  
+Wir geben Dir, was unser Herz beraubt.
+
+[Outro]  
+Du bist der Christus, Du bist mein Licht,  
+In Deiner Umarmung, da find’ ich mein Glück.  
+Für immer will ich bei Dir sein,  
+Du bist der Christus, mein Herz, mein Sein.`,
+        10: `[TITLE] Gehe hin und teile den Frieden
+
+[VERS 1]  
+Du rufst uns, Herr, mit deiner Stimme,  
+Die Ernte groß, die Arbeiter wenig,  
+Sende uns, oh Vater, in die Welt,  
+Lass uns tragen, was du uns erzählst.  
+
+[Chorus]  
+Frieden sei in diesem Hause,  
+Dein Reich, oh Herr, ist nah,  
+Lass uns lieben, wie du liebst,  
+Und dein Licht strahlt immer klar.  
+
+[VERS 2]  
+Inmitten Wölfen, stark und mutig,  
+Gib uns Kraft, Herr, und deine Nähe,  
+Die Kranken heilen, Herzen öffnen,  
+Dein Name, Jesus, schenkt das Leben.  
+
+[Chorus]  
+Frieden sei in diesem Hause,  
+Dein Reich, oh Herr, ist nah,  
+Lass uns lieben, wie du liebst,  
+Und dein Licht strahlt immer klar.  
+
+[Bridge]  
+Wir freuen uns, unsere Namen stehen,  
+Im Buch des Lebens, fest geschrieben,  
+Dein Geist erfüllt uns, wir gehen voran,  
+In deiner Liebe, oh Herr, sind wir vereint.  
+
+[Chorus]  
+Frieden sei in diesem Hause,  
+Dein Reich, oh Herr, ist nah,  
+Lass uns lieben, wie du liebst,  
+Und dein Licht strahlt immer klar.  
+
+[Outro]  
+Du bist der Weg, die Wahrheit, das Leben,  
+Wir stehen auf, um zu dienen, oh Herr,  
+In deinem Frieden, voller Freude,  
+Senden wir aus, was du uns gibst.`,
+        11: `[TITLE]  
+Vater, dein Reich komme
+
+[Verse 1]  
+In der Stille, Herr, such' ich dich,  
+Lehre mich, beten, wie du es sprachst,  
+Vater im Himmel, heilig ist dein Name,  
+Dein Wille geschehe, auf Erden sei dein Ruhm.
+
+[Chorus]  
+Vater, gib uns unser täglich Brot,  
+Vergib uns die Schuld, wie wir vergeben,  
+Führe uns nicht in Versuchung,  
+Erlöse uns von allem Übel, oh Herr.
+
+[Verse 2]  
+Wenn ich rufe, hörst du meine Stimme,  
+Du bist da, wenn ich anklopfe,  
+Wie ein guter Vater, der gibt, was wir brauchen,  
+Dein Geist führt uns in die Wahrheit hinein.
+
+[Chorus]  
+Vater, gib uns unser täglich Brot,  
+Vergib uns die Schuld, wie wir vergeben,  
+Führe uns nicht in Versuchung,  
+Erlöse uns von allem Übel, oh Herr.
+
+[Bridge]  
+Dein Reich, es kommt, in Macht und Herrlichkeit,  
+Auf den Wegen, die du uns bereitest,  
+Schenk uns dein Licht, lass die Dunkelheit flieh'n,  
+Wir sind dein Volk, für immer vereint.
+
+[Chorus]  
+Vater, gib uns unser täglich Brot,  
+Vergib uns die Schuld, wie wir vergeben,  
+Führe uns nicht in Versuchung,  
+Erlöse uns von allem Übel, oh Herr.
+
+[Outro]  
+In der Stille, Herr, such' ich dich,  
+Lehre mich, beten, wie du es sprachst,  
+Vater im Himmel, heilig ist dein Name,  
+Dein Wille geschehe, für immer, Amen.`,
+        12: `[TITLE]  
+Fürchtet euch nicht
+
+[VERS 1]  
+Wenn die Menge sich drängt,  
+Die Herzen voller Fragen,  
+In der Dunkelheit spricht Er,  
+Seine Wahrheit wird uns tragen.  
+Hütet euch vor dem Geiz,  
+Vor der Heuchelei der Welt,  
+Gott kennt unser Innerstes,  
+Sein Licht uns stets erhellt.
+
+[Chorus]  
+Fürchtet euch nicht, ihr kleinen Herden,  
+Euer Vater gibt euch Sein Reich.  
+Was ihr braucht, wird Er euch geben,  
+In Seiner Liebe, da sind wir reich.  
+Selig die, die auf Ihn warten,  
+Wachtend, bereit für Sein Kommen,  
+In der Dunkelheit wird Sein Licht leuchten,  
+In der Stille werden wir Ihn loben.
+
+[VERS 2]  
+Die Lilien blühen, die Raben fliegen,  
+Gott sorgt für all die Geschöpfe hier.  
+Wie viel mehr kümmert Er sich um uns,  
+Wir sind wertvoll, bei Ihm sind wir die Zier.  
+Die Haare auf unserem Haupt gezählt,  
+Keine Angst, wir sind nie allein,  
+In jedem Sturm, in jeder Nacht,  
+Sein Frieden wird in uns sein.
+
+[Chorus]  
+Fürchtet euch nicht, ihr kleinen Herden,  
+Euer Vater gibt euch Sein Reich.  
+Was ihr braucht, wird Er euch geben,  
+In Seiner Liebe, da sind wir reich.  
+Selig die, die auf Ihn warten,  
+Wachtend, bereit für Sein Kommen,  
+In der Dunkelheit wird Sein Licht leuchten,  
+In der Stille werden wir Ihn loben.
+
+[Bridge]  
+Wenn der Herr zurückkehrt,  
+Finden sollt ihr wachend sein,  
+Er wird euch an den Tisch setzen,  
+In Seiner Freude, da sind wir vereint.  
+Jeder Kummer wird vergehen,  
+In Seiner Gegenwart, da sind wir frei,  
+Lasst uns leben, lasst uns lieben,  
+Für den Herrn, der ewig bleibt.
+
+[Chorus]  
+Fürchtet euch nicht, ihr kleinen Herden,  
+Euer Vater gibt euch Sein Reich.  
+Was ihr braucht, wird Er euch geben,  
+In Seiner Liebe, da sind wir reich.  
+Selig die, die auf Ihn warten,  
+Wachtend, bereit für Sein Kommen,  
+In der Dunkelheit wird Sein Licht leuchten,  
+In der Stille werden wir Ihn loben.  
+
+[Outro]  
+Fürchtet euch nicht, fürchtet euch nicht,  
+In Seinem Licht, da sind wir frei.  
+Fürchtet euch nicht, fürchtet euch nicht,  
+In Seiner Liebe, da sind wir dabei.`,
         13: `[Verse 1]  
 In dunkler Nacht, Herr, rufst du uns,  
 Die Herzen schwer, die Wege krumm.  
@@ -37368,7 +49781,50 @@ So kommen wir, Herr, in der Demut vereint,
 Dein Wort, unser Licht, das die Dunkelheit weint.  
 Komm, Freund, zur Hochzeit, wir haben kein' Streit,  
 In deinem Reich, Herr, da ist nur das Kleid.`,
-        15: ``,
+        15: `[TITLE]  
+Der verlorene Sohn
+
+[VERS 1]  
+In der Wüste, fern von dir,  
+Suchst du mich, mein Vater, hier.  
+Hundert Schafe, eins verloren,  
+Deine Liebe, die mich ruft, ungebrochen, nie erfroren.  
+
+[Chorus]  
+Freude im Himmel, wenn ich umkehre,  
+Du empfängst mich, voller Gnade,  
+Egal wie weit ich mich entfernte,  
+Dein Herz schlägt für mich, immerdar.  
+
+[VERS 2]  
+Ich war hungrig, hab' mich verirrt,  
+In der Dunkelheit, wo keiner mir verwehrt.  
+Doch du wartest, voller Licht,  
+Ein Fest für mich, du vergisst mich nicht.  
+
+[Chorus]  
+Freude im Himmel, wenn ich umkehre,  
+Du empfängst mich, voller Gnade,  
+Egal wie weit ich mich entfernte,  
+Dein Herz schlägt für mich, immerdar.  
+
+[Bridge]  
+Vater, ich komme heim zu dir,  
+Nimm mich auf, ich bin hier.  
+Egal was war, ich bin dein Kind,  
+Die Liebe, die du gibst, die nie verrinnt.  
+
+[Chorus]  
+Freude im Himmel, wenn ich umkehre,  
+Du empfängst mich, voller Gnade,  
+Egal wie weit ich mich entfernte,  
+Dein Herz schlägt für mich, immerdar.  
+
+[Outro]  
+Du bist der Vater, der nie vergisst,  
+In deiner Nähe, da find' ich, was ich vermisst.  
+Ewig bei dir, in deinem Licht,  
+Die Freude im Herzen, die nie zerbricht.`,
         16: `[Verse 1]  
 O Herr, Du kennst mein Herz,  
 In Deinem Licht will ich geh’n,  
@@ -37497,15 +49953,1445 @@ Wir danken Dir, o Vater,
 Für Deine Liebe, die nie vergisst.  
 In Dir finden wir Frieden,  
 In Dir, Herr, sind wir gewiss.`,
-        18: ``,
-        19: ``,
-        20: ``,
-        21: ``,
-        22: ``,
-        23: ``,
-        24: ``,
-    },
+        18: `[TITLE]  
+Glaube, der uns führt
 
+[Verse 1]  
+Du Richter, der nicht fürchtet,  
+Die Witwe ruft zu dir.  
+In der Nacht, wenn alles schweigt,  
+Hörst du unser flehendes Lied.  
+„Rette mich, o Herr, von meinem Leid,  
+Gib mir Kraft, die Zweifel zu besieg’n.“  
+
+[Chorus]  
+Höre, Herr, unser Schreien,  
+Tag und Nacht zu dir, wir flehen.  
+Lass uns glauben, lass uns sehen,  
+In deiner Liebe, die nie vergeht.  
+Glaube, der uns führt,  
+In deiner Nähe, da sind wir nicht verloren.  
+
+[Verse 2]  
+Ein Zöllner, der dich sucht,  
+Schlägt an seine Brust,  
+„Gott, sei mir Sünder gnädig,  
+Gib mir Trost und neuen Mut.“  
+Die Kleinen, die zu dir kommen,  
+Sie zeigen uns den Weg,  
+Im Kinderglauben führt dein Licht,  
+Uns hin zu dir, o Herr, so lebendig und heilig.  
+
+[Chorus]  
+Höre, Herr, unser Schreien,  
+Tag und Nacht zu dir, wir flehen.  
+Lass uns glauben, lass uns sehen,  
+In deiner Liebe, die nie vergeht.  
+Glaube, der uns führt,  
+In deiner Nähe, da sind wir nicht verloren.  
+
+[Bridge]  
+Was bei den Menschen unmöglich,  
+Das ist bei dir, o Gott, so wahr.  
+Du schenkst uns Hoffnung, schenkst uns Leben,  
+Und wir folgen dir, Tag für Tag.  
+Du nimmst uns auf, du tröstest uns,  
+In deiner Gegenwart sind wir befreit.  
+
+[Chorus]  
+Höre, Herr, unser Schreien,  
+Tag und Nacht zu dir, wir flehen.  
+Lass uns glauben, lass uns sehen,  
+In deiner Liebe, die nie vergeht.  
+Glaube, der uns führt,  
+In deiner Nähe, da sind wir nicht verloren.  
+
+[Outro]  
+Glaube, der uns führt,  
+In deiner Nähe, da sind wir nicht verloren.  
+Du bist unser Licht, o Herr,  
+In dir finden wir unser Sein.`,
+        19: `[TITLE]  
+Zachäus, komm herab  
+
+[Verse 1]  
+In Jericho, ein Mann so klein,  
+Zachäus, voller Wunsch, allein,  
+Er suchte Jesus, wollte sehen,  
+Doch die Menge ließ ihn stehen.  
+
+[Chorus]  
+Komm, o Herr, in mein Haus,  
+Komm und bring den Frieden raus.  
+Zachäus, steig herab, sei bereit,  
+Dein Herz empfängt die Heiligkeit.  
+
+[Verse 2]  
+Auf dem Baum, er schaut hinab,  
+Jesus spricht, er hört den Schab,  
+„Steig schnell herab, ich komm zu dir,  
+Heil und Freude bring ich hier.“  
+
+[Chorus]  
+Komm, o Herr, in mein Haus,  
+Komm und bring den Frieden raus.  
+Zachäus, steig herab, sei bereit,  
+Dein Herz empfängt die Heiligkeit.  
+
+[Bridge]  
+Die Welt spricht: „Was soll das sein?  
+Er kehrt ein bei einem Sünderschein.“  
+Doch Jesus bringt das Heil und Licht,  
+Für jeden, der an ihn spricht.  
+
+[Verse 3]  
+Er gibt den Armen, was er hat,  
+Vierfach gibt er, was er tat,  
+„Heute ist Heil in deinem Haus,  
+Gott sei Lob, er bleibt nicht aus!“  
+
+[Chorus]  
+Komm, o Herr, in mein Haus,  
+Komm und bring den Frieden raus.  
+Zachäus, steig herab, sei bereit,  
+Dein Herz empfängt die Heiligkeit.  
+
+[Outro]  
+So lass uns singen, lass uns loben,  
+Für die Liebe, die er hat erhoben,  
+In jedem Herzen, in jedem Raum,  
+Jesus, unser Heil, unser Traum.`,
+        20: `[TITLE]  
+Eckstein der Hoffnung
+
+[Verse 1]  
+In deinem Tempel, Herr, da lehrt dein Sohn,  
+Die Wahrheit, die er bringt, erfüllt uns ganz,  
+Die Hohepriester fragen, aus welcher Macht,  
+Doch du, o Jesus, zeigst, was wirklich zählt.
+
+[Chorus]  
+Eckstein, auf den wir bauen,  
+Du bist unser Licht in der Dunkelheit,  
+Gib uns, Herr, die Kraft zu glauben,  
+In dir allein, da finden wir die Freiheit.
+
+[Verse 2]  
+Ein Weinberg pflanzt der Vater treu,  
+Die Weingärtner missachten, was er spricht,  
+Sein Sohn, in Liebe, kam zu uns,  
+Doch sie verwerfen, was die Welt nicht sieht.
+
+[Chorus]  
+Eckstein, auf den wir bauen,  
+Du bist unser Licht in der Dunkelheit,  
+Gib uns, Herr, die Kraft zu glauben,  
+In dir allein, da finden wir die Freiheit.
+
+[Bridge]  
+Du bist der Gott der Lebendigen,  
+Die Toten leben, du machst alles neu,  
+In deiner Nähe, da blüht das Leben,  
+Wir preisen deinen Namen in Ewigkeit.
+
+[Chorus]  
+Eckstein, auf den wir bauen,  
+Du bist unser Licht in der Dunkelheit,  
+Gib uns, Herr, die Kraft zu glauben,  
+In dir allein, da finden wir die Freiheit.
+
+[Outro]  
+Eckstein der Hoffnung, unser Grund,  
+Du machst die Herzen neu,  
+In dir, o Herr, sind wir vereint,  
+Für alle Zeit in deinem Licht.`,
+        21: `[TITLE] Aus Liebe gegeben
+
+[Verse 1]  
+Du sahst die Reichen, die geben viel,  
+Doch eine Witwe, arm und still,  
+Legt zwei Scherflein in den Kasten ein,  
+Du sprachst, ihr Herz ist reich allein.
+
+[Chorus]  
+Herr, schau in mein Herz, nimm meine Last,  
+In Deiner Liebe find' ich Rast.  
+Was ich gebe, sei aus Glauben,  
+In Deiner Gnade möcht' ich leben.
+
+[Verse 2]  
+Die Zeiten kommen, voller Leid,  
+Doch Du bist da in Dunkelheit.  
+Wenn Kriege toben, wenn Furcht regiert,  
+In Deinem Namen, Herr, sei mir verziert.
+
+[Chorus]  
+Herr, schau in mein Herz, nimm meine Last,  
+In Deiner Liebe find' ich Rast.  
+Was ich gebe, sei aus Glauben,  
+In Deiner Gnade möcht' ich leben.
+
+[Bridge]  
+Wenn die Zeichen sich erfüllen,  
+Und das Reich Gottes naht,  
+So heb' ich meine Augen empor,  
+Denn Du bist mein Licht, mein großer Herr,  
+Ich bin bereit, zu stehen vor Dir.
+
+[Chorus]  
+Herr, schau in mein Herz, nimm meine Last,  
+In Deiner Liebe find' ich Rast.  
+Was ich gebe, sei aus Glauben,  
+In Deiner Gnade möcht' ich leben.
+
+[Outro]  
+Fass' meine Seele mit Geduld,  
+In Deiner Treue find’ ich Ruh,  
+Wenn die Zeit gekommen ist,  
+Seh’ ich den Menschensohn, den Du sendest.`,
+        22: `[TITLE]  
+Das Osterlamm
+
+[Verse 1]  
+Die Zeit, sie naht, das Fest beginnt,  
+Ein Lamm für uns, das Leben bringt.  
+Die Hohenpriester, voller Angst,  
+Sie trachten nach dem, was uns verwandt.  
+
+[Chorus]  
+O, Jesus, du bist unser Licht,  
+Dein Blut, das fließt, vergibt die Sicht.  
+Mit dir am Tisch, in Einigkeit,  
+Führest du uns in die Herrlichkeit.
+
+[Verse 2]  
+Judas kam, der Verrat begann,  
+Er küsst den Sohn, den Heiligen Mann.  
+Doch du, oh Herr, bleibst treu und stark,  
+Die Liebe führt uns, ein heiliger Pfad.
+
+[Chorus]  
+O, Jesus, du bist unser Licht,  
+Dein Blut, das fließt, vergibt die Sicht.  
+Mit dir am Tisch, in Einigkeit,  
+Führest du uns in die Herrlichkeit.
+
+[Bridge]  
+Im Garten knietest du, oh Herr,  
+„Dein Wille geschehe“, so betest du schwer.  
+Die Dunkelheit, sie umgibt dich nun,  
+Doch wir vertrauen, du wirst uns ruh’n.
+
+[Chorus]  
+O, Jesus, du bist unser Licht,  
+Dein Blut, das fließt, vergibt die Sicht.  
+Mit dir am Tisch, in Einigkeit,  
+Führest du uns in die Herrlichkeit.
+
+[Outro]  
+So kommen wir, in Demut und Dank,  
+Das Osterlamm führt uns zum Klang.  
+Mit dir verbunden, in Liebe vereint,  
+Für immer bei dir, unser Herz, es weint.`,
+        23: `[TITLE] König der Herzen
+
+[Verse 1]  
+Vor Pilatus stand der Heilige,  
+Die Menge schrie, das Urteil fiel,  
+„Kreuzige ihn!“ war ihr Geschrei,  
+Doch er trug still das schwere Ziel.  
+Die Schuld der Welt, sie lag auf ihm,  
+Die Dornenkrone schmerzlich sticht,  
+Er sprach: „Vater, vergib ihnen,  
+Sie wissen nicht, was sie tun, bei Licht.“
+
+[Chorus]  
+Oh, König der Herzen, du gibst dein Leben,  
+Die Liebe, die uns heilt, hast du gegeben.  
+In der Dunkelheit leuchtet dein Licht,  
+Du trägst die Last, du bist das Gesicht  
+Der Gnade, die uns führt, oh, Herr, so nah,  
+König der Herzen, du bist für uns da.
+
+[Verse 2]  
+Die Weiber weinen, die Herzen schwer,  
+„Weinet nicht um mich“, spricht er mit Macht,  
+Denn das was kommt, ist mehr als Schmerz,  
+Ein neues Leben, der Morgen wacht.  
+Die Finsternis hüllt alles ein,  
+Doch Hoffnung blüht im tiefsten Tal,  
+„Heut wirst du mit mir im Paradies sein“,  
+Die Liebe triumphiert, die Gnade strahlt.
+
+[Chorus]  
+Oh, König der Herzen, du gibst dein Leben,  
+Die Liebe, die uns heilt, hast du gegeben.  
+In der Dunkelheit leuchtet dein Licht,  
+Du trägst die Last, du bist das Gesicht  
+Der Gnade, die uns führt, oh, Herr, so nah,  
+König der Herzen, du bist für uns da.
+
+[Bridge]  
+Und wenn der Vorhang reißt,  
+Und das Licht der Sonne schwankt,  
+Wird die Welt erwachen,  
+Wenn der Tod nicht mehr verlangt.  
+Du bist der Weg, die Wahrheit, das Leben,  
+In dir allein, Herr, wird alles neu geschehen.
+
+[Chorus]  
+Oh, König der Herzen, du gibst dein Leben,  
+Die Liebe, die uns heilt, hast du gegeben.  
+In der Dunkelheit leuchtet dein Licht,  
+Du trägst die Last, du bist das Gesicht  
+Der Gnade, die uns führt, oh, Herr, so nah,  
+König der Herzen, du bist für uns da.
+
+[Outro]  
+König der Herzen, du bist für uns da,  
+Dein Licht erstrahlt, oh, Herr, so nah.  
+In deiner Liebe find’ ich Frieden,  
+König der Herzen, du hast uns besiegt.`,
+        24: `[TITLE] Auferstanden, unser Licht
+
+[Verse 1]  
+Früh am Morgen, zum Grabe geeilt,  
+Die Hoffnung in Herzen, die Angst uns verweilt.  
+Der Stein war weg, das Grab leer und still,  
+Wo ist der Herr, der uns Frieden erfüllt?
+
+[Chorus]  
+Er ist nicht hier, er ist auferstanden,  
+Lebendig, in Herrlichkeit, unser Licht.  
+Die Engel rufen, "Was sucht ihr den Lebendigen?  
+Er lebt in uns, sein Wort bringt uns Sicht."
+
+[Verse 2]  
+Zwei Männer strahlen, in leuchtendem Kleid,  
+Sie fragen die Frauen, "Warum seid ihr so weit?  
+Er sprach von dem Leiden, das kommen mußte,  
+Doch am dritten Tag, er lebt, voller Güte."
+
+[Chorus]  
+Er ist nicht hier, er ist auferstanden,  
+Lebendig, in Herrlichkeit, unser Licht.  
+Die Engel rufen, "Was sucht ihr den Lebendigen?  
+Er lebt in uns, sein Wort bringt uns Sicht."
+
+[Bridge]  
+Oh, brannte nicht unser Herz,  
+Als er mit uns sprach auf dem Weg?  
+Die Schrift öffnete sich, sein Licht leuchtet klar,  
+Ewige Hoffnung, er ist immer da.
+
+[Verse 3]  
+In Emmaus, er bricht das Brot,  
+Ihre Augen geöffnet, das Licht in der Not.  
+Sie kehren zurück, die Freude erwacht,  
+"Der Herr ist wahrhaftig, er hat uns gebracht."
+
+[Chorus]  
+Er ist nicht hier, er ist auferstanden,  
+Lebendig, in Herrlichkeit, unser Licht.  
+Die Engel rufen, "Was sucht ihr den Lebendigen?  
+Er lebt in uns, sein Wort bringt uns Sicht."
+
+[Outro]  
+Wir beten an, mit großer Freude,  
+Im Tempel loben wir, in seiner Nähe.  
+Der Herr ist auferstanden, für alle Zeit,  
+In ihm sind wir frei, in seiner Herrlichkeit.`,
+    },
+    "43": {
+        1: `[Verse 1]  
+Im Anfang war das Wort,  
+bei Gott, das Leben in dir,  
+alle Dinge durch ihn gemacht,  
+ohne ihn ist nichts hier.  
+Das Licht, das in der Finsternis scheint,  
+die Dunkelheit es nicht ergreift,  
+Gott, du bist das Licht der Welt,  
+dein Wort, das uns befreit.
+
+[Chorus]  
+Siehe, das ist Gottes Lamm,  
+das die Sünde der Welt trägt,  
+in dir finden wir Frieden,  
+dein Licht, das nie vergeht.  
+Gnade um Gnade,  
+du schenkst uns neues Leben,  
+wir kommen zu dir, Herr,  
+dein Wort wird uns erheben.
+
+[Verse 2]  
+Johannes sprach von dir,  
+ein Zeuge in der Nacht,  
+er rief, bereitet den Weg,  
+das Licht, das uns entfacht.  
+In dir, Herr, ist die Fülle,  
+Gnade, die nie versiegt,  
+das Wort, das Fleisch geworden,  
+unsere Herzen erfliegt.
+
+[Chorus]  
+Siehe, das ist Gottes Lamm,  
+das die Sünde der Welt trägt,  
+in dir finden wir Frieden,  
+dein Licht, das nie vergeht.  
+Gnade um Gnade,  
+du schenkst uns neues Leben,  
+wir kommen zu dir, Herr,  
+dein Wort wird uns erheben.
+
+[Bridge]  
+Komm und sieh, der König naht,  
+der uns mit Liebe trägt,  
+wir folgen dir, oh Jesus,  
+dein Licht, das uns bewegt.  
+Dein Geist, der uns erfüllt,  
+in dir sind wir vereint,  
+das Wort, das uns befreit,  
+in dir, der alles weint.
+
+[Chorus]  
+Siehe, das ist Gottes Lamm,  
+das die Sünde der Welt trägt,  
+in dir finden wir Frieden,  
+dein Licht, das nie vergeht.  
+Gnade um Gnade,  
+du schenkst uns neues Leben,  
+wir kommen zu dir, Herr,  
+dein Wort wird uns erheben.
+
+[Outro]  
+Im Anfang war das Wort,  
+in dir, oh Herr, sind wir neu,  
+dein Licht leuchtet in uns,  
+wir sind in dir, ganz frei.`,
+        2: `Vers 1:  
+In Kana, wo die Freude blüht,  
+Die Hochzeit strahlt im Licht der Zeit.  
+Maria sieht, der Wein versiegt,  
+Sie ruft zu dir, Herr, sei bereit.  
+Du sprachst, die Stunde sei noch nicht,  
+Doch, was du tust, das vollbring' ich.  
+
+Chorus:  
+Erfülle uns mit deinem Geist,  
+Wandle Wasser in Wein,  
+In deiner Liebe, da sind wir frei,  
+Lass uns deine Herrlichkeit sein.  
+Der Wein der Freude fließt,  
+In jedem Herzen, das dich liebt.
+
+Vers 2:  
+Die Krüge voll, das Wasser klar,  
+Du sprichst das Wort, und Wunder gescheh’n.  
+Der Speisemeister ruft entzückt:  
+„Der beste Wein, das hast du gesehen!“  
+Du offenbarst, was in dir wohnt,  
+Deine Herrlichkeit, sie uns belohnt.
+
+Chorus:  
+Erfülle uns mit deinem Geist,  
+Wandle Wasser in Wein,  
+In deiner Liebe, da sind wir frei,  
+Lass uns deine Herrlichkeit sein.  
+Der Wein der Freude fließt,  
+In jedem Herzen, das dich liebt.
+
+Bridge:  
+Du hast den Tempel neu erbaut,  
+In drei Tagen, das hast du gesagt.  
+Auferstehung, die uns vertraut,  
+In dir, Herr, ist unser Tag.  
+Euer Eifer, Herr, erfüllt unsern Sinn,  
+In deinem Namen, da fängt das Leben an.
+
+Chorus:  
+Erfülle uns mit deinem Geist,  
+Wandle Wasser in Wein,  
+In deiner Liebe, da sind wir frei,  
+Lass uns deine Herrlichkeit sein.  
+Der Wein der Freude fließt,  
+In jedem Herzen, das dich liebt.
+
+Outro:  
+In Kana, wo die Freude blüht,  
+Bleibt unser Herz, dein Licht erglüht.  
+Du bist der Grund, dass wir besteh'n,  
+In deiner Liebe, Herr, lass uns geh’n.`,
+        3: `Strophe 1:  
+In der Nacht, ein Mensch kam zu Dir,  
+Nikodemus, suchend, voller Gier.  
+Er sprach: "Meister, Du bist vom Herrn,  
+Zeichen und Wunder, sie strahlen so fern."  
+
+Refrain:  
+Du sagst, wir müssen neu geboren sein,  
+Aus Wasser und Geist, in Deinem Licht so rein.  
+Die Liebe des Vaters, sie reicht weit hinaus,  
+Durch Dich, oh Jesus, führen wir nach Haus.  
+
+Strophe 2:  
+Wie kann ein Mensch, alt und voller Schmerz,  
+Wieder gebor’n sein in Deinem Herz?  
+Du erklärst, was vom Geist kommt, ist Geist,  
+In Deinem Licht, das die Dunkelheit speist.  
+
+Refrain:  
+Du sagst, wir müssen neu geboren sein,  
+Aus Wasser und Geist, in Deinem Licht so rein.  
+Die Liebe des Vaters, sie reicht weit hinaus,  
+Durch Dich, oh Jesus, führen wir nach Haus.  
+
+Bridge:  
+Denn so hat Gott die Welt geliebt,  
+Seinen Sohn gegeben, der uns den Frieden gibt.  
+Er wurde erhöht, damit wir leben,  
+Ewiges Leben, das Du uns gegeben.  
+
+Refrain:  
+Du sagst, wir müssen neu geboren sein,  
+Aus Wasser und Geist, in Deinem Licht so rein.  
+Die Liebe des Vaters, sie reicht weit hinaus,  
+Durch Dich, oh Jesus, führen wir nach Haus.  
+
+Outro:  
+In Dir, oh Herr, da finde ich mein Ziel,  
+Das Licht der Welt, Du bist mein Lebensspiel.  
+Die Wahrheit ruft, mein Herz schlägt laut,  
+In Deinem Namen, da bin ich gebaut.`,
+        4: `[LYRICS]
+[LYRICS]  
+
+[Verse 1]  
+Du kamst zu mir, so voller Licht,  
+In meiner Dunkelheit, da fand ich dich.  
+In Samaria, am tiefen Brunnen,  
+Hast du mir gesagt, ich kann neu beginnen.  
+
+[Chorus]  
+Gib mir, Herr, das lebendige Wasser,  
+Das in mir quillt, für immer und ewig.  
+Lass mich nie mehr dürsten,  
+In deiner Gegenwart, da will ich leben.  
+
+[Verse 2]  
+Du kennst mein Herz, du weißt, wer ich bin,  
+Hast mir vergeben, mir neues Leben geschenkt.  
+Die Last der Schuld hast du genommen,  
+In deinem Namen, da bin ich angekommen.  
+
+[Chorus]  
+Gib mir, Herr, das lebendige Wasser,  
+Das in mir quillt, für immer und ewig.  
+Lass mich nie mehr dürsten,  
+In deiner Gegenwart, da will ich leben.  
+
+[Bridge]  
+Die Wahrheit bist du, mein Heiland, mein Licht,  
+In dir allein, da finde ich Sicht.  
+Die Anbetung, die kommt aus dem Geist,  
+In deinem Namen, da weiß ich, ich bleib.  
+
+[Chorus]  
+Gib mir, Herr, das lebendige Wasser,  
+Das in mir quillt, für immer und ewig.  
+Lass mich nie mehr dürsten,  
+In deiner Gegenwart, da will ich leben.  
+
+[Outro]  
+Oh Herr, ich danke dir für deine Gnade,  
+In dir bin ich frei, in deiner Nähe.  
+Lebendiges Wasser, du erfüllst mein Herz,  
+Für immer bei dir, von dir nie mehr getrennt.`,
+        5: `[Verse 1]  
+In der Stadt, wo das Wasser fließt,  
+Wo die Kranken auf Heilung warten,  
+Ein Mann, der seit Jahren nicht steht,  
+Sein Herz in der Dunkelheit zerrt.  
+Doch Du kommst und fragst nach dem Willen,  
+Ob er will, dass er gesund wird.  
+Mit einer Stimme, die Leben spricht,  
+Befiehlst Du ihm: „Steh auf, geh hin!“
+
+[Chorus]  
+Jesus, Du bist das Licht,  
+Das die Dunkelheit besiegt.  
+In Deiner Gegenwart,  
+Wird der Kranke neu geboren.  
+Steh auf, nimm dein Bett,  
+Vertraue auf die Kraft, die heilt.  
+Du bist der Weg, die Wahrheit,  
+Lebensspender, ewig nah.
+
+[Verse 2]  
+In den Hallen von Bethesda,  
+Wo die Hoffnung oft vergeht,  
+Sprichst Du Worte voller Liebe,  
+Die den Schmerz und Zweifel hebt.  
+Du zeigst uns, wie der Vater wirkt,  
+Und die Toten auferstehen.  
+Wir glauben an die Stimme,  
+Die uns ruft, um neu zu leben.
+
+[Chorus]  
+Jesus, Du bist das Licht,  
+Das die Dunkelheit besiegt.  
+In Deiner Gegenwart,  
+Wird der Kranke neu geboren.  
+Steh auf, nimm dein Bett,  
+Vertraue auf die Kraft, die heilt.  
+Du bist der Weg, die Wahrheit,  
+Lebensspender, ewig nah.
+
+[Bridge]  
+Oh, erwecke in uns neues Leben,  
+Lass uns hören, was Du sagst.  
+In jedem Herzen, das verzweifelt,  
+Sei die Hoffnung, die nicht vergeht.  
+Wir vertrauen, wir sind hier,  
+In Deinem Namen, Herr, stehen wir.
+
+[Chorus]  
+Jesus, Du bist das Licht,  
+Das die Dunkelheit besiegt.  
+In Deiner Gegenwart,  
+Wird der Kranke neu geboren.  
+Steh auf, nimm dein Bett,  
+Vertraue auf die Kraft, die heilt.  
+Du bist der Weg, die Wahrheit,  
+Lebensspender, ewig nah.
+
+[Outro]  
+In Deinem Licht, Herr, sind wir frei,  
+Auf den Flügeln Deiner Gnade,  
+Stehen wir auf und gehen hin,  
+In Deinem Namen, Amen, Amen.`,
+        6: `[TITLE] Brot des Lebens
+
+[Verse 1]  
+Du kamst zu uns, Herr, über das Meer,  
+Die Menge folgte, durstig und leer.  
+Du sahst die Not, die Herzen so schwer,  
+Und sprachst: „Wo kaufen wir Brot für das Heer?“
+
+[Chorus]  
+Du bist das Brot des Lebens,  
+Niemals hungern wir mehr.  
+In Dir finden wir Frieden,  
+In Dir, o Herr, sind wir leer.  
+Dein Wort gibt uns Hoffnung,  
+Dein Geist macht uns neu,  
+Mit Dir in der Fülle,  
+Sind wir für immer frei.
+
+[Verse 2]  
+Ein Junge brachte, was er hatte,  
+Fünf Brote, zwei Fische, so klein und matt,  
+Doch Du nimmst das Wenige, segnest es mehr,  
+Und speist die Welt, o Herr, Du bist hehr.
+
+[Chorus]  
+Du bist das Brot des Lebens,  
+Niemals hungern wir mehr.  
+In Dir finden wir Frieden,  
+In Dir, o Herr, sind wir leer.  
+Dein Wort gibt uns Hoffnung,  
+Dein Geist macht uns neu,  
+Mit Dir in der Fülle,  
+Sind wir für immer frei.
+
+[Bridge]  
+Du sprichst: „Komm zu mir, und du wirst leben,  
+Mein Fleisch ist Speise, mein Blut gibt dir Leben.“  
+So kommen wir, Herr, mit Herzen so rein,  
+Lass uns in Deiner Liebe vereint sein.
+
+[Chorus]  
+Du bist das Brot des Lebens,  
+Niemals hungern wir mehr.  
+In Dir finden wir Frieden,  
+In Dir, o Herr, sind wir leer.  
+Dein Wort gibt uns Hoffnung,  
+Dein Geist macht uns neu,  
+Mit Dir in der Fülle,  
+Sind wir für immer frei.
+
+[Outro]  
+Du bist das Brot, das vom Himmel kam,  
+In Dir finden wir unser Leben, Amen.  
+Du bist das Brot, das vom Himmel kam,  
+In Dir finden wir unser Leben, Amen.`,
+        7: `[Verse 1]  
+In Galiläa zogst Du umher,  
+Die Welt kann Dich nicht lieben,  
+Doch Du sprichst mit sanfter Ehr’,  
+Dein Licht will uns umgeben.  
+Die Stimme ruft: „Kommt zu mir!“  
+Wer dürstet, der soll leben,  
+Ströme fließen, hier und hier,  
+In Dir, o Herr, vergeben.
+
+[Chorus]  
+Komm, o Herr, und füll mein Herz,  
+Mit Deinem Geist, so rein und klar.  
+Ströme des Lebens, fließ in mir,  
+Du bist mein Licht, mein Altar.  
+Komm, o Herr, und füll mein Herz,  
+In Deiner Liebe, sei ich frei.  
+Ströme des Lebens, fließ in mir,  
+Du bist mein Leben, ewig treu.
+
+[Verse 2]  
+Deine Brüder zweifelten,  
+Doch Du bliebst still und weise,  
+Die Wahrheit strahlt, unendlich schön,  
+Durch Dich gibt’s neue Reise.  
+Was ist der Mensch, der uns verführt?  
+Die Schrift spricht von dem Leben,  
+Dein Wort, es bleibt, es wird nie stür’n,  
+Die Hoffnung, die wir streben.
+
+[Chorus]  
+Komm, o Herr, und füll mein Herz,  
+Mit Deinem Geist, so rein und klar.  
+Ströme des Lebens, fließ in mir,  
+Du bist mein Licht, mein Altar.  
+Komm, o Herr, und füll mein Herz,  
+In Deiner Liebe, sei ich frei.  
+Ströme des Lebens, fließ in mir,  
+Du bist mein Leben, ewig treu.
+
+[Bridge]  
+Du kennst mein Herz, Du weißt, was ich brauche,  
+In Deiner Nähe, da bin ich geborgen.  
+Dein Licht erleuchtet, mein Weg, er wird klar,  
+In Dir allein, da bin ich wahrlich wahr.
+
+[Chorus]  
+Komm, o Herr, und füll mein Herz,  
+Mit Deinem Geist, so rein und klar.  
+Ströme des Lebens, fließ in mir,  
+Du bist mein Licht, mein Altar.  
+Komm, o Herr, und füll mein Herz,  
+In Deiner Liebe, sei ich frei.  
+Ströme des Lebens, fließ in mir,  
+Du bist mein Leben, ewig treu.  
+
+[Outro]  
+In Dir, o Herr, find’ ich mein Glück,  
+Die Ströme des Lebens, bringen mich zurück.  
+Komm, o Herr, und füll mein Herz,  
+Mit Dir allein, da heilt der Schmerz.`,
+        8: `[LYRICS]
+[LYRICS]
+
+Strophe 1:  
+Am Ölberg, in der Stille,  
+Wo die Menschen suchten Licht,  
+Jesus lehrte mit voller Liebe,  
+Wort der Wahrheit, das uns spricht.  
+Die Verkläger kamen nah,  
+Doch sein Blick war voller Gnade,  
+„Wer ohne Schuld ist, werft den Stein,“  
+Sein Herz schlägt für die Schwachen,  
+Für die, die fallen und zerbrochen,  
+Sein Licht bringt uns die Freiheit,  
+Lässt uns neu erwachen.
+
+Refrain:  
+Du bist das Licht der Welt,  
+Führst uns aus der Dunkelheit.  
+In Dir finden wir das Leben,  
+Ewige Wahrheit, die befreit.  
+Komm, wir folgen Dir, Herr,  
+Lass uns wandeln im Licht,  
+Du vergibst, Du heilst,  
+Du zeigst uns das Gesicht.
+
+Strophe 2:  
+„Wo sind die, die dich verdammten?  
+Ist da niemand, der dich spricht?“  
+„Niemand, Herr,“ sprach sie voller Hoffnung,  
+„So verdamme ich dich nicht.“  
+Mit Dir, Herr, will ich leben,  
+In Deiner Nähe, fern von Schuld,  
+Deine Liebe, sie ergreift mich,  
+Dein Wort macht meine Seele gut.
+
+Refrain:  
+Du bist das Licht der Welt,  
+Führst uns aus der Dunkelheit.  
+In Dir finden wir das Leben,  
+Ewige Wahrheit, die befreit.  
+Komm, wir folgen Dir, Herr,  
+Lass uns wandeln im Licht,  
+Du vergibst, Du heilst,  
+Du zeigst uns das Gesicht.
+
+Bridge:  
+Oft sind wir verloren,  
+Suchen nach dem Sinn,  
+Doch in Deiner Gegenwart,  
+Finden wir zurück,  
+Du bist der Weg, die Wahrheit,  
+Das Leben in uns drin,  
+In Dir sind wir geborgen,  
+Mit Dir fängt alles neu an.
+
+Refrain:  
+Du bist das Licht der Welt,  
+Führst uns aus der Dunkelheit.  
+In Dir finden wir das Leben,  
+Ewige Wahrheit, die befreit.  
+Komm, wir folgen Dir, Herr,  
+Lass uns wandeln im Licht,  
+Du vergibst, Du heilst,  
+Du zeigst uns das Gesicht.`,
+        9: `[Verse 1]  
+In der Dunkelheit, blind geboren,  
+Fragten Jünger, woher das Leid.  
+Doch der Meister, voller Gnade,  
+Sicht bringt Er, und er heilt die Zeit.  
+
+[Chorus]  
+Du bist das Licht, das uns erhellt,  
+Jesus, Du bringst die Hoffnung der Welt.  
+Von Dunkelheit zu neuem Leben,  
+In Deinem Licht, da ist vergeben.
+
+[Verse 2]  
+Am Teich Siloah, die Wasser klar,  
+Er sprach zu mir: "Wasche dich, sei wahr!"  
+Ich ging und wusch, die Augen öffneten,  
+Ein neues Leben, die Ketten sprengten.  
+
+[Chorus]  
+Du bist das Licht, das uns erhellt,  
+Jesus, Du bringst die Hoffnung der Welt.  
+Von Dunkelheit zu neuem Leben,  
+In Deinem Licht, da ist vergeben.
+
+[Bridge]  
+Die Pharisäer fragten und zweifelten,  
+Doch ich weiß, dass ich jetzt sehe.  
+Der Mensch, der Jesus heißt,  
+Hat mir die Augen aufgemacht,  
+Ich glaube, und ich bete an.  
+
+[Chorus]  
+Du bist das Licht, das uns erhellt,  
+Jesus, Du bringst die Hoffnung der Welt.  
+Von Dunkelheit zu neuem Leben,  
+In Deinem Licht, da ist vergeben.  
+
+[Outro]  
+In Dir, oh Herr, bin ich befreit,  
+Das Licht der Welt, in Ewigkeit.  
+Du schenkst mir Mut, Du schenkst mir Kraft,  
+In Deinem Namen, der die Liebe schafft.`,
+        10: `[TITLE]  
+Du bist die Tür
+
+[Verse 1]  
+Wahrlich, ich höre Deine Stimme,  
+Du rufst mich mit Namen, ich folge Dir nach.  
+Du bist der gute Hirte, der mein Herz erfüllt,  
+In Deinen Armen finde ich Frieden und Licht.
+
+[Chorus]  
+Du bist die Tür, die mir das Leben gibt,  
+In Dir bin ich sicher, in Dir bin ich frei.  
+Kein Dieb kann mich stehlen, kein Schatten mich trübt,  
+In Deinen Wegen, Herr, will ich sein.
+
+[Verse 2]  
+Wenn der Wolf kommt, lass mich nicht allein,  
+Du schützest die Meinen, Du bist mein Geleit.  
+Dein Wort ist die Wahrheit, Dein Licht in der Nacht,  
+In der Dunkelheit führst Du mich heim.
+
+[Chorus]  
+Du bist die Tür, die mir das Leben gibt,  
+In Dir bin ich sicher, in Dir bin ich frei.  
+Kein Dieb kann mich stehlen, kein Schatten mich trübt,  
+In Deinen Wegen, Herr, will ich sein.
+
+[Bridge]  
+Vater, ich danke Dir für Deine Liebe,  
+Du gabst mir den Sohn, der mein Herz erfüllt.  
+Ewig verbunden, in Dir bin ich eins,  
+Nichts kann mich trennen von Deiner Hand.
+
+[Chorus]  
+Du bist die Tür, die mir das Leben gibt,  
+In Dir bin ich sicher, in Dir bin ich frei.  
+Kein Dieb kann mich stehlen, kein Schatten mich trübt,  
+In Deinen Wegen, Herr, will ich sein.
+
+[Outro]  
+In Deinen Wegen, Herr, will ich sein,  
+Du bist die Tür, mein Licht, mein Sein.  
+In Deinen Armen, oh, bleib ich für immer,  
+Du bist mein Hirte, mein Herz, mein Leben.`,
+        11: `[LYRICS]
+[LYRICS]
+
+Vers 1:  
+In Bethanien, da lag ein Freund,  
+Die Schwestern riefen, voller Leid und Angst,  
+„Herr, du bist der Weg, das Licht,  
+Komm, rette uns in unserer Nacht.“
+
+Chorus:  
+Lazarus, komm heraus,  
+Leben fließt aus deinem Wort,  
+Jesus, du bist hier, versprich uns,  
+Die Dunkelheit wird nie mehr sein.
+
+Vers 2:  
+Martha sprach: „Wärst du hier gewesen,  
+Hätte er nicht den Tod gesehen.“  
+Doch du sagst, dass er aufersteht,  
+In dir, o Herr, ist unser Leben.
+
+Chorus:  
+Lazarus, komm heraus,  
+Leben fließt aus deinem Wort,  
+Jesus, du bist hier, versprich uns,  
+Die Dunkelheit wird nie mehr sein.
+
+Bridge:  
+Wo der Stein liegt, der uns hält,  
+Sprich das Wort, das Leben zählt.  
+Du bist die Auferstehung, das Licht,  
+In dir, Herr, gibt es kein Ende, kein Gericht.
+
+Chorus:  
+Lazarus, komm heraus,  
+Leben fließt aus deinem Wort,  
+Jesus, du bist hier, versprich uns,  
+Die Dunkelheit wird nie mehr sein.
+
+Outro:  
+Lazarus, komm heraus,  
+In dir, o Herr, ist neues Leben,  
+Glaube blüht, wo du erscheinst,  
+Ewiges Licht, das nie verweht.`,
+        12: `[TITLE]  
+König der Ehre
+
+[Verse 1]  
+Sechs Tage vor dem Fest,  
+kamst Du, Herr, in unsern Ort,  
+Lazarus erweckt durch Dich,  
+Die Hoffnung lebt, der Tod ist fort.  
+Martha diente, Maria fiel,  
+Mit Narde salbte sie Dein Ziel,  
+Das Haus erfüllt vom Duft der Treue,  
+In Dir, Herr, finden wir die Freude.
+
+[Chorus]  
+Hosianna, Hosianna,  
+Gelobt sei der, der kommt,  
+König der Ehre, unser Licht,  
+In Dir, Herr, sind wir vereint,  
+Hosianna, Hosianna,  
+Wir folgen Dir, oh Herr,  
+In Deiner Liebe, stark und klar,  
+Du bist bei uns, immerdar.
+
+[Verse 2]  
+Die Menge rief und jubelte laut,  
+Die Palmen wehten, der König schaut,  
+Du, der Frieden bringst,  
+Auf einem Esel reitest Du,  
+Fürchte Dich nicht, Zion, schau zu,  
+Die Dunkelheit kann uns nicht brechen,  
+In Dir, Herr, lass uns nicht schwächen.
+
+[Chorus]  
+Hosianna, Hosianna,  
+Gelobt sei der, der kommt,  
+König der Ehre, unser Licht,  
+In Dir, Herr, sind wir vereint,  
+Hosianna, Hosianna,  
+Wir folgen Dir, oh Herr,  
+In Deiner Liebe, stark und klar,  
+Du bist bei uns, immerdar.
+
+[Bridge]  
+Wenn die Welt in Dunkelheit wandelt,  
+Sei Du unser Licht, das uns hält,  
+Wir glauben an Dich, Du gibst uns Leben,  
+Für alle Zeiten, Herr, sei Dank gegeben.  
+Du bist das Wort, das uns führt,  
+In Deiner Nähe sind wir berührt.
+
+[Chorus]  
+Hosianna, Hosianna,  
+Gelobt sei der, der kommt,  
+König der Ehre, unser Licht,  
+In Dir, Herr, sind wir vereint,  
+Hosianna, Hosianna,  
+Wir folgen Dir, oh Herr,  
+In Deiner Liebe, stark und klar,  
+Du bist bei uns, immerdar.
+
+[Outro]  
+König der Ehre, wir preisen Dich,  
+In Deinem Licht, da leb' ich für Dich.  
+Amen.`,
+        13: `[TITLE]  
+"Liebe bis zum Ende"
+
+[Verse 1]  
+Vor dem Fest, die Stunde nah,  
+Jesus wusste, was geschah.  
+Er liebte uns, bis ans Ende,  
+Sein Herz, das für uns brennt.  
+
+[Verse 2]  
+Am Tisch, die Jünger voll Fragen,  
+Ein Verrat, den wir nicht tragen.  
+Doch mit Wasser, sanft und rein,  
+Wäscht er uns, macht uns sein.  
+
+[Chorus]  
+Oh, Herr, wie du uns liebst,  
+Dein Beispiel, das uns führt.  
+In der Demut, Hand in Hand,  
+Leben wir, in deinem Land.  
+
+[Verse 3]  
+Petrus sprach, "Was tust du, Herr?"  
+"Was ich tu', verstehst du nicht,  
+Doch bald wirst du es erkennen,  
+In der Liebe, die wir senden."  
+
+[Verse 4]  
+Ein neues Gebot, dir gegeben,  
+Liebe zeigen, so sollt ihr leben.  
+Wie ich euch liebte, so liebt euch,  
+In dieser Welt, die oft zerbricht.  
+
+[Chorus]  
+Oh, Herr, wie du uns liebst,  
+Dein Beispiel, das uns führt.  
+In der Demut, Hand in Hand,  
+Leben wir, in deinem Land.  
+
+[Bridge]  
+Wenn der Verrat uns trifft,  
+In der Dunkelheit, in der Nacht,  
+Erhebe uns, du Licht des Lebens,  
+Deine Liebe, die uns wacht.  
+
+[Chorus]  
+Oh, Herr, wie du uns liebst,  
+Dein Beispiel, das uns führt.  
+In der Demut, Hand in Hand,  
+Leben wir, in deinem Land.  
+
+[Outro]  
+Vor dem Fest, die Stunde nah,  
+Jesus liebt uns, immer da.  
+In der Einheit, stark vereint,  
+Sein Herz, das für uns scheint.`,
+        14: `Verse 1:  
+In stillen Nächten, wenn die Zweifel weichen,  
+Sagst Du zu mir: „Fürchte dich nicht, mein Kind.  
+Vertraue auf den Vater, auf den Weg, den ich dir zeige,  
+In meines Vaters Haus, da gibt es einen Ort für dich.“  
+
+Chorus:  
+Du bist der Weg, die Wahrheit, das Leben,  
+Keiner kommt zum Vater, nur durch Dich.  
+Dein Licht erhellt die Dunkelheit,  
+Ich folge Dir, oh Herr, bis ans Ziel.  
+
+Verse 2:  
+Du bist bei uns, in jedem Sturm der Zeiten,  
+Der Heilige Geist gibt Trost, wenn ich allein bin.  
+Du kommst zu mir, lässt mich nie im Zweifel,  
+Deine Liebe bleibt, auch wenn die Welt vergeht.  
+
+Chorus:  
+Du bist der Weg, die Wahrheit, das Leben,  
+Keiner kommt zum Vater, nur durch Dich.  
+Dein Licht erhellt die Dunkelheit,  
+Ich folge Dir, oh Herr, bis ans Ziel.  
+
+Bridge:  
+Euer Herz erschrecke nicht,  
+Ich bin bei euch, mein Frieden sei mit dir.  
+Was ihr bittet in meinem Namen,  
+Ich werde es tun, damit der Vater wird geehrt.  
+
+Chorus:  
+Du bist der Weg, die Wahrheit, das Leben,  
+Keiner kommt zum Vater, nur durch Dich.  
+Dein Licht erhellt die Dunkelheit,  
+Ich folge Dir, oh Herr, bis ans Ziel.  
+
+Outro:  
+In Dir, oh Herr, finde ich meinen Frieden,  
+Du bist der Weg, die Wahrheit, das Leben.  
+Ich bleibe in Dir, und Du in mir,  
+Für alle Zeit, Herr, führe mich zu Dir.`,
+        15: `[Verse 1]  
+Du bist der Weinstock, oh Herr,  
+In Deinem Schatten find' ich Licht.  
+Die Reben, die in Dir stehen,  
+Tragen Frucht, durch Dein Gesicht.  
+Deine Worte, sie reinigen,  
+In Deiner Liebe bleib' ich hier.  
+Oh, lass mich stets in Dir verweilen,  
+In Deiner Nähe spür' ich Dir.
+
+[Chorus]  
+Bleib in mir, Herr, bleib in mir,  
+Wie die Rebe am Weinstock hier.  
+Ohne Dich kann ich nichts tun,  
+In Deiner Liebe blüh' ich nun.  
+Deine Freude, sie vervollständigt,  
+Mein Herz, es tanzt, es jubiliert.  
+Bleib in mir, Herr, bleib in mir,  
+In Deiner Nähe, oh, ich verlier’ mich hier.
+
+[Verse 2]  
+Du hast mich gewählt, mein Freund,  
+Dein Wort, es führt mich auf den Weg.  
+In der Welt, da gibt es Zweifel,  
+Doch Deine Wahrheit stets besteht.  
+Deine Gebote, sie umarmen,  
+In der Liebe find' ich Ruh.  
+Gemeinsam tragen wir die Lasten,  
+In Deinem Namen blüh' ich zu.
+
+[Chorus]  
+Bleib in mir, Herr, bleib in mir,  
+Wie die Rebe am Weinstock hier.  
+Ohne Dich kann ich nichts tun,  
+In Deiner Liebe blüh' ich nun.  
+Deine Freude, sie vervollständigt,  
+Mein Herz, es tanzt, es jubiliert.  
+Bleib in mir, Herr, bleib in mir,  
+In Deiner Nähe, oh, ich verlier’ mich hier.
+
+[Bridge]  
+Wenn die Welt mich haßt, Herr,  
+Und die Schatten mich umhüll'n,  
+In Dir find' ich Trost und Frieden,  
+Lass mich weiter Deine Stimme spür’n.  
+Du bist der Geist der Wahrheit,  
+Der mich leitet, der mich führt.  
+In Deiner Liebe, oh mein Heiland,  
+Wird mein Herz für immer blüh'n.
+
+[Chorus]  
+Bleib in mir, Herr, bleib in mir,  
+Wie die Rebe am Weinstock hier.  
+Ohne Dich kann ich nichts tun,  
+In Deiner Liebe blüh' ich nun.  
+Deine Freude, sie vervollständigt,  
+Mein Herz, es tanzt, es jubiliert.  
+Bleib in mir, Herr, bleib in mir,  
+In Deiner Nähe, oh, ich verlier’ mich hier.
+
+[Outro]  
+In Dir bleib' ich, oh Herr,  
+Vereint in Liebe, ewiglich.  
+Du bist der Weinstock, ich die Rebe,  
+In Deinem Herzen find' ich mich.`,
+        16: `[TITLE] Frieden in dir
+
+[Verse 1]  
+Du sprichst zu uns, o Herr, in Dunkelheit,  
+In der Traurigkeit, die uns umgibt,  
+Du hast uns deine Nähe zugesagt,  
+Wenn wir in Ängsten stehen, bist du hier.
+
+[Chorus]  
+In der Welt, da gibt es Angst,  
+Doch du hast sie überwunden,  
+Frieden gibst du uns, o Jesus,  
+In dir finden wir das Leben.
+
+[Verse 2]  
+Wenn die Welt sich freut, und wir weinen,  
+Wird unsere Traurigkeit in Freude kehren,  
+Wie die Mutter, die ihr Kind gebärt,  
+So wirst du uns mit Hoffnung erfüllen.
+
+[Chorus]  
+In der Welt, da gibt es Angst,  
+Doch du hast sie überwunden,  
+Frieden gibst du uns, o Jesus,  
+In dir finden wir das Leben.
+
+[Bridge]  
+Der Geist der Wahrheit kommt,  
+Führt uns in alle Wahrheit rein,  
+Du bist bei uns, o Vater,  
+In deinem Namen bitten wir.
+
+[Verse 3]  
+Wir wissen, du hast uns geliebt,  
+Der Vater sieht uns, wenn wir rufen,  
+In der Zeit der Not und des Zweifels,  
+Finden wir bei dir, o Herr, den Frieden.
+
+[Chorus]  
+In der Welt, da gibt es Angst,  
+Doch du hast sie überwunden,  
+Frieden gibst du uns, o Jesus,  
+In dir finden wir das Leben.
+
+[Outro]  
+Du gehst zum Vater, uns verlassend,  
+Doch der Trost, er bleibt bei uns,  
+In dir, Herr, haben wir den Frieden,  
+Für immer, Amen, in deinem Namen.`,
+        17: `[TITLE] Herrlichkeit des Vaters
+
+[Verse 1]  
+Vater, die Stunde ist gekommen,  
+Dein Sohn wird hier verklärt.  
+Ewiges Leben, gib es den Seinen,  
+Die Du mir, Herr, gewährt.  
+In der Welt sind sie nicht verloren,  
+Halt sie fest, wie Du es sprachst.  
+Für sie bitte ich, Dein Wort,  
+In Liebe, die ewig wacht.
+
+[Chorus]  
+Oh, lass uns eins sein, wie Du und ich,  
+In Deiner Wahrheit, Herr, führe uns licht.  
+Die Welt erkennt, dass Du mich sandtest,  
+In Deiner Liebe, die niemals endet.
+
+[Verse 2]  
+Ich habe Deinen Namen offenbart,  
+Die Herzen, die Du mir gabst.  
+Sie wissen, dass alles von Dir kommt,  
+Und Dein Wort in ihnen labt.  
+Vater, bewahre sie vor dem Bösen,  
+Sie sind nicht von dieser Welt.  
+Heilige sie in Deiner Wahrheit,  
+Die Liebe, die uns zusammenhält.
+
+[Chorus]  
+Oh, lass uns eins sein, wie Du und ich,  
+In Deiner Wahrheit, Herr, führe uns licht.  
+Die Welt erkennt, dass Du mich sandtest,  
+In Deiner Liebe, die niemals endet.
+
+[Bridge]  
+Wo ich bin, da sollen sie sein,  
+In Deiner Herrlichkeit, so rein.  
+Die Freude, die Du uns gibst,  
+In uns wohnt, weil Du uns liebst.
+
+[Chorus]  
+Oh, lass uns eins sein, wie Du und ich,  
+In Deiner Wahrheit, Herr, führe uns licht.  
+Die Welt erkennt, dass Du mich sandtest,  
+In Deiner Liebe, die niemals endet.
+
+[Outro]  
+Vater, ich komme zu Dir zurück,  
+In dieser Liebe, find' ich mein Glück.  
+Ewig verbunden, eins in Dir,  
+Danke, Herr, für Deine Zärtlichkeit hier.`,
+        18: `[Verse 1]  
+Im Garten der Stille, wo die Schatten fallen,  
+Jesus spricht zu seinen, in der Dunkelheit,  
+Judas nahte mit Fackeln, die Nacht war so kalt,  
+Doch sein Herz war erfüllt von der Treue der Zeit.  
+
+[Chorus]  
+Ich bin’s, er ruft, der Herr der Welt,  
+In Liebe gebrochen, für uns so bestellt.  
+Der Kelch, den ich trinke, er fließt über Leid,  
+Für dich, o mein Lebenslicht, bin ich bereit.  
+
+[Verse 2]  
+Die Worte, die er sprach, waren voller Macht,  
+Fielen sie nieder, als er sich zeigt,  
+Petrus zog sein Schwert, doch Jesus sprach:  
+„Stecke es weg, der Weg führt durch die Nacht.“  
+
+[Chorus]  
+Ich bin’s, er ruft, der Herr der Welt,  
+In Liebe gebrochen, für uns so bestellt.  
+Der Kelch, den ich trinke, er fließt über Leid,  
+Für dich, o mein Lebenslicht, bin ich bereit.  
+
+[Bridge]  
+„Was ist Wahrheit?“ fragt der, der die Freiheit kennt,  
+Doch er bleibt stumm, als das Urteil brennt.  
+Dein Reich ist nicht von dieser Welt,  
+In deinem Schmerz, die Hoffnung sich stellt.  
+
+[Chorus]  
+Ich bin’s, er ruft, der Herr der Welt,  
+In Liebe gebrochen, für uns so bestellt.  
+Der Kelch, den ich trinke, er fließt über Leid,  
+Für dich, o mein Lebenslicht, bin ich bereit.  
+
+[Outro]  
+Im Garten der Stille, wo die Schatten fallen,  
+Jesus, unser Retter, er liebt uns so sehr.  
+In jedem Schmerz und in jedem Wort,  
+Führt er uns heim, zu unserem Ort.`,
+        19: `[LYRICS]
+[LYRICS]
+
+Vers 1:  
+In der Dunkelheit, da steht er still,  
+Mit Dornen gekrönt, erfüllt er den Will.  
+Die Schreie der Menge, sie hallen so laut,  
+Doch in seinem Herzen, da bleibt er vertraut.  
+
+Refrain:  
+Seht, welch ein Mensch, der für uns litt,  
+Sein Blut für uns, sein Weg so bitter.  
+Kreuzige ihn, doch er bleibt hier,  
+Für die Welt, für mich, für dich, unser Ziel.  
+
+Vers 2:  
+Pilatus fragt: "Woher bist du, mein Herr?"  
+Doch Jesus schweigt, sein Blick ist so klar.  
+Die Macht der Menschen, sie kann nicht bestehen,  
+Was Gott verheißen, wird niemals verwehen.  
+
+Refrain:  
+Seht, welch ein Mensch, der für uns litt,  
+Sein Blut für uns, sein Weg so bitter.  
+Kreuzige ihn, doch er bleibt hier,  
+Für die Welt, für mich, für dich, unser Ziel.  
+
+Bridge:  
+Es ist vollbracht, die Dunkelheit flieht,  
+Durch seinen Tod, das Leben erblüht.  
+Er trägt die Last, unsere Schuld und Pein,  
+Lass uns ihm folgen, ihm ganz allein.  
+
+Refrain:  
+Seht, welch ein Mensch, der für uns litt,  
+Sein Blut für uns, sein Weg so bitter.  
+Kreuzige ihn, doch er bleibt hier,  
+Für die Welt, für mich, für dich, unser Ziel.  
+
+Outro:  
+In der Stille, da hören wir sein Wort,  
+"Ich bin bei euch, bis ans Ende der Zeit."  
+Seht, welch ein Mensch, der für uns starb,  
+Für immer vereint, in seinem Herz, so nah.`,
+        20: `[Verse 1]  
+Maria kam zum Grab, in der Dunkelheit,  
+Trauer in ihrem Herzen, die Hoffnung weit.  
+Der Stein war weggerollt, das Grab war leer,  
+Sie suchte ihren Herrn, doch fand nur Schmerz und mehr.
+
+[Chorus]  
+Du bist auferstanden, Herr, o mein Licht,  
+In der Dunkelheit strahlst Du, gibst mir Sicht.  
+Mein Herz ist erfüllt von Deiner Gnade,  
+Jesus, Du lebst, mein Retter, mein Pfad.
+
+[Verse 2]  
+Petrus und der Jünger, sie liefen schnell,  
+Die Botschaft des Lebens, sie ruft so hell.  
+Die Leinen lagen, das Schweißtuch beiseit’ —  
+Sie sahen und glaubten, die Nacht war vorbei.
+
+[Chorus]  
+Du bist auferstanden, Herr, o mein Licht,  
+In der Dunkelheit strahlst Du, gibst mir Sicht.  
+Mein Herz ist erfüllt von Deiner Gnade,  
+Jesus, Du lebst, mein Retter, mein Pfad.
+
+[Bridge]  
+„Friede sei mit euch“, sprachst Du in die Nacht,  
+Die Türen verschlossen, doch Du hast uns bewacht.  
+Du gabst uns den Geist, den Heiligen,  
+So lass uns verkünden, dass wir leben in Dir.
+
+[Chorus]  
+Du bist auferstanden, Herr, o mein Licht,  
+In der Dunkelheit strahlst Du, gibst mir Sicht.  
+Mein Herz ist erfüllt von Deiner Gnade,  
+Jesus, Du lebst, mein Retter, mein Pfad.
+
+[Outro]  
+„Selig sind die Glaubenden“, Du sprachst es so klar,  
+Mein Herz ruft zu Dir: „Du bist wunderbar!“  
+Du bist auferstanden, für alle Zeit,  
+In Dir, o mein Herr, find' ich die Freiheit.`,
+        21: `(Verse 1)  
+Am Morgen, still und klar,  
+Stand Jesus am Ufer, so nah.  
+Die Jünger fischten, doch fanden nichts,  
+In der Dunkelheit, verloren im Licht.  
+
+(Chorus)  
+Komm und halt das Mahl,  
+Jesus, Du bist hier,  
+Du schenkst uns Leben,  
+Füllst unser Herz mit Dir.  
+Wir werfen die Netze,  
+In Deinen Namen jetzt,  
+Du bist unser Herr,  
+Der uns nie vergisst.  
+
+(Verse 2)  
+Er sprach: "Werfet zur Rechten das Netz,  
+Und seht, wie die Fische, sie kommen schnell jetzt."  
+In der Fülle, die Du uns gibst,  
+Erkennen wir, dass Du uns liebst.  
+
+(Chorus)  
+Komm und halt das Mahl,  
+Jesus, Du bist hier,  
+Du schenkst uns Leben,  
+Füllst unser Herz mit Dir.  
+Wir werfen die Netze,  
+In Deinen Namen jetzt,  
+Du bist unser Herr,  
+Der uns nie vergisst.  
+
+(Bridge)  
+Simon, hast Du mich lieb?  
+Du weißt, Herr, ich steh' zu Dir.  
+Weide meine Schafe,  
+In Deiner Nähe will ich sein.  
+Folge mir nach, ich bin bei Dir,  
+In jedem Schritt, in jedem Ziel.  
+
+(Chorus)  
+Komm und halt das Mahl,  
+Jesus, Du bist hier,  
+Du schenkst uns Leben,  
+Füllst unser Herz mit Dir.  
+Wir werfen die Netze,  
+In Deinen Namen jetzt,  
+Du bist unser Herr,  
+Der uns nie vergisst.  
+
+(Outro)  
+Komm und halt das Mahl,  
+Jesus, Du bist hier,  
+In Deiner Liebe,  
+Finden wir unser Ziel.  
+Komm und halt das Mahl,  
+Du schenkst uns neuen Mut,  
+In Deiner Gegenwart,  
+Ist alles gut.`,
+    },
     "44": {
         1: `Strophe 1:  
 Oh, Herr, Du bist der Anfang,  
@@ -37567,7 +51453,78 @@ Mit jedem Schritt, den wir gehen,
 Sind wir Deine Zeugen hier.  
 Wir sind Deine Zeugen,  
 Mit Freude gehen wir voran.`,
-        2: ``,
+        2: `[TITLE]  
+Feuer vom Himmel
+
+[Verse 1]  
+Als der Tag voll Freude kam,  
+Alle waren sie vereint,  
+Ein Brausen, wie der Wind,  
+Füllte Raum und Herz so rein.  
+Zungen wie von Feuer,  
+Setzten sich auf jeden hier;  
+Voll des Geistes, wir verkünden,  
+Gottes Wunder, Lob und Zier.
+
+[Chorus]  
+Feuer vom Himmel, komm,  
+Erfülle uns mit Kraft,  
+Dein Geist weht durch die Nacht,  
+In dir sind wir vereint,  
+Söhne, Töchter, wir erheben,  
+Dein Name, Herr, er leuchtet hell,  
+Mit Freude und in Liebe leben,  
+Du bist unser Licht und Ziel.
+
+[Verse 2]  
+Menschen aus den Völkern,  
+Hören uns in ihrer Zung’,  
+Neue Hoffnung, neue Freiheit,  
+Dein Geist macht uns so jung.  
+Wir bezeugen, was du tust,  
+Deine Liebe heilt und schenkt,  
+In Gemeinschaft, stark vereint,  
+Der Glaube, der uns lenkt.
+
+[Chorus]  
+Feuer vom Himmel, komm,  
+Erfülle uns mit Kraft,  
+Dein Geist weht durch die Nacht,  
+In dir sind wir vereint,  
+Söhne, Töchter, wir erheben,  
+Dein Name, Herr, er leuchtet hell,  
+Mit Freude und in Liebe leben,  
+Du bist unser Licht und Ziel.
+
+[Bridge]  
+Wir rufen deinen Namen,  
+Lass uns nicht allein,  
+In jedem Herzen brennt  
+Die Hoffnung, die du schenkst.  
+Du hast uns berührt,  
+Die Dunkelheit vergeht,  
+Mit deinem Geist erfüllt,  
+In dir sind wir bewegt.
+
+[Chorus]  
+Feuer vom Himmel, komm,  
+Erfülle uns mit Kraft,  
+Dein Geist weht durch die Nacht,  
+In dir sind wir vereint,  
+Söhne, Töchter, wir erheben,  
+Dein Name, Herr, er leuchtet hell,  
+Mit Freude und in Liebe leben,  
+Du bist unser Licht und Ziel.
+
+[Outro]  
+Feuer, komm und entzünde,  
+Unsere Herzen für dein Wort,  
+Mit Glauben, der verbindet,  
+Gehen wir an diesen Ort.  
+Feuer vom Himmel, leuchte,  
+In jedem neuen Tag,  
+Wir sind deine Zeugen,  
+Und was du tust, ist stark.`,
         3: `[Verse 1]  
 Petrus und Johannes, zur Stunde des Gebets,  
 Ein Lahmer in Not, an der Tür, die schön steht.  
@@ -37609,7 +51566,56 @@ Steh auf und wandle, in seinem Licht,
 Der Gott unserer Väter, er verlässt uns nicht.  
 Lob sei dem Herrn, für das, was er tut,  
 In Christus sind wir stark, in ihm finden wir Ruh.`,
-        4: ``,
+        4: `[TITLE]  
+Eckstein der Hoffnung
+
+[VERS 1]  
+Wenn wir reden, Herr, von Deiner Macht,  
+Die Priester sehen, was Du vollbracht.  
+Ein Name, der heilt, durch den du uns führst,  
+In Jesus allein, wo unser Herz spürt.
+
+[Chorus]  
+Du bist der Eckstein, unser Fels,  
+In Dir finden wir, was uns erhält.  
+Kein anderer Name, der uns befreit,  
+In Dir, Herr Jesus, ist die Ewigkeit.  
+Halleluja, wir loben Dich,  
+Für Deine Gnade, für Deinen Licht.
+
+[VERS 2]  
+Wenn die Zweifel kommen, der Mut vergeht,  
+Stehst Du an unserer Seite, wenn’s stürmisch weht.  
+Vor den Mächtigen, mutig und klar,  
+Reden wir von Dir, unserm Heiland, wunderbar.
+
+[Chorus]  
+Du bist der Eckstein, unser Fels,  
+In Dir finden wir, was uns erhält.  
+Kein anderer Name, der uns befreit,  
+In Dir, Herr Jesus, ist die Ewigkeit.  
+Halleluja, wir loben Dich,  
+Für Deine Gnade, für Deinen Licht.
+
+[Bridge]  
+Wir beten einmütig, erhebt sich unser Lied,  
+Du schenkst uns Deine Freude, Du bist unser Frieden.  
+Mit Kraft und mit Liebe, geh'n wir hinaus,  
+Die Welt braucht Deine Wahrheit, wir bringen sie raus.
+
+[Chorus]  
+Du bist der Eckstein, unser Fels,  
+In Dir finden wir, was uns erhält.  
+Kein anderer Name, der uns befreit,  
+In Dir, Herr Jesus, ist die Ewigkeit.  
+Halleluja, wir loben Dich,  
+Für Deine Gnade, für Deinen Licht.
+
+[Outro]  
+Halleluja, wir loben Dich,  
+In Deinem Namen finden wir,  
+Die Hoffnung, die uns trägt,  
+Ewig, Herr, in Dir.`,
         5: `[Verse 1]  
 Du hast uns gerufen, uns in Dein Licht,  
 Die Dunkelheit flieht, wenn Du bei uns bist.  
@@ -37702,10 +51708,249 @@ Voll Glaubens und Kraft, wir stehen vereint,
 Im Namen des Vaters, der uns stets vereint.  
 Die Zahl der Jünger, sie wächst Tag für Tag,  
 In Freude und Hoffnung, die unser Herz trägt.`,
-        7: ``,
-        8: ``,
-        9: ``,
-        10: ``,
+        7: `[TITLE]  
+Gott der Verheißung
+
+[Verse 1]  
+Du sprachst zu Abraham, geh’ hinaus,  
+In ein Land, das ich dir zeig’ –  
+Ein Erbe für dich, ein neuer Haus,  
+In deinem Glauben, bleib’ ich treu und gleich.  
+Durch Trübsal und Dunkel, du wirst nicht allein,  
+Ich bin der Gott, der stets bei dir wird sein.
+
+[Chorus]  
+Halleluja, Gott der Verheißung,  
+Du führst uns durch die Nacht,  
+In deiner Liebe, in deiner Gnade,  
+Hast du uns neu gemacht.  
+Halleluja, du bist der Heiland,  
+Der uns aus der Not befreit,  
+In dir, oh Herr, finden wir Frieden,  
+Und deine Treue bleibt.
+
+[Verse 2]  
+Joseph, verkauft, doch nicht verloren,  
+In Ägypten, du warst nicht allein.  
+Gott gab dir Gnade, du wurdest erkoren,  
+Ein Fürst, der sein Volk wird befrein.  
+Moses, berufen, in der Wüste glühend,  
+Du hörtest Gottes Stimme, die dich ruft:  
+„Zieh deine Schuhe aus, hier ist heiliges Land,  
+Ich hab’ dein Volk gesehen und geb’ ihm neuen Stand.“
+
+[Chorus]  
+Halleluja, Gott der Verheißung,  
+Du führst uns durch die Nacht,  
+In deiner Liebe, in deiner Gnade,  
+Hast du uns neu gemacht.  
+Halleluja, du bist der Heiland,  
+Der uns aus der Not befreit,  
+In dir, oh Herr, finden wir Frieden,  
+Und deine Treue bleibt.
+
+[Bridge]  
+Du bist der Gott der Wunder, der alles sieht,  
+In jedem Herzen, das zu dir kommt,  
+Wir bringen dir unser Lob, unser Lied,  
+Denn du bist der, der uns Freiheit bringt.  
+Wir stehen auf, wir feiern deinen Namen,  
+In deiner Nähe blüht das Leben neu,  
+Du bist das Licht, unser Ziel und unser Leben,  
+In dir, oh Herr, sind wir frei.
+
+[Chorus]  
+Halleluja, Gott der Verheißung,  
+Du führst uns durch die Nacht,  
+In deiner Liebe, in deiner Gnade,  
+Hast du uns neu gemacht.  
+Halleluja, du bist der Heiland,  
+Der uns aus der Not befreit,  
+In dir, oh Herr, finden wir Frieden,  
+Und deine Treue bleibt.
+
+[Outro]  
+Gott der Verheißung, du bist bei uns hier,  
+In deinem Namen, da sind wir vereint,  
+In jedem Schritt, in jedem neuen Ziel,  
+Für immer bei dir, in deinem Licht, vereint.`,
+        8: `[TITLE]  
+"Die Freude der Zerstreuten"  
+
+[Verse 1]  
+In den Straßen der Verfolgung,  
+Verstreut, doch nie allein,  
+Stehen wir auf für das Evangelium,  
+Seine Liebe soll unser Zeugnis sein.  
+Der Geist ruft uns, geht hinaus,  
+In die Herzen, die noch suchen,  
+Mit Hoffnung und mit Glauben,  
+Die Dunkelheit wird gebrochen.  
+
+[Chorus]  
+Oh, wir singen von der Freude,  
+Die in uns lebt, die uns befreit,  
+Jesus, Du bist unser Licht,  
+In der Dunkelheit, die uns umgibt.  
+Wir verkünden, was Du tust,  
+In jedem Land, in jedem Haus,  
+Sei gepriesen, Herr der Welt,  
+Dein Wort, das nie vergeht.  
+
+[Verse 2]  
+Philippus zog in die Städte,  
+Die Botschaft klang so klar,  
+Menschen fanden neue Hoffnung,  
+In der Stimme, die sie hör’n.  
+Die Geister fliehen vor Deinem Namen,  
+Heilung strömt durch jede Ader,  
+Wir sind Zeugen Deiner Größe,  
+In jedem Herzen, das Dir glaubt.  
+
+[Chorus]  
+Oh, wir singen von der Freude,  
+Die in uns lebt, die uns befreit,  
+Jesus, Du bist unser Licht,  
+In der Dunkelheit, die uns umgibt.  
+Wir verkünden, was Du tust,  
+In jedem Land, in jedem Haus,  
+Sei gepriesen, Herr der Welt,  
+Dein Wort, das nie vergeht.  
+
+[Bridge]  
+Wir kommen zusammen,  
+Um die Welt zu verändern,  
+Deine Kraft, sie fließt,  
+Durch uns, Herr, wir sind bereit.  
+Die Wasser des Lebens,  
+Sie sprudeln neu hervor,  
+In Deinem Namen, Jesus,  
+Öffnen wir das Tor.  
+
+[Chorus]  
+Oh, wir singen von der Freude,  
+Die in uns lebt, die uns befreit,  
+Jesus, Du bist unser Licht,  
+In der Dunkelheit, die uns umgibt.  
+Wir verkünden, was Du tust,  
+In jedem Land, in jedem Haus,  
+Sei gepriesen, Herr der Welt,  
+Dein Wort, das nie vergeht.  
+
+[Outro]  
+In der Freude und in der Kraft,  
+Gehen wir aus, was Du uns gabst,  
+Jesus, Du bist unser Ziel,  
+In Dir, Herr, erfüllen wir das Spiel.`,
+        9: `[TITLE] Licht auf dem Weg
+
+[Verse 1]  
+Saul, du schnaubtest voller Zorn,  
+Verfolgtest die Jünger, die du nicht erkorn.  
+Doch auf dem Weg nach Damaskus,  
+Erstrahlte ein Licht, oh, wie das Glanz und Kraft uns!  
+
+[Chorus]  
+Jesus, du bist der Weg, die Wahrheit, das Leben,  
+Du rufst uns, uns zu vergeben.  
+Aus Finsternis ins Licht, wir erheben  
+Dein Name, oh Herr, für alle Zeiten, wir leben!  
+
+[Verse 2]  
+„Saul, Saul, warum verfolgst du mich?“  
+Die Stimme spricht, sie trifft dich wie ein Licht.  
+Was willst du, Herr? Fragst du in Angst,  
+Steh auf, geh hin, das ist der neue Kranz.  
+
+[Chorus]  
+Jesus, du bist der Weg, die Wahrheit, das Leben,  
+Du rufst uns, uns zu vergeben.  
+Aus Finsternis ins Licht, wir erheben  
+Dein Name, oh Herr, für alle Zeiten, wir leben!  
+
+[Bridge]  
+Ananias, geh, sei mutig und stark,  
+Für Saul bin ich der Weg, der neue Tag.  
+Er wird meine Botschaft tragen,  
+Vor Könige, vor Völker, er wird es wagen.  
+
+[Chorus]  
+Jesus, du bist der Weg, die Wahrheit, das Leben,  
+Du rufst uns, uns zu vergeben.  
+Aus Finsternis ins Licht, wir erheben  
+Dein Name, oh Herr, für alle Zeiten, wir leben!  
+
+[Outro]  
+So wie Saul, der einst verloren,  
+Verändert durch Dich, neu geboren.  
+Wir gehen hinaus, voll Kraft und Mut,  
+In Deinem Namen, Herr, da ist alles gut!`,
+        10: `[TITLE]  
+Gott, Du hörst unser Rufen
+
+[Verse 1]  
+In Cäsarea, ein Mann,  
+Kornelius, der fromm begann.  
+Mit Gebet und Almosen,  
+Zu Dir, Herr, ließ er fließen.  
+Ein Engel sprach: „Deine Taten,  
+Sind vor Gott, sie werden strahlen.“
+
+[Chorus]  
+Gott, Du hörst unser Rufen,  
+In der Dunkelheit, Du Licht!  
+Kein Mensch ist unrein in Deinen Augen,  
+Du schenkst Frieden, Du schenkst Sicht.  
+Komm, Herr, in unsere Mitte,  
+Lass uns leben für Dein Wort!  
+Alle Nationen, ein Herz, ein Leben,  
+Gott, Du führst uns an den Ort.
+
+[Verse 2]  
+Petrus betet, sieht den Himmel,  
+Ein Gefäß, das ihm die Sinne schimmert.  
+„Was Gott rein macht, das mach nicht klein!“  
+Sein Herz, es brennt, es soll so sein.  
+Kornelius ruft, er wartet schon,  
+Mit Freunden hier in Deinem Lohn.
+
+[Chorus]  
+Gott, Du hörst unser Rufen,  
+In der Dunkelheit, Du Licht!  
+Kein Mensch ist unrein in Deinen Augen,  
+Du schenkst Frieden, Du schenkst Sicht.  
+Komm, Herr, in unsere Mitte,  
+Lass uns leben für Dein Wort!  
+Alle Nationen, ein Herz, ein Leben,  
+Gott, Du führst uns an den Ort.
+
+[Bridge]  
+Dein Geist, er fällt, er füllt den Raum,  
+Wir beten, hier im Glaubenstraum.  
+Alle Zungen loben Dich,  
+In Einheit, Herr, vergib uns nicht!  
+Du bist der Frieden, der uns vereint,  
+In Deinem Namen, der uns leitet,  
+Wir sind Zeugen, Deine Kraft,  
+In alle Welt, wo Liebe schafft.
+
+[Chorus]  
+Gott, Du hörst unser Rufen,  
+In der Dunkelheit, Du Licht!  
+Kein Mensch ist unrein in Deinen Augen,  
+Du schenkst Frieden, Du schenkst Sicht.  
+Komm, Herr, in unsere Mitte,  
+Lass uns leben für Dein Wort!  
+Alle Nationen, ein Herz, ein Leben,  
+Gott, Du führst uns an den Ort.
+
+[Outro]  
+Gott, Du hörst, Du bist hier,  
+In jedem Gebet, in jedem Lied.  
+Komm und führe, das ist unser Ziel,  
+In Deinem Namen, Herr, sind wir still.  
+Amen, Amen, Herr, sei unser Licht,  
+In Deiner Liebe, da vergiss uns nicht.`,
         11: `[Verse 1]  
 In Joppe, Herr, da fiel der Schleier,  
 Ein Bild vom Himmel, rein und klar,  
@@ -37802,7 +52047,65 @@ Freiheit in Deinem Licht,
 Wo Dunkelheit flieht,  
 Ich lebe für Dich,  
 Mein Herz schlägt für Dich, oh Gott!`,
-        13: ``,
+        13: `[TITLE] Erhebe Deinen Namen
+
+[Verse 1]  
+In Antiochien, da hörte man,  
+Die Stimme des Geistes, ein klarer Plan.  
+Barnabas und Saulus, sie beten und fasten,  
+Gesandt in die Welt, mit Glauben, nie zu rasten.  
+
+[Chorus]  
+Erhebe Deinen Namen, Herr,  
+Dein Wort, es breitet sich aus,  
+Wir verkünden Deine Liebe,  
+Im Glauben ziehen wir hinaus!  
+Oh, Herr, wir folgen Dir,  
+In Deinem Licht sind wir hier.  
+Die Nationen warten auf Dich,  
+Ewiges Leben, so wunderbar, so frisch.
+
+[Verse 2]  
+Die Straßen von Paphos, das Wort, es erklingt,  
+Sergius Paulus, sein Herz, es springt.  
+Elymas, der Zauberer, kann nicht bestehen,  
+Dein Licht wird strahlen, die Dunkelheit verwehen.  
+
+[Chorus]  
+Erhebe Deinen Namen, Herr,  
+Dein Wort, es breitet sich aus,  
+Wir verkünden Deine Liebe,  
+Im Glauben ziehen wir hinaus!  
+Oh, Herr, wir folgen Dir,  
+In Deinem Licht sind wir hier.  
+Die Nationen warten auf Dich,  
+Ewiges Leben, so wunderbar, so frisch.
+
+[Bridge]  
+Oh, wir sind Deine Zeugen,  
+Mit Freude ziehen wir voran,  
+Die Wahrheit wird uns leiten,  
+Im Licht des Sohnes, stark und klar!  
+Vergebung der Sünden, Hoffnung für die Welt,  
+Durch Jesus, unseren Retter, der alles neu bestellt.
+
+[Chorus]  
+Erhebe Deinen Namen, Herr,  
+Dein Wort, es breitet sich aus,  
+Wir verkünden Deine Liebe,  
+Im Glauben ziehen wir hinaus!  
+Oh, Herr, wir folgen Dir,  
+In Deinem Licht sind wir hier.  
+Die Nationen warten auf Dich,  
+Ewiges Leben, so wunderbar, so frisch.
+
+[Outro]  
+In Deinem Namen gehen wir,  
+Die Welt erwartet Dich, oh Herr,  
+Mit jedem Schritt, den wir tun,  
+Erfüllen wir das, was Du uns zusagst, voll Ruhm!  
+Amen, Amen, wir folgen Dir,  
+Dein Wort, es leuchtet hier!`,
         14: `Strophe 1:
 In Ikonion, das Wort erklingt,  
 Die Herzen, sie erblühen,  
@@ -37868,7 +52171,56 @@ Die Tür des Glaubens, sie bleibt nicht geschlossen,
 Wir tragen das Licht, das in uns ist erworben,  
 In Liebe und Hoffnung, für alle zu sehen,  
 Die Tür des Glaubens, lasst uns weitergehen.`,
-        15: ``,
+        15: `[TITLE]  
+Gnade, die uns vereint
+
+[Verse 1]  
+Von Judäa kam die Botschaft her,  
+Ein Streit entbrannte, so schwer.  
+Doch Paulus und Barnabas, mit Mut,  
+Erzählten von Gottes Gnade, die tut.  
+
+[Chorus]  
+Gnade, die uns vereint,  
+Kein Gesetz, das uns trennt.  
+Durch den Glauben sind wir frei,  
+In der Liebe stehen wir dabei.  
+Halleluja, unser Herz schlägt laut,  
+Für die Freiheit, die er uns erbaut.  
+
+[Verse 2]  
+Die Apostel sprachen, hörten hin,  
+Petrus erklärte, wo wir beginnen.  
+Gott reinigt Herzen, macht sie rein,  
+Kein Unterschied soll zwischen uns sein.  
+
+[Chorus]  
+Gnade, die uns vereint,  
+Kein Gesetz, das uns trennt.  
+Durch den Glauben sind wir frei,  
+In der Liebe stehen wir dabei.  
+Halleluja, unser Herz schlägt laut,  
+Für die Freiheit, die er uns erbaut.  
+
+[Bridge]  
+Wir gehen hinaus, von Stadt zu Stadt,  
+Erzählen von dem, was er uns tat.  
+Die Heiden hören, die Freude wächst,  
+In seinem Namen, der uns segnet.  
+
+[Chorus]  
+Gnade, die uns vereint,  
+Kein Gesetz, das uns trennt.  
+Durch den Glauben sind wir frei,  
+In der Liebe stehen wir dabei.  
+Halleluja, unser Herz schlägt laut,  
+Für die Freiheit, die er uns erbaut.  
+
+[Outro]  
+Gott sind alle Werke bewußt,  
+Wir leben in seinem Licht und seiner Lust.  
+Die Gnade, die uns vereint,  
+Ein neues Volk, das für ihn scheint.`,
         16: `Strophe 1:  
 Wir kamen in die Städte,  
 mit mutigem Herzen, bereit,  
@@ -37922,7 +52274,62 @@ Komm, hilf uns, Herr, wir folgen dir,
 In jedem Schritt, du bist hier.  
 Wir bringen dein Licht in die Welt,  
 Deine Liebe, die uns erhellt.`,
-        17: ``,
+        17: `[TITLE]  
+"Der unbekannte Gott"
+
+[Verse 1]  
+In der Stadt, wo Götter thronten,  
+Sah ich Herzen, die verloren,  
+Eure Altäre, aus Stein und Gold,  
+Doch der wahre Gott ist nicht so kalt.  
+
+[PRE-CHORUS]  
+Er hat die Welt gemacht,  
+Im Licht der Wahrheit wacht,  
+In jedem Atemzug, in jedem Wort,  
+Kein Tempel hält ihn hier am Ort.  
+
+[Chorus]  
+Wir suchen dich, oh Herr, im Glauben,  
+Du bist der König, wir vertrauen.  
+Die Auferstehung, sie gibt uns Mut,  
+In dir allein, da finden wir Ruh.  
+
+[Verse 2]  
+Paulus sprach zu den Völkern,  
+Von der Liebe, die uns stärkt,  
+Er rief uns zu, uns zu bekehren,  
+Zu leben, nicht nur zu erklären.  
+
+[PRE-CHORUS]  
+Er hat uns mit dem Blut erkauft,  
+In seiner Gnade sind wir aufgebaut,  
+Die Zeit der Unwissenheit, sie ist vorbei,  
+Wir kommen zu dir, oh Herr, sei frei!  
+
+[Chorus]  
+Wir suchen dich, oh Herr, im Glauben,  
+Du bist der König, wir vertrauen.  
+Die Auferstehung, sie gibt uns Mut,  
+In dir allein, da finden wir Ruh.  
+
+[Bridge]  
+In ihm leben wir, weben wir,  
+Sein Geist erfüllt uns, hier und hier.  
+Die Welt um uns, sie mag nicht sehen,  
+Doch wir werden fest in dir stehen.  
+
+[Chorus]  
+Wir suchen dich, oh Herr, im Glauben,  
+Du bist der König, wir vertrauen.  
+Die Auferstehung, sie gibt uns Mut,  
+In dir allein, da finden wir Ruh.  
+
+[Outro]  
+Oh, der unbekannte Gott,  
+Wir erheben deinen Namen,  
+In diesem Licht, das nie vergeht,  
+Mit dir, o Herr, sind wir ersehen.`,
         18: `(Strophe 1)  
 Du führst uns, Herr, auf neuen Wegen,  
 In Städten, wo Dein Wort erklingt.  
@@ -37989,8 +52396,118 @@ Du bist bei uns, verlässt uns nicht.
 Wir gehen voran, in Deine Spur,  
 Mit Dir, Herr, gibt es stets die Flur.  
 Amen.`,
-        19: ``,
-        20: ``,
+        19: `[TITLE]  
+Kraft des Heiligen Geistes
+
+[VERS 1]  
+Du kamst zu uns, Herr, in unserer Dunkelheit,  
+Siehst die Herzen, die nach Dir schreien,  
+Wie Johannes einst, rufst Du zur Buße,  
+Glauben an den, der uns befreit.
+
+[Chorus]  
+Kraft des Heiligen Geistes, komm herab,  
+Lass uns reden in neuen Zungen,  
+Du bist die Hoffnung, die niemals versagt,  
+In Dir sind wir stark, in Dir sind wir eins.  
+Halleluja, wir preisen den Namen,  
+Jesus, unser Retter, wir sind Dein Volk.
+
+[VERS 2]  
+Paulus sprach zu den Jüngern, voller Mut,  
+„Habt ihr den Geist empfangen in der Glut?“,  
+Sie hörten und ließen sich taufen auf Dich,  
+Der Name Jesus, er macht alles neu.
+
+[Chorus]  
+Kraft des Heiligen Geistes, komm herab,  
+Lass uns reden in neuen Zungen,  
+Du bist die Hoffnung, die niemals versagt,  
+In Dir sind wir stark, in Dir sind wir eins.  
+Halleluja, wir preisen den Namen,  
+Jesus, unser Retter, wir sind Dein Volk.
+
+[Bridge]  
+Inmitten der Stürme, Du bist bei uns,  
+Deine Liebe, sie trägt uns, sie ist unser Grund.  
+Wir verkünden das Wort, das die Welt verändert,  
+In Asien und darüber hinaus, wir sind gesendet.
+
+[Chorus]  
+Kraft des Heiligen Geistes, komm herab,  
+Lass uns reden in neuen Zungen,  
+Du bist die Hoffnung, die niemals versagt,  
+In Dir sind wir stark, in Dir sind wir eins.  
+Halleluja, wir preisen den Namen,  
+Jesus, unser Retter, wir sind Dein Volk.
+
+[Outro]  
+Mit Freude und Mut, gehen wir hinaus,  
+Das Licht Deiner Liebe, es leuchtet so hell.  
+Kraft des Heiligen Geistes, lebendig in uns,  
+Wir folgen Dir nach, bis an die Enden der Welt.  
+Halleluja, wir preisen den Namen,  
+Jesus, unser Retter, wir sind Dein Volk.`,
+        20: `[TITLE]  
+Der Weg des Glaubens
+
+[Verse 1]  
+Wenn die Stürme toben,  
+geh' ich fest voran,  
+Dein Wort ist mein Licht,  
+Du hältst meine Hand.  
+In der Dunkelheit,  
+strahlt Deine Gnade hell,  
+Du bist mein Fels,  
+mein Schild, mein schneller Retter.
+
+[Chorus]  
+Halleluja, ich erhebe Dich,  
+Du bist mein Leben, mein König, mein Licht!  
+Mit Freude verkünd' ich,  
+Dein Evangelium,  
+Deine Liebe erweckt,  
+mein Herz schlägt für Dich!
+
+[Verse 2]  
+In der Gemeinschaft,  
+fühlen wir die Kraft,  
+die uns zusammenführt,  
+in Deiner Heiligkeit.  
+Wie Paulus in Tränen,  
+verbreite ich den Traum,  
+dass alle Menschen finden,  
+den Frieden in Dir Raum.
+
+[Chorus]  
+Halleluja, ich erhebe Dich,  
+Du bist mein Leben, mein König, mein Licht!  
+Mit Freude verkünd' ich,  
+Dein Evangelium,  
+Deine Liebe erweckt,  
+mein Herz schlägt für Dich!
+
+[Bridge]  
+Du bist die Hoffnung, die nie vergeht,  
+Deine Stimme ruft, wenn der Weg uns dreht.  
+Wir stehen zusammen, in Liebe vereint,  
+bis der letzte Tag, an dem Du erscheinst.
+
+[Chorus]  
+Halleluja, ich erhebe Dich,  
+Du bist mein Leben, mein König, mein Licht!  
+Mit Freude verkünd' ich,  
+Dein Evangelium,  
+Deine Liebe erweckt,  
+mein Herz schlägt für Dich!
+
+[ENDING]  
+Ja, mein Herz schlägt für Dich,  
+Du bist mein Licht, mein König, mein Frieden.  
+In all meinen Tagen,  
+vertraue ich auf Dich,  
+Dein Wort ist mein Leben,  
+mein Herz schlägt für Dich!`,
         21: `Strophe 1:
 Wir ziehen aus, in Deinen Willen,  
 Der Geist führt uns, wir sind bereit,  
@@ -38097,7 +52614,49 @@ Oh, Jesus, unser Licht, unser Tag,
 Auf dem Weg nach Damaskus, wo dein Name mag.  
 Führ uns, oh Herr, durch Zeit und Raum,  
 In deinem Licht, da blüht unser Traum.`,
-        23: ``,
+        23: `[TITLE] Sei Getrost, Paulus
+
+[Verse 1]  
+Inmitten der Dunkelheit, da stehst du allein,  
+Die Stimmen um dich, sie wollen dich klein.  
+Doch der Herr, er kommt, spricht: „Hab nur Vertrauen,  
+Denn ich bin bei dir, lass die Zweifel zerhauen.“
+
+[Chorus]  
+Sei getrost, oh Paulus, ich bin bei dir,  
+In der Angst und der Nacht, führe ich dich hier.  
+Stark in der Hoffnung, stehe auf, sei bereit,  
+Denn ich sende dich aus, in meine Herrlichkeit.
+
+[Verse 2]  
+Die Menge zersplittert, das Urteil ist schwer,  
+Dein Herz ist erfüllt, von der Wahrheit, oh Herr.  
+Pharisäer und Sadduzäer, sie streiten so laut,  
+Doch du weißt, dass der Glaube in dir niemals zerhaut.
+
+[Chorus]  
+Sei getrost, oh Paulus, ich bin bei dir,  
+In der Angst und der Nacht, führe ich dich hier.  
+Stark in der Hoffnung, stehe auf, sei bereit,  
+Denn ich sende dich aus, in meine Herrlichkeit.
+
+[Bridge]  
+Kein Plan des Feindes kann dich je besiegen,  
+Meine Engel um dich, sie werden dich wiegen.  
+Du bist ein Licht, das die Dunkelheit bricht,  
+Vertraue auf mich, ich verlasse dich nicht.
+
+[Chorus]  
+Sei getrost, oh Paulus, ich bin bei dir,  
+In der Angst und der Nacht, führe ich dich hier.  
+Stark in der Hoffnung, stehe auf, sei bereit,  
+Denn ich sende dich aus, in meine Herrlichkeit.
+
+[Outro]  
+Sei getrost, oh Paulus, sei getrost,  
+Denn ich bin der Herr, der dich nie vergisst.  
+In jedem Sturm, in jedem Geleit,  
+Stehe auf und zeuge von meiner Einigkeit.`,
         24: `Strophe 1:  
 In der Stille, wo Zweifel weilt,  
 Stehst du fest, Herr, in deiner Zeit.  
@@ -38295,9 +52854,52 @@ Unverzagt, ich schau zu Dir,
 Du schenkst mir Mut, Du bist bei mir.  
 Dein Wort, mein Licht, mein Lebensbrot,  
 Dein Frieden trägt, auch in der Not.`,
-        28: ``,
-    },
+        28: `[TITLE] Du bist unser Licht
 
+[VERS 1]  
+In der Dunkelheit, wo der Sturm tobt,  
+Hast du uns gefunden, uns erleuchtet, oh Herr.  
+Auf der Insel der Hoffnung, wo Freundschaft blüht,  
+Hast du uns getragen, in jedem Schmerz und Leid.
+
+[Chorus]  
+Du bist unser Licht, du bist unsere Kraft,  
+In der Kälte und der Nacht, bist du immer da.  
+Wir heben die Hände, beten zu dir,  
+Du schenkst uns Leben, du bist hier bei uns!
+
+[VERS 2]  
+Wie Paulus am Feuer, stark in dem Glauben,  
+Hast du das Unmögliche, Herr, getan.  
+Die Wunden geheilt, die Herzen befreit,  
+Deine Liebe umarmt uns, für alle Zeit.
+
+[Chorus]  
+Du bist unser Licht, du bist unsere Kraft,  
+In der Kälte und der Nacht, bist du immer da.  
+Wir heben die Hände, beten zu dir,  
+Du schenkst uns Leben, du bist hier bei uns!
+
+[Bridge]  
+Mit jedem Schritt, den wir gehen,  
+Erfüllt von deinem Geist, oh Herr.  
+Wir tragen deine Botschaft,  
+Zu den Völkern und Orten, wo niemand weiß.  
+Denn du hast uns befreit, du hast uns gesandt,  
+Um zu leben in deinem Licht, Hand in Hand.
+
+[Chorus]  
+Du bist unser Licht, du bist unsere Kraft,  
+In der Kälte und der Nacht, bist du immer da.  
+Wir heben die Hände, beten zu dir,  
+Du schenkst uns Leben, du bist hier bei uns!
+
+[Outro]  
+Oh, wir danken dir, Herr, für deine Treue,  
+In jedem Moment, du bist unser Ziel.  
+Du bist unser Licht, wir beten zu dir,  
+In der Dunkelheit leuchtest du für uns hier.`,
+    },
     "45": {
         1: `[Verse 1]  
 Du rufst mich, Herr, in Deinen Plan,  
@@ -38654,7 +53256,50 @@ mit ganzem Herzen, voller Kraft,
 dein Gesetz ist mein Leben,  
 in dir, Herr, find' ich die Macht.  
 In dir, Herr, find' ich die Macht.`,
-        8: ``,
+        8: `[TITLE]  
+In Christus Frei
+
+[Verse 1]  
+Nichts Verdammliches, wo du bist,  
+In dir, Herr, find' ich den Frieden,  
+Der Geist, der lebendig macht,  
+Befreit mich von der Sünde, die mich hält.
+
+[Chorus]  
+Oh, mein Herz, erhebe dich,  
+In der Liebe, die nie vergeht.  
+Lebensgeist, du bist in mir,  
+Ewig bei dir, Herr, bin ich frei.
+
+[Verse 2]  
+Wie ein Kind, das ruft: "Abba, Vater!"  
+Dein Geist in mir, so stark und heilig,  
+Die Hoffnung lebt, die niemals stirbt,  
+In deiner Gerechtigkeit bin ich geborgen.
+
+[Chorus]  
+Oh, mein Herz, erhebe dich,  
+In der Liebe, die nie vergeht.  
+Lebensgeist, du bist in mir,  
+Ewig bei dir, Herr, bin ich frei.
+
+[Bridge]  
+Kein Leid, kein Tod kann uns trennen,  
+Von der Liebe, die du uns schenkst.  
+In allem überwinden wir,  
+Denn du bist hier, du bist mein Licht.
+
+[Chorus]  
+Oh, mein Herz, erhebe dich,  
+In der Liebe, die nie vergeht.  
+Lebensgeist, du bist in mir,  
+Ewig bei dir, Herr, bin ich frei.
+
+[Outro]  
+In Christus leben wir,  
+Ewig in deinem Licht,  
+Kein Schatten kann uns halten,  
+Du bist der Weg, das Leben, die Sicht.`,
         9: `[Verse 1]  
 In Christus steh' ich, die Wahrheit spricht,  
 Mein Gewissen zeugt, im Heiligen Licht.  
@@ -39056,7 +53701,6 @@ Die Gnade sei mit uns, sein Licht leuchtet fort.
 In all unseren Wegen, in Freude und Leid,  
 Gott, du bist bei uns, für alle Zeit.`,
     },
-
     "46": {
         1: `[Verse 1]  
 Du rufst uns, o Herr, in Deiner Gnade,  
@@ -39689,7 +54333,76 @@ Glaube, Hoffnung, Liebe, drei, die uns leiten,
 Doch die Liebe, die Liebe, wird immer gedeihen.  
 Die Liebe, sie bleibt, unser höchstes Gut,  
 In ihr finden wir Frieden, in ihr finden wir Mut.`,
-        14: ``,
+        14: `[TITLE]  
+Strebet nach der Liebe
+
+[Verse 1]  
+Strebet nach der Liebe,  
+lasst uns zusammen sein,  
+In Einigkeit und Frieden,  
+möcht' unser Geist gedeihn.  
+Die Gaben, die Du schenkst,  
+sind Worte, die erlösen,  
+Lass uns mit Klarheit reden,  
+damit wir nicht vergessen.
+
+[Chorus]  
+Wir heben unsere Stimmen,  
+zu Dir, o Herr, erheben wir,  
+in Deinem Licht erblühen,  
+lass uns hören, was Du sprichst.  
+Die Wahrheit, die Du zeigst,  
+berührt unser Herz und Leben,  
+in Deiner Gegenwart,  
+werden wir neu geboren.
+
+[Verse 2]  
+Wenn Worte nicht erheben,  
+was nützt das, was wir sagen?  
+Lass uns in der Liebe leben,  
+um einander zu tragen.  
+Die Weissagung, die Du sendest,  
+führt uns zu Deinem Licht,  
+in der Gemeinschaft finden wir  
+die Kraft, die uns verspricht.
+
+[Chorus]  
+Wir heben unsere Stimmen,  
+zu Dir, o Herr, erheben wir,  
+in Deinem Licht erblühen,  
+lass uns hören, was Du sprichst.  
+Die Wahrheit, die Du zeigst,  
+berührt unser Herz und Leben,  
+in Deiner Gegenwart,  
+werden wir neu geboren.
+
+[Bridge]  
+Gib uns Ohren, um zu hören,  
+und Herzen, die verstehen,  
+dass in der Stille Deine Stimme  
+uns führt auf unseren Wegen.  
+Wir danken Dir für Deine Gaben,  
+für die Liebe, die uns eint,  
+lass uns stets in Deinem Frieden  
+und der Freude, die vereint.
+
+[Chorus]  
+Wir heben unsere Stimmen,  
+zu Dir, o Herr, erheben wir,  
+in Deinem Licht erblühen,  
+lass uns hören, was Du sprichst.  
+Die Wahrheit, die Du zeigst,  
+berührt unser Herz und Leben,  
+in Deiner Gegenwart,  
+werden wir neu geboren.
+
+[Outro]  
+Strebet nach der Liebe,  
+lasst uns eins in Dir sein,  
+in der Kraft des Heiligen Geistes  
+möcht’ unser Leben blüh’n.  
+Amen, Amen,  
+in Deiner Liebe, o Herr.`,
         15: `[Verse 1]  
 Ich erinnere mich, o Herr, an dein Wort,  
 Das Evangelium der Hoffnung, du bist unser Ort.  
@@ -39773,7 +54486,6 @@ In Christus, unser Leben.
 Wir grüßen uns im heiligen Band,  
 In Deiner Liebe, die uns hebt.`,
     },
-
     "47": {
         1: `[Verse 1]  
 Du bist der Gott, der tröstet,  
@@ -40280,7 +54992,54 @@ Lob dem Herrn, in Ewigkeit,
 Sein Wort bleibt wahr, in alle Zeit.  
 Führe uns, Herr, auf Deinem Weg,  
 In Deinem Licht, da leben wir, segensreich.`,
-        11: ``,
+        11: `[TITLE]  
+Ewiger Eifer in Schwachheit
+
+[VERS 1]  
+Wollt ihr mir Torheit zugesteh’n,  
+In meinem Herzen brennt das Licht,  
+Für euch, o Gemeinde, leb' ich hier,  
+Ein reines Herz, das strebt nach dir.  
+Wie Eva fiel, so fürcht' ich sehr,  
+Dass eure Seelen verwirrt, wie Meer.
+
+[Chorus]  
+Ewiger Eifer, du bist mein Ziel,  
+In Schwachheit zeigst du dein starkes Spiel.  
+Ein anderer Jesus, den will ich nicht,  
+In deinem Licht, da find' ich die Sicht.
+
+[VERS 2]  
+Hab' ich gesündigt, um euch zu heben?  
+Das Evangelium, umsonst gegeben.  
+Die Brüder kamen, mich zu versorgen,  
+In jedem Mangel, in jedem Sorgen.  
+So wahr dein Wort in mir besteht,  
+Wird mein Ruhm für dich ewig wehen.
+
+[Chorus]  
+Ewiger Eifer, du bist mein Ziel,  
+In Schwachheit zeigst du dein starkes Spiel.  
+Ein anderer Jesus, den will ich nicht,  
+In deinem Licht, da find' ich die Sicht.
+
+[Bridge]  
+Wer ist schwach? Ich fühle die Last,  
+Doch in der Schwachheit bist du mein Rast.  
+Gott, du bist treu, im Sturm und in Nacht,  
+In deiner Liebe wird neu entfacht.
+
+[Chorus]  
+Ewiger Eifer, du bist mein Ziel,  
+In Schwachheit zeigst du dein starkes Spiel.  
+Ein anderer Jesus, den will ich nicht,  
+In deinem Licht, da find' ich die Sicht.
+
+[Outro]  
+Wir rühmen uns, nicht in Stolz,  
+Sondern in dir, der uns erhält,  
+Ewiger Eifer, in dir sind wir frei,  
+In deiner Liebe, da bleib' ich dabei.`,
         12: `[Verse 1]  
 Ich komme, Herr, zu Dir in Schwachheit,  
 Mit Sorgen und mit Schuld, die mich drücken.  
@@ -40364,7 +55123,6 @@ Gemeinschaft des Geistes, unser Herz stillt.
 In Deiner Kraft leben wir, oh Herr,  
 Für immer verbunden, in Dir sind wir mehr.`,
     },
-
     "48": {
         1: `[Verse 1]  
 Du rufst uns in Deine Gnade,  
@@ -40715,7 +55473,6 @@ In jedem Schritt, da gehen wir, so fern.
 Die Malzeichen des Kreuzes, in uns vereint,  
 In Liebe und Frieden, die Seele weint.`,
     },
-
     "49": {
         1: `"Erlösung in Christus"
 
@@ -41028,7 +55785,6 @@ Gnade sei mit uns, wenn der HERR uns verweint.
 In Deiner Kraft, o HERR, leben wir,  
 Ewig in Deinem Licht, bei Dir sind wir hier.`,
     },
-
     "50": {
         1: `[Verse 1]  
 In Gefängnis und in Ketten,  
@@ -41128,7 +55884,73 @@ So freuen wir uns, in Deiner Nähe,
 Gemeinsam im Glauben, in Deiner Gnade.  
 Amen, Amen, Herr, in Dir sind wir frei,  
 In Seiner Gegenwart, für alle Zeit, Amen.`,
-        3: ``,
+        3: `[TITLE] Strecken zum Ziel
+
+[Verse 1]  
+Freue dich, o Bruder, im HERRN,  
+So schreibe ich dir, sei stets bereit.  
+Die Hunde, die bösen, die uns umgeben,  
+Sie zeigen uns die falsche Zeit.  
+Wir sind die, die im Geist dienen,  
+Die mit Christus, dem HERRN, vereint.  
+Verlassen uns nicht auf unser Fleisch,  
+Denn in Ihm sind wir befreit.
+
+[Chorus]  
+Ich jage nach dem Ziel,  
+Nach der himmlischen Berufung,  
+In Christus, dem HERRN,  
+Wo die Freude nie vergeht.  
+Was mir Gewinn war,  
+Hab’ ich für Ihn verloren,  
+Um die Kraft der Auferstehung,  
+In Seiner Liebe neu geboren.
+
+[Verse 2]  
+Ein Hebräer von Hebräern,  
+Doch das Fleisch ist nicht mein Stolz.  
+Die Gerechtigkeit, die ich erlange,  
+Kommt durch Glauben, nicht durch Holz.  
+Ich achte alles für Verlust,  
+Um die Erkenntnis Seiner Macht.  
+In Gemeinschaft mit Seinen Leiden,  
+Wachse ich in Seiner Pracht.
+
+[Chorus]  
+Ich jage nach dem Ziel,  
+Nach der himmlischen Berufung,  
+In Christus, dem HERRN,  
+Wo die Freude nie vergeht.  
+Was mir Gewinn war,  
+Hab’ ich für Ihn verloren,  
+Um die Kraft der Auferstehung,  
+In Seiner Liebe neu geboren.
+
+[Bridge]  
+Vergessend, was hinter mir liegt,  
+Strecke ich mich dem Licht entgegen.  
+Im Glauben, fest verbunden,  
+Mit Dir, o HERR, mein Leben.  
+Ich folge Dir, mein Meister,  
+In der Gemeinschaft, stark und klar.  
+Mein Wandel ist im Himmel,  
+Die Hoffnung, die uns neu gebar.
+
+[Chorus]  
+Ich jage nach dem Ziel,  
+Nach der himmlischen Berufung,  
+In Christus, dem HERRN,  
+Wo die Freude nie vergeht.  
+Was mir Gewinn war,  
+Hab’ ich für Ihn verloren,  
+Um die Kraft der Auferstehung,  
+In Seiner Liebe neu geboren.  
+
+[Outro]  
+Freue dich, o Bruder, im HERRN,  
+Die Freiheit in Ihm ist unser Teil.  
+Gemeinsam auf dem Weg zum Ziel,  
+In Christus, dem HERRN, ist unser Heil.`,
         4: `[Vers 1]  
 Oh, meine Brüder, in Liebe vereint,  
 In Jesus, dem HERRN, sind wir niemals allein.  
@@ -41171,7 +55993,6 @@ In Christus, unserem Leben, da ist Freude bereit.
 Grüßt einander, die Heiligen, mit Liebe und Licht,  
 Die Gnade des HERRN sei mit euch, das vergesset nicht.`,
     },
-
     "51": {
         1: `(Verse 1)  
 Du rufst uns, Herr, in Deine Nähe,  
@@ -41378,7 +56199,6 @@ In Deinem Licht, Herr, sind wir bereit.
 Amen, Amen, für alle Ewigkeit,  
 In Deinem Licht, Herr, sind wir bereit.`,
     },
-
     "52": {
         1: `[Verse 1]  
 In der Dunkelheit, Herr, rufst Du uns,  
@@ -41601,7 +56421,6 @@ Erhebe uns, wir beten Dich an,
 In Deiner Liebe, da fangen wir an.  
 Amen.`,
     },
-
     "53": {
         1: `Verse 1:  
 Gott, unser Vater, wir kommen zu Dir,  
@@ -41751,7 +56570,6 @@ In jedem Tag, in jedem Traum,
 Vereint in Dir, in Deinem Licht,  
 Oh, Herr, wir preisen Deinen Namen, Amen.`,
     },
-
     "54": {
         1: `Verse 1:  
 Du, Herr, bist unser Leben,  
@@ -42036,7 +56854,6 @@ Die Gnade sei mit Dir, sie gibt uns Mut.
 In Deinem Namen, oh Herr, wir stehen,  
 Auf ewig in Dir, um mit Dir zu leben.`,
     },
-
     "55": {
         1: `[Verse 1]  
 Gott, mein Vater, hör mein Gebet,  
@@ -42233,7 +57050,6 @@ In Deinem Reich, da will ich sein.
 Amen, o Herr, so sei es stets,  
 In Deinem Wort, mein Herz, das lebt.`,
     },
-
     "56": {
         1: `[Verse 1]  
 Du bist der Gott, der niemals lügt,  
@@ -42372,7 +57188,6 @@ In Deinem Frieden, der nie uns trennt.
 Erfülle unsere Herzen, lass uns Zeugnis sein,  
 In Deiner Gnade, da sind wir nicht allein.`,
     },
-
     "57": {
         1: `[Verse 1]  
 Gott, Du bist mein Licht, mein Herz schlägt für Dich,  
@@ -42416,7 +57231,6 @@ In der Gemeinschaft, die in Dir besteht.
 Erquickt durch Deine Liebe, voller Dank und Lob,  
 In Deinem Frieden, unser Seelenbrot.`,
     },
-
     "58": {
         1: `Vers 1:
 Vor Zeiten sprachst Du, Herr, zu uns,  
@@ -43079,7 +57893,6 @@ Gnade sei mit uns,
 In Deiner Nähe, oh HERR,  
 Amen, Amen, Amen.`,
     },
-
     "59": {
         1: `[Verse 1]  
 Jakobus ruft uns, hört die Stimme,  
@@ -43276,9 +58089,50 @@ So naht euch zu Gott, und er naht sich euch,
 Reinige unsere Herzen, mach uns neu und gleich.  
 Demütige uns, Herr, wir sind ganz dein,  
 In deiner Liebe, da wollen wir sein.`,
-        5: ``,
-    },
+        5: `[TITLE] Geduld in der Hoffnung
 
+[Verse 1]  
+Wohlan, ihr Reichen, weinet um euren Stolz,  
+Euer Reichtum, er faulte, das Herz wird kalt.  
+Kleider mottenfraßig, der Glanz vergeht,  
+In der Eitelkeit, wo der Geist verweht.
+
+[Chorus]  
+Oh, Herr, wir warten auf Dein Licht,  
+Die Geduld in der Hoffnung, sie führt uns durch die Nacht.  
+Du bist der Richter, stehst vor der Tür,  
+Gib uns die Stärke, sei bei uns hier.
+
+[Verse 2]  
+Der Arbeiter schreit, hör, was er spricht,  
+Sein Lohn, der verweht, doch Du vergisst nicht.  
+Wir leben wohl, doch unser Herz ist schwer,  
+Die Wollust der Welt, sie zieht uns nicht mehr.
+
+[Chorus]  
+Oh, Herr, wir warten auf Dein Licht,  
+Die Geduld in der Hoffnung, sie führt uns durch die Nacht.  
+Du bist der Richter, stehst vor der Tür,  
+Gib uns die Stärke, sei bei uns hier.
+
+[Bridge]  
+Wie der Ackermann, so warten wir,  
+Auf den Regen, der kommt, bring das Leben zu mir.  
+Die Geduld Hiobs, wir tragen sie mit,  
+In Deinem Namen, Herr, führen wir unser Lied.
+
+[Chorus]  
+Oh, Herr, wir warten auf Dein Licht,  
+Die Geduld in der Hoffnung, sie führt uns durch die Nacht.  
+Du bist der Richter, stehst vor der Tür,  
+Gib uns die Stärke, sei bei uns hier.
+
+[Outro]  
+Barmherziger Vater, wir kommen zu Dir,  
+Lass unsere Herzen erblühen in Dir.  
+In der Gemeinschaft, im Gebet vereint,  
+Finden wir Trost, bis die Zeit erscheint.`,
+    },
     "60": {
         1: `Strophe 1:  
 In der Dunkelheit, Herr, kommst Du zu mir,  
@@ -43533,7 +58387,6 @@ In Deiner Liebe finden wir stets Geleit.
 In Christus allein, da leben wir,  
 Friede sei mit uns, in Dir, oh Herr, hier.`,
     },
-
     "61": {
         1: `[Verse 1]  
 Du, Herr, bist unser Licht,  
@@ -43673,7 +58526,370 @@ In Ewigkeit, unser Heiland, wunderbar.
 Amen, Amen, so sei es, Herr,  
 Wir warten auf Dich, Du bist unser Licht.`,
     },
+    "62": {
+        1: `[Verse 1]  
+Vom Anfang her, das Wort, das Leben,  
+Wir hörten es, sah’n es, uns gegeben.  
+In deinen Händen, oh Herr, so klar,  
+Das Licht, das strahlt, macht alles wahr.  
 
+[Chorus]  
+Du bist das Licht, in dir keine Nacht,  
+Gemeinschaft mit dir, die Freude entfacht.  
+Dein Blut macht rein, von aller Schuld,  
+Im Licht des Lebens, da finden wir Ruh’ und Halt.  
+
+[Verse 2]  
+Wir bezeugen, was wir sah’n,  
+Dein ewiges Leben, so nah, so dran.  
+Mit dir vereint, im Vaterhaus,  
+In deiner Nähe, da blüht unser Glaubensstrauß.  
+
+[Chorus]  
+Du bist das Licht, in dir keine Nacht,  
+Gemeinschaft mit dir, die Freude entfacht.  
+Dein Blut macht rein, von aller Schuld,  
+Im Licht des Lebens, da finden wir Ruh’ und Halt.  
+
+[Bridge]  
+Wenn wir im Licht wandeln, wie du es tust,  
+Sind wir vereint, in dir ist die Lust.  
+Unsre Sünden bekennen, du vergibst,  
+In deiner Wahrheit leben, die uns erhebt.  
+
+[Chorus]  
+Du bist das Licht, in dir keine Nacht,  
+Gemeinschaft mit dir, die Freude entfacht.  
+Dein Blut macht rein, von aller Schuld,  
+Im Licht des Lebens, da finden wir Ruh’ und Halt.  
+
+[Outro]  
+Im Licht des Lebens, so voller Kraft,  
+Mit dir, oh Herr, unser Herz erwacht.  
+Ewige Freude, in dir allein,  
+Wir sind vereint, für alle Zeit, Amen.`,
+        2: `Verse 1:
+Meine Kindlein, hört die Botschaft,  
+Sünde trennt uns von dem Licht.  
+Doch ein Fürsprecher, stark und gütig,  
+Jesus, unser Heiland, spricht.  
+Er ist die Versöhnung für die Welt,  
+Sein Blut hat Frieden uns bestellt.
+
+Chorus:
+In Dir verweilt, oh Herr,  
+In Deinem Wort, da blüht die Ehr’.  
+Die Liebe, die Du uns gabst,  
+Hält uns fest, wenn die Welt uns labt.  
+Wir wandeln in Deinem Licht,  
+Niemals verlier’n wir unser Gesicht.
+
+Verse 2:
+Wer in Dir bleibt, der liebt den Bruder,  
+Die Finsternis hat keinen Platz.  
+Denn die Liebe, die uns führt,  
+Lässt uns leben, ohne Hass.  
+Die Welt vergeht, doch wir sind stark,  
+Im Willen Gottes, unser Ziel ist klar.
+
+Chorus:
+In Dir verweilt, oh Herr,  
+In Deinem Wort, da blüht die Ehr’.  
+Die Liebe, die Du uns gabst,  
+Hält uns fest, wenn die Welt uns labt.  
+Wir wandeln in Deinem Licht,  
+Niemals verlier’n wir unser Gesicht.
+
+Bridge:
+Die Salbung, die Du uns gabst,  
+Sie bleibt bei uns, sie lehrt uns stets.  
+Wir erkennen, was wahrhaftig ist,  
+In Dir allein, da sind wir frei,  
+Die Hoffnung bleibt, die Liebe blüht,  
+In Deiner Nähe, Herr, vergessen wir die Zeit.
+
+Chorus:
+In Dir verweilt, oh Herr,  
+In Deinem Wort, da blüht die Ehr’.  
+Die Liebe, die Du uns gabst,  
+Hält uns fest, wenn die Welt uns labt.  
+Wir wandeln in Deinem Licht,  
+Niemals verlier’n wir unser Gesicht.
+
+Outro:
+Bleibt bei uns, oh Herr,  
+Wenn Du offenbarst,  
+Wir stehen hier, bereit und klar,  
+In Dir allein, in Deiner Gnade,  
+Ewig Dein, in dieser Stille,  
+Die Liebe führt uns, jetzt und hier.`,
+        3: `[Verse 1]  
+Sehet, welch eine Liebe, die uns der Vater gibt,  
+Uns nennt er seine Kinder, in ihm sind wir geliebt.  
+Die Welt kann uns nicht kennen, denn sie sieht ihn nicht,  
+Doch in ihm sind wir vereint im Licht, im Licht.
+
+[Chorus]  
+Oh, wie groß ist seine Liebe,  
+Die uns rein und heilig macht.  
+In der Hoffnung, die uns leitet,  
+Sehen wir, was er vollbracht.  
+In ihm sind wir, in ihm geborgen,  
+Sein Geist, er lebt in uns,  
+Lasst uns lieben ohne Worte,  
+In der Wahrheit, die uns führt.
+
+[Verse 2]  
+Wir sind aus Gott geboren, sein Same bleibt in uns,  
+Wer in ihm bleibt, der sündigt nicht, das ist unser Wunsch.  
+Die Kinder Gottes erkennbar, im Licht der Gerechtigkeit,  
+Lasst uns lieben einander, in der Einheit, die befreit.
+
+[Chorus]  
+Oh, wie groß ist seine Liebe,  
+Die uns rein und heilig macht.  
+In der Hoffnung, die uns leitet,  
+Sehen wir, was er vollbracht.  
+In ihm sind wir, in ihm geborgen,  
+Sein Geist, er lebt in uns,  
+Lasst uns lieben ohne Worte,  
+In der Wahrheit, die uns führt.
+
+[Bridge]  
+Wenn das Herz uns anklagt,  
+Gott ist größer, er erkennt,  
+Alle Dinge, die uns halten,  
+Seine Liebe, die uns sendet.  
+Lasst uns leben, lasst uns geben,  
+Für die Brüder, die hier sind,  
+Denn wir wissen, dass die Liebe,  
+In der Tat und Wahrheit blüht.
+
+[Chorus]  
+Oh, wie groß ist seine Liebe,  
+Die uns rein und heilig macht.  
+In der Hoffnung, die uns leitet,  
+Sehen wir, was er vollbracht.  
+In ihm sind wir, in ihm geborgen,  
+Sein Geist, er lebt in uns,  
+Lasst uns lieben ohne Worte,  
+In der Wahrheit, die uns führt.
+
+[Outro]  
+Sehet, welch eine Liebe, die uns der Vater gibt,  
+In der Gemeinschaft der Heiligen, wo sein Geist uns liebt.  
+Amen.`,
+        4: `[Verse 1]  
+Ihr Lieben, prüfet die Geister,  
+Was kommt von Gott, das bleibt bestehen.  
+Jesus Christus, unser Heiland,  
+Er kam zu uns, um uns zu lehren.  
+Die Welt hört nicht, doch wir sind von dir,  
+Der in uns ist, er gibt uns die Kraft.  
+
+[Chorus]  
+Gott ist Liebe, er bleibt bei uns,  
+In der Liebe vereint, sind wir eins.  
+Fürchtet euch nicht, denn er ist hier,  
+Seine Liebe treibt die Furcht aus, bei mir.  
+
+[Verse 2]  
+Wer nicht liebt, der kennt dich nicht,  
+Denn in der Liebe, da blüht das Licht.  
+Gott sandte seinen Sohn,  
+Um uns zu retten, uns zu versöhnen.  
+Lasst uns lieben, wie er uns liebt,  
+In dieser Welt, die oft verliert.  
+
+[Chorus]  
+Gott ist Liebe, er bleibt bei uns,  
+In der Liebe vereint, sind wir eins.  
+Fürchtet euch nicht, denn er ist hier,  
+Seine Liebe treibt die Furcht aus, bei mir.  
+
+[Bridge]  
+Wir bekennen, dass Jesus lebt,  
+In ihm bleibt die Liebe, die nie vergeht.  
+Kein Lügner spricht von Hass und Leid,  
+In der Gemeinschaft, da gibt’s die Zeit.  
+Gott ist die Liebe, die uns vereint,  
+In ihm sind wir stark, wenn die Dunkelheit weint.  
+
+[Chorus]  
+Gott ist Liebe, er bleibt bei uns,  
+In der Liebe vereint, sind wir eins.  
+Fürchtet euch nicht, denn er ist hier,  
+Seine Liebe treibt die Furcht aus, bei mir.  
+
+[Outro]  
+Lasst uns lieben, wie er uns liebt,  
+Denn in der Liebe, da blüht das Licht.  
+Gott ist die Liebe, die nie vergeht,  
+In ihm sind wir eins, wenn die Dunkelheit steht.`,
+        5: `[Verse 1]  
+Wer an dich glaubt, Herr, du Sohn des Lichts,  
+von Gott geboren, du zeigst uns den Weg.  
+In Liebe vereint, mit dir in der Pflicht,  
+denn deine Gebote, sie sind unser Steg.
+
+[Chorus]  
+In dir, oh Jesus, finden wir das Leben,  
+dein Geist zeugt von Wahrheit, lebendig und klar.  
+Du überwindest die Welt durch das Streben,  
+dein Sieg, unser Glauben, so wunderbar.
+
+[Verse 2]  
+Wir lieben die Brüder, in dir sind wir eins,  
+der Glaube verbindet, macht uns stark und frei.  
+Das ewige Leben, es fließt wie der Wein,  
+wer dich hat, Herr, der ist wahrhaftig dabei.
+
+[Chorus]  
+In dir, oh Jesus, finden wir das Leben,  
+dein Geist zeugt von Wahrheit, lebendig und klar.  
+Du überwindest die Welt durch das Streben,  
+dein Sieg, unser Glauben, so wunderbar.
+
+[Bridge]  
+Wir bitten im Glauben, nach deinem Willen,  
+du hörst unser Rufen, du schenkst uns den Frieden.  
+In dir sind wir sicher, kein Grund zum Verdrillen,  
+dein Wort gibt uns Hoffnung, wir werden nicht müde.
+
+[Chorus]  
+In dir, oh Jesus, finden wir das Leben,  
+dein Geist zeugt von Wahrheit, lebendig und klar.  
+Du überwindest die Welt durch das Streben,  
+dein Sieg, unser Glauben, so wunderbar.
+
+[Outro]  
+In Christus leben wir, in ihm sind wir frei,  
+der wahrhaftige Gott, unser Leben, oh sei.  
+Geliebt und bewahrt, in dir, oh Herr,  
+wir loben und preisen, dir sei Ehre, für immer mehr.`,
+    },
+    "63": {
+        1: `[Verse 1]  
+Gott, Du hast uns auserwählt,  
+In der Wahrheit, die nie vergeht.  
+Deine Liebe, sie bleibt bei uns,  
+In der Dunkelheit, ein Licht, ein Glanz.
+
+[Chorus]  
+Gnade, Barmherzigkeit,  
+Friede sei mit uns, oh Herr,  
+In der Wahrheit und in der Liebe,  
+Bleiben wir in Dir vereint.
+
+[Verse 2]  
+Die Kinder, die in Wahrheit leben,  
+Empfangen, was Du uns gegeben.  
+Wir wandeln nach Deinem Gebot,  
+In der Liebe, die nie vergeht, nie vergeht.
+
+[Chorus]  
+Gnade, Barmherzigkeit,  
+Friede sei mit uns, oh Herr,  
+In der Wahrheit und in der Liebe,  
+Bleiben wir in Dir vereint.
+
+[Bridge]  
+Lass uns wachsam sein,  
+Die Lehre fest im Herzen,  
+In Dir, oh Herr, sind wir geborgen,  
+Gemeinsam stark, für immer verbunden.
+
+[Chorus]  
+Gnade, Barmherzigkeit,  
+Friede sei mit uns, oh Herr,  
+In der Wahrheit und in der Liebe,  
+Bleiben wir in Dir vereint.
+
+[Verse 3]  
+Wenn Verführer in die Welt kommen,  
+Halten wir fest an Deinen Worten.  
+Die Freude, die Du uns schenkst,  
+Vollkommen, bis Du uns lenkst.
+
+[Chorus]  
+Gnade, Barmherzigkeit,  
+Friede sei mit uns, oh Herr,  
+In der Wahrheit und in der Liebe,  
+Bleiben wir in Dir vereint.
+
+[Outro]  
+So grüßen wir im Namen Deiner Liebe,  
+Die Kinder, die in Wahrheit leben,  
+Amen, unser Herz erhebt sich,  
+In der Wahrheit wandeln, für immer in Dir.`,
+    },
+    "64": {
+        1: `[Verse 1]  
+Gott, Du hast uns berufen,  
+In der Wahrheit zu leben,  
+Wie Gajus, treu und voller Liebe,  
+Dein Licht, das uns erheben.  
+Gesundheit für die Seele,  
+Dein Frieden, der uns führt,  
+In Gemeinschaft mit den Brüdern,  
+Die Deine Liebe spürt.  
+
+[Chorus]  
+In der Wahrheit wandeln,  
+Dein Wort ist unser Licht,  
+Gutes tun in Deinem Namen,  
+Zeugen Deiner Sicht.  
+Lass uns treu begleiten,  
+Die, die suchen Deine Ruh,  
+In der Wahrheit leben,  
+Sind wir eins mit Dir, oh Du.
+
+[Verse 2]  
+Wir empfangen die Gäste,  
+Mit Herzen, die bereit,  
+Für Deinen Namen streben,  
+In der Einheit, weit und breit.  
+Die Welt mag uns belügen,  
+Doch wir stehen fest und klar,  
+Denn Dein Geist, der uns führt,  
+Macht unsere Wege wahr.
+
+[Chorus]  
+In der Wahrheit wandeln,  
+Dein Wort ist unser Licht,  
+Gutes tun in Deinem Namen,  
+Zeugen Deiner Sicht.  
+Lass uns treu begleiten,  
+Die, die suchen Deine Ruh,  
+In der Wahrheit leben,  
+Sind wir eins mit Dir, oh Du.
+
+[Bridge]  
+Wir folgen nicht dem Bösen,  
+Sondern dem Guten, oh Herr,  
+Dein Zeugnis in uns lebendig,  
+Führt uns immer mehr.  
+In der Gemeinde, in der Liebe,  
+Sind wir stark und fest vereint,  
+In der Wahrheit, die Du gibst,  
+Sei unser Herz, das weint.
+
+[Chorus]  
+In der Wahrheit wandeln,  
+Dein Wort ist unser Licht,  
+Gutes tun in Deinem Namen,  
+Zeugen Deiner Sicht.  
+Lass uns treu begleiten,  
+Die, die suchen Deine Ruh,  
+In der Wahrheit leben,  
+Sind wir eins mit Dir, oh Du.
+
+[Outro]  
+Friede sei mit uns, oh Herr,  
+In der Wahrheit, Tag für Tag,  
+Gemeinsam gehen wir voran,  
+In der Liebe, die Du gabst.`,
+    },
     "65": {
         1: `[Verse 1]  
 Du, Herr, bist unser Licht,  
@@ -43723,7 +58939,6 @@ Sei Ehre in Ewigkeit,
 Vor Deinem Angesicht,  
 Mit Freude, Herr, sind wir bereit.`,
     },
-
     "66": {
         1: `[Verse 1]  
 Dies ist die Offenbarung, die Du uns gibst,  
@@ -43852,7 +59067,49 @@ Komm, Herr, erwecke unser Herz,
 Die erste Liebe, unser größter Schatz.  
 In Deiner Nähe, da sind wir stark,  
 Für immer, Herr, Du bist unser Tag.`,
-        3: ``,
+        3: `[TITLE] Wach auf, du Stadt des Lebens
+
+[Verse 1]  
+In Sardes, du Gemeinde, erwache nun,  
+Dein Name spricht von Leben, doch du bist tot.  
+Stärke das, was schwach ist, lass es nicht ruh’n,  
+Die Werke, die ich sah, sind nicht vollbracht, oh Gott.  
+
+[Chorus]  
+Wach auf, oh Seele, höre den Ruf,  
+Komm und kehre um, lass die Dunkelheit ruh’n.  
+In weißen Kleidern, wirst du wandeln mit mir,  
+Der Geist spricht zu dir, öffne dein Herz hier.  
+
+[Verse 2]  
+Die Tür ist geöffnet, niemand kann sie schließen,  
+In Philadelphia, bleib stark und treu.  
+Die Lügen der Welt, sie sollen dich nicht kriegen,  
+Ich werde dich bewahren, oh, höre mein Geschrei.  
+
+[Chorus]  
+Wach auf, oh Seele, höre den Ruf,  
+Komm und kehre um, lass die Dunkelheit ruh’n.  
+In weißen Kleidern, wirst du wandeln mit mir,  
+Der Geist spricht zu dir, öffne dein Herz hier.  
+
+[Bridge]  
+Die Liebe, die ich bringe, wird dich neu beleben,  
+Komm, lass uns essen, der Tisch ist bereitet.  
+Ich klopfe an die Tür, lass mich hinein leben,  
+Wer überwindet, mit mir wird er gedeihen.  
+
+[Chorus]  
+Wach auf, oh Seele, höre den Ruf,  
+Komm und kehre um, lass die Dunkelheit ruh’n.  
+In weißen Kleidern, wirst du wandeln mit mir,  
+Der Geist spricht zu dir, öffne dein Herz hier.  
+
+[Outro]  
+Wer Ohren hat, der höre, was der Geist spricht,  
+Ich komme bald zurück, in herrlichem Licht.  
+Halt fest, was du hast, lass niemand dir nehmen,  
+Die Krone des Lebens, die wird dir vergeben.`,
         4: `[Verse 1]  
 In der Höhe, eine Tür, die sich öffnet,  
 Ein Blick auf den Thron, so strahlend und schön.  
@@ -44236,7 +59493,57 @@ König der Herrlichkeit, erhebe dein Wort,
 In jedem Herzen, an jedem Ort.  
 Wir beten an, in Ehrfurcht und Licht,  
 Du bist der Gott, der niemals bricht.`,
-        12: ``,
+        12: `[TITLE]  
+*Das Zeichen im Himmel*
+
+[Verse 1]  
+Ein großes Zeichen, hell und klar,  
+Ein Weib, bekleidet mit der Sonne,  
+Der Mond zu Füßen, strahlend, wahr,  
+Mit goldner Krone, voller Wonne.  
+In Schmerzen schreit sie, ein Kind zu gebären,  
+Der Drache lauert, will es zerstören.  
+
+[Chorus]  
+Halleluja, unser Gott regiert,  
+Sein Reich ist nah, der Sieg passiert.  
+Durch des Lammes Blut sind wir befreit,  
+In der Dunkelheit strahlt sein Licht bereit.  
+
+[Verse 2]  
+Der Drache kämpft mit Zorn und Macht,  
+Doch Michael führt die Engel her,  
+Ein Streit im Himmel, Licht entfacht,  
+Die Wahrheit siegt, der Teufel leer.  
+Ausgeworfen in die tiefste Nacht,  
+Der große Widersacher, nun entfacht.  
+
+[Chorus]  
+Halleluja, unser Gott regiert,  
+Sein Reich ist nah, der Sieg passiert.  
+Durch des Lammes Blut sind wir befreit,  
+In der Dunkelheit strahlt sein Licht bereit.  
+
+[Bridge]  
+Freut euch, ihr Himmel, jubelt laut,  
+Die Macht des Christus, stark und vertraut.  
+Die Welt mag wanken, doch wir sind vereint,  
+In ihm, dem Retter, der uns vereint.  
+Die Schlange zittert, ihr Zorn wird klein,  
+Wir halten fest, im Licht, im Sein.  
+
+[Chorus]  
+Halleluja, unser Gott regiert,  
+Sein Reich ist nah, der Sieg passiert.  
+Durch des Lammes Blut sind wir befreit,  
+In der Dunkelheit strahlt sein Licht bereit.  
+
+[Outro]  
+Das Zeichen im Himmel, stark und wahr,  
+Gott führt uns, er ist stets für uns da.  
+Die Hoffnung blüht, das Leben erblüht,  
+In seinem Namen, der niemals verglüht.  
+Halleluja, Halleluja, Amen.`,
         13: `Strophe 1:  
 Am Sand des Meeres stehe ich,  
 Ein Tier erhebt sich, unheimlich,  
@@ -44290,7 +59597,56 @@ So lasst uns stehen, in Einheit und Licht,
 Die Zeichen der Welt, sie bringen uns nicht.  
 In deinem Namen, oh Herr, sind wir frei,  
 Für immer vereint, in deiner Herrlichkeit.`,
-        14: ``,
+        14: `[TITLE]  
+Das Lamm auf Zion
+
+[Verse 1]  
+Ich sah das Lamm, es steht erhöht,  
+Auf Zion, wo sein Licht uns führt.  
+Die 144.000, sie singen Lob,  
+Sein Name strahlt, wir folgen ihm, oh Gott.
+
+[Chorus]  
+Halleluja, singt dem Lamm,  
+Vor dem Thron, wo alles begann.  
+Die Engel singen, die Harfen klingen,  
+Ewiges Lied, das wir ihm bringen.
+
+[Verse 2]  
+Die Stimme vom Himmel, wie Wasser rauschend,  
+Ruft uns zum Glauben, zum Herzen lauschend.  
+Fürchtet den Herrn, gebt ihm die Ehre,  
+Die Zeit des Gerichts, sie nahn sich schwere.
+
+[Chorus]  
+Halleluja, singt dem Lamm,  
+Vor dem Thron, wo alles begann.  
+Die Engel singen, die Harfen klingen,  
+Ewiges Lied, das wir ihm bringen.
+
+[Bridge]  
+Hier sind die Heiligen, die treu bestehen,  
+Sie halten sein Wort, in Glauben wehen.  
+Die Toten, die in Christus ruhn,  
+Selig sind sie, die werden blühn.
+
+[Verse 3]  
+Auf der Wolke, der Menschensohn,  
+Mit goldner Krone, er ruft uns schon.  
+Die Zeit zum Ernten, sie ist nun reif,  
+Die Trauben des Lebens, sie werden heiß.
+
+[Chorus]  
+Halleluja, singt dem Lamm,  
+Vor dem Thron, wo alles begann.  
+Die Engel singen, die Harfen klingen,  
+Ewiges Lied, das wir ihm bringen.
+
+[Outro]  
+Das Lamm auf Zion, wir beten an,  
+In seiner Liebe, da fängt’s neu an.  
+Halleluja, wir singen vereint,  
+Bis in die Ewigkeit, die Herrlichkeit scheint.`,
         15: `[Verse 1]  
 Ich sah ein Zeichen, groß und klar,  
 Sieben Engel, heilig, wunderbar.  

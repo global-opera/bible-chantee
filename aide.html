@@ -173,10 +173,14 @@
 
       try {
         const premium = localStorage.getItem('bc_unlimited');
+        const lang = localStorage.getItem('bc_lang');
         const premiumCookie = document.cookie.includes('bc_premium');
         localStorage.clear();
         if (premium === 'true' || premiumCookie) {
           localStorage.setItem('bc_unlimited', 'true');
+        }
+        if (lang) {
+          localStorage.setItem('bc_lang', lang);
         }
         sessionStorage.clear();
 
