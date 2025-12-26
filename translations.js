@@ -5090,4 +5090,3 @@ Object.keys(translations).forEach(lang => {
     t.legalFooter = "© 2025 스테판 카사니 - 모든 권리 보유";
   }
 });
-});
