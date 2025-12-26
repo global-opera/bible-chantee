@@ -431,6 +431,25 @@
                 gap: 10px;
             }
         }
+
+        /* Share button styles */
+        .share-container { margin: 15px 0; padding: 15px; background: linear-gradient(135deg, rgba(255,215,0,0.1) 0%, rgba(255,165,0,0.1) 100%); border-radius: 12px; border: 1px solid #FFD700; text-align: center; }
+        .share-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: linear-gradient(135deg, #FFD700, #FFA500); color: #1a1a2e; border: none; border-radius: 8px; font-weight: 700; font-size: 15px; cursor: pointer; transition: transform 0.2s; }
+        .share-btn:hover { transform: scale(1.05); }
+        .share-btn svg { width: 20px; height: 20px; }
+        .share-reward { color: #FFD700; font-size: 14px; margin-top: 8px; }
+        .share-reward span { display: inline-block; padding: 4px 12px; background: linear-gradient(135deg, #00C853, #00E676); color: #fff; border-radius: 15px; font-weight: 700; margin-right: 6px; }
+        .share-panel { display: none; margin-top: 15px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 8px; }
+        .share-panel.visible { display: block; }
+        .share-link-input { width: 100%; padding: 10px; background: #0f0f23; border: 1px solid #FFD700; border-radius: 6px; color: #fff; font-family: monospace; margin-bottom: 10px; box-sizing: border-box; }
+        .share-buttons { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+        .share-buttons button { padding: 10px 20px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; }
+        .btn-copy { background: #4CAF50; color: white; }
+        .btn-whatsapp { background: #25D366; color: white; }
+        .btn-telegram { background: #0088cc; color: white; }
+        .btn-email { background: #EA4335; color: white; }
+        .share-toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(80px); background: #4CAF50; color: #fff; padding: 14px 28px; border-radius: 8px; font-weight: 600; opacity: 0; transition: all 0.3s; z-index: 9999; }
+        .share-toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
     </style>
 </head>
 <body>
@@ -540,6 +559,23 @@
             <button class="nav-btn" id="forcePlayBtn" style="display:none;">▶ Lancer</button>
             <span id="forcePlayMsg" style="display:none;color:#000080;font-weight:600;"></span>
         </div>
+        <div class="share-container" id="shareContainer">
+            <button class="share-btn" onclick="toggleShare()">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+                <span data-i18n="shareButton">PARTAGER CE CHAPITRE</span>
+            </button>
+            <div class="share-reward"><span>+10</span> <span data-i18n="shareReward">credits par inscription!</span></div>
+            <div class="share-panel" id="sharePanel">
+                <input type="text" class="share-link-input" id="shareLink" readonly>
+                <div class="share-buttons">
+                    <button class="btn-copy" onclick="copyShareLink()">Copier</button>
+                    <button class="btn-whatsapp" onclick="shareWA()">WhatsApp</button>
+                    <button class="btn-telegram" onclick="shareTG()">Telegram</button>
+                    <button class="btn-email" onclick="shareEmail()">Email</button>
+                </div>
+            </div>
+        </div>
+        <div class="share-toast" id="shareToast">Lien copie!</div>
         <div class="content-wrapper" id="contentWrapper">
             <div class="lyrics-container" id="lyricsContainer">
                 <div class="lyrics-text" id="lyricsText"></div>
@@ -1524,6 +1560,75 @@ renderBooks('old-testament', oldTestament);
         // Initialize language button on page load
         document.addEventListener('DOMContentLoaded', updateLangButton);
         updateLangButton();
+    </script>
+
+    <script>
+    // Share functionality
+    function getUserId() {
+        let id = localStorage.getItem('bc_user_id');
+        if (!id) {
+            id = 'u_' + Date.now().toString(36) + Math.random().toString(36).substr(2, 6);
+            localStorage.setItem('bc_user_id', id);
+        }
+        return id;
+    }
+
+    function getShareUrl() {
+        const book = currentBook || '01';
+        const chapter = currentChapter || 1;
+        const lang = window.currentLanguage || 'FR';
+        return 'https://biblechantee.com/lecteur.html?book=' + book + '&chapter=' + chapter + '&lang=' + lang + '&ref=' + getUserId();
+    }
+
+    function toggleShare() {
+        const panel = document.getElementById('sharePanel');
+        panel.classList.toggle('visible');
+        if (panel.classList.contains('visible')) {
+            document.getElementById('shareLink').value = getShareUrl();
+        }
+    }
+
+    function showToast(msg) {
+        const toast = document.getElementById('shareToast');
+        toast.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(function() { toast.classList.remove('show'); }, 2500);
+    }
+
+    function copyShareLink() {
+        const input = document.getElementById('shareLink');
+        input.select();
+        navigator.clipboard.writeText(input.value)
+            .then(function() { showToast('Lien copie!'); })
+            .catch(function() { document.execCommand('copy'); showToast('Lien copie!'); });
+    }
+
+    function shareWA() {
+        const url = getShareUrl();
+        const text = encodeURIComponent('Ecoute la Bible en musique! ' + url);
+        window.open('https://wa.me/?text=' + text, '_blank');
+    }
+
+    function shareTG() {
+        const url = getShareUrl();
+        const text = encodeURIComponent('Ecoute la Bible en musique!');
+        window.open('https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + text, '_blank');
+    }
+
+    function shareEmail() {
+        const url = getShareUrl();
+        const subject = encodeURIComponent('Decouvre la Bible Chantee!');
+        const body = encodeURIComponent('Salut!\n\nJ\'ai decouvert ce super projet: la Bible en musique!\n\nEcoute ce chapitre: ' + url + '\n\nBible Chantee');
+        window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
+    }
+
+    // Track referrals
+    (function() {
+        const ref = new URLSearchParams(location.search).get('ref');
+        if (ref && ref !== getUserId() && !localStorage.getItem('bc_referrer')) {
+            localStorage.setItem('bc_referrer', ref);
+        }
+    })();
     </script>
 </body>
 </html>

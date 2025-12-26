@@ -2676,6 +2676,8 @@ Object.keys(translations).forEach(lang => {
     t.readerNoLyrics = "Paroles non disponibles pour ce chapitre";
     t.readerNoBible = "Texte biblique non disponible pour ce chapitre";
     t.readerFooterCopyright = "© 2025 Bible Chantée - Stéphane Cassani - Tous droits d'auteur réservés";
+    t.shareButton = "PARTAGER CE CHAPITRE";
+    t.shareReward = "crédits par inscription!";
 
     // Promesses page
     t.promPageTitle = "Promesses de la Bible en Musique";
@@ -2977,6 +2979,8 @@ Object.keys(translations).forEach(lang => {
     t.readerNoLyrics = "Lyrics not available for this chapter";
     t.readerNoBible = "Bible text not available for this chapter";
     t.readerFooterCopyright = "© 2025 Sung Bible - Stéphane Cassani - All rights reserved";
+    t.shareButton = "SHARE THIS CHAPTER";
+    t.shareReward = "credits per signup!";
 
     // Promesses page
     t.promPageTitle = "Bible Promises in Music";
@@ -3278,6 +3282,8 @@ Object.keys(translations).forEach(lang => {
     t.readerNoLyrics = "Letras no disponibles para este capítulo";
     t.readerNoBible = "Texto bíblico no disponible para este capítulo";
     t.readerFooterCopyright = "© 2025 Biblia Cantada - Stéphane Cassani - Todos los derechos reservados";
+    t.shareButton = "COMPARTIR ESTE CAPÍTULO";
+    t.shareReward = "créditos por registro!";
 
     // Promesses page
     t.promPageTitle = "Promesas de la Biblia en Música";
@@ -3579,6 +3585,8 @@ Object.keys(translations).forEach(lang => {
     t.readerNoLyrics = "Letras não disponíveis para este capítulo";
     t.readerNoBible = "Texto bíblico não disponível para este capítulo";
     t.readerFooterCopyright = "© 2025 Bíblia Cantada - Stéphane Cassani - Todos os direitos reservados";
+    t.shareButton = "COMPARTILHAR ESTE CAPÍTULO";
+    t.shareReward = "créditos por inscrição!";
 
     // Promesses page
     t.promPageTitle = "Promessas da Bíblia em Música";
@@ -4042,6 +4050,8 @@ Object.keys(translations).forEach(lang => {
     t.readerNoLyrics = "Text nicht verfügbar für dieses Kapitel";
     t.readerNoBible = "Bibeltext nicht verfügbar für dieses Kapitel";
     t.readerFooterCopyright = "© 2025 Gesungene Bibel - Stéphane Cassani - Alle Rechte vorbehalten";
+    t.shareButton = "DIESES KAPITEL TEILEN";
+    t.shareReward = "Credits pro Anmeldung!";
 
     // Legal page
     t.legalPageTitle = "Impressum - Gesungene Bibel";
@@ -4281,6 +4291,8 @@ Object.keys(translations).forEach(lang => {
     t.readerNoLyrics = "Testo non disponibile per questo capitolo";
     t.readerNoBible = "Testo biblico non disponibile per questo capitolo";
     t.readerFooterCopyright = "© 2025 Bibbia Cantata - Stéphane Cassani - Tutti i diritti riservati";
+    t.shareButton = "CONDIVIDI QUESTO CAPITOLO";
+    t.shareReward = "crediti per iscrizione!";
 
     // Legal page
     t.legalPageTitle = "Note Legali - Bibbia Cantata";
@@ -4411,6 +4423,8 @@ Object.keys(translations).forEach(lang => {
     t.readerNoLyrics = "Текст недоступен для этой главы";
     t.readerNoBible = "Библейский текст недоступен для этой главы";
     t.readerFooterCopyright = "© 2025 Поющая Библия - Стéфан Кассани - Все права защищены";
+    t.shareButton = "ПОДЕЛИТЬСЯ ЭТОЙ ГЛАВОЙ";
+    t.shareReward = "кредиты за регистрацию!";
 
     // Legal page
     t.legalPageTitle = "Юридическая информация - Поющая Библия";
@@ -4541,6 +4555,8 @@ Object.keys(translations).forEach(lang => {
     t.readerNoLyrics = "النص غير متاح لهذا الفصل";
     t.readerNoBible = "نص الكتاب المقدس غير متاح لهذا الفصل";
     t.readerFooterCopyright = "© 2025 الكتاب المقدس المُغنّى - ستيفان كاساني - جميع الحقوق محفوظة";
+    t.shareButton = "مشاركة هذا الفصل";
+    t.shareReward = "نقاط لكل تسجيل!";
 
     // Legal page
     t.legalPageTitle = "الإشعار القانوني - الكتاب المقدس المُغنّى";
@@ -4671,6 +4687,8 @@ Object.keys(translations).forEach(lang => {
     t.readerNoLyrics = "此章节没有歌词";
     t.readerNoBible = "此章节没有圣经文本";
     t.readerFooterCopyright = "© 2025 歌唱圣经 - 斯特凡·卡萨尼 - 版权所有";
+    t.shareButton = "分享这一章";
+    t.shareReward = "每次注册获得积分！";
 
     // Legal page
     t.legalPageTitle = "法律声明 - 歌唱圣经";
@@ -4801,6 +4819,8 @@ Object.keys(translations).forEach(lang => {
     t.readerNoLyrics = "इस अध्याय के लिए बोल उपलब्ध नहीं";
     t.readerNoBible = "इस अध्याय के लिए बाइबिल पाठ उपलब्ध नहीं";
     t.readerFooterCopyright = "© 2025 गायी गई बाइबिल - स्टेफ़न कासानी - सर्वाधिकार सुरक्षित";
+    t.shareButton = "इस अध्याय को साझा करें";
+    t.shareReward = "प्रति साइनअप क्रेडिट!";
 
     // Legal page
     t.legalPageTitle = "कानूनी सूचना - गायी गई बाइबिल";
@@ -4931,6 +4951,8 @@ Object.keys(translations).forEach(lang => {
     t.readerNoLyrics = "Walang lyrics para sa kabanatang ito";
     t.readerNoBible = "Walang teksto ng Bibliya para sa kabanatang ito";
     t.readerFooterCopyright = "© 2025 Awiting Bibliya - Stéphane Cassani - Lahat ng karapatan ay nakalaan";
+    t.shareButton = "IBAHAGI ANG KABANATANG ITO";
+    t.shareReward = "credits kada sign-up!";
 
     // Legal page
     t.legalPageTitle = "Legal na Paunawa - Awiting Bibliya";
@@ -5061,6 +5083,8 @@ Object.keys(translations).forEach(lang => {
     t.readerNoLyrics = "이 장의 가사를 사용할 수 없습니다";
     t.readerNoBible = "이 장의 성경 본문을 사용할 수 없습니다";
     t.readerFooterCopyright = "© 2025 노래하는 성경 - 스테판 카사니 - 모든 권리 보유";
+    t.shareButton = "이 장을 공유하세요";
+    t.shareReward = "가입당 크레딧!";
 
     // Legal page
     t.legalPageTitle = "법적 고지 - 노래하는 성경";
