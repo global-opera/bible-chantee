@@ -752,7 +752,7 @@ if (window.translations && (window.currentLanguage || (window.BC_LANG && window.
             const lang = currentLang;
             const parts = trackId.split('_');
             const book = parts[0] + '_' + parts[1];
-            return `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${lang}/${book}/${trackId}.mp3`;
+            return `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${lang}/${book}/${trackId}_${lang}.mp3`;
         }
 
         function renderTracks() {
