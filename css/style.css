@@ -167,7 +167,7 @@ select option {
 }
 
 /* ========== MOBILE RESPONSIVE ========== */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   /* Header: drapeaux en haut, titre en dessous */
   .topbar {
     flex-direction: column-reverse;
@@ -244,3 +244,4 @@ select option {
     height: 12px;
   }
 }
+
