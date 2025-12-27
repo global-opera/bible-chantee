@@ -170,24 +170,23 @@ select option {
 @media (max-width: 768px) {
   /* Header: drapeaux en haut, titre en dessous */
   .topbar {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: column-reverse;
+    align-items: center;
     gap: 10px;
   }
   
   /* Drapeaux: 2 lignes, centré */
-  .langbar, .langs, #langBar {
+  .langbar, #langBar {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 6px;
-    order: 1;
     width: 100%;
+    max-width: 100%;
   }
   
-  /* Titre en dessous des drapeaux */
-  .brand, .header-left, [class*="header"] > div:first-child {
-    order: 2;
+  /* Titre centré */
+  .topbar > div:first-child {
     text-align: center;
     width: 100%;
   }
@@ -227,3 +226,4 @@ select option {
     padding: 10px 12px;
   }
 }
+
