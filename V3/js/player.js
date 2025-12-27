@@ -60,9 +60,41 @@
 
   function $(id) { return document.getElementById(id); }
 
-    function bookDisplayName(book, lang) {
-    const name = getBookName(book.num, book.code, lang);
-    return ${name};
+    function getBookName(lang, code){
+  try{
+    var L = String(lang||"FR").toUpperCase();
+    var c = String(code||"").toUpperCase();
+
+    if(window.BOOK_CODE_ALIASES && window.BOOK_CODE_ALIASES[c]) c = window.BOOK_CODE_ALIASES[c];
+
+    if(window.BOOK_NAMES && window.BOOK_NAMES[L] && window.BOOK_NAMES[L][c]) return window.BOOK_NAMES[L][c];
+    if(window.BOOK_NAMES && window.BOOK_NAMES.FR && window.BOOK_NAMES.FR[c]) return window.BOOK_NAMES.FR[c];
+  }catch(e){}
+  return code || "";
+}
+function bookDisplayName(book, lang) {
+    const name = getBookName(lang, book.code);
+    return name;
+  }
+
+  function getChapterWord(lang) {
+    const L = String(lang || 'FR').toUpperCase();
+    const CHAPTER_WORDS = {
+      FR: 'Chapitre',
+      EN: 'Chapter',
+      PT: 'Capítulo',
+      ES: 'Capítulo',
+      DE: 'Kapitel',
+      IT: 'Capitolo',
+      AR: 'الفصل',
+      RU: 'Глава',
+      ZH: '章',
+      HI: 'अध्याय',
+      TL: 'Kabanata',
+      SW: 'Sura',
+      KO: '장'
+    };
+    return CHAPTER_WORDS[L] || CHAPTER_WORDS.FR;
   }
 
   function buildBookIndex() {
@@ -92,7 +124,9 @@
     const bibleBox = $('bibleBox');
     const ref = $('currentRef');
 
-    ref.textContent = `${book.code} — ${chapter}`;
+    const bookName = getBookName(lang, book.code);
+    const chapterWord = getChapterWord(lang);
+    ref.textContent = `${bookName} — ${chapterWord} ${chapter}`;
 
     // AUDIO
     const audioUrl = getAudioUrl(book.num, chapter, lang, book.code);
@@ -175,3 +209,51 @@
     init();
   }
 })();
+
+
+
+
+/* BC_DROPDOWN_LABELS_V1 */
+function bcApplyBookSelectLabels(){
+  try{
+    var sel = document.querySelector('select');
+    if(!sel) return;
+
+    var L = (window.currentLanguage || "FR");
+
+    // Build book index if needed
+    if (window.BOOKS && !window.BOOKS_BY_NUM) {
+      const idx = {};
+      window.BOOKS.forEach(b => idx[b.num] = b);
+      window.BOOKS_BY_NUM = idx;
+    }
+
+    for(var i=0;i<sel.options.length;i++){
+      var val = sel.options[i].value || "";
+      var book = null;
+      var name = "";
+
+      // Check if value is a code like "01_GEN" or just a number like "01"
+      if(/_\w{3,}/.test(val)) {
+        // It's a code
+        name = getBookName(L, val);
+      } else if(/^\d{2}$/.test(val) && window.BOOKS_BY_NUM) {
+        // It's a number, look up the book
+        book = window.BOOKS_BY_NUM[val];
+        if(book) name = getBookName(L, book.code);
+      }
+
+      if(name) {
+        sel.options[i].textContent = name;
+      }
+    }
+  }catch(e){}
+}
+document.addEventListener('DOMContentLoaded', function(){
+  setTimeout(bcApplyBookSelectLabels, 50);
+  setTimeout(bcApplyBookSelectLabels, 300);
+});
+
+
+
+
