@@ -2341,7 +2341,10 @@ function closeIOSPopup() {
   if (dontShow) {
     localStorage.setItem('iosPromptSeen', 'true');
   }
-  document.getElementById('iosPopup').classList.remove('show');
+  const popup = document.getElementById('iosPopup');
+  if (popup) {
+    popup.classList.remove('show');
+  }
 }
 
 // Initialize on page load
@@ -2349,10 +2352,20 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     updateLangButton();
     showIOSPopup();
+    // Attach event listener to close button
+    const closeBtn = document.querySelector('.ios-popup-btn');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeIOSPopup);
+    }
   });
 } else {
   updateLangButton();
   showIOSPopup();
+  // Attach event listener to close button
+  const closeBtn = document.querySelector('.ios-popup-btn');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeIOSPopup);
+  }
 }
 </script>
 
@@ -2370,7 +2383,7 @@ if (document.readyState === 'loading') {
                 <input type="checkbox" id="iosPopupDontShow">
                 <span data-i18n="iosInstallDontShow">Ne plus afficher</span>
             </label>
-            <button class="ios-popup-btn" onclick="closeIOSPopup()" data-i18n="iosInstallGotIt">Compris</button>
+            <button class="ios-popup-btn" data-i18n="iosInstallGotIt">Compris</button>
         </div>
     </div>
 </div>
