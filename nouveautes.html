@@ -1,213 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="newsPageTitle">Nouveautes - Bible Chantee</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: linear-gradient(135deg, #1a1a4e 0%, #0d0d2b 100%); min-height: 100vh; color: #fff; padding: 20px; }
-    .container { max-width: 700px; margin: 0 auto; }
-    h1 { text-align: center; margin-bottom: 10px; color: #ffce00; }
-    .subtitle { text-align: center; margin-bottom: 30px; opacity: 0.8; }
-    .version { background: rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #ffce00; }
-    .version.current { border-left-color: #00ff88; background: rgba(0,255,136,0.1); }
-    .version-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-    .version-title { color: #ffce00; font-size: 1.2rem; font-weight: 700; }
-    .version.current .version-title { color: #00ff88; }
-    .version-date { font-size: 0.85rem; opacity: 0.7; }
-    .version-badge { background: #00ff88; color: #000; padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; }
-    .change-list { list-style: none; }
-    .change-list li { padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start; gap: 10px; }
-    .change-list li:last-child { border: none; }
-    .change-icon { font-size: 1.2rem; }
-    .change-text { flex: 1; }
-    .change-tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; margin-left: 8px; }
-    .tag-new { background: #00ff88; color: #000; }
-    .tag-fix { background: #ff6b6b; color: #fff; }
-    .tag-improve { background: #4ecdc4; color: #000; }
-    .back-link { display: block; text-align: center; margin-top: 30px; color: #ffce00; font-size: 1.1rem; text-decoration: none; }
-    .back-link:hover { text-decoration: underline; }
-    .stats { text-align: center; margin: 30px 0; padding: 20px; background: rgba(255,206,0,0.1); border-radius: 12px; }
-    .stats-title { color: #ffce00; margin-bottom: 10px; }
-    .stats-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
-    .stat-item { text-align: center; }
-    .stat-value { font-size: 2rem; font-weight: 700; color: #ffce00; }
-    .stat-label { font-size: 0.85rem; opacity: 0.8; }
-  </style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Bible Chantée V3 — Nouveautés</title>
+  <link rel="stylesheet" href="./css/style.css"/>
+<style>
+/* BC_CLEAR_CACHE_SITE_ONLY_V1 */
+#bcClearCacheWrap{position:fixed;right:14px;bottom:14px;z-index:99999}
+#clearCacheBtn{
+  padding:8px 14px;border-radius:10px;border:1px solid #f0c36d;
+  background:#2c2f5b;color:#fff;cursor:pointer;font-size:14px
+}
+#clearCacheBtn:hover{opacity:.85}
+</style>
+<script src="js/book-names.js?v=1"></script>
+<script src="js/ux-fixes.js?v=1"></script>
+<script src="js/clear-cache.js?v=1"></script>
+<!-- BC_V3_BOOTSTRAP_V1 -->
 </head>
 <body>
   <div class="container">
-    <a href="/" class="back-link" style="margin-bottom: 20px;" data-i18n="newsBackHome">← Retour a Bible Chantee</a>
-    <h1 data-i18n="newsHeading">Nouveautes</h1>
-    <p class="subtitle" data-i18n="newsSubtitle">Historique des mises a jour de Bible Chantee</p>
-
-    <!-- Stats -->
-    <div class="stats">
-      <div class="stats-title" data-i18n="newsStatsTitle">Progression du projet</div>
-      <div class="stats-grid">
-        <div class="stat-item">
-          <div class="stat-value">1189</div>
-          <div class="stat-label" data-i18n="newsStatChaptersFR">chapitres FR</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-value">1189</div>
-          <div class="stat-label" data-i18n="newsStatChaptersEN">chapitres EN</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-value">1189</div>
-          <div class="stat-label" data-i18n="newsStatChaptersPT">chapitres PT</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-value">1189</div>
-          <div class="stat-label" data-i18n="newsStatChaptersES">chapitres ES</div>
-        </div>
+    <div class="topbar">
+      <div class="brand">
+        <h1 data-i18n="navNews">Nouveautés</h1>
+        <div class="tag">V3</div>
+      </div>
+      <div class="langs">
+        <button class="lang-btn" data-lang="FR">FR</button><button class="lang-btn" data-lang="EN">EN</button><button class="lang-btn" data-lang="PT">PT</button><button class="lang-btn" data-lang="ES">ES</button><button class="lang-btn" data-lang="DE">DE</button><button class="lang-btn" data-lang="IT">IT</button><button class="lang-btn" data-lang="AR">AR</button><button class="lang-btn" data-lang="RU">RU</button><button class="lang-btn" data-lang="ZH">ZH</button><button class="lang-btn" data-lang="HI">HI</button><button class="lang-btn" data-lang="TL">TL</button><button class="lang-btn" data-lang="SW">SW</button>
       </div>
     </div>
-
-    <!-- Version actuelle -->
-    <div class="version current">
-      <div class="version-header">
-        <span class="version-title" data-i18n="newsVersion20">Version 2.0</span>
-        <span class="version-badge" data-i18n="newsBadgeCurrent">ACTUEL</span>
-      </div>
-      <div class="version-date" data-i18n="newsDateDec2025">Decembre 2025</div>
-      <ul class="change-list">
-        <li>
-          <span class="change-icon">🙏</span>
-          <span class="change-text" data-i18n="newsChange20_1">Navigation Promesses vers lecteur Premium<span class="change-tag tag-new" data-i18n="newsTagNew">Nouveau</span></span>
-        </li>
-        <li>
-          <span class="change-icon">🎵</span>
-          <span class="change-text" data-i18n="newsChange20_2">Correction titre Psaumes (affichage "-" resolu)<span class="change-tag tag-fix" data-i18n="newsTagFix">Corrige</span></span>
-        </li>
-        <li>
-          <span class="change-icon">🧹</span>
-          <span class="change-text" data-i18n="newsChange20_3">Nettoyage page Premium (plus de popups credits)<span class="change-tag tag-improve" data-i18n="newsTagImprove">Ameliore</span></span>
-        </li>
-        <li>
-          <span class="change-icon">🧹</span>
-          <span class="change-text" data-i18n="newsChange20_4">Bouton "Vider le cache" dans la page Aide<span class="change-tag tag-new" data-i18n="newsTagNew">Nouveau</span></span>
-        </li>
-        <li>
-          <span class="change-icon">⭐</span>
-          <span class="change-text" data-i18n="newsChange20_5">Page Premium separee (experience optimisee)<span class="change-tag tag-new" data-i18n="newsTagNew">Nouveau</span></span>
-        </li>
-        <li>
-          <span class="change-icon">📧</span>
-          <span class="change-text" data-i18n="newsChange20_6">Recuperation Premium par email Stripe<span class="change-tag tag-new" data-i18n="newsTagNew">Nouveau</span></span>
-        </li>
-        <li>
-          <span class="change-icon">🎁</span>
-          <span class="change-text" data-i18n="newsChange20_7">100 ecoutes gratuites (au lieu de 3)<span class="change-tag tag-improve" data-i18n="newsTagImprove">Ameliore</span></span>
-        </li>
-        <li>
-          <span class="change-icon">🔒</span>
-          <span class="change-text" data-i18n="newsChange20_8">Paiement Stripe securise direct<span class="change-tag tag-improve" data-i18n="newsTagImprove">Ameliore</span></span>
-        </li>
-        <li>
-          <span class="change-icon">📱</span>
-          <span class="change-text" data-i18n="newsChange20_9">Corrections affichage iOS/Safari<span class="change-tag tag-fix" data-i18n="newsTagFix">Corrige</span></span>
-        </li>
-        <li>
-          <span class="change-icon">🚀</span>
-          <span class="change-text" data-i18n="newsChange20_10">Performance amelioree (cache optimise)<span class="change-tag tag-improve" data-i18n="newsTagImprove">Ameliore</span></span>
-        </li>
-      </ul>
+    <div class="card" style="margin-top:14px">
+      <h2>Changelog</h2>
+      <div class="muted">V3 initialisation.</div>
+      <div style="height:12px"></div>
+      <a class="btn-gold" href="./index.html">Accueil</a>
     </div>
-
-    <!-- Version precedente -->
-    <div class="version">
-      <div class="version-header">
-        <span class="version-title" data-i18n="newsVersion15">Version 1.5</span>
-      </div>
-      <div class="version-date" data-i18n="newsDateNov2025">Novembre 2025</div>
-      <ul class="change-list">
-        <li>
-          <span class="change-icon">🇫🇷</span>
-          <span class="change-text" data-i18n="newsChange15_1">Francais 100% complete (1189 chapitres)</span>
-        </li>
-        <li>
-          <span class="change-icon">🇬🇧</span>
-          <span class="change-text" data-i18n="newsChange15_2">Anglais 100% complete (1189 chapitres)</span>
-        </li>
-        <li>
-          <span class="change-icon">🇧🇷</span>
-          <span class="change-text" data-i18n="newsChange15_3">Portugais 100% complete (1189 chapitres)</span>
-        </li>
-        <li>
-          <span class="change-icon">🇪🇸</span>
-          <span class="change-text" data-i18n="newsChange15_4">Espagnol 100% complete (1189 chapitres)</span>
-        </li>
-        <li>
-          <span class="change-icon">📲</span>
-          <span class="change-text" data-i18n="newsChange15_5">Application installable (PWA)</span>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Version initiale -->
-    <div class="version">
-      <div class="version-header">
-        <span class="version-title" data-i18n="newsVersion10">Version 1.0</span>
-      </div>
-      <div class="version-date" data-i18n="newsDateOct2025">Octobre 2025</div>
-      <ul class="change-list">
-        <li>
-          <span class="change-icon">🎵</span>
-          <span class="change-text" data-i18n="newsChange10_1">Lancement Bible Chantee</span>
-        </li>
-        <li>
-          <span class="change-icon">🎧</span>
-          <span class="change-text" data-i18n="newsChange10_2">Lecteur audio avec paroles synchronisees</span>
-        </li>
-        <li>
-          <span class="change-icon">🔍</span>
-          <span class="change-text" data-i18n="newsChange10_3">Recherche par mot-cle</span>
-        </li>
-        <li>
-          <span class="change-icon">💳</span>
-          <span class="change-text" data-i18n="newsChange10_4">Systeme Premium (0.99 EUR)</span>
-        </li>
-      </ul>
-    </div>
-
-    <!-- A venir -->
-    <div class="version" style="border-left-color: #9b59b6; opacity: 0.8;">
-      <div class="version-header">
-        <span class="version-title" style="color: #9b59b6;" data-i18n="newsFuture">A venir</span>
-      </div>
-      <div class="version-date" data-i18n="newsDate2026">2026</div>
-      <ul class="change-list">
-        <li>
-          <span class="change-icon">🇪🇸</span>
-          <span class="change-text" data-i18n="newsChangeFuture_1">Italien (en preparation)</span>
-        </li>
-        <li>
-          <span class="change-icon">🇩🇪</span>
-          <span class="change-text" data-i18n="newsChangeFuture_2">Allemand (planifie)</span>
-        </li>
-        <li>
-          <span class="change-icon">🎤</span>
-          <span class="change-text" data-i18n="newsChangeFuture_3">Mode karaoke</span>
-        </li>
-        <li>
-          <span class="change-icon">📴</span>
-          <span class="change-text" data-i18n="newsChangeFuture_4">Mode hors-ligne complet</span>
-        </li>
-      </ul>
-    </div>
+    <div class="footer">© 2025 Bible Chantée — V3</div>
   </div>
+  <script src="./js/config.js"></script>
+  <script src="./js/translations.js"></script>
+  <script src="./js/i18n.js"></script>
+  <script>document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>I18N.setLang(b.dataset.lang)));</script>
 
-  <script src="/translations.js"></script>
-  <script src="/translations-extra.js"></script>
-  <script src="/i18n.js"></script>
-  <script src="/lang-shared.js"></script>
-  <script>
-    // Auto-initialization happens in lang-shared.js
-  </script>
+
+
+<!-- BC_V3_BOOTSTRAP_V1 -->
+<div id="bcClearCacheWrap" style="position:fixed;right:14px;bottom:14px;z-index:99999">
+  <button id="clearCacheBtn" onclick="bcClearCache()"
+    style="padding:8px 14px;border-radius:10px;border:1px solid #f0c36d;background:#2c2f5b;color:#fff;cursor:pointer;font-size:14px">
+    🧹 Vider le cache
+  </button>
+</div>
 </body>
 </html>
+
+
 
 
 
