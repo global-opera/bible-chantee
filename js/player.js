@@ -581,7 +581,7 @@
       lyricsHeader.style.display = (m==='lyrics') ? '' : 'none';
       lyricsBox.style.display    = (m==='lyrics') ? '' : 'none';
 
-      refreshContent();
+      // refreshContent(); // Don't reload audio on Paroles/Bible toggle
     }
 
     bLyrics.addEventListener('click', function(){ setMode('lyrics'); });
