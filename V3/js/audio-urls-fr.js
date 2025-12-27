@@ -1,0 +1,1 @@
+window.AUDIO_URLS_FR = window.AUDIO_URLS_FR || {};
