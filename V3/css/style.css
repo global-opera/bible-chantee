@@ -78,3 +78,90 @@ audio{width:100%}
   cursor:pointer;
 }
 .btn-gold:hover{background:var(--gold-hover)}
+/* Fix: alias chapter-btn = chap-btn */
+.chapter-btn{
+  min-width:42px;
+  padding:8px 10px;border-radius:12px;
+  border:1px solid rgba(255,255,255,0.18);
+  background:rgba(0,0,0,0.18);color:#fff;
+  cursor:pointer;font-weight:700
+}
+.chapter-btn.active{border-color:#d4a843;background:rgba(212,168,67,0.25)}
+.chapter-btn:hover{background:rgba(255,255,255,0.08)}
+
+/* FORCE FIX boutons chapitres */
+.chapter-btn, .chap-btn, .chapter-grid button, #chapterButtons button, .chapters button {
+  min-width: 42px !important;
+  padding: 8px 10px !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255,255,255,0.18) !important;
+  background: rgba(0,0,0,0.18) !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  font-weight: 700 !important;
+}
+.chapter-btn.active, .chap-btn.active, .chapter-grid button.active, #chapterButtons button.active {
+  border-color: #d4a843 !important;
+  background: rgba(212,168,67,0.25) !important;
+}
+.chapter-btn:hover, .chap-btn:hover, .chapter-grid button:hover, #chapterButtons button:hover {
+  background: rgba(255,255,255,0.08) !important;
+}
+
+/* Titres couleur or */
+h1, h2, h3, .header-title, .bc-header-title, #headerTitle, #bcHeaderTitle,
+.title, .book-title, .chapter-title, [data-role="header-title"] {
+  color: #d4a843 !important;
+}
+
+/* Titre principal Player/Lecteur */
+.card h2, .panel h2, section h2 {
+  color: #d4a843 !important;
+}
+
+/* Titres couleur or */
+h1, h2, h3, .header-title, .bc-header-title, #headerTitle, #bcHeaderTitle,
+.title, .book-title, .chapter-title, [data-role="header-title"] {
+  color: #d4a843 !important;
+}
+
+/* Titre Lecteur principal */
+.card h2:first-of-type, .panel-header, section > h2:first-child {
+  color: #d4a843 !important;
+}
+
+/* Titre "Chapitre" et "Paroles" */
+.chapter-section h2, .lyrics-section h2, .bible-section h2 {
+  color: #d4a843 !important;
+}
+
+/* TITRES OR - classes .h1 .h2 */
+.h1, .h2, .h3 {
+  color: #d4a843 !important;
+}
+
+/* Sous-titre */
+.sub, #currentRef {
+  color: #d4a843 !important;
+}
+
+/* Dropdown livres - texte or */
+select, select option {
+  color: #d4a843 !important;
+}
+
+/* Dropdown fond sombre */
+select {
+  background: rgba(0,0,0,0.4) !important;
+  border: 1px solid rgba(212,168,67,0.5) !important;
+}
+
+select option {
+  background: #1a2744 !important;
+  color: #d4a843 !important;
+}
+
+/* Chapitre en blanc comme les numéros */
+#chapterLabel, [data-i18n="readerChapter"] {
+  color: #fff !important;
+}
