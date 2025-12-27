@@ -656,9 +656,10 @@
     }
 
     if(bookCode){
+      var savedChapter = getSelectedChapter();
       renderChaptersFor(bookCode);
       if(resetChapter !== false) setActiveChapter(1);
-      else setActiveChapter(getSelectedChapter());
+      else setActiveChapter(savedChapter);
     }
 
     ensureToggleUI();
@@ -718,5 +719,8 @@
   window.BC_PLAYER.refresh = function(){ refreshAll(false); };
 
 })();
+
+
+
 
 
