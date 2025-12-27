@@ -210,21 +210,37 @@ select option {
 }
 
 /* Extra petit écran (< 480px) */
+
+
+
+/* Mobile: boutons compacts */
 @media (max-width: 480px) {
   .lang-btn {
-    padding: 4px 6px;
-    font-size: 10px;
-    gap: 3px;
+    padding: 3px 5px;
+    font-size: 0;
+    gap: 0;
+    min-width: 32px;
   }
-  
   .lang-btn img {
-    width: 16px;
-    height: 11px;
+    width: 20px;
+    height: 14px;
   }
-  
   .topbar {
-    padding: 10px 12px;
+    padding: 10px 8px;
+  }
+  .langbar, #langBar {
+    gap: 4px;
   }
 }
 
-
+/* Tres petit ecran */
+@media (max-width: 380px) {
+  .lang-btn {
+    padding: 2px 4px;
+    min-width: 28px;
+  }
+  .lang-btn img {
+    width: 18px;
+    height: 12px;
+  }
+}
