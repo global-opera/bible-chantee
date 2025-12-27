@@ -165,3 +165,65 @@ select option {
 #chapterLabel, [data-i18n="readerChapter"] {
   color: #fff !important;
 }
+
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 768px) {
+  /* Header: drapeaux en haut, titre en dessous */
+  .topbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  /* Drapeaux: 2 lignes, centré */
+  .langbar, .langs, #langBar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    order: 1;
+    width: 100%;
+  }
+  
+  /* Titre en dessous des drapeaux */
+  .brand, .header-left, [class*="header"] > div:first-child {
+    order: 2;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Boutons langue plus compacts */
+  .lang-btn {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+  
+  /* Titre et sous-titre */
+  .h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .sub, #currentRef {
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+/* Extra petit écran (< 480px) */
+@media (max-width: 480px) {
+  .lang-btn {
+    padding: 4px 6px;
+    font-size: 10px;
+    gap: 3px;
+  }
+  
+  .lang-btn img {
+    width: 16px;
+    height: 11px;
+  }
+  
+  .topbar {
+    padding: 10px 12px;
+  }
+}
