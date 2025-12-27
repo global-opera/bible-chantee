@@ -21,3 +21,12 @@
   window.BOOK_NAMES.SW = window.BOOK_NAMES.SW || clone(EN);
   window.BOOK_NAMES.KO = window.BOOK_NAMES.KO || clone(EN);
 })();
+
+/* BC_BOOK_NAMES_NORMALIZED_V1 */
+window.BOOK_NAMES = { FR: FR, EN: EN, PT: PT, ES: ES, DE: DE, IT: IT };
+
+/* BC_BOOK_CODE_ALIASES_V1 */
+window.BOOK_CODE_ALIASES = {
+  "09_1SAM": "09_1SA",
+  "10_2SAM": "10_2SA"
+};
