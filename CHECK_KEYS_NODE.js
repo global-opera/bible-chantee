@@ -2,6 +2,8 @@ const fs = require("fs");
 const vm = require("vm");
 const path = require("path");
 
+console.log('[CHECK_KEYS] COMMIT MARKER: PROD-WHITELIST-v1');
+
 // === PROD PAGES WHITELIST ===
 // Only these pages are considered "public PROD" and enforce strict i18n keys
 const PROD_PAGES = new Set([
