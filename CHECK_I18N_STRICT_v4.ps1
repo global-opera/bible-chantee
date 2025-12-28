@@ -8,8 +8,8 @@ $prod = @(
   "mentions-legales.html","nouveautes.html","recover-premium.html","bible.html"
 )
 
-$mustHave = @("lang-shared.js") # seul vrai obligatoire
-$optional = @("i18n.js","translations.js","translations-extra.js")
+$mustHave = @() # No single file is mandatory (accept multiple i18n modes)
+$optional = @("lang-shared.js","i18n.js","translations.js","translations-extra.js")
 
 $anyRed = $false
 
@@ -42,13 +42,19 @@ foreach ($p in $prod) {
     }
   }
 
-  # 4) Init ok rule:
-  # If lang-shared.js exists -> initLanguage() runs on load => OK
-  if ($c -match "lang-shared\.js") {
+  # 4) Init ok rule: Accept TWO valid modes
+  # Mode A: lang-shared.js (auto-init)
+  # Mode B: i18n.js + translations.js (manual init)
+  $hasLangShared = ($c -match "lang-shared\.js")
+  $hasManualI18n = (($c -match "i18n\.js") -and ($c -match "translations\.js"))
+
+  if ($hasLangShared) {
     Write-Host "[OK] init ok (via lang-shared auto-init)"
+  } elseif ($hasManualI18n) {
+    Write-Host "[OK] init ok (via i18n.js + translations.js)"
   } else {
     $anyRed = $true
-    Write-Host "[FAIL] init missing (no lang-shared)" -ForegroundColor Red
+    Write-Host "[FAIL] init missing (no i18n system detected)" -ForegroundColor Red
   }
 }
 
