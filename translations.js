@@ -292,6 +292,59 @@ const translations = {
     "stat-hours": "Heures",
     "stat-languages": "Langues",
     "footer-rights": "Tous droits réservés.",
+
+    // Hero & Cards
+    heroTitle: "La Bible chantée",
+    heroDesc: "Écoutez la Parole en musique, dans votre langue.",
+    cardPlayerDesc: "Accédez au lecteur complet et à toutes les pistes.",
+    cardPromisesDesc: "Explorez des promesses classées par thèmes.",
+    cardPricingDesc: "Découvrez les offres et soutenez le projet.",
+    cardSignupDesc: "Recevez les nouveautés et l'accès Premium.",
+    cardAboutDesc: "En savoir plus sur la vision et l'équipe.",
+    cardContactDesc: "Contact, support et questions.",
+    cardHelpDesc: "Aide, FAQ et dépannage.",
+
+    // Actions
+    listenNow: "Écouter maintenant",
+    navPricing: "Tarifs",
+    navSignup: "S'inscrire",
+    pricingPremiumCTA: "Devenir Premium",
+    pricingSupporterCTA: "Soutenir le projet",
+
+    // Promises
+    promessesPageTitle: "Promesses",
+    promessesTitle: "Promesses bibliques",
+    promessesDesc: "Choisissez un thème et écoutez des promesses pour aujourd'hui.",
+
+    // Sections
+    sectionDiscover: "Découvrir",
+    sectionAccount: "Compte",
+
+    // Stats
+    statLangs: "Langues",
+    statAudioLangs: "Langues audio",
+
+    // Themes
+    themeAdoration: "Adoration",
+    themeAdorationDesc: "Adorer Dieu et s'approcher de Lui.",
+    themeAmour: "Amour",
+    themeAmourDesc: "Aimer et être aimé(e) selon Dieu.",
+    themeAnxiete: "Anxiété",
+    themeAnxieteDesc: "Paix et réconfort face aux inquiétudes.",
+    themeConfiance: "Confiance",
+    themeConfianceDesc: "S'appuyer sur Dieu dans toutes les situations.",
+    themeEsperance: "Espérance",
+    themeEsperanceDesc: "Garder l'espoir malgré les épreuves.",
+    themeForce: "Force",
+    themeForceDesc: "Recevoir courage et force intérieure.",
+    themeLouange: "Louange",
+    themeLouangeDesc: "Rendre grâce et célébrer Dieu.",
+    themePaix: "Paix",
+    themePaixDesc: "Repos du cœur et paix de Dieu.",
+    themeProtection: "Protection",
+    themeProtectionDesc: "Refuge, sécurité et délivrance.",
+    themeTristesse: "Tristesse",
+    themeTristesseDesc: "Consolation et guérison du cœur.",
     },
 
   EN: {
@@ -584,6 +637,59 @@ const translations = {
     "stat-hours": "Hours",
     "stat-languages": "Languages",
     "footer-rights": "All rights reserved.",
+
+    // Hero & Cards
+    heroTitle: "Sung Bible",
+    heroDesc: "Listen to the Word in music, in your language.",
+    cardPlayerDesc: "Access the full player and all tracks.",
+    cardPromisesDesc: "Browse promises by themes.",
+    cardPricingDesc: "See plans and support the project.",
+    cardSignupDesc: "Get updates and Premium access.",
+    cardAboutDesc: "Learn more about the vision and team.",
+    cardContactDesc: "Contact, support, and questions.",
+    cardHelpDesc: "Help, FAQ, and troubleshooting.",
+
+    // Actions
+    listenNow: "Listen now",
+    navPricing: "Pricing",
+    navSignup: "Sign up",
+    pricingPremiumCTA: "Go Premium",
+    pricingSupporterCTA: "Support the project",
+
+    // Promises
+    promessesPageTitle: "Promises",
+    promessesTitle: "Bible Promises",
+    promessesDesc: "Pick a theme and listen to promises for today.",
+
+    // Sections
+    sectionDiscover: "Discover",
+    sectionAccount: "Account",
+
+    // Stats
+    statLangs: "Languages",
+    statAudioLangs: "Audio languages",
+
+    // Themes
+    themeAdoration: "Worship",
+    themeAdorationDesc: "Worship God and draw near to Him.",
+    themeAmour: "Love",
+    themeAmourDesc: "Love and be loved God's way.",
+    themeAnxiete: "Anxiety",
+    themeAnxieteDesc: "Peace and comfort in worries.",
+    themeConfiance: "Trust",
+    themeConfianceDesc: "Rely on God in every situation.",
+    themeEsperance: "Hope",
+    themeEsperanceDesc: "Hold on to hope through trials.",
+    themeForce: "Strength",
+    themeForceDesc: "Receive courage and inner strength.",
+    themeLouange: "Praise",
+    themeLouangeDesc: "Give thanks and praise God.",
+    themePaix: "Peace",
+    themePaixDesc: "Rest of heart and God's peace.",
+    themeProtection: "Protection",
+    themeProtectionDesc: "Refuge, safety, and deliverance.",
+    themeTristesse: "Sadness",
+    themeTristesseDesc: "Comfort and healing for the heart.",
     },
 
   ES: {
@@ -876,6 +982,59 @@ const translations = {
     "stat-hours": "Horas",
     "stat-languages": "Idiomas",
     "footer-rights": "Todos los derechos reservados.",
+
+    // Hero & Cards
+    heroTitle: "Biblia Cantada",
+    heroDesc: "Escucha la Palabra en música, en tu idioma.",
+    cardPlayerDesc: "Accede al reproductor completo y a todas las pistas.",
+    cardPromisesDesc: "Explora promesas por temas.",
+    cardPricingDesc: "Ver planes y apoyar el proyecto.",
+    cardSignupDesc: "Recibe novedades y acceso Premium.",
+    cardAboutDesc: "Conoce la visión y el equipo.",
+    cardContactDesc: "Contacto, soporte y preguntas.",
+    cardHelpDesc: "Ayuda, FAQ y solución de problemas.",
+
+    // Actions
+    listenNow: "Escuchar ahora",
+    navPricing: "Precios",
+    navSignup: "Registrarse",
+    pricingPremiumCTA: "Hacerse Premium",
+    pricingSupporterCTA: "Apoyar el proyecto",
+
+    // Promises
+    promessesPageTitle: "Promesas",
+    promessesTitle: "Promesas bíblicas",
+    promessesDesc: "Elige un tema y escucha promesas para hoy.",
+
+    // Sections
+    sectionDiscover: "Descubrir",
+    sectionAccount: "Cuenta",
+
+    // Stats
+    statLangs: "Idiomas",
+    statAudioLangs: "Idiomas de audio",
+
+    // Themes
+    themeAdoration: "Adoración",
+    themeAdorationDesc: "Adorar a Dios y acercarse a Él.",
+    themeAmour: "Amor",
+    themeAmourDesc: "Amar y ser amado según Dios.",
+    themeAnxiete: "Ansiedad",
+    themeAnxieteDesc: "Paz y consuelo ante las preocupaciones.",
+    themeConfiance: "Confianza",
+    themeConfianceDesc: "Confiar en Dios en toda situación.",
+    themeEsperance: "Esperanza",
+    themeEsperanceDesc: "Mantener la esperanza en la prueba.",
+    themeForce: "Fuerza",
+    themeForceDesc: "Recibir ánimo y fortaleza interior.",
+    themeLouange: "Alabanza",
+    themeLouangeDesc: "Dar gracias y alabar a Dios.",
+    themePaix: "Paz",
+    themePaixDesc: "Reposo del corazón y paz de Dios.",
+    themeProtection: "Protección",
+    themeProtectionDesc: "Refugio, seguridad y liberación.",
+    themeTristesse: "Tristeza",
+    themeTristesseDesc: "Consuelo y sanidad del corazón.",
     },
 
   PT: {
@@ -1168,6 +1327,59 @@ const translations = {
     "stat-hours": "Horas",
     "stat-languages": "Idiomas",
     "footer-rights": "Todos os direitos reservados.",
+
+    // Hero & Cards
+    heroTitle: "Bíblia Cantada",
+    heroDesc: "Ouça a Palavra em música, no seu idioma.",
+    cardPlayerDesc: "Acesse o player completo e todas as faixas.",
+    cardPromisesDesc: "Explore promessas por temas.",
+    cardPricingDesc: "Veja os planos e apoie o projeto.",
+    cardSignupDesc: "Receba novidades e acesso Premium.",
+    cardAboutDesc: "Saiba mais sobre a visão e a equipe.",
+    cardContactDesc: "Contato, suporte e dúvidas.",
+    cardHelpDesc: "Ajuda, FAQ e solução de problemas.",
+
+    // Actions
+    listenNow: "Ouvir agora",
+    navPricing: "Planos",
+    navSignup: "Cadastrar",
+    pricingPremiumCTA: "Virar Premium",
+    pricingSupporterCTA: "Apoiar o projeto",
+
+    // Promises
+    promessesPageTitle: "Promessas",
+    promessesTitle: "Promessas bíblicas",
+    promessesDesc: "Escolha um tema e ouça promessas para hoje.",
+
+    // Sections
+    sectionDiscover: "Descobrir",
+    sectionAccount: "Conta",
+
+    // Stats
+    statLangs: "Idiomas",
+    statAudioLangs: "Idiomas de áudio",
+
+    // Themes
+    themeAdoration: "Adoração",
+    themeAdorationDesc: "Adorar a Deus e se aproximar d'Ele.",
+    themeAmour: "Amor",
+    themeAmourDesc: "Amar e ser amado do jeito de Deus.",
+    themeAnxiete: "Ansiedade",
+    themeAnxieteDesc: "Paz e consolo diante das preocupações.",
+    themeConfiance: "Confiança",
+    themeConfianceDesc: "Confiar em Deus em toda situação.",
+    themeEsperance: "Esperança",
+    themeEsperanceDesc: "Manter a esperança nas lutas.",
+    themeForce: "Força",
+    themeForceDesc: "Receber coragem e força interior.",
+    themeLouange: "Louvor",
+    themeLouangeDesc: "Agradecer e louvar a Deus.",
+    themePaix: "Paz",
+    themePaixDesc: "Descanso do coração e paz de Deus.",
+    themeProtection: "Proteção",
+    themeProtectionDesc: "Refúgio, segurança e livramento.",
+    themeTristesse: "Tristeza",
+    themeTristesseDesc: "Consolo e cura do coração.",
     },
 
   DE: {
@@ -1488,6 +1700,59 @@ const translations = {
     "stat-hours": "Stunden",
     "stat-languages": "Sprachen",
     "footer-rights": "Alle Rechte vorbehalten.",
+
+    // Hero & Cards
+    heroTitle: "Gesungene Bibel",
+    heroDesc: "Höre Gottes Wort als Musik – in deiner Sprache.",
+    cardPlayerDesc: "Zugriff auf den vollständigen Player und alle Tracks.",
+    cardPromisesDesc: "Entdecke Verheißungen nach Themen.",
+    cardPricingDesc: "Pläne ansehen und das Projekt unterstützen.",
+    cardSignupDesc: "Updates erhalten und Premium-Zugang bekommen.",
+    cardAboutDesc: "Mehr über Vision und Team erfahren.",
+    cardContactDesc: "Kontakt, Support und Fragen.",
+    cardHelpDesc: "Hilfe, FAQ und Problemlösung.",
+
+    // Actions
+    listenNow: "Jetzt hören",
+    navPricing: "Preise",
+    navSignup: "Anmelden",
+    pricingPremiumCTA: "Premium werden",
+    pricingSupporterCTA: "Projekt unterstützen",
+
+    // Promises
+    promessesPageTitle: "Verheißungen",
+    promessesTitle: "Biblische Verheißungen",
+    promessesDesc: "Wähle ein Thema und höre Verheißungen für heute.",
+
+    // Sections
+    sectionDiscover: "Entdecken",
+    sectionAccount: "Konto",
+
+    // Stats
+    statLangs: "Sprachen",
+    statAudioLangs: "Audio-Sprachen",
+
+    // Themes
+    themeAdoration: "Anbetung",
+    themeAdorationDesc: "Gott anbeten und ihm nahekommen.",
+    themeAmour: "Liebe",
+    themeAmourDesc: "Lieben und geliebt werden – nach Gottes Maß.",
+    themeAnxiete: "Angst",
+    themeAnxieteDesc: "Frieden und Trost in Sorgen.",
+    themeConfiance: "Vertrauen",
+    themeConfianceDesc: "Auf Gott in jeder Lage vertrauen.",
+    themeEsperance: "Hoffnung",
+    themeEsperanceDesc: "Hoffnung trotz Prüfungen bewahren.",
+    themeForce: "Stärke",
+    themeForceDesc: "Mut und innere Stärke empfangen.",
+    themeLouange: "Lobpreis",
+    themeLouangeDesc: "Danken und Gott preisen.",
+    themePaix: "Frieden",
+    themePaixDesc: "Herzensruhe und Gottes Frieden.",
+    themeProtection: "Schutz",
+    themeProtectionDesc: "Zuflucht, Sicherheit und Rettung.",
+    themeTristesse: "Traurigkeit",
+    themeTristesseDesc: "Trost und Heilung fürs Herz.",
     },
 
   IT: {
