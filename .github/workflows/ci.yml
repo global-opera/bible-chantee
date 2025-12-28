@@ -11,7 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref }}
+          fetch-depth: 0
+          ref: ${{ github.sha }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
