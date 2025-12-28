@@ -7,8 +7,20 @@ Write-Host "=== RUN AUDIT ===" -ForegroundColor Cyan
 if ($LASTEXITCODE -ne 0) { throw "CHECK_I18N_STRICT_v4 failed" }
 
 # 2) Keys exist (base+extra)
-node (Join-Path $PSScriptRoot "CHECK_KEYS_NODE.js")
-if ($LASTEXITCODE -ne 0) { throw "CHECK_KEYS_NODE failed" }
+$check = Join-Path $PSScriptRoot "CHECK_KEYS_NODE.js"
+if (!(Test-Path $check)) {
+  throw "CHECK_KEYS_NODE.js not found at: $check"
+}
+
+Write-Host "PWD=$((Get-Location).Path)" -ForegroundColor Cyan
+Write-Host "NODE=$(node -v)" -ForegroundColor Cyan
+Write-Host "CHECK=$check" -ForegroundColor Cyan
+
+node $check 2>&1 | Tee-Object -Variable checkLog
+if ($LASTEXITCODE -ne 0) {
+  Write-Host ($checkLog -join "`n")
+  throw "CHECK_KEYS_NODE failed"
+}
 
 # 3) No FR/fr fallback in PROD pages
 $prod = @(
