@@ -5,7 +5,7 @@ Write-Host "=== CHECK I18N STRICT v4 (PROD ONLY) ===" -ForegroundColor Cyan
 $prod = @(
   "index.html","demo.html","lecteur.html","premium.html","promesses.html","promesse-detail.html",
   "about.html","contact.html","pricing.html","signup.html","success.html","thank-you.html",
-  "mentions-legales.html","nouveautes.html","recover-premium.html","bible.html","aide.html"
+  "mentions-legales.html","nouveautes.html","recover-premium.html","bible.html"
 )
 
 $mustHave = @("lang-shared.js") # seul vrai obligatoire
