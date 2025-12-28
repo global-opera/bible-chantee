@@ -1,5 +1,6 @@
 const fs = require("fs");
 const vm = require("vm");
+const path = require("path");
 
 const htmlFiles = fs.readdirSync(".").filter(f => f.endsWith(".html"));
 const keys = new Set();
@@ -12,35 +13,37 @@ for (const f of htmlFiles) {
   while ((m = attrRe.exec(c))) keys.add(m[1]);
 }
 
+// Load translations explicitly from root with absolute path
 const sandbox = { module: { exports: {} }, exports: {}, window: {} };
 vm.createContext(sandbox);
 
-// 1) Load base translations
-const baseCode = fs.readFileSync("translations.js", "utf8");
+const ROOT = path.resolve(__dirname);
+const translationsPath = path.join(ROOT, 'translations.js');
+
+console.log('[CHECK_KEYS] loading translations from:', translationsPath);
+
+if (!fs.existsSync(translationsPath)) {
+  console.error('❌ translations.js not found at root');
+  process.exit(1);
+}
+
+const baseCode = fs.readFileSync(translationsPath, "utf8");
 vm.runInContext(baseCode, sandbox);
 
-// 2) Ensure window.translations exists
 let translations =
   (sandbox.module.exports && Object.keys(sandbox.module.exports).length)
     ? sandbox.module.exports
     : (sandbox.window.translations || sandbox.translations || sandbox.exports || null);
 
 if (!translations) {
-  console.error("❌ Impossible de récupérer translations depuis translations.js");
+  console.error('❌ Impossible de récupérer translations depuis translations.js');
   process.exit(2);
 }
 
-// If module.exports was used, mirror to window for extra patching
-sandbox.window.translations = sandbox.window.translations || translations;
-
-// 3) Load translations-extra.js if present (it patches window.translations)
-if (fs.existsSync("translations-extra.js")) {
-  const extraCode = fs.readFileSync("translations-extra.js", "utf8");
-  vm.runInContext(extraCode, sandbox);
-}
-
-// Re-read merged translations
-translations = sandbox.window.translations;
+console.log(
+  'Total keys loaded (FR):',
+  Object.keys(translations.FR || {}).length
+);
 
 const langs = ["FR","EN","PT","ES","DE"];
 let any = false;
