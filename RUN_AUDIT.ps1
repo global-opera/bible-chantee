@@ -1,4 +1,4 @@
-cd "C:\ScriptBible\bible-chantee"
+Push-Location $PSScriptRoot
 
 Write-Host "=== RUN AUDIT ===" -ForegroundColor Cyan
 
@@ -7,7 +7,7 @@ Write-Host "=== RUN AUDIT ===" -ForegroundColor Cyan
 if ($LASTEXITCODE -ne 0) { throw "CHECK_I18N_STRICT_v4 failed" }
 
 # 2) Keys exist (base+extra)
-node .\CHECK_KEYS_NODE.js
+node (Join-Path $PSScriptRoot "CHECK_KEYS_NODE.js")
 if ($LASTEXITCODE -ne 0) { throw "CHECK_KEYS_NODE failed" }
 
 # 3) No FR/fr fallback in PROD pages
@@ -29,8 +29,10 @@ foreach ($p in $prod) {
 if ($bad.Count -gt 0) {
   Write-Host "❌ Forbidden patterns found in:" -ForegroundColor Red
   $bad | ForEach-Object { Write-Host " - $_" -ForegroundColor Red }
+  Pop-Location
   exit 1
 }
 
 Write-Host "✅ AUDIT OK" -ForegroundColor Green
+Pop-Location
 exit 0
