@@ -274,6 +274,24 @@ const translations = {
     recoverVerifying: "Verification...",
     recoverRedirecting: "Redirection...",
     recoverError: "Erreur de connexion. Reessayez.",
+
+    // New UI elements (homepage, stats, etc.)
+    subtitle: "La Bible en musique, en plusieurs langues",
+    "announcement-title": "Annonce",
+    "announcement-text": "Nouveautés et mises à jour importantes ici.",
+    "languages-title": "Langues",
+    "qr-main": "QR Code — Lecteur",
+    "qr-main-desc": "Scannez pour ouvrir le lecteur Bible Chantée.",
+    "qr-demo": "QR Code — Démo",
+    "qr-demo-desc": "Scannez pour ouvrir la version démo.",
+    "review-title": "Avis",
+    "review-text": "Vous aimez Bible Chantée ? Laissez un avis !",
+    "review-btn": "Donner mon avis",
+    "stat-books": "Livres",
+    "stat-chapters": "Chapitres",
+    "stat-hours": "Heures",
+    "stat-languages": "Langues",
+    "footer-rights": "Tous droits réservés.",
     },
 
   EN: {
@@ -548,6 +566,24 @@ const translations = {
     recoverVerifying: "Verifying...",
     recoverRedirecting: "Redirecting...",
     recoverError: "Connection error. Try again.",
+
+    // New UI elements (homepage, stats, etc.)
+    subtitle: "The Bible in music, in multiple languages",
+    "announcement-title": "Announcement",
+    "announcement-text": "Important updates and news appear here.",
+    "languages-title": "Languages",
+    "qr-main": "QR Code — Player",
+    "qr-main-desc": "Scan to open the Bible Chantée player.",
+    "qr-demo": "QR Code — Demo",
+    "qr-demo-desc": "Scan to open the demo version.",
+    "review-title": "Review",
+    "review-text": "Enjoy Bible Chantée? Leave a review!",
+    "review-btn": "Leave a review",
+    "stat-books": "Books",
+    "stat-chapters": "Chapters",
+    "stat-hours": "Hours",
+    "stat-languages": "Languages",
+    "footer-rights": "All rights reserved.",
     },
 
   ES: {
@@ -822,6 +858,24 @@ const translations = {
     recoverVerifying: "Verificando...",
     recoverRedirecting: "Redirigiendo...",
     recoverError: "Error de conexión. Intenta de nuevo.",
+
+    // New UI elements (homepage, stats, etc.)
+    subtitle: "La Biblia en música, en varios idiomas",
+    "announcement-title": "Anuncio",
+    "announcement-text": "Aquí aparecen noticias y actualizaciones importantes.",
+    "languages-title": "Idiomas",
+    "qr-main": "Código QR — Reproductor",
+    "qr-main-desc": "Escanea para abrir el reproductor Bible Chantée.",
+    "qr-demo": "Código QR — Demo",
+    "qr-demo-desc": "Escanea para abrir la versión demo.",
+    "review-title": "Reseña",
+    "review-text": "¿Te gusta Bible Chantée? ¡Deja una reseña!",
+    "review-btn": "Escribir reseña",
+    "stat-books": "Libros",
+    "stat-chapters": "Capítulos",
+    "stat-hours": "Horas",
+    "stat-languages": "Idiomas",
+    "footer-rights": "Todos los derechos reservados.",
     },
 
   PT: {
@@ -1096,6 +1150,24 @@ const translations = {
     recoverVerifying: "Verificando...",
     recoverRedirecting: "Redirecionando...",
     recoverError: "Erro de conexão. Tente novamente.",
+
+    // New UI elements (homepage, stats, etc.)
+    subtitle: "A Bíblia em música, em vários idiomas",
+    "announcement-title": "Aviso",
+    "announcement-text": "Atualizações e novidades importantes aparecem aqui.",
+    "languages-title": "Idiomas",
+    "qr-main": "QR Code — Leitor",
+    "qr-main-desc": "Escaneie para abrir o leitor Bible Chantée.",
+    "qr-demo": "QR Code — Demo",
+    "qr-demo-desc": "Escaneie para abrir a versão demo.",
+    "review-title": "Avaliação",
+    "review-text": "Gostou do Bible Chantée? Deixe uma avaliação!",
+    "review-btn": "Avaliar",
+    "stat-books": "Livros",
+    "stat-chapters": "Capítulos",
+    "stat-hours": "Horas",
+    "stat-languages": "Idiomas",
+    "footer-rights": "Todos os direitos reservados.",
     },
 
   DE: {
@@ -1398,6 +1470,24 @@ const translations = {
     contactTitle: "Kontakt",
     aboutContactEmail: "E-Mail:",
     aboutFooterCopyright: "© 2024-2025 Gesungene Bibel - Alle Rechte vorbehalten",
+
+    // New UI elements (homepage, stats, etc.)
+    subtitle: "Die Bibel als Musik, in mehreren Sprachen",
+    "announcement-title": "Ankündigung",
+    "announcement-text": "Wichtige Updates und Neuigkeiten erscheinen hier.",
+    "languages-title": "Sprachen",
+    "qr-main": "QR-Code — Player",
+    "qr-main-desc": "Scannen, um den Bible-Chantée-Player zu öffnen.",
+    "qr-demo": "QR-Code — Demo",
+    "qr-demo-desc": "Scannen, um die Demo-Version zu öffnen.",
+    "review-title": "Bewertung",
+    "review-text": "Gefällt dir Bible Chantée? Hinterlasse eine Bewertung!",
+    "review-btn": "Bewertung abgeben",
+    "stat-books": "Bücher",
+    "stat-chapters": "Kapitel",
+    "stat-hours": "Stunden",
+    "stat-languages": "Sprachen",
+    "footer-rights": "Alle Rechte vorbehalten.",
     },
 
   IT: {
