@@ -345,6 +345,17 @@ const translations = {
     themeProtectionDesc: "Refuge, sécurité et délivrance.",
     themeTristesse: "Tristesse",
     themeTristesseDesc: "Consolation et guérison du cœur.",
+
+    // iOS PWA Install
+    iosInstallTitle: "Installer sur iOS",
+    iosInstallStep1: "1. Appuyez sur le bouton Partager",
+    iosInstallStep2: "2. Faites défiler et appuyez sur 'Sur l'écran d'accueil'",
+    iosInstallStep3: "3. Appuyez sur 'Ajouter'",
+    iosInstallGotIt: "Compris",
+    iosInstallDontShow: "Ne plus afficher",
+
+    // Reader
+    readerPlayBook: "Lire le livre",
     },
 
   EN: {
@@ -690,6 +701,17 @@ const translations = {
     themeProtectionDesc: "Refuge, safety, and deliverance.",
     themeTristesse: "Sadness",
     themeTristesseDesc: "Comfort and healing for the heart.",
+
+    // iOS PWA Install
+    iosInstallTitle: "Install on iOS",
+    iosInstallStep1: "1. Tap the Share button",
+    iosInstallStep2: "2. Scroll down and tap 'Add to Home Screen'",
+    iosInstallStep3: "3. Tap 'Add'",
+    iosInstallGotIt: "Got it",
+    iosInstallDontShow: "Don't show again",
+
+    // Reader
+    readerPlayBook: "Play book",
     },
 
   ES: {
@@ -1035,6 +1057,17 @@ const translations = {
     themeProtectionDesc: "Refugio, seguridad y liberación.",
     themeTristesse: "Tristeza",
     themeTristesseDesc: "Consuelo y sanidad del corazón.",
+
+    // iOS PWA Install
+    iosInstallTitle: "Instalar en iOS",
+    iosInstallStep1: "1. Toca el botón Compartir",
+    iosInstallStep2: "2. Desplázate y toca 'Añadir a pantalla de inicio'",
+    iosInstallStep3: "3. Toca 'Añadir'",
+    iosInstallGotIt: "Entendido",
+    iosInstallDontShow: "No volver a mostrar",
+
+    // Reader
+    readerPlayBook: "Reproducir libro",
     },
 
   PT: {
@@ -1380,6 +1413,17 @@ const translations = {
     themeProtectionDesc: "Refúgio, segurança e livramento.",
     themeTristesse: "Tristeza",
     themeTristesseDesc: "Consolo e cura do coração.",
+
+    // iOS PWA Install
+    iosInstallTitle: "Instalar no iOS",
+    iosInstallStep1: "1. Toque no botão Compartilhar",
+    iosInstallStep2: "2. Role e toque em 'Adicionar à tela inicial'",
+    iosInstallStep3: "3. Toque em 'Adicionar'",
+    iosInstallGotIt: "Entendi",
+    iosInstallDontShow: "Não mostrar novamente",
+
+    // Reader
+    readerPlayBook: "Reproduzir livro",
     },
 
   DE: {
@@ -1753,6 +1797,17 @@ const translations = {
     themeProtectionDesc: "Zuflucht, Sicherheit und Rettung.",
     themeTristesse: "Traurigkeit",
     themeTristesseDesc: "Trost und Heilung fürs Herz.",
+
+    // iOS PWA Install
+    iosInstallTitle: "Auf iOS installieren",
+    iosInstallStep1: "1. Tippen Sie auf die Schaltfläche 'Teilen'",
+    iosInstallStep2: "2. Scrollen Sie und tippen Sie auf 'Zum Home-Bildschirm'",
+    iosInstallStep3: "3. Tippen Sie auf 'Hinzufügen'",
+    iosInstallGotIt: "Verstanden",
+    iosInstallDontShow: "Nicht mehr anzeigen",
+
+    // Reader
+    readerPlayBook: "Buch abspielen",
     },
 
   IT: {
