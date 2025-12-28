@@ -26,7 +26,7 @@ if ($LASTEXITCODE -ne 0) {
 $prod = @(
   "index.html","demo.html","lecteur.html","premium.html","promesses.html","promesse-detail.html",
   "about.html","contact.html","pricing.html","signup.html","success.html","thank-you.html",
-  "mentions-legales.html","nouveautes.html","recover-premium.html","bible.html","aide.html"
+  "mentions-legales.html","nouveautes.html","recover-premium.html","bible.html"
 )
 
 $bad = @()
