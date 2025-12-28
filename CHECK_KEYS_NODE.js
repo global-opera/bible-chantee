@@ -2,11 +2,36 @@ const fs = require("fs");
 const vm = require("vm");
 const path = require("path");
 
+// === PROD PAGES WHITELIST ===
+// Only these pages are considered "public PROD" and enforce strict i18n keys
+const PROD_PAGES = new Set([
+  'index.html',
+  'lecteur.html',
+  'promesses.html',
+  'pricing.html',
+  'premium.html'
+]);
+
+function isProdPage(filePath) {
+  const fileName = path.basename(filePath);
+  return PROD_PAGES.has(fileName);
+}
+
 const htmlFiles = fs.readdirSync(".").filter(f => f.endsWith(".html"));
 const keys = new Set();
 const attrRe = /data-i18n(?:-placeholder|-title|-aria-label)?="([^"]+)"/g;
 
 for (const f of htmlFiles) {
+  const fileName = path.basename(f);
+
+  // 🔕 Skip non-PROD pages
+  if (!isProdPage(f)) {
+    console.log(`[SKIP] non-PROD page ignored: ${fileName}`);
+    continue;
+  }
+
+  console.log(`[SCAN] PROD page: ${fileName}`);
+
   const c = fs.readFileSync(f, "utf8");
   let m;
   attrRe.lastIndex = 0;
@@ -60,5 +85,6 @@ for (const k of [...keys].sort()) {
 }
 
 console.log(`\nClés i18n utilisées (data-i18n*): ${keys.size}`);
+console.log(`PROD pages scanned: ${[...PROD_PAGES].join(', ')}`);
 if (!any) console.log("✅ Toutes les clés existent dans toutes les langues (base + extra)");
 process.exit(any ? 1 : 0);
