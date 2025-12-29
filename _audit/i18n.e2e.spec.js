@@ -1,7 +1,8 @@
 const { test, expect } = require('@playwright/test');
 
-console.log('🧪 SMOKE_TEST_ACTIVE');
+console.log('🧪🧪🧪 COMMIT f95c2682 SMOKE TEST ACTIVE 🧪🧪🧪');
 console.log('🧪 TEST VERSION: smoke-test (ignore 404 resources)');
+console.log('🧪 FILE TIMESTAMP:', new Date().toISOString());
 
 test('lecteur.html loads without JS execution errors', async ({ page }) => {
   const errors = [];
