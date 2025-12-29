@@ -1,5 +1,8 @@
 const { test, expect } = require('@playwright/test');
 
+console.log('🧪 SMOKE_TEST_ACTIVE');
+console.log('🧪 COMMIT EXPECTED: 6a9bb219');
+console.log('🧪 DATE:', new Date().toISOString());
 console.log('🔍 E2E TEST LOADED FROM:', __filename);
 console.log('🔍 TEST VERSION: smoke-test (page loads + no JS errors)');
 
