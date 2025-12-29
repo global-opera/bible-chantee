@@ -2,6 +2,12 @@ Push-Location $PSScriptRoot
 
 Write-Host "=== RUN AUDIT ===" -ForegroundColor Cyan
 
+Write-Host "=== CI PROOF ===" -ForegroundColor Cyan
+git rev-parse HEAD
+git log -1 --oneline
+Write-Host "Has translations-extra.js? $(Test-Path (Join-Path $PSScriptRoot 'translations-extra.js'))" -ForegroundColor Cyan
+Write-Host "CHECK_KEYS_NODE path: $(Join-Path $PSScriptRoot 'CHECK_KEYS_NODE.js')" -ForegroundColor Cyan
+
 # 1) I18N prod structure
 .\CHECK_I18N_STRICT_v4.ps1
 if ($LASTEXITCODE -ne 0) { throw "CHECK_I18N_STRICT_v4 failed" }
