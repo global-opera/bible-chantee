@@ -3,6 +3,9 @@ const { test, expect } = require("@playwright/test");
 const BASE = "http://127.0.0.1:4177";
 
 test("lecteur.html applies i18n in header", async ({ page }) => {
+  console.log('🔍 E2E TEST LOADED FROM:', __filename);
+  console.log('🔍 TEST VERSION: ultra-robust (header + any data-i18n)');
+
   const errors = [];
   page.on("pageerror", (e) => errors.push(String(e)));
   page.on("console", (msg) => {
