@@ -2,30 +2,34 @@ const { test, expect } = require('@playwright/test');
 
 test('lecteur.html loads without JS execution errors', async ({ page }) => {
   console.log('🔍 E2E TEST LOADED FROM:', __filename);
-  console.log('🔍 TEST VERSION: smoke-test (ignore 404 resource console errors)');
+  console.log('🔍 TEST VERSION: DIAGNOSTIC - log all failed resources');
 
   const jsExecutionErrors = [];
   const consoleErrors = [];
+  const failedResources = [];
 
   page.on('pageerror', (err) => {
+    console.log('PAGE ERROR:', err.message);
     jsExecutionErrors.push(String(err));
   });
 
   page.on('console', (msg) => {
-    if (msg.type() !== 'error') return;
+    if (msg.type() === 'error') {
+      console.log('CONSOLE ERROR:', msg.text());
+    }
+  });
 
-    const text = msg.text() || '';
-
-    // Ignore common browser "resource failed" noise (404 assets, favicon, etc.)
-    if (/Failed to load resource/i.test(text)) return;
-    if (/the server responded with a status of 404/i.test(text)) return;
-    if (/net::ERR_/i.test(text)) return;
-
-    consoleErrors.push(`[console.error] ${text}`);
+  // DIAGNOSTIC: Log all failed requests with full URL
+  page.on('requestfailed', (request) => {
+    const url = request.url();
+    const errorText = request.failure()?.errorText || 'unknown error';
+    console.log('REQUEST FAILED:', url, '→', errorText);
+    failedResources.push(url);
   });
 
   await page.goto('http://127.0.0.1:4177/lecteur.html?lang=EN', { waitUntil: 'load' });
-  console.log('🔍 Page loaded successfully');
+  console.log('🔍 Page loaded');
+  console.log('🔍 Failed resources:', failedResources.length === 0 ? 'NONE' : failedResources.join(', '));
 
   const all = [...jsExecutionErrors, ...consoleErrors];
   if (all.length) console.log('🔍 JS Execution Errors:', all);
