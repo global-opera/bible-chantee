@@ -1,42 +1,34 @@
 const { test, expect } = require('@playwright/test');
 
-console.log('🧪🧪🧪 COMMIT f95c2682 SMOKE TEST ACTIVE 🧪🧪🧪');
-console.log('🧪 TEST VERSION: smoke-test (ignore 404 resources)');
-console.log('🧪 FILE TIMESTAMP:', new Date().toISOString());
-
 test('lecteur.html loads without JS execution errors', async ({ page }) => {
-  const errors = [];
+  console.log('🔍 E2E TEST LOADED FROM:', __filename);
+  console.log('🔍 TEST VERSION: smoke-test (ignore 404 resource console errors)');
 
-  page.on('pageerror', err => {
-    errors.push(`[pageerror] ${err.message}`);
+  const jsExecutionErrors = [];
+  const consoleErrors = [];
+
+  page.on('pageerror', (err) => {
+    jsExecutionErrors.push(String(err));
   });
 
-  page.on('console', msg => {
-    if (msg.type() === 'error') {
-      const text = msg.text();
+  page.on('console', (msg) => {
+    if (msg.type() !== 'error') return;
 
-      // IGNORER les erreurs réseau classiques (favicon, assets, etc.)
-      if (
-        text.includes('Failed to load resource') ||
-        text.includes('404') ||
-        text.includes('Not Found')
-      ) {
-        return;
-      }
+    const text = msg.text() || '';
 
-      errors.push(`[console.error] ${text}`);
-    }
+    // Ignore common browser "resource failed" noise (404 assets, favicon, etc.)
+    if (/Failed to load resource/i.test(text)) return;
+    if (/the server responded with a status of 404/i.test(text)) return;
+    if (/net::ERR_/i.test(text)) return;
+
+    consoleErrors.push(`[console.error] ${text}`);
   });
 
-  await page.goto('http://127.0.0.1:4177/lecteur.html?lang=EN', {
-    waitUntil: 'load'
-  });
+  await page.goto('http://127.0.0.1:4177/lecteur.html?lang=EN', { waitUntil: 'load' });
+  console.log('🔍 Page loaded successfully');
 
-  console.log('✅ Page loaded');
+  const all = [...jsExecutionErrors, ...consoleErrors];
+  if (all.length) console.log('🔍 JS Execution Errors:', all);
 
-  if (errors.length > 0) {
-    console.error('❌ JS execution errors detected:\n' + errors.join('\n'));
-  }
-
-  expect(errors).toEqual([]);
+  expect(all, 'JS execution errors detected:\n' + all.join('\n')).toEqual([]);
 });
