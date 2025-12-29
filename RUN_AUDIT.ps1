@@ -2,11 +2,17 @@ Push-Location $PSScriptRoot
 
 Write-Host "=== RUN AUDIT ===" -ForegroundColor Cyan
 
-Write-Host "=== CI PROOF ===" -ForegroundColor Cyan
+Write-Host "=== CI PROOF BLOCK ===" -ForegroundColor Cyan
+Write-Host "Current date/time: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss UTC')" -ForegroundColor Cyan
+Write-Host "GitHub SHA: $env:GITHUB_SHA" -ForegroundColor Cyan
+Write-Host "git rev-parse HEAD:" -ForegroundColor Cyan
 git rev-parse HEAD
-git log -1 --oneline
-Write-Host "Has translations-extra.js? $(Test-Path (Join-Path $PSScriptRoot 'translations-extra.js'))" -ForegroundColor Cyan
-Write-Host "CHECK_KEYS_NODE path: $(Join-Path $PSScriptRoot 'CHECK_KEYS_NODE.js')" -ForegroundColor Cyan
+Write-Host "git log -1 --oneline:" -ForegroundColor Cyan
+git log -1 --oneline --decorate
+Write-Host "Présence translations-extra.js : $(Test-Path (Join-Path $PSScriptRoot 'translations-extra.js'))" -ForegroundColor Cyan
+Write-Host "CHECK_KEYS_NODE.js existe ?  : $(Test-Path (Join-Path $PSScriptRoot 'CHECK_KEYS_NODE.js'))" -ForegroundColor Cyan
+Write-Host "Répertoire courant : $PWD" -ForegroundColor Cyan
+Write-Host "==================================" -ForegroundColor Cyan
 
 # 1) I18N prod structure
 .\CHECK_I18N_STRICT_v4.ps1
