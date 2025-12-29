@@ -2,17 +2,19 @@ Push-Location $PSScriptRoot
 
 Write-Host "=== RUN AUDIT ===" -ForegroundColor Cyan
 
-Write-Host "=== CI PROOF BLOCK ===" -ForegroundColor Cyan
-Write-Host "Current date/time: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss UTC')" -ForegroundColor Cyan
-Write-Host "GitHub SHA: $env:GITHUB_SHA" -ForegroundColor Cyan
-Write-Host "git rev-parse HEAD:" -ForegroundColor Cyan
+Write-Host "`n=== CI DEBUG / PREUVE DE VERSION ===" -ForegroundColor Cyan
+Write-Host "Date/Heure CI : $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss UTC')" -ForegroundColor Cyan
+Write-Host "GITHUB_SHA     : $env:GITHUB_SHA" -ForegroundColor Cyan
+
+Write-Host "git rev-parse HEAD : " -NoNewline -ForegroundColor Cyan
 git rev-parse HEAD
-Write-Host "git log -1 --oneline:" -ForegroundColor Cyan
+
+Write-Host "git log -1 : " -NoNewline -ForegroundColor Cyan
 git log -1 --oneline --decorate
-Write-Host "Présence translations-extra.js : $(Test-Path (Join-Path $PSScriptRoot 'translations-extra.js'))" -ForegroundColor Cyan
-Write-Host "CHECK_KEYS_NODE.js existe ?  : $(Test-Path (Join-Path $PSScriptRoot 'CHECK_KEYS_NODE.js'))" -ForegroundColor Cyan
-Write-Host "Répertoire courant : $PWD" -ForegroundColor Cyan
-Write-Host "==================================" -ForegroundColor Cyan
+
+$extra = Join-Path $PSScriptRoot "translations-extra.js"
+Write-Host "translations-extra.js : $(if (Test-Path $extra) {'OUI (PROBLEME !)'} else {'NON (normal)'})" -ForegroundColor Cyan
+Write-Host "======================================`n" -ForegroundColor Cyan
 
 # 1) I18N prod structure
 .\CHECK_I18N_STRICT_v4.ps1
