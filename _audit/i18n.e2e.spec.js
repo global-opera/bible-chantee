@@ -1,38 +1,20 @@
 const { test, expect } = require('@playwright/test');
 
 test('lecteur.html loads without JS execution errors', async ({ page }) => {
-  console.log('🔍 E2E TEST LOADED FROM:', __filename);
-  console.log('🔍 TEST VERSION: DIAGNOSTIC - log all failed resources');
+  const jsErrors = [];
 
-  const jsExecutionErrors = [];
-  const consoleErrors = [];
-  const failedResources = [];
-
+  // Catch uncaught JavaScript exceptions
   page.on('pageerror', (err) => {
-    console.log('PAGE ERROR:', err.message);
-    jsExecutionErrors.push(String(err));
+    jsErrors.push(`[pageerror] ${err.message}`);
   });
 
-  page.on('console', (msg) => {
-    if (msg.type() === 'error') {
-      console.log('CONSOLE ERROR:', msg.text());
-    }
-  });
-
-  // DIAGNOSTIC: Log all failed requests with full URL
+  // Catch failed resource requests (missing files)
   page.on('requestfailed', (request) => {
-    const url = request.url();
-    const errorText = request.failure()?.errorText || 'unknown error';
-    console.log('REQUEST FAILED:', url, '→', errorText);
-    failedResources.push(url);
+    jsErrors.push(`[requestfailed] ${request.url()}`);
   });
 
   await page.goto('http://127.0.0.1:4177/lecteur.html?lang=EN', { waitUntil: 'load' });
-  console.log('🔍 Page loaded');
-  console.log('🔍 Failed resources:', failedResources.length === 0 ? 'NONE' : failedResources.join(', '));
 
-  const all = [...jsExecutionErrors, ...consoleErrors];
-  if (all.length) console.log('🔍 JS Execution Errors:', all);
-
-  expect(all, 'JS execution errors detected:\n' + all.join('\n')).toEqual([]);
+  // Only fail if there are actual JS execution errors or missing critical resources
+  expect(jsErrors, 'JS errors detected:\n' + jsErrors.join('\n')).toEqual([]);
 });
