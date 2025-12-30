@@ -790,15 +790,11 @@
 
     // Helper: Obtenir URL audio pour un chapitre
     function getAudioUrl(book, chapter, lang) {
-      // Les URLs audio sont dans audio-urls-XX.js
-      // Format: AUDIO_URLS[book][chapter]
-      const audioUrlsVar = window[`AUDIO_URLS_${lang}`] || window.AUDIO_URLS;
-      if (audioUrlsVar && audioUrlsVar[book] && audioUrlsVar[book][chapter]) {
-        return audioUrlsVar[book][chapter];
-      }
-      // Fallback: construire URL depuis archive.org
+      // Construire URL directement depuis Cloudflare R2
+      // Format: https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/{LANG}/{BOOK}/{BOOK}_{CHAPTER}.mp3
       const chapterPadded = String(chapter).padStart(2, '0');
-      return `https://archive.org/download/bible-chantee-${lang.toLowerCase()}/${book}/${book}_${chapterPadded}.mp3`;
+      const langUpper = lang.toUpperCase();
+      return `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${langUpper}/${book}/${book}_${chapterPadded}.mp3`;
     }
 
     // Charger et jouer un chapitre
@@ -867,6 +863,13 @@
       lyricsContent.innerHTML = '<p style="color: #999; font-style: italic;">Chargement des paroles...</p>';
 
       try {
+        // Les paroles sont disponibles uniquement en français pour l'instant
+        if (lang !== 'FR') {
+          const t = translations[lang] || translations.FR;
+          lyricsContent.innerHTML = `<p style="color: #999; font-style: italic;">Paroles disponibles en français uniquement. <a href="#" onclick="document.querySelector('.flag-btn[data-lang=FR]').click(); return false;" style="color: #F5CB42;">Cliquer ici pour FR</a></p>`;
+          return;
+        }
+
         // Trouver le numéro du livre
         const bookData = BOOKS.find(b => b.code === bookCode);
         if (!bookData) {
@@ -1044,11 +1047,27 @@
     // Sélection langue
     document.querySelectorAll('.flag-btn').forEach(btn => {
       btn.addEventListener('click', () => {
+        if (btn.classList.contains('disabled')) return; // Ignorer les langues désactivées
+
         document.querySelectorAll('.flag-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         currentLang = btn.dataset.lang;
         populateBooksDropdown(); // Repopulate with new language
         updateTranslations();
+
+        // Recharger le chapitre actuel avec la nouvelle langue
+        if (currentBook && currentChapter) {
+          loadAndPlayChapter(currentBook, currentChapter, currentLang);
+          loadLyrics(currentBook, currentChapter, currentLang);
+          loadBibleText(currentBook, currentChapter, currentLang);
+
+          // Mettre à jour le titre du chapitre
+          const chapterTitle = getChapterTitle(currentBook, currentChapter, currentLang);
+          if (chapterTitle) {
+            const t = translations[currentLang] || translations.FR;
+            document.querySelector('#headerSubtitle').textContent = `${t.chapitre} ${currentChapter} - ${chapterTitle}`;
+          }
+        }
       });
     });
     
