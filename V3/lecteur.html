@@ -854,84 +854,33 @@
     let currentChapter = 1;
 
     // ====================================
-    // FREEMIUM PROTECTION - ENHANCED 90%
+    // FREEMIUM PROTECTION
     // ====================================
 
-    // 1. BROWSER FINGERPRINT (basic anti-manipulation)
-    function generateFingerprint() {
-      const nav = navigator;
-      const screen = window.screen;
-      const data = [
-        nav.userAgent,
-        nav.language,
-        screen.width + 'x' + screen.height,
-        screen.colorDepth,
-        new Date().getTimezoneOffset()
-      ].join('|');
-
-      // Simple hash function
-      let hash = 0;
-      for (let i = 0; i < data.length; i++) {
-        const char = data.charCodeAt(i);
-        hash = ((hash << 5) - hash) + char;
-        hash = hash & hash; // Convert to 32bit integer
-      }
-      return hash.toString(36);
-    }
-
-    const browserFingerprint = generateFingerprint();
-
-    // 2. DETECT SUSPICIOUS ACTIVITY (localStorage clearing/manipulation)
-    const storedFingerprint = localStorage.getItem('bc_fingerprint');
-    let suspiciousActivity = false;
-    if (storedFingerprint && storedFingerprint !== browserFingerprint) {
-      console.warn('⚠️ Suspicious activity detected');
-      suspiciousActivity = true;
-      // Increment suspicious counter
-      const suspiciousCount = parseInt(localStorage.getItem('bc_suspicious_count') || '0', 10);
-      localStorage.setItem('bc_suspicious_count', (suspiciousCount + 1).toString());
-    }
-    localStorage.setItem('bc_fingerprint', browserFingerprint);
-
-    // 3. PARSE URL PARAMETERS (shared links)
+    // Parse URL parameters for shared links
     const urlParams = new URLSearchParams(window.location.search);
     const sharedBook = urlParams.get('book');
     const sharedChapter = urlParams.get('chapter');
     const sharedLang = urlParams.get('lang');
     const isSharedLink = sharedBook && sharedChapter;
 
-    // 4. CHECK USER AUTHENTICATION
+    // Check user authentication status
     const bcUser = localStorage.getItem('bc_user');
     const bcPremium = localStorage.getItem('bc_premium') === 'true';
     const bcTrialStart = localStorage.getItem('bc_trial_start');
     const isLoggedIn = bcUser !== null;
 
-    // 5. CALCULATE TRIAL STATUS (7 days = 604800000 ms)
+    // Calculate trial status (7 days = 604800000 ms)
     let isTrialActive = false;
-    let trialDaysRemaining = 0;
     if (isLoggedIn && !bcPremium && bcTrialStart) {
       const trialElapsed = Date.now() - parseInt(bcTrialStart, 10);
       isTrialActive = trialElapsed < 604800000;
-      trialDaysRemaining = Math.max(0, Math.ceil((604800000 - trialElapsed) / 86400000));
     }
 
-    // 6. USER ACCESS LEVEL
+    // User access level
     const hasFullAccess = bcPremium || isTrialActive;
 
-    // 7. LISTEN COUNTER (track usage)
-    function incrementListenCounter() {
-      const counter = parseInt(localStorage.getItem('bc_listen_count') || '0', 10);
-      const newCount = counter + 1;
-      localStorage.setItem('bc_listen_count', newCount.toString());
-      localStorage.setItem('bc_last_listen', Date.now().toString());
-      return newCount;
-    }
-
-    function getListenCount() {
-      return parseInt(localStorage.getItem('bc_listen_count') || '0', 10);
-    }
-
-    // 8. ENFORCE SHARED LINK = 1 CHAPTER ONLY
+    // If shared link, override initial values
     if (isSharedLink) {
       currentBook = sharedBook;
       currentChapter = parseInt(sharedChapter, 10);
@@ -940,58 +889,29 @@
       }
     }
 
-    // 9. STRICT ACCESS CONTROL - 90% BLIND PROTECTION
+    // Function to check if user can access content
     function canAccessContent(book, chapter) {
-      // RULE 1: Premium or trial users = FULL ACCESS
-      if (hasFullAccess) {
+      // Premium or trial users: full access
+      if (hasFullAccess) return true;
+
+      // Shared link: can only access the specific shared chapter
+      if (isSharedLink && book === sharedBook && parseInt(chapter, 10) === parseInt(sharedChapter, 10)) {
         return true;
       }
 
-      // RULE 2: Shared link WITHOUT registration = NO ACCESS
-      // Strategy: User MUST be registered to view any content
-      if (isSharedLink && !isLoggedIn) {
-        return false; // ⛔ BLOCKED - must register first
-      }
-
-      // RULE 3: Registered user with shared link = 1 CHAPTER ONLY (no browsing)
-      if (isSharedLink && isLoggedIn && !hasFullAccess) {
-        // Can ONLY access the exact shared chapter, cannot navigate away
-        const isExactMatch = book === sharedBook && parseInt(chapter, 10) === parseInt(sharedChapter, 10);
-        return isExactMatch; // ⛔ Can't browse to other chapters
-      }
-
-      // RULE 4: Not logged in = NO ACCESS
-      if (!isLoggedIn) {
-        return false; // ⛔ Must register
-      }
-
-      // RULE 5: Logged in but trial expired and not premium = NO ACCESS
-      if (isLoggedIn && !hasFullAccess) {
-        return false; // ⛔ Must upgrade to premium
-      }
-
-      // Default: no access
+      // Not logged in or free user: no access
       return false;
     }
 
-    // 10. SHOW REGISTRATION MODAL
+    // Function to show registration modal
     function showRegistrationModal() {
       const modal = document.querySelector('#registrationModal');
       if (modal) {
         modal.style.display = 'flex';
-
-        // Update modal message based on context
-        const modalBody = modal.querySelector('.modal-body p');
-        if (modalBody) {
-          if (isSharedLink && !isLoggedIn) {
-            modalBody.textContent = '🔒 Pour écouter ce chapitre partagé, vous devez d\'abord créer un compte gratuit avec 7 jours d\'essai !';
-          } else if (isLoggedIn && !hasFullAccess) {
-            modalBody.textContent = `⏰ Votre période d'essai est terminée. Passez à Premium pour continuer à écouter la Bible Chantée !`;
-          }
-        }
       }
     }
 
+    // Function to hide registration modal
     function hideRegistrationModal() {
       const modal = document.querySelector('#registrationModal');
       if (modal) {
@@ -999,23 +919,8 @@
       }
     }
 
-    // 11. BLOCK UNAUTHORIZED NAVIGATION
-    function blockUnauthorizedNavigation(targetBook, targetChapter) {
-      if (!canAccessContent(targetBook, targetChapter)) {
-        showRegistrationModal();
-        return true; // Navigation blocked
-      }
-      return false; // Navigation allowed
-    }
-
-    // 12. INITIAL ACCESS CHECK - SHOW MODAL IMMEDIATELY IF NEEDED
-    if (isSharedLink && !isLoggedIn) {
-      // Shared link without registration: show modal immediately
-      setTimeout(() => showRegistrationModal(), 500);
-    }
-
     // ====================================
-    // END FREEMIUM PROTECTION - ENHANCED
+    // END FREEMIUM PROTECTION
     // ====================================
 
     function getChapterTitle(book, chapter, lang) {
