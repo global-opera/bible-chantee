@@ -70,11 +70,17 @@ if ($config.languages.$LangCode) {
     $planned = $plannedList.Count
     $totalLangs = $config.languages.PSObject.Properties.Count
 
-    $config.stats.complete = $complete
-    $config.stats.generating = $generating
-    $config.stats.planned = $planned
-    $config.stats.totalLanguages = $totalLangs
-    $config.stats.completionPercentage = [math]::Round(([double]$complete / [double]$totalLangs) * 100, 1)
+    $config.stats.complete = [int]$complete
+    $config.stats.generating = [int]$generating
+    $config.stats.planned = [int]$planned
+    $config.stats.totalLanguages = [int]$totalLangs
+
+    # Calculer pourcentage
+    $pct = 0.0
+    if ($totalLangs -gt 0) {
+        $pct = ([int]$complete / [int]$totalLangs) * 100
+    }
+    $config.stats.completionPercentage = [math]::Round($pct, 1)
 
     # Sauvegarder
     $config | ConvertTo-Json -Depth 10 | Set-Content $configPath -Encoding UTF8
