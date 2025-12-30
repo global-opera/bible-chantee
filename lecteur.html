@@ -841,8 +841,25 @@
       }
     }
 
-    // Cache pour les fichiers Bible JSON
+    // Cache pour les fichiers JSON
+    const lyricsCache = {};
     const bibleCache = {};
+
+    // Mapping langue -> fichier Lyrics
+    const lyricsFiles = {
+      FR: 'FR.json',
+      EN: 'EN.json',
+      PT: 'PT.json',
+      ES: 'ES.json',
+      DE: 'DE.json',
+      IT: 'IT.json',
+      AR: 'AR.json',
+      RU: 'RU.json',
+      ZH: 'ZH.json',
+      HI: 'HI.json',
+      TL: 'TL.json',
+      SW: 'SW.json'
+    };
 
     // Mapping langue -> fichier Bible
     const bibleFiles = {
@@ -859,6 +876,57 @@
       TL: 'tl_bible_old_tagalog.json',
       SW: 'sw_bible_swahili_publicdomain.json'
     };
+
+    // Charger et afficher les paroles
+    async function loadLyrics(bookCode, chapter, lang) {
+      const lyricsContent = document.querySelector('#lyricsContent');
+      lyricsContent.innerHTML = '<p style="color: #999; font-style: italic;">Chargement des paroles...</p>';
+
+      try {
+        // Trouver le numéro du livre
+        const bookData = BOOKS.find(b => b.code === bookCode);
+        if (!bookData) {
+          lyricsContent.innerHTML = '<p style="color: #f88;">Livre non trouvé</p>';
+          return;
+        }
+        const bookNumber = parseInt(bookData.num);
+
+        // Charger le fichier JSON
+        const filename = lyricsFiles[lang] || lyricsFiles.FR;
+        let lyricsData = lyricsCache[filename];
+
+        if (!lyricsData) {
+          const response = await fetch(`lyrics/${filename}`);
+          if (!response.ok) {
+            lyricsContent.innerHTML = '<p style="color: #f88;">Paroles non disponibles pour cette langue</p>';
+            return;
+          }
+          lyricsData = await response.json();
+          lyricsCache[filename] = lyricsData;
+        }
+
+        // Extraire les paroles du chapitre
+        const lyrics = lyricsData[bookNumber] && lyricsData[bookNumber][chapter];
+
+        if (!lyrics) {
+          lyricsContent.innerHTML = '<p style="color: #999;">Paroles non disponibles pour ce chapitre</p>';
+          return;
+        }
+
+        // Formater le texte (remplacer \r\n par <br>)
+        const formattedLyrics = lyrics
+          .replace(/\r\n/g, '<br>')
+          .replace(/\n/g, '<br>')
+          .replace(/\[TITLE\]<br>/g, '<div style="font-size: 22px; color: #F5CB42; font-weight: bold; margin-bottom: 15px;">')
+          .replace(/<br><br>\[LYRICS\]<br>/g, '</div>')
+          .replace(/\[(Verse|Chorus|Bridge|Spoken Word|Coup) (\d+|[^\]]+)\]/g, '<br><strong style="color: #F5CB42;">[$1 $2]</strong><br>');
+
+        lyricsContent.innerHTML = formattedLyrics;
+      } catch (error) {
+        console.error('Erreur chargement paroles:', error);
+        lyricsContent.innerHTML = '<p style="color: #f88;">Erreur de chargement des paroles</p>';
+      }
+    }
 
     // Charger et afficher le texte biblique
     async function loadBibleText(bookCode, chapter, lang) {
@@ -983,6 +1051,10 @@
             audioPlayer.src = audioUrl;
             audioPlayer.load();
           }
+          // Mettre à jour les paroles si on est en mode paroles
+          if (document.querySelector('#lyricsContent').style.display !== 'none') {
+            loadLyrics(bookCode, currentChapter, currentLang);
+          }
           // Mettre à jour le texte de la Bible si on est en mode Bible
           if (document.querySelector('#bibleContent').style.display !== 'none') {
             loadBibleText(bookCode, currentChapter, currentLang);
@@ -1019,6 +1091,10 @@
       document.querySelector('#toggleBible').innerHTML = '📖 ' + t.bible;
       document.querySelector('#headerMode').textContent = isRadioMode ? t.radio : t.lecteur;
 
+      // Mettre à jour les paroles si on est en mode paroles
+      if (document.querySelector('#lyricsContent').style.display !== 'none') {
+        loadLyrics(currentBook, currentChapter, currentLang);
+      }
       // Mettre à jour le texte de la Bible si on est en mode Bible
       if (document.querySelector('#bibleContent').style.display !== 'none') {
         loadBibleText(currentBook, currentChapter, currentLang);
@@ -1110,6 +1186,10 @@
       currentBook = bookCode;
       currentChapter = 1;
 
+      // Mettre à jour les paroles si on est en mode paroles
+      if (document.querySelector('#lyricsContent').style.display !== 'none') {
+        loadLyrics(bookCode, 1, currentLang);
+      }
       // Mettre à jour le texte de la Bible si on est en mode Bible
       if (document.querySelector('#bibleContent').style.display !== 'none') {
         loadBibleText(bookCode, 1, currentLang);
@@ -1165,6 +1245,9 @@
         const subtitle = `${t.chapitre} ${chapterNum} - ${chapterTitle}`;
         document.querySelector('#headerSubtitle').textContent = subtitle;
       }
+
+      // Charger les paroles initiales
+      loadLyrics(bookCode, 1, currentLang);
     })();
   </script>
 
