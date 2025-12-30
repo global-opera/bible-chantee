@@ -2028,9 +2028,23 @@ const translations = {
     navMission: "Миссия",
     navSupport: "Поддержать",
     navAbout: "О нас",
+    navHelp: "Помощь",
+    navNews: "Новости",
+    navPromises: "Обещания",
     navConfessions: "Исповедания",
+    navPrayers: "Молитвы",
+    navRadio: "Радио",
+    navPlayer: "Плеер",
+    navBible: "Библия",
     navContact: "Контакты",
     navCrowdfunding: "Поддержать",
+
+    // Reader Section
+    readerPageTitle: "Поющая Библия - Плеер",
+    readerBook: "Книга",
+    readerChapter: "Глава",
+    readerLyrics: "Текст",
+    readerBible: "Библия",
 
     // Project Section
     projectTitle: "Проект",
@@ -2174,9 +2188,23 @@ const translations = {
     navMission: "المهمة",
     navSupport: "دعم",
     navAbout: "حول",
+    navHelp: "مساعدة",
+    navNews: "أخبار",
+    navPromises: "وعود",
     navConfessions: "اعترافات",
+    navPrayers: "صلوات",
+    navRadio: "راديو",
+    navPlayer: "مشغل",
+    navBible: "الكتاب المقدس",
     navContact: "اتصل",
     navCrowdfunding: "يدعم",
+
+    // Reader Section
+    readerPageTitle: "الكتاب المقدس المغنى - مشغل",
+    readerBook: "كتاب",
+    readerChapter: "الفصل",
+    readerLyrics: "كلمات",
+    readerBible: "الكتاب المقدس",
 
     // Project Section
     projectTitle: "المشروع",
@@ -2320,9 +2348,23 @@ const translations = {
     navMission: "使命",
     navSupport: "支持",
     navAbout: "关于",
+    navHelp: "帮助",
+    navNews: "新闻",
+    navPromises: "应许",
+    navPrayers: "祷告",
+    navRadio: "电台",
+    navPlayer: "播放器",
+    navBible: "圣经",
     navConfessions: "宣告",
     navContact: "联系",
     navCrowdfunding: "支持",
+
+    // Reader Section
+    readerPageTitle: "圣经之歌 - 播放器",
+    readerBook: "书卷",
+    readerChapter: "章节",
+    readerLyrics: "歌词",
+    readerBible: "圣经",
 
     // Project Section
     projectTitle: "项目",
@@ -2466,9 +2508,23 @@ const translations = {
     navMission: "मिशन",
     navSupport: "समर्थन करें",
     navAbout: "हमारे बारे में",
+    navHelp: "मदद",
+    navNews: "समाचार",
+    navPromises: "वादे",
+    navPrayers: "प्रार्थनाएं",
+    navRadio: "रेडियो",
+    navPlayer: "प्लेयर",
+    navBible: "बाइबिल",
     navConfessions: "घोषणाएं",
     navContact: "संपर्क",
     navCrowdfunding: "समर्थन",
+
+    // Reader Section
+    readerPageTitle: "गायी जाने वाली बाइबिल - प्लेयर",
+    readerBook: "पुस्तक",
+    readerChapter: "अध्याय",
+    readerLyrics: "गीत के बोल",
+    readerBible: "बाइबिल",
 
     // Project Section
     projectTitle: "परियोजना",
@@ -2612,9 +2668,23 @@ const translations = {
     navMission: "Misyon",
     navSupport: "Suportahan",
     navAbout: "Tungkol",
+    navHelp: "Tulong",
+    navNews: "Balita",
+    navPromises: "Mga Pangako",
+    navPrayers: "Mga Panalangin",
+    navRadio: "Radyo",
+    navPlayer: "Tagapatugtog",
+    navBible: "Bibliya",
     navConfessions: "Mga Pahayag",
     navContact: "Makipag-ugnayan",
     navCrowdfunding: "Suportahan",
+
+    // Reader Section
+    readerPageTitle: "Aawitin ng Bibliya - Tagapatugtog",
+    readerBook: "Aklat",
+    readerChapter: "Kabanata",
+    readerLyrics: "Lyrics",
+    readerBible: "Bibliya",
 
     // Project Section
     projectTitle: "Ang proyekto",
@@ -2758,9 +2828,23 @@ const translations = {
     navMission: "선교",
     navSupport: "지원",
     navAbout: "소개",
+    navHelp: "도움말",
+    navNews: "소식",
+    navPromises: "약속",
+    navPrayers: "기도",
+    navRadio: "라디오",
+    navPlayer: "플레이어",
+    navBible: "성경",
     navConfessions: "신앙고백",
     navContact: "연락처",
     navCrowdfunding: "지원하다",
+
+    // Reader Section
+    readerPageTitle: "노래하는 성경 - 플레이어",
+    readerBook: "책",
+    readerChapter: "장",
+    readerLyrics: "가사",
+    readerBible: "성경",
 
     // Project Section
     projectTitle: "프로젝트",
