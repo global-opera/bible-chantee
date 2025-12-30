@@ -889,7 +889,7 @@
           lyricsContent.innerHTML = '<p style="color: #f88;">Livre non trouvé</p>';
           return;
         }
-        const bookNumber = parseInt(bookData.num);
+        const bookNumber = bookData.num; // Garder "01", "02" format avec zéro
 
         // Charger le fichier JSON
         const filename = lyricsFiles[lang] || lyricsFiles.FR;
