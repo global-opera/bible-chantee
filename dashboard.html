@@ -516,6 +516,8 @@
             <button class="lang-btn" data-lang="EN">EN</button>
             <button class="lang-btn" data-lang="PT">PT</button>
             <button class="lang-btn" data-lang="ES">ES</button>
+            <button class="lang-btn" data-lang="DE">DE</button>
+            <button class="lang-btn" data-lang="IT">IT</button>
         </div>
         <div class="period-selector" id="periodSelector">
             <span class="period-label" data-i18n="period-label">Période:</span>
@@ -677,9 +679,9 @@
         };
 
         // =====================================================
-        // I18N (FR / EN / PT / ES)
+        // I18N (FR / EN / PT / ES / DE / IT)
         // =====================================================
-        const SUPPORTED_LANGS = ['FR','EN','PT','ES'];
+        const SUPPORTED_LANGS = ['FR','EN','PT','ES','DE','IT'];
         let UI_LANG = (window.BC_LANG ? BC_LANG.resolveLang() : (localStorage.getItem('bc_lang') || 'EN')).toUpperCase();
         if (!SUPPORTED_LANGS.includes(UI_LANG)) UI_LANG = (window.BC_LANG ? BC_LANG.resolveLang() : 'EN');
 
@@ -706,6 +708,8 @@
                 langEN: "English",
                 langPT: "Português",
                 langES: "Español",
+                langDE: "Deutsch",
+                langIT: "Italiano",
                 dataConnecting: "Connexion à Google Analytics 4…",
                 dataLive: "Données Google Analytics 4 en temps réel",
                 dataDemo: "Mode démonstration - API non disponible",
@@ -742,6 +746,8 @@
                 langEN: "English",
                 langPT: "Português",
                 langES: "Español",
+                langDE: "German",
+                langIT: "Italian",
                 dataConnecting: "Connecting to Google Analytics 4…",
                 dataLive: "Google Analytics 4 real-time data",
                 dataDemo: "Demo mode - API unavailable",
@@ -778,6 +784,8 @@
                 langEN: "English",
                 langPT: "Português",
                 langES: "Español",
+                langDE: "Alemão",
+                langIT: "Italiano",
                 dataConnecting: "Conectando ao Google Analytics 4…",
                 dataLive: "Dados do Google Analytics 4 em tempo real",
                 dataDemo: "Modo demonstração - API indisponível",
@@ -814,6 +822,8 @@
                 langEN: "English",
                 langPT: "Português",
                 langES: "Español",
+                langDE: "Alemán",
+                langIT: "Italiano",
                 dataConnecting: "Conectando a Google Analytics 4…",
                 dataLive: "Datos de Google Analytics 4 en tiempo real",
                 dataDemo: "Modo demostración - API no disponible",
@@ -827,6 +837,82 @@
                 period7days: "7 días",
                 period30days: "30 días",
                 periodAll: "Todo"
+            },
+            DE: {
+                title: "Gesungene Bibel Dashboard - Statistiken",
+                headerTitle: "Gesungene Bibel Dashboard",
+                headerSubtitle: "Weltweite Echtzeitstatistiken",
+                statVisitorsToday: "Besucher heute",
+                statCountriesActive: "Aktive Länder",
+                statAudioPlays: "Audio-Wiedergaben",
+                statShares: "Geteilt",
+                statSignups: "Anmeldungen",
+                sectionWorld: "Besucher weltweit",
+                sectionProgress: "MP3-Generierung Fortschritt",
+                sectionTopCountries: "Top-Länder",
+                sectionTopPages: "Meistbesuchte Seiten",
+                sectionEvents: "GA4-Ereignisse",
+                sectionActivity: "Letzte Aktivität",
+                legendHigh: "100+ Besucher",
+                legendMedium: "50-99 Besucher",
+                legendLow: "1-49 Besucher",
+                langFR: "Französisch",
+                langEN: "Englisch",
+                langPT: "Portugiesisch",
+                langES: "Spanisch",
+                langDE: "Deutsch",
+                langIT: "Italienisch",
+                dataConnecting: "Verbindung zu Google Analytics 4…",
+                dataLive: "Google Analytics 4-Echtzeitdaten",
+                dataDemo: "Demo-Modus - API nicht verfügbar",
+                live: "LIVE",
+                agoMinutes: (n) => `Vor ${n} Min.`,
+                footerBrand: "Gesungene Bibel",
+                footerGA4: "Google Analytics 4-Daten",
+                footerRefresh: "Aktualisierung alle 30 Sekunden",
+                periodLabel: "Zeitraum:",
+                period24h: "24h",
+                period7days: "7 Tage",
+                period30days: "30 Tage",
+                periodAll: "Alle"
+            },
+            IT: {
+                title: "Dashboard Bibbia Cantata - Statistiche",
+                headerTitle: "Dashboard Bibbia Cantata",
+                headerSubtitle: "Statistiche globali in tempo reale",
+                statVisitorsToday: "Visitatori oggi",
+                statCountriesActive: "Paesi attivi",
+                statAudioPlays: "Riproduzioni audio",
+                statShares: "Condivisioni",
+                statSignups: "Iscrizioni",
+                sectionWorld: "Visitatori nel mondo",
+                sectionProgress: "Progresso generazione MP3",
+                sectionTopCountries: "Top Paesi",
+                sectionTopPages: "Pagine più viste",
+                sectionEvents: "Eventi GA4",
+                sectionActivity: "Attività recente",
+                legendHigh: "100+ visitatori",
+                legendMedium: "50-99 visitatori",
+                legendLow: "1-49 visitatori",
+                langFR: "Francese",
+                langEN: "Inglese",
+                langPT: "Portoghese",
+                langES: "Spagnolo",
+                langDE: "Tedesco",
+                langIT: "Italiano",
+                dataConnecting: "Connessione a Google Analytics 4…",
+                dataLive: "Dati Google Analytics 4 in tempo reale",
+                dataDemo: "Modalità demo - API non disponibile",
+                live: "LIVE",
+                agoMinutes: (n) => `${n} min fa`,
+                footerBrand: "Bibbia Cantata",
+                footerGA4: "Dati Google Analytics 4",
+                footerRefresh: "Aggiornamento ogni 30 secondi",
+                periodLabel: "Periodo:",
+                period24h: "24h",
+                period7days: "7 giorni",
+                period30days: "30 giorni",
+                periodAll: "Tutto"
             }
         };
 
