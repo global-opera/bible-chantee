@@ -402,7 +402,14 @@
       line-height: 1.8;
       color: rgba(255, 255, 255, 0.9);
     }
-    
+
+    .bible-text {
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.9);
+      white-space: pre-wrap;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
     /* === RADIO PLAYLIST === */
     .radio-playlist {
       display: none;
@@ -672,7 +679,9 @@
         <!-- CONTENU PAROLES/BIBLE -->
         <div class="content-box" id="contentBox">
           <div class="content-title" id="contentTitle">Paroles</div>
-          <div class="lyrics-text">
+
+          <!-- Paroles (affiché par défaut) -->
+          <div class="lyrics-text" id="lyricsContent" style="display: block;">
             [Verse 1]<br>
             Au commencement, Dieu créa<br>
             Les cieux et la terre, Il forma<br>
@@ -683,6 +692,11 @@
             Et la lumière fut là<br>
             Dieu sépara la lumière des ténèbres<br>
             Le premier jour était célébré
+          </div>
+
+          <!-- Bible (caché par défaut) -->
+          <div class="bible-text" id="bibleContent" style="display: none;">
+            <p style="color: #999; font-style: italic;">Chargement du texte biblique...</p>
           </div>
         </div>
       </div>
@@ -830,6 +844,74 @@
       }
     }
 
+    // Cache pour les fichiers Bible JSON
+    const bibleCache = {};
+
+    // Mapping langue -> fichier Bible
+    const bibleFiles = {
+      FR: 'fr_bible_segond1910.json',
+      EN: 'en_bible_kjv_1611.json',
+      PT: 'pt_bible_almeida_acf.json',
+      ES: 'es_bible_reina_valera_1909.json',
+      DE: 'de_bible_luther_1912.json',
+      IT: 'it_bible_diodati_1649.json',
+      AR: 'ar_bible_van_dyck_1865.json',
+      RU: 'ru_bible_synodal.json',
+      ZH: 'zh_bible_cuv_1919.json',
+      HI: 'hi_bible_bfbs_1914_publicdomain.json',
+      TL: 'tl_bible_old_tagalog.json',
+      SW: 'sw_bible_swahili_publicdomain.json'
+    };
+
+    // Charger et afficher le texte biblique
+    async function loadBibleText(bookCode, chapter, lang) {
+      const bibleContent = document.querySelector('#bibleContent');
+      bibleContent.innerHTML = '<p style="color: #999; font-style: italic;">Chargement...</p>';
+
+      try {
+        // Trouver le numéro du livre
+        const bookData = BOOKS.find(b => b.code === bookCode);
+        if (!bookData) {
+          bibleContent.innerHTML = '<p style="color: #f88;">Livre non trouvé</p>';
+          return;
+        }
+        const bookNumber = parseInt(bookData.num);
+
+        // Charger le fichier JSON
+        const filename = bibleFiles[lang] || bibleFiles.FR;
+        let bibleData = bibleCache[filename];
+
+        if (!bibleData) {
+          const response = await fetch(`bible/${filename}`);
+          if (!response.ok) {
+            bibleContent.innerHTML = '<p style="color: #f88;">Fichier Bible introuvable</p>';
+            return;
+          }
+          bibleData = await response.json();
+          bibleCache[filename] = bibleData;
+        }
+
+        // Extraire les versets du chapitre
+        const verses = bibleData.verses.filter(v => v.book === bookNumber && v.chapter === chapter);
+
+        if (verses.length === 0) {
+          bibleContent.innerHTML = '<p style="color: #999;">Aucun verset trouvé pour ce chapitre</p>';
+          return;
+        }
+
+        // Formater le texte
+        let html = '';
+        verses.forEach(v => {
+          html += `<sup style="color: #F5CB42; font-weight: bold;">${v.verse}</sup> ${v.text}\n\n`;
+        });
+
+        bibleContent.innerHTML = html;
+      } catch (error) {
+        console.error('Erreur chargement Bible:', error);
+        bibleContent.innerHTML = '<p style="color: #f88;">Erreur de chargement</p>';
+      }
+    }
+
     // Event: Fin du chapitre (autoplay)
     audioPlayer.addEventListener('ended', () => {
       if (isAutoplayEnabled) {
@@ -902,6 +984,10 @@
             audioPlayer.src = audioUrl;
             audioPlayer.load();
           }
+          // Mettre à jour le texte de la Bible si on est en mode Bible
+          if (document.querySelector('#bibleContent').style.display !== 'none') {
+            loadBibleText(bookCode, currentChapter, currentLang);
+          }
         });
 
         chaptersGrid.appendChild(btn);
@@ -933,6 +1019,11 @@
       document.querySelector('#toggleLyrics').innerHTML = '🎤 ' + t.paroles;
       document.querySelector('#toggleBible').innerHTML = '📖 ' + t.bible;
       document.querySelector('#headerMode').textContent = isRadioMode ? t.radio : t.lecteur;
+
+      // Mettre à jour le texte de la Bible si on est en mode Bible
+      if (document.querySelector('#bibleContent').style.display !== 'none') {
+        loadBibleText(currentBook, currentChapter, currentLang);
+      }
     }
     
     // Toggle Radio
@@ -949,12 +1040,20 @@
       document.querySelector('#toggleLyrics').classList.add('active');
       document.querySelector('#toggleBible').classList.remove('active');
       document.querySelector('#contentTitle').textContent = translations[currentLang].paroles;
+      // Afficher paroles, masquer Bible
+      document.querySelector('#lyricsContent').style.display = 'block';
+      document.querySelector('#bibleContent').style.display = 'none';
     });
-    
+
     document.querySelector('#toggleBible').addEventListener('click', () => {
       document.querySelector('#toggleBible').classList.add('active');
       document.querySelector('#toggleLyrics').classList.remove('active');
       document.querySelector('#contentTitle').textContent = translations[currentLang].bible;
+      // Afficher Bible, masquer paroles
+      document.querySelector('#lyricsContent').style.display = 'none';
+      document.querySelector('#bibleContent').style.display = 'block';
+      // Charger le texte de la Bible
+      loadBibleText(currentBook, currentChapter, currentLang);
     });
     
     // Favoris
@@ -1011,6 +1110,11 @@
       // Reset audio
       currentBook = bookCode;
       currentChapter = 1;
+
+      // Mettre à jour le texte de la Bible si on est en mode Bible
+      if (document.querySelector('#bibleContent').style.display !== 'none') {
+        loadBibleText(bookCode, 1, currentLang);
+      }
     });
     
     // Play/Pause
