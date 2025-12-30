@@ -505,7 +505,16 @@
         }
         .period-btn:hover { background: rgba(255,255,255,0.15); }
 
+        /* BC_CLEAR_CACHE_SITE_ONLY_V1 */
+        #bcClearCacheWrap{position:fixed;right:14px;bottom:14px;z-index:99999}
+        #clearCacheBtn{
+            padding:8px 14px;border-radius:10px;border:1px solid #f0c36d;
+            background:#2c2f5b;color:#fff;cursor:pointer;font-size:14px
+        }
+        #clearCacheBtn:hover{opacity:.85}
+
 </style>
+<script src="js/clear-cache.js?v=1"></script>
 </head>
 <body>
     <div class="header">
@@ -1396,6 +1405,13 @@
             setInterval(refresh, CONFIG.REFRESH_INTERVAL);
         });
     </script>
+
+  <div id="bcClearCacheWrap" style="position:fixed;right:14px;bottom:14px;z-index:99999">
+    <button id="clearCacheBtn" onclick="bcClearCache()"
+      style="padding:8px 14px;border-radius:10px;border:1px solid #f0c36d;background:#2c2f5b;color:#fff;cursor:pointer;font-size:14px">
+      🧹 Vider le cache
+    </button>
+  </div>
 
   <script src="/translations.js"></script>
   <script src="/translations-extra.js"></script>
