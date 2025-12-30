@@ -591,82 +591,11 @@
             </div>
         </div>
 
-        <!-- Progress Section -->
+        <!-- Progress Section (Dynamic from lang-config.json) -->
         <div class="progress-section">
             <div class="section-title"><span class="section-emoji">📊</span> <span data-i18n="section-progress">Progression Generation MP3</span></div>
-            <div class="progress-grid">
-                <div class="progress-item">
-                    <div class="progress-header">
-                        <div class="progress-lang">
-                            <span class="progress-flag">🇫🇷</span>
-                            <span data-i18n="lang-fr">Francais</span>
-                        </div>
-                        <span id="progressFR">1189/1189</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill complete" style="width: 100%"></div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-header">
-                        <div class="progress-lang">
-                            <span class="progress-flag">🇬🇧</span>
-                            <span data-i18n="lang-en">English</span>
-                        </div>
-                        <span id="progressEN">1189/1189</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill complete" style="width: 100%"></div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-header">
-                        <div class="progress-lang">
-                            <span class="progress-flag">🇧🇷</span>
-                            <span data-i18n="lang-pt">Portugues</span>
-                        </div>
-                        <span id="progressPT">1189/1189</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill complete" style="width: 100%"></div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-header">
-                        <div class="progress-lang">
-                            <span class="progress-flag">🇪🇸</span>
-                            <span data-i18n="lang-es">Espanol</span>
-                        </div>
-                        <span id="progressES">1189/1189</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill complete" style="width: 100%"></div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-header">
-                        <div class="progress-lang">
-                            <span class="progress-flag">🇩🇪</span>
-                            <span data-i18n="lang-de">Deutsch</span>
-                        </div>
-                        <span id="progressDE">1189/1189</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill complete" style="width: 100%"></div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-header">
-                        <div class="progress-lang">
-                            <span class="progress-flag">🇮🇹</span>
-                            <span data-i18n="lang-it">Italiano</span>
-                        </div>
-                        <span id="progressIT">1189/1189</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill progress" style="width: 100%"></div>
-                    </div>
-                </div>
+            <div class="progress-grid" id="languageProgressGrid">
+                <!-- Filled dynamically by lang-config.js -->
             </div>
         </div>
 
@@ -714,6 +643,7 @@
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/lang-config.js"></script>
 
     <script>
         // =====================================================
@@ -1059,6 +989,48 @@
         }
 
         // =====================================================
+        // LANGUAGE PROGRESS (Dynamic from lang-config.json)
+        // =====================================================
+
+        async function renderLanguageProgress() {
+            try {
+                const config = await LANG_CONFIG.load();
+                const grid = document.getElementById('languageProgressGrid');
+
+                if (!grid) return;
+
+                // Clear existing content
+                grid.innerHTML = '';
+
+                // Render each language
+                Object.entries(config.languages).forEach(([code, lang]) => {
+                    const progress = Math.round((lang.chapters / config.totalChapters) * 100);
+                    const statusClass = lang.status === 'complete' ? 'complete' : 'progress';
+
+                    const item = document.createElement('div');
+                    item.className = 'progress-item';
+                    item.innerHTML = `
+                        <div class="progress-header">
+                            <div class="progress-lang">
+                                <span class="progress-flag">${lang.flag}</span>
+                                <span data-i18n="lang-${code.toLowerCase()}">${lang.name}</span>
+                            </div>
+                            <span id="progress${code}">${lang.chapters}/${config.totalChapters}</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill ${statusClass}" style="width: ${progress}%"></div>
+                        </div>
+                    `;
+                    grid.appendChild(item);
+                });
+
+                console.log(`✅ Language progress rendered: ${Object.keys(config.languages).length} languages`);
+            } catch (error) {
+                console.error('Error rendering language progress:', error);
+            }
+        }
+
+        // =====================================================
         // API GA4 + STATS
         // =====================================================
         let CURRENT_PERIOD = 'all'; // Période sélectionnée
@@ -1327,6 +1299,10 @@
             initLangSwitch();
             initPeriodSelector();
             applyI18n();
+
+            // Render language progress from config
+            renderLanguageProgress();
+
             // Premier chargement
             refresh();
 
