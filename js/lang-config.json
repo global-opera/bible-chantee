@@ -1,0 +1,98 @@
+﻿{
+    "languages":  {
+                      "FR":  {
+                                 "name":  "Français",
+                                 "flag":  "🇫🇷",
+                                 "chapters":  1189,
+                                 "status":  "complete"
+                             },
+                      "EN":  {
+                                 "name":  "English",
+                                 "flag":  "🇬🇧",
+                                 "chapters":  1189,
+                                 "status":  "complete"
+                             },
+                      "PT":  {
+                                 "name":  "Português",
+                                 "flag":  "🇧🇷",
+                                 "chapters":  1189,
+                                 "status":  "complete"
+                             },
+                      "ES":  {
+                                 "name":  "Español",
+                                 "flag":  "🇪🇸",
+                                 "chapters":  1189,
+                                 "status":  "complete"
+                             },
+                      "DE":  {
+                                 "name":  "Deutsch",
+                                 "flag":  "🇩🇪",
+                                 "chapters":  1189,
+                                 "status":  "complete"
+                             },
+                      "IT":  {
+                                 "name":  "Italiano",
+                                 "flag":  "🇮🇹",
+                                 "chapters":  1189,
+                                 "status":  "complete"
+                             },
+                      "TL":  {
+                                 "name":  "Tagalog",
+                                 "flag":  "🇵🇭",
+                                 "chapters":  27,
+                                 "status":  "generating"
+                             },
+                      "AR":  {
+                                 "name":  "العربية",
+                                 "flag":  "🇸🇦",
+                                 "chapters":  0,
+                                 "status":  "planned"
+                             },
+                      "RU":  {
+                                 "name":  "Русский",
+                                 "flag":  "🇷🇺",
+                                 "chapters":  0,
+                                 "status":  "planned"
+                             },
+                      "ZH":  {
+                                 "name":  "中文",
+                                 "flag":  "🇨🇳",
+                                 "chapters":  0,
+                                 "status":  "planned"
+                             },
+                      "HI":  {
+                                 "name":  "हिन्दी",
+                                 "flag":  "🇮🇳",
+                                 "chapters":  0,
+                                 "status":  "planned"
+                             },
+                      "SW":  {
+                                 "name":  "Kiswahili",
+                                 "flag":  "🇰🇪",
+                                 "chapters":  0,
+                                 "status":  "planned"
+                             }
+                  },
+    "totalChapters":  1189,
+    "lastUpdated":  "2025-12-30",
+    "stats":  {
+                  "complete":  6,
+                  "generating":  1,
+                  "planned":  5,
+                  "totalLanguages":  [
+                                         1,
+                                         1,
+                                         1,
+                                         1,
+                                         1,
+                                         1,
+                                         1,
+                                         1,
+                                         1,
+                                         1,
+                                         1,
+                                         1
+                                     ],
+                  "completionPercentage":  50.0
+              }
+}
