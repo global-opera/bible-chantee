@@ -539,6 +539,7 @@
     }
   </style>
     <script src="js/books.js"></script>
+    <script src="js/book-names.js"></script>
     <script src="js/chapter-titles.js"></script>
   </head>
 <body>
@@ -607,29 +608,13 @@
         <div class="section-title" id="labelLivre">Livre</div>
         
         <select class="book-select" id="bookSelect">
-          <option value="01_GEN">Genèse</option>
-          <option value="02_EXO">Exode</option>
-          <option value="19_PSA">Psaumes</option>
-          <option value="66_REV">Apocalypse</option>
+          <!-- Populated dynamically from BOOKS + BOOK_NAMES -->
         </select>
         
         <div class="section-title" id="labelChapitre">Chapitre</div>
-        
+
         <div class="chapters-grid" id="chaptersGrid">
-          <button class="chapter-btn active">1</button>
-          <button class="chapter-btn">2</button>
-          <button class="chapter-btn">3</button>
-          <button class="chapter-btn">4</button>
-          <button class="chapter-btn">5</button>
-          <button class="chapter-btn">6</button>
-          <button class="chapter-btn">7</button>
-          <button class="chapter-btn">8</button>
-          <button class="chapter-btn">9</button>
-          <button class="chapter-btn">10</button>
-          <button class="chapter-btn">11</button>
-          <button class="chapter-btn">12</button>
-          <button class="chapter-btn">13</button>
-          <button class="chapter-btn">14</button>
+          <!-- Populated dynamically based on selected book -->
         </div>
         
         <!-- PLAYER -->
@@ -833,12 +818,81 @@
       }
     });
 
+    // Populate books dropdown
+    function populateBooksDropdown() {
+      const bookSelect = document.querySelector('#bookSelect');
+      if (!bookSelect || !window.BOOKS) return;
+
+      const currentValue = bookSelect.value || '01_GEN';
+      bookSelect.innerHTML = '';
+
+      const bookNames = window.BOOK_NAMES && window.BOOK_NAMES[currentLang]
+        ? window.BOOK_NAMES[currentLang]
+        : window.BOOK_NAMES && window.BOOK_NAMES.FR
+        ? window.BOOK_NAMES.FR
+        : {};
+
+      BOOKS.forEach(book => {
+        const option = document.createElement('option');
+        option.value = book.code;
+        option.textContent = bookNames[book.code] || book.code;
+        bookSelect.appendChild(option);
+      });
+
+      // Restore previous selection
+      bookSelect.value = currentValue;
+    }
+
+    // Populate chapters grid based on selected book
+    function populateChaptersGrid(bookCode) {
+      const chaptersGrid = document.querySelector('#chaptersGrid');
+      if (!chaptersGrid || !window.BOOKS) return;
+
+      const book = BOOKS.find(b => b.code === bookCode);
+      const numChapters = book ? book.chapters : 50;
+
+      chaptersGrid.innerHTML = '';
+
+      for (let i = 1; i <= numChapters; i++) {
+        const btn = document.createElement('button');
+        btn.className = 'chapter-btn';
+        if (i === 1) btn.classList.add('active');
+        btn.textContent = i;
+
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.chapter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const chapterNum = btn.textContent;
+          const t = translations[currentLang] || translations.FR;
+          const chapterTitle = getChapterTitle(bookCode, chapterNum, currentLang);
+          const subtitle = chapterTitle
+            ? `${t.chapitre} ${chapterNum} - ${chapterTitle}`
+            : `${t.chapitre} ${chapterNum}`;
+          document.querySelector('#headerSubtitle').textContent = subtitle;
+
+          currentBook = bookCode;
+          currentChapter = parseInt(chapterNum);
+          if (isPlaying) {
+            loadAndPlayChapter(bookCode, chapterNum, currentLang);
+          } else {
+            const audioUrl = getAudioUrl(bookCode, chapterNum, currentLang);
+            audioPlayer.src = audioUrl;
+            audioPlayer.load();
+          }
+        });
+
+        chaptersGrid.appendChild(btn);
+      }
+    }
+
     // Sélection langue
     document.querySelectorAll('.flag-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.flag-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         currentLang = btn.dataset.lang;
+        populateBooksDropdown(); // Repopulate with new language
         updateTranslations();
       });
     });
@@ -915,52 +969,26 @@
       }
     });
     
-    // Sélection chapitre
-    document.querySelectorAll('.chapter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.chapter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        // Mettre à jour le header avec le numéro de chapitre
-        const chapterNum = btn.textContent;
-        const bookCode = document.querySelector('#bookSelect').value;
-        const t = translations[currentLang] || translations.FR;
-        const chapterTitle = getChapterTitle(bookCode, chapterNum, currentLang);
-        const subtitle = chapterTitle
-          ? `${t.chapitre} ${chapterNum} - ${chapterTitle}`
-          : `${t.chapitre} ${chapterNum}`;
-        document.querySelector('#headerSubtitle').textContent = subtitle;
-
-        // Charger l'audio du chapitre sélectionné
-        currentBook = bookCode;
-        currentChapter = parseInt(chapterNum);
-        if (isPlaying) {
-          loadAndPlayChapter(bookCode, chapterNum, currentLang);
-        } else {
-          // Juste charger sans jouer
-          const audioUrl = getAudioUrl(bookCode, chapterNum, currentLang);
-          audioPlayer.src = audioUrl;
-          audioPlayer.load();
-        }
-      });
-    });
-    
     // Changement de livre
     document.querySelector('#bookSelect').addEventListener('change', (e) => {
       const bookCode = e.target.value;
       const bookName = e.target.options[e.target.selectedIndex].textContent;
       document.querySelector('#headerTitle').textContent = bookName;
 
-      // Reset chapitre à 1
-      document.querySelectorAll('.chapter-btn').forEach((b, i) => {
-        b.classList.toggle('active', i === 0);
-      });
+      // Repopulate chapters grid for new book
+      populateChaptersGrid(bookCode);
+
+      // Update subtitle for chapter 1
       const t = translations[currentLang] || translations.FR;
       const chapterTitle = getChapterTitle(bookCode, '1', currentLang);
       const subtitle = chapterTitle
         ? `${t.chapitre} 1 - ${chapterTitle}`
         : `${t.chapitre} 1`;
       document.querySelector('#headerSubtitle').textContent = subtitle;
+
+      // Reset audio
+      currentBook = bookCode;
+      currentChapter = 1;
     });
     
     // Play/Pause
@@ -993,9 +1021,18 @@
       });
     }
 
-    // Initialisation: mettre à jour le sous-titre au chargement
-    (function initializeChapterTitle() {
+    // Initialisation: populate dropdowns et mettre à jour le sous-titre
+    (function initialize() {
+      // Populate books dropdown first
+      populateBooksDropdown();
+
+      // Get initial book
       const bookCode = document.querySelector('#bookSelect').value || '01_GEN';
+
+      // Populate chapters grid for initial book
+      populateChaptersGrid(bookCode);
+
+      // Update chapter title
       const chapterNum = '1';
       const t = translations[currentLang] || translations.FR;
       const chapterTitle = getChapterTitle(bookCode, chapterNum, currentLang);
