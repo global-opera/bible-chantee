@@ -9,7 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- I18n System -->
+    <script src="./js/config.js"></script>
+    <script src="./js/translations.js"></script>
+    <script src="./js/i18n.js"></script>
+
 <style>
         :root {
             --bg-primary: #0a1628;
@@ -286,33 +289,51 @@
             text-decoration: underline;
         }
 
-        /* Language Selector */
-        .lang-selector {
+        /* Language Buttons */
+        .langs {
             position: absolute;
             top: 1rem;
             right: 2rem;
             z-index: 1000;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            max-width: 400px;
+            justify-content: flex-end;
         }
 
-        .lang-selector select {
-            padding: 0.5rem 1rem;
+        .lang-btn {
+            padding: 0.4rem 0.8rem;
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.3);
             color: var(--text-primary);
             border-radius: 8px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
         }
 
-        .lang-selector select:hover {
+        .lang-btn:hover {
             background: rgba(255, 255, 255, 0.2);
+            border-color: var(--accent-gold);
+            transform: scale(1.05);
+        }
+
+        .lang-btn.active {
+            background: var(--accent-gold);
+            color: #000;
             border-color: var(--accent-gold);
         }
 
-        .lang-selector select option {
-            background: var(--bg-card);
-            color: var(--text-primary);
+        .lang-btn img {
+            width: 20px;
+            height: 14px;
+            vertical-align: middle;
+            border-radius: 2px;
         }
 
         /* Responsive */
@@ -325,33 +346,34 @@
                 font-size: 2rem;
             }
 
-            .lang-selector {
-                top: 0.5rem;
-                right: 1rem;
+            .langs {
+                position: static;
+                justify-content: center;
+                margin: 0 auto 1rem;
+                max-width: 100%;
+                padding: 0 1rem;
+            }
+
+            header {
+                padding-top: 1rem;
             }
         }
     </style>
-
-<script src="translations.js"></script>
-<script src="translations-extra.js"></script>
-<script src="i18n.js"></script>
-<script src="lang-shared.js"></script>
 </head>
 <body>
     <!-- Header -->
     <header style="position: relative;">
-        <!-- Language Selector -->
-        <div class="lang-selector">
-            <select id="langSelect" onchange="window.setLanguage(this.value); location.reload();">
-                <option value="FR">FR</option>
-                <option value="EN">EN</option>
-                <option value="PT">PT</option>
-                <option value="ES">ES</option>
-                <option value="DE">DE</option>
-            </select>
+        <!-- Language Buttons -->
+        <div class="langs">
+            <button class="lang-btn" data-lang="FR"><img src="https://flagcdn.com/w20/fr.png" alt="FR">FR</button>
+            <button class="lang-btn" data-lang="EN"><img src="https://flagcdn.com/w20/gb.png" alt="EN">EN</button>
+            <button class="lang-btn" data-lang="PT"><img src="https://flagcdn.com/w20/br.png" alt="PT">PT</button>
+            <button class="lang-btn" data-lang="ES"><img src="https://flagcdn.com/w20/es.png" alt="ES">ES</button>
+            <button class="lang-btn" data-lang="DE"><img src="https://flagcdn.com/w20/de.png" alt="DE">DE</button>
+            <button class="lang-btn" data-lang="IT"><img src="https://flagcdn.com/w20/it.png" alt="IT">IT</button>
         </div>
 
-        <h1 data-i18n="pricingHeader">💰 Tarifs Sung Bible</h1>
+        <h1 data-i18n="pricingHeader">💰 Tarifs - Bible Chantée</h1>
         <p class="subtitle" data-i18n="pricingSubtitle">Débloquez l'accès complet à toute la Bible chantée</p>
         <a href="/" class="back-link" data-i18n="pricingBackLink">← Retour à l'accueil</a>
     </header>
@@ -380,7 +402,7 @@
                     <li data-i18n="pricingFreeFeature4">Aucune carte requise</li>
                 </ul>
 
-                <a href="/lecteur.html" class="payment-btn" data-i18n="pricingFreeCTA">
+                <a href="./lecteur.html" class="payment-btn primary" data-i18n="pricingFreeCTA">
                     🎵 Commencer gratuitement
                 </a>
             </div>
@@ -401,15 +423,9 @@
                 </ul>
 
                 <div class="payment-options">
-                    <a href="https://paypal.me/stephanecassani1/0.99" target="_blank" class="payment-btn primary" data-i18n="pricingPremiumPayPal">
-                        💳 Payer avec PayPal
+                    <a href="./signup.html?plan=premium" class="payment-btn primary" data-i18n="pricingPremiumCTA">
+                        👑 S'abonner
                     </a>
-                    <button class="payment-btn" onclick="alert('TWINT: Scannez le QR code affiché après clic sur PayPal')" data-i18n="pricingPremiumTWINT">
-                        📱 Payer avec TWINT
-                    </button>
-                    <button class="payment-btn" onclick="alert('PIX: Copiez la clé PIX affichée après clic sur PayPal')" data-i18n="pricingPremiumPIX">
-                        🇧🇷 Pagar com PIX
-                    </button>
                 </div>
             </div>
 
@@ -428,11 +444,8 @@
                 </ul>
 
                 <div class="payment-options">
-                    <a href="https://paypal.me/stephanecassani1/5" target="_blank" class="payment-btn primary" data-i18n="pricingSupporterCTA5">
-                        💝 Soutenir avec $5
-                    </a>
-                    <a href="https://paypal.me/stephanecassani1/10" target="_blank" class="payment-btn" data-i18n="pricingSupporterCTA10">
-                        ⭐ Soutenir avec $10
+                    <a href="./crowdfunding.html" class="payment-btn primary" data-i18n="pricingSupporterCTA">
+                        💝 Soutenir le projet
                     </a>
                 </div>
             </div>
@@ -494,77 +507,39 @@
 
     <!-- I18n Initialization -->
     <script>
-        // Initialize BibleI18n system
-        const BibleI18n = {
-            currentLang: window.currentLanguage || (window.BC_LANG && window.BC_LANG.current) || 'EN',
+        // Get current language (uses modern i18n.js API)
+        const lang = window.I18N ? I18N.getLang() : null;
 
-            init() {
-                this.currentLang = window.currentLanguage || (window.BC_LANG && window.BC_LANG.current) || 'EN';
-
-                // Update <html lang> attribute for SEO/accessibility
-                if (window.updateHtmlLang) {
-                    window.updateHtmlLang(this.currentLang);
-                }
-
-                this.updatePageTitle();
-                this.translatePage();
-                this.updateLangSelector();
-            },
-
-            updatePageTitle() {
-                const t = window.translations?.[this.currentLang];
-                if (t?.pricingTitle) {
-                    document.title = t.pricingTitle;
-                }
-                if (t?.pricingMetaDesc) {
-                    const metaDesc = document.querySelector('meta[name="description"]');
-                    if (metaDesc) metaDesc.setAttribute('content', t.pricingMetaDesc);
-                }
-            },
-
-            translatePage() {
-                const t = window.translations?.[this.currentLang];
-                if (!t) return;
-
-                // Translate all elements with data-i18n
-                document.querySelectorAll('[data-i18n]').forEach(el => {
-                    const key = el.getAttribute('data-i18n');
-                    if (t[key]) {
-                        el.textContent = t[key];
-                    }
-                });
-
-                // Update "RECOMMENDED" badge dynamically
-                const recommendedBadge = document.querySelector('.pricing-card.recommended::before');
-                if (t.pricingRecommended) {
-                    const style = document.createElement('style');
-                    style.textContent = `.pricing-card.recommended::before { content: '${t.pricingRecommended}'; }`;
-                    document.head.appendChild(style);
-                }
-            },
-
-            updateLangSelector() {
-                const selector = document.getElementById('langSelect');
-                if (selector) {
-                    selector.value = this.currentLang;
-                }
+        // Highlight active language button and set click handlers
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            if (lang && btn.dataset.lang === lang) {
+                btn.classList.add('active');
             }
-        };
-
-        // Initialize on DOM ready
-        document.addEventListener('DOMContentLoaded', () => {
-            BibleI18n.init();
-            console.log('✅ Pricing page i18n initialized:', BibleI18n.currentLang);
+            btn.addEventListener('click', () => {
+                if (window.I18N) {
+                    I18N.setLang(btn.dataset.lang);
+                }
+            });
         });
 
-        // Re-translate on language change
-        window.addEventListener('languageChanged', (e) => {
-            BibleI18n.currentLang = e.detail.lang;
-            BibleI18n.init();
+        // Update RECOMMENDED badge dynamically
+        if (window.translations && window.translations[lang] && window.translations[lang].pricingRecommended) {
+            const style = document.createElement('style');
+            style.textContent = `.pricing-card.recommended::before { content: '${window.translations[lang].pricingRecommended}'; }`;
+            document.head.appendChild(style);
+        }
+
+        // Track payment clicks
+        document.querySelectorAll('.payment-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const plan = this.closest('.pricing-card').querySelector('h3').textContent;
+                console.log(`💰 Payment initiated: ${plan}`);
+            });
         });
     </script>
 </body>
 </html>
+
 
 
 
