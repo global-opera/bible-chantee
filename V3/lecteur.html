@@ -527,6 +527,111 @@
       opacity: 1;
       color: #F5CB42;
     }
+
+    /* === FREEMIUM REGISTRATION MODAL === */
+    .registration-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 10000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: var(--bleu-cartes);
+      border: 2px solid var(--or-moyen);
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 450px;
+      width: 100%;
+      box-shadow: 0 0 30px rgba(245, 203, 66, 0.5);
+      text-align: center;
+    }
+
+    .modal-header {
+      font-size: 24px;
+      color: var(--or-moyen);
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .modal-body {
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .modal-benefits {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 15px;
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    .modal-benefits li {
+      margin: 10px 0;
+      padding-left: 10px;
+    }
+
+    .modal-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .modal-btn {
+      padding: 12px 30px;
+      border: 2px solid var(--or-moyen);
+      border-radius: 12px;
+      background: var(--or-chaud);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .modal-btn:hover {
+      background: var(--or-fonce);
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(245, 203, 66, 0.5);
+    }
+
+    .modal-btn.secondary {
+      background: transparent;
+      color: var(--or-moyen);
+    }
+
+    .modal-btn.secondary:hover {
+      background: rgba(245, 203, 66, 0.1);
+    }
+
+    @media (max-width: 600px) {
+      .modal-content {
+        padding: 20px;
+      }
+      .modal-header {
+        font-size: 20px;
+      }
+      .modal-body {
+        font-size: 14px;
+      }
+      .modal-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
   </style>
 
   <script src="lang-shared.js"></script>
@@ -748,6 +853,76 @@
     let currentBook = '01_GEN';
     let currentChapter = 1;
 
+    // ====================================
+    // FREEMIUM PROTECTION
+    // ====================================
+
+    // Parse URL parameters for shared links
+    const urlParams = new URLSearchParams(window.location.search);
+    const sharedBook = urlParams.get('book');
+    const sharedChapter = urlParams.get('chapter');
+    const sharedLang = urlParams.get('lang');
+    const isSharedLink = sharedBook && sharedChapter;
+
+    // Check user authentication status
+    const bcUser = localStorage.getItem('bc_user');
+    const bcPremium = localStorage.getItem('bc_premium') === 'true';
+    const bcTrialStart = localStorage.getItem('bc_trial_start');
+    const isLoggedIn = bcUser !== null;
+
+    // Calculate trial status (7 days = 604800000 ms)
+    let isTrialActive = false;
+    if (isLoggedIn && !bcPremium && bcTrialStart) {
+      const trialElapsed = Date.now() - parseInt(bcTrialStart, 10);
+      isTrialActive = trialElapsed < 604800000;
+    }
+
+    // User access level
+    const hasFullAccess = bcPremium || isTrialActive;
+
+    // If shared link, override initial values
+    if (isSharedLink) {
+      currentBook = sharedBook;
+      currentChapter = parseInt(sharedChapter, 10);
+      if (sharedLang) {
+        currentLang = sharedLang.toUpperCase();
+      }
+    }
+
+    // Function to check if user can access content
+    function canAccessContent(book, chapter) {
+      // Premium or trial users: full access
+      if (hasFullAccess) return true;
+
+      // Shared link: can only access the specific shared chapter
+      if (isSharedLink && book === sharedBook && parseInt(chapter, 10) === parseInt(sharedChapter, 10)) {
+        return true;
+      }
+
+      // Not logged in or free user: no access
+      return false;
+    }
+
+    // Function to show registration modal
+    function showRegistrationModal() {
+      const modal = document.querySelector('#registrationModal');
+      if (modal) {
+        modal.style.display = 'flex';
+      }
+    }
+
+    // Function to hide registration modal
+    function hideRegistrationModal() {
+      const modal = document.querySelector('#registrationModal');
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    // ====================================
+    // END FREEMIUM PROTECTION
+    // ====================================
+
     function getChapterTitle(book, chapter, lang) {
       if (typeof CHAPTER_TITLES !== 'undefined' &&
           CHAPTER_TITLES[lang] &&
@@ -915,11 +1090,18 @@
 
     document.querySelectorAll('.chapter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
+        const chapterNum = btn.textContent;
+        const bookCode = document.querySelector('#bookSelect').value;
+
+        // FREEMIUM: Check access before allowing chapter change
+        if (!canAccessContent(bookCode, chapterNum)) {
+          showRegistrationModal();
+          return; // Block chapter change
+        }
+
         document.querySelectorAll('.chapter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
-        const chapterNum = btn.textContent;
-        const bookCode = document.querySelector('#bookSelect').value;
         const t = translations_inline[currentLang] || translations_inline.FR;
         const chapterTitle = getChapterTitle(bookCode, chapterNum, currentLang);
         const subtitle = chapterTitle
@@ -942,6 +1124,15 @@
 
     document.querySelector('#bookSelect').addEventListener('change', (e) => {
       const bookCode = e.target.value;
+
+      // FREEMIUM: Check access before allowing book change
+      if (!canAccessContent(bookCode, 1)) {
+        showRegistrationModal();
+        // Restore previous book selection
+        e.target.value = currentBook;
+        return; // Block book change
+      }
+
       const bookName = (window.BOOK_NAMES && BOOK_NAMES[currentLang])
         ? BOOK_NAMES[currentLang][bookCode]
         : bookCode;
@@ -992,18 +1183,133 @@
     }
 
     (function initializeChapterTitle() {
-      const bookCode = document.querySelector('#bookSelect').value || '01_GEN';
-      const chapterNum = '1';
-      const t = translations_inline[currentLang] || translations_inline.FR;
-      const chapterTitle = getChapterTitle(bookCode, chapterNum, currentLang);
-      if (chapterTitle) {
-        document.querySelector('#headerSubtitle').textContent = `${t.chapitre} ${chapterNum} - ${chapterTitle}`;
+      // Use currentBook and currentChapter (set from URL params or defaults)
+      const bookCode = currentBook;
+      const chapterNum = currentChapter;
+
+      // Set book dropdown to match currentBook
+      const bookSelect = document.querySelector('#bookSelect');
+      if (bookSelect) {
+        bookSelect.value = bookCode;
       }
+
+      // Set correct chapter button as active
+      const chapterButtons = document.querySelectorAll('.chapter-btn');
+      chapterButtons.forEach(btn => {
+        btn.classList.toggle('active', parseInt(btn.textContent, 10) === chapterNum);
+      });
+
+      // Set correct language flag as active
+      document.querySelectorAll('.flag-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === currentLang);
+      });
+
+      // Update header title with book name
+      const bookName = (window.BOOK_NAMES && BOOK_NAMES[currentLang])
+        ? BOOK_NAMES[currentLang][bookCode]
+        : bookCode;
+      document.querySelector('#headerTitle').textContent = bookName;
+
+      // Update header subtitle with chapter title
+      const t = translations_inline[currentLang] || translations_inline.FR;
+      const chapterTitle = getChapterTitle(bookCode, String(chapterNum), currentLang);
+      const subtitle = chapterTitle
+        ? `${t.chapitre} ${chapterNum} - ${chapterTitle}`
+        : `${t.chapitre} ${chapterNum}`;
+      document.querySelector('#headerSubtitle').textContent = subtitle;
+
+      // Update all translations
       updateTranslations();
-      const audioUrl = getAudioUrl(bookCode, 1, currentLang);
+
+      // Load audio for current chapter
+      const audioUrl = getAudioUrl(bookCode, chapterNum, currentLang);
       audioPlayer.src = audioUrl;
       audioPlayer.load();
+
+      // FREEMIUM: Log user status to console for debugging
+      console.log('=== FREEMIUM STATUS ===');
+      console.log('Shared link:', isSharedLink);
+      if (isSharedLink) {
+        console.log(`Shared content: ${sharedBook} Ch.${sharedChapter} (${sharedLang})`);
+      }
+      console.log('Logged in:', isLoggedIn);
+      console.log('Premium:', bcPremium);
+      console.log('Trial active:', isTrialActive);
+      console.log('Full access:', hasFullAccess);
+      console.log('======================');
     })();
+
+    // FREEMIUM: DEV testing helpers (accessible via browser console)
+    window.bcFreemiumTest = {
+      // Simulate user registration with 7-day trial
+      register: function() {
+        localStorage.setItem('bc_user', 'test@user.com');
+        localStorage.setItem('bc_trial_start', Date.now().toString());
+        localStorage.removeItem('bc_premium');
+        console.log('✅ User registered with 7-day trial. Reload page to see changes.');
+      },
+      // Simulate premium upgrade
+      setPremium: function() {
+        localStorage.setItem('bc_user', 'test@user.com');
+        localStorage.setItem('bc_premium', 'true');
+        console.log('✅ User upgraded to Premium. Reload page to see changes.');
+      },
+      // Clear user data (logout)
+      logout: function() {
+        localStorage.removeItem('bc_user');
+        localStorage.removeItem('bc_premium');
+        localStorage.removeItem('bc_trial_start');
+        console.log('✅ User logged out. Reload page to see changes.');
+      },
+      // Expire trial (simulate 8 days passed)
+      expireTrial: function() {
+        const eightDaysAgo = Date.now() - (8 * 24 * 60 * 60 * 1000);
+        localStorage.setItem('bc_user', 'test@user.com');
+        localStorage.setItem('bc_trial_start', eightDaysAgo.toString());
+        localStorage.removeItem('bc_premium');
+        console.log('✅ Trial expired. Reload page to see changes.');
+      }
+    };
+
+    console.log('%c🔧 DEV HELPERS', 'font-size: 16px; font-weight: bold; color: #F5CB42;');
+    console.log('Use these commands to test freemium protection:');
+    console.log('  bcFreemiumTest.register()   - Register with 7-day trial');
+    console.log('  bcFreemiumTest.setPremium() - Upgrade to Premium');
+    console.log('  bcFreemiumTest.expireTrial() - Expire trial period');
+    console.log('  bcFreemiumTest.logout()     - Clear user data');
   </script>
+
+  <!-- FREEMIUM REGISTRATION MODAL -->
+  <div id="registrationModal" class="registration-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        🔒 Inscription requise
+      </div>
+      <div class="modal-body">
+        <p>Pour accéder à tous les chapitres de la Bible Chantée, inscrivez-vous gratuitement!</p>
+
+        <ul class="modal-benefits">
+          <li>✅ <strong>7 jours d'essai gratuit</strong></li>
+          <li>✅ Accès complet aux 66 livres</li>
+          <li>✅ Tous les chapitres en 12 langues</li>
+          <li>✅ Audio haute qualité</li>
+          <li>✅ Lecture continue et paroles synchronisées</li>
+        </ul>
+
+        <p style="font-size: 14px; opacity: 0.8; margin-top: 15px;">
+          Vous pouvez continuer à écouter ce chapitre partagé gratuitement, mais pour explorer d'autres chapitres, une inscription est nécessaire.
+        </p>
+      </div>
+      <div class="modal-buttons">
+        <button class="modal-btn" onclick="window.location.href='inscription.html'">
+          S'inscrire gratuitement
+        </button>
+        <button class="modal-btn secondary" onclick="hideRegistrationModal()">
+          Continuer ce chapitre
+        </button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
