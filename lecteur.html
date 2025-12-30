@@ -567,6 +567,7 @@
     <script src="js/books.js"></script>
     <script src="js/book-names.js"></script>
     <script src="js/chapter-titles.js"></script>
+    <script src="lyrics-data.js"></script>
   </head>
 <body>
   <div class="container">
@@ -841,25 +842,8 @@
       }
     }
 
-    // Cache pour les fichiers JSON
-    const lyricsCache = {};
+    // Cache pour les fichiers JSON (Bible seulement)
     const bibleCache = {};
-
-    // Mapping langue -> fichier Lyrics
-    const lyricsFiles = {
-      FR: 'FR.json',
-      EN: 'EN.json',
-      PT: 'PT.json',
-      ES: 'ES.json',
-      DE: 'DE.json',
-      IT: 'IT.json',
-      AR: 'AR.json',
-      RU: 'RU.json',
-      ZH: 'ZH.json',
-      HI: 'HI.json',
-      TL: 'TL.json',
-      SW: 'SW.json'
-    };
 
     // Mapping langue -> fichier Bible
     const bibleFiles = {
@@ -878,7 +862,7 @@
     };
 
     // Charger et afficher les paroles
-    async function loadLyrics(bookCode, chapter, lang) {
+    function loadLyrics(bookCode, chapter, lang) {
       const lyricsContent = document.querySelector('#lyricsContent');
       lyricsContent.innerHTML = '<p style="color: #999; font-style: italic;">Chargement des paroles...</p>';
 
@@ -889,24 +873,16 @@
           lyricsContent.innerHTML = '<p style="color: #f88;">Livre non trouvé</p>';
           return;
         }
-        const bookNumber = parseInt(bookData.num);
+        const bookNumber = bookData.num; // "01", "02", etc. - already formatted with leading zeros
 
-        // Charger le fichier JSON
-        const filename = lyricsFiles[lang] || lyricsFiles.FR;
-        let lyricsData = lyricsCache[filename];
-
-        if (!lyricsData) {
-          const response = await fetch(`lyrics/${filename}`);
-          if (!response.ok) {
-            lyricsContent.innerHTML = '<p style="color: #f88;">Paroles non disponibles pour cette langue</p>';
-            return;
-          }
-          lyricsData = await response.json();
-          lyricsCache[filename] = lyricsData;
+        // Vérifier si window.chapterLyrics existe (chargé depuis lyrics-data.js)
+        if (!window.chapterLyrics) {
+          lyricsContent.innerHTML = '<p style="color: #f88;">Données des paroles non chargées</p>';
+          return;
         }
 
         // Extraire les paroles du chapitre
-        const lyrics = lyricsData[bookNumber] && lyricsData[bookNumber][chapter];
+        const lyrics = window.chapterLyrics[bookNumber] && window.chapterLyrics[bookNumber][chapter];
 
         if (!lyrics) {
           lyricsContent.innerHTML = '<p style="color: #999;">Paroles non disponibles pour ce chapitre</p>';
