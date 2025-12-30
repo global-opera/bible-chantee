@@ -124,11 +124,22 @@
       color: var(--or-moyen);
       transform: scale(1.05);
     }
-    
+
     .nav-btn.active {
       border-color: var(--or-moyen);
       background: var(--bleu-hover);
       color: var(--or-moyen);
+    }
+
+    .nav-btn.disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    .nav-btn.disabled:hover {
+      opacity: 0.4;
+      transform: none;
     }
     
     .nav-btn .icon {
@@ -599,27 +610,27 @@
     
     <!-- LIGNE 3: 6 BOUTONS NAVIGATION - mêmes dimensions que drapeaux -->
     <div class="nav-row">
-      <a href="#about" class="nav-btn" id="navAbout">
+      <a href="#about" class="nav-btn disabled" id="navAbout">
         <span class="icon">📖</span>
         <span class="text">À propos</span>
       </a>
-      <a href="#aide" class="nav-btn" id="navAide">
+      <a href="#aide" class="nav-btn disabled" id="navAide">
         <span class="icon">❓</span>
         <span class="text">Aide</span>
       </a>
-      <button class="nav-btn" id="navRadio">
+      <button class="nav-btn disabled" id="navRadio">
         <span class="icon">📻</span>
         <span class="text">Radio</span>
       </button>
-      <a href="#promesses" class="nav-btn" id="navPromesses">
+      <a href="#promesses" class="nav-btn disabled" id="navPromesses">
         <span class="icon">⭐</span>
         <span class="text">Promesses</span>
       </a>
-      <a href="#confessions" class="nav-btn" id="navConfessions">
+      <a href="#confessions" class="nav-btn disabled" id="navConfessions">
         <span class="icon">❤️</span>
         <span class="text">Confessions</span>
       </a>
-      <a href="#prieres" class="nav-btn" id="navPrieres">
+      <a href="#prieres" class="nav-btn disabled" id="navPrieres">
         <span class="icon">🙏</span>
         <span class="text">Prières</span>
       </a>
