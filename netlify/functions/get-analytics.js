@@ -14,10 +14,10 @@ exports.handler = async (event) => {
 
         const client = new BetaAnalyticsDataClient({ credentials });
 
-        // Visiteurs aujourd'hui par pays
+        // Visiteurs aujourd'hui par pays (yesterday + today pour avoir des données)
         const [visitorsResponse] = await client.runReport({
             property: `properties/${propertyId}`,
-            dateRanges: [{ startDate: 'today', endDate: 'today' }],
+            dateRanges: [{ startDate: 'yesterday', endDate: 'today' }],
             dimensions: [{ name: 'country' }, { name: 'city' }],
             metrics: [{ name: 'activeUsers' }, { name: 'sessions' }]
         });
