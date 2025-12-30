@@ -1,137 +1,993 @@
-<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bible Chantée V3 — Lecteur</title>
-  <link rel="stylesheet" href="./css/style.css" />
-<style>
-/* BC_CLEAR_CACHE_SITE_ONLY_V1 */
-#bcClearCacheWrap{position:fixed;right:14px;bottom:14px;z-index:99999}
-#clearCacheBtn{
-  padding:8px 14px;border-radius:10px;border:1px solid #f0c36d;
-  background:#2c2f5b;color:#fff;cursor:pointer;font-size:14px
-}
-#clearCacheBtn:hover{opacity:.85}
-</style>
-<script src="js/clear-cache.js?v=1"></script>
-<style>
-/* BC_LANG_FLAGS_V1 */
-.lang-btn img{width:20px;height:14px;vertical-align:middle;margin-right:4px;border-radius:2px}
-</style>
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bible Chantée - Test Architecture</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-.bc-lang-wrap{ margin-left:auto; display:flex; flex-direction:column; gap:10px; }
-.bc-lang-row{ display:flex; gap:10px; justify-content:flex-end; align-items:center; flex-wrap:nowrap; }
-.bc-lang-row.soon{ opacity:.20; } /* 80% transparent */
-.lang-btn{ display:inline-flex; align-items:center; gap:6px; padding:6px 10px; height:32px; }
-.lang-btn img{ width:20px; height:14px; vertical-align:middle; border-radius:2px; }
-/* /BC_HEADER_V1_CSS */
-</style>
-<style>
-/* BC_HEADER_V1 */
-.bc-lang-wrap{margin-left:auto;display:flex;flex-direction:column;gap:8px}
-.bc-lang-row{display:flex;gap:10px;justify-content:flex-end;align-items:center;flex-wrap:nowrap}
-.bc-lang-row.soon{opacity:.20} /* 80% transparent */
-.lang-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;height:32px}
-.lang-btn img{width:20px;height:14px;vertical-align:middle;border-radius:2px}
-/* /BC_HEADER_V1 */
-</style>
+    :root {
+      /* Blues */
+      --bleu-nuit: #1E3A5F;
+      --bleu-sombre: #162B46;
+      --bleu-cartes: #243F66;
+      --bleu-hover: #2C4A73;
+
+      /* Golds */
+      --or-clair: #FFD700;
+      --or-moyen: #F5CB42;
+      --or-fonce: #FFAA00;
+      --or-chaud: #E6B000;
+    }
+
+    body {
+      background: linear-gradient(180deg, var(--bleu-nuit) 0%, var(--bleu-sombre) 100%);
+      min-height: 100vh;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* === DRAPEAUX LIGNES 1 & 2 === */
+    .flags-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .flag-btn {
+      width: 75px;
+      height: 50px;
+      border: 2px solid rgba(245, 203, 66, 0.4);
+      border-radius: 12px;
+      background: var(--bleu-cartes);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      padding: 8px;
+    }
+
+    .flag-btn:hover {
+      border-color: var(--or-moyen);
+      background: var(--bleu-hover);
+      transform: scale(1.05);
+    }
+
+    .flag-btn.active {
+      border-color: var(--or-moyen);
+      background: var(--bleu-hover);
+      box-shadow: 0 0 15px rgba(245, 203, 66, 0.3);
+    }
+
+    .flag-btn.disabled {
+      opacity: 0.2;
+      cursor: not-allowed;
+    }
+
+    .flag-btn.disabled:hover {
+      transform: none;
+      border-color: rgba(245, 203, 66, 0.4);
+      background: var(--bleu-cartes);
+    }
+
+    .flag-img {
+      width: 100%;
+      height: auto;
+      max-height: 30px;
+      object-fit: contain;
+    }
+
+    .flag-emoji {
+      font-size: 28px;
+    }
+
+    /* === BOUTONS NAVIGATION LIGNE 3 === */
+    .nav-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+      margin-bottom: 25px;
+    }
+
+    .nav-btn {
+      width: 75px;
+      height: 50px;
+      border: 2px solid rgba(245, 203, 66, 0.4);
+      border-radius: 12px;
+      background: var(--bleu-cartes);
+      color: white;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1px;
+      font-size: 8px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .nav-btn:hover {
+      border-color: var(--or-moyen);
+      background: var(--bleu-hover);
+      color: var(--or-moyen);
+      transform: scale(1.05);
+    }
+
+    .nav-btn.active {
+      border-color: var(--or-moyen);
+      background: var(--bleu-hover);
+      color: var(--or-moyen);
+    }
+
+    .nav-btn .icon {
+      font-size: 20px;
+    }
+
+    .nav-btn .text {
+      font-size: 8px;
+      white-space: nowrap;
+    }
+
+    .nav-btn .badge {
+      font-size: 7px;
+      opacity: 0.7;
+    }
+
+    /* === HEADER === */
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 20px;
+      background: var(--bleu-cartes);
+      border-radius: 20px;
+      border: 1px solid rgba(245, 203, 66, 0.2);
+    }
+
+    .header-mode {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .header-title {
+      font-size: 28px;
+      color: var(--or-moyen);
+    }
+
+    .header-subtitle {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    /* === CONTENU PRINCIPAL === */
+    .main-content {
+      background: var(--bleu-cartes);
+      border-radius: 20px;
+      padding: 25px;
+      border: 1px solid rgba(245, 203, 66, 0.2);
+    }
+
+    .section-title {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: var(--or-moyen);
+    }
+
+    /* === SELECT LIVRE === */
+    .book-select {
+      width: 100%;
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid rgba(245, 203, 66, 0.3);
+      background: var(--bleu-sombre);
+      color: var(--or-moyen);
+      font-size: 16px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    .book-select option {
+      background: var(--bleu-sombre);
+      color: white;
+      padding: 10px;
+    }
+
+    .book-select option:checked {
+      background: var(--bleu-hover);
+      color: var(--or-moyen);
+    }
+
+    .book-select option:hover {
+      background: var(--bleu-hover);
+    }
+
+    /* === GRILLE CHAPITRES === */
+    .chapters-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .chapter-btn {
+      aspect-ratio: 1;
+      border: 2px solid rgba(245, 203, 66, 0.3);
+      border-radius: 10px;
+      background: var(--bleu-sombre);
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .chapter-btn:hover {
+      border-color: var(--or-moyen);
+      background: var(--bleu-hover);
+    }
+
+    .chapter-btn.active {
+      border-color: var(--or-moyen);
+      background: var(--bleu-hover);
+      color: var(--or-moyen);
+      font-weight: bold;
+    }
+
+    /* === PLAYER === */
+    .player-bar {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px;
+      background: var(--bleu-sombre);
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+
+    .play-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--or-moyen);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: var(--bleu-nuit);
+    }
+
+    .progress-container {
+      flex: 1;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .progress-fill {
+      width: 35%;
+      height: 100%;
+      background: var(--or-moyen);
+      border-radius: 3px;
+    }
+
+    .time {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      min-width: 90px;
+      text-align: center;
+    }
+
+    .player-controls {
+      display: flex;
+      gap: 10px;
+    }
+
+    .control-btn {
+      min-width: 40px;
+      height: 40px;
+      padding: 0 8px;
+      border-radius: 20px;
+      background: var(--bleu-hover);
+      border: 2px solid rgba(245, 203, 66, 0.4);
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .control-btn:hover {
+      background: var(--bleu-cartes);
+      border-color: var(--or-moyen);
+    }
+
+    .control-btn.favorited {
+      color: var(--success);
+      background: var(--success-bg);
+    }
+
+    .add-radio-btn {
+      gap: 2px;
+    }
+
+    .plus-icon {
+      color: var(--or-moyen);
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .radio-icon {
+      font-size: 22px;
+    }
+
+    .share-btn {
+      padding: 0;
+      background: transparent;
+      border: none;
+    }
+
+    .share-icon {
+      width: 40px;
+      height: 40px;
+    }
+
+    /* === TOGGLE PAROLES/BIBLE/RADIO === */
+    .toggle-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .toggle-btn {
+      flex: 1;
+      padding: 12px;
+      border: 2px solid rgba(245, 203, 66, 0.3);
+      border-radius: 25px;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .toggle-btn.active {
+      border-color: var(--or-moyen);
+      background: var(--bleu-hover);
+      color: var(--or-moyen);
+    }
+
+    /* === ZONE CONTENU === */
+    .content-box {
+      margin-top: 20px;
+      padding: 20px;
+      background: var(--bleu-sombre);
+      border-radius: 15px;
+      border: 1px solid rgba(245, 203, 66, 0.15);
+      min-height: 200px;
+    }
+
+    .content-title {
+      color: var(--or-moyen);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .lyrics-text {
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* === RADIO PLAYLIST === */
+    .radio-playlist {
+      display: none;
+    }
+
+    .radio-playlist.active {
+      display: block;
+    }
+
+    .playlist-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 12px;
+      background: var(--bleu-sombre);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .playlist-item:hover {
+      background: var(--bleu-hover);
+    }
+
+    .playlist-item.playing {
+      background: var(--bleu-hover);
+      border-left: 3px solid var(--or-moyen);
+    }
+
+    .playlist-num {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(245, 203, 66, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--or-moyen);
+    }
+
+    .playlist-info {
+      flex: 1;
+    }
+
+    .playlist-title {
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+
+    .playlist-lang {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .playlist-remove {
+      color: rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    .playlist-remove:hover {
+      color: #ff6b6b;
+    }
+
+    .radio-controls {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .radio-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--bleu-cartes);
+      border: 2px solid rgba(245, 203, 66, 0.3);
+      color: white;
+      cursor: pointer;
+      font-size: 20px;
+      transition: all 0.2s ease;
+    }
+
+    .radio-btn:hover {
+      background: var(--bleu-hover);
+      border-color: var(--or-moyen);
+    }
+
+    .radio-btn.main {
+      width: 60px;
+      height: 60px;
+      background: var(--or-moyen);
+      color: var(--bleu-nuit);
+      border: none;
+    }
+
+    /* === FOOTER === */
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 15px;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 14px;
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 600px) {
+      .flags-row { gap: 6px; }
+      .flag-btn { width: 55px; height: 40px; font-size: 22px; }
+      .nav-btn { padding: 8px 12px; font-size: 12px; }
+      .chapters-grid { grid-template-columns: repeat(5, 1fr); }
+    }
+
+    .autoplay-btn {
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+    .autoplay-btn.active {
+      opacity: 1;
+      color: #F5CB42;
+    }
+  </style>
+
+  <script src="lang-shared.js"></script>
+  <script src="i18n.js"></script>
+  <script src="translations.js"></script>
+  <script src="translations-extra.js"></script>
+  <script src="js/books.js"></script>
+  <script src="js/chapter-titles.js"></script>
 </head>
+
 <body>
   <div class="container">
-    <div class="topbar card">
-      <div>
-        <div class="h1" data-i18n="navPlayer">Lecteur</div>
-        <div class="sub" id="currentRef">—</div>
-      </div>
 
-      <div class="langbar" id="langBar">
-        <button class="lang-btn" data-lang="FR"><img src="https://flagcdn.com/w20/fr.png" alt="FR">FR</button>
-        <button class="lang-btn" data-lang="EN"><img src="https://flagcdn.com/w20/gb.png" alt="EN">EN</button>
-        <button class="lang-btn" data-lang="PT"><img src="https://flagcdn.com/w20/br.png" alt="PT">PT</button>
-        <button class="lang-btn" data-lang="ES"><img src="https://flagcdn.com/w20/es.png" alt="ES">ES</button>
-        <button class="lang-btn" data-lang="DE"><img src="https://flagcdn.com/w20/de.png" alt="DE">DE</button>
-        <button class="lang-btn" data-lang="IT"><img src="https://flagcdn.com/w20/it.png" alt="IT">IT</button>
-        <button class="lang-btn" data-lang="AR"><img src="https://flagcdn.com/w20/sa.png" alt="AR">AR</button>
-        <button class="lang-btn" data-lang="RU"><img src="https://flagcdn.com/w20/ru.png" alt="RU">RU</button>
-        <button class="lang-btn" data-lang="ZH"><img src="https://flagcdn.com/w20/cn.png" alt="ZH">ZH</button>
-        <button class="lang-btn" data-lang="HI"><img src="https://flagcdn.com/w20/in.png" alt="HI">HI</button>
-        <button class="lang-btn" data-lang="TL"><img src="https://flagcdn.com/w20/ph.png" alt="TL">TL</button>
-        <button class="lang-btn" data-lang="SW"><img src="https://flagcdn.com/w20/ke.png" alt="SW">SW</button>
-      </div>
+    <!-- LIGNE 1: 6 DRAPEAUX (langues complètes) -->
+    <div class="flags-row">
+      <button class="flag-btn active" data-lang="FR"><img src="./img/flags/flag_FR.png" alt="FR" class="flag-img"></button>
+      <button class="flag-btn" data-lang="EN"><img src="./img/flags/flag_EN.png" alt="EN" class="flag-img"></button>
+      <button class="flag-btn" data-lang="PT"><img src="./img/flags/flag_PT.png" alt="PT" class="flag-img"></button>
+      <button class="flag-btn" data-lang="ES"><img src="./img/flags/flag_ES.png" alt="ES" class="flag-img"></button>
+      <button class="flag-btn" data-lang="DE"><img src="./img/flags/flag_DE.png" alt="DE" class="flag-img"></button>
+      <button class="flag-btn" data-lang="IT"><img src="./img/flags/flag_IT.png" alt="IT" class="flag-img"></button>
     </div>
 
-    <div class="grid">
-      <div class="card">
-        <div class="h2" id="chapterLabel" data-i18n="readerChapter">Chapitre</div>
-
-        <select id="bookSelect" class="select"></select>
-        <div id="chapterGrid" class="chapters"></div>
-
-        <div class="small" id="audioStatus"></div>
-        <audio id="audioPlayer" controls preload="none" style="width:100%; margin-top:10px;"></audio>
-      </div>
-
-      <div class="card">
-        <div class="h2" data-i18n="readerLyrics">Paroles</div>
-        <pre id="lyricsBox" class="pre"></pre>
-
-        <div style="height:14px"></div>
-
-        <div class="h2" data-i18n="readerBible">Bible</div>
-        <pre id="bibleBox" class="pre">—</pre>
-      </div>
+    <!-- LIGNE 2: 6 DRAPEAUX (langues pas encore terminées = 20% opacité) -->
+    <div class="flags-row">
+      <button class="flag-btn disabled" data-lang="AR"><img src="./img/flags/flag_AR.png" alt="AR" class="flag-img"></button>
+      <button class="flag-btn disabled" data-lang="RU"><img src="./img/flags/flag_RU.png" alt="RU" class="flag-img"></button>
+      <button class="flag-btn disabled" data-lang="ZH"><img src="./img/flags/flag_ZH.png" alt="ZH" class="flag-img"></button>
+      <button class="flag-btn disabled" data-lang="HI"><img src="./img/flags/flag_HI.png" alt="HI" class="flag-img"></button>
+      <button class="flag-btn disabled" data-lang="TL"><img src="./img/flags/flag_TL.png" alt="TL" class="flag-img"></button>
+      <button class="flag-btn disabled" data-lang="SW"><img src="./img/flags/flag_SW.png" alt="SW" class="flag-img"></button>
     </div>
 
-    <div class="footer">V3 standalone</div>
+    <!-- LIGNE 3: 6 BOUTONS NAVIGATION - mêmes dimensions que drapeaux -->
+    <div class="nav-row">
+      <a href="about.html" class="nav-btn" id="navAbout">
+        <span class="icon">📖</span>
+        <span class="text">À propos</span>
+      </a>
+      <a href="aide.html" class="nav-btn" id="navAide">
+        <span class="icon">❓</span>
+        <span class="text">Aide</span>
+      </a>
+      <button class="nav-btn" id="navRadio">
+        <span class="icon">📻</span>
+        <span class="text">Radio</span>
+      </button>
+      <a href="promesses.html" class="nav-btn" id="navPromesses">
+        <span class="icon">⭐</span>
+        <span class="text">Promesses</span>
+      </a>
+      <a href="confessions.html" class="nav-btn" id="navConfessions">
+        <span class="icon">❤️</span>
+        <span class="text">Confessions</span>
+      </a>
+      <a href="prieres.html" class="nav-btn" id="navPrieres">
+        <span class="icon">🙏</span>
+        <span class="text">Prières</span>
+      </a>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="header-mode" id="headerMode">Lecteur</div>
+      <div class="header-title" id="headerTitle">Genèse</div>
+      <div class="header-subtitle" id="headerSubtitle">Chapitre 1</div>
+    </div>
+
+    <!-- CONTENU PRINCIPAL -->
+    <div class="main-content">
+
+      <!-- SECTION LECTEUR -->
+      <div id="playerSection">
+        <div class="section-title" id="labelLivre">Livre</div>
+
+        <select class="book-select" id="bookSelect">
+          <option value="01_GEN">Genèse</option>
+          <option value="02_EXO">Exode</option>
+          <option value="19_PSA">Psaumes</option>
+          <option value="66_REV">Apocalypse</option>
+        </select>
+
+        <div class="section-title" id="labelChapitre">Chapitre</div>
+
+        <div class="chapters-grid" id="chaptersGrid">
+          <button class="chapter-btn active">1</button>
+          <button class="chapter-btn">2</button>
+          <button class="chapter-btn">3</button>
+          <button class="chapter-btn">4</button>
+          <button class="chapter-btn">5</button>
+          <button class="chapter-btn">6</button>
+          <button class="chapter-btn">7</button>
+          <button class="chapter-btn">8</button>
+          <button class="chapter-btn">9</button>
+          <button class="chapter-btn">10</button>
+          <button class="chapter-btn">11</button>
+          <button class="chapter-btn">12</button>
+          <button class="chapter-btn">13</button>
+          <button class="chapter-btn">14</button>
+        </div>
+
+        <!-- PLAYER -->
+        <div class="player-bar">
+          <button class="play-btn" id="playBtn">▶</button>
+          <div class="progress-container">
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+          <div class="time">01:24 / 03:56</div>
+          <div class="player-controls">
+            <button class="control-btn add-radio-btn" id="favoriteBtn" title="Ajouter à la radio"><span class="plus-icon">+</span><span class="radio-icon">📻</span></button>
+            <button class="control-btn autoplay-btn" id="autoplayBtn" title="Lecture continue">🔁</button>
+            <button class="control-btn share-btn" id="shareBtn" title="Partager">
+              <svg viewBox="0 0 100 100" class="share-icon">
+                <circle cx="50" cy="50" r="48" fill="#2C4A73"/>
+                <path d="M30 55 Q30 35 50 35 L50 25 L75 45 L50 65 L50 55 Q40 55 30 55 Z" fill="#F5CB42"/>
+              </svg>
+            </button>
+          </div>
+
+          <audio id="audioPlayer" style="display: none;"></audio>
+        </div>
+
+        <!-- TOGGLE PAROLES/BIBLE -->
+        <div class="toggle-row">
+          <button class="toggle-btn active" id="toggleLyrics">🎤 Paroles</button>
+          <button class="toggle-btn" id="toggleBible">📖 Bible</button>
+        </div>
+
+        <!-- CONTENU PAROLES/BIBLE -->
+        <div class="content-box" id="contentBox">
+          <div class="content-title" id="contentTitle">Paroles</div>
+          <div class="lyrics-text">
+            [Verse 1]<br>
+            Au commencement, Dieu créa<br>
+            Les cieux et la terre, Il forma<br>
+            La terre était informe et vide<br>
+            L'Esprit planait sur l'abîme<br><br>
+            [Chorus]<br>
+            Que la lumière soit !<br>
+            Et la lumière fut là<br>
+            Dieu sépara la lumière des ténèbres<br>
+            Le premier jour était célébré
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION RADIO (cachée par défaut) -->
+      <div class="radio-playlist" id="radioSection">
+        <div class="content-title">📻 Ma Radio - Playlist Favoris</div>
+
+        <div class="playlist-item playing">
+          <div class="playlist-num">▶</div>
+          <div class="playlist-info">
+            <div class="playlist-title">Genèse 1 - Au Commencement</div>
+            <div class="playlist-lang">🇫🇷 Français</div>
+          </div>
+          <div class="playlist-remove">✕</div>
+        </div>
+
+        <div class="playlist-item">
+          <div class="playlist-num">2</div>
+          <div class="playlist-info">
+            <div class="playlist-title">Psalm 23 - The Lord is my Shepherd</div>
+            <div class="playlist-lang">🇬🇧 English</div>
+          </div>
+          <div class="playlist-remove">✕</div>
+        </div>
+
+        <div class="playlist-item">
+          <div class="playlist-num">3</div>
+          <div class="playlist-info">
+            <div class="playlist-title">Salmo 91 - Aquele que habita</div>
+            <div class="playlist-lang">🇧🇷 Português</div>
+          </div>
+          <div class="playlist-remove">✕</div>
+        </div>
+
+        <div class="radio-controls">
+          <button class="radio-btn">🔀</button>
+          <button class="radio-btn">⏮️</button>
+          <button class="radio-btn main">▶</button>
+          <button class="radio-btn">⏭️</button>
+          <button class="radio-btn">🔁</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      © 2025 Bible Chantée — V3 Test
+    </div>
+
   </div>
 
-  <!-- Core data -->
-  <script src="./js/config.js"></script>
-  <script src="./js/books.js"></script>
-<script src="./js/translations.js"></script>
-  <script src="./js/i18n.js"></script>
+  <script>
+    // Traductions
+    const translations_inline = {
+      FR: { about: "À propos", aide: "Aide", radio: "Radio", promesses: "Promesses", confessions: "Confessions", prieres: "Prières", livre: "Livre", chapitre: "Chapitre", paroles: "Paroles", bible: "Bible", lecteur: "Lecteur" },
+      EN: { about: "About", aide: "Help", radio: "Radio", promesses: "Promises", confessions: "Confessions", prieres: "Prayers", livre: "Book", chapitre: "Chapter", paroles: "Lyrics", bible: "Bible", lecteur: "Player" },
+      PT: { about: "Sobre", aide: "Ajuda", radio: "Rádio", promesses: "Promessas", confessions: "Confissões", prieres: "Orações", livre: "Livro", chapitre: "Capítulo", paroles: "Letras", bible: "Bíblia", lecteur: "Leitor" },
+      ES: { about: "Acerca de", aide: "Ayuda", radio: "Radio", promesses: "Promesas", confessions: "Confesiones", prieres: "Oraciones", livre: "Libro", chapitre: "Capítulo", paroles: "Letras", bible: "Biblia", lecteur: "Reproductor" },
+      DE: { about: "Über uns", aide: "Hilfe", radio: "Radio", promesses: "Verheißungen", confessions: "Bekenntnisse", prieres: "Gebete", livre: "Buch", chapitre: "Kapitel", paroles: "Liedtext", bible: "Bibel", lecteur: "Spieler" },
+      IT: { about: "Chi siamo", aide: "Aiuto", radio: "Radio", promesses: "Promesse", confessions: "Confessioni", prieres: "Preghiere", livre: "Libro", chapitre: "Capitolo", paroles: "Testo", bible: "Bibbia", lecteur: "Lettore" },
+      RU: { about: "О нас", aide: "Помощь", radio: "Радио", promesses: "Обещания", confessions: "Исповедания", prieres: "Молитвы", livre: "Книга", chapitre: "Глава", paroles: "Текст", bible: "Библия", lecteur: "Плеер" },
+      AR: { about: "حول", aide: "مساعدة", radio: "راديو", promesses: "وعود", confessions: "اعترافات", prieres: "صلوات", livre: "كتاب", chapitre: "الفصل", paroles: "كلمات", bible: "الكتاب المقدس", lecteur: "مشغل" },
+      ZH: { about: "关于", aide: "帮助", radio: "电台", promesses: "应许", confessions: "认信", prieres: "祷告", livre: "书卷", chapitre: "章", paroles: "歌词", bible: "圣经", lecteur: "播放器" },
+      HI: { about: "परिचय", aide: "सहायता", radio: "रेडियो", promesses: "वादे", confessions: "स्वीकारोक्ति", prieres: "प्रार्थनाएं", livre: "पुस्तक", chapitre: "अध्याय", paroles: "बोल", bible: "बाइबिल", lecteur: "प्लेयर" },
+      TL: { about: "Tungkol", aide: "Tulong", radio: "Radyo", promesses: "Pangako", confessions: "Pagtatapat", prieres: "Panalangin", livre: "Aklat", chapitre: "Kabanata", paroles: "Lyrics", bible: "Bibliya", lecteur: "Player" },
+      SW: { about: "Kuhusu", aide: "Msaada", radio: "Redio", promesses: "Ahadi", confessions: "Kukiri", prieres: "Maombi", livre: "Kitabu", chapitre: "Sura", paroles: "Maneno", bible: "Biblia", lecteur: "Kichezaji" }
+    };
 
-  <!-- Optional audio maps (if you generated them) -->
-  <script src="./js/audio-urls-fr.js"></script>
-  <script src="./js/audio-urls-en.js"></script>
-  <script src="./js/audio-urls-pt.js"></script>
-  <script src="./js/audio-urls-es.js"></script>
-  <script src="./js/audio-urls-de.js"></script>
-  <script src="./js/audio-urls-it.js"></script>
+    let currentLang = 'FR';
+    let isRadioMode = false;
+    let isFavorited = false;
+    let isAutoplayEnabled = false;
+    let currentBook = '01_GEN';
+    let currentChapter = 1;
 
-  <!-- Player -->
-  <script src="./js/book-names.js"></script>
-<script src="./js/player.js"></script>
+    function getChapterTitle(book, chapter, lang) {
+      if (typeof CHAPTER_TITLES !== 'undefined' &&
+          CHAPTER_TITLES[lang] &&
+          CHAPTER_TITLES[lang][book] &&
+          CHAPTER_TITLES[lang][book][chapter]) {
+        return CHAPTER_TITLES[lang][book][chapter];
+      }
+      return '';
+    }
 
+    const audioPlayer = document.querySelector('#audioPlayer');
+    const playBtn = document.querySelector('#playBtn');
+    let isPlaying = false;
 
+    function getAudioUrl(book, chapter, lang) {
+      const audioUrlsVar = window[`AUDIO_URLS_${lang}`] || window.AUDIO_URLS;
+      if (audioUrlsVar && audioUrlsVar[book] && audioUrlsVar[book][chapter]) {
+        return audioUrlsVar[book][chapter];
+      }
+      const chapterPadded = String(chapter).padStart(2, '0');
+      return `https://archive.org/download/bible-chantee-${lang.toLowerCase()}/${book}/${book}_${chapterPadded}.mp3`;
+    }
 
-<div id="bcClearCacheWrap" style="position:fixed;right:14px;bottom:14px;z-index:99999">
-  <button id="clearCacheBtn" onclick="bcClearCache()"
-    style="padding:8px 14px;border-radius:10px;border:1px solid #f0c36d;background:#2c2f5b;color:#fff;cursor:pointer;font-size:14px">
-    🧹 Vider le cache
-  </button>
-</div>
+    function loadAndPlayChapter(book, chapter, lang) {
+      currentBook = book;
+      currentChapter = parseInt(chapter, 10);
+      const audioUrl = getAudioUrl(book, chapter, lang);
+      audioPlayer.src = audioUrl;
+      audioPlayer.load();
+      audioPlayer.play().catch(e => console.log('Lecture bloquée:', e));
+      isPlaying = true;
+      playBtn.textContent = '⏸';
+    }
 
-<script src="js/header-v1.js?v=1"></script>
+    function playNextChapter() {
+      const currentBookData = (typeof BOOKS !== 'undefined' && Array.isArray(BOOKS))
+        ? BOOKS.find(b => b.code === currentBook)
+        : null;
+      const maxChapters = currentBookData ? currentBookData.chapters : 50;
+
+      if (currentChapter < maxChapters) {
+        const nextChapter = currentChapter + 1;
+
+        document.querySelectorAll('.chapter-btn').forEach(btn => {
+          btn.classList.toggle('active', parseInt(btn.textContent, 10) === nextChapter);
+        });
+
+        loadAndPlayChapter(currentBook, nextChapter, currentLang);
+
+        const t = translations_inline[currentLang] || translations_inline.FR;
+        const chapterTitle = getChapterTitle(currentBook, nextChapter.toString(), currentLang);
+        const subtitle = chapterTitle
+          ? `${t.chapitre} ${nextChapter} - ${chapterTitle}`
+          : `${t.chapitre} ${nextChapter}`;
+        document.querySelector('#headerSubtitle').textContent = subtitle;
+      } else {
+        isPlaying = false;
+        playBtn.textContent = '▶';
+        console.log('Fin du livre atteint');
+      }
+    }
+
+    audioPlayer.addEventListener('ended', () => {
+      if (isAutoplayEnabled) {
+        playNextChapter();
+      } else {
+        isPlaying = false;
+        playBtn.textContent = '▶';
+      }
+    });
+
+    document.querySelectorAll('.flag-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (btn.classList.contains('disabled')) return;
+        document.querySelectorAll('.flag-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentLang = btn.dataset.lang;
+        updateTranslations();
+      });
+    });
+
+    function updateTranslations() {
+      const t = translations_inline[currentLang] || translations_inline.FR;
+      document.querySelector('#navAbout .text').textContent = t.about;
+      document.querySelector('#navAide .text').textContent = t.aide;
+      document.querySelector('#navRadio .text').textContent = t.radio;
+      document.querySelector('#navPromesses .text').textContent = t.promesses;
+      document.querySelector('#navConfessions .text').textContent = t.confessions;
+      document.querySelector('#navPrieres .text').textContent = t.prieres;
+      document.querySelector('#labelLivre').textContent = t.livre;
+      document.querySelector('#labelChapitre').textContent = t.chapitre;
+      document.querySelector('#toggleLyrics').innerHTML = '🎤 ' + t.paroles;
+      document.querySelector('#toggleBible').innerHTML = '📖 ' + t.bible;
+      document.querySelector('#headerMode').textContent = isRadioMode ? t.radio : t.lecteur;
+      document.querySelector('#contentTitle').textContent =
+        document.querySelector('#toggleBible').classList.contains('active') ? t.bible : t.paroles;
+    }
+
+    document.querySelector('#navRadio').addEventListener('click', () => {
+      isRadioMode = !isRadioMode;
+      document.querySelector('#navRadio').classList.toggle('active', isRadioMode);
+      document.querySelector('#playerSection').style.display = isRadioMode ? 'none' : 'block';
+      document.querySelector('#radioSection').classList.toggle('active', isRadioMode);
+      updateTranslations();
+    });
+
+    document.querySelector('#toggleLyrics').addEventListener('click', () => {
+      document.querySelector('#toggleLyrics').classList.add('active');
+      document.querySelector('#toggleBible').classList.remove('active');
+      document.querySelector('#contentTitle').textContent = (translations_inline[currentLang] || translations_inline.FR).paroles;
+    });
+
+    document.querySelector('#toggleBible').addEventListener('click', () => {
+      document.querySelector('#toggleBible').classList.add('active');
+      document.querySelector('#toggleLyrics').classList.remove('active');
+      document.querySelector('#contentTitle').textContent = (translations_inline[currentLang] || translations_inline.FR).bible;
+    });
+
+    document.querySelector('#favoriteBtn').addEventListener('click', () => {
+      isFavorited = !isFavorited;
+      document.querySelector('#favoriteBtn').innerHTML = isFavorited
+        ? '<span class="plus-icon">✓</span><span class="radio-icon">📻</span>'
+        : '<span class="plus-icon">+</span><span class="radio-icon">📻</span>';
+      document.querySelector('#favoriteBtn').classList.toggle('favorited', isFavorited);
+
+      const badge = document.querySelector('#radioBadge');
+      if (badge) {
+        let count = parseInt((badge.textContent || '').replace(/[()]/g, ''), 10) || 0;
+        count = isFavorited ? count + 1 : Math.max(0, count - 1);
+        badge.textContent = `(${count})`;
+      }
+    });
+
+    document.querySelector('#shareBtn').addEventListener('click', async () => {
+      const shareData = {
+        title: 'Bible Chantée - Genèse 1',
+        text: '🎵 Écoute Genèse 1 - Au Commencement sur Bible Chantée !',
+        url: 'https://biblechantee.com/lecteur.html?lang=' + currentLang + '&book=01_GEN&ch=1'
+      };
+
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+        } catch (err) {
+          console.log('Partage annulé');
+        }
+      } else {
+        await navigator.clipboard.writeText(shareData.text + '\n' + shareData.url);
+        alert('Lien copié !');
+      }
+    });
+
+    document.querySelectorAll('.chapter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.chapter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const chapterNum = btn.textContent;
+        const bookCode = document.querySelector('#bookSelect').value;
+        const t = translations_inline[currentLang] || translations_inline.FR;
+        const chapterTitle = getChapterTitle(bookCode, chapterNum, currentLang);
+        const subtitle = chapterTitle
+          ? `${t.chapitre} ${chapterNum} - ${chapterTitle}`
+          : `${t.chapitre} ${chapterNum}`;
+        document.querySelector('#headerSubtitle').textContent = subtitle;
+
+        currentBook = bookCode;
+        currentChapter = parseInt(chapterNum, 10);
+
+        if (isPlaying) {
+          loadAndPlayChapter(bookCode, chapterNum, currentLang);
+        } else {
+          const audioUrl = getAudioUrl(bookCode, chapterNum, currentLang);
+          audioPlayer.src = audioUrl;
+          audioPlayer.load();
+        }
+      });
+    });
+
+    document.querySelector('#bookSelect').addEventListener('change', (e) => {
+      const bookCode = e.target.value;
+      const bookName = e.target.options[e.target.selectedIndex].textContent;
+      document.querySelector('#headerTitle').textContent = bookName;
+
+      document.querySelectorAll('.chapter-btn').forEach((b, i) => {
+        b.classList.toggle('active', i === 0);
+      });
+
+      currentBook = bookCode;
+      currentChapter = 1;
+
+      const t = translations_inline[currentLang] || translations_inline.FR;
+      const chapterTitle = getChapterTitle(bookCode, '1', currentLang);
+      const subtitle = chapterTitle
+        ? `${t.chapitre} 1 - ${chapterTitle}`
+        : `${t.chapitre} 1`;
+      document.querySelector('#headerSubtitle').textContent = subtitle;
+
+      const audioUrl = getAudioUrl(bookCode, 1, currentLang);
+      audioPlayer.src = audioUrl;
+      audioPlayer.load();
+    });
+
+    playBtn.addEventListener('click', () => {
+      if (isPlaying) {
+        audioPlayer.pause();
+        isPlaying = false;
+        playBtn.textContent = '▶';
+      } else {
+        if (!audioPlayer.src) {
+          loadAndPlayChapter(currentBook, currentChapter, currentLang);
+        } else {
+          audioPlayer.play().catch(e => console.log('Lecture bloquée:', e));
+          isPlaying = true;
+          playBtn.textContent = '⏸';
+        }
+      }
+    });
+
+    const autoplayBtn = document.querySelector('#autoplayBtn');
+    if (autoplayBtn) {
+      autoplayBtn.addEventListener('click', () => {
+        isAutoplayEnabled = !isAutoplayEnabled;
+        autoplayBtn.classList.toggle('active', isAutoplayEnabled);
+        autoplayBtn.title = isAutoplayEnabled ? 'Lecture continue activée' : 'Lecture continue';
+      });
+    }
+
+    (function initializeChapterTitle() {
+      const bookCode = document.querySelector('#bookSelect').value || '01_GEN';
+      const chapterNum = '1';
+      const t = translations_inline[currentLang] || translations_inline.FR;
+      const chapterTitle = getChapterTitle(bookCode, chapterNum, currentLang);
+      if (chapterTitle) {
+        document.querySelector('#headerSubtitle').textContent = `${t.chapitre} ${chapterNum} - ${chapterTitle}`;
+      }
+      updateTranslations();
+      const audioUrl = getAudioUrl(bookCode, 1, currentLang);
+      audioPlayer.src = audioUrl;
+      audioPlayer.load();
+    })();
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
