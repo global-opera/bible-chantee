@@ -791,10 +791,11 @@
     // Helper: Obtenir URL audio pour un chapitre
     function getAudioUrl(book, chapter, lang) {
       // Construire URL directement depuis Cloudflare R2
-      // Format: https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/{LANG}/{BOOK}/{BOOK}_{CHAPTER}.mp3
+      // Format: https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/{LANG}/{BOOK}/{BOOK}_{CHAPTER}_{LANG}.mp3
+      // Exemple: .../FR/01_GEN/01_GEN_01_FR.mp3
       const chapterPadded = String(chapter).padStart(2, '0');
       const langUpper = lang.toUpperCase();
-      return `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${langUpper}/${book}/${book}_${chapterPadded}.mp3`;
+      return `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${langUpper}/${book}/${book}_${chapterPadded}_${langUpper}.mp3`;
     }
 
     // Charger et jouer un chapitre
