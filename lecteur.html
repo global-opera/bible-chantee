@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bible Chantée - Test Architecture</title>
+  <script src="js/clear-cache.js?v=1"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
@@ -537,6 +538,27 @@
       opacity: 1;
       color: #F5CB42;
     }
+
+    /* === BOUTON VIDER CACHE === */
+    #bcClearCacheWrap {
+      position: fixed;
+      right: 14px;
+      bottom: 14px;
+      z-index: 99999;
+    }
+    #clearCacheBtn {
+      padding: 8px 14px;
+      border-radius: 10px;
+      border: 1px solid #f0c36d;
+      background: #2c2f5b;
+      color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      transition: opacity 0.3s;
+    }
+    #clearCacheBtn:hover {
+      opacity: 0.85;
+    }
   </style>
     <script src="js/books.js"></script>
     <script src="js/book-names.js"></script>
@@ -1042,6 +1064,14 @@
       }
     })();
   </script>
+
+  <!-- BOUTON VIDER CACHE (bottom-right fixe) -->
+  <div id="bcClearCacheWrap">
+    <button id="clearCacheBtn" onclick="bcClearCache()">
+      🧹 Vider le cache
+    </button>
+  </div>
+
 </body>
 </html>
 
