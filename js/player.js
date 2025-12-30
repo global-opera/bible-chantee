@@ -44,6 +44,12 @@
     '66_REV': 66
   };
 
+  // Inverse mapping: book number to book code
+  var NUM_TO_BOOK_CODE = {};
+  for (var code in BOOK_CODE_TO_NUM) {
+    NUM_TO_BOOK_CODE[BOOK_CODE_TO_NUM[code]] = code;
+  }
+
   function normLang(x){ return String(x || 'FR').toUpperCase(); }
 
   function getLang(){
@@ -120,7 +126,7 @@
   }
 
   function findChapterWrap(){
-    return document.querySelector('#chapterButtons, #chapters, .chapter-buttons, .chapters, .chapter-grid');
+    return document.querySelector('#chapterButtons, #chapters, #chapterGrid, .chapter-buttons, .chapters, .chapter-grid');
   }
 
   function findAudioEl(){
@@ -647,7 +653,14 @@
     renderBookDropdown(lang);
 
     var bookCode = getSelectedBookCode();
-    if(!bookCode){
+
+    // Si on a des paramètres URL, les utiliser en priorité
+    if(urlBookCode){
+      console.log('[refreshAll] Using urlBookCode:', urlBookCode);
+      bookCode = urlBookCode;
+      setSelectedBookCode(urlBookCode);
+      urlBookCode = null; // Utiliser une seule fois
+    } else if(!bookCode){
       var sel = findBookSelect();
       if(sel && sel.options && sel.options.length){
         bookCode = String(sel.options[0].value || '').toUpperCase();
@@ -656,10 +669,20 @@
     }
 
     if(bookCode){
+      // Sauvegarder le chapitre AVANT de détruire les boutons
       var savedChapter = getSelectedChapter();
+
       renderChaptersFor(bookCode);
-      if(resetChapter !== false) setActiveChapter(1);
-      else setActiveChapter(savedChapter);
+
+      // Si on a un chapitre depuis l'URL, l'utiliser
+      if(urlChapter !== null){
+        console.log('[refreshAll] Using urlChapter:', urlChapter);
+        setActiveChapter(urlChapter);
+        urlChapter = null; // Utiliser une seule fois
+      } else {
+        if(resetChapter !== false) setActiveChapter(1);
+        else setActiveChapter(savedChapter);
+      }
     }
 
     ensureToggleUI();
@@ -698,13 +721,127 @@
     }, true);
   }
 
+  var shouldAutoplay = false;
+  var isAutoplayEnabled = false; // Lecture continue
+  var urlBookCode = null;
+  var urlChapter = null;
+
+  function loadFromURL(){
+    console.log('[loadFromURL] called');
+    try {
+      var params = new URLSearchParams(location.search);
+      var bookNum = params.get('book');
+      var chapterNum = params.get('chapter');
+      var autoplay = params.get('autoplay');
+
+      console.log('[loadFromURL] book param:', bookNum);
+      console.log('[loadFromURL] chapter param:', chapterNum);
+      console.log('[loadFromURL] NUM_TO_BOOK_CODE:', NUM_TO_BOOK_CODE);
+
+      // Si on vient des Promesses avec book et chapter, on active l'autoplay
+      if (bookNum && chapterNum) {
+        shouldAutoplay = true;
+        console.log('[loadFromURL] Autoplay enabled');
+      }
+
+      if (bookNum) {
+        var bookInt = parseInt(bookNum, 10);
+        console.log('[loadFromURL] bookInt:', bookInt);
+
+        if (bookInt >= 1 && bookInt <= 66) {
+          var bookCode = NUM_TO_BOOK_CODE[bookInt];
+          console.log('[loadFromURL] bookCode found:', bookCode);
+
+          if (bookCode) {
+            // Stocker les valeurs pour les appliquer après que le DOM soit créé
+            urlBookCode = bookCode;
+            console.log('[loadFromURL] Stored urlBookCode:', urlBookCode);
+
+            if (chapterNum) {
+              var chInt = parseInt(chapterNum, 10);
+              if (chInt >= 1) {
+                urlChapter = chInt;
+                console.log('[loadFromURL] Stored urlChapter:', urlChapter);
+              }
+            }
+          } else {
+            console.error('[loadFromURL] No book code found for number:', bookInt);
+          }
+        }
+      }
+    } catch (e) {
+      console.error('[loadFromURL] Error:', e);
+    }
+  }
+
+  function tryAutoplay(){
+    if (shouldAutoplay) {
+      shouldAutoplay = false;
+      var audio = findAudioEl();
+      if (audio && audio.src) {
+        setTimeout(function(){
+          audio.play().catch(function(e){
+            console.log('Autoplay prevented by browser:', e);
+          });
+        }, 500);
+      }
+    }
+  }
+
+  function playNextChapter(){
+    if(!isAutoplayEnabled) return;
+
+    buildBookIndex();
+    var bookCode = getSelectedBookCode();
+    var currentChapter = getSelectedChapter();
+
+    // Trouver le nombre total de chapitres
+    var book = (window.BOOKS_BY_CODE && window.BOOKS_BY_CODE[String(bookCode||'').toUpperCase()]) || null;
+    var maxChapters = 1;
+    if(book){
+      if(typeof book.chapters === 'number') maxChapters = book.chapters;
+      else if(typeof book.chapterCount === 'number') maxChapters = book.chapterCount;
+    }
+
+    // Si pas le dernier chapitre, avancer
+    if(currentChapter < maxChapters){
+      var nextChapter = currentChapter + 1;
+      setActiveChapter(nextChapter);
+      refreshContent();
+      console.log('[Autoplay] Playing next chapter:', nextChapter);
+    } else {
+      console.log('[Autoplay] End of book reached');
+    }
+  }
+
+  function setupAutoplayListener(){
+    var audio = findAudioEl();
+    if(!audio) return;
+
+    // Remove existing listener if any
+    audio.removeEventListener('ended', playNextChapter);
+
+    // Add ended event listener
+    audio.addEventListener('ended', function(){
+      console.log('[Audio] Chapter ended, autoplay enabled:', isAutoplayEnabled);
+      if(isAutoplayEnabled){
+        playNextChapter();
+      }
+    });
+  }
+
   function boot(){
     buildBookIndex();
     wireEvents();
-    refreshAll(true);
+    loadFromURL();
+    setupAutoplayListener(); // Configurer l'autoplay
+    refreshAll(false);
     setTimeout(function(){ refreshAll(false); }, 150);
     setTimeout(function(){ refreshAll(false); }, 600);
-    setTimeout(function(){ refreshAll(false); }, 1200);
+    setTimeout(function(){
+      refreshAll(false);
+      tryAutoplay();
+    }, 1200);
   }
 
   if(document.readyState === 'loading'){
@@ -717,6 +854,14 @@
   window.BC_PLAYER.getLang = getLang;
   window.BC_PLAYER.setLang = setLang;
   window.BC_PLAYER.refresh = function(){ refreshAll(false); };
+  window.BC_PLAYER.toggleAutoplay = function(){
+    isAutoplayEnabled = !isAutoplayEnabled;
+    console.log('[Autoplay] Toggled:', isAutoplayEnabled);
+    return isAutoplayEnabled;
+  };
+  window.BC_PLAYER.getAutoplayStatus = function(){
+    return isAutoplayEnabled;
+  };
 
 })();
 
