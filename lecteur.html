@@ -939,7 +939,9 @@
       BOOKS.forEach(book => {
         const option = document.createElement('option');
         option.value = book.code;
-        option.textContent = bookNames[book.code] || book.code;
+        // Résoudre l'alias si nécessaire (ex: 09_1SAM -> 09_1SA)
+        const resolvedCode = (window.BOOK_CODE_ALIASES && window.BOOK_CODE_ALIASES[book.code]) || book.code;
+        option.textContent = bookNames[resolvedCode] || book.code;
         bookSelect.appendChild(option);
       });
 
