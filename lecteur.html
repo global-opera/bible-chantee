@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bible Chantée - Test Architecture</title>
+  <title data-i18n="readerPageTitle">Bible Chantée - Lecteur</title>
   <script src="js/clear-cache.js?v=1"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -564,6 +564,14 @@
       opacity: 0.85;
     }
   </style>
+
+  <!-- I18N System -->
+  <script src="translations.js"></script>
+  <script src="translations-extra.js"></script>
+  <script src="i18n.js"></script>
+  <script src="lang-shared.js"></script>
+
+  <!-- Data -->
     <script src="js/books.js"></script>
     <script src="js/book-names.js"></script>
     <script src="js/chapter-titles.js"></script>
@@ -595,33 +603,33 @@
     <div class="nav-row">
       <a href="#about" class="nav-btn" id="navAbout">
         <span class="icon">📖</span>
-        <span class="text">À propos</span>
+        <span class="text" data-i18n="navAbout">À propos</span>
       </a>
       <a href="#aide" class="nav-btn" id="navAide">
         <span class="icon">❓</span>
-        <span class="text">Aide</span>
+        <span class="text" data-i18n="navHelp">Aide</span>
       </a>
       <button class="nav-btn" id="navRadio">
         <span class="icon">📻</span>
-        <span class="text">Radio</span>
+        <span class="text" data-i18n="navRadio">Radio</span>
       </button>
       <a href="#promesses" class="nav-btn" id="navPromesses">
         <span class="icon">⭐</span>
-        <span class="text">Promesses</span>
+        <span class="text" data-i18n="navPromises">Promesses</span>
       </a>
       <a href="#confessions" class="nav-btn" id="navConfessions">
         <span class="icon">❤️</span>
-        <span class="text">Confessions</span>
+        <span class="text" data-i18n="navConfessions">Confessions</span>
       </a>
       <a href="#prieres" class="nav-btn" id="navPrieres">
         <span class="icon">🙏</span>
-        <span class="text">Prières</span>
+        <span class="text" data-i18n="navPrayers">Prières</span>
       </a>
     </div>
     
     <!-- HEADER -->
     <div class="header">
-      <div class="header-mode" id="headerMode">Lecteur</div>
+      <div class="header-mode" id="headerMode" data-i18n="navPlayer">Lecteur</div>
       <div class="header-title" id="headerTitle">Genèse</div>
       <div class="header-subtitle" id="headerSubtitle">Chapitre 1</div>
     </div>
@@ -631,13 +639,13 @@
       
       <!-- SECTION LECTEUR -->
       <div id="playerSection">
-        <div class="section-title" id="labelLivre">Livre</div>
-        
+        <div class="section-title" id="labelLivre" data-i18n="readerBook">Livre</div>
+
         <select class="book-select" id="bookSelect">
           <!-- Populated dynamically from BOOKS + BOOK_NAMES -->
         </select>
-        
-        <div class="section-title" id="labelChapitre">Chapitre</div>
+
+        <div class="section-title" id="labelChapitre" data-i18n="readerChapter">Chapitre</div>
 
         <div class="chapters-grid" id="chaptersGrid">
           <!-- Populated dynamically based on selected book -->
@@ -669,8 +677,8 @@
         
         <!-- TOGGLE PAROLES/BIBLE -->
         <div class="toggle-row">
-          <button class="toggle-btn active" id="toggleLyrics">🎤 Paroles</button>
-          <button class="toggle-btn" id="toggleBible">📖 Bible</button>
+          <button class="toggle-btn active" id="toggleLyrics" data-i18n="readerLyrics">🎤 Paroles</button>
+          <button class="toggle-btn" id="toggleBible" data-i18n="readerBible">📖 Bible</button>
         </div>
         
         <!-- CONTENU PAROLES/BIBLE -->

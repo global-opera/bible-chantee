@@ -1,4 +1,4 @@
-// Bible Chantee - Multi-language translations
+﻿// Bible Chantee - Multi-language translations
 // 12 languages: FR, EN, ES, PT, DE, RU, AR, ZH, HI, TL, IT, KO
 
 const translations = {
@@ -20,10 +20,19 @@ const translations = {
     navNews: "Nouveautés",
     navPromises: "Promesses",
     navConfessions: "Confessions",
+    navPrayers: "Prières",
+    navRadio: "Radio",
     navPlayer: "Lecteur",
     navBible: "Bible",
     navContact: "Contact",
     navCrowdfunding: "Soutenir",
+
+    // Reader Section
+    readerPageTitle: "Bible Chantée - Lecteur",
+    readerBook: "Livre",
+    readerChapter: "Chapitre",
+    readerLyrics: "Paroles",
+    readerBible: "Bible",
 
     // Project Section
     projectTitle: "Le projet",
@@ -376,10 +385,19 @@ const translations = {
     navNews: "What's New",
     navPromises: "Promises",
     navConfessions: "Confessions",
+    navPrayers: "Prayers",
+    navRadio: "Radio",
     navPlayer: "Player",
     navBible: "Bible",
     navContact: "Contact",
     navCrowdfunding: "Support",
+
+    // Reader Section
+    readerPageTitle: "Sung Bible - Player",
+    readerBook: "Book",
+    readerChapter: "Chapter",
+    readerLyrics: "Lyrics",
+    readerBible: "Bible",
 
     // Project Section
     projectTitle: "The project",
@@ -732,10 +750,19 @@ const translations = {
     navNews: "Novedades",
     navPromises: "Promesas",
     navConfessions: "Confesiones",
+    navPrayers: "Oraciones",
+    navRadio: "Radio",
     navPlayer: "Reproductor",
     navBible: "Biblia",
     navCrowdfunding: "Apoyar",
     navContact: "Contacto",
+
+    // Reader Section
+    readerPageTitle: "Biblia Cantada - Reproductor",
+    readerBook: "Libro",
+    readerChapter: "Capítulo",
+    readerLyrics: "Letras",
+    readerBible: "Biblia",
 
     // Project Section
     projectTitle: "El proyecto",
@@ -1088,10 +1115,19 @@ const translations = {
     navNews: "Novidades",
     navPromises: "Promessas",
     navConfessions: "Confissões",
+    navPrayers: "Orações",
+    navRadio: "Rádio",
     navPlayer: "Leitor",
     navCrowdfunding: "Apoiar",
     navBible: "Bíblia",
     navContact: "Contato",
+
+    // Reader Section
+    readerPageTitle: "Bíblia Cantada - Leitor",
+    readerBook: "Livro",
+    readerChapter: "Capítulo",
+    readerLyrics: "Letras",
+    readerBible: "Bíblia",
 
     // Project Section
     projectTitle: "O projeto",
@@ -1444,10 +1480,19 @@ const translations = {
     navNews: "Neuigkeiten",
     navPromises: "Verheißungen",
     navConfessions: "Bekenntnisse",
+    navPrayers: "Gebete",
+    navRadio: "Radio",
     navCrowdfunding: "Unterstützen",
     navPlayer: "Spieler",
     navBible: "Bibel",
     navContact: "Kontakt",
+
+    // Reader Section
+    readerPageTitle: "Gesungene Bibel - Spieler",
+    readerBook: "Buch",
+    readerChapter: "Kapitel",
+    readerLyrics: "Liedtext",
+    readerBible: "Bibel",
 
     // Project Section
     projectTitle: "Das Projekt",
