@@ -534,6 +534,7 @@
   <script src="translations.js"></script>
   <script src="translations-extra.js"></script>
   <script src="js/books.js"></script>
+  <script src="js/book-names.js"></script>
   <script src="js/chapter-titles.js"></script>
 </head>
 
@@ -843,6 +844,11 @@
       document.querySelector('#headerMode').textContent = isRadioMode ? t.radio : t.lecteur;
       document.querySelector('#contentTitle').textContent =
         document.querySelector('#toggleBible').classList.contains('active') ? t.bible : t.paroles;
+
+      // Mettre à jour le titre du livre dans le header
+      if (currentBook && window.BOOK_NAMES && BOOK_NAMES[currentLang]) {
+        document.querySelector('#headerTitle').textContent = BOOK_NAMES[currentLang][currentBook];
+      }
     }
 
     document.querySelector('#navRadio').addEventListener('click', () => {
@@ -928,7 +934,9 @@
 
     document.querySelector('#bookSelect').addEventListener('change', (e) => {
       const bookCode = e.target.value;
-      const bookName = e.target.options[e.target.selectedIndex].textContent;
+      const bookName = (window.BOOK_NAMES && BOOK_NAMES[currentLang])
+        ? BOOK_NAMES[currentLang][bookCode]
+        : bookCode;
       document.querySelector('#headerTitle').textContent = bookName;
 
       document.querySelectorAll('.chapter-btn').forEach((b, i) => {
