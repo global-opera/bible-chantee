@@ -568,6 +568,11 @@
     <script src="js/book-names.js"></script>
     <script src="js/chapter-titles.js"></script>
     <script src="lyrics-data.js"></script>
+    <script src="lyrics-data-en.js"></script>
+    <script src="lyrics-data-pt.js"></script>
+    <script src="lyrics-data-es.js"></script>
+    <script src="lyrics-data-de.js"></script>
+    <script src="lyrics-data-it.js"></script>
   </head>
 <body>
   <div class="container">
@@ -864,13 +869,6 @@
       lyricsContent.innerHTML = '<p style="color: #999; font-style: italic;">Chargement des paroles...</p>';
 
       try {
-        // Les paroles sont disponibles uniquement en français pour l'instant
-        if (lang !== 'FR') {
-          const t = translations[lang] || translations.FR;
-          lyricsContent.innerHTML = `<p style="color: #999; font-style: italic;">Paroles disponibles en français uniquement. <a href="#" onclick="document.querySelector('.flag-btn[data-lang=FR]').click(); return false;" style="color: #F5CB42;">Cliquer ici pour FR</a></p>`;
-          return;
-        }
-
         // Trouver le numéro du livre
         const bookData = BOOKS.find(b => b.code === bookCode);
         if (!bookData) {
@@ -879,14 +877,18 @@
         }
         const bookNumber = bookData.num; // "01", "02", etc. - already formatted with leading zeros
 
-        // Vérifier si window.chapterLyrics existe (chargé depuis lyrics-data.js)
-        if (!window.chapterLyrics) {
-          lyricsContent.innerHTML = '<p style="color: #f88;">Données des paroles non chargées</p>';
+        // Obtenir les paroles depuis window.chapterLyrics{LANG}
+        // FR: window.chapterLyrics, EN: window.chapterLyricsEN, etc.
+        const lyricsVarName = lang === 'FR' ? 'chapterLyrics' : `chapterLyrics${lang}`;
+        const lyricsData = window[lyricsVarName];
+
+        if (!lyricsData) {
+          lyricsContent.innerHTML = `<p style="color: #999; font-style: italic;">Paroles non disponibles en ${lang}.</p>`;
           return;
         }
 
         // Extraire les paroles du chapitre
-        const lyrics = window.chapterLyrics[bookNumber] && window.chapterLyrics[bookNumber][chapter];
+        const lyrics = lyricsData[bookNumber] && lyricsData[bookNumber][chapter];
 
         if (!lyrics) {
           lyricsContent.innerHTML = '<p style="color: #999;">Paroles non disponibles pour ce chapitre</p>';
@@ -899,7 +901,7 @@
           .replace(/\n/g, '<br>')
           .replace(/\[TITLE\]<br>/g, '<div style="font-size: 22px; color: #F5CB42; font-weight: bold; margin-bottom: 15px;">')
           .replace(/<br><br>\[LYRICS\]<br>/g, '</div>')
-          .replace(/\[(Verse|Chorus|Bridge|Spoken Word|Coup) (\d+|[^\]]+)\]/g, '<br><strong style="color: #F5CB42;">[$1 $2]</strong><br>');
+          .replace(/\[(Verse|Chorus|Bridge|Spoken Word|Coup|Couplet|Refrain|Verset|Strophe) (\d+|[^\]]+)\]/g, '<br><strong style="color: #F5CB42;">[$1 $2]</strong><br>');
 
         lyricsContent.innerHTML = formattedLyrics;
       } catch (error) {
@@ -1087,6 +1089,15 @@
       document.querySelector('#toggleBible').innerHTML = '📖 ' + t.bible;
       document.querySelector('#headerMode').textContent = isRadioMode ? t.radio : t.lecteur;
 
+      // Mettre à jour le titre du livre (headerTitle)
+      if (currentBook && window.BOOK_NAMES && window.BOOK_NAMES[currentLang]) {
+        const bookData = BOOKS.find(b => b.code === currentBook);
+        if (bookData) {
+          const bookName = window.BOOK_NAMES[currentLang][bookData.num] || window.BOOK_NAMES.FR[bookData.num] || bookData.code;
+          document.querySelector('#headerTitle').textContent = bookName;
+        }
+      }
+
       // Mettre à jour les paroles si on est en mode paroles
       if (document.querySelector('#lyricsContent').style.display !== 'none') {
         loadLyrics(currentBook, currentChapter, currentLang);
@@ -1229,9 +1240,20 @@
 
       // Get initial book
       const bookCode = document.querySelector('#bookSelect').value || '01_GEN';
+      currentBook = bookCode;
+      currentChapter = 1;
 
       // Populate chapters grid for initial book
       populateChaptersGrid(bookCode);
+
+      // Update header title (book name)
+      if (window.BOOK_NAMES && window.BOOK_NAMES[currentLang]) {
+        const bookData = BOOKS.find(b => b.code === bookCode);
+        if (bookData) {
+          const bookName = window.BOOK_NAMES[currentLang][bookData.num] || window.BOOK_NAMES.FR[bookData.num] || bookData.code;
+          document.querySelector('#headerTitle').textContent = bookName;
+        }
+      }
 
       // Update chapter title
       const chapterNum = '1';
