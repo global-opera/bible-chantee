@@ -42,9 +42,10 @@ foreach ($p in $prod) {
     }
   }
 
-  # 4) Init ok rule: Accept TWO valid modes
+  # 4) Init ok rule: Accept THREE valid modes
   # Mode A: lang-shared.js (auto-init)
   # Mode B: i18n.js + translations.js (manual init)
+  # Mode C: Inline translations (standalone pages like lecteur.html)
   $hasLangShared = ($c -match "lang-shared\.js")
   $hasManualI18n = (($c -match "i18n\.js") -and ($c -match "translations\.js"))
 
@@ -52,6 +53,8 @@ foreach ($p in $prod) {
     Write-Host "[OK] init ok (via lang-shared auto-init)"
   } elseif ($hasManualI18n) {
     Write-Host "[OK] init ok (via i18n.js + translations.js)"
+  } elseif ($hasInlineTranslations) {
+    Write-Host "[OK] init ok (via inline translations)"
   } else {
     $anyRed = $true
     Write-Host "[FAIL] init missing (no i18n system detected)" -ForegroundColor Red
