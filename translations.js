@@ -1868,9 +1868,23 @@ const translations = {
     navMission: "Missione",
     navSupport: "Sostenere",
     navAbout: "Chi siamo",
+    navHelp: "Aiuto",
+    navNews: "Novità",
+    navPromises: "Promesse",
     navConfessions: "Confessioni",
+    navPrayers: "Preghiere",
+    navRadio: "Radio",
+    navPlayer: "Lettore",
+    navBible: "Bibbia",
     navContact: "Contatto",
     navCrowdfunding: "Sostenere",
+
+    // Reader Section
+    readerPageTitle: "Bibbia Cantata - Lettore",
+    readerBook: "Libro",
+    readerChapter: "Capitolo",
+    readerLyrics: "Testo",
+    readerBible: "Bibbia",
 
     // Project Section
     projectTitle: "Il progetto",
