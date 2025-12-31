@@ -396,7 +396,7 @@
 
     document.addEventListener('DOMContentLoaded', function() {
         // Utiliser la langue depuis lang-shared.js (lue depuis localStorage)
-        const lang = window.currentLanguage || 'FR';
+        const lang = (window.BC_LANG ? BC_LANG.resolveLang() : 'FR');
         render(lang);
     });
     </script>
