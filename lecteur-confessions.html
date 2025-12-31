@@ -135,12 +135,39 @@
         .then(r => r.text())
         .then(text => lyricsBox.textContent = text);
     };
+    const BIBLE_TEXTS = {
+      FR: [
+        "Ne vous affligez pas, car la joie de l'Éternel est votre force. (Néhémie 8:10)",
+        "Par ses meurtrissures, nous sommes guéris. (Ésaïe 53:5)",
+        "Bien-aimé, je souhaite que tu prospères à tous égards et sois en bonne santé. (3 Jean 1:2)",
+        "Nous sommes plus que vainqueurs par celui qui nous a aimés. (Romains 8:37)",
+        "Médite ce livre jour et nuit, alors tu réussiras. (Josué 1:8)",
+        "Rendez grâces en toutes choses. (1 Thessaloniciens 5:18)",
+        "Tu me feras connaître le sentier de la vie; il y a abondance de joies devant ta face. (Psaume 16:11)",
+        "Béni soit Dieu qui nous a bénis de toute bénédiction spirituelle. (Éphésiens 1:3)",
+        "Car c'est à toi qu'appartiennent le règne, la puissance et la gloire. Amen. (Matthieu 6:13)",
+        "Je vous laisse la paix, je vous donne ma paix. (Jean 14:27)"
+      ],
+      PT: [
+        "Não vos entristeçais, porque a alegria do Senhor é a vossa força. (Neemias 8:10)",
+        "Pelas suas pisaduras fomos sarados. (Isaías 53:5)",
+        "Amado, desejo que te vá bem em todas as coisas e que tenhas saúde. (3 João 1:2)",
+        "Somos mais que vencedores por aquele que nos amou. (Romanos 8:37)",
+        "Medita neste livro dia e noite, então serás bem-sucedido. (Josué 1:8)",
+        "Em tudo dai graças. (1 Tessalonicenses 5:18)",
+        "Tu me farás ver a vereda da vida; na tua presença há fartura de alegrias. (Salmo 16:11)",
+        "Bendito seja Deus que nos abençoou com toda bênção espiritual. (Efésios 1:3)",
+        "Pois teu é o Reino, o poder e a glória. Amém. (Mateus 6:13)",
+        "Deixo-vos a paz, a minha paz vos dou. (João 14:27)"
+      ]
+    };
     document.getElementById('toggleBible').onclick = function() {
       this.classList.add('active');
       document.getElementById('toggleLyrics').classList.remove('active');
-      lyricsBox.textContent = "Texte biblique: " + (VERSES[lang] || VERSES.FR)[id];
+      lyricsBox.textContent = (BIBLE_TEXTS[lang] || BIBLE_TEXTS.FR)[id];
     };
   </script>
 </body>
 </html>
+
 
