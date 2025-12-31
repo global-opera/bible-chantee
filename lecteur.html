@@ -1067,6 +1067,10 @@
         document.querySelectorAll('.flag-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         currentLang = btn.dataset.lang;
+
+        // Sauvegarder la langue dans localStorage pour les autres pages
+        localStorage.setItem('bc_lang', currentLang);
+
         populateBooksDropdown(); // Repopulate with new language
         updateTranslations();
 
