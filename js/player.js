@@ -501,7 +501,9 @@
     if(!ht) return;
 
     var L = normLang(lang);
+    console.log('[DEBUG] lang:', lang, 'bookCode:', bookCode, 'L:', L);
     var name = getBookName(L, bookCode);
+    console.log('[DEBUG] name:', name);
 
     var title = '';
     try{
@@ -864,6 +866,7 @@
   };
 
 })();
+
 
 
 
