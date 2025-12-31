@@ -370,13 +370,10 @@
 
     const ICONS = ["😊", "🤍", "💪", "🏆", "🌱", "🙏", "⭐", "🎵", "🙌", "❤️"];
     // Lire la langue depuis l'URL ou BC_LANG ou défaut FR
-    const urlParams = new URLSearchParams(window.location.search);
-    let currentLang = urlParams.get('lang');
-    if (!currentLang) {
-        currentLang = (window.BC_LANG ? BC_LANG.resolveLang() : 'FR');
-    }
+    // Lire langue depuis localStorage (sauvegardée par lecteur.html)
+    let currentLang = localStorage.getItem('bc_lang') || 'FR';
     currentLang = currentLang.toUpperCase();
-    console.log('URL lang:', urlParams.get('lang'), '-> currentLang:', currentLang);
+    console.log('localStorage bc_lang:', currentLang);
 
     function render(lang) {
         currentLang = lang;
@@ -414,6 +411,7 @@
   <script src="/lang-shared.js"></script>
 </body>
 </html>
+
 
 
 
