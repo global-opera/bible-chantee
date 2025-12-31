@@ -371,7 +371,12 @@
     const ICONS = ["😊", "🤍", "💪", "🏆", "🌱", "🙏", "⭐", "🎵", "🙌", "❤️"];
     // Lire la langue depuis l'URL ou BC_LANG ou défaut FR
     const urlParams = new URLSearchParams(window.location.search);
-    let currentLang = urlParams.get('lang') || (window.BC_LANG ? BC_LANG.resolveLang() : 'FR');
+    let currentLang = urlParams.get('lang');
+    if (!currentLang) {
+        currentLang = (window.BC_LANG ? BC_LANG.resolveLang() : 'FR');
+    }
+    currentLang = currentLang.toUpperCase();
+    console.log('URL lang:', urlParams.get('lang'), '-> currentLang:', currentLang);
 
     function render(lang) {
         currentLang = lang;
@@ -409,6 +414,7 @@
   <script src="/lang-shared.js"></script>
 </body>
 </html>
+
 
 
 
