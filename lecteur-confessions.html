@@ -167,7 +167,37 @@
       lyricsBox.textContent = (BIBLE_TEXTS[lang] || BIBLE_TEXTS.FR)[id];
     };
   </script>
+<script>
+// === CONFESSIONS HELPERS (404/HTML guard + fallback messages) ===
+function setLyricsUnavailable(lang, details) {
+  const box = document.getElementById('lyricsBox') || window.lyricsBox;
+  if (!box) return;
+  box.textContent = (lang ? Paroles non disponibles pour cette langue () : "Paroles non disponibles pour cette langue")
+    + (details ? \n\n : "");
+}
+
+async function safeFetchText(url) {
+  const r = await fetch(url, { cache: 'no-store' });
+  if (!r.ok) throw new Error(HTTP );
+  const ct = (r.headers.get('content-type') || '').toLowerCase();
+  const text = await r.text();
+
+  const t = text.trim().toLowerCase();
+  const looksHtml = t.startsWith('<!doctype') || t.startsWith('<html') || ct.includes('text/html');
+  if (looksHtml) throw new Error('HTML response');
+  return text;
+}
+</script>
+<script>
+// === CONFESSIONS AUDIO FALLBACK ===
+function getConfessionAudio(lang, num) {
+  const available = ['FR','PT'];
+  const useLang = available.includes((lang || '').toUpperCase()) ? (lang || '').toUpperCase() : 'FR';
+  return (window.CONFESSIONS_AUDIO && window.CONFESSIONS_AUDIO[useLang]) ? window.CONFESSIONS_AUDIO[useLang][num] : null;
+}
+</script>
 </body>
 </html>
+
 
 
