@@ -144,7 +144,7 @@
   }
 
   function findHeaderTitle(){
-    return document.querySelector('#headerTitle, #bcHeaderTitle, .bc-header-title, .header-title, [data-role="header-title"]');
+    return document.querySelector('#currentRef, #headerTitle, #bcHeaderTitle, .bc-header-title, .header-title, [data-role="header-title"]');
   }
 
   function pad2(n){
