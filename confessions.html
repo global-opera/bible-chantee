@@ -68,38 +68,39 @@
             font-size: 1.2rem;
         }
         
-        .confessions-grid { max-width: 500px; margin: 0 auto;
+        .confessions-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
         }
         .confession-card {
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             background: rgba(30, 58, 95, 0.8);
-            border-radius: 15px;
+            border-radius: 12px;
+            text-decoration: none;
             padding: 15px;
-            text-align: center;
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-            display: block;
         }
         .confession-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(245, 200, 66, 0.3);
         }
-        .confession-icon { font-size: 1.5rem; margin-bottom: 8px; }
-        .confession-word { color: #f5c842; font-size: 0.9rem; }
-        .confession-title { font-size: 1rem; margin: 5px 0; color: #fff; }
-        .confession-verse { color: #b0b0b0; font-style: italic; margin-bottom: 8px; }
-        .confession-cta {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 16px;
-            background: linear-gradient(135deg, #f5c842 0%, #e0b030 100%);
-            color: #1e3a5f;
-            border-radius: 20px;
+        .confession-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .confession-title {
+            color: white;
             font-size: 0.9rem;
-            font-weight: bold;
+            text-align: center;
+            font-weight: normal;
         }
         
         @media (max-width: 480px) {
@@ -381,17 +382,12 @@
         grid.innerHTML = '';
         
         d.items.forEach((item, i) => {
-            const ref = BIBLE_REFS[i];
             const card = document.createElement('a');
             card.className = 'confession-card';
-            // Lien direct vers le lecteur avec le bon chapitre
             card.href = `lecteur-confessions.html?id=${i}&lang=${lang}`;
             card.innerHTML = `
                 <div class="confession-icon">${ICONS[i]}</div>
-                <div class="confession-word">${d.word} ${i + 1}</div>
-                <h3 class="confession-title">${item[0]}</h3>
-                <p class="confession-verse">${item[1]}</p>
-                <div class="confession-cta">${d.listenBtn} &#9658;</div>
+                <div class="confession-title">${item[0]}</div>
             `;
             grid.appendChild(card);
         });
