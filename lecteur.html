@@ -1105,7 +1105,7 @@
       if (currentBook && window.BOOK_NAMES && window.BOOK_NAMES[currentLang]) {
         const bookData = BOOKS.find(b => b.code === currentBook);
         if (bookData) {
-          const bookName = window.BOOK_NAMES[currentLang][bookData.num] || window.BOOK_NAMES.FR[bookData.num] || bookData.code;
+          const bookName = window.BOOK_NAMES[currentLang][bookData.code] || window.BOOK_NAMES.FR[bookData.code] || bookData.code;
           document.querySelector('#headerTitle').textContent = bookName;
         }
       }
@@ -1262,7 +1262,7 @@
       if (window.BOOK_NAMES && window.BOOK_NAMES[currentLang]) {
         const bookData = BOOKS.find(b => b.code === bookCode);
         if (bookData) {
-          const bookName = window.BOOK_NAMES[currentLang][bookData.num] || window.BOOK_NAMES.FR[bookData.num] || bookData.code;
+          const bookName = window.BOOK_NAMES[currentLang][bookData.code] || window.BOOK_NAMES.FR[bookData.code] || bookData.code;
           document.querySelector('#headerTitle').textContent = bookName;
         }
       }
@@ -1290,6 +1290,8 @@
 
 </body>
 </html>
+
+
 
 
 
