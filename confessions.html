@@ -373,7 +373,6 @@
     // Lire langue depuis localStorage (sauvegardée par lecteur.html)
     let currentLang = localStorage.getItem('bc_lang') || 'FR';
     currentLang = currentLang.toUpperCase();
-    console.log('localStorage bc_lang:', currentLang);
 
     function render(lang) {
         currentLang = lang;
@@ -411,6 +410,7 @@
   <script src="/lang-shared.js"></script>
 </body>
 </html>
+
 
 
 
