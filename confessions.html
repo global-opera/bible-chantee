@@ -369,7 +369,9 @@
     ];
 
     const ICONS = ["😊", "🤍", "💪", "🏆", "🌱", "🙏", "⭐", "🎵", "🙌", "❤️"];
-    let currentLang = (window.BC_LANG ? BC_LANG.resolveLang() : 'EN');
+    // Lire la langue depuis l'URL ou BC_LANG ou défaut FR
+    const urlParams = new URLSearchParams(window.location.search);
+    let currentLang = urlParams.get('lang') || (window.BC_LANG ? BC_LANG.resolveLang() : 'FR');
 
     function render(lang) {
         currentLang = lang;
@@ -407,6 +409,7 @@
   <script src="/lang-shared.js"></script>
 </body>
 </html>
+
 
 
 
