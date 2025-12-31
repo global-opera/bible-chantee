@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bible Chantée - Confession</title>
+  <style>
+    :root {
+      --bleu-nuit: #1E3A5F;
+      --bleu-sombre: #162B46;
+      --bleu-cartes: #243F66;
+      --or-moyen: #F5CB42;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: linear-gradient(180deg, var(--bleu-nuit) 0%, var(--bleu-sombre) 100%);
+      min-height: 100vh;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    .container { max-width: 500px; margin: 0 auto; text-align: center; }
+    .icon { font-size: 60px; margin-bottom: 15px; }
+    .title { color: var(--or-moyen); font-size: 24px; margin-bottom: 8px; }
+    .verse { color: #b0b0b0; font-style: italic; margin-bottom: 20px; font-size: 14px; }
+    .player-box {
+      background: var(--bleu-cartes);
+      border-radius: 20px;
+      padding: 25px;
+      border: 1px solid rgba(245, 203, 66, 0.3);
+      margin-bottom: 20px;
+    }
+    audio { width: 100%; margin-bottom: 15px; }
+    .toggle-row { display: flex; gap: 10px; margin-bottom: 15px; }
+    .toggle-btn {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid rgba(245, 203, 66, 0.4);
+      border-radius: 10px;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .toggle-btn.active {
+      background: var(--or-moyen);
+      color: var(--bleu-nuit);
+      font-weight: bold;
+    }
+    .lyrics-box {
+      background: var(--bleu-sombre);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: left;
+      max-height: 500px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .back-btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: transparent;
+      border: 2px solid var(--or-moyen);
+      color: var(--or-moyen);
+      border-radius: 25px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .back-btn:hover {
+      background: var(--or-moyen);
+      color: var(--bleu-nuit);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon" id="icon">😊</div>
+    <h1 class="title" id="title">Confession</h1>
+    <p class="verse" id="verse"></p>
+    <div class="player-box">
+      <audio id="audio" controls autoplay></audio>
+      <div class="toggle-row">
+        <button class="toggle-btn active" id="toggleLyrics">🎤 Paroles</button>
+        <button class="toggle-btn" id="toggleBible">📖 Bible</button>
+      </div>
+      <div class="lyrics-box" id="lyricsBox">Chargement...</div>
+    </div>
+    <a href="confessions.html" class="back-btn" id="backBtn">← Retour</a>
+  </div>
+  <script src="js/audio-urls-confessions.js"></script>
+  <script>
+    const ICONS = ["😊", "🤍", "💪", "🏆", "🌱", "🙏", "⭐", "🎵", "🙌", "❤️"];
+    const TITLES = {
+      FR: ["Je suis dans la joie", "Je suis guéri", "Je suis en bonne santé", "Je suis vainqueur", "Je prospère", "Je suis reconnaissant", "Je suis heureux", "Je suis béni", "Amen", "Shalom"],
+      PT: ["Eu sou alegre", "Eu estou curado", "Eu tenho saúde", "Eu sou vencedor", "Eu sou próspero", "Eu sou grato", "Eu sou feliz", "Eu sou abençoado", "Amém", "Shalom"]
+    };
+    const VERSES = {
+      FR: ["Néhémie 8:10", "Ésaïe 53:5", "3 Jean 1:2", "Romains 8:37", "Josué 1:8", "1 Thess. 5:18", "Psaume 16:11", "Éphésiens 1:3", "Matthieu 6:13", "Jean 14:27"],
+      PT: ["Neemias 8:10", "Isaías 53:5", "3 João 1:2", "Romanos 8:37", "Josué 1:8", "1 Tess. 5:18", "Salmo 16:11", "Efésios 1:3", "Mateus 6:13", "João 14:27"]
+    };
+    const FILES = {
+      FR: ["01_Joie", "02_Gueri", "03_Sante", "04_Vainqueur", "05_Prospere", "06_Reconnaissant", "07_Heureux", "08_Beni", "09_Amen", "10_Shalom"],
+      PT: ["01_Alegria", "02_Curado", "03_Saude", "04_Vencedor", "05_Prospero", "06_Grato", "07_Feliz", "08_Abencoado", "09_Amem", "10_Shalom"]
+    };
+    
+    const params = new URLSearchParams(location.search);
+    const id = parseInt(params.get('id')) || 0;
+    const lang = (params.get('lang') || 'FR').toUpperCase();
+    const num = String(id + 1).padStart(2, '0');
+    const fileName = FILES[lang]?.[id] || FILES.FR[id];
+    
+    document.getElementById('icon').textContent = ICONS[id] || "🎵";
+    document.getElementById('title').textContent = (TITLES[lang] || TITLES.FR)[id] || "Confession";
+    document.getElementById('verse').textContent = (VERSES[lang] || VERSES.FR)[id] || "";
+    document.getElementById('backBtn').href = "confessions.html?lang=" + lang;
+    
+    // Audio
+    const audioUrl = window.CONFESSIONS_AUDIO?.[lang]?.[num] || window.CONFESSIONS_AUDIO?.FR?.[num];
+    if (audioUrl) document.getElementById('audio').src = audioUrl;
+    
+    // Lyrics
+    const lyricsBox = document.getElementById('lyricsBox');
+    fetch(`lyrics/confessions/${lang}/${fileName}.txt`)
+      .then(r => r.ok ? r.text() : Promise.reject())
+      .then(text => lyricsBox.textContent = text)
+      .catch(() => lyricsBox.textContent = "Paroles non disponibles");
+    
+    // Toggle
+    document.getElementById('toggleLyrics').onclick = function() {
+      this.classList.add('active');
+      document.getElementById('toggleBible').classList.remove('active');
+      fetch(`lyrics/confessions/${lang}/${fileName}.txt`)
+        .then(r => r.text())
+        .then(text => lyricsBox.textContent = text);
+    };
+    document.getElementById('toggleBible').onclick = function() {
+      this.classList.add('active');
+      document.getElementById('toggleLyrics').classList.remove('active');
+      lyricsBox.textContent = "Texte biblique: " + (VERSES[lang] || VERSES.FR)[id];
+    };
+  </script>
+</body>
+</html>
+
