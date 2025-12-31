@@ -21,9 +21,52 @@ const translations = {
     navPromises: "Promesses",
     navConfessions: "Confessions",
     navPlayer: "Lecteur",
+    // Homepage
+    heroTitle: "Toute la Bible en musique",
+    heroDesc: "Découvrez les 1189 chapitres de la Bible mis en musique contemporaine, disponibles en 12 langues.",
+    statChapters: "Chapitres",
+    statAudioLangs: "Langues audio",
+    statLangs: "Langues",
+    listenNow: "Écouter maintenant",
+    sectionDiscover: "Découvrir",
+    sectionAccount: "Mon compte",
+    cardPlayerDesc: "Écouter la Bible chantée",
+    cardAboutDesc: "Notre mission",
+    cardPricingDesc: "Plans et accès",
+    cardHelpDesc: "Questions fréquentes",
+    cardPromisesDesc: "Promesses bibliques",
+    cardSignupDesc: "Créer un compte gratuit",
+    cardContactDesc: "Nous écrire",
+    navPricing: "Tarifs",
+    navSignup: "Inscription",
     navBible: "Bible",
     navContact: "Contact",
     navCrowdfunding: "Soutenir",
+
+    // Promesses Page
+    promessesPageTitle: "Promesses Bibliques - Bible Chantée",
+    promessesTitle: "Promesses Bibliques",
+    promessesDesc: "Découvrez les promesses de Dieu organisées par thèmes. Chaque thème contient une sélection de psaumes en musique pour vous encourager et fortifier votre foi.",
+    themeAnxiete: "Anxiété et peur",
+    themeAnxieteDesc: "Trouvez la paix intérieure",
+    themePaix: "Paix et repos",
+    themePaixDesc: "Entrez dans le repos de Dieu",
+    themeLouange: "Louange et gratitude",
+    themeLouangeDesc: "Célébrez le Seigneur avec joie",
+    themeProtection: "Protection divine",
+    themeProtectionDesc: "Dieu est votre refuge",
+    themeTristesse: "Tristesse et deuil",
+    themeTristesseDesc: "Dieu console ceux qui pleurent",
+    themeForce: "Force et courage",
+    themeForceDesc: "Dieu est votre force",
+    themeConfiance: "Confiance en Dieu",
+    themeConfianceDesc: "Mettez votre confiance en l'Éternel",
+    themeAmour: "Amour de Dieu",
+    themeAmourDesc: "L'amour éternel du Père",
+    themeEsperance: "Espérance",
+    themeEsperanceDesc: "L'espoir qui ne déçoit jamais",
+    themeAdoration: "Adoration",
+    themeAdorationDesc: "Adorez le Seigneur",
 
     // Project Section
     projectTitle: "Le projet",
@@ -295,9 +338,51 @@ const translations = {
     navPromises: "Promises",
     navConfessions: "Confessions",
     navPlayer: "Player",
+    heroTitle: "The Entire Bible in Music",
+    heroDesc: "Discover all 1189 chapters of the Bible set to contemporary music, available in 12 languages.",
+    statChapters: "Chapters",
+    statAudioLangs: "Audio languages",
+    statLangs: "Languages",
+    listenNow: "Listen now",
+    sectionDiscover: "Discover",
+    sectionAccount: "My account",
+    cardPlayerDesc: "Listen to the Sung Bible",
+    cardAboutDesc: "Our mission",
+    cardPricingDesc: "Plans and access",
+    cardHelpDesc: "Frequently asked questions",
+    cardPromisesDesc: "Biblical promises",
+    cardSignupDesc: "Create a free account",
+    cardContactDesc: "Contact us",
+    navPricing: "Pricing",
+    navSignup: "Sign up",
     navBible: "Bible",
     navContact: "Contact",
     navCrowdfunding: "Support",
+
+    // Promesses Page
+    promessesPageTitle: "Biblical Promises - Sung Bible",
+    promessesTitle: "Biblical Promises",
+    promessesDesc: "Discover God's promises organized by themes. Each theme contains a selection of psalms in music to encourage and strengthen your faith.",
+    themeAnxiete: "Anxiety and fear",
+    themeAnxieteDesc: "Find inner peace",
+    themePaix: "Peace and rest",
+    themePaixDesc: "Enter into God's rest",
+    themeLouange: "Praise and gratitude",
+    themeLouangeDesc: "Celebrate the Lord with joy",
+    themeProtection: "Divine protection",
+    themeProtectionDesc: "God is your refuge",
+    themeTristesse: "Grief and sorrow",
+    themeTristesseDesc: "God comforts those who mourn",
+    themeForce: "Strength and courage",
+    themeForceDesc: "God is your strength",
+    themeConfiance: "Trust in God",
+    themeConfianceDesc: "Put your trust in the Lord",
+    themeAmour: "God's love",
+    themeAmourDesc: "The Father's eternal love",
+    themeEsperance: "Hope",
+    themeEsperanceDesc: "The hope that never disappoints",
+    themeAdoration: "Worship",
+    themeAdorationDesc: "Worship the Lord",
 
     // Project Section
     projectTitle: "The project",
@@ -569,9 +654,51 @@ const translations = {
     navPromises: "Promesas",
     navConfessions: "Confesiones",
     navPlayer: "Reproductor",
+    heroTitle: "Toda la Biblia en Música",
+    heroDesc: "Descubre los 1189 capítulos de la Biblia en música contemporánea, disponibles en 12 idiomas.",
+    statChapters: "Capítulos",
+    statAudioLangs: "Idiomas audio",
+    statLangs: "Idiomas",
+    listenNow: "Escuchar ahora",
+    sectionDiscover: "Descubrir",
+    sectionAccount: "Mi cuenta",
+    cardPlayerDesc: "Escuchar la Biblia cantada",
+    cardAboutDesc: "Nuestra misión",
+    cardPricingDesc: "Planes y acceso",
+    cardHelpDesc: "Preguntas frecuentes",
+    cardPromisesDesc: "Promesas bíblicas",
+    cardSignupDesc: "Crear cuenta gratis",
+    cardContactDesc: "Contáctenos",
+    navPricing: "Precios",
+    navSignup: "Registro",
     navBible: "Biblia",
     navCrowdfunding: "Apoyar",
     navContact: "Contacto",
+
+    // Promesses Page
+    promessesPageTitle: "Promesas Bíblicas - Biblia Cantada",
+    promessesTitle: "Promesas Bíblicas",
+    promessesDesc: "Descubre las promesas de Dios organizadas por temas. Cada tema contiene una selección de salmos en música para animarte y fortalecer tu fe.",
+    themeAnxiete: "Ansiedad y miedo",
+    themeAnxieteDesc: "Encuentra paz interior",
+    themePaix: "Paz y descanso",
+    themePaixDesc: "Entra en el descanso de Dios",
+    themeLouange: "Alabanza y gratitud",
+    themeLouangeDesc: "Celebra al Señor con alegría",
+    themeProtection: "Protección divina",
+    themeProtectionDesc: "Dios es tu refugio",
+    themeTristesse: "Tristeza y duelo",
+    themeTristesseDesc: "Dios consuela a los que lloran",
+    themeForce: "Fuerza y valentía",
+    themeForceDesc: "Dios es tu fuerza",
+    themeConfiance: "Confianza en Dios",
+    themeConfianceDesc: "Pon tu confianza en el Señor",
+    themeAmour: "Amor de Dios",
+    themeAmourDesc: "El amor eterno del Padre",
+    themeEsperance: "Esperanza",
+    themeEsperanceDesc: "La esperanza que nunca decepciona",
+    themeAdoration: "Adoración",
+    themeAdorationDesc: "Adora al Señor",
 
     // Project Section
     projectTitle: "El proyecto",
@@ -843,9 +970,51 @@ const translations = {
     navPromises: "Promessas",
     navConfessions: "Confissões",
     navPlayer: "Leitor",
+    heroTitle: "Toda a Bíblia em Música",
+    heroDesc: "Descubra os 1189 capítulos da Bíblia em música contemporânea, disponíveis em 12 idiomas.",
+    statChapters: "Capítulos",
+    statAudioLangs: "Idiomas áudio",
+    statLangs: "Idiomas",
+    listenNow: "Ouvir agora",
+    sectionDiscover: "Descobrir",
+    sectionAccount: "Minha conta",
+    cardPlayerDesc: "Ouvir a Bíblia cantada",
+    cardAboutDesc: "Nossa missão",
+    cardPricingDesc: "Planos e acesso",
+    cardHelpDesc: "Perguntas frequentes",
+    cardPromisesDesc: "Promessas bíblicas",
+    cardSignupDesc: "Criar conta gratuita",
+    cardContactDesc: "Contate-nos",
+    navPricing: "Preços",
+    navSignup: "Cadastro",
     navCrowdfunding: "Apoiar",
     navBible: "Bíblia",
     navContact: "Contato",
+
+    // Promesses Page
+    promessesPageTitle: "Promessas Bíblicas - Bíblia Cantada",
+    promessesTitle: "Promessas Bíblicas",
+    promessesDesc: "Descubra as promessas de Deus organizadas por temas. Cada tema contém uma seleção de salmos em música para encorajá-lo e fortalecer sua fé.",
+    themeAnxiete: "Ansiedade e medo",
+    themeAnxieteDesc: "Encontre paz interior",
+    themePaix: "Paz e descanso",
+    themePaixDesc: "Entre no descanso de Deus",
+    themeLouange: "Louvor e gratidão",
+    themeLouangeDesc: "Celebre o Senhor com alegria",
+    themeProtection: "Proteção divina",
+    themeProtectionDesc: "Deus é o seu refúgio",
+    themeTristesse: "Tristeza e luto",
+    themeTristesseDesc: "Deus consola os que choram",
+    themeForce: "Força e coragem",
+    themeForceDesc: "Deus é a sua força",
+    themeConfiance: "Confiança em Deus",
+    themeConfianceDesc: "Coloque sua confiança no Senhor",
+    themeAmour: "Amor de Deus",
+    themeAmourDesc: "O amor eterno do Pai",
+    themeEsperance: "Esperança",
+    themeEsperanceDesc: "A esperança que nunca decepciona",
+    themeAdoration: "Adoração",
+    themeAdorationDesc: "Adore o Senhor",
 
     // Project Section
     projectTitle: "O projeto",
@@ -1118,8 +1287,50 @@ const translations = {
     navConfessions: "Bekenntnisse",
     navCrowdfunding: "Unterstützen",
     navPlayer: "Spieler",
+    heroTitle: "Die ganze Bibel in Musik",
+    heroDesc: "Entdecken Sie alle 1189 Kapitel der Bibel in zeitgenössischer Musik, verfügbar in 12 Sprachen.",
+    statChapters: "Kapitel",
+    statAudioLangs: "Audio-Sprachen",
+    statLangs: "Sprachen",
+    listenNow: "Jetzt anhören",
+    sectionDiscover: "Entdecken",
+    sectionAccount: "Mein Konto",
+    cardPlayerDesc: "Die gesungene Bibel hören",
+    cardAboutDesc: "Unsere Mission",
+    cardPricingDesc: "Pläne und Zugang",
+    cardHelpDesc: "Häufige Fragen",
+    cardPromisesDesc: "Biblische Verheißungen",
+    cardSignupDesc: "Kostenloses Konto erstellen",
+    cardContactDesc: "Kontaktieren Sie uns",
+    navPricing: "Preise",
+    navSignup: "Registrierung",
     navBible: "Bibel",
     navContact: "Kontakt",
+
+    // Promesses Page
+    promessesPageTitle: "Biblische Verheißungen - Gesungene Bibel",
+    promessesTitle: "Biblische Verheißungen",
+    promessesDesc: "Entdecken Sie Gottes Verheißungen nach Themen geordnet. Jedes Thema enthält eine Auswahl an Psalmen in Musik, um Sie zu ermutigen und Ihren Glauben zu stärken.",
+    themeAnxiete: "Angst und Furcht",
+    themeAnxieteDesc: "Finden Sie inneren Frieden",
+    themePaix: "Friede und Ruhe",
+    themePaixDesc: "Treten Sie in Gottes Ruhe ein",
+    themeLouange: "Lobpreis und Dankbarkeit",
+    themeLouangeDesc: "Feiern Sie den Herrn mit Freude",
+    themeProtection: "Göttlicher Schutz",
+    themeProtectionDesc: "Gott ist Ihre Zuflucht",
+    themeTristesse: "Trauer und Kummer",
+    themeTristesseDesc: "Gott tröstet die Trauernden",
+    themeForce: "Kraft und Mut",
+    themeForceDesc: "Gott ist Ihre Kraft",
+    themeConfiance: "Vertrauen auf Gott",
+    themeConfianceDesc: "Setzen Sie Ihr Vertrauen auf den Herrn",
+    themeAmour: "Gottes Liebe",
+    themeAmourDesc: "Die ewige Liebe des Vaters",
+    themeEsperance: "Hoffnung",
+    themeEsperanceDesc: "Die Hoffnung, die niemals enttäuscht",
+    themeAdoration: "Anbetung",
+    themeAdorationDesc: "Beten Sie den Herrn an",
 
     // Project Section
     projectTitle: "Das Projekt",
@@ -1416,6 +1627,56 @@ const translations = {
     navConfessions: "Confessioni",
     navContact: "Contatto",
     navCrowdfunding: "Sostenere",
+    navPlayer: "Lettore",
+    navHelp: "Aiuto",
+    navPromises: "Promesse",
+    navPricing: "Prezzi",
+    navSignup: "Registrazione",
+
+    // Hero Section
+    heroTitle: "Tutta la Bibbia in Musica",
+    heroDesc: "Scopri tutti i 1189 capitoli della Bibbia in musica contemporanea, disponibili in 12 lingue.",
+    statAudioLangs: "Lingue audio",
+    statLangs: "Lingue",
+    listenNow: "Ascolta ora",
+
+    // Sections
+    sectionDiscover: "Scopri",
+    sectionAccount: "Il mio account",
+
+    // Cards
+    cardPlayerDesc: "Ascolta la Bibbia cantata",
+    cardAboutDesc: "La nostra missione",
+    cardPricingDesc: "Piani e accesso",
+    cardHelpDesc: "Domande frequenti",
+    cardPromisesDesc: "Promesse bibliche",
+    cardSignupDesc: "Crea un account gratuito",
+    cardContactDesc: "Contattaci",
+
+    // Promesses Page
+    promessesPageTitle: "Promesse Bibliche - Bibbia Cantata",
+    promessesTitle: "Promesse Bibliche",
+    promessesDesc: "Scopri le promesse di Dio organizzate per temi. Ogni tema contiene una selezione di salmi in musica per incoraggiarti e rafforzare la tua fede.",
+    themeAnxiete: "Ansia e paura",
+    themeAnxieteDesc: "Trova la pace interiore",
+    themePaix: "Pace e riposo",
+    themePaixDesc: "Entra nel riposo di Dio",
+    themeLouange: "Lode e gratitudine",
+    themeLouangeDesc: "Celebra il Signore con gioia",
+    themeProtection: "Protezione divina",
+    themeProtectionDesc: "Dio è il tuo rifugio",
+    themeTristesse: "Tristezza e lutto",
+    themeTristesseDesc: "Dio consola chi piange",
+    themeForce: "Forza e coraggio",
+    themeForceDesc: "Dio è la tua forza",
+    themeConfiance: "Fiducia in Dio",
+    themeConfianceDesc: "Riponi la tua fiducia nel Signore",
+    themeAmour: "Amore di Dio",
+    themeAmourDesc: "L'amore eterno del Padre",
+    themeEsperance: "Speranza",
+    themeEsperanceDesc: "La speranza che non delude mai",
+    themeAdoration: "Adorazione",
+    themeAdorationDesc: "Adora il Signore",
 
     // Project Section
     projectTitle: "Il progetto",
@@ -1544,6 +1805,71 @@ const translations = {
     book64: "3 Giovanni",
     book65: "Giuda",
     book66: "Apocalisse",
+
+    // === PRICING PAGE ===
+    pricingTitle: "Prezzi - Bibbia Cantata",
+    pricingMetaDesc: "Sblocca l'accesso completo alla Bibbia Cantata - 1189 capitoli per soli $0.99",
+    pricingHeader: "💰 Prezzi - Bibbia Cantata",
+    pricingSubtitle: "Sblocca l'accesso completo a tutta la Bibbia Cantata",
+    pricingBackLink: "← Torna alla home",
+
+    // Intro
+    pricingIntroTitle: "Scegli il tuo piano",
+    pricingIntroDesc: "Hai già ascoltato i tuoi 100 capitoli gratuiti? Sblocca l'accesso completo per meno di un caffè!",
+
+    // Free Plan
+    pricingFreePlan: "Gratuito",
+    pricingFreeDesc: "Perfetto per scoprire",
+    pricingFreeFeature1: "100 capitoli gratuiti",
+    pricingFreeFeature2: "Accesso a tutte le lingue",
+    pricingFreeFeature3: "Ascolto illimitato dei capitoli sbloccati",
+    pricingFreeFeature4: "Nessuna carta richiesta",
+    pricingFreeCTA: "🎵 Inizia gratis",
+
+    // Premium Plan
+    pricingRecommended: "⭐ RACCOMANDATO",
+    pricingPremiumPlan: "Accesso Completo",
+    pricingPremiumDesc: "🔥 Il miglior rapporto qualità-prezzo!",
+    pricingPremiumFeature1: "1189 capitoli sbloccati",
+    pricingPremiumFeature2: "Tutta la Bibbia (Antico + Nuovo Testamento)",
+    pricingPremiumFeature3: "Ascolto illimitato a vita",
+    pricingPremiumFeature4: "Supporto di tutte le lingue",
+    pricingPremiumFeature5: "Nessun abbonamento",
+    pricingPremiumCTA: "👑 Abbonati",
+    pricingPremiumPayPal: "💳 Paga con PayPal",
+    pricingPremiumTWINT: "📱 Paga con TWINT",
+    pricingPremiumPIX: "🇧🇷 Paga con PIX",
+
+    // Supporter Plan
+    pricingSupporterPlan: "Sostenitore",
+    pricingSupporterDesc: "Sostieni il progetto",
+    pricingSupporterFeature1: "Tutto dal piano Accesso Completo",
+    pricingSupporterFeature2: "Sostieni la creazione di nuove lingue",
+    pricingSupporterFeature3: "Accesso anticipato alle novità",
+    pricingSupporterFeature4: "Badge \"Sostenitore\" (presto)",
+    pricingSupporterCTA: "💝 Sostieni il progetto",
+    pricingSupporterCTA5: "💝 Sostieni con $5",
+    pricingSupporterCTA10: "⭐ Sostieni con $10",
+
+    // FAQ
+    pricingFAQTitle: "Domande frequenti",
+    pricingFAQQ1: "💳 Quali metodi di pagamento accettate?",
+    pricingFAQA1: "Accettiamo PayPal, TWINT (Svizzera) e PIX (Brasile). PayPal permette anche di pagare con carta senza creare un account.",
+    pricingFAQQ2: "🔐 Come ricevo il mio accesso dopo il pagamento?",
+    pricingFAQA2: "Dopo il pagamento, riceverai un'email con un codice di sblocco. Inserisci questo codice nel lettore per attivare l'accesso illimitato.",
+    pricingFAQQ3: "🌍 L'accesso è valido per tutte le lingue?",
+    pricingFAQA3: "Sì! Il piano Accesso Completo sblocca TUTTE le lingue disponibili (FR, EN, PT e future lingue).",
+    pricingFAQQ4: "♾️ È un abbonamento?",
+    pricingFAQA4: "No! È un pagamento unico. Una volta pagato, hai accesso a vita, senza rinnovo.",
+    pricingFAQQ5: "📱 Posso ascoltare su più dispositivi?",
+    pricingFAQA5: "Sì! Il tuo accesso funziona su tutti i tuoi dispositivi. Basta usare la stessa email e codice di sblocco.",
+    pricingFAQQ6: "❓ Ho perso il mio codice di sblocco, cosa faccio?",
+    pricingFAQA6: "Contattaci a support@sungbible.world con la tua email PayPal e ti rinvieremo il tuo codice.",
+
+    // Footer
+    pricingFooterHome: "Home",
+    pricingFooterPlayer: "Lettore",
+    pricingFooterTagline: "Creato con ❤️ per condividere la Parola di Dio",
     },
 
   RU: {
@@ -2781,7 +3107,7 @@ Object.keys(translations).forEach(lang => {
     // === PRICING PAGE ===
     t.pricingTitle = "Tarifs - Bible Chantée";
     t.pricingMetaDesc = "Débloquez l'accès complet à la Bible chantée - 1189 chapitres pour seulement $0.99";
-    t.pricingHeader = "💰 Tarifs Sung Bible";
+    t.pricingHeader = "💰 Tarifs - Bible Chantée";
     t.pricingSubtitle = "Débloquez l'accès complet à toute la Bible chantée";
     t.pricingBackLink = "← Retour à l'accueil";
 
@@ -2807,6 +3133,7 @@ Object.keys(translations).forEach(lang => {
     t.pricingPremiumFeature3 = "Écoute illimitée à vie";
     t.pricingPremiumFeature4 = "Support de toutes les langues";
     t.pricingPremiumFeature5 = "Aucun abonnement";
+    t.pricingPremiumCTA = "👑 S'abonner";
     t.pricingPremiumPayPal = "💳 Payer avec PayPal";
     t.pricingPremiumTWINT = "📱 Payer avec TWINT";
     t.pricingPremiumPIX = "🇧🇷 Pagar com PIX";
@@ -2818,6 +3145,7 @@ Object.keys(translations).forEach(lang => {
     t.pricingSupporterFeature2 = "Soutenez la création de nouvelles langues";
     t.pricingSupporterFeature3 = "Accès anticipé aux nouveautés";
     t.pricingSupporterFeature4 = "Badge \"Supporter\" (bientôt)";
+    t.pricingSupporterCTA = "💝 Soutenir le projet";
     t.pricingSupporterCTA5 = "💝 Soutenir avec $5";
     t.pricingSupporterCTA10 = "⭐ Soutenir avec $10";
 
@@ -3108,6 +3436,7 @@ Object.keys(translations).forEach(lang => {
     t.pricingPremiumFeature3 = "Lifetime unlimited listening";
     t.pricingPremiumFeature4 = "Support for all languages";
     t.pricingPremiumFeature5 = "No subscription";
+    t.pricingPremiumCTA = "👑 Subscribe";
     t.pricingPremiumPayPal = "💳 Pay with PayPal";
     t.pricingPremiumTWINT = "📱 Pay with TWINT";
     t.pricingPremiumPIX = "🇧🇷 Pay with PIX";
@@ -3119,6 +3448,7 @@ Object.keys(translations).forEach(lang => {
     t.pricingSupporterFeature2 = "Support creation of new languages";
     t.pricingSupporterFeature3 = "Early access to new features";
     t.pricingSupporterFeature4 = "\"Supporter\" badge (coming soon)";
+    t.pricingSupporterCTA = "💝 Support the project";
     t.pricingSupporterCTA5 = "💝 Support with $5";
     t.pricingSupporterCTA10 = "⭐ Support with $10";
 
@@ -3383,7 +3713,7 @@ Object.keys(translations).forEach(lang => {
     // === PRICING PAGE ===
     t.pricingTitle = "Precios - Biblia Cantada";
     t.pricingMetaDesc = "Desbloquea acceso completo a la Biblia Cantada - 1189 capítulos por solo $0.99";
-    t.pricingHeader = "💰 Precios Sung Bible";
+    t.pricingHeader = "💰 Precios - Biblia Cantada";
     t.pricingSubtitle = "Desbloquea acceso completo a toda la Biblia Cantada";
     t.pricingBackLink = "← Volver inicio";
 
@@ -3409,6 +3739,7 @@ Object.keys(translations).forEach(lang => {
     t.pricingPremiumFeature3 = "Escucha ilimitada de por vida";
     t.pricingPremiumFeature4 = "Soporte de todos los idiomas";
     t.pricingPremiumFeature5 = "Sin suscripción";
+    t.pricingPremiumCTA = "👑 Suscribirse";
     t.pricingPremiumPayPal = "💳 Pagar con PayPal";
     t.pricingPremiumTWINT = "📱 Pagar con TWINT";
     t.pricingPremiumPIX = "🇧🇷 Pagar con PIX";
@@ -3420,6 +3751,7 @@ Object.keys(translations).forEach(lang => {
     t.pricingSupporterFeature2 = "Apoya la creación de nuevos idiomas";
     t.pricingSupporterFeature3 = "Acceso anticipado a novedades";
     t.pricingSupporterFeature4 = "Insignia \"Patrocinador\" (próximamente)";
+    t.pricingSupporterCTA = "💝 Apoyar el proyecto";
     t.pricingSupporterCTA5 = "💝 Apoyar con $5";
     t.pricingSupporterCTA10 = "⭐ Apoyar con $10";
 
@@ -3684,7 +4016,7 @@ Object.keys(translations).forEach(lang => {
     // === PRICING PAGE ===
     t.pricingTitle = "Preços - Bíblia Cantada";
     t.pricingMetaDesc = "Desbloqueie acesso completo à Bíblia Cantada - 1189 capítulos por apenas $0.99";
-    t.pricingHeader = "💰 Preços Sung Bible";
+    t.pricingHeader = "💰 Preços - Bíblia Cantada";
     t.pricingSubtitle = "Desbloqueie acesso completo a toda a Bíblia Cantada";
     t.pricingBackLink = "← Voltar início";
 
@@ -3710,6 +4042,7 @@ Object.keys(translations).forEach(lang => {
     t.pricingPremiumFeature3 = "Audição ilimitada vitalícia";
     t.pricingPremiumFeature4 = "Suporte a todos os idiomas";
     t.pricingPremiumFeature5 = "Sem assinatura";
+    t.pricingPremiumCTA = "👑 Assinar";
     t.pricingPremiumPayPal = "💳 Pagar com PayPal";
     t.pricingPremiumTWINT = "📱 Pagar com TWINT";
     t.pricingPremiumPIX = "🇧🇷 Pagar com PIX";
@@ -3721,6 +4054,7 @@ Object.keys(translations).forEach(lang => {
     t.pricingSupporterFeature2 = "Apoie a criação de novos idiomas";
     t.pricingSupporterFeature3 = "Acesso antecipado a novidades";
     t.pricingSupporterFeature4 = "Distintivo \"Apoiador\" (em breve)";
+    t.pricingSupporterCTA = "💝 Apoiar o projeto";
     t.pricingSupporterCTA5 = "💝 Apoiar com $5";
     t.pricingSupporterCTA10 = "⭐ Apoiar com $10";
 
@@ -4073,7 +4407,7 @@ Object.keys(translations).forEach(lang => {
     // === PRICING PAGE ===
     t.pricingTitle = "Preise - Gesungene Bibel";
     t.pricingMetaDesc = "Schalten Sie vollen Zugang zur Gesungenen Bibel frei - 1189 Kapitel für nur $0.99";
-    t.pricingHeader = "💰 Sung Bible Preise";
+    t.pricingHeader = "💰 Preise - Gesungene Bibel";
     t.pricingSubtitle = "Schalten Sie vollen Zugang zur gesamten Gesungenen Bibel frei";
     t.pricingBackLink = "← Zurück zur Startseite";
 
@@ -4099,6 +4433,7 @@ Object.keys(translations).forEach(lang => {
     t.pricingPremiumFeature3 = "Lebenslang unbegrenztes Hören";
     t.pricingPremiumFeature4 = "Unterstützung aller Sprachen";
     t.pricingPremiumFeature5 = "Kein Abonnement";
+    t.pricingPremiumCTA = "👑 Abonnieren";
     t.pricingPremiumPayPal = "💳 Mit PayPal bezahlen";
     t.pricingPremiumTWINT = "📱 Mit TWINT bezahlen";
     t.pricingPremiumPIX = "🇧🇷 Mit PIX bezahlen";
@@ -4110,6 +4445,7 @@ Object.keys(translations).forEach(lang => {
     t.pricingSupporterFeature2 = "Unterstützen Sie die Erstellung neuer Sprachen";
     t.pricingSupporterFeature3 = "Früher Zugang zu Neuigkeiten";
     t.pricingSupporterFeature4 = "\"Unterstützer\" Abzeichen (bald)";
+    t.pricingSupporterCTA = "💝 Projekt unterstützen";
     t.pricingSupporterCTA5 = "💝 Mit $5 unterstützen";
     t.pricingSupporterCTA10 = "⭐ Mit $10 unterstützen";
 
@@ -5093,3 +5429,7 @@ Object.keys(translations).forEach(lang => {
 
 // Expose translations globally for i18n.js
 window.translations = translations;
+
+
+
+

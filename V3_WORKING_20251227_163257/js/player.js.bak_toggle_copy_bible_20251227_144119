@@ -1,0 +1,411 @@
+/* Bible Chantée V3 — player.js (standalone, robust) */
+(function () {
+  const LANGS = (window.I18N && window.I18N.LANGS) || ['FR','EN','PT','ES','DE','IT','AR','RU','ZH','HI','TL','SW'];
+
+  function pad2(n) { return String(n).padStart(2, '0'); }
+
+  function getLang() {
+    try {
+      const url = new URLSearchParams(location.search).get('lang');
+      if (url && LANGS.includes(url.toUpperCase())) {
+        const lang = url.toUpperCase();
+        localStorage.setItem('bc_lang', lang);
+        return lang;
+      const stored = (localStorage.getItem('bc_lang') || '').toUpperCase();
+      if (stored && LANGS.includes(stored)) return stored;
+      return 'FR';
+    } catch (e) { return 'FR'; }
+  function setLang(lang) {
+    const L = String(lang||'').toUpperCase();
+    if (!LANGS.includes(L)) return;
+    localStorage.setItem('bc_lang', L);
+    const url = new URL(location.href);
+    url.searchParams.set('lang', L);
+    location.href = url.toString();
+  // Mapping-first, fallback local pattern
+  function getAudioUrl(bookNum, chapter, lang, bookCode) {
+    const L = String(lang || 'FR').toUpperCase();
+    const B = String(bookNum || '').padStart(2, '0');
+    const C = String(chapter);
+
+    // 1) Mapping (if present)
+    const mapVar = 'AUDIO_URLS_' + L;
+    const urls = window[mapVar];
+    if (urls && urls[B] && urls[B][C]) return urls[B][C];
+
+    // 2) Local pattern
+    const code = bookCode || null;
+    if (!code) return null;
+
+    const ch2 = pad2(Number(chapter));
+    return `./audio/${L}/${code}/${code}_${ch2}_${L}.mp3`;
+  function getLyricsUrl(bookCode, chapter, lang) {
+    const L = String(lang || 'FR').toUpperCase();
+    const ch2 = pad2(Number(chapter));
+    return `./lyrics/${L}/${bookCode}/${bookCode}_${ch2}_${L}.txt`;
+  async function loadText(url) {
+    const r = await fetch(url, { cache: 'no-store' });
+    if (!r.ok) return null;
+    return await r.text();
+  function $(id) { return document.getElementById(id); }
+
+    function getBookName(lang, code){
+  try{
+    var L = String(lang||"FR").toUpperCase();
+    var c = String(code||"").toUpperCase();
+
+    if(window.BOOK_CODE_ALIASES && window.BOOK_CODE_ALIASES[c]) c = window.BOOK_CODE_ALIASES[c];
+
+    if(window.BOOK_NAMES && window.BOOK_NAMES[L] && window.BOOK_NAMES[L][c]) return window.BOOK_NAMES[L][c];
+    if(window.BOOK_NAMES && window.BOOK_NAMES.FR && window.BOOK_NAMES.FR[c]) return window.BOOK_NAMES.FR[c];
+  }catch(e){}
+  return code || "";
+function bookDisplayName(book, lang) {
+    const name = getBookName(lang, book.code);
+    return name;
+  function getChapterWord(lang) {
+    const L = String(lang || 'FR').toUpperCase();
+    const CHAPTER_WORDS = {
+      FR: 'Chapitre',
+      EN: 'Chapter',
+      PT: 'Capítulo',
+      ES: 'Capítulo',
+      DE: 'Kapitel',
+      IT: 'Capitolo',
+      AR: 'الفصل',
+      RU: 'Глава',
+      ZH: '章',
+      HI: 'अध्याय',
+      TL: 'Kabanata',
+      SW: 'Sura',
+      KO: '장'
+    };
+    return CHAPTER_WORDS[L] || CHAPTER_WORDS.FR;
+  function buildBookIndex() {
+    if (window.BOOKS && !window.BOOKS_BY_NUM) {
+      const idx = {};
+      window.BOOKS.forEach(b => idx[b.num] = b);
+      window.BOOKS_BY_NUM = idx;
+  function renderChapters(book, selectedChap, onPick) {
+    const grid = $('chapterGrid');
+    grid.innerHTML = '';
+    for (let c = 1; c <= book.chapters; c++) {
+      const btn = document.createElement('button');
+      btn.className = 'chap-btn' + (c === selectedChap ? ' active' : '');
+      btn.textContent = String(c);
+      btn.addEventListener('click', () => onPick(c));
+      grid.appendChild(btn);
+  async function setChapter(book, chapter, lang) {
+    const audio = $('audioPlayer');
+    const status = $('audioStatus');
+    const lyricsBox = $('lyricsBox');
+    const bibleBox = $('bibleBox');
+    const ref = $('currentRef');
+
+    const bookName = getBookName(lang, book.code);
+    const chapterWord = getChapterWord(lang);
+    ref.textContent = `${bookName} — ${chapterWord} ${chapter}`;
+
+    // AUDIO
+    const audioUrl = getAudioUrl(book.num, chapter, lang, book.code);
+    if (!audioUrl) {
+      status.textContent = 'MP3 introuvable';
+      audio.removeAttribute('src');
+      status.textContent = audioUrl.includes('http') ? 'Audio (R2)' : 'Audio (local)';
+      audio.src = audioUrl;
+      audio.load();
+    // LYRICS
+    const lurl = getLyricsUrl(book.code, chapter, lang);
+    const ltxt = await loadText(lurl);
+    lyricsBox.textContent = ltxt || '—';
+
+    // BIBLE (placeholder for now)
+    bibleBox.textContent = '—';
+  function init() {
+    buildBookIndex();
+
+    const lang = getLang();
+
+    // Lang buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      const L = btn.dataset.lang;
+      btn.classList.toggle('active', L === lang);
+      btn.addEventListener('click', () => setLang(L));
+    });
+
+    // i18n apply
+    if (window.I18N && window.I18N.applyTranslations) window.I18N.applyTranslations();
+
+    // Books
+    const books = window.BOOKS || [];
+    const bookSelect = $('bookSelect');
+    if (!books.length) {
+      $('audioStatus').textContent = 'ERREUR: BOOKS non chargé (books.js)';
+      return;
+    // default: first book
+    let currentBook = books[0];
+    let currentChapter = 1;
+
+    bookSelect.innerHTML = '';
+    books.forEach(b => {
+      const opt = document.createElement('option');
+      opt.value = b.num;
+      opt.textContent = bookDisplayName(b, lang);
+      bookSelect.appendChild(opt);
+    });
+
+    bookSelect.value = currentBook.num;
+
+    const pickChapter = async (c) => {
+      currentChapter = c;
+      renderChapters(currentBook, currentChapter, pickChapter);
+      await setChapter(currentBook, currentChapter, lang);
+    };
+
+    bookSelect.addEventListener('change', async () => {
+      const num = bookSelect.value;
+      currentBook = window.BOOKS_BY_NUM[num] || books[0];
+      currentChapter = 1;
+      renderChapters(currentBook, currentChapter, pickChapter);
+      await setChapter(currentBook, currentChapter, lang);
+    });
+
+    renderChapters(currentBook, currentChapter, pickChapter);
+    pickChapter(currentChapter);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+    init();
+})();
+
+
+
+
+/* BC_DROPDOWN_LABELS_V1 */
+function bcApplyBookSelectLabels(){
+  try{
+    var sel = document.querySelector('select');
+    if(!sel) return;
+
+    var L = (window.currentLanguage || "FR");
+
+    // Build book index if needed
+    if (window.BOOKS && !window.BOOKS_BY_NUM) {
+      const idx = {};
+      window.BOOKS.forEach(b => idx[b.num] = b);
+      window.BOOKS_BY_NUM = idx;
+    for(var i=0;i<sel.options.length;i++){
+      var val = sel.options[i].value || "";
+      var book = null;
+      var name = "";
+
+      // Check if value is a code like "01_GEN" or just a number like "01"
+      if(/_\w{3,}/.test(val)) {
+        // It's a code
+        name = getBookName(L, val);
+      } else if(/^\d{2}$/.test(val) && window.BOOKS_BY_NUM) {
+        // It's a number, look up the book
+        book = window.BOOKS_BY_NUM[val];
+        if(book) name = getBookName(L, book.code);
+      if(name) {
+        sel.options[i].textContent = name;
+  }catch(e){}
+document.addEventListener('DOMContentLoaded', function(){
+  setTimeout(bcApplyBookSelectLabels, 50);
+  setTimeout(bcApplyBookSelectLabels, 300);
+});
+
+
+/* BC_SIMPLE_LYRICS_BIBLE_TOGGLE_V1
+   Un seul panneau: on affiche soit les PAROLES soit la BIBLE dans la même zone (#lyricsBox).
+*/
+(function(){
+  function normLang(x){ return String(x||"FR").toUpperCase(); }
+  function getLang(){
+    return normLang(window.currentLanguage || (window.BC_LANG && (window.BC_LANG.current||window.BC_LANG.lang)) || "FR");
+  function codeAlias(code){
+    var c = String(code||"").toUpperCase();
+    try{ if(window.BOOK_CODE_ALIASES && window.BOOK_CODE_ALIASES[c]) c = window.BOOK_CODE_ALIASES[c]; }catch(e){}
+    return c;
+  function getBookCode(){
+    var sel = document.querySelector('select[id*="book"], select[name*="book"], #bookSelect, #book, #bookSelector');
+    return sel && sel.value ? String(sel.value) : "";
+  function getChapter(){
+    var active = document.querySelector('.chapter-btn.active, .chapterButton.active, .chap-btn.active, button[aria-current="true"][data-chapter]');
+    if(active){
+      var t = (active.getAttribute('data-chapter') || active.textContent || "").trim();
+      if(/^\d+$/.test(t)) return parseInt(t,10);
+    return 1;
+  // --- BIBLE: supporte plusieurs formats (BC_BIBLE / BIBLE / BIBLE_TEXTS / BIBLE_PT etc.)
+  function findBibleText(lang, bookCode, chapter){
+    var L = normLang(lang);
+    var c = codeAlias(bookCode);
+
+    try{
+      if(window.BC_BIBLE && window.BC_BIBLE[L] && window.BC_BIBLE[L][c]){
+        return window.BC_BIBLE[L][c][chapter] || window.BC_BIBLE[L][c][String(chapter)] || "";
+    }catch(e){}
+
+    try{
+      if(window.BIBLE && window.BIBLE[L] && window.BIBLE[L][c]){
+        return window.BIBLE[L][c][chapter] || window.BIBLE[L][c][String(chapter)] || "";
+    }catch(e){}
+
+    try{
+      if(window.BIBLE_TEXTS && window.BIBLE_TEXTS[L] && window.BIBLE_TEXTS[L][c]){
+        return window.BIBLE_TEXTS[L][c][chapter] || window.BIBLE_TEXTS[L][c][String(chapter)] || "";
+    }catch(e){}
+
+    try{
+      var key = "BIBLE_" + L;
+      if(window[key] && window[key][c]){
+        return window[key][c][chapter] || window[key][c][String(chapter)] || "";
+    }catch(e){}
+
+    return "";
+  // --- Gestion affichage unique
+  function getLyricsBox(){
+    return document.querySelector('#lyricsBox, #lyricsText, #lyrics, pre#lyricsBox, pre#lyricsText');
+  function rememberOriginalLyricsOnce(box){
+    if(!box || box.getAttribute('data-bc-orig') === '1') return;
+    box.setAttribute('data-bc-orig', '1');
+    box.setAttribute('data-bc-lyrics-cache', box.textContent || "");
+  function setMode(mode){
+    document.body.setAttribute('data-bc-mode', mode);
+    render();
+    updateButtons();
+  function render(){
+    var box = getLyricsBox();
+    if(!box) return;
+
+    rememberOriginalLyricsOnce(box);
+
+    var mode = document.body.getAttribute('data-bc-mode') || 'lyrics';
+    if(mode === 'bible'){
+      var lang = getLang();
+      var book = getBookCode();
+      var chap = getChapter();
+      var text = findBibleText(lang, book, chap);
+
+      if(Array.isArray(text)) text = text.join("\n");
+
+      if(!text){
+        box.textContent = "Bible introuvable (" + lang + ") — " + codeAlias(book) + " " + chap;
+        box.textContent = String(text);
+      // Reprend le contenu paroles: si ton player recharge async, on met à jour le cache quand ça change
+      var cached = box.getAttribute('data-bc-lyrics-cache') || "";
+      box.textContent = cached || (box.textContent || "");
+  function updateLyricsCacheFromDom(){
+    var box = getLyricsBox();
+    if(!box) return;
+    if(document.body.getAttribute('data-bc-mode') === 'lyrics'){
+      // quand le player met à jour les paroles, on garde ça en cache
+      box.setAttribute('data-bc-lyrics-cache', box.textContent || "");
+  // --- UI Toggle minimal
+  function ensureToggle(){
+    if(document.getElementById('bcToggleWrap')) return;
+
+    var lyricsBox = document.querySelector('#lyricsBox') || document.querySelector('#lyricsText') || document.querySelector('#lyrics') || document.querySelector('pre');
+var targetTitle = (lyricsBox && lyricsBox.parentNode) ? lyricsBox : document.querySelector('[data-i18n="readerLyrics"]') || document.querySelector('.h2') || document.body;if(!targetTitle) return;
+
+    var wrap = document.createElement('div');
+    wrap.id = 'bcToggleWrap';
+    wrap.style.display = 'flex';
+    wrap.style.gap = '10px';
+    wrap.style.margin = '6px 0 10px 0';
+
+    var bLyrics = document.createElement('button');
+    bLyrics.id = 'bcBtnLyrics';
+    bLyrics.type = 'button';
+    bLyrics.textContent = 'Paroles';
+    bLyrics.style.padding = '6px 10px';
+    bLyrics.style.borderRadius = '10px';
+    bLyrics.style.border = '1px solid rgba(255,255,255,.25)';
+    bLyrics.style.background = 'rgba(255,255,255,.06)';
+    bLyrics.style.color = '#fff';
+    bLyrics.style.cursor = 'pointer';
+
+    var bBible = document.createElement('button');
+    bBible.id = 'bcBtnBible';
+    bBible.type = 'button';
+    bBible.textContent = 'Bible';
+    bBible.style.padding = '6px 10px';
+    bBible.style.borderRadius = '10px';
+    bBible.style.border = '1px solid rgba(255,255,255,.25)';
+    bBible.style.background = 'rgba(255,255,255,.06)';
+    bBible.style.color = '#fff';
+    bBible.style.cursor = 'pointer';
+
+    bLyrics.addEventListener('click', function(){ setMode('lyrics'); }, true);
+    bBible.addEventListener('click', function(){ setMode('bible'); }, true);
+
+    wrap.appendChild(bLyrics);
+    wrap.appendChild(bBible);
+
+    // On insère le toggle juste sous le titre du panneau "Paroles/Letras"
+    if(lyricsBox && lyricsBox.parentNode){
+  lyricsBox.parentNode.insertBefore(wrap, lyricsBox);
+}else if(targetTitle && targetTitle.parentNode){
+  targetTitle.parentNode.insertBefore(wrap, targetTitle.nextSibling);
+}else{
+  document.body.insertBefore(wrap, document.body.firstChild);
+}updateButtons();
+  function updateButtons(){
+    var mode = document.body.getAttribute('data-bc-mode') || 'lyrics';
+    var a = document.getElementById('bcBtnLyrics');
+    var b = document.getElementById('bcBtnBible');
+    if(!a || !b) return;
+
+    // style "actif" simple
+    if(mode === 'bible'){
+      a.style.opacity = '0.55';
+      b.style.opacity = '1';
+      b.style.borderColor = 'rgba(255,255,255,.55)';
+      b.style.opacity = '0.55';
+      a.style.opacity = '1';
+      a.style.borderColor = 'rgba(255,255,255,.55)';
+  function hook(){
+    // mode par défaut
+    if(!document.body.getAttribute('data-bc-mode')) document.body.setAttribute('data-bc-mode','lyrics');
+
+    ensureToggle();
+
+    // Quand on change de livre / chapitre / langue => si mode bible, on rerender
+    document.addEventListener('change', function(e){
+      var t = e.target;
+      if(!t) return;
+      if(t.matches('select[id*="book"], select[name*="book"], #bookSelect, #book, #bookSelector')){
+        if(document.body.getAttribute('data-bc-mode') === 'bible') render();
+    }, true);
+
+    document.addEventListener('click', function(e){
+      var b = e.target;
+      if(!b) return;
+      if(b.closest('.chapter-btn, .chapterButton, .chap-btn')){
+        if(document.body.getAttribute('data-bc-mode') === 'bible') render();
+      if(b.closest('.bc-lang-row button, .bc-lang-row .lang-btn, .lang-row button')){
+        setTimeout(function(){
+          if(document.body.getAttribute('data-bc-mode') === 'bible') render();
+          updateButtons();
+        }, 80);
+    }, true);
+
+    // Observe les changements des paroles pour garder le cache à jour
+    var box = getLyricsBox();
+    if(box && window.MutationObserver){
+      var mo = new MutationObserver(function(){
+        updateLyricsCacheFromDom();
+      });
+      mo.observe(box, { childList:true, characterData:true, subtree:true });
+    // premier rendu
+    setTimeout(function(){
+      ensureToggle();
+      updateLyricsCacheFromDom();
+      render();
+    }, 150);
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', hook);
+  else hook();
+})();
+
+
+
+

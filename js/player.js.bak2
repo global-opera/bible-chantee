@@ -1,0 +1,722 @@
+/* Bible Chantée V3 — player.js (standalone, tolerant)
+   - Noms livres: BOOK_NAMES + aliases BOOK_CODE_ALIASES
+   - Audio: supporte AUDIO_URLS, AUDIO_URLS_FR, AUDIO_URLS_fr, AUDIO_URLS_PT, etc.
+   - Bible: supporte BC_BIBLE, BIBLE, BIBLE_TEXTS, BIBLE_FR, BIBLE_fr, BC_BIBLE_FR, etc.
+   - Toggle simple Paroles/Bible dans le même panneau
+*/
+(function () {
+  'use strict';
+
+  var LANGS = ['FR','EN','PT','ES','DE','IT','AR','RU','ZH','HI','TL','SW','KO'];
+
+  var BIBLE_FILES = {
+    FR: 'V3/bible/fr_bible_segond1910.json',
+    EN: 'V3/bible/en_bible_kjv_1611.json',
+    PT: 'V3/bible/pt_bible_almeida_acf.json',
+    ES: 'V3/bible/es_bible_reina_valera_1909.json',
+    DE: 'V3/bible/de_bible_luther_1912.json',
+    IT: 'V3/bible/it_bible_diodati_1649.json',
+    AR: 'V3/bible/ar_bible_van_dyck_1865.json',
+    RU: 'V3/bible/ru_bible_synodal.json',
+    ZH: 'V3/bible/zh_bible_cuv_1919.json',
+    HI: 'V3/bible/hi_bible_bfbs_1914_publicdomain.json',
+    TL: 'V3/bible/tl_bible_old_tagalog.json',
+    SW: 'V3/bible/sw_bible_swahili_publicdomain.json'
+  };
+
+  var bibleCache = {};
+
+  // Book code to book number mapping
+  var BOOK_CODE_TO_NUM = {
+    '01_GEN': 1, '02_EXO': 2, '03_LEV': 3, '04_NUM': 4, '05_DEU': 5,
+    '06_JOS': 6, '07_JDG': 7, '08_RUT': 8, '09_1SA': 9, '10_2SA': 10,
+    '11_1KI': 11, '12_2KI': 12, '13_1CH': 13, '14_2CH': 14, '15_EZR': 15,
+    '16_NEH': 16, '17_EST': 17, '18_JOB': 18, '19_PSA': 19, '20_PRO': 20,
+    '21_ECC': 21, '22_SNG': 22, '23_ISA': 23, '24_JER': 24, '25_LAM': 25,
+    '26_EZK': 26, '27_DAN': 27, '28_HOS': 28, '29_JOL': 29, '30_AMO': 30,
+    '31_OBA': 31, '32_JON': 32, '33_MIC': 33, '34_NAM': 34, '35_HAB': 35,
+    '36_ZEP': 36, '37_HAG': 37, '38_ZEC': 38, '39_MAL': 39, '40_MAT': 40,
+    '41_MRK': 41, '42_LUK': 42, '43_JHN': 43, '44_ACT': 44, '45_ROM': 45,
+    '46_1CO': 46, '47_2CO': 47, '48_GAL': 48, '49_EPH': 49, '50_PHP': 50,
+    '51_COL': 51, '52_1TH': 52, '53_2TH': 53, '54_1TI': 54, '55_2TI': 55,
+    '56_TIT': 56, '57_PHM': 57, '58_HEB': 58, '59_JAS': 59, '60_1PE': 60,
+    '61_2PE': 61, '62_1JN': 62, '63_2JN': 63, '64_3JN': 64, '65_JUD': 65,
+    '66_REV': 66
+  };
+
+  function normLang(x){ return String(x || 'FR').toUpperCase(); }
+
+  function getLang(){
+    try{
+      var qp = new URLSearchParams(location.search).get('lang');
+      if(qp && LANGS.indexOf(qp.toUpperCase()) >= 0){
+        var Lq = qp.toUpperCase();
+        try{ localStorage.setItem('bc_lang', Lq); }catch(e){}
+        return Lq;
+      }
+    }catch(e){}
+    try{
+      var st = String(localStorage.getItem('bc_lang') || '').toUpperCase();
+      if(st && LANGS.indexOf(st) >= 0) return st;
+    }catch(e){}
+    return 'FR';
+  }
+
+  function setLang(L){
+    var lang = normLang(L);
+    if(LANGS.indexOf(lang) < 0) return;
+    try{ localStorage.setItem('bc_lang', lang); }catch(e){}
+    try{
+      var url = new URL(location.href);
+      url.searchParams.set('lang', lang);
+      location.href = url.toString();
+    }catch(e){
+      location.search = '?lang=' + encodeURIComponent(lang);
+    }
+  }
+
+  function $(id){ return document.getElementById(id); }
+
+  function codeAlias(code){
+    var c = String(code || '').toUpperCase();
+    try{
+      if(window.BOOK_CODE_ALIASES && window.BOOK_CODE_ALIASES[c]) c = window.BOOK_CODE_ALIASES[c];
+    }catch(e){}
+    return c;
+  }
+
+  function getBookName(lang, code){
+    var L = normLang(lang);
+    var c = codeAlias(code);
+    try{
+      if(window.BOOK_NAMES && window.BOOK_NAMES[L] && window.BOOK_NAMES[L][c]) return window.BOOK_NAMES[L][c];
+      if(window.BOOK_NAMES && window.BOOK_NAMES.FR && window.BOOK_NAMES.FR[c]) return window.BOOK_NAMES.FR[c];
+    }catch(e){}
+    return String(code || '');
+  }
+
+  function getChapterWord(lang){
+    var L = normLang(lang);
+    var map = {
+      FR:'Chapitre', EN:'Chapter', PT:'Capítulo', ES:'Capítulo', DE:'Kapitel', IT:'Capitolo',
+      AR:'الفصل', RU:'Глава', ZH:'章', HI:'अध्याय', TL:'Kabanata', SW:'Sura', KO:'장'
+    };
+    return map[L] || map.FR;
+  }
+
+  function buildBookIndex(){
+    if(window.BOOKS && !window.BOOKS_BY_CODE){
+      var idx2 = {};
+      for(var j=0;j<window.BOOKS.length;j++){
+        var bb = window.BOOKS[j];
+        if(bb && bb.code) idx2[String(bb.code).toUpperCase()] = bb;
+      }
+      window.BOOKS_BY_CODE = idx2;
+    }
+  }
+
+  function findBookSelect(){
+    return document.querySelector('#bookSelect, #book, #bookSelector, select[name="book"], select[id*="book"]');
+  }
+
+  function findChapterWrap(){
+    return document.querySelector('#chapterButtons, #chapters, .chapter-buttons, .chapters, .chapter-grid');
+  }
+
+  function findAudioEl(){
+    return document.querySelector('#audioPlayer, audio#audio, audio');
+  }
+
+  function findLyricsBox(){
+    return document.querySelector('#lyricsBox, #lyricsText, #lyrics, pre#lyrics');
+  }
+
+  function findBibleBox(){
+    return document.querySelector('#bibleBox, #bibleText, #bible, pre#bible');
+  }
+
+  function findLyricsHeader(){
+    return document.querySelector('[data-i18n="readerLyrics"], #readerLyrics, .readerLyrics');
+  }
+
+  function findBibleHeader(){
+    return document.querySelector('[data-i18n="readerBible"], #readerBible, .readerBible');
+  }
+
+  function findHeaderTitle(){
+    return document.querySelector('#currentRef, #headerTitle, #bcHeaderTitle, .bc-header-title, .header-title, [data-role="header-title"]');
+  }
+
+  function pad2(n){
+    var s = String(n);
+    return (s.length === 1) ? ('0'+s) : s;
+  }
+
+  function safeText(s){
+    return (s == null) ? '' : String(s);
+  }
+
+  function setBoxText(el, text){
+    if(!el) return;
+    el.textContent = safeText(text);
+  }
+
+  function getSelectedBookCode(){
+    var sel = findBookSelect();
+    if(!sel) return '';
+    return String(sel.value || '').toUpperCase();
+  }
+
+  function setSelectedBookCode(code){
+    var sel = findBookSelect();
+    if(!sel) return;
+    sel.value = code;
+  }
+
+  function getSelectedChapter(){
+    var active = document.querySelector('.chapter-btn.active, .chapterButton.active, .chap-btn.active, button[aria-current="true"][data-chapter]');
+    if(active){
+      var t = (active.getAttribute('data-chapter') || active.textContent || '').trim();
+      if(/^\d+$/.test(t)) return parseInt(t,10);
+    }
+    return 1;
+  }
+
+  function setActiveChapter(n){
+    var wrap = findChapterWrap();
+    if(!wrap) return;
+    var btns = wrap.querySelectorAll('button');
+    for(var i=0;i<btns.length;i++){
+      var b = btns[i];
+      var t = (b.getAttribute('data-chapter') || b.textContent || '').trim();
+      if(String(n) === t){
+        b.classList.add('active');
+        b.setAttribute('aria-current','true');
+      }else{
+        b.classList.remove('active');
+        b.removeAttribute('aria-current');
+      }
+    }
+  }
+
+  function getLyricsUrl(lang, bookCode, chapter){
+    var L = normLang(lang);
+    var bc = String(bookCode||'').toUpperCase();
+    return './V3/lyrics/' + L + '/' + bc + '/' + bc + '_' + pad2(chapter) + '_' + L + '.txt';
+  }
+
+  // -------- AUDIO (tolérant) --------
+
+  function getAudioMapsForLang(L){
+    var out = [];
+
+    function pushIf(obj){
+      if(obj && typeof obj === 'object') out.push(obj);
+    }
+
+    try{ pushIf(window.AUDIO_URLS && window.AUDIO_URLS[L]); }catch(e){}
+    try{ pushIf(window.AUDIO_URLS && window.AUDIO_URLS[L.toLowerCase && L.toLowerCase()]); }catch(e){}
+
+    var keys = [
+      'AUDIO_URLS_' + L,
+      'AUDIO_URLS_' + L.toLowerCase(),
+      'audio_urls_' + L,
+      'audio_urls_' + L.toLowerCase(),
+      'AUDIO_' + L,
+      'AUDIO_' + L.toLowerCase()
+    ];
+
+    for(var i=0;i<keys.length;i++){
+      try{ pushIf(window[keys[i]]); }catch(e){}
+    }
+
+    return out;
+  }
+
+  function resolveAudioUrl(L, bookCode, chapter){
+    var bc = String(bookCode||'').toUpperCase();
+    var key1 = bc + '_' + pad2(chapter) + '_' + L;         // ex 08_RUT_01_PT
+    var key2 = bc + '_' + chapter + '_' + L;               // fallback
+    var key3 = bc + '_' + pad2(chapter);                   // fallback sans langue
+    var key4 = bc + '_' + chapter;
+
+    var maps = getAudioMapsForLang(L);
+
+    function tryMap(m){
+      if(!m) return '';
+      if(typeof m[key1] === 'string') return m[key1];
+      if(typeof m[key2] === 'string') return m[key2];
+
+      // parfois m[bookCode] = { "1": url, "01": url }
+      if(m[bc] && typeof m[bc] === 'object'){
+        var mm = m[bc];
+        if(typeof mm[chapter] === 'string') return mm[chapter];
+        if(typeof mm[String(chapter)] === 'string') return mm[String(chapter)];
+        if(typeof mm[pad2(chapter)] === 'string') return mm[pad2(chapter)];
+      }
+
+      // parfois clé sans langue
+      if(typeof m[key3] === 'string') return m[key3];
+      if(typeof m[key4] === 'string') return m[key4];
+
+      return '';
+    }
+
+    for(var i=0;i<maps.length;i++){
+      var u = tryMap(maps[i]);
+      if(u) return u;
+    }
+    return '';
+  }
+
+  function setAudioFor(lang, bookCode, chapter){
+    var audio = findAudioEl();
+    if(!audio) return;
+
+    var L = normLang(lang);
+    var url = resolveAudioUrl(L, bookCode, chapter);
+
+    if(url){
+      try{
+        audio.src = url;
+        audio.load();
+      }catch(e){}
+    }else{
+      // pas d'audio trouvé -> laisser vide
+      try{
+        audio.removeAttribute('src');
+        audio.load();
+      }catch(e){}
+    }
+  }
+
+  // -------- BIBLE (tolérant) --------
+
+  function normalizeBibleValue(v){
+    if(v == null) return '';
+    if(typeof v === 'string') return v;
+    if(Array.isArray(v)) return v.join('\n');
+    if(typeof v === 'object'){
+      // objet de versets {1:"...",2:"..."} -> concat
+      try{
+        var keys = Object.keys(v).sort(function(a,b){
+          var na = parseInt(a,10), nb = parseInt(b,10);
+          if(isNaN(na) || isNaN(nb)) return String(a).localeCompare(String(b));
+          return na-nb;
+        });
+        var out = [];
+        for(var i=0;i<keys.length;i++){
+          out.push(v[keys[i]]);
+        }
+        return out.join('\n');
+      }catch(e){}
+    }
+    return String(v);
+  }
+
+  function findBibleText(lang, bookCode, chapter){
+    var L = normLang(lang);
+    var c = codeAlias(bookCode);
+
+    function grab(obj){
+      if(!obj) return '';
+      var byBook = obj[c] || obj[String(c)];
+      if(!byBook) return '';
+      var v = byBook[chapter] || byBook[String(chapter)] || byBook[pad2(chapter)];
+      return normalizeBibleValue(v);
+    }
+
+    // 1) structures multi-langues: BC_BIBLE[L][code][ch]
+    try{
+      if(window.BC_BIBLE && window.BC_BIBLE[L]) {
+        var t1 = grab(window.BC_BIBLE[L]);
+        if(t1) return t1;
+      }
+    }catch(e){}
+    try{
+      if(window.BIBLE && window.BIBLE[L]) {
+        var t2 = grab(window.BIBLE[L]);
+        if(t2) return t2;
+      }
+    }catch(e){}
+    try{
+      if(window.BIBLE_TEXTS && window.BIBLE_TEXTS[L]) {
+        var t3 = grab(window.BIBLE_TEXTS[L]);
+        if(t3) return t3;
+      }
+    }catch(e){}
+
+    // 2) variables par langue: BIBLE_FR, BC_BIBLE_FR, BIBLE_fr...
+    var candidates = [
+      'BC_BIBLE_' + L, 'BC_BIBLE_' + L.toLowerCase(),
+      'BIBLE_' + L,    'BIBLE_' + L.toLowerCase(),
+      'BIBLE_TEXT_' + L, 'BIBLE_TEXT_' + L.toLowerCase(),
+      'BIBLE_TEXTS_' + L, 'BIBLE_TEXTS_' + L.toLowerCase()
+    ];
+
+    for(var i=0;i<candidates.length;i++){
+      try{
+        var obj = window[candidates[i]];
+        var t = grab(obj);
+        if(t) return t;
+      }catch(e){}
+    }
+
+    return '';
+  }
+
+  async function loadBibleFromJSON(lang){
+    var L = normLang(lang);
+    if(bibleCache[L]) return bibleCache[L];
+    if(!BIBLE_FILES[L]) return null;
+
+    try{
+      var response = await fetch(BIBLE_FILES[L]);
+      if(!response.ok) return null;
+      var data = await response.json();
+      bibleCache[L] = data;
+      return data;
+    }catch(e){
+      console.error('Error loading Bible JSON:', e);
+      return null;
+    }
+  }
+
+  function extractChapterFromJSON(jsonData, bookCode, chapter){
+    if(!jsonData || !jsonData.verses) return '';
+
+    var c = codeAlias(bookCode);
+    var bookNum = BOOK_CODE_TO_NUM[c];
+    if(!bookNum) return '';
+
+    var chapterVerses = [];
+    for(var i=0; i<jsonData.verses.length; i++){
+      var v = jsonData.verses[i];
+      if(v.book === bookNum && v.chapter === chapter){
+        chapterVerses.push(v.text);
+      }
+    }
+
+    return chapterVerses.join('\n');
+  }
+
+  async function loadBible(lang, bookCode, chapter){
+    var box = findBibleBox();
+    if(!box) return '';
+
+    // Try existing global variables first
+    var t = findBibleText(lang, bookCode, chapter);
+    if(t){
+      setBoxText(box, t);
+      return t;
+    }
+
+    // Load from JSON if available
+    var jsonData = await loadBibleFromJSON(lang);
+    if(jsonData){
+      var text = extractChapterFromJSON(jsonData, bookCode, chapter);
+      if(text){
+        setBoxText(box, text);
+        return text;
+      }
+    }
+
+    setBoxText(box, '—');
+    return '';
+  }
+
+  // -------- UI / render --------
+
+  function renderBookDropdown(lang){
+    buildBookIndex();
+    var sel = findBookSelect();
+    if(!sel) return;
+
+    var L = normLang(lang);
+    if(sel.getAttribute('data-bc-labeled') === L) return;
+
+    var opts = sel.querySelectorAll('option');
+    if(opts && opts.length){
+      for(var i=0;i<opts.length;i++){
+        var code = String(opts[i].value || opts[i].getAttribute('value') || opts[i].textContent || '').trim();
+        if(!code) continue;
+        opts[i].textContent = getBookName(L, code);
+      }
+      sel.setAttribute('data-bc-labeled', L);
+      return;
+    }
+
+    var books = window.BOOKS || [];
+    sel.innerHTML = '';
+    for(var j=0;j<books.length;j++){
+      var b = books[j];
+      if(!b || !b.code) continue;
+      var opt = document.createElement('option');
+      opt.value = String(b.code).toUpperCase();
+      opt.textContent = getBookName(L, b.code);
+      sel.appendChild(opt);
+    }
+    sel.setAttribute('data-bc-labeled', L);
+  }
+
+  function renderChaptersFor(bookCode){
+    buildBookIndex();
+    var wrap = findChapterWrap();
+    if(!wrap) return;
+
+    var book = (window.BOOKS_BY_CODE && window.BOOKS_BY_CODE[String(bookCode||'').toUpperCase()]) || null;
+    var total = 1;
+
+    if(book){
+      if(typeof book.chapters === 'number') total = book.chapters;
+      else if(typeof book.chapterCount === 'number') total = book.chapterCount;
+      else if(Array.isArray(book.chapterTitles)) total = book.chapterTitles.length;
+    }
+
+    wrap.innerHTML = '';
+    for(var i=1;i<=total;i++){
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'chapter-btn';
+      btn.textContent = String(i);
+      btn.setAttribute('data-chapter', String(i));
+      (function(n){
+        btn.addEventListener('click', function(){
+          setActiveChapter(n);
+          refreshAll(false);
+        });
+      })(i);
+      wrap.appendChild(btn);
+    }
+  }
+
+  function setHeaderTitleLine(lang, bookCode, chapter, lyricsText){
+    var ht = findHeaderTitle();
+    if(!ht) return;
+
+    var L = normLang(lang);
+    var name = getBookName(L, bookCode);
+
+    var title = '';
+    try{
+      var m = safeText(lyricsText).match(/\[TITLE\]\s*[\r\n]+([^\r\n]+)/i);
+      if(m && m[1]) title = String(m[1]).trim();
+      if(title){
+        var parts = title.split(/\s-\s/);
+        if(parts.length >= 2) title = parts.slice(1).join(' - ').trim();
+        parts = title.split(/\s—\s/);
+        if(parts.length >= 2) title = parts.slice(1).join(' — ').trim();
+      }
+    }catch(e){}
+
+    var line = name + ' — ' + getChapterWord(L) + ' ' + chapter;
+    if(title) line = name + ' ' + chapter + ' — ' + title;
+
+    ht.textContent = line;
+  }
+
+  function ensureToggleUI(){
+    if(document.getElementById('bcToggleWrap')) return;
+
+    var lyricsHeader = findLyricsHeader();
+    var bibleHeader  = findBibleHeader();
+    var lyricsBox = findLyricsBox();
+    var bibleBox  = findBibleBox();
+
+    if(!lyricsHeader || !lyricsBox) return;
+
+    var host = lyricsHeader.parentNode;
+    if(!host) return;
+
+    var wrap = document.createElement('div');
+    wrap.id = 'bcToggleWrap';
+    wrap.style.display = 'flex';
+    wrap.style.gap = '10px';
+    wrap.style.margin = '0 0 10px 0';
+
+    var bLyrics = document.createElement('button');
+    bLyrics.type = 'button';
+    bLyrics.id = 'bcBtnLyrics';
+
+    var bBible = document.createElement('button');
+    bBible.type = 'button';
+    bBible.id = 'bcBtnBible';
+
+    function labelButtons(){
+      var L = getLang();
+      var tLyrics = null, tBible = null;
+      try{
+        if(window.translations && window.translations[L]){
+          tLyrics = window.translations[L].readerLyrics || window.translations[L].lyrics || null;
+          tBible  = window.translations[L].readerBible  || window.translations[L].bible  || null;
+        }
+      }catch(e){}
+      bLyrics.textContent = tLyrics || (L==='EN'?'Lyrics':(L==='PT'?'Letras':(L==='ES'?'Letras':(L==='DE'?'Liedtext':(L==='IT'?'Testo':'Paroles')))));
+      bBible.textContent  = tBible  || (L==='EN'?'Bible':(L==='PT'?'Bíblia':(L==='ES'?'Biblia':(L==='DE'?'Bibel':(L==='IT'?'Bibbia':'Bible')))));
+    }
+
+    function setMode(mode){
+      var m = (mode === 'bible') ? 'bible' : 'lyrics';
+      try{ localStorage.setItem('bc_mode', m); }catch(e){}
+      wrap.setAttribute('data-mode', m);
+
+      var activeStyle = '2px solid rgba(255,255,255,0.7)';
+      var idleStyle   = '1px solid rgba(255,255,255,0.25)';
+
+      if(m === 'lyrics'){
+        bLyrics.style.border = activeStyle;
+        bBible.style.border  = idleStyle;
+      }else{
+        bBible.style.border  = activeStyle;
+        bLyrics.style.border = idleStyle;
+      }
+      bLyrics.style.padding = bBible.style.padding = '6px 10px';
+      bLyrics.style.borderRadius = bBible.style.borderRadius = '10px';
+      bLyrics.style.background = bBible.style.background = 'rgba(0,0,0,0.15)';
+      bLyrics.style.color = bBible.style.color = '#fff';
+
+      if(bibleHeader) bibleHeader.style.display = (m==='bible') ? '' : 'none';
+      if(bibleBox)    bibleBox.style.display    = (m==='bible') ? '' : 'none';
+
+      lyricsHeader.style.display = (m==='lyrics') ? '' : 'none';
+      lyricsBox.style.display    = (m==='lyrics') ? '' : 'none';
+
+      refreshContent();
+    }
+
+    bLyrics.addEventListener('click', function(){ setMode('lyrics'); });
+    bBible.addEventListener('click',  function(){ setMode('bible');  });
+
+    wrap.appendChild(bLyrics);
+    wrap.appendChild(bBible);
+
+    host.insertBefore(wrap, lyricsHeader);
+
+    labelButtons();
+
+    var mode = 'lyrics';
+    try{ mode = localStorage.getItem('bc_mode') || 'lyrics'; }catch(e){}
+    setMode(mode);
+
+    document.addEventListener('bc:lang', function(){ labelButtons(); }, true);
+  }
+
+  async function loadLyrics(lang, bookCode, chapter){
+    var box = findLyricsBox();
+    if(!box) return '';
+
+    var url = getLyricsUrl(lang, bookCode, chapter);
+    try{
+      var r = await fetch(url, { cache:'no-store' });
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      var t = await r.text();
+      setBoxText(box, t);
+      return t;
+    }catch(e){
+      setBoxText(box, '—');
+      return '';
+    }
+  }
+
+  async function refreshContent(){
+    var lang = getLang();
+    var bookCode = getSelectedBookCode();
+    if(!bookCode){
+      var books = window.BOOKS || [];
+      if(books.length && books[0].code){
+        bookCode = String(books[0].code).toUpperCase();
+        setSelectedBookCode(bookCode);
+      }
+    }
+    if(!bookCode) return;
+
+    var chapter = getSelectedChapter();
+
+    setAudioFor(lang, bookCode, chapter);
+    await loadBible(lang, bookCode, chapter);
+
+    loadLyrics(lang, bookCode, chapter).then(function(lyricsText){
+      setHeaderTitleLine(lang, bookCode, chapter, lyricsText);
+    });
+  }
+
+  function refreshAll(resetChapter){
+    var lang = getLang();
+    window.currentLanguage = lang;
+
+    renderBookDropdown(lang);
+
+    var bookCode = getSelectedBookCode();
+    if(!bookCode){
+      var sel = findBookSelect();
+      if(sel && sel.options && sel.options.length){
+        bookCode = String(sel.options[0].value || '').toUpperCase();
+        if(bookCode) setSelectedBookCode(bookCode);
+      }
+    }
+
+    if(bookCode){
+      renderChaptersFor(bookCode);
+      if(resetChapter !== false) setActiveChapter(1);
+      else setActiveChapter(getSelectedChapter());
+    }
+
+    ensureToggleUI();
+    refreshContent();
+  }
+
+  function wireEvents(){
+    var sel = findBookSelect();
+    if(sel){
+      sel.addEventListener('change', function(){
+        var code = getSelectedBookCode();
+        if(code){
+          renderChaptersFor(code);
+          setActiveChapter(1);
+        }
+        refreshAll(false);
+      });
+    }
+
+    document.addEventListener('click', function(e){
+      var btn = e.target;
+      if(!btn) return;
+
+      var lang = btn.getAttribute && (btn.getAttribute('data-lang') || btn.getAttribute('data-language'));
+      if(!lang){
+        var t = (btn.textContent || '').trim();
+        if(/^(FR|EN|PT|ES|DE|IT|AR|RU|ZH|HI|TL|SW|KO)$/.test(t)) lang = t;
+      }
+      if(lang){
+        if(btn.closest && btn.closest('#bcToggleWrap')) return;
+        if(btn.closest && btn.closest('.bc-lang-row')) {
+          e.preventDefault();
+          setLang(lang);
+        }
+      }
+    }, true);
+  }
+
+  function boot(){
+    buildBookIndex();
+    wireEvents();
+    refreshAll(true);
+    setTimeout(function(){ refreshAll(false); }, 150);
+    setTimeout(function(){ refreshAll(false); }, 600);
+    setTimeout(function(){ refreshAll(false); }, 1200);
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', boot);
+  }else{
+    boot();
+  }
+
+  window.BC_PLAYER = window.BC_PLAYER || {};
+  window.BC_PLAYER.getLang = getLang;
+  window.BC_PLAYER.setLang = setLang;
+  window.BC_PLAYER.refresh = function(){ refreshAll(false); };
+
+})();
+
+

@@ -1,0 +1,404 @@
+/* Bible Chantée V3 — player.js (standalone, robust) */
+(function () {
+  const LANGS = (window.I18N && window.I18N.LANGS) || ['FR','EN','PT','ES','DE','IT','AR','RU','ZH','HI','TL','SW'];
+
+  function pad2(n) { return String(n).padStart(2, '0'); }
+
+  function getLang() {
+    try {
+      const url = new URLSearchParams(location.search).get('lang');
+      if (url && LANGS.includes(url.toUpperCase())) {
+        const lang = url.toUpperCase();
+        localStorage.setItem('bc_lang', lang);
+        return lang;
+      }
+      const stored = (localStorage.getItem('bc_lang') || '').toUpperCase();
+      if (stored && LANGS.includes(stored)) return stored;
+      return 'FR';
+    } catch (e) { return 'FR'; }
+  }
+
+  function setLang(lang) {
+    const L = String(lang||'').toUpperCase();
+    if (!LANGS.includes(L)) return;
+    localStorage.setItem('bc_lang', L);
+    const url = new URL(location.href);
+    url.searchParams.set('lang', L);
+    location.href = url.toString();
+  }
+
+  // Mapping-first, fallback local pattern
+  function getAudioUrl(bookNum, chapter, lang, bookCode) {
+    const L = String(lang || 'FR').toUpperCase();
+    const B = String(bookNum || '').padStart(2, '0');
+    const C = String(chapter);
+
+    // 1) Mapping (if present)
+    const mapVar = 'AUDIO_URLS_' + L;
+    const urls = window[mapVar];
+    if (urls && urls[B] && urls[B][C]) return urls[B][C];
+
+    // 2) Local pattern
+    const code = bookCode || null;
+    if (!code) return null;
+
+    const ch2 = pad2(Number(chapter));
+    return `./audio/${L}/${code}/${code}_${ch2}_${L}.mp3`;
+  }
+
+  function getLyricsUrl(bookCode, chapter, lang) {
+    const L = String(lang || 'FR').toUpperCase();
+    const ch2 = pad2(Number(chapter));
+    return `./lyrics/${L}/${bookCode}/${bookCode}_${ch2}_${L}.txt`;
+  }
+
+  async function loadText(url) {
+    const r = await fetch(url, { cache: 'no-store' });
+    if (!r.ok) return null;
+    return await r.text();
+  }
+
+  function $(id) { return document.getElementById(id); }
+
+    function getBookName(lang, code){
+  try{
+    var L = String(lang||"FR").toUpperCase();
+    var c = String(code||"").toUpperCase();
+
+    if(window.BOOK_CODE_ALIASES && window.BOOK_CODE_ALIASES[c]) c = window.BOOK_CODE_ALIASES[c];
+
+    if(window.BOOK_NAMES && window.BOOK_NAMES[L] && window.BOOK_NAMES[L][c]) return window.BOOK_NAMES[L][c];
+    if(window.BOOK_NAMES && window.BOOK_NAMES.FR && window.BOOK_NAMES.FR[c]) return window.BOOK_NAMES.FR[c];
+  }catch(e){}
+  return code || "";
+}
+function bookDisplayName(book, lang) {
+    const name = getBookName(book.num, book.code, lang);
+    return name;
+  }
+
+  function buildBookIndex() {
+    if (window.BOOKS && !window.BOOKS_BY_NUM) {
+      const idx = {};
+      window.BOOKS.forEach(b => idx[b.num] = b);
+      window.BOOKS_BY_NUM = idx;
+    }
+  }
+
+  function renderChapters(book, selectedChap, onPick) {
+    const grid = $('chapterGrid');
+    grid.innerHTML = '';
+    for (let c = 1; c <= book.chapters; c++) {
+      const btn = document.createElement('button');
+      btn.className = 'chap-btn' + (c === selectedChap ? ' active' : '');
+      btn.textContent = String(c);
+      btn.addEventListener('click', () => onPick(c));
+      grid.appendChild(btn);
+    }
+  }
+
+  async function setChapter(book, chapter, lang) {
+    const audio = $('audioPlayer');
+    const status = $('audioStatus');
+    const lyricsBox = $('lyricsBox');
+    const bibleBox = $('bibleBox');
+    const ref = $('currentRef');
+
+    ref.textContent = `${book.code} — ${chapter}`;
+
+    // AUDIO
+    const audioUrl = getAudioUrl(book.num, chapter, lang, book.code);
+    if (!audioUrl) {
+      status.textContent = 'MP3 introuvable';
+      audio.removeAttribute('src');
+    } else {
+      status.textContent = audioUrl.includes('http') ? 'Audio (R2)' : 'Audio (local)';
+      audio.src = audioUrl;
+      audio.load();
+    }
+
+    // LYRICS
+    const lurl = getLyricsUrl(book.code, chapter, lang);
+    const ltxt = await loadText(lurl);
+    lyricsBox.textContent = ltxt || '—';
+
+    // BIBLE (placeholder for now)
+    bibleBox.textContent = '—';
+  }
+
+  function init() {
+    buildBookIndex();
+
+    const lang = getLang();
+
+    // Lang buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      const L = btn.dataset.lang;
+      btn.classList.toggle('active', L === lang);
+      btn.addEventListener('click', () => setLang(L));
+    });
+
+    // i18n apply
+    if (window.I18N && window.I18N.applyTranslations) window.I18N.applyTranslations();
+
+    // Books
+    const books = window.BOOKS || [];
+    const bookSelect = $('bookSelect');
+    if (!books.length) {
+      $('audioStatus').textContent = 'ERREUR: BOOKS non chargé (books.js)';
+      return;
+    }
+
+    // default: first book
+    let currentBook = books[0];
+    let currentChapter = 1;
+
+    bookSelect.innerHTML = '';
+    books.forEach(b => {
+      const opt = document.createElement('option');
+      opt.value = b.num;
+      opt.textContent = bookDisplayName(b, lang);
+      bookSelect.appendChild(opt);
+    });
+
+    bookSelect.value = currentBook.num;
+
+    const pickChapter = async (c) => {
+      currentChapter = c;
+      renderChapters(currentBook, currentChapter, pickChapter);
+      await setChapter(currentBook, currentChapter, lang);
+    };
+
+    bookSelect.addEventListener('change', async () => {
+      const num = bookSelect.value;
+      currentBook = window.BOOKS_BY_NUM[num] || books[0];
+      currentChapter = 1;
+      renderChapters(currentBook, currentChapter, pickChapter);
+      await setChapter(currentBook, currentChapter, lang);
+    });
+
+    renderChapters(currentBook, currentChapter, pickChapter);
+    pickChapter(currentChapter);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
+
+
+
+/* BC_FORCE_BOOKLABEL_V1
+   Force l'affichage des livres (dropdown) + header (Livre Chapitre — Titre),
+   en se basant sur BOOK_NAMES + le DOM, sans dépendre de l'implémentation interne du player.
+*/
+(function(){
+  function normLang(x){ return String(x||"FR").toUpperCase(); }
+
+  function getLang(){
+    return normLang(window.currentLanguage || (window.BC_LANG && (window.BC_LANG.current||window.BC_LANG.lang)) || "FR");
+  }
+
+  function codeAlias(code){
+    var c = String(code||"").toUpperCase();
+    try{
+      if(window.BOOK_CODE_ALIASES && window.BOOK_CODE_ALIASES[c]) c = window.BOOK_CODE_ALIASES[c];
+    }catch(e){}
+    return c;
+  }
+
+  function getBookNameSafe(lang, code){
+    try{
+      var L = normLang(lang);
+      var c = codeAlias(code);
+      if(window.BOOK_NAMES && window.BOOK_NAMES[L] && window.BOOK_NAMES[L][c]) return window.BOOK_NAMES[L][c];
+      if(window.BOOK_NAMES && window.BOOK_NAMES.FR && window.BOOK_NAMES.FR[c]) return window.BOOK_NAMES.FR[c];
+    }catch(e){}
+    return String(code||"");
+  }
+
+  function getBookCodeFromDom(){
+    var sel = document.querySelector('select[id*="book"], select[name*="book"], #bookSelect, #book, #bookSelector');
+    if(sel && sel.value) return sel.value;
+    return "";
+  }
+
+  function getChapterFromDom(){
+    // bouton actif
+    var active = document.querySelector('.chapter-btn.active, .chapterButton.active, .chap-btn.active, button[aria-current="true"][data-chapter]');
+    if(active){
+      var t = (active.getAttribute('data-chapter') || active.textContent || "").trim();
+      if(/^\d+$/.test(t)) return t;
+    }
+    // fallback: lire dans header actuel
+    var h = document.querySelector('#headerTitle, #bcHeaderTitle, .bc-header-title, .header-title');
+    if(h){
+      var m = String(h.textContent||"").match(/(?:—|\-)\s*(\d{1,3})\s*$/);
+      if(m) return m[1];
+    }
+    return "1";
+  }
+
+  function getTitleFromLyricsDom(){
+    // Cherche dans le panneau paroles: ligne après [TITLE]
+    var nodes = [
+      document.querySelector('#lyricsText'),
+      document.querySelector('#lyrics'),
+      document.querySelector('#lyricsPane'),
+      document.querySelector('.lyrics'),
+      document.querySelector('.panel-lyrics'),
+      document.body
+    ].filter(Boolean);
+
+    var txt = "";
+    for(var i=0;i<nodes.length;i++){
+      txt = (nodes[i].innerText || nodes[i].textContent || "");
+      if(txt && txt.indexOf('[TITLE]') >= 0) break;
+    }
+    if(!txt || txt.indexOf('[TITLE]') < 0) return "";
+
+    var m = txt.match(/\[TITLE\]\s*[\r\n]+([^\r\n]+)/i);
+    if(!m) return "";
+    var line = (m[1]||"").trim();
+
+    // Exemple: "Genèse 1 - Lumière du commencement"
+    // On garde seulement la partie après " - " si présent
+    var parts = line.split(/\s-\s/);
+    if(parts.length >= 2) return parts.slice(1).join(" - ").trim();
+
+    // ou "Genèse 1 — ..."
+    parts = line.split(/\s—\s/);
+    if(parts.length >= 2) return parts.slice(1).join(" — ").trim();
+
+    return line;
+  }
+
+  function formatBookOption(lang, code){
+    var c = String(code||"");
+    var num = c.substring(0,2);
+    var name = getBookNameSafe(lang, c);
+    if(/^\d{2}$/.test(num)) return num + " - " + name;
+    return name;
+  }
+
+  function refreshDropdown(){
+    var lang = getLang();
+    var sel = document.querySelector('select[id*="book"], select[name*="book"], #bookSelect, #book, #bookSelector');
+    if(!sel) return;
+
+    // Evite de refaire 200 fois si déjà OK
+    var mark = "data-bc-labeled";
+    if(sel.getAttribute(mark) === lang) return;
+
+    var opts = sel.querySelectorAll('option');
+    for(var i=0;i<opts.length;i++){
+      var code = opts[i].value || opts[i].getAttribute('value') || opts[i].textContent;
+      opts[i].textContent = formatBookOption(lang, code);
+    }
+    sel.setAttribute(mark, lang);
+  }
+
+  function refreshHeader(){
+    var lang = getLang();
+    var bookCode = getBookCodeFromDom();
+    if(!bookCode) return;
+
+    var bookName = getBookNameSafe(lang, bookCode);
+    var chap = getChapterFromDom();
+    var title = getTitleFromLyricsDom();
+
+    var line = bookName + " " + chap;
+    if(title) line += " — " + title;
+
+    // Essaye plusieurs cibles possibles (selon ta V3)
+    var targets = [
+      document.querySelector('#headerTitle'),
+      document.querySelector('#bcHeaderTitle'),
+      document.querySelector('.bc-header-title'),
+      document.querySelector('.header-title'),
+      document.querySelector('[data-role="header-title"]')
+    ].filter(Boolean);
+
+    // fallback: ton header a 2 lignes, la 2e est souvent le 2e <div> dans la carte header
+    if(targets.length === 0){
+      var card = document.querySelector('.bc-header, .header-card, .top-header, header');
+      if(card){
+        var divs = card.querySelectorAll('div, span, h1, h2');
+        if(divs && divs.length >= 2) targets.push(divs[1]);
+      }
+    }
+
+    for(var i=0;i<targets.length;i++){
+      if(targets[i]) targets[i].textContent = line;
+    }
+  }
+
+  function refreshAll(){
+    try{ refreshDropdown(); }catch(e){}
+    try{ refreshHeader(); }catch(e){}
+  }
+
+  function hook(){
+    // écoute changements
+    document.addEventListener('change', function(e){
+      var t = e.target;
+      if(!t) return;
+      if(t.matches('select[id*="book"], select[name*="book"], #bookSelect, #book, #bookSelector')) refreshAll();
+    }, true);
+
+    document.addEventListener('click', function(e){
+      var b = e.target;
+      if(!b) return;
+      if(b.closest('.chapter-btn, .chapterButton, .chap-btn')) refreshAll();
+      if(b.closest('.bc-lang-row button, .bc-lang-row .lang-btn, .lang-row button')) {
+        // reset label marker pour relabel dans nouvelle langue
+        var sel = document.querySelector('select[id*="book"], select[name*="book"], #bookSelect, #book, #bookSelector');
+        if(sel) sel.removeAttribute('data-bc-labeled');
+        setTimeout(refreshAll, 50);
+      }
+    }, true);
+
+    // premier rendu + rattrapage après chargements async
+    refreshAll();
+    setTimeout(refreshAll, 150);
+    setTimeout(refreshAll, 500);
+    setTimeout(refreshAll, 1200);
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', hook);
+  }else{
+    hook();
+  }
+})();
+
+
+
+
+/* BC_DROPDOWN_LABELS_V1 */
+function bcApplyBookSelectLabels(){
+  try{
+    var sel = document.querySelector('select');
+    // priorité: le select du livre contient souvent des valeurs style "01_GEN"
+    var candidates = Array.from(document.querySelectorAll('select'));
+    sel = candidates.find(s => Array.from(s.options||[]).some(o => /_\w{3,}/.test(String(o.value||"")))) || sel;
+    if(!sel) return;
+
+    var L = (window.currentLanguage || "FR");
+    for(var i=0;i<sel.options.length;i++){
+      var code = sel.options[i].value || "";
+      var num = String(code).substring(0,2);
+      var name = getBookName(L, code);
+      if(/^\d{2}$/.test(num)) sel.options[i].textContent = num + " - " + name;
+      else sel.options[i].textContent = name;
+    }
+  }catch(e){}
+}
+document.addEventListener('DOMContentLoaded', function(){
+  setTimeout(bcApplyBookSelectLabels, 50);
+  setTimeout(bcApplyBookSelectLabels, 300);
+});
+

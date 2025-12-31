@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <base href="/">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Promesses</title>
+  <title>Promesses - Bible Chantée</title>
 
-  <link rel="stylesheet" href="/site.css">
+  <link rel="stylesheet" href="./css/style.css">
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -34,6 +33,34 @@
       text-decoration: none;
       font-weight: 700;
     }
+
+    /* Lecteur audio */
+    .audio-player {
+      background: rgba(30, 58, 95, 0.9);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 24px;
+      border: 2px solid rgba(245,200,66,0.3);
+    }
+    .audio-player.playing {
+      border-color: rgba(245,200,66,0.8);
+      box-shadow: 0 4px 20px rgba(245,200,66,0.3);
+    }
+    .now-playing {
+      color: #f5c842;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .now-playing.hidden { display: none; }
+    audio {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+
+    /* Liste des psaumes */
     .list {
       display: grid;
       grid-template-columns: 1fr;
@@ -46,13 +73,57 @@
       border-radius: 14px;
       padding: 18px 20px;
       border-left: 4px solid rgba(245,200,66,0.5);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .item a {
+    .item:hover {
+      background: rgba(30, 58, 95, 1);
+      border-left-color: rgba(245,200,66,1);
+      transform: translateX(4px);
+    }
+    .item.playing {
+      background: rgba(245,200,66,0.15);
+      border-left-color: rgba(245,200,66,1);
+    }
+    .item-content {
+      flex: 1;
+    }
+    .item-title {
       color: #f5c842;
       text-decoration: none;
       font-weight: 800;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
-    .item p { color: #d1d5db; margin-top: 6px; }
+    .play-icon {
+      font-size: 1.2rem;
+    }
+    .item p { color: #d1d5db; margin-top: 6px; font-size: 0.9rem; }
+    .item-actions {
+      display: flex;
+      gap: 8px;
+    }
+    .btn-small {
+      padding: 6px 12px;
+      background: rgba(245,200,66,0.2);
+      border: 1px solid rgba(245,200,66,0.4);
+      border-radius: 6px;
+      color: #f5c842;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .btn-small:hover {
+      background: rgba(245,200,66,0.3);
+      border-color: rgba(245,200,66,0.8);
+    }
     .error {
       text-align: center;
       color: #fca5a5;
@@ -61,17 +132,26 @@
     }
   </style>
 
-  <!-- Langue globale -->
-
-  <!-- Données promesses -->
-    <script src="/lang-shared.js"></script>
-  <script src="/promesses-data.js"></script>
+  <!-- Langue globale et données promesses -->
+  <script src="./js/config.js"></script>
+  <script src="./js/translations.js"></script>
+  <script src="./js/i18n.js"></script>
+  <script src="./promesses-data.js"></script>
 </head>
 
 <body>
   <div class="container">
-    <a class="back" id="backLink" href="/promesses.html">← Promesses</a>
+    <a class="back" id="backLink" href="./promesses.html">← Promesses</a>
     <h1 id="pageTitle">Promesses</h1>
+
+    <!-- Lecteur audio intégré -->
+    <div class="audio-player" id="audioPlayer">
+      <div class="now-playing hidden" id="nowPlaying">♫ En lecture : <span id="currentTitle"></span></div>
+      <audio id="audio" controls preload="none">
+        Votre navigateur ne supporte pas la lecture audio.
+      </audio>
+    </div>
+
     <div class="list" id="list"></div>
     <div class="error" id="err" style="display:none;"></div>
   </div>
@@ -79,20 +159,69 @@
 <script>
 (function () {
   // 1) Langue canonique
-  const lang = (
-    window.BC_LANG && typeof BC_LANG.getCurrentLanguage === "function"
-  )
-    ? BC_LANG.getCurrentLanguage()
+  const lang = (window.I18N && typeof I18N.getCurrentLanguage === "function")
+    ? I18N.getCurrentLanguage()
     : "FR";
 
   const qs = new URLSearchParams(location.search);
   const tema = qs.get("tema") || "";
 
   const back = document.getElementById("backLink");
-  back.href = `promesses.html?lang=${lang}`;
+  back.href = `./promesses.html?lang=${lang}`;
 
   const list = document.getElementById("list");
   const err = document.getElementById("err");
+  const audio = document.getElementById("audio");
+  const nowPlaying = document.getElementById("nowPlaying");
+  const currentTitle = document.getElementById("currentTitle");
+  const audioPlayer = document.getElementById("audioPlayer");
+
+  let currentPlayingItem = null;
+
+  // Mapping des numéros de livres vers les codes
+  const BOOK_CODES = {
+    "19": "19_PSA", // Psaumes
+    "1": "1_GEN",
+    "2": "2_EXO",
+    // Ajouter d'autres si nécessaire
+  };
+
+  // Fonction pour construire l'URL R2 du MP3
+  function buildAudioUrl(lang, bookNum, chapter) {
+    const bookCode = BOOK_CODES[bookNum] || "19_PSA";
+    // Padding à 2 chiffres pour chapitres 1-9, pas de padding pour 10+
+    const chapterFormatted = chapter < 10 ? String(chapter).padStart(2, '0') : String(chapter);
+    const fileName = `${bookCode}_${chapterFormatted}_${lang}.mp3`;
+    return `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${lang}/${bookCode}/${fileName}`;
+  }
+
+  // Fonction pour jouer un psaume
+  function playPsalm(book, chapter, label, itemElement) {
+    const url = buildAudioUrl(lang, book, chapter);
+    console.log('[playPsalm] Loading:', url);
+
+    // Mettre à jour l'affichage
+    currentTitle.textContent = label;
+    nowPlaying.classList.remove('hidden');
+    audioPlayer.classList.add('playing');
+
+    // Retirer la classe playing de l'ancien item
+    if (currentPlayingItem) {
+      currentPlayingItem.classList.remove('playing');
+    }
+
+    // Ajouter la classe playing au nouvel item
+    itemElement.classList.add('playing');
+    currentPlayingItem = itemElement;
+
+    // Charger et jouer l'audio
+    audio.src = url;
+    audio.load();
+    audio.play().catch(err => {
+      console.error('[playPsalm] Erreur de lecture:', err);
+      alert('Erreur lors du chargement de l\'audio. Vérifiez votre connexion internet.');
+    });
+  }
 
   // 2) Sécurité données
   if (!window.PROMESSAS) {
@@ -133,26 +262,47 @@
 
     if (book && chapter) {
       div.innerHTML = `
-        <a href="/lecteur.html?book=${encodeURIComponent(book)}&chapter=${encodeURIComponent(chapter)}&lang=${lang}&return=${encodeURIComponent("promesses-tema.html?tema=" + tema)}&section=${encodeURIComponent(tema)}">
-          ▶ ${label || (book + " " + chapter)}
-        </a>
-        ${it.sub ? `<p>${it.sub}</p>` : ""}
+        <div class="item-content">
+          <div class="item-title">
+            <span class="play-icon">▶</span>
+            ${label || ("Chapitre " + chapter)}
+          </div>
+          ${it.sub ? `<p>${it.sub}</p>` : ""}
+        </div>
+        <div class="item-actions">
+          <a href="./lecteur.html?book=${encodeURIComponent(book)}&chapter=${encodeURIComponent(chapter)}&lang=${lang}&return=${encodeURIComponent("promesses-tema.html?tema=" + tema)}&section=${encodeURIComponent(tema)}"
+             class="btn-small"
+             onclick="event.stopPropagation()">
+            Lecteur complet
+          </a>
+        </div>
       `;
+
+      // Clic sur l'item pour jouer l'audio
+      div.addEventListener('click', (e) => {
+        // Ne pas déclencher si on clique sur le bouton "Lecteur complet"
+        if (e.target.classList.contains('btn-small') || e.target.closest('.btn-small')) {
+          return;
+        }
+        playPsalm(book, chapter, label, div);
+      });
     } else {
-      div.innerHTML = `<p>${label || JSON.stringify(it)}</p>`;
+      div.innerHTML = `<div class="item-content"><p>${label || JSON.stringify(it)}</p></div>`;
     }
 
     list.appendChild(div);
   });
+
+  // Gérer la fin de lecture
+  audio.addEventListener('ended', () => {
+    if (currentPlayingItem) {
+      currentPlayingItem.classList.remove('playing');
+    }
+    audioPlayer.classList.remove('playing');
+  });
+
 })();
 </script>
 
-
-  <script src="/translations.js"></script>
-  <script src="/translations-extra.js"></script>
-  <script src="/i18n.js"></script>
-  <script src="/lang-shared.js"></script>
 </body>
 </html>
-
-
