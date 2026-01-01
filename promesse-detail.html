@@ -206,6 +206,8 @@
             listenLabel: "Ecouter dans le lecteur",
             lyricsLabel: "Paroles",
             bibleLabel: "Bible",
+            shareLabel: "Partager",
+            shareCopied: "Lien copie !",
             loadingText: "Chargement...",
             lyricsUnavailable: "Paroles non disponibles",
             comingSoon: "Audio bientot disponible",
@@ -229,6 +231,8 @@
             listenLabel: "Listen in player",
             lyricsLabel: "Lyrics",
             bibleLabel: "Bible",
+            shareLabel: "Share",
+            shareCopied: "Link copied!",
             loadingText: "Loading...",
             lyricsUnavailable: "Lyrics not available",
             comingSoon: "Audio coming soon",
@@ -251,6 +255,8 @@
             psalmWord: "Salmo",
             lyricsLabel: "Letras",
             bibleLabel: "Biblia",
+            shareLabel: "Compartilhar",
+            shareCopied: "Link copiado!",
             loadingText: "Carregando...",
             lyricsUnavailable: "Letras nao disponiveis",
             listenLabel: "Ouvir no leitor",
@@ -274,6 +280,8 @@
             psalmWord: "Salmo",
             lyricsLabel: "Letras",
             bibleLabel: "Biblia",
+            shareLabel: "Compartir",
+            shareCopied: "Enlace copiado!",
             loadingText: "Cargando...",
             lyricsUnavailable: "Letras no disponibles",
             listenLabel: "Escuchar en el reproductor",
@@ -297,6 +305,8 @@
             psalmWord: "Psalm",
             lyricsLabel: "Text",
             bibleLabel: "Bibel",
+            shareLabel: "Teilen",
+            shareCopied: "Link kopiert!",
             loadingText: "Laden...",
             lyricsUnavailable: "Text nicht verfugbar",
             listenLabel: "Im Player anhoren",
@@ -320,6 +330,8 @@
             psalmWord: "Salmo",
             lyricsLabel: "Testo",
             bibleLabel: "Bibbia",
+            shareLabel: "Condividi",
+            shareCopied: "Link copiato!",
             loadingText: "Caricamento...",
             lyricsUnavailable: "Testo non disponibile",
             listenLabel: "Ascolta nel lettore",
@@ -440,6 +452,9 @@
                     </button>
                     <button class="btn btn-toggle" onclick="toggleBible('${psalmNum}', '${lyricsId}', this, '${lang}')">
                         📖 ${langData.bibleLabel || 'Bible'}
+                    </button>
+                    <button class="btn btn-toggle" onclick="shareContent(${themeIndex}, ${psalmNum}, '${lang}', this)">
+                        🔗 ${langData.shareLabel || 'Partager'}
                     </button>
                 </div>
                 <div id="${lyricsId}" class="lyrics-box">
@@ -590,7 +605,183 @@
         }
     }
 
-    document.addEventListener('DOMContentLoaded', render);
+    // Share content function
+    function shareContent(themeIndex, psalmNum, lang, button) {
+        const langData = THEMES_DATA[lang] || THEMES_DATA.FR;
+
+        // Generate shareable URL with shared=true parameter for email gate
+        const baseUrl = window.location.origin + window.location.pathname;
+        const shareUrl = `${baseUrl}?theme=${themeIndex}&psalm=${psalmNum}&lang=${lang}&shared=true`;
+
+        // Copy to clipboard
+        navigator.clipboard.writeText(shareUrl).then(() => {
+            // Show feedback
+            const originalText = button.innerHTML;
+            button.innerHTML = `✓ ${langData.shareCopied}`;
+            button.classList.add('active');
+
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.classList.remove('active');
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy:', err);
+            alert(shareUrl);
+        });
+    }
+
+    // Check if this is a shared link (requires email gate)
+    function checkEmailGate() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const isShared = urlParams.get('shared');
+
+        if (isShared === 'true') {
+            // Check if user has already entered email within 7 days
+            const emailData = localStorage.getItem('bc_trial_email');
+
+            if (emailData) {
+                const data = JSON.parse(emailData);
+                const now = Date.now();
+                const sevenDays = 7 * 24 * 60 * 60 * 1000;
+
+                if (now - data.timestamp < sevenDays) {
+                    // Still within trial period
+                    return true;
+                }
+            }
+
+            // Show email gate modal
+            showEmailGate();
+            return false;
+        }
+
+        return true;
+    }
+
+    // Show email gate modal
+    function showEmailGate() {
+        const lang = new URLSearchParams(window.location.search).get('lang') || 'FR';
+        const langData = THEMES_DATA[lang] || THEMES_DATA.FR;
+
+        const modal = document.createElement('div');
+        modal.id = 'emailGateModal';
+        modal.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+        `;
+
+        const modalContent = document.createElement('div');
+        modalContent.style.cssText = `
+            background: linear-gradient(135deg, #1a237e 0%, #0a1628 100%);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 500px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 20px 60px rgba(245, 200, 66, 0.3);
+        `;
+
+        const messages = {
+            FR: {
+                title: 'Bienvenue sur Bible Chantée',
+                subtitle: 'Entrez votre email pour accéder gratuitement pendant 7 jours',
+                placeholder: 'Votre email',
+                button: 'Accéder gratuitement',
+                privacy: 'Nous respectons votre vie privée'
+            },
+            EN: {
+                title: 'Welcome to Sung Bible',
+                subtitle: 'Enter your email for 7 days free access',
+                placeholder: 'Your email',
+                button: 'Get Free Access',
+                privacy: 'We respect your privacy'
+            },
+            PT: {
+                title: 'Bem-vindo à Bíblia Cantada',
+                subtitle: 'Digite seu email para acesso gratuito por 7 dias',
+                placeholder: 'Seu email',
+                button: 'Obter Acesso Gratuito',
+                privacy: 'Respeitamos sua privacidade'
+            },
+            ES: {
+                title: 'Bienvenido a Biblia Cantada',
+                subtitle: 'Ingresa tu email para acceso gratuito por 7 días',
+                placeholder: 'Tu email',
+                button: 'Obtener Acceso Gratuito',
+                privacy: 'Respetamos tu privacidad'
+            },
+            DE: {
+                title: 'Willkommen bei Gesungene Bibel',
+                subtitle: 'Geben Sie Ihre E-Mail für 7 Tage kostenlosen Zugang ein',
+                placeholder: 'Ihre E-Mail',
+                button: 'Kostenlosen Zugang erhalten',
+                privacy: 'Wir respektieren Ihre Privatsphäre'
+            },
+            IT: {
+                title: 'Benvenuto su Bibbia Cantata',
+                subtitle: 'Inserisci la tua email per accesso gratuito per 7 giorni',
+                placeholder: 'La tua email',
+                button: 'Ottieni Accesso Gratuito',
+                privacy: 'Rispettiamo la tua privacy'
+            }
+        };
+
+        const msg = messages[lang] || messages.FR;
+
+        modalContent.innerHTML = `
+            <h1 style="color: #f5c842; margin-bottom: 20px; font-size: 2rem;">🎵 ${msg.title}</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.6;">${msg.subtitle}</p>
+            <input type="email" id="trialEmail" placeholder="${msg.placeholder}"
+                style="width: 100%; padding: 15px; font-size: 1rem; border-radius: 10px; border: 2px solid #f5c842; margin-bottom: 20px; background: rgba(255,255,255,0.9); color: #1a237e;">
+            <button id="submitEmail" style="width: 100%; padding: 15px; font-size: 1.1rem; background: #f5c842; color: #1a237e; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; margin-bottom: 15px;">
+                ${msg.button}
+            </button>
+            <p style="font-size: 0.9rem; color: #b0b0b0;">${msg.privacy}</p>
+        `;
+
+        modal.appendChild(modalContent);
+        document.body.appendChild(modal);
+
+        // Handle email submission
+        document.getElementById('submitEmail').onclick = function() {
+            const email = document.getElementById('trialEmail').value.trim();
+            if (email && email.includes('@')) {
+                // Store email and timestamp
+                const data = {
+                    email: email,
+                    timestamp: Date.now()
+                };
+                localStorage.setItem('bc_trial_email', JSON.stringify(data));
+
+                // Remove modal and render content
+                modal.remove();
+                render();
+            } else {
+                alert('Please enter a valid email address');
+            }
+        };
+
+        // Allow Enter key to submit
+        document.getElementById('trialEmail').onkeypress = function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('submitEmail').click();
+            }
+        };
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        if (checkEmailGate()) {
+            render();
+        }
+    });
     </script>
 
   <script src="js/audio-urls-fr.js"></script>
