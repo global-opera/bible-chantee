@@ -638,7 +638,7 @@
         <span class="icon">📻</span>
         <span class="text">Radio</span>
       </button>
-      <a href="#promesses" class="nav-btn disabled" id="navPromesses">
+      <a href="promesses.html" class="nav-btn" id="navPromesses">
         <span class="icon">⭐</span>
         <span class="text">Promesses</span>
       </a>
@@ -1120,6 +1120,7 @@
       document.querySelector('#navNews .text').textContent = t.news;
       document.querySelector('#navRadio .text').textContent = t.radio;
       document.querySelector('#navPromesses .text').textContent = t.promesses;
+      document.querySelector('#navPromesses').href = 'promesses.html?lang=' + currentLang;
       document.querySelector('#navConfessions .text').textContent = t.confessions;
       document.querySelector('#navConfessions').href = 'confessions.html?lang=' + currentLang;
       document.querySelector('#navPrieres .text').textContent = t.prieres;
