@@ -85,6 +85,7 @@
       <div class="toggle-row">
         <button class="toggle-btn active" id="toggleLyrics">🎤 Paroles</button>
         <button class="toggle-btn" id="toggleBible">📖 Bible</button>
+        <button class="toggle-btn" id="toggleShare">🔗 Partager</button>
       </div>
       <div class="lyrics-box" id="lyricsBox">Chargement...</div>
     </div></div>
@@ -124,12 +125,12 @@
     
     // Traductions interface
     const UI_TEXTS = {
-      FR: { lyrics: "🎤 Paroles", bible: "📖 Bible", back: "← Retour", unavailable: "Paroles non disponibles" },
-      EN: { lyrics: "🎤 Lyrics", bible: "📖 Bible", back: "← Back", unavailable: "Lyrics not available" },
-      PT: { lyrics: "🎤 Letras", bible: "📖 Bíblia", back: "← Voltar", unavailable: "Letras não disponíveis" },
-      ES: { lyrics: "🎤 Letras", bible: "📖 Biblia", back: "← Volver", unavailable: "Letras no disponibles" },
-      DE: { lyrics: "🎤 Text", bible: "📖 Bibel", back: "← Zurück", unavailable: "Text nicht verfügbar" },
-      IT: { lyrics: "🎤 Testo", bible: "📖 Bibbia", back: "← Indietro", unavailable: "Testo non disponibile" }
+      FR: { lyrics: "🎤 Paroles", bible: "📖 Bible", share: "🔗 Partager", back: "← Retour", unavailable: "Paroles non disponibles", shareCopied: "Lien copié !" },
+      EN: { lyrics: "🎤 Lyrics", bible: "📖 Bible", share: "🔗 Share", back: "← Back", unavailable: "Lyrics not available", shareCopied: "Link copied!" },
+      PT: { lyrics: "🎤 Letras", bible: "📖 Bíblia", share: "🔗 Compartilhar", back: "← Voltar", unavailable: "Letras não disponíveis", shareCopied: "Link copiado!" },
+      ES: { lyrics: "🎤 Letras", bible: "📖 Biblia", share: "🔗 Compartir", back: "← Volver", unavailable: "Letras no disponibles", shareCopied: "Enlace copiado!" },
+      DE: { lyrics: "🎤 Text", bible: "📖 Bibel", share: "🔗 Teilen", back: "← Zurück", unavailable: "Text nicht verfügbar", shareCopied: "Link kopiert!" },
+      IT: { lyrics: "🎤 Testo", bible: "📖 Bibbia", share: "🔗 Condividi", back: "← Indietro", unavailable: "Testo non disponibile", shareCopied: "Link copiato!" }
     };
     const ui = UI_TEXTS[lang] || UI_TEXTS.FR;
 
@@ -138,6 +139,7 @@
     document.getElementById('verse').textContent = (VERSES[lang] || VERSES.FR)[id] || "";
     document.getElementById('toggleLyrics').textContent = ui.lyrics;
     document.getElementById('toggleBible').textContent = ui.bible;
+    document.getElementById('toggleShare').textContent = ui.share;
     document.getElementById('backBtn').textContent = ui.back;
     document.getElementById('backBtn').href = "confessions.html?lang=" + lang;
     
@@ -156,6 +158,7 @@
     document.getElementById('toggleLyrics').onclick = function() {
       this.classList.add('active');
       document.getElementById('toggleBible').classList.remove('active');
+      document.getElementById('toggleShare').classList.remove('active');
       fetch(`lyrics/confessions/${lang}/${fileName}.txt`)
         .then(r => r.text())
         .then(text => lyricsBox.textContent = text);
@@ -237,8 +240,177 @@
     document.getElementById('toggleBible').onclick = function() {
       this.classList.add('active');
       document.getElementById('toggleLyrics').classList.remove('active');
+      document.getElementById('toggleShare').classList.remove('active');
       lyricsBox.textContent = (BIBLE_TEXTS[lang] || BIBLE_TEXTS.FR)[id];
     };
+
+    // Share button
+    document.getElementById('toggleShare').onclick = function() {
+      const baseUrl = window.location.origin + window.location.pathname;
+      const shareUrl = `${baseUrl}?id=${id}&lang=${lang}&shared=true`;
+
+      navigator.clipboard.writeText(shareUrl).then(() => {
+        const originalText = this.textContent;
+        this.textContent = `✓ ${ui.shareCopied}`;
+        this.classList.add('active');
+
+        setTimeout(() => {
+          this.textContent = originalText;
+          this.classList.remove('active');
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy:', err);
+        alert(shareUrl);
+      });
+    };
+
+    // Check if this is a shared link (requires email gate)
+    function checkEmailGate() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const isShared = urlParams.get('shared');
+
+      if (isShared === 'true') {
+        const emailData = localStorage.getItem('bc_trial_email');
+
+        if (emailData) {
+          const data = JSON.parse(emailData);
+          const now = Date.now();
+          const sevenDays = 7 * 24 * 60 * 60 * 1000;
+
+          if (now - data.timestamp < sevenDays) {
+            return true;
+          }
+        }
+
+        showEmailGate();
+        return false;
+      }
+
+      return true;
+    }
+
+    // Show email gate modal
+    function showEmailGate() {
+      const messages = {
+        FR: {
+          title: 'Bienvenue sur Bible Chantée',
+          subtitle: 'Entrez votre email pour accéder gratuitement pendant 7 jours',
+          placeholder: 'Votre email',
+          button: 'Accéder gratuitement',
+          privacy: 'Nous respectons votre vie privée',
+          invalid: 'Veuillez entrer une adresse email valide'
+        },
+        EN: {
+          title: 'Welcome to Sung Bible',
+          subtitle: 'Enter your email for 7 days free access',
+          placeholder: 'Your email',
+          button: 'Get Free Access',
+          privacy: 'We respect your privacy',
+          invalid: 'Please enter a valid email address'
+        },
+        PT: {
+          title: 'Bem-vindo à Bíblia Cantada',
+          subtitle: 'Digite seu email para acesso gratuito por 7 dias',
+          placeholder: 'Seu email',
+          button: 'Obter Acesso Gratuito',
+          privacy: 'Respeitamos sua privacidade',
+          invalid: 'Por favor, insira um endereço de email válido'
+        },
+        ES: {
+          title: 'Bienvenido a Biblia Cantada',
+          subtitle: 'Ingresa tu email para acceso gratuito por 7 días',
+          placeholder: 'Tu email',
+          button: 'Obtener Acceso Gratuito',
+          privacy: 'Respetamos tu privacidad',
+          invalid: 'Por favor, ingresa una dirección de correo válida'
+        },
+        DE: {
+          title: 'Willkommen bei Gesungene Bibel',
+          subtitle: 'Geben Sie Ihre E-Mail für 7 Tage kostenlosen Zugang ein',
+          placeholder: 'Ihre E-Mail',
+          button: 'Kostenlosen Zugang erhalten',
+          privacy: 'Wir respektieren Ihre Privatsphäre',
+          invalid: 'Bitte geben Sie eine gültige E-Mail-Adresse ein'
+        },
+        IT: {
+          title: 'Benvenuto su Bibbia Cantata',
+          subtitle: 'Inserisci la tua email per accesso gratuito per 7 giorni',
+          placeholder: 'La tua email',
+          button: 'Ottieni Accesso Gratuito',
+          privacy: 'Rispettiamo la tua privacy',
+          invalid: 'Si prega di inserire un indirizzo email valido'
+        }
+      };
+
+      const msg = messages[lang] || messages.FR;
+
+      const modal = document.createElement('div');
+      modal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+      `;
+
+      const modalContent = document.createElement('div');
+      modalContent.style.cssText = `
+        background: linear-gradient(135deg, #1a237e 0%, #0a1628 100%);
+        padding: 40px;
+        border-radius: 20px;
+        max-width: 500px;
+        text-align: center;
+        color: white;
+        box-shadow: 0 20px 60px rgba(245, 200, 66, 0.3);
+      `;
+
+      modalContent.innerHTML = `
+        <h1 style="color: #f5c842; margin-bottom: 20px; font-size: 2rem;">🎵 ${msg.title}</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.6;">${msg.subtitle}</p>
+        <input type="email" id="trialEmail" placeholder="${msg.placeholder}"
+          style="width: 100%; padding: 15px; font-size: 1rem; border-radius: 10px; border: 2px solid #f5c842; margin-bottom: 20px; background: rgba(255,255,255,0.9); color: #1a237e;">
+        <button id="submitEmail" style="width: 100%; padding: 15px; font-size: 1.1rem; background: #f5c842; color: #1a237e; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; margin-bottom: 15px;">
+          ${msg.button}
+        </button>
+        <p style="font-size: 0.9rem; color: #b0b0b0;">${msg.privacy}</p>
+      `;
+
+      modal.appendChild(modalContent);
+      document.body.appendChild(modal);
+
+      document.getElementById('submitEmail').onclick = function() {
+        const email = document.getElementById('trialEmail').value.trim();
+        if (email && email.includes('@')) {
+          const data = {
+            email: email,
+            timestamp: Date.now()
+          };
+          localStorage.setItem('bc_trial_email', JSON.stringify(data));
+          modal.remove();
+          location.reload();
+        } else {
+          alert(msg.invalid);
+        }
+      };
+
+      document.getElementById('trialEmail').onkeypress = function(e) {
+        if (e.key === 'Enter') {
+          document.getElementById('submitEmail').click();
+        }
+      };
+    }
+
+    // Check email gate on load if shared link
+    if (!checkEmailGate()) {
+      // Don't load content until email is provided
+      document.getElementById('audio').removeAttribute('autoplay');
+      document.getElementById('audio').src = '';
+    }
   </script>
 <script>
 // === CONFESSIONS HELPERS (404/HTML guard + fallback messages) ===
