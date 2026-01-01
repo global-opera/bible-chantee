@@ -513,57 +513,15 @@
         }
     }
 
-    // Toggle Bible text display
-    async function toggleBible(psalmNum, lyricsId, button, lang) {
-        const lyricsBox = document.getElementById(lyricsId);
-        const langData = THEMES_DATA[lang] || THEMES_DATA.FR;
-        const langUpper = lang.toUpperCase();
+    // Open Bible chapter in lecteur
+    function toggleBible(psalmNum, lyricsId, button, lang) {
+        // Get theme index from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const themeIndex = parseInt(urlParams.get('theme')) || 0;
 
-        // Deactivate Lyrics button
-        const lyricsBtn = button.parentElement.querySelector('.btn-toggle:first-child');
-        if (lyricsBtn) lyricsBtn.classList.remove('active');
-
-        if (button.classList.contains('active')) {
-            lyricsBox.classList.remove('active');
-            button.classList.remove('active');
-        } else {
-            button.classList.add('active');
-            lyricsBox.classList.add('active');
-
-            // Check cache first
-            const cacheKey = `bible-${psalmNum}-${lang}`;
-            if (contentCache[cacheKey]) {
-                lyricsBox.textContent = contentCache[cacheKey];
-                return;
-            }
-
-            lyricsBox.textContent = langData.loadingText || 'Chargement...';
-
-            try {
-                // Load Bible text from bible/[LANG].json
-                const response = await fetch(`bible/${langUpper}.json`);
-                if (response.ok) {
-                    const data = await response.json();
-                    if (data['19'] && data['19'][String(psalmNum)]) {
-                        let bibleText = data['19'][String(psalmNum)];
-                        // Clean up formatting
-                        bibleText = bibleText.replace(/\\n/g, '\n');
-                        bibleText = bibleText.trim();
-
-                        // Cache the result
-                        contentCache[cacheKey] = bibleText;
-                        lyricsBox.textContent = bibleText;
-                    } else {
-                        lyricsBox.textContent = langData.lyricsUnavailable || 'Texte biblique non disponible';
-                    }
-                } else {
-                    lyricsBox.textContent = langData.lyricsUnavailable || 'Texte biblique non disponible';
-                }
-            } catch (error) {
-                console.error('Error loading Bible text:', error);
-                lyricsBox.textContent = langData.lyricsUnavailable || 'Erreur de chargement';
-            }
-        }
+        // Generate lecteur URL and navigate
+        const lecteurUrl = getLecteurUrl(psalmNum, lang, themeIndex);
+        window.location.href = lecteurUrl;
     }
 
     // Load lyrics from JSON file
