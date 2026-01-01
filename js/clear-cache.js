@@ -19,6 +19,12 @@
     try{
       removePrefixed(localStorage,["bc_","sungbible_"]);
       removePrefixed(sessionStorage,["bc_","sungbible_"]);
+
+      // Explicitly clear radio playlist
+      try{
+        localStorage.removeItem('bc_radio_playlist');
+      }catch(ex){}
+
       var cookies=["bc_lang","bc_premium","bc_debug","sungbible_lang","sungbible_premium"];
       for(var i=0;i<cookies.length;i++) delCookie(cookies[i]);
       if(window.caches && caches.keys){
@@ -26,7 +32,7 @@
           for(var i=0;i<keys.length;i++) caches.delete(keys[i]);
         });
       }
-      alert("Cache Bible Chantée vidé. Rechargement…");
+      alert("Cache Bible Chantée vidé (y compris liste radio). Rechargement…");
       location.reload();
     }catch(e){
       try{console.error(e);}catch(x){}
