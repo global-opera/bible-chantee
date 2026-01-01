@@ -1,0 +1,3 @@
+AWS_ACCESS_KEY_ID: 6aae0b5cf6c092016c33bc64d95fda48
+AWS_SECRET_ACCESS_KEY: c6994ee709eab3c3ba9e9463da6f87c9c904bb30efb469370826b2717ccb041d
+Endpoint: https://639b9becb7f3884bc3aa3d27b80e671d.r2.cloudflarestorage.com
