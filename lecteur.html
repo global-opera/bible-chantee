@@ -1362,57 +1362,42 @@
     
     // Favoris
     document.querySelector('#favoriteBtn').addEventListener('click', () => {
-      isFavorited = !isFavorited;
-      document.querySelector('#favoriteBtn').innerHTML = isFavorited ? '<span class="plus-icon">✓</span><span class="radio-icon">📻</span>' : '<span class="plus-icon">+</span><span class="radio-icon">📻</span>';
-      document.querySelector('#favoriteBtn').classList.toggle('favorited', isFavorited);
+      const btn = document.querySelector('#favoriteBtn');
+      const bookData = BOOKS.find(b => b.code === currentBook);
 
-      if (isFavorited) {
-        // Add current chapter to radio playlist
-        const bookData = BOOKS.find(b => b.code === currentBook);
-
-        // Get book name from BOOK_NAMES with proper fallback
-        let bookName = currentBook;
-        if (bookData && window.BOOK_NAMES) {
-          bookName = (window.BOOK_NAMES[currentLang] && window.BOOK_NAMES[currentLang][bookData.code])
-            || (window.BOOK_NAMES.FR && window.BOOK_NAMES.FR[bookData.code])
-            || bookData.code;
-        }
-
-        radioPlaylist.push({
-          book: currentBook,
-          chapter: currentChapter,
-          name: bookName
-        });
-
-        // Update the playlist display
-        renderRadioPlaylist();
-
-        // Save to localStorage
-        saveRadioPlaylist();
-      } else {
-        // Remove current chapter from radio playlist
-        const index = radioPlaylist.findIndex(item =>
-          item.book === currentBook && item.chapter === currentChapter
-        );
-        if (index !== -1) {
-          radioPlaylist.splice(index, 1);
-
-          // Adjust radioIndex if needed
-          if (radioIndex >= radioPlaylist.length) {
-            radioIndex = Math.max(0, radioPlaylist.length - 1);
-          }
-
-          // Update the playlist display
-          renderRadioPlaylist();
-
-          // Save to localStorage
-          saveRadioPlaylist();
-        }
+      // Get book name from BOOK_NAMES with proper fallback
+      let bookName = currentBook;
+      if (bookData && window.BOOK_NAMES) {
+        bookName = (window.BOOK_NAMES[currentLang] && window.BOOK_NAMES[currentLang][bookData.code])
+          || (window.BOOK_NAMES.FR && window.BOOK_NAMES.FR[bookData.code])
+          || bookData.code;
       }
 
-      // Mettre à jour badge radio
+      // Add current chapter to radio playlist
+      radioPlaylist.push({
+        book: currentBook,
+        chapter: currentChapter,
+        name: bookName
+      });
+
+      // Update the playlist display
+      renderRadioPlaylist();
+
+      // Save to localStorage
+      saveRadioPlaylist();
+
+      // Update badge radio
       const badge = document.querySelector('#radioBadge');
       badge.textContent = `(${radioPlaylist.length})`;
+
+      // Show confirmation briefly then reset
+      btn.innerHTML = '<span class="plus-icon">✓</span><span class="radio-icon">📻</span>';
+      btn.classList.add('favorited');
+
+      setTimeout(() => {
+        btn.innerHTML = '<span class="plus-icon">+</span><span class="radio-icon">📻</span>';
+        btn.classList.remove('favorited');
+      }, 500);
     });
     
     // Partage
