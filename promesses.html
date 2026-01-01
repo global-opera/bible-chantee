@@ -253,7 +253,7 @@
         d.items.forEach((item, i) => {
             const card = document.createElement('a');
             card.className = 'promesse-card';
-            card.href = `promesse-detail.html?id=${i}&lang=${lang}`;
+            card.href = `promesse-detail.html?theme=${i}&lang=${lang}`;
             card.innerHTML = `
                 <div class="promesse-icon">${ICONS[i]}</div>
                 <div class="promesse-title">${item[0]}</div>

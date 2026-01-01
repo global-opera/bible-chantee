@@ -244,33 +244,71 @@
                 { icon: "🌟", name: "Esperanza", desc: "El futuro esta en Sus manos", psalms: [27, 42, 62, 130] },
                 { icon: "🎵", name: "Adoracion", desc: "Adora al Rey de reyes", psalms: [100, 148, 150] }
             ]
+        },
+        DE: {
+            back: "Zuruck zu den Themen",
+            siteName: "Gesungene Bibel",
+            psalmWord: "Psalm",
+            listenLabel: "Im Player anhoren",
+            comingSoon: "Audio bald verfugbar",
+            themes: [
+                { icon: "😰", name: "Innerer Frieden", desc: "Finden Sie inneren Frieden", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "Frieden und Ruhe", desc: "Gehen Sie in Gottes Ruhe ein", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "Lob und Dankbarkeit", desc: "Feiern Sie Gottes Gute", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "Schutz", desc: "Gott ist Ihre Zuflucht", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "Trauer und Leid", desc: "Trost in Prufungen", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "Starke und Mut", desc: "Werden Sie von Gott gestarkt", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "Vertrauen auf Gott", desc: "Geben Sie sich Ihm hin", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "Gottes Liebe", desc: "Erleben Sie Seine Liebe", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "Hoffnung", desc: "Die Zukunft liegt in Seinen Handen", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "Anbetung", desc: "Beten Sie den Konig der Konige an", psalms: [100, 148, 150] }
+            ]
+        },
+        IT: {
+            back: "Torna ai temi",
+            siteName: "Bibbia Cantata",
+            psalmWord: "Salmo",
+            listenLabel: "Ascolta nel lettore",
+            comingSoon: "Audio prossimamente",
+            themes: [
+                { icon: "😰", name: "Pace interiore", desc: "Trova la pace interiore", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "Pace e Riposo", desc: "Entra nel riposo di Dio", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "Lode e Gratitudine", desc: "Celebra la bonta di Dio", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "Protezione", desc: "Dio e il tuo rifugio", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "Tristezza e Lutto", desc: "Conforto nelle prove", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "Forza e Coraggio", desc: "Sii fortificato da Dio", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "Fiducia in Dio", desc: "Affidati a Lui", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "Amore di Dio", desc: "Sperimenta il Suo amore", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "Speranza", desc: "Il futuro e nelle Sue mani", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "Adorazione", desc: "Adora il Re dei re", psalms: [100, 148, 150] }
+            ]
         }
     };
 
     // Psalm themes/subtitles
     const PSALM_THEMES = {
-        4: { FR: "Paix dans la nuit", EN: "Peace at night", PT: "Paz na noite", ES: "Paz en la noche" },
-        18: { FR: "Dieu mon rocher", EN: "God my rock", PT: "Deus minha rocha", ES: "Dios mi roca" },
-        23: { FR: "L'Eternel est mon berger", EN: "The Lord is my shepherd", PT: "O Senhor e meu pastor", ES: "El Senor es mi pastor" },
-        27: { FR: "L'Eternel est ma lumiere", EN: "The Lord is my light", PT: "O Senhor e minha luz", ES: "El Senor es mi luz" },
-        30: { FR: "La joie vient le matin", EN: "Joy comes in the morning", PT: "A alegria vem pela manha", ES: "El gozo viene por la manana" },
-        34: { FR: "Goutez et voyez", EN: "Taste and see", PT: "Provai e vede", ES: "Gustad y ved" },
-        37: { FR: "Confie-toi en l'Eternel", EN: "Trust in the Lord", PT: "Confia no Senhor", ES: "Confia en el Senor" },
-        42: { FR: "Mon ame a soif de Dieu", EN: "My soul thirsts for God", PT: "Minha alma tem sede de Deus", ES: "Mi alma tiene sed de Dios" },
-        46: { FR: "Dieu est notre refuge", EN: "God is our refuge", PT: "Deus e nosso refugio", ES: "Dios es nuestro refugio" },
-        62: { FR: "Mon ame se confie en Dieu", EN: "My soul trusts in God", PT: "Minha alma confia em Deus", ES: "Mi alma confia en Dios" },
-        91: { FR: "A l'abri du Tres-Haut", EN: "Shelter of the Most High", PT: "Abrigo do Altissimo", ES: "Abrigo del Altisimo" },
-        100: { FR: "Acclamez l'Eternel", EN: "Shout for joy", PT: "Aclamai ao Senhor", ES: "Aclamad al Senor" },
-        103: { FR: "Benis l'Eternel mon ame", EN: "Bless the Lord O my soul", PT: "Bendize o Senhor minha alma", ES: "Bendice al Senor alma mia" },
-        121: { FR: "Mon secours vient de l'Eternel", EN: "My help comes from the Lord", PT: "O meu socorro vem do Senhor", ES: "Mi socorro viene del Senor" },
-        125: { FR: "Ceux qui se confient", EN: "Those who trust", PT: "Os que confiam", ES: "Los que confian" },
-        130: { FR: "Des profondeurs", EN: "Out of the depths", PT: "Das profundezas", ES: "De lo profundo" },
-        131: { FR: "Mon coeur n'est pas orgueilleux", EN: "My heart is not proud", PT: "Meu coracao nao e soberbo", ES: "Mi corazon no es soberbio" },
-        144: { FR: "Mon rocher et ma forteresse", EN: "My rock and fortress", PT: "Minha rocha e fortaleza", ES: "Mi roca y fortaleza" },
-        145: { FR: "Je t'exalterai mon Dieu", EN: "I will exalt You my God", PT: "Eu te exaltarei meu Deus", ES: "Te exaltare mi Dios" },
-        147: { FR: "Louez l'Eternel", EN: "Praise the Lord", PT: "Louvai ao Senhor", ES: "Alabad al Senor" },
-        148: { FR: "Que tout ce qui respire loue", EN: "Let everything praise", PT: "Tudo que respira louve", ES: "Todo lo que respira alabe" },
-        150: { FR: "Louez Dieu dans son sanctuaire", EN: "Praise God in His sanctuary", PT: "Louvai a Deus no seu santuario", ES: "Alabad a Dios en su santuario" }
+        4: { FR: "Paix dans la nuit", EN: "Peace at night", PT: "Paz na noite", ES: "Paz en la noche", DE: "Frieden in der Nacht", IT: "Pace nella notte" },
+        18: { FR: "Dieu mon rocher", EN: "God my rock", PT: "Deus minha rocha", ES: "Dios mi roca", DE: "Gott mein Fels", IT: "Dio mia roccia" },
+        23: { FR: "L'Eternel est mon berger", EN: "The Lord is my shepherd", PT: "O Senhor e meu pastor", ES: "El Senor es mi pastor", DE: "Der Herr ist mein Hirte", IT: "Il Signore e il mio pastore" },
+        27: { FR: "L'Eternel est ma lumiere", EN: "The Lord is my light", PT: "O Senhor e minha luz", ES: "El Senor es mi luz", DE: "Der Herr ist mein Licht", IT: "Il Signore e la mia luce" },
+        30: { FR: "La joie vient le matin", EN: "Joy comes in the morning", PT: "A alegria vem pela manha", ES: "El gozo viene por la manana", DE: "Freude kommt am Morgen", IT: "La gioia viene al mattino" },
+        34: { FR: "Goutez et voyez", EN: "Taste and see", PT: "Provai e vede", ES: "Gustad y ved", DE: "Schmeckt und seht", IT: "Gustate e vedete" },
+        37: { FR: "Confie-toi en l'Eternel", EN: "Trust in the Lord", PT: "Confia no Senhor", ES: "Confia en el Senor", DE: "Vertraue auf den Herrn", IT: "Confida nel Signore" },
+        42: { FR: "Mon ame a soif de Dieu", EN: "My soul thirsts for God", PT: "Minha alma tem sede de Deus", ES: "Mi alma tiene sed de Dios", DE: "Meine Seele durstet nach Gott", IT: "La mia anima ha sete di Dio" },
+        46: { FR: "Dieu est notre refuge", EN: "God is our refuge", PT: "Deus e nosso refugio", ES: "Dios es nuestro refugio", DE: "Gott ist unsere Zuflucht", IT: "Dio e il nostro rifugio" },
+        62: { FR: "Mon ame se confie en Dieu", EN: "My soul trusts in God", PT: "Minha alma confia em Deus", ES: "Mi alma confia en Dios", DE: "Meine Seele vertraut auf Gott", IT: "La mia anima confida in Dio" },
+        91: { FR: "A l'abri du Tres-Haut", EN: "Shelter of the Most High", PT: "Abrigo do Altissimo", ES: "Abrigo del Altisimo", DE: "Schutz des Hochsten", IT: "Rifugio dell'Altissimo" },
+        100: { FR: "Acclamez l'Eternel", EN: "Shout for joy", PT: "Aclamai ao Senhor", ES: "Aclamad al Senor", DE: "Jauchzt dem Herrn", IT: "Acclamate al Signore" },
+        103: { FR: "Benis l'Eternel mon ame", EN: "Bless the Lord O my soul", PT: "Bendize o Senhor minha alma", ES: "Bendice al Senor alma mia", DE: "Lobe den Herrn meine Seele", IT: "Benedici il Signore anima mia" },
+        121: { FR: "Mon secours vient de l'Eternel", EN: "My help comes from the Lord", PT: "O meu socorro vem do Senhor", ES: "Mi socorro viene del Senor", DE: "Meine Hilfe kommt vom Herrn", IT: "Il mio aiuto viene dal Signore" },
+        125: { FR: "Ceux qui se confient", EN: "Those who trust", PT: "Os que confiam", ES: "Los que confian", DE: "Die vertrauen", IT: "Coloro che confidano" },
+        130: { FR: "Des profondeurs", EN: "Out of the depths", PT: "Das profundezas", ES: "De lo profundo", DE: "Aus der Tiefe", IT: "Dalle profondita" },
+        131: { FR: "Mon coeur n'est pas orgueilleux", EN: "My heart is not proud", PT: "Meu coracao nao e soberbo", ES: "Mi corazon no es soberbio", DE: "Mein Herz ist nicht stolz", IT: "Il mio cuore non e orgoglioso" },
+        144: { FR: "Mon rocher et ma forteresse", EN: "My rock and fortress", PT: "Minha rocha e fortaleza", ES: "Mi roca y fortaleza", DE: "Mein Fels und Festung", IT: "La mia roccia e fortezza" },
+        145: { FR: "Je t'exalterai mon Dieu", EN: "I will exalt You my God", PT: "Eu te exaltarei meu Deus", ES: "Te exaltare mi Dios", DE: "Ich will dich erheben mein Gott", IT: "Ti esaltero mio Dio" },
+        147: { FR: "Louez l'Eternel", EN: "Praise the Lord", PT: "Louvai ao Senhor", ES: "Alabad al Senor", DE: "Lobt den Herrn", IT: "Lodate il Signore" },
+        148: { FR: "Que tout ce qui respire loue", EN: "Let everything praise", PT: "Tudo que respira louve", ES: "Todo lo que respira alabe", DE: "Alles was atmet lobe", IT: "Tutto cio che respira lodi" },
+        150: { FR: "Louez Dieu dans son sanctuaire", EN: "Praise God in His sanctuary", PT: "Louvai a Deus no seu santuario", ES: "Alabad a Dios en su santuario", DE: "Lobt Gott in seinem Heiligtum", IT: "Lodate Dio nel suo santuario" }
     };
 
     // Mapping index theme -> section key (meme que sections-promesses.js)
