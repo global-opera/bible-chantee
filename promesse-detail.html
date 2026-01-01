@@ -197,6 +197,9 @@
     </div>
 
     <script>
+    // Global language variable
+    let currentLang = 'FR';
+
     // Themes data (same as promesses.html)
     const THEMES_DATA = {
         FR: {
@@ -402,9 +405,9 @@
     function render() {
         const urlParams = new URLSearchParams(window.location.search);
         const themeIndex = parseInt(urlParams.get('theme')) || 0;
-        const lang = urlParams.get('lang') || localStorage.getItem('selectedLang') || 'EN';
-        
-        const langData = THEMES_DATA[lang] || THEMES_DATA.FR;
+        currentLang = urlParams.get('lang') || localStorage.getItem('selectedLang') || 'EN';
+
+        const langData = THEMES_DATA[currentLang] || THEMES_DATA.FR;
         const theme = langData.themes[themeIndex];
         
         if (!theme) {
@@ -414,25 +417,25 @@
         
         // Update back link
         document.getElementById('backLink').textContent = langData.back;
-        document.getElementById('backLink').href = `promesses.html?lang=${lang}`;
-        
+        document.getElementById('backLink').href = `promesses.html?lang=${currentLang}`;
+
         // Update header
         document.getElementById('themeIcon').textContent = theme.icon;
         document.getElementById('themeName').textContent = theme.name;
         document.getElementById('themeDesc').textContent = theme.desc;
         document.title = `${theme.name} - ${langData.siteName}`;
-        
+
         // Build psalms list
         const listContainer = document.getElementById('psalmsList');
         listContainer.innerHTML = '';
-        
+
         theme.psalms.forEach((psalmNum, index) => {
             const card = document.createElement('div');
             card.className = 'psalm-card';
             card.dataset.psalmNum = psalmNum;
 
-            const psalmTheme = PSALM_THEMES[psalmNum] ? (PSALM_THEMES[psalmNum][lang] || PSALM_THEMES[psalmNum].FR) : '';
-            const audioUrl = getAudioUrl(psalmNum, lang);
+            const psalmTheme = PSALM_THEMES[psalmNum] ? (PSALM_THEMES[psalmNum][currentLang] || PSALM_THEMES[psalmNum].FR) : '';
+            const audioUrl = getAudioUrl(psalmNum, currentLang);
             const lyricsId = `lyrics-${psalmNum}`;
             const audioId = `audio-${psalmNum}`;
 
@@ -450,10 +453,10 @@
                     <button class="btn btn-toggle" onclick="toggleLyrics('${lyricsId}', this)">
                         🎤 ${langData.lyricsLabel || 'Paroles'}
                     </button>
-                    <button class="btn btn-toggle" onclick="toggleBible('${psalmNum}', '${lyricsId}', this, '${lang}')">
+                    <button class="btn btn-toggle" onclick="toggleBible('${psalmNum}', '${lyricsId}', this, '${currentLang}')">
                         📖 ${langData.bibleLabel || 'Bible'}
                     </button>
-                    <button class="btn btn-toggle" onclick="shareContent(${themeIndex}, ${psalmNum}, '${lang}', this)">
+                    <button class="btn btn-toggle" onclick="shareContent(${themeIndex}, ${psalmNum}, '${currentLang}', this)">
                         🔗 ${langData.shareLabel || 'Partager'}
                     </button>
                 </div>
@@ -465,7 +468,7 @@
             listContainer.appendChild(card);
 
             // Load lyrics after card is added
-            loadLyrics(psalmNum, lang, lyricsId);
+            loadLyrics(psalmNum, currentLang, lyricsId);
         });
     }
 
