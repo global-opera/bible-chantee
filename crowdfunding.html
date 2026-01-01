@@ -337,6 +337,8 @@
                     or: "ou par virement direct (sans frais)",
                     iban: "🏦 IBAN (Europe)",
                     paypal: "💳 PayPal",
+                    twint: "🇨🇭 TWINT (Suisse)",
+                    pix: "🇧🇷 PIX (Brasil)",
                     copy: "Copier",
                     copied: "Copié !"
                 },
@@ -372,6 +374,8 @@
                     or: "or by direct transfer (no fees)",
                     iban: "🏦 IBAN (Europe)",
                     paypal: "💳 PayPal",
+                    twint: "🇨🇭 TWINT (Switzerland)",
+                    pix: "🇧🇷 PIX (Brazil)",
                     copy: "Copy",
                     copied: "Copied!"
                 },
@@ -407,6 +411,8 @@
                     or: "ou por transferência direta (sem taxas)",
                     iban: "🏦 IBAN (Europa)",
                     paypal: "💳 PayPal",
+                    twint: "🇨🇭 TWINT (Suíça)",
+                    pix: "🇧🇷 PIX (Brasil)",
                     copy: "Copiar",
                     copied: "Copiado!"
                 },
@@ -442,6 +448,8 @@
                     or: "o por transferencia directa (sin comisiones)",
                     iban: "🏦 IBAN (Europa)",
                     paypal: "💳 PayPal",
+                    twint: "🇨🇭 TWINT (Suiza)",
+                    pix: "🇧🇷 PIX (Brasil)",
                     copy: "Copiar",
                     copied: "¡Copiado!"
                 },
@@ -477,6 +485,8 @@
                     or: "oder per Direktüberweisung (keine Gebühren)",
                     iban: "🏦 IBAN (Europa)",
                     paypal: "💳 PayPal",
+                    twint: "🇨🇭 TWINT (Schweiz)",
+                    pix: "🇧🇷 PIX (Brasilien)",
                     copy: "Kopieren",
                     copied: "Kopiert!"
                 },
@@ -512,6 +522,8 @@
                     or: "o tramite bonifico diretto (senza commissioni)",
                     iban: "🏦 IBAN (Europa)",
                     paypal: "💳 PayPal",
+                    twint: "🇨🇭 TWINT (Svizzera)",
+                    pix: "🇧🇷 PIX (Brasile)",
                     copy: "Copia",
                     copied: "Copiato!"
                 },
@@ -569,6 +581,18 @@
                             <h3>${t.donate.paypal}</h3>
                             <code>scassani@gmail.com</code>
                             <button onclick="copyToClipboard('scassani@gmail.com', '${t.donate.copied}')">${t.donate.copy}</button>
+                        </div>
+
+                        <div class="payment-card">
+                            <h3>${t.donate.twint}</h3>
+                            <code>+41 78 212 53 63</code>
+                            <button onclick="copyToClipboard('+41782125363', '${t.donate.copied}')">${t.donate.copy}</button>
+                        </div>
+
+                        <div class="payment-card">
+                            <h3>${t.donate.pix}</h3>
+                            <code>scassani@jim.com</code>
+                            <button onclick="copyToClipboard('scassani@jim.com', '${t.donate.copied}')">${t.donate.copy}</button>
                         </div>
                     </div>
                 </div>
