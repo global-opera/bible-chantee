@@ -1170,9 +1170,10 @@
     
     // Partage
     document.querySelector('#shareBtn').addEventListener('click', async () => {
+      const bookData = BOOKS.find(b => b.code === currentBook);
       const shareData = {
-        title: 'Bible Chantée - ' + (currentBookData ? currentBookData.name : 'Bible') + ' ' + (currentChapter || 1),
-        text: '🎵 Écoute ' + (currentBookData ? currentBookData.name : 'Bible') + ' ' + (currentChapter || 1) + ' sur Bible Chantée !',
+        title: 'Bible Chantée - ' + (bookData ? bookData.name : 'Bible') + ' ' + (currentChapter || 1),
+        text: '🎵 Écoute ' + (bookData ? bookData.name : 'Bible') + ' ' + (currentChapter || 1) + ' sur Bible Chantée !',
         url: 'https://biblechantee.com/lecteur.html?lang=' + currentLang + '&book=' + (currentBook || '01_GEN') + '&ch=' + (currentChapter || 1)
       };
       
@@ -1295,6 +1296,7 @@
 
 </body>
 </html>
+
 
 
 
