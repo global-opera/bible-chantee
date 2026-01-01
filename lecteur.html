@@ -1171,6 +1171,12 @@
 
     // Générer playlist aléatoire (15 chapitres)
     function generateRadioPlaylist() {
+      // Try to load saved playlist first
+      if (loadRadioPlaylist()) {
+        return;
+      }
+
+      // Generate random playlist if no saved playlist
       radioPlaylist = [];
       const availableBooks = BOOKS.filter(b => {
         // Filtrer les livres qui ont de l'audio (pour l'instant, tous les livres FR/EN/PT/ES/DE/IT)
@@ -1188,6 +1194,7 @@
       }
       radioIndex = 0;
       renderRadioPlaylist();
+      saveRadioPlaylist();
     }
 
     // Afficher playlist
@@ -1230,6 +1237,13 @@
       radioPlaylist.splice(index, 1);
       if (radioIndex >= index) radioIndex = Math.max(0, radioIndex - 1);
       renderRadioPlaylist();
+      saveRadioPlaylist();
+
+      // Update badge count
+      const badge = document.querySelector('#radioBadge');
+      if (badge) {
+        badge.textContent = `(${radioPlaylist.length})`;
+      }
     }
 
     // Mettre à jour le bouton play/pause
@@ -1280,6 +1294,30 @@
       playRadioItem(radioIndex);
     });
 
+    // Save radio playlist to localStorage
+    function saveRadioPlaylist() {
+      try {
+        localStorage.setItem('bc_radio_playlist', JSON.stringify(radioPlaylist));
+      } catch (error) {
+        console.error('Error saving radio playlist:', error);
+      }
+    }
+
+    // Load radio playlist from localStorage
+    function loadRadioPlaylist() {
+      try {
+        const saved = localStorage.getItem('bc_radio_playlist');
+        if (saved) {
+          radioPlaylist = JSON.parse(saved);
+          renderRadioPlaylist();
+          return true;
+        }
+      } catch (error) {
+        console.error('Error loading radio playlist:', error);
+      }
+      return false;
+    }
+
     // Shuffle
     document.getElementById('radioShuffle').addEventListener('click', () => {
       radioShuffle = !radioShuffle;
@@ -1318,12 +1356,47 @@
       isFavorited = !isFavorited;
       document.querySelector('#favoriteBtn').innerHTML = isFavorited ? '<span class="plus-icon">✓</span><span class="radio-icon">📻</span>' : '<span class="plus-icon">+</span><span class="radio-icon">📻</span>';
       document.querySelector('#favoriteBtn').classList.toggle('favorited', isFavorited);
-      
+
+      if (isFavorited) {
+        // Add current chapter to radio playlist
+        const bookData = BOOKS.find(b => b.code === currentBook);
+        const bookName = bookData ? bookData.name : currentBook;
+
+        radioPlaylist.push({
+          book: currentBook,
+          chapter: currentChapter,
+          name: bookName
+        });
+
+        // Update the playlist display
+        renderRadioPlaylist();
+
+        // Save to localStorage
+        saveRadioPlaylist();
+      } else {
+        // Remove current chapter from radio playlist
+        const index = radioPlaylist.findIndex(item =>
+          item.book === currentBook && item.chapter === currentChapter
+        );
+        if (index !== -1) {
+          radioPlaylist.splice(index, 1);
+
+          // Adjust radioIndex if needed
+          if (radioIndex >= radioPlaylist.length) {
+            radioIndex = Math.max(0, radioPlaylist.length - 1);
+          }
+
+          // Update the playlist display
+          renderRadioPlaylist();
+
+          // Save to localStorage
+          saveRadioPlaylist();
+        }
+      }
+
       // Mettre à jour badge radio
       const badge = document.querySelector('#radioBadge');
-      let count = parseInt(badge.textContent.replace(/[()]/g, ''));
-      count = isFavorited ? count + 1 : count - 1;
-      badge.textContent = `(${count})`;
+      badge.textContent = `(${radioPlaylist.length})`;
     });
     
     // Partage
