@@ -1171,9 +1171,9 @@
     // Partage
     document.querySelector('#shareBtn').addEventListener('click', async () => {
       const shareData = {
-        title: 'Bible Chantée - Genèse 1',
-        text: '🎵 Écoute Genèse 1 - Au Commencement sur Bible Chantée !',
-        url: 'https://biblechantee.com/lecteur.html?lang=' + currentLang + '&book=01_GEN&ch=1'
+        title: 'Bible Chantée - ' + (currentBookData ? currentBookData.name : 'Bible') + ' ' + (currentChapter || 1),
+        text: '🎵 Écoute ' + (currentBookData ? currentBookData.name : 'Bible') + ' ' + (currentChapter || 1) + ' sur Bible Chantée !',
+        url: 'https://biblechantee.com/lecteur.html?lang=' + currentLang + '&book=' + (currentBook || '01_GEN') + '&ch=' + (currentChapter || 1)
       };
       
       if (navigator.share) {
@@ -1295,6 +1295,7 @@
 
 </body>
 </html>
+
 
 
 
