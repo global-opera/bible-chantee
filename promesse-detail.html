@@ -777,22 +777,58 @@
         document.body.appendChild(modal);
 
         // Handle email submission
-        document.getElementById('submitEmail').onclick = function() {
+        document.getElementById('submitEmail').onclick = async function() {
             const email = document.getElementById('trialEmail').value.trim();
-            if (email && email.includes('@')) {
-                // Store email and timestamp
+            const submitBtn = document.getElementById('submitEmail');
+
+            if (!email || !email.includes('@')) {
+                alert('Please enter a valid email address');
+                return;
+            }
+
+            // Désactiver le bouton pendant la requête
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'En cours...';
+
+            try {
+                // Générer UID unique
+                const uid = 'uid_' + Date.now() + '_' + Math.random().toString(36).substring(2, 11);
+
+                // Sauvegarder localement AVANT l'appel backend
                 const data = {
+                    uid: uid,
                     email: email,
                     timestamp: Date.now()
                 };
                 localStorage.setItem('bc_trial_email', JSON.stringify(data));
 
-                // Remove modal and render content
-                modal.remove();
-                render();
-            } else {
-                alert('Please enter a valid email address');
+                // Envoyer vers backend Supabase
+                const response = await fetch('/.netlify/functions/bc_signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ uid, email })
+                });
+
+                const result = await response.json();
+
+                if (result.ok) {
+                    console.log('✅ Utilisateur inscrit:', result.me);
+
+                    // Sauvegarder les infos complètes
+                    localStorage.setItem('bc_user', JSON.stringify(result.me));
+                } else {
+                    console.warn('⚠️ Backend signup failed:', result.error);
+                    // Continuer quand même (fail gracefully)
+                }
+
+            } catch (error) {
+                console.error('❌ Error during signup:', error);
+                // Continuer quand même (fail gracefully)
             }
+
+            // Fermer le modal et afficher le contenu
+            modal.remove();
+            render();
         };
 
         // Allow Enter key to submit

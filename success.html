@@ -1,126 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="successPageTitle">Paiement reussi - Bible Chantee</title>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TX3ETCKJQZ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-TX3ETCKJQZ');
-    </script>
+    <title>Paiement Réussi - Bible Chantée</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            background: #000080;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a237e 100%);
             min-height: 100vh;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
             padding: 20px;
         }
-        .success-box {
-            background: rgba(255,255,255,0.1);
-            padding: 40px;
+        .container {
+            max-width: 600px;
+            background: rgba(30, 58, 95, 0.8);
+            padding: 60px 40px;
             border-radius: 20px;
-            border: 2px solid #ffce00;
-            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(245, 200, 66, 0.3);
         }
-        .checkmark {
-            font-size: 4rem;
-            color: #00ff00;
-            margin-bottom: 20px;
+        .success-icon {
+            font-size: 5rem;
+            margin-bottom: 30px;
+            animation: bounce 1s ease;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
         }
         h1 {
-            color: #ffce00;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
+            color: #f5c842;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
-        p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-            color: #ddd;
-        }
-        .highlight {
-            color: #ffce00;
-            font-weight: bold;
-        }
-        .btn {
+        .cta-button {
             display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background: linear-gradient(135deg, #ffce00, #ffa500);
-            color: #000080;
+            padding: 15px 40px;
+            background: #f5c842;
+            color: #1a237e;
             text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 20px rgba(255, 206, 0, 0.4);
-        }
-        .premium-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-            color: #000;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.9rem;
+            border-radius: 10px;
+            font-size: 1.2rem;
             font-weight: bold;
             margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="success-box">
-        <div class="checkmark">&#10003;</div>
-        <h1 data-i18n="successHeading">Merci pour votre achat !</h1>
-        <p data-i18n="successText1">Votre acces <span class="highlight">Premium illimite</span> a Bible Chantee est maintenant actif.</p>
-        <p data-i18n="successText2">Profitez des <span class="highlight">1189 chapitres</span> dans toutes les langues, sans aucune limite.</p>
-        <div class="premium-badge" data-i18n="successBadge">&#9733; PREMIUM ACTIVE</div>
-        <br>
-        <a href="/lecteur.html" class="btn" data-i18n="successButton">Commencer a ecouter</a>
+    <div class="container">
+        <div class="success-icon">🎉</div>
+        <h1>Paiement Réussi !</h1>
+        <p style="font-size: 1.2rem; margin: 20px 0;">Votre compte premium est activé.</p>
+        <a href="/lecteur.html" class="cta-button">Commencer à écouter</a>
     </div>
+    <script src="/js/premium-system.js"></script>
     <script>
-        // Activer premium dans localStorage
-        const user = JSON.parse(localStorage.getItem('bc_user') || '{}');
-        user.premium = true;
-        user.premiumDate = new Date().toISOString();
-        localStorage.setItem('bc_user', JSON.stringify(user));
-
-        // Track GA4 purchase
-        gtag('event', 'purchase', {
-            currency: 'CHF',
-            value: 0.99,
-            transaction_id: 'stripe_' + Date.now(),
-            item_name: 'Bible Chantee Premium'
-        });
-
-        console.log('Premium active!', user);
+        premiumSystem.checkPremiumStatus();
     </script>
-
-    <script src="lang-shared.js"></script>
-    <script src="translations.js"></script>
-<script src="translations-extra.js"></script>
-    <script>
-        // Initialize i18n
-        if (typeof window.translations !== 'undefined' && typeof window.BibleI18n !== 'undefined') {
-            window.BibleI18n.init();
-        }
-    </script>
-
-  <script src="/translations.js"></script>
-  <script src="/translations-extra.js"></script>
-  <script src="/i18n.js"></script>
-  <script src="/lang-shared.js"></script>
 </body>
 </html>
-
-
