@@ -456,15 +456,18 @@
 
     // Get audio URL for psalm
     function getAudioUrl(psalmNum, lang) {
-        // Format: book 19 (Psalms), chapter = psalmNum
-        const book = '19';
-        const chapter = String(psalmNum).padStart(3, '0');
+        // Format: 19_PSA_23_ES for Psalm 23 in Spanish
+        const langUpper = lang.toUpperCase();
+        const chapter = String(psalmNum).padStart(2, '0');
+        const key = `19_PSA_${chapter}_${langUpper}`;
+
         // Try to get from window.AUDIO_URLS if it exists
-        if (window.AUDIO_URLS && window.AUDIO_URLS[lang] && window.AUDIO_URLS[lang][book]) {
-            return window.AUDIO_URLS[lang][book][chapter];
+        if (window.AUDIO_URLS && window.AUDIO_URLS[key]) {
+            return window.AUDIO_URLS[key];
         }
+
         // Fallback to R2 URL pattern
-        return `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${lang}/19_${chapter}.mp3`;
+        return `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${langUpper}/19_PSA/19_PSA_${chapter}_${langUpper}.mp3`;
     }
 
     // Toggle lyrics display
@@ -502,21 +505,33 @@
         }
     }
 
-    // Load lyrics from file
+    // Load lyrics from JSON file
     async function loadLyrics(psalmNum, lang, lyricsId) {
         const lyricsBox = document.getElementById(lyricsId);
         const langData = THEMES_DATA[lang] || THEMES_DATA.FR;
+        const langUpper = lang.toUpperCase();
 
         try {
-            // Try to load lyrics from lyrics/19/psalmNum.txt
-            const response = await fetch(`lyrics/${lang}/19_${String(psalmNum).padStart(3, '0')}.txt`);
+            // Load lyrics from JSON file (lyrics/ES.json, lyrics/FR.json, etc.)
+            const response = await fetch(`lyrics/${langUpper}.json`);
             if (response.ok) {
-                const text = await response.text();
-                lyricsBox.textContent = text;
+                const data = await response.json();
+                // Get psalm from book 19
+                if (data['19'] && data['19'][String(psalmNum)]) {
+                    let lyrics = data['19'][String(psalmNum)];
+                    // Clean up the text (remove [TITLE], [LYRICS] tags, etc.)
+                    lyrics = lyrics.replace(/\[TITLE\]\r?\n/g, '');
+                    lyrics = lyrics.replace(/\[LYRICS\]\r?\n/g, '');
+                    lyrics = lyrics.replace(/\r\n/g, '\n');
+                    lyricsBox.textContent = lyrics.trim();
+                } else {
+                    lyricsBox.textContent = langData.lyricsUnavailable || 'Paroles non disponibles';
+                }
             } else {
                 lyricsBox.textContent = langData.lyricsUnavailable || 'Paroles non disponibles';
             }
         } catch (error) {
+            console.error('Error loading lyrics:', error);
             lyricsBox.textContent = langData.lyricsUnavailable || 'Paroles non disponibles';
         }
     }
@@ -524,6 +539,12 @@
     document.addEventListener('DOMContentLoaded', render);
     </script>
 
+  <script src="js/audio-urls-fr.js"></script>
+  <script src="js/audio-urls-en.js"></script>
+  <script src="js/audio-urls-pt.js"></script>
+  <script src="js/audio-urls-es.js"></script>
+  <script src="js/audio-urls-de.js"></script>
+  <script src="js/audio-urls-it.js"></script>
   <script src="/translations.js"></script>
   <script src="/translations-extra.js"></script>
   <script src="/i18n.js"></script>
