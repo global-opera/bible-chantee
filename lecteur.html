@@ -1186,10 +1186,19 @@
       for (let i = 0; i < 15; i++) {
         const book = availableBooks[Math.floor(Math.random() * availableBooks.length)];
         const chapter = Math.floor(Math.random() * book.chapters) + 1;
+
+        // Get book name from BOOK_NAMES with proper fallback
+        let bookName = book.code;
+        if (window.BOOK_NAMES) {
+          bookName = (window.BOOK_NAMES[currentLang] && window.BOOK_NAMES[currentLang][book.code])
+            || (window.BOOK_NAMES.FR && window.BOOK_NAMES.FR[book.code])
+            || book.code;
+        }
+
         radioPlaylist.push({
           book: book.code,
           chapter,
-          name: book.name
+          name: bookName
         });
       }
       radioIndex = 0;
@@ -1360,7 +1369,14 @@
       if (isFavorited) {
         // Add current chapter to radio playlist
         const bookData = BOOKS.find(b => b.code === currentBook);
-        const bookName = bookData ? bookData.name : currentBook;
+
+        // Get book name from BOOK_NAMES with proper fallback
+        let bookName = currentBook;
+        if (bookData && window.BOOK_NAMES) {
+          bookName = (window.BOOK_NAMES[currentLang] && window.BOOK_NAMES[currentLang][bookData.code])
+            || (window.BOOK_NAMES.FR && window.BOOK_NAMES.FR[bookData.code])
+            || bookData.code;
+        }
 
         radioPlaylist.push({
           book: currentBook,
