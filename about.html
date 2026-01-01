@@ -1,318 +1,657 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title data-i18n="aboutPageTitle">À propos - Bible Chantée</title>
-  <meta name="description" content="Découvrez Bible Chantée, un projet musical spirituel mettant en musique les 1189 chapitres de la Bible en 12 langues.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Bible Chantée V3</title>
+    <meta name="description" content="Découvrez Bible Chantée, 1189 chapitres de la Bible mis en musique en 12 langues avec Suno AI">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bleu-nuit: #1E3A5F;
+            --bleu-sombre: #162B46;
+            --bleu-cartes: #243F66;
+            --bleu-hover: #2C4A73;
+            --or-moyen: #F5CB42;
+        }
 
-    body {
-      font-family: 'Inter', Arial, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-      line-height: 1.7;
-    }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--bleu-sombre) 0%, var(--bleu-nuit) 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
 
-    header {
-      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-      padding: 60px 20px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-    header::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="40" opacity="0.08" fill="%23ffffff">&#9835;</text></svg>');
-      background-size: 80px;
-    }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-    header h1 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 3em;
-      margin-bottom: 15px;
-      position: relative;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-    }
+        h1 {
+            font-size: 2.5rem;
+            color: var(--or-moyen);
+            margin-bottom: 10px;
+        }
 
-    header p {
-      font-size: 1.25em;
-      max-width: 700px;
-      margin: 0 auto;
-      opacity: 0.95;
-      position: relative;
-    }
+        .subtitle {
+            color: #b0b0b0;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
 
-    nav {
-      background: #020617;
-      text-align: center;
-      padding: 15px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    }
+        .back-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background: transparent;
+            border: 2px solid var(--or-moyen);
+            border-radius: 25px;
+            color: var(--or-moyen);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s;
+            margin-bottom: 20px;
+        }
 
-    nav a {
-      color: #93c5fd;
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95em;
-      transition: color 0.3s;
-    }
+        .back-btn:hover {
+            background: var(--or-moyen);
+            color: var(--bleu-nuit);
+        }
 
-    nav a:hover { color: #ffffff; }
+        .lang-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 15px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
 
-    main {
-      padding: 50px 20px 70px;
-      max-width: 1100px;
-      margin: auto;
-    }
+        .lang-btn {
+            padding: 8px 16px;
+            background: var(--bleu-cartes);
+            color: var(--or-moyen);
+            border: 1px solid var(--or-moyen);
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
 
-    .bloc {
-      background: linear-gradient(145deg, #111827, #1e293b);
-      border-radius: 16px;
-      padding: 30px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 25px rgba(0,0,0,0.4);
-      border: 1px solid rgba(147, 197, 253, 0.1);
-    }
+        .lang-btn:hover, .lang-btn.active {
+            background: var(--or-moyen);
+            color: var(--bleu-nuit);
+        }
 
-    h2 {
-      font-family: 'Playfair Display', Georgia, serif;
-      color: #93c5fd;
-      margin-top: 0;
-      margin-bottom: 20px;
-      font-size: 1.6em;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+        .section {
+            background: rgba(30, 58, 95, 0.8);
+            border-radius: 11px;
+            padding: 30px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
 
-    h2 i { font-size: 0.9em; }
+        .section:hover {
+            box-shadow: 0 5px 20px rgba(245, 200, 66, 0.2);
+        }
 
-    p { margin-bottom: 15px; color: #cbd5e1; }
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
 
-    ul { list-style-position: inside; color: #cbd5e1; margin-bottom: 15px; }
-    ul li { margin-bottom: 8px; padding-left: 10px; }
+        .section-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
 
-    .platforms {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 25px;
-    }
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--or-moyen);
+        }
 
-    .platform-link {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-decoration: none;
-      color: #93c5fd;
-      transition: transform 0.3s, color 0.3s;
-      padding: 15px;
-      border-radius: 12px;
-      background: rgba(147, 197, 253, 0.05);
-      min-width: 120px;
-    }
+        .section-content {
+            color: #e0e0e0;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
 
-    .platform-link:hover {
-      transform: translateY(-5px);
-      color: #ffffff;
-      background: rgba(147, 197, 253, 0.1);
-    }
+        .section-content p {
+            margin-bottom: 15px;
+        }
 
-    .platform-link i { font-size: 3em; margin-bottom: 10px; }
-    .platform-link span { font-weight: 600; font-size: 0.9em; }
+        .section-content ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
 
-    .usage-list {
-      background: rgba(147, 197, 253, 0.05);
-      border-left: 4px solid #93c5fd;
-      padding: 20px;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
+        .section-content li {
+            margin-bottom: 8px;
+        }
 
-    .usage-list ul { margin-bottom: 0; }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
 
-    .contact-info {
-      background: rgba(37, 99, 235, 0.1);
-      padding: 20px;
-      border-radius: 12px;
-      margin-top: 15px;
-    }
+        .stat-card {
+            background: var(--bleu-hover);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
 
-    .contact-info p { margin-bottom: 10px; }
-    .contact-info a { color: #93c5fd; text-decoration: none; transition: color 0.3s; }
-    .contact-info a:hover { color: #ffffff; }
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--or-moyen);
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
 
-    footer {
-      background: #020617;
-      text-align: center;
-      padding: 25px 20px;
-      margin-top: 50px;
-      border-top: 1px solid rgba(147, 197, 253, 0.1);
-    }
+        .stat-label {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+        }
 
-    footer p { color: #94a3b8; font-size: 0.9em; margin-bottom: 0; }
+        .email-link {
+            color: var(--or-moyen);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
 
-    @media (max-width: 768px) {
-      header h1 { font-size: 2em; }
-      header p { font-size: 1em; }
-      .platforms { gap: 15px; }
-      .platform-link { min-width: 100px; padding: 12px; }
-      .platform-link i { font-size: 2.5em; }
-      nav a { display: inline-block; margin: 5px 8px; }
-    }
-  </style>
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            color: #808080;
+            margin-top: 50px;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <h1 id="pageTitle">À propos</h1>
+            <p class="subtitle" id="pageSubtitle">La Bible entière mise en musique</p>
+            <a href="lecteur.html" class="back-btn" id="backBtn">← Retour au Lecteur</a>
+        </div>
 
-<header>
-  <h1 data-i18n="siteName">Bible Chantée</h1>
-  <p data-i18n="aboutTagline">La Parole de Dieu en musique</p>
-</header>
+        <div class="lang-bar">
+            <button class="lang-btn" data-lang="FR">FR</button>
+            <button class="lang-btn" data-lang="EN">EN</button>
+            <button class="lang-btn" data-lang="PT">PT</button>
+            <button class="lang-btn" data-lang="ES">ES</button>
+            <button class="lang-btn" data-lang="DE">DE</button>
+            <button class="lang-btn" data-lang="IT">IT</button>
+        </div>
 
-<nav>
-  <a href="/" id="returnLink" data-i18n="navHome">Retour</a>
-  <a href="about.html" data-i18n="navAbout">À propos</a>
-</nav>
+        <div id="sectionsContainer"></div>
 
-<main>
-  <div class="bloc">
-    <h2><i class="fas fa-info-circle"></i> <span data-i18n="aboutProjectTitle">À propos du projet</span></h2>
-    <p data-i18n="aboutProjectDesc1">
-      <strong>Bible Chantée</strong> est un projet musical spirituel visant à mettre en musique
-      les <strong>1189 chapitres de la Bible</strong> en <strong>12 langues</strong>.
-    </p>
-    <p data-i18n="aboutProjectDesc2">
-      Toutes les compositions sont originales. Les paroles sont basées sur les textes bibliques
-      du domaine public.
-    </p>
-  </div>
-
-  <div class="bloc">
-    <h2><i class="fas fa-headphones"></i> <span data-i18n="aboutListenTitle">Écoutez Bible Chantée (bientôt disponible)</span></h2>
-    <p data-i18n="aboutListenDesc">Retrouvez nos musiques sur vos plateformes de streaming préférées :</p>
-
-    <div class="platforms">
-      <a href="https://open.spotify.com/artist/XXXXX" class="platform-link" target="_blank" rel="noopener">
-        <i class="fab fa-spotify"></i>
-        <span>Spotify</span>
-      </a>
-      <a href="https://music.apple.com/artist/XXXXX" class="platform-link" target="_blank" rel="noopener">
-        <i class="fab fa-apple"></i>
-        <span>Apple Music</span>
-      </a>
-      <a href="https://music.youtube.com/channel/XXXXX" class="platform-link" target="_blank" rel="noopener">
-        <i class="fab fa-youtube"></i>
-        <span>YouTube Music</span>
-      </a>
-      <a href="https://www.deezer.com/artist/XXXXX" class="platform-link" target="_blank" rel="noopener">
-        <i class="fab fa-deezer"></i>
-        <span>Deezer</span>
-      </a>
-      <a href="https://music.amazon.com/artists/XXXXX" class="platform-link" target="_blank" rel="noopener">
-        <i class="fab fa-amazon"></i>
-        <span>Amazon Music</span>
-      </a>
+        <div class="footer">
+            © 2025 Bible Chantée — V3
+        </div>
     </div>
-  </div>
 
-  <div class="bloc">
-    <h2><i class="fas fa-check-circle"></i> <span data-i18n="aboutUsageTitle">Utilisation autorisée</span></h2>
-    <p data-i18n="aboutUsageDesc">Vous êtes libre d'utiliser ces musiques dans un cadre :</p>
-    <div class="usage-list">
-      <ul>
-        <li><strong data-i18n="aboutUsageSpiritual">Spirituel</strong> <span data-i18n="aboutUsageSpiritualDetail">(églises, cultes, méditations)</span></li>
-        <li><strong data-i18n="aboutUsageEducational">Éducatif</strong> <span data-i18n="aboutUsageEducationalDetail">(cours, études bibliques)</span></li>
-        <li><strong data-i18n="aboutUsagePersonal">Personnel</strong> <span data-i18n="aboutUsagePersonalDetail">(vidéos non commerciales)</span></li>
-      </ul>
-    </div>
-    <p style="margin-top: 20px;" data-i18n="aboutUsageCondition">
-      Sans crainte de blocage, tant que l'usage reste <strong>non commercial</strong> et conforme aux conditions des plateformes.
-    </p>
-  </div>
+    <script>
+        // Traductions
+        const TRANSLATIONS = {
+            FR: {
+                pageTitle: "À propos",
+                pageSubtitle: "La Bible entière mise en musique",
+                backBtn: "← Retour au Lecteur",
+                sections: [
+                    {
+                        icon: "🎵",
+                        title: "Notre Mission",
+                        content: `<p>Bible Chantée est né d'une passion pour rendre la Parole de Dieu accessible et mémorable à travers la musique.</p>
+                        <p>Notre mission est de permettre à chacun d'écouter, de méditer et de mémoriser les Écritures d'une manière nouvelle et inspirante.</p>`
+                    },
+                    {
+                        icon: "📖",
+                        title: "Le Projet",
+                        content: `<p><strong>1189 chapitres</strong> de la Bible ont été transformés en chansons contemplatives.</p>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-number">1189</span>
+                                <span class="stat-label">Chapitres</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">66</span>
+                                <span class="stat-label">Livres</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">Langues</span>
+                            </div>
+                        </div>
+                        <p style="margin-top: 20px;"><strong>Langues audio disponibles :</strong> Français, Anglais, Portugais, Espagnol, Allemand, Italien</p>
+                        <p><strong>Langues pour les paroles :</strong> FR, EN, PT, ES, DE, IT, AR, RU, ZH, HI, TL, SW</p>
+                        <p>Chaque chanson capture l'essence spirituelle du chapitre biblique correspondant.</p>`
+                    },
+                    {
+                        icon: "🤖",
+                        title: "Comment ça marche",
+                        content: `<p>Les chansons sont générées avec <strong>Suno AI V5</strong>, une technologie de pointe en création musicale.</p>
+                        <p><strong>Paroles originales :</strong> Chaque chapitre a été transformé en paroles poétiques uniques, fidèles au texte biblique tout en étant adaptées au format musical.</p>
+                        <p><strong>Style musical :</strong> Worship contemplatif, acoustique, 72-80 BPM, créant une atmosphère propice à la méditation et à la prière.</p>
+                        <p><strong>Qualité professionnelle :</strong> Toutes les chansons sont en haute qualité audio pour une expérience d'écoute optimale.</p>`
+                    },
+                    {
+                        icon: "👥",
+                        title: "L'Équipe",
+                        content: `<p>Bible Chantée est un projet créé avec passion et dévouement pour partager la Parole de Dieu.</p>
+                        <p>Ce projet est le fruit d'un travail minutieux de création de paroles, de génération musicale et de développement technique.</p>
+                        <p><strong>Projet gratuit :</strong> Toutes les chansons sont accessibles gratuitement pour permettre au plus grand nombre de découvrir et méditer les Écritures en musique.</p>`
+                    },
+                    {
+                        icon: "✉️",
+                        title: "Contact",
+                        content: `<p>Vous avez des questions, des suggestions ou souhaitez soutenir le projet ?</p>
+                        <p>N'hésitez pas à nous contacter :</p>
+                        <p style="text-align: center; margin-top: 20px;">
+                            <a href="mailto:info@biblechantee.com" class="email-link">info@biblechantee.com</a>
+                        </p>
+                        <p style="margin-top: 20px; text-align: center; color: #b0b0b0;">
+                            Suivez-nous pour découvrir les nouveautés et mises à jour du projet !
+                        </p>`
+                    }
+                ]
+            },
+            EN: {
+                pageTitle: "About",
+                pageSubtitle: "The entire Bible set to music",
+                backBtn: "← Back to Player",
+                sections: [
+                    {
+                        icon: "🎵",
+                        title: "Our Mission",
+                        content: `<p>Bible Chantée was born from a passion to make God's Word accessible and memorable through music.</p>
+                        <p>Our mission is to enable everyone to listen, meditate, and memorize Scripture in a new and inspiring way.</p>`
+                    },
+                    {
+                        icon: "📖",
+                        title: "The Project",
+                        content: `<p><strong>1189 chapters</strong> of the Bible have been transformed into contemplative songs.</p>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-number">1189</span>
+                                <span class="stat-label">Chapters</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">66</span>
+                                <span class="stat-label">Books</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">Languages</span>
+                            </div>
+                        </div>
+                        <p style="margin-top: 20px;"><strong>Audio languages available:</strong> French, English, Portuguese, Spanish, German, Italian</p>
+                        <p><strong>Lyrics languages:</strong> FR, EN, PT, ES, DE, IT, AR, RU, ZH, HI, TL, SW</p>
+                        <p>Each song captures the spiritual essence of its corresponding Bible chapter.</p>`
+                    },
+                    {
+                        icon: "🤖",
+                        title: "How It Works",
+                        content: `<p>Songs are generated with <strong>Suno AI V5</strong>, cutting-edge music creation technology.</p>
+                        <p><strong>Original lyrics:</strong> Each chapter has been transformed into unique poetic lyrics, faithful to the biblical text while adapted to musical format.</p>
+                        <p><strong>Musical style:</strong> Contemplative worship, acoustic, 72-80 BPM, creating an atmosphere conducive to meditation and prayer.</p>
+                        <p><strong>Professional quality:</strong> All songs are in high audio quality for an optimal listening experience.</p>`
+                    },
+                    {
+                        icon: "👥",
+                        title: "The Team",
+                        content: `<p>Bible Chantée is a project created with passion and dedication to share God's Word.</p>
+                        <p>This project is the result of meticulous work in lyric creation, musical generation, and technical development.</p>
+                        <p><strong>Free project:</strong> All songs are freely accessible to allow as many people as possible to discover and meditate on Scripture through music.</p>`
+                    },
+                    {
+                        icon: "✉️",
+                        title: "Contact",
+                        content: `<p>Do you have questions, suggestions, or want to support the project?</p>
+                        <p>Feel free to contact us:</p>
+                        <p style="text-align: center; margin-top: 20px;">
+                            <a href="mailto:info@biblechantee.com" class="email-link">info@biblechantee.com</a>
+                        </p>
+                        <p style="margin-top: 20px; text-align: center; color: #b0b0b0;">
+                            Follow us to discover news and project updates!
+                        </p>`
+                    }
+                ]
+            },
+            PT: {
+                pageTitle: "Sobre",
+                pageSubtitle: "A Bíblia inteira musicada",
+                backBtn: "← Voltar ao Player",
+                sections: [
+                    {
+                        icon: "🎵",
+                        title: "Nossa Missão",
+                        content: `<p>Bíblia Cantada nasceu de uma paixão por tornar a Palavra de Deus acessível e memorável através da música.</p>
+                        <p>Nossa missão é permitir que todos ouçam, meditem e memorizem as Escrituras de uma maneira nova e inspiradora.</p>`
+                    },
+                    {
+                        icon: "📖",
+                        title: "O Projeto",
+                        content: `<p><strong>1189 capítulos</strong> da Bíblia foram transformados em canções contemplativas.</p>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-number">1189</span>
+                                <span class="stat-label">Capítulos</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">66</span>
+                                <span class="stat-label">Livros</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">Idiomas</span>
+                            </div>
+                        </div>
+                        <p style="margin-top: 20px;"><strong>Idiomas de áudio disponíveis:</strong> Francês, Inglês, Português, Espanhol, Alemão, Italiano</p>
+                        <p><strong>Idiomas das letras:</strong> FR, EN, PT, ES, DE, IT, AR, RU, ZH, HI, TL, SW</p>
+                        <p>Cada canção captura a essência espiritual do capítulo bíblico correspondente.</p>`
+                    },
+                    {
+                        icon: "🤖",
+                        title: "Como Funciona",
+                        content: `<p>As canções são geradas com <strong>Suno AI V5</strong>, tecnologia de ponta em criação musical.</p>
+                        <p><strong>Letras originais:</strong> Cada capítulo foi transformado em letras poéticas únicas, fiéis ao texto bíblico enquanto adaptadas ao formato musical.</p>
+                        <p><strong>Estilo musical:</strong> Worship contemplativo, acústico, 72-80 BPM, criando uma atmosfera propícia à meditação e oração.</p>
+                        <p><strong>Qualidade profissional:</strong> Todas as canções são em alta qualidade de áudio para uma experiência de audição ideal.</p>`
+                    },
+                    {
+                        icon: "👥",
+                        title: "A Equipe",
+                        content: `<p>Bíblia Cantada é um projeto criado com paixão e dedicação para compartilhar a Palavra de Deus.</p>
+                        <p>Este projeto é o resultado de um trabalho meticuloso de criação de letras, geração musical e desenvolvimento técnico.</p>
+                        <p><strong>Projeto gratuito:</strong> Todas as canções são acessíveis gratuitamente para permitir que o maior número de pessoas descubra e medite as Escrituras através da música.</p>`
+                    },
+                    {
+                        icon: "✉️",
+                        title: "Contato",
+                        content: `<p>Você tem perguntas, sugestões ou deseja apoiar o projeto?</p>
+                        <p>Não hesite em nos contatar:</p>
+                        <p style="text-align: center; margin-top: 20px;">
+                            <a href="mailto:info@biblechantee.com" class="email-link">info@biblechantee.com</a>
+                        </p>
+                        <p style="margin-top: 20px; text-align: center; color: #b0b0b0;">
+                            Siga-nos para descobrir novidades e atualizações do projeto!
+                        </p>`
+                    }
+                ]
+            },
+            ES: {
+                pageTitle: "Acerca de",
+                pageSubtitle: "La Biblia completa musicalizada",
+                backBtn: "← Volver al Reproductor",
+                sections: [
+                    {
+                        icon: "🎵",
+                        title: "Nuestra Misión",
+                        content: `<p>Biblia Cantada nació de una pasión por hacer la Palabra de Dios accesible y memorable a través de la música.</p>
+                        <p>Nuestra misión es permitir que todos escuchen, mediten y memoricen las Escrituras de una manera nueva e inspiradora.</p>`
+                    },
+                    {
+                        icon: "📖",
+                        title: "El Proyecto",
+                        content: `<p><strong>1189 capítulos</strong> de la Biblia han sido transformados en canciones contemplativas.</p>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-number">1189</span>
+                                <span class="stat-label">Capítulos</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">66</span>
+                                <span class="stat-label">Libros</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">Idiomas</span>
+                            </div>
+                        </div>
+                        <p style="margin-top: 20px;"><strong>Idiomas de audio disponibles:</strong> Francés, Inglés, Portugués, Español, Alemán, Italiano</p>
+                        <p><strong>Idiomas de las letras:</strong> FR, EN, PT, ES, DE, IT, AR, RU, ZH, HI, TL, SW</p>
+                        <p>Cada canción captura la esencia espiritual del capítulo bíblico correspondiente.</p>`
+                    },
+                    {
+                        icon: "🤖",
+                        title: "Cómo Funciona",
+                        content: `<p>Las canciones se generan con <strong>Suno AI V5</strong>, tecnología de vanguardia en creación musical.</p>
+                        <p><strong>Letras originales:</strong> Cada capítulo ha sido transformado en letras poéticas únicas, fieles al texto bíblico mientras se adaptan al formato musical.</p>
+                        <p><strong>Estilo musical:</strong> Worship contemplativo, acústico, 72-80 BPM, creando una atmósfera propicia para la meditación y la oración.</p>
+                        <p><strong>Calidad profesional:</strong> Todas las canciones están en alta calidad de audio para una experiencia de escucha óptima.</p>`
+                    },
+                    {
+                        icon: "👥",
+                        title: "El Equipo",
+                        content: `<p>Biblia Cantada es un proyecto creado con pasión y dedicación para compartir la Palabra de Dios.</p>
+                        <p>Este proyecto es el resultado de un trabajo meticuloso de creación de letras, generación musical y desarrollo técnico.</p>
+                        <p><strong>Proyecto gratuito:</strong> Todas las canciones son accesibles gratuitamente para permitir que la mayor cantidad de personas descubra y medite las Escrituras a través de la música.</p>`
+                    },
+                    {
+                        icon: "✉️",
+                        title: "Contacto",
+                        content: `<p>¿Tienes preguntas, sugerencias o deseas apoyar el proyecto?</p>
+                        <p>No dudes en contactarnos:</p>
+                        <p style="text-align: center; margin-top: 20px;">
+                            <a href="mailto:info@biblechantee.com" class="email-link">info@biblechantee.com</a>
+                        </p>
+                        <p style="margin-top: 20px; text-align: center; color: #b0b0b0;">
+                            ¡Síguenos para descubrir novedades y actualizaciones del proyecto!
+                        </p>`
+                    }
+                ]
+            },
+            DE: {
+                pageTitle: "Über uns",
+                pageSubtitle: "Die gesamte Bibel vertont",
+                backBtn: "← Zurück zum Player",
+                sections: [
+                    {
+                        icon: "🎵",
+                        title: "Unsere Mission",
+                        content: `<p>Bible Chantée entstand aus einer Leidenschaft, Gottes Wort durch Musik zugänglich und einprägsam zu machen.</p>
+                        <p>Unsere Mission ist es, jedem zu ermöglichen, die Schrift auf eine neue und inspirierende Weise zu hören, zu meditieren und auswendig zu lernen.</p>`
+                    },
+                    {
+                        icon: "📖",
+                        title: "Das Projekt",
+                        content: `<p><strong>1189 Kapitel</strong> der Bibel wurden in kontemplative Lieder verwandelt.</p>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-number">1189</span>
+                                <span class="stat-label">Kapitel</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">66</span>
+                                <span class="stat-label">Bücher</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">Sprachen</span>
+                            </div>
+                        </div>
+                        <p style="margin-top: 20px;"><strong>Verfügbare Audiosprachen:</strong> Französisch, Englisch, Portugiesisch, Spanisch, Deutsch, Italienisch</p>
+                        <p><strong>Textsprachen:</strong> FR, EN, PT, ES, DE, IT, AR, RU, ZH, HI, TL, SW</p>
+                        <p>Jedes Lied erfasst die spirituelle Essenz des entsprechenden Bibelkapitels.</p>`
+                    },
+                    {
+                        icon: "🤖",
+                        title: "Wie es funktioniert",
+                        content: `<p>Die Lieder werden mit <strong>Suno AI V5</strong> generiert, modernster Technologie zur Musikkreation.</p>
+                        <p><strong>Originaltexte:</strong> Jedes Kapitel wurde in einzigartige poetische Texte verwandelt, die dem biblischen Text treu bleiben und gleichzeitig an das musikalische Format angepasst sind.</p>
+                        <p><strong>Musikstil:</strong> Kontemplatives Worship, akustisch, 72-80 BPM, schafft eine Atmosphäre, die zur Meditation und zum Gebet einlädt.</p>
+                        <p><strong>Professionelle Qualität:</strong> Alle Lieder sind in hoher Audioqualität für ein optimales Hörerlebnis.</p>`
+                    },
+                    {
+                        icon: "👥",
+                        title: "Das Team",
+                        content: `<p>Bible Chantée ist ein Projekt, das mit Leidenschaft und Hingabe geschaffen wurde, um Gottes Wort zu teilen.</p>
+                        <p>Dieses Projekt ist das Ergebnis sorgfältiger Arbeit bei der Texterstellung, musikalischen Generierung und technischen Entwicklung.</p>
+                        <p><strong>Kostenloses Projekt:</strong> Alle Lieder sind kostenlos zugänglich, um möglichst vielen Menschen zu ermöglichen, die Schrift durch Musik zu entdecken und zu meditieren.</p>`
+                    },
+                    {
+                        icon: "✉️",
+                        title: "Kontakt",
+                        content: `<p>Haben Sie Fragen, Vorschläge oder möchten Sie das Projekt unterstützen?</p>
+                        <p>Zögern Sie nicht, uns zu kontaktieren:</p>
+                        <p style="text-align: center; margin-top: 20px;">
+                            <a href="mailto:info@biblechantee.com" class="email-link">info@biblechantee.com</a>
+                        </p>
+                        <p style="margin-top: 20px; text-align: center; color: #b0b0b0;">
+                            Folgen Sie uns, um Neuigkeiten und Projektaktualisierungen zu entdecken!
+                        </p>`
+                    }
+                ]
+            },
+            IT: {
+                pageTitle: "Chi siamo",
+                pageSubtitle: "L'intera Bibbia musicata",
+                backBtn: "← Torna al Lettore",
+                sections: [
+                    {
+                        icon: "🎵",
+                        title: "La Nostra Missione",
+                        content: `<p>Bible Chantée è nato da una passione per rendere la Parola di Dio accessibile e memorabile attraverso la musica.</p>
+                        <p>La nostra missione è permettere a tutti di ascoltare, meditare e memorizzare le Scritture in modo nuovo e ispirante.</p>`
+                    },
+                    {
+                        icon: "📖",
+                        title: "Il Progetto",
+                        content: `<p><strong>1189 capitoli</strong> della Bibbia sono stati trasformati in canzoni contemplative.</p>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <span class="stat-number">1189</span>
+                                <span class="stat-label">Capitoli</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">66</span>
+                                <span class="stat-label">Libri</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">12</span>
+                                <span class="stat-label">Lingue</span>
+                            </div>
+                        </div>
+                        <p style="margin-top: 20px;"><strong>Lingue audio disponibili:</strong> Francese, Inglese, Portoghese, Spagnolo, Tedesco, Italiano</p>
+                        <p><strong>Lingue dei testi:</strong> FR, EN, PT, ES, DE, IT, AR, RU, ZH, HI, TL, SW</p>
+                        <p>Ogni canzone cattura l'essenza spirituale del capitolo biblico corrispondente.</p>`
+                    },
+                    {
+                        icon: "🤖",
+                        title: "Come Funziona",
+                        content: `<p>Le canzoni sono generate con <strong>Suno AI V5</strong>, tecnologia all'avanguardia nella creazione musicale.</p>
+                        <p><strong>Testi originali:</strong> Ogni capitolo è stato trasformato in testi poetici unici, fedeli al testo biblico pur essendo adattati al formato musicale.</p>
+                        <p><strong>Stile musicale:</strong> Worship contemplativo, acustico, 72-80 BPM, creando un'atmosfera propizia alla meditazione e alla preghiera.</p>
+                        <p><strong>Qualità professionale:</strong> Tutte le canzoni sono in alta qualità audio per un'esperienza di ascolto ottimale.</p>`
+                    },
+                    {
+                        icon: "👥",
+                        title: "Il Team",
+                        content: `<p>Bible Chantée è un progetto creato con passione e dedizione per condividere la Parola di Dio.</p>
+                        <p>Questo progetto è il risultato di un lavoro meticoloso di creazione di testi, generazione musicale e sviluppo tecnico.</p>
+                        <p><strong>Progetto gratuito:</strong> Tutte le canzoni sono accessibili gratuitamente per permettere al maggior numero di persone di scoprire e meditare le Scritture attraverso la musica.</p>`
+                    },
+                    {
+                        icon: "✉️",
+                        title: "Contatto",
+                        content: `<p>Hai domande, suggerimenti o vuoi supportare il progetto?</p>
+                        <p>Non esitare a contattarci:</p>
+                        <p style="text-align: center; margin-top: 20px;">
+                            <a href="mailto:info@biblechantee.com" class="email-link">info@biblechantee.com</a>
+                        </p>
+                        <p style="margin-top: 20px; text-align: center; color: #b0b0b0;">
+                            Seguici per scoprire novità e aggiornamenti del progetto!
+                        </p>`
+                    }
+                ]
+            }
+        };
 
-  <div class="bloc">
-    <h2><i class="fas fa-book-open"></i> <span data-i18n="aboutTranslationsTitle">Traductions bibliques utilisées</span></h2>
-    <p data-i18n="aboutTranslationsDesc">Les chansons sont basées sur les traductions bibliques suivantes :</p>
-    <div class="usage-list">
-      <ul>
-        <li data-i18n="aboutTranslationFR"><strong>FR (Français) :</strong> Louis Segond (LSG)</li>
-        <li data-i18n="aboutTranslationEN"><strong>EN (English) :</strong> King James Version (KJV)</li>
-        <li data-i18n="aboutTranslationPT"><strong>PT (Português) :</strong> Almeida Revista e Corrigida (ARC)</li>
-        <li data-i18n="aboutTranslationES"><strong>ES (Español) :</strong> Reina Valera (RVR)</li>
-        <li data-i18n="aboutTranslationDE"><strong>DE (Deutsch) :</strong> Luther Bibel (LUT)</li>
-        <li data-i18n="aboutTranslationIT"><strong>IT (Italiano) :</strong> Nuova Riveduta (NR)</li>
-      </ul>
-    </div>
-    <p style="margin-top: 20px;" data-i18n="aboutTranslationsNote">
-      Ces traductions classiques et reconnues garantissent la fidélité aux textes bibliques originaux.
-    </p>
-  </div>
+        // Get language from localStorage
+        let currentLang = localStorage.getItem('bc_lang') || 'FR';
 
-  <div class="bloc">
-    <h2><i class="fas fa-envelope"></i> <span data-i18n="contactTitle">Contact</span></h2>
-    <div class="contact-info">
-      <p><strong data-i18n="aboutContactEmail">Email :</strong> <strong><a href="mailto:info@biblechantee.com">info@biblechantee.com</a></strong></p>
-      </div>
-  </div>
-</main>
+        // Update page content
+        function updateContent(lang) {
+            const t = TRANSLATIONS[lang] || TRANSLATIONS.FR;
 
-<footer>
-  <p data-i18n="aboutFooterCopyright">&copy; 2024-2025 Bible Chantée - Tous droits réservés</p>
-</footer>
+            document.getElementById('pageTitle').textContent = t.pageTitle;
+            document.getElementById('pageSubtitle').textContent = t.pageSubtitle;
+            document.getElementById('backBtn').textContent = t.backBtn;
 
-<!-- Scripts langue et traductions - ARCHITECTURE SIMPLE -->
-<script src="lang-shared.js"></script>
-<script src="translations.js"></script>
-<script src="translations-extra.js"></script>
-<script src="i18n.js"></script>
+            // Generate sections
+            const sectionsContainer = document.getElementById('sectionsContainer');
+            sectionsContainer.innerHTML = '';
 
-<!-- 🔒 Safe return navigation (évite history.back() + valide same origin) -->
-<script>
-(() => {
-  const link = document.getElementById('returnLink');
-  if (!link) return;
+            t.sections.forEach(section => {
+                const sectionDiv = document.createElement('div');
+                sectionDiv.className = 'section';
+                sectionDiv.innerHTML = `
+                    <div class="section-header">
+                        <span class="section-icon">${section.icon}</span>
+                        <h2 class="section-title">${section.title}</h2>
+                    </div>
+                    <div class="section-content">
+                        ${section.content}
+                    </div>
+                `;
+                sectionsContainer.appendChild(sectionDiv);
+            });
+        }
 
-  const u = new URL(location.href);
-  const returnUrl = u.searchParams.get('return');
+        // Language button handlers
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.dataset.lang;
+                currentLang = lang;
+                localStorage.setItem('bc_lang', lang);
 
-  // Si return= présent, vérifier same origin avant d'utiliser
-  if (returnUrl) {
-    try {
-      const returnUrlObj = new URL(returnUrl, location.origin);
-      if (returnUrlObj.origin === location.origin) {
-        link.href = returnUrl;
-        return;
-      }
-    } catch (e) {
-      console.warn('[About] Invalid return URL, using default');
-    }
-  }
+                // Update active button
+                document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
 
-  // Fallback: /lecteur.html avec lang si présent
-  const lang = u.searchParams.get('lang');
-  link.href = lang ? `/lecteur.html?lang=${encodeURIComponent(lang)}` : '/lecteur.html';
-})();
-</script>
+                // Update content
+                updateContent(lang);
+            });
+        });
 
+        // Initialize
+        updateContent(currentLang);
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            if (btn.dataset.lang === currentLang) {
+                btn.classList.add('active');
+            }
+        });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
