@@ -1414,80 +1414,101 @@
 
     // Initialisation: populate dropdowns et mettre à jour le sous-titre
     (function initialize() {
-      // Read URL parameters
-      const urlParams = new URLSearchParams(window.location.search);
-      const urlBook = urlParams.get('book');
-      const urlChapter = urlParams.get('chapter');
-      const urlLang = urlParams.get('lang');
+      try {
+        // Read URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlBook = urlParams.get('book');
+        const urlChapter = urlParams.get('chapter');
+        const urlLang = urlParams.get('lang');
 
-      // Set language from URL if provided
-      if (urlLang) {
-        currentLang = urlLang.toUpperCase();
-        localStorage.setItem('bc_lang', currentLang);
-      }
+        // Set language from URL if provided
+        if (urlLang) {
+          currentLang = urlLang.toUpperCase();
+          localStorage.setItem('bc_lang', currentLang);
+        }
 
-      // Populate books dropdown first
-      populateBooksDropdown();
+        // Populate books dropdown first
+        populateBooksDropdown();
 
-      // Convert book number to book code if needed (e.g., "19" -> "19_PSA")
-      let bookCode = '01_GEN';
-      if (urlBook) {
-        // Check if it's a number (like "19") or already a code (like "19_PSA")
-        if (/^\d+$/.test(urlBook)) {
-          // It's a number, find the corresponding book code
-          const bookNum = urlBook.padStart(2, '0');
-          const bookData = BOOKS.find(b => b.code.startsWith(bookNum + '_'));
-          if (bookData) {
-            bookCode = bookData.code;
+        // Convert book number to book code if needed (e.g., "19" -> "19_PSA")
+        let bookCode = '01_GEN';
+        if (urlBook && window.BOOKS) {
+          // Check if it's a number (like "19") or already a code (like "19_PSA")
+          if (/^\d+$/.test(urlBook)) {
+            // It's a number, find the corresponding book code
+            const bookNum = urlBook.padStart(2, '0');
+            const bookData = window.BOOKS.find(b => b.code && b.code.startsWith(bookNum + '_'));
+            if (bookData) {
+              bookCode = bookData.code;
+            }
+          } else {
+            // It's already a code, verify it exists
+            const bookData = window.BOOKS.find(b => b.code === urlBook);
+            if (bookData) {
+              bookCode = urlBook;
+            }
           }
+        } else if (!urlBook) {
+          bookCode = document.querySelector('#bookSelect').value || '01_GEN';
+        }
+
+        currentBook = bookCode;
+        currentChapter = urlChapter ? parseInt(urlChapter) : 1;
+
+        // Update book select dropdown
+        const bookSelect = document.querySelector('#bookSelect');
+        if (bookSelect) {
+          bookSelect.value = bookCode;
+        }
+
+        // Populate chapters grid for initial book
+        populateChaptersGrid(bookCode);
+
+        // Mark the current chapter as active
+        setTimeout(() => {
+          document.querySelectorAll('.chapter-btn').forEach((btn, i) => {
+            btn.classList.toggle('active', parseInt(btn.textContent) === currentChapter);
+          });
+        }, 100);
+
+        // Update header title (book name)
+        if (window.BOOK_NAMES && window.BOOK_NAMES[currentLang] && window.BOOKS) {
+          const bookData = window.BOOKS.find(b => b.code === bookCode);
+          if (bookData) {
+            const bookName = window.BOOK_NAMES[currentLang][bookData.code] || window.BOOK_NAMES.FR[bookData.code] || bookData.code;
+            document.querySelector('#headerTitle').textContent = bookName;
+          }
+        }
+
+        // Update chapter title
+        const chapterNum = currentChapter.toString();
+        const t = translations[currentLang] || translations.FR;
+        const chapterTitle = getChapterTitle(bookCode, chapterNum, currentLang);
+        if (chapterTitle) {
+          const subtitle = `${t.chapitre} ${chapterNum} - ${chapterTitle}`;
+          document.querySelector('#headerSubtitle').textContent = subtitle;
         } else {
-          // It's already a code
-          bookCode = urlBook;
+          const subtitle = `${t.chapitre} ${chapterNum}`;
+          document.querySelector('#headerSubtitle').textContent = subtitle;
         }
-      } else {
-        bookCode = document.querySelector('#bookSelect').value || '01_GEN';
-      }
 
-      currentBook = bookCode;
-      currentChapter = urlChapter ? parseInt(urlChapter) : 1;
-
-      // Update book select dropdown
-      document.querySelector('#bookSelect').value = bookCode;
-
-      // Populate chapters grid for initial book
-      populateChaptersGrid(bookCode);
-
-      // Mark the current chapter as active
-      document.querySelectorAll('.chapter-btn').forEach((btn, i) => {
-        btn.classList.toggle('active', parseInt(btn.textContent) === currentChapter);
-      });
-
-      // Update header title (book name)
-      if (window.BOOK_NAMES && window.BOOK_NAMES[currentLang]) {
-        const bookData = BOOKS.find(b => b.code === bookCode);
-        if (bookData) {
-          const bookName = window.BOOK_NAMES[currentLang][bookData.code] || window.BOOK_NAMES.FR[bookData.code] || bookData.code;
-          document.querySelector('#headerTitle').textContent = bookName;
+        // Load and play the chapter if URL params were provided
+        if (urlBook || urlChapter) {
+          loadAndPlayChapter(bookCode, currentChapter, currentLang);
         }
+
+        // Charger les paroles initiales
+        loadLyrics(bookCode, currentChapter, currentLang);
+      } catch (error) {
+        console.error('Initialize error:', error);
+        // Fallback to default
+        populateBooksDropdown();
+        const bookCode = '01_GEN';
+        currentBook = bookCode;
+        currentChapter = 1;
+        populateChaptersGrid(bookCode);
+        loadLyrics(bookCode, 1, currentLang);
       }
-
-      // Update chapter title
-      const chapterNum = currentChapter.toString();
-      const t = translations[currentLang] || translations.FR;
-      const chapterTitle = getChapterTitle(bookCode, chapterNum, currentLang);
-      if (chapterTitle) {
-        const subtitle = `${t.chapitre} ${chapterNum} - ${chapterTitle}`;
-        document.querySelector('#headerSubtitle').textContent = subtitle;
-      } else {
-        const subtitle = `${t.chapitre} ${chapterNum}`;
-        document.querySelector('#headerSubtitle').textContent = subtitle;
-      }
-
-      // Load and play the chapter
-      loadAndPlayChapter(bookCode, currentChapter, currentLang);
-
-      // Charger les paroles initiales
-      loadLyrics(bookCode, currentChapter, currentLang);
     })();
   </script>
 
