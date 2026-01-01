@@ -87,20 +87,20 @@
             width: 100%;
             margin: 15px 0;
         }
-        
+
         .audio-player audio {
             width: 100%;
             height: 45px;
             border-radius: 25px;
         }
-        
+
         .psalm-actions {
             display: flex;
-            gap: 15px;
+            gap: 10px;
             flex-wrap: wrap;
             margin-top: 15px;
         }
-        
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -114,7 +114,7 @@
             transition: all 0.3s ease;
             border: none;
         }
-        
+
         .btn-primary {
             background: linear-gradient(135deg, #f5c842 0%, #e0b030 100%);
             color: #1e3a5f;
@@ -123,7 +123,7 @@
             transform: scale(1.05);
             box-shadow: 0 4px 15px rgba(245, 200, 66, 0.4);
         }
-        
+
         .btn-secondary {
             background: transparent;
             border: 1px solid #f5c842;
@@ -131,6 +131,36 @@
         }
         .btn-secondary:hover {
             background: rgba(245, 200, 66, 0.1);
+        }
+
+        .btn-toggle {
+            background: transparent;
+            border: 1px solid rgba(245, 200, 66, 0.4);
+            color: #f5c842;
+        }
+        .btn-toggle.active {
+            background: #f5c842;
+            color: #1e3a5f;
+            font-weight: bold;
+        }
+        .btn-toggle:hover {
+            background: rgba(245, 200, 66, 0.1);
+        }
+
+        .lyrics-box {
+            background: rgba(10, 22, 40, 0.8);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 15px;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            line-height: 1.8;
+            color: #e0e0e0;
+            display: none;
+        }
+        .lyrics-box.active {
+            display: block;
         }
         
         .no-audio {
@@ -174,6 +204,10 @@
             siteName: "Bible Chantee",
             psalmWord: "Psaume",
             listenLabel: "Ecouter dans le lecteur",
+            lyricsLabel: "Paroles",
+            bibleLabel: "Bible",
+            loadingText: "Chargement...",
+            lyricsUnavailable: "Paroles non disponibles",
             comingSoon: "Audio bientot disponible",
             themes: [
                 { icon: "😰", name: "Anxiete et Peur", desc: "Trouvez la paix interieure", psalms: [23, 27, 46, 91] },
@@ -193,6 +227,10 @@
             siteName: "Sung Bible",
             psalmWord: "Psalm",
             listenLabel: "Listen in player",
+            lyricsLabel: "Lyrics",
+            bibleLabel: "Bible",
+            loadingText: "Loading...",
+            lyricsUnavailable: "Lyrics not available",
             comingSoon: "Audio coming soon",
             themes: [
                 { icon: "😰", name: "Anxiety and Fear", desc: "Find inner peace", psalms: [23, 27, 46, 91] },
@@ -211,6 +249,10 @@
             back: "Voltar aos temas",
             siteName: "Biblia Cantada",
             psalmWord: "Salmo",
+            lyricsLabel: "Letras",
+            bibleLabel: "Biblia",
+            loadingText: "Carregando...",
+            lyricsUnavailable: "Letras nao disponiveis",
             listenLabel: "Ouvir no leitor",
             comingSoon: "Audio em breve",
             themes: [
@@ -230,6 +272,10 @@
             back: "Volver a los temas",
             siteName: "Biblia Cantada",
             psalmWord: "Salmo",
+            lyricsLabel: "Letras",
+            bibleLabel: "Biblia",
+            loadingText: "Cargando...",
+            lyricsUnavailable: "Letras no disponibles",
             listenLabel: "Escuchar en el reproductor",
             comingSoon: "Audio proximamente",
             themes: [
@@ -249,6 +295,10 @@
             back: "Zuruck zu den Themen",
             siteName: "Gesungene Bibel",
             psalmWord: "Psalm",
+            lyricsLabel: "Text",
+            bibleLabel: "Bibel",
+            loadingText: "Laden...",
+            lyricsUnavailable: "Text nicht verfugbar",
             listenLabel: "Im Player anhoren",
             comingSoon: "Audio bald verfugbar",
             themes: [
@@ -268,6 +318,10 @@
             back: "Torna ai temi",
             siteName: "Bibbia Cantata",
             psalmWord: "Salmo",
+            lyricsLabel: "Testo",
+            bibleLabel: "Bibbia",
+            loadingText: "Caricamento...",
+            lyricsUnavailable: "Testo non disponibile",
             listenLabel: "Ascolta nel lettore",
             comingSoon: "Audio prossimamente",
             themes: [
@@ -360,27 +414,111 @@
         const listContainer = document.getElementById('psalmsList');
         listContainer.innerHTML = '';
         
-        theme.psalms.forEach(psalmNum => {
+        theme.psalms.forEach((psalmNum, index) => {
             const card = document.createElement('div');
             card.className = 'psalm-card';
-            
+            card.dataset.psalmNum = psalmNum;
+
             const psalmTheme = PSALM_THEMES[psalmNum] ? (PSALM_THEMES[psalmNum][lang] || PSALM_THEMES[psalmNum].FR) : '';
-            const lecteurUrl = getLecteurUrl(psalmNum, lang, themeIndex);
-            
+            const audioUrl = getAudioUrl(psalmNum, lang);
+            const lyricsId = `lyrics-${psalmNum}`;
+            const audioId = `audio-${psalmNum}`;
+
             card.innerHTML = `
                 <div class="psalm-header">
                     <h2 class="psalm-title">${langData.psalmWord} ${psalmNum}</h2>
                     <span class="psalm-theme">${psalmTheme}</span>
                 </div>
+                <div class="audio-player">
+                    <audio id="${audioId}" controls ${index === 0 ? 'autoplay' : ''}>
+                        ${audioUrl ? `<source src="${audioUrl}" type="audio/mpeg">` : ''}
+                    </audio>
+                </div>
                 <div class="psalm-actions">
-                    <a href="${lecteurUrl}" class="btn btn-primary">
-                        <span>&#9658;</span> ${langData.listenLabel}
-                    </a>
+                    <button class="btn btn-toggle" onclick="toggleLyrics('${lyricsId}', this)">
+                        🎤 ${langData.lyricsLabel || 'Paroles'}
+                    </button>
+                    <button class="btn btn-toggle" onclick="toggleBible('${psalmNum}', '${lyricsId}', this, '${lang}')">
+                        📖 ${langData.bibleLabel || 'Bible'}
+                    </button>
+                </div>
+                <div id="${lyricsId}" class="lyrics-box">
+                    ${langData.loadingText || 'Chargement...'}
                 </div>
             `;
-            
+
             listContainer.appendChild(card);
+
+            // Load lyrics after card is added
+            loadLyrics(psalmNum, lang, lyricsId);
         });
+    }
+
+    // Get audio URL for psalm
+    function getAudioUrl(psalmNum, lang) {
+        // Format: book 19 (Psalms), chapter = psalmNum
+        const book = '19';
+        const chapter = String(psalmNum).padStart(3, '0');
+        // Try to get from window.AUDIO_URLS if it exists
+        if (window.AUDIO_URLS && window.AUDIO_URLS[lang] && window.AUDIO_URLS[lang][book]) {
+            return window.AUDIO_URLS[lang][book][chapter];
+        }
+        // Fallback to R2 URL pattern
+        return `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${lang}/19_${chapter}.mp3`;
+    }
+
+    // Toggle lyrics display
+    function toggleLyrics(lyricsId, button) {
+        const lyricsBox = document.getElementById(lyricsId);
+        const allButtons = button.parentElement.querySelectorAll('.btn-toggle');
+
+        if (lyricsBox.classList.contains('active')) {
+            lyricsBox.classList.remove('active');
+            button.classList.remove('active');
+        } else {
+            lyricsBox.classList.add('active');
+            allButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        }
+    }
+
+    // Toggle Bible text display
+    function toggleBible(psalmNum, lyricsId, button, lang) {
+        const lyricsBox = document.getElementById(lyricsId);
+        const allButtons = button.parentElement.querySelectorAll('.btn-toggle');
+        const langData = THEMES_DATA[lang] || THEMES_DATA.FR;
+
+        // Load Bible text (simplified - you can enhance this)
+        const bibleText = `Psaume ${psalmNum}\n\n[Texte biblique du Psaume ${psalmNum}]\n\nPour lire le texte complet, ouvrez le lecteur principal.`;
+
+        if (lyricsBox.classList.contains('active') && button.classList.contains('active')) {
+            lyricsBox.classList.remove('active');
+            button.classList.remove('active');
+        } else {
+            lyricsBox.textContent = bibleText;
+            lyricsBox.classList.add('active');
+            allButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        }
+    }
+
+    // Load lyrics from file
+    async function loadLyrics(psalmNum, lang, lyricsId) {
+        const lyricsBox = document.getElementById(lyricsId);
+        const langData = THEMES_DATA[lang] || THEMES_DATA.FR;
+
+        try {
+            // Try to load lyrics from lyrics/19/psalmNum.txt
+            const response = await fetch(`lyrics/${lang}/19_${String(psalmNum).padStart(3, '0')}.txt`);
+            if (response.ok) {
+                const text = await response.text();
+                lyricsBox.textContent = text;
+            } else {
+                lyricsBox.textContent = langData.lyricsUnavailable || 'Paroles non disponibles';
+            }
+        } catch (error) {
+            lyricsBox.textContent = langData.lyricsUnavailable || 'Paroles non disponibles';
+        }
     }
 
     document.addEventListener('DOMContentLoaded', render);
