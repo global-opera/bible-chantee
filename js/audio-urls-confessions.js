@@ -3,7 +3,7 @@
 // Hébergés sur Cloudflare R2
 // Généré: 1er Janvier 2026
 
-const AUDIO_URLS_CONFESSIONS = {
+window.CONFESSIONS_AUDIO = {
     FR: {
         "01": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/FR/01_Joie.mp3",
         "02": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/FR/02_Gueri.mp3",
@@ -154,3 +154,4 @@ const AUDIO_URLS_CONFESSIONS = {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = AUDIO_URLS_CONFESSIONS;
 }
+
