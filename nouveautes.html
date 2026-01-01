@@ -64,60 +64,6 @@
             color: var(--bleu-nuit);
         }
 
-        .lang-bar {
-            padding: 15px;
-            background: rgba(0,0,0,0.3);
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-
-        .flags-row {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-
-        .lang-btn {
-            width: 75px;
-            height: 50px;
-            border: 2px solid rgba(245, 203, 66, 0.4);
-            border-radius: 8px;
-            background: var(--bleu-cartes);
-            cursor: pointer;
-            padding: 8px;
-            transition: all 0.3s;
-        }
-
-        .lang-btn:hover {
-            border-color: var(--or-moyen);
-            background: var(--bleu-hover);
-            transform: scale(1.05);
-        }
-
-        .lang-btn.active {
-            border-color: var(--or-moyen);
-            background: var(--bleu-hover);
-            box-shadow: 0 0 15px rgba(245, 203, 66, 0.3);
-        }
-
-        .lang-btn.disabled {
-            opacity: 0.2;
-            cursor: not-allowed;
-        }
-
-        .lang-btn.disabled:hover {
-            transform: none;
-            border-color: rgba(245, 203, 66, 0.4);
-            background: var(--bleu-cartes);
-        }
-
-        .flag-img {
-            width: 100%;
-            height: auto;
-            max-height: 30px;
-        }
-
         .update-card {
             background: rgba(30, 58, 95, 0.8);
             border-radius: 15px;
@@ -192,15 +138,6 @@
             .update-card {
                 padding: 20px;
             }
-
-            .flags-row {
-                gap: 6px;
-            }
-
-            .lang-btn {
-                width: 55px;
-                height: 40px;
-            }
         }
     </style>
 </head>
@@ -212,25 +149,6 @@
             <a href="lecteur.html" class="back-btn" id="backBtn">← Retour au Lecteur</a>
         </div>
 
-        <div class="lang-bar">
-            <div class="flags-row">
-                <button class="lang-btn" data-lang="FR"><img src="./img/flags/flag_FR.png" alt="FR" class="flag-img"></button>
-                <button class="lang-btn" data-lang="EN"><img src="./img/flags/flag_EN.png" alt="EN" class="flag-img"></button>
-                <button class="lang-btn" data-lang="PT"><img src="./img/flags/flag_PT.png" alt="PT" class="flag-img"></button>
-                <button class="lang-btn" data-lang="ES"><img src="./img/flags/flag_ES.png" alt="ES" class="flag-img"></button>
-                <button class="lang-btn" data-lang="DE"><img src="./img/flags/flag_DE.png" alt="DE" class="flag-img"></button>
-                <button class="lang-btn" data-lang="IT"><img src="./img/flags/flag_IT.png" alt="IT" class="flag-img"></button>
-            </div>
-            <div class="flags-row">
-                <button class="lang-btn disabled" data-lang="AR"><img src="./img/flags/flag_AR.png" alt="AR" class="flag-img"></button>
-                <button class="lang-btn disabled" data-lang="RU"><img src="./img/flags/flag_RU.png" alt="RU" class="flag-img"></button>
-                <button class="lang-btn disabled" data-lang="ZH"><img src="./img/flags/flag_ZH.png" alt="ZH" class="flag-img"></button>
-                <button class="lang-btn disabled" data-lang="HI"><img src="./img/flags/flag_HI.png" alt="HI" class="flag-img"></button>
-                <button class="lang-btn disabled" data-lang="TL"><img src="./img/flags/flag_TL.png" alt="TL" class="flag-img"></button>
-                <button class="lang-btn disabled" data-lang="SW"><img src="./img/flags/flag_SW.png" alt="SW" class="flag-img"></button>
-            </div>
-        </div>
-
         <div id="updatesContainer"></div>
 
         <div class="footer">
@@ -239,8 +157,13 @@
     </div>
 
     <script>
-        // Détection langue
-        let currentLang = localStorage.getItem('bc_lang') || 'FR';
+        // Résoudre la langue (priorité: URL > localStorage > défaut)
+        const params = new URLSearchParams(window.location.search);
+        let currentLang = params.get('lang') || localStorage.getItem('bc_lang') || 'FR';
+        currentLang = currentLang.toUpperCase();
+
+        // Sauvegarder dans localStorage pour cohérence
+        localStorage.setItem('bc_lang', currentLang);
 
         const TRANSLATIONS = {
             FR: {
@@ -517,31 +440,8 @@
             });
         }
 
-        // Language button handlers
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                if (btn.classList.contains('disabled')) return;
-
-                const lang = btn.dataset.lang;
-                currentLang = lang;
-                localStorage.setItem('bc_lang', lang);
-
-                // Update active button
-                document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                // Update content
-                updateContent(lang);
-            });
-        });
-
         // Initialize
         updateContent(currentLang);
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            if (btn.dataset.lang === currentLang) {
-                btn.classList.add('active');
-            }
-        });
     </script>
 </body>
 </html>
