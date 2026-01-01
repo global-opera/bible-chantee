@@ -1,0 +1,93 @@
+====================================================================
+VARIABLES D'ENVIRONNEMENT NETLIFY - Bible Chantée
+====================================================================
+
+INSTRUCTIONS:
+1. Aller sur: https://app.netlify.com
+2. Sélectionner votre site
+3. Site settings → Environment variables
+4. Add variable (répéter 6 fois)
+5. Copier-coller les valeurs ci-dessous
+
+====================================================================
+SUPABASE (3 variables)
+====================================================================
+
+Nom: SUPABASE_URL
+Valeur: https://ozkztvstozwdkpsyhgsr.supabase.co
+
+--------------------------------------------------------------------
+
+Nom: SUPABASE_SERVICE_ROLE_KEY
+Valeur: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im96a3p0dnN0b3p3ZGtwc3loZ3NyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NjE2MTQ2NiwiZXhwIjoyMDgxNzM3NDY2fQ.5S7Kc6cWr-17oU_MPs3ASg9dI72sU6ixOGJYnC5Ku7Q
+
+--------------------------------------------------------------------
+
+Nom: SUPABASE_ANON_KEY
+Valeur: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im96a3p0dnN0b3p3ZGtwc3loZ3NyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjYxNjE0NjYsImV4cCI6MjA4MTczNzQ2Nn0.qhNSgqIhR1fOkbnAnyBcMFyuzHIHtn1cvSvE8wdSbMA
+
+====================================================================
+STRIPE MODE TEST (3 variables) - COMMENCER PAR CELUI-CI
+====================================================================
+
+Nom: STRIPE_PUBLISHABLE_KEY
+Valeur: pk_test_VOTRE_CLE_TEST_ICI
+Note: Obtenir sur https://dashboard.stripe.com/test/apikeys
+
+--------------------------------------------------------------------
+
+Nom: STRIPE_SECRET_KEY
+Valeur: sk_test_VOTRE_CLE_TEST_ICI
+Note: Obtenir sur https://dashboard.stripe.com/test/apikeys
+
+--------------------------------------------------------------------
+
+Nom: STRIPE_WEBHOOK_SECRET
+Valeur: whsec_SERA_AJOUTE_APRES_CREATION_WEBHOOK
+Note: Obtenir après création du webhook (étape 3)
+
+====================================================================
+STRIPE MODE LIVE (pour production) - REMPLACER APRÈS TESTS
+====================================================================
+
+Nom: STRIPE_PUBLISHABLE_KEY
+Valeur: pk_live_51SgqwB2Mkne8EGh4hVJOyOhjNspBLAEsLdXoVF4aPLw8o7X3g4b8HdPUczy1BGQ6zwkGF3ALhULURjvtUZaFqmGv00aQ5ppVRC
+
+--------------------------------------------------------------------
+
+Nom: STRIPE_SECRET_KEY
+Valeur: sk_live_VOTRE_VRAIE_CLE_SECRETE_ICI
+Note: ⚠️ NE PAS PARTAGER - À obtenir sur Stripe Dashboard
+
+--------------------------------------------------------------------
+
+Nom: STRIPE_WEBHOOK_SECRET
+Valeur: whsec_VOTRE_WEBHOOK_SECRET_LIVE
+Note: Différent du TEST, à obtenir après création webhook LIVE
+
+====================================================================
+ORDRE DE CONFIGURATION
+====================================================================
+
+1. ✅ Ajouter SUPABASE_* (3 variables)
+2. ✅ Ajouter STRIPE_* en mode TEST (3 variables)
+3. ✅ Créer webhook Stripe TEST
+4. ✅ Ajouter STRIPE_WEBHOOK_SECRET (TEST)
+5. ✅ Tester tout en mode TEST
+6. ✅ Remplacer par clés LIVE quand prêt
+
+====================================================================
+VÉRIFICATION
+====================================================================
+
+Après configuration, vérifier dans Netlify:
+- Total variables: 6
+- Toutes commencent par SUPABASE_ ou STRIPE_
+- Aucune valeur vide
+- Webhook secret commence par whsec_
+
+Redéployer après ajout variables:
+→ Netlify redéploie automatiquement OU
+→ Deploys → Trigger deploy → Deploy site
+
+====================================================================
