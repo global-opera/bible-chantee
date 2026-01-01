@@ -172,6 +172,12 @@
             background: #2C4A73;
         }
 
+        /* Carte Stripe - MÊME style bleu (PAS de fond jaune) */
+        .payment-box.stripe,
+        .stripe-card {
+            background: #243F66 !important;
+        }
+
         /* Titre en or */
         .payment-box h4 {
             color: #F5CB42;
@@ -179,14 +185,16 @@
             font-size: 1.1rem;
         }
 
-        /* Info sur UNE ligne */
+        /* Info IBAN/email/tel - largeur suffisante pour IBAN complet */
         .payment-info {
             background: rgba(0,0,0,0.2);
             padding: 10px 15px;
             border-radius: 6px;
             font-family: monospace;
-            font-size: 0.95em;
+            font-size: 1em;
             white-space: nowrap;
+            overflow: visible;
+            min-width: 260px;
             margin-bottom: 12px;
             color: #fff;
         }
