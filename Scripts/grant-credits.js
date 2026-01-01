@@ -5,10 +5,11 @@
  *
  * Usage:
  *   1. Exécuter get-subscribers.ps1 pour générer inscrits_biblechantee.csv
- *   2. Configurer les variables d'environnement Supabase
- *   3. Exécuter: node scripts/grant-credits.js
+ *   2. Configurer les variables d'environnement Supabase dans .env
+ *   3. Exécuter: node Scripts/grant-credits.js
  */
 
+require('dotenv').config();
 const { createClient } = require('@supabase/supabase-js');
 const fs = require('fs');
 const path = require('path');
@@ -29,13 +30,13 @@ console.log('  Offrir 100 crédits aux inscrits');
 console.log('========================================\n');
 
 const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_SERVICE_KEY || process.env.SUPABASE_ANON_KEY;
+const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseUrl || !supabaseKey) {
     console.error('❌ Variables d\'environnement Supabase manquantes:');
     console.error('   SUPABASE_URL:', supabaseUrl ? '✅' : '❌');
-    console.error('   SUPABASE_SERVICE_KEY:', supabaseKey ? '✅' : '❌');
-    console.error('\nDéfinir les variables d\'environnement ou créer un fichier .env');
+    console.error('   SUPABASE_SERVICE_ROLE_KEY:', supabaseKey ? '✅' : '❌');
+    console.error('\nDéfinir les variables dans le fichier .env');
     process.exit(1);
 }
 

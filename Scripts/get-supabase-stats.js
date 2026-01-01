@@ -11,6 +11,7 @@
  * - Early adopters
  */
 
+require('dotenv').config();
 const { createClient } = require('@supabase/supabase-js');
 
 // ============================================
@@ -22,13 +23,13 @@ console.log('  Statistiques Supabase - Bible Chantée');
 console.log('========================================\n');
 
 const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_SERVICE_KEY || process.env.SUPABASE_ANON_KEY;
+const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseUrl || !supabaseKey) {
     console.error('❌ Variables d\'environnement Supabase manquantes:');
     console.error('   SUPABASE_URL:', supabaseUrl ? '✅' : '❌');
-    console.error('   SUPABASE_SERVICE_KEY:', supabaseKey ? '✅' : '❌');
-    console.error('\nDéfinir les variables d\'environnement');
+    console.error('   SUPABASE_SERVICE_ROLE_KEY:', supabaseKey ? '✅' : '❌');
+    console.error('\nDéfinir les variables dans le fichier .env');
     process.exit(1);
 }
 

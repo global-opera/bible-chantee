@@ -4,6 +4,7 @@
  * ============================================
  */
 
+require('dotenv').config();
 const { createClient } = require('@supabase/supabase-js');
 const fs = require('fs');
 const path = require('path');
@@ -13,13 +14,14 @@ console.log('  Import des inscrits dans Supabase');
 console.log('========================================\n');
 
 // Credentials Supabase
-const supabaseUrl = process.env.SUPABASE_URL || 'https://ozkztvstozwdkpsyhgsr.supabase.co';
+const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-if (!supabaseKey) {
-    console.error('❌ SUPABASE_SERVICE_ROLE_KEY manquant');
-    console.error('\nDéfinir la variable:');
-    console.error('  $env:SUPABASE_SERVICE_ROLE_KEY = "votre_key"');
+if (!supabaseUrl || !supabaseKey) {
+    console.error('❌ Variables d\'environnement Supabase manquantes:');
+    console.error('   SUPABASE_URL:', supabaseUrl ? '✅' : '❌');
+    console.error('   SUPABASE_SERVICE_ROLE_KEY:', supabaseKey ? '✅' : '❌');
+    console.error('\nDéfinir les variables dans le fichier .env');
     process.exit(1);
 }
 
