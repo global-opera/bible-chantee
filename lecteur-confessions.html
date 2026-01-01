@@ -94,11 +94,19 @@
     const ICONS = ["😊", "🤍", "💪", "🏆", "🌱", "🙏", "⭐", "🎵", "🙌", "❤️"];
     const TITLES = {
       FR: ["Je suis dans la joie", "Je suis guéri", "Je suis en bonne santé", "Je suis vainqueur", "Je prospère", "Je suis reconnaissant", "Je suis heureux", "Je suis béni", "Amen", "Shalom"],
-      PT: ["Eu sou alegre", "Eu estou curado", "Eu tenho saúde", "Eu sou vencedor", "Eu sou próspero", "Eu sou grato", "Eu sou feliz", "Eu sou abençoado", "Amém", "Shalom"]
+      EN: ["I am full of joy", "I am healed", "I am in good health", "I am a conqueror", "I prosper", "I am grateful", "I am happy", "I am blessed", "Amen", "Shalom"],
+      PT: ["Eu sou alegre", "Eu estou curado", "Eu tenho saúde", "Eu sou vencedor", "Eu sou próspero", "Eu sou grato", "Eu sou feliz", "Eu sou abençoado", "Amém", "Shalom"],
+      ES: ["Estoy lleno de alegría", "Estoy sanado", "Tengo buena salud", "Soy un vencedor", "Prospero", "Soy agradecido", "Soy feliz", "Soy bendecido", "Amén", "Shalom"],
+      DE: ["Ich bin voller Freude", "Ich bin geheilt", "Ich bin gesund", "Ich bin ein Überwinder", "Ich bin wohlhabend", "Ich bin dankbar", "Ich bin glücklich", "Ich bin gesegnet", "Amen", "Schalom"],
+      IT: ["Sono pieno di gioia", "Sono guarito", "Sono in buona salute", "Sono un vincitore", "Prospero", "Sono grato", "Sono felice", "Sono benedetto", "Amen", "Shalom"]
     };
     const VERSES = {
       FR: ["Néhémie 8:10", "Ésaïe 53:5", "3 Jean 1:2", "Romains 8:37", "Josué 1:8", "1 Thess. 5:18", "Psaume 16:11", "Éphésiens 1:3", "Matthieu 6:13", "Jean 14:27"],
-      PT: ["Neemias 8:10", "Isaías 53:5", "3 João 1:2", "Romanos 8:37", "Josué 1:8", "1 Tess. 5:18", "Salmo 16:11", "Efésios 1:3", "Mateus 6:13", "João 14:27"]
+      EN: ["Nehemiah 8:10", "Isaiah 53:5", "3 John 1:2", "Romans 8:37", "Joshua 1:8", "1 Thess. 5:18", "Psalm 16:11", "Ephesians 1:3", "Matthew 6:13", "John 14:27"],
+      PT: ["Neemias 8:10", "Isaías 53:5", "3 João 1:2", "Romanos 8:37", "Josué 1:8", "1 Tess. 5:18", "Salmo 16:11", "Efésios 1:3", "Mateus 6:13", "João 14:27"],
+      ES: ["Nehemías 8:10", "Isaías 53:5", "3 Juan 1:2", "Romanos 8:37", "Josué 1:8", "1 Tes. 5:18", "Salmo 16:11", "Efesios 1:3", "Mateo 6:13", "Juan 14:27"],
+      DE: ["Nehemia 8:10", "Jesaja 53:5", "3. Johannes 1:2", "Römer 8:37", "Josua 1:8", "1. Thess. 5:18", "Psalm 16:11", "Epheser 1:3", "Matthäus 6:13", "Johannes 14:27"],
+      IT: ["Neemia 8:10", "Isaia 53:5", "3 Giovanni 1:2", "Romani 8:37", "Giosuè 1:8", "1 Tess. 5:18", "Salmo 16:11", "Efesini 1:3", "Matteo 6:13", "Giovanni 14:27"]
     };
     const FILES = {
       FR: ["01_Joie", "02_Gueri", "03_Sante", "04_Vainqueur", "05_Prospere", "06_Reconnaissant", "07_Heureux", "08_Beni", "09_Amen", "10_Shalom"],
@@ -115,9 +123,23 @@
     const num = String(id + 1).padStart(2, '0');
     const fileName = FILES[lang]?.[id] || FILES.FR[id];
     
+    // Traductions interface
+    const UI_TEXTS = {
+      FR: { lyrics: "🎤 Paroles", bible: "📖 Bible", back: "← Retour", unavailable: "Paroles non disponibles" },
+      EN: { lyrics: "🎤 Lyrics", bible: "📖 Bible", back: "← Back", unavailable: "Lyrics not available" },
+      PT: { lyrics: "🎤 Letras", bible: "📖 Bíblia", back: "← Voltar", unavailable: "Letras não disponíveis" },
+      ES: { lyrics: "🎤 Letras", bible: "📖 Biblia", back: "← Volver", unavailable: "Letras no disponibles" },
+      DE: { lyrics: "🎤 Text", bible: "📖 Bibel", back: "← Zurück", unavailable: "Text nicht verfügbar" },
+      IT: { lyrics: "🎤 Testo", bible: "📖 Bibbia", back: "← Indietro", unavailable: "Testo non disponibile" }
+    };
+    const ui = UI_TEXTS[lang] || UI_TEXTS.FR;
+
     document.getElementById('icon').textContent = ICONS[id] || "🎵";
     document.getElementById('title').textContent = (TITLES[lang] || TITLES.FR)[id] || "Confession";
     document.getElementById('verse').textContent = (VERSES[lang] || VERSES.FR)[id] || "";
+    document.getElementById('toggleLyrics').textContent = ui.lyrics;
+    document.getElementById('toggleBible').textContent = ui.bible;
+    document.getElementById('backBtn').textContent = ui.back;
     document.getElementById('backBtn').href = "confessions.html?lang=" + lang;
     
     // Audio
@@ -129,7 +151,7 @@
     fetch(`lyrics/confessions/${lang}/${fileName}.txt`)
       .then(r => r.ok ? r.text() : Promise.reject())
       .then(text => lyricsBox.textContent = text)
-      .catch(() => lyricsBox.textContent = "Paroles non disponibles");
+      .catch(() => lyricsBox.textContent = ui.unavailable);
     
     // Toggle
     document.getElementById('toggleLyrics').onclick = function() {
@@ -152,6 +174,18 @@
         "Car c'est à toi qu'appartiennent le règne, la puissance et la gloire. Amen. (Matthieu 6:13)",
         "Je vous laisse la paix, je vous donne ma paix. (Jean 14:27)"
       ],
+      EN: [
+        "Do not be grieved, for the joy of the Lord is your strength. (Nehemiah 8:10)",
+        "By His stripes we are healed. (Isaiah 53:5)",
+        "Beloved, I pray that you may prosper in all things and be in good health. (3 John 1:2)",
+        "We are more than conquerors through Him who loved us. (Romans 8:37)",
+        "Meditate on this book day and night, then you will prosper. (Joshua 1:8)",
+        "Give thanks in all circumstances. (1 Thessalonians 5:18)",
+        "You will show me the path of life; in Your presence is fullness of joy. (Psalm 16:11)",
+        "Blessed be the God who has blessed us with every spiritual blessing. (Ephesians 1:3)",
+        "For Yours is the kingdom and the power and the glory forever. Amen. (Matthew 6:13)",
+        "Peace I leave with you, My peace I give to you. (John 14:27)"
+      ],
       PT: [
         "Não vos entristeçais, porque a alegria do Senhor é a vossa força. (Neemias 8:10)",
         "Pelas suas pisaduras fomos sarados. (Isaías 53:5)",
@@ -163,6 +197,42 @@
         "Bendito seja Deus que nos abençoou com toda bênção espiritual. (Efésios 1:3)",
         "Pois teu é o Reino, o poder e a glória. Amém. (Mateus 6:13)",
         "Deixo-vos a paz, a minha paz vos dou. (João 14:27)"
+      ],
+      ES: [
+        "No os entristezcáis, porque el gozo del Señor es vuestra fuerza. (Nehemías 8:10)",
+        "Por sus llagas fuimos nosotros curados. (Isaías 53:5)",
+        "Amado, yo deseo que seas prosperado en todas las cosas y que tengas salud. (3 Juan 1:2)",
+        "Somos más que vencedores por medio de aquel que nos amó. (Romanos 8:37)",
+        "Medita en este libro de día y de noche, entonces prosperarás. (Josué 1:8)",
+        "Dad gracias en todo. (1 Tesalonicenses 5:18)",
+        "Me mostrarás la senda de la vida; en tu presencia hay plenitud de gozo. (Salmo 16:11)",
+        "Bendito sea Dios que nos bendijo con toda bendición espiritual. (Efesios 1:3)",
+        "Porque tuyo es el reino, el poder y la gloria por siempre. Amén. (Mateo 6:13)",
+        "La paz os dejo, mi paz os doy. (Juan 14:27)"
+      ],
+      DE: [
+        "Seid nicht betrübt, denn die Freude am Herrn ist eure Stärke. (Nehemia 8:10)",
+        "Durch seine Wunden sind wir geheilt. (Jesaja 53:5)",
+        "Geliebter, ich wünsche, dass es dir in allem wohlgeht und du gesund bist. (3. Johannes 1:2)",
+        "Wir sind mehr als Überwinder durch den, der uns geliebt hat. (Römer 8:37)",
+        "Sinne über dieses Buch Tag und Nacht nach, dann wirst du Erfolg haben. (Josua 1:8)",
+        "Sagt in allem Dank. (1. Thessalonicher 5:18)",
+        "Du wirst mir den Weg des Lebens zeigen; vor deinem Angesicht ist Freude die Fülle. (Psalm 16:11)",
+        "Gepriesen sei Gott, der uns gesegnet hat mit jedem geistlichen Segen. (Epheser 1:3)",
+        "Denn dein ist das Reich und die Kraft und die Herrlichkeit in Ewigkeit. Amen. (Matthäus 6:13)",
+        "Frieden lasse ich euch, meinen Frieden gebe ich euch. (Johannes 14:27)"
+      ],
+      IT: [
+        "Non vi rattristate, perché la gioia del Signore è la vostra forza. (Neemia 8:10)",
+        "Per le sue lividure noi siamo stati guariti. (Isaia 53:5)",
+        "Carissimo, io prego che tu prosperi in ogni cosa e goda buona salute. (3 Giovanni 1:2)",
+        "Siamo più che vincitori in virtù di colui che ci ha amati. (Romani 8:37)",
+        "Medita questo libro giorno e notte, allora avrai successo. (Giosuè 1:8)",
+        "Rendete grazie in ogni cosa. (1 Tessalonicesi 5:18)",
+        "Tu mi farai conoscere il sentiero della vita; ci sono gioie a sazietà in tua presenza. (Salmo 16:11)",
+        "Benedetto sia Dio che ci ha benedetti con ogni benedizione spirituale. (Efesini 1:3)",
+        "Perché tuo è il regno, la potenza e la gloria in eterno. Amen. (Matteo 6:13)",
+        "Vi lascio la pace, vi do la mia pace. (Giovanni 14:27)"
       ]
     };
     document.getElementById('toggleBible').onclick = function() {
