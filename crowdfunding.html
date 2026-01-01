@@ -201,16 +201,18 @@
 
         /* Boutons Copier et Payer - même style */
         .copy-btn, .stripe-btn {
-            background: #F5CB42;
-            color: #1E3A5F;
+            background: #F5CB42 !important;
+            color: #1E3A5F !important;
             border: none;
             padding: 10px 24px;
             border-radius: 8px;
             font-weight: bold;
+            font-size: 1em;
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
             transition: all 0.3s;
+            line-height: 1.5;
         }
 
         .copy-btn:hover, .stripe-btn:hover {
@@ -550,9 +552,7 @@
                             <div class="payment-box">
                                 <h4>${t.donate.stripe.title}</h4>
                                 <p class="payment-subtitle">${t.donate.stripe.subtitle}</p>
-                                <a href="https://buy.stripe.com/bJeaEQ8HJfoD3LybIg0Fi01" target="_blank" class="stripe-btn">
-                                    ${t.donate.stripe.btn}
-                                </a>
+                                <a href="https://buy.stripe.com/bJeaEQ8HJfoD3LybIg0Fi01" target="_blank" class="stripe-btn">${t.donate.stripe.btn}</a>
                             </div>
                         </div>
 
