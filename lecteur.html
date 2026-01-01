@@ -1421,6 +1421,8 @@
         const urlChapter = urlParams.get('chapter');
         const urlLang = urlParams.get('lang');
 
+        console.log('Lecteur initialize:', { urlBook, urlChapter, urlLang, fullUrl: window.location.href });
+
         // Set language from URL if provided
         if (urlLang) {
           currentLang = urlLang.toUpperCase();

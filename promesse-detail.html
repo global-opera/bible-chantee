@@ -521,6 +521,7 @@
 
         // Generate lecteur URL and navigate
         const lecteurUrl = getLecteurUrl(psalmNum, lang, themeIndex);
+        console.log('Opening Bible chapter:', { psalmNum, lang, themeIndex, url: lecteurUrl });
         window.location.href = lecteurUrl;
     }
 
