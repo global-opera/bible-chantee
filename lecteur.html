@@ -718,41 +718,18 @@
       
       <!-- SECTION RADIO (cachée par défaut) -->
       <div class="radio-playlist" id="radioSection">
-        <div class="content-title">📻 Ma Radio - Playlist Favoris</div>
-        
-        <div class="playlist-item playing">
-          <div class="playlist-num">▶</div>
-          <div class="playlist-info">
-            <div class="playlist-title">Genèse 1 - Au Commencement</div>
-            <div class="playlist-lang">🇫🇷 Français</div>
-          </div>
-          <div class="playlist-remove">✕</div>
-        </div>
-        
-        <div class="playlist-item">
-          <div class="playlist-num">2</div>
-          <div class="playlist-info">
-            <div class="playlist-title">Psalm 23 - The Lord is my Shepherd</div>
-            <div class="playlist-lang">🇬🇧 English</div>
-          </div>
-          <div class="playlist-remove">✕</div>
-        </div>
-        
-        <div class="playlist-item">
-          <div class="playlist-num">3</div>
-          <div class="playlist-info">
-            <div class="playlist-title">Salmo 91 - Aquele que habita</div>
-            <div class="playlist-lang">🇧🇷 Português</div>
-          </div>
-          <div class="playlist-remove">✕</div>
-        </div>
-        
+        <div class="content-title">📻 Radio Bible Chantée</div>
+
+        <!-- Playlist dynamique -->
+        <div id="radioPlaylist"></div>
+
+        <!-- Contrôles -->
         <div class="radio-controls">
-          <button class="radio-btn">🔀</button>
-          <button class="radio-btn">⏮️</button>
-          <button class="radio-btn main">▶</button>
-          <button class="radio-btn">⏭️</button>
-          <button class="radio-btn">🔁</button>
+          <button class="radio-btn" id="radioShuffle" title="Aléatoire">🔀</button>
+          <button class="radio-btn" id="radioPrev" title="Précédent">⏮️</button>
+          <button class="radio-btn main" id="radioPlayPause" title="Lecture">▶️</button>
+          <button class="radio-btn" id="radioNext" title="Suivant">⏭️</button>
+          <button class="radio-btn" id="radioRepeat" title="Répéter">🔁</button>
         </div>
       </div>
       
@@ -788,6 +765,13 @@
     let isAutoplayEnabled = false;
     let currentBook = '01_GEN';
     let currentChapter = 1;
+
+    // Variables Radio
+    let radioPlaylist = [];
+    let radioIndex = 0;
+    let radioShuffle = false;
+    let radioRepeat = false;
+    let radioPlaying = false;
 
     // Helper: Obtenir titre du chapitre depuis CHAPTER_TITLES
     function getChapterTitle(book, chapter, lang) {
@@ -973,7 +957,22 @@
 
     // Event: Fin du chapitre (autoplay)
     audioPlayer.addEventListener('ended', () => {
-      if (isAutoplayEnabled) {
+      if (isRadioMode) {
+        // Mode Radio: passer au chapitre suivant
+        if (radioShuffle) {
+          radioIndex = Math.floor(Math.random() * radioPlaylist.length);
+        } else {
+          radioIndex = (radioIndex + 1) % radioPlaylist.length;
+          // Si repeat est désactivé et qu'on est à la fin, arrêter
+          if (radioIndex === 0 && !radioRepeat) {
+            isPlaying = false;
+            radioPlaying = false;
+            updateRadioPlayPauseBtn();
+            return;
+          }
+        }
+        playRadioItem(radioIndex);
+      } else if (isAutoplayEnabled) {
         playNextChapter();
       } else {
         isPlaying = false;
@@ -1131,9 +1130,139 @@
       document.querySelector('#navRadio').classList.toggle('active', isRadioMode);
       document.querySelector('#playerSection').style.display = isRadioMode ? 'none' : 'block';
       document.querySelector('#radioSection').classList.toggle('active', isRadioMode);
+
+      if (isRadioMode && radioPlaylist.length === 0) {
+        generateRadioPlaylist();
+      }
+
       updateTranslations();
     });
-    
+
+    // === FONCTIONS RADIO ===
+
+    // Générer playlist aléatoire (15 chapitres)
+    function generateRadioPlaylist() {
+      radioPlaylist = [];
+      const availableBooks = BOOKS.filter(b => {
+        // Filtrer les livres qui ont de l'audio (pour l'instant, tous les livres FR/EN/PT/ES/DE/IT)
+        return true;
+      });
+
+      for (let i = 0; i < 15; i++) {
+        const book = availableBooks[Math.floor(Math.random() * availableBooks.length)];
+        const chapter = Math.floor(Math.random() * book.chapters) + 1;
+        radioPlaylist.push({
+          book: book.code,
+          chapter,
+          name: book.name
+        });
+      }
+      radioIndex = 0;
+      renderRadioPlaylist();
+    }
+
+    // Afficher playlist
+    function renderRadioPlaylist() {
+      const container = document.getElementById('radioPlaylist');
+      if (!container) return;
+
+      container.innerHTML = radioPlaylist.map((item, i) => `
+        <div class="playlist-item ${i === radioIndex ? 'playing' : ''}" onclick="playRadioItem(${i})">
+          <div class="playlist-num">${i === radioIndex ? '▶' : i + 1}</div>
+          <div class="playlist-info">
+            <div class="playlist-title">${item.name} ${item.chapter}</div>
+          </div>
+          <div class="playlist-remove" onclick="removeRadioItem(${i}, event)">×</div>
+        </div>
+      `).join('');
+    }
+
+    // Jouer un item
+    function playRadioItem(index) {
+      radioIndex = index;
+      const item = radioPlaylist[index];
+
+      // Charger et jouer le chapitre
+      currentBook = item.book;
+      currentChapter = item.chapter;
+      const url = getAudioUrl(item.book, item.chapter, currentLang);
+      audioPlayer.src = url;
+      audioPlayer.play();
+
+      isPlaying = true;
+      radioPlaying = true;
+      renderRadioPlaylist();
+      updateRadioPlayPauseBtn();
+    }
+
+    // Retirer un item de la playlist
+    function removeRadioItem(index, event) {
+      event.stopPropagation();
+      radioPlaylist.splice(index, 1);
+      if (radioIndex >= index) radioIndex = Math.max(0, radioIndex - 1);
+      renderRadioPlaylist();
+    }
+
+    // Mettre à jour le bouton play/pause
+    function updateRadioPlayPauseBtn() {
+      const btn = document.getElementById('radioPlayPause');
+      if (!btn) return;
+      btn.textContent = (isPlaying && radioPlaying) ? '⏸️' : '▶️';
+    }
+
+    // === CONTRÔLES RADIO ===
+
+    // Play/Pause
+    document.getElementById('radioPlayPause').addEventListener('click', () => {
+      if (radioPlaylist.length === 0) {
+        generateRadioPlaylist();
+        playRadioItem(0);
+        return;
+      }
+
+      if (audioPlayer.paused) {
+        audioPlayer.play();
+        isPlaying = true;
+        radioPlaying = true;
+      } else {
+        audioPlayer.pause();
+        isPlaying = false;
+        radioPlaying = false;
+      }
+      updateRadioPlayPauseBtn();
+    });
+
+    // Next
+    document.getElementById('radioNext').addEventListener('click', () => {
+      if (radioPlaylist.length === 0) return;
+
+      if (radioShuffle) {
+        radioIndex = Math.floor(Math.random() * radioPlaylist.length);
+      } else {
+        radioIndex = (radioIndex + 1) % radioPlaylist.length;
+      }
+      playRadioItem(radioIndex);
+    });
+
+    // Prev
+    document.getElementById('radioPrev').addEventListener('click', () => {
+      if (radioPlaylist.length === 0) return;
+      radioIndex = (radioIndex - 1 + radioPlaylist.length) % radioPlaylist.length;
+      playRadioItem(radioIndex);
+    });
+
+    // Shuffle
+    document.getElementById('radioShuffle').addEventListener('click', () => {
+      radioShuffle = !radioShuffle;
+      document.getElementById('radioShuffle').style.opacity = radioShuffle ? '1' : '0.5';
+    });
+
+    // Repeat
+    document.getElementById('radioRepeat').addEventListener('click', () => {
+      radioRepeat = !radioRepeat;
+      document.getElementById('radioRepeat').style.opacity = radioRepeat ? '1' : '0.5';
+    });
+
     // Toggle Paroles/Bible
     document.querySelector('#toggleLyrics').addEventListener('click', () => {
       document.querySelector('#toggleLyrics').classList.add('active');
