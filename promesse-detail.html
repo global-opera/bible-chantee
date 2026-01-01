@@ -513,16 +513,80 @@
         }
     }
 
-    // Open Bible chapter in lecteur
-    function toggleBible(psalmNum, lyricsId, button, lang) {
-        // Get theme index from URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const themeIndex = parseInt(urlParams.get('theme')) || 0;
+    // Map language codes to Bible file names
+    const BIBLE_FILES = {
+        'FR': 'fr_bible_segond1910.json',
+        'EN': 'en_bible_kjv_1611.json',
+        'PT': 'pt_bible_almeida_acf.json',
+        'ES': 'es_bible_reina_valera_1909.json',
+        'DE': 'de_bible_luther_1912.json',
+        'IT': 'it_bible_diodati_1649.json'
+    };
 
-        // Generate lecteur URL and navigate
-        const lecteurUrl = getLecteurUrl(psalmNum, lang, themeIndex);
-        console.log('Opening Bible chapter:', { psalmNum, lang, themeIndex, url: lecteurUrl });
-        window.location.href = lecteurUrl;
+    // Toggle Bible text display
+    async function toggleBible(psalmNum, lyricsId, button, lang) {
+        const lyricsBox = document.getElementById(lyricsId);
+        const langData = THEMES_DATA[lang] || THEMES_DATA.FR;
+        const langUpper = lang.toUpperCase();
+
+        // Deactivate Lyrics button
+        const lyricsBtn = button.parentElement.querySelector('.btn-toggle:first-child');
+        if (lyricsBtn) lyricsBtn.classList.remove('active');
+
+        // Deactivate Share button
+        const shareBtn = button.parentElement.querySelector('.btn-toggle:last-child');
+        if (shareBtn) shareBtn.classList.remove('active');
+
+        if (button.classList.contains('active')) {
+            lyricsBox.classList.remove('active');
+            button.classList.remove('active');
+        } else {
+            button.classList.add('active');
+            lyricsBox.classList.add('active');
+
+            // Check cache first
+            const cacheKey = `bible-${psalmNum}-${lang}`;
+            if (contentCache[cacheKey]) {
+                lyricsBox.textContent = contentCache[cacheKey];
+                return;
+            }
+
+            lyricsBox.textContent = langData.loadingText || 'Chargement...';
+
+            try {
+                const bibleFile = BIBLE_FILES[langUpper] || BIBLE_FILES['FR'];
+                const response = await fetch(`bible/${bibleFile}`);
+
+                if (response.ok) {
+                    const data = await response.json();
+                    const verses = data.verses || [];
+
+                    // Filter verses for Psalms (book 19) and specific chapter
+                    const psalmVerses = verses.filter(v =>
+                        v.book === 19 && v.chapter === parseInt(psalmNum)
+                    );
+
+                    if (psalmVerses.length > 0) {
+                        // Combine verses into text
+                        const bibleText = psalmVerses
+                            .sort((a, b) => a.verse - b.verse)
+                            .map(v => `${v.verse}. ${v.text}`)
+                            .join('\n\n');
+
+                        // Cache the result
+                        contentCache[cacheKey] = bibleText;
+                        lyricsBox.textContent = bibleText;
+                    } else {
+                        lyricsBox.textContent = langData.lyricsUnavailable || 'Texte biblique non disponible';
+                    }
+                } else {
+                    lyricsBox.textContent = langData.lyricsUnavailable || 'Texte biblique non disponible';
+                }
+            } catch (error) {
+                console.error('Error loading Bible text:', error);
+                lyricsBox.textContent = langData.lyricsUnavailable || 'Erreur de chargement';
+            }
+        }
     }
 
     // Load lyrics from JSON file
