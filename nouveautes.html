@@ -77,6 +77,31 @@
             transform: translateX(5px);
         }
 
+        /* Card FEATURED pour la nouveauté principale */
+        .update-card.featured {
+            border: 2px solid var(--or-moyen);
+            border-left: 5px solid var(--or-moyen);
+            background: linear-gradient(135deg, rgba(36, 63, 102, 0.95) 0%, rgba(30, 58, 95, 0.95) 100%);
+            box-shadow: 0 0 20px rgba(245, 203, 66, 0.3);
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: var(--or-moyen);
+            color: var(--bleu-nuit);
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-left: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
         .update-header {
             display: flex;
             justify-content: space-between;
@@ -122,6 +147,23 @@
             font-weight: bold;
         }
 
+        .try-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: var(--or-moyen);
+            color: var(--bleu-nuit);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .try-btn:hover {
+            background: #fff;
+            transform: scale(1.05);
+        }
+
         .footer {
             text-align: center;
             color: #888;
@@ -152,7 +194,7 @@
         <div id="updatesContainer"></div>
 
         <div class="footer">
-            © 2025 Bible Chantée — V3
+            © 2025-2026 Bible Chantée — V3
         </div>
     </div>
 
@@ -170,7 +212,21 @@
                 pageTitle: "🆕 Nouveautés",
                 pageSubtitle: "Dernières mises à jour",
                 backBtn: "← Retour au Lecteur",
+                tryNow: "Essayer maintenant →",
+                featured: "NOUVEAU",
                 updates: [
+                    {
+                        date: "2 Janvier 2026",
+                        version: "V3.2",
+                        featured: true,
+                        items: [
+                            "🔍 Recherche sémantique intelligente",
+                            "💬 \"Comment vous sentez-vous ?\" - Trouvez le chapitre parfait",
+                            "🎯 12 familles thématiques (peur, solitude, burnout, joie...)",
+                            "🌍 Recherche en 6 langues (FR, EN, PT, ES, DE, IT)",
+                            "📖 Exemples : peur → Psaume 23, 27, 91 | burnout → 1 Rois 19"
+                        ]
+                    },
                     {
                         date: "1er Janvier 2026",
                         version: "V3.1",
@@ -201,7 +257,6 @@
                         items: [
                             "📦 Migration depuis Archive.org",
                             "🌐 Ajout des 6 premières langues audio",
-                            "💳 Système de crédits freemium",
                             "🎨 Interface améliorée"
                         ]
                     }
@@ -211,9 +266,23 @@
                 pageTitle: "🆕 What's New",
                 pageSubtitle: "Latest updates",
                 backBtn: "← Back to Player",
+                tryNow: "Try it now →",
+                featured: "NEW",
                 updates: [
                     {
-                        date: "January 1st, 2026",
+                        date: "January 2, 2026",
+                        version: "V3.2",
+                        featured: true,
+                        items: [
+                            "🔍 Intelligent semantic search",
+                            "💬 \"How are you feeling?\" - Find the perfect chapter",
+                            "🎯 12 thematic families (fear, loneliness, burnout, joy...)",
+                            "🌍 Search in 6 languages (FR, EN, PT, ES, DE, IT)",
+                            "📖 Examples: fear → Psalm 23, 27, 91 | burnout → 1 Kings 19"
+                        ]
+                    },
+                    {
+                        date: "January 1, 2026",
                         version: "V3.1",
                         items: [
                             "🎵 Radio mode activated (continuous playback)",
@@ -224,14 +293,14 @@
                         ]
                     },
                     {
-                        date: "December 31st, 2025",
+                        date: "December 31, 2025",
                         version: "V3.0",
                         items: [
-                            "🚀 Sung Bible V3 Launch",
+                            "🚀 Launch of Sung Bible V3",
                             "🎵 1189 Bible chapters in music",
                             "🌍 6 audio languages available (FR, EN, PT, ES, DE, IT)",
                             "📝 12 languages for lyrics and interface",
-                            "🎨 New night blue + gold interface",
+                            "🎨 New midnight blue + gold interface",
                             "☁️ Audio hosted on Cloudflare R2",
                             "⚡ Ultra-fast loading"
                         ]
@@ -242,7 +311,6 @@
                         items: [
                             "📦 Migration from Archive.org",
                             "🌐 Added first 6 audio languages",
-                            "💳 Freemium credits system",
                             "🎨 Improved interface"
                         ]
                     }
@@ -252,7 +320,21 @@
                 pageTitle: "🆕 Novidades",
                 pageSubtitle: "Últimas atualizações",
                 backBtn: "← Voltar ao Player",
+                tryNow: "Experimentar agora →",
+                featured: "NOVO",
                 updates: [
+                    {
+                        date: "2 de Janeiro de 2026",
+                        version: "V3.2",
+                        featured: true,
+                        items: [
+                            "🔍 Pesquisa semântica inteligente",
+                            "💬 \"Como você está se sentindo?\" - Encontre o capítulo perfeito",
+                            "🎯 12 famílias temáticas (medo, solidão, burnout, alegria...)",
+                            "🌍 Pesquisa em 6 idiomas (FR, EN, PT, ES, DE, IT)",
+                            "📖 Exemplos: medo → Salmo 23, 27, 91 | burnout → 1 Reis 19"
+                        ]
+                    },
                     {
                         date: "1 de Janeiro de 2026",
                         version: "V3.1",
@@ -283,7 +365,6 @@
                         items: [
                             "📦 Migração do Archive.org",
                             "🌐 Adição dos primeiros 6 idiomas de áudio",
-                            "💳 Sistema de créditos freemium",
                             "🎨 Interface melhorada"
                         ]
                     }
@@ -293,7 +374,21 @@
                 pageTitle: "🆕 Novedades",
                 pageSubtitle: "Últimas actualizaciones",
                 backBtn: "← Volver al Reproductor",
+                tryNow: "Probar ahora →",
+                featured: "NUEVO",
                 updates: [
+                    {
+                        date: "2 de Enero de 2026",
+                        version: "V3.2",
+                        featured: true,
+                        items: [
+                            "🔍 Búsqueda semántica inteligente",
+                            "💬 \"¿Cómo te sientes?\" - Encuentra el capítulo perfecto",
+                            "🎯 12 familias temáticas (miedo, soledad, burnout, alegría...)",
+                            "🌍 Búsqueda en 6 idiomas (FR, EN, PT, ES, DE, IT)",
+                            "📖 Ejemplos: miedo → Salmo 23, 27, 91 | burnout → 1 Reyes 19"
+                        ]
+                    },
                     {
                         date: "1 de Enero de 2026",
                         version: "V3.1",
@@ -324,7 +419,6 @@
                         items: [
                             "📦 Migración desde Archive.org",
                             "🌐 Adición de los primeros 6 idiomas de audio",
-                            "💳 Sistema de créditos freemium",
                             "🎨 Interfaz mejorada"
                         ]
                     }
@@ -334,7 +428,21 @@
                 pageTitle: "🆕 Neuigkeiten",
                 pageSubtitle: "Neueste Updates",
                 backBtn: "← Zurück zum Player",
+                tryNow: "Jetzt ausprobieren →",
+                featured: "NEU",
                 updates: [
+                    {
+                        date: "2. Januar 2026",
+                        version: "V3.2",
+                        featured: true,
+                        items: [
+                            "🔍 Intelligente semantische Suche",
+                            "💬 \"Wie fühlen Sie sich?\" - Finden Sie das perfekte Kapitel",
+                            "🎯 12 thematische Familien (Angst, Einsamkeit, Burnout, Freude...)",
+                            "🌍 Suche in 6 Sprachen (FR, EN, PT, ES, DE, IT)",
+                            "📖 Beispiele: Angst → Psalm 23, 27, 91 | Burnout → 1. Könige 19"
+                        ]
+                    },
                     {
                         date: "1. Januar 2026",
                         version: "V3.1",
@@ -365,7 +473,6 @@
                         items: [
                             "📦 Migration von Archive.org",
                             "🌐 Hinzufügung der ersten 6 Audiosprachen",
-                            "💳 Freemium-Credits-System",
                             "🎨 Verbesserte Benutzeroberfläche"
                         ]
                     }
@@ -375,7 +482,21 @@
                 pageTitle: "🆕 Novità",
                 pageSubtitle: "Ultimi aggiornamenti",
                 backBtn: "← Torna al Lettore",
+                tryNow: "Prova ora →",
+                featured: "NUOVO",
                 updates: [
+                    {
+                        date: "2 Gennaio 2026",
+                        version: "V3.2",
+                        featured: true,
+                        items: [
+                            "🔍 Ricerca semantica intelligente",
+                            "💬 \"Come ti senti?\" - Trova il capitolo perfetto",
+                            "🎯 12 famiglie tematiche (paura, solitudine, burnout, gioia...)",
+                            "🌍 Ricerca in 6 lingue (FR, EN, PT, ES, DE, IT)",
+                            "📖 Esempi: paura → Salmo 23, 27, 91 | burnout → 1 Re 19"
+                        ]
+                    },
                     {
                         date: "1 Gennaio 2026",
                         version: "V3.1",
@@ -406,7 +527,6 @@
                         items: [
                             "📦 Migrazione da Archive.org",
                             "🌐 Aggiunta delle prime 6 lingue audio",
-                            "💳 Sistema crediti freemium",
                             "🎨 Interfaccia migliorata"
                         ]
                     }
@@ -426,16 +546,24 @@
 
             t.updates.forEach(update => {
                 const updateDiv = document.createElement('div');
-                updateDiv.className = 'update-card';
-                updateDiv.innerHTML = `
+                updateDiv.className = update.featured ? 'update-card featured' : 'update-card';
+                
+                let headerHTML = `
                     <div class="update-header">
-                        <div class="update-date">${update.date}</div>
+                        <div class="update-date">${update.date}${update.featured ? `<span class="featured-badge">${t.featured}</span>` : ''}</div>
                         <div class="update-version">${update.version}</div>
                     </div>
+                `;
+                
+                let listHTML = `
                     <ul class="update-list">
                         ${update.items.map(item => `<li>${item}</li>`).join('')}
                     </ul>
                 `;
+                
+                let btnHTML = update.featured ? `<a href="lecteur.html" class="try-btn">${t.tryNow}</a>` : '';
+                
+                updateDiv.innerHTML = headerHTML + listHTML + btnHTML;
                 updatesContainer.appendChild(updateDiv);
             });
         }
