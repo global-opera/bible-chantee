@@ -1,0 +1,80 @@
+{
+  "generatedAt": "2026-01-01T20:03:06.012Z",
+  "stats": {
+    "total": 13,
+    "premium": 0,
+    "with100Credits": 13,
+    "earlyAdopters": 13,
+    "totalCredits": 1300,
+    "averageCredits": 100
+  },
+  "creditRanges": {
+    "0": 0,
+    "1-50": 0,
+    "51-100": 13,
+    "101-500": 0,
+    "500+": 0
+  },
+  "topUsers": [
+    {
+      "email": "yves.glardon@swissonline.ch",
+      "credits": 100,
+      "isPremium": false,
+      "createdAt": "2025-12-22T19:11:50.374+00:00"
+    },
+    {
+      "email": "scassani@protonmail.com",
+      "credits": 100,
+      "isPremium": false,
+      "createdAt": "2025-12-21T18:47:52.582+00:00"
+    },
+    {
+      "email": "riviervaudoise@gmail.com",
+      "credits": 100,
+      "isPremium": false,
+      "createdAt": "2025-12-21T18:47:01.148+00:00"
+    },
+    {
+      "email": "scassani@gmail.com",
+      "credits": 100,
+      "isPremium": false,
+      "createdAt": "2025-12-21T18:43:57.724+00:00"
+    },
+    {
+      "email": "duc.maryco@gmail.com",
+      "credits": 100,
+      "isPremium": false,
+      "createdAt": "2025-12-21T17:35:26.034+00:00"
+    },
+    {
+      "email": "vohgirl@yahoo.fr",
+      "credits": 100,
+      "isPremium": false,
+      "createdAt": "2025-12-21T15:42:58.616+00:00"
+    },
+    {
+      "email": "yanin.sergey69@gmail.com",
+      "credits": 100,
+      "isPremium": false,
+      "createdAt": "2025-12-21T11:52:18.762+00:00"
+    },
+    {
+      "email": "stefan.fuchser@gmail.com",
+      "credits": 100,
+      "isPremium": false,
+      "createdAt": "2025-12-20T10:39:54.933+00:00"
+    },
+    {
+      "email": "info@biblechantee.com",
+      "credits": 100,
+      "isPremium": false,
+      "createdAt": "2025-12-20T01:25:55.201+00:00"
+    },
+    {
+      "email": "test@example.com",
+      "credits": 100,
+      "isPremium": false,
+      "createdAt": "2025-12-20T00:58:03.88+00:00"
+    }
+  ]
+}
