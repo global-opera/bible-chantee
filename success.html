@@ -54,10 +54,21 @@
 <body>
     <div class="container">
         <div class="success-icon">🎉</div>
-        <h1>Paiement Réussi !</h1>
-        <p style="font-size: 1.2rem; margin: 20px 0;">Votre compte premium est activé.</p>
-        <a href="/lecteur.html" class="cta-button">Commencer à écouter</a>
+        <h1 id="title">Paiement Réussi !</h1>
+        <p id="message" style="font-size: 1.2rem; margin: 20px 0;">Votre compte premium est activé.</p>
+        <a href="/lecteur.html" class="cta-button" id="cta">Commencer à écouter</a>
     </div>
+    <script>
+        // Inline translations
+        const translations = {
+            FR: { title: "Paiement Réussi !", message: "Votre compte premium est activé.", cta: "Commencer à écouter" },
+            EN: { title: "Payment Successful!", message: "Your premium account is activated.", cta: "Start Listening" },
+            PT: { title: "Pagamento Bem-sucedido!", message: "Sua conta premium está ativada.", cta: "Começar a Ouvir" },
+            ES: { title: "¡Pago Exitoso!", message: "Tu cuenta premium está activada.", cta: "Empezar a Escuchar" },
+            DE: { title: "Zahlung Erfolgreich!", message: "Ihr Premium-Konto ist aktiviert.", cta: "Jetzt Anhören" },
+            IT: { title: "Pagamento Riuscito!", message: "Il tuo account premium è attivato.", cta: "Inizia ad Ascoltare" }
+        };
+    </script>
     <script src="/js/premium-system.js"></script>
     <script>
         premiumSystem.checkPremiumStatus();
