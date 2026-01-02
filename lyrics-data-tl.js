@@ -1,6 +1,6 @@
 // Paroles des chapitres TL - Bible Chantee
 // Auto-genere: 2026-01-02 19:38:18
-window.chapterLyrics = {
+window.chapterLyricsTL = {
     "01": {
         1: `[Verse 1]  
 Sa simula, Iyong nilikha,  
@@ -42985,3 +42985,4 @@ Darating ka sa iyong kaluwalhatian,
 Hallelujah, aming Diyos, magpakailanman.`,
     },
 };
+
