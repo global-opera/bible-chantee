@@ -1240,7 +1240,11 @@
 
         // Recharger le chapitre actuel avec la nouvelle langue
         if (currentBook && currentChapter) {
-          loadAndPlayChapter(currentBook, currentChapter, currentLang);
+          // Charger l'audio SANS lancer la lecture automatique
+          const audioUrl = getAudioUrl(currentBook, currentChapter, currentLang);
+          audioPlayer.src = audioUrl;
+          audioPlayer.load();
+
           loadLyrics(currentBook, currentChapter, currentLang);
           loadBibleText(currentBook, currentChapter, currentLang);
 
