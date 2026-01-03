@@ -71,7 +71,7 @@ exports.handler = async (event) => {
             currency: 'usd',
             product_data: {
               name: 'Bible Chantée - Accès Premium',
-              description: 'Accès illimité à vie - 1189 chapitres en 6 langues',
+              description: 'Accès illimité à vie - 1189 chapitres en 7 langues',
               images: ['https://biblechantee.com/icons/icon-512x512.png']
             },
             unit_amount: 99 // $0.99 = 99 cents

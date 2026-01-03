@@ -920,13 +920,13 @@
   <script>
     // Traductions
     const translations = {
-      FR: { about: "À propos", aide: "Aide", news: "Nouveautés", radio: "Radio", promesses: "Promesses", confessions: "Confessions", prieres: "Prières", soutenir: "Soutenir", livre: "Livre", chapitre: "Chapitre", paroles: "Paroles", bible: "Bible", lecteur: "Lecteur" },
-      EN: { about: "About", aide: "Help", news: "What's New", radio: "Radio", promesses: "Promises", confessions: "Confessions", prieres: "Prayers", soutenir: "Support", livre: "Book", chapitre: "Chapter", paroles: "Lyrics", bible: "Bible", lecteur: "Player" },
-      PT: { about: "Sobre", aide: "Ajuda", news: "Novidades", radio: "Rádio", promesses: "Promessas", confessions: "Confissões", prieres: "Orações", soutenir: "Apoiar", livre: "Livro", chapitre: "Capítulo", paroles: "Letras", bible: "Bíblia", lecteur: "Leitor" },
-      ES: { about: "Acerca de", aide: "Ayuda", news: "Novedades", radio: "Radio", promesses: "Promesas", confessions: "Confesiones", prieres: "Oraciones", soutenir: "Apoyar", livre: "Libro", chapitre: "Capítulo", paroles: "Letras", bible: "Biblia", lecteur: "Reproductor" },
-      DE: { about: "Über uns", aide: "Hilfe", news: "Neuigkeiten", radio: "Radio", promesses: "Verheißungen", confessions: "Bekenntnisse", prieres: "Gebete", soutenir: "Unterstützen", livre: "Buch", chapitre: "Kapitel", paroles: "Liedtext", bible: "Bibel", lecteur: "Spieler" },
-      IT: { about: "Chi siamo", aide: "Aiuto", news: "Novità", radio: "Radio", promesses: "Promesse", confessions: "Confessioni", prieres: "Preghiere", soutenir: "Sostieni", livre: "Libro", chapitre: "Capitolo", paroles: "Testo", bible: "Bibbia", lecteur: "Lettore" },
-      TL: { about: "Tungkol", aide: "Tulong", news: "Mga Bago", radio: "Radyo", promesses: "Pangako", confessions: "Pagtatapat", prieres: "Panalangin", soutenir: "Suportahan", livre: "Aklat", chapitre: "Kabanata", paroles: "Lyrics", bible: "Bibliya", lecteur: "Player" }
+      FR: { about: "À propos", aide: "Aide", news: "Nouveautés", radio: "Radio", promesses: "Promesses", confessions: "Confessions", prieres: "Prières", soutenir: "Soutenir", livre: "Livre", chapitre: "Chapitre", paroles: "Paroles", bible: "Bible", lecteur: "Lecteur", searchPlaceholder: "Comment vous sentez-vous ?" },
+      EN: { about: "About", aide: "Help", news: "What's New", radio: "Radio", promesses: "Promises", confessions: "Confessions", prieres: "Prayers", soutenir: "Support", livre: "Book", chapitre: "Chapter", paroles: "Lyrics", bible: "Bible", lecteur: "Player", searchPlaceholder: "How are you feeling?" },
+      PT: { about: "Sobre", aide: "Ajuda", news: "Novidades", radio: "Rádio", promesses: "Promessas", confessions: "Confissões", prieres: "Orações", soutenir: "Apoiar", livre: "Livro", chapitre: "Capítulo", paroles: "Letras", bible: "Bíblia", lecteur: "Leitor", searchPlaceholder: "Como você está se sentindo?" },
+      ES: { about: "Acerca de", aide: "Ayuda", news: "Novedades", radio: "Radio", promesses: "Promesas", confessions: "Confesiones", prieres: "Oraciones", soutenir: "Apoyar", livre: "Libro", chapitre: "Capítulo", paroles: "Letras", bible: "Biblia", lecteur: "Reproductor", searchPlaceholder: "¿Cómo te sientes?" },
+      DE: { about: "Über uns", aide: "Hilfe", news: "Neuigkeiten", radio: "Radio", promesses: "Verheißungen", confessions: "Bekenntnisse", prieres: "Gebete", soutenir: "Unterstützen", livre: "Buch", chapitre: "Kapitel", paroles: "Liedtext", bible: "Bibel", lecteur: "Spieler", searchPlaceholder: "Wie fühlen Sie sich?" },
+      IT: { about: "Chi siamo", aide: "Aiuto", news: "Novità", radio: "Radio", promesses: "Promesse", confessions: "Confessioni", prieres: "Preghiere", soutenir: "Sostieni", livre: "Libro", chapitre: "Capitolo", paroles: "Testo", bible: "Bibbia", lecteur: "Lettore", searchPlaceholder: "Come ti senti?" },
+      TL: { about: "Tungkol", aide: "Tulong", news: "Mga Bago", radio: "Radyo", promesses: "Pangako", confessions: "Pagtatapat", prieres: "Panalangin", soutenir: "Suportahan", livre: "Aklat", chapitre: "Kabanata", paroles: "Lyrics", bible: "Bibliya", lecteur: "Player", searchPlaceholder: "Paano ka nakakaramdam?" }
     };
     
     let currentLang = 'FR';
@@ -1279,6 +1279,7 @@
       document.querySelector('#toggleLyrics').innerHTML = '🎤 ' + t.paroles;
       document.querySelector('#toggleBible').innerHTML = '📖 ' + t.bible;
       document.querySelector('#headerMode').textContent = isRadioMode ? t.radio : t.lecteur;
+      document.querySelector('#searchInput').placeholder = t.searchPlaceholder;
 
       // Mettre à jour le titre du livre (headerTitle)
       if (currentBook && window.BOOK_NAMES && window.BOOK_NAMES[currentLang]) {

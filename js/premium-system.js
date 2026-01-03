@@ -119,7 +119,7 @@ const premiumSystem = {
             </p>
 
             <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin-bottom: 30px;">
-                <div style="margin-bottom: 10px;">✅ 1189 chapitres en 6 langues</div>
+                <div style="margin-bottom: 10px;">✅ 1189 chapitres en 7 langues</div>
                 <div style="margin-bottom: 10px;">✅ Accès illimité à vie</div>
                 <div style="margin-bottom: 10px;">✅ Pas d'abonnement</div>
                 <div style="margin-bottom: 10px;">✅ Soutien au projet</div>
