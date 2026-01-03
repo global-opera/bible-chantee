@@ -1710,9 +1710,13 @@
           document.querySelector('#headerSubtitle').textContent = subtitle;
         }
 
-        // Load and play the chapter if URL params were provided
+        // Préparer l'audio mais NE PAS lancer automatiquement
+        // L'utilisateur doit cliquer sur Play pour démarrer
         if (urlBook || urlChapter) {
-          loadAndPlayChapter(bookCode, currentChapter, currentLang);
+          const audioUrl = getAudioUrl(bookCode, currentChapter, currentLang);
+          audioPlayer.src = audioUrl;
+          audioPlayer.load();
+          // Ne pas appeler .play() - attendre le clic utilisateur
         }
 
         // Charger les paroles initiales
