@@ -39,60 +39,17 @@
                       "TL":  {
                                  "name":  "Tagalog",
                                  "flag":  "🇵🇭",
-                                 "chapters":  27,
-                                 "status":  "generating"
-                             },
-                      "AR":  {
-                                 "name":  "العربية",
-                                 "flag":  "🇸🇦",
-                                 "chapters":  0,
-                                 "status":  "planned"
-                             },
-                      "RU":  {
-                                 "name":  "Русский",
-                                 "flag":  "🇷🇺",
-                                 "chapters":  0,
-                                 "status":  "planned"
-                             },
-                      "ZH":  {
-                                 "name":  "中文",
-                                 "flag":  "🇨🇳",
-                                 "chapters":  0,
-                                 "status":  "planned"
-                             },
-                      "HI":  {
-                                 "name":  "हिन्दी",
-                                 "flag":  "🇮🇳",
-                                 "chapters":  0,
-                                 "status":  "planned"
-                             },
-                      "SW":  {
-                                 "name":  "Kiswahili",
-                                 "flag":  "🇰🇪",
-                                 "chapters":  0,
-                                 "status":  "planned"
+                                 "chapters":  1189,
+                                 "status":  "complete"
                              }
                   },
     "totalChapters":  1189,
     "lastUpdated":  "2025-12-30",
     "stats":  {
-                  "complete":  6,
-                  "generating":  1,
-                  "planned":  5,
-                  "totalLanguages":  [
-                                         1,
-                                         1,
-                                         1,
-                                         1,
-                                         1,
-                                         1,
-                                         1,
-                                         1,
-                                         1,
-                                         1,
-                                         1,
-                                         1
-                                     ],
-                  "completionPercentage":  50.0
+                  "complete":  7,
+                  "generating":  0,
+                  "planned":  0,
+                  "totalLanguages":  7,
+                  "completionPercentage":  100.0
               }
 }

@@ -97,7 +97,8 @@ window.LANG_CONFIG = (function() {
                 PT: { name: "Português", flag: "🇧🇷", chapters: 1189, status: "complete" },
                 ES: { name: "Español", flag: "🇪🇸", chapters: 1189, status: "complete" },
                 DE: { name: "Deutsch", flag: "🇩🇪", chapters: 1189, status: "complete" },
-                IT: { name: "Italiano", flag: "🇮🇹", chapters: 1189, status: "complete" }
+                IT: { name: "Italiano", flag: "🇮🇹", chapters: 1189, status: "complete" },
+                TL: { name: "Tagalog", flag: "🇵🇭", chapters: 1189, status: "complete" }
             },
             totalChapters: 1189,
             lastUpdated: "2024-12-30"

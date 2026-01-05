@@ -527,6 +527,7 @@
             <button class="lang-btn" data-lang="ES">ES</button>
             <button class="lang-btn" data-lang="DE">DE</button>
             <button class="lang-btn" data-lang="IT">IT</button>
+            <button class="lang-btn" data-lang="TL">TL</button>
         </div>
         <div class="period-selector" id="periodSelector">
             <span class="period-label" data-i18n="period-label">Période:</span>
@@ -690,7 +691,7 @@
         // =====================================================
         // I18N (FR / EN / PT / ES / DE / IT)
         // =====================================================
-        const SUPPORTED_LANGS = ['FR','EN','PT','ES','DE','IT'];
+        const SUPPORTED_LANGS = ['FR','EN','PT','ES','DE','IT','TL'];
         let UI_LANG = (window.BC_LANG ? BC_LANG.resolveLang() : (localStorage.getItem('bc_lang') || 'EN')).toUpperCase();
         if (!SUPPORTED_LANGS.includes(UI_LANG)) UI_LANG = (window.BC_LANG ? BC_LANG.resolveLang() : 'EN');
 
@@ -922,6 +923,44 @@
                 period7days: "7 giorni",
                 period30days: "30 giorni",
                 periodAll: "Tutto"
+            },
+            TL: {
+                title: "Dashboard Bible Chantée - Istatistika",
+                headerTitle: "Dashboard Bible Chantée",
+                headerSubtitle: "Pandaigdigang istatistika sa real-time",
+                statVisitorsToday: "Mga bisita ngayong araw",
+                statCountriesActive: "Aktibong mga bansa",
+                statAudioPlays: "Mga paglalaro ng audio",
+                statShares: "Mga pagbabahagi",
+                statSignups: "Mga pagpaparehistro",
+                sectionWorld: "Mga bisita sa buong mundo",
+                sectionProgress: "Progreso ng Pagbuo ng MP3",
+                sectionTopCountries: "Nangungunang mga Bansa",
+                sectionTopPages: "Pinaka-tiningnan na mga pahina",
+                sectionEvents: "Mga Kaganapan ng GA4",
+                sectionActivity: "Kamakailang aktibidad",
+                legendHigh: "100+ bisita",
+                legendMedium: "50-99 bisita",
+                legendLow: "1-49 bisita",
+                langFR: "Pranses",
+                langEN: "Ingles",
+                langPT: "Portuges",
+                langES: "Espanyol",
+                langDE: "Aleman",
+                langIT: "Italyano",
+                dataConnecting: "Kumokonekta sa Google Analytics 4…",
+                dataLive: "Real-time na data ng Google Analytics 4",
+                dataDemo: "Demo mode - Hindi available ang API",
+                live: "LIVE",
+                agoMinutes: (n) => `${n} min ang nakalipas`,
+                footerBrand: "Bible Chantée",
+                footerGA4: "Data ng Google Analytics 4",
+                footerRefresh: "Pag-refresh bawat 30 segundo",
+                periodLabel: "Panahon:",
+                period24h: "24h",
+                period7days: "7 araw",
+                period30days: "30 araw",
+                periodAll: "Lahat"
             }
         };
 
