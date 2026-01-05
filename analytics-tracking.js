@@ -2,7 +2,7 @@
 // Ce fichier contient toutes les fonctions de tracking pour GA4
 
 // Configuration
-const GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // À remplacer par votre ID GA4
+const GA4_MEASUREMENT_ID = 'G-TX3ETCKJQZ';
 
 // Initialiser GA4
 (function() {

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bible Chantée - Lecteur Audio</title>
   <script src="js/clear-cache.js?v=1"></script>
+  <script src="analytics-tracking.js"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
@@ -1143,6 +1144,14 @@
       } else {
         isPlaying = false;
         playBtn.textContent = '▶';
+      }
+    });
+
+    // Event: Tracking GA4 quand l'audio démarre
+    audioPlayer.addEventListener('play', () => {
+      if (window.BibleAnalytics && currentBook && currentChapter && currentLang) {
+        const duration = Math.round(audioPlayer.duration) || 0;
+        window.BibleAnalytics.trackAudioPlay(currentBook, currentChapter, currentLang, duration);
       }
     });
 
