@@ -4,8 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bible Chantée - Lecteur Audio</title>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TX3ETCKJQZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TX3ETCKJQZ');
+  </script>
+
   <script src="js/clear-cache.js?v=1"></script>
-  <script src="analytics-tracking.js?v=20260103"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     
@@ -1149,9 +1158,17 @@
 
     // Event: Tracking GA4 quand l'audio démarre
     audioPlayer.addEventListener('play', () => {
-      if (window.BibleAnalytics && currentBook && currentChapter && currentLang) {
+      if (window.gtag && currentBook && currentChapter && currentLang) {
         const duration = Math.round(audioPlayer.duration) || 0;
-        window.BibleAnalytics.trackAudioPlay(currentBook, currentChapter, currentLang, duration);
+        gtag('event', 'audio_play', {
+          book: currentBook,
+          chapter: currentChapter,
+          language: currentLang,
+          duration_seconds: duration,
+          event_category: 'Audio',
+          event_label: `${currentBook}_${currentChapter}_${currentLang}`
+        });
+        console.log('✅ GA4 audio_play tracked:', currentBook, currentChapter, currentLang);
       }
     });
 
