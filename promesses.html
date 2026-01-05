@@ -232,9 +232,16 @@
 
     const ICONS = ["😰", "💪", "🙏", "❤️", "🕊️", "🌟", "🛡️", "💰", "🩹", "🎯"];
 
-    // Résoudre la langue (priorité: URL > localStorage > défaut)
+    // Détection automatique de la langue
+    const getDefaultLang = () => {
+        const browserLang = (navigator.language || navigator.userLanguage || 'en').substring(0, 2).toUpperCase();
+        const supported = ['FR', 'EN', 'PT', 'ES', 'DE', 'IT', 'TL'];
+        return supported.includes(browserLang) ? browserLang : 'EN';
+    };
+
+    // Résoudre la langue (priorité: URL > localStorage > navigateur)
     const params = new URLSearchParams(window.location.search);
-    let currentLang = params.get('lang') || localStorage.getItem('bc_lang') || 'FR';
+    let currentLang = params.get('lang') || localStorage.getItem('bc_lang') || getDefaultLang();
     currentLang = currentLang.toUpperCase();
 
     // Sauvegarder dans localStorage pour cohérence

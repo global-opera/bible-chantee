@@ -554,7 +554,7 @@
             lyricsBox.textContent = langData.loadingText || 'Chargement...';
 
             try {
-                const bibleFile = BIBLE_FILES[langUpper] || BIBLE_FILES['FR'];
+                const bibleFile = BIBLE_FILES[langUpper] || BIBLE_FILES['EN'];
                 const response = await fetch(`bible/${bibleFile}`);
 
                 if (response.ok) {
@@ -686,7 +686,7 @@
 
     // Show email gate modal
     function showEmailGate() {
-        const lang = new URLSearchParams(window.location.search).get('lang') || 'FR';
+        const lang = new URLSearchParams(window.location.search).get('lang') || currentLang;
         const langData = THEMES_DATA[lang] || THEMES_DATA.FR;
 
         const modal = document.createElement('div');
