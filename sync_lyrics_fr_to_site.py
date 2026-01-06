@@ -7,8 +7,8 @@ from pathlib import Path
 from datetime import datetime
 
 # Configuration
-# IMPORTANT: Using V1 lyrics (original sung version)
-LYRICS_DIR = Path("G:/Mon Drive/01 BibleChantee/Lyrics/FR_BACKUP_BEFORE_FR_V2")
+# IMPORTANT: Using V2 lyrics (VRAIES paroles chantées - Archive.org)
+LYRICS_DIR = Path("G:/Mon Drive/01 BibleChantee/Lyrics/FR/FR_V2")
 OUTPUT_FILE = Path("C:/ScriptBible/bible-chantee/lyrics-data.js")
 
 # Mapping des codes de livres vers numéros
@@ -107,7 +107,7 @@ def generate_js_file(lyrics_data):
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.write("// Paroles des chapitres - Bible Chantee\n")
-        f.write("// Source: Lyrics FR V1 (Paroles originales chantees)\n")
+        f.write("// Source: Lyrics FR V2 (Archive.org)\n")
         f.write(f"// Auto-genere: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write("window.chapterLyrics = {\n")
 
