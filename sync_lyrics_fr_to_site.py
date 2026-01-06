@@ -7,8 +7,8 @@ from pathlib import Path
 from datetime import datetime
 
 # Configuration
-# IMPORTANT: Using V2 lyrics (VRAIES paroles chantées - Archive.org)
-LYRICS_DIR = Path("G:/Mon Drive/01 BibleChantee/Lyrics/FR/FR_V2")
+# IMPORTANT: Using Whisper FR transcriptions (VRAIES paroles chantées depuis les MP3)
+LYRICS_DIR = Path("G:/Mon Drive/01 BibleChantee/Lyrics_Whisper_FR")
 OUTPUT_FILE = Path("C:/ScriptBible/bible-chantee/lyrics-data.js")
 
 # Mapping des codes de livres vers numéros
@@ -107,7 +107,7 @@ def generate_js_file(lyrics_data):
 
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         f.write("// Paroles des chapitres - Bible Chantee\n")
-        f.write("// Source: Lyrics FR V2 (Archive.org)\n")
+        f.write("// Source: Whisper FR transcriptions (paroles reelles chantees)\n")
         f.write(f"// Auto-genere: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write("window.chapterLyrics = {\n")
 
