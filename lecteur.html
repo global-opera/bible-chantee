@@ -1240,39 +1240,6 @@
       chapterSelect.value = currentChapter || 1;
     }
 
-    // Event listener for chapter select change
-    document.addEventListener('DOMContentLoaded', () => {
-      const chapterSelect = document.querySelector('#chapterSelect');
-      if (chapterSelect) {
-        chapterSelect.addEventListener('change', (e) => {
-          const chapterNum = parseInt(e.target.value);
-          const t = translations[currentLang] || translations.FR;
-          const chapterTitle = getChapterTitle(currentBook, chapterNum.toString(), currentLang);
-          const subtitle = chapterTitle
-            ? `${t.chapitre} ${chapterNum} - ${chapterTitle}`
-            : `${t.chapitre} ${chapterNum}`;
-          document.querySelector('#headerSubtitle').textContent = subtitle;
-
-          currentChapter = chapterNum;
-          if (isPlaying) {
-            loadAndPlayChapter(currentBook, chapterNum, currentLang);
-          } else {
-            const audioUrl = getAudioUrl(currentBook, chapterNum, currentLang);
-            audioPlayer.src = audioUrl;
-            audioPlayer.load();
-          }
-
-          // Mettre à jour les paroles si on est en mode paroles
-          if (document.querySelector('#lyricsContent').style.display !== 'none') {
-            loadLyrics(currentBook, currentChapter, currentLang);
-          }
-          // Mettre à jour le texte de la Bible si on est en mode Bible
-          if (document.querySelector('#bibleContent').style.display !== 'none') {
-            loadBibleText(currentBook, currentChapter, currentLang);
-          }
-        });
-      }
-    });
 
     // Sélection langue
     document.querySelectorAll('.flag-btn').forEach(btn => {
@@ -1778,6 +1745,38 @@
 
         // Charger les paroles initiales
         loadLyrics(bookCode, currentChapter, currentLang);
+
+        // Event listener for chapter select change
+        const chapterSelect = document.querySelector('#chapterSelect');
+        if (chapterSelect) {
+          chapterSelect.addEventListener('change', (e) => {
+            const chapterNum = parseInt(e.target.value);
+            const t = translations[currentLang] || translations.FR;
+            const chapterTitle = getChapterTitle(currentBook, chapterNum.toString(), currentLang);
+            const subtitle = chapterTitle
+              ? `${t.chapitre} ${chapterNum} - ${chapterTitle}`
+              : `${t.chapitre} ${chapterNum}`;
+            document.querySelector('#headerSubtitle').textContent = subtitle;
+
+            currentChapter = chapterNum;
+            if (isPlaying) {
+              loadAndPlayChapter(currentBook, chapterNum, currentLang);
+            } else {
+              const audioUrl = getAudioUrl(currentBook, chapterNum, currentLang);
+              audioPlayer.src = audioUrl;
+              audioPlayer.load();
+            }
+
+            // Mettre à jour les paroles si on est en mode paroles
+            if (document.querySelector('#lyricsContent').style.display !== 'none') {
+              loadLyrics(currentBook, currentChapter, currentLang);
+            }
+            // Mettre à jour le texte de la Bible si on est en mode Bible
+            if (document.querySelector('#bibleContent').style.display !== 'none') {
+              loadBibleText(currentBook, currentChapter, currentLang);
+            }
+          });
+        }
       } catch (error) {
         console.error('Initialize error:', error);
         // Fallback to default
