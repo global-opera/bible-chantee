@@ -1,6 +1,6 @@
 /* Bible Chantée - Service Worker (clean) */
-const CACHE_NAME = 'bible-chantee-v9';
-const RUNTIME_CACHE = 'bc-cache-v2';
+const CACHE_NAME = 'bible-chantee-v10';
+const RUNTIME_CACHE = 'bc-cache-v3';
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
