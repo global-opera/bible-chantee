@@ -1058,11 +1058,11 @@
     <!-- SECTION INSCRIPTION NOUVEAUTÉS -->
     <div class="newsletter-section">
       <div class="newsletter-icon">🔔</div>
-      <div class="newsletter-title">Restez informé des nouveautés</div>
-      <div class="newsletter-subtitle">Prières chantées • Promesses bibliques • Confessions de foi</div>
+      <div class="newsletter-title" id="newsletterTitle">Restez informé des nouveautés</div>
+      <div class="newsletter-subtitle" id="newsletterSubtitle">Prières chantées • Promesses bibliques • Confessions de foi</div>
       <button class="newsletter-btn" onclick="openSubscribePopup()">
         <span class="icon">🔔</span>
-        <span>S'inscrire</span>
+        <span id="newsletterBtnText">S'inscrire</span>
       </button>
     </div>
 
@@ -1074,8 +1074,8 @@
         <!-- Écran formulaire -->
         <div id="subscribeForm">
           <div class="popup-icon">📧</div>
-          <h2 class="popup-title">Inscrivez-vous</h2>
-          <p class="popup-subtitle">Recevez les nouveautés : prières, promesses, confessions</p>
+          <h2 class="popup-title" id="popupFormTitle">Inscrivez-vous</h2>
+          <p class="popup-subtitle" id="popupFormSubtitle">Recevez les nouveautés : prières, promesses, confessions</p>
 
           <input
             type="email"
@@ -1086,15 +1086,15 @@
           >
           <div id="emailError" class="popup-error"></div>
 
-          <button class="popup-btn" onclick="submitEmail()">Envoyer</button>
+          <button class="popup-btn" id="popupSendBtn" onclick="submitEmail()">Envoyer</button>
         </div>
 
         <!-- Écran de remerciement -->
         <div id="thankYouScreen" style="display: none;">
           <div class="popup-icon">🎉</div>
-          <h2 class="popup-title">Merci !</h2>
-          <p class="popup-message">Vous êtes inscrit ! Vous recevrez bientôt des nouvelles de Bible Chantée.</p>
-          <button class="popup-btn" onclick="closeSubscribePopup()">Fermer</button>
+          <h2 class="popup-title" id="popupThankYouTitle">Merci !</h2>
+          <p class="popup-message" id="popupThankYouMsg">Vous êtes inscrit ! Vous recevrez bientôt des nouvelles de Bible Chantée.</p>
+          <button class="popup-btn" id="popupCloseBtn" onclick="closeSubscribePopup()">Fermer</button>
         </div>
       </div>
     </div>
@@ -1207,13 +1207,104 @@
   <script>
     // Traductions
     const translations = {
-      FR: { about: "À propos", aide: "Aide", news: "Nouveautés", radio: "Radio", promesses: "Promesses", confessions: "Confessions", prieres: "Prières", soutenir: "Soutenir", livre: "Livre", chapitre: "Chapitre", paroles: "Paroles", bible: "Bible", lecteur: "Lecteur", searchPlaceholder: "Comment vous sentez-vous ?" },
-      EN: { about: "About", aide: "Help", news: "What's New", radio: "Radio", promesses: "Promises", confessions: "Confessions", prieres: "Prayers", soutenir: "Support", livre: "Book", chapitre: "Chapter", paroles: "Lyrics", bible: "Bible", lecteur: "Player", searchPlaceholder: "How are you feeling?" },
-      PT: { about: "Sobre", aide: "Ajuda", news: "Novidades", radio: "Rádio", promesses: "Promessas", confessions: "Confissões", prieres: "Orações", soutenir: "Apoiar", livre: "Livro", chapitre: "Capítulo", paroles: "Letras", bible: "Bíblia", lecteur: "Leitor", searchPlaceholder: "Como você está se sentindo?" },
-      ES: { about: "Acerca de", aide: "Ayuda", news: "Novedades", radio: "Radio", promesses: "Promesas", confessions: "Confesiones", prieres: "Oraciones", soutenir: "Apoyar", livre: "Libro", chapitre: "Capítulo", paroles: "Letras", bible: "Biblia", lecteur: "Reproductor", searchPlaceholder: "¿Cómo te sientes?" },
-      DE: { about: "Über uns", aide: "Hilfe", news: "Neuigkeiten", radio: "Radio", promesses: "Verheißungen", confessions: "Bekenntnisse", prieres: "Gebete", soutenir: "Unterstützen", livre: "Buch", chapitre: "Kapitel", paroles: "Liedtext", bible: "Bibel", lecteur: "Spieler", searchPlaceholder: "Wie fühlen Sie sich?" },
-      IT: { about: "Chi siamo", aide: "Aiuto", news: "Novità", radio: "Radio", promesses: "Promesse", confessions: "Confessioni", prieres: "Preghiere", soutenir: "Sostieni", livre: "Libro", chapitre: "Capitolo", paroles: "Testo", bible: "Bibbia", lecteur: "Lettore", searchPlaceholder: "Come ti senti?" },
-      TL: { about: "Tungkol", aide: "Tulong", news: "Mga Bago", radio: "Radyo", promesses: "Pangako", confessions: "Pagtatapat", prieres: "Panalangin", soutenir: "Suportahan", livre: "Aklat", chapitre: "Kabanata", paroles: "Lyrics", bible: "Bibliya", lecteur: "Player", searchPlaceholder: "Paano ka nakakaramdam?" }
+      FR: { about: "À propos", aide: "Aide", news: "Nouveautés", radio: "Radio", promesses: "Promesses", confessions: "Confessions", prieres: "Prières", soutenir: "Soutenir", livre: "Livre", chapitre: "Chapitre", paroles: "Paroles", bible: "Bible", lecteur: "Lecteur", searchPlaceholder: "Comment vous sentez-vous ?",
+        newsletterTitle: "Restez informé des nouveautés",
+        newsletterSubtitle: "Prières chantées • Promesses bibliques • Confessions de foi",
+        newsletterBtn: "S'inscrire",
+        popupTitle: "Inscrivez-vous",
+        popupSubtitle: "Recevez les nouveautés : prières, promesses, confessions",
+        popupEmailPlaceholder: "Votre adresse email",
+        popupSendBtn: "Envoyer",
+        popupErrorEmpty: "Veuillez entrer votre adresse email",
+        popupErrorInvalid: "Veuillez entrer un email valide",
+        popupThankYouTitle: "Merci !",
+        popupThankYouMsg: "Vous êtes inscrit ! Vous recevrez bientôt des nouvelles de Bible Chantée.",
+        popupCloseBtn: "Fermer"
+      },
+      EN: { about: "About", aide: "Help", news: "What's New", radio: "Radio", promesses: "Promises", confessions: "Confessions", prieres: "Prayers", soutenir: "Support", livre: "Book", chapitre: "Chapter", paroles: "Lyrics", bible: "Bible", lecteur: "Player", searchPlaceholder: "How are you feeling?",
+        newsletterTitle: "Stay informed of new releases",
+        newsletterSubtitle: "Sung Prayers • Biblical Promises • Confessions of Faith",
+        newsletterBtn: "Subscribe",
+        popupTitle: "Subscribe",
+        popupSubtitle: "Receive updates: prayers, promises, confessions",
+        popupEmailPlaceholder: "Your email address",
+        popupSendBtn: "Send",
+        popupErrorEmpty: "Please enter your email address",
+        popupErrorInvalid: "Please enter a valid email",
+        popupThankYouTitle: "Thank you!",
+        popupThankYouMsg: "You're subscribed! You'll receive news from Bible Chantée soon.",
+        popupCloseBtn: "Close"
+      },
+      PT: { about: "Sobre", aide: "Ajuda", news: "Novidades", radio: "Rádio", promesses: "Promessas", confessions: "Confissões", prieres: "Orações", soutenir: "Apoiar", livre: "Livro", chapitre: "Capítulo", paroles: "Letras", bible: "Bíblia", lecteur: "Leitor", searchPlaceholder: "Como você está se sentindo?",
+        newsletterTitle: "Fique informado das novidades",
+        newsletterSubtitle: "Orações cantadas • Promessas bíblicas • Confissões de fé",
+        newsletterBtn: "Inscrever-se",
+        popupTitle: "Inscreva-se",
+        popupSubtitle: "Receba novidades: orações, promessas, confissões",
+        popupEmailPlaceholder: "Seu endereço de email",
+        popupSendBtn: "Enviar",
+        popupErrorEmpty: "Por favor insira seu email",
+        popupErrorInvalid: "Por favor insira um email válido",
+        popupThankYouTitle: "Obrigado!",
+        popupThankYouMsg: "Você está inscrito! Receberá notícias da Bible Chantée em breve.",
+        popupCloseBtn: "Fechar"
+      },
+      ES: { about: "Acerca de", aide: "Ayuda", news: "Novedades", radio: "Radio", promesses: "Promesas", confessions: "Confesiones", prieres: "Oraciones", soutenir: "Apoyar", livre: "Libro", chapitre: "Capítulo", paroles: "Letras", bible: "Biblia", lecteur: "Reproductor", searchPlaceholder: "¿Cómo te sientes?",
+        newsletterTitle: "Mantente informado de las novedades",
+        newsletterSubtitle: "Oraciones cantadas • Promesas bíblicas • Confesiones de fe",
+        newsletterBtn: "Suscribirse",
+        popupTitle: "Suscríbete",
+        popupSubtitle: "Recibe novedades: oraciones, promesas, confesiones",
+        popupEmailPlaceholder: "Tu dirección de correo",
+        popupSendBtn: "Enviar",
+        popupErrorEmpty: "Por favor ingresa tu email",
+        popupErrorInvalid: "Por favor ingresa un email válido",
+        popupThankYouTitle: "¡Gracias!",
+        popupThankYouMsg: "¡Estás suscrito! Recibirás noticias de Bible Chantée pronto.",
+        popupCloseBtn: "Cerrar"
+      },
+      DE: { about: "Über uns", aide: "Hilfe", news: "Neuigkeiten", radio: "Radio", promesses: "Verheißungen", confessions: "Bekenntnisse", prieres: "Gebete", soutenir: "Unterstützen", livre: "Buch", chapitre: "Kapitel", paroles: "Liedtext", bible: "Bibel", lecteur: "Spieler", searchPlaceholder: "Wie fühlen Sie sich?",
+        newsletterTitle: "Bleiben Sie über Neuigkeiten informiert",
+        newsletterSubtitle: "Gesungene Gebete • Biblische Verheißungen • Glaubensbekenntnisse",
+        newsletterBtn: "Anmelden",
+        popupTitle: "Anmelden",
+        popupSubtitle: "Erhalten Sie Neuigkeiten: Gebete, Verheißungen, Bekenntnisse",
+        popupEmailPlaceholder: "Ihre E-Mail-Adresse",
+        popupSendBtn: "Senden",
+        popupErrorEmpty: "Bitte geben Sie Ihre E-Mail ein",
+        popupErrorInvalid: "Bitte geben Sie eine gültige E-Mail ein",
+        popupThankYouTitle: "Danke!",
+        popupThankYouMsg: "Sie sind angemeldet! Sie erhalten bald Neuigkeiten von Bible Chantée.",
+        popupCloseBtn: "Schließen"
+      },
+      IT: { about: "Chi siamo", aide: "Aiuto", news: "Novità", radio: "Radio", promesses: "Promesse", confessions: "Confessioni", prieres: "Preghiere", soutenir: "Sostieni", livre: "Libro", chapitre: "Capitolo", paroles: "Testo", bible: "Bibbia", lecteur: "Lettore", searchPlaceholder: "Come ti senti?",
+        newsletterTitle: "Rimani informato sulle novità",
+        newsletterSubtitle: "Preghiere cantate • Promesse bibliche • Confessioni di fede",
+        newsletterBtn: "Iscriviti",
+        popupTitle: "Iscriviti",
+        popupSubtitle: "Ricevi novità: preghiere, promesse, confessioni",
+        popupEmailPlaceholder: "Il tuo indirizzo email",
+        popupSendBtn: "Invia",
+        popupErrorEmpty: "Inserisci il tuo email",
+        popupErrorInvalid: "Inserisci un email valido",
+        popupThankYouTitle: "Grazie!",
+        popupThankYouMsg: "Sei iscritto! Riceverai presto notizie da Bible Chantée.",
+        popupCloseBtn: "Chiudi"
+      },
+      TL: { about: "Tungkol", aide: "Tulong", news: "Mga Bago", radio: "Radyo", promesses: "Pangako", confessions: "Pagtatapat", prieres: "Panalangin", soutenir: "Suportahan", livre: "Aklat", chapitre: "Kabanata", paroles: "Lyrics", bible: "Bibliya", lecteur: "Player", searchPlaceholder: "Paano ka nakakaramdam?",
+        newsletterTitle: "Manatiling May Kaalaman sa Mga Bagong Balita",
+        newsletterSubtitle: "Mga Awit na Panalangin • Pangako sa Bibliya • Mga Pahayag ng Pananampalataya",
+        newsletterBtn: "Mag-subscribe",
+        popupTitle: "Mag-subscribe",
+        popupSubtitle: "Tumanggap ng balita: panalangin, pangako, pagtatapat",
+        popupEmailPlaceholder: "Iyong email address",
+        popupSendBtn: "Ipadala",
+        popupErrorEmpty: "Mangyaring ilagay ang iyong email",
+        popupErrorInvalid: "Mangyaring ilagay ang wastong email",
+        popupThankYouTitle: "Salamat!",
+        popupThankYouMsg: "Naka-subscribe ka na! Makakatanggap ka ng balita mula sa Bible Chantée.",
+        popupCloseBtn: "Isara"
+      }
     };
     
     let currentLang = 'FR';
@@ -1518,6 +1609,7 @@
 
         populateBooksDropdown(); // Repopulate with new language
         updateTranslations();
+        updateNewsletterTranslations(); // Traductions newsletter + popup
 
         // Recharger le chapitre actuel avec la nouvelle langue
         if (currentBook && currentChapter) {
@@ -1955,18 +2047,19 @@
       const emailInput = document.getElementById('emailInput');
       const emailError = document.getElementById('emailError');
       const email = emailInput.value.trim();
+      const t = translations[currentLang] || translations.FR;
 
       // Validation email basique
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
       if (!email) {
-        emailError.textContent = 'Veuillez entrer votre adresse email';
+        emailError.textContent = t.popupErrorEmpty;
         emailInput.focus();
         return;
       }
 
       if (!emailRegex.test(email)) {
-        emailError.textContent = 'Veuillez entrer un email valide';
+        emailError.textContent = t.popupErrorInvalid;
         emailInput.focus();
         return;
       }
@@ -1982,6 +2075,40 @@
 
       subscribeForm.style.display = 'none';
       thankYouScreen.style.display = 'block';
+    }
+
+    // Mettre à jour les traductions de la newsletter et du popup
+    function updateNewsletterTranslations() {
+      const t = translations[currentLang] || translations.FR;
+
+      // Section newsletter
+      const newsletterTitle = document.getElementById('newsletterTitle');
+      const newsletterSubtitle = document.getElementById('newsletterSubtitle');
+      const newsletterBtnText = document.getElementById('newsletterBtnText');
+
+      if (newsletterTitle) newsletterTitle.textContent = t.newsletterTitle;
+      if (newsletterSubtitle) newsletterSubtitle.textContent = t.newsletterSubtitle;
+      if (newsletterBtnText) newsletterBtnText.textContent = t.newsletterBtn;
+
+      // Popup formulaire
+      const popupFormTitle = document.getElementById('popupFormTitle');
+      const popupFormSubtitle = document.getElementById('popupFormSubtitle');
+      const emailInput = document.getElementById('emailInput');
+      const popupSendBtn = document.getElementById('popupSendBtn');
+
+      if (popupFormTitle) popupFormTitle.textContent = t.popupTitle;
+      if (popupFormSubtitle) popupFormSubtitle.textContent = t.popupSubtitle;
+      if (emailInput) emailInput.placeholder = t.popupEmailPlaceholder;
+      if (popupSendBtn) popupSendBtn.textContent = t.popupSendBtn;
+
+      // Popup remerciement
+      const popupThankYouTitle = document.getElementById('popupThankYouTitle');
+      const popupThankYouMsg = document.getElementById('popupThankYouMsg');
+      const popupCloseBtn = document.getElementById('popupCloseBtn');
+
+      if (popupThankYouTitle) popupThankYouTitle.textContent = t.popupThankYouTitle;
+      if (popupThankYouMsg) popupThankYouMsg.textContent = t.popupThankYouMsg;
+      if (popupCloseBtn) popupCloseBtn.textContent = t.popupCloseBtn;
     }
 
     // Fermer popup avec touche Escape
@@ -2088,6 +2215,9 @@
 
         // Charger les paroles initiales
         loadLyrics(bookCode, currentChapter, currentLang);
+
+        // Initialiser les traductions de la newsletter
+        updateNewsletterTranslations();
 
         // Event listener for chapter select change
         const chapterSelect = document.querySelector('#chapterSelect');
