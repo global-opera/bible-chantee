@@ -712,6 +712,43 @@
       background: transparent;
       border: none;
     }
+
+    /* Bouton Like (Cœur) */
+    .like-btn {
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .like-btn svg {
+      width: 24px;
+      height: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .like-btn:not(.liked) svg {
+      fill: none;
+      stroke: var(--or-moyen);
+      stroke-width: 2;
+    }
+
+    .like-btn.liked svg {
+      fill: #e74c3c;
+      stroke: #e74c3c;
+      stroke-width: 0;
+    }
+
+    .like-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .like-btn:active {
+      transform: scale(1.2);
+    }
     
     .share-icon {
       width: 40px;
@@ -1141,6 +1178,11 @@
                 <path d="M30 55 Q30 35 50 35 L50 25 L75 45 L50 65 L50 55 Q40 55 30 55 Z" fill="#F5CB42"/>
               </svg>
             </button>
+            <button class="control-btn like-btn" id="likeBtn" title="Ajouter aux favoris" onclick="toggleLike()">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            </button>
           </div>
         
         <!-- LECTEUR AUDIO (cachÃ©, contrÃ´lÃ© par UI) -->
@@ -1357,6 +1399,7 @@
       audioPlayer.play().catch(e => console.log('Lecture bloquée:', e));
       isPlaying = true;
       playBtn.textContent = '⏸';
+      updateLikeButton(); // Mettre à jour le bouton like
     }
 
     // Jouer chapitre suivant (pour autoplay)
@@ -2006,6 +2049,75 @@
       });
     }
 
+    // === SYSTÈME DE LIKE (FAVORIS CHAPITRES) ===
+
+    // Obtenir les chapitres likés depuis localStorage
+    function getLikedChapters() {
+      const stored = localStorage.getItem('likedChapters');
+      return stored ? JSON.parse(stored) : [];
+    }
+
+    // Sauvegarder les chapitres likés dans localStorage
+    function saveLikedChapters(likedChapters) {
+      localStorage.setItem('likedChapters', JSON.stringify(likedChapters));
+    }
+
+    // Vérifier si un chapitre est liké
+    function isChapterLiked(lang, book, chapter) {
+      const likedChapters = getLikedChapters();
+      return likedChapters.some(item =>
+        item.lang === lang &&
+        item.book === book &&
+        item.chapter === chapter
+      );
+    }
+
+    // Toggle like/unlike du chapitre actuel
+    function toggleLike() {
+      const likedChapters = getLikedChapters();
+      const currentChapterData = {
+        lang: currentLang,
+        book: currentBook,
+        chapter: currentChapter
+      };
+
+      // Vérifier si déjà liké
+      const index = likedChapters.findIndex(item =>
+        item.lang === currentChapterData.lang &&
+        item.book === currentChapterData.book &&
+        item.chapter === currentChapterData.chapter
+      );
+
+      if (index !== -1) {
+        // Déjà liké → retirer
+        likedChapters.splice(index, 1);
+        console.log('Chapitre unliké:', currentChapterData);
+      } else {
+        // Pas liké → ajouter
+        likedChapters.push(currentChapterData);
+        console.log('Chapitre liké:', currentChapterData);
+      }
+
+      saveLikedChapters(likedChapters);
+      updateLikeButton();
+    }
+
+    // Mettre à jour l'apparence du bouton like
+    function updateLikeButton() {
+      const likeBtn = document.getElementById('likeBtn');
+      if (!likeBtn) return;
+
+      const isLiked = isChapterLiked(currentLang, currentBook, currentChapter);
+
+      if (isLiked) {
+        likeBtn.classList.add('liked');
+        likeBtn.title = 'Retirer des favoris';
+      } else {
+        likeBtn.classList.remove('liked');
+        likeBtn.title = 'Ajouter aux favoris';
+      }
+    }
+
     // === POPUP INSCRIPTION EMAIL ===
 
     // Ouvrir le popup
@@ -2219,6 +2331,9 @@
         // Initialiser les traductions de la newsletter
         updateNewsletterTranslations();
 
+        // Initialiser le bouton like
+        updateLikeButton();
+
         // Event listener for chapter select change
         const chapterSelect = document.querySelector('#chapterSelect');
         if (chapterSelect) {
@@ -2248,6 +2363,8 @@
             if (document.querySelector('#bibleContent').style.display !== 'none') {
               loadBibleText(currentBook, currentChapter, currentLang);
             }
+            // Mettre à jour le bouton like
+            updateLikeButton();
           });
         }
       } catch (error) {
