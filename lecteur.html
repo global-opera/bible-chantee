@@ -172,6 +172,204 @@
       padding: 0 10px;
     }
 
+    /* === SECTION INSCRIPTION === */
+    .newsletter-section {
+      max-width: 585px;
+      margin: 20px auto 20px;
+      background: var(--bleu-cartes);
+      border-radius: 20px;
+      padding: 25px;
+      border: 1px solid rgba(245, 203, 66, 0.2);
+      text-align: center;
+    }
+
+    .newsletter-icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .newsletter-title {
+      font-size: 20px;
+      color: var(--or-moyen);
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .newsletter-subtitle {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .newsletter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 32px;
+      background: var(--or-moyen);
+      color: var(--bleu-nuit);
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(245, 203, 66, 0.3);
+    }
+
+    .newsletter-btn:hover {
+      background: var(--or-clair);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 203, 66, 0.4);
+    }
+
+    .newsletter-btn .icon {
+      font-size: 20px;
+    }
+
+    /* POPUP INSCRIPTION */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-overlay.active {
+      display: flex;
+    }
+
+    .popup-modal {
+      background: var(--bleu-cartes);
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      animation: popupSlide 0.3s ease;
+    }
+
+    @keyframes popupSlide {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      color: var(--or-moyen);
+      font-size: 28px;
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.2s ease;
+    }
+
+    .popup-close:hover {
+      background: rgba(245, 203, 66, 0.1);
+      transform: rotate(90deg);
+    }
+
+    .popup-icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .popup-title {
+      color: var(--or-moyen);
+      font-size: 24px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .popup-subtitle {
+      color: var(--texte-secondaire);
+      font-size: 14px;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+
+    .popup-message {
+      color: var(--texte-principal);
+      font-size: 16px;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .popup-input {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid rgba(245, 203, 66, 0.3);
+      background: var(--bleu-sombre);
+      color: var(--texte-principal);
+      font-size: 16px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+
+    .popup-input:focus {
+      outline: none;
+      border-color: var(--or-moyen);
+      box-shadow: 0 0 0 3px rgba(245, 203, 66, 0.1);
+    }
+
+    .popup-input::placeholder {
+      color: var(--texte-secondaire);
+    }
+
+    .popup-error {
+      color: #ff6b6b;
+      font-size: 13px;
+      margin-bottom: 15px;
+      min-height: 18px;
+      text-align: left;
+      padding-left: 5px;
+    }
+
+    .popup-btn {
+      width: 100%;
+      padding: 15px;
+      background: var(--or-moyen);
+      color: var(--bleu-nuit);
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(245, 203, 66, 0.3);
+    }
+
+    .popup-btn:hover {
+      background: var(--or-clair);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 203, 66, 0.4);
+    }
+
     .result-card {
       background: var(--bleu-cartes);
       border: 1px solid rgba(245, 203, 66, 0.2);
@@ -723,6 +921,25 @@
         font-size: 12px;
         padding: 10px 12px;
       }
+      /* Newsletter section responsive */
+      .newsletter-section {
+        max-width: 420px;
+        padding: 20px 15px;
+        margin: 15px auto;
+      }
+      .newsletter-icon {
+        font-size: 36px;
+      }
+      .newsletter-title {
+        font-size: 18px;
+      }
+      .newsletter-subtitle {
+        font-size: 13px;
+      }
+      .newsletter-btn {
+        padding: 10px 24px;
+        font-size: 14px;
+      }
     }
     .autoplay-btn.active {
       background: rgba(245, 203, 66, 0.2);
@@ -835,6 +1052,50 @@
 
     <!-- RÉSULTATS DE RECHERCHE -->
     <div id="searchResults" class="search-results"></div>
+
+    <!-- SECTION INSCRIPTION NOUVEAUTÉS -->
+    <div class="newsletter-section">
+      <div class="newsletter-icon">🔔</div>
+      <div class="newsletter-title">Restez informé des nouveautés</div>
+      <div class="newsletter-subtitle">Prières chantées • Promesses bibliques • Confessions de foi</div>
+      <button class="newsletter-btn" onclick="openSubscribePopup()">
+        <span class="icon">🔔</span>
+        <span>S'inscrire</span>
+      </button>
+    </div>
+
+    <!-- POPUP INSCRIPTION EMAIL -->
+    <div class="popup-overlay" id="subscribePopup" onclick="closePopupOnOverlay(event)">
+      <div class="popup-modal">
+        <button class="popup-close" onclick="closeSubscribePopup()">&times;</button>
+
+        <!-- Écran formulaire -->
+        <div id="subscribeForm">
+          <div class="popup-icon">📧</div>
+          <h2 class="popup-title">Inscrivez-vous</h2>
+          <p class="popup-subtitle">Recevez les nouveautés : prières, promesses, confessions</p>
+
+          <input
+            type="email"
+            id="emailInput"
+            class="popup-input"
+            placeholder="Votre adresse email"
+            onkeypress="if(event.key==='Enter') submitEmail()"
+          >
+          <div id="emailError" class="popup-error"></div>
+
+          <button class="popup-btn" onclick="submitEmail()">Envoyer</button>
+        </div>
+
+        <!-- Écran de remerciement -->
+        <div id="thankYouScreen" style="display: none;">
+          <div class="popup-icon">🎉</div>
+          <h2 class="popup-title">Merci !</h2>
+          <p class="popup-message">Vous êtes inscrit ! Vous recevrez bientôt des nouvelles de Bible Chantée.</p>
+          <button class="popup-btn" onclick="closeSubscribePopup()">Fermer</button>
+        </div>
+      </div>
+    </div>
 
     <!-- HEADER -->
     <div class="header">
@@ -1650,6 +1911,86 @@
           : 'Lecture continue';
       });
     }
+
+    // === POPUP INSCRIPTION EMAIL ===
+
+    // Ouvrir le popup
+    function openSubscribePopup() {
+      const popup = document.getElementById('subscribePopup');
+      const emailInput = document.getElementById('emailInput');
+      const emailError = document.getElementById('emailError');
+      const subscribeForm = document.getElementById('subscribeForm');
+      const thankYouScreen = document.getElementById('thankYouScreen');
+
+      // Réinitialiser le popup
+      subscribeForm.style.display = 'block';
+      thankYouScreen.style.display = 'none';
+      emailInput.value = '';
+      emailError.textContent = '';
+
+      // Afficher le popup
+      popup.classList.add('active');
+
+      // Focus sur l'input après animation
+      setTimeout(() => emailInput.focus(), 300);
+    }
+
+    // Fermer le popup
+    function closeSubscribePopup() {
+      const popup = document.getElementById('subscribePopup');
+      popup.classList.remove('active');
+    }
+
+    // Fermer si clic sur l'overlay (pas sur le modal)
+    function closePopupOnOverlay(event) {
+      if (event.target.id === 'subscribePopup') {
+        closeSubscribePopup();
+      }
+    }
+
+    // Validation et soumission email
+    function submitEmail() {
+      const emailInput = document.getElementById('emailInput');
+      const emailError = document.getElementById('emailError');
+      const email = emailInput.value.trim();
+
+      // Validation email basique
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!email) {
+        emailError.textContent = 'Veuillez entrer votre adresse email';
+        emailInput.focus();
+        return;
+      }
+
+      if (!emailRegex.test(email)) {
+        emailError.textContent = 'Veuillez entrer un email valide';
+        emailInput.focus();
+        return;
+      }
+
+      // Email valide - enregistrer et afficher remerciement
+      console.log('Email inscrit:', email);
+      localStorage.setItem('subscribedEmail', email);
+      localStorage.setItem('subscriptionDate', new Date().toISOString());
+
+      // Afficher écran de remerciement
+      const subscribeForm = document.getElementById('subscribeForm');
+      const thankYouScreen = document.getElementById('thankYouScreen');
+
+      subscribeForm.style.display = 'none';
+      thankYouScreen.style.display = 'block';
+    }
+
+    // Fermer popup avec touche Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const popup = document.getElementById('subscribePopup');
+        if (popup && popup.classList.contains('active')) {
+          closeSubscribePopup();
+        }
+      }
+    });
 
     // Initialisation: populate dropdowns et mettre à jour le sous-titre
     (function initialize() {
