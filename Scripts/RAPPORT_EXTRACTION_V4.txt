@@ -1,0 +1,213 @@
+================================================================================
+RAPPORT D'EXTRACTION V4 - ULTRA-ROBUSTE
+Bible Chantee - Titres de chapitres
+================================================================================
+
+
+[FR] STATISTIQUES
+----------------------------------------
+Total chapitres:    922
+Titres extraits:    922 (100.0%)
+Format A (standard): 920
+Format B (apres LYRICS): 0
+Format C (force): 2
+Vides:              0
+Placeholders:       0
+
+[EN] STATISTIQUES
+----------------------------------------
+Total chapitres:    922
+Titres extraits:    644 (69.8%)
+Format A (standard): 628
+Format B (apres LYRICS): 16
+Format C (force): 0
+Vides:              0
+Placeholders:       278
+
+Chapitres avec placeholders (278):
+  - 31_OBA 1 (PLACEHOLDER)
+  - 30_AMO 6 (PLACEHOLDER)
+  - 30_AMO 8 (PLACEHOLDER)
+  - 30_AMO 5 (PLACEHOLDER)
+  - 30_AMO 2 (PLACEHOLDER)
+  - 30_AMO 4 (PLACEHOLDER)
+  - 30_AMO 3 (PLACEHOLDER)
+  - 30_AMO 7 (PLACEHOLDER)
+  - 41_MRK 15 (PLACEHOLDER)
+  - 41_MRK 13 (PLACEHOLDER)
+  - 41_MRK 16 (PLACEHOLDER)
+  - 41_MRK 1 (PLACEHOLDER)
+  - 41_MRK 6 (PLACEHOLDER)
+  - 19_PSA 118 (PLACEHOLDER)
+  - 19_PSA 47 (PLACEHOLDER)
+  - 19_PSA 100 (PLACEHOLDER)
+  - 19_PSA 96 (PLACEHOLDER)
+  - 19_PSA 67 (PLACEHOLDER)
+  - 19_PSA 19 (PLACEHOLDER)
+  - 19_PSA 48 (PLACEHOLDER)
+  ... et 258 autres
+
+[PT] STATISTIQUES
+----------------------------------------
+Total chapitres:    922
+Titres extraits:    649 (70.4%)
+Format A (standard): 634
+Format B (apres LYRICS): 0
+Format C (force): 15
+Vides:              0
+Placeholders:       273
+
+Chapitres avec placeholders (273):
+  - 31_OBA 1 (PLACEHOLDER)
+  - 30_AMO 5 (PLACEHOLDER)
+  - 30_AMO 4 (PLACEHOLDER)
+  - 41_MRK 11 (PLACEHOLDER)
+  - 41_MRK 10 (PLACEHOLDER)
+  - 41_MRK 7 (PLACEHOLDER)
+  - 41_MRK 8 (PLACEHOLDER)
+  - 41_MRK 12 (PLACEHOLDER)
+  - 41_MRK 9 (PLACEHOLDER)
+  - 41_MRK 13 (PLACEHOLDER)
+  - 41_MRK 2 (PLACEHOLDER)
+  - 41_MRK 5 (PLACEHOLDER)
+  - 41_MRK 1 (PLACEHOLDER)
+  - 41_MRK 4 (PLACEHOLDER)
+  - 41_MRK 14 (PLACEHOLDER)
+  - 41_MRK 6 (PLACEHOLDER)
+  - 19_PSA 9 (PLACEHOLDER)
+  - 19_PSA 140 (PLACEHOLDER)
+  - 19_PSA 50 (PLACEHOLDER)
+  - 19_PSA 18 (PLACEHOLDER)
+  ... et 253 autres
+
+[ES] STATISTIQUES
+----------------------------------------
+Total chapitres:    922
+Titres extraits:    861 (93.4%)
+Format A (standard): 857
+Format B (apres LYRICS): 0
+Format C (force): 4
+Vides:              0
+Placeholders:       61
+
+Chapitres avec placeholders (61):
+  - 30_AMO 2 (PLACEHOLDER)
+  - 41_MRK 10 (PLACEHOLDER)
+  - 41_MRK 13 (PLACEHOLDER)
+  - 41_MRK 5 (PLACEHOLDER)
+  - 41_MRK 4 (PLACEHOLDER)
+  - 41_MRK 6 (PLACEHOLDER)
+  - 19_PSA 115 (PLACEHOLDER)
+  - 19_PSA 134 (PLACEHOLDER)
+  - 23_ISA 51 (PLACEHOLDER)
+  - 12_2KI 25 (PLACEHOLDER)
+  - 12_2KI 17 (PLACEHOLDER)
+  - 12_2KI 2 (PLACEHOLDER)
+  - 12_2KI 23 (PLACEHOLDER)
+  - 27_DAN 6 (PLACEHOLDER)
+  - 27_DAN 3 (PLACEHOLDER)
+  - 42_LUK 12 (PLACEHOLDER)
+  - 42_LUK 9 (PLACEHOLDER)
+  - 42_LUK 22 (PLACEHOLDER)
+  - 42_LUK 5 (PLACEHOLDER)
+  - 42_LUK 1 (PLACEHOLDER)
+  ... et 41 autres
+
+[DE] STATISTIQUES
+----------------------------------------
+Total chapitres:    922
+Titres extraits:    780 (84.6%)
+Format A (standard): 780
+Format B (apres LYRICS): 0
+Format C (force): 0
+Vides:              0
+Placeholders:       142
+
+Chapitres avec placeholders (142):
+  - 30_AMO 6 (PLACEHOLDER)
+  - 41_MRK 12 (PLACEHOLDER)
+  - 41_MRK 15 (PLACEHOLDER)
+  - 41_MRK 5 (PLACEHOLDER)
+  - 41_MRK 1 (PLACEHOLDER)
+  - 41_MRK 14 (PLACEHOLDER)
+  - 41_MRK 6 (PLACEHOLDER)
+  - 19_PSA 119 (PLACEHOLDER)
+  - 19_PSA 49 (PLACEHOLDER)
+  - 19_PSA 77 (PLACEHOLDER)
+  - 19_PSA 18 (PLACEHOLDER)
+  - 19_PSA 89 (PLACEHOLDER)
+  - 19_PSA 68 (PLACEHOLDER)
+  - 19_PSA 56 (PLACEHOLDER)
+  - 19_PSA 22 (PLACEHOLDER)
+  - 19_PSA 59 (PLACEHOLDER)
+  - 23_ISA 30 (PLACEHOLDER)
+  - 23_ISA 37 (PLACEHOLDER)
+  - 23_ISA 36 (PLACEHOLDER)
+  - 23_ISA 28 (PLACEHOLDER)
+  ... et 122 autres
+
+[IT] STATISTIQUES
+----------------------------------------
+Total chapitres:    922
+Titres extraits:    460 (49.9%)
+Format A (standard): 437
+Format B (apres LYRICS): 0
+Format C (force): 23
+Vides:              0
+Placeholders:       462
+
+Chapitres avec placeholders (462):
+  - 31_OBA 1 (PLACEHOLDER)
+  - 30_AMO 6 (PLACEHOLDER)
+  - 30_AMO 5 (PLACEHOLDER)
+  - 30_AMO 4 (PLACEHOLDER)
+  - 30_AMO 7 (PLACEHOLDER)
+  - 30_AMO 1 (PLACEHOLDER)
+  - 30_AMO 9 (PLACEHOLDER)
+  - 41_MRK 7 (PLACEHOLDER)
+  - 41_MRK 12 (PLACEHOLDER)
+  - 41_MRK 9 (PLACEHOLDER)
+  - 41_MRK 15 (PLACEHOLDER)
+  - 41_MRK 3 (PLACEHOLDER)
+  - 41_MRK 2 (PLACEHOLDER)
+  - 41_MRK 5 (PLACEHOLDER)
+  - 41_MRK 4 (PLACEHOLDER)
+  - 41_MRK 14 (PLACEHOLDER)
+  - 41_MRK 6 (PLACEHOLDER)
+  - 19_PSA 47 (PLACEHOLDER)
+  - 19_PSA 119 (PLACEHOLDER)
+  - 19_PSA 106 (PLACEHOLDER)
+  ... et 442 autres
+
+[TL] STATISTIQUES
+----------------------------------------
+Total chapitres:    922
+Titres extraits:    729 (79.1%)
+Format A (standard): 729
+Format B (apres LYRICS): 0
+Format C (force): 0
+Vides:              0
+Placeholders:       193
+
+Chapitres avec placeholders (193):
+  - 41_MRK 11 (PLACEHOLDER)
+  - 41_MRK 10 (PLACEHOLDER)
+  - 41_MRK 8 (PLACEHOLDER)
+  - 41_MRK 15 (PLACEHOLDER)
+  - 41_MRK 3 (PLACEHOLDER)
+  - 41_MRK 16 (PLACEHOLDER)
+  - 41_MRK 1 (PLACEHOLDER)
+  - 41_MRK 6 (PLACEHOLDER)
+  - 19_PSA 119 (PLACEHOLDER)
+  - 19_PSA 83 (PLACEHOLDER)
+  - 19_PSA 74 (PLACEHOLDER)
+  - 19_PSA 28 (PLACEHOLDER)
+  - 19_PSA 127 (PLACEHOLDER)
+  - 23_ISA 30 (PLACEHOLDER)
+  - 23_ISA 41 (PLACEHOLDER)
+  - 23_ISA 1 (PLACEHOLDER)
+  - 23_ISA 42 (PLACEHOLDER)
+  - 23_ISA 37 (PLACEHOLDER)
+  - 23_ISA 22 (PLACEHOLDER)
+  - 23_ISA 43 (PLACEHOLDER)
+  ... et 173 autres
