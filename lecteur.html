@@ -1661,6 +1661,7 @@
         localStorage.setItem('bc_lang', currentLang);
 
         populateBooksDropdown(); // Repopulate with new language
+        populateChaptersSelect(currentBook); // Repopulate chapters with new language
         updateTranslations();
         updateNewsletterTranslations(); // Traductions newsletter + popup
 
