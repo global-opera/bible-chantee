@@ -1369,9 +1369,13 @@
           CHAPTER_TITLES[lang] &&
           CHAPTER_TITLES[lang][book] &&
           CHAPTER_TITLES[lang][book][chapter]) {
-        return CHAPTER_TITLES[lang][book][chapter];
+        const title = CHAPTER_TITLES[lang][book][chapter];
+        // Filtrer les placeholders "[LYRICS]" et titres invalides
+        if (title && title !== '[LYRICS]' && !title.startsWith('[LYRICS]')) {
+          return title;
+        }
       }
-      return ''; // Pas de titre trouvé
+      return ''; // Pas de titre trouvé ou titre invalide
     }
 
     // Audio Player
