@@ -1706,12 +1706,14 @@
         }
       }
 
-      // Mettre à jour les paroles si on est en mode paroles
-      if (document.querySelector('#lyricsContent').style.display !== 'none') {
+      // Mettre à jour le titre du contenu (Paroles ou Bible)
+      const lyricsVisible = document.querySelector('#lyricsContent').style.display !== 'none';
+      const bibleVisible = document.querySelector('#bibleContent').style.display !== 'none';
+      if (lyricsVisible) {
+        document.querySelector('#contentTitle').textContent = t.paroles;
         loadLyrics(currentBook, currentChapter, currentLang);
-      }
-      // Mettre à jour le texte de la Bible si on est en mode Bible
-      if (document.querySelector('#bibleContent').style.display !== 'none') {
+      } else if (bibleVisible) {
+        document.querySelector('#contentTitle').textContent = t.bible;
         loadBibleText(currentBook, currentChapter, currentLang);
       }
     }
@@ -2330,6 +2332,9 @@
 
         // Initialiser les traductions de la newsletter
         updateNewsletterTranslations();
+
+        // Initialiser les traductions de l'interface (labels, boutons, etc.)
+        updateTranslations();
 
         // Initialiser le bouton like
         updateLikeButton();
