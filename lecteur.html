@@ -1365,6 +1365,11 @@
 
     // Helper: Obtenir titre du chapitre depuis CHAPTER_TITLES
     function getChapterTitle(book, chapter, lang) {
+      // Afficher les titres UNIQUEMENT en français (les autres langues ne sont pas complètes)
+      if (lang !== 'FR') {
+        return ''; // Pas de titre pour les langues autres que FR
+      }
+
       if (typeof CHAPTER_TITLES !== 'undefined' &&
           CHAPTER_TITLES[lang] &&
           CHAPTER_TITLES[lang][book] &&
