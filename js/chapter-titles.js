@@ -7591,7 +7591,7 @@ window.CHAPTER_TITLES = {
       "1": "Liwanag ng Buhay",
       "2": "[LUMALAKAD SA LIWANAG]",
       "3": "Pag-ibig ng Ama",
-      "4": ",
+      "4": "",
       "5": "Sa Kanya'y Buhay",
     },
     "63": {
