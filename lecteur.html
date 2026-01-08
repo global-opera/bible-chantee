@@ -1688,18 +1688,21 @@
     function updateTranslations() {
       const t = translations[currentLang] || translations.FR;
       document.querySelector('#navAbout .text').textContent = t.about;
+      document.querySelector('#navAbout').href = 'about.html?lang=' + currentLang;
       document.querySelector('#navAide .text').textContent = t.aide;
+      document.querySelector('#navAide').href = 'aide.html?lang=' + currentLang;
       document.querySelector('#navNews .text').textContent = t.news;
+      document.querySelector('#navNews').href = 'nouveautes.html?lang=' + currentLang;
       document.querySelector('#navRadio .text').textContent = t.radio;
+      // navRadio est un button (mode radio intégré), pas de .href
       document.querySelector('#navPromesses .text').textContent = t.promesses;
       document.querySelector('#navPromesses').href = 'promesses.html?lang=' + currentLang;
       document.querySelector('#navConfessions .text').textContent = t.confessions;
       document.querySelector('#navConfessions').href = 'confessions.html?lang=' + currentLang;
-      document.querySelector('#navAbout').href = 'about.html?lang=' + currentLang;
-      document.querySelector('#navAide').href = 'aide.html?lang=' + currentLang;
-      document.querySelector('#navNews').href = 'nouveautes.html?lang=' + currentLang;
       document.querySelector('#navPrieres .text').textContent = t.prieres;
+      document.querySelector('#navPrieres').href = 'prieres.html?lang=' + currentLang;
       document.querySelector('#navSoutenir .text').textContent = t.soutenir;
+      document.querySelector('#navSoutenir').href = 'crowdfunding.html?lang=' + currentLang;
       document.querySelector('#labelLivre').textContent = t.livre;
       document.querySelector('#labelChapitre').textContent = t.chapitre;
       document.querySelector('#toggleLyrics').innerHTML = '🎤 ' + t.paroles;
