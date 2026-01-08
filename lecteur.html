@@ -1365,12 +1365,12 @@
 
     // Helper: Obtenir titre du chapitre depuis CHAPTER_TITLES
     function getChapterTitle(book, chapter, lang) {
-      // Maintenant tous les titres sont disponibles dans toutes les langues !
+      const bookNum = book.split('_')[0];
       if (typeof CHAPTER_TITLES !== 'undefined' &&
           CHAPTER_TITLES[lang] &&
-          CHAPTER_TITLES[lang][book] &&
-          CHAPTER_TITLES[lang][book][chapter]) {
-        const title = CHAPTER_TITLES[lang][book][chapter];
+          CHAPTER_TITLES[lang][bookNum] &&
+          CHAPTER_TITLES[lang][bookNum][chapter]) {
+        const title = CHAPTER_TITLES[lang][bookNum][chapter];
         // Filtrer les placeholders "[LYRICS]" et titres invalides
         if (title && title !== '[LYRICS]' && !title.startsWith('[LYRICS]')) {
           return title;
