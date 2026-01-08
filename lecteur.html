@@ -1707,12 +1707,12 @@
       }
 
       // Mettre à jour le titre du contenu (Paroles ou Bible)
-      const lyricsVisible = document.querySelector('#lyricsContent').style.display !== 'none';
-      const bibleVisible = document.querySelector('#bibleContent').style.display !== 'none';
-      if (lyricsVisible) {
+      // Vérifier quel bouton est actif (plus fiable que style.display)
+      const lyricsActive = document.querySelector('#toggleLyrics').classList.contains('active');
+      if (lyricsActive) {
         document.querySelector('#contentTitle').textContent = t.paroles;
         loadLyrics(currentBook, currentChapter, currentLang);
-      } else if (bibleVisible) {
+      } else {
         document.querySelector('#contentTitle').textContent = t.bible;
         loadBibleText(currentBook, currentChapter, currentLang);
       }
@@ -1906,18 +1906,20 @@
 
     // Toggle Paroles/Bible
     document.querySelector('#toggleLyrics').addEventListener('click', () => {
+      const t = translations[currentLang] || translations.FR;
       document.querySelector('#toggleLyrics').classList.add('active');
       document.querySelector('#toggleBible').classList.remove('active');
-      document.querySelector('#contentTitle').textContent = translations[currentLang].paroles;
+      document.querySelector('#contentTitle').textContent = t.paroles;
       // Afficher paroles, masquer Bible
       document.querySelector('#lyricsContent').style.display = 'block';
       document.querySelector('#bibleContent').style.display = 'none';
     });
 
     document.querySelector('#toggleBible').addEventListener('click', () => {
+      const t = translations[currentLang] || translations.FR;
       document.querySelector('#toggleBible').classList.add('active');
       document.querySelector('#toggleLyrics').classList.remove('active');
-      document.querySelector('#contentTitle').textContent = translations[currentLang].bible;
+      document.querySelector('#contentTitle').textContent = t.bible;
       // Afficher Bible, masquer paroles
       document.querySelector('#lyricsContent').style.display = 'none';
       document.querySelector('#bibleContent').style.display = 'block';
