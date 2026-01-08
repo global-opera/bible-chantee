@@ -2248,11 +2248,26 @@
 
         console.log('Lecteur initialize:', { urlBook, urlChapter, urlLang, fullUrl: window.location.href });
 
-        // Set language from URL if provided
+        // Set language from URL if provided, otherwise from localStorage
         if (urlLang) {
           currentLang = urlLang.toUpperCase();
           localStorage.setItem('bc_lang', currentLang);
+        } else {
+          // Lire la langue sauvegardée depuis localStorage
+          const savedLang = localStorage.getItem('bc_lang');
+          if (savedLang) {
+            currentLang = savedLang;
+          }
         }
+
+        // Mettre à jour le drapeau actif visuellement
+        document.querySelectorAll('.flag-btn').forEach(btn => {
+          if (btn.dataset.lang === currentLang) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
 
         // Populate books dropdown first
         populateBooksDropdown();
