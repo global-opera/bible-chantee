@@ -14,18 +14,15 @@ function cleanLine(s) {
   if (!s) return null;
   s = String(s).replace(/\r/g, "").trim();
 
-  // retirer marqueurs / wrappers fréquents
   s = s.replace(/^#+\s*/, "");
   s = s.replace(/\[(TITLE|LYRICS|STYLE)\]/gi, "").trim();
   s = s.replace(/^(TITRE|TITLE|T[IÍ]TULO|TITEL|TITOLO)\s*:\s*/i, "").trim();
 
-  // retirer italique markdown
   s = s.replace(/^\*+/, "").replace(/\*+$/, "").trim();
 
   // retirer tags type [Verse 1]
   s = s.replace(/^\[(verse|chorus|bridge|pre-chorus|refrain)\s*\d*\]\s*/i, "").trim();
 
-  // ligne inutile?
   if (!s) return null;
   if (/^\[?lyrics\]?$/i.test(s)) return null;
   if (/^\[?title\]?$/i.test(s)) return null;
@@ -44,7 +41,7 @@ function extractBestTitleFromLyricsBlock(txt) {
     if (/^\[title\]$/i.test(lines[i])) {
       for (let j = i + 1; j < Math.min(i + 10, lines.length); j++) {
         const cand = cleanLine(lines[j]);
-        if (cand && !/^verse\s*\d+$/i.test(cand)) return cand;
+        if (cand && !/^verse\s*\d+[\s:.\-]*$/i.test(cand)) return cand;
       }
     }
   }
@@ -54,27 +51,27 @@ function extractBestTitleFromLyricsBlock(txt) {
     const m = ln.match(/^#+\s*(TITRE|TITLE)\s*:?\s*(.+)$/i);
     if (m) {
       const cand = cleanLine(m[2]);
-      if (cand && !/^verse\s*\d+$/i.test(cand)) return cand;
+      if (cand && !/^verse\s*\d+[\s:.\-]*$/i.test(cand)) return cand;
     }
   }
 
-  // 3) première ligne utile après [LYRICS] (en sautant Verse/Chorus/Bridge)
+  // 3) première ligne utile après [LYRICS]
   for (let i = 0; i < lines.length; i++) {
     if (/^\[lyrics\]$/i.test(lines[i])) {
-      for (let j = i + 1; j < Math.min(i + 60, lines.length); j++) {
+      for (let j = i + 1; j < Math.min(i + 80, lines.length); j++) {
         const cand = cleanLine(lines[j]);
         if (!cand) continue;
         if (/^(verse|chorus|bridge|pre-chorus|refrain)\s*\d*:?$/i.test(cand)) continue;
-        if (/^verse\s*\d+$/i.test(cand)) continue;
+        if (/^verse\s*\d+[\s:.\-]*$/i.test(cand)) continue;
         return cand;
       }
     }
   }
 
-  // 4) fallback ultime : première ligne utile du fichier
+  // 4) fallback ultime
   for (const ln of lines) {
     const cand = cleanLine(ln);
-    if (cand && !/^verse\s*\d+$/i.test(cand)) return cand;
+    if (cand && !/^verse\s*\d+[\s:.\-]*$/i.test(cand)) return cand;
   }
 
   return null;
@@ -83,15 +80,13 @@ function extractBestTitleFromLyricsBlock(txt) {
 function main() {
   const { ctFile, T } = loadChapterTitles();
 
-  // Charger lyrics EN
   const lf = "lyrics/EN.json";
   if (!fs.existsSync(lf)) {
-    console.error("FAIL — lyrics/EN.json introuvable. Abandon.");
+    console.error("FAIL — lyrics/EN.json introuvable.");
     process.exit(2);
   }
   const data = JSON.parse(fs.readFileSync(lf, "utf8"));
 
-  // index book key par "01_", "02_", ...
   const bookKeyByNum = {};
   for (const k of Object.keys(data)) {
     const bn = k.split("_")[0];
@@ -102,14 +97,16 @@ function main() {
   let cleanedSuffix = 0;
   let couldNot = 0;
 
-  const rxVerseOnly = /^verse\s*\d+\s*:?\s*$/i;
-  const rxTail = /\s*-\s*(?:\(|\[)?\s*verse\s*\d+\s*(?:\)|\])?\s*:?\s*$/i;
+  // ✅ accepte "Verse 1", "Verse 1:", "Verse 1 -", "Verse 1."
+  const rxVerseOnly = /^verse\s*\d+[\s:.\-]*$/i;
+
+  // ✅ enlève suffixes "- (verse 1)" "- verse 1:" "[verse 1]" etc.
+  const rxTail = /\s*-\s*(?:\(|\[)?\s*verse\s*\d+\s*(?:\)|\])?\s*[:.\-]*\s*$/i;
 
   for (const b in T.EN) {
     for (const ch in T.EN[b]) {
       const before = String(T.EN[b][ch] ?? "").trim();
 
-      // 1) enlever suffixe "- Verse X"
       const noSuffix = before.replace(rxTail, "").trim();
       if (noSuffix !== before) {
         T.EN[b][ch] = noSuffix;
@@ -118,7 +115,6 @@ function main() {
 
       const cur = String(T.EN[b][ch] ?? "").trim();
 
-      // 2) si titre = "Verse X" => remplacer depuis lyrics
       if (rxVerseOnly.test(cur)) {
         const key = bookKeyByNum[b];
         if (!key || !data[key] || !data[key][ch]) { couldNot++; continue; }
@@ -132,14 +128,13 @@ function main() {
 
   fs.writeFileSync(ctFile, "window.CHAPTER_TITLES = " + JSON.stringify(T, null, 2) + ";", "utf8");
 
-  // Audit EN
   let remaining = 0;
   const samples = [];
   for (const b in T.EN) for (const ch in T.EN[b]) {
     const v = String(T.EN[b][ch] ?? "");
     if (rxVerseOnly.test(v) || rxTail.test(v)) {
       remaining++;
-      if (samples.length < 10) samples.push(["EN", b, ch, v]);
+      if (samples.length < 12) samples.push(["EN", b, ch, v]);
     }
   }
 
@@ -149,7 +144,6 @@ function main() {
     console.log("SAMPLES:");
     for (const s of samples) console.log("BAD", ...s);
   }
-
   if (remaining !== 0) process.exit(3);
 }
 
