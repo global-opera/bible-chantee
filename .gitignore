@@ -134,3 +134,5 @@ sections-promesses.js.bak*
 # CSV / exports divers
 ########################################
 query-results.csv
+tools/fix_3_fallbacks.js
+tools/fix_chapter_titles.js
