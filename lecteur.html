@@ -1620,6 +1620,7 @@
 
       chapterSelect.innerHTML = '';
 
+      const t = translations[currentLang] || translations.FR;
       for (let i = 1; i <= numChapters; i++) {
         const option = document.createElement('option');
         option.value = i;
@@ -1627,8 +1628,8 @@
         const chapterTitle = getChapterTitle(bookCode, i.toString(), currentLang);
         const chapterPadded = String(i).padStart(2, '0');
         option.textContent = chapterTitle
-          ? `Ch.${chapterPadded} - ${chapterTitle}`
-          : `Chapitre ${i}`;
+          ? `${t.chapitre} ${chapterPadded} - ${chapterTitle}`
+          : `${t.chapitre} ${i}`;
 
         chapterSelect.appendChild(option);
       }
