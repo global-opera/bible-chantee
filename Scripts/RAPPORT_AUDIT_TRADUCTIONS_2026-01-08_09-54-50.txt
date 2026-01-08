@@ -1,0 +1,1974 @@
+================================================================================
+RAPPORT D'AUDIT - TRADUCTIONS DES TITRES DE CHAPITRES
+Bible Chantée - 2026-01-08 09:54:50
+================================================================================
+
+LANGUES VÉRIFIÉES: 7
+TOTAL ATTENDU: 1189 chapitres par langue
+
+================================================================================
+RÉSUMÉ PAR LANGUE
+================================================================================
+
+[X] FR: ANOMALIES
+   Chapitres: 922/1189
+   Manquants: 267 chapitres
+
+[X] EN: ANOMALIES
+   Chapitres: 922/1189
+   Manquants: 267 chapitres
+   Titres suspects: 1
+
+[X] PT: ANOMALIES
+   Chapitres: 922/1189
+   Manquants: 267 chapitres
+
+[X] ES: ANOMALIES
+   Chapitres: 922/1189
+   Manquants: 267 chapitres
+
+[X] DE: ANOMALIES
+   Chapitres: 922/1189
+   Manquants: 267 chapitres
+   Titres suspects: 1
+
+[X] IT: ANOMALIES
+   Chapitres: 922/1189
+   Manquants: 267 chapitres
+   Titres manquants: 4
+
+[X] TL: ANOMALIES
+   Chapitres: 922/1189
+   Manquants: 267 chapitres
+   Titres manquants: 3
+
+
+================================================================================
+DÉTAILS DES ANOMALIES
+================================================================================
+
+
+--- FR ---
+
+CHAPITRES MANQUANTS (267):
+  - Genèse 1
+  - Genèse 2
+  - Genèse 3
+  - Genèse 4
+  - Genèse 5
+  - Genèse 6
+  - Genèse 7
+  - Genèse 8
+  - Genèse 9
+  - Genèse 10
+  - Genèse 11
+  - Genèse 12
+  - Genèse 13
+  - Genèse 14
+  - Genèse 15
+  - Genèse 16
+  - Genèse 17
+  - Genèse 18
+  - Genèse 19
+  - Genèse 20
+  - Genèse 21
+  - Genèse 22
+  - Genèse 23
+  - Genèse 24
+  - Genèse 25
+  - Genèse 26
+  - Genèse 27
+  - Genèse 28
+  - Genèse 29
+  - Genèse 30
+  - Genèse 31
+  - Genèse 32
+  - Genèse 33
+  - Genèse 34
+  - Genèse 35
+  - Genèse 36
+  - Genèse 37
+  - Genèse 38
+  - Genèse 39
+  - Genèse 40
+  - Genèse 41
+  - Genèse 42
+  - Genèse 43
+  - Genèse 44
+  - Genèse 45
+  - Genèse 46
+  - Genèse 47
+  - Genèse 48
+  - Genèse 49
+  - Genèse 50
+  - Exode 1
+  - Exode 2
+  - Exode 3
+  - Exode 4
+  - Exode 5
+  - Exode 6
+  - Exode 7
+  - Exode 8
+  - Exode 9
+  - Exode 10
+  - Exode 11
+  - Exode 12
+  - Exode 13
+  - Exode 14
+  - Exode 15
+  - Exode 16
+  - Exode 17
+  - Exode 18
+  - Exode 19
+  - Exode 20
+  - Exode 21
+  - Exode 22
+  - Exode 23
+  - Exode 24
+  - Exode 25
+  - Exode 26
+  - Exode 27
+  - Exode 28
+  - Exode 29
+  - Exode 30
+  - Exode 31
+  - Exode 32
+  - Exode 33
+  - Exode 34
+  - Exode 35
+  - Exode 36
+  - Exode 37
+  - Exode 38
+  - Exode 39
+  - Exode 40
+  - Lévitique 1
+  - Lévitique 2
+  - Lévitique 3
+  - Lévitique 4
+  - Lévitique 5
+  - Lévitique 6
+  - Lévitique 7
+  - Lévitique 8
+  - Lévitique 9
+  - Lévitique 10
+  - Lévitique 11
+  - Lévitique 12
+  - Lévitique 13
+  - Lévitique 14
+  - Lévitique 15
+  - Lévitique 16
+  - Lévitique 17
+  - Lévitique 18
+  - Lévitique 19
+  - Lévitique 20
+  - Lévitique 21
+  - Lévitique 22
+  - Lévitique 23
+  - Lévitique 24
+  - Lévitique 25
+  - Lévitique 26
+  - Lévitique 27
+  - Nombres 1
+  - Nombres 2
+  - Nombres 3
+  - Nombres 4
+  - Nombres 5
+  - Nombres 6
+  - Nombres 7
+  - Nombres 8
+  - Nombres 9
+  - Nombres 10
+  - Nombres 11
+  - Nombres 12
+  - Nombres 13
+  - Nombres 14
+  - Nombres 15
+  - Nombres 16
+  - Nombres 17
+  - Nombres 18
+  - Nombres 19
+  - Nombres 20
+  - Nombres 21
+  - Nombres 22
+  - Nombres 23
+  - Nombres 24
+  - Nombres 25
+  - Nombres 26
+  - Nombres 27
+  - Nombres 28
+  - Nombres 29
+  - Nombres 30
+  - Nombres 31
+  - Nombres 32
+  - Nombres 33
+  - Nombres 34
+  - Nombres 35
+  - Nombres 36
+  - Deutéronome 1
+  - Deutéronome 2
+  - Deutéronome 3
+  - Deutéronome 4
+  - Deutéronome 5
+  - Deutéronome 6
+  - Deutéronome 7
+  - Deutéronome 8
+  - Deutéronome 9
+  - Deutéronome 10
+  - Deutéronome 11
+  - Deutéronome 12
+  - Deutéronome 13
+  - Deutéronome 14
+  - Deutéronome 15
+  - Deutéronome 16
+  - Deutéronome 17
+  - Deutéronome 18
+  - Deutéronome 19
+  - Deutéronome 20
+  - Deutéronome 21
+  - Deutéronome 22
+  - Deutéronome 23
+  - Deutéronome 24
+  - Deutéronome 25
+  - Deutéronome 26
+  - Deutéronome 27
+  - Deutéronome 28
+  - Deutéronome 29
+  - Deutéronome 30
+  - Deutéronome 31
+  - Deutéronome 32
+  - Deutéronome 33
+  - Deutéronome 34
+  - Josué 1
+  - Josué 2
+  - Josué 3
+  - Josué 4
+  - Josué 5
+  - Josué 6
+  - Josué 7
+  - Josué 8
+  - Josué 9
+  - Josué 10
+  - Josué 11
+  - Josué 12
+  - Josué 13
+  - Josué 14
+  - Josué 15
+  - Josué 16
+  - Josué 17
+  - Josué 18
+  - Josué 19
+  - Josué 20
+  - Josué 21
+  - Josué 22
+  - Josué 23
+  - Josué 24
+  - Juges 1
+  - Juges 2
+  - Juges 3
+  - Juges 4
+  - Juges 5
+  - Juges 6
+  - Juges 7
+  - Juges 8
+  - Juges 9
+  - Juges 10
+  - Juges 11
+  - Juges 12
+  - Juges 13
+  - Juges 14
+  - Juges 15
+  - Juges 16
+  - Juges 17
+  - Juges 18
+  - Juges 19
+  - Juges 20
+  - Juges 21
+  - Ruth 1
+  - Ruth 2
+  - Ruth 3
+  - Ruth 4
+  - 1 Samuel 1
+  - 1 Samuel 2
+  - 1 Samuel 3
+  - 1 Samuel 4
+  - 1 Samuel 5
+  - 1 Samuel 6
+  - 1 Samuel 7
+  - 1 Samuel 8
+  - 1 Samuel 9
+  - 1 Samuel 10
+  - 1 Samuel 11
+  - 1 Samuel 12
+  - 1 Samuel 13
+  - 1 Samuel 14
+  - 1 Samuel 15
+  - 1 Samuel 16
+  - 1 Samuel 17
+  - 1 Samuel 18
+  - 1 Samuel 19
+  - 1 Samuel 20
+  - 1 Samuel 21
+  - 1 Samuel 22
+  - 1 Samuel 23
+  - 1 Samuel 24
+  - 1 Samuel 25
+  - 1 Samuel 26
+  - 1 Samuel 27
+  - 1 Samuel 28
+  - 1 Samuel 29
+  - 1 Samuel 30
+  - 1 Samuel 31
+
+
+--- EN ---
+
+CHAPITRES MANQUANTS (267):
+  - Genèse 1
+  - Genèse 2
+  - Genèse 3
+  - Genèse 4
+  - Genèse 5
+  - Genèse 6
+  - Genèse 7
+  - Genèse 8
+  - Genèse 9
+  - Genèse 10
+  - Genèse 11
+  - Genèse 12
+  - Genèse 13
+  - Genèse 14
+  - Genèse 15
+  - Genèse 16
+  - Genèse 17
+  - Genèse 18
+  - Genèse 19
+  - Genèse 20
+  - Genèse 21
+  - Genèse 22
+  - Genèse 23
+  - Genèse 24
+  - Genèse 25
+  - Genèse 26
+  - Genèse 27
+  - Genèse 28
+  - Genèse 29
+  - Genèse 30
+  - Genèse 31
+  - Genèse 32
+  - Genèse 33
+  - Genèse 34
+  - Genèse 35
+  - Genèse 36
+  - Genèse 37
+  - Genèse 38
+  - Genèse 39
+  - Genèse 40
+  - Genèse 41
+  - Genèse 42
+  - Genèse 43
+  - Genèse 44
+  - Genèse 45
+  - Genèse 46
+  - Genèse 47
+  - Genèse 48
+  - Genèse 49
+  - Genèse 50
+  - Exode 1
+  - Exode 2
+  - Exode 3
+  - Exode 4
+  - Exode 5
+  - Exode 6
+  - Exode 7
+  - Exode 8
+  - Exode 9
+  - Exode 10
+  - Exode 11
+  - Exode 12
+  - Exode 13
+  - Exode 14
+  - Exode 15
+  - Exode 16
+  - Exode 17
+  - Exode 18
+  - Exode 19
+  - Exode 20
+  - Exode 21
+  - Exode 22
+  - Exode 23
+  - Exode 24
+  - Exode 25
+  - Exode 26
+  - Exode 27
+  - Exode 28
+  - Exode 29
+  - Exode 30
+  - Exode 31
+  - Exode 32
+  - Exode 33
+  - Exode 34
+  - Exode 35
+  - Exode 36
+  - Exode 37
+  - Exode 38
+  - Exode 39
+  - Exode 40
+  - Lévitique 1
+  - Lévitique 2
+  - Lévitique 3
+  - Lévitique 4
+  - Lévitique 5
+  - Lévitique 6
+  - Lévitique 7
+  - Lévitique 8
+  - Lévitique 9
+  - Lévitique 10
+  - Lévitique 11
+  - Lévitique 12
+  - Lévitique 13
+  - Lévitique 14
+  - Lévitique 15
+  - Lévitique 16
+  - Lévitique 17
+  - Lévitique 18
+  - Lévitique 19
+  - Lévitique 20
+  - Lévitique 21
+  - Lévitique 22
+  - Lévitique 23
+  - Lévitique 24
+  - Lévitique 25
+  - Lévitique 26
+  - Lévitique 27
+  - Nombres 1
+  - Nombres 2
+  - Nombres 3
+  - Nombres 4
+  - Nombres 5
+  - Nombres 6
+  - Nombres 7
+  - Nombres 8
+  - Nombres 9
+  - Nombres 10
+  - Nombres 11
+  - Nombres 12
+  - Nombres 13
+  - Nombres 14
+  - Nombres 15
+  - Nombres 16
+  - Nombres 17
+  - Nombres 18
+  - Nombres 19
+  - Nombres 20
+  - Nombres 21
+  - Nombres 22
+  - Nombres 23
+  - Nombres 24
+  - Nombres 25
+  - Nombres 26
+  - Nombres 27
+  - Nombres 28
+  - Nombres 29
+  - Nombres 30
+  - Nombres 31
+  - Nombres 32
+  - Nombres 33
+  - Nombres 34
+  - Nombres 35
+  - Nombres 36
+  - Deutéronome 1
+  - Deutéronome 2
+  - Deutéronome 3
+  - Deutéronome 4
+  - Deutéronome 5
+  - Deutéronome 6
+  - Deutéronome 7
+  - Deutéronome 8
+  - Deutéronome 9
+  - Deutéronome 10
+  - Deutéronome 11
+  - Deutéronome 12
+  - Deutéronome 13
+  - Deutéronome 14
+  - Deutéronome 15
+  - Deutéronome 16
+  - Deutéronome 17
+  - Deutéronome 18
+  - Deutéronome 19
+  - Deutéronome 20
+  - Deutéronome 21
+  - Deutéronome 22
+  - Deutéronome 23
+  - Deutéronome 24
+  - Deutéronome 25
+  - Deutéronome 26
+  - Deutéronome 27
+  - Deutéronome 28
+  - Deutéronome 29
+  - Deutéronome 30
+  - Deutéronome 31
+  - Deutéronome 32
+  - Deutéronome 33
+  - Deutéronome 34
+  - Josué 1
+  - Josué 2
+  - Josué 3
+  - Josué 4
+  - Josué 5
+  - Josué 6
+  - Josué 7
+  - Josué 8
+  - Josué 9
+  - Josué 10
+  - Josué 11
+  - Josué 12
+  - Josué 13
+  - Josué 14
+  - Josué 15
+  - Josué 16
+  - Josué 17
+  - Josué 18
+  - Josué 19
+  - Josué 20
+  - Josué 21
+  - Josué 22
+  - Josué 23
+  - Josué 24
+  - Juges 1
+  - Juges 2
+  - Juges 3
+  - Juges 4
+  - Juges 5
+  - Juges 6
+  - Juges 7
+  - Juges 8
+  - Juges 9
+  - Juges 10
+  - Juges 11
+  - Juges 12
+  - Juges 13
+  - Juges 14
+  - Juges 15
+  - Juges 16
+  - Juges 17
+  - Juges 18
+  - Juges 19
+  - Juges 20
+  - Juges 21
+  - Ruth 1
+  - Ruth 2
+  - Ruth 3
+  - Ruth 4
+  - 1 Samuel 1
+  - 1 Samuel 2
+  - 1 Samuel 3
+  - 1 Samuel 4
+  - 1 Samuel 5
+  - 1 Samuel 6
+  - 1 Samuel 7
+  - 1 Samuel 8
+  - 1 Samuel 9
+  - 1 Samuel 10
+  - 1 Samuel 11
+  - 1 Samuel 12
+  - 1 Samuel 13
+  - 1 Samuel 14
+  - 1 Samuel 15
+  - 1 Samuel 16
+  - 1 Samuel 17
+  - 1 Samuel 18
+  - 1 Samuel 19
+  - 1 Samuel 20
+  - 1 Samuel 21
+  - 1 Samuel 22
+  - 1 Samuel 23
+  - 1 Samuel 24
+  - 1 Samuel 25
+  - 1 Samuel 26
+  - 1 Samuel 27
+  - 1 Samuel 28
+  - 1 Samuel 29
+  - 1 Samuel 30
+  - 1 Samuel 31
+
+TITRES SUSPECTS (1):
+  - Job 5: '###' (Titre trop court)
+
+
+--- PT ---
+
+CHAPITRES MANQUANTS (267):
+  - Genèse 1
+  - Genèse 2
+  - Genèse 3
+  - Genèse 4
+  - Genèse 5
+  - Genèse 6
+  - Genèse 7
+  - Genèse 8
+  - Genèse 9
+  - Genèse 10
+  - Genèse 11
+  - Genèse 12
+  - Genèse 13
+  - Genèse 14
+  - Genèse 15
+  - Genèse 16
+  - Genèse 17
+  - Genèse 18
+  - Genèse 19
+  - Genèse 20
+  - Genèse 21
+  - Genèse 22
+  - Genèse 23
+  - Genèse 24
+  - Genèse 25
+  - Genèse 26
+  - Genèse 27
+  - Genèse 28
+  - Genèse 29
+  - Genèse 30
+  - Genèse 31
+  - Genèse 32
+  - Genèse 33
+  - Genèse 34
+  - Genèse 35
+  - Genèse 36
+  - Genèse 37
+  - Genèse 38
+  - Genèse 39
+  - Genèse 40
+  - Genèse 41
+  - Genèse 42
+  - Genèse 43
+  - Genèse 44
+  - Genèse 45
+  - Genèse 46
+  - Genèse 47
+  - Genèse 48
+  - Genèse 49
+  - Genèse 50
+  - Exode 1
+  - Exode 2
+  - Exode 3
+  - Exode 4
+  - Exode 5
+  - Exode 6
+  - Exode 7
+  - Exode 8
+  - Exode 9
+  - Exode 10
+  - Exode 11
+  - Exode 12
+  - Exode 13
+  - Exode 14
+  - Exode 15
+  - Exode 16
+  - Exode 17
+  - Exode 18
+  - Exode 19
+  - Exode 20
+  - Exode 21
+  - Exode 22
+  - Exode 23
+  - Exode 24
+  - Exode 25
+  - Exode 26
+  - Exode 27
+  - Exode 28
+  - Exode 29
+  - Exode 30
+  - Exode 31
+  - Exode 32
+  - Exode 33
+  - Exode 34
+  - Exode 35
+  - Exode 36
+  - Exode 37
+  - Exode 38
+  - Exode 39
+  - Exode 40
+  - Lévitique 1
+  - Lévitique 2
+  - Lévitique 3
+  - Lévitique 4
+  - Lévitique 5
+  - Lévitique 6
+  - Lévitique 7
+  - Lévitique 8
+  - Lévitique 9
+  - Lévitique 10
+  - Lévitique 11
+  - Lévitique 12
+  - Lévitique 13
+  - Lévitique 14
+  - Lévitique 15
+  - Lévitique 16
+  - Lévitique 17
+  - Lévitique 18
+  - Lévitique 19
+  - Lévitique 20
+  - Lévitique 21
+  - Lévitique 22
+  - Lévitique 23
+  - Lévitique 24
+  - Lévitique 25
+  - Lévitique 26
+  - Lévitique 27
+  - Nombres 1
+  - Nombres 2
+  - Nombres 3
+  - Nombres 4
+  - Nombres 5
+  - Nombres 6
+  - Nombres 7
+  - Nombres 8
+  - Nombres 9
+  - Nombres 10
+  - Nombres 11
+  - Nombres 12
+  - Nombres 13
+  - Nombres 14
+  - Nombres 15
+  - Nombres 16
+  - Nombres 17
+  - Nombres 18
+  - Nombres 19
+  - Nombres 20
+  - Nombres 21
+  - Nombres 22
+  - Nombres 23
+  - Nombres 24
+  - Nombres 25
+  - Nombres 26
+  - Nombres 27
+  - Nombres 28
+  - Nombres 29
+  - Nombres 30
+  - Nombres 31
+  - Nombres 32
+  - Nombres 33
+  - Nombres 34
+  - Nombres 35
+  - Nombres 36
+  - Deutéronome 1
+  - Deutéronome 2
+  - Deutéronome 3
+  - Deutéronome 4
+  - Deutéronome 5
+  - Deutéronome 6
+  - Deutéronome 7
+  - Deutéronome 8
+  - Deutéronome 9
+  - Deutéronome 10
+  - Deutéronome 11
+  - Deutéronome 12
+  - Deutéronome 13
+  - Deutéronome 14
+  - Deutéronome 15
+  - Deutéronome 16
+  - Deutéronome 17
+  - Deutéronome 18
+  - Deutéronome 19
+  - Deutéronome 20
+  - Deutéronome 21
+  - Deutéronome 22
+  - Deutéronome 23
+  - Deutéronome 24
+  - Deutéronome 25
+  - Deutéronome 26
+  - Deutéronome 27
+  - Deutéronome 28
+  - Deutéronome 29
+  - Deutéronome 30
+  - Deutéronome 31
+  - Deutéronome 32
+  - Deutéronome 33
+  - Deutéronome 34
+  - Josué 1
+  - Josué 2
+  - Josué 3
+  - Josué 4
+  - Josué 5
+  - Josué 6
+  - Josué 7
+  - Josué 8
+  - Josué 9
+  - Josué 10
+  - Josué 11
+  - Josué 12
+  - Josué 13
+  - Josué 14
+  - Josué 15
+  - Josué 16
+  - Josué 17
+  - Josué 18
+  - Josué 19
+  - Josué 20
+  - Josué 21
+  - Josué 22
+  - Josué 23
+  - Josué 24
+  - Juges 1
+  - Juges 2
+  - Juges 3
+  - Juges 4
+  - Juges 5
+  - Juges 6
+  - Juges 7
+  - Juges 8
+  - Juges 9
+  - Juges 10
+  - Juges 11
+  - Juges 12
+  - Juges 13
+  - Juges 14
+  - Juges 15
+  - Juges 16
+  - Juges 17
+  - Juges 18
+  - Juges 19
+  - Juges 20
+  - Juges 21
+  - Ruth 1
+  - Ruth 2
+  - Ruth 3
+  - Ruth 4
+  - 1 Samuel 1
+  - 1 Samuel 2
+  - 1 Samuel 3
+  - 1 Samuel 4
+  - 1 Samuel 5
+  - 1 Samuel 6
+  - 1 Samuel 7
+  - 1 Samuel 8
+  - 1 Samuel 9
+  - 1 Samuel 10
+  - 1 Samuel 11
+  - 1 Samuel 12
+  - 1 Samuel 13
+  - 1 Samuel 14
+  - 1 Samuel 15
+  - 1 Samuel 16
+  - 1 Samuel 17
+  - 1 Samuel 18
+  - 1 Samuel 19
+  - 1 Samuel 20
+  - 1 Samuel 21
+  - 1 Samuel 22
+  - 1 Samuel 23
+  - 1 Samuel 24
+  - 1 Samuel 25
+  - 1 Samuel 26
+  - 1 Samuel 27
+  - 1 Samuel 28
+  - 1 Samuel 29
+  - 1 Samuel 30
+  - 1 Samuel 31
+
+
+--- ES ---
+
+CHAPITRES MANQUANTS (267):
+  - Genèse 1
+  - Genèse 2
+  - Genèse 3
+  - Genèse 4
+  - Genèse 5
+  - Genèse 6
+  - Genèse 7
+  - Genèse 8
+  - Genèse 9
+  - Genèse 10
+  - Genèse 11
+  - Genèse 12
+  - Genèse 13
+  - Genèse 14
+  - Genèse 15
+  - Genèse 16
+  - Genèse 17
+  - Genèse 18
+  - Genèse 19
+  - Genèse 20
+  - Genèse 21
+  - Genèse 22
+  - Genèse 23
+  - Genèse 24
+  - Genèse 25
+  - Genèse 26
+  - Genèse 27
+  - Genèse 28
+  - Genèse 29
+  - Genèse 30
+  - Genèse 31
+  - Genèse 32
+  - Genèse 33
+  - Genèse 34
+  - Genèse 35
+  - Genèse 36
+  - Genèse 37
+  - Genèse 38
+  - Genèse 39
+  - Genèse 40
+  - Genèse 41
+  - Genèse 42
+  - Genèse 43
+  - Genèse 44
+  - Genèse 45
+  - Genèse 46
+  - Genèse 47
+  - Genèse 48
+  - Genèse 49
+  - Genèse 50
+  - Exode 1
+  - Exode 2
+  - Exode 3
+  - Exode 4
+  - Exode 5
+  - Exode 6
+  - Exode 7
+  - Exode 8
+  - Exode 9
+  - Exode 10
+  - Exode 11
+  - Exode 12
+  - Exode 13
+  - Exode 14
+  - Exode 15
+  - Exode 16
+  - Exode 17
+  - Exode 18
+  - Exode 19
+  - Exode 20
+  - Exode 21
+  - Exode 22
+  - Exode 23
+  - Exode 24
+  - Exode 25
+  - Exode 26
+  - Exode 27
+  - Exode 28
+  - Exode 29
+  - Exode 30
+  - Exode 31
+  - Exode 32
+  - Exode 33
+  - Exode 34
+  - Exode 35
+  - Exode 36
+  - Exode 37
+  - Exode 38
+  - Exode 39
+  - Exode 40
+  - Lévitique 1
+  - Lévitique 2
+  - Lévitique 3
+  - Lévitique 4
+  - Lévitique 5
+  - Lévitique 6
+  - Lévitique 7
+  - Lévitique 8
+  - Lévitique 9
+  - Lévitique 10
+  - Lévitique 11
+  - Lévitique 12
+  - Lévitique 13
+  - Lévitique 14
+  - Lévitique 15
+  - Lévitique 16
+  - Lévitique 17
+  - Lévitique 18
+  - Lévitique 19
+  - Lévitique 20
+  - Lévitique 21
+  - Lévitique 22
+  - Lévitique 23
+  - Lévitique 24
+  - Lévitique 25
+  - Lévitique 26
+  - Lévitique 27
+  - Nombres 1
+  - Nombres 2
+  - Nombres 3
+  - Nombres 4
+  - Nombres 5
+  - Nombres 6
+  - Nombres 7
+  - Nombres 8
+  - Nombres 9
+  - Nombres 10
+  - Nombres 11
+  - Nombres 12
+  - Nombres 13
+  - Nombres 14
+  - Nombres 15
+  - Nombres 16
+  - Nombres 17
+  - Nombres 18
+  - Nombres 19
+  - Nombres 20
+  - Nombres 21
+  - Nombres 22
+  - Nombres 23
+  - Nombres 24
+  - Nombres 25
+  - Nombres 26
+  - Nombres 27
+  - Nombres 28
+  - Nombres 29
+  - Nombres 30
+  - Nombres 31
+  - Nombres 32
+  - Nombres 33
+  - Nombres 34
+  - Nombres 35
+  - Nombres 36
+  - Deutéronome 1
+  - Deutéronome 2
+  - Deutéronome 3
+  - Deutéronome 4
+  - Deutéronome 5
+  - Deutéronome 6
+  - Deutéronome 7
+  - Deutéronome 8
+  - Deutéronome 9
+  - Deutéronome 10
+  - Deutéronome 11
+  - Deutéronome 12
+  - Deutéronome 13
+  - Deutéronome 14
+  - Deutéronome 15
+  - Deutéronome 16
+  - Deutéronome 17
+  - Deutéronome 18
+  - Deutéronome 19
+  - Deutéronome 20
+  - Deutéronome 21
+  - Deutéronome 22
+  - Deutéronome 23
+  - Deutéronome 24
+  - Deutéronome 25
+  - Deutéronome 26
+  - Deutéronome 27
+  - Deutéronome 28
+  - Deutéronome 29
+  - Deutéronome 30
+  - Deutéronome 31
+  - Deutéronome 32
+  - Deutéronome 33
+  - Deutéronome 34
+  - Josué 1
+  - Josué 2
+  - Josué 3
+  - Josué 4
+  - Josué 5
+  - Josué 6
+  - Josué 7
+  - Josué 8
+  - Josué 9
+  - Josué 10
+  - Josué 11
+  - Josué 12
+  - Josué 13
+  - Josué 14
+  - Josué 15
+  - Josué 16
+  - Josué 17
+  - Josué 18
+  - Josué 19
+  - Josué 20
+  - Josué 21
+  - Josué 22
+  - Josué 23
+  - Josué 24
+  - Juges 1
+  - Juges 2
+  - Juges 3
+  - Juges 4
+  - Juges 5
+  - Juges 6
+  - Juges 7
+  - Juges 8
+  - Juges 9
+  - Juges 10
+  - Juges 11
+  - Juges 12
+  - Juges 13
+  - Juges 14
+  - Juges 15
+  - Juges 16
+  - Juges 17
+  - Juges 18
+  - Juges 19
+  - Juges 20
+  - Juges 21
+  - Ruth 1
+  - Ruth 2
+  - Ruth 3
+  - Ruth 4
+  - 1 Samuel 1
+  - 1 Samuel 2
+  - 1 Samuel 3
+  - 1 Samuel 4
+  - 1 Samuel 5
+  - 1 Samuel 6
+  - 1 Samuel 7
+  - 1 Samuel 8
+  - 1 Samuel 9
+  - 1 Samuel 10
+  - 1 Samuel 11
+  - 1 Samuel 12
+  - 1 Samuel 13
+  - 1 Samuel 14
+  - 1 Samuel 15
+  - 1 Samuel 16
+  - 1 Samuel 17
+  - 1 Samuel 18
+  - 1 Samuel 19
+  - 1 Samuel 20
+  - 1 Samuel 21
+  - 1 Samuel 22
+  - 1 Samuel 23
+  - 1 Samuel 24
+  - 1 Samuel 25
+  - 1 Samuel 26
+  - 1 Samuel 27
+  - 1 Samuel 28
+  - 1 Samuel 29
+  - 1 Samuel 30
+  - 1 Samuel 31
+
+
+--- DE ---
+
+CHAPITRES MANQUANTS (267):
+  - Genèse 1
+  - Genèse 2
+  - Genèse 3
+  - Genèse 4
+  - Genèse 5
+  - Genèse 6
+  - Genèse 7
+  - Genèse 8
+  - Genèse 9
+  - Genèse 10
+  - Genèse 11
+  - Genèse 12
+  - Genèse 13
+  - Genèse 14
+  - Genèse 15
+  - Genèse 16
+  - Genèse 17
+  - Genèse 18
+  - Genèse 19
+  - Genèse 20
+  - Genèse 21
+  - Genèse 22
+  - Genèse 23
+  - Genèse 24
+  - Genèse 25
+  - Genèse 26
+  - Genèse 27
+  - Genèse 28
+  - Genèse 29
+  - Genèse 30
+  - Genèse 31
+  - Genèse 32
+  - Genèse 33
+  - Genèse 34
+  - Genèse 35
+  - Genèse 36
+  - Genèse 37
+  - Genèse 38
+  - Genèse 39
+  - Genèse 40
+  - Genèse 41
+  - Genèse 42
+  - Genèse 43
+  - Genèse 44
+  - Genèse 45
+  - Genèse 46
+  - Genèse 47
+  - Genèse 48
+  - Genèse 49
+  - Genèse 50
+  - Exode 1
+  - Exode 2
+  - Exode 3
+  - Exode 4
+  - Exode 5
+  - Exode 6
+  - Exode 7
+  - Exode 8
+  - Exode 9
+  - Exode 10
+  - Exode 11
+  - Exode 12
+  - Exode 13
+  - Exode 14
+  - Exode 15
+  - Exode 16
+  - Exode 17
+  - Exode 18
+  - Exode 19
+  - Exode 20
+  - Exode 21
+  - Exode 22
+  - Exode 23
+  - Exode 24
+  - Exode 25
+  - Exode 26
+  - Exode 27
+  - Exode 28
+  - Exode 29
+  - Exode 30
+  - Exode 31
+  - Exode 32
+  - Exode 33
+  - Exode 34
+  - Exode 35
+  - Exode 36
+  - Exode 37
+  - Exode 38
+  - Exode 39
+  - Exode 40
+  - Lévitique 1
+  - Lévitique 2
+  - Lévitique 3
+  - Lévitique 4
+  - Lévitique 5
+  - Lévitique 6
+  - Lévitique 7
+  - Lévitique 8
+  - Lévitique 9
+  - Lévitique 10
+  - Lévitique 11
+  - Lévitique 12
+  - Lévitique 13
+  - Lévitique 14
+  - Lévitique 15
+  - Lévitique 16
+  - Lévitique 17
+  - Lévitique 18
+  - Lévitique 19
+  - Lévitique 20
+  - Lévitique 21
+  - Lévitique 22
+  - Lévitique 23
+  - Lévitique 24
+  - Lévitique 25
+  - Lévitique 26
+  - Lévitique 27
+  - Nombres 1
+  - Nombres 2
+  - Nombres 3
+  - Nombres 4
+  - Nombres 5
+  - Nombres 6
+  - Nombres 7
+  - Nombres 8
+  - Nombres 9
+  - Nombres 10
+  - Nombres 11
+  - Nombres 12
+  - Nombres 13
+  - Nombres 14
+  - Nombres 15
+  - Nombres 16
+  - Nombres 17
+  - Nombres 18
+  - Nombres 19
+  - Nombres 20
+  - Nombres 21
+  - Nombres 22
+  - Nombres 23
+  - Nombres 24
+  - Nombres 25
+  - Nombres 26
+  - Nombres 27
+  - Nombres 28
+  - Nombres 29
+  - Nombres 30
+  - Nombres 31
+  - Nombres 32
+  - Nombres 33
+  - Nombres 34
+  - Nombres 35
+  - Nombres 36
+  - Deutéronome 1
+  - Deutéronome 2
+  - Deutéronome 3
+  - Deutéronome 4
+  - Deutéronome 5
+  - Deutéronome 6
+  - Deutéronome 7
+  - Deutéronome 8
+  - Deutéronome 9
+  - Deutéronome 10
+  - Deutéronome 11
+  - Deutéronome 12
+  - Deutéronome 13
+  - Deutéronome 14
+  - Deutéronome 15
+  - Deutéronome 16
+  - Deutéronome 17
+  - Deutéronome 18
+  - Deutéronome 19
+  - Deutéronome 20
+  - Deutéronome 21
+  - Deutéronome 22
+  - Deutéronome 23
+  - Deutéronome 24
+  - Deutéronome 25
+  - Deutéronome 26
+  - Deutéronome 27
+  - Deutéronome 28
+  - Deutéronome 29
+  - Deutéronome 30
+  - Deutéronome 31
+  - Deutéronome 32
+  - Deutéronome 33
+  - Deutéronome 34
+  - Josué 1
+  - Josué 2
+  - Josué 3
+  - Josué 4
+  - Josué 5
+  - Josué 6
+  - Josué 7
+  - Josué 8
+  - Josué 9
+  - Josué 10
+  - Josué 11
+  - Josué 12
+  - Josué 13
+  - Josué 14
+  - Josué 15
+  - Josué 16
+  - Josué 17
+  - Josué 18
+  - Josué 19
+  - Josué 20
+  - Josué 21
+  - Josué 22
+  - Josué 23
+  - Josué 24
+  - Juges 1
+  - Juges 2
+  - Juges 3
+  - Juges 4
+  - Juges 5
+  - Juges 6
+  - Juges 7
+  - Juges 8
+  - Juges 9
+  - Juges 10
+  - Juges 11
+  - Juges 12
+  - Juges 13
+  - Juges 14
+  - Juges 15
+  - Juges 16
+  - Juges 17
+  - Juges 18
+  - Juges 19
+  - Juges 20
+  - Juges 21
+  - Ruth 1
+  - Ruth 2
+  - Ruth 3
+  - Ruth 4
+  - 1 Samuel 1
+  - 1 Samuel 2
+  - 1 Samuel 3
+  - 1 Samuel 4
+  - 1 Samuel 5
+  - 1 Samuel 6
+  - 1 Samuel 7
+  - 1 Samuel 8
+  - 1 Samuel 9
+  - 1 Samuel 10
+  - 1 Samuel 11
+  - 1 Samuel 12
+  - 1 Samuel 13
+  - 1 Samuel 14
+  - 1 Samuel 15
+  - 1 Samuel 16
+  - 1 Samuel 17
+  - 1 Samuel 18
+  - 1 Samuel 19
+  - 1 Samuel 20
+  - 1 Samuel 21
+  - 1 Samuel 22
+  - 1 Samuel 23
+  - 1 Samuel 24
+  - 1 Samuel 25
+  - 1 Samuel 26
+  - 1 Samuel 27
+  - 1 Samuel 28
+  - 1 Samuel 29
+  - 1 Samuel 30
+  - 1 Samuel 31
+
+TITRES SUSPECTS (1):
+  - Matthieu 22: '1.' (Titre trop court)
+
+
+--- IT ---
+
+CHAPITRES MANQUANTS (267):
+  - Genèse 1
+  - Genèse 2
+  - Genèse 3
+  - Genèse 4
+  - Genèse 5
+  - Genèse 6
+  - Genèse 7
+  - Genèse 8
+  - Genèse 9
+  - Genèse 10
+  - Genèse 11
+  - Genèse 12
+  - Genèse 13
+  - Genèse 14
+  - Genèse 15
+  - Genèse 16
+  - Genèse 17
+  - Genèse 18
+  - Genèse 19
+  - Genèse 20
+  - Genèse 21
+  - Genèse 22
+  - Genèse 23
+  - Genèse 24
+  - Genèse 25
+  - Genèse 26
+  - Genèse 27
+  - Genèse 28
+  - Genèse 29
+  - Genèse 30
+  - Genèse 31
+  - Genèse 32
+  - Genèse 33
+  - Genèse 34
+  - Genèse 35
+  - Genèse 36
+  - Genèse 37
+  - Genèse 38
+  - Genèse 39
+  - Genèse 40
+  - Genèse 41
+  - Genèse 42
+  - Genèse 43
+  - Genèse 44
+  - Genèse 45
+  - Genèse 46
+  - Genèse 47
+  - Genèse 48
+  - Genèse 49
+  - Genèse 50
+  - Exode 1
+  - Exode 2
+  - Exode 3
+  - Exode 4
+  - Exode 5
+  - Exode 6
+  - Exode 7
+  - Exode 8
+  - Exode 9
+  - Exode 10
+  - Exode 11
+  - Exode 12
+  - Exode 13
+  - Exode 14
+  - Exode 15
+  - Exode 16
+  - Exode 17
+  - Exode 18
+  - Exode 19
+  - Exode 20
+  - Exode 21
+  - Exode 22
+  - Exode 23
+  - Exode 24
+  - Exode 25
+  - Exode 26
+  - Exode 27
+  - Exode 28
+  - Exode 29
+  - Exode 30
+  - Exode 31
+  - Exode 32
+  - Exode 33
+  - Exode 34
+  - Exode 35
+  - Exode 36
+  - Exode 37
+  - Exode 38
+  - Exode 39
+  - Exode 40
+  - Lévitique 1
+  - Lévitique 2
+  - Lévitique 3
+  - Lévitique 4
+  - Lévitique 5
+  - Lévitique 6
+  - Lévitique 7
+  - Lévitique 8
+  - Lévitique 9
+  - Lévitique 10
+  - Lévitique 11
+  - Lévitique 12
+  - Lévitique 13
+  - Lévitique 14
+  - Lévitique 15
+  - Lévitique 16
+  - Lévitique 17
+  - Lévitique 18
+  - Lévitique 19
+  - Lévitique 20
+  - Lévitique 21
+  - Lévitique 22
+  - Lévitique 23
+  - Lévitique 24
+  - Lévitique 25
+  - Lévitique 26
+  - Lévitique 27
+  - Nombres 1
+  - Nombres 2
+  - Nombres 3
+  - Nombres 4
+  - Nombres 5
+  - Nombres 6
+  - Nombres 7
+  - Nombres 8
+  - Nombres 9
+  - Nombres 10
+  - Nombres 11
+  - Nombres 12
+  - Nombres 13
+  - Nombres 14
+  - Nombres 15
+  - Nombres 16
+  - Nombres 17
+  - Nombres 18
+  - Nombres 19
+  - Nombres 20
+  - Nombres 21
+  - Nombres 22
+  - Nombres 23
+  - Nombres 24
+  - Nombres 25
+  - Nombres 26
+  - Nombres 27
+  - Nombres 28
+  - Nombres 29
+  - Nombres 30
+  - Nombres 31
+  - Nombres 32
+  - Nombres 33
+  - Nombres 34
+  - Nombres 35
+  - Nombres 36
+  - Deutéronome 1
+  - Deutéronome 2
+  - Deutéronome 3
+  - Deutéronome 4
+  - Deutéronome 5
+  - Deutéronome 6
+  - Deutéronome 7
+  - Deutéronome 8
+  - Deutéronome 9
+  - Deutéronome 10
+  - Deutéronome 11
+  - Deutéronome 12
+  - Deutéronome 13
+  - Deutéronome 14
+  - Deutéronome 15
+  - Deutéronome 16
+  - Deutéronome 17
+  - Deutéronome 18
+  - Deutéronome 19
+  - Deutéronome 20
+  - Deutéronome 21
+  - Deutéronome 22
+  - Deutéronome 23
+  - Deutéronome 24
+  - Deutéronome 25
+  - Deutéronome 26
+  - Deutéronome 27
+  - Deutéronome 28
+  - Deutéronome 29
+  - Deutéronome 30
+  - Deutéronome 31
+  - Deutéronome 32
+  - Deutéronome 33
+  - Deutéronome 34
+  - Josué 1
+  - Josué 2
+  - Josué 3
+  - Josué 4
+  - Josué 5
+  - Josué 6
+  - Josué 7
+  - Josué 8
+  - Josué 9
+  - Josué 10
+  - Josué 11
+  - Josué 12
+  - Josué 13
+  - Josué 14
+  - Josué 15
+  - Josué 16
+  - Josué 17
+  - Josué 18
+  - Josué 19
+  - Josué 20
+  - Josué 21
+  - Josué 22
+  - Josué 23
+  - Josué 24
+  - Juges 1
+  - Juges 2
+  - Juges 3
+  - Juges 4
+  - Juges 5
+  - Juges 6
+  - Juges 7
+  - Juges 8
+  - Juges 9
+  - Juges 10
+  - Juges 11
+  - Juges 12
+  - Juges 13
+  - Juges 14
+  - Juges 15
+  - Juges 16
+  - Juges 17
+  - Juges 18
+  - Juges 19
+  - Juges 20
+  - Juges 21
+  - Ruth 1
+  - Ruth 2
+  - Ruth 3
+  - Ruth 4
+  - 1 Samuel 1
+  - 1 Samuel 2
+  - 1 Samuel 3
+  - 1 Samuel 4
+  - 1 Samuel 5
+  - 1 Samuel 6
+  - 1 Samuel 7
+  - 1 Samuel 8
+  - 1 Samuel 9
+  - 1 Samuel 10
+  - 1 Samuel 11
+  - 1 Samuel 12
+  - 1 Samuel 13
+  - 1 Samuel 14
+  - 1 Samuel 15
+  - 1 Samuel 16
+  - 1 Samuel 17
+  - 1 Samuel 18
+  - 1 Samuel 19
+  - 1 Samuel 20
+  - 1 Samuel 21
+  - 1 Samuel 22
+  - 1 Samuel 23
+  - 1 Samuel 24
+  - 1 Samuel 25
+  - 1 Samuel 26
+  - 1 Samuel 27
+  - 1 Samuel 28
+  - 1 Samuel 29
+  - 1 Samuel 30
+  - 1 Samuel 31
+
+TITRES MANQUANTS (4):
+  - Psaumes 132
+  - Psaumes 133
+  - Psaumes 136
+  - Ecclésiaste 8
+
+
+--- TL ---
+
+CHAPITRES MANQUANTS (267):
+  - Genèse 1
+  - Genèse 2
+  - Genèse 3
+  - Genèse 4
+  - Genèse 5
+  - Genèse 6
+  - Genèse 7
+  - Genèse 8
+  - Genèse 9
+  - Genèse 10
+  - Genèse 11
+  - Genèse 12
+  - Genèse 13
+  - Genèse 14
+  - Genèse 15
+  - Genèse 16
+  - Genèse 17
+  - Genèse 18
+  - Genèse 19
+  - Genèse 20
+  - Genèse 21
+  - Genèse 22
+  - Genèse 23
+  - Genèse 24
+  - Genèse 25
+  - Genèse 26
+  - Genèse 27
+  - Genèse 28
+  - Genèse 29
+  - Genèse 30
+  - Genèse 31
+  - Genèse 32
+  - Genèse 33
+  - Genèse 34
+  - Genèse 35
+  - Genèse 36
+  - Genèse 37
+  - Genèse 38
+  - Genèse 39
+  - Genèse 40
+  - Genèse 41
+  - Genèse 42
+  - Genèse 43
+  - Genèse 44
+  - Genèse 45
+  - Genèse 46
+  - Genèse 47
+  - Genèse 48
+  - Genèse 49
+  - Genèse 50
+  - Exode 1
+  - Exode 2
+  - Exode 3
+  - Exode 4
+  - Exode 5
+  - Exode 6
+  - Exode 7
+  - Exode 8
+  - Exode 9
+  - Exode 10
+  - Exode 11
+  - Exode 12
+  - Exode 13
+  - Exode 14
+  - Exode 15
+  - Exode 16
+  - Exode 17
+  - Exode 18
+  - Exode 19
+  - Exode 20
+  - Exode 21
+  - Exode 22
+  - Exode 23
+  - Exode 24
+  - Exode 25
+  - Exode 26
+  - Exode 27
+  - Exode 28
+  - Exode 29
+  - Exode 30
+  - Exode 31
+  - Exode 32
+  - Exode 33
+  - Exode 34
+  - Exode 35
+  - Exode 36
+  - Exode 37
+  - Exode 38
+  - Exode 39
+  - Exode 40
+  - Lévitique 1
+  - Lévitique 2
+  - Lévitique 3
+  - Lévitique 4
+  - Lévitique 5
+  - Lévitique 6
+  - Lévitique 7
+  - Lévitique 8
+  - Lévitique 9
+  - Lévitique 10
+  - Lévitique 11
+  - Lévitique 12
+  - Lévitique 13
+  - Lévitique 14
+  - Lévitique 15
+  - Lévitique 16
+  - Lévitique 17
+  - Lévitique 18
+  - Lévitique 19
+  - Lévitique 20
+  - Lévitique 21
+  - Lévitique 22
+  - Lévitique 23
+  - Lévitique 24
+  - Lévitique 25
+  - Lévitique 26
+  - Lévitique 27
+  - Nombres 1
+  - Nombres 2
+  - Nombres 3
+  - Nombres 4
+  - Nombres 5
+  - Nombres 6
+  - Nombres 7
+  - Nombres 8
+  - Nombres 9
+  - Nombres 10
+  - Nombres 11
+  - Nombres 12
+  - Nombres 13
+  - Nombres 14
+  - Nombres 15
+  - Nombres 16
+  - Nombres 17
+  - Nombres 18
+  - Nombres 19
+  - Nombres 20
+  - Nombres 21
+  - Nombres 22
+  - Nombres 23
+  - Nombres 24
+  - Nombres 25
+  - Nombres 26
+  - Nombres 27
+  - Nombres 28
+  - Nombres 29
+  - Nombres 30
+  - Nombres 31
+  - Nombres 32
+  - Nombres 33
+  - Nombres 34
+  - Nombres 35
+  - Nombres 36
+  - Deutéronome 1
+  - Deutéronome 2
+  - Deutéronome 3
+  - Deutéronome 4
+  - Deutéronome 5
+  - Deutéronome 6
+  - Deutéronome 7
+  - Deutéronome 8
+  - Deutéronome 9
+  - Deutéronome 10
+  - Deutéronome 11
+  - Deutéronome 12
+  - Deutéronome 13
+  - Deutéronome 14
+  - Deutéronome 15
+  - Deutéronome 16
+  - Deutéronome 17
+  - Deutéronome 18
+  - Deutéronome 19
+  - Deutéronome 20
+  - Deutéronome 21
+  - Deutéronome 22
+  - Deutéronome 23
+  - Deutéronome 24
+  - Deutéronome 25
+  - Deutéronome 26
+  - Deutéronome 27
+  - Deutéronome 28
+  - Deutéronome 29
+  - Deutéronome 30
+  - Deutéronome 31
+  - Deutéronome 32
+  - Deutéronome 33
+  - Deutéronome 34
+  - Josué 1
+  - Josué 2
+  - Josué 3
+  - Josué 4
+  - Josué 5
+  - Josué 6
+  - Josué 7
+  - Josué 8
+  - Josué 9
+  - Josué 10
+  - Josué 11
+  - Josué 12
+  - Josué 13
+  - Josué 14
+  - Josué 15
+  - Josué 16
+  - Josué 17
+  - Josué 18
+  - Josué 19
+  - Josué 20
+  - Josué 21
+  - Josué 22
+  - Josué 23
+  - Josué 24
+  - Juges 1
+  - Juges 2
+  - Juges 3
+  - Juges 4
+  - Juges 5
+  - Juges 6
+  - Juges 7
+  - Juges 8
+  - Juges 9
+  - Juges 10
+  - Juges 11
+  - Juges 12
+  - Juges 13
+  - Juges 14
+  - Juges 15
+  - Juges 16
+  - Juges 17
+  - Juges 18
+  - Juges 19
+  - Juges 20
+  - Juges 21
+  - Ruth 1
+  - Ruth 2
+  - Ruth 3
+  - Ruth 4
+  - 1 Samuel 1
+  - 1 Samuel 2
+  - 1 Samuel 3
+  - 1 Samuel 4
+  - 1 Samuel 5
+  - 1 Samuel 6
+  - 1 Samuel 7
+  - 1 Samuel 8
+  - 1 Samuel 9
+  - 1 Samuel 10
+  - 1 Samuel 11
+  - 1 Samuel 12
+  - 1 Samuel 13
+  - 1 Samuel 14
+  - 1 Samuel 15
+  - 1 Samuel 16
+  - 1 Samuel 17
+  - 1 Samuel 18
+  - 1 Samuel 19
+  - 1 Samuel 20
+  - 1 Samuel 21
+  - 1 Samuel 22
+  - 1 Samuel 23
+  - 1 Samuel 24
+  - 1 Samuel 25
+  - 1 Samuel 26
+  - 1 Samuel 27
+  - 1 Samuel 28
+  - 1 Samuel 29
+  - 1 Samuel 30
+  - 1 Samuel 31
+
+TITRES MANQUANTS (3):
+  - Ézéchiel 1
+  - Ézéchiel 45
+  - Daniel 1
+
+
+================================================================================
+FIN DU RAPPORT
+================================================================================
