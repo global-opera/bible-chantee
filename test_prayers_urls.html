@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Prayers URLs</title>
+    <style>
+        body { font-family: monospace; padding: 20px; background: #1a1a1a; color: #fff; }
+        .test { margin: 10px 0; padding: 10px; background: #2a2a2a; border-left: 3px solid #4a4; }
+        .error { border-color: #a44; }
+        .url { color: #6af; word-break: break-all; }
+        .status { color: #4a4; }
+        .status.error { color: #a44; }
+        button { padding: 10px 20px; font-size: 16px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Prayers URLs Test</h1>
+    <button onclick="testAll()">Test All URLs</button>
+    <div id="results"></div>
+
+    <script>
+    const AUDIO_BASE = "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/prayers/";
+    const LYRICS_BASE = "lyrics/prayers/";
+
+    const PRAYERS = {
+        FR: [
+            { title: "Notre Pere", audio: "FR_Notre Pere.mp3", lyrics: "FR_Notre Pere.md" },
+            { title: "D'Abord Je Te Cherche", audio: "FR_DAbord Je Te Cherche.mp3", lyrics: "FR_DAbord Je Te Cherche.md" },
+            { title: "Priere de Delivrance", audio: "FR_Priere de delivrance.mp3", lyrics: "FR_Priere de delivrance.md" },
+            { title: "Reconnaissance", audio: "FR_Reconnaissance.mp3", lyrics: "FR_Reconnaissance.md" },
+            { title: "Tu Es Ma Protection", audio: "FR_Tu Es Ma Protection.mp3", lyrics: "FR_Tu Es Ma Protection.md" }
+        ]
+    };
+
+    async function testAudio(url) {
+        try {
+            const response = await fetch(url, { method: 'HEAD' });
+            return { ok: response.ok, status: response.status };
+        } catch (err) {
+            return { ok: false, error: err.message };
+        }
+    }
+
+    async function testLyrics(url) {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            const text = await response.text();
+            return { ok: true, size: text.length };
+        } catch (err) {
+            return { ok: false, error: err.message };
+        }
+    }
+
+    async function testAll() {
+        const resultsDiv = document.getElementById('results');
+        resultsDiv.innerHTML = '<p>Testing...</p>';
+
+        let html = '';
+
+        for (const [lang, prayers] of Object.entries(PRAYERS)) {
+            html += `<h2>${lang}</h2>`;
+
+            for (const prayer of prayers) {
+                const audioUrl = AUDIO_BASE + encodeURIComponent(prayer.audio);
+                const lyricsUrl = LYRICS_BASE + encodeURIComponent(prayer.lyrics);
+
+                html += `<div class="test">
+                    <h3>${prayer.title}</h3>
+                    <p><strong>Audio:</strong> <span class="url">${audioUrl}</span></p>
+                    <p id="audio-${lang}-${prayer.title.replace(/\s+/g, '-')}">Testing audio...</p>
+                    <p><strong>Lyrics:</strong> <span class="url">${lyricsUrl}</span></p>
+                    <p id="lyrics-${lang}-${prayer.title.replace(/\s+/g, '-')}">Testing lyrics...</p>
+                </div>`;
+            }
+        }
+
+        resultsDiv.innerHTML = html;
+
+        // Test each prayer
+        for (const [lang, prayers] of Object.entries(PRAYERS)) {
+            for (const prayer of prayers) {
+                const id = `${lang}-${prayer.title.replace(/\s+/g, '-')}`;
+                const audioUrl = AUDIO_BASE + encodeURIComponent(prayer.audio);
+                const lyricsUrl = LYRICS_BASE + encodeURIComponent(prayer.lyrics);
+
+                // Test audio
+                const audioResult = await testAudio(audioUrl);
+                const audioEl = document.getElementById(`audio-${id}`);
+                if (audioResult.ok) {
+                    audioEl.innerHTML = `<span class="status">✅ Audio OK (${audioResult.status})</span>`;
+                } else {
+                    audioEl.innerHTML = `<span class="status error">❌ Audio Error: ${audioResult.error || audioResult.status}</span>`;
+                    audioEl.parentElement.classList.add('error');
+                }
+
+                // Test lyrics
+                const lyricsResult = await testLyrics(lyricsUrl);
+                const lyricsEl = document.getElementById(`lyrics-${id}`);
+                if (lyricsResult.ok) {
+                    lyricsEl.innerHTML = `<span class="status">✅ Lyrics OK (${lyricsResult.size} bytes)</span>`;
+                } else {
+                    lyricsEl.innerHTML = `<span class="status error">❌ Lyrics Error: ${lyricsResult.error}</span>`;
+                    lyricsEl.parentElement.classList.add('error');
+                }
+            }
+        }
+    }
+    </script>
+</body>
+</html>
