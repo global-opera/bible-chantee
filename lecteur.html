@@ -1441,7 +1441,7 @@ function isVerseLikeEN(s){
 
       // --- RÉCUPÉRATION + NETTOYAGE ---
       let rawTitle = TITLES_LANG?.[bookKey]?.[chapKey];
-      if (!rawTitle) return "";
+      if (!rawTitle) rawTitle = ""; // Continuer vers fallback si vide
 
       // Appliquer cleanTitle() pour supprimer guillemets externes
       let title = cleanTitle(rawTitle);
