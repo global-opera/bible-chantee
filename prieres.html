@@ -49,7 +49,7 @@
     var AUDIO_BASE = "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/prayers/";
     var LYRICS_BASE = "lyrics/prayers/";
 
-    // Prayer data with EXACT filenames from R2
+    // Prayer data with EXACT filenames matching R2 and lyrics folder
     var PRAYERS = {
         FR: [
             { title: "Notre Pere", audio: "FR_Notre Pere.mp3", lyrics: "FR_Notre Pere.md" },
@@ -84,32 +84,37 @@
         ],
         IT: [
             { title: "Padre Nostro", audio: "IT_Padre Nostro.mp3", lyrics: "IT_Padre Nostro.md" },
+            { title: "Prima Ti Cerco", audio: "IT_Prima Ti Cerco.mp3", lyrics: "IT_Prima Ti Cerco.md" },
             { title: "Gratitudine", audio: "IT_Gratitudine.mp3", lyrics: "IT_Gratitudine.md" },
             { title: "Preghiera di Liberazione", audio: "IT_Preghiera di Liberazione.mp3", lyrics: "IT_Preghiera di Liberazione.md" },
+            { title: "Tu Sei La Mia Protezione", audio: "IT_Tu Sei La Mia Protezione.mp3", lyrics: "IT_Tu Sei La Mia Protezione.md" },
             { title: "Apri Le Porte", audio: "IT_Apri Le Porte.mp3", lyrics: "IT_Apri Le Porte.md" }
         ],
         PT: [
+            { title: "Pai Nosso", audio: "PT_Pai Nosso.mp3", lyrics: "PT_Pai Nosso.md" },
             { title: "Gratidao", audio: "PT_Gratidao.mp3", lyrics: "PT_Gratidão.md" },
             { title: "Oracao de Libertacao", audio: "PT_Oracao de Libertacao.mp3", lyrics: "PT_Oração de Libertação.md" },
             { title: "Primeiro Eu Te Busco", audio: "PT_Primeiro Eu Te Busco.mp3", lyrics: "PT_Primeiro Eu Te Busco.md" },
             { title: "Tu Es a Minha Protecao", audio: "PT_Tu es a Minha Protecao.mp3", lyrics: "PT_Tu És a Minha Proteção.md" }
         ],
         TL: [
+            { title: "Ama Namin", audio: "TL_Ama Namin.mp3", lyrics: null },
             { title: "Pasasalamat", audio: "TL_Pasasalamat.mp3", lyrics: "TL_Pasasalamat.md" },
             { title: "Panalangin ng Paglaya", audio: "TL_Panalangin ng Paglaya.mp3", lyrics: "TL_Panalangin ng Paglaya.md" },
+            { title: "Una Kitang Hinahanap", audio: "TL_Una Kitang Hinahanap.mp3", lyrics: "TL_Una Kitang Hinahanap.md" },
             { title: "Binubuksan Mo Ang Pinto", audio: "TL_Binubuksan Mo Ang Pinto.mp3", lyrics: "TL_Binubuksan Mo Ang Pinto.md" },
             { title: "Ikaw ang Aking Proteksiyon", audio: "TL_Ikaw ang Aking Proteksiyon.mp3", lyrics: "TL_Ikaw ang Aking Proteksiyon.md" }
         ]
     };
 
     var UI = {
-        FR: { title: "Prieres Chantees", subtitle: "Elevez votre coeur vers Dieu", back: "Retour" },
-        EN: { title: "Sung Prayers", subtitle: "Lift your heart to God", back: "Back" },
-        ES: { title: "Oraciones Cantadas", subtitle: "Eleva tu corazon a Dios", back: "Volver" },
-        DE: { title: "Gesungene Gebete", subtitle: "Erhebe dein Herz zu Gott", back: "Zuruck" },
-        IT: { title: "Preghiere Cantate", subtitle: "Eleva il tuo cuore a Dio", back: "Indietro" },
-        PT: { title: "Oracoes Cantadas", subtitle: "Eleve seu coracao a Deus", back: "Voltar" },
-        TL: { title: "Mga Panalangin", subtitle: "Itaas ang puso mo sa Diyos", back: "Bumalik" }
+        FR: { title: "Prieres Chantees", subtitle: "Elevez votre coeur vers Dieu", back: "Retour", loading: "Chargement...", unavailable: "Paroles non disponibles" },
+        EN: { title: "Sung Prayers", subtitle: "Lift your heart to God", back: "Back", loading: "Loading...", unavailable: "Lyrics not available" },
+        ES: { title: "Oraciones Cantadas", subtitle: "Eleva tu corazon a Dios", back: "Volver", loading: "Cargando...", unavailable: "Letras no disponibles" },
+        DE: { title: "Gesungene Gebete", subtitle: "Erhebe dein Herz zu Gott", back: "Zuruck", loading: "Laden...", unavailable: "Text nicht verfügbar" },
+        IT: { title: "Preghiere Cantate", subtitle: "Eleva il tuo cuore a Dio", back: "Indietro", loading: "Caricamento...", unavailable: "Testo non disponibile" },
+        PT: { title: "Oracoes Cantadas", subtitle: "Eleve seu coracao a Deus", back: "Voltar", loading: "Carregando...", unavailable: "Letras não disponíveis" },
+        TL: { title: "Mga Panalangin", subtitle: "Itaas ang puso mo sa Diyos", back: "Bumalik", loading: "Naglo-load...", unavailable: "Walang lyrics" }
     };
 
     var currentLang = new URLSearchParams(location.search).get("lang") || localStorage.getItem("bc_lang") || "FR";
@@ -139,6 +144,8 @@
         var p = PRAYERS[currentLang][index];
         if (!p) return;
 
+        var ui = UI[currentLang] || UI.FR;
+
         document.getElementById("playerTitle").textContent = p.title;
 
         // Build audio URL with proper encoding
@@ -147,7 +154,18 @@
         document.getElementById("audio").src = audioUrl;
 
         // Load lyrics
-        document.getElementById("lyricsBox").textContent = "Chargement...";
+        var lyricsBox = document.getElementById("lyricsBox");
+        lyricsBox.textContent = ui.loading;
+
+        if (!p.lyrics) {
+            lyricsBox.textContent = ui.unavailable;
+            document.getElementById("playerOverlay").classList.add("active");
+            document.getElementById("audio").play().catch(function(err) {
+                console.error("Audio play error:", err);
+            });
+            return;
+        }
+
         var lyricsUrl = LYRICS_BASE + encodeURIComponent(p.lyrics);
         console.log("Loading lyrics:", lyricsUrl);
 
@@ -160,11 +178,11 @@
                 // Remove markdown markers and clean up
                 text = text.replace(/\[(VERSE|CHORUS|BRIDGE|PRE-CHORUS|INTRO|OUTRO|REFRAIN|COUPLET|PONT)\]/gi, '');
                 text = text.replace(/\*\*([^*]+)\*\*/g, '$1');
-                document.getElementById("lyricsBox").textContent = text;
+                lyricsBox.textContent = text;
             })
             .catch(function(err) {
                 console.error("Lyrics error:", err);
-                document.getElementById("lyricsBox").textContent = "Paroles non disponibles";
+                lyricsBox.textContent = ui.unavailable;
             });
 
         document.getElementById("playerOverlay").classList.add("active");
@@ -208,4 +226,3 @@
     </script>
 </body>
 </html>
-
