@@ -1629,6 +1629,49 @@ const audioPlayer = document.querySelector('#audioPlayer');
       TL: 'tl_bible_old_tagalog.json'
     };
 
+    // Nettoyer les paroles (supprimer tags et formatage indésirables)
+    function cleanLyrics(text) {
+      if (!text) return '';
+
+      // Supprimer [STYLE] et tout ce qui suit
+      const styleIndex = text.indexOf('[STYLE]');
+      if (styleIndex !== -1) {
+        text = text.substring(0, styleIndex);
+      }
+
+      // Supprimer [LYRICS] et [TITLE] tags
+      text = text.replace(/\[LYRICS\]/g, '');
+      text = text.replace(/\[TITLE\]/g, '');
+
+      // Supprimer les lignes de titre (Título: ou Title:)
+      text = text.replace(/\*\*Título:\s*["""][^"""]*["""]\*\*/g, '');
+      text = text.replace(/\*\*Title:\s*["""][^"""]*["""]\*\*/g, '');
+      text = text.replace(/Título:\s*["""][^"""]*["""]/g, '');
+      text = text.replace(/Title:\s*["""][^"""]*["""]/g, '');
+
+      // Supprimer tous les tags de section entre crochets
+      // [Verso 1], [Verse 1], [Refrão], [Chorus], [Ponte], [Bridge], [Final], [Outro], etc.
+      text = text.replace(/\*\*\[(Vers[oe]|Chorus|Refrão|Ponte|Bridge|Final|Outro|Couplet|Refrain|Verset|Strophe|Spoken Word)[^\]]*\]\*\*/gi, '');
+      text = text.replace(/\[(Vers[oe]|Chorus|Refrão|Ponte|Bridge|Final|Outro|Couplet|Refrain|Verset|Strophe|Spoken Word)[^\]]*\]/gi, '');
+
+      // Supprimer les lignes contenant uniquement des noms de section (sans crochets)
+      text = text.replace(/^\s*(Vers[oe]\s+\d+|Chorus|Refrão|Ponte|Bridge|Final|Outro)\s*$/gmi, '');
+
+      // Supprimer "Letras" ou "Lyrics" seul en début de ligne
+      text = text.replace(/^\s*(Letras|Lyrics)\s*$/gmi, '');
+
+      // Enlever le markdown ** ** (garder le texte entre)
+      text = text.replace(/\*\*([^*]+)\*\*/g, '$1');
+
+      // Nettoyer les lignes vides en trop (max 2 lignes vides consécutives)
+      text = text.replace(/(\r?\n\s*){3,}/g, '\n\n');
+
+      // Nettoyer les espaces en début/fin
+      text = text.trim();
+
+      return text;
+    }
+
     // Charger et afficher les paroles
     function loadLyrics(bookCode, chapter, lang) {
       const lyricsContent = document.querySelector('#lyricsContent');
@@ -1654,20 +1697,20 @@ const audioPlayer = document.querySelector('#audioPlayer');
         }
 
         // Extraire les paroles du chapitre
-        const lyrics = lyricsData[bookNumber] && lyricsData[bookNumber][chapter];
+        let lyrics = lyricsData[bookNumber] && lyricsData[bookNumber][chapter];
 
         if (!lyrics) {
           lyricsContent.innerHTML = '<p style="color: #999;">Paroles non disponibles pour ce chapitre</p>';
           return;
         }
 
+        // Nettoyer les paroles AVANT le formatage HTML
+        lyrics = cleanLyrics(lyrics);
+
         // Formater le texte (remplacer \r\n par <br>)
         const formattedLyrics = lyrics
           .replace(/\r\n/g, '<br>')
-          .replace(/\n/g, '<br>')
-          .replace(/\[TITLE\]<br>/g, '<div style="font-size: 22px; color: #F5CB42; font-weight: bold; margin-bottom: 15px;">')
-          .replace(/<br><br>\[LYRICS\]<br>/g, '</div>')
-          .replace(/\[(Verse|Chorus|Bridge|Spoken Word|Coup|Couplet|Refrain|Verset|Strophe) (\d+|[^\]]+)\]/g, '<br><strong style="color: #F5CB42;">[$1 $2]</strong><br>');
+          .replace(/\n/g, '<br>');
 
         lyricsContent.innerHTML = formattedLyrics;
       } catch (error) {
