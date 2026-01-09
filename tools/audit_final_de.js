@@ -1,0 +1,87 @@
+const fs = require("fs");
+const path = require("path");
+
+const ROOT = path.resolve(__dirname, "..");
+const DE_PATH = path.join(ROOT, "titles", "DE.json");
+
+const ACCENTED_CHARS = "éèêëàâùûôîïçÉÈÊËÀÂÙÛÔÎÏÇ";
+const reAccents = new RegExp("[" + ACCENTED_CHARS.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&") + "]");
+
+// French words ONLY (not valid in German)
+// Note: Exclude "des", "der", "den", "dem", "du" (German "you") which are valid in German
+const FRENCH_WORDS = [
+  "Éternel","Eternel","Majesté","Majeste","Seigneur","Lumière","Lumiere","Grâce","Grace",
+  "Louange","Promesse","Fidèle","Fidele","Béni","Beni","Cœur","Coeur","Père","Pere","Mère","Mere",
+  "Frère","Frere","Sœur","Soeur","Âme","Ame","Vallée","Vallee","Désert","Desert","Chemin","Voie",
+  "Étoile","Etoile","Tête","Tete","Œil","Oeil",
+  "le","la","les","de","dans","pour","avec","sans","sous","sur","vers","entre",
+  "notre","votre","mon","ton","son","mes","tes","ses","une","aux","cette","qui","que","où","ou"
+];
+
+function escapeRegex(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+const frenchWordPattern = FRENCH_WORDS
+  .map(w => escapeRegex(w))
+  .sort((a,b) => b.length - a.length)
+  .join("|");
+
+const reFrenchWords = new RegExp(
+  `(^|[\\s"""'''()\\[\\]{}<>.,;:!?/\\\\|-])(${frenchWordPattern})(?=($|[\\s"""'''()\\[\\]{}<>.,;:!?/\\\\|-]))`,
+  "i"
+);
+
+const reFrenchElision = /(^|[\s"""([])(l|d|j|c|m|n|s|t|qu)['']/i;
+
+function loadJson(p) {
+  if (!fs.existsSync(p)) {
+    console.error("Introuvable:", p);
+    process.exit(1);
+  }
+  return JSON.parse(fs.readFileSync(p, "utf8"));
+}
+
+function main() {
+  const de = loadJson(DE_PATH);
+  const errors = [];
+
+  for (const book of Object.keys(de)) {
+    for (const chap of Object.keys(de[book] || {})) {
+      const title = String(de[book][chap] || "").trim();
+      if (!title) continue;
+
+      // Check French accents (not used in German)
+      if (reAccents.test(title)) {
+        errors.push({ book, chap, title });
+        continue;
+      }
+
+      // Check French words
+      const frenchMatch = title.match(reFrenchWords);
+      if (frenchMatch) {
+        errors.push({ book, chap, title });
+        continue;
+      }
+
+      // Check French elision
+      if (reFrenchElision.test(title)) {
+        errors.push({ book, chap, title });
+      }
+    }
+  }
+
+  if (errors.length) {
+    console.log("AUDIT FINAL DE: ECHEC");
+    console.log("Erreurs restantes:", errors.length);
+    errors.slice(0, 50).forEach((e, i) => {
+      console.log(`${String(i+1).padStart(2,"0")}. ${e.book}:${e.chap} -> ${e.title}`);
+    });
+    process.exit(2);
+  }
+
+  console.log("AUDIT FINAL DE: OK (0 erreur)");
+  process.exit(0);
+}
+
+main();

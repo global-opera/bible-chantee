@@ -14,8 +14,10 @@
     "@supabase/supabase-js": "^2.45.4",
     "dotenv": "^17.2.3",
     "googleapis": "^128.0.0",
+    "iconv-lite": "^0.7.2",
     "jsdom": "^27.3.0",
     "jsonwebtoken": "^9.0.3",
+    "openai": "^6.15.0",
     "stripe": "^20.1.0"
   },
   "author": "Stéphane CASSANI",

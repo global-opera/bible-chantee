@@ -134,6 +134,12 @@ sections-promesses.js.bak*
 # CSV / exports divers
 ########################################
 query-results.csv
+errors_EN_completes.csv
+errors_ES_completes.csv
+errors_DE_completes.csv
+errors_IT_completes.csv
+errors_TL_completes.csv
+errors_PT_completes.csv
 tools/fix_3_fallbacks.js
 tools/fix_chapter_titles.js
 # Lyrics archive (too large for git)
