@@ -1633,40 +1633,42 @@ const audioPlayer = document.querySelector('#audioPlayer');
     function cleanLyrics(text) {
       if (!text) return '';
 
-      // Supprimer [STYLE] et tout ce qui suit
+      // 1. Supprimer [STYLE] et tout ce qui suit
       const styleIndex = text.indexOf('[STYLE]');
       if (styleIndex !== -1) {
         text = text.substring(0, styleIndex);
       }
 
-      // Supprimer [LYRICS] et [TITLE] tags
-      text = text.replace(/\[LYRICS\]/g, '');
-      text = text.replace(/\[TITLE\]/g, '');
+      // 2. Supprimer les tags structurels [TITLE], [LYRICS]
+      text = text.replace(/\[TITLE\]/gi, '');
+      text = text.replace(/\[LYRICS\]/gi, '');
 
-      // Supprimer les lignes de titre (Título: ou Title:)
-      text = text.replace(/\*\*Título:\s*["""][^"""]*["""]\*\*/g, '');
-      text = text.replace(/\*\*Title:\s*["""][^"""]*["""]\*\*/g, '');
-      text = text.replace(/Título:\s*["""][^"""]*["""]/g, '');
-      text = text.replace(/Title:\s*["""][^"""]*["""]/g, '');
+      // 3. Supprimer les lignes de titre avec markdown et guillemets
+      text = text.replace(/\*\*(Título|Title|TÍTULO|TITLE):\s*["""][^"""]*["""]\*\*/gi, '');
+      text = text.replace(/(Título|Title|TÍTULO|TITLE):\s*["""][^"""]*["""]/gi, '');
 
-      // Supprimer tous les tags de section entre crochets
-      // [Verso 1], [Verse 1], [Refrão], [Chorus], [Ponte], [Bridge], [Final], [Outro], etc.
-      text = text.replace(/\*\*\[(Vers[oe]|Chorus|Refrão|Ponte|Bridge|Final|Outro|Couplet|Refrain|Verset|Strophe|Spoken Word)[^\]]*\]\*\*/gi, '');
-      text = text.replace(/\[(Vers[oe]|Chorus|Refrão|Ponte|Bridge|Final|Outro|Couplet|Refrain|Verset|Strophe|Spoken Word)[^\]]*\]/gi, '');
+      // 4. Supprimer TOUS les tags de section entre crochets (avec ou sans markdown)
+      // Français: [Verset], [Couplet], [Refrain], [Strophe]
+      // Anglais: [Verse], [Chorus], [Bridge], [Outro], [Intro], [Spoken Word]
+      // Espagnol: [Verso], [Coro], [Puente]
+      // Portugais: [Verso], [Refrão], [Ponte], [Fim]
+      text = text.replace(/\*\*\[(Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*\]\*\*/gi, '');
+      text = text.replace(/\[(Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*\]/gi, '');
 
-      // Supprimer les lignes contenant uniquement des noms de section (sans crochets)
-      text = text.replace(/^\s*(Vers[oe]\s+\d+|Chorus|Refrão|Ponte|Bridge|Final|Outro)\s*$/gmi, '');
+      // 5. Supprimer les lignes de section avec deux-points (Verse 1:, Chorus:, etc.)
+      // Format: "Verse 1:  " ou "Verso 1:  " ou "Coro  " etc.
+      text = text.replace(/^\s*(Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe)\s*\d*\s*:?\s*$/gmi, '');
 
-      // Supprimer "Letras" ou "Lyrics" seul en début de ligne
-      text = text.replace(/^\s*(Letras|Lyrics)\s*$/gmi, '');
+      // 6. Supprimer "Letras", "Lyrics", "LYRICS" seul en début de ligne
+      text = text.replace(/^\s*(Letras|Lyrics|LYRICS)\s*$/gmi, '');
 
-      // Enlever le markdown ** ** (garder le texte entre)
+      // 7. Enlever le markdown ** ** (garder le texte entre)
       text = text.replace(/\*\*([^*]+)\*\*/g, '$1');
 
-      // Nettoyer les lignes vides en trop (max 2 lignes vides consécutives)
+      // 8. Nettoyer les lignes vides en trop (max 2 lignes vides consécutives)
       text = text.replace(/(\r?\n\s*){3,}/g, '\n\n');
 
-      // Nettoyer les espaces en début/fin
+      // 9. Nettoyer les espaces en début/fin
       text = text.trim();
 
       return text;
