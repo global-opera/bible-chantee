@@ -21,12 +21,9 @@
             width: fit-content; margin: 0 auto 20px; transition: all 0.3s;
         }
         .back-link:hover { background: #f5c842; color: #1a237e; }
-        .lang-selector { display: flex; justify-content: center; gap: 8px; margin-bottom: 25px; flex-wrap: wrap; }
-        .lang-btn {
-            padding: 8px 15px; border: 1px solid #f5c842; border-radius: 20px;
-            background: transparent; color: #f5c842; cursor: pointer; font-size: 14px;
-        }
-        .lang-btn.active { background: #f5c842; color: #1a237e; }
+        
+        
+        
         .prayers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 13px; }
         .prayer-card {
             aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -52,7 +49,7 @@
         <a href="lecteur.html" class="back-link" id="backLink">Retour</a>
         <h1 id="pageTitle">Prieres Chantees</h1>
         <p class="subtitle" id="subtitle">Elevez votre coeur vers Dieu</p>
-        <div class="lang-selector" id="langSelector"></div>
+        
         <div class="prayers-grid" id="prayersGrid"></div>
     </div>
 
@@ -138,16 +135,7 @@
     currentLang = currentLang.toUpperCase();
     if (!PRAYERS[currentLang]) currentLang = 'FR';
 
-    function renderLangSelector() {
-        const selector = document.getElementById('langSelector');
-        selector.innerHTML = '';
-        Object.keys(PRAYERS).forEach(lang => {
-            const btn = document.createElement('button');
-            btn.className = 'lang-btn' + (lang === currentLang ? ' active' : '');
-            btn.textContent = lang;
-            btn.onclick = () => { currentLang = lang; localStorage.setItem('bc_lang', lang); render(); };
-            selector.appendChild(btn);
-        });
+    );
     }
 
     function render() {
@@ -155,7 +143,7 @@
         document.getElementById('pageTitle').textContent = ui.title;
         document.getElementById('subtitle').textContent = ui.subtitle;
         document.getElementById('backLink').textContent = ui.back;
-        renderLangSelector();
+        
 
         const grid = document.getElementById('prayersGrid');
         grid.innerHTML = '';
@@ -191,3 +179,4 @@
     </script>
 </body>
 </html>
+
