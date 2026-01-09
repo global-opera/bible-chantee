@@ -2,7 +2,7 @@
 // Auto-generated: 2025-12-19
 window.chapterLyricsEN = {
 
-    "01": {
+    "01_GEN": {
         1: `[Verse 1]  
 In the beginning, You spoke the Word,  
 From the void, Your voice we heard.  
@@ -2571,7 +2571,7 @@ In the heart of the Father, our hope never wanes.
 In the land of promise, together we stand,  
 With faith as our anchor, held firm in His hand.`,
     },
-    "02": {
+    "02_EXO": {
         1: `Verse 1:  
 In the shadow of Egypt, the children came,  
 Jacob's sons united, calling out Your name.  
@@ -4702,7 +4702,7 @@ With every heart, we lift Your song,
 In the sacred space where we belong.  
 Amen.`,
     },
-    "03": {
+    "03_LEV": {
         1: `Verse 1  
 In the quiet of Your presence, Lord,  
 You call us near, our hearts restored.  
@@ -6091,7 +6091,7 @@ A covenant written, guiding our light.
 As we gather, let our voices rise,  
 In holy vows, our hearts will harmonize.`,
     },
-    "04": {
+    "04_NUM": {
         1: `[Verse 1]  
 In the wilderness, You called us,  
 Moses heard Your voice so clear,  
@@ -7921,7 +7921,7 @@ Holding tightly to the gift of Your grace.
 Inherit the promise, as we lift up our voice,  
 Together in unity, we rejoice, we rejoice.`,
     },
-    "05": {
+    "05_DEU": {
         1: `Verse 1:  
 In the wilderness, we stand,  
 Moses spoke, by God’s command,  
@@ -9736,7 +9736,7 @@ With hearts united, His love our own.
 For every promise, we shall proclaim,  
 In faith we walk, and glorify His name.`,
     },
-    "06": {
+    "06_JOS": {
         1: `### Title: "Rise Up, O Israel"
 
 Verse 1  
@@ -11017,7 +11017,7 @@ We choose to follow, we choose the good.
 With faith unshaken, together we’ll lay,  
 Our lives before Him, we choose this day.`,
     },
-    "07": {
+    "07_JDG": {
         1: `Verse 1:  
 In the days of old, the children cried,  
 "Who shall go up, O Lord, as our guide?"  
@@ -12162,7 +12162,7 @@ Every heart seeking, in You we confide.
 As we leave this place, let us carry the light,  
 United in Your love, we will shine through the night.`,
     },
-    "08": {
+    "08_RUT": {
         1: `Verse 1:  
 In the days when judges ruled the land,  
 A famine struck, and hope slipped from our hands.  
@@ -12380,7 +12380,7 @@ You are our hope, our battle cry.
 Amen, amen, we sing Your name,  
 Our Redeemer, forever the same.`,
     },
-    "09": {
+    "09_1SAM": {
         1: `[Verse 1]  
 In the shadows of Shiloh, a heart filled with pain,  
 Hannah weeps in silence, calling on Your name.  
@@ -13988,7 +13988,7 @@ In Your love, we find our way,
 Through every trial, every sorrow,  
 You guide us day by day.`,
     },
-    "10": {
+    "10_2SAM": {
         1: `Verse 1:  
 In the shadow of Gilboa, the battle raged on,  
 Saul and Jonathan, oh how they shone,  
@@ -15237,7 +15237,7 @@ On Your grace through all our days.
 In Your hands, O Lord, we fall,  
 Your mercy reigns, our all in all.`,
     },
-    "11": {
+    "11_1KI": {
         1: `(Verse 1)  
 In the twilight of David's reign,  
 As the shadows start to fall,  
@@ -16309,7 +16309,7 @@ We find our hope in the risen Son.
 Together we march, through valleys low,  
 With You, O Lord, forever we’ll go.`,
     },
-    "12": {
+    "12_2KI": {
         1: `Verse 1  
 In the shadow of the throne,  
 A king fell through the skies,  
@@ -17622,7 +17622,7 @@ With faith, we rise, in Your command.
 For even in the darkest night,  
 You are our hope, our guiding light.`,
     },
-    "13": {
+    "13_1CH": {
         1: `Verse 1  
 From Adam's breath, the story unfolds,  
 A lineage of faith, in hearts it's told.  
@@ -19064,7 +19064,7 @@ With every breath, we worship, in love, we find our grace.
 Forever we will praise You, our hearts forever true,  
 In this house that we build, we’re united, Lord, with You.`,
     },
-    "14": {
+    "14_2CH": {
         1: `Verse 1  
 In the shadow of the throne, where mercy reigns,  
 Solomon stood, his heart aflame,  
@@ -20911,7 +20911,7 @@ With every fallen kingdom, You guide us to fight.
 In the story of kings, Your purpose we find,  
 Forever we worship, our hearts intertwined.`,
     },
-    "15": {
+    "15_EZR": {
         1: `Rise Up to Build
 
 VERSE 1  
@@ -21415,7 +21415,7 @@ To the God of our fathers, our Savior, our King.
 In the light of Your mercy, we’ll walk in Your ways,  
 Forever we'll honor You, for all of our days.`,
     },
-    "16": {
+    "16_NEH": {
         1: `Verse 1  
 In the palace of Shushan, I sat with a heart so torn,  
 A word from my brethren, a burden borne.  
@@ -22052,7 +22052,7 @@ With every breath, my heart beats loud,
 Forever in Your holy place.  
 Remember me, O God, always.`,
     },
-    "17": {
+    "17_EST": {
         1: `[Verse 1]  
 In the days of a mighty king,  
 Ahasuerus on his throne did reign,  
@@ -22537,7 +22537,7 @@ Of the grace that unites us, and the hope that He brings.
 For Mordecai’s courage, in our hearts shall remain,  
 A legacy of faith, forever proclaim.`,
     },
-    "18": {
+    "18_JOB": {
         1: `Verse 1  
 In the land of Uz, a man stood tall,  
 Job, upright and faithful, he gave his all.  
@@ -24744,7 +24744,7 @@ In Your great mercy, I will rely.
 For every tear, You’ve wiped away,  
 In dust and ashes, I rise to pray.`,
     },
-    "19": {
+    "19_PSA": {
         1: `Verse 1:  
 Blessed is the man who walks in Your ways,  
 Not in the counsel where darkness stays.  
@@ -31075,7 +31075,7 @@ Forever, we’ll exalt Your name.
 Praise ye the Lord!  
 Praise ye the Lord!`,
     },
-    "20": {
+    "20_PRO": {
         2: `Verse 1  
 My heart, O Lord, I offer thee,  
 To hide Your words, to set me free.  
@@ -31865,7 +31865,7 @@ For Your wisdom, Lord, is great.
 Lead me onward, day by day,  
 In Your truth, I choose to stay.`,
     },
-    "21": {
+    "21_ECC": {
         3: `Verse 1  
 In every season, a time to be born,  
 A time to embrace, a time to mourn.  
@@ -32112,7 +32112,7 @@ In every twist and turn, Lord, let Your light be spread.
 For wisdom is our treasure, in the stillness, we remain,  
 In the house of mourning, we find joy amidst the pain.`,
     },
-    "22": {
+    "22_SON": {
         4: `Verse 1  
 Behold, my love, so fair and bright,  
 Your beauty shines, a pure delight.  
@@ -32353,7 +32353,7 @@ In the mountains of spices, our love will be free.
 With the world at our feet, and hope in our eyes,  
 In Your arms, my Beloved, my spirit will rise.`,
     },
-    "23": {
+    "23_ISA": {
         1: `Verse 1  
 O heavens, hear the cry,  
 The earth, give heed to the call,  
@@ -33294,7 +33294,7 @@ In Your fire, Lord, we find our choir.
 With every breath, we sing Your praise,  
 Forevermore, our hearts ablaze.`,
     },
-    "24": {
+    "24_JER": {
         1: `Verse 1  
 In the shadow of the night, You spoke my name,  
 Before the dawn of time, I was known, not in vain.  
@@ -34562,7 +34562,7 @@ In the ruins, hope will spring,
 Chains of silence, we are free,  
 In Your love, we find our peace.`,
     },
-    "25": {
+    "25_LAM": {
         1: `Verse 1:
 In the night, the city weeps,  
 Once so grand, now silence keeps,  
@@ -34768,7 +34768,7 @@ In faith we stand, with open skies.
 O daughter Zion, sing your song,  
 For in His arms, we will belong.`,
     },
-    "27": {
+    "27_DAN": {
         4: `Verse 1  
 In the shadow of the tree, I stood in pride,  
 Built a kingdom strong, in my own might,  
@@ -34828,7 +34828,7 @@ In Your love, our fears release,
 Most High, forever we proclaim,  
 Your kingdom reigns, in Jesus' name.`,
     },
-    "28": {
+    "28_HOS": {
         2: `Verse 1:  
 In the wilderness, I hear Your call,  
 Pleading for hearts that have lost it all.  
@@ -35038,7 +35038,7 @@ The just will walk in paths forevermore.
 Return to the Lord, with hearts open wide,  
 In His love and grace, forever abide.`,
     },
-    "30": {
+    "30_AMO": {
         1: `Verse 1  
 From the hills of Tekoa, a voice breaks through,  
 The Lord is calling, hear His truth anew.  
@@ -35316,7 +35316,7 @@ In the arms of the Father, His love draws near.
 He who sees all, our hope and our song,  
 In His presence, forever, we belong.`,
     },
-    "31": {
+    "31_OBA": {
         1: `Verse 1:  
 O Lord, we hear the whisper,  
 Of judgment coming near,  
@@ -35383,7 +35383,7 @@ With mercy in Your hand.
 The day of the Lord is coming,  
 O Lord, we make our stand.`,
     },
-    "32": {
+    "32_JON": {
         1: `Verse 1  
 You called to Jonah, rise and go,  
 To Nineveh, where wickedness flows.  
@@ -35597,7 +35597,7 @@ With Your grace, set them free.
 Spare the city, O our Savior,  
 Let Your heart be shown through me.`,
     },
-    "33": {
+    "33_MIC": {
         1: `Verse 1  
 Hear, O people, the word of the Lord,  
 From His holy temple, let truth be restored.  
@@ -35879,7 +35879,7 @@ In Your salvation, I will rejoice.
 In Your mercy, I will stand,  
 Holding tightly to Your hand.`,
     },
-    "34": {
+    "34_NAH": {
         1: `Verse 1  
 In the shadow of the mountains,  
 The Lord declares His might,  
@@ -36005,7 +36005,7 @@ We will bow before Your throne,
 With our hearts made pure and ready,  
 In Your presence, we are home.`,
     },
-    "36": {
+    "36_ZEP": {
         3: `[Verse 1]  
 Woe to the heart, that turns away,  
 In the shadows, lost and led astray.  
@@ -36060,7 +36060,7 @@ Your love, O Lord, forever the same.
 With hearts united, we call Your name,  
 In the midst of us, we’ll never be the same.`,
     },
-    "37": {
+    "37_HAG": {
         1: `Verse 1:
 In the quiet of the morning, Lord, we seek Your face,  
 Your voice breaks through the silence, calling us to grace.  
@@ -36154,7 +36154,7 @@ Trusting in Your mighty hand.
 From this day forth, Lord, we believe,  
 In Your glory, we shall receive.`,
     },
-    "38": {
+    "38_ZEC": {
         1: `Verse 1  
 In the stillness of the night, You call,  
 To the hearts that wander far,  
@@ -36538,7 +36538,7 @@ Every pot shall be holy, exalt His name.
 The feast of our King, let all nations come,  
 In the light of His mercy, our hearts are one.`,
     },
-    "39": {
+    "39_MAL": {
         1: `Verse 1  
 You have loved us, O Lord, in ways we can't see,  
 Yet we question Your heart, when we fail to believe.  
@@ -36736,7 +36736,7 @@ In reverence, we come, as time draws nigh.
 Let hearts unite, in love we stand,  
 Until that day, we trust Your hand.`,
     },
-    "40": {
+    "40_MAT": {
         2: `Verse 1:  
 In the stillness of the night, a promise shines so bright,  
 Wise men traveled far and wide, led by heaven's light.  
@@ -37273,7 +37273,7 @@ With every tear, with every cost,
 I stand redeemed, forever lost in You,  
 In the shadow of the cross.`,
     },
-    "42": {
+    "42_LUK": {
         3: `Verse 1  
 In the wilderness, Your voice is calling,  
 "Prepare the way, for the Lord is near."  
@@ -37820,7 +37820,7 @@ In wonder and love, we lift up our voice.
 With hearts full of praise, we gather and sing,  
 Our Savior is here, our risen King!`,
     },
-    "44": {
+    "44_ACT": {
         3: `Verse 1  
 In the temple, at the hour of prayer,  
 A man was waiting, burdened by despair.  
@@ -38389,7 +38389,7 @@ With Your love, I’ll take this land.
 We’ll tell the world of all You’ve done,  
 With open hearts, we’ll rise as one.`,
     },
-    "45": {
+    "45_ROM": {
         1: `Verse 1  
 Here I stand, a servant true,  
 Called by grace to worship You.  
@@ -39125,7 +39125,7 @@ Through Jesus our Savior, our praises we sing,
 In the bonds of His love, we’ll stand hand in hand,  
 Together in faith, united we’ll stand.`,
     },
-    "46": {
+    "46_1CO": {
         1: `### Title: "Glory in the Lord"
 
 Verse 1  
@@ -39398,7 +39398,7 @@ In the spirit of Christ, we find our place.
 United in faith, we lift Your name,  
 In remembrance of You, forever the same.`,
     },
-    "47": {
+    "47_2CO": {
         3: `Verse 1:  
 In the silence of our hearts,  
 A story written deep within,  
@@ -39463,7 +39463,7 @@ Your story lives, forevermore,
 Written not in stone, but love,  
 In every life, Your grace restores.`,
     },
-    "49": {
+    "49_EPH": {
         5: `Verse 1  
 As dear children, we will follow,  
 In the light, our hearts will shine,  
@@ -39555,7 +39555,7 @@ Grace upon us all, as we walk in unity.
 Stand firm in His might, let His Spirit lead,  
 In the strength of the Lord, we are all we need.`,
     },
-    "50": {
+    "50_PHP": {
         1: `Verse 1  
 In every prayer, I lift you high,  
 With joy I thank my God above,  
@@ -39745,7 +39745,7 @@ Together in love, we stand endeavor.
 The grace of Christ, our hearts will fill,  
 In unity, Lord, we seek Your will.`,
     },
-    "51": {
+    "51_COL": {
         1: `Verse 1  
 In the grace from God our Father,  
 Peace flows like a river wide,  
@@ -39918,7 +39918,7 @@ We serve the Lord, our hearts He'll lead.
 With thankful hearts, we rise and sing,  
 In Christ, our Savior, everything.`,
     },
-    "54": {
+    "54_1TI": {
         4: `Verse 1  
 In the latter days, we hear Your call,  
 Spirit speaking to us, guiding through it all.  
@@ -39977,7 +39977,7 @@ In every word and deed,
 We’ll share the hope of salvation,  
 In love, we plant the seed.`,
     },
-    "56": {
+    "56_TIT": {
         2: `Verse 1:  
 In the quiet of the morning,  
 We gather here in grace,  
@@ -40112,7 +40112,7 @@ In the light of Your favor,
 We’ll shine Your truth along the way.  
 Amen.`,
     },
-    "57": {
+    "57_PHM": {
         1: `Verse 1  
 In the bonds of love we gather,  
 In the grace of Christ we stand,  
@@ -40179,7 +40179,7 @@ In our hearts, His love will stay,
 As we walk this road together,  
 In His light, we find our way.`,
     },
-    "58": {
+    "58_HEB": {
         1: `Verse 1  
 In the silence of the ages, Your voice breaks through the night,  
 Once You spoke through prophets, now You shine with holy light.  
@@ -40446,7 +40446,7 @@ With hearts that are lifted, our praises resound.
 In Jesus, our forerunner, forever we stand,  
 Anchored in grace, held securely by hand.`,
     },
-    "60": {
+    "60_1PE": {
         4: `Verse 1  
 In the silence of the night, You bore our pain,  
 Suffering in the flesh, You took our shame.  
@@ -40538,7 +40538,7 @@ In Christ Jesus, our hearts complete.
 Peace be with us, as we stand,  
 Together, Lord, hand in hand.`,
     },
-    "65": {
+    "65_JUD": {
         1: `Verse 1  
 Servants called by grace divine,  
 Sanctified, we seek to shine,  
@@ -40593,7 +40593,7 @@ Forever held in Your grace.
 In Your love, we stand secure,  
 Our hearts and lives, forever pure.`,
     },
-    "66": {
+    "66_REV": {
         1: `Verse 1:  
 In the silence of Patmos, I heard a voice so clear,  
 A trumpet call of glory, drawing all to hear.  
