@@ -1,0 +1,65 @@
+═══════════════════════════════════════════════════════════════
+  ⚡ COMMANDES RAPIDES - PATCH NETTOYAGE TITRES ⚡
+═══════════════════════════════════════════════════════════════
+
+🚀 COMMIT EN 3 LIGNES
+───────────────────────────────────────────────────────────────
+cd "C:\ScriptBible\bible-chantee"
+git add lecteur.html js/chapter-titles.js Scripts/NORMALIZE_CHAPTER_TITLES.ps1
+git commit -F COMMIT_MESSAGE.txt
+
+📚 DOCUMENTATION (par ordre de lecture)
+───────────────────────────────────────────────────────────────
+1. LIRE_EN_PREMIER.txt ........... Résumé 10 secondes
+2. COMMANDES_RAPIDES.txt ......... Ce fichier
+3. GUIDE_COMMIT.md ............... Guide étape par étape
+4. PATCH_FINAL_SUMMARY.md ........ Documentation complète
+
+🔍 VÉRIFIER LES MODIFICATIONS
+───────────────────────────────────────────────────────────────
+git status
+git diff lecteur.html
+git diff js/chapter-titles.js
+git diff --stat
+
+📦 FICHIERS CRÉÉS/MODIFIÉS
+───────────────────────────────────────────────────────────────
+✓ lecteur.html ......................... [MODIFIÉ - +15/-10]
+✓ js/chapter-titles.js ................. [MODIFIÉ - 8 titres]
+✓ Scripts/NORMALIZE_CHAPTER_TITLES.ps1 . [NOUVEAU]
+
+📄 Documentation (6 fichiers)
+✓ LIRE_EN_PREMIER.txt
+✓ COMMANDES_RAPIDES.txt
+✓ GUIDE_COMMIT.md
+✓ PATCH_FINAL_SUMMARY.md
+✓ PATCH_README.txt
+✓ PATCH_SUMMARY.md
+✓ COMMIT_MESSAGE.txt
+✓ PATCH_CLEAN_TITLES_COMPLETE.diff
+
+🧪 TESTER APRÈS COMMIT
+───────────────────────────────────────────────────────────────
+1. Ouvrir lecteur.html dans navigateur
+2. Console F12 :
+   cleanTitle('" Test "')  // → "Test"
+3. Charger Lamentations 3 (FR)
+4. Vérifier titre sans guillemet » à la fin
+
+♻️  RELANCER NORMALISATION (si besoin)
+───────────────────────────────────────────────────────────────
+pwsh Scripts/NORMALIZE_CHAPTER_TITLES.ps1
+
+↩️  ANNULER (si problème AVANT commit)
+───────────────────────────────────────────────────────────────
+git checkout -- lecteur.html
+git checkout -- js/chapter-titles.js
+
+📌 TAG DE VERSION (optionnel)
+───────────────────────────────────────────────────────────────
+git tag -a v1.2.0-clean-titles -m "Nettoyage permanent titres"
+git push origin v1.2.0-clean-titles
+
+═══════════════════════════════════════════════════════════════
+Patch prêt à commiter ✅ | Status git : prod | Date : 2026-01-09
+═══════════════════════════════════════════════════════════════

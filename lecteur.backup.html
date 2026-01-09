@@ -1,0 +1,2581 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bible Chantée - Lecteur Audio</title>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TX3ETCKJQZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TX3ETCKJQZ');
+  </script>
+
+  <script src="js/clear-cache.js?v=1"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      /* Blues */
+      --bleu-nuit: #1E3A5F;
+      --bleu-sombre: #162B46;
+      --bleu-cartes: #243F66;
+      --bleu-hover: #2C4A73;
+      
+      /* Golds */
+      --or-clair: #FFD700;
+      --or-moyen: #F5CB42;
+      --or-fonce: #FFAA00;
+      --or-chaud: #E6B000;
+    }
+    
+    body {
+      background: linear-gradient(180deg, var(--bleu-nuit) 0%, var(--bleu-sombre) 100%);
+      min-height: 100vh;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    
+    /* === LIGNE 1: DRAPEAUX (7 langues actives) === */
+    .flags-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      max-width: 585px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .flag-btn {
+      width: 89px;
+      height: 50px;
+      border: 2px solid rgba(245, 203, 66, 0.4);
+      border-radius: 12px;
+      background: var(--bleu-cartes);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      padding: 8px;
+    }
+    
+    .flag-btn:hover {
+      border-color: var(--or-moyen);
+      background: var(--bleu-hover);
+      transform: scale(1.05);
+    }
+    
+    .flag-btn.active {
+      border-color: var(--or-moyen);
+      background: var(--bleu-hover);
+      box-shadow: 0 0 15px rgba(245, 203, 66, 0.3);
+    }
+    
+    /* Disabled flags removed - only 7 active languages */
+    
+    .flag-img {
+      width: 100%;
+      height: auto;
+      max-height: 30px;
+      object-fit: contain;
+    }
+    
+    .flag-emoji {
+      font-size: 28px;
+    }
+    
+    /* === LIGNE 2: BOUTONS NAVIGATION (même hauteur que drapeaux) === */
+    .nav-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+      margin-bottom: 25px;
+      max-width: 585px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* === RECHERCHE SÉMANTIQUE === */
+    #searchInput {
+      flex: 1;
+      padding: 15px;
+      font-size: 16px;
+      border: 1px solid rgba(245, 203, 66, 0.3);
+      border-radius: 12px;
+      outline: none;
+      background: var(--bleu-sombre);
+      color: var(--or-moyen);
+      min-width: 0;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    #searchInput::placeholder {
+      color: var(--or-moyen);
+    }
+
+    #searchInput:focus {
+      border-color: var(--or-moyen);
+      box-shadow: 0 0 15px rgba(245, 203, 66, 0.3);
+      background: var(--bleu-hover);
+    }
+
+    .search-button {
+      width: 75px;
+      height: 50px;
+      background: var(--bleu-cartes);
+      color: white;
+      border: 2px solid rgba(245, 203, 66, 0.4);
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 20px;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-button:hover {
+      background: var(--bleu-hover);
+      border-color: var(--or-moyen);
+      transform: scale(1.05);
+    }
+
+    /* Bouton WhatsApp - même taille que les 14 autres */
+    .btn-whatsapp {
+      width: 75px !important;
+      height: 50px !important;
+      background: #25D366 !important;
+      border-color: #25D366 !important;
+    }
+
+    .btn-whatsapp:hover {
+      background: #128C7E !important;
+      border-color: #128C7E !important;
+      transform: scale(1.1);
+    }
+
+    .search-results {
+      max-width: 585px;
+      margin: 20px auto;
+      padding: 0 10px;
+    }
+
+    /* === SECTION INSCRIPTION === */
+    .newsletter-section {
+      max-width: 585px;
+      margin: 20px auto 20px;
+      background: var(--bleu-cartes);
+      border-radius: 20px;
+      padding: 25px;
+      border: 1px solid rgba(245, 203, 66, 0.2);
+      text-align: center;
+    }
+
+    .newsletter-icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .newsletter-title {
+      font-size: 20px;
+      color: var(--or-moyen);
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .newsletter-subtitle {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .newsletter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 32px;
+      background: var(--or-moyen);
+      color: var(--bleu-nuit);
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(245, 203, 66, 0.3);
+    }
+
+    .newsletter-btn:hover {
+      background: var(--or-clair);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 203, 66, 0.4);
+    }
+
+    .newsletter-btn .icon {
+      font-size: 20px;
+    }
+
+    /* POPUP INSCRIPTION */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-overlay.active {
+      display: flex;
+    }
+
+    .popup-modal {
+      background: var(--bleu-cartes);
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      animation: popupSlide 0.3s ease;
+    }
+
+    @keyframes popupSlide {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      color: var(--or-moyen);
+      font-size: 28px;
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.2s ease;
+    }
+
+    .popup-close:hover {
+      background: rgba(245, 203, 66, 0.1);
+      transform: rotate(90deg);
+    }
+
+    .popup-icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .popup-title {
+      color: var(--or-moyen);
+      font-size: 24px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .popup-subtitle {
+      color: var(--texte-secondaire);
+      font-size: 14px;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+
+    .popup-message {
+      color: var(--texte-principal);
+      font-size: 16px;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .popup-input {
+      width: 100%;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid rgba(245, 203, 66, 0.3);
+      background: var(--bleu-sombre);
+      color: var(--texte-principal);
+      font-size: 16px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+
+    .popup-input:focus {
+      outline: none;
+      border-color: var(--or-moyen);
+      box-shadow: 0 0 0 3px rgba(245, 203, 66, 0.1);
+    }
+
+    .popup-input::placeholder {
+      color: var(--texte-secondaire);
+    }
+
+    .popup-error {
+      color: #ff6b6b;
+      font-size: 13px;
+      margin-bottom: 15px;
+      min-height: 18px;
+      text-align: left;
+      padding-left: 5px;
+    }
+
+    .popup-btn {
+      width: 100%;
+      padding: 15px;
+      background: var(--or-moyen);
+      color: var(--bleu-nuit);
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(245, 203, 66, 0.3);
+    }
+
+    .popup-btn:hover {
+      background: var(--or-clair);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 203, 66, 0.4);
+    }
+
+    .result-card {
+      background: var(--bleu-cartes);
+      border: 1px solid rgba(245, 203, 66, 0.2);
+      border-radius: 15px;
+      padding: 15px 20px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      transition: all 0.2s ease;
+    }
+
+    .result-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 20px rgba(245, 203, 66, 0.3);
+      border-color: var(--or-moyen);
+    }
+
+    .result-icon {
+      font-size: 28px;
+      min-width: 40px;
+      text-align: center;
+    }
+
+    .result-info {
+      flex: 1;
+    }
+
+    .result-info h4 {
+      margin: 0;
+      color: var(--or-moyen);
+      font-size: 16px;
+    }
+
+    .result-info p {
+      margin: 5px 0 0;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 13px;
+    }
+
+    .result-play-btn {
+      background: var(--or-moyen);
+      color: var(--bleu-nuit);
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+
+    .result-play-btn:hover {
+      background: var(--or-clair);
+      transform: scale(1.05);
+    }
+    
+    .nav-btn {
+      width: 89px;
+      height: 50px;
+      border: 2px solid rgba(245, 203, 66, 0.4);
+      border-radius: 12px;
+      background: var(--bleu-cartes);
+      color: white;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1px;
+      font-size: 8px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .nav-btn:hover {
+      border-color: var(--or-moyen);
+      background: var(--bleu-hover);
+      color: var(--or-moyen);
+      transform: scale(1.05);
+    }
+
+    .nav-btn.active {
+      border-color: var(--or-moyen);
+      background: var(--bleu-hover);
+      color: var(--or-moyen);
+    }
+
+    .nav-btn.disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    .nav-btn.disabled:hover {
+      opacity: 0.4;
+      transform: none;
+    }
+    
+    .nav-btn .icon {
+      font-size: 20px;
+    }
+    
+    .nav-btn .text {
+      font-size: 8px;
+      white-space: nowrap;
+    }
+    
+    .nav-btn .badge {
+      font-size: 7px;
+      opacity: 0.7;
+    }
+
+    /* Bouton Soutenir - même taille que les 14 autres */
+    #navSoutenir {
+      width: 75px;
+      height: 50px;
+      padding: 8px;
+      background: linear-gradient(135deg, #F5CB42 0%, #FFD966 100%);
+      color: #1E3A5F;
+      border: 2px solid #F5CB42;
+    }
+
+    #navSoutenir:hover {
+      background: linear-gradient(135deg, #FFD966 0%, #FFF4CC 100%);
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(245, 203, 66, 0.4);
+    }
+
+    #navSoutenir .icon {
+      font-size: 20px;
+    }
+
+    #navSoutenir .text {
+      font-size: 8px;
+      font-weight: bold;
+    }
+
+    /* === HEADER === */
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 20px;
+      background: var(--bleu-cartes);
+      border-radius: 20px;
+      border: 1px solid rgba(245, 203, 66, 0.2);
+    }
+    
+    .header-mode {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+    
+    .header-title {
+      font-size: 28px;
+      color: var(--or-moyen);
+    }
+    
+    .header-subtitle {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 16px;
+      margin-top: 5px;
+    }
+    
+    /* === CONTENU PRINCIPAL === */
+    .main-content {
+      background: var(--bleu-cartes);
+      border-radius: 20px;
+      padding: 25px;
+      border: 1px solid rgba(245, 203, 66, 0.2);
+    }
+    
+    .section-title {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: var(--or-moyen);
+    }
+    
+    /* === SELECT LIVRE === */
+    .book-select {
+      width: 100%;
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid rgba(245, 203, 66, 0.3);
+      background: var(--bleu-sombre);
+      color: var(--or-moyen);
+      font-size: 16px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    
+    .book-select option {
+      background: var(--bleu-sombre);
+      color: white;
+      padding: 10px;
+    }
+    
+    .book-select option:checked {
+      background: var(--bleu-hover);
+      color: var(--or-moyen);
+    }
+    
+    .book-select option:hover {
+      background: var(--bleu-hover);
+    }
+    
+    /* === SELECT CHAPITRE === */
+    .chapter-select {
+      width: 100%;
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid rgba(245, 203, 66, 0.3);
+      background: var(--bleu-sombre);
+      color: var(--or-moyen);
+      font-size: 16px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    .chapter-select option {
+      background: var(--bleu-sombre);
+      color: white;
+      padding: 10px;
+    }
+
+    .chapter-select option:checked {
+      background: var(--bleu-hover);
+      color: var(--or-moyen);
+    }
+
+    .chapter-select option:hover {
+      background: var(--bleu-hover);
+    }
+    
+    /* === PLAYER === */
+    .player-bar {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 15px;
+      background: var(--bleu-sombre);
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+    
+    .play-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--or-moyen);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: var(--bleu-nuit);
+    }
+    
+    .progress-container {
+      flex: 1;
+    }
+    
+    .progress-bar {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    
+    .progress-fill {
+      width: 35%;
+      height: 100%;
+      background: var(--or-moyen);
+      border-radius: 3px;
+    }
+    
+    .time {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      min-width: 90px;
+      text-align: center;
+    }
+    
+    .player-controls {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .control-btn {
+      min-width: 40px;
+      height: 40px;
+      padding: 0 8px;
+      border-radius: 20px;
+      background: var(--bleu-hover);
+      border: 2px solid rgba(245, 203, 66, 0.4);
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      transition: all 0.2s ease;
+    }
+    
+    .control-btn:hover {
+      background: var(--bleu-cartes);
+      border-color: var(--or-moyen);
+    }
+    
+    .control-btn.favorited {
+      color: var(--success);
+      background: var(--success-bg);
+    }
+    
+    .add-radio-btn {
+      gap: 2px;
+    }
+    
+    .plus-icon {
+      color: var(--or-moyen);
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    .radio-icon {
+      font-size: 22px;
+    }
+    
+    .share-btn {
+      padding: 0;
+      background: transparent;
+      border: none;
+    }
+
+    /* Bouton Like (Cœur) */
+    .like-btn {
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .like-btn svg {
+      width: 24px;
+      height: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .like-btn:not(.liked) svg {
+      fill: none;
+      stroke: var(--or-moyen);
+      stroke-width: 2;
+    }
+
+    .like-btn.liked svg {
+      fill: #e74c3c;
+      stroke: #e74c3c;
+      stroke-width: 0;
+    }
+
+    .like-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .like-btn:active {
+      transform: scale(1.2);
+    }
+    
+    .share-icon {
+      width: 40px;
+      height: 40px;
+    }
+    
+    /* === TOGGLE PAROLES/BIBLE/RADIO === */
+    .toggle-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    
+    .toggle-btn {
+      flex: 1;
+      padding: 12px;
+      border: 2px solid rgba(245, 203, 66, 0.3);
+      border-radius: 25px;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.2s ease;
+    }
+    
+    .toggle-btn.active {
+      border-color: var(--or-moyen);
+      background: var(--bleu-hover);
+      color: var(--or-moyen);
+    }
+    
+    /* === ZONE CONTENU === */
+    .content-box {
+      margin-top: 20px;
+      padding: 20px;
+      background: var(--bleu-sombre);
+      border-radius: 15px;
+      border: 1px solid rgba(245, 203, 66, 0.15);
+      min-height: 200px;
+    }
+    
+    .content-title {
+      color: var(--or-moyen);
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    
+    .lyrics-text {
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .bible-text {
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.9);
+      white-space: pre-wrap;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* === RADIO PLAYLIST === */
+    .radio-playlist {
+      display: none;
+    }
+    
+    .radio-playlist.active {
+      display: block;
+    }
+    
+    .playlist-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 12px;
+      background: var(--bleu-sombre);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .playlist-item:hover {
+      background: var(--bleu-hover);
+    }
+    
+    .playlist-item.playing {
+      background: var(--bleu-hover);
+      border-left: 3px solid var(--or-moyen);
+    }
+    
+    .playlist-num {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(245, 203, 66, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--or-moyen);
+    }
+    
+    .playlist-info {
+      flex: 1;
+    }
+    
+    .playlist-title {
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+    
+    .playlist-lang {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .playlist-remove {
+      color: rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      padding: 5px;
+    }
+    
+    .playlist-remove:hover {
+      color: #ff6b6b;
+    }
+    
+    .radio-controls {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .radio-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--bleu-cartes);
+      border: 2px solid rgba(245, 203, 66, 0.3);
+      color: white;
+      cursor: pointer;
+      font-size: 20px;
+      transition: all 0.2s ease;
+    }
+    
+    .radio-btn:hover {
+      background: var(--bleu-hover);
+      border-color: var(--or-moyen);
+    }
+    
+    .radio-btn.main {
+      width: 60px;
+      height: 60px;
+      background: var(--or-moyen);
+      color: var(--bleu-nuit);
+      border: none;
+    }
+    
+    /* === FOOTER === */
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 15px;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 14px;
+    }
+    
+    /* === RESPONSIVE === */
+    @media (max-width: 600px) {
+      .flags-row {
+        gap: 6px;
+        max-width: 420px;
+      }
+      .flag-btn {
+        width: 55px;
+        height: 40px;
+        font-size: 22px;
+      }
+      .nav-row {
+        max-width: 420px;
+      }
+      .nav-btn {
+        width: 55px;
+        height: 40px;
+        padding: 8px 6px;
+        font-size: 12px;
+      }
+      /* Ligne 3: même taille pour Soutenir, Loupe et WhatsApp */
+      #navSoutenir {
+        width: 55px !important;
+        height: 40px !important;
+      }
+      .search-button {
+        width: 55px !important;
+        height: 40px !important;
+        font-size: 18px !important;
+      }
+      .btn-whatsapp {
+        width: 55px !important;
+        height: 40px !important;
+      }
+      /* Ligne 3: conteneur */
+      .flags-row + .nav-row + div {
+        max-width: 420px !important;
+      }
+      #searchInput {
+        min-width: 100px;
+        font-size: 12px;
+        padding: 10px 12px;
+      }
+      /* Newsletter section responsive */
+      .newsletter-section {
+        max-width: 420px;
+        padding: 20px 15px;
+        margin: 15px auto;
+      }
+      .newsletter-icon {
+        font-size: 36px;
+      }
+      .newsletter-title {
+        font-size: 18px;
+      }
+      .newsletter-subtitle {
+        font-size: 13px;
+      }
+      .newsletter-btn {
+        padding: 10px 24px;
+        font-size: 14px;
+      }
+    }
+    .autoplay-btn.active {
+      background: rgba(245, 203, 66, 0.2);
+      border-color: #F5CB42;
+      color: #F5CB42;
+    }
+
+    /* === BOUTON VIDER CACHE === */
+    #bcClearCacheWrap {
+      position: fixed;
+      right: 14px;
+      bottom: 14px;
+      z-index: 99999;
+    }
+    #clearCacheBtn {
+      padding: 8px 14px;
+      border-radius: 10px;
+      border: 1px solid #f0c36d;
+      background: #2c2f5b;
+      color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      transition: opacity 0.3s;
+    }
+    #clearCacheBtn:hover {
+      opacity: 0.85;
+    }
+  </style>
+    <script src="js/books.js"></script>
+    <script src="js/book-names.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/chapter-titles.js?v=2"></script>
+    <script src="lyrics-data.js"></script>
+    <script src="lyrics-data-en.js"></script>
+    <script src="lyrics-data-pt.js"></script>
+    <script src="lyrics-data-es.js"></script>
+    <script src="lyrics-data-de.js"></script>
+    <script src="lyrics-data-it.js"></script>
+    <script src="lyrics-data-tl.js"></script>
+  </head>
+<body>
+  <div class="container">
+    
+    <!-- LIGNE 1: 7 DRAPEAUX (toutes les langues disponibles) -->
+    <div class="flags-row">
+      <button class="flag-btn active" data-lang="FR"><img src="./img/flags/flag_FR.png" alt="FR" class="flag-img"></button>
+      <button class="flag-btn" data-lang="EN"><img src="./img/flags/flag_EN.png" alt="EN" class="flag-img"></button>
+      <button class="flag-btn" data-lang="PT"><img src="./img/flags/flag_PT.png" alt="PT" class="flag-img"></button>
+      <button class="flag-btn" data-lang="ES"><img src="./img/flags/flag_ES.png" alt="ES" class="flag-img"></button>
+      <button class="flag-btn" data-lang="DE"><img src="./img/flags/flag_DE.png" alt="DE" class="flag-img"></button>
+      <button class="flag-btn" data-lang="IT"><img src="./img/flags/flag_IT.png" alt="IT" class="flag-img"></button>
+      <button class="flag-btn" data-lang="TL"><img src="./img/flags/flag_TL.png" alt="TL" class="flag-img"></button>
+    </div>
+
+    <!-- LIGNE 2: BOUTONS NAVIGATION -->
+    <div class="nav-row">
+      <a href="about.html" class="nav-btn" id="navAbout">
+        <span class="icon">📖</span>
+        <span class="text">À propos</span>
+      </a>
+      <a href="aide.html" class="nav-btn" id="navAide">
+        <span class="icon">❓</span>
+        <span class="text">Aide</span>
+      </a>
+      <a href="nouveautes.html" class="nav-btn" id="navNews">
+        <span class="icon">🆕</span>
+        <span class="text">Nouveautés</span>
+      </a>
+      <button class="nav-btn" id="navRadio">
+        <span class="icon">📻</span>
+        <span class="text">Radio</span>
+      </button>
+      <a href="promesses.html" class="nav-btn" id="navPromesses">
+        <span class="icon">⭐</span>
+        <span class="text">Promesses</span>
+      </a>
+      <a href="confessions.html" class="nav-btn" id="navConfessions">
+        <span class="icon">❤️</span>
+        <span class="text">Confessions</span>
+      </a>
+      <a href="#prieres" class="nav-btn disabled" id="navPrieres">
+        <span class="icon">🙏</span>
+        <span class="text">Prières</span>
+      </a>
+    </div>
+
+    <!-- LIGNE 3: SOUTENIR + RECHERCHE + LOUPE + WHATSAPP -->
+    <div style="display: flex; gap: 10px; align-items: center; margin-top: 5px; max-width: 585px; margin-left: auto; margin-right: auto;">
+      <!-- Bouton Soutenir: 75px (même taille réelle que les 14 autres) -->
+      <a href="crowdfunding.html" class="nav-btn" id="navSoutenir" style="width: 75px; height: 50px; flex-shrink: 0;">
+        <span class="icon" style="font-size: 20px;">💝</span>
+        <span class="text" style="font-size: 8px;">Soutenir</span>
+      </a>
+
+      <!-- Champ de recherche: prend l'espace restant -->
+      <input type="text" id="searchInput"
+             placeholder="Comment vous sentez-vous ?"
+             autocomplete="off">
+
+      <!-- Bouton Loupe: 75px (même taille réelle que les 14 autres) -->
+      <button id="searchBtn" class="search-button">🔍</button>
+
+      <!-- Bouton WhatsApp: 75px (même taille réelle que les 14 autres) -->
+      <button class="nav-btn btn-whatsapp" onclick="shareWhatsApp()" title="Partager sur WhatsApp" style="width: 75px; height: 50px; flex-shrink: 0; background: #25D366; border-color: #25D366;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- RÉSULTATS DE RECHERCHE -->
+    <div id="searchResults" class="search-results"></div>
+
+    <!-- SECTION INSCRIPTION NOUVEAUTÉS -->
+    <div class="newsletter-section">
+      <div class="newsletter-icon">🔔</div>
+      <div class="newsletter-title" id="newsletterTitle">Restez informé des nouveautés</div>
+      <div class="newsletter-subtitle" id="newsletterSubtitle">Prières chantées • Promesses bibliques • Confessions de foi</div>
+      <button class="newsletter-btn" onclick="openSubscribePopup()">
+        <span class="icon">🔔</span>
+        <span id="newsletterBtnText">S'inscrire</span>
+      </button>
+    </div>
+
+    <!-- POPUP INSCRIPTION EMAIL -->
+    <div class="popup-overlay" id="subscribePopup" onclick="closePopupOnOverlay(event)">
+      <div class="popup-modal">
+        <button class="popup-close" onclick="closeSubscribePopup()">&times;</button>
+
+        <!-- Écran formulaire -->
+        <div id="subscribeForm">
+          <div class="popup-icon">📧</div>
+          <h2 class="popup-title" id="popupFormTitle">Inscrivez-vous</h2>
+          <p class="popup-subtitle" id="popupFormSubtitle">Recevez les nouveautés : prières, promesses, confessions</p>
+
+          <input
+            type="email"
+            id="emailInput"
+            class="popup-input"
+            placeholder="Votre adresse email"
+            onkeypress="if(event.key==='Enter') submitEmail()"
+          >
+          <div id="emailError" class="popup-error"></div>
+
+          <button class="popup-btn" id="popupSendBtn" onclick="submitEmail()">Envoyer</button>
+        </div>
+
+        <!-- Écran de remerciement -->
+        <div id="thankYouScreen" style="display: none;">
+          <div class="popup-icon">🎉</div>
+          <h2 class="popup-title" id="popupThankYouTitle">Merci !</h2>
+          <p class="popup-message" id="popupThankYouMsg">Vous êtes inscrit ! Vous recevrez bientôt des nouvelles de Bible Chantée.</p>
+          <button class="popup-btn" id="popupCloseBtn" onclick="closeSubscribePopup()">Fermer</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="header-mode" id="headerMode">Lecteur</div>
+      <div class="header-title" id="headerTitle">Genèse</div>
+      <div class="header-subtitle" id="headerSubtitle">Chapitre 1</div>
+    </div>
+    
+    <!-- CONTENU PRINCIPAL -->
+    <div class="main-content">
+      
+      <!-- SECTION LECTEUR -->
+      <div id="playerSection">
+        <div class="section-title" id="labelLivre">Livre</div>
+        
+        <select class="book-select" id="bookSelect">
+          <!-- Populated dynamically from BOOKS + BOOK_NAMES -->
+        </select>
+        
+        <div class="section-title" id="labelChapitre">Chapitre</div>
+
+        <select class="chapter-select" id="chapterSelect">
+          <!-- Populated dynamically based on selected book -->
+        </select>
+        
+        <!-- PLAYER -->
+        <div class="player-bar">
+          <button class="play-btn" id="playBtn">▶</button>
+          <div class="progress-container">
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+          <div class="time">01:24 / 03:56</div>
+          <div class="player-controls">
+            <button class="control-btn add-radio-btn" id="favoriteBtn" title="Ajouter à la radio"><span class="plus-icon">+</span><span class="radio-icon">📻</span></button>
+            <button class="control-btn autoplay-btn" id="autoplayBtn" title="Lecture continue">🔁</button>
+            <button class="control-btn share-btn" id="shareBtn" title="Partager">
+              <svg viewBox="0 0 100 100" class="share-icon">
+                <circle cx="50" cy="50" r="48" fill="#2C4A73"/>
+                <path d="M30 55 Q30 35 50 35 L50 25 L75 45 L50 65 L50 55 Q40 55 30 55 Z" fill="#F5CB42"/>
+              </svg>
+            </button>
+            <button class="control-btn like-btn" id="likeBtn" title="Ajouter aux favoris" onclick="toggleLike()">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+            </button>
+          </div>
+        
+        <!-- LECTEUR AUDIO (cachÃ©, contrÃ´lÃ© par UI) -->
+        <audio id="audioPlayer" style="display: none;"></audio>
+</div>
+        
+        <!-- TOGGLE PAROLES/BIBLE -->
+        <div class="toggle-row">
+          <button class="toggle-btn active" id="toggleLyrics">🎤 Paroles</button>
+          <button class="toggle-btn" id="toggleBible">📖 Bible</button>
+        </div>
+        
+        <!-- CONTENU PAROLES/BIBLE -->
+        <div class="content-box" id="contentBox">
+          <div class="content-title" id="contentTitle">Paroles</div>
+
+          <!-- Paroles (affiché par défaut) -->
+          <div class="lyrics-text" id="lyricsContent" style="display: block;">
+            [Verse 1]<br>
+            Au commencement, Dieu créa<br>
+            Les cieux et la terre, Il forma<br>
+            La terre était informe et vide<br>
+            L'Esprit planait sur l'abîme<br><br>
+            [Chorus]<br>
+            Que la lumière soit !<br>
+            Et la lumière fut là<br>
+            Dieu sépara la lumière des ténèbres<br>
+            Le premier jour était célébré
+          </div>
+
+          <!-- Bible (caché par défaut) -->
+          <div class="bible-text" id="bibleContent" style="display: none;">
+            <p style="color: #999; font-style: italic;">Chargement du texte biblique...</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- SECTION RADIO (cachée par défaut) -->
+      <div class="radio-playlist" id="radioSection">
+        <div class="content-title">📻 Radio Bible Chantée</div>
+
+        <!-- Playlist dynamique -->
+        <div id="radioPlaylist"></div>
+
+        <!-- Contrôles -->
+        <div class="radio-controls">
+          <button class="radio-btn" id="radioShuffle" title="Aléatoire">🔀</button>
+          <button class="radio-btn" id="radioPrev" title="Précédent">⏮️</button>
+          <button class="radio-btn main" id="radioPlayPause" title="Lecture">▶️</button>
+          <button class="radio-btn" id="radioNext" title="Suivant">⏭️</button>
+          <button class="radio-btn" id="radioRepeat" title="Répéter">🔁</button>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- FOOTER -->
+    <div class="footer">
+      © 2025 Bible Chantée — V3 Test
+    </div>
+    
+  </div>
+  
+  <script>
+    // Traductions
+    const translations = {
+      FR: { about: "À propos", aide: "Aide", news: "Nouveautés", radio: "Radio", promesses: "Promesses", confessions: "Confessions", prieres: "Prières", soutenir: "Soutenir", livre: "Livre", chapitre: "Chapitre", paroles: "Paroles", bible: "Bible", lecteur: "Lecteur", searchPlaceholder: "Comment vous sentez-vous ?",
+        newsletterTitle: "Restez informé des nouveautés",
+        newsletterSubtitle: "Prières chantées • Promesses bibliques • Confessions de foi",
+        newsletterBtn: "S'inscrire",
+        popupTitle: "Inscrivez-vous",
+        popupSubtitle: "Recevez les nouveautés : prières, promesses, confessions",
+        popupEmailPlaceholder: "Votre adresse email",
+        popupSendBtn: "Envoyer",
+        popupErrorEmpty: "Veuillez entrer votre adresse email",
+        popupErrorInvalid: "Veuillez entrer un email valide",
+        popupThankYouTitle: "Merci !",
+        popupThankYouMsg: "Vous êtes inscrit ! Vous recevrez bientôt des nouvelles de Bible Chantée.",
+        popupCloseBtn: "Fermer"
+      },
+      EN: { about: "About", aide: "Help", news: "What's New", radio: "Radio", promesses: "Promises", confessions: "Confessions", prieres: "Prayers", soutenir: "Support", livre: "Book", chapitre: "Chapter", paroles: "Lyrics", bible: "Bible", lecteur: "Player", searchPlaceholder: "How are you feeling?",
+        newsletterTitle: "Stay informed of new releases",
+        newsletterSubtitle: "Sung Prayers • Biblical Promises • Confessions of Faith",
+        newsletterBtn: "Subscribe",
+        popupTitle: "Subscribe",
+        popupSubtitle: "Receive updates: prayers, promises, confessions",
+        popupEmailPlaceholder: "Your email address",
+        popupSendBtn: "Send",
+        popupErrorEmpty: "Please enter your email address",
+        popupErrorInvalid: "Please enter a valid email",
+        popupThankYouTitle: "Thank you!",
+        popupThankYouMsg: "You're subscribed! You'll receive news from Bible Chantée soon.",
+        popupCloseBtn: "Close"
+      },
+      PT: { about: "Sobre", aide: "Ajuda", news: "Novidades", radio: "Rádio", promesses: "Promessas", confessions: "Confissões", prieres: "Orações", soutenir: "Apoiar", livre: "Livro", chapitre: "Capítulo", paroles: "Letras", bible: "Bíblia", lecteur: "Leitor", searchPlaceholder: "Como você está se sentindo?",
+        newsletterTitle: "Fique informado das novidades",
+        newsletterSubtitle: "Orações cantadas • Promessas bíblicas • Confissões de fé",
+        newsletterBtn: "Inscrever-se",
+        popupTitle: "Inscreva-se",
+        popupSubtitle: "Receba novidades: orações, promessas, confissões",
+        popupEmailPlaceholder: "Seu endereço de email",
+        popupSendBtn: "Enviar",
+        popupErrorEmpty: "Por favor insira seu email",
+        popupErrorInvalid: "Por favor insira um email válido",
+        popupThankYouTitle: "Obrigado!",
+        popupThankYouMsg: "Você está inscrito! Receberá notícias da Bible Chantée em breve.",
+        popupCloseBtn: "Fechar"
+      },
+      ES: { about: "Acerca de", aide: "Ayuda", news: "Novedades", radio: "Radio", promesses: "Promesas", confessions: "Confesiones", prieres: "Oraciones", soutenir: "Apoyar", livre: "Libro", chapitre: "Capítulo", paroles: "Letras", bible: "Biblia", lecteur: "Reproductor", searchPlaceholder: "¿Cómo te sientes?",
+        newsletterTitle: "Mantente informado de las novedades",
+        newsletterSubtitle: "Oraciones cantadas • Promesas bíblicas • Confesiones de fe",
+        newsletterBtn: "Suscribirse",
+        popupTitle: "Suscríbete",
+        popupSubtitle: "Recibe novedades: oraciones, promesas, confesiones",
+        popupEmailPlaceholder: "Tu dirección de correo",
+        popupSendBtn: "Enviar",
+        popupErrorEmpty: "Por favor ingresa tu email",
+        popupErrorInvalid: "Por favor ingresa un email válido",
+        popupThankYouTitle: "¡Gracias!",
+        popupThankYouMsg: "¡Estás suscrito! Recibirás noticias de Bible Chantée pronto.",
+        popupCloseBtn: "Cerrar"
+      },
+      DE: { about: "Über uns", aide: "Hilfe", news: "Neuigkeiten", radio: "Radio", promesses: "Verheißungen", confessions: "Bekenntnisse", prieres: "Gebete", soutenir: "Unterstützen", livre: "Buch", chapitre: "Kapitel", paroles: "Liedtext", bible: "Bibel", lecteur: "Spieler", searchPlaceholder: "Wie fühlen Sie sich?",
+        newsletterTitle: "Bleiben Sie über Neuigkeiten informiert",
+        newsletterSubtitle: "Gesungene Gebete • Biblische Verheißungen • Glaubensbekenntnisse",
+        newsletterBtn: "Anmelden",
+        popupTitle: "Anmelden",
+        popupSubtitle: "Erhalten Sie Neuigkeiten: Gebete, Verheißungen, Bekenntnisse",
+        popupEmailPlaceholder: "Ihre E-Mail-Adresse",
+        popupSendBtn: "Senden",
+        popupErrorEmpty: "Bitte geben Sie Ihre E-Mail ein",
+        popupErrorInvalid: "Bitte geben Sie eine gültige E-Mail ein",
+        popupThankYouTitle: "Danke!",
+        popupThankYouMsg: "Sie sind angemeldet! Sie erhalten bald Neuigkeiten von Bible Chantée.",
+        popupCloseBtn: "Schließen"
+      },
+      IT: { about: "Chi siamo", aide: "Aiuto", news: "Novità", radio: "Radio", promesses: "Promesse", confessions: "Confessioni", prieres: "Preghiere", soutenir: "Sostieni", livre: "Libro", chapitre: "Capitolo", paroles: "Testo", bible: "Bibbia", lecteur: "Lettore", searchPlaceholder: "Come ti senti?",
+        newsletterTitle: "Rimani informato sulle novità",
+        newsletterSubtitle: "Preghiere cantate • Promesse bibliche • Confessioni di fede",
+        newsletterBtn: "Iscriviti",
+        popupTitle: "Iscriviti",
+        popupSubtitle: "Ricevi novità: preghiere, promesse, confessioni",
+        popupEmailPlaceholder: "Il tuo indirizzo email",
+        popupSendBtn: "Invia",
+        popupErrorEmpty: "Inserisci il tuo email",
+        popupErrorInvalid: "Inserisci un email valido",
+        popupThankYouTitle: "Grazie!",
+        popupThankYouMsg: "Sei iscritto! Riceverai presto notizie da Bible Chantée.",
+        popupCloseBtn: "Chiudi"
+      },
+      TL: { about: "Tungkol", aide: "Tulong", news: "Mga Bago", radio: "Radyo", promesses: "Pangako", confessions: "Pagtatapat", prieres: "Panalangin", soutenir: "Suportahan", livre: "Aklat", chapitre: "Kabanata", paroles: "Lyrics", bible: "Bibliya", lecteur: "Player", searchPlaceholder: "Paano ka nakakaramdam?",
+        newsletterTitle: "Manatiling May Kaalaman sa Mga Bagong Balita",
+        newsletterSubtitle: "Mga Awit na Panalangin • Pangako sa Bibliya • Mga Pahayag ng Pananampalataya",
+        newsletterBtn: "Mag-subscribe",
+        popupTitle: "Mag-subscribe",
+        popupSubtitle: "Tumanggap ng balita: panalangin, pangako, pagtatapat",
+        popupEmailPlaceholder: "Iyong email address",
+        popupSendBtn: "Ipadala",
+        popupErrorEmpty: "Mangyaring ilagay ang iyong email",
+        popupErrorInvalid: "Mangyaring ilagay ang wastong email",
+        popupThankYouTitle: "Salamat!",
+        popupThankYouMsg: "Naka-subscribe ka na! Makakatanggap ka ng balita mula sa Bible Chantée.",
+        popupCloseBtn: "Isara"
+      }
+    };
+    
+    let currentLang = 'FR';
+    let isRadioMode = false;
+    let isFavorited = false;
+    let isAutoplayEnabled = false;
+    let currentBook = '01_GEN';
+    let currentChapter = 1;
+
+    // Variables Radio
+    let radioPlaylist = [];
+    let radioIndex = 0;
+    let radioShuffle = false;
+    let radioRepeat = false;
+    let radioPlaying = false;
+
+    // Helper: Obtenir titre du chapitre depuis CHAPTER_TITLES
+    function getChapterTitle(book, chapter, lang) {
+      const bookNum = book.split('_')[0];
+      if (typeof CHAPTER_TITLES !== 'undefined' &&
+          CHAPTER_TITLES[lang] &&
+          CHAPTER_TITLES[lang][bookNum] &&
+          CHAPTER_TITLES[lang][bookNum][chapter]) {
+        const title = CHAPTER_TITLES[lang][bookNum][chapter];
+        // Filtrer les placeholders "[LYRICS]" et titres invalides
+        if (title && title !== '[LYRICS]' && !title.startsWith('[LYRICS]')) {
+          return title;
+        }
+      }
+      return ''; // Pas de titre trouvé ou titre invalide
+    }
+
+    // Audio Player
+    const audioPlayer = document.querySelector('#audioPlayer');
+    const playBtn = document.querySelector('#playBtn');
+    let isPlaying = false;
+
+    // Helper: Obtenir URL audio pour un chapitre
+    function getAudioUrl(book, chapter, lang) {
+      // Construire URL directement depuis Cloudflare R2
+      // Format: https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/{LANG}/{BOOK}/{BOOK}_{CHAPTER}_{LANG}.mp3
+      // Exemple: .../FR/01_GEN/01_GEN_01_FR.mp3
+      const chapterPadded = String(chapter).padStart(2, '0');
+      const langUpper = lang.toUpperCase();
+      return `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${langUpper}/${book}/${book}_${chapterPadded}_${langUpper}.mp3`;
+    }
+
+    // Charger et jouer un chapitre
+    function loadAndPlayChapter(book, chapter, lang) {
+      currentBook = book;
+      currentChapter = parseInt(chapter);
+      const audioUrl = getAudioUrl(book, chapter, lang);
+      audioPlayer.src = audioUrl;
+      audioPlayer.load();
+      audioPlayer.play().catch(e => console.log('Lecture bloquée:', e));
+      isPlaying = true;
+      playBtn.textContent = '⏸';
+      updateLikeButton(); // Mettre à jour le bouton like
+    }
+
+    // Jouer chapitre suivant (pour autoplay)
+    function playNextChapter() {
+      // Récupérer le nombre de chapitres du livre actuel
+      const currentBookData = BOOKS.find(b => b.code === currentBook);
+      const maxChapters = currentBookData ? currentBookData.chapters : 50;
+
+      if (currentChapter < maxChapters) {
+        const nextChapter = currentChapter + 1;
+        // Mettre à jour l'UI
+        const chapterSelect = document.querySelector('#chapterSelect');
+        if (chapterSelect) {
+          chapterSelect.value = nextChapter;
+        }
+        // Charger et jouer
+        loadAndPlayChapter(currentBook, nextChapter, currentLang);
+        // Mettre à jour le sous-titre
+        const t = translations[currentLang] || translations.FR;
+        const chapterTitle = getChapterTitle(currentBook, nextChapter.toString(), currentLang);
+        const subtitle = chapterTitle
+          ? `${t.chapitre} ${nextChapter} - ${chapterTitle}`
+          : `${t.chapitre} ${nextChapter}`;
+        document.querySelector('#headerSubtitle').textContent = subtitle;
+      } else {
+        // Fin du livre, arrêter l'autoplay
+        isPlaying = false;
+        playBtn.textContent = '▶';
+        console.log('Fin du livre atteint');
+      }
+    }
+
+    // Cache pour les fichiers JSON (Bible seulement)
+    const bibleCache = {};
+
+    // Mapping langue -> fichier Bible
+    const bibleFiles = {
+      FR: 'fr_bible_segond1910.json',
+      EN: 'en_bible_kjv_1611.json',
+      PT: 'pt_bible_almeida_acf.json',
+      ES: 'es_bible_reina_valera_1909.json',
+      DE: 'de_bible_luther_1912.json',
+      IT: 'it_bible_diodati_1649.json',
+      TL: 'tl_bible_old_tagalog.json'
+    };
+
+    // Charger et afficher les paroles
+    function loadLyrics(bookCode, chapter, lang) {
+      const lyricsContent = document.querySelector('#lyricsContent');
+      lyricsContent.innerHTML = '<p style="color: #999; font-style: italic;">Chargement des paroles...</p>';
+
+      try {
+        // Trouver le numéro du livre
+        const bookData = BOOKS.find(b => b.code === bookCode);
+        if (!bookData) {
+          lyricsContent.innerHTML = '<p style="color: #f88;">Livre non trouvé</p>';
+          return;
+        }
+        const bookNumber = bookData.num; // "01", "02", etc. - already formatted with leading zeros
+
+        // Obtenir les paroles depuis window.chapterLyrics{LANG}
+        // FR: window.chapterLyrics, EN: window.chapterLyricsEN, etc.
+        const lyricsVarName = lang === 'FR' ? 'chapterLyrics' : `chapterLyrics${lang}`;
+        const lyricsData = window[lyricsVarName];
+
+        if (!lyricsData) {
+          lyricsContent.innerHTML = `<p style="color: #999; font-style: italic;">Paroles non disponibles en ${lang}.</p>`;
+          return;
+        }
+
+        // Extraire les paroles du chapitre
+        const lyrics = lyricsData[bookNumber] && lyricsData[bookNumber][chapter];
+
+        if (!lyrics) {
+          lyricsContent.innerHTML = '<p style="color: #999;">Paroles non disponibles pour ce chapitre</p>';
+          return;
+        }
+
+        // Formater le texte (remplacer \r\n par <br>)
+        const formattedLyrics = lyrics
+          .replace(/\r\n/g, '<br>')
+          .replace(/\n/g, '<br>')
+          .replace(/\[TITLE\]<br>/g, '<div style="font-size: 22px; color: #F5CB42; font-weight: bold; margin-bottom: 15px;">')
+          .replace(/<br><br>\[LYRICS\]<br>/g, '</div>')
+          .replace(/\[(Verse|Chorus|Bridge|Spoken Word|Coup|Couplet|Refrain|Verset|Strophe) (\d+|[^\]]+)\]/g, '<br><strong style="color: #F5CB42;">[$1 $2]</strong><br>');
+
+        lyricsContent.innerHTML = formattedLyrics;
+      } catch (error) {
+        console.error('Erreur chargement paroles:', error);
+        lyricsContent.innerHTML = '<p style="color: #f88;">Erreur de chargement des paroles</p>';
+      }
+    }
+
+    // Charger et afficher le texte biblique
+    async function loadBibleText(bookCode, chapter, lang) {
+      const bibleContent = document.querySelector('#bibleContent');
+      bibleContent.innerHTML = '<p style="color: #999; font-style: italic;">Chargement...</p>';
+
+      try {
+        // Trouver le numéro du livre
+        const bookData = BOOKS.find(b => b.code === bookCode);
+        if (!bookData) {
+          bibleContent.innerHTML = '<p style="color: #f88;">Livre non trouvé</p>';
+          return;
+        }
+        const bookNumber = parseInt(bookData.num);
+
+        // Charger le fichier JSON
+        const filename = bibleFiles[lang] || bibleFiles.FR;
+        let bibleData = bibleCache[filename];
+
+        if (!bibleData) {
+          const response = await fetch(`bible/${filename}`);
+          if (!response.ok) {
+            bibleContent.innerHTML = '<p style="color: #f88;">Fichier Bible introuvable</p>';
+            return;
+          }
+          bibleData = await response.json();
+          bibleCache[filename] = bibleData;
+        }
+
+        // Extraire les versets du chapitre
+        const verses = bibleData.verses.filter(v => v.book === bookNumber && v.chapter === chapter);
+
+        if (verses.length === 0) {
+          bibleContent.innerHTML = '<p style="color: #999;">Aucun verset trouvé pour ce chapitre</p>';
+          return;
+        }
+
+        // Formater le texte
+        let html = '';
+        verses.forEach(v => {
+          html += `<sup style="color: #F5CB42; font-weight: bold;">${v.verse}</sup> ${v.text}\n\n`;
+        });
+
+        bibleContent.innerHTML = html;
+      } catch (error) {
+        console.error('Erreur chargement Bible:', error);
+        bibleContent.innerHTML = '<p style="color: #f88;">Erreur de chargement</p>';
+      }
+    }
+
+    // Event: Fin du chapitre (autoplay)
+    audioPlayer.addEventListener('ended', () => {
+      if (isRadioMode) {
+        // Mode Radio: passer au chapitre suivant
+        if (radioShuffle) {
+          radioIndex = Math.floor(Math.random() * radioPlaylist.length);
+        } else {
+          radioIndex = (radioIndex + 1) % radioPlaylist.length;
+          // Si repeat est désactivé et qu'on est à la fin, arrêter
+          if (radioIndex === 0 && !radioRepeat) {
+            isPlaying = false;
+            radioPlaying = false;
+            updateRadioPlayPauseBtn();
+            return;
+          }
+        }
+        playRadioItem(radioIndex);
+      } else if (isAutoplayEnabled) {
+        playNextChapter();
+      } else {
+        isPlaying = false;
+        playBtn.textContent = '▶';
+      }
+    });
+
+    // Event: Tracking GA4 quand l'audio démarre
+    audioPlayer.addEventListener('play', () => {
+      if (window.gtag && currentBook && currentChapter && currentLang) {
+        const duration = Math.round(audioPlayer.duration) || 0;
+        gtag('event', 'audio_play', {
+          book: currentBook,
+          chapter: currentChapter,
+          language: currentLang,
+          duration_seconds: duration,
+          event_category: 'Audio',
+          event_label: `${currentBook}_${currentChapter}_${currentLang}`
+        });
+        console.log('✅ GA4 audio_play tracked:', currentBook, currentChapter, currentLang);
+      }
+    });
+
+    // Populate books dropdown
+    function populateBooksDropdown() {
+      const bookSelect = document.querySelector('#bookSelect');
+      if (!bookSelect || !window.BOOKS) return;
+
+      const currentValue = bookSelect.value || '01_GEN';
+      bookSelect.innerHTML = '';
+
+      const bookNames = window.BOOK_NAMES && window.BOOK_NAMES[currentLang]
+        ? window.BOOK_NAMES[currentLang]
+        : window.BOOK_NAMES && window.BOOK_NAMES.FR
+        ? window.BOOK_NAMES.FR
+        : {};
+
+      BOOKS.forEach(book => {
+        const option = document.createElement('option');
+        option.value = book.code;
+        // Résoudre l'alias si nécessaire (ex: 09_1SAM -> 09_1SA)
+        const resolvedCode = (window.BOOK_CODE_ALIASES && window.BOOK_CODE_ALIASES[book.code]) || book.code;
+        option.textContent = bookNames[resolvedCode] || book.code;
+        bookSelect.appendChild(option);
+      });
+
+      // Restore previous selection
+      bookSelect.value = currentValue;
+    }
+
+    // Populate chapters select based on selected book
+    function populateChaptersSelect(bookCode) {
+      const chapterSelect = document.querySelector('#chapterSelect');
+      if (!chapterSelect || !window.BOOKS) return;
+
+      const book = BOOKS.find(b => b.code === bookCode);
+      const numChapters = book ? book.chapters : 50;
+
+      chapterSelect.innerHTML = '';
+
+      const t = translations[currentLang] || translations.FR;
+      for (let i = 1; i <= numChapters; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+
+        const chapterTitle = getChapterTitle(bookCode, i.toString(), currentLang);
+        const chapterPadded = String(i).padStart(2, '0');
+        option.textContent = chapterTitle
+          ? `${t.chapitre} ${chapterPadded} - ${chapterTitle}`
+          : `${t.chapitre} ${i}`;
+
+        chapterSelect.appendChild(option);
+      }
+
+      // Set current chapter as selected
+      chapterSelect.value = currentChapter || 1;
+    }
+
+
+    // Sélection langue
+    document.querySelectorAll('.flag-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (btn.classList.contains('disabled')) return; // Ignorer les langues désactivées
+
+        document.querySelectorAll('.flag-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentLang = btn.dataset.lang;
+
+        // Sauvegarder la langue dans localStorage pour les autres pages
+        localStorage.setItem('bc_lang', currentLang);
+
+        populateBooksDropdown(); // Repopulate with new language
+        populateChaptersSelect(currentBook); // Repopulate chapters with new language
+        updateTranslations();
+        updateNewsletterTranslations(); // Traductions newsletter + popup
+
+        // Recharger le chapitre actuel avec la nouvelle langue
+        if (currentBook && currentChapter) {
+          // Charger l'audio SANS lancer la lecture automatique
+          const audioUrl = getAudioUrl(currentBook, currentChapter, currentLang);
+          audioPlayer.src = audioUrl;
+          audioPlayer.load();
+
+          loadLyrics(currentBook, currentChapter, currentLang);
+          loadBibleText(currentBook, currentChapter, currentLang);
+
+          // Mettre à jour le titre du chapitre
+          const chapterTitle = getChapterTitle(currentBook, currentChapter, currentLang);
+          if (chapterTitle) {
+            const t = translations[currentLang] || translations.FR;
+            document.querySelector('#headerSubtitle').textContent = `${t.chapitre} ${currentChapter} - ${chapterTitle}`;
+          }
+        }
+      });
+    });
+    
+    // Mise à jour traductions
+    function updateTranslations() {
+      const t = translations[currentLang] || translations.FR;
+      document.querySelector('#navAbout .text').textContent = t.about;
+      document.querySelector('#navAbout').href = 'about.html?lang=' + currentLang;
+      document.querySelector('#navAide .text').textContent = t.aide;
+      document.querySelector('#navAide').href = 'aide.html?lang=' + currentLang;
+      document.querySelector('#navNews .text').textContent = t.news;
+      document.querySelector('#navNews').href = 'nouveautes.html?lang=' + currentLang;
+      document.querySelector('#navRadio .text').textContent = t.radio;
+      // navRadio est un button (mode radio intégré), pas de .href
+      document.querySelector('#navPromesses .text').textContent = t.promesses;
+      document.querySelector('#navPromesses').href = 'promesses.html?lang=' + currentLang;
+      document.querySelector('#navConfessions .text').textContent = t.confessions;
+      document.querySelector('#navConfessions').href = 'confessions.html?lang=' + currentLang;
+      document.querySelector('#navPrieres .text').textContent = t.prieres;
+      document.querySelector('#navPrieres').href = 'prieres.html?lang=' + currentLang;
+      document.querySelector('#navSoutenir .text').textContent = t.soutenir;
+      document.querySelector('#navSoutenir').href = 'crowdfunding.html?lang=' + currentLang;
+      document.querySelector('#labelLivre').textContent = t.livre;
+      document.querySelector('#labelChapitre').textContent = t.chapitre;
+      document.querySelector('#toggleLyrics').innerHTML = '🎤 ' + t.paroles;
+      document.querySelector('#toggleBible').innerHTML = '📖 ' + t.bible;
+      document.querySelector('#headerMode').textContent = isRadioMode ? t.radio : t.lecteur;
+      document.querySelector('#searchInput').placeholder = t.searchPlaceholder;
+
+      // Mettre à jour le titre du livre (headerTitle)
+      if (currentBook && window.BOOK_NAMES && window.BOOK_NAMES[currentLang]) {
+        const bookData = BOOKS.find(b => b.code === currentBook);
+        if (bookData) {
+          const bookName = window.BOOK_NAMES[currentLang][bookData.code] || window.BOOK_NAMES.FR[bookData.code] || bookData.code;
+          document.querySelector('#headerTitle').textContent = bookName;
+        }
+      }
+
+      // Mettre à jour le titre du contenu (Paroles ou Bible)
+      // Vérifier quel bouton est actif (plus fiable que style.display)
+      const lyricsActive = document.querySelector('#toggleLyrics').classList.contains('active');
+      if (lyricsActive) {
+        document.querySelector('#contentTitle').textContent = t.paroles;
+        loadLyrics(currentBook, currentChapter, currentLang);
+      } else {
+        document.querySelector('#contentTitle').textContent = t.bible;
+        loadBibleText(currentBook, currentChapter, currentLang);
+      }
+    }
+    
+    // Toggle Radio
+    document.querySelector('#navRadio').addEventListener('click', () => {
+      isRadioMode = !isRadioMode;
+      document.querySelector('#navRadio').classList.toggle('active', isRadioMode);
+      document.querySelector('#playerSection').style.display = isRadioMode ? 'none' : 'block';
+      document.querySelector('#radioSection').classList.toggle('active', isRadioMode);
+
+      if (isRadioMode && radioPlaylist.length === 0) {
+        generateRadioPlaylist();
+      }
+
+      updateTranslations();
+    });
+
+    // === FONCTIONS RADIO ===
+
+    // Générer playlist aléatoire (15 chapitres)
+    function generateRadioPlaylist() {
+      // Try to load saved playlist first
+      if (loadRadioPlaylist()) {
+        return;
+      }
+
+      // Generate random playlist if no saved playlist
+      radioPlaylist = [];
+      const availableBooks = BOOKS.filter(b => {
+        // Filtrer les livres qui ont de l'audio (pour l'instant, tous les livres FR/EN/PT/ES/DE/IT/TL)
+        return true;
+      });
+
+      for (let i = 0; i < 15; i++) {
+        const book = availableBooks[Math.floor(Math.random() * availableBooks.length)];
+        const chapter = Math.floor(Math.random() * book.chapters) + 1;
+
+        // Get book name from BOOK_NAMES with proper fallback
+        let bookName = book.code;
+        if (window.BOOK_NAMES) {
+          bookName = (window.BOOK_NAMES[currentLang] && window.BOOK_NAMES[currentLang][book.code])
+            || (window.BOOK_NAMES.FR && window.BOOK_NAMES.FR[book.code])
+            || book.code;
+        }
+
+        radioPlaylist.push({
+          book: book.code,
+          chapter,
+          name: bookName
+        });
+      }
+      radioIndex = 0;
+      renderRadioPlaylist();
+      saveRadioPlaylist();
+    }
+
+    // Afficher playlist
+    function renderRadioPlaylist() {
+      const container = document.getElementById('radioPlaylist');
+      if (!container) return;
+
+      container.innerHTML = radioPlaylist.map((item, i) => `
+        <div class="playlist-item ${i === radioIndex ? 'playing' : ''}" onclick="playRadioItem(${i})">
+          <div class="playlist-num">${i === radioIndex ? '▶' : i + 1}</div>
+          <div class="playlist-info">
+            <div class="playlist-title">${item.name} ${item.chapter}</div>
+          </div>
+          <div class="playlist-remove" onclick="removeRadioItem(${i}, event)">×</div>
+        </div>
+      `).join('');
+    }
+
+    // Jouer un item
+    function playRadioItem(index) {
+      radioIndex = index;
+      const item = radioPlaylist[index];
+
+      // Charger et jouer le chapitre
+      currentBook = item.book;
+      currentChapter = item.chapter;
+      const url = getAudioUrl(item.book, item.chapter, currentLang);
+      audioPlayer.src = url;
+      audioPlayer.play();
+
+      isPlaying = true;
+      radioPlaying = true;
+      renderRadioPlaylist();
+      updateRadioPlayPauseBtn();
+    }
+
+    // Retirer un item de la playlist
+    function removeRadioItem(index, event) {
+      event.stopPropagation();
+      radioPlaylist.splice(index, 1);
+      if (radioIndex >= index) radioIndex = Math.max(0, radioIndex - 1);
+      renderRadioPlaylist();
+      saveRadioPlaylist();
+
+      // Update badge count
+      const badge = document.querySelector('#radioBadge');
+      if (badge) {
+        badge.textContent = `(${radioPlaylist.length})`;
+      }
+    }
+
+    // Mettre à jour le bouton play/pause
+    function updateRadioPlayPauseBtn() {
+      const btn = document.getElementById('radioPlayPause');
+      if (!btn) return;
+      btn.textContent = (isPlaying && radioPlaying) ? '⏸️' : '▶️';
+    }
+
+    // === CONTRÔLES RADIO ===
+
+    // Play/Pause
+    document.getElementById('radioPlayPause').addEventListener('click', () => {
+      if (radioPlaylist.length === 0) {
+        generateRadioPlaylist();
+        playRadioItem(0);
+        return;
+      }
+
+      if (audioPlayer.paused) {
+        audioPlayer.play();
+        isPlaying = true;
+        radioPlaying = true;
+      } else {
+        audioPlayer.pause();
+        isPlaying = false;
+        radioPlaying = false;
+      }
+      updateRadioPlayPauseBtn();
+    });
+
+    // Next
+    document.getElementById('radioNext').addEventListener('click', () => {
+      if (radioPlaylist.length === 0) return;
+
+      if (radioShuffle) {
+        radioIndex = Math.floor(Math.random() * radioPlaylist.length);
+      } else {
+        radioIndex = (radioIndex + 1) % radioPlaylist.length;
+      }
+      playRadioItem(radioIndex);
+    });
+
+    // Prev
+    document.getElementById('radioPrev').addEventListener('click', () => {
+      if (radioPlaylist.length === 0) return;
+      radioIndex = (radioIndex - 1 + radioPlaylist.length) % radioPlaylist.length;
+      playRadioItem(radioIndex);
+    });
+
+    // Save radio playlist to localStorage
+    function saveRadioPlaylist() {
+      try {
+        localStorage.setItem('bc_radio_playlist', JSON.stringify(radioPlaylist));
+      } catch (error) {
+        console.error('Error saving radio playlist:', error);
+      }
+    }
+
+    // Load radio playlist from localStorage
+    function loadRadioPlaylist() {
+      try {
+        const saved = localStorage.getItem('bc_radio_playlist');
+        if (saved) {
+          radioPlaylist = JSON.parse(saved);
+          renderRadioPlaylist();
+          return true;
+        }
+      } catch (error) {
+        console.error('Error loading radio playlist:', error);
+      }
+      return false;
+    }
+
+    // Shuffle
+    document.getElementById('radioShuffle').addEventListener('click', () => {
+      radioShuffle = !radioShuffle;
+      document.getElementById('radioShuffle').style.opacity = radioShuffle ? '1' : '0.5';
+    });
+
+    // Repeat
+    document.getElementById('radioRepeat').addEventListener('click', () => {
+      radioRepeat = !radioRepeat;
+      document.getElementById('radioRepeat').style.opacity = radioRepeat ? '1' : '0.5';
+    });
+
+    // Toggle Paroles/Bible
+    document.querySelector('#toggleLyrics').addEventListener('click', () => {
+      const t = translations[currentLang] || translations.FR;
+      document.querySelector('#toggleLyrics').classList.add('active');
+      document.querySelector('#toggleBible').classList.remove('active');
+      document.querySelector('#contentTitle').textContent = t.paroles;
+      // Afficher paroles, masquer Bible
+      document.querySelector('#lyricsContent').style.display = 'block';
+      document.querySelector('#bibleContent').style.display = 'none';
+    });
+
+    document.querySelector('#toggleBible').addEventListener('click', () => {
+      const t = translations[currentLang] || translations.FR;
+      document.querySelector('#toggleBible').classList.add('active');
+      document.querySelector('#toggleLyrics').classList.remove('active');
+      document.querySelector('#contentTitle').textContent = t.bible;
+      // Afficher Bible, masquer paroles
+      document.querySelector('#lyricsContent').style.display = 'none';
+      document.querySelector('#bibleContent').style.display = 'block';
+      // Charger le texte de la Bible
+      loadBibleText(currentBook, currentChapter, currentLang);
+    });
+    
+    // Favoris
+    document.querySelector('#favoriteBtn').addEventListener('click', () => {
+      const btn = document.querySelector('#favoriteBtn');
+      const bookData = BOOKS.find(b => b.code === currentBook);
+
+      // Get book name from BOOK_NAMES with proper fallback
+      let bookName = currentBook;
+      if (bookData && window.BOOK_NAMES) {
+        bookName = (window.BOOK_NAMES[currentLang] && window.BOOK_NAMES[currentLang][bookData.code])
+          || (window.BOOK_NAMES.FR && window.BOOK_NAMES.FR[bookData.code])
+          || bookData.code;
+      }
+
+      // Add current chapter to radio playlist
+      radioPlaylist.push({
+        book: currentBook,
+        chapter: currentChapter,
+        name: bookName
+      });
+
+      // Update the playlist display
+      renderRadioPlaylist();
+
+      // Save to localStorage
+      saveRadioPlaylist();
+
+      // Update badge radio
+      const badge = document.querySelector('#radioBadge');
+      badge.textContent = `(${radioPlaylist.length})`;
+
+      // Show confirmation briefly then reset
+      btn.innerHTML = '<span class="plus-icon">✓</span><span class="radio-icon">📻</span>';
+      btn.classList.add('favorited');
+
+      setTimeout(() => {
+        btn.innerHTML = '<span class="plus-icon">+</span><span class="radio-icon">📻</span>';
+        btn.classList.remove('favorited');
+      }, 500);
+    });
+    
+    // Partage
+    document.querySelector('#shareBtn').addEventListener('click', async () => {
+      const bookData = BOOKS.find(b => b.code === currentBook);
+      const bookName = bookData ? bookData.name : 'Bible';
+      const chapter = currentChapter || 1;
+      const bookCode = currentBook || '01_GEN';
+
+      const shareData = {
+        title: 'Bible Chantée - ' + bookName + ' ' + chapter,
+        text: '🎵 Écoute ' + bookName + ' ' + chapter + ' sur Bible Chantée !',
+        url: 'https://biblechantee.com/lecteur.html?lang=' + currentLang + '&book=' + bookCode + '&ch=' + chapter
+      };
+
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+        } catch (err) {
+          console.log('Partage annulé');
+        }
+      } else {
+        await navigator.clipboard.writeText(shareData.text + '\n' + shareData.url);
+        alert('Lien copié !');
+      }
+    });
+    
+    // Changement de livre
+    document.querySelector('#bookSelect').addEventListener('change', (e) => {
+      const bookCode = e.target.value;
+      const bookName = e.target.options[e.target.selectedIndex].textContent;
+      document.querySelector('#headerTitle').textContent = bookName;
+
+      // Repopulate chapters grid for new book
+      populateChaptersSelect(bookCode);
+
+      // Update subtitle for chapter 1
+      const t = translations[currentLang] || translations.FR;
+      const chapterTitle = getChapterTitle(bookCode, '1', currentLang);
+      const subtitle = chapterTitle
+        ? `${t.chapitre} 1 - ${chapterTitle}`
+        : `${t.chapitre} 1`;
+      document.querySelector('#headerSubtitle').textContent = subtitle;
+
+      // Reset audio
+      currentBook = bookCode;
+      currentChapter = 1;
+
+      // Mettre à jour les paroles si on est en mode paroles
+      if (document.querySelector('#lyricsContent').style.display !== 'none') {
+        loadLyrics(bookCode, 1, currentLang);
+      }
+      // Mettre à jour le texte de la Bible si on est en mode Bible
+      if (document.querySelector('#bibleContent').style.display !== 'none') {
+        loadBibleText(bookCode, 1, currentLang);
+      }
+    });
+    
+    // Play/Pause
+    playBtn.addEventListener('click', () => {
+      if (isPlaying) {
+        audioPlayer.pause();
+        isPlaying = false;
+        playBtn.textContent = '▶';
+      } else {
+        if (!audioPlayer.src) {
+          // Premier chargement
+          loadAndPlayChapter(currentBook, currentChapter, currentLang);
+        } else {
+          audioPlayer.play().catch(e => console.log('Lecture bloquée:', e));
+          isPlaying = true;
+          playBtn.textContent = '⏸';
+        }
+      }
+    });
+
+    // Autoplay toggle
+    const autoplayBtn = document.querySelector('#autoplayBtn');
+    if (autoplayBtn) {
+      autoplayBtn.addEventListener('click', () => {
+        isAutoplayEnabled = !isAutoplayEnabled;
+        autoplayBtn.classList.toggle('active', isAutoplayEnabled);
+        autoplayBtn.title = isAutoplayEnabled
+          ? 'Lecture continue activée'
+          : 'Lecture continue';
+      });
+    }
+
+    // === SYSTÈME DE LIKE (FAVORIS CHAPITRES) ===
+
+    // Obtenir les chapitres likés depuis localStorage
+    function getLikedChapters() {
+      const stored = localStorage.getItem('likedChapters');
+      return stored ? JSON.parse(stored) : [];
+    }
+
+    // Sauvegarder les chapitres likés dans localStorage
+    function saveLikedChapters(likedChapters) {
+      localStorage.setItem('likedChapters', JSON.stringify(likedChapters));
+    }
+
+    // Vérifier si un chapitre est liké
+    function isChapterLiked(lang, book, chapter) {
+      const likedChapters = getLikedChapters();
+      return likedChapters.some(item =>
+        item.lang === lang &&
+        item.book === book &&
+        item.chapter === chapter
+      );
+    }
+
+    // Toggle like/unlike du chapitre actuel
+    function toggleLike() {
+      const likedChapters = getLikedChapters();
+      const currentChapterData = {
+        lang: currentLang,
+        book: currentBook,
+        chapter: currentChapter
+      };
+
+      // Vérifier si déjà liké
+      const index = likedChapters.findIndex(item =>
+        item.lang === currentChapterData.lang &&
+        item.book === currentChapterData.book &&
+        item.chapter === currentChapterData.chapter
+      );
+
+      if (index !== -1) {
+        // Déjà liké → retirer
+        likedChapters.splice(index, 1);
+        console.log('Chapitre unliké:', currentChapterData);
+      } else {
+        // Pas liké → ajouter
+        likedChapters.push(currentChapterData);
+        console.log('Chapitre liké:', currentChapterData);
+      }
+
+      saveLikedChapters(likedChapters);
+      updateLikeButton();
+    }
+
+    // Mettre à jour l'apparence du bouton like
+    function updateLikeButton() {
+      const likeBtn = document.getElementById('likeBtn');
+      if (!likeBtn) return;
+
+      const isLiked = isChapterLiked(currentLang, currentBook, currentChapter);
+
+      if (isLiked) {
+        likeBtn.classList.add('liked');
+        likeBtn.title = 'Retirer des favoris';
+      } else {
+        likeBtn.classList.remove('liked');
+        likeBtn.title = 'Ajouter aux favoris';
+      }
+    }
+
+    // === POPUP INSCRIPTION EMAIL ===
+
+    // Ouvrir le popup
+    function openSubscribePopup() {
+      const popup = document.getElementById('subscribePopup');
+      const emailInput = document.getElementById('emailInput');
+      const emailError = document.getElementById('emailError');
+      const subscribeForm = document.getElementById('subscribeForm');
+      const thankYouScreen = document.getElementById('thankYouScreen');
+
+      // Réinitialiser le popup
+      subscribeForm.style.display = 'block';
+      thankYouScreen.style.display = 'none';
+      emailInput.value = '';
+      emailError.textContent = '';
+
+      // Afficher le popup
+      popup.classList.add('active');
+
+      // Focus sur l'input après animation
+      setTimeout(() => emailInput.focus(), 300);
+    }
+
+    // Fermer le popup
+    function closeSubscribePopup() {
+      const popup = document.getElementById('subscribePopup');
+      popup.classList.remove('active');
+    }
+
+    // Fermer si clic sur l'overlay (pas sur le modal)
+    function closePopupOnOverlay(event) {
+      if (event.target.id === 'subscribePopup') {
+        closeSubscribePopup();
+      }
+    }
+
+    // Validation et soumission email
+    function submitEmail() {
+      const emailInput = document.getElementById('emailInput');
+      const emailError = document.getElementById('emailError');
+      const email = emailInput.value.trim();
+      const t = translations[currentLang] || translations.FR;
+
+      // Validation email basique
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!email) {
+        emailError.textContent = t.popupErrorEmpty;
+        emailInput.focus();
+        return;
+      }
+
+      if (!emailRegex.test(email)) {
+        emailError.textContent = t.popupErrorInvalid;
+        emailInput.focus();
+        return;
+      }
+
+      // Email valide - enregistrer et afficher remerciement
+      console.log('Email inscrit:', email);
+      localStorage.setItem('subscribedEmail', email);
+      localStorage.setItem('subscriptionDate', new Date().toISOString());
+
+      // Afficher écran de remerciement
+      const subscribeForm = document.getElementById('subscribeForm');
+      const thankYouScreen = document.getElementById('thankYouScreen');
+
+      subscribeForm.style.display = 'none';
+      thankYouScreen.style.display = 'block';
+    }
+
+    // Mettre à jour les traductions de la newsletter et du popup
+    function updateNewsletterTranslations() {
+      const t = translations[currentLang] || translations.FR;
+
+      // Section newsletter
+      const newsletterTitle = document.getElementById('newsletterTitle');
+      const newsletterSubtitle = document.getElementById('newsletterSubtitle');
+      const newsletterBtnText = document.getElementById('newsletterBtnText');
+
+      if (newsletterTitle) newsletterTitle.textContent = t.newsletterTitle;
+      if (newsletterSubtitle) newsletterSubtitle.textContent = t.newsletterSubtitle;
+      if (newsletterBtnText) newsletterBtnText.textContent = t.newsletterBtn;
+
+      // Popup formulaire
+      const popupFormTitle = document.getElementById('popupFormTitle');
+      const popupFormSubtitle = document.getElementById('popupFormSubtitle');
+      const emailInput = document.getElementById('emailInput');
+      const popupSendBtn = document.getElementById('popupSendBtn');
+
+      if (popupFormTitle) popupFormTitle.textContent = t.popupTitle;
+      if (popupFormSubtitle) popupFormSubtitle.textContent = t.popupSubtitle;
+      if (emailInput) emailInput.placeholder = t.popupEmailPlaceholder;
+      if (popupSendBtn) popupSendBtn.textContent = t.popupSendBtn;
+
+      // Popup remerciement
+      const popupThankYouTitle = document.getElementById('popupThankYouTitle');
+      const popupThankYouMsg = document.getElementById('popupThankYouMsg');
+      const popupCloseBtn = document.getElementById('popupCloseBtn');
+
+      if (popupThankYouTitle) popupThankYouTitle.textContent = t.popupThankYouTitle;
+      if (popupThankYouMsg) popupThankYouMsg.textContent = t.popupThankYouMsg;
+      if (popupCloseBtn) popupCloseBtn.textContent = t.popupCloseBtn;
+    }
+
+    // Fermer popup avec touche Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const popup = document.getElementById('subscribePopup');
+        if (popup && popup.classList.contains('active')) {
+          closeSubscribePopup();
+        }
+      }
+    });
+
+    // Initialisation: populate dropdowns et mettre à jour le sous-titre
+    (function initialize() {
+      try {
+        // Read URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlBook = urlParams.get('book');
+        const urlChapter = urlParams.get('chapter');
+        const urlLang = urlParams.get('lang');
+
+        console.log('Lecteur initialize:', { urlBook, urlChapter, urlLang, fullUrl: window.location.href });
+
+        // Set language from URL if provided, otherwise from localStorage
+        if (urlLang) {
+          currentLang = urlLang.toUpperCase();
+          localStorage.setItem('bc_lang', currentLang);
+        } else {
+          // Lire la langue sauvegardée depuis localStorage
+          const savedLang = localStorage.getItem('bc_lang');
+          if (savedLang) {
+            currentLang = savedLang;
+          }
+        }
+
+        // Mettre à jour le drapeau actif visuellement
+        document.querySelectorAll('.flag-btn').forEach(btn => {
+          if (btn.dataset.lang === currentLang) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+
+        // Populate books dropdown first
+        populateBooksDropdown();
+
+        // Convert book number to book code if needed (e.g., "19" -> "19_PSA")
+        let bookCode = '01_GEN';
+        if (urlBook && window.BOOKS) {
+          // Check if it's a number (like "19") or already a code (like "19_PSA")
+          if (/^\d+$/.test(urlBook)) {
+            // It's a number, find the corresponding book code
+            const bookNum = urlBook.padStart(2, '0');
+            const bookData = window.BOOKS.find(b => b.code && b.code.startsWith(bookNum + '_'));
+            if (bookData) {
+              bookCode = bookData.code;
+            }
+          } else {
+            // It's already a code, verify it exists
+            const bookData = window.BOOKS.find(b => b.code === urlBook);
+            if (bookData) {
+              bookCode = urlBook;
+            }
+          }
+        } else if (!urlBook) {
+          bookCode = document.querySelector('#bookSelect').value || '01_GEN';
+        }
+
+        currentBook = bookCode;
+        currentChapter = urlChapter ? parseInt(urlChapter) : 1;
+
+        // Update book select dropdown
+        const bookSelect = document.querySelector('#bookSelect');
+        if (bookSelect) {
+          bookSelect.value = bookCode;
+        }
+
+        // Populate chapters grid for initial book
+        populateChaptersSelect(bookCode);
+
+        // Set the current chapter in select
+        setTimeout(() => {
+          const chapterSelect = document.querySelector('#chapterSelect');
+          if (chapterSelect) {
+            chapterSelect.value = currentChapter;
+          }
+        }, 100);
+
+        // Update header title (book name)
+        if (window.BOOK_NAMES && window.BOOK_NAMES[currentLang] && window.BOOKS) {
+          const bookData = window.BOOKS.find(b => b.code === bookCode);
+          if (bookData) {
+            const bookName = window.BOOK_NAMES[currentLang][bookData.code] || window.BOOK_NAMES.FR[bookData.code] || bookData.code;
+            document.querySelector('#headerTitle').textContent = bookName;
+          }
+        }
+
+        // Update chapter title
+        const chapterNum = currentChapter.toString();
+        const t = translations[currentLang] || translations.FR;
+        const chapterTitle = getChapterTitle(bookCode, chapterNum, currentLang);
+        if (chapterTitle) {
+          const subtitle = `${t.chapitre} ${chapterNum} - ${chapterTitle}`;
+          document.querySelector('#headerSubtitle').textContent = subtitle;
+        } else {
+          const subtitle = `${t.chapitre} ${chapterNum}`;
+          document.querySelector('#headerSubtitle').textContent = subtitle;
+        }
+
+        // Préparer l'audio mais NE PAS lancer automatiquement
+        // L'utilisateur doit cliquer sur Play pour démarrer
+        if (urlBook || urlChapter) {
+          const audioUrl = getAudioUrl(bookCode, currentChapter, currentLang);
+          audioPlayer.src = audioUrl;
+          audioPlayer.load();
+          // Ne pas appeler .play() - attendre le clic utilisateur
+        }
+
+        // Charger les paroles initiales
+        loadLyrics(bookCode, currentChapter, currentLang);
+
+        // Initialiser les traductions de la newsletter
+        updateNewsletterTranslations();
+
+        // Initialiser les traductions de l'interface (labels, boutons, etc.)
+        updateTranslations();
+
+        // Initialiser le bouton like
+        updateLikeButton();
+
+        // Event listener for chapter select change
+        const chapterSelect = document.querySelector('#chapterSelect');
+        if (chapterSelect) {
+          chapterSelect.addEventListener('change', (e) => {
+            const chapterNum = parseInt(e.target.value);
+            const t = translations[currentLang] || translations.FR;
+            const chapterTitle = getChapterTitle(currentBook, chapterNum.toString(), currentLang);
+            const subtitle = chapterTitle
+              ? `${t.chapitre} ${chapterNum} - ${chapterTitle}`
+              : `${t.chapitre} ${chapterNum}`;
+            document.querySelector('#headerSubtitle').textContent = subtitle;
+
+            currentChapter = chapterNum;
+            if (isPlaying) {
+              loadAndPlayChapter(currentBook, chapterNum, currentLang);
+            } else {
+              const audioUrl = getAudioUrl(currentBook, chapterNum, currentLang);
+              audioPlayer.src = audioUrl;
+              audioPlayer.load();
+            }
+
+            // Mettre à jour les paroles si on est en mode paroles
+            if (document.querySelector('#lyricsContent').style.display !== 'none') {
+              loadLyrics(currentBook, currentChapter, currentLang);
+            }
+            // Mettre à jour le texte de la Bible si on est en mode Bible
+            if (document.querySelector('#bibleContent').style.display !== 'none') {
+              loadBibleText(currentBook, currentChapter, currentLang);
+            }
+            // Mettre à jour le bouton like
+            updateLikeButton();
+          });
+        }
+      } catch (error) {
+        console.error('Initialize error:', error);
+        // Fallback to default
+        populateBooksDropdown();
+        const bookCode = '01_GEN';
+        currentBook = bookCode;
+        currentChapter = 1;
+        populateChaptersSelect(bookCode);
+        loadLyrics(bookCode, 1, currentLang);
+      }
+    })();
+  </script>
+
+  <!-- SEMANTIC SEARCH ENGINE -->
+  <script src="js/semantic-engine.js"></script>
+  <script>
+    // Recherche sémantique
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+    const searchResults = document.getElementById('searchResults');
+
+    // Fonction de recherche
+    function performSemanticSearch() {
+      const query = searchInput.value.trim();
+
+      if (!query) {
+        searchResults.innerHTML = '';
+        return;
+      }
+
+      if (typeof SemanticEngine === 'undefined') {
+        searchResults.innerHTML = '<div class="result-card"><p style="color: #f88;">Moteur de recherche non disponible</p></div>';
+        return;
+      }
+
+      const results = SemanticEngine.search(query, currentLang, 8);
+
+      if (results.length === 0) {
+        searchResults.innerHTML = `
+          <div class="result-card">
+            <div class="result-icon">🔍</div>
+            <div class="result-info">
+              <h4>Aucun résultat</h4>
+              <p>Essayez: peur, joie, espoir, amour, paix, pardon, solitude...</p>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      // Afficher les résultats
+      searchResults.innerHTML = results.map(result => {
+        const parts = result.chapter.split('_');
+        const bookCode = parts[0] + '_' + parts[1];
+        const chapterNum = parseInt(parts[2]);
+
+        const bookName = SemanticEngine.getBookName(parts[1], currentLang);
+
+        return `
+          <div class="result-card" onclick="playSearchResult('${bookCode}', ${chapterNum})">
+            <div class="result-icon">📖</div>
+            <div class="result-info">
+              <h4>${bookName} ${chapterNum}</h4>
+              <p>Score: ${result.score}%</p>
+            </div>
+            <button class="result-play-btn" onclick="event.stopPropagation(); playSearchResult('${bookCode}', ${chapterNum})">▶ Écouter</button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Fonction pour jouer un résultat de recherche
+    function playSearchResult(bookCode, chapter) {
+      // Mettre à jour la sélection du livre
+      const bookSelect = document.getElementById('bookSelect');
+      bookSelect.value = bookCode;
+
+      // Trigger book change event
+      const bookData = BOOKS.find(b => b.code === bookCode);
+      if (bookData) {
+        const bookName = window.BOOK_NAMES && window.BOOK_NAMES[currentLang]
+          ? window.BOOK_NAMES[currentLang][bookCode]
+          : bookCode;
+        document.querySelector('#headerTitle').textContent = bookName;
+
+        // Repopulate chapters grid
+        populateChaptersSelect(bookCode);
+
+        // Wait a bit for select to populate, then select chapter
+        setTimeout(() => {
+          // Set the chapter in select
+          const chapterSelect = document.querySelector('#chapterSelect');
+          if (chapterSelect) {
+            chapterSelect.value = chapter;
+          }
+
+          // Load and play
+          currentBook = bookCode;
+          currentChapter = chapter;
+          loadAndPlayChapter(bookCode, chapter, currentLang);
+          loadLyrics(bookCode, chapter, currentLang);
+
+          // Update subtitle
+          const t = translations[currentLang] || translations.FR;
+          const chapterTitle = getChapterTitle(bookCode, chapter.toString(), currentLang);
+          const subtitle = chapterTitle
+            ? `${t.chapitre} ${chapter} - ${chapterTitle}`
+            : `${t.chapitre} ${chapter}`;
+          document.querySelector('#headerSubtitle').textContent = subtitle;
+
+          // Clear search results
+          searchResults.innerHTML = '';
+          searchInput.value = '';
+
+          // Scroll to player
+          document.querySelector('.header').scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+
+    // Event listeners
+    searchBtn.addEventListener('click', performSemanticSearch);
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        performSemanticSearch();
+      }
+    });
+
+    // Clear results when input is cleared
+    searchInput.addEventListener('input', () => {
+      if (!searchInput.value.trim()) {
+        searchResults.innerHTML = '';
+      }
+    });
+  </script>
+
+  <script>
+    // Partage WhatsApp
+    function shareWhatsApp() {
+      let text = "🎵 Découvrez la Bible Chantée !\n\n";
+      text += "1189 chapitres bibliques mis en musique en 7 langues.\n\n";
+
+      // Ajouter le chapitre en cours si disponible
+      const bookTitle = document.getElementById('headerTitle')?.textContent;
+      const chapterInfo = document.getElementById('headerSubtitle')?.textContent;
+      if (bookTitle && chapterInfo) {
+        text += "🎧 En ce moment : " + bookTitle + " - " + chapterInfo + "\n\n";
+      }
+
+      text += "🇫🇷 🇬🇧 🇧🇷 🇪🇸 🇩🇪 🇮🇹 🇵🇭\n\n";
+      text += "👉 https://biblechantee.com";
+
+      window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
+    }
+  </script>
+
+  <!-- BOUTON VIDER CACHE (bottom-right fixe) -->
+  <div id="bcClearCacheWrap">
+    <button id="clearCacheBtn" onclick="bcClearCache()">
+      🧹 Vider le cache
+    </button>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

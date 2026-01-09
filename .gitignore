@@ -136,3 +136,6 @@ sections-promesses.js.bak*
 query-results.csv
 tools/fix_3_fallbacks.js
 tools/fix_chapter_titles.js
+# Lyrics archive (too large for git)
+lyrics-archive/
+lyrics-archive.zip

@@ -1,0 +1,58 @@
+diff --git a/lecteur.html b/lecteur.html
+index 6252060f..a2a39f86 100644
+--- a/lecteur.html
++++ b/lecteur.html
+@@ -1386,6 +1386,23 @@ function isVerseLikeEN(s){
+     let radioRepeat = false;
+     let radioPlaying = false;
+
++    // Helper: Nettoyer les titres (guillemets externes, espaces, préfixes type TITRE:/Title:/Título:)
++    function cleanTitle(s) {
++      if (s == null) return '';
++      s = String(s).trim();
++      // Guillemets externes (", “ ”, ', « »)
++      s = s.replace(/^[\s"“'«]+/g, '');
++      s = s.replace(/[\s"”'»]+$/g, '');
++      // Préfixes parasites (TITRE:, Title:, Título:, etc.)
++      s = s.replace(/^(?:TITRE|TITLE|T[ÍI]TULO|TITULO|TITEL|TITOLO)\s*:?\s*/i, '');
++      s = s.trim();
++      // Placeholders purs
++      if (/^(?:TITRE|TITLE|T[ÍI]TULO|TITULO|TITEL|TITOLO)$/i.test(s)) return '';
++      return s;
++    }
++
+     // Helper: Obtenir titre du chapitre depuis CHAPTER_TITLES
+     function getChapterTitle(book, chapter, lang) {
+@@ -1395,7 +1412,7 @@ function isVerseLikeEN(s){
+   const rawTitle =
+     (typeof CHAPTER_TITLES !== 'undefined' &&
+       CHAPTER_TITLES?.[lang]?.[bookNum]?.[chKey] != null)
+-      ? CHAPTER_TITLES[lang][bookNum][chKey]
++      ? cleanTitle(CHAPTER_TITLES[lang][bookNum][chKey])
+       : null;
+@@ -1496,8 +1513,8 @@ function isVerseLikeEN(s){
+     return null;
+   };
+
+-  // A) start with chapter-titles.js
+-  let title = rawTitle ? String(rawTitle).trim() : '';
++  // A) start with chapter-titles.js (already cleaned by cleanTitle above)
++  let title = rawTitle || '';
+
+   // B) if title is missing or looks like "Verse X", try to derive from lyrics block
+   if (!title || isVerseLike(title)) {
+@@ -1506,7 +1523,7 @@ function isVerseLikeEN(s){
+       const bookKey = Object.keys(lyricsData).find(k => String(k).startsWith(bookNum + '_'));
+       const block = bookKey ? lyricsData?.[bookKey]?.[chKey] : null;
+       const derived = extractTitleFromLyricsBlock(block);
+-      if (derived) title = derived;
++      if (derived) title = cleanTitle(derived);
+     }
+   }
+@@ -1514,8 +1531,8 @@ function isVerseLikeEN(s){
+
+   // C) final safeguard: never return Verse-like titles to the UI
+   if (isVerseLike(title)) return '';
+-  return title || '';
++  return title;
+ }

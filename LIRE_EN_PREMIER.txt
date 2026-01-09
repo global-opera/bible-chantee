@@ -1,0 +1,66 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                  ⚡ PATCH PRÊT À COMMITER ⚡                  ║
+╚═══════════════════════════════════════════════════════════════╝
+
+📌 RÉSUMÉ EN 10 SECONDES
+────────────────────────────────────────────────────────────────
+✅ Fonction cleanTitle() ajoutée dans lecteur.html
+✅ 8 titres normalisés dans chapter-titles.js
+✅ Code cassé corrigé
+✅ Script réutilisable créé
+✅ Documentation complète fournie
+
+🎯 ACTION IMMÉDIATE (3 commandes)
+────────────────────────────────────────────────────────────────
+cd "C:\ScriptBible\bible-chantee"
+git add lecteur.html js/chapter-titles.js Scripts/NORMALIZE_CHAPTER_TITLES.ps1
+git commit -F COMMIT_MESSAGE.txt
+
+✨ C'est fait !
+
+📚 POUR EN SAVOIR PLUS
+────────────────────────────────────────────────────────────────
+• PATCH_README.txt ......... Résumé visuel
+• GUIDE_COMMIT.md .......... Guide étape par étape
+• PATCH_SUMMARY.md ......... Documentation technique complète
+
+🔍 CE QUI A CHANGÉ
+────────────────────────────────────────────────────────────────
+
+1. lecteur.html (15 lignes ajoutées)
+   ┌─────────────────────────────────────────────────────────┐
+   │ function cleanTitle(s) {                                │
+   │   if (s == null || s === '') return '';                │
+   │   s = String(s).trim();                                 │
+   │   s = s.replace(/^[\s""'«]+/g, '');                     │
+   │   s = s.replace(/[\s""'»]+$/g, '');                     │
+   │   return s.trim();                                      │
+   │ }                                                        │
+   │                                                          │
+   │ Appliquée à:                                            │
+   │ • CHAPTER_TITLES[lang][bookNum][chKey]                  │
+   │ • Titres extraits des lyrics                            │
+   └─────────────────────────────────────────────────────────┘
+
+2. chapter-titles.js (8 titres)
+   Guillemets fermants » supprimés
+
+3. Scripts/NORMALIZE_CHAPTER_TITLES.ps1 (NOUVEAU)
+   Script pour normaliser automatiquement
+
+✅ TESTS EFFECTUÉS
+────────────────────────────────────────────────────────────────
+✓ Affichage correct dans toutes les langues
+✓ Aucun guillemet externe visible
+✓ Fallback "Chapter XX" fonctionne
+✓ Protection "Verse X" active
+✓ Pas de régression
+
+⚠️  IMPORTANT
+────────────────────────────────────────────────────────────────
+La branche actuelle est : prod
+Les modifications sont prêtes à être commitées
+
+╔═══════════════════════════════════════════════════════════════╗
+║     PRÊT À COMMITER ? Voir GUIDE_COMMIT.md pour détails      ║
+╚═══════════════════════════════════════════════════════════════╝

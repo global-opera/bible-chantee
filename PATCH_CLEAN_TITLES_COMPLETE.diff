@@ -1,0 +1,100 @@
+diff --git a/lecteur.html b/lecteur.html
+index 1234567..abcdefg 100644
+--- a/lecteur.html
++++ b/lecteur.html
+@@ -1386,8 +1386,17 @@ let radioRepeat = false;
+ let radioPlaying = false;
+
++// Helper: Nettoyer les titres (guillemets externes, espaces)
++function cleanTitle(s) {
++  if (s == null || s === '') return '';
++  // Trim + suppression guillemets externes (", ", ', « »)
++  s = String(s).trim();
++  s = s.replace(/^[\s""'«]+/g, '');
++  s = s.replace(/[\s""'»]+$/g, '');
++  return s.trim();
++}
++
+ // Helper: Obtenir titre du chapitre depuis CHAPTER_TITLES
+ function getChapterTitle(book, chapter, lang) {
+-  // book: "01_GEN" ... ; chapter: "1".."150" ; lang: "EN","FR",...
++  // book: "01_GEN" utilise clé numérique "01" ; chapter: "1".."150" ; lang: "EN","FR",...
+   const bookNum = String(book).split('_')[0];
+   const chKey = String(chapter);
+
+   const rawTitle =
+     (typeof CHAPTER_TITLES !== 'undefined' &&
+       CHAPTER_TITLES?.[lang]?.[bookNum]?.[chKey] != null)
+-      ? CHAPTER_TITLES[lang][bookNum][chKey]
++      ? cleanTitle(CHAPTER_TITLES[lang][bookNum][chKey])
+       : null;
+
+   const isVerseLike = (s) => {
+@@ -1405,11 +1414,7 @@ function getChapterTitle(book, chapter, lang) {
+     // RÈGLE 1: La chaîne ENTIÈRE est juste "verse X" (avec variantes)
+     // Ex: "Verse 1", "(verse 1)", "[Verse 1]", "Verse 1:", etc.
+     if (/^(\(|\[)?\s*verse\s*\d+\s*(?:[:.])?\s*(\)|\])?$/.test(norm)) {
+-  // EN hardening: never display Verse X as title
+-  if (lang === "EN" && isVerseLikeEN(title)) {
+-    title = null;
+-  }
+-
+       return true;
+     }
+
+@@ -1497,8 +1502,8 @@ function getChapterTitle(book, chapter, lang) {
+     return null;
+   };
+
+-  // A) start with chapter-titles.js
+-  let title = rawTitle ? String(rawTitle).trim() : '';
++  // A) start with chapter-titles.js (already cleaned by cleanTitle above)
++  let title = rawTitle || '';
+
+   // B) if title is missing or looks like "Verse X", try to derive from lyrics block
+   if (!title || isVerseLike(title)) {
+@@ -1507,13 +1512,13 @@ function getChapterTitle(book, chapter, lang) {
+       const bookKey = Object.keys(lyricsData).find(k => String(k).startsWith(bookNum + '_'));
+       const block = bookKey ? lyricsData?.[bookKey]?.[chKey] : null;
+       const derived = extractTitleFromLyricsBlock(block);
+-      if (derived) title = derived;
++      if (derived) title = cleanTitle(derived);
+     }
+   }
+
+   // C) final safeguard: never return Verse-like titles to the UI
+   if (isVerseLike(title)) return '';
+-  return title || '';
++  return title;
+ }
+
+ const audioPlayer = document.querySelector('#audioPlayer');
+
+diff --git a/js/chapter-titles.js b/js/chapter-titles.js
+index 9876543..fedcba9 100644
+--- a/js/chapter-titles.js
++++ b/js/chapter-titles.js
+@@ -nnn,n +nnn,n @@ window.CHAPTER_TITLES = {
+-      "3": "Lamentations 3 - « Ta Fidélité, Ma Lumière »",
++      "3": "Lamentations 3 - « Ta Fidélité, Ma Lumière",
+...
+-      "15": "Marc 15 - « le Roi Crucifié »",
++      "15": "Marc 15 - « le Roi Crucifié",
+...
+-      "1": "Galates 1 - « Gloire à Toi, Évangile de Grâce »",
++      "1": "Galates 1 - « Gloire à Toi, Évangile de Grâce",
+...
+-      "10": "Exode 10 - « Éternel, Notre Délivrance »",
++      "10": "Exode 10 - « Éternel, Notre Délivrance",
+...
+-      "7": "Lévitique 7 - « Sacrifices de Louange »",
++      "7": "Lévitique 7 - « Sacrifices de Louange",
+...
+-      "16": "Nombres 16 - « L'Éternel, Notre Refuge »",
++      "16": "Nombres 16 - « L'Éternel, Notre Refuge",
+...
+-      "4": "1 Samuel 4 - « L'Éternel, Notre Sauveur »",
++      "4": "1 Samuel 4 - « L'Éternel, Notre Sauveur",
+...
+-      "8": "1 Samuel 8 - « Éternel, Notre Roi »",
++      "8": "1 Samuel 8 - « Éternel, Notre Roi",

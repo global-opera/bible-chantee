@@ -1,0 +1,28 @@
+feat: nettoyage permanent des titres de chapitres
+
+## Modifications
+
+### Frontend (lecteur.html)
+- Ajout fonction `cleanTitle(s)` pour normaliser tous les titres
+  - Trim automatique
+  - Suppression guillemets externes (", ", ', « »)
+- Application systématique dans `getChapterTitle()`
+  - Sur lecture depuis CHAPTER_TITLES
+  - Sur titres extraits des lyrics
+- Correction code cassé (lignes 1408-1411)
+- Simplification logique de retour
+
+### Données (js/chapter-titles.js)
+- Normalisation de 8 titres avec guillemets externes parasites
+- Structure harmonisée : clés numériques "01", "02", etc.
+
+### Scripts
+- `Scripts/NORMALIZE_CHAPTER_TITLES.ps1` : normalisation automatique
+- `Scripts/CLEAN_EN_VERSE_TITLES.ps1` : suppression "Verse X" (déjà exécuté)
+
+## Résultat
+- Aucun titre ne commence/finit par guillemets externes
+- Affichage uniforme dans toutes les langues
+- Code maintenable et documenté
+
+Testé: ✓ Aucune régression, affichage correct
