@@ -1010,7 +1010,30 @@
     <script src="js/books.js"></script>
     <script src="js/book-names.js"></script>
     <script src="js/player.js"></script>
-    <script src="js/chapter-titles.js?v=2"></script>
+    <script src="js/chapter-titles.js?v=3"></script>
+<script>
+/* ===== EN TITLES HARDENING (AUTO-PATCH) =====
+   - Avoid using "Verse X" as chapter title in EN
+   - EN fallback should be "Chapter XX" (no subtitle) when title is invalid
+*/
+function isVerseLikeEN(s){
+  if(!s) return true;
+  s = String(s).trim();
+
+  // normalize wrappers
+  s = s.replace(/^[\(\[\{]\s*/,'').replace(/\s*[\)\]\}]$/,'').trim();
+
+  // exact forms: Verse 1 / Verse 1: / verse 1 / (verse 1) / [Verse 1:]
+  if (/^verse\s*\d+\s*:?\s*$/i.test(s)) return true;
+
+  // suffix forms: "" / " (verse 1)" / " [Verse 1:]"
+  if (/\s*-\s*(?:\(|\[)?\s*verse\s*\d+\s*:?\s*(?:\)|\])?\s*$/i.test(s)) return true;
+  if (/\s*(?:\(|\[)\s*verse\s*\d+\s*:?\s*(?:\)|\])\s*$/i.test(s)) return true;
+
+  return false;
+}
+/* ===== END EN TITLES HARDENING ===== */
+</script>
     <script src="lyrics-data.js"></script>
     <script src="lyrics-data-en.js"></script>
     <script src="lyrics-data-pt.js"></script>
@@ -1365,22 +1388,134 @@
 
     // Helper: Obtenir titre du chapitre depuis CHAPTER_TITLES
     function getChapterTitle(book, chapter, lang) {
-      const bookNum = book.split('_')[0];
-      if (typeof CHAPTER_TITLES !== 'undefined' &&
-          CHAPTER_TITLES[lang] &&
-          CHAPTER_TITLES[lang][bookNum] &&
-          CHAPTER_TITLES[lang][bookNum][chapter]) {
-        const title = CHAPTER_TITLES[lang][bookNum][chapter];
-        // Filtrer les placeholders "[LYRICS]" et titres invalides
-        if (title && title !== '[LYRICS]' && !title.startsWith('[LYRICS]')) {
-          return title;
-        }
-      }
-      return ''; // Pas de titre trouvé ou titre invalide
+  // book: "01_GEN" ... ; chapter: "1".."150" ; lang: "EN","FR",...
+  const bookNum = String(book).split('_')[0];
+  const chKey = String(chapter);
+
+  const rawTitle =
+    (typeof CHAPTER_TITLES !== 'undefined' &&
+      CHAPTER_TITLES?.[lang]?.[bookNum]?.[chKey] != null)
+      ? CHAPTER_TITLES[lang][bookNum][chKey]
+      : null;
+
+  const isVerseLike = (s) => {
+    if (s == null) return false;
+    const norm = String(s).trim().toLowerCase().replace(/\s+/g, ' ');
+
+    // RÈGLE 1: La chaîne ENTIÈRE est juste "verse X" (avec variantes)
+    // Ex: "Verse 1", "(verse 1)", "[Verse 1]", "Verse 1:", etc.
+    if (/^(\(|\[)?\s*verse\s*\d+\s*(?:[:.])?\s*(\)|\])?$/.test(norm)) {
+  // EN hardening: never display Verse X as title
+  if (lang === "EN" && isVerseLikeEN(title)) {
+    title = null;
+  }
+
+      return true;
     }
 
-    // Audio Player
-    const audioPlayer = document.querySelector('#audioPlayer');
+    // RÈGLE 2: Le titre CONTIENT "verse X" comme sous-titre ou suffixe
+    // Ex: "Chapter Title", "Introduction (verse 1)", "Title"
+    if (/[-—–]\s*(\(|\[)?\s*verse\s*\d+\s*(?:[:.])?\s*(\)|\])?$/i.test(norm)) {
+      return true;
+    }
+
+    // RÈGLE 3: Le titre SE TERMINE par "(verse X)" ou "[verse X]"
+    // Ex: "Some Title (verse 1)"
+    if (/\(\s*verse\s*\d+\s*(?:[:.])?\s*\)$/i.test(norm)) {
+      return true;
+    }
+    if (/\[\s*verse\s*\d+\s*(?:[:.])?\s*\]$/i.test(norm)) {
+      return true;
+    }
+
+    return false;
+  };
+
+  const cleanLine = (s) => {
+    if (!s) return null;
+    s = String(s).replace(/\r/g, '').trim();
+
+    // drop headings & wrappers
+    s = s.replace(/^#+\s*/, '');
+    s = s.replace(/\[(TITLE|LYRICS|STYLE)\]/gi, '').trim();
+    s = s.replace(/^(TITRE|TITLE|T[IÍ]TULO|TITEL|TITOLO)\s*:\s*/i, '').trim();
+
+    // drop markdown italics
+    s = s.replace(/^\*+/, '').replace(/\*+$/, '').trim();
+
+    // drop tags like "[Verse 1]" "[Chorus]" "[Bridge]" at line start
+    s = s.replace(/^\[(verse|chorus|bridge|pre-chorus|refrain)\s*\d*\]\s*/i, '').trim();
+
+    if (!s) return null;
+
+    // ignore pure section markers like "Verse 1:" "Chorus:"
+    if (/^(verse|chorus|bridge|pre-chorus|refrain)\s*\d*\s*:?\s*$/i.test(s)) return null;
+
+    return s;
+  };
+
+  const extractTitleFromLyricsBlock = (txt) => {
+    if (!txt) return null;
+    const lines = String(txt).replace(/\r/g, '').split('\n').map(l => l.trim());
+
+    // 1) after [TITLE]
+    for (let i = 0; i < lines.length; i++) {
+      if (/^\[title\]$/i.test(lines[i])) {
+        for (let j = i + 1; j < Math.min(i + 12, lines.length); j++) {
+          const cand = cleanLine(lines[j]);
+          if (cand && !isVerseLike(cand)) return cand;
+        }
+      }
+    }
+
+    // 2) "Title: xxx"
+    for (const ln of lines) {
+      const m = ln.match(/^#+\s*(TITRE|TITLE)\s*:?\s*(.+)$/i);
+      if (m) {
+        const cand = cleanLine(m[2]);
+        if (cand && !isVerseLike(cand)) return cand;
+      }
+    }
+
+    // 3) first meaningful line after [LYRICS]
+    for (let i = 0; i < lines.length; i++) {
+      if (/^\[lyrics\]$/i.test(lines[i])) {
+        for (let j = i + 1; j < Math.min(i + 80, lines.length); j++) {
+          const cand = cleanLine(lines[j]);
+          if (cand && !isVerseLike(cand)) return cand;
+        }
+      }
+    }
+
+    // 4) ultimate fallback: first meaningful line in block
+    for (const ln of lines) {
+      const cand = cleanLine(ln);
+      if (cand && !isVerseLike(cand)) return cand;
+    }
+
+    return null;
+  };
+
+  // A) start with chapter-titles.js
+  let title = rawTitle ? String(rawTitle).trim() : '';
+
+  // B) if title is missing or looks like "Verse X", try to derive from lyrics block
+  if (!title || isVerseLike(title)) {
+    const lyricsData = window[`chapterLyrics${lang}`];
+    if (lyricsData) {
+      const bookKey = Object.keys(lyricsData).find(k => String(k).startsWith(bookNum + '_'));
+      const block = bookKey ? lyricsData?.[bookKey]?.[chKey] : null;
+      const derived = extractTitleFromLyricsBlock(block);
+      if (derived) title = derived;
+    }
+  }
+
+  // C) final safeguard: never return Verse-like titles to the UI
+  if (isVerseLike(title)) return '';
+  return title || '';
+}
+
+const audioPlayer = document.querySelector('#audioPlayer');
     const playBtn = document.querySelector('#playBtn');
     let isPlaying = false;
 
@@ -2564,6 +2699,8 @@
 
 </body>
 </html>
+
+
 
 
 
