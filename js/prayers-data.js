@@ -52,3 +52,16 @@ const PRAYERS_DATA = {
     { title: "Ikaw ang Aking Proteksiyon", audioFile: "TL_Ikaw ang Aking Proteksiyon.mp3", lyricsFile: "TL_Ikaw ang Aking Proteksiyon.md" }
   ]
 };
+
+// Helper functions
+window.getPrayersByLanguage = function(lang) {
+  return PRAYERS_DATA[lang] || PRAYERS_DATA["FR"] || [];
+};
+
+window.getPrayerAudioUrl = function(filename) {
+  return PRAYERS_BASE_URL + encodeURIComponent(filename);
+};
+
+window.getPrayerLyricsPath = function(filename) {
+  return "lyrics/prayers/" + filename;
+};
