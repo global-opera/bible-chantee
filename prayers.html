@@ -17,14 +17,14 @@
         .prayer-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(245, 200, 66, 0.3); }
         .prayer-icon { font-size: 2.2rem; margin-bottom: 9px; }
         .prayer-title { color: white; font-size: 0.85rem; text-align: center; line-height: 1.2; }
-        .player-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.9); z-index: 1000; overflow-y: auto; }
+        .player-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.95); z-index: 1000; overflow-y: auto; }
         .player-overlay.active { display: block; }
         .player-container { max-width: 500px; margin: 20px auto; padding: 20px; }
-        .close-btn { display: block; text-align: right; color: #f5c842; font-size: 30px; cursor: pointer; margin-bottom: 10px; }
+        .close-btn { display: block; text-align: right; color: #f5c842; font-size: 30px; cursor: pointer; margin-bottom: 10px; user-select: none; }
         .player-title { color: #f5c842; font-size: 1.5rem; text-align: center; margin-bottom: 20px; }
         .player-box { background: rgba(30, 58, 95, 0.9); border-radius: 15px; padding: 20px; }
         audio { width: 100%; margin-bottom: 15px; }
-        .lyrics-box { background: #162B46; border-radius: 10px; padding: 15px; max-height: 400px; overflow-y: auto; white-space: pre-wrap; line-height: 1.6; }
+        .lyrics-box { background: #162B46; border-radius: 10px; padding: 15px; max-height: 400px; overflow-y: auto; white-space: pre-wrap; line-height: 1.6; font-size: 0.95rem; }
     </style>
 </head>
 <body>
@@ -48,6 +48,8 @@
     <script>
     var AUDIO_BASE = "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/prayers/";
     var LYRICS_BASE = "lyrics/prayers/";
+
+    // Prayer data with EXACT filenames from R2
     var PRAYERS = {
         FR: [
             { title: "Notre Pere", audio: "FR_Notre Pere.mp3", lyrics: "FR_Notre Père.md" },
@@ -99,6 +101,7 @@
             { title: "Ikaw ang Aking Proteksiyon", audio: "TL_Ikaw ang Aking Proteksiyon.mp3", lyrics: "TL_Ikaw ang Aking Proteksiyon.md" }
         ]
     };
+
     var UI = {
         FR: { title: "Prieres Chantees", subtitle: "Elevez votre coeur vers Dieu", back: "Retour" },
         EN: { title: "Sung Prayers", subtitle: "Lift your heart to God", back: "Back" },
@@ -108,9 +111,11 @@
         PT: { title: "Oracoes Cantadas", subtitle: "Eleve seu coracao a Deus", back: "Voltar" },
         TL: { title: "Mga Panalangin", subtitle: "Itaas ang puso mo sa Diyos", back: "Bumalik" }
     };
+
     var currentLang = new URLSearchParams(location.search).get("lang") || localStorage.getItem("bc_lang") || "FR";
     currentLang = currentLang.toUpperCase();
     if (!PRAYERS[currentLang]) currentLang = "FR";
+
     function render() {
         var ui = UI[currentLang] || UI.FR;
         document.getElementById("pageTitle").textContent = ui.title;
@@ -129,27 +134,77 @@
             grid.appendChild(card);
         }
     }
+
     function openPlayer(index) {
         var p = PRAYERS[currentLang][index];
         if (!p) return;
+
         document.getElementById("playerTitle").textContent = p.title;
-        document.getElementById("audio").src = AUDIO_BASE + encodeURIComponent(p.audio);
+
+        // Build audio URL with proper encoding
+        var audioUrl = AUDIO_BASE + encodeURIComponent(p.audio);
+        console.log("Loading audio:", audioUrl);
+        document.getElementById("audio").src = audioUrl;
+
+        // Load lyrics
         document.getElementById("lyricsBox").textContent = "Chargement...";
-        fetch(LYRICS_BASE + encodeURIComponent(p.lyrics))
-            .then(function(r) { return r.ok ? r.text() : "Paroles non disponibles"; })
-            .then(function(t) { document.getElementById("lyricsBox").textContent = t; })
-            .catch(function() { document.getElementById("lyricsBox").textContent = "Paroles non disponibles"; });
+        var lyricsUrl = LYRICS_BASE + encodeURIComponent(p.lyrics);
+        console.log("Loading lyrics:", lyricsUrl);
+
+        fetch(lyricsUrl)
+            .then(function(r) {
+                if (!r.ok) throw new Error("HTTP " + r.status);
+                return r.text();
+            })
+            .then(function(text) {
+                // Remove markdown markers and clean up
+                text = text.replace(/\[(VERSE|CHORUS|BRIDGE|PRE-CHORUS|INTRO|OUTRO|REFRAIN|COUPLET|PONT)\]/gi, '');
+                text = text.replace(/\*\*([^*]+)\*\*/g, '$1');
+                document.getElementById("lyricsBox").textContent = text;
+            })
+            .catch(function(err) {
+                console.error("Lyrics error:", err);
+                document.getElementById("lyricsBox").textContent = "Paroles non disponibles";
+            });
+
         document.getElementById("playerOverlay").classList.add("active");
-        document.getElementById("audio").play();
+
+        // Try to play audio
+        var audioEl = document.getElementById("audio");
+        var playPromise = audioEl.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(function(err) {
+                console.error("Audio play error:", err);
+            });
+        }
     }
-    document.getElementById("closePlayer").onclick = function() {
+
+    function closePlayer() {
         document.getElementById("playerOverlay").classList.remove("active");
         document.getElementById("audio").pause();
+        document.getElementById("audio").currentTime = 0;
+    }
+
+    document.getElementById("closePlayer").onclick = closePlayer;
+
+    // Close on overlay click (but not on player box click)
+    document.getElementById("playerOverlay").onclick = function(e) {
+        if (e.target === this) closePlayer();
     };
+
+    // Prevent clicks inside player from closing
+    document.querySelector(".player-container").onclick = function(e) {
+        e.stopPropagation();
+    };
+
+    // Handle audio errors
+    document.getElementById("audio").addEventListener("error", function(e) {
+        console.error("Audio error:", e);
+        console.error("Audio src:", this.src);
+        console.error("Error details:", this.error);
+    });
+
     render();
     </script>
 </body>
 </html>
-
-
-
