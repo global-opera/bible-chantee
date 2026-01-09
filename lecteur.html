@@ -1404,15 +1404,47 @@ function isVerseLikeEN(s){
     }
     // Helper: Obtenir titre du chapitre depuis CHAPTER_TITLES
     function getChapterTitle(book, chapter, lang) {
-  // book: "01_GEN" ... ; chapter: "1".."150" ; lang: "EN","FR",...
-  const bookNum = String(book).split('_')[0];
-  const chKey = String(chapter);
+      // NORMALISATION DES CLÉS (support format "01" ET "1")
+      const TITLES = window.CHAPTER_TITLES;
+      if (!TITLES) return "";
 
-  const rawTitle =
-    (typeof CHAPTER_TITLES !== 'undefined' &&
-      CHAPTER_TITLES?.[lang]?.[bookNum]?.[chKey] != null)
-      ? cleanTitle(CHAPTER_TITLES[lang][bookNum][chKey])
-      : null;
+      lang = String(lang || "FR").trim().toUpperCase();
+      const TITLES_LANG = TITLES[lang] || TITLES[Object.keys(TITLES)[0]];
+      if (!TITLES_LANG) return "";
+
+      // --- BOOK KEY NORMALIZATION ---
+      // Input: "01_GEN" ou "01" ou "1"
+      const rawBook = String(book || "").trim();
+      if (!rawBook) return "";
+
+      const bookNum = parseInt(rawBook, 10);
+      if (Number.isNaN(bookNum)) return "";
+
+      const bookNum2 = String(bookNum).padStart(2, "0"); // "01"
+
+      const bookCandidates = [
+        bookNum2,              // ✅ "01" (prioritaire pour FR)
+        rawBook,               // "01_GEN"
+        String(bookNum),       // "1"
+        rawBook.split("_")[1], // "GEN"
+      ].filter(Boolean);
+
+      const bookKey = bookCandidates.find(k =>
+        Object.prototype.hasOwnProperty.call(TITLES_LANG, k)
+      );
+      if (!bookKey) return "";
+
+      // --- CHAPTER KEY NORMALIZATION ---
+      // Input: "01" ou "1" → toujours "1"
+      const chapNum = parseInt(String(chapter || "1"), 10);
+      const chapKey = String(chapNum); // "1"
+
+      // --- RÉCUPÉRATION + NETTOYAGE ---
+      let rawTitle = TITLES_LANG?.[bookKey]?.[chapKey];
+      if (!rawTitle) return "";
+
+      // Appliquer cleanTitle() pour supprimer guillemets externes
+      let title = cleanTitle(rawTitle);
 
   const isVerseLike = (s) => {
     if (s == null) return false;
@@ -1421,11 +1453,6 @@ function isVerseLikeEN(s){
     // RÈGLE 1: La chaîne ENTIÈRE est juste "verse X" (avec variantes)
     // Ex: "Verse 1", "(verse 1)", "[Verse 1]", "Verse 1:", etc.
     if (/^(\(|\[)?\s*verse\s*\d+\s*(?:[:.])?\s*(\)|\])?$/.test(norm)) {
-  // EN hardening: never display Verse X as title
-  if (lang === "EN" && isVerseLikeEN(title)) {
-    title = null;
-  }
-
       return true;
     }
 
@@ -1512,21 +1539,21 @@ function isVerseLikeEN(s){
     return null;
   };
 
-  // A) start with chapter-titles.js
-  let title = rawTitle || '';
-
-  // B) if title is missing or looks like "Verse X", try to derive from lyrics block
-  if (!title || isVerseLike(title)) {
+  // FALLBACK: Si titre vide, extraire depuis lyrics
+  if (!title) {
     const lyricsData = window[`chapterLyrics${lang}`];
     if (lyricsData) {
-      const bookKey = Object.keys(lyricsData).find(k => String(k).startsWith(bookNum + '_'));
-      const block = bookKey ? lyricsData?.[bookKey]?.[chKey] : null;
+      // Chercher avec bookKey normalisée (ex: "01_GEN")
+      const lyricsBookKey = Object.keys(lyricsData).find(k =>
+        String(k).startsWith(bookNum2 + '_') || String(k).startsWith(String(bookNum) + '_')
+      );
+      const block = lyricsBookKey ? lyricsData?.[lyricsBookKey]?.[chapKey] : null;
       const derived = extractTitleFromLyricsBlock(block);
       if (derived) title = cleanTitle(derived);
     }
   }
 
-  // C) final safeguard: never return Verse-like titles to the UI
+  // SAFEGUARD FINAL: ne jamais retourner "Verse X"
   if (isVerseLike(title)) return '';
   return title;
 }
