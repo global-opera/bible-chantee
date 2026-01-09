@@ -1390,8 +1390,13 @@ function isVerseLikeEN(s){
     function cleanTitle(s) {
       if (s == null) return '';
       s = String(s).trim();
+      // Remove quotes right after " - " and trailing quotes
+      s = s.replace(/(\s-\s)["“'«]+/g, '');
+      s = s.replace(/["”'»]+\s*$/g, '');
+      // Outer quotes
       s = s.replace(/^[\s"“'«]+/g, '');
       s = s.replace(/[\s"”'»]+$/g, '');
+      // Prefixes
       s = s.replace(/^(?:TITRE|TITLE|T[ÍI]TULO|TITULO|TITEL|TITOLO)\s*:?\s*/i, '');
       s = s.trim();
       if (/^(?:TITRE|TITLE|T[ÍI]TULO|TITULO|TITEL|TITOLO)$/i.test(s)) return '';
@@ -2710,5 +2715,6 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
 </body>
 </html>
+
 
 
