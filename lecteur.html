@@ -1386,6 +1386,17 @@ function isVerseLikeEN(s){
     let radioRepeat = false;
     let radioPlaying = false;
 
+    // Helper: Clean chapter titles (outer quotes + TITRE/Title/Titulo prefixes)
+    function cleanTitle(s) {
+      if (s == null) return '';
+      s = String(s).trim();
+      s = s.replace(/^[\s"“'«]+/g, '');
+      s = s.replace(/[\s"”'»]+$/g, '');
+      s = s.replace(/^(?:TITRE|TITLE|T[ÍI]TULO|TITULO|TITEL|TITOLO)\s*:?\s*/i, '');
+      s = s.trim();
+      if (/^(?:TITRE|TITLE|T[ÍI]TULO|TITULO|TITEL|TITOLO)$/i.test(s)) return '';
+      return s;
+    }
     // Helper: Obtenir titre du chapitre depuis CHAPTER_TITLES
     function getChapterTitle(book, chapter, lang) {
   // book: "01_GEN" ... ; chapter: "1".."150" ; lang: "EN","FR",...
@@ -1395,7 +1406,7 @@ function isVerseLikeEN(s){
   const rawTitle =
     (typeof CHAPTER_TITLES !== 'undefined' &&
       CHAPTER_TITLES?.[lang]?.[bookNum]?.[chKey] != null)
-      ? CHAPTER_TITLES[lang][bookNum][chKey]
+      ? cleanTitle(CHAPTER_TITLES[lang][bookNum][chKey])
       : null;
 
   const isVerseLike = (s) => {
@@ -1497,7 +1508,7 @@ function isVerseLikeEN(s){
   };
 
   // A) start with chapter-titles.js
-  let title = rawTitle ? String(rawTitle).trim() : '';
+  let title = rawTitle || '';
 
   // B) if title is missing or looks like "Verse X", try to derive from lyrics block
   if (!title || isVerseLike(title)) {
@@ -1506,13 +1517,13 @@ function isVerseLikeEN(s){
       const bookKey = Object.keys(lyricsData).find(k => String(k).startsWith(bookNum + '_'));
       const block = bookKey ? lyricsData?.[bookKey]?.[chKey] : null;
       const derived = extractTitleFromLyricsBlock(block);
-      if (derived) title = derived;
+      if (derived) title = cleanTitle(derived);
     }
   }
 
   // C) final safeguard: never return Verse-like titles to the UI
   if (isVerseLike(title)) return '';
-  return title || '';
+  return title;
 }
 
 const audioPlayer = document.querySelector('#audioPlayer');
@@ -2699,6 +2710,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
 </body>
 </html>
+
 
 
 
