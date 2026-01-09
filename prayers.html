@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bible Chantée - Prières</title>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TX3ETCKJQZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TX3ETCKJQZ');
+  </script>
+
+  <script src="js/clear-cache.js?v=1"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      /* Blues */
+      --bleu-nuit: #1E3A5F;
+      --bleu-sombre: #162B46;
+      --bleu-cartes: #243F66;
+      --bleu-hover: #2C4A73;
+
+      /* Golds */
+      --or-clair: #FFD700;
+      --or-moyen: #F5CB42;
+      --or-fonce: #FFAA00;
+      --or-chaud: #E6B000;
+    }
+
+    body {
+      background: linear-gradient(180deg, var(--bleu-nuit) 0%, var(--bleu-sombre) 100%);
+      min-height: 100vh;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: white;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* === HEADER === */
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: var(--or-moyen);
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* === DRAPEAUX === */
+    .flags-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .flag-btn {
+      width: 89px;
+      height: 50px;
+      border: 2px solid rgba(245, 203, 66, 0.4);
+      border-radius: 12px;
+      background: var(--bleu-cartes);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      padding: 8px;
+    }
+
+    .flag-btn:hover {
+      border-color: var(--or-moyen);
+      background: var(--bleu-hover);
+      transform: scale(1.05);
+    }
+
+    .flag-btn.active {
+      border-color: var(--or-moyen);
+      background: var(--bleu-hover);
+      box-shadow: 0 0 15px rgba(245, 203, 66, 0.3);
+    }
+
+    .flag-emoji {
+      font-size: 28px;
+    }
+
+    /* === NAVIGATION === */
+    .nav-row {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .nav-btn {
+      padding: 12px 24px;
+      background: var(--bleu-cartes);
+      border: 2px solid rgba(245, 203, 66, 0.4);
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .nav-btn:hover {
+      background: var(--bleu-hover);
+      border-color: var(--or-moyen);
+      transform: translateY(-2px);
+    }
+
+    .nav-btn.active {
+      background: var(--bleu-hover);
+      border-color: var(--or-moyen);
+    }
+
+    /* === PRAYERS LIST === */
+    .prayers-list {
+      background: var(--bleu-cartes);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .prayer-item {
+      padding: 15px;
+      margin-bottom: 10px;
+      background: var(--bleu-sombre);
+      border: 2px solid rgba(245, 203, 66, 0.2);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .prayer-item:hover {
+      background: var(--bleu-hover);
+      border-color: var(--or-moyen);
+      transform: translateX(5px);
+    }
+
+    .prayer-item.active {
+      background: var(--bleu-hover);
+      border-color: var(--or-moyen);
+      box-shadow: 0 0 10px rgba(245, 203, 66, 0.3);
+    }
+
+    .prayer-title {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .prayer-has-lyrics {
+      font-size: 14px;
+      color: var(--or-moyen);
+    }
+
+    /* === AUDIO PLAYER === */
+    .audio-player {
+      background: var(--bleu-cartes);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      display: none;
+    }
+
+    .audio-player.visible {
+      display: block;
+    }
+
+    .player-title {
+      font-size: 20px;
+      color: var(--or-moyen);
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .audio-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    audio {
+      width: 100%;
+      height: 40px;
+    }
+
+    /* Custom audio player styling */
+    audio::-webkit-media-controls-panel {
+      background-color: var(--bleu-sombre);
+    }
+
+    .player-info {
+      text-align: center;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* === LYRICS DISPLAY === */
+    .lyrics-container {
+      background: var(--bleu-cartes);
+      border-radius: 12px;
+      padding: 20px;
+      display: none;
+      max-height: 500px;
+      overflow-y: auto;
+    }
+
+    .lyrics-container.visible {
+      display: block;
+    }
+
+    .lyrics-title {
+      font-size: 20px;
+      color: var(--or-moyen);
+      margin-bottom: 15px;
+      text-align: center;
+      border-bottom: 2px solid rgba(245, 203, 66, 0.3);
+      padding-bottom: 10px;
+    }
+
+    .lyrics-content {
+      line-height: 1.8;
+      font-size: 16px;
+      white-space: pre-wrap;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .lyrics-content h2, .lyrics-content h3 {
+      color: var(--or-moyen);
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .lyrics-content p {
+      margin-bottom: 15px;
+    }
+
+    /* === EMPTY STATE === */
+    .empty-state {
+      text-align: center;
+      padding: 40px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .empty-state-icon {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    /* === SCROLLBAR === */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bleu-sombre);
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--or-moyen);
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--or-fonce);
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .prayer-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+      }
+
+      .flags-row {
+        gap: 8px;
+      }
+
+      .flag-btn {
+        width: 70px;
+        height: 40px;
+      }
+
+      .flag-emoji {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>🙏 Prières / Prayers</h1>
+      <p class="subtitle">Bible Chantée - 57 prières en 7 langues</p>
+    </div>
+
+    <!-- Drapeaux -->
+    <div class="flags-row">
+      <button class="flag-btn active" data-lang="FR" title="Français">
+        <span class="flag-emoji">🇫🇷</span>
+      </button>
+      <button class="flag-btn" data-lang="EN" title="English">
+        <span class="flag-emoji">🇬🇧</span>
+      </button>
+      <button class="flag-btn" data-lang="ES" title="Español">
+        <span class="flag-emoji">🇪🇸</span>
+      </button>
+      <button class="flag-btn" data-lang="DE" title="Deutsch">
+        <span class="flag-emoji">🇩🇪</span>
+      </button>
+      <button class="flag-btn" data-lang="IT" title="Italiano">
+        <span class="flag-emoji">🇮🇹</span>
+      </button>
+      <button class="flag-btn" data-lang="PT" title="Português">
+        <span class="flag-emoji">🇵🇹</span>
+      </button>
+      <button class="flag-btn" data-lang="TL" title="Tagalog">
+        <span class="flag-emoji">🇵🇭</span>
+      </button>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-row">
+      <a href="index.html" class="nav-btn">🏠 Accueil</a>
+      <a href="lecteur.html" class="nav-btn">📖 Bible</a>
+      <a href="prayers.html" class="nav-btn active">🙏 Prières</a>
+    </div>
+
+    <!-- Prayers List -->
+    <div class="prayers-list" id="prayersList">
+      <div class="empty-state">
+        <div class="empty-state-icon">🙏</div>
+        <p>Sélectionnez une langue pour voir les prières disponibles</p>
+      </div>
+    </div>
+
+    <!-- Audio Player -->
+    <div class="audio-player" id="audioPlayer">
+      <div class="player-title" id="playerTitle">Notre Père</div>
+      <div class="audio-controls">
+        <audio id="audioElement" controls>
+          <source id="audioSource" src="" type="audio/mpeg">
+          Votre navigateur ne supporte pas l'élément audio.
+        </audio>
+        <div class="player-info" id="playerInfo">
+          En attente...
+        </div>
+      </div>
+    </div>
+
+    <!-- Lyrics Display -->
+    <div class="lyrics-container" id="lyricsContainer">
+      <div class="lyrics-title" id="lyricsTitle">Paroles</div>
+      <div class="lyrics-content" id="lyricsContent">
+        Chargement des paroles...
+      </div>
+    </div>
+  </div>
+
+  <!-- Load prayers data -->
+  <script src="js/prayers-data.js"></script>
+
+  <!-- Main script -->
+  <script>
+    let currentLang = 'FR';
+    let currentPrayer = null;
+    let audioElement = document.getElementById('audioElement');
+    let audioSource = document.getElementById('audioSource');
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+      setupLanguageButtons();
+      loadPrayers(currentLang);
+      setupAudioPlayer();
+    });
+
+    // Setup language buttons
+    function setupLanguageButtons() {
+      const flagButtons = document.querySelectorAll('.flag-btn');
+      flagButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const lang = this.dataset.lang;
+          selectLanguage(lang);
+        });
+      });
+    }
+
+    // Select language
+    function selectLanguage(lang) {
+      currentLang = lang;
+
+      // Update active button
+      document.querySelectorAll('.flag-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+
+      // Load prayers for this language
+      loadPrayers(lang);
+
+      // Hide player and lyrics
+      hidePlayer();
+      hideLyrics();
+    }
+
+    // Load prayers for a language
+    function loadPrayers(lang) {
+      const prayers = getPrayersByLanguage(lang);
+      const prayersList = document.getElementById('prayersList');
+
+      if (!prayers || prayers.length === 0) {
+        prayersList.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-icon">🙏</div>
+            <p>Aucune prière disponible pour cette langue</p>
+          </div>
+        `;
+        return;
+      }
+
+      prayersList.innerHTML = '';
+      prayers.forEach((prayer, index) => {
+        const prayerItem = document.createElement('div');
+        prayerItem.className = 'prayer-item';
+        prayerItem.dataset.index = index;
+
+        const hasLyrics = prayer.lyricsFile ? '📜' : '';
+
+        prayerItem.innerHTML = `
+          <span class="prayer-title">${prayer.title}</span>
+          <span class="prayer-has-lyrics">${hasLyrics}</span>
+        `;
+
+        prayerItem.addEventListener('click', function() {
+          selectPrayer(lang, index);
+        });
+
+        prayersList.appendChild(prayerItem);
+      });
+    }
+
+    // Select and play a prayer
+    function selectPrayer(lang, index) {
+      const prayers = getPrayersByLanguage(lang);
+      const prayer = prayers[index];
+
+      if (!prayer) return;
+
+      currentPrayer = { lang, index, ...prayer };
+
+      // Update active prayer item
+      document.querySelectorAll('.prayer-item').forEach(item => {
+        item.classList.toggle('active', item.dataset.index == index);
+      });
+
+      // Load and play audio
+      const audioUrl = getPrayerAudioUrl(prayer.audioFile);
+      audioSource.src = audioUrl;
+      audioElement.load();
+
+      // Update player title
+      document.getElementById('playerTitle').textContent = prayer.title;
+      document.getElementById('playerInfo').textContent = `${LANGUAGE_INFO[lang].name} - ${prayer.title}`;
+
+      // Show player
+      showPlayer();
+
+      // Auto play
+      audioElement.play().catch(err => {
+        console.log('Autoplay prevented:', err);
+      });
+
+      // Load lyrics if available
+      if (prayer.lyricsFile) {
+        loadLyrics(prayer.lyricsFile);
+      } else {
+        hideLyrics();
+      }
+    }
+
+    // Load lyrics from markdown file
+    async function loadLyrics(lyricsFile) {
+      const lyricsPath = getPrayerLyricsPath(lyricsFile);
+
+      if (!lyricsPath) {
+        hideLyrics();
+        return;
+      }
+
+      try {
+        const response = await fetch(lyricsPath);
+        if (!response.ok) throw new Error('Lyrics not found');
+
+        const markdown = await response.text();
+
+        // Simple markdown to HTML conversion
+        const html = convertMarkdownToHTML(markdown);
+
+        document.getElementById('lyricsContent').innerHTML = html;
+        document.getElementById('lyricsTitle').textContent = 'Paroles / Lyrics';
+        showLyrics();
+      } catch (error) {
+        console.error('Error loading lyrics:', error);
+        hideLyrics();
+      }
+    }
+
+    // Simple markdown to HTML converter
+    function convertMarkdownToHTML(markdown) {
+      let html = markdown;
+
+      // Headers
+      html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+      html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+      html = html.replace(/^# (.*$)/gim, '<h2>$1</h2>');
+
+      // Bold
+      html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+      // Italic
+      html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+      // Line breaks
+      html = html.replace(/\n\n/g, '</p><p>');
+      html = '<p>' + html + '</p>';
+
+      return html;
+    }
+
+    // Show/hide player
+    function showPlayer() {
+      document.getElementById('audioPlayer').classList.add('visible');
+    }
+
+    function hidePlayer() {
+      document.getElementById('audioPlayer').classList.remove('visible');
+      audioElement.pause();
+    }
+
+    // Show/hide lyrics
+    function showLyrics() {
+      document.getElementById('lyricsContainer').classList.add('visible');
+    }
+
+    function hideLyrics() {
+      document.getElementById('lyricsContainer').classList.remove('visible');
+    }
+
+    // Setup audio player events
+    function setupAudioPlayer() {
+      audioElement.addEventListener('play', function() {
+        document.getElementById('playerInfo').textContent = '▶️ Lecture en cours...';
+      });
+
+      audioElement.addEventListener('pause', function() {
+        document.getElementById('playerInfo').textContent = '⏸️ En pause';
+      });
+
+      audioElement.addEventListener('ended', function() {
+        document.getElementById('playerInfo').textContent = '✅ Terminé';
+      });
+
+      audioElement.addEventListener('error', function() {
+        document.getElementById('playerInfo').textContent = '❌ Erreur de chargement';
+      });
+    }
+
+    // Track analytics
+    if (typeof gtag !== 'undefined') {
+      audioElement.addEventListener('play', function() {
+        if (currentPrayer) {
+          gtag('event', 'prayer_play', {
+            'prayer_title': currentPrayer.title,
+            'language': currentPrayer.lang
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>
