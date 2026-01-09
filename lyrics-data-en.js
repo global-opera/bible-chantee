@@ -8142,47 +8142,77 @@ O Israel, hear the call of the King,
 With hearts intertwined, let our voices sing.  
 For the Lord is our God, our fortress and guide,  
 In the land of His promise, in Him we abide.`,
-        5: `[Verse 1]  
-O hear, O Israel, the words of the Lord,  
-He speaks to us today, His love poured out like a chord.  
-In the fire of the mountain, His voice we did hear,  
-A covenant of promise, our hearts He draws near.  
+        5: `TITLE: Written in Fire, Carved in Stone
+LYRICS:
+[Verse 1]
+On the mountain You descended
+Thunder rolled and lightning blazed
+In the fire Your voice commanded
+Holy covenant displayed
+Ten words spoken from the heavens
+Hearts of stone now set aflame
+Love the Lord with all your being
+Fear His power, praise His name
 
-[Chorus]  
-We will walk in Your ways, O God most high,  
-With every word You’ve spoken, we lift our hearts to the sky.  
-You brought us from bondage, Your mercy we sing,  
-In the land of the living, our praises we bring.  
+[Pre-Chorus]
+You are holy, You are faithful
+Every word You speak is true
+We will follow, we will listen
+All our hearts belong to You
 
-[Verse 2]  
-You are our deliverer, from chains set us free,  
-No other gods before You, in perfect unity.  
-We honor our fathers, we cherish the call,  
-In the Sabbath we find rest, You’re our all in all.  
+[Chorus]
+Written in fire, carved in stone
+Your commandments lead us home
+Love and justice, mercy shown
+In Your presence we are known
+Written in fire, carved in stone
+Your covenant, our cornerstone
 
-[Chorus]  
-We will walk in Your ways, O God most high,  
-With every word You’ve spoken, we lift our hearts to the sky.  
-You brought us from bondage, Your mercy we sing,  
-In the land of the living, our praises we bring.  
+[Verse 2]
+Keep the Sabbath set apart
+Rest and worship in Your grace
+Honor father, mother's heart
+Walk in righteousness always
+Do not steal or bear false witness
+Guard the truth with every breath
+Love your neighbor as yourself
+Life and peace, not greed or death
 
-[Bridge]  
-O that our hearts would fear You, and keep Your commands,  
-In the midst of the darkness, we’ll stand on dry land.  
-You’ve spoken with power, Your truth ever stands,  
-In the shadow of Your glory, we’ll follow Your plans.  
+[Pre-Chorus]
+You are holy, You are faithful
+Every word You speak is true
+We will follow, we will listen
+All our hearts belong to You
 
-[Chorus]  
-We will walk in Your ways, O God most high,  
-With every word You’ve spoken, we lift our hearts to the sky.  
-You brought us from bondage, Your mercy we sing,  
-In the land of the living, our praises we bring.  
+[Chorus]
+Written in fire, carved in stone
+Your commandments lead us home
+Love and justice, mercy shown
+In Your presence we are known
+Written in fire, carved in stone
+Your covenant, our cornerstone
 
-[Outro]  
-So lead us, O Lord, in the path that is true,  
-With hearts ever faithful, we’ll follow You through.  
-In the land of Your promise, forever we’ll stay,  
-In covenant of grace, we’re Yours every day.`,
+[Bridge]
+From the mountain to our hearts
+You have written who You are
+Holy fire, burning bright
+Guide us through the darkest night
+Not by fear but by Your love
+Drawing near to God above
+Every law a gift of grace
+Leading us to seek Your face
+
+[Chorus]
+Written in fire, carved in stone
+Your commandments lead us home
+Love and justice, mercy shown
+In Your presence we are known
+Written in fire, carved in stone
+Your covenant, our cornerstone
+
+[Outro]
+Written in fire, carved in stone
+Forever Yours, forever known`,
         6: `Verse 1  
 In the land where Your commandments flow,  
 You teach us, Lord, the way to go.  
