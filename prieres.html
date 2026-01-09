@@ -1,57 +1,254 @@
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Bible Chantée V3 — Prières</title>
-  <link rel="stylesheet" href="./css/style.css"/>
-<style>
-/* BC_CLEAR_CACHE_SITE_ONLY_V1 */
-#bcClearCacheWrap{position:fixed;right:14px;bottom:14px;z-index:99999}
-#clearCacheBtn{
-  padding:8px 14px;border-radius:10px;border:1px solid #f0c36d;
-  background:#2c2f5b;color:#fff;cursor:pointer;font-size:14px
-}
-#clearCacheBtn:hover{opacity:.85}
-</style>
-<script src="js/book-names.js?v=1"></script>
-<script src="js/ux-fixes.js?v=1"></script>
-<script src="js/clear-cache.js?v=1"></script>
-<!-- BC_V3_BOOTSTRAP_V1 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prieres Chantees - Bible Chantee</title>
+  <script src="analytics-tracking.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a237e 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        .container { max-width: 400px; margin: 0 auto; padding: 20px; }
+
+        h1 {
+            text-align: center;
+            font-size: 1.7rem;
+            color: #f5c842;
+            margin-bottom: 20px;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            color: #f5c842;
+            text-decoration: none;
+            padding: 10px 25px;
+            border: 2px solid #f5c842;
+            border-radius: 25px;
+            width: fit-content;
+            margin: 0 auto 20px;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            background: #f5c842;
+            color: #1a237e;
+        }
+        .subtitle {
+            text-align: center;
+            font-style: italic;
+            color: #b0b0b0;
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+        }
+
+        .prayers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 13px;
+            max-width: 495px;
+            margin: 0 auto;
+        }
+        .prayer-card {
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(30, 58, 95, 0.8);
+            border-radius: 11px;
+            text-decoration: none;
+            padding: 13px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .prayer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(245, 200, 66, 0.3);
+        }
+        .prayer-icon {
+            font-size: 2.2rem;
+            margin-bottom: 9px;
+        }
+        .prayer-title {
+            color: white;
+            font-size: 0.85rem;
+            text-align: center;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="topbar">
-      <div class="brand">
-        <h1 data-i18n="navPrayers">Prières</h1>
-        <div class="tag">V3</div>
-      </div>
-      <div class="langs">
-        <button class="lang-btn" data-lang="FR">FR</button><button class="lang-btn" data-lang="EN">EN</button><button class="lang-btn" data-lang="PT">PT</button><button class="lang-btn" data-lang="ES">ES</button><button class="lang-btn" data-lang="DE">DE</button><button class="lang-btn" data-lang="IT">IT</button><button class="lang-btn" data-lang="AR">AR</button><button class="lang-btn" data-lang="RU">RU</button><button class="lang-btn" data-lang="ZH">ZH</button><button class="lang-btn" data-lang="HI">HI</button><button class="lang-btn" data-lang="TL">TL</button><button class="lang-btn" data-lang="SW">SW</button>
-      </div>
+    <!-- Langue lue depuis localStorage (définie sur page accueil) -->
+    <script src="lang-shared.js"></script>
+
+    <div class="container">
+        <a href="lecteur.html" class="back-link" id="backLink">Retour accueil</a>
+        <h1 id="pageTitle">Prieres Chantees</h1>
+        <p class="subtitle" id="subtitle">Elevez votre coeur vers Dieu en chantant</p>
+
+        <div class="prayers-grid" id="prayersGrid"></div>
     </div>
-    <div class="card" style="margin-top:14px">
-      <h2>V3</h2>
-      <div class="muted">Page prières (à compléter).</div>
-      <div style="height:12px"></div>
-      <a class="btn-gold" href="./index.html">Accueil</a>
-      <a class="btn-gold" href="./lecteur.html" style="margin-left:8px">Lecteur</a>
-    </div>
-    <div class="footer">© 2025 Bible Chantée — V3</div>
-  </div>
-  <script src="./js/config.js"></script>
-  <script src="./js/translations.js"></script>
-  <script src="./js/i18n.js"></script>
-  <script>document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>I18N.setLang(b.dataset.lang)));</script>
 
+    <script src="js/prayers-data.js"></script>
+    <script>
+    const DATA = {
+        FR: {
+            title: "Prieres Chantees",
+            back: "Retour accueil",
+            subtitle: "Elevez votre coeur vers Dieu en chantant",
+            items: [
+                "Notre Pere",
+                "D'Abord Je Te Cherche",
+                "Priere de Delivrance",
+                "Reconnaissance",
+                "Tu Es Ma Protection",
+                "Tu Ouvres Des Portes",
+                "Tu Ouvres Des Portes (v1)",
+                "Tu Ouvres Des Portes (v2)"
+            ]
+        },
+        EN: {
+            title: "Sung Prayers",
+            back: "Back to Home",
+            subtitle: "Lift your heart to God through song",
+            items: [
+                "Our Father",
+                "Our Father (v1)",
+                "First I Seek You",
+                "Gratitude",
+                "Prayer of Deliverance",
+                "You Are My Protection",
+                "You Open Doors",
+                "You Open Doors (v1)",
+                "You Open Doors (v2)"
+            ]
+        },
+        PT: {
+            title: "Oracoes Cantadas",
+            back: "Voltar ao inicio",
+            subtitle: "Eleve seu coracao a Deus atraves do canto",
+            items: [
+                "Pai Nosso",
+                "Gratidao",
+                "Oracao de Libertacao",
+                "Primeiro Eu Te Busco",
+                "Tu Es a Minha Protecao",
+                "Tu Abres Portas"
+            ]
+        },
+        ES: {
+            title: "Oraciones Cantadas",
+            back: "Volver al inicio",
+            subtitle: "Eleva tu corazon a Dios a traves del canto",
+            items: [
+                "Padre Nuestro",
+                "Padre Nuestro (v1)",
+                "Padre Nuestro (v2)",
+                "Abres Las Puertas",
+                "Abres Las Puertas (v1)",
+                "Gratitud",
+                "Oracion de Liberacion",
+                "Oracion de Liberacion (v1)",
+                "Primero Te Busco",
+                "Primero Te Busco (v1)",
+                "Tu Eres Mi Proteccion"
+            ]
+        },
+        DE: {
+            title: "Gesungene Gebete",
+            back: "Zuruck zur Startseite",
+            subtitle: "Erhebe dein Herz zu Gott durch Gesang",
+            items: [
+                "Vater Unser",
+                "Vater Unser (v1)",
+                "Vater Unser (v2)",
+                "Dankbarkeit",
+                "Du Bist Mein Schutz",
+                "Du Offnest Turen",
+                "Gebet der Befreiung",
+                "Gebet der Befreiung (v1)",
+                "Zuerst Suche Ich Dich"
+            ]
+        },
+        IT: {
+            title: "Preghiere Cantate",
+            back: "Torna alla home",
+            subtitle: "Eleva il tuo cuore a Dio attraverso il canto",
+            items: [
+                "Padre Nostro",
+                "Padre Nostro (v1)",
+                "Apri Le Porte",
+                "Gratitudine",
+                "Preghiera di Liberazione",
+                "Prima Ti Cerco",
+                "Tu Sei La Mia Protezione"
+            ]
+        },
+        TL: {
+            title: "Mga Panalangin na Inaawit",
+            back: "Bumalik sa Home",
+            subtitle: "Itaas ang iyong puso sa Diyos sa pamamagitan ng awit",
+            items: [
+                "Ama Namin",
+                "Ama Namin (v1)",
+                "Binubuksan Mo Ang Pinto",
+                "Ikaw ang Aking Proteksiyon",
+                "Panalangin ng Paglaya",
+                "Pasasalamat",
+                "Una Kitang Hinahanap"
+            ]
+        }
+    };
 
+    // Résoudre la langue (priorité: URL > localStorage > défaut)
+    const params = new URLSearchParams(window.location.search);
+    let currentLang = params.get('lang') || localStorage.getItem('bc_lang') || 'FR';
+    currentLang = currentLang.toUpperCase();
 
-<!-- BC_V3_BOOTSTRAP_V1 -->
-<div id="bcClearCacheWrap" style="position:fixed;right:14px;bottom:14px;z-index:99999">
-  <button id="clearCacheBtn" onclick="bcClearCache()"
-    style="padding:8px 14px;border-radius:10px;border:1px solid #f0c36d;background:#2c2f5b;color:#fff;cursor:pointer;font-size:14px">
-    🧹 Vider le cache
-  </button>
-</div>
+    // Sauvegarder dans localStorage pour cohérence
+    localStorage.setItem('bc_lang', currentLang);
+
+    function render(lang) {
+        currentLang = lang;
+        const d = DATA[lang] || DATA.FR;
+
+        document.getElementById('pageTitle').textContent = d.title;
+        document.getElementById('backLink').textContent = d.back;
+        document.getElementById('subtitle').textContent = d.subtitle;
+
+        const grid = document.getElementById('prayersGrid');
+        grid.innerHTML = '';
+
+        d.items.forEach((title, i) => {
+            const card = document.createElement('a');
+            card.className = 'prayer-card';
+            card.href = `lecteur-prayers.html?id=${i}&lang=${lang}`;
+            card.innerHTML = `
+                <div class="prayer-icon">🙏</div>
+                <div class="prayer-title">${title}</div>
+            `;
+            grid.appendChild(card);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Utiliser currentLang déjà résolu (URL > localStorage > défaut)
+        render(currentLang);
+    });
+    </script>
+
+  <script src="/translations.js"></script>
+  <script src="/translations-extra.js"></script>
+  <script src="/i18n.js"></script>
+  <script src="/lang-shared.js"></script>
 </body>
 </html>
