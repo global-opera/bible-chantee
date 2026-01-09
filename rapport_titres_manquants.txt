@@ -1,0 +1,1474 @@
+═══════════════════════════════════════════════════════════════
+         AUDIT COMPLET DES TITRES - BIBLE CHANTÉE
+═══════════════════════════════════════════════════════════════
+
+Référence: FR avec 1189 titres
+
+═══════════════════════════════════════════════════════════════
+RÉSUMÉ PAR LANGUE
+═══════════════════════════════════════════════════════════════
+
+EN:
+  - Titres manquants: 388
+  - Placeholders: 0
+  - TOTAL à corriger: 388
+
+PT:
+  - Titres manquants: 79
+  - Placeholders: 0
+  - TOTAL à corriger: 79
+
+ES:
+  - Titres manquants: 81
+  - Placeholders: 0
+  - TOTAL à corriger: 81
+
+DE:
+  - Titres manquants: 58
+  - Placeholders: 0
+  - TOTAL à corriger: 58
+
+IT:
+  - Titres manquants: 56
+  - Placeholders: 0
+  - TOTAL à corriger: 56
+
+TL:
+  - Titres manquants: 42
+  - Placeholders: 0
+  - TOTAL à corriger: 42
+
+═══════════════════════════════════════════════════════════════
+DÉTAILS DES TITRES MANQUANTS ET PLACEHOLDERS
+═══════════════════════════════════════════════════════════════
+
+
+━━━ EN: 388 TITRES MANQUANTS ━━━
+
+1. Livre 10 Ch 1
+   FR: "Chant des Héros Tombés"
+2. Livre 10 Ch 2
+   FR: "Éternel, notre Roi et notre Guide"
+3. Livre 10 Ch 3
+   FR: "Éternel, notre Roi en toute saison"
+4. Livre 10 Ch 4
+   FR: "L'Éternel, notre refuge dans l'épreuve"
+5. Livre 10 Ch 5
+   FR: "David, Roi de Gloire, notre Victoire!"
+6. Livre 10 Ch 6
+   FR: "Danse de Louange devant l'Éternel"
+7. Livre 10 Ch 9
+   FR: "À Ta Table, Seigneur, nous trouvons la Grâce!"
+8. Livre 10 Ch 11
+   FR: "Garde nos cœurs, ô Éternel!"
+9. Livre 10 Ch 16
+   FR: "Dans la Tempête, Je Te Loue"
+10. Livre 10 Ch 22
+   FR: "Mon Rocher, Mon Sauveur"
+11. Livre 10 Ch 23
+   FR: "Mon Rocher, Ma Louange"
+12. Livre 11 Ch 4
+   FR: "Sagesse et Paix sous le Règne de Salomon"
+13. Livre 11 Ch 7
+   FR: "Dans la Maison de l'Éternel"
+14. Livre 11 Ch 10
+   FR: "La Sagesse du Roi Salomon"
+15. Livre 11 Ch 11
+   FR: "Un Cœur Fidèle à Toi"
+16. Livre 11 Ch 12
+   FR: "Guide nos cœurs vers l'unité"
+17. Livre 11 Ch 13
+   FR: "Écoute la Voix de Dieu"
+18. Livre 11 Ch 14
+   FR: "Dans l'Ombre de Ta Grâce"
+19. Livre 11 Ch 16
+   FR: "Éternel, notre Roi, notre Lumière"
+20. Livre 11 Ch 20
+   FR: "Notre Roi, notre Victoire"
+21. Livre 11 Ch 21
+   FR: "La Vigne de la Justice"
+22. Livre 11 Ch 22
+   FR: "Guide nos pas, Éternel!"
+23. Livre 12 Ch 3
+   FR: "Éternel, notre guide"
+24. Livre 12 Ch 9
+   FR: "Jéhu, L'Instruments de Ta Justice"
+25. Livre 12 Ch 10
+   FR: "Le Zèle de Jéhu pour l'Éternel"
+26. Livre 12 Ch 13
+   FR: "Libération et Miséricorde"
+27. Livre 12 Ch 16
+   FR: "Fidèle malgré nos égarements"
+28. Livre 12 Ch 19
+   FR: "Éternel, notre Roi, notre Délivrance"
+29. Livre 12 Ch 23
+   FR: "Marchons dans la Lumière du Roi"
+30. Livre 12 Ch 24
+   FR: "Roi de Grâce et de Rédemption"
+31. Livre 13 Ch 1
+   FR: "Généalogie de Grâce"
+32. Livre 13 Ch 2
+   FR: "Dans la Lignée de Ta Gloire"
+33. Livre 13 Ch 3
+   FR: "Héritiers de la Promesse"
+34. Livre 13 Ch 7
+   FR: "Gloire à Toi, Seigneur des générations !"
+35. Livre 13 Ch 8
+   FR: "Lignées de Louange et de Victoire"
+36. Livre 13 Ch 11
+   FR: "Éternel des Armées, notre Victoire!"
+37. Livre 13 Ch 22
+   FR: "Élevons Ta Maison, Éternel!"
+38. Livre 13 Ch 23
+   FR: "À Jamais, Nous T’Adorerons"
+39. Livre 13 Ch 25
+   FR: "Unis dans la Louange à l'Éternel"
+40. Livre 14 Ch 1
+   FR: "Sagesse et Gloire, notre héritage divin"
+41. Livre 14 Ch 2
+   FR: "Bâtissons pour notre Roi"
+42. Livre 14 Ch 4
+   FR: "Dans le Temple de Ta Gloire"
+43. Livre 14 Ch 5
+   FR: "Dans Ta Présence, Éternel!"
+44. Livre 14 Ch 7
+   FR: "La Maison de Sa Gloire"
+45. Livre 14 Ch 8
+   FR: "Salomon, bâtisseur de louanges"
+46. Livre 14 Ch 9
+   FR: "La Sagesse et la Gloire du Roi"
+47. Livre 14 Ch 11
+   FR: "Roboam, sous Ta protection"
+48. Livre 14 Ch 12
+   FR: "Humilité et Grâce : Notre Chant vers l'Éternel"
+49. Livre 14 Ch 22
+   FR: "Dans l'Ombre de Ta Grâce"
+50. Livre 14 Ch 23
+   FR: "Vive le Roi des Rois!"
+51. Livre 14 Ch 27
+   FR: "Jotham, Roi de Droiture et de Foi"
+52. Livre 14 Ch 30
+   FR: "Revenons à l'Éternel !"
+53. Livre 14 Ch 31
+   FR: "Renaître dans Ta lumière"
+54. Livre 14 Ch 36
+   FR: "Roc de Miséricorde"
+55. Livre 15 Ch 1
+   FR: "À Jérusalem, bâtissons sa maison!"
+56. Livre 15 Ch 2
+   FR: "Retour à la Maison du Seigneur"
+57. Livre 15 Ch 3
+   FR: "Unis pour l'Éternel"
+58. Livre 15 Ch 4
+   FR: "Bâtissons pour l'Éternel!"
+59. Livre 15 Ch 6
+   FR: "Renaître dans la Louange"
+60. Livre 16 Ch 2
+   FR: "Rebâtissons Jérusalem !"
+61. Livre 16 Ch 3
+   FR: "Bâtisseurs de Louange"
+62. Livre 16 Ch 11
+   FR: "À Jérusalem, notre cœur est à Toi"
+63. Livre 16 Ch 13
+   FR: "Restauration et Louange"
+64. Livre 17 Ch 1
+   FR: "Le Festin de la Gloire"
+65. Livre 17 Ch 4
+   FR: "Pour un Temps Comme Celui-ci"
+66. Livre 17 Ch 6
+   FR: "Élevé dans la Gloire de Dieu"
+67. Livre 17 Ch 8
+   FR: "La Victoire du Roi des Cieux"
+68. Livre 17 Ch 9
+   FR: "Jours de Joie et de Victoire"
+69. Livre 18 Ch 1
+   FR: "Fidèle au Milieu de l'Épreuve"
+70. Livre 18 Ch 6
+   FR: "Dans l'Abîme, J'Appelle à Toi"
+71. Livre 18 Ch 16
+   FR: "Mon Témoin dans les Cieux"
+72. Livre 18 Ch 17
+   FR: "Lumière dans l'Obscurité"
+73. Livre 18 Ch 18
+   FR: "Lumière dans les Ténèbres"
+74. Livre 18 Ch 19
+   FR: "Mon Rédempteur est vivant!"
+75. Livre 18 Ch 20
+   FR: "La Justice de Dieu Éternelle"
+76. Livre 18 Ch 21
+   FR: "Lumière dans le Tumulte"
+77. Livre 18 Ch 28
+   FR: "La Sagesse Cachée en Toi"
+78. Livre 18 Ch 32
+   FR: "Écoute la Voix de l'Éternel"
+79. Livre 18 Ch 33
+   FR: "Dieu, notre refuge et lumière"
+80. Livre 18 Ch 34
+   FR: "Justice et Louange au Dieu des cieux"
+81. Livre 18 Ch 36
+   FR: "Dieu, notre Puissance et notre Espoir!"
+82. Livre 18 Ch 37
+   FR: "Majesté du Tout-Puissant"
+83. Livre 18 Ch 40
+   FR: "Dans la Tempête de Ta Puissance"
+84. Livre 18 Ch 41
+   FR: "Roi des Fiers Animaux"
+85. Livre 19 Ch 3
+   FR: "Mon Bouclier, Mon Espoir"
+86. Livre 19 Ch 4
+   FR: "Dans Ta Lumière"
+87. Livre 19 Ch 5
+   FR: "Lumière et Vérité de mon cœur"
+88. Livre 19 Ch 6
+   FR: "Appel à la Miséricorde"
+89. Livre 19 Ch 8
+   FR: "Majesté Éternelle"
+90. Livre 19 Ch 10
+   FR: "Lève-toi, Éternel !"
+91. Livre 19 Ch 11
+   FR: "Refuge Éternel"
+92. Livre 19 Ch 14
+   FR: "Dans la lumière de Ta grâce"
+93. Livre 19 Ch 18
+   FR: "Ma Force et Ma Délivrance"
+94. Livre 19 Ch 19
+   FR: "Chant de Gloire aux Cieux"
+95. Livre 19 Ch 21
+   FR: "Célébrons ta majesté!"
+96. Livre 19 Ch 23
+   FR: "Mon Berger, Ma Lumière"
+97. Livre 19 Ch 24
+   FR: "Le Roi de gloire entre dans nos coeurs!"
+98. Livre 19 Ch 25
+   FR: "Éternel, Ma Lumière et Mon Abri"
+99. Livre 19 Ch 28
+   FR: "Éternel, Ma Force et Mon Bouclier"
+100. Livre 19 Ch 29
+   FR: "Gloire à l'Éternel, notre Roi puissant!"
+101. Livre 19 Ch 30
+   FR: "De l'Obscurité à la Joie"
+102. Livre 19 Ch 31
+   FR: "Mon Refuge Éternel"
+103. Livre 19 Ch 32
+   FR: "Heureux en Ta Grâce"
+104. Livre 19 Ch 33
+   FR: "L'Éternel, notre Force et notre Louange"
+105. Livre 19 Ch 36
+   FR: "La Bonté qui Atteint les Cieux"
+106. Livre 19 Ch 37
+   FR: "L'Éternel, Mon Refuge Éternel"
+107. Livre 19 Ch 42
+   FR: "Espérance en Lui, ma Louange éternelle"
+108. Livre 19 Ch 44
+   FR: "Réveille-toi, Seigneur!"
+109. Livre 19 Ch 46
+   FR: "Dieu, Mon Refuge Éternel"
+110. Livre 19 Ch 47
+   FR: "L'Éternel, notre Roi souverain!"
+111. Livre 19 Ch 48
+   FR: "Louez le Grand Roi de Sion!"
+112. Livre 19 Ch 51
+   FR: "Cœur Pur, Esprit Renouvelé"
+113. Livre 19 Ch 52
+   FR: "La Bonté Éternelle de Dieu"
+114. Livre 19 Ch 55
+   FR: "Crier vers le Seigneur, ma force et ma paix"
+115. Livre 19 Ch 61
+   FR: "Mon Refuge, Ma Forteresse"
+116. Livre 19 Ch 67
+   FR: "Tous les Peuples Te Louent"
+117. Livre 19 Ch 71
+   FR: "Mon Refuge Éternel"
+118. Livre 19 Ch 73
+   FR: "Mon Rocher, Mon Refuge éternel"
+119. Livre 19 Ch 90
+   FR: "Éternel, notre Refuge"
+120. Livre 19 Ch 95
+   FR: "Chantons à notre Roi!"
+121. Livre 19 Ch 96
+   FR: "Chantons au Roi des cieux!"
+122. Livre 19 Ch 98
+   FR: "Chantons à l'Éternel, notre roi!"
+123. Livre 19 Ch 99
+   FR: "L'Éternel Règne en Gloire!"
+124. Livre 19 Ch 100
+   FR: "Célébrons l'Éternel, notre joie éternelle!"
+125. Livre 19 Ch 101
+   FR: "Sur la Voie de la Justice"
+126. Livre 19 Ch 103
+   FR: "Bénis l'Éternel, ô mon âme!"
+127. Livre 19 Ch 104
+   FR: "Bénis l'Éternel, ô mon âme!"
+128. Livre 19 Ch 108
+   FR: "Élève-toi, Seigneur, dans ta gloire!"
+129. Livre 19 Ch 110
+   FR: "À Ta Droite, Ô Mon Roi"
+130. Livre 19 Ch 111
+   FR: "Louez l'Éternel, de tout mon cœur!"
+131. Livre 19 Ch 112
+   FR: "Heureux l'Homme de Lumière"
+132. Livre 19 Ch 117
+   FR: "Louez l'Éternel, sa bonté est éternelle!"
+133. Livre 19 Ch 118
+   FR: "L'Éternel, notre force à jamais!"
+134. Livre 19 Ch 123
+   FR: "Regarde vers Nous, Éternel!"
+135. Livre 19 Ch 125
+   FR: "Inébranlable en Ton Amour"
+136. Livre 19 Ch 128
+   FR: "Heureux l'Homme de Dieu"
+137. Livre 19 Ch 130
+   FR: "Espoir dans l'Éternel"
+138. Livre 19 Ch 131
+   FR: "Espoir en l'Éternel, à jamais!"
+139. Livre 19 Ch 132
+   FR: "Viens à Ton Repos, Éternel!"
+140. Livre 19 Ch 133
+   FR: "Unis dans la bénédiction"
+141. Livre 19 Ch 134
+   FR: "Bénissons l'Éternel, notre Roi"
+142. Livre 19 Ch 135
+   FR: "Louez l'Éternel, notre fondation!"
+143. Livre 19 Ch 136
+   FR: "Louez l'Éternel, Sa Miséricorde Dure À Toujours!"
+144. Livre 19 Ch 137
+   FR: "Souviens-toi de Jérusalem"
+145. Livre 19 Ch 142
+   FR: "Mon Refuge, Ma Lumière"
+146. Livre 19 Ch 144
+   FR: "Heureux le Peuple de l'Éternel"
+147. Livre 19 Ch 145
+   FR: "L'Éternel, Ma Louange Éternelle"
+148. Livre 19 Ch 146
+   FR: "L'Éternel, notre espoir éternel"
+149. Livre 19 Ch 149
+   FR: "Chantez au Roi de Gloire!"
+150. Livre 19 Ch 150
+   FR: "Célébrons l'Éternel!"
+151. Livre 20 Ch 2
+   FR: "Dans la Lumière de ta Sagesse"
+152. Livre 20 Ch 9
+   FR: "Sagesse, Éclaire Nos Cœurs"
+153. Livre 20 Ch 10
+   FR: "Le Chant des Justes"
+154. Livre 20 Ch 11
+   FR: "Justice et Vérité"
+155. Livre 20 Ch 12
+   FR: "Établis-nous dans Ta lumière"
+156. Livre 20 Ch 13
+   FR: "Dans Ta Lumière, Nous Marchons"
+157. Livre 20 Ch 15
+   FR: "Réponse de Paix"
+158. Livre 20 Ch 17
+   FR: "Paix et Sagesse en Toi"
+159. Livre 20 Ch 18
+   FR: "Ma Tour Forte"
+160. Livre 20 Ch 19
+   FR: "Guide mes Pas, Ô Éternel"
+161. Livre 20 Ch 21
+   FR: "Dans Ta Main, Éternel"
+162. Livre 20 Ch 22
+   FR: "Richesse de Grâce"
+163. Livre 20 Ch 24
+   FR: "Élève Ma Maison"
+164. Livre 21 Ch 4
+   FR: "Console-nous, Seigneur"
+165. Livre 21 Ch 6
+   FR: "Au-delà des désirs, je trouve la paix"
+166. Livre 21 Ch 7
+   FR: "Dans la Maison de Deuil"
+167. Livre 22 Ch 5
+   FR: "Dans le Jardin de Son Amour"
+168. Livre 22 Ch 8
+   FR: "L'Amour Éternel"
+169. Livre 23 Ch 1
+   FR: "Restauration de Sion"
+170. Livre 23 Ch 11
+   FR: "Rameau de Gloire"
+171. Livre 23 Ch 12
+   FR: "Sources de Salut"
+172. Livre 23 Ch 13
+   FR: "Le Jour de l'Eternel est Arrivé"
+173. Livre 23 Ch 15
+   FR: "Dans la Lamentation, Brille l'Espoir"
+174. Livre 23 Ch 18
+   FR: "Élevez Vos Yeux"
+175. Livre 23 Ch 19
+   FR: "Sur les Nuées de l'Espoir"
+176. Livre 23 Ch 20
+   FR: "L'Éternel, notre salut éternel"
+177. Livre 23 Ch 21
+   FR: "Dans la Tempête, Seigneur, Nous Te Louons!"
+178. Livre 23 Ch 22
+   FR: "Clé de la Promesse"
+179. Livre 23 Ch 64
+   FR: "Viens, Seigneur, fais-nous voir ta gloire !"
+180. Livre 24 Ch 10
+   FR: "Seigneur, Nul n'est Comme Toi"
+181. Livre 24 Ch 11
+   FR: "Écoute, Ô Peuple Bien-Aimé"
+182. Livre 24 Ch 12
+   FR: "Restaure, Éternel"
+183. Livre 24 Ch 19
+   FR: "Vase Brisé, Cœur Ramené"
+184. Livre 24 Ch 20
+   FR: "Mon Héros Éternel"
+185. Livre 24 Ch 21
+   FR: "Chemin de Vie, Lumière Éternelle"
+186. Livre 24 Ch 23
+   FR: "Rassemble-nous, Éternel"
+187. Livre 24 Ch 40
+   FR: "Liberté dans les Chaînes"
+188. Livre 24 Ch 52
+   FR: "Dans la Tempête, Ta Grâce"
+189. Livre 26 Ch 14
+   FR: "Reviens à Ta Grâce"
+190. Livre 26 Ch 15
+   FR: "Restaure en Nous Ta Douce Face"
+191. Livre 26 Ch 32
+   FR: "Le Juge des Nations"
+192. Livre 26 Ch 39
+   FR: "Notre Vainqueur, L'Éternel"
+193. Livre 26 Ch 45
+   FR: "Portion Sainte, Cœur Pur"
+194. Livre 26 Ch 47
+   FR: "L'Eau de Vie qui Renaît"
+195. Livre 27 Ch 4
+   FR: "Éternel, le Roi des cieux!"
+196. Livre 28 Ch 2
+   FR: "Attirés vers le Désert d'Espérance"
+197. Livre 28 Ch 13
+   FR: "Seul Dieu, notre Sauveur"
+198. Livre 29 Ch 2
+   FR: "Reviens à Nous, Ô Éternel"
+199. Livre 29 Ch 3
+   FR: "Le Jugement et la Rédemption de Sion"
+200. Livre 30 Ch 2
+   FR: "Écoute la Voix de l'Éternel"
+201. Livre 30 Ch 7
+   FR: "Seigneur, notre Refuge"
+202. Livre 30 Ch 8
+   FR: "Corbeille de Fruits : Retour à l'Éternel"
+203. Livre 31 Ch 1
+   FR: "Le Jour du Salut à Sion!"
+204. Livre 32 Ch 2
+   FR: "Dans les Profondeurs, je Te Loue"
+205. Livre 32 Ch 4
+   FR: "La Miséricorde qui Sauve"
+206. Livre 33 Ch 3
+   FR: "Rends-nous la Justice, Éternel"
+207. Livre 33 Ch 4
+   FR: "Vers la Montagne d'Amour"
+208. Livre 34 Ch 2
+   FR: "La Gloire Rétablie du Seigneur"
+209. Livre 38 Ch 2
+   FR: "Jérusalem, Éveille-toi!"
+210. Livre 38 Ch 9
+   FR: "Le Roi de Paix"
+211. Livre 38 Ch 14
+   FR: "Le Jour de l'Éternel"
+212. Livre 39 Ch 1
+   FR: "Grand est l'Éternel, notre Roi"
+213. Livre 39 Ch 2
+   FR: "Éveille nos cœurs à Ta vérité"
+214. Livre 39 Ch 3
+   FR: "Purifiés par Ta Lumière"
+215. Livre 39 Ch 4
+   FR: "Le Soleil de Justice"
+216. Livre 40 Ch 11
+   FR: "Venez à Moi, Trouvez le Repos"
+217. Livre 40 Ch 12
+   FR: "Maître du Sabbat, Lumière de nos Vies"
+218. Livre 40 Ch 13
+   FR: "Semences de Gloire"
+219. Livre 40 Ch 22
+   FR: "Venez aux Noces du Roi"
+220. Livre 41 Ch 1
+   FR: "Préparez le chemin du Seigneur"
+221. Livre 41 Ch 6
+   FR: "Jésus, notre Espoir Éternel"
+222. Livre 41 Ch 13
+   FR: "Veillez et Priez"
+223. Livre 41 Ch 15
+   FR: "« Le Roi Crucifié »"
+224. Livre 41 Ch 16
+   FR: "Alléluia, Il Est Vivant !"
+225. Livre 42 Ch 3
+   FR: "Préparez le chemin du Seigneur!"
+226. Livre 42 Ch 11
+   FR: "Dans la Lumière de la Prière"
+227. Livre 42 Ch 19
+   FR: "Béni soit le Roi qui nous sauve !"
+228. Livre 42 Ch 20
+   FR: "Pierre Angulaire"
+229. Livre 42 Ch 24
+   FR: "Il est Vivant, Alléluia !"
+230. Livre 43 Ch 2
+   FR: "Le Miracle de Cana"
+231. Livre 43 Ch 3
+   FR: "Lumière de Vie, Amour Éternel"
+232. Livre 43 Ch 4
+   FR: "L'Eau Vive de la Grâce"
+233. Livre 43 Ch 13
+   FR: "À Tes Pieds, Seigneur"
+234. Livre 43 Ch 15
+   FR: "Racines d'Amour"
+235. Livre 43 Ch 17
+   FR: "Unis dans Ta Gloire"
+236. Livre 43 Ch 18
+   FR: "Le Roi des Cieux"
+237. Livre 43 Ch 19
+   FR: "Couronne d'Épines, Amour Éternel"
+238. Livre 44 Ch 3
+   FR: "Lève-toi et marche en Lui !"
+239. Livre 44 Ch 5
+   FR: "Dans la Lumière de la Vérité"
+240. Livre 44 Ch 21
+   FR: "Unis pour Sa Gloire"
+241. Livre 44 Ch 28
+   FR: "Notre Dieu Fort"
+242. Livre 45 Ch 2
+   FR: "Rends-nous purs, Seigneur de gloire"
+243. Livre 45 Ch 3
+   FR: "Rachetés par la Foi"
+244. Livre 45 Ch 5
+   FR: "L'Amour qui Libère"
+245. Livre 45 Ch 6
+   FR: "Libres pour l'Éternité"
+246. Livre 45 Ch 7
+   FR: "Libéré par la Grâce du Christ"
+247. Livre 45 Ch 9
+   FR: "Fils du Dieu Vivant"
+248. Livre 45 Ch 10
+   FR: "Viens, Seigneur, et sauve-nous"
+249. Livre 45 Ch 11
+   FR: "La Grâce Éternelle de Dieu"
+250. Livre 45 Ch 12
+   FR: "Un Sacrifice de Louange"
+251. Livre 45 Ch 13
+   FR: "Revêtons-nous de lumière et d'amour"
+252. Livre 45 Ch 14
+   FR: "Unis dans l'Amour du Seigneur"
+253. Livre 46 Ch 2
+   FR: "La Sagesse Cachée de Dieu"
+254. Livre 46 Ch 11
+   FR: "Unis dans la Louange à notre Chef"
+255. Livre 49 Ch 5
+   FR: "Marche dans la Lumière de Christ"
+256. Livre 50 Ch 2
+   FR: "Élevé en Louange, notre Sauveur!"
+257. Livre 50 Ch 3
+   FR: "Avançons vers la Gloire Céleste"
+258. Livre 50 Ch 4
+   FR: "Réjouissez-vous dans le Seigneur!"
+259. Livre 51 Ch 3
+   FR: "Revêtons-nous d'Amour et de Lumière"
+260. Livre 56 Ch 3
+   FR: "Héritiers de Sa Grâce"
+261. Livre 58 Ch 2
+   FR: "Un Grand Salut en Jésus"
+262. Livre 58 Ch 4
+   FR: "Entrons dans le Repos de Dieu"
+263. Livre 58 Ch 5
+   FR: "Souverain Sacrificateur, notre Rédempteur"
+264. Livre 58 Ch 6
+   FR: "Ancre de notre âme"
+265. Livre 60 Ch 5
+   FR: "Sous la Main Puissante de Dieu"
+266. Livre 62 Ch 5
+   FR: "Triomphe en Christ"
+267. Livre 63 Ch 1
+   FR: "Dans l'Amour et la Vérité"
+268. Livre 64 Ch 1
+   FR: "Marchons dans la vérité !"
+269. Livre 66 Ch 1
+   FR: "Jésus, notre Roi éternel"
+270. Livre 66 Ch 17
+   FR: "L'Agneau Vainqueur"
+271. Livre 66 Ch 20
+   FR: "Victoire éternelle, notre Roi!"
+272. Livre 66 Ch 21
+   FR: "La Nouvelle Jérusalem, notre espérance éternelle"
+273. Livre 09 Ch 3
+   FR: "Écoute, Éternel, je suis à toi"
+274. Livre 09 Ch 4
+   FR: "« L'Éternel, notre Sauveur »"
+275. Livre 09 Ch 5
+   FR: "La Puissance de l'Éternel"
+276. Livre 09 Ch 6
+   FR: "L'Arche de Gloire, Retour et Louange!"
+277. Livre 09 Ch 19
+   FR: "Fidèle au cœur, refuge divin"
+278. Livre 09 Ch 21
+   FR: "Abri dans la Tempête"
+279. Livre 09 Ch 22
+   FR: "Ma Force dans la Tempête"
+280. Livre 09 Ch 25
+   FR: "Sagesse et Paix dans la Tempête"
+281. Livre 09 Ch 28
+   FR: "Dans la Tempête, Seigneur, notre Refuge"
+282. Livre 09 Ch 30
+   FR: "Dans la tempête, je me tourne vers toi"
+283. Livre 09 Ch 31
+   FR: "Dans la Nuit, Ta Lumière"
+284. Livre 08 Ch 2
+   FR: "Sous les Ailes de la Grâce"
+285. Livre 08 Ch 4
+   FR: "Rédemption à la Porte de Bethléhem"
+286. Livre 06 Ch 4
+   FR: "Souvenons-nous de Sa Puissance"
+287. Livre 06 Ch 6
+   FR: "Les Murailles de Jéricho s'Écroulent!"
+288. Livre 06 Ch 7
+   FR: "Sanctifie-nous, ô Seigneur !"
+289. Livre 06 Ch 12
+   FR: "Victoire et Louange au Roi des Rois"
+290. Livre 06 Ch 13
+   FR: "L'Héritage de la Promesse"
+291. Livre 06 Ch 14
+   FR: "Héritiers de la Promesse"
+292. Livre 06 Ch 16
+   FR: "Héritiers de Sa Promesse"
+293. Livre 06 Ch 19
+   FR: "L'Héritage de notre Dieu"
+294. Livre 06 Ch 20
+   FR: "Villes de Refuge, Abri de Grâce"
+295. Livre 06 Ch 21
+   FR: "Des Villes de Refuge, notre Louange"
+296. Livre 06 Ch 22
+   FR: "Témoin de notre Unité"
+297. Livre 02 Ch 3
+   FR: "Me Voici, Ô Éternel"
+298. Livre 02 Ch 9
+   FR: "Éternel, Ta Puissance Se Manifeste"
+299. Livre 02 Ch 12
+   FR: "La Pâque de notre Libération"
+300. Livre 02 Ch 15
+   FR: "Chant de la délivrance et de la gloire"
+301. Livre 02 Ch 16
+   FR: "Manne du Ciel, Pain de Vie"
+302. Livre 02 Ch 17
+   FR: "L'Éternel, notre rocher et bannière!"
+303. Livre 02 Ch 18
+   FR: "Béni soit l'Éternel, notre Libérateur!"
+304. Livre 02 Ch 26
+   FR: "Dans le Tabernacle de Ta Gloire"
+305. Livre 02 Ch 28
+   FR: "Sainteté à l'Éternel, notre Rédemption"
+306. Livre 02 Ch 35
+   FR: "Offrande de Cœurs"
+307. Livre 02 Ch 37
+   FR: "Lumière dans le Saint des Saints"
+308. Livre 02 Ch 38
+   FR: "Sanctuaire de Louange"
+309. Livre 02 Ch 40
+   FR: "Gloire dans la Nuée"
+310. Livre 07 Ch 2
+   FR: "Rappelle-nous, Éternel!"
+311. Livre 07 Ch 4
+   FR: "La Victoire de l'Éternel"
+312. Livre 07 Ch 6
+   FR: "Héros de notre délivrance"
+313. Livre 07 Ch 7
+   FR: "Pour l'Éternel et pour Gédéon"
+314. Livre 07 Ch 9
+   FR: "Éternel, Notre Roi, Guide de Paix"
+315. Livre 07 Ch 14
+   FR: "Force et Douceur en Christ"
+316. Livre 07 Ch 19
+   FR: "Dans l'Obscurité, Cherchons Ta Lumière"
+317. Livre 07 Ch 20
+   FR: "Unis dans la vérité, marchons vers Toi!"
+318. Livre 07 Ch 21
+   FR: "Unis dans la douleur, restaurés par Ta grâce"
+319. Livre 05 Ch 2
+   FR: "Éternel, notre guide et défenseur"
+320. Livre 05 Ch 3
+   FR: "Ne Crains Rien, L'Éternel Combat Pour Nous"
+321. Livre 05 Ch 5
+   FR: "Marche dans la Lumière de l'Éternel"
+322. Livre 05 Ch 7
+   FR: "Peuple Saint, Éternel Dieu"
+323. Livre 05 Ch 8
+   FR: "Souviens-toi de l'Éternel, notre force et notre chemin"
+324. Livre 05 Ch 14
+   FR: "Enfants de l'Éternel, Louons Sa Sainteté"
+325. Livre 05 Ch 15
+   FR: "Relâche et Grâce"
+326. Livre 05 Ch 16
+   FR: "Célébrons notre Délivrance !"
+327. Livre 05 Ch 19
+   FR: "Refuge et Bonté de l'Éternel"
+328. Livre 05 Ch 21
+   FR: "Notre Phare, Ô Eternel"
+329. Livre 05 Ch 22
+   FR: "Marcher dans l'Amour de Dieu"
+330. Livre 05 Ch 24
+   FR: "À l'ombre de Ta bonté"
+331. Livre 05 Ch 25
+   FR: "Justice et Amour, notre héritage éternel!"
+332. Livre 05 Ch 26
+   FR: "Héritiers de Ta Promesse"
+333. Livre 05 Ch 27
+   FR: "Gravons Sa Loi, Élevons Nos Voix"
+334. Livre 05 Ch 28
+   FR: "Bénédictions et Promesses de l'Éternel"
+335. Livre 05 Ch 29
+   FR: "Alliance d'Éternité"
+336. Livre 05 Ch 30
+   FR: "Choisis la Vie, Choisis l'Amour"
+337. Livre 01 Ch 4
+   FR: "Le Cri du Sang et la Promesse"
+338. Livre 01 Ch 5
+   FR: "Des Générations en Louange"
+339. Livre 01 Ch 9
+   FR: "L'Arc de l'Alliance"
+340. Livre 01 Ch 14
+   FR: "Dans la Vallée des Victoires"
+341. Livre 01 Ch 17
+   FR: "Promesse Éternelle"
+342. Livre 01 Ch 18
+   FR: "Rien n'est Impossible à Toi"
+343. Livre 01 Ch 19
+   FR: "Vers la Lumière, Épargnés par Ta Grâce"
+344. Livre 01 Ch 22
+   FR: "Sur la Montagne, Dieu Pourvoit"
+345. Livre 01 Ch 23
+   FR: "Dans la Peine, la Foi et l'Espoir"
+346. Livre 01 Ch 27
+   FR: "Bénis-moi, Ô Seigneur, dans la lumière de Ta grâce!"
+347. Livre 01 Ch 33
+   FR: "Dans l'Unité de Ton Amour"
+348. Livre 01 Ch 35
+   FR: "El-Béthel, notre lieu de rencontre"
+349. Livre 01 Ch 36
+   FR: "Esaü, Père d'une Grande Nation"
+350. Livre 01 Ch 41
+   FR: "Le Maître des Songes"
+351. Livre 01 Ch 42
+   FR: "Dans la Famine, notre Espoir"
+352. Livre 01 Ch 44
+   FR: "Le Sacrifice de l'Amour"
+353. Livre 01 Ch 47
+   FR: "Dans les bras de Ta grâce"
+354. Livre 01 Ch 50
+   FR: "Lumière dans le Deuil"
+355. Livre 03 Ch 1
+   FR: "Holocauste de Louange"
+356. Livre 03 Ch 2
+   FR: "Offrande de Louange à l'Eternel"
+357. Livre 03 Ch 3
+   FR: "Sacrifice de Louange"
+358. Livre 03 Ch 4
+   FR: "Pardonne et Purifie nos Cœurs"
+359. Livre 03 Ch 6
+   FR: "Restaurés par Ta Grâce"
+360. Livre 03 Ch 7
+   FR: "« Sacrifices de Louange »"
+361. Livre 03 Ch 9
+   FR: "Feu du Ciel, Gloire Éternelle"
+362. Livre 03 Ch 12
+   FR: "Purifiés par Ta Grâce"
+363. Livre 03 Ch 13
+   FR: "Purifié par Ta grâce, Seigneur!"
+364. Livre 03 Ch 14
+   FR: "Purifiés par Ta Grâce"
+365. Livre 03 Ch 15
+   FR: "Purifiés par Ta Grâce"
+366. Livre 03 Ch 16
+   FR: "Purifiés par le Sang de l'Agneau"
+367. Livre 03 Ch 17
+   FR: "Dans le Sang de la Rédemption"
+368. Livre 03 Ch 19
+   FR: "Peuple de l'Éternel, en Sainteté"
+369. Livre 03 Ch 22
+   FR: "Sanctifiés pour Te louer"
+370. Livre 03 Ch 23
+   FR: "Célébrons l'Éternel, notre joie!"
+371. Livre 03 Ch 27
+   FR: "À Toi, Seigneur, nos vœux et nos cœurs"
+372. Livre 04 Ch 4
+   FR: "Dans la Tente de Sa Gloire"
+373. Livre 04 Ch 5
+   FR: "Purifiés par Ta Grâce"
+374. Livre 04 Ch 10
+   FR: "Sonnez, Trompettes de Louange !"
+375. Livre 04 Ch 11
+   FR: "Éternel, Nourris nos Cœurs!"
+376. Livre 04 Ch 13
+   FR: "Vers la Terre Promise, avec Foi et Courage"
+377. Livre 04 Ch 16
+   FR: "« L'Éternel, notre refuge »"
+378. Livre 04 Ch 17
+   FR: "Fleuris en nous, Éternel!"
+379. Livre 04 Ch 19
+   FR: "L'Eau de Purification"
+380. Livre 04 Ch 22
+   FR: "Dans Ta Lumière, Nous Avançons"
+381. Livre 04 Ch 24
+   FR: "Lumière de notre peuple"
+382. Livre 04 Ch 25
+   FR: "Zèle et Paix, notre Chant pour l'Éternel"
+383. Livre 04 Ch 27
+   FR: "Héritiers de Sa Promesse"
+384. Livre 04 Ch 28
+   FR: "Offrandes de Louange"
+385. Livre 04 Ch 30
+   FR: "Promesses de Foi, Cœurs Unis"
+386. Livre 04 Ch 31
+   FR: "Vengeance et Louange : Le Chant de la Victoire"
+387. Livre 04 Ch 34
+   FR: "Héritiers de la Promesse Divine"
+388. Livre 04 Ch 35
+   FR: "Villes de Refuge, notre Espoir en Toi!"
+
+━━━ PT: 79 TITRES MANQUANTS ━━━
+
+1. Livre 10 Ch 15
+   FR: "Dans la Vallée des Larmes"
+2. Livre 11 Ch 3
+   FR: "Sagesse du Ciel, Guide de nos Cœurs"
+3. Livre 11 Ch 11
+   FR: "Un Cœur Fidèle à Toi"
+4. Livre 11 Ch 15
+   FR: "Lumière et Fidélité dans nos Cœurs"
+5. Livre 12 Ch 1
+   FR: "Éternel, notre seul refuge"
+6. Livre 12 Ch 11
+   FR: "Joas, Roi de Lumière"
+7. Livre 12 Ch 16
+   FR: "Fidèle malgré nos égarements"
+8. Livre 13 Ch 16
+   FR: "Louez l'Éternel, notre Sauveur!"
+9. Livre 13 Ch 26
+   FR: "Gardiens de la Maison du Roi"
+10. Livre 14 Ch 7
+   FR: "La Maison de Sa Gloire"
+11. Livre 14 Ch 11
+   FR: "Roboam, sous Ta protection"
+12. Livre 14 Ch 21
+   FR: "Dans la lumière de Ta vérité"
+13. Livre 14 Ch 32
+   FR: "Fortifie-toi, notre Dieu est là!"
+14. Livre 17 Ch 2
+   FR: "Esther, Étoile de Grâce"
+15. Livre 19 Ch 22
+   FR: "Dans la Nuit, Seigneur, Tu es mon Espoir"
+16. Livre 19 Ch 50
+   FR: "Rassemble tes fidèles, Seigneur"
+17. Livre 19 Ch 86
+   FR: "Éternel, Mon Secours et Ma Lumière"
+18. Livre 20 Ch 12
+   FR: "Établis-nous dans Ta lumière"
+19. Livre 20 Ch 24
+   FR: "Élève Ma Maison"
+20. Livre 20 Ch 25
+   FR: "Dans Ta Gloire, Ô Roi"
+21. Livre 20 Ch 30
+   FR: "Refuge de Vérité"
+22. Livre 21 Ch 3
+   FR: "Un Temps pour Louer notre Dieu"
+23. Livre 23 Ch 11
+   FR: "Rameau de Gloire"
+24. Livre 23 Ch 65
+   FR: "Réjouis-toi, Jérusalem!"
+25. Livre 24 Ch 29
+   FR: "Espérance en captivité"
+26. Livre 24 Ch 36
+   FR: "Écoute notre Cri, Éternel"
+27. Livre 26 Ch 1
+   FR: "Visions de Gloire, Éternel!"
+28. Livre 26 Ch 10
+   FR: "Dans la Gloire des Chérubins"
+29. Livre 26 Ch 23
+   FR: "Ramène-nous à Toi"
+30. Livre 26 Ch 43
+   FR: "Dans Ta Maison, Éternel"
+31. Livre 26 Ch 45
+   FR: "Portion Sainte, Cœur Pur"
+32. Livre 27 Ch 6
+   FR: "Le Dieu qui Délivre"
+33. Livre 27 Ch 9
+   FR: "Seigneur, Écoute notre Prière"
+34. Livre 27 Ch 11
+   FR: "Dans la Tempête, Tu es Souverain"
+35. Livre 33 Ch 1
+   FR: "Quand le Cœur Pleure, Éternel se Lève"
+36. Livre 40 Ch 9
+   FR: "Seigneur de Miséricorde"
+37. Livre 40 Ch 12
+   FR: "Maître du Sabbat, Lumière de nos Vies"
+38. Livre 40 Ch 18
+   FR: "Enfants du Royaume"
+39. Livre 41 Ch 2
+   FR: "Lève-toi et marche, ô mon Sauveur!"
+40. Livre 41 Ch 11
+   FR: "Hosanna au Roi des Rois"
+41. Livre 41 Ch 13
+   FR: "Veillez et Priez"
+42. Livre 42 Ch 6
+   FR: "Libérés par Ta grâce, Seigneur!"
+43. Livre 42 Ch 24
+   FR: "Il est Vivant, Alléluia !"
+44. Livre 43 Ch 1
+   FR: "Lumière du Monde"
+45. Livre 43 Ch 9
+   FR: "Lumière de Vie"
+46. Livre 43 Ch 10
+   FR: "Le Bon Berger"
+47. Livre 43 Ch 19
+   FR: "Couronne d'Épines, Amour Éternel"
+48. Livre 44 Ch 10
+   FR: "Unis par Ta Grâce, Seigneur!"
+49. Livre 44 Ch 21
+   FR: "Unis pour Sa Gloire"
+50. Livre 44 Ch 27
+   FR: "Notre Espoir dans la Tempête"
+51. Livre 45 Ch 1
+   FR: "Gloire à Toi, notre Puissance de Salut"
+52. Livre 46 Ch 16
+   FR: "Unis dans l'Amour de Christ"
+53. Livre 47 Ch 12
+   FR: "Ma Grâce Te Suffit"
+54. Livre 48 Ch 4
+   FR: "Fils et Héritiers de la Grâce"
+55. Livre 54 Ch 3
+   FR: "Dans la Maison de Dieu, Nous Te Louons!"
+56. Livre 58 Ch 6
+   FR: "Ancre de notre âme"
+57. Livre 09 Ch 3
+   FR: "Écoute, Éternel, je suis à toi"
+58. Livre 09 Ch 4
+   FR: "« L'Éternel, notre Sauveur »"
+59. Livre 09 Ch 12
+   FR: "Notre Roi, notre Guide"
+60. Livre 09 Ch 17
+   FR: "La Victoire du Jeune Berger"
+61. Livre 09 Ch 22
+   FR: "Ma Force dans la Tempête"
+62. Livre 09 Ch 23
+   FR: "Ma Force, Mon Éternel"
+63. Livre 08 Ch 3
+   FR: "Sous l'Aile du Rachat"
+64. Livre 06 Ch 6
+   FR: "Les Murailles de Jéricho s'Écroulent!"
+65. Livre 06 Ch 14
+   FR: "Héritiers de la Promesse"
+66. Livre 06 Ch 17
+   FR: "Notre Héritage en Christ"
+67. Livre 02 Ch 16
+   FR: "Manne du Ciel, Pain de Vie"
+68. Livre 02 Ch 21
+   FR: "Liberté et Justice en Toi"
+69. Livre 02 Ch 28
+   FR: "Sainteté à l'Éternel, notre Rédemption"
+70. Livre 02 Ch 39
+   FR: "Dans le Sanctuaire de Ta Gloire"
+71. Livre 05 Ch 14
+   FR: "Enfants de l'Éternel, Louons Sa Sainteté"
+72. Livre 05 Ch 15
+   FR: "Relâche et Grâce"
+73. Livre 05 Ch 22
+   FR: "Marcher dans l'Amour de Dieu"
+74. Livre 03 Ch 9
+   FR: "Feu du Ciel, Gloire Éternelle"
+75. Livre 03 Ch 15
+   FR: "Purifiés par Ta Grâce"
+76. Livre 04 Ch 6
+   FR: "Consacrés à l'Éternel, bénis pour l'éternité"
+77. Livre 04 Ch 11
+   FR: "Éternel, Nourris nos Cœurs!"
+78. Livre 04 Ch 20
+   FR: "Dans le Désert, Tu es notre Rocher"
+79. Livre 04 Ch 33
+   FR: "Vers la Terre Promise, main dans la main!"
+
+━━━ ES: 81 TITRES MANQUANTS ━━━
+
+1. Livre 10 Ch 6
+   FR: "Danse de Louange devant l'Éternel"
+2. Livre 10 Ch 12
+   FR: "Dans la lumière de Ta grâce"
+3. Livre 10 Ch 19
+   FR: "Règne en nous, ô Roi de Grâce"
+4. Livre 11 Ch 7
+   FR: "Dans la Maison de l'Éternel"
+5. Livre 11 Ch 15
+   FR: "Lumière et Fidélité dans nos Cœurs"
+6. Livre 12 Ch 2
+   FR: "Dans le Tourbillon de Ta Gloire"
+7. Livre 12 Ch 17
+   FR: "Reviens à l'Éternel, notre refuge!"
+8. Livre 12 Ch 23
+   FR: "Marchons dans la Lumière du Roi"
+9. Livre 12 Ch 25
+   FR: "Dans la douleur, Tu es notre espoir"
+10. Livre 13 Ch 4
+   FR: "Élargis mes limites, ô Dieu!"
+11. Livre 13 Ch 15
+   FR: "Célébrons l'Arche du Seigneur"
+12. Livre 14 Ch 18
+   FR: "La Lumière dans la Bataille"
+13. Livre 14 Ch 20
+   FR: "Dans la Louange, notre Victoire!"
+14. Livre 15 Ch 5
+   FR: "Bâtissons ensemble la maison de notre Roi"
+15. Livre 16 Ch 9
+   FR: "Fidélité et Miséricorde de l'Éternel"
+16. Livre 16 Ch 10
+   FR: "Unis pour Ta Maison, Seigneur"
+17. Livre 16 Ch 13
+   FR: "Restauration et Louange"
+18. Livre 19 Ch 115
+   FR: "À Ton Nom, Seigneur, la Gloire!"
+19. Livre 19 Ch 134
+   FR: "Bénissons l'Éternel, notre Roi"
+20. Livre 23 Ch 51
+   FR: "Réveille-toi, Sion!"
+21. Livre 24 Ch 9
+   FR: "Larmes de Vérité"
+22. Livre 24 Ch 22
+   FR: "Voix de l'Éternel"
+23. Livre 24 Ch 29
+   FR: "Espérance en captivité"
+24. Livre 24 Ch 32
+   FR: "Force et Promesse"
+25. Livre 24 Ch 49
+   FR: "Dans les Ruines, Nous Te Louons"
+26. Livre 24 Ch 52
+   FR: "Dans la Tempête, Ta Grâce"
+27. Livre 25 Ch 2
+   FR: "Restaure, ô Éternel, notre cœur en pleurs!"
+28. Livre 26 Ch 23
+   FR: "Ramène-nous à Toi"
+29. Livre 26 Ch 37
+   FR: "Réveille-nous, Esprit de Vie!"
+30. Livre 26 Ch 43
+   FR: "Dans Ta Maison, Éternel"
+31. Livre 26 Ch 48
+   FR: "L'Éternel est ici !"
+32. Livre 27 Ch 3
+   FR: "En toi, notre délivrance"
+33. Livre 27 Ch 6
+   FR: "Le Dieu qui Délivre"
+34. Livre 29 Ch 3
+   FR: "Le Jugement et la Rédemption de Sion"
+35. Livre 30 Ch 2
+   FR: "Écoute la Voix de l'Éternel"
+36. Livre 33 Ch 4
+   FR: "Vers la Montagne d'Amour"
+37. Livre 36 Ch 2
+   FR: "Revêts-toi de Sa Bonté"
+38. Livre 36 Ch 3
+   FR: "Réveille-toi, ô Sion!"
+39. Livre 38 Ch 1
+   FR: "Reviens à Moi, Ô Jérusalem"
+40. Livre 40 Ch 6
+   FR: "Dans le Secret de Ta Présence"
+41. Livre 40 Ch 13
+   FR: "Semences de Gloire"
+42. Livre 40 Ch 22
+   FR: "Venez aux Noces du Roi"
+43. Livre 40 Ch 24
+   FR: "Viens, Seigneur, dans Ta Gloire"
+44. Livre 41 Ch 4
+   FR: "Écoute le Semeur, porte du Fruit!"
+45. Livre 41 Ch 5
+   FR: "Libérateur de nos âmes"
+46. Livre 41 Ch 6
+   FR: "Jésus, notre Espoir Éternel"
+47. Livre 41 Ch 10
+   FR: "Unis dans Ta Grâce"
+48. Livre 41 Ch 13
+   FR: "Veillez et Priez"
+49. Livre 42 Ch 1
+   FR: "Promesses de Grâce et de Lumière"
+50. Livre 42 Ch 4
+   FR: "Le Messie, Notre Espoir"
+51. Livre 42 Ch 5
+   FR: "À la rencontre du Maître"
+52. Livre 42 Ch 6
+   FR: "Libérés par Ta grâce, Seigneur!"
+53. Livre 42 Ch 9
+   FR: "Suivons le Roi"
+54. Livre 42 Ch 12
+   FR: "Veillons dans la Lumière"
+55. Livre 42 Ch 20
+   FR: "Pierre Angulaire"
+56. Livre 42 Ch 22
+   FR: "Dans la Nuit de la Pâque"
+57. Livre 43 Ch 7
+   FR: "Venez à moi, ô assoiffés !"
+58. Livre 43 Ch 12
+   FR: "Hosanna au Roi des cieux !"
+59. Livre 43 Ch 13
+   FR: "À Tes Pieds, Seigneur"
+60. Livre 43 Ch 14
+   FR: "Je Ne Te Laisserai Pas"
+61. Livre 44 Ch 20
+   FR: "Unis dans la Grâce"
+62. Livre 44 Ch 21
+   FR: "Unis pour Sa Gloire"
+63. Livre 46 Ch 7
+   FR: "Unis dans l'Amour du Christ"
+64. Livre 46 Ch 9
+   FR: "Libres pour l'Évangile, unis dans Sa grâce."
+65. Livre 47 Ch 7
+   FR: "Dans la Tristesse, Ta Joie"
+66. Livre 09 Ch 2
+   FR: "Mon Cœur Se Réjouit en Toi, Éternel"
+67. Livre 06 Ch 6
+   FR: "Les Murailles de Jéricho s'Écroulent!"
+68. Livre 06 Ch 13
+   FR: "L'Héritage de la Promesse"
+69. Livre 06 Ch 19
+   FR: "L'Héritage de notre Dieu"
+70. Livre 02 Ch 8
+   FR: "Libération par Ta Puissance"
+71. Livre 02 Ch 16
+   FR: "Manne du Ciel, Pain de Vie"
+72. Livre 02 Ch 39
+   FR: "Dans le Sanctuaire de Ta Gloire"
+73. Livre 05 Ch 31
+   FR: "Fortifiés par Sa Promesse"
+74. Livre 01 Ch 14
+   FR: "Dans la Vallée des Victoires"
+75. Livre 01 Ch 19
+   FR: "Vers la Lumière, Épargnés par Ta Grâce"
+76. Livre 01 Ch 41
+   FR: "Le Maître des Songes"
+77. Livre 03 Ch 16
+   FR: "Purifiés par le Sang de l'Agneau"
+78. Livre 03 Ch 27
+   FR: "À Toi, Seigneur, nos vœux et nos cœurs"
+79. Livre 04 Ch 4
+   FR: "Dans la Tente de Sa Gloire"
+80. Livre 04 Ch 7
+   FR: "Offrandes de Louange au Très-Haut"
+81. Livre 04 Ch 13
+   FR: "Vers la Terre Promise, avec Foi et Courage"
+
+━━━ DE: 58 TITRES MANQUANTS ━━━
+
+1. Livre 10 Ch 2
+   FR: "Éternel, notre Roi et notre Guide"
+2. Livre 10 Ch 14
+   FR: "Rassemble les âmes, ô Jésus!"
+3. Livre 11 Ch 12
+   FR: "Guide nos cœurs vers l'unité"
+4. Livre 12 Ch 5
+   FR: "Naaman, le Lépreux Purifié"
+5. Livre 12 Ch 14
+   FR: "Éternel, Notre Guide et Espoir"
+6. Livre 12 Ch 15
+   FR: "Gloire à Toi, Éternel, notre Roi!"
+7. Livre 13 Ch 17
+   FR: "Éternel, Bâtisseur de nos cœurs"
+8. Livre 14 Ch 1
+   FR: "Sagesse et Gloire, notre héritage divin"
+9. Livre 19 Ch 55
+   FR: "Crier vers le Seigneur, ma force et ma paix"
+10. Livre 23 Ch 33
+   FR: "À Toi, Éternel, notre Refuge"
+11. Livre 23 Ch 36
+   FR: "Notre Force dans la Tempête"
+12. Livre 24 Ch 51
+   FR: "Le Cri de la Justice Divine"
+13. Livre 26 Ch 16
+   FR: "Rédemption de Jérusalem"
+14. Livre 26 Ch 21
+   FR: "L'Épée de Justice"
+15. Livre 26 Ch 39
+   FR: "Notre Vainqueur, L'Éternel"
+16. Livre 26 Ch 42
+   FR: "Dans la Maison du Saint"
+17. Livre 26 Ch 45
+   FR: "Portion Sainte, Cœur Pur"
+18. Livre 27 Ch 4
+   FR: "Éternel, le Roi des cieux!"
+19. Livre 32 Ch 1
+   FR: "Dans la tempête, je Te louerai"
+20. Livre 40 Ch 8
+   FR: "Jésus, notre Espoir, notre Guérisseur"
+21. Livre 40 Ch 9
+   FR: "Seigneur de Miséricorde"
+22. Livre 40 Ch 18
+   FR: "Enfants du Royaume"
+23. Livre 40 Ch 21
+   FR: "Hosanna au Roi"
+24. Livre 40 Ch 24
+   FR: "Viens, Seigneur, dans Ta Gloire"
+25. Livre 41 Ch 13
+   FR: "Veillez et Priez"
+26. Livre 42 Ch 4
+   FR: "Le Messie, Notre Espoir"
+27. Livre 42 Ch 9
+   FR: "Suivons le Roi"
+28. Livre 42 Ch 10
+   FR: "Envoyés pour la Moisson"
+29. Livre 42 Ch 21
+   FR: "Notre Refuge, Notre Espoir"
+30. Livre 42 Ch 23
+   FR: "Libérés par la Croix"
+31. Livre 42 Ch 24
+   FR: "Il est Vivant, Alléluia !"
+32. Livre 43 Ch 4
+   FR: "L'Eau Vive de la Grâce"
+33. Livre 43 Ch 6
+   FR: "Pain de Vie, notre Espoir éternel"
+34. Livre 43 Ch 8
+   FR: "Lumière du Monde, Liberté en Jésus"
+35. Livre 43 Ch 11
+   FR: "Résurrection et Vie"
+36. Livre 43 Ch 16
+   FR: "Joie au Milieu des Larmes"
+37. Livre 43 Ch 17
+   FR: "Unis dans Ta Gloire"
+38. Livre 43 Ch 19
+   FR: "Couronne d'Épines, Amour Éternel"
+39. Livre 44 Ch 9
+   FR: "Lumière sur le chemin"
+40. Livre 44 Ch 13
+   FR: "Paroles de Vie, Lumière des Nations"
+41. Livre 44 Ch 23
+   FR: "Prends Courage, Ô Paul!"
+42. Livre 44 Ch 27
+   FR: "Notre Espoir dans la Tempête"
+43. Livre 44 Ch 28
+   FR: "Notre Dieu Fort"
+44. Livre 46 Ch 6
+   FR: "Rachetés et Unis dans Sa Grâce"
+45. Livre 50 Ch 3
+   FR: "Avançons vers la Gloire Céleste"
+46. Livre 59 Ch 5
+   FR: "Dans l'Attente de Ta Miséricorde"
+47. Livre 66 Ch 3
+   FR: "Réveille-nous, Seigneur, dans Ta lumière!"
+48. Livre 06 Ch 22
+   FR: "Témoin de notre Unité"
+49. Livre 02 Ch 19
+   FR: "Au Pied de la Montagne Sainte"
+50. Livre 05 Ch 5
+   FR: "Marche dans la Lumière de l'Éternel"
+51. Livre 05 Ch 21
+   FR: "Notre Phare, Ô Eternel"
+52. Livre 05 Ch 31
+   FR: "Fortifiés par Sa Promesse"
+53. Livre 01 Ch 21
+   FR: "Dieu des promesses, notre joie éternelle"
+54. Livre 01 Ch 32
+   FR: "Vainqueur par Ta Grâce"
+55. Livre 03 Ch 10
+   FR: "Sanctifiés pour Ta Gloire"
+56. Livre 03 Ch 13
+   FR: "Purifié par Ta grâce, Seigneur!"
+57. Livre 03 Ch 23
+   FR: "Célébrons l'Éternel, notre joie!"
+58. Livre 04 Ch 18
+   FR: "Notre Héritage Éternel"
+
+━━━ IT: 56 TITRES MANQUANTS ━━━
+
+1. Livre 11 Ch 13
+   FR: "Écoute la Voix de Dieu"
+2. Livre 12 Ch 4
+   FR: "Ton Huile Ne Tarit Jamais"
+3. Livre 12 Ch 13
+   FR: "Libération et Miséricorde"
+4. Livre 13 Ch 15
+   FR: "Célébrons l'Arche du Seigneur"
+5. Livre 13 Ch 22
+   FR: "Élevons Ta Maison, Éternel!"
+6. Livre 14 Ch 6
+   FR: "Éternel, notre demeure"
+7. Livre 14 Ch 10
+   FR: "Guide nos cœurs vers Ta sagesse"
+8. Livre 14 Ch 13
+   FR: "L'Éternel, notre vainqueur !"
+9. Livre 14 Ch 15
+   FR: "Cherchons l'Éternel, notre refuge et roi"
+10. Livre 14 Ch 25
+   FR: "Éternel, Guide Nos Pas"
+11. Livre 15 Ch 5
+   FR: "Bâtissons ensemble la maison de notre Roi"
+12. Livre 16 Ch 2
+   FR: "Rebâtissons Jérusalem !"
+13. Livre 18 Ch 17
+   FR: "Lumière dans l'Obscurité"
+14. Livre 18 Ch 40
+   FR: "Dans la Tempête de Ta Puissance"
+15. Livre 19 Ch 102
+   FR: "Éternel, notre refuge éternel"
+16. Livre 22 Ch 3
+   FR: "À la recherche de mon Bien-Aimé"
+17. Livre 23 Ch 15
+   FR: "Dans la Lamentation, Brille l'Espoir"
+18. Livre 23 Ch 49
+   FR: "Lumière des Nations"
+19. Livre 23 Ch 65
+   FR: "Réjouis-toi, Jérusalem!"
+20. Livre 24 Ch 10
+   FR: "Seigneur, Nul n'est Comme Toi"
+21. Livre 24 Ch 16
+   FR: "Éternel, Notre Refuge"
+22. Livre 26 Ch 20
+   FR: "Reviens à l'Éternel"
+23. Livre 26 Ch 26
+   FR: "Le Rocher des Nations"
+24. Livre 26 Ch 38
+   FR: "Éternel, notre Espoir"
+25. Livre 27 Ch 3
+   FR: "En toi, notre délivrance"
+26. Livre 28 Ch 1
+   FR: "Fils du Dieu Vivant"
+27. Livre 28 Ch 5
+   FR: "Ramène-nous à Toi, Seigneur"
+28. Livre 28 Ch 12
+   FR: "Reviens à Ton Dieu"
+29. Livre 28 Ch 14
+   FR: "Reviens à Ton Dieu"
+30. Livre 33 Ch 4
+   FR: "Vers la Montagne d'Amour"
+31. Livre 40 Ch 5
+   FR: "Heureux dans la Lumière"
+32. Livre 40 Ch 6
+   FR: "Dans le Secret de Ta Présence"
+33. Livre 40 Ch 22
+   FR: "Venez aux Noces du Roi"
+34. Livre 41 Ch 8
+   FR: "Rassasie nos âmes"
+35. Livre 41 Ch 11
+   FR: "Hosanna au Roi des Rois"
+36. Livre 42 Ch 21
+   FR: "Notre Refuge, Notre Espoir"
+37. Livre 43 Ch 6
+   FR: "Pain de Vie, notre Espoir éternel"
+38. Livre 43 Ch 13
+   FR: "À Tes Pieds, Seigneur"
+39. Livre 44 Ch 6
+   FR: "Unis dans la Grâce"
+40. Livre 44 Ch 8
+   FR: "Force et Joie dans la Tempête"
+41. Livre 44 Ch 26
+   FR: "Lumière de mon cœur"
+42. Livre 44 Ch 28
+   FR: "Notre Dieu Fort"
+43. Livre 46 Ch 8
+   FR: "Unis dans l'Amour du Christ"
+44. Livre 46 Ch 9
+   FR: "Libres pour l'Évangile, unis dans Sa grâce."
+45. Livre 62 Ch 3
+   FR: "Enfants de Dieu, unis dans l'amour!"
+46. Livre 62 Ch 4
+   FR: "Unis dans l'Amour"
+47. Livre 66 Ch 7
+   FR: "Le Salut Est À Notre Dieu"
+48. Livre 66 Ch 20
+   FR: "Victoire éternelle, notre Roi!"
+49. Livre 09 Ch 5
+   FR: "La Puissance de l'Éternel"
+50. Livre 09 Ch 24
+   FR: "La Voie de la Bonté"
+51. Livre 06 Ch 9
+   FR: "Alliance de Lumière"
+52. Livre 02 Ch 16
+   FR: "Manne du Ciel, Pain de Vie"
+53. Livre 02 Ch 32
+   FR: "Vers Toi, Seigneur, nous revenons"
+54. Livre 03 Ch 10
+   FR: "Sanctifiés pour Ta Gloire"
+55. Livre 04 Ch 4
+   FR: "Dans la Tente de Sa Gloire"
+56. Livre 04 Ch 21
+   FR: "Notre Force, Notre Chant"
+
+━━━ TL: 42 TITRES MANQUANTS ━━━
+
+1. Livre 12 Ch 3
+   FR: "Éternel, notre guide"
+2. Livre 12 Ch 4
+   FR: "Ton Huile Ne Tarit Jamais"
+3. Livre 18 Ch 14
+   FR: "Dans ta grâce, notre réconfort"
+4. Livre 19 Ch 28
+   FR: "Éternel, Ma Force et Mon Bouclier"
+5. Livre 19 Ch 147
+   FR: "Louez l'Éternel, notre Force et notre Paix!"
+6. Livre 20 Ch 4
+   FR: "Sur le chemin de la sagesse"
+7. Livre 20 Ch 25
+   FR: "Dans Ta Gloire, Ô Roi"
+8. Livre 23 Ch 14
+   FR: "Renaître en Sion"
+9. Livre 23 Ch 39
+   FR: "Lumière dans la Tempête"
+10. Livre 23 Ch 66
+   FR: "Dans Tes Bras, Éternel"
+11. Livre 24 Ch 17
+   FR: "Fleurir près des Eaux"
+12. Livre 26 Ch 12
+   FR: "Promesse Accomplie"
+13. Livre 26 Ch 19
+   FR: "Rugissements de Rédemption"
+14. Livre 26 Ch 26
+   FR: "Le Rocher des Nations"
+15. Livre 26 Ch 42
+   FR: "Dans la Maison du Saint"
+16. Livre 26 Ch 43
+   FR: "Dans Ta Maison, Éternel"
+17. Livre 30 Ch 5
+   FR: "À la Lumière de l'Éternel"
+18. Livre 40 Ch 3
+   FR: "Préparez le Chemin du Seigneur"
+19. Livre 40 Ch 5
+   FR: "Heureux dans la Lumière"
+20. Livre 40 Ch 25
+   FR: "Veillons à la Lumière !"
+21. Livre 41 Ch 7
+   FR: "Ouvre Nos Cœurs à Ta Vérité"
+22. Livre 41 Ch 15
+   FR: "« Le Roi Crucifié »"
+23. Livre 42 Ch 2
+   FR: "La Naissance de la Lumière"
+24. Livre 42 Ch 5
+   FR: "À la rencontre du Maître"
+25. Livre 43 Ch 3
+   FR: "Lumière de Vie, Amour Éternel"
+26. Livre 43 Ch 7
+   FR: "Venez à moi, ô assoiffés !"
+27. Livre 44 Ch 11
+   FR: "Grâces aux Païens!"
+28. Livre 44 Ch 25
+   FR: "Dans la Lumière de la Vérité"
+29. Livre 46 Ch 7
+   FR: "Unis dans l'Amour du Christ"
+30. Livre 46 Ch 16
+   FR: "Unis dans l'Amour de Christ"
+31. Livre 47 Ch 13
+   FR: "Examinez vos cœurs"
+32. Livre 60 Ch 4
+   FR: "Portés par Ta Gloire"
+33. Livre 62 Ch 2
+   FR: "Dans la Lumière Éternelle"
+34. Livre 66 Ch 12
+   FR: "Le Triomphe de la Lumière"
+35. Livre 09 Ch 17
+   FR: "La Victoire du Jeune Berger"
+36. Livre 09 Ch 25
+   FR: "Sagesse et Paix dans la Tempête"
+37. Livre 06 Ch 7
+   FR: "Sanctifie-nous, ô Seigneur !"
+38. Livre 01 Ch 19
+   FR: "Vers la Lumière, Épargnés par Ta Grâce"
+39. Livre 01 Ch 28
+   FR: "Échelle vers le Ciel"
+40. Livre 01 Ch 30
+   FR: "Dans la Lutte, Dieu Entend"
+41. Livre 01 Ch 33
+   FR: "Dans l'Unité de Ton Amour"
+42. Livre 04 Ch 22
+   FR: "Dans Ta Lumière, Nous Avançons"
+
+═══════════════════════════════════════════════════════════════
+Rapport JSON sauvegardé: audit_report.json
+═══════════════════════════════════════════════════════════════

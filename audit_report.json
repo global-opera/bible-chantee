@@ -1,0 +1,50 @@
+{
+  "missing": {
+    "EN": [],
+    "PT": [],
+    "ES": [],
+    "DE": [],
+    "IT": [],
+    "TL": []
+  },
+  "placeholders": {
+    "EN": [],
+    "PT": [],
+    "ES": [],
+    "DE": [],
+    "IT": [],
+    "TL": []
+  },
+  "summary": {
+    "EN": {
+      "missing": 0,
+      "placeholders": 0,
+      "total": 0
+    },
+    "PT": {
+      "missing": 0,
+      "placeholders": 0,
+      "total": 0
+    },
+    "ES": {
+      "missing": 0,
+      "placeholders": 0,
+      "total": 0
+    },
+    "DE": {
+      "missing": 0,
+      "placeholders": 0,
+      "total": 0
+    },
+    "IT": {
+      "missing": 0,
+      "placeholders": 0,
+      "total": 0
+    },
+    "TL": {
+      "missing": 0,
+      "placeholders": 0,
+      "total": 0
+    }
+  }
+}

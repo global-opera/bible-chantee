@@ -1,0 +1,245 @@
+═══════════════════════════════════════════════════════════════
+         AUDIT COMPLET DES PAROLES - BIBLE CHANTÉE
+═══════════════════════════════════════════════════════════════
+
+═══════════════════════════════════════════════════════════════
+RÉSUMÉ PAR LANGUE
+═══════════════════════════════════════════════════════════════
+
+FR:
+  - Total chapitres: 1189
+  - Chapitres avec patterns: 1189 (100.0%)
+
+EN:
+  - Total chapitres: 1189
+  - Chapitres avec patterns: 1189 (100.0%)
+
+PT:
+  - Total chapitres: 1189
+  - Chapitres avec patterns: 1189 (100.0%)
+
+ES:
+  - Total chapitres: 1189
+  - Chapitres avec patterns: 1189 (100.0%)
+
+DE:
+  - Total chapitres: 1189
+  - Chapitres avec patterns: 1189 (100.0%)
+
+IT:
+  - Total chapitres: 1189
+  - Chapitres avec patterns: 1189 (100.0%)
+
+TL:
+  - Total chapitres: 1189
+  - Chapitres avec patterns: 1189 (100.0%)
+
+═══════════════════════════════════════════════════════════════
+PATTERNS DÉTECTÉS PAR LANGUE
+═══════════════════════════════════════════════════════════════
+
+
+━━━ FR ━━━
+
+Pattern: titleTag
+  Exemple (Livre 10 Ch 1): "[TITLE]"
+Pattern: lyricsTag
+  Exemple (Livre 10 Ch 1): "[LYRICS]"
+Pattern: verseTagged
+  Exemple (Livre 10 Ch 1): "[Verse 1]"
+Pattern: chorusTagged
+  Exemple (Livre 10 Ch 1): "[Chorus]"
+Pattern: bridgeTagged
+  Exemple (Livre 10 Ch 1): "[Bridge]"
+Pattern: outroTagged
+  Exemple (Livre 10 Ch 3): "[Outro]"
+Pattern: spokenTagged
+  Exemple (Livre 10 Ch 9): "[Spoken Word]"
+
+━━━ EN ━━━
+
+Pattern: titleTag
+  Exemple (Livre 10 Ch 1): "[TITLE]"
+Pattern: lyricsTag
+  Exemple (Livre 10 Ch 1): "[LYRICS]"
+Pattern: verseLine
+  Exemple (Livre 10 Ch 1): "Verse 1:  "
+Pattern: chorusLine
+  Exemple (Livre 10 Ch 1): "Chorus:  "
+Pattern: bridgeLine
+  Exemple (Livre 10 Ch 1): "Bridge:  "
+Pattern: outroLine
+  Exemple (Livre 10 Ch 1): "Outro:  "
+Pattern: verseTagged
+  Exemple (Livre 10 Ch 4): "[Verse 1]"
+Pattern: chorusTagged
+  Exemple (Livre 10 Ch 4): "[Chorus]"
+Pattern: bridgeTagged
+  Exemple (Livre 10 Ch 4): "[Bridge]"
+Pattern: outroTagged
+  Exemple (Livre 10 Ch 4): "[Outro]"
+Pattern: titleLine
+  Exemple (Livre 11 Ch 17): "Title: "The Brook and the Widow""
+Pattern: multipleEmptyLines
+  Exemple (Livre 11 Ch 21): "
+  
+
+"
+
+━━━ PT ━━━
+
+Pattern: titleTag
+  Exemple (Livre 10 Ch 1): "[TITLE]"
+Pattern: multipleEmptyLines
+  Exemple (Livre 10 Ch 1): "
+
+  
+"
+Pattern: verseTagged
+  Exemple (Livre 10 Ch 3): "[Verse 1]"
+Pattern: chorusTagged
+  Exemple (Livre 10 Ch 3): "[Chorus]"
+Pattern: bridgeTagged
+  Exemple (Livre 10 Ch 3): "[Bridge]"
+Pattern: outroTagged
+  Exemple (Livre 10 Ch 3): "[Outro]"
+Pattern: lyricsTag
+  Exemple (Livre 11 Ch 2): "[LYRICS]"
+Pattern: titleLine
+  Exemple (Livre 19 Ch 14): "Título: "Refúgio do Meu Coração""
+
+━━━ ES ━━━
+
+Pattern: titleTag
+  Exemple (Livre 10 Ch 1): "[TITLE]"
+Pattern: lyricsTag
+  Exemple (Livre 10 Ch 1): "[LYRICS]"
+Pattern: verseTagged
+  Exemple (Livre 10 Ch 1): "[Verse 1]"
+Pattern: chorusLine
+  Exemple (Livre 10 Ch 1): "Coro  "
+Pattern: bridgeLine
+  Exemple (Livre 10 Ch 1): "Puente  "
+Pattern: verseLine
+  Exemple (Livre 10 Ch 2): "Verso 1:  "
+Pattern: chorusTagged
+  Exemple (Livre 10 Ch 5): "[Coro]"
+Pattern: bridgeTagged
+  Exemple (Livre 10 Ch 5): "[Puente]"
+Pattern: outroTagged
+  Exemple (Livre 10 Ch 5): "[Outro]"
+Pattern: outroLine
+  Exemple (Livre 10 Ch 10): "Outro:  "
+Pattern: titleLine
+  Exemple (Livre 12 Ch 4): "TÍTULO: "El Aceite de la Fe""
+Pattern: lyricsWord
+  Exemple (Livre 13 Ch 15): "LYRICS"
+Pattern: multipleEmptyLines
+  Exemple (Livre 15 Ch 6): "
+  
+
+"
+
+━━━ DE ━━━
+
+Pattern: titleTag
+  Exemple (Livre 10 Ch 1): "[TITLE]"
+Pattern: lyricsTag
+  Exemple (Livre 10 Ch 1): "[LYRICS]"
+Pattern: verseTagged
+  Exemple (Livre 10 Ch 1): "[Verse 1]"
+Pattern: chorusTagged
+  Exemple (Livre 10 Ch 1): "[Chorus]"
+Pattern: bridgeTagged
+  Exemple (Livre 10 Ch 1): "[Bridge]"
+Pattern: outroTagged
+  Exemple (Livre 10 Ch 1): "[Outro]"
+Pattern: chorusLine
+  Exemple (Livre 10 Ch 8): "Refrain:  "
+Pattern: bridgeLine
+  Exemple (Livre 10 Ch 8): "Bridge:  "
+Pattern: outroLine
+  Exemple (Livre 10 Ch 8): "Outro:  "
+Pattern: verseLine
+  Exemple (Livre 12 Ch 7): "Verse 1:  "
+Pattern: multipleEmptyLines
+  Exemple (Livre 18 Ch 33): "
+  
+
+"
+
+━━━ IT ━━━
+
+Pattern: titleTag
+  Exemple (Livre 10 Ch 1): "[TITLE]"
+Pattern: lyricsTag
+  Exemple (Livre 10 Ch 1): "[LYRICS]"
+Pattern: verseTagged
+  Exemple (Livre 10 Ch 1): "[Verse 1]"
+Pattern: bridgeTagged
+  Exemple (Livre 10 Ch 1): "[Bridge]"
+Pattern: verseLine
+  Exemple (Livre 10 Ch 3): "Verso 1:  "
+Pattern: chorusLine
+  Exemple (Livre 10 Ch 3): "Chorus:  "
+Pattern: bridgeLine
+  Exemple (Livre 10 Ch 3): "Bridge:  "
+Pattern: outroLine
+  Exemple (Livre 10 Ch 3): "Outro:  "
+Pattern: outroTagged
+  Exemple (Livre 10 Ch 5): "[Outro]"
+Pattern: chorusTagged
+  Exemple (Livre 10 Ch 9): "[Chorus]"
+
+━━━ TL ━━━
+
+Pattern: titleTag
+  Exemple (Livre 10 Ch 1): "[TITLE]"
+Pattern: lyricsTag
+  Exemple (Livre 10 Ch 1): "[LYRICS]"
+Pattern: verseTagged
+  Exemple (Livre 10 Ch 1): "[Verse 1]"
+Pattern: chorusTagged
+  Exemple (Livre 10 Ch 1): "[Chorus]"
+Pattern: bridgeTagged
+  Exemple (Livre 10 Ch 1): "[Bridge]"
+Pattern: outroTagged
+  Exemple (Livre 10 Ch 1): "[Outro]"
+Pattern: verseLine
+  Exemple (Livre 10 Ch 2): "Verse 1:  "
+Pattern: chorusLine
+  Exemple (Livre 10 Ch 2): "Chorus:  "
+Pattern: bridgeLine
+  Exemple (Livre 10 Ch 2): "Bridge:  "
+Pattern: outroLine
+  Exemple (Livre 10 Ch 2): "Outro:  "
+Pattern: multipleEmptyLines
+  Exemple (Livre 11 Ch 20): "
+  
+
+"
+
+═══════════════════════════════════════════════════════════════
+STATISTIQUES PAR PATTERN (toutes langues)
+═══════════════════════════════════════════════════════════════
+
+Top 20 patterns les plus fréquents:
+
+1. chorusTagged: 14287 occurrences
+2. verseTagged: 13335 occurrences
+3. titleTag: 10506 occurrences
+4. lyricsTag: 7771 occurrences
+5. chorusLine: 5644 occurrences
+6. bridgeTagged: 5122 occurrences
+7. multipleEmptyLines: 4436 occurrences
+8. outroTagged: 3630 occurrences
+9. verseLine: 3199 occurrences
+10. bridgeLine: 1988 occurrences
+11. outroLine: 1358 occurrences
+12. spokenTagged: 104 occurrences
+13. titleLine: 27 occurrences
+14. lyricsWord: 10 occurrences
+
+═══════════════════════════════════════════════════════════════
+Rapport JSON sauvegardé: audit_lyrics_report.json
+═══════════════════════════════════════════════════════════════
