@@ -799,8 +799,12 @@
     }
     
     .lyrics-text {
-      line-height: 1.5;
+      line-height: 1.3;
       color: rgba(255, 255, 255, 0.9);
+    }
+
+    #lyricsContent {
+      white-space: pre-line;
     }
 
     .bible-text {
@@ -1851,12 +1855,9 @@ const audioPlayer = document.querySelector('#audioPlayer');
         // Nettoyer les paroles AVANT le formatage HTML
         lyrics = cleanLyrics(lyrics);
 
-        // Formater le texte (remplacer \r\n par <br>)
-        const formattedLyrics = lyrics
-          .replace(/\r\n/g, '<br>')
-          .replace(/\n/g, '<br>');
-
-        lyricsContent.innerHTML = formattedLyrics;
+        // Utiliser textContent pour garder les sauts de ligne natifs
+        // Le CSS white-space: pre-line s'occupera du formatage
+        lyricsContent.textContent = lyrics;
       } catch (error) {
         console.error('Erreur chargement paroles:', error);
         lyricsContent.innerHTML = '<p style="color: #f88;">Erreur de chargement des paroles</p>';
