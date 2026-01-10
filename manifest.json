@@ -2,15 +2,15 @@
   "name": "Bible Chantée - Sung Bible",
   "short_name": "Bible Chantée",
   "id": "biblechantee",
-  "description": "1189 chapitres de la Bible en musique - 4 langues: Français, English, Português, Español",
+  "description": "1189 chapitres de la Bible en musique - 7 langues: FR, EN, PT, ES, DE, IT, TL",
   "start_url": "/lecteur.html",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
   "dir": "ltr",
   "lang": "fr",
-  "background_color": "#000080",
-  "theme_color": "#000080",
+  "background_color": "#162B46",
+  "theme_color": "#1E3A5F",
   "categories": ["books", "music", "education", "lifestyle"],
   "icons": [
     {
