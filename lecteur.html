@@ -805,6 +805,7 @@
 
     #lyricsContent {
       white-space: pre-line;
+      line-height: 1.5;
     }
 
     .bible-text {
@@ -1811,11 +1812,24 @@ const audioPlayer = document.querySelector('#audioPlayer');
       // 7. Enlever le markdown ** ** restant (garder le texte entre)
       text = text.replace(/\*\*([^*]+)\*\*/g, '$1');
 
-      // 8. Nettoyer les lignes vides en trop (max 2 lignes vides consécutives)
-      text = text.replace(/(\r?\n\s*){4,}/g, '\n\n');
+      // 8. Supprimer espaces en fin de ligne
+      text = text.replace(/[ \t]+$/gm, '');
 
-      // 9. Nettoyer les espaces en début/fin
-      text = text.trim();
+      // 9. Normaliser les sauts de ligne Windows -> Unix
+      text = text.replace(/\r\n/g, '\n');
+
+      // 10. Supprimer le BOM UTF-8 s'il existe
+      text = text.replace(/^\uFEFF/, '');
+      text = text.replace(/\uFEFF/g, '');
+
+      // 11. Maximum 2 sauts de ligne consécutifs (1 ligne vide entre sections)
+      text = text.replace(/\n{3,}/g, '\n\n');
+
+      // 12. Supprimer lignes vides au début
+      text = text.replace(/^\n+/, '');
+
+      // 13. Supprimer lignes vides à la fin
+      text = text.replace(/\n+$/, '');
 
       return text;
     }
