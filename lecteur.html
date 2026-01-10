@@ -1879,15 +1879,9 @@ const audioPlayer = document.querySelector('#audioPlayer');
         // Convertir les sauts de ligne en HTML
         // \n\n = séparation couplets (margin)
         // \n = saut de ligne simple
-        const escapeHtml = (text) => {
-          const div = document.createElement('div');
-          div.textContent = text;
-          return div.innerHTML;
-        };
-
         const paragraphs = lyrics.split('\n\n');
         const html = paragraphs.map(p => {
-          const lines = p.split('\n').map(line => escapeHtml(line)).join('<br>');
+          const lines = p.split('\n').join('<br>');
           return '<p style="margin: 0 0 1em 0;">' + lines + '</p>';
         }).join('');
         lyricsContent.innerHTML = html;
