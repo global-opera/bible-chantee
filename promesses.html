@@ -41,8 +41,54 @@
             text-align: center;
             font-style: italic;
             color: #b0b0b0;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             font-size: 1.2rem;
+        }
+
+        /* Favorites filter button */
+        .filter-container { text-align: center; margin-bottom: 20px; }
+        .filter-btn {
+            padding: 8px 20px;
+            border: 2px solid rgba(245, 200, 66, 0.5);
+            background: rgba(30, 58, 95, 0.6);
+            color: #fff;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        .filter-btn:hover {
+            border-color: #f5c842;
+            background: rgba(30, 58, 95, 0.8);
+        }
+        .filter-btn.active {
+            background: #f5c842;
+            color: #1a237e;
+            border-color: #f5c842;
+            font-weight: bold;
+        }
+
+        /* Favorite star */
+        .favorite-star {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: transform 0.2s;
+            user-select: none;
+        }
+        .favorite-star:hover { transform: scale(1.2); }
+        .favorite-star.favorited { color: #f5c842; }
+        .favorite-star:not(.favorited) { color: rgba(255, 255, 255, 0.3); }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #b0b0b0;
+            font-style: italic;
         }
 
         .promesses-grid {
@@ -64,6 +110,7 @@
             padding: 13px;
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
         }
         .promesse-card:hover {
             transform: translateY(-5px);
@@ -95,7 +142,14 @@
         <h1 id="pageTitle">10 Promesses Bibliques</h1>
         <p class="subtitle" id="subtitle">Les promesses de Dieu pour votre vie</p>
 
+        <div class="filter-container">
+            <button class="filter-btn" id="filterBtn" onclick="toggleFilter()">
+                <span id="filterText">★ Favoris</span>
+            </button>
+        </div>
+
         <div class="promesses-grid" id="promessesGrid"></div>
+        <div class="empty-state" id="emptyState" style="display:none;"></div>
     </div>
 
     <script>
@@ -106,6 +160,9 @@
             subtitle: "Les promesses de Dieu pour votre vie",
             word: "Promesse",
             listenBtn: "Ecouter",
+            favorites: "★ Favoris",
+            showAll: "Voir tout",
+            noFavorites: "Aucun favori. Cliquez sur ★ pour en ajouter.",
             items: [
                 ["Paix interieure", "Philippiens 4:7"],
                 ["Force dans l'epreuve", "Esaie 41:10"],
@@ -125,6 +182,9 @@
             subtitle: "God's promises for your life",
             word: "Promise",
             listenBtn: "Listen",
+            favorites: "★ Favorites",
+            showAll: "Show all",
+            noFavorites: "No favorites. Click ★ to add some.",
             items: [
                 ["Inner peace", "Philippians 4:7"],
                 ["Strength in trials", "Isaiah 41:10"],
@@ -144,6 +204,9 @@
             subtitle: "As promessas de Deus para sua vida",
             word: "Promessa",
             listenBtn: "Ouvir",
+            favorites: "★ Favoritos",
+            showAll: "Ver tudo",
+            noFavorites: "Sem favoritos. Clique em ★ para adicionar.",
             items: [
                 ["Paz interior", "Filipenses 4:7"],
                 ["Forca na provacao", "Isaias 41:10"],
@@ -163,6 +226,9 @@
             subtitle: "Las promesas de Dios para tu vida",
             word: "Promesa",
             listenBtn: "Escuchar",
+            favorites: "★ Favoritos",
+            showAll: "Ver todo",
+            noFavorites: "Sin favoritos. Haz clic en ★ para agregar.",
             items: [
                 ["Paz interior", "Filipenses 4:7"],
                 ["Fuerza en la prueba", "Isaias 41:10"],
@@ -182,6 +248,9 @@
             subtitle: "Gottes Verheissungen fur dein Leben",
             word: "Verheissung",
             listenBtn: "Anhoren",
+            favorites: "★ Favoriten",
+            showAll: "Alle anzeigen",
+            noFavorites: "Keine Favoriten. Klicke auf ★ zum Hinzufügen.",
             items: [
                 ["Innerer Frieden", "Philipper 4:7"],
                 ["Kraft in Prufungen", "Jesaja 41:10"],
@@ -201,6 +270,9 @@
             subtitle: "Le promesse di Dio per la tua vita",
             word: "Promessa",
             listenBtn: "Ascolta",
+            favorites: "★ Preferiti",
+            showAll: "Mostra tutto",
+            noFavorites: "Nessun preferito. Clicca su ★ per aggiungere.",
             items: [
                 ["Pace interiore", "Filippesi 4:7"],
                 ["Forza nella prova", "Isaia 41:10"],
@@ -247,6 +319,71 @@
     // Sauvegarder dans localStorage pour cohérence
     localStorage.setItem('bc_lang', currentLang);
 
+    // Favorites management
+    let showOnlyFavorites = false;
+
+    function getFavorites() {
+        try {
+            const stored = localStorage.getItem("bc_favorites_promesses");
+            return stored ? JSON.parse(stored) : [];
+        } catch (e) {
+            return [];
+        }
+    }
+
+    function saveFavorites(favorites) {
+        try {
+            localStorage.setItem("bc_favorites_promesses", JSON.stringify(favorites));
+        } catch (e) {
+            console.error("Failed to save favorites:", e);
+        }
+    }
+
+    function getFavoriteKey(lang, theme) {
+        return "promesse_" + lang + "_" + theme;
+    }
+
+    function isFavorite(lang, theme) {
+        const favorites = getFavorites();
+        return favorites.includes(getFavoriteKey(lang, theme));
+    }
+
+    function toggleFavorite(lang, theme, event) {
+        if (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        let favorites = getFavorites();
+        const key = getFavoriteKey(lang, theme);
+
+        if (favorites.includes(key)) {
+            favorites = favorites.filter(f => f !== key);
+        } else {
+            favorites.push(key);
+        }
+
+        saveFavorites(favorites);
+        render(currentLang);
+    }
+
+    function toggleFilter() {
+        showOnlyFavorites = !showOnlyFavorites;
+        const filterBtn = document.getElementById('filterBtn');
+        const filterText = document.getElementById('filterText');
+        const d = DATA[currentLang] || DATA.FR;
+
+        if (showOnlyFavorites) {
+            filterBtn.classList.add('active');
+            filterText.textContent = d.showAll;
+        } else {
+            filterBtn.classList.remove('active');
+            filterText.textContent = d.favorites;
+        }
+
+        render(currentLang);
+    }
+
     function render(lang) {
         currentLang = lang;
         const d = DATA[lang] || DATA.FR;
@@ -256,16 +393,44 @@
         document.getElementById('subtitle').textContent = d.subtitle;
 
         const grid = document.getElementById('promessesGrid');
+        const emptyState = document.getElementById('emptyState');
         grid.innerHTML = '';
 
+        // Filter items if showing only favorites
+        let itemsToShow = d.items;
+        if (showOnlyFavorites) {
+            itemsToShow = d.items.filter((item, i) => isFavorite(lang, i));
+
+            if (itemsToShow.length === 0) {
+                grid.style.display = 'none';
+                emptyState.style.display = 'block';
+                emptyState.textContent = d.noFavorites;
+                return;
+            }
+        }
+
+        grid.style.display = 'grid';
+        emptyState.style.display = 'none';
+
         d.items.forEach((item, i) => {
+            if (showOnlyFavorites && !isFavorite(lang, i)) {
+                return;
+            }
+
             const card = document.createElement('a');
             card.className = 'promesse-card';
             card.href = `promesse-detail.html?theme=${i}&lang=${lang}`;
+
+            const star = document.createElement('span');
+            star.className = 'favorite-star' + (isFavorite(lang, i) ? ' favorited' : '');
+            star.textContent = isFavorite(lang, i) ? '★' : '☆';
+            star.onclick = (e) => toggleFavorite(lang, i, e);
+
             card.innerHTML = `
                 <div class="promesse-icon">${ICONS[i]}</div>
                 <div class="promesse-title">${item[0]}</div>
             `;
+            card.insertBefore(star, card.firstChild);
             grid.appendChild(card);
         });
     }

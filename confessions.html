@@ -41,10 +41,56 @@
             text-align: center;
             font-style: italic;
             color: #b0b0b0;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             font-size: 1.2rem;
         }
-        
+
+        /* Favorites filter button */
+        .filter-container { text-align: center; margin-bottom: 20px; }
+        .filter-btn {
+            padding: 8px 20px;
+            border: 2px solid rgba(245, 200, 66, 0.5);
+            background: rgba(30, 58, 95, 0.6);
+            color: #fff;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        .filter-btn:hover {
+            border-color: #f5c842;
+            background: rgba(30, 58, 95, 0.8);
+        }
+        .filter-btn.active {
+            background: #f5c842;
+            color: #1a237e;
+            border-color: #f5c842;
+            font-weight: bold;
+        }
+
+        /* Favorite star */
+        .favorite-star {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: transform 0.2s;
+            user-select: none;
+        }
+        .favorite-star:hover { transform: scale(1.2); }
+        .favorite-star.favorited { color: #f5c842; }
+        .favorite-star:not(.favorited) { color: rgba(255, 255, 255, 0.3); }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #b0b0b0;
+            font-style: italic;
+        }
+
         .confessions-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -64,6 +110,7 @@
             padding: 13px;
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
         }
         .confession-card:hover {
             transform: translateY(-5px);
@@ -94,8 +141,15 @@
         <a href="lecteur.html" class="back-link" id="backLink">Retour accueil</a>
         <h1 id="pageTitle">10 Confessions de la Bible en Musique</h1>
         <p class="subtitle" id="subtitle">Declarez la Parole de Dieu sur votre vie</p>
-        
+
+        <div class="filter-container">
+            <button class="filter-btn" id="filterBtn" onclick="toggleFilter()">
+                <span id="filterText">★ Favoris</span>
+            </button>
+        </div>
+
         <div class="confessions-grid" id="confessionsGrid"></div>
+        <div class="empty-state" id="emptyState" style="display:none;"></div>
     </div>
 
     <script>
@@ -106,6 +160,9 @@
             subtitle: "Declarez la Parole de Dieu sur votre vie",
             word: "Confession",
             listenBtn: "Ecouter",
+            favorites: "★ Favoris",
+            showAll: "Voir tout",
+            noFavorites: "Aucun favori. Cliquez sur ★ pour en ajouter.",
             items: [
                 ["Je suis enfant de Dieu", "Jean 1:12"],
                 ["Je suis justifie par la foi", "Romains 5:1"],
@@ -125,6 +182,9 @@
             subtitle: "Declare God's Word over your life",
             word: "Confession",
             listenBtn: "Listen",
+            favorites: "★ Favorites",
+            showAll: "Show all",
+            noFavorites: "No favorites. Click ★ to add some.",
             items: [
                 ["I am a child of God", "John 1:12"],
                 ["I am justified by faith", "Romans 5:1"],
@@ -144,6 +204,9 @@
             subtitle: "Declare a Palavra de Deus sobre sua vida",
             word: "Confissao",
             listenBtn: "Ouvir",
+            favorites: "★ Favoritos",
+            showAll: "Ver tudo",
+            noFavorites: "Sem favoritos. Clique em ★ para adicionar.",
             items: [
                 ["Sou filho de Deus", "Joao 1:12"],
                 ["Sou justificado pela fe", "Romanos 5:1"],
@@ -163,6 +226,9 @@
             subtitle: "Declara la Palabra de Dios sobre tu vida",
             word: "Confesion",
             listenBtn: "Escuchar",
+            favorites: "★ Favoritos",
+            showAll: "Ver todo",
+            noFavorites: "Sin favoritos. Haz clic en ★ para agregar.",
             items: [
                 ["Soy hijo de Dios", "Juan 1:12"],
                 ["Soy justificado por la fe", "Romanos 5:1"],
@@ -182,6 +248,9 @@
             subtitle: "Bekenne Gottes Wort uber dein Leben",
             word: "Bekenntnis",
             listenBtn: "Anhoren",
+            favorites: "★ Favoriten",
+            showAll: "Alle anzeigen",
+            noFavorites: "Keine Favoriten. Klicke auf ★ zum Hinzufügen.",
             items: [
                 ["Ich bin ein Kind Gottes", "Johannes 1:12"],
                 ["Ich bin durch Glauben gerechtfertigt", "Romer 5:1"],
@@ -201,6 +270,9 @@
             subtitle: "Dichiara la Parola di Dio sulla tua vita",
             word: "Confessione",
             listenBtn: "Ascolta",
+            favorites: "★ Preferiti",
+            showAll: "Mostra tutto",
+            noFavorites: "Nessun preferito. Clicca su ★ per aggiungere.",
             items: [
                 ["Sono figlio di Dio", "Giovanni 1:12"],
                 ["Sono giustificato per fede", "Romani 5:1"],
@@ -296,6 +368,9 @@
             subtitle: "Ipahayag ang Salita ng Diyos sa iyong buhay",
             word: "Pangungumpisal",
             listenBtn: "Makinig",
+            favorites: "★ Mga Paborito",
+            showAll: "Ipakita lahat",
+            noFavorites: "Walang paborito. I-click ang ★ para magdagdag.",
             items: [
                 ["Ako ay anak ng Diyos", "Juan 1:12"],
                 ["Ako ay pinawalang-sala", "Roma 5:1"],
@@ -354,25 +429,118 @@
     // Sauvegarder dans localStorage pour cohérence
     localStorage.setItem('bc_lang', currentLang);
 
+    // Favorites management
+    let showOnlyFavorites = false;
+
+    function getFavorites() {
+        try {
+            const stored = localStorage.getItem("bc_favorites_confessions");
+            return stored ? JSON.parse(stored) : [];
+        } catch (e) {
+            return [];
+        }
+    }
+
+    function saveFavorites(favorites) {
+        try {
+            localStorage.setItem("bc_favorites_confessions", JSON.stringify(favorites));
+        } catch (e) {
+            console.error("Failed to save favorites:", e);
+        }
+    }
+
+    function getFavoriteKey(lang, index) {
+        return "confession_" + lang + "_" + index;
+    }
+
+    function isFavorite(lang, index) {
+        const favorites = getFavorites();
+        return favorites.includes(getFavoriteKey(lang, index));
+    }
+
+    function toggleFavorite(lang, index, event) {
+        if (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        let favorites = getFavorites();
+        const key = getFavoriteKey(lang, index);
+
+        if (favorites.includes(key)) {
+            favorites = favorites.filter(f => f !== key);
+        } else {
+            favorites.push(key);
+        }
+
+        saveFavorites(favorites);
+        render(currentLang);
+    }
+
+    function toggleFilter() {
+        showOnlyFavorites = !showOnlyFavorites;
+        const filterBtn = document.getElementById('filterBtn');
+        const filterText = document.getElementById('filterText');
+        const d = DATA[currentLang] || DATA.FR;
+
+        if (showOnlyFavorites) {
+            filterBtn.classList.add('active');
+            filterText.textContent = d.showAll;
+        } else {
+            filterBtn.classList.remove('active');
+            filterText.textContent = d.favorites;
+        }
+
+        render(currentLang);
+    }
+
     function render(lang) {
         currentLang = lang;
         const d = DATA[lang] || DATA.FR;
-        
+
         document.getElementById('pageTitle').textContent = d.title;
         document.getElementById('backLink').textContent = d.back;
         document.getElementById('subtitle').textContent = d.subtitle;
-        
+
         const grid = document.getElementById('confessionsGrid');
+        const emptyState = document.getElementById('emptyState');
         grid.innerHTML = '';
-        
+
+        // Filter items if showing only favorites
+        let itemsToShow = d.items;
+        if (showOnlyFavorites) {
+            itemsToShow = d.items.filter((item, i) => isFavorite(lang, i));
+
+            if (itemsToShow.length === 0) {
+                grid.style.display = 'none';
+                emptyState.style.display = 'block';
+                emptyState.textContent = d.noFavorites;
+                return;
+            }
+        }
+
+        grid.style.display = 'grid';
+        emptyState.style.display = 'none';
+
         d.items.forEach((item, i) => {
+            if (showOnlyFavorites && !isFavorite(lang, i)) {
+                return;
+            }
+
             const card = document.createElement('a');
             card.className = 'confession-card';
             card.href = `lecteur-confessions.html?id=${i}&lang=${lang}`;
+
+            const star = document.createElement('span');
+            star.className = 'favorite-star' + (isFavorite(lang, i) ? ' favorited' : '');
+            star.textContent = isFavorite(lang, i) ? '★' : '☆';
+            star.onclick = (e) => toggleFavorite(lang, i, e);
+
             card.innerHTML = `
                 <div class="confession-icon">${ICONS[i]}</div>
                 <div class="confession-title">${item[0]}</div>
             `;
+            card.insertBefore(star, card.firstChild);
             grid.appendChild(card);
         });
     }
