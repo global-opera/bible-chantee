@@ -1791,7 +1791,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
       text = text.replace(/\*\*(Título|Title|TÍTULO|TITLE):\s*["""][^"""]*["""]\*\*/gi, '');
       text = text.replace(/(Título|Title|TÍTULO|TITLE):\s*["""][^"""]*["""]/gi, '');
 
-      // 4. Supprimer les tags de section (mais garder espacement avant)
+      // 4. MARQUER les vraies séparations de couplets (tags de section)
       // Français: [Verset], [Couplet], [Refrain], [Strophe]
       // Anglais: [Verse], [Chorus], [Bridge], [Outro], [Intro], [Spoken Word]
       // Espagnol: [Verso], [Coro], [Puente]
@@ -1800,8 +1800,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
       // D'abord, supprimer les markdown ** ** autour des sections
       text = text.replace(/\*\*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*)\]\*\*/gi, '[$1]');
 
-      // Remplacer les tags de section par un double saut de ligne (pour garder espacement)
-      text = text.replace(/\s*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*)\]\s*/gi, '\n\n');
+      // Remplacer les tags de section par un marqueur unique
+      text = text.replace(/\s*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*)\]\s*/gi, '###PARAGRAPH_BREAK###');
 
       // 5. Supprimer les lignes de section avec deux-points (Verse 1:, Chorus:, etc.)
       // Format: "Verse 1:  " ou "Verso 1:  " ou "Coro  " etc.
@@ -1823,13 +1823,19 @@ const audioPlayer = document.querySelector('#audioPlayer');
       text = text.replace(/^\uFEFF/, '');
       text = text.replace(/\uFEFF/g, '');
 
-      // 11. Maximum 2 sauts de ligne consécutifs (1 ligne vide entre sections)
+      // 11. Convertir tous les doubles sauts de ligne en simples (élimine les lignes vides partout)
+      text = text.replace(/\n\n+/g, '\n');
+
+      // 12. Restaurer les vraies séparations de couplets (marqueurs -> double saut)
+      text = text.replace(/###PARAGRAPH_BREAK###/g, '\n\n');
+
+      // 13. Nettoyer les sauts multiples qui pourraient rester
       text = text.replace(/\n{3,}/g, '\n\n');
 
-      // 12. Supprimer lignes vides au début
+      // 14. Supprimer lignes vides au début
       text = text.replace(/^\n+/, '');
 
-      // 13. Supprimer lignes vides à la fin
+      // 15. Supprimer lignes vides à la fin
       text = text.replace(/\n+$/, '');
 
       return text;
