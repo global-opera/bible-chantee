@@ -980,6 +980,119 @@
         font-size: 14px;
       }
     }
+
+    /* === RESPONSIVE MOBILE PLAYER === */
+    @media (max-width: 480px) {
+      .player-bar {
+        gap: 8px;
+        padding: 10px;
+        flex-wrap: wrap;
+      }
+
+      .play-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+      }
+
+      .progress-container {
+        order: 10;
+        flex-basis: 100%;
+        margin-top: 8px;
+      }
+
+      .time {
+        font-size: 12px;
+        min-width: 70px;
+      }
+
+      .player-controls {
+        gap: 6px;
+      }
+
+      .control-btn {
+        min-width: 36px;
+        height: 36px;
+        padding: 0 6px;
+        font-size: 14px;
+      }
+
+      .like-btn {
+        width: 36px;
+        height: 36px;
+      }
+
+      .like-btn svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .share-icon {
+        width: 36px;
+        height: 36px;
+      }
+
+      .plus-icon {
+        font-size: 16px;
+      }
+
+      .radio-icon {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .player-bar {
+        gap: 6px;
+        padding: 8px;
+      }
+
+      .play-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+      }
+
+      .time {
+        font-size: 11px;
+        min-width: 65px;
+      }
+
+      .player-controls {
+        gap: 4px;
+      }
+
+      .control-btn {
+        min-width: 32px;
+        height: 32px;
+        padding: 0 4px;
+        font-size: 13px;
+      }
+
+      .like-btn {
+        width: 32px;
+        height: 32px;
+      }
+
+      .like-btn svg {
+        width: 18px;
+        height: 18px;
+      }
+
+      .share-icon {
+        width: 32px;
+        height: 32px;
+      }
+
+      .plus-icon {
+        font-size: 14px;
+      }
+
+      .radio-icon {
+        font-size: 16px;
+      }
+    }
+
     .autoplay-btn.active {
       background: rgba(245, 203, 66, 0.2);
       border-color: #F5CB42;
