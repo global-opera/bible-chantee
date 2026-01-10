@@ -1386,6 +1386,30 @@ function isVerseLikeEN(s){
     let radioRepeat = false;
     let radioPlaying = false;
 
+    // Helper: Obtenir le nom du livre traduit
+    function getBookName(bookCode, lang) {
+      if (!bookCode) return bookCode || '';
+
+      // Extraire le numéro du livre depuis le code (ex: "43_JOH" => "43")
+      const bookNum = bookCode.split('_')[0];
+      const bookIndex = parseInt(bookNum, 10) - 1; // Convertir en index 0-based (43 => 42)
+
+      // Vérifier si BC_BOOK_NAMES existe
+      if (window.BC_BOOK_NAMES && window.BC_BOOK_NAMES[lang]) {
+        const name = window.BC_BOOK_NAMES[lang][bookIndex];
+        if (name) return name;
+      }
+
+      // Fallback vers FR si la langue demandée n'existe pas
+      if (window.BC_BOOK_NAMES && window.BC_BOOK_NAMES.FR) {
+        const name = window.BC_BOOK_NAMES.FR[bookIndex];
+        if (name) return name;
+      }
+
+      // Si tout échoue, retourner le code original
+      return bookCode;
+    }
+
     // Helper: Clean chapter titles (outer quotes + TITRE/Title/Titulo prefixes)
     function cleanTitle(s) {
       if (s == null) return '';
@@ -1985,18 +2009,9 @@ const audioPlayer = document.querySelector('#audioPlayer');
         const book = availableBooks[Math.floor(Math.random() * availableBooks.length)];
         const chapter = Math.floor(Math.random() * book.chapters) + 1;
 
-        // Get book name from BOOK_NAMES with proper fallback
-        let bookName = book.code;
-        if (window.BOOK_NAMES) {
-          bookName = (window.BOOK_NAMES[currentLang] && window.BOOK_NAMES[currentLang][book.code])
-            || (window.BOOK_NAMES.FR && window.BOOK_NAMES.FR[book.code])
-            || book.code;
-        }
-
         radioPlaylist.push({
           book: book.code,
-          chapter,
-          name: bookName
+          chapter
         });
       }
       radioIndex = 0;
@@ -2009,15 +2024,20 @@ const audioPlayer = document.querySelector('#audioPlayer');
       const container = document.getElementById('radioPlaylist');
       if (!container) return;
 
-      container.innerHTML = radioPlaylist.map((item, i) => `
+      container.innerHTML = radioPlaylist.map((item, i) => {
+        // Obtenir le nom du livre traduit dans la langue actuelle
+        const translatedBookName = getBookName(item.book, currentLang);
+
+        return `
         <div class="playlist-item ${i === radioIndex ? 'playing' : ''}" onclick="playRadioItem(${i})">
           <div class="playlist-num">${i === radioIndex ? '▶' : i + 1}</div>
           <div class="playlist-info">
-            <div class="playlist-title">${item.name} ${item.chapter}</div>
+            <div class="playlist-title">${translatedBookName} ${item.chapter}</div>
           </div>
           <div class="playlist-remove" onclick="removeRadioItem(${i}, event)">×</div>
         </div>
-      `).join('');
+        `;
+      }).join('');
     }
 
     // Jouer un item
@@ -2163,21 +2183,10 @@ const audioPlayer = document.querySelector('#audioPlayer');
     // Favoris
     document.querySelector('#favoriteBtn').addEventListener('click', () => {
       const btn = document.querySelector('#favoriteBtn');
-      const bookData = BOOKS.find(b => b.code === currentBook);
-
-      // Get book name from BOOK_NAMES with proper fallback
-      let bookName = currentBook;
-      if (bookData && window.BOOK_NAMES) {
-        bookName = (window.BOOK_NAMES[currentLang] && window.BOOK_NAMES[currentLang][bookData.code])
-          || (window.BOOK_NAMES.FR && window.BOOK_NAMES.FR[bookData.code])
-          || bookData.code;
-      }
-
       // Add current chapter to radio playlist
       radioPlaylist.push({
         book: currentBook,
-        chapter: currentChapter,
-        name: bookName
+        chapter: currentChapter
       });
 
       // Update the playlist display
