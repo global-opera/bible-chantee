@@ -226,6 +226,20 @@
       box-shadow: 0 6px 20px rgba(245, 203, 66, 0.4);
     }
 
+    .newsletter-section a {
+      display: block;
+      margin-top: 15px;
+      color: #888;
+      font-size: 0.8em;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .newsletter-section a:hover {
+      color: #aaa;
+      text-decoration: underline;
+    }
+
     .newsletter-btn .icon {
       font-size: 20px;
     }
@@ -1245,6 +1259,7 @@ function isVerseLikeEN(s){
         <span class="icon">🔔</span>
         <span id="newsletterBtnText">S'inscrire</span>
       </button>
+      <a href="privacy-fr.html" id="privacyLink">Règles de confidentialité</a>
     </div>
 
     <!-- POPUP INSCRIPTION EMAIL -->
@@ -1397,6 +1412,8 @@ function isVerseLikeEN(s){
         newsletterTitle: "Restez informé des nouveautés",
         newsletterSubtitle: "Prières chantées • Promesses bibliques • Confessions de foi",
         newsletterBtn: "S'inscrire",
+        privacyLink: "Règles de confidentialité",
+        privacyUrl: "privacy-fr.html",
         popupTitle: "Inscrivez-vous",
         popupSubtitle: "Recevez les nouveautés : prières, promesses, confessions",
         popupEmailPlaceholder: "Votre adresse email",
@@ -1411,6 +1428,8 @@ function isVerseLikeEN(s){
         newsletterTitle: "Stay informed of new releases",
         newsletterSubtitle: "Sung Prayers • Biblical Promises • Confessions of Faith",
         newsletterBtn: "Subscribe",
+        privacyLink: "Privacy Policy",
+        privacyUrl: "privacy.html",
         popupTitle: "Subscribe",
         popupSubtitle: "Receive updates: prayers, promises, confessions",
         popupEmailPlaceholder: "Your email address",
@@ -1425,6 +1444,8 @@ function isVerseLikeEN(s){
         newsletterTitle: "Fique informado das novidades",
         newsletterSubtitle: "Orações cantadas • Promessas bíblicas • Confissões de fé",
         newsletterBtn: "Inscrever-se",
+        privacyLink: "Política de Privacidade",
+        privacyUrl: "privacy-pt.html",
         popupTitle: "Inscreva-se",
         popupSubtitle: "Receba novidades: orações, promessas, confissões",
         popupEmailPlaceholder: "Seu endereço de email",
@@ -1439,6 +1460,8 @@ function isVerseLikeEN(s){
         newsletterTitle: "Mantente informado de las novedades",
         newsletterSubtitle: "Oraciones cantadas • Promesas bíblicas • Confesiones de fe",
         newsletterBtn: "Suscribirse",
+        privacyLink: "Política de Privacidad",
+        privacyUrl: "privacy-es.html",
         popupTitle: "Suscríbete",
         popupSubtitle: "Recibe novedades: oraciones, promesas, confesiones",
         popupEmailPlaceholder: "Tu dirección de correo",
@@ -1453,6 +1476,8 @@ function isVerseLikeEN(s){
         newsletterTitle: "Bleiben Sie über Neuigkeiten informiert",
         newsletterSubtitle: "Gesungene Gebete • Biblische Verheißungen • Glaubensbekenntnisse",
         newsletterBtn: "Anmelden",
+        privacyLink: "Datenschutzrichtlinie",
+        privacyUrl: "privacy-de.html",
         popupTitle: "Anmelden",
         popupSubtitle: "Erhalten Sie Neuigkeiten: Gebete, Verheißungen, Bekenntnisse",
         popupEmailPlaceholder: "Ihre E-Mail-Adresse",
@@ -1463,10 +1488,12 @@ function isVerseLikeEN(s){
         popupThankYouMsg: "Sie sind angemeldet! Sie erhalten bald Neuigkeiten von Bible Chantée.",
         popupCloseBtn: "Schließen"
       },
-      IT: { about: "Chi siamo", aide: "Aiuto", news: "Novità", radio: "Radio", promesses: "Promesse", confessions: "Confessioni", prieres: "Preghiere", soutenir: "Sostieni", livre: "Libro", chapitre: "Capitolo", paroles: "Testo", bible: "Bibbia", lecteur: "Lettore", searchPlaceholder: "Come ti senti?",
+      IT: { about: "Chi siamo", aide: "Aiuto", news: "Novità", radio: "Radio", promesse: "Promesse", confessions: "Confessioni", prieres: "Preghiere", soutenir: "Sostieni", livre: "Libro", chapitre: "Capitolo", paroles: "Testo", bible: "Bibbia", lecteur: "Lettore", searchPlaceholder: "Come ti senti?",
         newsletterTitle: "Rimani informato sulle novità",
         newsletterSubtitle: "Preghiere cantate • Promesse bibliche • Confessioni di fede",
         newsletterBtn: "Iscriviti",
+        privacyLink: "Informativa sulla Privacy",
+        privacyUrl: "privacy-it.html",
         popupTitle: "Iscriviti",
         popupSubtitle: "Ricevi novità: preghiere, promesse, confessioni",
         popupEmailPlaceholder: "Il tuo indirizzo email",
@@ -1481,6 +1508,8 @@ function isVerseLikeEN(s){
         newsletterTitle: "Manatiling May Kaalaman sa Mga Bagong Balita",
         newsletterSubtitle: "Mga Awit na Panalangin • Pangako sa Bibliya • Mga Pahayag ng Pananampalataya",
         newsletterBtn: "Mag-subscribe",
+        privacyLink: "Patakaran sa Privacy",
+        privacyUrl: "privacy-tl.html",
         popupTitle: "Mag-subscribe",
         popupSubtitle: "Tumanggap ng balita: panalangin, pangako, pagtatapat",
         popupEmailPlaceholder: "Iyong email address",
@@ -2589,10 +2618,15 @@ const audioPlayer = document.querySelector('#audioPlayer');
       const newsletterTitle = document.getElementById('newsletterTitle');
       const newsletterSubtitle = document.getElementById('newsletterSubtitle');
       const newsletterBtnText = document.getElementById('newsletterBtnText');
+      const privacyLink = document.getElementById('privacyLink');
 
       if (newsletterTitle) newsletterTitle.textContent = t.newsletterTitle;
       if (newsletterSubtitle) newsletterSubtitle.textContent = t.newsletterSubtitle;
       if (newsletterBtnText) newsletterBtnText.textContent = t.newsletterBtn;
+      if (privacyLink) {
+        privacyLink.textContent = t.privacyLink;
+        privacyLink.href = t.privacyUrl;
+      }
 
       // Popup formulaire
       const popupFormTitle = document.getElementById('popupFormTitle');
