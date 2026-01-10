@@ -1,0 +1,170 @@
+================================================================================
+                    AUDIT COMPLET - PAROLES BIBLE CHANTÉE
+                         Généré le: 2026-01-10
+================================================================================
+
+RÉSUMÉ EXÉCUTIF
+================================================================================
+
+Total de chapitres attendus par langue : 1189 (66 livres bibliques)
+
+FRANÇAIS (FR)
+  - OK:        1181 chapitres (99.3%)
+  - MANQUANT:     8 chapitres ( 0.7%)
+  - ERREUR:       0 chapitres ( 0.0%)
+
+ENGLISH (EN)
+  - OK:           0 chapitres ( 0.0%)
+  - MANQUANT:  1189 chapitres (100.0%)
+  - ERREUR:       0 chapitres ( 0.0%)
+  - NOTE: Aucun fichier de paroles dans lyrics/EN/
+
+PORTUGUÊS (PT)
+  - OK:           0 chapitres ( 0.0%)
+  - MANQUANT:  1189 chapitres (100.0%)
+  - ERREUR:       0 chapitres ( 0.0%)
+  - NOTE: Aucun fichier de paroles dans lyrics/PT/
+
+ESPAÑOL (ES)
+  - OK:           0 chapitres ( 0.0%)
+  - MANQUANT:  1189 chapitres (100.0%)
+  - ERREUR:       0 chapitres ( 0.0%)
+  - NOTE: Aucun fichier de paroles dans lyrics/ES/
+
+DEUTSCH (DE)
+  - OK:           0 chapitres ( 0.0%)
+  - MANQUANT:  1189 chapitres (100.0%)
+  - ERREUR:       0 chapitres ( 0.0%)
+  - NOTE: Aucun fichier de paroles dans lyrics/DE/
+
+ITALIANO (IT)
+  - OK:           0 chapitres ( 0.0%)
+  - MANQUANT:  1189 chapitres (100.0%)
+  - ERREUR:       0 chapitres ( 0.0%)
+  - NOTE: Aucun fichier de paroles dans lyrics/IT/
+
+TAGALOG (TL)
+  - OK:           0 chapitres ( 0.0%)
+  - MANQUANT:  1189 chapitres (100.0%)
+  - ERREUR:       0 chapitres ( 0.0%)
+  - NOTE: Dossier existe mais structure différente (sous-dossiers par livre)
+
+
+================================================================================
+                        FICHIERS FRANÇAIS MANQUANTS
+================================================================================
+
+8 fichiers manquants identifiés :
+
+1. Jacques chapitre 1  (59_JAM_01_FR.txt)
+2. Jacques chapitre 2  (59_JAM_02_FR.txt)
+3. Jacques chapitre 3  (59_JAM_03_FR.txt)
+4. Jacques chapitre 4  (59_JAM_04_FR.txt)
+5. Jacques chapitre 5  (59_JAM_05_FR.txt)
+6. 1 Jean chapitre 2   (62_1JN_02_FR.txt)
+7. 1 Jean chapitre 3   (62_1JN_03_FR.txt)
+8. 3 Jean chapitre 1   (64_3JN_01_FR.txt)
+
+NOTE: Le livre de Jacques est complètement absent (5 chapitres sur 5).
+
+
+================================================================================
+                    PROBLÈME IDENTIFIÉ : GENÈSE 1
+================================================================================
+
+PROBLÈME RAPPORTÉ:
+  L'utilisateur signale que les paroles affichées ne correspondent pas aux
+  paroles chantées.
+
+EXEMPLE GENÈSE 1:
+  - Paroles AFFICHÉES: "Au commencement L'espoir s'est épanoui"
+  - Paroles CHANTÉES:  "Au commencement Dieu tu as créé les cieux et la terre"
+
+FICHIER SOURCE: lyrics/FR/01_GEN_01_FR.txt
+
+PREMIÈRE LIGNE DES PAROLES STOCKÉES:
+  "Au commencement L'espoir s'est épanoui Loué sois-tu, Créateur des cieux..."
+
+CONCLUSION:
+  Les paroles dans le fichier texte NE CORRESPONDENT PAS aux paroles réellement
+  chantées dans l'audio. Cela suggère que:
+
+  1. Les fichiers audio ont été générés avec des paroles différentes
+  2. Les fichiers lyrics/*.txt contiennent des transcriptions incorrectes
+  3. Il y a eu une discordance entre la génération audio et l'extraction lyrics
+
+
+================================================================================
+                         STRUCTURE DES DONNÉES
+================================================================================
+
+FICHIERS LYRICS TROUVÉS:
+
+1. lyrics/FR/*.txt           - 1207 fichiers (format: XX_XXX_XX_FR.txt)
+2. lyrics/TL/                - Structure en sous-dossiers (72 dossiers)
+3. lyrics-data.js            - Fichier JavaScript avec paroles FR compilées
+4. lyrics-data-{lang}.js     - Fichiers pour EN, PT, ES, DE, IT, TL
+5. lyrics/FR.json            - Fichier JSON avec données FR
+6. lyrics/{LANG}.json        - Fichiers JSON pour autres langues
+
+OBSERVATIONS:
+  - Les fichiers lyrics-data-{lang}.js existent mais ne correspondent pas
+    nécessairement aux fichiers texte dans lyrics/{LANG}/
+  - La structure n'est pas cohérente entre les langues
+  - Seul FR a une structure complète de fichiers texte individuels
+
+
+================================================================================
+                         RECOMMANDATIONS
+================================================================================
+
+PRIORITÉ 1 - VÉRIFICATION AUDIO vs PAROLES:
+  [ ] Comparer l'audio réel (fichiers MP3 sur R2) avec les paroles stockées
+  [ ] Utiliser un outil de transcription automatique (Whisper) pour extraire
+      les vraies paroles chantées
+  [ ] Identifier tous les chapitres avec discordance audio/texte
+
+PRIORITÉ 2 - COMPLÉTION FR:
+  [ ] Générer/récupérer les 8 fichiers manquants:
+      - Jacques 1-5
+      - 1 Jean 2-3
+      - 3 Jean 1
+
+PRIORITÉ 3 - AUTRES LANGUES:
+  [ ] Créer la structure lyrics/{LANG}/*.txt pour EN, PT, ES, DE, IT
+  [ ] Extraire les paroles depuis les fichiers JSON ou JS existants
+  [ ] Vérifier que les paroles correspondent aux audios respectifs
+
+PRIORITÉ 4 - DOCUMENTATION:
+  [ ] Documenter le processus de génération audio vs lyrics
+  [ ] Créer un système de validation automatique audio/lyrics
+  [ ] Mettre en place un pipeline de CI/CD pour vérifier la cohérence
+
+
+================================================================================
+                         FICHIERS GÉNÉRÉS
+================================================================================
+
+1. AUDIT_PAROLES_COMPLET.xlsx
+   - Fichier Excel avec onglets par langue
+   - Détail de chaque chapitre (1189 × 7 langues)
+   - Colonnes: Code, Nom, Chapitre, AudioFile, LyricsFile, Preview, Status
+
+2. RAPPORT_AUDIT_PAROLES.txt (ce fichier)
+   - Rapport textuel complet
+   - Statistiques par langue
+   - Liste des fichiers manquants
+   - Recommandations
+
+3. audit_paroles.py
+   - Script Python pour générer l'audit
+   - Peut être réexécuté à tout moment
+
+4. analyse_manquants.py
+   - Script Python pour identifier les fichiers manquants
+   - Focus sur la langue FR
+
+
+================================================================================
+                              FIN DU RAPPORT
+================================================================================
