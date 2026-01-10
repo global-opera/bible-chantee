@@ -664,6 +664,8 @@
     
     .player-controls {
       display: flex;
+      justify-content: center;
+      align-items: center;
       gap: 10px;
     }
     
@@ -1783,13 +1785,17 @@ const audioPlayer = document.querySelector('#audioPlayer');
       text = text.replace(/\*\*(Título|Title|TÍTULO|TITLE):\s*["""][^"""]*["""]\*\*/gi, '');
       text = text.replace(/(Título|Title|TÍTULO|TITLE):\s*["""][^"""]*["""]/gi, '');
 
-      // 4. Supprimer TOUS les tags de section entre crochets (avec ou sans markdown)
+      // 4. FORMATER les tags de section (ajouter espaces avant au lieu de supprimer)
       // Français: [Verset], [Couplet], [Refrain], [Strophe]
       // Anglais: [Verse], [Chorus], [Bridge], [Outro], [Intro], [Spoken Word]
       // Espagnol: [Verso], [Coro], [Puente]
       // Portugais: [Verso], [Refrão], [Ponte], [Fim]
-      text = text.replace(/\*\*\[(Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*\]\*\*/gi, '');
-      text = text.replace(/\[(Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*\]/gi, '');
+
+      // D'abord, supprimer les markdown ** ** autour des sections
+      text = text.replace(/\*\*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*)\]\*\*/gi, '[$1]');
+
+      // Ajouter un double saut de ligne avant chaque section (sauf en début de texte)
+      text = text.replace(/([^\n])\s*\n?\s*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*)\]/gi, '$1\n\n[$2]');
 
       // 5. Supprimer les lignes de section avec deux-points (Verse 1:, Chorus:, etc.)
       // Format: "Verse 1:  " ou "Verso 1:  " ou "Coro  " etc.
@@ -1798,11 +1804,11 @@ const audioPlayer = document.querySelector('#audioPlayer');
       // 6. Supprimer "Letras", "Lyrics", "LYRICS" seul en début de ligne
       text = text.replace(/^\s*(Letras|Lyrics|LYRICS)\s*$/gmi, '');
 
-      // 7. Enlever le markdown ** ** (garder le texte entre)
+      // 7. Enlever le markdown ** ** restant (garder le texte entre)
       text = text.replace(/\*\*([^*]+)\*\*/g, '$1');
 
       // 8. Nettoyer les lignes vides en trop (max 2 lignes vides consécutives)
-      text = text.replace(/(\r?\n\s*){3,}/g, '\n\n');
+      text = text.replace(/(\r?\n\s*){4,}/g, '\n\n');
 
       // 9. Nettoyer les espaces en début/fin
       text = text.trim();
