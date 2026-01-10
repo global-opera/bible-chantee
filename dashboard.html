@@ -708,11 +708,13 @@
                 'Switzerland': { lat: 46.818, lng: 8.227, flag: '🇨🇭' },
                 'France': { lat: 46.603, lng: 1.888, flag: '🇫🇷' },
                 'Brazil': { lat: -14.235, lng: -51.925, flag: '🇧🇷' },
+                'Brasil': { lat: -14.235, lng: -51.925, flag: '🇧🇷' },
                 'Portugal': { lat: 39.399, lng: -8.224, flag: '🇵🇹' },
                 'United States': { lat: 37.090, lng: -95.712, flag: '🇺🇸' },
                 'Canada': { lat: 56.130, lng: -106.346, flag: '🇨🇦' },
                 'Belgium': { lat: 50.503, lng: 4.469, flag: '🇧🇪' },
                 'Spain': { lat: 40.463, lng: -3.749, flag: '🇪🇸' },
+                'España': { lat: 40.463, lng: -3.749, flag: '🇪🇸' },
                 'Germany': { lat: 51.165, lng: 10.451, flag: '🇩🇪' },
                 'Italy': { lat: 41.871, lng: 12.567, flag: '🇮🇹' },
                 'United Kingdom': { lat: 55.378, lng: -3.435, flag: '🇬🇧' },
@@ -1198,9 +1200,14 @@
             markers.forEach(m => map.removeLayer(m));
             markers = [];
 
+            console.log('📍 Pays reçus pour la carte:', countries.map(c => c.name));
+
             countries.forEach(country => {
                 const coords = CONFIG.COUNTRY_COORDS[country.name];
-                if (!coords) return;
+                if (!coords) {
+                    console.warn('⚠️ Pays sans coordonnées:', country.name);
+                    return;
+                }
 
                 const radius = Math.max(8, Math.min(30, country.visitors * 3));
                 let color = '#00ff00';
@@ -1228,6 +1235,8 @@
 
                 markers.push(marker);
             });
+
+            console.log('✅ Marqueurs ajoutés sur la carte:', markers.length);
         }
 
         // =====================================================
@@ -1443,8 +1452,9 @@
 
             // Pays
             const countries = data.today?.countries || [];
-            document.getElementById('totalCountries').textContent = countries.length;
-            document.getElementById('countriesChange').textContent = countries.length + ' pays actifs';
+            const validCountries = countries.filter(c => c.name && c.name !== '(not set)' && c.name.trim() !== '');
+            document.getElementById('totalCountries').textContent = validCountries.length;
+            document.getElementById('countriesChange').textContent = validCountries.length + ' pays actifs';
 
             // Evenements (depuis stats.js: Netlify Forms + GA4)
             const stats = (data && data.stats) ? data.stats : (data || {});
@@ -1469,7 +1479,10 @@
                 return;
             }
 
-            list.innerHTML = countries.slice(0, 10).map((c, i) => {
+            // Filtrer les pays sans nom ou "(not set)"
+            const validCountries = countries.filter(c => c.name && c.name !== '(not set)' && c.name.trim() !== '');
+
+            list.innerHTML = validCountries.slice(0, 10).map((c, i) => {
                 const coords = CONFIG.COUNTRY_COORDS[c.name];
                 const flag = coords ? coords.flag : '🌐';
                 const cities = c.cities ? c.cities.slice(0, 2).map(city => city.name || city).join(', ') : '';
@@ -1641,9 +1654,25 @@
 
             const data = await fetchGA4Data(CURRENT_PERIOD);
 
+            console.log('📊 Données GA4 reçues:', data);
+
             if (data && !data.error) {
                 isUsingRealData = true;
                 lastApiData = data;
+
+                console.log('🌍 Liste des pays:', data.today?.countries);
+
+                // Debug: afficher les pays "(not set)" avec leurs villes
+                const notSetCountries = (data.today?.countries || []).filter(c =>
+                    !c.name || c.name === '(not set)' || c.name.trim() === ''
+                );
+                if (notSetCountries.length > 0) {
+                    console.warn('⚠️ Pays "(not set)" détectés:', notSetCountries.length);
+                    notSetCountries.forEach(c => {
+                        const cities = c.cities ? c.cities.map(city => city.name || city).join(', ') : 'Aucune ville';
+                        console.log(`   → "${c.name}" - ${c.visitors} visiteurs - Villes: ${cities}`);
+                    });
+                }
 
                 updateStats(data);
                 updateTopCountries(data.today?.countries || []);
