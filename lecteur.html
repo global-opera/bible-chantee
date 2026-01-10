@@ -799,7 +799,7 @@
     }
     
     .lyrics-text {
-      line-height: 1.8;
+      line-height: 1.5;
       color: rgba(255, 255, 255, 0.9);
     }
 
@@ -1785,7 +1785,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
       text = text.replace(/\*\*(Título|Title|TÍTULO|TITLE):\s*["""][^"""]*["""]\*\*/gi, '');
       text = text.replace(/(Título|Title|TÍTULO|TITLE):\s*["""][^"""]*["""]/gi, '');
 
-      // 4. FORMATER les tags de section (ajouter espaces avant au lieu de supprimer)
+      // 4. Supprimer les tags de section (mais garder espacement avant)
       // Français: [Verset], [Couplet], [Refrain], [Strophe]
       // Anglais: [Verse], [Chorus], [Bridge], [Outro], [Intro], [Spoken Word]
       // Espagnol: [Verso], [Coro], [Puente]
@@ -1794,8 +1794,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
       // D'abord, supprimer les markdown ** ** autour des sections
       text = text.replace(/\*\*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*)\]\*\*/gi, '[$1]');
 
-      // Ajouter un double saut de ligne avant chaque section (sauf en début de texte)
-      text = text.replace(/([^\n])\s*\n?\s*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*)\]/gi, '$1\n\n[$2]');
+      // Remplacer les tags de section par un double saut de ligne (pour garder espacement)
+      text = text.replace(/\s*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*)\]\s*/gi, '\n\n');
 
       // 5. Supprimer les lignes de section avec deux-points (Verse 1:, Chorus:, etc.)
       // Format: "Verse 1:  " ou "Verso 1:  " ou "Coro  " etc.
