@@ -1390,19 +1390,18 @@ function isVerseLikeEN(s){
     function getBookName(bookCode, lang) {
       if (!bookCode) return bookCode || '';
 
-      // Extraire le numéro du livre depuis le code (ex: "43_JOH" => "43")
-      const bookNum = bookCode.split('_')[0];
-      const bookIndex = parseInt(bookNum, 10) - 1; // Convertir en index 0-based (43 => 42)
+      // Résoudre les alias (ex: "43_JOH" => "43_JHN")
+      const resolvedCode = (window.BOOK_CODE_ALIASES && window.BOOK_CODE_ALIASES[bookCode]) || bookCode;
 
-      // Vérifier si BC_BOOK_NAMES existe
-      if (window.BC_BOOK_NAMES && window.BC_BOOK_NAMES[lang]) {
-        const name = window.BC_BOOK_NAMES[lang][bookIndex];
+      // Vérifier si BOOK_NAMES existe et récupérer le nom traduit
+      if (window.BOOK_NAMES && window.BOOK_NAMES[lang]) {
+        const name = window.BOOK_NAMES[lang][resolvedCode];
         if (name) return name;
       }
 
       // Fallback vers FR si la langue demandée n'existe pas
-      if (window.BC_BOOK_NAMES && window.BC_BOOK_NAMES.FR) {
-        const name = window.BC_BOOK_NAMES.FR[bookIndex];
+      if (window.BOOK_NAMES && window.BOOK_NAMES.FR) {
+        const name = window.BOOK_NAMES.FR[resolvedCode];
         if (name) return name;
       }
 
