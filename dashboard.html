@@ -1452,9 +1452,8 @@
 
             // Pays
             const countries = data.today?.countries || [];
-            const validCountries = countries.filter(c => c.name && c.name !== '(not set)' && c.name.trim() !== '');
-            document.getElementById('totalCountries').textContent = validCountries.length;
-            document.getElementById('countriesChange').textContent = validCountries.length + ' pays actifs';
+            document.getElementById('totalCountries').textContent = countries.length;
+            document.getElementById('countriesChange').textContent = countries.length + ' pays actifs';
 
             // Evenements (depuis stats.js: Netlify Forms + GA4)
             const stats = (data && data.stats) ? data.stats : (data || {});
@@ -1479,10 +1478,7 @@
                 return;
             }
 
-            // Filtrer les pays sans nom ou "(not set)"
-            const validCountries = countries.filter(c => c.name && c.name !== '(not set)' && c.name.trim() !== '');
-
-            list.innerHTML = validCountries.slice(0, 10).map((c, i) => {
+            list.innerHTML = countries.slice(0, 10).map((c, i) => {
                 const coords = CONFIG.COUNTRY_COORDS[c.name];
                 const flag = coords ? coords.flag : '🌐';
                 const cities = c.cities ? c.cities.slice(0, 2).map(city => city.name || city).join(', ') : '';
@@ -1662,8 +1658,14 @@
 
                 console.log('🌍 Liste des pays:', data.today?.countries);
 
+                // Filtrer les pays valides
+                const allCountries = data.today?.countries || [];
+                const validCountries = allCountries.filter(c =>
+                    c.name && c.name !== '(not set)' && c.name.trim() !== ''
+                );
+
                 // Debug: afficher les pays "(not set)" avec leurs villes
-                const notSetCountries = (data.today?.countries || []).filter(c =>
+                const notSetCountries = allCountries.filter(c =>
                     !c.name || c.name === '(not set)' || c.name.trim() === ''
                 );
                 if (notSetCountries.length > 0) {
@@ -1674,12 +1676,23 @@
                     });
                 }
 
-                updateStats(data);
-                updateTopCountries(data.today?.countries || []);
+                console.log('✅ Pays valides pour affichage:', validCountries.length, validCountries.map(c => c.name));
+
+                // Créer un objet data modifié avec les pays filtrés
+                const filteredData = {
+                    ...data,
+                    today: {
+                        ...data.today,
+                        countries: validCountries
+                    }
+                };
+
+                updateStats(filteredData);
+                updateTopCountries(validCountries);
                 updateTopPages(data.topPages || []);
                 updateEvents(data.events || {});
-                updateActivity(data);
-                updateMap(data.today?.countries || []);
+                updateActivity(filteredData);
+                updateMap(validCountries);
                 setDataSource(true);
             } else {
                 setDataSource(false, 'Erreur connexion API GA4');
