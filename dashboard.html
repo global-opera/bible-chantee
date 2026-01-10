@@ -570,6 +570,12 @@
                 <div class="stat-change positive" id="listensChange">-</div>
             </div>
             <div class="stat-card">
+                <div class="stat-icon">🙏</div>
+                <div class="stat-value" id="totalPrayers">40</div>
+                <div class="stat-label" data-i18n="stat-prayers">Prieres disponibles</div>
+                <div class="stat-change positive" id="prayersChange" data-i18n="prayers-change">7 langues</div>
+            </div>
+            <div class="stat-card">
                 <div class="stat-icon">🔔</div>
                 <div class="stat-value" id="totalShares">0</div>
                 <div class="stat-label" data-i18n="stat-shares">Partages</div>
@@ -599,6 +605,35 @@
                 <div class="legend-item">
                     <div class="legend-dot low"></div>
                     <span data-i18n="legend-low">1-49 visiteurs</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Prayer Statistics Section -->
+        <div class="progress-section">
+            <div class="section-title"><span class="section-emoji">🙏</span> <span data-i18n="section-prayer-stats">Statistiques des Prieres</span></div>
+            <div class="two-columns" style="margin: 0;">
+                <div class="panel" style="background: rgba(0,0,0,0.3); padding: 20px;">
+                    <h3 style="color: #FFD700; margin-bottom: 15px; font-size: 1.1rem;" data-i18n="prayer-favorites-title">Favoris Utilisateur</h3>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 20px;">
+                        <div style="text-align: center; background: rgba(255,215,0,0.1); padding: 15px; border-radius: 10px;">
+                            <div style="font-size: 2rem; font-weight: bold; color: #FFD700;" id="totalFavorites">0</div>
+                            <div style="color: #aaa; font-size: 0.85rem;" data-i18n="total-favorites">Total favoris</div>
+                        </div>
+                        <div style="text-align: center; background: rgba(0,255,0,0.1); padding: 15px; border-radius: 10px;">
+                            <div style="font-size: 2rem; font-weight: bold; color: #00ff00;" id="mostFavoritedLang">-</div>
+                            <div style="color: #aaa; font-size: 0.85rem;" data-i18n="most-favorited-lang">Langue favorite</div>
+                        </div>
+                    </div>
+                    <div id="favoritesByLanguage">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+                <div class="panel" style="background: rgba(0,0,0,0.3); padding: 20px;">
+                    <h3 style="color: #FFD700; margin-bottom: 15px; font-size: 1.1rem;" data-i18n="prayer-distribution-title">Distribution des Prieres</h3>
+                    <ul class="top-list" id="prayersDistribution">
+                        <!-- Filled by JS -->
+                    </ul>
                 </div>
             </div>
         </div>
@@ -704,9 +739,16 @@
                 statVisitorsToday: "Visiteurs aujourd'hui",
                 statCountriesActive: "Pays actifs",
                 statAudioPlays: "Écoutes audio",
+                statPrayers: "Prières disponibles",
+                prayersChange: "7 langues",
                 statShares: "Partages",
                 statSignups: "Inscriptions",
                 sectionWorld: "Visiteurs dans le monde",
+                sectionPrayerStats: "Statistiques des Prières",
+                prayerFavoritesTitle: "Favoris Utilisateur",
+                totalFavorites: "Total favoris",
+                mostFavoritedLang: "Langue favorite",
+                prayerDistributionTitle: "Distribution des Prières",
                 sectionProgress: "Progression Génération MP3",
                 sectionTopCountries: "Top Pays",
                 sectionTopPages: "Pages les plus vues",
@@ -733,7 +775,9 @@
                 period24h: "24h",
                 period7days: "7 jours",
                 period30days: "30 jours",
-                periodAll: "Tout"
+                periodAll: "Tout",
+                prayersAvailable: "prières",
+                noFavorites: "Aucun favori enregistré"
             },
             EN: {
                 title: "Sung Bible Dashboard - Stats",
@@ -742,9 +786,16 @@
                 statVisitorsToday: "Visitors today",
                 statCountriesActive: "Active countries",
                 statAudioPlays: "Audio plays",
+                statPrayers: "Prayers available",
+                prayersChange: "7 languages",
                 statShares: "Shares",
                 statSignups: "Signups",
                 sectionWorld: "Visitors around the world",
+                sectionPrayerStats: "Prayer Statistics",
+                prayerFavoritesTitle: "User Favorites",
+                totalFavorites: "Total favorites",
+                mostFavoritedLang: "Favorite language",
+                prayerDistributionTitle: "Prayer Distribution",
                 sectionProgress: "MP3 Generation Progress",
                 sectionTopCountries: "Top Countries",
                 sectionTopPages: "Top Pages",
@@ -771,7 +822,9 @@
                 period24h: "24h",
                 period7days: "7 days",
                 period30days: "30 days",
-                periodAll: "All"
+                periodAll: "All",
+                prayersAvailable: "prayers",
+                noFavorites: "No favorites recorded"
             },
             PT: {
                 title: "Painel Bíblia Cantada - Estatísticas",
@@ -780,9 +833,16 @@
                 statVisitorsToday: "Visitantes hoje",
                 statCountriesActive: "Países ativos",
                 statAudioPlays: "Reproduções de áudio",
+                statPrayers: "Orações disponíveis",
+                prayersChange: "7 idiomas",
                 statShares: "Compartilhamentos",
                 statSignups: "Inscrições",
                 sectionWorld: "Visitantes no mundo",
+                sectionPrayerStats: "Estatísticas de Orações",
+                prayerFavoritesTitle: "Favoritos do Usuário",
+                totalFavorites: "Total de favoritos",
+                mostFavoritedLang: "Idioma favorito",
+                prayerDistributionTitle: "Distribuição de Orações",
                 sectionProgress: "Progresso da Geração MP3",
                 sectionTopCountries: "Top Países",
                 sectionTopPages: "Páginas mais vistas",
@@ -809,7 +869,9 @@
                 period24h: "24h",
                 period7days: "7 dias",
                 period30days: "30 dias",
-                periodAll: "Tudo"
+                periodAll: "Tudo",
+                prayersAvailable: "orações",
+                noFavorites: "Nenhum favorito registrado"
             },
             ES: {
                 title: "Panel Biblia Cantada - Estadísticas",
@@ -818,9 +880,16 @@
                 statVisitorsToday: "Visitantes hoy",
                 statCountriesActive: "Países activos",
                 statAudioPlays: "Reproducciones de audio",
+                statPrayers: "Oraciones disponibles",
+                prayersChange: "7 idiomas",
                 statShares: "Compartidos",
                 statSignups: "Inscripciones",
                 sectionWorld: "Visitantes en el mundo",
+                sectionPrayerStats: "Estadísticas de Oraciones",
+                prayerFavoritesTitle: "Favoritos del Usuario",
+                totalFavorites: "Total de favoritos",
+                mostFavoritedLang: "Idioma favorito",
+                prayerDistributionTitle: "Distribución de Oraciones",
                 sectionProgress: "Progreso de Generación MP3",
                 sectionTopCountries: "Top Países",
                 sectionTopPages: "Páginas más vistas",
@@ -847,7 +916,9 @@
                 period24h: "24h",
                 period7days: "7 días",
                 period30days: "30 días",
-                periodAll: "Todo"
+                periodAll: "Todo",
+                prayersAvailable: "oraciones",
+                noFavorites: "No hay favoritos registrados"
             },
             DE: {
                 title: "Gesungene Bibel Dashboard - Statistiken",
@@ -856,9 +927,16 @@
                 statVisitorsToday: "Besucher heute",
                 statCountriesActive: "Aktive Länder",
                 statAudioPlays: "Audio-Wiedergaben",
+                statPrayers: "Gebete verfügbar",
+                prayersChange: "7 Sprachen",
                 statShares: "Geteilt",
                 statSignups: "Anmeldungen",
                 sectionWorld: "Besucher weltweit",
+                sectionPrayerStats: "Gebetsstatistiken",
+                prayerFavoritesTitle: "Benutzerfavoriten",
+                totalFavorites: "Gesamt Favoriten",
+                mostFavoritedLang: "Lieblingssprache",
+                prayerDistributionTitle: "Gebetsverteilung",
                 sectionProgress: "MP3-Generierung Fortschritt",
                 sectionTopCountries: "Top-Länder",
                 sectionTopPages: "Meistbesuchte Seiten",
@@ -885,7 +963,9 @@
                 period24h: "24h",
                 period7days: "7 Tage",
                 period30days: "30 Tage",
-                periodAll: "Alle"
+                periodAll: "Alle",
+                prayersAvailable: "Gebete",
+                noFavorites: "Keine Favoriten aufgezeichnet"
             },
             IT: {
                 title: "Dashboard Bibbia Cantata - Statistiche",
@@ -894,9 +974,16 @@
                 statVisitorsToday: "Visitatori oggi",
                 statCountriesActive: "Paesi attivi",
                 statAudioPlays: "Riproduzioni audio",
+                statPrayers: "Preghiere disponibili",
+                prayersChange: "7 lingue",
                 statShares: "Condivisioni",
                 statSignups: "Iscrizioni",
                 sectionWorld: "Visitatori nel mondo",
+                sectionPrayerStats: "Statistiche Preghiere",
+                prayerFavoritesTitle: "Preferiti Utente",
+                totalFavorites: "Totale preferiti",
+                mostFavoritedLang: "Lingua preferita",
+                prayerDistributionTitle: "Distribuzione Preghiere",
                 sectionProgress: "Progresso generazione MP3",
                 sectionTopCountries: "Top Paesi",
                 sectionTopPages: "Pagine più viste",
@@ -923,7 +1010,9 @@
                 period24h: "24h",
                 period7days: "7 giorni",
                 period30days: "30 giorni",
-                periodAll: "Tutto"
+                periodAll: "Tutto",
+                prayersAvailable: "preghiere",
+                noFavorites: "Nessun preferito registrato"
             },
             TL: {
                 title: "Dashboard Bible Chantée - Istatistika",
@@ -932,9 +1021,16 @@
                 statVisitorsToday: "Mga bisita ngayong araw",
                 statCountriesActive: "Aktibong mga bansa",
                 statAudioPlays: "Mga paglalaro ng audio",
+                statPrayers: "Mga panalangin na available",
+                prayersChange: "7 wika",
                 statShares: "Mga pagbabahagi",
                 statSignups: "Mga pagpaparehistro",
                 sectionWorld: "Mga bisita sa buong mundo",
+                sectionPrayerStats: "Istatistika ng Panalangin",
+                prayerFavoritesTitle: "Mga Paborito ng User",
+                totalFavorites: "Kabuuang paborito",
+                mostFavoritedLang: "Paboritong wika",
+                prayerDistributionTitle: "Distribusyon ng Panalangin",
                 sectionProgress: "Progreso ng Pagbuo ng MP3",
                 sectionTopCountries: "Nangungunang mga Bansa",
                 sectionTopPages: "Pinaka-tiningnan na mga pahina",
@@ -961,7 +1057,9 @@
                 period24h: "24h",
                 period7days: "7 araw",
                 period30days: "30 araw",
-                periodAll: "Lahat"
+                periodAll: "Lahat",
+                prayersAvailable: "panalangin",
+                noFavorites: "Walang naitala na paborito"
             }
         };
 
@@ -981,9 +1079,16 @@
                 "stat-visitors-today": t.statVisitorsToday,
                 "stat-countries-active": t.statCountriesActive,
                 "stat-audio-plays": t.statAudioPlays,
+                "stat-prayers": t.statPrayers,
+                "prayers-change": t.prayersChange,
                 "stat-shares": t.statShares,
                 "stat-signups": t.statSignups,
                 "section-world": t.sectionWorld,
+                "section-prayer-stats": t.sectionPrayerStats,
+                "prayer-favorites-title": t.prayerFavoritesTitle,
+                "total-favorites": t.totalFavorites,
+                "most-favorited-lang": t.mostFavoritedLang,
+                "prayer-distribution-title": t.prayerDistributionTitle,
                 "section-progress": t.sectionProgress,
                 "section-top-countries": t.sectionTopCountries,
                 "section-top-pages": t.sectionTopPages,
@@ -1030,6 +1135,8 @@
                 localStorage.setItem('bc_lang', L);
                 UI_LANG = L;
                 applyI18n();
+                // Re-render prayer statistics with new language
+                renderPrayerStatistics();
             });
         }
 
@@ -1163,6 +1270,131 @@
             } catch (error) {
                 console.error('Error rendering language progress:', error);
             }
+        }
+
+        // =====================================================
+        // PRAYER STATISTICS
+        // =====================================================
+
+        // Prayer counts per language (from prayers.html)
+        const PRAYER_COUNTS = {
+            FR: 5,
+            EN: 6,
+            ES: 6,
+            DE: 6,
+            IT: 6,
+            PT: 5,
+            TL: 6
+        };
+
+        const LANG_FLAGS = {
+            FR: '🇫🇷',
+            EN: '🇬🇧',
+            ES: '🇪🇸',
+            DE: '🇩🇪',
+            IT: '🇮🇹',
+            PT: '🇵🇹',
+            TL: '🇵🇭'
+        };
+
+        function getPrayerFavorites() {
+            try {
+                const stored = localStorage.getItem("bc_prayer_favorites");
+                return stored ? JSON.parse(stored) : {};
+            } catch (e) {
+                console.error("Error reading prayer favorites:", e);
+                return {};
+            }
+        }
+
+        function analyzePrayerFavorites() {
+            const favorites = getPrayerFavorites();
+            const byLanguage = {};
+
+            // Count favorites per language
+            Object.keys(favorites).forEach(key => {
+                const lang = key.split('_')[0]; // Extract language code (e.g., "FR" from "FR_0")
+                if (!byLanguage[lang]) {
+                    byLanguage[lang] = 0;
+                }
+                byLanguage[lang]++;
+            });
+
+            // Find most favorited language
+            let mostFavoritedLang = '-';
+            let maxCount = 0;
+            Object.entries(byLanguage).forEach(([lang, count]) => {
+                if (count > maxCount) {
+                    maxCount = count;
+                    mostFavoritedLang = lang;
+                }
+            });
+
+            return {
+                total: Object.keys(favorites).length,
+                byLanguage: byLanguage,
+                mostFavoritedLang: mostFavoritedLang
+            };
+        }
+
+        function renderPrayerStatistics() {
+            const stats = analyzePrayerFavorites();
+            const t = T();
+
+            // Update total favorites
+            document.getElementById('totalFavorites').textContent = stats.total;
+
+            // Update most favorited language
+            const mostFavLangEl = document.getElementById('mostFavoritedLang');
+            if (stats.mostFavoritedLang !== '-') {
+                mostFavLangEl.textContent = LANG_FLAGS[stats.mostFavoritedLang] + ' ' + stats.mostFavoritedLang;
+            } else {
+                mostFavLangEl.textContent = '-';
+            }
+
+            // Render favorites by language
+            const favsByLangEl = document.getElementById('favoritesByLanguage');
+            if (stats.total === 0) {
+                favsByLangEl.innerHTML = `<div style="text-align:center;color:#888;padding:20px;">${t.noFavorites}</div>`;
+            } else {
+                const sortedLangs = Object.entries(stats.byLanguage)
+                    .sort((a, b) => b[1] - a[1]);
+
+                favsByLangEl.innerHTML = sortedLangs.map(([lang, count]) => {
+                    const percentage = Math.round((count / stats.total) * 100);
+                    return `
+                        <div style="margin-bottom: 12px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.9rem;">
+                                <span>${LANG_FLAGS[lang]} ${lang}</span>
+                                <span style="color: #FFD700; font-weight: bold;">${count}</span>
+                            </div>
+                            <div style="height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden;">
+                                <div style="height: 100%; width: ${percentage}%; background: linear-gradient(90deg, #FFD700, #FFA500); transition: width 0.5s;"></div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // Render prayer distribution by language
+            const distributionEl = document.getElementById('prayersDistribution');
+            const langEntries = Object.entries(PRAYER_COUNTS);
+
+            distributionEl.innerHTML = langEntries.map(([lang, count], i) => {
+                const favCount = stats.byLanguage[lang] || 0;
+                return `
+                    <li>
+                        <span class="rank">${LANG_FLAGS[lang]}</span>
+                        <div class="info">
+                            <div class="name">${lang}</div>
+                            <div class="detail">${favCount} ${t.prayersAvailable} favorites</div>
+                        </div>
+                        <span class="value">${count}</span>
+                    </li>
+                `;
+            }).join('');
+
+            console.log('✅ Prayer statistics rendered:', stats);
         }
 
         // =====================================================
@@ -1437,6 +1669,9 @@
 
             // Render language progress from config
             renderLanguageProgress();
+
+            // Render prayer statistics
+            renderPrayerStatistics();
 
             // Premier chargement
             refresh();
