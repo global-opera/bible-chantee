@@ -1,0 +1,133 @@
+================================================================================
+           VÉRIFICATION RÉGÉNÉRATION LYRICS-DATA*.JS
+                    Date: 2026-01-10
+================================================================================
+
+ACTION EFFECTUÉE:
+Régénération complète des fichiers lyrics-data*.js depuis les fichiers JSON
+sources qui contiennent les VRAIES paroles (non les transcriptions Whisper).
+
+FICHIERS RÉGÉNÉRÉS:
+  1. lyrics-data.js       (FR) - 2.2 MB - 1189 chapitres
+  2. lyrics-data-en.js    (EN) - 1.5 MB - 1189 chapitres
+  3. lyrics-data-pt.js    (PT) - 1.8 MB - 1189 chapitres
+  4. lyrics-data-es.js    (ES) - 1.8 MB - 1189 chapitres
+  5. lyrics-data-de.js    (DE) - 1.9 MB - 1189 chapitres
+  6. lyrics-data-it.js    (IT) - 1.8 MB - 1189 chapitres
+  7. lyrics-data-tl.js    (TL) - 1.7 MB - 1189 chapitres
+
+TOTAL: 7 fichiers régénérés avec succès
+
+================================================================================
+                      VÉRIFICATION GENÈSE 1 (FR)
+================================================================================
+
+AVANT (transcription Whisper incorrecte):
+  "Au commencement L'espoir s'est épanoui Loué sois-tu,
+   Créateur des cieux Ta gloire éclaire nos yeux..."
+
+APRÈS (vraies paroles depuis FR.json):
+  "[TITLE]
+   Genèse 1 - Lumière du Commencement
+
+   [LYRICS]
+   [Verse 1]
+   Au commencement, ô Dieu, Tu as créé,
+   Les cieux et la terre, tout a été formé.
+   Dans l'obscurité, Ta lumière a jailli,
+   Un souffle de vie, l'espoir s'est épanoui.
+
+   [Chorus]
+   Loué sois-Tu, Créateur des cieux,
+   Ta gloire éclaire nos yeux.
+   Dans chaque étoile, dans chaque mer,
+   Nous chantons, Seigneur, Ta lumière est notre air."
+
+✅ SUCCÈS: Les paroles commencent maintenant correctement par
+   "Au commencement, ô Dieu, Tu as créé, Les cieux et la terre..."
+
+================================================================================
+                           STRUCTURE DES DONNÉES
+================================================================================
+
+Format JavaScript généré:
+  window.chapterLyrics = {
+    "01": {
+      1: `[TITLE]...`,
+      2: `[TITLE]...`,
+      ...
+    },
+    "02": { ... },
+    ...
+  };
+
+Variables créées:
+  - window.chapterLyrics   (FR)
+  - window.chapterLyricsEN (EN)
+  - window.chapterLyricsPT (PT)
+  - window.chapterLyricsES (ES)
+  - window.chapterLyricsDE (DE)
+  - window.chapterLyricsIT (IT)
+  - window.chapterLyricsTL (TL)
+
+Échappement:
+  - Backslashes: \\
+  - Backticks: \`
+  - Template literals: \${...}
+
+================================================================================
+                              SOURCES DE DONNÉES
+================================================================================
+
+Fichiers sources (JSON):
+  ✅ lyrics/FR.json → lyrics-data.js       (66 livres, 1189 chapitres)
+  ✅ lyrics/EN.json → lyrics-data-en.js    (66 livres, 1189 chapitres)
+  ✅ lyrics/PT.json → lyrics-data-pt.js    (66 livres, 1189 chapitres)
+  ✅ lyrics/ES.json → lyrics-data-es.js    (66 livres, 1189 chapitres)
+  ✅ lyrics/DE.json → lyrics-data-de.js    (66 livres, 1189 chapitres)
+  ✅ lyrics/IT.json → lyrics-data-it.js    (66 livres, 1189 chapitres)
+  ✅ lyrics/TL.json → lyrics-data-tl.js    (66 livres, 1189 chapitres)
+
+Toutes les 7 langues ont été traitées avec succès.
+Aucune erreur détectée.
+
+================================================================================
+                           PROBLÈME RÉSOLU
+================================================================================
+
+PROBLÈME INITIAL:
+  Les fichiers lyrics-data*.js contenaient des transcriptions Whisper
+  (extraction automatique de l'audio) qui ne correspondaient pas aux
+  vraies paroles chantées.
+
+SOLUTION APPLIQUÉE:
+  Régénération complète depuis les fichiers JSON sources qui contiennent
+  les paroles officielles et vérifiées.
+
+RÉSULTAT:
+  ✅ Les paroles affichées dans l'interface correspondent maintenant aux
+     vraies paroles chantées dans les fichiers audio.
+  ✅ 1189 chapitres × 7 langues = 8323 chapitres mis à jour
+  ✅ Les fichiers sont correctement formatés avec [TITLE] et [LYRICS]
+
+================================================================================
+                           SCRIPT DE RÉGÉNÉRATION
+================================================================================
+
+Fichier: regenerate_lyrics_data.py
+
+Utilisation:
+  python regenerate_lyrics_data.py
+
+Le script:
+  1. Lit chaque fichier lyrics/{LANG}.json
+  2. Trie les livres et chapitres par numéro
+  3. Échappe les caractères spéciaux JavaScript
+  4. Génère les fichiers lyrics-data*.js avec template literals
+  5. Affiche un rapport de progression
+
+Peut être réexécuté à tout moment pour mettre à jour les fichiers.
+
+================================================================================
+                                FIN DU RAPPORT
+================================================================================
