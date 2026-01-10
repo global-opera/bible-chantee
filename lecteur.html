@@ -666,14 +666,16 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 10px;
+      gap: 15px;
+      width: 100%;
     }
-    
+
     .control-btn {
-      min-width: 40px;
-      height: 40px;
-      padding: 0 8px;
-      border-radius: 20px;
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      padding: 0;
+      border-radius: 22px;
       background: var(--bleu-hover);
       border: 2px solid rgba(245, 203, 66, 0.4);
       color: white;
@@ -1880,7 +1882,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
         const paragraphs = lyrics.split('\n\n');
         const html = paragraphs.map(p => {
           const lines = p.split('\n').map(line => escapeHtml(line)).join('<br>');
-          return '<p style="margin-bottom: 1em;">' + lines + '</p>';
+          return '<p style="margin: 0 0 1em 0;">' + lines + '</p>';
         }).join('');
         lyricsContent.innerHTML = html;
       } catch (error) {
