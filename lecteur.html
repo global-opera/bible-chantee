@@ -1964,6 +1964,12 @@ const audioPlayer = document.querySelector('#audioPlayer');
         // Extraire les paroles du chapitre
         let lyrics = lyricsData[bookNumber] && lyricsData[bookNumber][chapter];
 
+        // FR V1: Paroles en cours de synchronisation
+        if (lang === 'FR') {
+          lyricsContent.innerHTML = '<p style="color: #FFD700; font-style: italic; text-align: center; padding: 20px;">Paroles en cours de synchronisation<br><br><span style="color: #999; font-size: 0.9em;">Une nouvelle version avec paroles synchronisees arrive bientot !</span></p>';
+          return;
+        }
+
         if (!lyrics) {
           lyricsContent.innerHTML = '<p style="color: #999;">Paroles non disponibles pour ce chapitre</p>';
           return;
@@ -3145,6 +3151,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
 </body>
 </html>
+
 
 
 
