@@ -503,6 +503,17 @@
     var L = normLang(lang);
     var name = getBookName(L, bookCode);
 
+    // Check if headerSubtitle exists (lecteur.html has separate title/subtitle)
+    var hasSubtitle = !!document.getElementById('headerSubtitle');
+
+    if(hasSubtitle){
+      // lecteur.html: only set book name in headerTitle
+      // headerSubtitle is managed by lecteur.html itself
+      ht.textContent = name;
+      return;
+    }
+
+    // Other pages: use full line format
     var title = '';
     try{
       var m = safeText(lyricsText).match(/\[TITLE\]\s*[\r\n]+([^\r\n]+)/i);
