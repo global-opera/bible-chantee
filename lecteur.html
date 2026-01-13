@@ -2485,7 +2485,11 @@ const audioPlayer = document.querySelector('#audioPlayer');
     // Changement de livre
     document.querySelector('#bookSelect').addEventListener('change', (e) => {
       const bookCode = e.target.value;
-      const bookName = e.target.options[e.target.selectedIndex].textContent;
+      // Get book name from BOOK_NAMES (not from option.textContent which may contain chapter info)
+      const bookData = BOOKS.find(b => b.code === bookCode);
+      const bookName = bookData && window.BOOK_NAMES && window.BOOK_NAMES[currentLang]
+        ? window.BOOK_NAMES[currentLang][bookCode] || window.BOOK_NAMES.FR[bookCode] || bookCode
+        : bookCode;
       document.querySelector('#headerTitle').textContent = bookName;
 
       // Repopulate chapters grid for new book
