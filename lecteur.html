@@ -629,12 +629,16 @@
     /* === PLAYER === */
     .player-bar {
       display: flex;
-      align-items: center;
+      flex-direction: column;
       gap: 15px;
       padding: 15px;
       background: var(--bleu-sombre);
       border-radius: 15px;
       margin-top: 20px;
+    }
+
+    .player-bar > div:not(.nav-controls) {
+      width: 100%;
     }
     
     .play-btn {
@@ -653,28 +657,41 @@
     
     .progress-container {
       flex: 1;
-    }
-    
-    .progress-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       width: 100%;
+    }
+
+    .progress-bar {
+      flex: 1;
       height: 6px;
       background: rgba(255, 255, 255, 0.2);
       border-radius: 3px;
       cursor: pointer;
+      position: relative;
     }
-    
+
+    .progress-bar:hover {
+      height: 8px;
+      background: rgba(255, 255, 255, 0.25);
+    }
+
     .progress-fill {
-      width: 35%;
+      width: 0%;
       height: 100%;
       background: var(--or-moyen);
       border-radius: 3px;
+      transition: width 0.1s linear;
     }
-    
+
     .time {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 14px;
-      min-width: 90px;
-      text-align: center;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 13px;
+      min-width: 105px;
+      text-align: right;
+      font-family: 'Courier New', monospace;
+      white-space: nowrap;
     }
     
     .player-controls {
@@ -725,7 +742,40 @@
     .radio-icon {
       font-size: 22px;
     }
-    
+
+    /* === NAVIGATION CONTROLS === */
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .nav-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--bleu-hover);
+      border: 2px solid rgba(245, 203, 66, 0.3);
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      background: var(--bleu-cartes);
+      border-color: var(--or-moyen);
+      transform: scale(1.05);
+    }
+
+    .nav-btn:active {
+      transform: scale(0.95);
+    }
+
     .share-btn {
       padding: 0;
       background: transparent;
@@ -1007,30 +1057,38 @@
     /* === RESPONSIVE MOBILE PLAYER === */
     @media (max-width: 480px) {
       .player-bar {
-        gap: 8px;
-        padding: 10px;
-        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px;
+      }
+
+      .nav-controls {
+        gap: 6px;
+      }
+
+      .nav-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
       }
 
       .play-btn {
-        width: 42px;
-        height: 42px;
+        width: 44px;
+        height: 44px;
         font-size: 18px;
       }
 
       .progress-container {
-        order: 10;
-        flex-basis: 100%;
-        margin-top: 8px;
+        gap: 8px;
       }
 
       .time {
-        font-size: 12px;
-        min-width: 70px;
+        font-size: 11px;
+        min-width: 95px;
       }
 
       .player-controls {
         gap: 6px;
+        flex-wrap: wrap;
       }
 
       .control-btn {
@@ -1322,13 +1380,21 @@ function isVerseLikeEN(s){
         
         <!-- PLAYER -->
         <div class="player-bar">
-          <button class="play-btn" id="playBtn">▶</button>
+          <!-- Contrôles de navigation -->
+          <div class="nav-controls">
+            <button class="nav-btn" id="restartBtn" title="Revenir au début">⏮️</button>
+            <button class="nav-btn" id="rewind10Btn" title="Reculer 10s">⏪</button>
+            <button class="play-btn" id="playBtn">▶</button>
+            <button class="nav-btn" id="forward10Btn" title="Avancer 10s">⏩</button>
+            <button class="nav-btn" id="nextChapterBtn" title="Chapitre suivant">⏭️</button>
+          </div>
+
           <div class="progress-container">
-            <div class="progress-bar">
-              <div class="progress-fill"></div>
+            <div class="progress-bar" id="progressBar">
+              <div class="progress-fill" id="progressFill"></div>
             </div>
           </div>
-          <div class="time">01:24 / 03:56</div>
+          <div class="time" id="timeDisplay">00:00 / 00:00</div>
           <div class="player-controls">
             <button class="control-btn add-radio-btn" id="favoriteBtn" title="Ajouter à la radio"><span class="plus-icon">+</span><span class="radio-icon">📻</span></button>
             <button class="control-btn autoplay-btn" id="autoplayBtn" title="Lecture continue">🔁</button>
@@ -2458,6 +2524,108 @@ const audioPlayer = document.querySelector('#audioPlayer');
         }
       }
     });
+
+    // === NOUVEAUX CONTRÔLES DE NAVIGATION ===
+
+    // Revenir au début
+    document.getElementById('restartBtn').addEventListener('click', () => {
+      if (audioPlayer.src) {
+        audioPlayer.currentTime = 0;
+      }
+    });
+
+    // Reculer de 10 secondes
+    document.getElementById('rewind10Btn').addEventListener('click', () => {
+      if (audioPlayer.src) {
+        audioPlayer.currentTime = Math.max(0, audioPlayer.currentTime - 10);
+      }
+    });
+
+    // Avancer de 10 secondes
+    document.getElementById('forward10Btn').addEventListener('click', () => {
+      if (audioPlayer.src) {
+        audioPlayer.currentTime = Math.min(audioPlayer.duration || 0, audioPlayer.currentTime + 10);
+      }
+    });
+
+    // Chapitre suivant
+    document.getElementById('nextChapterBtn').addEventListener('click', () => {
+      const chapterSelect = document.getElementById('chapterSelect');
+      const currentIndex = chapterSelect.selectedIndex;
+      if (currentIndex < chapterSelect.options.length - 1) {
+        chapterSelect.selectedIndex = currentIndex + 1;
+        const nextChapter = parseInt(chapterSelect.value);
+        currentChapter = nextChapter;
+        if (isPlaying) {
+          loadAndPlayChapter(currentBook, nextChapter, currentLang);
+        } else {
+          const audioUrl = getAudioUrl(currentBook, nextChapter, currentLang);
+          audioPlayer.src = audioUrl;
+          audioPlayer.load();
+        }
+        // Mettre à jour les paroles/bible
+        if (document.querySelector('#lyricsContent').style.display !== 'none') {
+          loadLyrics(currentBook, nextChapter, currentLang);
+        }
+        if (document.querySelector('#bibleContent').style.display !== 'none') {
+          loadBibleText(currentBook, nextChapter, currentLang);
+        }
+        updateHeaderSubtitle(currentBook, nextChapter, currentLang);
+      }
+    });
+
+    // === BARRE DE PROGRESSION CLIQUABLE ===
+    const progressBar = document.getElementById('progressBar');
+    const progressFill = document.getElementById('progressFill');
+
+    progressBar.addEventListener('click', (e) => {
+      if (audioPlayer.src && audioPlayer.duration) {
+        const rect = progressBar.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const percentage = clickX / rect.width;
+        audioPlayer.currentTime = percentage * audioPlayer.duration;
+      }
+    });
+
+    // === MISE À JOUR DU TEMPS ET DE LA BARRE DE PROGRESSION ===
+    const timeDisplay = document.getElementById('timeDisplay');
+
+    function formatTime(seconds) {
+      if (isNaN(seconds) || seconds === null) return '00:00';
+      const mins = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60);
+      return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+    }
+
+    function updateProgressAndTime() {
+      if (audioPlayer.src) {
+        const currentTime = audioPlayer.currentTime || 0;
+        const duration = audioPlayer.duration || 0;
+
+        // Mise à jour de la barre de progression
+        if (duration > 0) {
+          const percentage = (currentTime / duration) * 100;
+          progressFill.style.width = `${percentage}%`;
+        }
+
+        // Mise à jour de l'affichage du temps
+        timeDisplay.textContent = `${formatTime(currentTime)} / ${formatTime(duration)}`;
+      }
+    }
+
+    // Mettre à jour toutes les 100ms pendant la lecture
+    audioPlayer.addEventListener('timeupdate', updateProgressAndTime);
+    audioPlayer.addEventListener('loadedmetadata', updateProgressAndTime);
+
+    // Helper pour mettre à jour le sous-titre du header
+    function updateHeaderSubtitle(book, chapter, lang) {
+      const t = translations[lang] || translations.FR;
+      const chapterTitle = getChapterTitle(book, String(chapter), lang);
+      const subtitle = chapterTitle
+        ? `${t.chapitre} ${chapter} - ${chapterTitle}`
+        : `${t.chapitre} ${chapter}`;
+      document.querySelector('#headerSubtitle').textContent = subtitle;
+    }
 
     // Autoplay toggle
     const autoplayBtn = document.querySelector('#autoplayBtn');
