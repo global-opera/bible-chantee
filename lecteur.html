@@ -637,7 +637,7 @@
       margin-top: 20px;
     }
 
-    .player-bar > div:not(.nav-controls) {
+    .player-bar > div:not(.player-nav-controls) {
       width: 100%;
     }
     
@@ -743,15 +743,15 @@
       font-size: 22px;
     }
 
-    /* === NAVIGATION CONTROLS === */
-    .nav-controls {
+    /* === PLAYER NAVIGATION CONTROLS === */
+    .player-nav-controls {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
     }
 
-    .nav-btn {
+    .player-nav-btn {
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -766,13 +766,13 @@
       transition: all 0.2s ease;
     }
 
-    .nav-btn:hover {
+    .player-nav-btn:hover {
       background: var(--bleu-cartes);
       border-color: var(--or-moyen);
       transform: scale(1.05);
     }
 
-    .nav-btn:active {
+    .player-nav-btn:active {
       transform: scale(0.95);
     }
 
@@ -1061,11 +1061,11 @@
         padding: 12px;
       }
 
-      .nav-controls {
+      .player-nav-controls {
         gap: 6px;
       }
 
-      .nav-btn {
+      .player-nav-btn {
         width: 36px;
         height: 36px;
         font-size: 14px;
@@ -1381,12 +1381,12 @@ function isVerseLikeEN(s){
         <!-- PLAYER -->
         <div class="player-bar">
           <!-- Contrôles de navigation -->
-          <div class="nav-controls">
-            <button class="nav-btn" id="restartBtn" title="Revenir au début">⏮️</button>
-            <button class="nav-btn" id="rewind10Btn" title="Reculer 10s">⏪</button>
+          <div class="player-nav-controls">
+            <button class="player-nav-btn" id="restartBtn" title="Revenir au début">⏮️</button>
+            <button class="player-nav-btn" id="rewind10Btn" title="Reculer 10s">⏪</button>
             <button class="play-btn" id="playBtn">▶</button>
-            <button class="nav-btn" id="forward10Btn" title="Avancer 10s">⏩</button>
-            <button class="nav-btn" id="nextChapterBtn" title="Chapitre suivant">⏭️</button>
+            <button class="player-nav-btn" id="forward10Btn" title="Avancer 10s">⏩</button>
+            <button class="player-nav-btn" id="nextChapterBtn" title="Chapitre suivant">⏭️</button>
           </div>
 
           <div class="progress-container">
