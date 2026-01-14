@@ -1244,7 +1244,7 @@ function isVerseLikeEN(s){
 }
 /* ===== END EN TITLES HARDENING ===== */
 </script>
-    <script src="lyrics-data.js?v=20260114e"></script>
+    <script src="lyrics-data.js?v=20260114f"></script>
     <script src="lyrics-data-en.js"></script>
     <script src="lyrics-data-pt.js"></script>
     <script src="lyrics-data-es.js"></script>
@@ -1398,7 +1398,7 @@ function isVerseLikeEN(s){
         <div class="player-bar">
           <!-- Contrôles de navigation -->
           <div class="player-nav-controls">
-            <button class="player-nav-btn" id="restartBtn" title="Revenir au début">⏮️</button>
+            <button class="player-nav-btn" id="restartBtn" title="Chapitre précédent">⏮️</button>
             <button class="player-nav-btn" id="rewind10Btn" title="Reculer 10s">⏪</button>
             <button class="play-btn" id="playBtn">▶</button>
             <button class="player-nav-btn" id="forward10Btn" title="Avancer 10s">⏩</button>
@@ -2547,10 +2547,28 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
     // === NOUVEAUX CONTRÔLES DE NAVIGATION ===
 
-    // Revenir au début
+    // Chapitre précédent
     document.getElementById('restartBtn').addEventListener('click', () => {
-      if (audioPlayer.src) {
-        audioPlayer.currentTime = 0;
+      const chapterSelect = document.getElementById('chapterSelect');
+      const currentIndex = chapterSelect.selectedIndex;
+      if (currentIndex > 0) {
+        chapterSelect.selectedIndex = currentIndex - 1;
+        const prevChapter = parseInt(chapterSelect.value);
+        currentChapter = prevChapter;
+        if (isPlaying) {
+          loadAndPlayChapter(currentBook, prevChapter, currentLang);
+        } else {
+          const audioUrl = getAudioUrl(currentBook, prevChapter, currentLang);
+          audioPlayer.src = audioUrl;
+          audioPlayer.load();
+        }
+        // Mettre à jour les paroles/bible
+        if (document.querySelector('#lyricsContent').style.display !== 'none') {
+          loadLyrics(currentBook, prevChapter, currentLang);
+        }
+        if (document.querySelector('#bibleContent').style.display !== 'none') {
+          loadBibleText(currentBook, prevChapter, currentLang);
+        }
       }
     });
 
