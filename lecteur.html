@@ -47,7 +47,13 @@
     }
     
     /* === LIGNE 1: DRAPEAUX (7 langues actives) === */
-    .flags-row { display: flex; justify-content: space-between; gap: 5px; overflow: hidden;
+    .flags-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 5px;
+      width: 100%;
+      padding: 0 10px;
+      box-sizing: border-box;
       margin-bottom: 10px;
       max-width: 585px;
       margin-left: auto;
@@ -96,8 +102,11 @@
     /* === LIGNE 2: BOUTONS NAVIGATION (même hauteur que drapeaux) === */
     .nav-row {
       display: flex;
-      justify-content: center;
-      gap: 10px;
+      justify-content: space-between;
+      gap: 5px;
+      width: 100%;
+      padding: 0 10px;
+      box-sizing: border-box;
       margin-top: 10px;
       margin-bottom: 25px;
       max-width: 585px;
@@ -990,32 +999,30 @@
     /* === RESPONSIVE === */
     @media (max-width: 600px) {
       .flags-row {
-        gap: 6px;
+        gap: 5px;
         max-width: 100%;
         flex-wrap: nowrap;
-        overflow-x: auto;
       }
       .flag-btn {
-        width: 55px;
+        width: calc((100% - 30px) / 7);
+        min-width: 40px;
+        max-width: 55px;
+        flex-shrink: 1;
         height: 40px;
         font-size: 22px;
       }
       .nav-row {
         max-width: 100%;
         flex-wrap: nowrap;
-        overflow-x: auto;
       }
       .nav-btn {
-        width: 55px;
+        width: calc((100% - 30px) / 7);
+        min-width: 40px;
+        max-width: 55px;
+        flex-shrink: 1;
         height: 40px;
-        min-width: 55px;
-        flex-shrink: 0;
         padding: 4px 2px;
         font-size: 12px;
-      }
-      .flag-btn {
-        min-width: 55px;
-        flex-shrink: 0;
       }
       /* Ligne 3: même taille pour Soutenir, Loupe et WhatsApp */
       #navSoutenir {
@@ -1974,12 +1981,6 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
         // Extraire les paroles du chapitre
         let lyrics = lyricsData[bookNumber] && lyricsData[bookNumber][chapter];
-
-        // FR V1: Paroles en cours de synchronisation
-        if (lang === 'FR') {
-          lyricsContent.innerHTML = '<p style="color: #FFD700; font-style: italic; text-align: center; padding: 20px;">Paroles en cours de synchronisation<br><br><span style="color: #999; font-size: 0.9em;">Une nouvelle version avec paroles synchronisees arrive bientot !</span></p>';
-          return;
-        }
 
         if (!lyrics) {
           lyricsContent.innerHTML = '<p style="color: #999;">Paroles non disponibles pour ce chapitre</p>';
@@ -3166,6 +3167,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
 </body>
 </html>
+
 
 
 
