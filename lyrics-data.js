@@ -1,47 +1,9 @@
 // Paroles des chapitres - Bible Chantee
 // Source: Whisper FR V1 transcriptions (CLEAN - sans tags)
-// Auto-genere: 2026-01-17 19:48:07
+// Auto-genere: 2026-01-17 20:39:10
 window.chapterLyrics = {
     "01": {
-        1: `Au commencement L'espoir s'est épanoui Loué sois-tu,
-Créateur des cieux Ta gloire éclaire nos yeux Dans chaque
-étoile,
-dans chaque mer Nous chantons Seigneur Ta lumière est notre
-
-rêve Loué sois-tu,
-Créateur des cieux Ta gloire éclaire nos yeux Dans chaque
-étoile,
-dans chaque mer Dans chaque mer Nous chantons Seigneur Ta
-
-lumière est notre rêve Les eaux se rassemblent La terre
-apparaît Les arbres en fleurs La verdure est là Les
-fruits abondent Ta bonté se déploie Chaque créature chante Gloire
-à toi,
-
-Roi des rois Loué sois-tu,
-Créateur des cieux Ta gloire éclaire nos yeux Dans chaque
-étoile,
-dans chaque mer Nous chantons Seigneur Ta lumière est notre
-
-rêve Nous chantons Seigneur Ta gloire éclaire nos yeux Des
-très beaux signes Le crayon du Père Des humains으니까 Desmedim
-Les Orange,
-les rois Nos RAMSAY Notreître Notre purite Notre page Notre
-
-anticonfort Notre pièce Notre nation Notre entreprise Notre place Notre
-cruel C'est l'thinkissant Notre fort Notre localité Notre province Notre
-civilité Nous chantons Seigneur,
-ta lumière est notre aide Faisons l'homme à ta ressemblance
-
-Pour régner sur la terre dans l'espérance A ton image
-nous sommes créés Pour glorifier,
-pour aimer,
-pour adorer Loué sois-tu,
-
-Créateur des cieux Ta gloire éclaire nos yeux Dans chaque
-étoile,
-dans chaque mer Nous chantons Seigneur,
-ta lumière est notre aide`,
+        1: `Au commencement, ô Dieu, Tu as créé, Les cieux et la terre, tout a été formé. Dans l'obscurité, Ta lumière a jailli, Un souffle de vie, l'espoir s'est épanoui. Loué sois-Tu, Créateur des cieux, Ta gloire éclaire nos yeux. Dans chaque étoile, dans chaque mer, Nous chantons, Seigneur, Ta lumière est notre air. Tu as dit : « Que la lumière soit, » Et les ténèbres ont fui sous Ta voix. Le jour et la nuit, Tu as séparés, Dans chaque matin, Ta grâce renouvelée. Loué sois-Tu, Créateur des cieux, Ta gloire éclaire nos yeux. Dans chaque étoile, dans chaque mer, Nous chantons, Seigneur, Ta lumière est notre air. Les eaux se rassemblent, la terre apparaît, Les arbres en fleurs, la verdure est là. Les fruits abondent, Ta bonté se déploie, Chaque créature chante, « Gloire à Toi, Roi des rois! » Loué sois-Tu, Créateur des cieux, Ta gloire éclaire nos yeux. Dans chaque étoile, dans chaque mer, Nous chantons, Seigneur, Ta lumière est notre air. Des luminaires brillent dans l'immensité, Le soleil, la lune, pour notre clarté. Les poissons dans l'eau, les oiseaux dans le ciel, Tout est à sa place, tout est si essentiel. Loué sois-Tu, Créateur des cieux, Ta gloire éclaire nos yeux. Dans chaque étoile, dans chaque mer, Nous chantons, Seigneur, Ta lumière est notre air. « Faisons l'homme à Ta ressemblance », Pour régner sur la terre, dans l'espérance. À Ton image, nous sommes créés, Pour glorifier, pour aimer, pour adorer. Loué sois-Tu, Créateur des cieux, Ta gloire éclaire nos yeux. Dans chaque étoile, dans chaque mer, Nous chantons, Seigneur, Ta lumière est notre air.`,
         2: `Dans le silence d'un matin Les cieux et la terre
 par ta main Chaque étoile,
 chaque brise Tout est bon,
