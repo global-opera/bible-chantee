@@ -1989,12 +1989,12 @@ const audioPlayer = document.querySelector('#audioPlayer');
         lyrics = cleanLyrics(lyrics);
 
         // Convertir les sauts de ligne en HTML
-        // \n\n = séparation couplets (margin)
-        // \n = saut de ligne simple
+        // \n\n = séparation entre strophes
+        // \n simple = fusionné en espace pour paragraphe fluide
         const paragraphs = lyrics.split('\n\n');
         const html = paragraphs.map(p => {
-          const lines = p.split('\n').join('<br>');
-          return '<p style="margin: 0 0 1em 0;">' + lines + '</p>';
+          const lines = p.replace(/\n/g, ' '); // Paragraphe fluide justifié
+          return '<p style="margin: 0 0 1.2em 0; text-align: justify; text-justify: inter-word; line-height: 1.7;">' + lines + '</p>';
         }).join('');
         lyricsContent.innerHTML = html;
       } catch (error) {
