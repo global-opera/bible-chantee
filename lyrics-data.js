@@ -1,6 +1,6 @@
 // Paroles des chapitres - Bible Chantee
 // Source: Whisper FR V1 transcriptions (CLEAN - sans tags)
-// Auto-genere: 2026-01-17 19:20:56
+// Auto-genere: 2026-01-17 19:48:07
 window.chapterLyrics = {
     "01": {
         1: `Au commencement L'espoir s'est épanoui Loué sois-tu,
@@ -25889,37 +25889,7 @@ Créateur de tout ce qui vit Révèle-moi ton amour,
 chantons ce doux appel Dans la nuit comme au matin
 
 Je chanterai pour l'éternel Amen`,
-        105: `Louez l'éternel Dans l'ombre et la lumière Il est notre
-espérance Glorifiez son Saint Nom Élevez vos voix en chant
-Il est notre refuge,
-notre roi En Lui nous trouvons la foi Souvenons-nous des
-
-prodigies repassées Des miracles qu'Il a faits,
-de Sa fidélité De l'Alliance qu'Il a scellée Pour mille
-générations,
-Il nous a libérés Glorifiez son Saint Nom Élevez vos
-
-voix en chant Il est notre refuge,
-notre roi En Lui nous trouvons la foi Il a
-changé nos cœurs Dans la nuit,
-les lumières Au désert,
-
-Il est le pain Avec Lui,
-nous ne craindrons rien Il a donné des terres aux
-nations Pour que nous gardions Ses commandements Il a fait
-sortir Son peuple dans l'allégresse Chantons ensemble,
-
-célébrons Sa tendresse Glorifiez son Saint Nom Et levez vos
-voix en chant Il est notre refuge,
-notre roi En Lui nous trouvons la foi Nous et
-l'Éternel dans l'unité Pour Ses promesses et Sa bonté À
-
-jamais nous proclamerons Son amour,
-notre chant,
-notre raison Ces paroles évoquent la grandeur de Dieu Et
-s'appuient sur les Écritures Tout en créant une atmosphère d'adoration
-
-Douce et contubadrée`,
+        105: `Louez l'Éternel, invoquez son nom, Faites connaître ses merveilles et sa bonté. Des cœurs en joie, cherchant sa présence, Dans l'ombre et la lumière, il est notre espérance. Glorifiez son saint nom, Élevez vos voix en chant, Il est notre refuge, notre roi, En lui nous trouvons la foi. Souvenons-nous des prodiges passés, Des miracles qu'il a faits, de sa fidélité, De l'alliance qu'il a scellée, Pour mille générations, il nous a libérés. Glorifiez son saint nom, Élevez vos voix en chant, Il est notre refuge, notre roi, En lui nous trouvons la foi. Il a changé nos cœurs, Dans la nuit, il est lumière, Au désert, il est le pain, Avec lui, nous ne craindrons rien. Il a donné des terres aux nations, Pour que nous gardions ses commandements, Il a fait sortir son peuple dans l'allégresse, Chantons ensemble, célébrons sa tendresse. Glorifiez son saint nom, Et levez vos voix en chant, Il est notre refuge, notre roi, En lui nous trouvons la foi. Nous et l'Éternel dans l'unité, Pour ses promesses et sa bonté, À jamais nous proclamerons, Son amour, notre chant, notre raison.`,
         106: `Louez l'éternel Oh mon cœur,
 ensemble nous chantons sa louange Sauve-nous,
 oh Dieu de grâce Souviens-toi de nous dans ta bienveillance
