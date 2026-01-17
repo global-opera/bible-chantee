@@ -554,6 +554,59 @@
     .header-title {
       font-size: 28px;
       color: var(--or-moyen);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .header-title-text {
+      font-size: 28px;
+      color: var(--or-moyen);
+    }
+
+    /* === TOGGLE V1/V2 MINI (dans header) === */
+    .version-btn-mini {
+      padding: 8px 14px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      display: none;
+      white-space: nowrap;
+    }
+
+    .version-btn-mini:hover {
+      color: var(--or-moyen);
+      border-color: var(--or-moyen);
+      transform: scale(1.05);
+    }
+
+    .version-btn-mini.active {
+      color: #D4AF37;
+      border-color: #D4AF37;
+      background: rgba(212, 175, 55, 0.15);
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+    }
+
+    .version-btn-mini.show {
+      display: inline-block;
+    }
+
+    .version-btn-mini:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .version-btn-mini:disabled:hover {
+      transform: none;
+      color: rgba(255, 255, 255, 0.3);
+      border-color: rgba(255, 255, 255, 0.1);
     }
     
     .header-subtitle {
@@ -869,15 +922,51 @@
       color: var(--or-moyen);
       font-size: 18px;
       margin-bottom: 15px;
+      display: none; /* Masquer le titre (redondant avec les boutons toggle) */
     }
     
     .lyrics-text {
-      line-height: 1.3;
+      line-height: 1.8;
       color: rgba(255, 255, 255, 0.9);
     }
 
     #lyricsContent {
-      line-height: 1.4;
+      line-height: 1.8;
+      max-height: 400px;
+      overflow-y: auto;
+      padding-right: 10px;
+      scroll-behavior: smooth;
+    }
+
+    /* Scrollbar discrète pour la zone des paroles */
+    #lyricsContent::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    #lyricsContent::-webkit-scrollbar-thumb {
+      background: rgba(212, 175, 55, 0.5);
+      border-radius: 3px;
+    }
+
+    #lyricsContent::-webkit-scrollbar-thumb:hover {
+      background: rgba(212, 175, 55, 0.7);
+    }
+
+    #lyricsContent::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+    }
+
+    /* Style des strophes de paroles */
+    .strophe {
+      margin-bottom: 1.2em;
+      line-height: 1.7;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .strophe:last-child {
+      margin-bottom: 0;
     }
 
     .bible-text {
@@ -1216,6 +1305,44 @@
     #clearCacheBtn:hover {
       opacity: 0.85;
     }
+
+    /* === SECTION PAROLES === */
+    .lyrics-section {
+      max-width: 585px;
+      margin: 20px auto;
+      background: var(--bleu-cartes);
+      border-radius: 20px;
+      padding: 25px;
+      border: 1px solid rgba(245, 203, 66, 0.2);
+      display: none;
+    }
+
+    .lyrics-section.show {
+      display: block;
+    }
+
+    .lyrics-header {
+      text-align: center;
+      color: var(--or-moyen);
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .lyrics-content {
+      color: white;
+      font-size: 16px;
+      line-height: 1.8;
+      white-space: pre-wrap;
+      text-align: center;
+    }
+
+    .lyrics-placeholder {
+      text-align: center;
+      color: var(--or-moyen);
+      font-size: 18px;
+      padding: 20px;
+    }
   </style>
     <script src="js/books.js"></script>
     <script src="js/book-names.js"></script>
@@ -1373,7 +1500,11 @@ function isVerseLikeEN(s){
     <!-- HEADER -->
     <div class="header">
       <div class="header-mode" id="headerMode">Lecteur</div>
-      <div class="header-title" id="headerTitle">Genèse</div>
+      <div class="header-title">
+        <button class="version-btn-mini active" id="btnV1Mini" data-version="v1">Original (1189)</button>
+        <span class="header-title-text" id="headerTitle">Genèse</span>
+        <button class="version-btn-mini" id="btnV2Mini" data-version="v2">Nouveau (433)</button>
+      </div>
       <div class="header-subtitle" id="headerSubtitle">Chapitre 1</div>
     </div>
     
@@ -1398,7 +1529,7 @@ function isVerseLikeEN(s){
         <div class="player-bar">
           <!-- Contrôles de navigation -->
           <div class="player-nav-controls">
-            <button class="player-nav-btn" id="restartBtn" title="Chapitre précédent">⏮️</button>
+            <button class="player-nav-btn" id="restartBtn" title="Revenir au début">⏮️</button>
             <button class="player-nav-btn" id="rewind10Btn" title="Reculer 10s">⏪</button>
             <button class="play-btn" id="playBtn">▶</button>
             <button class="player-nav-btn" id="forward10Btn" title="Avancer 10s">⏩</button>
@@ -1611,6 +1742,7 @@ function isVerseLikeEN(s){
     let isAutoplayEnabled = false;
     let currentBook = '01_GEN';
     let currentChapter = 1;
+    let currentVersion = 'v1'; // 'v1' (CDN R2) ou 'v2' (local avec paroles)
 
     // Variables Radio
     let radioPlaylist = [];
@@ -1820,12 +1952,21 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
     // Helper: Obtenir URL audio pour un chapitre
     function getAudioUrl(book, chapter, lang) {
-      // Construire URL directement depuis Cloudflare R2
-      // Format: https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/{LANG}/{BOOK}/{BOOK}_{CHAPTER}_{LANG}.mp3
-      // Exemple: .../FR/01_GEN/01_GEN_01_FR.mp3
-      const chapterPadded = String(chapter).padStart(2, '0');
       const langUpper = lang.toUpperCase();
-      return `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${langUpper}/${book}/${book}_${chapterPadded}_${langUpper}.mp3`;
+
+      // V1: Local FR_V1 (1189 chapitres complets)
+      if (currentVersion === 'v1') {
+        // Format: audio_v1/{BOOK}/{BOOK}_{CH:02}_FR.mp3
+        // Exemple: audio_v1/01_GEN/01_GEN_01_FR.mp3
+        const chapterPadded = String(chapter).padStart(2, '0');
+        return `audio_v1/${book}/${book}_${chapterPadded}_FR.mp3`;
+      }
+
+      // V2: Local FR_V2 (génération en cours - 433 chapitres, avec paroles)
+      // Format: audio_v2/{BOOK}/{BOOK}_{CH:03}_v1.mp3
+      // Exemple: audio_v2/01_GEN/01_GEN_001_v1.mp3
+      const chapterPadded3 = String(chapter).padStart(3, '0');
+      return `audio_v2/${book}/${book}_${chapterPadded3}_v1.mp3`;
     }
 
     // Charger et jouer un chapitre
@@ -1956,6 +2097,19 @@ const audioPlayer = document.querySelector('#audioPlayer');
     // Charger et afficher les paroles
     function loadLyrics(bookCode, chapter, lang) {
       const lyricsContent = document.querySelector('#lyricsContent');
+
+      // Si on est en FR et en V1, charger les paroles V1
+      if (lang === 'FR' && currentVersion === 'v1') {
+        loadLyricsV1(bookCode, chapter);
+        return;
+      }
+
+      // Si on est en FR et en V2, charger les paroles V2
+      if (lang === 'FR' && currentVersion === 'v2') {
+        loadLyricsV2(bookCode, chapter);
+        return;
+      }
+
       lyricsContent.innerHTML = '<p style="color: #999; font-style: italic;">Chargement des paroles...</p>';
 
       try {
@@ -2093,6 +2247,38 @@ const audioPlayer = document.querySelector('#audioPlayer');
       }
     });
 
+    // Gestionnaire d'erreur pour MP3 manquants (notamment V2)
+    audioPlayer.addEventListener('error', (e) => {
+      console.error('[Audio Error]', e);
+
+      // Si on est en V2 et que le fichier n'existe pas
+      if (currentVersion === 'v2') {
+        const lyricsContent = document.getElementById('lyricsContent');
+        if (lyricsContent) {
+          lyricsContent.innerHTML = `
+            <div style="text-align: center; padding: 40px; color: #F5CB42;">
+              <div style="font-size: 48px; margin-bottom: 20px;">🎵</div>
+              <div style="font-size: 18px; font-weight: 600; margin-bottom: 10px;">
+                Version V2 pas encore disponible
+              </div>
+              <div style="font-size: 14px; color: rgba(255, 255, 255, 0.7); margin-bottom: 20px;">
+                Ce chapitre est en cours de génération.<br>
+                Basculez sur "Original (1189)" pour écouter la V1.
+              </div>
+              <button onclick="document.getElementById('btnV1Mini').click()"
+                      style="padding: 12px 24px; background: #D4AF37; color: #1E3A5F; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 14px;">
+                Revenir à la V1
+              </button>
+            </div>
+          `;
+        }
+
+        // Désactiver le bouton play
+        playBtn.textContent = '▶';
+        isPlaying = false;
+      }
+    });
+
     // Populate books dropdown
     function populateBooksDropdown() {
       const bookSelect = document.querySelector('#bookSelect');
@@ -2160,6 +2346,18 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
         // Sauvegarder la langue dans localStorage pour les autres pages
         localStorage.setItem('bc_lang', currentLang);
+
+        // Afficher/masquer toggle V1/V2 (FR uniquement)
+        const btnV1Mini = document.getElementById('btnV1Mini');
+        const btnV2Mini = document.getElementById('btnV2Mini');
+        if (currentLang === 'FR') {
+          btnV1Mini.classList.add('show');
+          btnV2Mini.classList.add('show');
+        } else {
+          btnV1Mini.classList.remove('show');
+          btnV2Mini.classList.remove('show');
+          currentVersion = 'v1'; // Forcer V1 pour les autres langues
+        }
 
         populateBooksDropdown(); // Repopulate with new language
         populateChaptersSelect(currentBook); // Repopulate chapters with new language
@@ -2437,7 +2635,165 @@ const audioPlayer = document.querySelector('#audioPlayer');
       // Charger le texte de la Bible
       loadBibleText(currentBook, currentChapter, currentLang);
     });
-    
+
+    // Toggle V1/V2 (FR uniquement)
+    document.getElementById('btnV1Mini').addEventListener('click', () => {
+      currentVersion = 'v1';
+      document.getElementById('btnV1Mini').classList.add('active');
+      document.getElementById('btnV2Mini').classList.remove('active');
+
+      // Charger les paroles V1
+      loadLyricsV1(currentBook, currentChapter);
+
+      // Recharger l'audio en V1
+      const audioUrl = getAudioUrl(currentBook, currentChapter, currentLang);
+      audioPlayer.src = audioUrl;
+      audioPlayer.load();
+      if (isPlaying) {
+        audioPlayer.play().catch(e => console.log('Lecture bloquée:', e));
+      }
+    });
+
+    document.getElementById('btnV2Mini').addEventListener('click', () => {
+      currentVersion = 'v2';
+      document.getElementById('btnV2Mini').classList.add('active');
+      document.getElementById('btnV1Mini').classList.remove('active');
+
+      // Charger les paroles V2
+      loadLyricsV2(currentBook, currentChapter);
+
+      // Recharger l'audio en V2
+      const audioUrl = getAudioUrl(currentBook, currentChapter, currentLang);
+      audioPlayer.src = audioUrl;
+      audioPlayer.load();
+      if (isPlaying) {
+        audioPlayer.play().catch(e => console.log('Lecture bloquée:', e));
+      }
+    });
+
+    // Fonction pour charger les paroles V1 depuis le fichier local
+    async function loadLyricsV1(book, chapter) {
+      const lyricsContent = document.getElementById('lyricsContent');
+      lyricsContent.innerHTML = '<p style="color: #999; font-style: italic;">Chargement des paroles V1...</p>';
+
+      const chapterPadded = String(chapter).padStart(3, '0');
+      const lyricsUrl = `lyrics_v1/${book}/${book}_${chapterPadded}_FR.txt`;
+
+      console.log('[V1] Chargement paroles:', lyricsUrl);
+
+      try {
+        const response = await fetch(lyricsUrl);
+        console.log('[V1] Response status:', response.status, response.ok);
+
+        if (!response.ok) {
+          throw new Error(`Paroles V1 non disponibles (HTTP ${response.status})`);
+        }
+
+        let lyrics = await response.text();
+        console.log('[V1] Paroles chargées, longueur:', lyrics.length);
+
+        // 1. Supprimer tout après [STYLE] (inclus)
+        lyrics = lyrics.replace(/\[STYLE\][\s\S]*/gi, '');
+
+        // 2. Supprimer l'en-tête [TITLE]...[LYRICS] (garder les paroles après)
+        lyrics = lyrics.replace(/\[TITLE\][\s\S]*?\[LYRICS\]/gi, '');
+
+        // 3. Supprimer les tags de section mais GARDER une ligne vide à la place
+        lyrics = lyrics.replace(/^\[(LYRICS|Verse \d*|Chorus|Pre-Chorus|Bridge|Final Chorus|Outro|Intro|Instrumental)\]\s*$/gim, '\n');
+
+        // 4. Supprimer caractères ¶
+        lyrics = lyrics.replace(/¶\s*/g, '');
+        lyrics = lyrics.replace(/\u00B6\s*/g, '');
+        lyrics = lyrics.replace(/[§†‡•◦]\s*/g, '');
+
+        // 5. Supprimer lignes vides multiples (max 2 sauts = 1 ligne vide)
+        lyrics = lyrics.replace(/\n{3,}/g, '\n\n');
+
+        // 6. Supprimer espaces en début/fin
+        lyrics = lyrics.trim();
+
+        // 7. Formatter en HTML - Séparer par strophes (double saut de ligne)
+        const strophes = lyrics.split(/\n\n+/);
+        const html = strophes
+          .filter(s => s.trim())
+          .map(strophe => {
+            // Fusionner les lignes en un seul paragraphe fluide pour la justification
+            const lines = strophe.trim().replace(/\n/g, ' ');
+            return '<p class="strophe">' + lines + '</p>';
+          })
+          .join('');
+
+        lyricsContent.innerHTML = html || '<p style="color: #999;">Paroles V1 vides</p>';
+        console.log('[V1] Paroles affichées avec succès -', strophes.length, 'strophes');
+      } catch (error) {
+        console.error('[V1] Erreur chargement paroles:', error);
+        lyricsContent.innerHTML = '<div style="text-align: center; padding: 40px; color: #F5CB42; font-size: 16px;">📝 Paroles V1 non disponibles</div>';
+      }
+    }
+
+
+    // Fonction pour charger les paroles V2 depuis le fichier local
+    async function loadLyricsV2(book, chapter) {
+      const lyricsContent = document.getElementById('lyricsContent');
+      lyricsContent.innerHTML = '<p style="color: #999; font-style: italic;">Chargement des paroles V2...</p>';
+
+      const chapterPadded = String(chapter).padStart(2, '0');
+      const chapterPadded3 = String(chapter).padStart(3, '0');
+      const lyricsUrl = `lyrics_v2/${book}/${book}_${chapterPadded3}_FR.txt`;
+
+      console.log('[V2] Chargement paroles:', lyricsUrl);
+
+      try {
+        const response = await fetch(lyricsUrl);
+        console.log('[V2] Response status:', response.status, response.ok);
+
+        if (!response.ok) {
+          throw new Error(`Paroles non disponibles (HTTP ${response.status})`);
+        }
+
+        let lyrics = await response.text();
+        console.log('[V2] Paroles chargées, longueur:', lyrics.length);
+
+        // 1. Supprimer tout après [STYLE] (inclus)
+        lyrics = lyrics.replace(/\[STYLE\][\s\S]*/gi, '');
+
+        // 2. Supprimer l'en-tête [TITLE]...[LYRICS] (garder les paroles après)
+        lyrics = lyrics.replace(/\[TITLE\][\s\S]*?\[LYRICS\]/gi, '');
+
+        // 3. Supprimer les tags de section mais GARDER une ligne vide à la place
+        lyrics = lyrics.replace(/^\[(LYRICS|Verse \d*|Chorus|Pre-Chorus|Bridge|Final Chorus|Outro|Intro|Instrumental)\]\s*$/gim, '\n');
+
+        // 4. Supprimer caractères ¶
+        lyrics = lyrics.replace(/¶\s*/g, '');
+        lyrics = lyrics.replace(/\u00B6\s*/g, '');
+        lyrics = lyrics.replace(/[§†‡•◦]\s*/g, '');
+
+        // 5. Supprimer lignes vides multiples (max 2 sauts = 1 ligne vide)
+        lyrics = lyrics.replace(/\n{3,}/g, '\n\n');
+
+        // 6. Supprimer espaces en début/fin
+        lyrics = lyrics.trim();
+
+        // 7. Formatter en HTML - Séparer par strophes (double saut de ligne)
+        const strophes = lyrics.split(/\n\n+/);
+        const html = strophes
+          .filter(s => s.trim())
+          .map(strophe => {
+            // Fusionner les lignes en un seul paragraphe fluide pour la justification
+            const lines = strophe.trim().replace(/\n/g, ' ');
+            return '<p class="strophe">' + lines + '</p>';
+          })
+          .join('');
+
+        lyricsContent.innerHTML = html || '<p style="color: #999;">Paroles V2 vides</p>';
+        console.log('[V2] Paroles affichées avec succès -', strophes.length, 'strophes');
+
+      } catch (error) {
+        console.error('[V2] Erreur chargement paroles:', error);
+        lyricsContent.innerHTML = '<div style="text-align: center; padding: 40px; color: #F5CB42; font-size: 18px;">⏳ Paroles V2 bientôt disponibles<br><small style="color: #999; font-size: 14px;">' + error.message + '</small></div>';
+      }
+    }
+
     // Favoris
     document.querySelector('#favoriteBtn').addEventListener('click', () => {
       const btn = document.querySelector('#favoriteBtn');
@@ -2547,27 +2903,35 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
     // === NOUVEAUX CONTRÔLES DE NAVIGATION ===
 
-    // Chapitre précédent
+    // Revenir au début (0:00) du chapitre actuel
     document.getElementById('restartBtn').addEventListener('click', () => {
-      const chapterSelect = document.getElementById('chapterSelect');
-      const currentIndex = chapterSelect.selectedIndex;
-      if (currentIndex > 0) {
-        chapterSelect.selectedIndex = currentIndex - 1;
-        const prevChapter = parseInt(chapterSelect.value);
-        currentChapter = prevChapter;
-        if (isPlaying) {
-          loadAndPlayChapter(currentBook, prevChapter, currentLang);
+      if (audioPlayer.src) {
+        // Si on est au début (< 3 secondes), aller au chapitre précédent
+        if (audioPlayer.currentTime < 3) {
+          const chapterSelect = document.getElementById('chapterSelect');
+          const currentIndex = chapterSelect.selectedIndex;
+          if (currentIndex > 0) {
+            chapterSelect.selectedIndex = currentIndex - 1;
+            const prevChapter = parseInt(chapterSelect.value);
+            currentChapter = prevChapter;
+            if (isPlaying) {
+              loadAndPlayChapter(currentBook, prevChapter, currentLang);
+            } else {
+              const audioUrl = getAudioUrl(currentBook, prevChapter, currentLang);
+              audioPlayer.src = audioUrl;
+              audioPlayer.load();
+            }
+            // Mettre à jour les paroles/bible
+            if (document.querySelector('#lyricsContent').style.display !== 'none') {
+              loadLyrics(currentBook, prevChapter, currentLang);
+            }
+            if (document.querySelector('#bibleContent').style.display !== 'none') {
+              loadBibleText(currentBook, prevChapter, currentLang);
+            }
+          }
         } else {
-          const audioUrl = getAudioUrl(currentBook, prevChapter, currentLang);
-          audioPlayer.src = audioUrl;
-          audioPlayer.load();
-        }
-        // Mettre à jour les paroles/bible
-        if (document.querySelector('#lyricsContent').style.display !== 'none') {
-          loadLyrics(currentBook, prevChapter, currentLang);
-        }
-        if (document.querySelector('#bibleContent').style.display !== 'none') {
-          loadBibleText(currentBook, prevChapter, currentLang);
+          // Sinon, simplement revenir au début (0:00) du chapitre actuel
+          audioPlayer.currentTime = 0;
         }
       }
     });
@@ -2897,6 +3261,17 @@ const audioPlayer = document.querySelector('#audioPlayer');
             btn.classList.remove('active');
           }
         });
+
+        // Initialiser toggle V1/V2 (FR uniquement)
+        const btnV1Mini = document.getElementById('btnV1Mini');
+        const btnV2Mini = document.getElementById('btnV2Mini');
+        if (currentLang === 'FR') {
+          btnV1Mini.classList.add('show');
+          btnV2Mini.classList.add('show');
+        } else {
+          btnV1Mini.classList.remove('show');
+          btnV2Mini.classList.remove('show');
+        }
 
         // Populate books dropdown first
         populateBooksDropdown();
