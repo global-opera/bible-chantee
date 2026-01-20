@@ -1,0 +1,1032 @@
+﻿{
+    "language":  "fr",
+    "text":  "Dans le jardin tu as créé L\u0027homme et la femme à ton image\nbéni par ta main Notre héritage nous marchons Seigneux\ndans ta vérité A ta ressemblance nous sommes né Dans l\u0027amour\nnous voulons marcher De génération en génération Nous chantons\n\nta grande création Cette énoge dans la lumière Leur vie\nun récit de ta bonté Et nos marchards avec toi cher Père\nUnis par ta grâce nous voulons prier A ta ressemblance\nnous sommes né Dans l\u0027amour nous voulons marcher De génération\n\nen génération Nous chantons ta grande création Noé un espoir\ndans la tempête Un futur une promesse à jamais Oh Seigneux\nnous te cherchons Qui ne nous parle Dans cette vision A\nta ressemblance nous sommes né Dans l\u0027amour nous voulons\n\nmarcher De génération en génération Nous chantons ta grande\ncréation Dans chaque souffle chaque prière Nous te louons\npour notre lumière A ta ressemblance nous sommes né Pour\nt\u0027agoir notre cœur est engagé Ces paroles évoquent la création\n\net la continité de la vie Selon le plan divin tout en restant\nfidèles au texte biblique",
+    "segments":  [
+                     {
+                         "end":  23.32,
+                         "words":  [
+                                       {
+                                           "word":  "Dans",
+                                           "end":  12.2,
+                                           "start":  10.8
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  12.62,
+                                           "start":  12.2
+                                       },
+                                       {
+                                           "word":  "jardin",
+                                           "end":  13.8,
+                                           "start":  12.62
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  15.52,
+                                           "start":  13.8
+                                       },
+                                       {
+                                           "word":  "as",
+                                           "end":  16.02,
+                                           "start":  15.52
+                                       },
+                                       {
+                                           "word":  "créé",
+                                           "end":  17.06,
+                                           "start":  16.02
+                                       },
+                                       {
+                                           "word":  "L\u0027homme",
+                                           "end":  17.56,
+                                           "start":  17.16
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  19.4,
+                                           "start":  19.16
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  19.72,
+                                           "start":  19.4
+                                       },
+                                       {
+                                           "word":  "femme",
+                                           "end":  20.4,
+                                           "start":  19.72
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  21.18,
+                                           "start":  20.4
+                                       },
+                                       {
+                                           "word":  "ton",
+                                           "end":  21.92,
+                                           "start":  21.18
+                                       },
+                                       {
+                                           "word":  "image",
+                                           "end":  23.32,
+                                           "start":  21.92
+                                       }
+                                   ],
+                         "text":  "Dans le jardin tu as créé L\u0027homme et la femme à ton image",
+                         "start":  10.8
+                     },
+                     {
+                         "end":  33.98,
+                         "words":  [
+                                       {
+                                           "word":  "béni",
+                                           "end":  25.74,
+                                           "start":  23.32
+                                       },
+                                       {
+                                           "word":  "par",
+                                           "end":  25.98,
+                                           "start":  25.74
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  26.34,
+                                           "start":  25.98
+                                       },
+                                       {
+                                           "word":  "main",
+                                           "end":  26.96,
+                                           "start":  26.34
+                                       },
+                                       {
+                                           "word":  "Notre",
+                                           "end":  28.96,
+                                           "start":  27.18
+                                       },
+                                       {
+                                           "word":  "héritage",
+                                           "end":  30.6,
+                                           "start":  28.96
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  31.42,
+                                           "start":  30.64
+                                       },
+                                       {
+                                           "word":  "marchons",
+                                           "end":  32.48,
+                                           "start":  31.42
+                                       },
+                                       {
+                                           "word":  "Seigneux",
+                                           "end":  33.98,
+                                           "start":  32.48
+                                       }
+                                   ],
+                         "text":  "béni par ta main Notre héritage nous marchons Seigneux",
+                         "start":  23.32
+                     },
+                     {
+                         "end":  49.82,
+                         "words":  [
+                                       {
+                                           "word":  "dans",
+                                           "end":  35.18,
+                                           "start":  33.98
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  35.56,
+                                           "start":  35.18
+                                       },
+                                       {
+                                           "word":  "vérité",
+                                           "end":  37.42,
+                                           "start":  35.56
+                                       },
+                                       {
+                                           "word":  "A",
+                                           "end":  37.92,
+                                           "start":  37.52
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  42.14,
+                                           "start":  41.76
+                                       },
+                                       {
+                                           "word":  "ressemblance",
+                                           "end":  43.86,
+                                           "start":  42.14
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  45.52,
+                                           "start":  43.86
+                                       },
+                                       {
+                                           "word":  "sommes",
+                                           "end":  46.18,
+                                           "start":  45.52
+                                       },
+                                       {
+                                           "word":  "né",
+                                           "end":  46.68,
+                                           "start":  46.28
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  49.32,
+                                           "start":  47.26
+                                       },
+                                       {
+                                           "word":  "l\u0027amour",
+                                           "end":  49.82,
+                                           "start":  49.42
+                                       }
+                                   ],
+                         "text":  "dans ta vérité A ta ressemblance nous sommes né Dans l\u0027amour",
+                         "start":  33.98
+                     },
+                     {
+                         "end":  63.62,
+                         "words":  [
+                                       {
+                                           "word":  "nous",
+                                           "end":  51.38,
+                                           "start":  50.36
+                                       },
+                                       {
+                                           "word":  "voulons",
+                                           "end":  52.64,
+                                           "start":  51.38
+                                       },
+                                       {
+                                           "word":  "marcher",
+                                           "end":  53.68,
+                                           "start":  52.64
+                                       },
+                                       {
+                                           "word":  "De",
+                                           "end":  54.7,
+                                           "start":  53.68
+                                       },
+                                       {
+                                           "word":  "génération",
+                                           "end":  56.6,
+                                           "start":  54.7
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  58.1,
+                                           "start":  56.6
+                                       },
+                                       {
+                                           "word":  "génération",
+                                           "end":  59.92,
+                                           "start":  58.1
+                                       },
+                                       {
+                                           "word":  "Nous",
+                                           "end":  61.78,
+                                           "start":  60.38
+                                       },
+                                       {
+                                           "word":  "chantons",
+                                           "end":  63.62,
+                                           "start":  61.78
+                                       }
+                                   ],
+                         "text":  "nous voulons marcher De génération en génération Nous chantons",
+                         "start":  50.36
+                     },
+                     {
+                         "end":  76.04,
+                         "words":  [
+                                       {
+                                           "word":  "ta",
+                                           "end":  64.68,
+                                           "start":  63.62
+                                       },
+                                       {
+                                           "word":  "grande",
+                                           "end":  65.26,
+                                           "start":  64.68
+                                       },
+                                       {
+                                           "word":  "création",
+                                           "end":  66.82,
+                                           "start":  65.26
+                                       },
+                                       {
+                                           "word":  "Cette",
+                                           "end":  67.32,
+                                           "start":  66.919999999999987
+                                       },
+                                       {
+                                           "word":  "énoge",
+                                           "end":  67.82,
+                                           "start":  67.419999999999987
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  72.32,
+                                           "start":  71.04
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  72.66,
+                                           "start":  72.32
+                                       },
+                                       {
+                                           "word":  "lumière",
+                                           "end":  73.5,
+                                           "start":  72.66
+                                       },
+                                       {
+                                           "word":  "Leur",
+                                           "end":  75.86,
+                                           "start":  75.16
+                                       },
+                                       {
+                                           "word":  "vie",
+                                           "end":  76.04,
+                                           "start":  75.86
+                                       }
+                                   ],
+                         "text":  "ta grande création Cette énoge dans la lumière Leur vie",
+                         "start":  63.62
+                     },
+                     {
+                         "end":  87.18,
+                         "words":  [
+                                       {
+                                           "word":  "un",
+                                           "end":  76.44,
+                                           "start":  76.04
+                                       },
+                                       {
+                                           "word":  "récit",
+                                           "end":  76.94,
+                                           "start":  76.539999999999992
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  78.56,
+                                           "start":  77.68
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  79.08,
+                                           "start":  78.56
+                                       },
+                                       {
+                                           "word":  "bonté",
+                                           "end":  80.56,
+                                           "start":  79.08
+                                       },
+                                       {
+                                           "word":  "Et",
+                                           "end":  81.76,
+                                           "start":  80.56
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  82.26,
+                                           "start":  81.76
+                                       },
+                                       {
+                                           "word":  "marchards",
+                                           "end":  84.14,
+                                           "start":  82.26
+                                       },
+                                       {
+                                           "word":  "avec",
+                                           "end":  85.14,
+                                           "start":  84.14
+                                       },
+                                       {
+                                           "word":  "toi",
+                                           "end":  85.78,
+                                           "start":  85.14
+                                       },
+                                       {
+                                           "word":  "cher",
+                                           "end":  86.38,
+                                           "start":  85.78
+                                       },
+                                       {
+                                           "word":  "Père",
+                                           "end":  87.18,
+                                           "start":  86.38
+                                       }
+                                   ],
+                         "text":  "un récit de ta bonté Et nos marchards avec toi cher Père",
+                         "start":  76.04
+                     },
+                     {
+                         "end":  97.26,
+                         "words":  [
+                                       {
+                                           "word":  "Unis",
+                                           "end":  88.5,
+                                           "start":  87.84
+                                       },
+                                       {
+                                           "word":  "par",
+                                           "end":  89.1,
+                                           "start":  88.5
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  89.66,
+                                           "start":  89.1
+                                       },
+                                       {
+                                           "word":  "grâce",
+                                           "end":  90.62,
+                                           "start":  89.66
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  91.36,
+                                           "start":  90.96
+                                       },
+                                       {
+                                           "word":  "voulons",
+                                           "end":  92.52,
+                                           "start":  91.36
+                                       },
+                                       {
+                                           "word":  "prier",
+                                           "end":  94.14,
+                                           "start":  92.52
+                                       },
+                                       {
+                                           "word":  "A",
+                                           "end":  94.64,
+                                           "start":  94.24
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  95.46,
+                                           "start":  95.14
+                                       },
+                                       {
+                                           "word":  "ressemblance",
+                                           "end":  97.26,
+                                           "start":  95.46
+                                       }
+                                   ],
+                         "text":  "Unis par ta grâce nous voulons prier A ta ressemblance",
+                         "start":  87.84
+                     },
+                     {
+                         "end":  109.84,
+                         "words":  [
+                                       {
+                                           "word":  "nous",
+                                           "end":  98.88,
+                                           "start":  97.26
+                                       },
+                                       {
+                                           "word":  "sommes",
+                                           "end":  99.5,
+                                           "start":  98.88
+                                       },
+                                       {
+                                           "word":  "né",
+                                           "end":  100,
+                                           "start":  99.6
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  102.64,
+                                           "start":  101.98
+                                       },
+                                       {
+                                           "word":  "l\u0027amour",
+                                           "end":  103.14,
+                                           "start":  102.74
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  104.72,
+                                           "start":  103.72
+                                       },
+                                       {
+                                           "word":  "voulons",
+                                           "end":  105.94,
+                                           "start":  104.72
+                                       },
+                                       {
+                                           "word":  "marcher",
+                                           "end":  106.9,
+                                           "start":  105.94
+                                       },
+                                       {
+                                           "word":  "De",
+                                           "end":  108.02,
+                                           "start":  107.26
+                                       },
+                                       {
+                                           "word":  "génération",
+                                           "end":  109.84,
+                                           "start":  108.02
+                                       }
+                                   ],
+                         "text":  "nous sommes né Dans l\u0027amour nous voulons marcher De génération",
+                         "start":  97.26
+                     },
+                     {
+                         "end":  125.24,
+                         "words":  [
+                                       {
+                                           "word":  "en",
+                                           "end":  111.34,
+                                           "start":  109.84
+                                       },
+                                       {
+                                           "word":  "génération",
+                                           "end":  113.36,
+                                           "start":  111.34
+                                       },
+                                       {
+                                           "word":  "Nous",
+                                           "end":  115.1,
+                                           "start":  113.44
+                                       },
+                                       {
+                                           "word":  "chantons",
+                                           "end":  116.9,
+                                           "start":  115.1
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  118,
+                                           "start":  116.9
+                                       },
+                                       {
+                                           "word":  "grande",
+                                           "end":  118.62,
+                                           "start":  118
+                                       },
+                                       {
+                                           "word":  "création",
+                                           "end":  120.18,
+                                           "start":  118.62
+                                       },
+                                       {
+                                           "word":  "Noé",
+                                           "end":  122.98,
+                                           "start":  122.28
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  124.34,
+                                           "start":  123.32
+                                       },
+                                       {
+                                           "word":  "espoir",
+                                           "end":  125.24,
+                                           "start":  124.34
+                                       }
+                                   ],
+                         "text":  "en génération Nous chantons ta grande création Noé un espoir",
+                         "start":  109.84
+                     },
+                     {
+                         "end":  136.82,
+                         "words":  [
+                                       {
+                                           "word":  "dans",
+                                           "end":  125.64,
+                                           "start":  125.24
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  125.8,
+                                           "start":  125.64
+                                       },
+                                       {
+                                           "word":  "tempête",
+                                           "end":  127.22,
+                                           "start":  125.8
+                                       },
+                                       {
+                                           "word":  "Un",
+                                           "end":  128.46,
+                                           "start":  127.54
+                                       },
+                                       {
+                                           "word":  "futur",
+                                           "end":  129.7,
+                                           "start":  128.46
+                                       },
+                                       {
+                                           "word":  "une",
+                                           "end":  130.94,
+                                           "start":  129.98
+                                       },
+                                       {
+                                           "word":  "promesse",
+                                           "end":  132.02,
+                                           "start":  130.94
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  132.52,
+                                           "start":  132.02
+                                       },
+                                       {
+                                           "word":  "jamais",
+                                           "end":  133.34,
+                                           "start":  132.52
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  133.84,
+                                           "start":  133.44
+                                       },
+                                       {
+                                           "word":  "Seigneux",
+                                           "end":  136.82,
+                                           "start":  135.2
+                                       }
+                                   ],
+                         "text":  "dans la tempête Un futur une promesse à jamais Oh Seigneux",
+                         "start":  125.24
+                     },
+                     {
+                         "end":  160.76,
+                         "words":  [
+                                       {
+                                           "word":  "nous",
+                                           "end":  138.06,
+                                           "start":  136.82
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  138.32,
+                                           "start":  138.06
+                                       },
+                                       {
+                                           "word":  "cherchons",
+                                           "end":  140.12,
+                                           "start":  138.32
+                                       },
+                                       {
+                                           "word":  "Qui",
+                                           "end":  140.62,
+                                           "start":  140.22
+                                       },
+                                       {
+                                           "word":  "ne",
+                                           "end":  141.12,
+                                           "start":  140.72
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  155.54,
+                                           "start":  153.96
+                                       },
+                                       {
+                                           "word":  "parle",
+                                           "end":  156.04,
+                                           "start":  155.64
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  159.26,
+                                           "start":  157.86
+                                       },
+                                       {
+                                           "word":  "cette",
+                                           "end":  159.76,
+                                           "start":  159.35999999999999
+                                       },
+                                       {
+                                           "word":  "vision",
+                                           "end":  160.26,
+                                           "start":  159.85999999999999
+                                       },
+                                       {
+                                           "word":  "A",
+                                           "end":  160.76,
+                                           "start":  160.35999999999999
+                                       }
+                                   ],
+                         "text":  "nous te cherchons Qui ne nous parle Dans cette vision A",
+                         "start":  136.82
+                     },
+                     {
+                         "end":  197.92,
+                         "words":  [
+                                       {
+                                           "word":  "ta",
+                                           "end":  174.7,
+                                           "start":  173.66
+                                       },
+                                       {
+                                           "word":  "ressemblance",
+                                           "end":  175.2,
+                                           "start":  174.79999999999998
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  185.5,
+                                           "start":  183.56
+                                       },
+                                       {
+                                           "word":  "sommes",
+                                           "end":  196.32,
+                                           "start":  195.76
+                                       },
+                                       {
+                                           "word":  "né",
+                                           "end":  196.82,
+                                           "start":  196.42
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  197.32,
+                                           "start":  196.92
+                                       },
+                                       {
+                                           "word":  "l\u0027amour",
+                                           "end":  197.82,
+                                           "start":  197.42
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  197.42,
+                                           "start":  197.18
+                                       },
+                                       {
+                                           "word":  "voulons",
+                                           "end":  197.92,
+                                           "start":  197.51999999999998
+                                       }
+                                   ],
+                         "text":  "ta ressemblance nous sommes né Dans l\u0027amour nous voulons",
+                         "start":  173.66
+                     },
+                     {
+                         "end":  200.26,
+                         "words":  [
+                                       {
+                                           "word":  "marcher",
+                                           "end":  198.42,
+                                           "start":  198.01999999999998
+                                       },
+                                       {
+                                           "word":  "De",
+                                           "end":  198.92,
+                                           "start":  198.51999999999998
+                                       },
+                                       {
+                                           "word":  "génération",
+                                           "end":  199.42,
+                                           "start":  199.01999999999998
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  199.92,
+                                           "start":  199.51999999999998
+                                       },
+                                       {
+                                           "word":  "génération",
+                                           "end":  200.42,
+                                           "start":  200.01999999999998
+                                       },
+                                       {
+                                           "word":  "Nous",
+                                           "end":  200.92,
+                                           "start":  200.51999999999998
+                                       },
+                                       {
+                                           "word":  "chantons",
+                                           "end":  201.42,
+                                           "start":  201.01999999999998
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  199.76,
+                                           "start":  199.28
+                                       },
+                                       {
+                                           "word":  "grande",
+                                           "end":  200.26,
+                                           "start":  199.85999999999999
+                                       }
+                                   ],
+                         "text":  "marcher De génération en génération Nous chantons ta grande",
+                         "start":  198.01999999999998
+                     },
+                     {
+                         "end":  217.4,
+                         "words":  [
+                                       {
+                                           "word":  "création",
+                                           "end":  213.4,
+                                           "start":  212.84
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  213.9,
+                                           "start":  213.5
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  214.4,
+                                           "start":  214
+                                       },
+                                       {
+                                           "word":  "souffle",
+                                           "end":  214.9,
+                                           "start":  214.5
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  215.4,
+                                           "start":  215
+                                       },
+                                       {
+                                           "word":  "prière",
+                                           "end":  215.9,
+                                           "start":  215.5
+                                       },
+                                       {
+                                           "word":  "Nous",
+                                           "end":  216.4,
+                                           "start":  216
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  216.9,
+                                           "start":  216.5
+                                       },
+                                       {
+                                           "word":  "louons",
+                                           "end":  217.4,
+                                           "start":  217
+                                       }
+                                   ],
+                         "text":  "création Dans chaque souffle chaque prière Nous te louons",
+                         "start":  212.84
+                     },
+                     {
+                         "end":  222.4,
+                         "words":  [
+                                       {
+                                           "word":  "pour",
+                                           "end":  217.9,
+                                           "start":  217.5
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  218.4,
+                                           "start":  218
+                                       },
+                                       {
+                                           "word":  "lumière",
+                                           "end":  218.9,
+                                           "start":  218.5
+                                       },
+                                       {
+                                           "word":  "A",
+                                           "end":  219.4,
+                                           "start":  219
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  219.9,
+                                           "start":  219.5
+                                       },
+                                       {
+                                           "word":  "ressemblance",
+                                           "end":  220.4,
+                                           "start":  220
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  220.9,
+                                           "start":  220.5
+                                       },
+                                       {
+                                           "word":  "sommes",
+                                           "end":  221.4,
+                                           "start":  221
+                                       },
+                                       {
+                                           "word":  "né",
+                                           "end":  221.9,
+                                           "start":  221.5
+                                       },
+                                       {
+                                           "word":  "Pour",
+                                           "end":  222.4,
+                                           "start":  222
+                                       }
+                                   ],
+                         "text":  "pour notre lumière A ta ressemblance nous sommes né Pour",
+                         "start":  217.5
+                     },
+                     {
+                         "end":  214.18,
+                         "words":  [
+                                       {
+                                           "word":  "t\u0027agoir",
+                                           "end":  222.9,
+                                           "start":  222.5
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  223.4,
+                                           "start":  223
+                                       },
+                                       {
+                                           "word":  "cœur",
+                                           "end":  223.9,
+                                           "start":  223.5
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  224.4,
+                                           "start":  224
+                                       },
+                                       {
+                                           "word":  "engagé",
+                                           "end":  224.9,
+                                           "start":  224.5
+                                       },
+                                       {
+                                           "word":  "Ces",
+                                           "end":  225.4,
+                                           "start":  225
+                                       },
+                                       {
+                                           "word":  "paroles",
+                                           "end":  225.9,
+                                           "start":  225.5
+                                       },
+                                       {
+                                           "word":  "évoquent",
+                                           "end":  226.4,
+                                           "start":  226
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  213.68,
+                                           "start":  213.6
+                                       },
+                                       {
+                                           "word":  "création",
+                                           "end":  214.18,
+                                           "start":  213.78
+                                       }
+                                   ],
+                         "text":  "t\u0027agoir notre cœur est engagé Ces paroles évoquent la création",
+                         "start":  222.5
+                     },
+                     {
+                         "end":  219.5,
+                         "words":  [
+                                       {
+                                           "word":  "et",
+                                           "end":  214.68,
+                                           "start":  214.28
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  214.58,
+                                           "start":  214.48
+                                       },
+                                       {
+                                           "word":  "continité",
+                                           "end":  215.08,
+                                           "start":  214.68
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  215.58,
+                                           "start":  215.18
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  216.08,
+                                           "start":  215.68
+                                       },
+                                       {
+                                           "word":  "vie",
+                                           "end":  214.84,
+                                           "start":  214.58
+                                       },
+                                       {
+                                           "word":  "Selon",
+                                           "end":  216.22,
+                                           "start":  214.84
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  216.42,
+                                           "start":  216.22
+                                       },
+                                       {
+                                           "word":  "plan",
+                                           "end":  216.7,
+                                           "start":  216.42
+                                       },
+                                       {
+                                           "word":  "divin",
+                                           "end":  217.24,
+                                           "start":  216.7
+                                       },
+                                       {
+                                           "word":  "tout",
+                                           "end":  218.94,
+                                           "start":  218.34
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  219.18,
+                                           "start":  218.94
+                                       },
+                                       {
+                                           "word":  "restant",
+                                           "end":  219.5,
+                                           "start":  219.18
+                                       }
+                                   ],
+                         "text":  "et la continité de la vie Selon le plan divin tout en restant",
+                         "start":  214.28
+                     },
+                     {
+                         "end":  221.14,
+                         "words":  [
+                                       {
+                                           "word":  "fidèles",
+                                           "end":  219.96,
+                                           "start":  219.5
+                                       },
+                                       {
+                                           "word":  "au",
+                                           "end":  220.12,
+                                           "start":  219.96
+                                       },
+                                       {
+                                           "word":  "texte",
+                                           "end":  220.54,
+                                           "start":  220.12
+                                       },
+                                       {
+                                           "word":  "biblique",
+                                           "end":  221.14,
+                                           "start":  220.54
+                                       }
+                                   ],
+                         "text":  "fidèles au texte biblique",
+                         "start":  219.5
+                     }
+                 ]
+}

@@ -5,68 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genese 13 | Bible Chantee Karaoke</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
-        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
-        .header h1{font-size:1.8em;color:#d4af37}
-        .player{max-width:800px;margin:20px auto;padding:0 20px}
-        audio{width:100%}
-        .lyrics{max-width:800px;margin:20px auto;padding:20px}
-        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
-        .line:hover{background:rgba(212,175,55,0.1)}
-        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
-        .line.passed{opacity:0.5}
-        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
-        .footer{text-align:center;padding:20px;color:#666}
-        .footer a{color:#d4af37}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
+        .header p { color: #888; }
+        .audio-player { 
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        audio { width: 100%; }
+        .lyrics { 
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        .line { 
+            padding: 12px 15px;
+            margin: 5px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .line .time { 
+            color: #666; 
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+        .line.active { 
+            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
+            color: #fff;
+            border-left: 4px solid #d4af37;
+            transform: scale(1.02);
+        }
+        .line.active .time { color: #d4af37; }
+        .line.past { opacity: 0.5; }
     </style>
 </head>
 <body>
-    <div class="header"><h1>Genese 13</h1><p>Bible Chantee Karaoke</p></div>
-    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_13_FR.mp3" type="audio/mpeg"></audio></div>
-    <div class="lyrics">
-        <div class="line" data-start="12.82" data-end="21.80"><span class="time">[0:12]</span>Dans les plaines de Cana, l'écho d'un appel</div>
-        <div class="line" data-start="21.80" data-end="31.08"><span class="time">[0:21]</span>Abram marche avec foi vers le ciel éternel</div>
-        <div class="line" data-start="31.08" data-end="31.08"><span class="time">[0:31]</span>Il lève les yeux, voit la terre adonnée</div>
-        <div class="line" data-start="31.08" data-end="44.48"><span class="time">[0:31]</span>Une promesse scellée par ton amour, ô Seigneur</div>
-        <div class="line" data-start="44.48" data-end="52.68"><span class="time">[0:44]</span>Lève les yeux, regarde, tout est devant toi</div>
-        <div class="line" data-start="52.68" data-end="60.72"><span class="time">[0:52]</span>Chaque pas que tu fais est guidé par ta voix</div>
-        <div class="line" data-start="60.72" data-end="75.70"><span class="time">[1:00]</span>Dans la lumière de ta grâce, nous marchons</div>
-        <div class="line" data-start="75.70" data-end="75.70"><span class="time">[1:15]</span>Promesse éternelle, notre cœur te répond</div>
-        <div class="line" data-start="75.70" data-end="84.36"><span class="time">[1:15]</span>Lot choisit son chemin vers les vallées dorées</div>
-        <div class="line" data-start="84.36" data-end="94.24"><span class="time">[1:24]</span>Mais la méchanceté là-bas va l'engloutir</div>
-        <div class="line" data-start="94.24" data-end="107.98"><span class="time">[1:34]</span>Abram, homme de paix, appelant à l'harmonie</div>
-        <div class="line" data-start="107.98" data-end="107.98"><span class="time">[1:47]</span>Qu'il n'y ait point de dispute, uni dans l'infini</div>
-        <div class="line" data-start="107.98" data-end="115.36"><span class="time">[1:47]</span>Lève les yeux, regarde, tout est devant toi</div>
-        <div class="line" data-start="115.36" data-end="123.00"><span class="time">[1:55]</span>Chaque pas que tu fais est guidé par ta voix</div>
-        <div class="line" data-start="123.00" data-end="136.26"><span class="time">[2:03]</span>Dans la lumière de ta grâce, nous marchons</div>
-        <div class="line" data-start="136.26" data-end="145.78"><span class="time">[2:16]</span>Promesse éternelle, notre cœur te répond</div>
-        <div class="line" data-start="145.78" data-end="145.78"><span class="time">[2:25]</span>Ô Seigneur, tu es notre refuge</div>
-        <div class="line" data-start="145.78" data-end="155.36"><span class="time">[2:25]</span>Dans chaque saison, ta bonté est notre juge</div>
-        <div class="line" data-start="155.36" data-end="168.14"><span class="time">[2:35]</span>Nous bâtissons des autels pour te louer</div>
-        <div class="line" data-start="168.14" data-end="176.14"><span class="time">[2:48]</span>Dans l'ombre de ta présence, nous voulons demeurer</div>
-        <div class="line" data-start="176.14" data-end="176.14"><span class="time">[2:56]</span>Lève les yeux, regarde, tout est devant toi</div>
-        <div class="line" data-start="176.14" data-end="184.54"><span class="time">[2:56]</span>Chaque pas que tu fais est guidé par ta voix</div>
-        <div class="line" data-start="184.54" data-end="202.32"><span class="time">[3:04]</span>Dans la lumière de ta grâce, nous marchons</div>
-        <div class="line" data-start="202.32" data-end="203.42"><span class="time">[3:22]</span>Promesse éternelle, notre cœur te répond</div>
-        <div class="line" data-start="203.42" data-end="214.36"><span class="time">[3:23]</span>Abram aux chênes de Mamré, tu es notre guide</div>
-        <div class="line" data-start="214.36" data-end="214.36"><span class="time">[3:34]</span>Dans la plénitude de ta promesse, nous vivons en vide</div>
-        <div class="line" data-start="214.36" data-end="230.34"><span class="time">[3:34]</span>Lève les yeux, regarde, unis par ta main</div>
-        <div class="line" data-start="230.34" data-end="234.52"><span class="time">[3:50]</span>Promesse éternelle, nous marchons vers demain</div>
+    <div class="container">
+        <div class="header">
+            <h1>Genese 13</h1>
+            <p>Bible Chantee Karaoke</p>
+        </div>
+        <div class="audio-player">
+            <audio id="audio" controls>
+                <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_13_FR.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="lyrics" id="lyrics">
+        <div class="line" data-start="12.82" data-end="21.80"><span class="time">[0:12]</span>Dans les plaines de cana, les codins appellent Abra marche</div>
+        <div class="line" data-start="21.80" data-end="31.08"><span class="time">[0:21]</span>avec foi vers le ciel éternel Il lève les yeux, voie la</div>
+        <div class="line" data-start="31.08" data-end="42.60"><span class="time">[0:31]</span>terre à donner Une promesse scellée par ton amour Oh Seigneur</div>
+        <div class="line" data-start="44.48" data-end="52.68"><span class="time">[0:44]</span>Lève les yeux, regarde tout est devant toi Chaque pas que</div>
+        <div class="line" data-start="52.68" data-end="60.70"><span class="time">[0:52]</span>tu fais est guidée par ta voix Dans la lumière de ta grâce</div>
+        <div class="line" data-start="60.72" data-end="69.46"><span class="time">[1:00]</span>nous marchons Promesse éternel, notre cœur te répond L'autre</div>
+        <div class="line" data-start="75.70" data-end="84.26"><span class="time">[1:15]</span>choisi son chemin vers les vallées dorées Mais la méchanceté</div>
+        <div class="line" data-start="84.36" data-end="94.14"><span class="time">[1:24]</span>là-bas va l'engloutir Abra m'homme de paix appelant à l'harmonie</div>
+        <div class="line" data-start="94.24" data-end="107.98"><span class="time">[1:34]</span>Qu'il n'y ait point de dispute uni dans l'infini Lève les</div>
+        <div class="line" data-start="107.98" data-end="115.36"><span class="time">[1:47]</span>yeux, regarde tout est devant toi Chaque pas que tu fais</div>
+        <div class="line" data-start="115.36" data-end="123.00"><span class="time">[1:55]</span>est guidée par ta voix Dans la lumière de ta grâce nous</div>
+        <div class="line" data-start="123.00" data-end="136.26"><span class="time">[2:03]</span>marchons Promesse éternel, notre cœur te répond Oh Seigneur,</div>
+        <div class="line" data-start="136.26" data-end="145.78"><span class="time">[2:16]</span>tu es notre refuge Dans chaque saison t'abandonner notre</div>
+        <div class="line" data-start="145.78" data-end="155.20"><span class="time">[2:25]</span>juge Nous bâtissons des hôtels pour te louer Dans l'ombre</div>
+        <div class="line" data-start="155.36" data-end="167.56"><span class="time">[2:35]</span>de ta présence nous voulons demeurer Lève les yeux, regarde</div>
+        <div class="line" data-start="168.14" data-end="176.14"><span class="time">[2:48]</span>tout est devant toi Chaque pas que tu fais est guidée par</div>
+        <div class="line" data-start="176.14" data-end="184.54"><span class="time">[2:56]</span>ta voix Dans la lumière de ta grâce nous marchons Promesse</div>
+        <div class="line" data-start="184.54" data-end="202.22"><span class="time">[3:04]</span>éternel, notre cœur te répond Abra m'eau chaîne de marmerie,</div>
+        <div class="line" data-start="202.32" data-end="203.42"><span class="time">[3:22]</span>tu es notre guide Dans la plénitude de ta promesse nous</div>
+        <div class="line" data-start="203.42" data-end="213.08"><span class="time">[3:23]</span>vivons en vide Lève les yeux, regarde unis par ta main</div>
+        <div class="line" data-start="214.36" data-end="223.04"><span class="time">[3:34]</span>Promesse éternel, nous marchons vers demain Abra m'eau</div>
+        <div class="line" data-start="230.34" data-end="234.52"><span class="time">[3:50]</span>chaîne de marmerie, tu es notre guide</div>
+        </div>
     </div>
-    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
     <script>
-        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
-        audio.addEventListener('timeupdate',()=>{
-            const t=audio.currentTime;
-            lines.forEach(l=>{
-                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
-                l.classList.remove('active','passed');
-                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
-                else if(t>=e)l.classList.add('passed')
-            })
+        const audio = document.getElementById('audio');
+        const lines = document.querySelectorAll('.line');
+        const lyricsContainer = document.getElementById('lyrics');
+        
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            let activeIndex = -1;
+            
+            lines.forEach((line, index) => {
+                const start = parseFloat(line.dataset.start);
+                const end = parseFloat(line.dataset.end);
+                
+                line.classList.remove('active', 'past');
+                
+                if (currentTime >= start && currentTime < end) {
+                    line.classList.add('active');
+                    activeIndex = index;
+                } else if (currentTime >= end) {
+                    line.classList.add('past');
+                }
+            });
+            
+            if (activeIndex >= 0) {
+                const activeLine = lines[activeIndex];
+                const containerRect = lyricsContainer.getBoundingClientRect();
+                const lineRect = activeLine.getBoundingClientRect();
+                
+                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
+                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
         });
-        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+        
+        lines.forEach(line => {
+            line.addEventListener('click', () => {
+                audio.currentTime = parseFloat(line.dataset.start);
+                audio.play();
+            });
+        });
     </script>
 </body>
 </html>

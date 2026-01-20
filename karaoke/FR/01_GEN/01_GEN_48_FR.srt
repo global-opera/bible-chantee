@@ -1,68 +1,216 @@
 1
-00:00:10,000 --> 00:00:27,000
-Dans la nuit, ton père s'inquiète Joseph vient, il t'attend
+00:00:10,000 --> 00:00:16,000
+Dans la nuit ton père s'inquiète
 
 2
-00:00:27,000 --> 00:00:38,000
-Les fils de ta promesse, Éphraïm et Manassé En avant, Israël sur son lit
+00:00:16,000 --> 00:00:23,000
+J'oseviens il t'attend
 
 3
-00:00:38,000 --> 00:00:55,000
-Rassemble sa force, il se souvient des promesses De la voie qui l'encourage
+00:00:24,000 --> 00:00:27,000
+Les fils de ta promesse
 
 4
-00:00:55,000 --> 00:01:05,000
-Ô Dieu, bénis ces enfants Qu'ils portent ton nom comme Éphraïm Manassé
+00:00:27,000 --> 00:00:30,000
+Les prêts et mes mains n'assé
 
 5
-00:01:05,000 --> 00:01:17,000
-Dans la terre promise, qu'ils marchent en ta lumière Leur avenir une prière, que ta gloire les éclaire
+00:00:32,000 --> 00:00:34,000
+En avant
 
 6
-00:01:17,000 --> 00:01:30,000
-Là, sur le chemin des Éphrata Rachel pleure mais l'espoir demeure
+00:00:34,000 --> 00:00:38,000
+Il serait sur son lit
 
 7
-00:01:30,000 --> 00:01:42,000
-Les yeux d'Israël s'illuminent De voir la vie d'un cœur vainqueur
+00:00:38,000 --> 00:00:41,000
+Rassemble sa force
 
 8
-00:01:42,000 --> 00:01:56,000
-Il embrasse ses enfants Dans la foi, la promesse que l'ange qui m'a protégé
+00:00:41,000 --> 00:00:44,000
+Il se souvienne des promesses
 
 9
-00:01:56,000 --> 00:02:09,000
-Les garde en ta tendresse
+00:00:44,000 --> 00:00:49,000
+De la voix qui l'encouragent
 
 10
-00:02:09,000 --> 00:02:20,000
-Ô Dieu, bénis ces enfants Qu'ils portent ton nom comme Éphraïm Manassé
+00:00:50,000 --> 00:00:55,000
+Oh Dieu, bénisse ses enfants
 
 11
-00:02:20,000 --> 00:02:30,000
-Dans la terre promise, qu'ils marchent en ta lumière Leur avenir une prière, que ta gloire les éclaire
+00:00:55,000 --> 00:00:58,000
+Qui le porte ton nom
 
 12
-00:02:30,000 --> 00:02:39,000
-Et même si le monde tremble, ta main guide notre chemin Tu es le Dieu de mes pères de génération en génération
+00:00:58,000 --> 00:01:01,000
+Comme les frayés, mes mains n'assé
 
 13
-00:02:39,000 --> 00:02:53,000
-Nous déclarons avec foi que de cette lignée Jaillira une multitude pour louer ta sainteté
+00:01:01,000 --> 00:01:05,000
+Dans la terre de ton père
 
 14
-00:02:53,000 --> 00:03:03,000
-Ô Dieu, bénis ces enfants Qu'ils portent ton nom comme Éphraïm Manassé
+00:01:05,000 --> 00:01:08,000
+Qui le marche en ta lumière
 
 15
-00:03:03,000 --> 00:03:21,000
-Dans la terre promise, qu'ils marchent en ta lumière Leur avenir une prière, que ta gloire les éclaire
+00:01:08,000 --> 00:01:11,000
+Le ravenir eut le prier
 
 16
-00:03:21,000 --> 00:03:36,000
-À jamais dans ton amour nous marcherons, Seigneur Avec la bénédiction de nos ancêtres en cœur
+00:01:11,000 --> 00:01:16,000
+Que ta gloire l'exéclève
 
 17
-00:03:36,000 --> 00:03:50,000
-Ô Dieu, bénis ces enfants Qu'ils portent ton nom pour l'éternité Nous chantons ta promesse, notre fondation
+00:01:17,000 --> 00:01:21,000
+Là sur le chemin des pratas
+
+18
+00:01:21,000 --> 00:01:27,000
+Rachèle pleure mais l'espoir de meu
+
+19
+00:01:27,000 --> 00:01:30,000
+Mais Dieu discrèlse si lumine
+
+20
+00:01:30,000 --> 00:01:35,000
+De voir la vie d'un coeur, vainqueur
+
+21
+00:01:35,000 --> 00:01:39,000
+Il embrasse ses enfants
+
+22
+00:01:39,000 --> 00:01:42,000
+Dans la fois la promesse
+
+23
+00:01:42,000 --> 00:01:45,000
+Que l'enche qui m'a protégé
+
+24
+00:01:45,000 --> 00:01:51,000
+Les gardes en ta tonresse
+
+25
+00:01:51,000 --> 00:01:56,000
+Oh Dieu, bénisse ses enfants
+
+26
+00:01:56,000 --> 00:01:59,000
+Qui le porte ton nom
+
+27
+00:01:59,000 --> 00:02:02,000
+Comme les frayés, mes mains n'assé
+
+28
+00:02:02,000 --> 00:02:06,000
+Dans la terre de ton père
+
+29
+00:02:06,000 --> 00:02:09,000
+Qui le marche en ta lumière
+
+30
+00:02:09,000 --> 00:02:12,000
+Le ravenir eut le prier
+
+31
+00:02:12,000 --> 00:02:17,000
+Que ta gloire l'exéclève
+
+32
+00:02:17,000 --> 00:02:20,000
+Et même si le monde tremble
+
+33
+00:02:20,000 --> 00:02:23,000
+Ta main qui est de notre chemin
+
+34
+00:02:23,000 --> 00:02:27,000
+Tu es le Dieu de mes pères de génération
+
+35
+00:02:27,000 --> 00:02:30,000
+Génération
+
+36
+00:02:30,000 --> 00:02:33,000
+Nous déclarons avec soi
+
+37
+00:02:33,000 --> 00:02:36,000
+Que de cette linee est
+
+38
+00:02:36,000 --> 00:02:39,000
+J'aira une multitude
+
+39
+00:02:39,000 --> 00:02:45,000
+Pour lui être assainte de terre
+
+40
+00:02:45,000 --> 00:02:50,000
+Oh Dieu, bénisse ses enfants
+
+41
+00:02:50,000 --> 00:02:53,000
+Qui le porte ton nom
+
+42
+00:02:53,000 --> 00:02:57,000
+Comme les frayés, mes mains n'assé
+
+43
+00:02:57,000 --> 00:03:00,000
+Dans la terre de ton père
+
+44
+00:03:00,000 --> 00:03:03,000
+Qui le marche en ta lumière
+
+45
+00:03:03,000 --> 00:03:06,000
+Le ravenir eut le prier
+
+46
+00:03:06,000 --> 00:03:13,000
+Que ta gloire l'exéclève
+
+47
+00:03:13,000 --> 00:03:18,000
+A jamais dans ton amour
+
+48
+00:03:18,000 --> 00:03:21,000
+Nous marcherons au Seigneur
+
+49
+00:03:21,000 --> 00:03:24,000
+Avec la bénédiction
+
+50
+00:03:24,000 --> 00:03:29,000
+De nos ancêtres en cœur
+
+51
+00:03:29,000 --> 00:03:35,000
+Oh Dieu, bénisse ses enfants
+
+52
+00:03:36,000 --> 00:03:38,000
+Qui le porte ton nom
+
+53
+00:03:38,000 --> 00:03:44,000
+Pour les termités nous chantons
+
+54
+00:03:44,000 --> 00:03:50,000
+Ta promesse notre fondation
 

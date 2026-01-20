@@ -5,72 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genese 26 | Bible Chantee Karaoke</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
-        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
-        .header h1{font-size:1.8em;color:#d4af37}
-        .player{max-width:800px;margin:20px auto;padding:0 20px}
-        audio{width:100%}
-        .lyrics{max-width:800px;margin:20px auto;padding:20px}
-        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
-        .line:hover{background:rgba(212,175,55,0.1)}
-        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
-        .line.passed{opacity:0.5}
-        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
-        .footer{text-align:center;padding:20px;color:#666}
-        .footer a{color:#d4af37}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
+        .header p { color: #888; }
+        .audio-player { 
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        audio { width: 100%; }
+        .lyrics { 
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        .line { 
+            padding: 12px 15px;
+            margin: 5px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .line .time { 
+            color: #666; 
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+        .line.active { 
+            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
+            color: #fff;
+            border-left: 4px solid #d4af37;
+            transform: scale(1.02);
+        }
+        .line.active .time { color: #d4af37; }
+        .line.past { opacity: 0.5; }
     </style>
 </head>
 <body>
-    <div class="header"><h1>Genese 26</h1><p>Bible Chantee Karaoke</p></div>
-    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_26_FR.mp3" type="audio/mpeg"></audio></div>
-    <div class="lyrics">
-        <div class="line" data-start="13.00" data-end="19.00"><span class="time">[0:13]</span>Il y eut une famine dans ce pays de l'angoisse</div>
-        <div class="line" data-start="19.00" data-end="26.00"><span class="time">[0:19]</span>Isaac se lève à Guérar, il se glisse</div>
-        <div class="line" data-start="26.00" data-end="32.00"><span class="time">[0:26]</span>L'éternel lui est par là, avec douceur et force</div>
-        <div class="line" data-start="32.00" data-end="40.00"><span class="time">[0:32]</span>Reste ici, je suis avec toi, dans ma course</div>
-        <div class="line" data-start="40.00" data-end="46.00"><span class="time">[0:40]</span>Oh éternel, ta parole est ma lumière</div>
-        <div class="line" data-start="46.00" data-end="53.00"><span class="time">[0:46]</span>Tu bénis ma descendance, tu es ma prière</div>
-        <div class="line" data-start="53.00" data-end="60.00"><span class="time">[0:53]</span>Comme les étoiles, tu multiplies ma foi</div>
+    <div class="container">
+        <div class="header">
+            <h1>Genese 26</h1>
+            <p>Bible Chantee Karaoke</p>
+        </div>
+        <div class="audio-player">
+            <audio id="audio" controls>
+                <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_26_FR.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="lyrics" id="lyrics">
+        <div class="line" data-start="13.00" data-end="19.00"><span class="time">[0:13]</span>Il y a eu une famille dans ce pays de langues-guaces</div>
+        <div class="line" data-start="19.00" data-end="26.00"><span class="time">[0:19]</span>Ils accélèvent vers guérard, il se glisse</div>
+        <div class="line" data-start="26.00" data-end="32.00"><span class="time">[0:26]</span>L'éterne, elle lui est par là avec douceur et force</div>
+        <div class="line" data-start="32.00" data-end="40.00"><span class="time">[0:32]</span>Reste ici, je suis avec toi dans ma course</div>
+        <div class="line" data-start="40.00" data-end="46.00"><span class="time">[0:40]</span>Oh éternez, tu as parole et mal lumière</div>
+        <div class="line" data-start="46.00" data-end="53.00"><span class="time">[0:46]</span>Tu bini ma descendance, tu es ma prière</div>
+        <div class="line" data-start="53.00" data-end="60.00"><span class="time">[0:53]</span>Comme les étroits, tu multiplies ma foi</div>
         <div class="line" data-start="60.00" data-end="68.00"><span class="time">[1:00]</span>Dans la promesse, je marche, je crois</div>
-        <div class="line" data-start="68.00" data-end="81.00"><span class="time">[1:08]</span>Il creusa des puits, dans la terre asséchée</div>
-        <div class="line" data-start="81.00" data-end="87.00"><span class="time">[1:21]</span>Des disputes s'élevèrent, mais il reste apaisé</div>
-        <div class="line" data-start="87.00" data-end="95.00"><span class="time">[1:27]</span>Rehoboth, le lieu où l'eau vive jaillit</div>
-        <div class="line" data-start="95.00" data-end="101.00"><span class="time">[1:35]</span>L'éternel nous met au large ici, je suis un épris</div>
-        <div class="line" data-start="101.00" data-end="108.00"><span class="time">[1:41]</span>Oh éternel, ta parole est ma lumière</div>
-        <div class="line" data-start="108.00" data-end="115.00"><span class="time">[1:48]</span>Tu bénis ma descendance, tu es ma prière</div>
-        <div class="line" data-start="115.00" data-end="123.00"><span class="time">[1:55]</span>Comme les étoiles, tu multiplies ma foi</div>
-        <div class="line" data-start="123.00" data-end="129.00"><span class="time">[2:03]</span>Dans la promesse, je marche, je crois</div>
-        <div class="line" data-start="129.00" data-end="135.00"><span class="time">[2:09]</span>N'aie pas peur, je suis avec toi</div>
-        <div class="line" data-start="135.00" data-end="141.00"><span class="time">[2:15]</span>Je te bénirai, écoute ma voix</div>
-        <div class="line" data-start="141.00" data-end="152.00"><span class="time">[2:21]</span>Les nations seront bénies en toi</div>
-        <div class="line" data-start="152.00" data-end="159.00"><span class="time">[2:32]</span>Car Abraham, mon serviteur, a marché en moi</div>
-        <div class="line" data-start="159.00" data-end="165.00"><span class="time">[2:39]</span>Abîmé l'éclate, avec un cœur humble</div>
-        <div class="line" data-start="165.00" data-end="171.00"><span class="time">[2:45]</span>Nous voyons que l'éternel en toi tremble</div>
-        <div class="line" data-start="171.00" data-end="177.00"><span class="time">[2:51]</span>Ils firent alliance, un serment de paix</div>
-        <div class="line" data-start="177.00" data-end="189.00"><span class="time">[2:57]</span>Dans la douceur de l'unité, ils se levèrent en vérité</div>
-        <div class="line" data-start="189.00" data-end="196.00"><span class="time">[3:09]</span>Oh éternel, ta parole est ma lumière</div>
-        <div class="line" data-start="196.00" data-end="202.00"><span class="time">[3:16]</span>Tu bénis ma descendance, tu es ma prière</div>
-        <div class="line" data-start="202.00" data-end="209.00"><span class="time">[3:22]</span>Comme les étoiles, tu multiplies ma foi</div>
-        <div class="line" data-start="209.00" data-end="215.00"><span class="time">[3:29]</span>Dans la promesse, je marche, je crois</div>
-        <div class="line" data-start="215.00" data-end="222.00"><span class="time">[3:35]</span>Dans Bir-Sheba, je bâtis un autel</div>
-        <div class="line" data-start="222.00" data-end="228.00"><span class="time">[3:42]</span>Invoquant ton nom, ô Dieu éternel</div>
-        <div class="line" data-start="228.00" data-end="235.00"><span class="time">[3:48]</span>Dans chaque épreuve, je chanterai ta gloire</div>
-        <div class="line" data-start="235.00" data-end="242.00"><span class="time">[3:55]</span>Dans ta promesse, je vivrai dans l'espoir</div>
+        <div class="line" data-start="68.00" data-end="74.00"><span class="time">[1:08]</span>Il creus a des puits dans la terre asséché</div>
+        <div class="line" data-start="74.00" data-end="81.00"><span class="time">[1:14]</span>Des disputes s'élever, mais il reste à péser</div>
+        <div class="line" data-start="81.00" data-end="87.00"><span class="time">[1:21]</span>Reboite le lieu où l'eau vive j'ai</div>
+        <div class="line" data-start="87.00" data-end="95.00"><span class="time">[1:27]</span>L'éternelle nous met au large ici, je suis un épris</div>
+        <div class="line" data-start="95.00" data-end="101.00"><span class="time">[1:35]</span>Oh éternez, tu as parole et mal lumière</div>
+        <div class="line" data-start="101.00" data-end="108.00"><span class="time">[1:41]</span>Tu bini ma descendance, tu es ma prière</div>
+        <div class="line" data-start="108.00" data-end="115.00"><span class="time">[1:48]</span>Comme les étroits, tu multiplies ma foi</div>
+        <div class="line" data-start="115.00" data-end="123.00"><span class="time">[1:55]</span>Dans la promesse, je marche, je crois</div>
+        <div class="line" data-start="123.00" data-end="129.00"><span class="time">[2:03]</span>Les papeurs, je suis avec toi</div>
+        <div class="line" data-start="129.00" data-end="135.00"><span class="time">[2:09]</span>Je te pénirai et coûte ma voix</div>
+        <div class="line" data-start="135.00" data-end="141.00"><span class="time">[2:15]</span>Les nations seront venis en toi</div>
+        <div class="line" data-start="141.00" data-end="150.00"><span class="time">[2:21]</span>Car abrabe mon serviteur à marcher en moi</div>
+        <div class="line" data-start="152.00" data-end="159.00"><span class="time">[2:32]</span>Abîmer les gvantes avec un coeur un</div>
+        <div class="line" data-start="159.00" data-end="165.00"><span class="time">[2:39]</span>Nous voyons que l'éternelle en toi tremble</div>
+        <div class="line" data-start="165.00" data-end="171.00"><span class="time">[2:45]</span>Il fiert à l'ience, un serment de paix</div>
+        <div class="line" data-start="171.00" data-end="177.00"><span class="time">[2:51]</span>Dans la douceur de l'unité il se le verra</div>
+        <div class="line" data-start="177.00" data-end="183.00"><span class="time">[2:57]</span>En mérité</div>
+        <div class="line" data-start="183.00" data-end="189.00"><span class="time">[3:03]</span>Oh éternez, tu as parole et mal lumière</div>
+        <div class="line" data-start="189.00" data-end="196.00"><span class="time">[3:09]</span>Tu bini ma descendance, tu es ma prière</div>
+        <div class="line" data-start="196.00" data-end="202.00"><span class="time">[3:16]</span>Comme les étroits, tu multiplies ma foi</div>
+        <div class="line" data-start="202.00" data-end="209.00"><span class="time">[3:22]</span>Dans la promesse, je marche, je crois</div>
+        <div class="line" data-start="209.00" data-end="215.00"><span class="time">[3:29]</span>Dans pire schébat, je bats si un hotel</div>
+        <div class="line" data-start="215.00" data-end="222.00"><span class="time">[3:35]</span>Et vos cantons n'ont au Dieu éternelle</div>
+        <div class="line" data-start="222.00" data-end="228.00"><span class="time">[3:42]</span>Dans chaque épreuve, je chanteurais ta gloire</div>
+        <div class="line" data-start="228.00" data-end="235.00"><span class="time">[3:48]</span>Dans ta promesse, je vivrais</div>
+        <div class="line" data-start="235.00" data-end="242.00"><span class="time">[3:55]</span>Dans l'espoir</div>
+        </div>
     </div>
-    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
     <script>
-        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
-        audio.addEventListener('timeupdate',()=>{
-            const t=audio.currentTime;
-            lines.forEach(l=>{
-                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
-                l.classList.remove('active','passed');
-                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
-                else if(t>=e)l.classList.add('passed')
-            })
+        const audio = document.getElementById('audio');
+        const lines = document.querySelectorAll('.line');
+        const lyricsContainer = document.getElementById('lyrics');
+        
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            let activeIndex = -1;
+            
+            lines.forEach((line, index) => {
+                const start = parseFloat(line.dataset.start);
+                const end = parseFloat(line.dataset.end);
+                
+                line.classList.remove('active', 'past');
+                
+                if (currentTime >= start && currentTime < end) {
+                    line.classList.add('active');
+                    activeIndex = index;
+                } else if (currentTime >= end) {
+                    line.classList.add('past');
+                }
+            });
+            
+            if (activeIndex >= 0) {
+                const activeLine = lines[activeIndex];
+                const containerRect = lyricsContainer.getBoundingClientRect();
+                const lineRect = activeLine.getBoundingClientRect();
+                
+                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
+                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
         });
-        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+        
+        lines.forEach(line => {
+            line.addEventListener('click', () => {
+                audio.currentTime = parseFloat(line.dataset.start);
+                audio.play();
+            });
+        });
     </script>
 </body>
 </html>

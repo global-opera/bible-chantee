@@ -5,68 +5,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genese 30 | Bible Chantee Karaoke</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
-        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
-        .header h1{font-size:1.8em;color:#d4af37}
-        .player{max-width:800px;margin:20px auto;padding:0 20px}
-        audio{width:100%}
-        .lyrics{max-width:800px;margin:20px auto;padding:20px}
-        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
-        .line:hover{background:rgba(212,175,55,0.1)}
-        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
-        .line.passed{opacity:0.5}
-        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
-        .footer{text-align:center;padding:20px;color:#666}
-        .footer a{color:#d4af37}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
+        .header p { color: #888; }
+        .audio-player { 
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        audio { width: 100%; }
+        .lyrics { 
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        .line { 
+            padding: 12px 15px;
+            margin: 5px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .line .time { 
+            color: #666; 
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+        .line.active { 
+            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
+            color: #fff;
+            border-left: 4px solid #d4af37;
+            transform: scale(1.02);
+        }
+        .line.active .time { color: #d4af37; }
+        .line.past { opacity: 0.5; }
     </style>
 </head>
 <body>
-    <div class="header"><h1>Genese 30</h1><p>Bible Chantee Karaoke</p></div>
-    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_30_FR.mp3" type="audio/mpeg"></audio></div>
-    <div class="lyrics">
-        <div class="line" data-start="13.00" data-end="20.00"><span class="time">[0:13]</span>Dans l'ombre de ma peine, je crie à toi</div>
-        <div class="line" data-start="20.00" data-end="27.00"><span class="time">[0:20]</span>Comme Rachel je cherche un enfant pour mon coeur</div>
-        <div class="line" data-start="27.00" data-end="34.00"><span class="time">[0:27]</span>Dans le silence, je lutte, je m'accroche à la foi</div>
-        <div class="line" data-start="34.00" data-end="41.00"><span class="time">[0:34]</span>Dieu, tu entends ma voix, tu es mon sauveur</div>
-        <div class="line" data-start="41.00" data-end="49.00"><span class="time">[0:41]</span>Dieu de promesses, tu es celui qui donne</div>
-        <div class="line" data-start="49.00" data-end="56.00"><span class="time">[0:49]</span>Dans la nuit, ta lumière éclaire ma maison</div>
-        <div class="line" data-start="56.00" data-end="64.00"><span class="time">[0:56]</span>Au milieu des luttes, tu es ma couronne</div>
-        <div class="line" data-start="64.00" data-end="74.00"><span class="time">[1:04]</span>Seigneur, je t'adore, tu es ma raison</div>
-        <div class="line" data-start="74.00" data-end="81.00"><span class="time">[1:14]</span>Quand Léa pleurait dans la douleur</div>
-        <div class="line" data-start="81.00" data-end="88.00"><span class="time">[1:21]</span>Toi, tu as vu son coeur et tu as répondu</div>
-        <div class="line" data-start="88.00" data-end="96.00"><span class="time">[1:28]</span>Avec chaque fils, tu as comblé son âme</div>
-        <div class="line" data-start="96.00" data-end="103.00"><span class="time">[1:36]</span>Dieu, dans chaque épreuve, ton amour est le fruit</div>
-        <div class="line" data-start="103.00" data-end="111.00"><span class="time">[1:43]</span>Dieu de promesses, tu es celui qui donne</div>
-        <div class="line" data-start="111.00" data-end="117.00"><span class="time">[1:51]</span>Dans la nuit, ta lumière éclaire ma maison</div>
-        <div class="line" data-start="117.00" data-end="125.00"><span class="time">[1:57]</span>Au milieu des luttes, tu es ma couronne</div>
-        <div class="line" data-start="125.00" data-end="132.00"><span class="time">[2:05]</span>Seigneur, je t'adore, tu es ma raison</div>
-        <div class="line" data-start="132.00" data-end="139.00"><span class="time">[2:12]</span>Tu as exaucé Rachel, tu as enlevé l'opprobre</div>
-        <div class="line" data-start="139.00" data-end="146.00"><span class="time">[2:19]</span>Dans chaque prière, tu es ma lueur d'espoir</div>
-        <div class="line" data-start="146.00" data-end="154.00"><span class="time">[2:26]</span>Seigneur, tu es fidèle et ton amour ne s'arrête</div>
-        <div class="line" data-start="154.00" data-end="161.00"><span class="time">[2:34]</span>Avec chaque saison, tu renouvelles mes jours</div>
-        <div class="line" data-start="161.00" data-end="169.00"><span class="time">[2:41]</span>Dieu de promesses, tu es celui qui donne</div>
-        <div class="line" data-start="169.00" data-end="175.00"><span class="time">[2:49]</span>Dans la nuit, ta lumière éclaire ma maison</div>
-        <div class="line" data-start="175.00" data-end="183.00"><span class="time">[2:55]</span>Au milieu des luttes, tu es ma couronne</div>
-        <div class="line" data-start="183.00" data-end="190.00"><span class="time">[3:03]</span>Seigneur, je t'adore, tu es ma raison</div>
-        <div class="line" data-start="190.00" data-end="197.00"><span class="time">[3:10]</span>Dieu de promesses, je marche avec foi</div>
-        <div class="line" data-start="197.00" data-end="204.00"><span class="time">[3:17]</span>Dans chaque fois, je sais que tu es là</div>
-        <div class="line" data-start="204.00" data-end="212.00"><span class="time">[3:24]</span>Seigneur, je t'adore, tu es ma lumière</div>
-        <div class="line" data-start="212.00" data-end="219.00"><span class="time">[3:32]</span>Pour l'éternité, je chanterai ta bonté</div>
+    <div class="container">
+        <div class="header">
+            <h1>Genese 30</h1>
+            <p>Bible Chantee Karaoke</p>
+        </div>
+        <div class="audio-player">
+            <audio id="audio" controls>
+                <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_30_FR.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="lyrics" id="lyrics">
+        <div class="line" data-start="13.00" data-end="16.00"><span class="time">[0:13]</span>Dans l'ombre de ma peine</div>
+        <div class="line" data-start="16.00" data-end="20.00"><span class="time">[0:16]</span>Je crie à toi</div>
+        <div class="line" data-start="20.00" data-end="23.00"><span class="time">[0:20]</span>Comme rachèles je cherche</div>
+        <div class="line" data-start="23.00" data-end="27.00"><span class="time">[0:23]</span>Un enfant pour mon coeur</div>
+        <div class="line" data-start="27.00" data-end="31.00"><span class="time">[0:27]</span>Dans le silence je lute</div>
+        <div class="line" data-start="31.00" data-end="34.00"><span class="time">[0:31]</span>Je m'accroche à la fois</div>
+        <div class="line" data-start="34.00" data-end="38.00"><span class="time">[0:34]</span>Tu as tu entends ma voix</div>
+        <div class="line" data-start="38.00" data-end="41.00"><span class="time">[0:38]</span>Tu es mon sauveur</div>
+        <div class="line" data-start="41.00" data-end="45.00"><span class="time">[0:41]</span>Tu as de promesse</div>
+        <div class="line" data-start="45.00" data-end="49.00"><span class="time">[0:45]</span>Tu es celui qui donne</div>
+        <div class="line" data-start="49.00" data-end="52.00"><span class="time">[0:49]</span>Dans la nuit ta lumière</div>
+        <div class="line" data-start="52.00" data-end="56.00"><span class="time">[0:52]</span>Et claire ma maison</div>
+        <div class="line" data-start="56.00" data-end="59.00"><span class="time">[0:56]</span>Au milieu des luttes</div>
+        <div class="line" data-start="59.00" data-end="64.00"><span class="time">[0:59]</span>Tu es ma couronne</div>
+        <div class="line" data-start="64.00" data-end="67.00"><span class="time">[1:04]</span>Seigneur je t'adore</div>
+        <div class="line" data-start="67.00" data-end="71.00"><span class="time">[1:07]</span>Tu es ma raison</div>
+        <div class="line" data-start="74.00" data-end="78.00"><span class="time">[1:14]</span>Quand les appelerait</div>
+        <div class="line" data-start="78.00" data-end="81.00"><span class="time">[1:18]</span>Dans la douleur</div>
+        <div class="line" data-start="81.00" data-end="84.00"><span class="time">[1:21]</span>Toi tu as vu son coeur</div>
+        <div class="line" data-start="84.00" data-end="88.00"><span class="time">[1:24]</span>Et tu as répondu</div>
+        <div class="line" data-start="88.00" data-end="92.00"><span class="time">[1:28]</span>Avec chaque fils</div>
+        <div class="line" data-start="92.00" data-end="96.00"><span class="time">[1:32]</span>Tu as comblé son amin</div>
+        <div class="line" data-start="96.00" data-end="99.00"><span class="time">[1:36]</span>Tu es dans chaque épreuve</div>
+        <div class="line" data-start="99.00" data-end="103.00"><span class="time">[1:39]</span>Ton amour est le fruit</div>
+        <div class="line" data-start="103.00" data-end="107.00"><span class="time">[1:43]</span>Tu as de promesse</div>
+        <div class="line" data-start="107.00" data-end="111.00"><span class="time">[1:47]</span>Tu es celui qui donne</div>
+        <div class="line" data-start="111.00" data-end="113.00"><span class="time">[1:51]</span>Dans la nuit ta lumière</div>
+        <div class="line" data-start="113.00" data-end="117.00"><span class="time">[1:53]</span>Et claire ma maison</div>
+        <div class="line" data-start="117.00" data-end="121.00"><span class="time">[1:57]</span>Au milieu des luttes</div>
+        <div class="line" data-start="121.00" data-end="125.00"><span class="time">[2:01]</span>Tu es ma couronne</div>
+        <div class="line" data-start="125.00" data-end="129.00"><span class="time">[2:05]</span>Seigneur je t'adore</div>
+        <div class="line" data-start="129.00" data-end="132.00"><span class="time">[2:09]</span>Tu es ma raison</div>
+        <div class="line" data-start="132.00" data-end="135.00"><span class="time">[2:12]</span>Tu as exocéraschèles</div>
+        <div class="line" data-start="135.00" data-end="139.00"><span class="time">[2:15]</span>Tu as enlevé l'autre propre</div>
+        <div class="line" data-start="139.00" data-end="142.00"><span class="time">[2:19]</span>Dans chaque prière</div>
+        <div class="line" data-start="142.00" data-end="146.00"><span class="time">[2:22]</span>Tu es ma lueur d'espoir</div>
+        <div class="line" data-start="146.00" data-end="149.00"><span class="time">[2:26]</span>Seigneur tu es fidélé</div>
+        <div class="line" data-start="149.00" data-end="154.00"><span class="time">[2:29]</span>Son arône s'arrête</div>
+        <div class="line" data-start="154.00" data-end="157.00"><span class="time">[2:34]</span>Avec chaque saison</div>
+        <div class="line" data-start="157.00" data-end="161.00"><span class="time">[2:37]</span>Tu renouveles mes jours</div>
+        <div class="line" data-start="161.00" data-end="165.00"><span class="time">[2:41]</span>Tu as de promesse</div>
+        <div class="line" data-start="165.00" data-end="169.00"><span class="time">[2:45]</span>Tu es celui qui donne</div>
+        <div class="line" data-start="169.00" data-end="171.00"><span class="time">[2:49]</span>Dans la nuit ta lumière</div>
+        <div class="line" data-start="171.00" data-end="175.00"><span class="time">[2:51]</span>Et claire ma maison</div>
+        <div class="line" data-start="175.00" data-end="179.00"><span class="time">[2:55]</span>Au milieu des luttes</div>
+        <div class="line" data-start="179.00" data-end="183.00"><span class="time">[2:59]</span>Tu es ma couronne</div>
+        <div class="line" data-start="183.00" data-end="187.00"><span class="time">[3:03]</span>Seigneur je t'adore</div>
+        <div class="line" data-start="187.00" data-end="190.00"><span class="time">[3:07]</span>Tu es ma raison</div>
+        <div class="line" data-start="190.00" data-end="193.00"><span class="time">[3:10]</span>Tu as de promesse</div>
+        <div class="line" data-start="193.00" data-end="197.00"><span class="time">[3:13]</span>Je m'encha avec foi</div>
+        <div class="line" data-start="197.00" data-end="200.00"><span class="time">[3:17]</span>Dans chaque fois</div>
+        <div class="line" data-start="200.00" data-end="204.00"><span class="time">[3:20]</span>Je sais que tu es là</div>
+        <div class="line" data-start="204.00" data-end="208.00"><span class="time">[3:24]</span>Seigneur je t'adore</div>
+        <div class="line" data-start="208.00" data-end="212.00"><span class="time">[3:28]</span>Tu es ma lumière</div>
+        <div class="line" data-start="212.00" data-end="215.00"><span class="time">[3:32]</span>Pour l'éternité</div>
+        <div class="line" data-start="215.00" data-end="219.00"><span class="time">[3:35]</span>Je chante rétabendé</div>
+        </div>
     </div>
-    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
     <script>
-        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
-        audio.addEventListener('timeupdate',()=>{
-            const t=audio.currentTime;
-            lines.forEach(l=>{
-                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
-                l.classList.remove('active','passed');
-                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
-                else if(t>=e)l.classList.add('passed')
-            })
+        const audio = document.getElementById('audio');
+        const lines = document.querySelectorAll('.line');
+        const lyricsContainer = document.getElementById('lyrics');
+        
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            let activeIndex = -1;
+            
+            lines.forEach((line, index) => {
+                const start = parseFloat(line.dataset.start);
+                const end = parseFloat(line.dataset.end);
+                
+                line.classList.remove('active', 'past');
+                
+                if (currentTime >= start && currentTime < end) {
+                    line.classList.add('active');
+                    activeIndex = index;
+                } else if (currentTime >= end) {
+                    line.classList.add('past');
+                }
+            });
+            
+            if (activeIndex >= 0) {
+                const activeLine = lines[activeIndex];
+                const containerRect = lyricsContainer.getBoundingClientRect();
+                const lineRect = activeLine.getBoundingClientRect();
+                
+                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
+                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
         });
-        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+        
+        lines.forEach(line => {
+            line.addEventListener('click', () => {
+                audio.currentTime = parseFloat(line.dataset.start);
+                audio.play();
+            });
+        });
     </script>
 </body>
 </html>

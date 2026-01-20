@@ -1,32 +1,308 @@
 1
-00:00:17,000 --> 00:00:41,000
-Dans le pays de Goshen, où l'espoir est né, Joseph a conduit, son peuple a protégé
+00:00:17,000 --> 00:00:19,000
+Dans le pain de gosene
 
 2
-00:00:41,000 --> 00:01:03,000
-Des brebis et des bœufs, ils sont venus. Fuyant la famine, la grâce a résu
+00:00:19,000 --> 00:00:22,000
+Où l'espoir est né
 
 3
-00:01:03,000 --> 00:01:31,000
-Ô Seigneur, dans ta bonté, tu nourris nos âmes, tu viens nous sauver. Dans l'obscurité, ta lumière brillera. À jamais, nous chantons dans le pays de Goshen, ta promesse, notre refuge, notre maison
+00:00:22,000 --> 00:00:24,000
+Joseph a conduit
 
 4
-00:01:31,000 --> 00:01:54,000
-Pharaon a vu et a donné sa main à Jacob et ses fils, une terre de pain. Dans l'épreuve, ils ont trouvé la paix. Leur cœur rempli de foi, ils se sont avancés
+00:00:24,000 --> 00:00:26,000
+Son peuple a protégé
 
 5
-00:01:54,000 --> 00:02:14,000
-Ô Seigneur, dans ta bonté, tu nourris nos âmes, tu viens nous sauver. Dans l'obscurité, ta lumière brillera. À jamais, nous chantons dans le pays de Goshen, ta promesse, notre refuge, notre maison
+00:00:26,000 --> 00:00:29,000
+Des brebis et des beaux
 
 6
-00:02:14,000 --> 00:02:34,000
-Nous sommes des pèlerins sur cette terre. Avec toi, Seigneur, nous faisons nos prières. Quand la famine rôde, quand le cœur est lourd, nous trouvons en toi un amour toujours
+00:00:29,000 --> 00:00:31,000
+Ils sont venus
 
 7
-00:02:34,000 --> 00:02:52,000
-Ô Seigneur, dans ta bonté, tu nourris nos âmes, tu viens nous sauver. Dans l'obscurité, ta lumière brillera. À jamais, nous chantons dans le pays de Goshen, ta promesse, notre refuge, notre maison
+00:00:31,000 --> 00:00:33,000
+Fuyant la famille
 
 8
-00:02:52,000 --> 00:03:14,000
-Dans le pays de Goshen, nous resterons avec nos cœurs unis. Nous te louons à jamais, Seigneur. Nous t'appartenons dans ta grâce infinie. Nous marcherons
+00:00:33,000 --> 00:00:37,000
+La grâce a résus
+
+9
+00:00:37,000 --> 00:00:39,000
+O seigneur
+
+10
+00:00:39,000 --> 00:00:41,000
+Dans ta volonté
+
+11
+00:00:41,000 --> 00:00:44,000
+Tu nous rie nos âmes
+
+12
+00:00:44,000 --> 00:00:46,000
+Tu viens nous sauver
+
+13
+00:00:46,000 --> 00:00:48,000
+Dans l'obscurité
+
+14
+00:00:48,000 --> 00:00:51,000
+Ta lumière brillera
+
+15
+00:00:51,000 --> 00:00:54,000
+À jamais nous chanteons
+
+16
+00:00:54,000 --> 00:00:57,000
+Dans le pain de gosene
+
+17
+00:00:57,000 --> 00:00:59,000
+Tu as promès
+
+18
+00:00:59,000 --> 00:01:01,000
+Notre refuge
+
+19
+00:01:01,000 --> 00:01:03,000
+Notre maison
+
+20
+00:01:03,000 --> 00:01:07,000
+Farah on a vu
+
+21
+00:01:07,000 --> 00:01:09,000
+Et a donné sa main
+
+22
+00:01:09,000 --> 00:01:11,000
+À j'acobé ses fils
+
+23
+00:01:11,000 --> 00:01:13,000
+Une terre de pain
+
+24
+00:01:13,000 --> 00:01:15,000
+Dans les preuves
+
+25
+00:01:15,000 --> 00:01:17,000
+Ils ont trouvé la paix
+
+26
+00:01:17,000 --> 00:01:21,000
+Leur cœur emplie de foi
+
+27
+00:01:21,000 --> 00:01:25,000
+Ils se sont avancés
+
+28
+00:01:25,000 --> 00:01:29,000
+O seigneur
+
+29
+00:01:29,000 --> 00:01:31,000
+Dans ta volonté
+
+30
+00:01:31,000 --> 00:01:33,000
+Tu nous rie nos âmes
+
+31
+00:01:33,000 --> 00:01:35,000
+Tu viens nous sauver
+
+32
+00:01:35,000 --> 00:01:37,000
+Dans l'obscurité
+
+33
+00:01:37,000 --> 00:01:41,000
+Ta lumière brillera
+
+34
+00:01:41,000 --> 00:01:44,000
+À jamais nous chanteons
+
+35
+00:01:44,000 --> 00:01:46,000
+Dans le pain de gosene
+
+36
+00:01:46,000 --> 00:01:48,000
+Tu as promès
+
+37
+00:01:48,000 --> 00:01:50,000
+Notre refuge
+
+38
+00:01:50,000 --> 00:01:54,000
+Notre maison
+
+39
+00:01:54,000 --> 00:01:56,000
+Nous sommes des bellies
+
+40
+00:01:56,000 --> 00:01:58,000
+Sur cette terre
+
+41
+00:01:58,000 --> 00:02:00,000
+Avec toi, s'égeur
+
+42
+00:02:00,000 --> 00:02:02,000
+Nous faisons nos prières
+
+43
+00:02:02,000 --> 00:02:04,000
+Quand la famille ne rorde
+
+44
+00:02:04,000 --> 00:02:06,000
+Quand le cœur est lourd
+
+45
+00:02:06,000 --> 00:02:08,000
+Nous trouvons en toi
+
+46
+00:02:08,000 --> 00:02:10,000
+Un amour toujours
+
+47
+00:02:10,000 --> 00:02:12,000
+O seigneur
+
+48
+00:02:12,000 --> 00:02:14,000
+Dans ta volonté
+
+49
+00:02:14,000 --> 00:02:16,000
+Tu nous rie nos âmes
+
+50
+00:02:16,000 --> 00:02:18,000
+Tu viens nous sauver
+
+51
+00:02:18,000 --> 00:02:20,000
+Dans l'obscurité
+
+52
+00:02:20,000 --> 00:02:22,000
+Ta lumière brillera
+
+53
+00:02:22,000 --> 00:02:24,000
+À jamais nous chanteons
+
+54
+00:02:24,000 --> 00:02:26,000
+Dans le pain de gosene
+
+55
+00:02:26,000 --> 00:02:28,000
+Tu as promès
+
+56
+00:02:28,000 --> 00:02:30,000
+Notre refuge
+
+57
+00:02:30,000 --> 00:02:32,000
+Notre maison
+
+58
+00:02:32,000 --> 00:02:34,000
+Notre maison
+
+59
+00:02:34,000 --> 00:02:36,000
+Notre maison
+
+60
+00:02:36,000 --> 00:02:38,000
+Notre maison
+
+61
+00:02:38,000 --> 00:02:40,000
+Notre maison
+
+62
+00:02:40,000 --> 00:02:42,000
+Notre maison
+
+63
+00:02:42,000 --> 00:02:44,000
+Notre maison
+
+64
+00:02:44,000 --> 00:02:46,000
+Notre maison
+
+65
+00:02:46,000 --> 00:02:48,000
+Notre maison
+
+66
+00:02:48,000 --> 00:02:50,000
+Notre maison
+
+67
+00:02:50,000 --> 00:02:52,000
+Notre maison
+
+68
+00:02:52,000 --> 00:02:54,000
+Dans le pain de gosene
+
+69
+00:02:54,000 --> 00:02:56,000
+Nous resterons
+
+70
+00:02:56,000 --> 00:02:58,000
+Avec nos carunis
+
+71
+00:02:58,000 --> 00:03:00,000
+Nous te lourds
+
+72
+00:03:00,000 --> 00:03:02,000
+À jamais s'égeure
+
+73
+00:03:02,000 --> 00:03:04,000
+Nous te lourds
+
+74
+00:03:04,000 --> 00:03:06,000
+Nous te lourds
+
+75
+00:03:06,000 --> 00:03:08,000
+Dans ta grâce
+
+76
+00:03:08,000 --> 00:03:10,000
+Un fini
+
+77
+00:03:10,000 --> 00:03:14,000
+Nous marcherons
 

@@ -1,0 +1,987 @@
+﻿{
+    "language":  "fr",
+    "text":  "Dans la nuit tu m\u0027appelais Abrand le craint point je suis\nlà Mon bouclier ta récompense Je t\u0027invite à croire en ma\nvoix Regarde les étoiles contelées Comme la promesse que\nj\u0027ai faite Ta descendance un peu blanche je m\u0027as Je suis\n\nl\u0027éternel je suis avec toi Dans l\u0027ombre une frayeur massage\nMets ta lumière au Seigneur éclaire Des générations un\nhéritage Je te donne ce pays t\u0027attends Regarde les étoiles\ncontelées Comme la promesse que j\u0027ai faite Ta descendance\n\nun peu blanche je m\u0027as Je suis l\u0027éternel je suis avec toi\nQuand l\u0027obscurité s\u0027étend sur le monde Je t\u0027assure je suis\nlà pour guider À travers les épreuves ma main t\u0027entoure\nJe ferai alliance je ne t\u0027abandonnerai jamais Regarde les\n\nétoiles contelées Comme la promesse que j\u0027ai faite Ta descendance\nun peu blanche je m\u0027as Je suis l\u0027éternel je suis avec toi\nDans chaque génération je suis fidèle Promesse éternelle\nje t\u0027emmène Abrame marche avec moi Je suis l\u0027éternel je\n\nsuis ton roi Sous-titres réalisés par la communauté d\u0027\nAmara.org",
+    "segments":  [
+                     {
+                         "end":  23.1,
+                         "words":  [
+                                       {
+                                           "word":  "Dans",
+                                           "end":  13.24,
+                                           "start":  12.32
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  13.44,
+                                           "start":  13.24
+                                       },
+                                       {
+                                           "word":  "nuit",
+                                           "end":  13.76,
+                                           "start":  13.44
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  15.2,
+                                           "start":  14
+                                       },
+                                       {
+                                           "word":  "m\u0027appelais",
+                                           "end":  15.7,
+                                           "start":  15.299999999999999
+                                       },
+                                       {
+                                           "word":  "Abrand",
+                                           "end":  16.2,
+                                           "start":  15.799999999999999
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  16.7,
+                                           "start":  16.3
+                                       },
+                                       {
+                                           "word":  "craint",
+                                           "end":  21.38,
+                                           "start":  21.04
+                                       },
+                                       {
+                                           "word":  "point",
+                                           "end":  21.72,
+                                           "start":  21.38
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  22.78,
+                                           "start":  21.88
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  23.1,
+                                           "start":  22.78
+                                       }
+                                   ],
+                         "text":  "Dans la nuit tu m\u0027appelais Abrand le craint point je suis",
+                         "start":  12.32
+                     },
+                     {
+                         "end":  35.28,
+                         "words":  [
+                                       {
+                                           "word":  "là",
+                                           "end":  23.42,
+                                           "start":  23.1
+                                       },
+                                       {
+                                           "word":  "Mon",
+                                           "end":  25.82,
+                                           "start":  24.9
+                                       },
+                                       {
+                                           "word":  "bouclier",
+                                           "end":  26.48,
+                                           "start":  25.82
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  28.8,
+                                           "start":  26.7
+                                       },
+                                       {
+                                           "word":  "récompense",
+                                           "end":  29.88,
+                                           "start":  28.8
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  32.36,
+                                           "start":  31.2
+                                       },
+                                       {
+                                           "word":  "t\u0027invite",
+                                           "end":  32.86,
+                                           "start":  32.46
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  34,
+                                           "start":  33.24
+                                       },
+                                       {
+                                           "word":  "croire",
+                                           "end":  34.56,
+                                           "start":  34
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  35.02,
+                                           "start":  34.56
+                                       },
+                                       {
+                                           "word":  "ma",
+                                           "end":  35.28,
+                                           "start":  35.02
+                                       }
+                                   ],
+                         "text":  "là Mon bouclier ta récompense Je t\u0027invite à croire en ma",
+                         "start":  23.1
+                     },
+                     {
+                         "end":  48.02,
+                         "words":  [
+                                       {
+                                           "word":  "voix",
+                                           "end":  35.74,
+                                           "start":  35.28
+                                       },
+                                       {
+                                           "word":  "Regarde",
+                                           "end":  38.8,
+                                           "start":  37.639999999999993
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  39.28,
+                                           "start":  38.8
+                                       },
+                                       {
+                                           "word":  "étoiles",
+                                           "end":  40.2,
+                                           "start":  39.28
+                                       },
+                                       {
+                                           "word":  "contelées",
+                                           "end":  40.7,
+                                           "start":  40.300000000000004
+                                       },
+                                       {
+                                           "word":  "Comme",
+                                           "end":  45.68,
+                                           "start":  44.52
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  46.22,
+                                           "start":  45.68
+                                       },
+                                       {
+                                           "word":  "promesse",
+                                           "end":  47.36,
+                                           "start":  46.22
+                                       },
+                                       {
+                                           "word":  "que",
+                                           "end":  48.02,
+                                           "start":  47.36
+                                       }
+                                   ],
+                         "text":  "voix Regarde les étoiles contelées Comme la promesse que",
+                         "start":  35.28
+                     },
+                     {
+                         "end":  59.98,
+                         "words":  [
+                                       {
+                                           "word":  "j\u0027ai",
+                                           "end":  48.52,
+                                           "start":  48.120000000000005
+                                       },
+                                       {
+                                           "word":  "faite",
+                                           "end":  49.08,
+                                           "start":  48.32
+                                       },
+                                       {
+                                           "word":  "Ta",
+                                           "end":  51.24,
+                                           "start":  49.08
+                                       },
+                                       {
+                                           "word":  "descendance",
+                                           "end":  52.78,
+                                           "start":  51.24
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  53.42,
+                                           "start":  52.82
+                                       },
+                                       {
+                                           "word":  "peu",
+                                           "end":  53.8,
+                                           "start":  53.42
+                                       },
+                                       {
+                                           "word":  "blanche",
+                                           "end":  54.3,
+                                           "start":  53.9
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  57.36,
+                                           "start":  56.2
+                                       },
+                                       {
+                                           "word":  "m\u0027as",
+                                           "end":  57.86,
+                                           "start":  57.46
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  59.88,
+                                           "start":  58.94
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  59.98,
+                                           "start":  59.88
+                                       }
+                                   ],
+                         "text":  "j\u0027ai faite Ta descendance un peu blanche je m\u0027as Je suis",
+                         "start":  48.120000000000005
+                     },
+                     {
+                         "end":  67.82,
+                         "words":  [
+                                       {
+                                           "word":  "l\u0027éternel",
+                                           "end":  60.48,
+                                           "start":  60.08
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  59.98,
+                                           "start":  59.98
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  60.3,
+                                           "start":  59.98
+                                       },
+                                       {
+                                           "word":  "avec",
+                                           "end":  61.34,
+                                           "start":  60.3
+                                       },
+                                       {
+                                           "word":  "toi",
+                                           "end":  61.78,
+                                           "start":  61.34
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  64.54,
+                                           "start":  63.260000000000005
+                                       },
+                                       {
+                                           "word":  "l\u0027ombre",
+                                           "end":  65.04,
+                                           "start":  64.64
+                                       },
+                                       {
+                                           "word":  "une",
+                                           "end":  66.34,
+                                           "start":  65.64
+                                       },
+                                       {
+                                           "word":  "frayeur",
+                                           "end":  67.32,
+                                           "start":  66.34
+                                       },
+                                       {
+                                           "word":  "massage",
+                                           "end":  67.82,
+                                           "start":  67.419999999999987
+                                       }
+                                   ],
+                         "text":  "l\u0027éternel je suis avec toi Dans l\u0027ombre une frayeur massage",
+                         "start":  60.08
+                     },
+                     {
+                         "end":  80.06,
+                         "words":  [
+                                       {
+                                           "word":  "Mets",
+                                           "end":  68.32,
+                                           "start":  67.919999999999987
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  70.82,
+                                           "start":  70.64
+                                       },
+                                       {
+                                           "word":  "lumière",
+                                           "end":  71.32,
+                                           "start":  70.82
+                                       },
+                                       {
+                                           "word":  "au",
+                                           "end":  71.82,
+                                           "start":  71.419999999999987
+                                       },
+                                       {
+                                           "word":  "Seigneur",
+                                           "end":  74.1,
+                                           "start":  72.86
+                                       },
+                                       {
+                                           "word":  "éclaire",
+                                           "end":  74.6,
+                                           "start":  74.199999999999989
+                                       },
+                                       {
+                                           "word":  "Des",
+                                           "end":  76.58,
+                                           "start":  75.94
+                                       },
+                                       {
+                                           "word":  "générations",
+                                           "end":  77.94,
+                                           "start":  76.58
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  80.06,
+                                           "start":  77.94
+                                       }
+                                   ],
+                         "text":  "Mets ta lumière au Seigneur éclaire Des générations un",
+                         "start":  67.919999999999987
+                     },
+                     {
+                         "end":  91.44,
+                         "words":  [
+                                       {
+                                           "word":  "héritage",
+                                           "end":  81.86,
+                                           "start":  80.06
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  83.32,
+                                           "start":  81.86
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  83.72,
+                                           "start":  83.32
+                                       },
+                                       {
+                                           "word":  "donne",
+                                           "end":  84.58,
+                                           "start":  83.72
+                                       },
+                                       {
+                                           "word":  "ce",
+                                           "end":  85.14,
+                                           "start":  84.58
+                                       },
+                                       {
+                                           "word":  "pays",
+                                           "end":  85.66,
+                                           "start":  85.14
+                                       },
+                                       {
+                                           "word":  "t\u0027attends",
+                                           "end":  86.16,
+                                           "start":  85.759999999999991
+                                       },
+                                       {
+                                           "word":  "Regarde",
+                                           "end":  90.14,
+                                           "start":  90.14
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  90.36,
+                                           "start":  90.14
+                                       },
+                                       {
+                                           "word":  "étoiles",
+                                           "end":  91.44,
+                                           "start":  90.36
+                                       }
+                                   ],
+                         "text":  "héritage Je te donne ce pays t\u0027attends Regarde les étoiles",
+                         "start":  80.06
+                     },
+                     {
+                         "end":  103.96,
+                         "words":  [
+                                       {
+                                           "word":  "contelées",
+                                           "end":  91.94,
+                                           "start":  91.539999999999992
+                                       },
+                                       {
+                                           "word":  "Comme",
+                                           "end":  96.86,
+                                           "start":  95.62
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  97.42,
+                                           "start":  96.86
+                                       },
+                                       {
+                                           "word":  "promesse",
+                                           "end":  98.62,
+                                           "start":  97.42
+                                       },
+                                       {
+                                           "word":  "que",
+                                           "end":  99.24,
+                                           "start":  98.62
+                                       },
+                                       {
+                                           "word":  "j\u0027ai",
+                                           "end":  99.74,
+                                           "start":  99.339999999999989
+                                       },
+                                       {
+                                           "word":  "faite",
+                                           "end":  100.34,
+                                           "start":  99.56
+                                       },
+                                       {
+                                           "word":  "Ta",
+                                           "end":  102.5,
+                                           "start":  100.34
+                                       },
+                                       {
+                                           "word":  "descendance",
+                                           "end":  103.96,
+                                           "start":  102.5
+                                       }
+                                   ],
+                         "text":  "contelées Comme la promesse que j\u0027ai faite Ta descendance",
+                         "start":  91.539999999999992
+                     },
+                     {
+                         "end":  124.82,
+                         "words":  [
+                                       {
+                                           "word":  "un",
+                                           "end":  104.58,
+                                           "start":  103.98
+                                       },
+                                       {
+                                           "word":  "peu",
+                                           "end":  105.02,
+                                           "start":  104.58
+                                       },
+                                       {
+                                           "word":  "blanche",
+                                           "end":  105.52,
+                                           "start":  105.11999999999999
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  108.64,
+                                           "start":  107.4
+                                       },
+                                       {
+                                           "word":  "m\u0027as",
+                                           "end":  109.14,
+                                           "start":  108.74
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  111.18,
+                                           "start":  110.22
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  111.62,
+                                           "start":  111.18
+                                       },
+                                       {
+                                           "word":  "l\u0027éternel",
+                                           "end":  112.12,
+                                           "start":  111.72
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  121.18,
+                                           "start":  119.96
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  123.82,
+                                           "start":  123.54
+                                       },
+                                       {
+                                           "word":  "avec",
+                                           "end":  124.32,
+                                           "start":  123.91999999999999
+                                       },
+                                       {
+                                           "word":  "toi",
+                                           "end":  124.82,
+                                           "start":  124.41999999999999
+                                       }
+                                   ],
+                         "text":  "un peu blanche je m\u0027as Je suis l\u0027éternel je suis avec toi",
+                         "start":  103.98
+                     },
+                     {
+                         "end":  136.9,
+                         "words":  [
+                                       {
+                                           "word":  "Quand",
+                                           "end":  125.32,
+                                           "start":  124.91999999999999
+                                       },
+                                       {
+                                           "word":  "l\u0027obscurité",
+                                           "end":  125.82,
+                                           "start":  125.41999999999999
+                                       },
+                                       {
+                                           "word":  "s\u0027étend",
+                                           "end":  126.32,
+                                           "start":  125.91999999999999
+                                       },
+                                       {
+                                           "word":  "sur",
+                                           "end":  126.82,
+                                           "start":  126.41999999999999
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  127.32,
+                                           "start":  126.91999999999999
+                                       },
+                                       {
+                                           "word":  "monde",
+                                           "end":  127.82,
+                                           "start":  127.41999999999999
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  134.18,
+                                           "start":  133.46
+                                       },
+                                       {
+                                           "word":  "t\u0027assure",
+                                           "end":  134.68,
+                                           "start":  134.28
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  136.4,
+                                           "start":  135.70000000000002
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  136.9,
+                                           "start":  136.5
+                                       }
+                                   ],
+                         "text":  "Quand l\u0027obscurité s\u0027étend sur le monde Je t\u0027assure je suis",
+                         "start":  124.91999999999999
+                     },
+                     {
+                         "end":  146.86,
+                         "words":  [
+                                       {
+                                           "word":  "là",
+                                           "end":  137.4,
+                                           "start":  137
+                                       },
+                                       {
+                                           "word":  "pour",
+                                           "end":  137.9,
+                                           "start":  137.5
+                                       },
+                                       {
+                                           "word":  "guider",
+                                           "end":  138.4,
+                                           "start":  138
+                                       },
+                                       {
+                                           "word":  "À",
+                                           "end":  138.9,
+                                           "start":  138.5
+                                       },
+                                       {
+                                           "word":  "travers",
+                                           "end":  139.4,
+                                           "start":  139
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  144.86,
+                                           "start":  144.4
+                                       },
+                                       {
+                                           "word":  "épreuves",
+                                           "end":  145.36,
+                                           "start":  144.96
+                                       },
+                                       {
+                                           "word":  "ma",
+                                           "end":  145.86,
+                                           "start":  145.46
+                                       },
+                                       {
+                                           "word":  "main",
+                                           "end":  146.36,
+                                           "start":  145.96
+                                       },
+                                       {
+                                           "word":  "t\u0027entoure",
+                                           "end":  146.86,
+                                           "start":  146.46
+                                       }
+                                   ],
+                         "text":  "là pour guider À travers les épreuves ma main t\u0027entoure",
+                         "start":  137
+                     },
+                     {
+                         "end":  149.94,
+                         "words":  [
+                                       {
+                                           "word":  "Je",
+                                           "end":  147.36,
+                                           "start":  146.96
+                                       },
+                                       {
+                                           "word":  "ferai",
+                                           "end":  147.86,
+                                           "start":  147.46
+                                       },
+                                       {
+                                           "word":  "alliance",
+                                           "end":  148.36,
+                                           "start":  147.96
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  148.86,
+                                           "start":  148.46
+                                       },
+                                       {
+                                           "word":  "ne",
+                                           "end":  149.36,
+                                           "start":  148.96
+                                       },
+                                       {
+                                           "word":  "t\u0027abandonnerai",
+                                           "end":  149.86,
+                                           "start":  149.46
+                                       },
+                                       {
+                                           "word":  "jamais",
+                                           "end":  150.36,
+                                           "start":  149.96
+                                       },
+                                       {
+                                           "word":  "Regarde",
+                                           "end":  149.94,
+                                           "start":  147.98
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  149.94,
+                                           "start":  149.94
+                                       }
+                                   ],
+                         "text":  "Je ferai alliance je ne t\u0027abandonnerai jamais Regarde les",
+                         "start":  146.96
+                     },
+                     {
+                         "end":  158.42,
+                         "words":  [
+                                       {
+                                           "word":  "étoiles",
+                                           "end":  149.94,
+                                           "start":  149.94
+                                       },
+                                       {
+                                           "word":  "contelées",
+                                           "end":  150.44,
+                                           "start":  150.04
+                                       },
+                                       {
+                                           "word":  "Comme",
+                                           "end":  151.52,
+                                           "start":  149.96
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  151.84,
+                                           "start":  151.52
+                                       },
+                                       {
+                                           "word":  "promesse",
+                                           "end":  153.1,
+                                           "start":  151.84
+                                       },
+                                       {
+                                           "word":  "que",
+                                           "end":  153.56,
+                                           "start":  153.1
+                                       },
+                                       {
+                                           "word":  "j\u0027ai",
+                                           "end":  154.06,
+                                           "start":  153.66
+                                       },
+                                       {
+                                           "word":  "faite",
+                                           "end":  154.56,
+                                           "start":  153.92
+                                       },
+                                       {
+                                           "word":  "Ta",
+                                           "end":  157.33999999999995,
+                                           "start":  156.25999999999996
+                                       },
+                                       {
+                                           "word":  "descendance",
+                                           "end":  158.42,
+                                           "start":  157.33999999999995
+                                       }
+                                   ],
+                         "text":  "étoiles contelées Comme la promesse que j\u0027ai faite Ta descendance",
+                         "start":  149.94
+                     },
+                     {
+                         "end":  186.8,
+                         "words":  [
+                                       {
+                                           "word":  "un",
+                                           "end":  158.98,
+                                           "start":  158.44
+                                       },
+                                       {
+                                           "word":  "peu",
+                                           "end":  159.36,
+                                           "start":  158.98
+                                       },
+                                       {
+                                           "word":  "blanche",
+                                           "end":  159.86,
+                                           "start":  159.46
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  162.94,
+                                           "start":  161.86
+                                       },
+                                       {
+                                           "word":  "m\u0027as",
+                                           "end":  163.44,
+                                           "start":  163.04
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  165.58,
+                                           "start":  164.58
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  165.98,
+                                           "start":  165.58
+                                       },
+                                       {
+                                           "word":  "l\u0027éternel",
+                                           "end":  166.48,
+                                           "start":  166.07999999999998
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  172.7,
+                                           "start":  172.04
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  173.2,
+                                           "start":  172.7
+                                       },
+                                       {
+                                           "word":  "avec",
+                                           "end":  186.3,
+                                           "start":  185.92
+                                       },
+                                       {
+                                           "word":  "toi",
+                                           "end":  186.8,
+                                           "start":  186.4
+                                       }
+                                   ],
+                         "text":  "un peu blanche je m\u0027as Je suis l\u0027éternel je suis avec toi",
+                         "start":  158.44
+                     },
+                     {
+                         "end":  190.48,
+                         "words":  [
+                                       {
+                                           "word":  "Dans",
+                                           "end":  187.3,
+                                           "start":  186.9
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  187.8,
+                                           "start":  187.4
+                                       },
+                                       {
+                                           "word":  "génération",
+                                           "end":  188.3,
+                                           "start":  187.9
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  188.62,
+                                           "start":  187.22
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  188.98,
+                                           "start":  188.62
+                                       },
+                                       {
+                                           "word":  "fidèle",
+                                           "end":  189.48,
+                                           "start":  189.07999999999998
+                                       },
+                                       {
+                                           "word":  "Promesse",
+                                           "end":  189.98,
+                                           "start":  189.57999999999998
+                                       },
+                                       {
+                                           "word":  "éternelle",
+                                           "end":  190.48,
+                                           "start":  190.07999999999998
+                                       }
+                                   ],
+                         "text":  "Dans chaque génération je suis fidèle Promesse éternelle",
+                         "start":  186.9
+                     },
+                     {
+                         "end":  194.24,
+                         "words":  [
+                                       {
+                                           "word":  "je",
+                                           "end":  192.76,
+                                           "start":  190.2
+                                       },
+                                       {
+                                           "word":  "t\u0027emmène",
+                                           "end":  193.26,
+                                           "start":  192.85999999999999
+                                       },
+                                       {
+                                           "word":  "Abrame",
+                                           "end":  193.76,
+                                           "start":  193.35999999999999
+                                       },
+                                       {
+                                           "word":  "marche",
+                                           "end":  194.26,
+                                           "start":  193.85999999999999
+                                       },
+                                       {
+                                           "word":  "avec",
+                                           "end":  194.76,
+                                           "start":  194.35999999999999
+                                       },
+                                       {
+                                           "word":  "moi",
+                                           "end":  195.26,
+                                           "start":  194.85999999999999
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  195.76,
+                                           "start":  195.35999999999999
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  193.24,
+                                           "start":  192.76
+                                       },
+                                       {
+                                           "word":  "l\u0027éternel",
+                                           "end":  193.74,
+                                           "start":  193.34
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  194.24,
+                                           "start":  193.84
+                                       }
+                                   ],
+                         "text":  "je t\u0027emmène Abrame marche avec moi Je suis l\u0027éternel je",
+                         "start":  190.2
+                     },
+                     {
+                         "end":  198,
+                         "words":  [
+                                       {
+                                           "word":  "suis",
+                                           "end":  194.74,
+                                           "start":  194.34
+                                       },
+                                       {
+                                           "word":  "ton",
+                                           "end":  194.3,
+                                           "start":  193.24
+                                       },
+                                       {
+                                           "word":  "roi",
+                                           "end":  195,
+                                           "start":  194.3
+                                       },
+                                       {
+                                           "word":  "Sous-titres",
+                                           "end":  195.5,
+                                           "start":  195.1
+                                       },
+                                       {
+                                           "word":  "réalisés",
+                                           "end":  196,
+                                           "start":  195.6
+                                       },
+                                       {
+                                           "word":  "par",
+                                           "end":  196.5,
+                                           "start":  196.1
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  197,
+                                           "start":  196.6
+                                       },
+                                       {
+                                           "word":  "communauté",
+                                           "end":  197.5,
+                                           "start":  197.1
+                                       },
+                                       {
+                                           "word":  "d\u0027",
+                                           "end":  198,
+                                           "start":  197.6
+                                       }
+                                   ],
+                         "text":  "suis ton roi Sous-titres réalisés par la communauté d\u0027",
+                         "start":  194.34
+                     },
+                     {
+                         "end":  198.5,
+                         "words":  [
+                                       {
+                                           "word":  "Amara.org",
+                                           "end":  198.5,
+                                           "start":  198.1
+                                       }
+                                   ],
+                         "text":  "Amara.org",
+                         "start":  198.1
+                     }
+                 ]
+}

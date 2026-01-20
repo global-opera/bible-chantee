@@ -5,113 +5,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genese 9 | Bible Chantee Karaoke</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
-        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
-        .header h1{font-size:1.8em;color:#d4af37}
-        .player{max-width:800px;margin:20px auto;padding:0 20px}
-        audio{width:100%}
-        .lyrics{max-width:800px;margin:20px auto;padding:20px}
-        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
-        .line:hover{background:rgba(212,175,55,0.1)}
-        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
-        .line.passed{opacity:0.5}
-        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
-        .footer{text-align:center;padding:20px;color:#666}
-        .footer a{color:#d4af37}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
+        .header p { color: #888; }
+        .audio-player { 
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        audio { width: 100%; }
+        .lyrics { 
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        .line { 
+            padding: 12px 15px;
+            margin: 5px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .line .time { 
+            color: #666; 
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+        .line.active { 
+            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
+            color: #fff;
+            border-left: 4px solid #d4af37;
+            transform: scale(1.02);
+        }
+        .line.active .time { color: #d4af37; }
+        .line.past { opacity: 0.5; }
     </style>
 </head>
 <body>
-    <div class="header"><h1>Genese 9</h1><p>Bible Chantee Karaoke</p></div>
-    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_09_FR.mp3" type="audio/mpeg"></audio></div>
-    <div class="lyrics">
-        <div class="line" data-start="0.10" data-end="0.10"><span class="time">[0:00]</span>Dans la lumière de l'aube</div>
-        <div class="line" data-start="0.10" data-end="33.52"><span class="time">[0:00]</span>Une voix se fait entendre</div>
-        <div class="line" data-start="33.52" data-end="33.52"><span class="time">[0:33]</span>Dieu bénit Noé</div>
-        <div class="line" data-start="33.52" data-end="33.52"><span class="time">[0:33]</span>La terre à défendre</div>
-        <div class="line" data-start="33.52" data-end="44.20"><span class="time">[0:33]</span>Soyez fécondes</div>
-        <div class="line" data-start="44.20" data-end="44.20"><span class="time">[0:44]</span>Remplissez l'horizon</div>
-        <div class="line" data-start="44.20" data-end="44.20"><span class="time">[0:44]</span>Les cieux et la mer</div>
-        <div class="line" data-start="44.20" data-end="55.82"><span class="time">[0:44]</span>Sont en saisons</div>
-        <div class="line" data-start="55.82" data-end="55.82"><span class="time">[0:55]</span>Ô arc-en-ciel</div>
-        <div class="line" data-start="55.82" data-end="64.14"><span class="time">[0:55]</span>Symbole de l'alliance</div>
-        <div class="line" data-start="64.14" data-end="64.14"><span class="time">[1:04]</span>Entre ciel et terre</div>
-        <div class="line" data-start="64.14" data-end="64.14"><span class="time">[1:04]</span>Une douce présence</div>
-        <div class="line" data-start="64.14" data-end="72.46"><span class="time">[1:04]</span>Aucune chair ne périra</div>
-        <div class="line" data-start="72.46" data-end="72.46"><span class="time">[1:12]</span>Dans les flots</div>
-        <div class="line" data-start="72.46" data-end="72.46"><span class="time">[1:12]</span>Mon amour éternel pour vous</div>
-        <div class="line" data-start="72.46" data-end="82.46"><span class="time">[1:12]</span>Je le sais en mots</div>
-        <div class="line" data-start="82.46" data-end="82.46"><span class="time">[1:22]</span>Les animaux dansent</div>
-        <div class="line" data-start="82.46" data-end="82.46"><span class="time">[1:22]</span>La vie se réveille</div>
-        <div class="line" data-start="82.46" data-end="90.62"><span class="time">[1:22]</span>Tous sont sous ma grâce</div>
-        <div class="line" data-start="90.62" data-end="90.62"><span class="time">[1:30]</span>Unis dans le vermeil</div>
-        <div class="line" data-start="90.62" data-end="90.62"><span class="time">[1:30]</span>Ne craignez rien</div>
-        <div class="line" data-start="90.62" data-end="98.00"><span class="time">[1:30]</span>Car je suis votre roi</div>
-        <div class="line" data-start="98.00" data-end="98.00"><span class="time">[1:38]</span>L'alliance de paix</div>
-        <div class="line" data-start="98.00" data-end="108.12"><span class="time">[1:38]</span>Je la fais avec toi</div>
-        <div class="line" data-start="108.12" data-end="108.12"><span class="time">[1:48]</span>Ô arc-en-ciel</div>
-        <div class="line" data-start="108.12" data-end="108.12"><span class="time">[1:48]</span>Symbole de l'alliance</div>
-        <div class="line" data-start="108.12" data-end="115.80"><span class="time">[1:48]</span>Entre ciel et terre</div>
-        <div class="line" data-start="115.80" data-end="115.80"><span class="time">[1:55]</span>Une douce présence</div>
-        <div class="line" data-start="115.80" data-end="115.80"><span class="time">[1:55]</span>Aucune chair ne périra</div>
-        <div class="line" data-start="115.80" data-end="123.12"><span class="time">[1:55]</span>Dans les flots</div>
-        <div class="line" data-start="123.12" data-end="123.12"><span class="time">[2:03]</span>Mon amour éternel pour vous</div>
-        <div class="line" data-start="123.12" data-end="123.12"><span class="time">[2:03]</span>Je le sais en mots</div>
-        <div class="line" data-start="123.12" data-end="133.20"><span class="time">[2:03]</span>Souviens-toi, ô mon peuple</div>
-        <div class="line" data-start="133.20" data-end="133.20"><span class="time">[2:13]</span>De ce pacte sacré</div>
-        <div class="line" data-start="133.20" data-end="133.20"><span class="time">[2:13]</span>Je suis votre refuge</div>
-        <div class="line" data-start="133.20" data-end="139.90"><span class="time">[2:13]</span>Dans la tempête, l'oubli</div>
-        <div class="line" data-start="139.90" data-end="139.90"><span class="time">[2:19]</span>Quand les nuages s'assombrissent</div>
-        <div class="line" data-start="139.90" data-end="145.68"><span class="time">[2:19]</span>Et que le vent souffle fort</div>
-        <div class="line" data-start="145.68" data-end="145.68"><span class="time">[2:25]</span>Regarde l'arc dans le ciel</div>
-        <div class="line" data-start="145.68" data-end="145.68"><span class="time">[2:25]</span>Je suis là</div>
-        <div class="line" data-start="145.68" data-end="151.56"><span class="time">[2:25]</span>Je te serre encore</div>
-        <div class="line" data-start="151.56" data-end="151.56"><span class="time">[2:31]</span>Ô arc-en-ciel</div>
-        <div class="line" data-start="151.56" data-end="151.56"><span class="time">[2:31]</span>Symbole de l'alliance</div>
-        <div class="line" data-start="151.56" data-end="149.48"><span class="time">[2:31]</span>Entre ciel et terre</div>
-        <div class="line" data-start="149.48" data-end="149.48"><span class="time">[2:29]</span>Une douce présence</div>
-        <div class="line" data-start="149.48" data-end="149.48"><span class="time">[2:29]</span>Aucune chair ne périra</div>
-        <div class="line" data-start="149.48" data-end="154.48"><span class="time">[2:29]</span>Dans les flots</div>
-        <div class="line" data-start="154.48" data-end="154.48"><span class="time">[2:34]</span>Mon amour éternel pour vous</div>
-        <div class="line" data-start="154.48" data-end="154.48"><span class="time">[2:34]</span>Je le sais en mots</div>
-        <div class="line" data-start="154.48" data-end="163.10"><span class="time">[2:34]</span>Avec Noé et ses fils</div>
-        <div class="line" data-start="163.10" data-end="163.10"><span class="time">[2:43]</span>Nous bâtissons l'avenir</div>
-        <div class="line" data-start="163.10" data-end="172.34"><span class="time">[2:43]</span>Dans chaque heure, la promesse</div>
-        <div class="line" data-start="172.34" data-end="172.34"><span class="time">[2:52]</span>Un doux souvenir</div>
-        <div class="line" data-start="172.34" data-end="172.34"><span class="time">[2:52]</span>L'unité dans la diversité</div>
-        <div class="line" data-start="172.34" data-end="176.84"><span class="time">[2:52]</span>Mains dans la main</div>
-        <div class="line" data-start="176.84" data-end="176.84"><span class="time">[2:56]</span>Répandons l'amour</div>
-        <div class="line" data-start="176.84" data-end="176.84"><span class="time">[2:56]</span>Sur ce chemin divin</div>
-        <div class="line" data-start="176.84" data-end="181.84"><span class="time">[2:56]</span>Ô arc-en-ciel</div>
-        <div class="line" data-start="181.84" data-end="181.84"><span class="time">[3:01]</span>Symbole de l'alliance</div>
-        <div class="line" data-start="181.84" data-end="181.84"><span class="time">[3:01]</span>Entre ciel et terre</div>
-        <div class="line" data-start="181.84" data-end="185.50"><span class="time">[3:01]</span>Une douce présence</div>
-        <div class="line" data-start="185.50" data-end="185.50"><span class="time">[3:05]</span>Aucune chair ne périra</div>
-        <div class="line" data-start="185.50" data-end="185.50"><span class="time">[3:05]</span>Dans les flots</div>
-        <div class="line" data-start="185.50" data-end="195.04"><span class="time">[3:05]</span>Mon amour éternel pour vous</div>
-        <div class="line" data-start="195.04" data-end="195.04"><span class="time">[3:15]</span>Je le sais en mots</div>
-        <div class="line" data-start="195.04" data-end="206.66"><span class="time">[3:15]</span>L'arc dans le ciel</div>
-        <div class="line" data-start="206.66" data-end="206.66"><span class="time">[3:26]</span>Un rappel d'espérance</div>
-        <div class="line" data-start="206.66" data-end="206.66"><span class="time">[3:26]</span>L'alliance de Dieu</div>
-        <div class="line" data-start="206.66" data-end="220.72"><span class="time">[3:26]</span>Une éternelle danse</div>
-        <div class="line" data-start="220.72" data-end="220.72"><span class="time">[3:40]</span>Remplissons la terre</div>
-        <div class="line" data-start="220.72" data-end="220.72"><span class="time">[3:40]</span>De sa lumière</div>
-        <div class="line" data-start="220.72" data-end="225.86"><span class="time">[3:40]</span>Pour toujours unis</div>
-        <div class="line" data-start="0.00" data-end="225.86"><span class="time">[0:00]</span>Sous son amour sincère</div>
+    <div class="container">
+        <div class="header">
+            <h1>Genese 9</h1>
+            <p>Bible Chantee Karaoke</p>
+        </div>
+        <div class="audio-player">
+            <audio id="audio" controls>
+                <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_09_FR.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="lyrics" id="lyrics">
+        <div class="line" data-start="0.10" data-end="32.88"><span class="time">[0:00]</span>... Dans la lumière de l'aube Une voix se fait entendre</div>
+        <div class="line" data-start="33.52" data-end="44.10"><span class="time">[0:33]</span>Dieu bénit nos aies La terre à défendre Soyez fécons, remplissez</div>
+        <div class="line" data-start="44.20" data-end="54.90"><span class="time">[0:44]</span>l'horizon Les cieuses et la mer sont en ma raison Au arcanciel,</div>
+        <div class="line" data-start="55.82" data-end="64.14"><span class="time">[0:55]</span>symbole de l'alliance Entre ciel et terre Une douce présence</div>
+        <div class="line" data-start="64.14" data-end="72.46"><span class="time">[1:04]</span>Aucune chair ne périrà dans les flots Mon amour éternel</div>
+        <div class="line" data-start="72.46" data-end="82.46"><span class="time">[1:12]</span>pour vous Je le sais en mot Les animaux dansent La vie</div>
+        <div class="line" data-start="82.46" data-end="90.62"><span class="time">[1:22]</span>se réveille Tous en sous ma grâce Unis dans le vernet Ne</div>
+        <div class="line" data-start="90.62" data-end="98.00"><span class="time">[1:30]</span>craignez rien Car je suis votre roi L'alliance de paix</div>
+        <div class="line" data-start="98.00" data-end="107.32"><span class="time">[1:38]</span>Je la fais avec toi Au arcanciel, symbole de l'alliance</div>
+        <div class="line" data-start="108.12" data-end="115.80"><span class="time">[1:48]</span>Entre ciel et terre Une douce présence Aucune chair ne</div>
+        <div class="line" data-start="115.80" data-end="123.12"><span class="time">[1:55]</span>périrà dans les flots Mon amour éternel pour vous Je le</div>
+        <div class="line" data-start="123.12" data-end="133.20"><span class="time">[2:03]</span>sais en mot Souviens-toi au mon peuple De ce pacte sacré</div>
+        <div class="line" data-start="133.20" data-end="139.80"><span class="time">[2:13]</span>Je suis votre refuge Dans la tempête l'oubli Quand les</div>
+        <div class="line" data-start="139.90" data-end="145.58"><span class="time">[2:19]</span>nuèges s'assombrissent Et que le vent souffle fort Regarde</div>
+        <div class="line" data-start="145.68" data-end="151.46"><span class="time">[2:25]</span>l'art dans le ciel Je suis là Je te serre encore Au arcanciel,</div>
+        <div class="line" data-start="151.56" data-end="149.38"><span class="time">[2:31]</span>symbole de l'alliance Entre ciel et terre Une douce présence</div>
+        <div class="line" data-start="149.48" data-end="154.38"><span class="time">[2:29]</span>Aucune chair ne périrà dans les flots Mon amour éternel</div>
+        <div class="line" data-start="154.48" data-end="163.00"><span class="time">[2:34]</span>pour vous Je le sais en mot Avec Noé et ses fils Nous bâtissons</div>
+        <div class="line" data-start="163.10" data-end="172.24"><span class="time">[2:43]</span>l'avenir Dans chaque heure la promesse Un dos souvenir</div>
+        <div class="line" data-start="172.34" data-end="176.74"><span class="time">[2:52]</span>L'unité dans la diversité Mains dans la main Répendons</div>
+        <div class="line" data-start="176.84" data-end="181.74"><span class="time">[2:56]</span>l'amour Sur ce chemin divin Au arcanciel, symbole de l'alliance</div>
+        <div class="line" data-start="181.84" data-end="185.40"><span class="time">[3:01]</span>Entre ciel et terre Une douce présence Aucune chair ne</div>
+        <div class="line" data-start="185.50" data-end="194.94"><span class="time">[3:05]</span>périrà dans les flots Mon amour éternel pour vous Je le</div>
+        <div class="line" data-start="195.04" data-end="207.12"><span class="time">[3:15]</span>sais en mot L'art dans le ciel Un rappel d'espérance L'alliance</div>
+        <div class="line" data-start="206.66" data-end="220.62"><span class="time">[3:26]</span>de Dieu Une éternelle danse Remplissons la terre de sa</div>
+        <div class="line" data-start="220.72" data-end="225.86"><span class="time">[3:40]</span>lumière Pour toujours une île Sous son amour sincère</div>
+        </div>
     </div>
-    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
     <script>
-        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
-        audio.addEventListener('timeupdate',()=>{
-            const t=audio.currentTime;
-            lines.forEach(l=>{
-                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
-                l.classList.remove('active','passed');
-                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
-                else if(t>=e)l.classList.add('passed')
-            })
+        const audio = document.getElementById('audio');
+        const lines = document.querySelectorAll('.line');
+        const lyricsContainer = document.getElementById('lyrics');
+        
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            let activeIndex = -1;
+            
+            lines.forEach((line, index) => {
+                const start = parseFloat(line.dataset.start);
+                const end = parseFloat(line.dataset.end);
+                
+                line.classList.remove('active', 'past');
+                
+                if (currentTime >= start && currentTime < end) {
+                    line.classList.add('active');
+                    activeIndex = index;
+                } else if (currentTime >= end) {
+                    line.classList.add('past');
+                }
+            });
+            
+            if (activeIndex >= 0) {
+                const activeLine = lines[activeIndex];
+                const containerRect = lyricsContainer.getBoundingClientRect();
+                const lineRect = activeLine.getBoundingClientRect();
+                
+                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
+                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
         });
-        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+        
+        lines.forEach(line => {
+            line.addEventListener('click', () => {
+                audio.currentTime = parseFloat(line.dataset.start);
+                audio.play();
+            });
+        });
     </script>
 </body>
 </html>

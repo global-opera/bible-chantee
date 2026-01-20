@@ -1,0 +1,1455 @@
+﻿{
+    "language":  "fr",
+    "text":  "Dans la nuit sombre, l\u0027angoisse s\u0027élève. A Sodom, la voix\ndes amants détresse. L\u0027OTAN prière, reçoit des envoyés.\nDes hommes de lumière, un chemin attracé. Oh Seigneur,\ntu es notre refuge. Dans la tempête, ta main nous conduit.\n\nSauve-nous, nous implorons. Ne regarde pas en arrière.\nVers la montagne, notre cœur s\u0027élève. Dans l\u0027ombre de ta\ngrâce, nous vivrons. Les portes se ferment, la foule est\nen colère. L\u0027eau défend les étrangers, bras vent l\u0027enfer.\n\nDes anges puissants, savoir raison. Lève-toi, fuis, faire\nla vie, tu raisonneur. Oh Seigneur, tu es notre refuge.\nDans la tempête, ta main nous conduit. Sauve-nous, nous\nimplorons. Ne regarde pas en arrière. Vers la montagne,\n\nnotre cœur s\u0027élève. Dans l\u0027ombre de ta grâce, nous vivrons.\nLe soleil se lève, la pile s\u0027effondre. Au cœur de la nuit,\nta promesse abonde. Souviens-toi d\u0027abra, de la foi qui\nsauve. Dans le chaos, ta miséricorde approuve. Oh Seigneur,\n\ntu es notre refuge. Dans la tempête, ta main nous conduit.\nSauve-nous, nous implorons. Ne regarde pas en arrière.\nVers la montagne, notre cœur s\u0027élève. Dans l\u0027ombre de ta\ngrâce, nous vivrons. Dans l\u0027ombre de ta grâce, nous vivrons.\n\nDans la lumière, nos âmes s\u0027uniront. Oh Seigneur, en toi\nnous espérons. Dans l\u0027ombre de ta grâce, nous vivrons.\nDans l\u0027ombre de ta grâce, nous vivrons. Ces paroles s\u0027inspirent\nde l\u0027histoire de l\u0027Hôte et de la miséricorde divine. Elles\n\nsont conçues pour être chantées dans un cadre de culte,\névoquant des thèmes de refuge, de protection et de foi\ndans les épreuves.",
+    "segments":  [
+                     {
+                         "end":  19.12,
+                         "words":  [
+                                       {
+                                           "word":  "Dans",
+                                           "end":  11.12,
+                                           "start":  10.04
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  11.38,
+                                           "start":  11.12
+                                       },
+                                       {
+                                           "word":  "nuit",
+                                           "end":  11.7,
+                                           "start":  11.38
+                                       },
+                                       {
+                                           "word":  "sombre,",
+                                           "end":  12.78,
+                                           "start":  11.7
+                                       },
+                                       {
+                                           "word":  "l\u0027angoisse",
+                                           "end":  13.28,
+                                           "start":  12.879999999999999
+                                       },
+                                       {
+                                           "word":  "s\u0027élève.",
+                                           "end":  13.78,
+                                           "start":  13.379999999999999
+                                       },
+                                       {
+                                           "word":  "A",
+                                           "end":  14.28,
+                                           "start":  13.879999999999999
+                                       },
+                                       {
+                                           "word":  "Sodom,",
+                                           "end":  18.26,
+                                           "start":  17.06
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  18.86,
+                                           "start":  18.32
+                                       },
+                                       {
+                                           "word":  "voix",
+                                           "end":  19.12,
+                                           "start":  18.86
+                                       }
+                                   ],
+                         "text":  "Dans la nuit sombre, l\u0027angoisse s\u0027élève. A Sodom, la voix",
+                         "start":  10.04
+                     },
+                     {
+                         "end":  26.82,
+                         "words":  [
+                                       {
+                                           "word":  "des",
+                                           "end":  19.3,
+                                           "start":  19.12
+                                       },
+                                       {
+                                           "word":  "amants",
+                                           "end":  19.8,
+                                           "start":  19.400000000000002
+                                       },
+                                       {
+                                           "word":  "détresse.",
+                                           "end":  20.98,
+                                           "start":  20.16
+                                       },
+                                       {
+                                           "word":  "L\u0027OTAN",
+                                           "end":  21.48,
+                                           "start":  21.080000000000002
+                                       },
+                                       {
+                                           "word":  "prière,",
+                                           "end":  23.66,
+                                           "start":  22.92
+                                       },
+                                       {
+                                           "word":  "reçoit",
+                                           "end":  25.12,
+                                           "start":  23.66
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  25.42,
+                                           "start":  25.12
+                                       },
+                                       {
+                                           "word":  "envoyés.",
+                                           "end":  26.82,
+                                           "start":  25.42
+                                       }
+                                   ],
+                         "text":  "des amants détresse. L\u0027OTAN prière, reçoit des envoyés.",
+                         "start":  19.12
+                     },
+                     {
+                         "end":  35.4,
+                         "words":  [
+                                       {
+                                           "word":  "Des",
+                                           "end":  28.22,
+                                           "start":  26.82
+                                       },
+                                       {
+                                           "word":  "hommes",
+                                           "end":  28.7,
+                                           "start":  28.22
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  28.94,
+                                           "start":  28.7
+                                       },
+                                       {
+                                           "word":  "lumière,",
+                                           "end":  29.7,
+                                           "start":  28.94
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  30.54,
+                                           "start":  30.18
+                                       },
+                                       {
+                                           "word":  "chemin",
+                                           "end":  31.04,
+                                           "start":  30.54
+                                       },
+                                       {
+                                           "word":  "attracé.",
+                                           "end":  31.54,
+                                           "start":  31.14
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  32.04,
+                                           "start":  31.64
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  35.4,
+                                           "start":  34.44
+                                       }
+                                   ],
+                         "text":  "Des hommes de lumière, un chemin attracé. Oh Seigneur,",
+                         "start":  26.82
+                     },
+                     {
+                         "end":  43.84,
+                         "words":  [
+                                       {
+                                           "word":  "tu",
+                                           "end":  35.98,
+                                           "start":  35.4
+                                       },
+                                       {
+                                           "word":  "es",
+                                           "end":  36.22,
+                                           "start":  35.98
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  36.76,
+                                           "start":  36.22
+                                       },
+                                       {
+                                           "word":  "refuge.",
+                                           "end":  37.86,
+                                           "start":  36.76
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  39.56,
+                                           "start":  39.080000000000005
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  39.96,
+                                           "start":  39.56
+                                       },
+                                       {
+                                           "word":  "tempête,",
+                                           "end":  41.34,
+                                           "start":  39.96
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  42.06,
+                                           "start":  41.4
+                                       },
+                                       {
+                                           "word":  "main",
+                                           "end":  42.54,
+                                           "start":  42.06
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  42.82,
+                                           "start":  42.54
+                                       },
+                                       {
+                                           "word":  "conduit.",
+                                           "end":  43.84,
+                                           "start":  42.82
+                                       }
+                                   ],
+                         "text":  "tu es notre refuge. Dans la tempête, ta main nous conduit.",
+                         "start":  35.4
+                     },
+                     {
+                         "end":  49.78,
+                         "words":  [
+                                       {
+                                           "word":  "Sauve-nous,",
+                                           "end":  44.8,
+                                           "start":  44.14
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  45,
+                                           "start":  44.8
+                                       },
+                                       {
+                                           "word":  "implorons.",
+                                           "end":  46.72,
+                                           "start":  45.34
+                                       },
+                                       {
+                                           "word":  "Ne",
+                                           "end":  47.28,
+                                           "start":  46.88
+                                       },
+                                       {
+                                           "word":  "regarde",
+                                           "end":  47.66,
+                                           "start":  47.28
+                                       },
+                                       {
+                                           "word":  "pas",
+                                           "end":  48.2,
+                                           "start":  47.66
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  48.64,
+                                           "start":  48.2
+                                       },
+                                       {
+                                           "word":  "arrière.",
+                                           "end":  49.78,
+                                           "start":  48.64
+                                       }
+                                   ],
+                         "text":  "Sauve-nous, nous implorons. Ne regarde pas en arrière.",
+                         "start":  44.14
+                     },
+                     {
+                         "end":  57.46,
+                         "words":  [
+                                       {
+                                           "word":  "Vers",
+                                           "end":  51.02,
+                                           "start":  50.540000000000006
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  51.44,
+                                           "start":  51.02
+                                       },
+                                       {
+                                           "word":  "montagne,",
+                                           "end":  52.76,
+                                           "start":  51.44
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  53.6,
+                                           "start":  52.82
+                                       },
+                                       {
+                                           "word":  "cœur",
+                                           "end":  54.3,
+                                           "start":  53.6
+                                       },
+                                       {
+                                           "word":  "s\u0027élève.",
+                                           "end":  54.8,
+                                           "start":  54.4
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  56.08,
+                                           "start":  55.28
+                                       },
+                                       {
+                                           "word":  "l\u0027ombre",
+                                           "end":  56.58,
+                                           "start":  56.18
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  57.2,
+                                           "start":  56.78
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  57.46,
+                                           "start":  57.2
+                                       }
+                                   ],
+                         "text":  "Vers la montagne, notre cœur s\u0027élève. Dans l\u0027ombre de ta",
+                         "start":  50.540000000000006
+                     },
+                     {
+                         "end":  65.46,
+                         "words":  [
+                                       {
+                                           "word":  "grâce,",
+                                           "end":  58.46,
+                                           "start":  57.46
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  59.96,
+                                           "start":  58.46
+                                       },
+                                       {
+                                           "word":  "vivrons.",
+                                           "end":  60.82,
+                                           "start":  59.96
+                                       },
+                                       {
+                                           "word":  "Les",
+                                           "end":  62.44,
+                                           "start":  61.94
+                                       },
+                                       {
+                                           "word":  "portes",
+                                           "end":  63.02,
+                                           "start":  62.44
+                                       },
+                                       {
+                                           "word":  "se",
+                                           "end":  63.16,
+                                           "start":  63.02
+                                       },
+                                       {
+                                           "word":  "ferment,",
+                                           "end":  63.74,
+                                           "start":  63.16
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  64.66,
+                                           "start":  64.2
+                                       },
+                                       {
+                                           "word":  "foule",
+                                           "end":  65.2,
+                                           "start":  64.66
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  65.46,
+                                           "start":  65.2
+                                       }
+                                   ],
+                         "text":  "grâce, nous vivrons. Les portes se ferment, la foule est",
+                         "start":  57.46
+                     },
+                     {
+                         "end":  72.32,
+                         "words":  [
+                                       {
+                                           "word":  "en",
+                                           "end":  65.72,
+                                           "start":  65.46
+                                       },
+                                       {
+                                           "word":  "colère.",
+                                           "end":  66.64,
+                                           "start":  65.72
+                                       },
+                                       {
+                                           "word":  "L\u0027eau",
+                                           "end":  67.14,
+                                           "start":  66.74
+                                       },
+                                       {
+                                           "word":  "défend",
+                                           "end":  69.34,
+                                           "start":  68.64
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  69.62,
+                                           "start":  69.34
+                                       },
+                                       {
+                                           "word":  "étrangers,",
+                                           "end":  70.44,
+                                           "start":  69.62
+                                       },
+                                       {
+                                           "word":  "bras",
+                                           "end":  71.32,
+                                           "start":  70.7
+                                       },
+                                       {
+                                           "word":  "vent",
+                                           "end":  71.82,
+                                           "start":  71.419999999999987
+                                       },
+                                       {
+                                           "word":  "l\u0027enfer.",
+                                           "end":  72.32,
+                                           "start":  71.919999999999987
+                                       }
+                                   ],
+                         "text":  "en colère. L\u0027eau défend les étrangers, bras vent l\u0027enfer.",
+                         "start":  65.46
+                     },
+                     {
+                         "end":  81.5,
+                         "words":  [
+                                       {
+                                           "word":  "Des",
+                                           "end":  73.88,
+                                           "start":  73.38
+                                       },
+                                       {
+                                           "word":  "anges",
+                                           "end":  74.38,
+                                           "start":  73.88
+                                       },
+                                       {
+                                           "word":  "puissants,",
+                                           "end":  75.42,
+                                           "start":  74.38
+                                       },
+                                       {
+                                           "word":  "savoir",
+                                           "end":  75.92,
+                                           "start":  75.52
+                                       },
+                                       {
+                                           "word":  "raison.",
+                                           "end":  76.42,
+                                           "start":  76.02
+                                       },
+                                       {
+                                           "word":  "Lève-toi,",
+                                           "end":  80.16,
+                                           "start":  79.5
+                                       },
+                                       {
+                                           "word":  "fuis,",
+                                           "end":  81,
+                                           "start":  80.5
+                                       },
+                                       {
+                                           "word":  "faire",
+                                           "end":  81.5,
+                                           "start":  81.1
+                                       }
+                                   ],
+                         "text":  "Des anges puissants, savoir raison. Lève-toi, fuis, faire",
+                         "start":  73.38
+                     },
+                     {
+                         "end":  89.02,
+                         "words":  [
+                                       {
+                                           "word":  "la",
+                                           "end":  81.92,
+                                           "start":  81.6
+                                       },
+                                       {
+                                           "word":  "vie,",
+                                           "end":  82.26,
+                                           "start":  81.92
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  82.78,
+                                           "start":  82.46
+                                       },
+                                       {
+                                           "word":  "raisonneur.",
+                                           "end":  83.28,
+                                           "start":  82.88
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  83.78,
+                                           "start":  83.38
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  86.94,
+                                           "start":  85.68
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  87.38,
+                                           "start":  86.94
+                                       },
+                                       {
+                                           "word":  "es",
+                                           "end":  87.66,
+                                           "start":  87.38
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  88.2,
+                                           "start":  87.66
+                                       },
+                                       {
+                                           "word":  "refuge.",
+                                           "end":  89.02,
+                                           "start":  88.2
+                                       }
+                                   ],
+                         "text":  "la vie, tu raisonneur. Oh Seigneur, tu es notre refuge.",
+                         "start":  81.6
+                     },
+                     {
+                         "end":  96.42,
+                         "words":  [
+                                       {
+                                           "word":  "Dans",
+                                           "end":  90.94,
+                                           "start":  90.46
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  91.38,
+                                           "start":  90.94
+                                       },
+                                       {
+                                           "word":  "tempête,",
+                                           "end":  92.52,
+                                           "start":  91.38
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  93.5,
+                                           "start":  92.84
+                                       },
+                                       {
+                                           "word":  "main",
+                                           "end":  94,
+                                           "start":  93.5
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  94.26,
+                                           "start":  94
+                                       },
+                                       {
+                                           "word":  "conduit.",
+                                           "end":  95.26,
+                                           "start":  94.26
+                                       },
+                                       {
+                                           "word":  "Sauve-nous,",
+                                           "end":  96.22,
+                                           "start":  95.58
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  96.42,
+                                           "start":  96.22
+                                       }
+                                   ],
+                         "text":  "Dans la tempête, ta main nous conduit. Sauve-nous, nous",
+                         "start":  90.46
+                     },
+                     {
+                         "end":  104.2,
+                         "words":  [
+                                       {
+                                           "word":  "implorons.",
+                                           "end":  98.08,
+                                           "start":  96.76
+                                       },
+                                       {
+                                           "word":  "Ne",
+                                           "end":  98.7,
+                                           "start":  98.22
+                                       },
+                                       {
+                                           "word":  "regarde",
+                                           "end":  99.1,
+                                           "start":  98.7
+                                       },
+                                       {
+                                           "word":  "pas",
+                                           "end":  99.6,
+                                           "start":  99.1
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  100,
+                                           "start":  99.6
+                                       },
+                                       {
+                                           "word":  "arrière.",
+                                           "end":  101.34,
+                                           "start":  100
+                                       },
+                                       {
+                                           "word":  "Vers",
+                                           "end":  102.46,
+                                           "start":  101.98
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  102.86,
+                                           "start":  102.46
+                                       },
+                                       {
+                                           "word":  "montagne,",
+                                           "end":  104.2,
+                                           "start":  102.86
+                                       }
+                                   ],
+                         "text":  "implorons. Ne regarde pas en arrière. Vers la montagne,",
+                         "start":  96.76
+                     },
+                     {
+                         "end":  112.48,
+                         "words":  [
+                                       {
+                                           "word":  "notre",
+                                           "end":  105,
+                                           "start":  104.36
+                                       },
+                                       {
+                                           "word":  "cœur",
+                                           "end":  105.72,
+                                           "start":  105
+                                       },
+                                       {
+                                           "word":  "s\u0027élève.",
+                                           "end":  106.22,
+                                           "start":  105.82
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  107.5,
+                                           "start":  107.02
+                                       },
+                                       {
+                                           "word":  "l\u0027ombre",
+                                           "end":  108,
+                                           "start":  107.6
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  108.64,
+                                           "start":  108.2
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  108.82,
+                                           "start":  108.64
+                                       },
+                                       {
+                                           "word":  "grâce,",
+                                           "end":  109.96,
+                                           "start":  108.82
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  111.38,
+                                           "start":  109.96
+                                       },
+                                       {
+                                           "word":  "vivrons.",
+                                           "end":  112.48,
+                                           "start":  111.38
+                                       }
+                                   ],
+                         "text":  "notre cœur s\u0027élève. Dans l\u0027ombre de ta grâce, nous vivrons.",
+                         "start":  104.36
+                     },
+                     {
+                         "end":  122.32,
+                         "words":  [
+                                       {
+                                           "word":  "Le",
+                                           "end":  114.74,
+                                           "start":  113.66
+                                       },
+                                       {
+                                           "word":  "soleil",
+                                           "end":  115.82,
+                                           "start":  114.74
+                                       },
+                                       {
+                                           "word":  "se",
+                                           "end":  116,
+                                           "start":  115.82
+                                       },
+                                       {
+                                           "word":  "lève,",
+                                           "end":  116.98,
+                                           "start":  116
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  117.78,
+                                           "start":  117.06
+                                       },
+                                       {
+                                           "word":  "pile",
+                                           "end":  118.28,
+                                           "start":  117.88
+                                       },
+                                       {
+                                           "word":  "s\u0027effondre.",
+                                           "end":  118.78,
+                                           "start":  118.38
+                                       },
+                                       {
+                                           "word":  "Au",
+                                           "end":  120.64,
+                                           "start":  120.1
+                                       },
+                                       {
+                                           "word":  "cœur",
+                                           "end":  121.02,
+                                           "start":  120.64
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  121.4,
+                                           "start":  121.02
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  121.7,
+                                           "start":  121.4
+                                       },
+                                       {
+                                           "word":  "nuit,",
+                                           "end":  122.32,
+                                           "start":  121.7
+                                       }
+                                   ],
+                         "text":  "Le soleil se lève, la pile s\u0027effondre. Au cœur de la nuit,",
+                         "start":  113.66
+                     },
+                     {
+                         "end":  130.3,
+                         "words":  [
+                                       {
+                                           "word":  "ta",
+                                           "end":  122.8,
+                                           "start":  122.4
+                                       },
+                                       {
+                                           "word":  "promesse",
+                                           "end":  123.92,
+                                           "start":  122.8
+                                       },
+                                       {
+                                           "word":  "abonde.",
+                                           "end":  125.5,
+                                           "start":  123.92
+                                       },
+                                       {
+                                           "word":  "Souviens-toi",
+                                           "end":  126.58,
+                                           "start":  125.86
+                                       },
+                                       {
+                                           "word":  "d\u0027abra,",
+                                           "end":  127.08,
+                                           "start":  126.67999999999999
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  129.06,
+                                           "start":  128.5
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  129.28,
+                                           "start":  129.06
+                                       },
+                                       {
+                                           "word":  "foi",
+                                           "end":  129.82,
+                                           "start":  129.28
+                                       },
+                                       {
+                                           "word":  "qui",
+                                           "end":  130.3,
+                                           "start":  129.82
+                                       }
+                                   ],
+                         "text":  "ta promesse abonde. Souviens-toi d\u0027abra, de la foi qui",
+                         "start":  122.4
+                     },
+                     {
+                         "end":  139.7,
+                         "words":  [
+                                       {
+                                           "word":  "sauve.",
+                                           "end":  131.3,
+                                           "start":  130.3
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  132.14,
+                                           "start":  131.6
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  132.62,
+                                           "start":  132.14
+                                       },
+                                       {
+                                           "word":  "chaos,",
+                                           "end":  133.28,
+                                           "start":  132.62
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  134.2,
+                                           "start":  133.9
+                                       },
+                                       {
+                                           "word":  "miséricorde",
+                                           "end":  135.74,
+                                           "start":  134.2
+                                       },
+                                       {
+                                           "word":  "approuve.",
+                                           "end":  136.78,
+                                           "start":  135.74
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  137.28,
+                                           "start":  136.88
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  139.7,
+                                           "start":  138.48
+                                       }
+                                   ],
+                         "text":  "sauve. Dans le chaos, ta miséricorde approuve. Oh Seigneur,",
+                         "start":  130.3
+                     },
+                     {
+                         "end":  148.26,
+                         "words":  [
+                                       {
+                                           "word":  "tu",
+                                           "end":  140.26,
+                                           "start":  139.72
+                                       },
+                                       {
+                                           "word":  "es",
+                                           "end":  140.5,
+                                           "start":  140.26
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  141.02,
+                                           "start":  140.5
+                                       },
+                                       {
+                                           "word":  "refuge.",
+                                           "end":  142.08,
+                                           "start":  141.02
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  143.82,
+                                           "start":  142.48
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  144.24,
+                                           "start":  143.82
+                                       },
+                                       {
+                                           "word":  "tempête,",
+                                           "end":  145.26,
+                                           "start":  144.24
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  146.36,
+                                           "start":  145.26
+                                       },
+                                       {
+                                           "word":  "main",
+                                           "end":  146.82,
+                                           "start":  146.36
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  147.12,
+                                           "start":  146.82
+                                       },
+                                       {
+                                           "word":  "conduit.",
+                                           "end":  148.26,
+                                           "start":  147.12
+                                       }
+                                   ],
+                         "text":  "tu es notre refuge. Dans la tempête, ta main nous conduit.",
+                         "start":  139.72
+                     },
+                     {
+                         "end":  154.1,
+                         "words":  [
+                                       {
+                                           "word":  "Sauve-nous,",
+                                           "end":  149.02,
+                                           "start":  148.34
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  149.24,
+                                           "start":  149.02
+                                       },
+                                       {
+                                           "word":  "implorons.",
+                                           "end":  150.98,
+                                           "start":  149.58
+                                       },
+                                       {
+                                           "word":  "Ne",
+                                           "end":  151.54,
+                                           "start":  150.98
+                                       },
+                                       {
+                                           "word":  "regarde",
+                                           "end":  151.94,
+                                           "start":  151.54
+                                       },
+                                       {
+                                           "word":  "pas",
+                                           "end":  152.48,
+                                           "start":  151.94
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  152.88,
+                                           "start":  152.48
+                                       },
+                                       {
+                                           "word":  "arrière.",
+                                           "end":  154.1,
+                                           "start":  152.88
+                                       }
+                                   ],
+                         "text":  "Sauve-nous, nous implorons. Ne regarde pas en arrière.",
+                         "start":  148.34
+                     },
+                     {
+                         "end":  161.8,
+                         "words":  [
+                                       {
+                                           "word":  "Vers",
+                                           "end":  155.28,
+                                           "start":  154.3
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  155.72,
+                                           "start":  155.28
+                                       },
+                                       {
+                                           "word":  "montagne,",
+                                           "end":  157.06,
+                                           "start":  155.72
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  157.84,
+                                           "start":  157.12
+                                       },
+                                       {
+                                           "word":  "cœur",
+                                           "end":  158.58,
+                                           "start":  157.84
+                                       },
+                                       {
+                                           "word":  "s\u0027élève.",
+                                           "end":  159.08,
+                                           "start":  158.68
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  160.32,
+                                           "start":  159.64
+                                       },
+                                       {
+                                           "word":  "l\u0027ombre",
+                                           "end":  160.82,
+                                           "start":  160.42
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  161.5,
+                                           "start":  161.12
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  161.8,
+                                           "start":  161.5
+                                       }
+                                   ],
+                         "text":  "Vers la montagne, notre cœur s\u0027élève. Dans l\u0027ombre de ta",
+                         "start":  154.3
+                     },
+                     {
+                         "end":  170.76,
+                         "words":  [
+                                       {
+                                           "word":  "grâce,",
+                                           "end":  162.78,
+                                           "start":  161.8
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  164.26,
+                                           "start":  162.84
+                                       },
+                                       {
+                                           "word":  "vivrons.",
+                                           "end":  165.06,
+                                           "start":  164.26
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  166.1,
+                                           "start":  165.26
+                                       },
+                                       {
+                                           "word":  "l\u0027ombre",
+                                           "end":  166.6,
+                                           "start":  166.2
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  167.16,
+                                           "start":  166.8
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  167.54,
+                                           "start":  167.16
+                                       },
+                                       {
+                                           "word":  "grâce,",
+                                           "end":  168.42,
+                                           "start":  167.54
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  169.98,
+                                           "start":  168.5
+                                       },
+                                       {
+                                           "word":  "vivrons.",
+                                           "end":  170.76,
+                                           "start":  169.98
+                                       }
+                                   ],
+                         "text":  "grâce, nous vivrons. Dans l\u0027ombre de ta grâce, nous vivrons.",
+                         "start":  161.8
+                     },
+                     {
+                         "end":  180.68,
+                         "words":  [
+                                       {
+                                           "word":  "Dans",
+                                           "end":  171.76,
+                                           "start":  170.88
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  172.82,
+                                           "start":  172.5
+                                       },
+                                       {
+                                           "word":  "lumière,",
+                                           "end":  173.56,
+                                           "start":  172.82
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  174.6,
+                                           "start":  173.76
+                                       },
+                                       {
+                                           "word":  "âmes",
+                                           "end":  175.44,
+                                           "start":  174.6
+                                       },
+                                       {
+                                           "word":  "s\u0027uniront.",
+                                           "end":  175.94,
+                                           "start":  175.54
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  176.44,
+                                           "start":  176.04
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  179.88,
+                                           "start":  178.5
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  180.3,
+                                           "start":  179.88
+                                       },
+                                       {
+                                           "word":  "toi",
+                                           "end":  180.68,
+                                           "start":  180.3
+                                       }
+                                   ],
+                         "text":  "Dans la lumière, nos âmes s\u0027uniront. Oh Seigneur, en toi",
+                         "start":  170.88
+                     },
+                     {
+                         "end":  187.9,
+                         "words":  [
+                                       {
+                                           "word":  "nous",
+                                           "end":  181.06,
+                                           "start":  180.68
+                                       },
+                                       {
+                                           "word":  "espérons.",
+                                           "end":  182.44,
+                                           "start":  181.06
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  183.18,
+                                           "start":  182.44
+                                       },
+                                       {
+                                           "word":  "l\u0027ombre",
+                                           "end":  183.68,
+                                           "start":  183.28
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  184.34,
+                                           "start":  183.96
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  184.58,
+                                           "start":  184.34
+                                       },
+                                       {
+                                           "word":  "grâce,",
+                                           "end":  185.7,
+                                           "start":  184.58
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  187.06,
+                                           "start":  185.72
+                                       },
+                                       {
+                                           "word":  "vivrons.",
+                                           "end":  187.9,
+                                           "start":  187.06
+                                       }
+                                   ],
+                         "text":  "nous espérons. Dans l\u0027ombre de ta grâce, nous vivrons.",
+                         "start":  180.68
+                     },
+                     {
+                         "end":  197.94,
+                         "words":  [
+                                       {
+                                           "word":  "Dans",
+                                           "end":  188.9,
+                                           "start":  188.46
+                                       },
+                                       {
+                                           "word":  "l\u0027ombre",
+                                           "end":  189.4,
+                                           "start":  189
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  190.04,
+                                           "start":  189.62
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  190.3,
+                                           "start":  190.04
+                                       },
+                                       {
+                                           "word":  "grâce,",
+                                           "end":  191.44,
+                                           "start":  190.3
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  192.84,
+                                           "start":  192.1
+                                       },
+                                       {
+                                           "word":  "vivrons.",
+                                           "end":  193.7,
+                                           "start":  192.84
+                                       },
+                                       {
+                                           "word":  "Ces",
+                                           "end":  196.98,
+                                           "start":  196.54
+                                       },
+                                       {
+                                           "word":  "paroles",
+                                           "end":  197.44,
+                                           "start":  196.98
+                                       },
+                                       {
+                                           "word":  "s\u0027inspirent",
+                                           "end":  197.94,
+                                           "start":  197.54
+                                       }
+                                   ],
+                         "text":  "Dans l\u0027ombre de ta grâce, nous vivrons. Ces paroles s\u0027inspirent",
+                         "start":  188.46
+                     },
+                     {
+                         "end":  202.92,
+                         "words":  [
+                                       {
+                                           "word":  "de",
+                                           "end":  198.22,
+                                           "start":  198.06
+                                       },
+                                       {
+                                           "word":  "l\u0027histoire",
+                                           "end":  198.72,
+                                           "start":  198.32
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  198.78,
+                                           "start":  198.52
+                                       },
+                                       {
+                                           "word":  "l\u0027Hôte",
+                                           "end":  199.28,
+                                           "start":  198.88
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  199.9,
+                                           "start":  199.46
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  200.16,
+                                           "start":  199.9
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  200.3,
+                                           "start":  200.16
+                                       },
+                                       {
+                                           "word":  "miséricorde",
+                                           "end":  201.08,
+                                           "start":  200.3
+                                       },
+                                       {
+                                           "word":  "divine.",
+                                           "end":  201.42,
+                                           "start":  201.08
+                                       },
+                                       {
+                                           "word":  "Elles",
+                                           "end":  202.92,
+                                           "start":  202.32
+                                       }
+                                   ],
+                         "text":  "de l\u0027histoire de l\u0027Hôte et de la miséricorde divine. Elles",
+                         "start":  198.06
+                     },
+                     {
+                         "end":  206.26,
+                         "words":  [
+                                       {
+                                           "word":  "sont",
+                                           "end":  203.08,
+                                           "start":  202.92
+                                       },
+                                       {
+                                           "word":  "conçues",
+                                           "end":  203.66,
+                                           "start":  203.08
+                                       },
+                                       {
+                                           "word":  "pour",
+                                           "end":  203.82,
+                                           "start":  203.66
+                                       },
+                                       {
+                                           "word":  "être",
+                                           "end":  204.04,
+                                           "start":  203.82
+                                       },
+                                       {
+                                           "word":  "chantées",
+                                           "end":  204.68,
+                                           "start":  204.04
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  204.84,
+                                           "start":  204.68
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  205,
+                                           "start":  204.84
+                                       },
+                                       {
+                                           "word":  "cadre",
+                                           "end":  205.5,
+                                           "start":  205
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  205.66,
+                                           "start":  205.5
+                                       },
+                                       {
+                                           "word":  "culte,",
+                                           "end":  206.26,
+                                           "start":  205.66
+                                       }
+                                   ],
+                         "text":  "sont conçues pour être chantées dans un cadre de culte,",
+                         "start":  202.92
+                     },
+                     {
+                         "end":  211.78,
+                         "words":  [
+                                       {
+                                           "word":  "évoquant",
+                                           "end":  207.62,
+                                           "start":  207.02
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  207.76,
+                                           "start":  207.62
+                                       },
+                                       {
+                                           "word":  "thèmes",
+                                           "end":  208.16,
+                                           "start":  207.76
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  208.28,
+                                           "start":  208.16
+                                       },
+                                       {
+                                           "word":  "refuge,",
+                                           "end":  208.72,
+                                           "start":  208.28
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  210,
+                                           "start":  209.02
+                                       },
+                                       {
+                                           "word":  "protection",
+                                           "end":  210.52,
+                                           "start":  210
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  211.38,
+                                           "start":  210.52
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  211.5,
+                                           "start":  211.38
+                                       },
+                                       {
+                                           "word":  "foi",
+                                           "end":  211.78,
+                                           "start":  211.5
+                                       }
+                                   ],
+                         "text":  "évoquant des thèmes de refuge, de protection et de foi",
+                         "start":  207.02
+                     },
+                     {
+                         "end":  212.7,
+                         "words":  [
+                                       {
+                                           "word":  "dans",
+                                           "end":  212,
+                                           "start":  211.78
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  212.14,
+                                           "start":  212
+                                       },
+                                       {
+                                           "word":  "épreuves.",
+                                           "end":  212.7,
+                                           "start":  212.14
+                                       }
+                                   ],
+                         "text":  "dans les épreuves.",
+                         "start":  211.78
+                     }
+                 ]
+}

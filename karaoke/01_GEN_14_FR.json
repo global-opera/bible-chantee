@@ -1,0 +1,1504 @@
+﻿{
+    "language":  "fr",
+    "text":  "... Dans la vallée de Sydym, Des rois se sont levés, Que\ndans la hauteur, en guerre, Les coeurs sont troublés. Soudom\net Gomor, Sur le chemin de l\u0027éranse, La peur dans le regard,\nMais tu es notre espérance. Oh Dieu, très haut ma lumière,\n\nTu libères, tu délimes, Dans la nuit de nos combats, Tu\nes là, tu es la bénisoie. Ton nom éternel, Ma force, mon\nrefuge, Dans la tempête, je me lève avec toi. Je suis mon\nteuf. Abra m\u0027a entendu, Le cri d\u0027un fuyard, Il armait ses\n\nbras, Pour un juste combat, 318 vaillants, Au coeur plein\nde foi, Il a poursuivi l\u0027ennemi, Avec la force de toi.\nOh Dieu, très haut ma lumière, Tu libères, tu délimes,\nDans la nuit de nos combats, Tu es là, tu es la bénisoie.\n\nTon nom éternel, Ma force, mon refuge, Dans la tempête,\nje me lève avec toi. Je suis mon teuf. Mélchice et des\ncarbénis, Le Dieu de ciel et terre. Abra m\u0027a donné sa dîme,\nEn reconnaissance sincère. Bien ne m\u0027appartient, Au Seigneur,\n\nje lève ma main vers toi. Marichette, c\u0027est dans ta grâce,\nEn toi, je crois, Je crois. Oh Dieu, très haut ma lumière,\nTu libères, tu délimes, Dans la nuit de nos combats, Tu\nes là, tu es la bénisoie. Ton nom éternel, Ma force, mon\n\nrefuge, Dans la tempête, je me lève avec toi. Je suis mon...\nDans le temps de l\u0027épreuve, Tu es toujours fidèle, Le Dieu\ntrès haut ma pétérnèle, Avec toi, je marcherai, Dans la\nlumière, je vivrai. Dieu, très haut, Mon cœur te chantera.",
+    "segments":  [
+                     {
+                         "end":  30.42,
+                         "words":  [
+                                       {
+                                           "word":  "...",
+                                           "end":  0.5,
+                                           "start":  0.1
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  25.54,
+                                           "start":  24.82
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  25.78,
+                                           "start":  25.54
+                                       },
+                                       {
+                                           "word":  "vallée",
+                                           "end":  26.14,
+                                           "start":  25.78
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  26.36,
+                                           "start":  26.14
+                                       },
+                                       {
+                                           "word":  "Sydym,",
+                                           "end":  26.86,
+                                           "start":  26.46
+                                       },
+                                       {
+                                           "word":  "Des",
+                                           "end":  27.68,
+                                           "start":  27.32
+                                       },
+                                       {
+                                           "word":  "rois",
+                                           "end":  27.98,
+                                           "start":  27.68
+                                       },
+                                       {
+                                           "word":  "se",
+                                           "end":  28.24,
+                                           "start":  27.98
+                                       },
+                                       {
+                                           "word":  "sont",
+                                           "end":  28.5,
+                                           "start":  28.24
+                                       },
+                                       {
+                                           "word":  "levés,",
+                                           "end":  29.32,
+                                           "start":  28.5
+                                       },
+                                       {
+                                           "word":  "Que",
+                                           "end":  30.42,
+                                           "start":  30
+                                       }
+                                   ],
+                         "text":  "... Dans la vallée de Sydym, Des rois se sont levés, Que",
+                         "start":  0.1
+                     },
+                     {
+                         "end":  34.9,
+                         "words":  [
+                                       {
+                                           "word":  "dans",
+                                           "end":  30.66,
+                                           "start":  30.42
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  30.9,
+                                           "start":  30.66
+                                       },
+                                       {
+                                           "word":  "hauteur,",
+                                           "end":  31.4,
+                                           "start":  31
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  31.9,
+                                           "start":  31.5
+                                       },
+                                       {
+                                           "word":  "guerre,",
+                                           "end":  32.4,
+                                           "start":  32
+                                       },
+                                       {
+                                           "word":  "Les",
+                                           "end":  32.86,
+                                           "start":  32.58
+                                       },
+                                       {
+                                           "word":  "coeurs",
+                                           "end":  33.26,
+                                           "start":  32.86
+                                       },
+                                       {
+                                           "word":  "sont",
+                                           "end":  33.44,
+                                           "start":  33.26
+                                       },
+                                       {
+                                           "word":  "troublés.",
+                                           "end":  34.4,
+                                           "start":  33.44
+                                       },
+                                       {
+                                           "word":  "Soudom",
+                                           "end":  34.9,
+                                           "start":  34.5
+                                       }
+                                   ],
+                         "text":  "dans la hauteur, en guerre, Les coeurs sont troublés. Soudom",
+                         "start":  30.42
+                     },
+                     {
+                         "end":  41.9,
+                         "words":  [
+                                       {
+                                           "word":  "et",
+                                           "end":  35.88,
+                                           "start":  35.74
+                                       },
+                                       {
+                                           "word":  "Gomor,",
+                                           "end":  36.56,
+                                           "start":  35.88
+                                       },
+                                       {
+                                           "word":  "Sur",
+                                           "end":  37.3,
+                                           "start":  36.98
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  37.44,
+                                           "start":  37.3
+                                       },
+                                       {
+                                           "word":  "chemin",
+                                           "end":  37.88,
+                                           "start":  37.44
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  38.24,
+                                           "start":  37.88
+                                       },
+                                       {
+                                           "word":  "l\u0027éranse,",
+                                           "end":  38.74,
+                                           "start":  38.34
+                                       },
+                                       {
+                                           "word":  "La",
+                                           "end":  40.26,
+                                           "start":  39.62
+                                       },
+                                       {
+                                           "word":  "peur",
+                                           "end":  40.54,
+                                           "start":  40.26
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  40.78,
+                                           "start":  40.54
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  40.96,
+                                           "start":  40.78
+                                       },
+                                       {
+                                           "word":  "regard,",
+                                           "end":  41.9,
+                                           "start":  40.96
+                                       }
+                                   ],
+                         "text":  "et Gomor, Sur le chemin de l\u0027éranse, La peur dans le regard,",
+                         "start":  35.74
+                     },
+                     {
+                         "end":  51.86,
+                         "words":  [
+                                       {
+                                           "word":  "Mais",
+                                           "end":  42.86,
+                                           "start":  42.4
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  43.16,
+                                           "start":  42.86
+                                       },
+                                       {
+                                           "word":  "es",
+                                           "end":  43.52,
+                                           "start":  43.16
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  44.24,
+                                           "start":  43.52
+                                       },
+                                       {
+                                           "word":  "espérance.",
+                                           "end":  46.4,
+                                           "start":  44.24
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  49.54,
+                                           "start":  48.9
+                                       },
+                                       {
+                                           "word":  "Dieu,",
+                                           "end":  50.12,
+                                           "start":  49.54
+                                       },
+                                       {
+                                           "word":  "très",
+                                           "end":  50.68,
+                                           "start":  50.3
+                                       },
+                                       {
+                                           "word":  "haut",
+                                           "end":  51.08,
+                                           "start":  50.68
+                                       },
+                                       {
+                                           "word":  "ma",
+                                           "end":  51.24,
+                                           "start":  51.24
+                                       },
+                                       {
+                                           "word":  "lumière,",
+                                           "end":  51.86,
+                                           "start":  51.24
+                                       }
+                                   ],
+                         "text":  "Mais tu es notre espérance. Oh Dieu, très haut ma lumière,",
+                         "start":  42.4
+                     },
+                     {
+                         "end":  57.22,
+                         "words":  [
+                                       {
+                                           "word":  "Tu",
+                                           "end":  52.42,
+                                           "start":  52.02
+                                       },
+                                       {
+                                           "word":  "libères,",
+                                           "end":  53.4,
+                                           "start":  52.42
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  53.62,
+                                           "start":  53.46
+                                       },
+                                       {
+                                           "word":  "délimes,",
+                                           "end":  54.6,
+                                           "start":  53.62
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  54.84,
+                                           "start":  54.62
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  55.08,
+                                           "start":  54.84
+                                       },
+                                       {
+                                           "word":  "nuit",
+                                           "end":  55.46,
+                                           "start":  55.08
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  55.78,
+                                           "start":  55.46
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  56.1,
+                                           "start":  55.78
+                                       },
+                                       {
+                                           "word":  "combats,",
+                                           "end":  56.74,
+                                           "start":  56.1
+                                       },
+                                       {
+                                           "word":  "Tu",
+                                           "end":  57.22,
+                                           "start":  56.96
+                                       }
+                                   ],
+                         "text":  "Tu libères, tu délimes, Dans la nuit de nos combats, Tu",
+                         "start":  52.02
+                     },
+                     {
+                         "end":  68.12,
+                         "words":  [
+                                       {
+                                           "word":  "es",
+                                           "end":  57.54,
+                                           "start":  57.22
+                                       },
+                                       {
+                                           "word":  "là,",
+                                           "end":  57.94,
+                                           "start":  57.54
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  58.42,
+                                           "start":  58.14
+                                       },
+                                       {
+                                           "word":  "es",
+                                           "end":  58.72,
+                                           "start":  58.42
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  64.62,
+                                           "start":  64.44
+                                       },
+                                       {
+                                           "word":  "bénisoie.",
+                                           "end":  65.12,
+                                           "start":  64.72
+                                       },
+                                       {
+                                           "word":  "Ton",
+                                           "end":  65.62,
+                                           "start":  65.22
+                                       },
+                                       {
+                                           "word":  "nom",
+                                           "end":  66.12,
+                                           "start":  65.72
+                                       },
+                                       {
+                                           "word":  "éternel,",
+                                           "end":  66.62,
+                                           "start":  66.22
+                                       },
+                                       {
+                                           "word":  "Ma",
+                                           "end":  67.12,
+                                           "start":  66.72
+                                       },
+                                       {
+                                           "word":  "force,",
+                                           "end":  67.62,
+                                           "start":  67.22
+                                       },
+                                       {
+                                           "word":  "mon",
+                                           "end":  68.12,
+                                           "start":  67.72
+                                       }
+                                   ],
+                         "text":  "es là, tu es la bénisoie. Ton nom éternel, Ma force, mon",
+                         "start":  57.22
+                     },
+                     {
+                         "end":  69.6,
+                         "words":  [
+                                       {
+                                           "word":  "refuge,",
+                                           "end":  68.62,
+                                           "start":  68.22
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  69.12,
+                                           "start":  68.72
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  69.62,
+                                           "start":  69.22
+                                       },
+                                       {
+                                           "word":  "tempête,",
+                                           "end":  65.38,
+                                           "start":  64.62
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  65.64,
+                                           "start":  65.38
+                                       },
+                                       {
+                                           "word":  "me",
+                                           "end":  66.14,
+                                           "start":  65.74
+                                       },
+                                       {
+                                           "word":  "lève",
+                                           "end":  66.64,
+                                           "start":  66.24
+                                       },
+                                       {
+                                           "word":  "avec",
+                                           "end":  67.02,
+                                           "start":  66.42
+                                       },
+                                       {
+                                           "word":  "toi.",
+                                           "end":  67.52,
+                                           "start":  67.02
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  68.6,
+                                           "start":  68.16
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  69.1,
+                                           "start":  68.699999999999989
+                                       },
+                                       {
+                                           "word":  "mon",
+                                           "end":  69.6,
+                                           "start":  69.199999999999989
+                                       }
+                                   ],
+                         "text":  "refuge, Dans la tempête, je me lève avec toi. Je suis mon",
+                         "start":  68.22
+                     },
+                     {
+                         "end":  79.74,
+                         "words":  [
+                                       {
+                                           "word":  "teuf.",
+                                           "end":  70.1,
+                                           "start":  69.699999999999989
+                                       },
+                                       {
+                                           "word":  "Abra",
+                                           "end":  74.08,
+                                           "start":  73.2
+                                       },
+                                       {
+                                           "word":  "m\u0027a",
+                                           "end":  74.58,
+                                           "start":  74.179999999999993
+                                       },
+                                       {
+                                           "word":  "entendu,",
+                                           "end":  75,
+                                           "start":  74.42
+                                       },
+                                       {
+                                           "word":  "Le",
+                                           "end":  76.26,
+                                           "start":  75
+                                       },
+                                       {
+                                           "word":  "cri",
+                                           "end":  76.5,
+                                           "start":  76.26
+                                       },
+                                       {
+                                           "word":  "d\u0027un",
+                                           "end":  77,
+                                           "start":  76.6
+                                       },
+                                       {
+                                           "word":  "fuyard,",
+                                           "end":  77.6,
+                                           "start":  76.8
+                                       },
+                                       {
+                                           "word":  "Il",
+                                           "end":  78.76,
+                                           "start":  78.320000000000007
+                                       },
+                                       {
+                                           "word":  "armait",
+                                           "end":  79.52,
+                                           "start":  78.9
+                                       },
+                                       {
+                                           "word":  "ses",
+                                           "end":  79.74,
+                                           "start":  79.52
+                                       }
+                                   ],
+                         "text":  "teuf. Abra m\u0027a entendu, Le cri d\u0027un fuyard, Il armait ses",
+                         "start":  69.699999999999989
+                     },
+                     {
+                         "end":  86.72,
+                         "words":  [
+                                       {
+                                           "word":  "bras,",
+                                           "end":  80.36,
+                                           "start":  79.74
+                                       },
+                                       {
+                                           "word":  "Pour",
+                                           "end":  81.26,
+                                           "start":  80.820000000000007
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  81.6,
+                                           "start":  81.26
+                                       },
+                                       {
+                                           "word":  "juste",
+                                           "end":  82.02,
+                                           "start":  81.6
+                                       },
+                                       {
+                                           "word":  "combat,",
+                                           "end":  82.56,
+                                           "start":  82.02
+                                       },
+                                       {
+                                           "word":  "318",
+                                           "end":  84.08,
+                                           "start":  83.2
+                                       },
+                                       {
+                                           "word":  "vaillants,",
+                                           "end":  84.94,
+                                           "start":  84.08
+                                       },
+                                       {
+                                           "word":  "Au",
+                                           "end":  85.86,
+                                           "start":  84.94
+                                       },
+                                       {
+                                           "word":  "coeur",
+                                           "end":  86.18,
+                                           "start":  85.86
+                                       },
+                                       {
+                                           "word":  "plein",
+                                           "end":  86.72,
+                                           "start":  86.18
+                                       }
+                                   ],
+                         "text":  "bras, Pour un juste combat, 318 vaillants, Au coeur plein",
+                         "start":  79.74
+                     },
+                     {
+                         "end":  92.3,
+                         "words":  [
+                                       {
+                                           "word":  "de",
+                                           "end":  87,
+                                           "start":  86.72
+                                       },
+                                       {
+                                           "word":  "foi,",
+                                           "end":  87.44,
+                                           "start":  87
+                                       },
+                                       {
+                                           "word":  "Il",
+                                           "end":  88.1,
+                                           "start":  87.58
+                                       },
+                                       {
+                                           "word":  "a",
+                                           "end":  88.48,
+                                           "start":  88.1
+                                       },
+                                       {
+                                           "word":  "poursuivi",
+                                           "end":  89.06,
+                                           "start":  88.48
+                                       },
+                                       {
+                                           "word":  "l\u0027ennemi,",
+                                           "end":  89.56,
+                                           "start":  89.16
+                                       },
+                                       {
+                                           "word":  "Avec",
+                                           "end":  90.8,
+                                           "start":  90.24
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  91.12,
+                                           "start":  90.8
+                                       },
+                                       {
+                                           "word":  "force",
+                                           "end":  91.64,
+                                           "start":  91.12
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  92,
+                                           "start":  91.64
+                                       },
+                                       {
+                                           "word":  "toi.",
+                                           "end":  92.3,
+                                           "start":  92
+                                       }
+                                   ],
+                         "text":  "de foi, Il a poursuivi l\u0027ennemi, Avec la force de toi.",
+                         "start":  86.72
+                     },
+                     {
+                         "end":  100.2,
+                         "words":  [
+                                       {
+                                           "word":  "Oh",
+                                           "end":  95,
+                                           "start":  94.3
+                                       },
+                                       {
+                                           "word":  "Dieu,",
+                                           "end":  95.7,
+                                           "start":  95
+                                       },
+                                       {
+                                           "word":  "très",
+                                           "end":  96.28,
+                                           "start":  95.86
+                                       },
+                                       {
+                                           "word":  "haut",
+                                           "end":  96.66,
+                                           "start":  96.28
+                                       },
+                                       {
+                                           "word":  "ma",
+                                           "end":  97,
+                                           "start":  96.78
+                                       },
+                                       {
+                                           "word":  "lumière,",
+                                           "end":  97.5,
+                                           "start":  97
+                                       },
+                                       {
+                                           "word":  "Tu",
+                                           "end":  98.02,
+                                           "start":  97.64
+                                       },
+                                       {
+                                           "word":  "libères,",
+                                           "end":  98.78,
+                                           "start":  98.02
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  99.28,
+                                           "start":  98.82
+                                       },
+                                       {
+                                           "word":  "délimes,",
+                                           "end":  100.2,
+                                           "start":  99.28
+                                       }
+                                   ],
+                         "text":  "Oh Dieu, très haut ma lumière, Tu libères, tu délimes,",
+                         "start":  94.3
+                     },
+                     {
+                         "end":  121.52,
+                         "words":  [
+                                       {
+                                           "word":  "Dans",
+                                           "end":  100.44,
+                                           "start":  100.22
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  100.72,
+                                           "start":  100.44
+                                       },
+                                       {
+                                           "word":  "nuit",
+                                           "end":  101.04,
+                                           "start":  100.72
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  101.38,
+                                           "start":  101.04
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  101.66,
+                                           "start":  101.38
+                                       },
+                                       {
+                                           "word":  "combats,",
+                                           "end":  102.4,
+                                           "start":  101.66
+                                       },
+                                       {
+                                           "word":  "Tu",
+                                           "end":  102.82,
+                                           "start":  102.56
+                                       },
+                                       {
+                                           "word":  "es",
+                                           "end":  103.16,
+                                           "start":  102.82
+                                       },
+                                       {
+                                           "word":  "là,",
+                                           "end":  103.56,
+                                           "start":  103.16
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  103.98,
+                                           "start":  103.72
+                                       },
+                                       {
+                                           "word":  "es",
+                                           "end":  104.38,
+                                           "start":  103.98
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  110.2,
+                                           "start":  110.04
+                                       },
+                                       {
+                                           "word":  "bénisoie.",
+                                           "end":  121.52,
+                                           "start":  120.76
+                                       }
+                                   ],
+                         "text":  "Dans la nuit de nos combats, Tu es là, tu es la bénisoie.",
+                         "start":  100.22
+                     },
+                     {
+                         "end":  125.74,
+                         "words":  [
+                                       {
+                                           "word":  "Ton",
+                                           "end":  122.38,
+                                           "start":  122.28
+                                       },
+                                       {
+                                           "word":  "nom",
+                                           "end":  122.74,
+                                           "start":  122.38
+                                       },
+                                       {
+                                           "word":  "éternel,",
+                                           "end":  123.54,
+                                           "start":  122.74
+                                       },
+                                       {
+                                           "word":  "Ma",
+                                           "end":  124.02,
+                                           "start":  123.54
+                                       },
+                                       {
+                                           "word":  "force,",
+                                           "end":  124.24,
+                                           "start":  124.02
+                                       },
+                                       {
+                                           "word":  "mon",
+                                           "end":  124.24,
+                                           "start":  124.24
+                                       },
+                                       {
+                                           "word":  "refuge,",
+                                           "end":  124.24,
+                                           "start":  124.24
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  124.74,
+                                           "start":  124.33999999999999
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  125.24,
+                                           "start":  124.83999999999999
+                                       },
+                                       {
+                                           "word":  "tempête,",
+                                           "end":  125.74,
+                                           "start":  125.33999999999999
+                                       }
+                                   ],
+                         "text":  "Ton nom éternel, Ma force, mon refuge, Dans la tempête,",
+                         "start":  122.28
+                     },
+                     {
+                         "end":  139.74,
+                         "words":  [
+                                       {
+                                           "word":  "je",
+                                           "end":  131.48,
+                                           "start":  131.12
+                                       },
+                                       {
+                                           "word":  "me",
+                                           "end":  131.98,
+                                           "start":  131.57999999999998
+                                       },
+                                       {
+                                           "word":  "lève",
+                                           "end":  131.8,
+                                           "start":  131.48
+                                       },
+                                       {
+                                           "word":  "avec",
+                                           "end":  132.3,
+                                           "start":  131.9
+                                       },
+                                       {
+                                           "word":  "toi.",
+                                           "end":  133.2,
+                                           "start":  132.76
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  136.74,
+                                           "start":  136.56
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  137.24,
+                                           "start":  136.84
+                                       },
+                                       {
+                                           "word":  "mon",
+                                           "end":  137.74,
+                                           "start":  137.34
+                                       },
+                                       {
+                                           "word":  "teuf.",
+                                           "end":  138.24,
+                                           "start":  137.84
+                                       },
+                                       {
+                                           "word":  "Mélchice",
+                                           "end":  138.74,
+                                           "start":  138.34
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  139.24,
+                                           "start":  138.84
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  139.74,
+                                           "start":  139.34
+                                       }
+                                   ],
+                         "text":  "je me lève avec toi. Je suis mon teuf. Mélchice et des",
+                         "start":  131.12
+                     },
+                     {
+                         "end":  148.76,
+                         "words":  [
+                                       {
+                                           "word":  "carbénis,",
+                                           "end":  140.24,
+                                           "start":  139.84
+                                       },
+                                       {
+                                           "word":  "Le",
+                                           "end":  140.74,
+                                           "start":  140.34
+                                       },
+                                       {
+                                           "word":  "Dieu",
+                                           "end":  143.7,
+                                           "start":  143.06
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  144.76,
+                                           "start":  144.68
+                                       },
+                                       {
+                                           "word":  "ciel",
+                                           "end":  145.26,
+                                           "start":  144.85999999999999
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  145.76,
+                                           "start":  145.35999999999999
+                                       },
+                                       {
+                                           "word":  "terre.",
+                                           "end":  146.26,
+                                           "start":  145.85999999999999
+                                       },
+                                       {
+                                           "word":  "Abra",
+                                           "end":  146.76,
+                                           "start":  146.35999999999999
+                                       },
+                                       {
+                                           "word":  "m\u0027a",
+                                           "end":  147.26,
+                                           "start":  146.85999999999999
+                                       },
+                                       {
+                                           "word":  "donné",
+                                           "end":  147.76,
+                                           "start":  147.35999999999999
+                                       },
+                                       {
+                                           "word":  "sa",
+                                           "end":  148.26,
+                                           "start":  147.85999999999999
+                                       },
+                                       {
+                                           "word":  "dîme,",
+                                           "end":  148.76,
+                                           "start":  148.35999999999999
+                                       }
+                                   ],
+                         "text":  "carbénis, Le Dieu de ciel et terre. Abra m\u0027a donné sa dîme,",
+                         "start":  139.84
+                     },
+                     {
+                         "end":  152.76,
+                         "words":  [
+                                       {
+                                           "word":  "En",
+                                           "end":  149.26,
+                                           "start":  148.85999999999999
+                                       },
+                                       {
+                                           "word":  "reconnaissance",
+                                           "end":  149.76,
+                                           "start":  149.35999999999999
+                                       },
+                                       {
+                                           "word":  "sincère.",
+                                           "end":  150.26,
+                                           "start":  149.85999999999999
+                                       },
+                                       {
+                                           "word":  "Bien",
+                                           "end":  150.76,
+                                           "start":  150.35999999999999
+                                       },
+                                       {
+                                           "word":  "ne",
+                                           "end":  151.26,
+                                           "start":  150.85999999999999
+                                       },
+                                       {
+                                           "word":  "m\u0027appartient,",
+                                           "end":  151.76,
+                                           "start":  151.35999999999999
+                                       },
+                                       {
+                                           "word":  "Au",
+                                           "end":  152.26,
+                                           "start":  151.85999999999999
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  152.76,
+                                           "start":  152.35999999999999
+                                       }
+                                   ],
+                         "text":  "En reconnaissance sincère. Bien ne m\u0027appartient, Au Seigneur,",
+                         "start":  148.85999999999999
+                     },
+                     {
+                         "end":  149.46,
+                         "words":  [
+                                       {
+                                           "word":  "je",
+                                           "end":  153.26,
+                                           "start":  152.85999999999999
+                                       },
+                                       {
+                                           "word":  "lève",
+                                           "end":  153.76,
+                                           "start":  153.35999999999999
+                                       },
+                                       {
+                                           "word":  "ma",
+                                           "end":  144.88,
+                                           "start":  144.76
+                                       },
+                                       {
+                                           "word":  "main",
+                                           "end":  145.38,
+                                           "start":  144.98
+                                       },
+                                       {
+                                           "word":  "vers",
+                                           "end":  145.88,
+                                           "start":  145.48
+                                       },
+                                       {
+                                           "word":  "toi.",
+                                           "end":  146.38,
+                                           "start":  145.98
+                                       },
+                                       {
+                                           "word":  "Marichette,",
+                                           "end":  146.88,
+                                           "start":  146.48
+                                       },
+                                       {
+                                           "word":  "c\u0027est",
+                                           "end":  147.38,
+                                           "start":  146.98
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  148.46,
+                                           "start":  148.2
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  148.96,
+                                           "start":  148.56
+                                       },
+                                       {
+                                           "word":  "grâce,",
+                                           "end":  149.46,
+                                           "start":  149.06
+                                       }
+                                   ],
+                         "text":  "je lève ma main vers toi. Marichette, c\u0027est dans ta grâce,",
+                         "start":  152.85999999999999
+                     },
+                     {
+                         "end":  155.46,
+                         "words":  [
+                                       {
+                                           "word":  "En",
+                                           "end":  149.96,
+                                           "start":  149.56
+                                       },
+                                       {
+                                           "word":  "toi,",
+                                           "end":  150.46,
+                                           "start":  150.06
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  150.96,
+                                           "start":  150.56
+                                       },
+                                       {
+                                           "word":  "crois,",
+                                           "end":  151.46,
+                                           "start":  151.06
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  151.96,
+                                           "start":  151.56
+                                       },
+                                       {
+                                           "word":  "crois.",
+                                           "end":  152.46,
+                                           "start":  152.06
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  152.96,
+                                           "start":  152.56
+                                       },
+                                       {
+                                           "word":  "Dieu,",
+                                           "end":  153.46,
+                                           "start":  153.06
+                                       },
+                                       {
+                                           "word":  "très",
+                                           "end":  153.96,
+                                           "start":  153.56
+                                       },
+                                       {
+                                           "word":  "haut",
+                                           "end":  154.46,
+                                           "start":  154.06
+                                       },
+                                       {
+                                           "word":  "ma",
+                                           "end":  154.96,
+                                           "start":  154.56
+                                       },
+                                       {
+                                           "word":  "lumière,",
+                                           "end":  155.46,
+                                           "start":  155.06
+                                       }
+                                   ],
+                         "text":  "En toi, je crois, Je crois. Oh Dieu, très haut ma lumière,",
+                         "start":  149.56
+                     },
+                     {
+                         "end":  166.14,
+                         "words":  [
+                                       {
+                                           "word":  "Tu",
+                                           "end":  149.46,
+                                           "start":  149.06
+                                       },
+                                       {
+                                           "word":  "libères,",
+                                           "end":  149.96,
+                                           "start":  149.56
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  152,
+                                           "start":  151.68
+                                       },
+                                       {
+                                           "word":  "délimes,",
+                                           "end":  152.5,
+                                           "start":  152.1
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  158.06,
+                                           "start":  157.62
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  158.22,
+                                           "start":  158.06
+                                       },
+                                       {
+                                           "word":  "nuit",
+                                           "end":  158.72,
+                                           "start":  158.32
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  164.72,
+                                           "start":  164.44
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  165.22,
+                                           "start":  164.82
+                                       },
+                                       {
+                                           "word":  "combats,",
+                                           "end":  165.72,
+                                           "start":  165.32
+                                       },
+                                       {
+                                           "word":  "Tu",
+                                           "end":  166.14,
+                                           "start":  165.8
+                                       }
+                                   ],
+                         "text":  "Tu libères, tu délimes, Dans la nuit de nos combats, Tu",
+                         "start":  149.06
+                     },
+                     {
+                         "end":  186,
+                         "words":  [
+                                       {
+                                           "word":  "es",
+                                           "end":  166.5,
+                                           "start":  166.14
+                                       },
+                                       {
+                                           "word":  "là,",
+                                           "end":  167,
+                                           "start":  166.6
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  167.5,
+                                           "start":  167.1
+                                       },
+                                       {
+                                           "word":  "es",
+                                           "end":  168,
+                                           "start":  167.6
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  168.5,
+                                           "start":  168.1
+                                       },
+                                       {
+                                           "word":  "bénisoie.",
+                                           "end":  169,
+                                           "start":  168.6
+                                       },
+                                       {
+                                           "word":  "Ton",
+                                           "end":  169.5,
+                                           "start":  169.1
+                                       },
+                                       {
+                                           "word":  "nom",
+                                           "end":  170,
+                                           "start":  169.6
+                                       },
+                                       {
+                                           "word":  "éternel,",
+                                           "end":  172.64,
+                                           "start":  170.98
+                                       },
+                                       {
+                                           "word":  "Ma",
+                                           "end":  179.04,
+                                           "start":  179.04
+                                       },
+                                       {
+                                           "word":  "force,",
+                                           "end":  179.54,
+                                           "start":  179.14
+                                       },
+                                       {
+                                           "word":  "mon",
+                                           "end":  186,
+                                           "start":  186
+                                       }
+                                   ],
+                         "text":  "es là, tu es la bénisoie. Ton nom éternel, Ma force, mon",
+                         "start":  166.14
+                     },
+                     {
+                         "end":  192,
+                         "words":  [
+                                       {
+                                           "word":  "refuge,",
+                                           "end":  186.5,
+                                           "start":  186.1
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  187,
+                                           "start":  186.6
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  187.5,
+                                           "start":  187.1
+                                       },
+                                       {
+                                           "word":  "tempête,",
+                                           "end":  188,
+                                           "start":  187.6
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  188.5,
+                                           "start":  188.1
+                                       },
+                                       {
+                                           "word":  "me",
+                                           "end":  189,
+                                           "start":  188.6
+                                       },
+                                       {
+                                           "word":  "lève",
+                                           "end":  189.5,
+                                           "start":  189.1
+                                       },
+                                       {
+                                           "word":  "avec",
+                                           "end":  190,
+                                           "start":  189.6
+                                       },
+                                       {
+                                           "word":  "toi.",
+                                           "end":  190.5,
+                                           "start":  190.1
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  191,
+                                           "start":  190.6
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  191.5,
+                                           "start":  191.1
+                                       },
+                                       {
+                                           "word":  "mon...",
+                                           "end":  192,
+                                           "start":  191.6
+                                       }
+                                   ],
+                         "text":  "refuge, Dans la tempête, je me lève avec toi. Je suis mon...",
+                         "start":  186.1
+                     },
+                     {
+                         "end":  197.5,
+                         "words":  [
+                                       {
+                                           "word":  "Dans",
+                                           "end":  192.5,
+                                           "start":  192.1
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  193,
+                                           "start":  192.6
+                                       },
+                                       {
+                                           "word":  "temps",
+                                           "end":  193.5,
+                                           "start":  193.1
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  194,
+                                           "start":  193.6
+                                       },
+                                       {
+                                           "word":  "l\u0027épreuve,",
+                                           "end":  194.5,
+                                           "start":  194.1
+                                       },
+                                       {
+                                           "word":  "Tu",
+                                           "end":  195,
+                                           "start":  194.6
+                                       },
+                                       {
+                                           "word":  "es",
+                                           "end":  195.5,
+                                           "start":  195.1
+                                       },
+                                       {
+                                           "word":  "toujours",
+                                           "end":  196,
+                                           "start":  195.6
+                                       },
+                                       {
+                                           "word":  "fidèle,",
+                                           "end":  196.5,
+                                           "start":  196.1
+                                       },
+                                       {
+                                           "word":  "Le",
+                                           "end":  197,
+                                           "start":  196.6
+                                       },
+                                       {
+                                           "word":  "Dieu",
+                                           "end":  197.5,
+                                           "start":  197.1
+                                       }
+                                   ],
+                         "text":  "Dans le temps de l\u0027épreuve, Tu es toujours fidèle, Le Dieu",
+                         "start":  192.1
+                     },
+                     {
+                         "end":  202.5,
+                         "words":  [
+                                       {
+                                           "word":  "très",
+                                           "end":  198,
+                                           "start":  197.6
+                                       },
+                                       {
+                                           "word":  "haut",
+                                           "end":  198.5,
+                                           "start":  198.1
+                                       },
+                                       {
+                                           "word":  "ma",
+                                           "end":  199,
+                                           "start":  198.6
+                                       },
+                                       {
+                                           "word":  "pétérnèle,",
+                                           "end":  199.5,
+                                           "start":  199.1
+                                       },
+                                       {
+                                           "word":  "Avec",
+                                           "end":  200,
+                                           "start":  199.6
+                                       },
+                                       {
+                                           "word":  "toi,",
+                                           "end":  200.5,
+                                           "start":  200.1
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  201,
+                                           "start":  200.6
+                                       },
+                                       {
+                                           "word":  "marcherai,",
+                                           "end":  201.5,
+                                           "start":  201.1
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  202,
+                                           "start":  201.6
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  202.5,
+                                           "start":  202.1
+                                       }
+                                   ],
+                         "text":  "très haut ma pétérnèle, Avec toi, je marcherai, Dans la",
+                         "start":  197.6
+                     },
+                     {
+                         "end":  187.92,
+                         "words":  [
+                                       {
+                                           "word":  "lumière,",
+                                           "end":  203,
+                                           "start":  202.6
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  203.5,
+                                           "start":  203.1
+                                       },
+                                       {
+                                           "word":  "vivrai.",
+                                           "end":  204,
+                                           "start":  203.6
+                                       },
+                                       {
+                                           "word":  "Dieu,",
+                                           "end":  204.5,
+                                           "start":  204.1
+                                       },
+                                       {
+                                           "word":  "très",
+                                           "end":  205,
+                                           "start":  204.6
+                                       },
+                                       {
+                                           "word":  "haut,",
+                                           "end":  205.5,
+                                           "start":  205.1
+                                       },
+                                       {
+                                           "word":  "Mon",
+                                           "end":  206,
+                                           "start":  205.6
+                                       },
+                                       {
+                                           "word":  "cœur",
+                                           "end":  186.3,
+                                           "start":  186
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  186.86,
+                                           "start":  186.3
+                                       },
+                                       {
+                                           "word":  "chantera.",
+                                           "end":  187.92,
+                                           "start":  186.86
+                                       }
+                                   ],
+                         "text":  "lumière, je vivrai. Dieu, très haut, Mon cœur te chantera.",
+                         "start":  202.6
+                     }
+                 ]
+}

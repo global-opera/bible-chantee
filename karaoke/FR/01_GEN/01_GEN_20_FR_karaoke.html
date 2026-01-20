@@ -5,80 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genese 20 | Bible Chantee Karaoke</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
-        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
-        .header h1{font-size:1.8em;color:#d4af37}
-        .player{max-width:800px;margin:20px auto;padding:0 20px}
-        audio{width:100%}
-        .lyrics{max-width:800px;margin:20px auto;padding:20px}
-        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
-        .line:hover{background:rgba(212,175,55,0.1)}
-        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
-        .line.passed{opacity:0.5}
-        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
-        .footer{text-align:center;padding:20px;color:#666}
-        .footer a{color:#d4af37}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
+        .header p { color: #888; }
+        .audio-player { 
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        audio { width: 100%; }
+        .lyrics { 
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        .line { 
+            padding: 12px 15px;
+            margin: 5px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .line .time { 
+            color: #666; 
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+        .line.active { 
+            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
+            color: #fff;
+            border-left: 4px solid #d4af37;
+            transform: scale(1.02);
+        }
+        .line.active .time { color: #d4af37; }
+        .line.past { opacity: 0.5; }
     </style>
 </head>
 <body>
-    <div class="header"><h1>Genese 20</h1><p>Bible Chantee Karaoke</p></div>
-    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_20_FR.mp3" type="audio/mpeg"></audio></div>
-    <div class="lyrics">
-        <div class="line" data-start="12.48" data-end="20.74"><span class="time">[0:12]</span>Dans une terre lointaine, Abraham errait</div>
-        <div class="line" data-start="20.74" data-end="20.74"><span class="time">[0:20]</span>Avec Sara sa douce, son cœur était en secret</div>
-        <div class="line" data-start="20.74" data-end="27.58"><span class="time">[0:20]</span>Il craignait pour sa vie, sa foi vacillait</div>
-        <div class="line" data-start="27.58" data-end="27.58"><span class="time">[0:27]</span>Ses sœurs n'ont rien fait de mal</div>
-        <div class="line" data-start="27.58" data-end="34.60"><span class="time">[0:27]</span>Il craignait pour sa vie, sa foi vacillait</div>
-        <div class="line" data-start="34.60" data-end="44.92"><span class="time">[0:34]</span>Ses masseurs, ils disaient, en vérité, ils se trompaient</div>
-        <div class="line" data-start="44.92" data-end="44.92"><span class="time">[0:44]</span>Ô Seigneur, Tu vois nos cœurs</div>
-        <div class="line" data-start="44.92" data-end="54.78"><span class="time">[0:44]</span>Dans l'ombre, Tu es notre lueur</div>
-        <div class="line" data-start="54.78" data-end="54.78"><span class="time">[0:54]</span>Avec tes mains innocentes, nous venons</div>
-        <div class="line" data-start="54.78" data-end="64.00"><span class="time">[0:54]</span>Dans ta grâce, nous trouvons raison</div>
-        <div class="line" data-start="64.00" data-end="73.34"><span class="time">[1:04]</span>Abimélec dans un rêve entendi</div>
-        <div class="line" data-start="73.34" data-end="73.34"><span class="time">[1:13]</span>La voix de Dieu, lui révélant la vie</div>
-        <div class="line" data-start="73.34" data-end="80.04"><span class="time">[1:13]</span>Rends-lui sa femme, car il prie pour toi</div>
-        <div class="line" data-start="80.04" data-end="80.04"><span class="time">[1:20]</span>Sache que sans cela, tu périras ici-bas</div>
-        <div class="line" data-start="80.04" data-end="93.00"><span class="time">[1:20]</span>Ô Seigneur, Tu vois nos cœurs</div>
-        <div class="line" data-start="93.00" data-end="101.56"><span class="time">[1:33]</span>Dans l'ombre, Tu es notre lueur</div>
-        <div class="line" data-start="101.56" data-end="101.56"><span class="time">[1:41]</span>Avec tes mains innocentes, nous venons</div>
-        <div class="line" data-start="101.56" data-end="111.86"><span class="time">[1:41]</span>Dans ta grâce, nous trouvons raison</div>
-        <div class="line" data-start="111.86" data-end="111.86"><span class="time">[1:51]</span>Tu es le Dieu qui protège</div>
-        <div class="line" data-start="111.86" data-end="123.42"><span class="time">[1:51]</span>Des promesses que tu engages</div>
-        <div class="line" data-start="123.42" data-end="136.98"><span class="time">[2:03]</span>Dans nos faiblesses, tu es fort</div>
-        <div class="line" data-start="136.98" data-end="136.98"><span class="time">[2:16]</span>Nous croyons, nous espérons encore</div>
-        <div class="line" data-start="136.98" data-end="145.54"><span class="time">[2:16]</span>Abraham en prière pour Abimelech</div>
-        <div class="line" data-start="145.54" data-end="145.54"><span class="time">[2:25]</span>Dieu guérit son cœur, un acte de grâce</div>
-        <div class="line" data-start="145.54" data-end="153.36"><span class="time">[2:25]</span>Dans la stérilité, la vie est restaurée</div>
-        <div class="line" data-start="153.36" data-end="165.58"><span class="time">[2:33]</span>Car le juste, en prière, peut tout transformer</div>
-        <div class="line" data-start="165.58" data-end="165.58"><span class="time">[2:45]</span>Ô Seigneur, Tu vois nos cœurs</div>
-        <div class="line" data-start="165.58" data-end="173.46"><span class="time">[2:45]</span>Dans l'ombre, Tu es notre lueur</div>
-        <div class="line" data-start="173.46" data-end="173.46"><span class="time">[2:53]</span>Avec tes mains innocentes, nous venons</div>
-        <div class="line" data-start="173.46" data-end="185.14"><span class="time">[2:53]</span>Dans ta grâce, nous trouvons raison</div>
-        <div class="line" data-start="185.14" data-end="192.86"><span class="time">[3:05]</span>Dans chaque voyage, dans chaque pas</div>
-        <div class="line" data-start="192.86" data-end="192.86"><span class="time">[3:12]</span>Ta promesse, Seigneur, toujours nous portera</div>
-        <div class="line" data-start="192.86" data-end="201.80"><span class="time">[3:12]</span>Au cœur pur, nos vies, nous t'offrons</div>
-        <div class="line" data-start="201.80" data-end="201.80"><span class="time">[3:21]</span>Dans ta lumière</div>
-        <div class="line" data-start="201.80" data-end="214.14"><span class="time">[3:21]</span>Nous trouvons notre chanson</div>
-        <div class="line" data-start="214.14" data-end="222.04"><span class="time">[3:34]</span>Ô Seigneur, Tu vois nos cœurs</div>
-        <div class="line" data-start="222.04" data-end="222.04"><span class="time">[3:42]</span>Dans l'ombre, Tu es notre lueur</div>
-        <div class="line" data-start="222.04" data-end="229.74"><span class="time">[3:42]</span>Avec tes mains innocentes, nous venons</div>
-        <div class="line" data-start="229.74" data-end="229.74"><span class="time">[3:49]</span>Dans ta grâce, nous trouvons raison</div>
-        <div class="line" data-start="229.74" data-end="231.64"><span class="time">[3:49]</span>Dans ta lumière</div>
+    <div class="container">
+        <div class="header">
+            <h1>Genese 20</h1>
+            <p>Bible Chantee Karaoke</p>
+        </div>
+        <div class="audio-player">
+            <audio id="audio" controls>
+                <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_20_FR.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="lyrics" id="lyrics">
+        <div class="line" data-start="12.48" data-end="22.24"><span class="time">[0:12]</span>Dans une terre lointaine à bras amérés Avec Sarah s'adouce</div>
+        <div class="line" data-start="20.74" data-end="27.58"><span class="time">[0:20]</span>son cœur était en secret Il craignait pour sa vie sa foi</div>
+        <div class="line" data-start="27.58" data-end="34.50"><span class="time">[0:27]</span>vacillait C'est ma sœur il disait en vérité il se trompait</div>
+        <div class="line" data-start="34.60" data-end="44.92"><span class="time">[0:34]</span>Au Seigneur tu vois nos cœurs Dans l'ombre tu es notre</div>
+        <div class="line" data-start="44.92" data-end="54.60"><span class="time">[0:44]</span>lueur Avec des mains innocentes nous venons Dans ta grâce</div>
+        <div class="line" data-start="54.78" data-end="64.00"><span class="time">[0:54]</span>nous trouvons raison Abîmez les croix dans un rêve entendu</div>
+        <div class="line" data-start="64.00" data-end="73.10"><span class="time">[1:04]</span>La voix de Dieu lui révélant la vie Rends lui sa femme</div>
+        <div class="line" data-start="73.34" data-end="79.84"><span class="time">[1:13]</span>car il y le prit pour toi Sache que sans cela tu perdiras</div>
+        <div class="line" data-start="80.04" data-end="93.00"><span class="time">[1:20]</span>ici bas Au Seigneur tu vois nos cœurs Dans l'ombre tu es</div>
+        <div class="line" data-start="93.00" data-end="101.56"><span class="time">[1:33]</span>notre lueur Avec des mains innocentes nous venons Dans</div>
+        <div class="line" data-start="101.56" data-end="111.86"><span class="time">[1:41]</span>ta grâce nous trouvons raison Tu es le Dieu qui protège</div>
+        <div class="line" data-start="111.86" data-end="123.10"><span class="time">[1:51]</span>Des promesses que tu engage Dans nos faiblesses tu es fort</div>
+        <div class="line" data-start="123.42" data-end="136.88"><span class="time">[2:03]</span>Nous croyons nous espérons encore Abra mes prières pour</div>
+        <div class="line" data-start="136.98" data-end="145.44"><span class="time">[2:16]</span>abîmer l'aie Dieu guérit son cœur un acte de grâce Dans</div>
+        <div class="line" data-start="145.54" data-end="153.34"><span class="time">[2:25]</span>l'astérialité la vie est restaurée Car le juste en prière</div>
+        <div class="line" data-start="153.36" data-end="165.48"><span class="time">[2:33]</span>peut tout transformer Au Seigneur tu vois nos cœurs Dans</div>
+        <div class="line" data-start="165.58" data-end="173.46"><span class="time">[2:45]</span>l'ombre tu es notre lueur Avec des mains innocentes nous</div>
+        <div class="line" data-start="173.46" data-end="184.20"><span class="time">[2:53]</span>venons Dans ta grâce nous trouvons raison Dans chaque voyage</div>
+        <div class="line" data-start="185.14" data-end="192.86"><span class="time">[3:05]</span>Dans chaque pas Ta promesse seigneur Toujours nous portera</div>
+        <div class="line" data-start="192.86" data-end="201.80"><span class="time">[3:12]</span>Au cœur pure nos vies nous t'offrons Dans ta lumière Nous</div>
+        <div class="line" data-start="201.80" data-end="214.04"><span class="time">[3:21]</span>trouvons notre chanson Au Seigneur tu vois nos cœurs Dans</div>
+        <div class="line" data-start="214.14" data-end="222.04"><span class="time">[3:34]</span>l'ombre tu es notre lueur Avec des mains innocentes nous</div>
+        <div class="line" data-start="222.04" data-end="229.64"><span class="time">[3:42]</span>venons Dans ta grâce nous trouvons raison Sous-titres par</div>
+        <div class="line" data-start="229.74" data-end="231.64"><span class="time">[3:49]</span>la communauté d' Amara.org</div>
+        </div>
     </div>
-    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
     <script>
-        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
-        audio.addEventListener('timeupdate',()=>{
-            const t=audio.currentTime;
-            lines.forEach(l=>{
-                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
-                l.classList.remove('active','passed');
-                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
-                else if(t>=e)l.classList.add('passed')
-            })
+        const audio = document.getElementById('audio');
+        const lines = document.querySelectorAll('.line');
+        const lyricsContainer = document.getElementById('lyrics');
+        
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            let activeIndex = -1;
+            
+            lines.forEach((line, index) => {
+                const start = parseFloat(line.dataset.start);
+                const end = parseFloat(line.dataset.end);
+                
+                line.classList.remove('active', 'past');
+                
+                if (currentTime >= start && currentTime < end) {
+                    line.classList.add('active');
+                    activeIndex = index;
+                } else if (currentTime >= end) {
+                    line.classList.add('past');
+                }
+            });
+            
+            if (activeIndex >= 0) {
+                const activeLine = lines[activeIndex];
+                const containerRect = lyricsContainer.getBoundingClientRect();
+                const lineRect = activeLine.getBoundingClientRect();
+                
+                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
+                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
         });
-        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+        
+        lines.forEach(line => {
+            line.addEventListener('click', () => {
+                audio.currentTime = parseFloat(line.dataset.start);
+                audio.play();
+            });
+        });
     </script>
 </body>
 </html>

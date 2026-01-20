@@ -1,292 +1,104 @@
 1
-00:00:00,100 --> 00:00:00,100
-Dans la lumière de l'aube
+00:00:00,100 --> 00:00:32,880
+... Dans la lumière de l'aube Une voix se fait entendre
 
 2
-00:00:00,100 --> 00:00:33,519
-Une voix se fait entendre
+00:00:33,519 --> 00:00:44,100
+Dieu bénit nos aies La terre à défendre Soyez fécons, remplissez
 
 3
-00:00:33,519 --> 00:00:33,519
-Dieu bénit Noé
+00:00:44,200 --> 00:00:54,899
+l'horizon Les cieuses et la mer sont en ma raison Au arcanciel,
 
 4
-00:00:33,519 --> 00:00:33,519
-La terre à défendre
+00:00:55,820 --> 00:01:04,140
+symbole de l'alliance Entre ciel et terre Une douce présence
 
 5
-00:00:33,519 --> 00:00:44,200
-Soyez fécondes
+00:01:04,140 --> 00:01:12,459
+Aucune chair ne périrà dans les flots Mon amour éternel
 
 6
-00:00:44,200 --> 00:00:44,200
-Remplissez l'horizon
+00:01:12,459 --> 00:01:22,459
+pour vous Je le sais en mot Les animaux dansent La vie
 
 7
-00:00:44,200 --> 00:00:44,200
-Les cieux et la mer
+00:01:22,459 --> 00:01:30,620
+se réveille Tous en sous ma grâce Unis dans le vernet Ne
 
 8
-00:00:44,200 --> 00:00:55,820
-Sont en saisons
+00:01:30,620 --> 00:01:38,000
+craignez rien Car je suis votre roi L'alliance de paix
 
 9
-00:00:55,820 --> 00:00:55,820
-Ô arc-en-ciel
+00:01:38,000 --> 00:01:47,319
+Je la fais avec toi Au arcanciel, symbole de l'alliance
 
 10
-00:00:55,820 --> 00:01:04,140
-Symbole de l'alliance
+00:01:48,120 --> 00:01:55,799
+Entre ciel et terre Une douce présence Aucune chair ne
 
 11
-00:01:04,140 --> 00:01:04,140
-Entre ciel et terre
+00:01:55,799 --> 00:02:03,120
+périrà dans les flots Mon amour éternel pour vous Je le
 
 12
-00:01:04,140 --> 00:01:04,140
-Une douce présence
+00:02:03,120 --> 00:02:13,199
+sais en mot Souviens-toi au mon peuple De ce pacte sacré
 
 13
-00:01:04,140 --> 00:01:12,459
-Aucune chair ne périra
+00:02:13,199 --> 00:02:19,800
+Je suis votre refuge Dans la tempête l'oubli Quand les
 
 14
-00:01:12,459 --> 00:01:12,459
-Dans les flots
+00:02:19,900 --> 00:02:25,580
+nuèges s'assombrissent Et que le vent souffle fort Regarde
 
 15
-00:01:12,459 --> 00:01:12,459
-Mon amour éternel pour vous
+00:02:25,680 --> 00:02:31,460
+l'art dans le ciel Je suis là Je te serre encore Au arcanciel,
 
 16
-00:01:12,459 --> 00:01:22,459
-Je le sais en mots
+00:02:31,560 --> 00:02:29,379
+symbole de l'alliance Entre ciel et terre Une douce présence
 
 17
-00:01:22,459 --> 00:01:22,459
-Les animaux dansent
+00:02:29,479 --> 00:02:34,379
+Aucune chair ne périrà dans les flots Mon amour éternel
 
 18
-00:01:22,459 --> 00:01:22,459
-La vie se réveille
+00:02:34,479 --> 00:02:43,000
+pour vous Je le sais en mot Avec Noé et ses fils Nous bâtissons
 
 19
-00:01:22,459 --> 00:01:30,620
-Tous sont sous ma grâce
+00:02:43,099 --> 00:02:52,240
+l'avenir Dans chaque heure la promesse Un dos souvenir
 
 20
-00:01:30,620 --> 00:01:30,620
-Unis dans le vermeil
+00:02:52,340 --> 00:02:56,740
+L'unité dans la diversité Mains dans la main Répendons
 
 21
-00:01:30,620 --> 00:01:30,620
-Ne craignez rien
+00:02:56,840 --> 00:03:01,740
+l'amour Sur ce chemin divin Au arcanciel, symbole de l'alliance
 
 22
-00:01:30,620 --> 00:01:38,000
-Car je suis votre roi
+00:03:01,840 --> 00:03:05,400
+Entre ciel et terre Une douce présence Aucune chair ne
 
 23
-00:01:38,000 --> 00:01:38,000
-L'alliance de paix
+00:03:05,500 --> 00:03:14,939
+périrà dans les flots Mon amour éternel pour vous Je le
 
 24
-00:01:38,000 --> 00:01:48,120
-Je la fais avec toi
+00:03:15,039 --> 00:03:27,120
+sais en mot L'art dans le ciel Un rappel d'espérance L'alliance
 
 25
-00:01:48,120 --> 00:01:48,120
-Ô arc-en-ciel
+00:03:26,659 --> 00:03:40,620
+de Dieu Une éternelle danse Remplissons la terre de sa
 
 26
-00:01:48,120 --> 00:01:48,120
-Symbole de l'alliance
-
-27
-00:01:48,120 --> 00:01:55,799
-Entre ciel et terre
-
-28
-00:01:55,799 --> 00:01:55,799
-Une douce présence
-
-29
-00:01:55,799 --> 00:01:55,799
-Aucune chair ne périra
-
-30
-00:01:55,799 --> 00:02:03,120
-Dans les flots
-
-31
-00:02:03,120 --> 00:02:03,120
-Mon amour éternel pour vous
-
-32
-00:02:03,120 --> 00:02:03,120
-Je le sais en mots
-
-33
-00:02:03,120 --> 00:02:13,199
-Souviens-toi, ô mon peuple
-
-34
-00:02:13,199 --> 00:02:13,199
-De ce pacte sacré
-
-35
-00:02:13,199 --> 00:02:13,199
-Je suis votre refuge
-
-36
-00:02:13,199 --> 00:02:19,900
-Dans la tempête, l'oubli
-
-37
-00:02:19,900 --> 00:02:19,900
-Quand les nuages s'assombrissent
-
-38
-00:02:19,900 --> 00:02:25,680
-Et que le vent souffle fort
-
-39
-00:02:25,680 --> 00:02:25,680
-Regarde l'arc dans le ciel
-
-40
-00:02:25,680 --> 00:02:25,680
-Je suis là
-
-41
-00:02:25,680 --> 00:02:31,560
-Je te serre encore
-
-42
-00:02:31,560 --> 00:02:31,560
-Ô arc-en-ciel
-
-43
-00:02:31,560 --> 00:02:31,560
-Symbole de l'alliance
-
-44
-00:02:31,560 --> 00:02:29,479
-Entre ciel et terre
-
-45
-00:02:29,479 --> 00:02:29,479
-Une douce présence
-
-46
-00:02:29,479 --> 00:02:29,479
-Aucune chair ne périra
-
-47
-00:02:29,479 --> 00:02:34,479
-Dans les flots
-
-48
-00:02:34,479 --> 00:02:34,479
-Mon amour éternel pour vous
-
-49
-00:02:34,479 --> 00:02:34,479
-Je le sais en mots
-
-50
-00:02:34,479 --> 00:02:43,099
-Avec Noé et ses fils
-
-51
-00:02:43,099 --> 00:02:43,099
-Nous bâtissons l'avenir
-
-52
-00:02:43,099 --> 00:02:52,340
-Dans chaque heure, la promesse
-
-53
-00:02:52,340 --> 00:02:52,340
-Un doux souvenir
-
-54
-00:02:52,340 --> 00:02:52,340
-L'unité dans la diversité
-
-55
-00:02:52,340 --> 00:02:56,840
-Mains dans la main
-
-56
-00:02:56,840 --> 00:02:56,840
-Répandons l'amour
-
-57
-00:02:56,840 --> 00:02:56,840
-Sur ce chemin divin
-
-58
-00:02:56,840 --> 00:03:01,840
-Ô arc-en-ciel
-
-59
-00:03:01,840 --> 00:03:01,840
-Symbole de l'alliance
-
-60
-00:03:01,840 --> 00:03:01,840
-Entre ciel et terre
-
-61
-00:03:01,840 --> 00:03:05,500
-Une douce présence
-
-62
-00:03:05,500 --> 00:03:05,500
-Aucune chair ne périra
-
-63
-00:03:05,500 --> 00:03:05,500
-Dans les flots
-
-64
-00:03:05,500 --> 00:03:15,039
-Mon amour éternel pour vous
-
-65
-00:03:15,039 --> 00:03:15,039
-Je le sais en mots
-
-66
-00:03:15,039 --> 00:03:26,659
-L'arc dans le ciel
-
-67
-00:03:26,659 --> 00:03:26,659
-Un rappel d'espérance
-
-68
-00:03:26,659 --> 00:03:26,659
-L'alliance de Dieu
-
-69
-00:03:26,659 --> 00:03:40,719
-Une éternelle danse
-
-70
-00:03:40,719 --> 00:03:40,719
-Remplissons la terre
-
-71
-00:03:40,719 --> 00:03:40,719
-De sa lumière
-
-72
 00:03:40,719 --> 00:03:45,860
-Pour toujours unis
-
-73
-00:00:00,000 --> 00:03:45,860
-Sous son amour sincère
+lumière Pour toujours une île Sous son amour sincère
 

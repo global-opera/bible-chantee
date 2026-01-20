@@ -5,53 +5,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genese 46 | Bible Chantee Karaoke</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
-        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
-        .header h1{font-size:1.8em;color:#d4af37}
-        .player{max-width:800px;margin:20px auto;padding:0 20px}
-        audio{width:100%}
-        .lyrics{max-width:800px;margin:20px auto;padding:20px}
-        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
-        .line:hover{background:rgba(212,175,55,0.1)}
-        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
-        .line.passed{opacity:0.5}
-        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
-        .footer{text-align:center;padding:20px;color:#666}
-        .footer a{color:#d4af37}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
+        .header p { color: #888; }
+        .audio-player { 
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        audio { width: 100%; }
+        .lyrics { 
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        .line { 
+            padding: 12px 15px;
+            margin: 5px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .line .time { 
+            color: #666; 
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+        .line.active { 
+            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
+            color: #fff;
+            border-left: 4px solid #d4af37;
+            transform: scale(1.02);
+        }
+        .line.active .time { color: #d4af37; }
+        .line.past { opacity: 0.5; }
     </style>
 </head>
 <body>
-    <div class="header"><h1>Genese 46</h1><p>Bible Chantee Karaoke</p></div>
-    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_46_FR.mp3" type="audio/mpeg"></audio></div>
-    <div class="lyrics">
-        <div class="line" data-start="0.00" data-end="3.78"><span class="time">[0:00]</span>Israël, au mon cœur, à Beer-Shéba, sacrifices sont offerts, le dieu d'Isaac dans la nuit, sa voix résonne, ne crains point, je suis avec toi</div>
-        <div class="line" data-start="3.78" data-end="13.60"><span class="time">[0:03]</span>Descends en Égypte, là je te ferai grandir, une nation nouvelle, par ma main tu vas fleurir</div>
-        <div class="line" data-start="13.60" data-end="27.68"><span class="time">[0:13]</span>Je descendrai avec toi, dans la douleur et le temps, et de la terre d'Égypte, je te ferai remonter lentement</div>
-        <div class="line" data-start="27.68" data-end="39.88"><span class="time">[0:27]</span>L'écharpe de Pharaon, pour notre voyage, Jacob et sa famille, ensemble dans ce paysage</div>
-        <div class="line" data-start="39.88" data-end="54.88"><span class="time">[0:39]</span>Les fils et les filles, une promesse à porter, soixante-dix âmes, unies pour avancer</div>
-        <div class="line" data-start="54.88" data-end="68.88"><span class="time">[0:54]</span>Descends en Égypte, là je te ferai grandir, une nation nouvelle, par ma main tu vas fleurir</div>
-        <div class="line" data-start="68.88" data-end="78.88"><span class="time">[1:08]</span>Je descendrai avec toi, dans la douleur et le temps, et de la terre d'Égypte, je te ferai remonter lentement</div>
-        <div class="line" data-start="78.88" data-end="97.88"><span class="time">[1:18]</span>Joseph attend, le cœur plein de joie, à son père il court, les tendres sous le ciel</div>
-        <div class="line" data-start="97.88" data-end="107.88"><span class="time">[1:37]</span>J'ai vu ton visage, ô mon père ma foi, que je me rends en paix, tant que tu es là, éternel</div>
-        <div class="line" data-start="107.88" data-end="124.88"><span class="time">[1:47]</span>Descends en Égypte, là je te ferai grandir, une nation nouvelle, par ma main tu vas fleurir</div>
-        <div class="line" data-start="124.88" data-end="134.88"><span class="time">[2:04]</span>Je descendrai avec toi, dans la douleur et le temps, et de la terre d'Égypte, je te ferai remonter lentement</div>
-        <div class="line" data-start="134.88" data-end="155.88"><span class="time">[2:14]</span>Ô Seigneur, guide nos pas, dans les ténèbres, tu es notre roi</div>
-        <div class="line" data-start="155.88" data-end="170.88"><span class="time">[2:35]</span>Nous marchons ensemble, en ta lumière, vers la terre promise, ta grâce notre prière</div>
+    <div class="container">
+        <div class="header">
+            <h1>Genese 46</h1>
+            <p>Bible Chantee Karaoke</p>
+        </div>
+        <div class="audio-player">
+            <audio id="audio" controls>
+                <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_46_FR.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="lyrics" id="lyrics">
+        <div class="line" data-start="0.00" data-end="2.20"><span class="time">[0:00]</span>19经 Schwartz</div>
+        <div class="line" data-start="2.60" data-end="3.78"><span class="time">[0:02]</span>Entrez le phénomien de Trichel</div>
+        <div class="line" data-start="3.78" data-end="7.08"><span class="time">[0:03]</span>Score</div>
+        <div class="line" data-start="7.08" data-end="9.76"><span class="time">[0:07]</span>2 Et groskey</div>
+        <div class="line" data-start="10.86" data-end="13.00"><span class="time">[0:10]</span>Vizzi</div>
+        <div class="line" data-start="13.60" data-end="24.38"><span class="time">[0:13]</span>4 EARL</div>
+        <div class="line" data-start="25.66" data-end="27.68"><span class="time">[0:25]</span>5 EARL</div>
+        <div class="line" data-start="27.68" data-end="29.88"><span class="time">[0:27]</span>Mon total</div>
+        <div class="line" data-start="29.88" data-end="34.88"><span class="time">[0:29]</span>Des sens en égypte là, je te ferai grandi</div>
+        <div class="line" data-start="34.88" data-end="39.88"><span class="time">[0:34]</span>Une nation nouvelle par ma main tu vas ferir</div>
+        <div class="line" data-start="39.88" data-end="44.88"><span class="time">[0:39]</span>Je descendrai avec toi, doit douleur et le temps</div>
+        <div class="line" data-start="44.88" data-end="53.88"><span class="time">[0:44]</span>Et de la terre des Egyptes, je te ferai rentrer lentement</div>
+        <div class="line" data-start="54.88" data-end="58.88"><span class="time">[0:54]</span>Les chers de Farahont pour notre voyage</div>
+        <div class="line" data-start="58.88" data-end="63.88"><span class="time">[0:58]</span>J'acobé sa famille ensemble dans ce paysage</div>
+        <div class="line" data-start="63.88" data-end="68.88"><span class="time">[1:03]</span>Les fils et les filles une promesse à porter</div>
+        <div class="line" data-start="68.88" data-end="73.88"><span class="time">[1:08]</span>Soit un disame unis pour avancer</div>
+        <div class="line" data-start="73.88" data-end="78.88"><span class="time">[1:13]</span>Des sens en égypte là, je te ferai grandi</div>
+        <div class="line" data-start="78.88" data-end="82.88"><span class="time">[1:18]</span>Une nation nouvelle par ma main tu vas ferir</div>
+        <div class="line" data-start="82.88" data-end="87.88"><span class="time">[1:22]</span>Je descendrai avec toi, doit douleur et le temps</div>
+        <div class="line" data-start="87.88" data-end="97.88"><span class="time">[1:27]</span>Et de la terre des Egyptes, je te ferai rentrer lentement</div>
+        <div class="line" data-start="97.88" data-end="102.88"><span class="time">[1:37]</span>J'osef attend le cœur plein de joie</div>
+        <div class="line" data-start="102.88" data-end="107.88"><span class="time">[1:42]</span>A son père il court les trains sous le ciel</div>
+        <div class="line" data-start="107.88" data-end="112.88"><span class="time">[1:47]</span>J'ai vu ton visage au mon père ma foi</div>
+        <div class="line" data-start="112.88" data-end="119.88"><span class="time">[1:52]</span>Que je me remfait, tant que tu es là</div>
+        <div class="line" data-start="119.88" data-end="124.88"><span class="time">[1:59]</span>Des sens en égypte là, je te ferai grandi</div>
+        <div class="line" data-start="124.88" data-end="129.88"><span class="time">[2:04]</span>Une nation nouvelle par ma main tu vas ferir</div>
+        <div class="line" data-start="129.88" data-end="134.88"><span class="time">[2:09]</span>Je descendrai avec toi, doit douleur et le temps</div>
+        <div class="line" data-start="134.88" data-end="141.88"><span class="time">[2:14]</span>Et de la terre des Egyptes, je te ferai rentrer lentement</div>
+        <div class="line" data-start="141.88" data-end="150.88"><span class="time">[2:21]</span>Ouh signeur qui de nos pas dans les ténèbres</div>
+        <div class="line" data-start="150.88" data-end="155.88"><span class="time">[2:30]</span>Tu es notre roi, nous marchons ensemble</div>
+        <div class="line" data-start="155.88" data-end="160.88"><span class="time">[2:35]</span>Entre à l'huile vers la terre promisse</div>
+        <div class="line" data-start="160.88" data-end="170.88"><span class="time">[2:40]</span>T'agrasse notre prière</div>
+        </div>
     </div>
-    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
     <script>
-        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
-        audio.addEventListener('timeupdate',()=>{
-            const t=audio.currentTime;
-            lines.forEach(l=>{
-                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
-                l.classList.remove('active','passed');
-                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
-                else if(t>=e)l.classList.add('passed')
-            })
+        const audio = document.getElementById('audio');
+        const lines = document.querySelectorAll('.line');
+        const lyricsContainer = document.getElementById('lyrics');
+        
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            let activeIndex = -1;
+            
+            lines.forEach((line, index) => {
+                const start = parseFloat(line.dataset.start);
+                const end = parseFloat(line.dataset.end);
+                
+                line.classList.remove('active', 'past');
+                
+                if (currentTime >= start && currentTime < end) {
+                    line.classList.add('active');
+                    activeIndex = index;
+                } else if (currentTime >= end) {
+                    line.classList.add('past');
+                }
+            });
+            
+            if (activeIndex >= 0) {
+                const activeLine = lines[activeIndex];
+                const containerRect = lyricsContainer.getBoundingClientRect();
+                const lineRect = activeLine.getBoundingClientRect();
+                
+                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
+                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
         });
-        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+        
+        lines.forEach(line => {
+            line.addEventListener('click', () => {
+                audio.currentTime = parseFloat(line.dataset.start);
+                audio.play();
+            });
+        });
     </script>
 </body>
 </html>

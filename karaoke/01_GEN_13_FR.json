@@ -1,0 +1,1300 @@
+﻿{
+    "language":  "fr",
+    "text":  "Dans les plaines de cana, les codins appellent Abra marche\navec foi vers le ciel éternel Il lève les yeux, voie la\nterre à donner Une promesse scellée par ton amour Oh Seigneur\nLève les yeux, regarde tout est devant toi Chaque pas que\n\ntu fais est guidée par ta voix Dans la lumière de ta grâce\nnous marchons Promesse éternel, notre cœur te répond L\u0027autre\nchoisi son chemin vers les vallées dorées Mais la méchanceté\nlà-bas va l\u0027engloutir Abra m\u0027homme de paix appelant à l\u0027harmonie\n\nQu\u0027il n\u0027y ait point de dispute uni dans l\u0027infini Lève les\nyeux, regarde tout est devant toi Chaque pas que tu fais\nest guidée par ta voix Dans la lumière de ta grâce nous\nmarchons Promesse éternel, notre cœur te répond Oh Seigneur,\n\ntu es notre refuge Dans chaque saison t\u0027abandonner notre\njuge Nous bâtissons des hôtels pour te louer Dans l\u0027ombre\nde ta présence nous voulons demeurer Lève les yeux, regarde\ntout est devant toi Chaque pas que tu fais est guidée par\n\nta voix Dans la lumière de ta grâce nous marchons Promesse\néternel, notre cœur te répond Abra m\u0027eau chaîne de marmerie,\ntu es notre guide Dans la plénitude de ta promesse nous\nvivons en vide Lève les yeux, regarde unis par ta main\n\nPromesse éternel, nous marchons vers demain Abra m\u0027eau\nchaîne de marmerie, tu es notre guide",
+    "segments":  [
+                     {
+                         "end":  21.8,
+                         "words":  [
+                                       {
+                                           "word":  "Dans",
+                                           "end":  13.86,
+                                           "start":  12.82
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  14.14,
+                                           "start":  13.86
+                                       },
+                                       {
+                                           "word":  "plaines",
+                                           "end":  14.88,
+                                           "start":  14.14
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  14.94,
+                                           "start":  14.88
+                                       },
+                                       {
+                                           "word":  "cana,",
+                                           "end":  15.98,
+                                           "start":  14.94
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  16.48,
+                                           "start":  16.080000000000002
+                                       },
+                                       {
+                                           "word":  "codins",
+                                           "end":  16.98,
+                                           "start":  16.580000000000002
+                                       },
+                                       {
+                                           "word":  "appellent",
+                                           "end":  19.24,
+                                           "start":  18.54
+                                       },
+                                       {
+                                           "word":  "Abra",
+                                           "end":  21.3,
+                                           "start":  19.92
+                                       },
+                                       {
+                                           "word":  "marche",
+                                           "end":  21.8,
+                                           "start":  21.3
+                                       }
+                                   ],
+                         "text":  "Dans les plaines de cana, les codins appellent Abra marche",
+                         "start":  12.82
+                     },
+                     {
+                         "end":  31.08,
+                         "words":  [
+                                       {
+                                           "word":  "avec",
+                                           "end":  22.32,
+                                           "start":  21.8
+                                       },
+                                       {
+                                           "word":  "foi",
+                                           "end":  22.74,
+                                           "start":  22.32
+                                       },
+                                       {
+                                           "word":  "vers",
+                                           "end":  23.9,
+                                           "start":  22.74
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  24.2,
+                                           "start":  23.9
+                                       },
+                                       {
+                                           "word":  "ciel",
+                                           "end":  24.74,
+                                           "start":  24.2
+                                       },
+                                       {
+                                           "word":  "éternel",
+                                           "end":  26.52,
+                                           "start":  24.74
+                                       },
+                                       {
+                                           "word":  "Il",
+                                           "end":  27.9,
+                                           "start":  26.52
+                                       },
+                                       {
+                                           "word":  "lève",
+                                           "end":  28.64,
+                                           "start":  27.9
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  29.3,
+                                           "start":  28.64
+                                       },
+                                       {
+                                           "word":  "yeux,",
+                                           "end":  29.74,
+                                           "start":  29.3
+                                       },
+                                       {
+                                           "word":  "voie",
+                                           "end":  30.68,
+                                           "start":  29.94
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  31.08,
+                                           "start":  30.68
+                                       }
+                                   ],
+                         "text":  "avec foi vers le ciel éternel Il lève les yeux, voie la",
+                         "start":  21.8
+                     },
+                     {
+                         "end":  42.6,
+                         "words":  [
+                                       {
+                                           "word":  "terre",
+                                           "end":  31.62,
+                                           "start":  31.08
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  32.120000000000005,
+                                           "start":  31.720000000000002
+                                       },
+                                       {
+                                           "word":  "donner",
+                                           "end":  32.620000000000005,
+                                           "start":  32.220000000000006
+                                       },
+                                       {
+                                           "word":  "Une",
+                                           "end":  34.38,
+                                           "start":  33.08
+                                       },
+                                       {
+                                           "word":  "promesse",
+                                           "end":  36,
+                                           "start":  34.38
+                                       },
+                                       {
+                                           "word":  "scellée",
+                                           "end":  36.94,
+                                           "start":  36
+                                       },
+                                       {
+                                           "word":  "par",
+                                           "end":  37.98,
+                                           "start":  36.94
+                                       },
+                                       {
+                                           "word":  "ton",
+                                           "end":  38.36,
+                                           "start":  37.98
+                                       },
+                                       {
+                                           "word":  "amour",
+                                           "end":  39.28,
+                                           "start":  38.36
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  40.88,
+                                           "start":  39.28
+                                       },
+                                       {
+                                           "word":  "Seigneur",
+                                           "end":  42.6,
+                                           "start":  40.88
+                                       }
+                                   ],
+                         "text":  "terre à donner Une promesse scellée par ton amour Oh Seigneur",
+                         "start":  31.08
+                     },
+                     {
+                         "end":  52.68,
+                         "words":  [
+                                       {
+                                           "word":  "Lève",
+                                           "end":  45.68,
+                                           "start":  44.48
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  46.28,
+                                           "start":  45.68
+                                       },
+                                       {
+                                           "word":  "yeux,",
+                                           "end":  46.84,
+                                           "start":  46.28
+                                       },
+                                       {
+                                           "word":  "regarde",
+                                           "end":  47.62,
+                                           "start":  47.04
+                                       },
+                                       {
+                                           "word":  "tout",
+                                           "end":  48.58,
+                                           "start":  48.18
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  49.06,
+                                           "start":  48.58
+                                       },
+                                       {
+                                           "word":  "devant",
+                                           "end":  49.66,
+                                           "start":  49.06
+                                       },
+                                       {
+                                           "word":  "toi",
+                                           "end":  50.2,
+                                           "start":  49.66
+                                       },
+                                       {
+                                           "word":  "Chaque",
+                                           "end":  51.78,
+                                           "start":  50.2
+                                       },
+                                       {
+                                           "word":  "pas",
+                                           "end":  52.1,
+                                           "start":  51.78
+                                       },
+                                       {
+                                           "word":  "que",
+                                           "end":  52.68,
+                                           "start":  52.1
+                                       }
+                                   ],
+                         "text":  "Lève les yeux, regarde tout est devant toi Chaque pas que",
+                         "start":  44.48
+                     },
+                     {
+                         "end":  60.7,
+                         "words":  [
+                                       {
+                                           "word":  "tu",
+                                           "end":  53.14,
+                                           "start":  52.68
+                                       },
+                                       {
+                                           "word":  "fais",
+                                           "end":  53.62,
+                                           "start":  53.14
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  54.7,
+                                           "start":  53.62
+                                       },
+                                       {
+                                           "word":  "guidée",
+                                           "end":  55.52,
+                                           "start":  54.7
+                                       },
+                                       {
+                                           "word":  "par",
+                                           "end":  56.18,
+                                           "start":  55.52
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  59.92,
+                                           "start":  59.8
+                                       },
+                                       {
+                                           "word":  "voix",
+                                           "end":  60.42,
+                                           "start":  60.02
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  60.92,
+                                           "start":  60.52
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  61.42,
+                                           "start":  61.02
+                                       },
+                                       {
+                                           "word":  "lumière",
+                                           "end":  61.92,
+                                           "start":  61.52
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  62.42,
+                                           "start":  62.02
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  62.92,
+                                           "start":  62.52
+                                       },
+                                       {
+                                           "word":  "grâce",
+                                           "end":  60.7,
+                                           "start":  59.92
+                                       }
+                                   ],
+                         "text":  "tu fais est guidée par ta voix Dans la lumière de ta grâce",
+                         "start":  52.68
+                     },
+                     {
+                         "end":  69.46,
+                         "words":  [
+                                       {
+                                           "word":  "nous",
+                                           "end":  61.32,
+                                           "start":  60.72
+                                       },
+                                       {
+                                           "word":  "marchons",
+                                           "end":  62.24,
+                                           "start":  61.32
+                                       },
+                                       {
+                                           "word":  "Promesse",
+                                           "end":  64.54,
+                                           "start":  62.24
+                                       },
+                                       {
+                                           "word":  "éternel,",
+                                           "end":  65.7,
+                                           "start":  64.54
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  66.72,
+                                           "start":  65.7
+                                       },
+                                       {
+                                           "word":  "cœur",
+                                           "end":  67.58,
+                                           "start":  66.72
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  68.3,
+                                           "start":  67.58
+                                       },
+                                       {
+                                           "word":  "répond",
+                                           "end":  68.96,
+                                           "start":  68.3
+                                       },
+                                       {
+                                           "word":  "L\u0027autre",
+                                           "end":  69.46,
+                                           "start":  69.059999999999988
+                                       }
+                                   ],
+                         "text":  "nous marchons Promesse éternel, notre cœur te répond L\u0027autre",
+                         "start":  60.72
+                     },
+                     {
+                         "end":  84.26,
+                         "words":  [
+                                       {
+                                           "word":  "choisi",
+                                           "end":  76.38,
+                                           "start":  75.7
+                                       },
+                                       {
+                                           "word":  "son",
+                                           "end":  76.78,
+                                           "start":  76.38
+                                       },
+                                       {
+                                           "word":  "chemin",
+                                           "end":  77.52,
+                                           "start":  76.78
+                                       },
+                                       {
+                                           "word":  "vers",
+                                           "end":  79.1,
+                                           "start":  77.52
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  79.3,
+                                           "start":  79.1
+                                       },
+                                       {
+                                           "word":  "vallées",
+                                           "end":  80.26,
+                                           "start":  79.3
+                                       },
+                                       {
+                                           "word":  "dorées",
+                                           "end":  81.18,
+                                           "start":  80.26
+                                       },
+                                       {
+                                           "word":  "Mais",
+                                           "end":  82.7,
+                                           "start":  81.18
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  82.92,
+                                           "start":  82.7
+                                       },
+                                       {
+                                           "word":  "méchanceté",
+                                           "end":  84.26,
+                                           "start":  82.92
+                                       }
+                                   ],
+                         "text":  "choisi son chemin vers les vallées dorées Mais la méchanceté",
+                         "start":  75.7
+                     },
+                     {
+                         "end":  94.14,
+                         "words":  [
+                                       {
+                                           "word":  "là-bas",
+                                           "end":  84.76,
+                                           "start":  84.36
+                                       },
+                                       {
+                                           "word":  "va",
+                                           "end":  86.3,
+                                           "start":  85.32
+                                       },
+                                       {
+                                           "word":  "l\u0027engloutir",
+                                           "end":  86.8,
+                                           "start":  86.399999999999991
+                                       },
+                                       {
+                                           "word":  "Abra",
+                                           "end":  90.08,
+                                           "start":  88.16
+                                       },
+                                       {
+                                           "word":  "m\u0027homme",
+                                           "end":  90.58,
+                                           "start":  90.179999999999993
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  91.12,
+                                           "start":  90.6
+                                       },
+                                       {
+                                           "word":  "paix",
+                                           "end":  91.58,
+                                           "start":  91.12
+                                       },
+                                       {
+                                           "word":  "appelant",
+                                           "end":  93.42,
+                                           "start":  91.68
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  93.64,
+                                           "start":  93.42
+                                       },
+                                       {
+                                           "word":  "l\u0027harmonie",
+                                           "end":  94.14,
+                                           "start":  93.74
+                                       }
+                                   ],
+                         "text":  "là-bas va l\u0027engloutir Abra m\u0027homme de paix appelant à l\u0027harmonie",
+                         "start":  84.36
+                     },
+                     {
+                         "end":  107.98,
+                         "words":  [
+                                       {
+                                           "word":  "Qu\u0027il",
+                                           "end":  94.64,
+                                           "start":  94.24
+                                       },
+                                       {
+                                           "word":  "n\u0027y",
+                                           "end":  95.14,
+                                           "start":  94.74
+                                       },
+                                       {
+                                           "word":  "ait",
+                                           "end":  96.72,
+                                           "start":  96.48
+                                       },
+                                       {
+                                           "word":  "point",
+                                           "end":  97.16,
+                                           "start":  96.72
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  97.48,
+                                           "start":  97.16
+                                       },
+                                       {
+                                           "word":  "dispute",
+                                           "end":  98.14,
+                                           "start":  97.48
+                                       },
+                                       {
+                                           "word":  "uni",
+                                           "end":  100.5,
+                                           "start":  99.54
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  101.46,
+                                           "start":  100.5
+                                       },
+                                       {
+                                           "word":  "l\u0027infini",
+                                           "end":  101.96,
+                                           "start":  101.55999999999999
+                                       },
+                                       {
+                                           "word":  "Lève",
+                                           "end":  107.5,
+                                           "start":  106.54
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  107.98,
+                                           "start":  107.5
+                                       }
+                                   ],
+                         "text":  "Qu\u0027il n\u0027y ait point de dispute uni dans l\u0027infini Lève les",
+                         "start":  94.24
+                     },
+                     {
+                         "end":  115.36,
+                         "words":  [
+                                       {
+                                           "word":  "yeux,",
+                                           "end":  108.58,
+                                           "start":  107.98
+                                       },
+                                       {
+                                           "word":  "regarde",
+                                           "end":  109.24,
+                                           "start":  108.76
+                                       },
+                                       {
+                                           "word":  "tout",
+                                           "end":  110.3,
+                                           "start":  109.68
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  110.78,
+                                           "start":  110.3
+                                       },
+                                       {
+                                           "word":  "devant",
+                                           "end":  111.38,
+                                           "start":  110.78
+                                       },
+                                       {
+                                           "word":  "toi",
+                                           "end":  111.92,
+                                           "start":  111.38
+                                       },
+                                       {
+                                           "word":  "Chaque",
+                                           "end":  113.5,
+                                           "start":  111.92
+                                       },
+                                       {
+                                           "word":  "pas",
+                                           "end":  113.84,
+                                           "start":  113.5
+                                       },
+                                       {
+                                           "word":  "que",
+                                           "end":  114.38,
+                                           "start":  113.84
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  114.82,
+                                           "start":  114.38
+                                       },
+                                       {
+                                           "word":  "fais",
+                                           "end":  115.36,
+                                           "start":  114.82
+                                       }
+                                   ],
+                         "text":  "yeux, regarde tout est devant toi Chaque pas que tu fais",
+                         "start":  107.98
+                     },
+                     {
+                         "end":  123,
+                         "words":  [
+                                       {
+                                           "word":  "est",
+                                           "end":  116.36,
+                                           "start":  115.36
+                                       },
+                                       {
+                                           "word":  "guidée",
+                                           "end":  116.5,
+                                           "start":  116.36
+                                       },
+                                       {
+                                           "word":  "par",
+                                           "end":  116.5,
+                                           "start":  116.5
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  118.24,
+                                           "start":  117.8
+                                       },
+                                       {
+                                           "word":  "voix",
+                                           "end":  118.78,
+                                           "start":  118.24
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  119.72,
+                                           "start":  118.78
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  120.16,
+                                           "start":  119.72
+                                       },
+                                       {
+                                           "word":  "lumière",
+                                           "end":  121.02,
+                                           "start":  120.16
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  121.48,
+                                           "start":  121.02
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  121.7,
+                                           "start":  121.48
+                                       },
+                                       {
+                                           "word":  "grâce",
+                                           "end":  122.4,
+                                           "start":  121.7
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  123,
+                                           "start":  122.52
+                                       }
+                                   ],
+                         "text":  "est guidée par ta voix Dans la lumière de ta grâce nous",
+                         "start":  115.36
+                     },
+                     {
+                         "end":  136.26,
+                         "words":  [
+                                       {
+                                           "word":  "marchons",
+                                           "end":  124.1,
+                                           "start":  123
+                                       },
+                                       {
+                                           "word":  "Promesse",
+                                           "end":  126.2,
+                                           "start":  124.1
+                                       },
+                                       {
+                                           "word":  "éternel,",
+                                           "end":  127.58,
+                                           "start":  126.2
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  128.42,
+                                           "start":  127.58
+                                       },
+                                       {
+                                           "word":  "cœur",
+                                           "end":  129.3,
+                                           "start":  128.42
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  130.06,
+                                           "start":  129.3
+                                       },
+                                       {
+                                           "word":  "répond",
+                                           "end":  130.7,
+                                           "start":  130.06
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  134.86,
+                                           "start":  133.45999999999998
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  136.26,
+                                           "start":  134.86
+                                       }
+                                   ],
+                         "text":  "marchons Promesse éternel, notre cœur te répond Oh Seigneur,",
+                         "start":  123
+                     },
+                     {
+                         "end":  145.78,
+                         "words":  [
+                                       {
+                                           "word":  "tu",
+                                           "end":  137.22,
+                                           "start":  136.26
+                                       },
+                                       {
+                                           "word":  "es",
+                                           "end":  137.66,
+                                           "start":  137.22
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  138.36,
+                                           "start":  137.66
+                                       },
+                                       {
+                                           "word":  "refuge",
+                                           "end":  139.34,
+                                           "start":  138.36
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  140.92,
+                                           "start":  139.34
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  141.54,
+                                           "start":  140.92
+                                       },
+                                       {
+                                           "word":  "saison",
+                                           "end":  142.96,
+                                           "start":  141.54
+                                       },
+                                       {
+                                           "word":  "t\u0027abandonner",
+                                           "end":  143.46,
+                                           "start":  143.06
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  145.78,
+                                           "start":  145
+                                       }
+                                   ],
+                         "text":  "tu es notre refuge Dans chaque saison t\u0027abandonner notre",
+                         "start":  136.26
+                     },
+                     {
+                         "end":  155.2,
+                         "words":  [
+                                       {
+                                           "word":  "juge",
+                                           "end":  146.38,
+                                           "start":  145.78
+                                       },
+                                       {
+                                           "word":  "Nous",
+                                           "end":  147.22,
+                                           "start":  146.5
+                                       },
+                                       {
+                                           "word":  "bâtissons",
+                                           "end":  148.4,
+                                           "start":  147.22
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  148.94,
+                                           "start":  148.4
+                                       },
+                                       {
+                                           "word":  "hôtels",
+                                           "end":  150.06,
+                                           "start":  148.94
+                                       },
+                                       {
+                                           "word":  "pour",
+                                           "end":  151.48,
+                                           "start":  150.06
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  152.02,
+                                           "start":  151.48
+                                       },
+                                       {
+                                           "word":  "louer",
+                                           "end":  153.04,
+                                           "start":  152.02
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  154.7,
+                                           "start":  153.04
+                                       },
+                                       {
+                                           "word":  "l\u0027ombre",
+                                           "end":  155.2,
+                                           "start":  154.79999999999998
+                                       }
+                                   ],
+                         "text":  "juge Nous bâtissons des hôtels pour te louer Dans l\u0027ombre",
+                         "start":  145.78
+                     },
+                     {
+                         "end":  167.56,
+                         "words":  [
+                                       {
+                                           "word":  "de",
+                                           "end":  155.66,
+                                           "start":  155.36
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  155.92,
+                                           "start":  155.66
+                                       },
+                                       {
+                                           "word":  "présence",
+                                           "end":  157.38,
+                                           "start":  155.92
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  157.92,
+                                           "start":  157.42
+                                       },
+                                       {
+                                           "word":  "voulons",
+                                           "end":  158.68,
+                                           "start":  157.92
+                                       },
+                                       {
+                                           "word":  "demeurer",
+                                           "end":  159.88,
+                                           "start":  158.68
+                                       },
+                                       {
+                                           "word":  "Lève",
+                                           "end":  165.7,
+                                           "start":  164.54
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  166.22,
+                                           "start":  165.7
+                                       },
+                                       {
+                                           "word":  "yeux,",
+                                           "end":  166.8,
+                                           "start":  166.22
+                                       },
+                                       {
+                                           "word":  "regarde",
+                                           "end":  167.56,
+                                           "start":  166.94
+                                       }
+                                   ],
+                         "text":  "de ta présence nous voulons demeurer Lève les yeux, regarde",
+                         "start":  155.36
+                     },
+                     {
+                         "end":  176.14,
+                         "words":  [
+                                       {
+                                           "word":  "tout",
+                                           "end":  168.6,
+                                           "start":  168.14
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  169.06,
+                                           "start":  168.6
+                                       },
+                                       {
+                                           "word":  "devant",
+                                           "end":  169.64,
+                                           "start":  169.06
+                                       },
+                                       {
+                                           "word":  "toi",
+                                           "end":  170.18,
+                                           "start":  169.64
+                                       },
+                                       {
+                                           "word":  "Chaque",
+                                           "end":  171.8,
+                                           "start":  170.74
+                                       },
+                                       {
+                                           "word":  "pas",
+                                           "end":  172.12,
+                                           "start":  171.8
+                                       },
+                                       {
+                                           "word":  "que",
+                                           "end":  172.66,
+                                           "start":  172.12
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  173.1,
+                                           "start":  172.66
+                                       },
+                                       {
+                                           "word":  "fais",
+                                           "end":  173.58,
+                                           "start":  173.1
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  174.68,
+                                           "start":  173.58
+                                       },
+                                       {
+                                           "word":  "guidée",
+                                           "end":  175.52,
+                                           "start":  174.68
+                                       },
+                                       {
+                                           "word":  "par",
+                                           "end":  176.14,
+                                           "start":  175.52
+                                       }
+                                   ],
+                         "text":  "tout est devant toi Chaque pas que tu fais est guidée par",
+                         "start":  168.14
+                     },
+                     {
+                         "end":  184.54,
+                         "words":  [
+                                       {
+                                           "word":  "ta",
+                                           "end":  176.52,
+                                           "start":  176.14
+                                       },
+                                       {
+                                           "word":  "voix",
+                                           "end":  177.02,
+                                           "start":  176.52
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  178.06,
+                                           "start":  177.02
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  178.46,
+                                           "start":  178.06
+                                       },
+                                       {
+                                           "word":  "lumière",
+                                           "end":  179.34,
+                                           "start":  178.46
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  179.78,
+                                           "start":  179.34
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  179.98,
+                                           "start":  179.78
+                                       },
+                                       {
+                                           "word":  "grâce",
+                                           "end":  180.68,
+                                           "start":  179.98
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  181.28,
+                                           "start":  180.7
+                                       },
+                                       {
+                                           "word":  "marchons",
+                                           "end":  182.28,
+                                           "start":  181.28
+                                       },
+                                       {
+                                           "word":  "Promesse",
+                                           "end":  184.54,
+                                           "start":  182.28
+                                       }
+                                   ],
+                         "text":  "ta voix Dans la lumière de ta grâce nous marchons Promesse",
+                         "start":  176.14
+                     },
+                     {
+                         "end":  202.22,
+                         "words":  [
+                                       {
+                                           "word":  "éternel,",
+                                           "end":  185.9,
+                                           "start":  184.54
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  186.7,
+                                           "start":  185.92
+                                       },
+                                       {
+                                           "word":  "cœur",
+                                           "end":  187.6,
+                                           "start":  186.7
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  188.32,
+                                           "start":  187.6
+                                       },
+                                       {
+                                           "word":  "répond",
+                                           "end":  188.96,
+                                           "start":  188.32
+                                       },
+                                       {
+                                           "word":  "Abra",
+                                           "end":  193.74,
+                                           "start":  192.62
+                                       },
+                                       {
+                                           "word":  "m\u0027eau",
+                                           "end":  194.24,
+                                           "start":  193.84
+                                       },
+                                       {
+                                           "word":  "chaîne",
+                                           "end":  194.74,
+                                           "start":  194.34
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  201.72,
+                                           "start":  201.24
+                                       },
+                                       {
+                                           "word":  "marmerie,",
+                                           "end":  202.22,
+                                           "start":  201.82
+                                       }
+                                   ],
+                         "text":  "éternel, notre cœur te répond Abra m\u0027eau chaîne de marmerie,",
+                         "start":  184.54
+                     },
+                     {
+                         "end":  203.42,
+                         "words":  [
+                                       {
+                                           "word":  "tu",
+                                           "end":  202.72,
+                                           "start":  202.32
+                                       },
+                                       {
+                                           "word":  "es",
+                                           "end":  203.22,
+                                           "start":  202.82
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  203.72,
+                                           "start":  203.32
+                                       },
+                                       {
+                                           "word":  "guide",
+                                           "end":  204.22,
+                                           "start":  203.82
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  204.72,
+                                           "start":  204.32
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  205.22,
+                                           "start":  204.82
+                                       },
+                                       {
+                                           "word":  "plénitude",
+                                           "end":  205.72,
+                                           "start":  205.32
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  206.22,
+                                           "start":  205.82
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  201.92,
+                                           "start":  201.72
+                                       },
+                                       {
+                                           "word":  "promesse",
+                                           "end":  202.98,
+                                           "start":  201.92
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  203.42,
+                                           "start":  203.1
+                                       }
+                                   ],
+                         "text":  "tu es notre guide Dans la plénitude de ta promesse nous",
+                         "start":  202.32
+                     },
+                     {
+                         "end":  213.08,
+                         "words":  [
+                                       {
+                                           "word":  "vivons",
+                                           "end":  204.22,
+                                           "start":  203.42
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  204.48,
+                                           "start":  204.22
+                                       },
+                                       {
+                                           "word":  "vide",
+                                           "end":  204.98,
+                                           "start":  204.57999999999998
+                                       },
+                                       {
+                                           "word":  "Lève",
+                                           "end":  208.5,
+                                           "start":  207.38
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  209.1,
+                                           "start":  208.5
+                                       },
+                                       {
+                                           "word":  "yeux,",
+                                           "end":  209.72,
+                                           "start":  209.1
+                                       },
+                                       {
+                                           "word":  "regarde",
+                                           "end":  210.46,
+                                           "start":  209.88
+                                       },
+                                       {
+                                           "word":  "unis",
+                                           "end":  211.9,
+                                           "start":  210.96
+                                       },
+                                       {
+                                           "word":  "par",
+                                           "end":  212.16,
+                                           "start":  211.9
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  212.58,
+                                           "start":  212.16
+                                       },
+                                       {
+                                           "word":  "main",
+                                           "end":  213.08,
+                                           "start":  212.58
+                                       }
+                                   ],
+                         "text":  "vivons en vide Lève les yeux, regarde unis par ta main",
+                         "start":  203.42
+                     },
+                     {
+                         "end":  223.04,
+                         "words":  [
+                                       {
+                                           "word":  "Promesse",
+                                           "end":  215.48,
+                                           "start":  214.36
+                                       },
+                                       {
+                                           "word":  "éternel,",
+                                           "end":  216.6,
+                                           "start":  215.48
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  217.5,
+                                           "start":  216.6
+                                       },
+                                       {
+                                           "word":  "marchons",
+                                           "end":  218.64,
+                                           "start":  217.5
+                                       },
+                                       {
+                                           "word":  "vers",
+                                           "end":  221.54,
+                                           "start":  220.14
+                                       },
+                                       {
+                                           "word":  "demain",
+                                           "end":  222.04,
+                                           "start":  221.64
+                                       },
+                                       {
+                                           "word":  "Abra",
+                                           "end":  222.54,
+                                           "start":  222.14
+                                       },
+                                       {
+                                           "word":  "m\u0027eau",
+                                           "end":  223.04,
+                                           "start":  222.64
+                                       }
+                                   ],
+                         "text":  "Promesse éternel, nous marchons vers demain Abra m\u0027eau",
+                         "start":  214.36
+                     },
+                     {
+                         "end":  234.52,
+                         "words":  [
+                                       {
+                                           "word":  "chaîne",
+                                           "end":  231.16,
+                                           "start":  230.34
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  232.02,
+                                           "start":  232.02
+                                       },
+                                       {
+                                           "word":  "marmerie,",
+                                           "end":  232.52,
+                                           "start":  232.12
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  233.02,
+                                           "start":  232.62
+                                       },
+                                       {
+                                           "word":  "es",
+                                           "end":  233.52,
+                                           "start":  233.12
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  234.02,
+                                           "start":  233.62
+                                       },
+                                       {
+                                           "word":  "guide",
+                                           "end":  234.52,
+                                           "start":  234.12
+                                       }
+                                   ],
+                         "text":  "chaîne de marmerie, tu es notre guide",
+                         "start":  230.34
+                     }
+                 ]
+}

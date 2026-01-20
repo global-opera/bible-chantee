@@ -1,0 +1,1074 @@
+﻿{
+    "language":  "fr",
+    "text":  "... Dans la plaine de Chineards, Un peuple unis, un seul\nespoir, Ils bâtissent des rêves, des murs vers le ciel,\nEnsemble ils cherchent à faire leur nom. Au Seigneur, descends\net voie, La quête des cas, la voie des rois. Dans notre\n\nunion, nous oublions ta loi, Confondons nos langages, guider\nnos cas. Ils rêvaient d\u0027une tour qui touche les yeux, Ignorant\nque leur gueuille est un piège dangereux. L\u0027éternel observa,\nle cœur en est moi, Et dans son amour, ils changent à leur\n\nvoie. Au Seigneur, descends et voie, La quête des cas,\nla voie des rois. Dans notre union, nous oublions ta loi,\nConfondons nos langages, guider nos pas. De Babel, nous\nsommes dispersés, Mais dans l\u0027esprit, nous sommes rassemblés.\n\nUn même cœur, une même prière, Dans la diversité, ta lumière\nclaire. Seigneur, descends et voie, La quête des cas, la\nvoie des rois. Dans notre union, nous oublions ta loi,\nConfondons nos langages, guider nos pas. Dans chaque langue,\n\nun champ s\u0027élève Pour te louer, pour te servir sans trêve.\nUnion de vistes, nous battent ces sons. Une ville d\u0027amour,\nune nouvelle vision.",
+    "segments":  [
+                     {
+                         "end":  19.14,
+                         "words":  [
+                                       {
+                                           "word":  "...",
+                                           "end":  0.5,
+                                           "start":  0.1
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  11.88,
+                                           "start":  10.52
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  12.64,
+                                           "start":  11.88
+                                       },
+                                       {
+                                           "word":  "plaine",
+                                           "end":  13.92,
+                                           "start":  12.64
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  14.2,
+                                           "start":  13.92
+                                       },
+                                       {
+                                           "word":  "Chineards,",
+                                           "end":  15.56,
+                                           "start":  14.2
+                                       },
+                                       {
+                                           "word":  "Un",
+                                           "end":  16.46,
+                                           "start":  15.78
+                                       },
+                                       {
+                                           "word":  "peuple",
+                                           "end":  17,
+                                           "start":  16.46
+                                       },
+                                       {
+                                           "word":  "unis,",
+                                           "end":  17.62,
+                                           "start":  17
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  18.62,
+                                           "start":  18.02
+                                       },
+                                       {
+                                           "word":  "seul",
+                                           "end":  19.14,
+                                           "start":  18.62
+                                       }
+                                   ],
+                         "text":  "... Dans la plaine de Chineards, Un peuple unis, un seul",
+                         "start":  0.1
+                     },
+                     {
+                         "end":  27.52,
+                         "words":  [
+                                       {
+                                           "word":  "espoir,",
+                                           "end":  20.48,
+                                           "start":  19.14
+                                       },
+                                       {
+                                           "word":  "Ils",
+                                           "end":  22.5,
+                                           "start":  20.48
+                                       },
+                                       {
+                                           "word":  "bâtissent",
+                                           "end":  23.68,
+                                           "start":  22.5
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  24.3,
+                                           "start":  23.68
+                                       },
+                                       {
+                                           "word":  "rêves,",
+                                           "end":  25.02,
+                                           "start":  24.3
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  25.36,
+                                           "start":  25.02
+                                       },
+                                       {
+                                           "word":  "murs",
+                                           "end":  26.2,
+                                           "start":  25.36
+                                       },
+                                       {
+                                           "word":  "vers",
+                                           "end":  26.84,
+                                           "start":  26.2
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  27.12,
+                                           "start":  26.84
+                                       },
+                                       {
+                                           "word":  "ciel,",
+                                           "end":  27.52,
+                                           "start":  27.12
+                                       }
+                                   ],
+                         "text":  "espoir, Ils bâtissent des rêves, des murs vers le ciel,",
+                         "start":  19.14
+                     },
+                     {
+                         "end":  35.92,
+                         "words":  [
+                                       {
+                                           "word":  "Ensemble",
+                                           "end":  29.2,
+                                           "start":  27.52
+                                       },
+                                       {
+                                           "word":  "ils",
+                                           "end":  29.38,
+                                           "start":  29.2
+                                       },
+                                       {
+                                           "word":  "cherchent",
+                                           "end":  29.9,
+                                           "start":  29.38
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  30,
+                                           "start":  29.9
+                                       },
+                                       {
+                                           "word":  "faire",
+                                           "end":  30.46,
+                                           "start":  30
+                                       },
+                                       {
+                                           "word":  "leur",
+                                           "end":  31.46,
+                                           "start":  30.46
+                                       },
+                                       {
+                                           "word":  "nom.",
+                                           "end":  31.82,
+                                           "start":  31.46
+                                       },
+                                       {
+                                           "word":  "Au",
+                                           "end":  33.62,
+                                           "start":  32.34
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  35.08,
+                                           "start":  33.62
+                                       },
+                                       {
+                                           "word":  "descends",
+                                           "end":  35.92,
+                                           "start":  35.08
+                                       }
+                                   ],
+                         "text":  "Ensemble ils cherchent à faire leur nom. Au Seigneur, descends",
+                         "start":  27.52
+                     },
+                     {
+                         "end":  45.1,
+                         "words":  [
+                                       {
+                                           "word":  "et",
+                                           "end":  37.04,
+                                           "start":  36.56
+                                       },
+                                       {
+                                           "word":  "voie,",
+                                           "end":  37.44,
+                                           "start":  37.04
+                                       },
+                                       {
+                                           "word":  "La",
+                                           "end":  38.38,
+                                           "start":  37.44
+                                       },
+                                       {
+                                           "word":  "quête",
+                                           "end":  39.28,
+                                           "start":  38.38
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  39.78,
+                                           "start":  39.28
+                                       },
+                                       {
+                                           "word":  "cas,",
+                                           "end":  40.28,
+                                           "start":  39.88
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  41.22,
+                                           "start":  40.74
+                                       },
+                                       {
+                                           "word":  "voie",
+                                           "end":  41.66,
+                                           "start":  41.22
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  42.2,
+                                           "start":  41.66
+                                       },
+                                       {
+                                           "word":  "rois.",
+                                           "end":  43,
+                                           "start":  42.2
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  44.44,
+                                           "start":  43.58
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  45.1,
+                                           "start":  44.44
+                                       }
+                                   ],
+                         "text":  "et voie, La quête des cas, la voie des rois. Dans notre",
+                         "start":  36.56
+                     },
+                     {
+                         "end":  52.68,
+                         "words":  [
+                                       {
+                                           "word":  "union,",
+                                           "end":  45.8,
+                                           "start":  45.1
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  46.5,
+                                           "start":  46.08
+                                       },
+                                       {
+                                           "word":  "oublions",
+                                           "end":  47.84,
+                                           "start":  46.5
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  48.26,
+                                           "start":  47.84
+                                       },
+                                       {
+                                           "word":  "loi,",
+                                           "end":  48.7,
+                                           "start":  48.26
+                                       },
+                                       {
+                                           "word":  "Confondons",
+                                           "end":  50.76,
+                                           "start":  48.7
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  50.82,
+                                           "start":  50.76
+                                       },
+                                       {
+                                           "word":  "langages,",
+                                           "end":  51.42,
+                                           "start":  50.82
+                                       },
+                                       {
+                                           "word":  "guider",
+                                           "end":  52.68,
+                                           "start":  52.12
+                                       }
+                                   ],
+                         "text":  "union, nous oublions ta loi, Confondons nos langages, guider",
+                         "start":  45.1
+                     },
+                     {
+                         "end":  65.96,
+                         "words":  [
+                                       {
+                                           "word":  "nos",
+                                           "end":  53.78,
+                                           "start":  52.68
+                                       },
+                                       {
+                                           "word":  "cas.",
+                                           "end":  54.28,
+                                           "start":  53.88
+                                       },
+                                       {
+                                           "word":  "Ils",
+                                           "end":  59.94,
+                                           "start":  58.66
+                                       },
+                                       {
+                                           "word":  "rêvaient",
+                                           "end":  60.68,
+                                           "start":  59.94
+                                       },
+                                       {
+                                           "word":  "d\u0027une",
+                                           "end":  61.18,
+                                           "start":  60.78
+                                       },
+                                       {
+                                           "word":  "tour",
+                                           "end":  61.82,
+                                           "start":  61.14
+                                       },
+                                       {
+                                           "word":  "qui",
+                                           "end":  62.74,
+                                           "start":  61.82
+                                       },
+                                       {
+                                           "word":  "touche",
+                                           "end":  63.42,
+                                           "start":  62.74
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  63.68,
+                                           "start":  63.42
+                                       },
+                                       {
+                                           "word":  "yeux,",
+                                           "end":  64.18,
+                                           "start":  63.78
+                                       },
+                                       {
+                                           "word":  "Ignorant",
+                                           "end":  65.96,
+                                           "start":  64.32
+                                       }
+                                   ],
+                         "text":  "nos cas. Ils rêvaient d\u0027une tour qui touche les yeux, Ignorant",
+                         "start":  52.68
+                     },
+                     {
+                         "end":  73.04,
+                         "words":  [
+                                       {
+                                           "word":  "que",
+                                           "end":  66.3,
+                                           "start":  65.96
+                                       },
+                                       {
+                                           "word":  "leur",
+                                           "end":  66.8,
+                                           "start":  66.399999999999991
+                                       },
+                                       {
+                                           "word":  "gueuille",
+                                           "end":  67.3,
+                                           "start":  66.899999999999991
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  67.78,
+                                           "start":  67.14
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  68.02,
+                                           "start":  67.78
+                                       },
+                                       {
+                                           "word":  "piège",
+                                           "end":  68.76,
+                                           "start":  68.02
+                                       },
+                                       {
+                                           "word":  "dangereux.",
+                                           "end":  70.04,
+                                           "start":  68.76
+                                       },
+                                       {
+                                           "word":  "L\u0027éternel",
+                                           "end":  70.54,
+                                           "start":  70.14
+                                       },
+                                       {
+                                           "word":  "observa,",
+                                           "end":  73.04,
+                                           "start":  71.6
+                                       }
+                                   ],
+                         "text":  "que leur gueuille est un piège dangereux. L\u0027éternel observa,",
+                         "start":  65.96
+                     },
+                     {
+                         "end":  80.68,
+                         "words":  [
+                                       {
+                                           "word":  "le",
+                                           "end":  73.74,
+                                           "start":  73.04
+                                       },
+                                       {
+                                           "word":  "cœur",
+                                           "end":  74.2,
+                                           "start":  73.74
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  74.88,
+                                           "start":  74.2
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  75.38,
+                                           "start":  74.97999999999999
+                                       },
+                                       {
+                                           "word":  "moi,",
+                                           "end":  75.88,
+                                           "start":  75.47999999999999
+                                       },
+                                       {
+                                           "word":  "Et",
+                                           "end":  76.94,
+                                           "start":  75.46
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  77.26,
+                                           "start":  76.94
+                                       },
+                                       {
+                                           "word":  "son",
+                                           "end":  77.62,
+                                           "start":  77.26
+                                       },
+                                       {
+                                           "word":  "amour,",
+                                           "end":  78.52,
+                                           "start":  77.62
+                                       },
+                                       {
+                                           "word":  "ils",
+                                           "end":  79.02,
+                                           "start":  78.61999999999999
+                                       },
+                                       {
+                                           "word":  "changent",
+                                           "end":  80.5,
+                                           "start":  79.68
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  81,
+                                           "start":  80.6
+                                       },
+                                       {
+                                           "word":  "leur",
+                                           "end":  80.68,
+                                           "start":  80.5
+                                       }
+                                   ],
+                         "text":  "le cœur en est moi, Et dans son amour, ils changent à leur",
+                         "start":  73.04
+                     },
+                     {
+                         "end":  91.1,
+                         "words":  [
+                                       {
+                                           "word":  "voie.",
+                                           "end":  81.08,
+                                           "start":  80.68
+                                       },
+                                       {
+                                           "word":  "Au",
+                                           "end":  84.98,
+                                           "start":  83.7
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  86.26,
+                                           "start":  84.98
+                                       },
+                                       {
+                                           "word":  "descends",
+                                           "end":  86.72,
+                                           "start":  86.26
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  87.5,
+                                           "start":  87.36
+                                       },
+                                       {
+                                           "word":  "voie,",
+                                           "end":  87.5,
+                                           "start":  87.5
+                                       },
+                                       {
+                                           "word":  "La",
+                                           "end":  89.2,
+                                           "start":  88.24
+                                       },
+                                       {
+                                           "word":  "quête",
+                                           "end":  90.04,
+                                           "start":  89.2
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  90.6,
+                                           "start":  90.04
+                                       },
+                                       {
+                                           "word":  "cas,",
+                                           "end":  91.1,
+                                           "start":  90.699999999999989
+                                       }
+                                   ],
+                         "text":  "voie. Au Seigneur, descends et voie, La quête des cas,",
+                         "start":  80.68
+                     },
+                     {
+                         "end":  99.54,
+                         "words":  [
+                                       {
+                                           "word":  "la",
+                                           "end":  92.02,
+                                           "start":  91.56
+                                       },
+                                       {
+                                           "word":  "voie",
+                                           "end":  92.48,
+                                           "start":  92.02
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  93.04,
+                                           "start":  92.48
+                                       },
+                                       {
+                                           "word":  "rois.",
+                                           "end":  93.82,
+                                           "start":  93.04
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  95.2,
+                                           "start":  94.44
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  95.9,
+                                           "start":  95.2
+                                       },
+                                       {
+                                           "word":  "union,",
+                                           "end":  96.66,
+                                           "start":  95.9
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  97.36,
+                                           "start":  96.96
+                                       },
+                                       {
+                                           "word":  "oublions",
+                                           "end":  98.44,
+                                           "start":  97.36
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  99.08,
+                                           "start":  98.44
+                                       },
+                                       {
+                                           "word":  "loi,",
+                                           "end":  99.54,
+                                           "start":  99.08
+                                       }
+                                   ],
+                         "text":  "la voie des rois. Dans notre union, nous oublions ta loi,",
+                         "start":  91.56
+                     },
+                     {
+                         "end":  110.4,
+                         "words":  [
+                                       {
+                                           "word":  "Confondons",
+                                           "end":  101.56,
+                                           "start":  99.54
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  101.68,
+                                           "start":  101.56
+                                       },
+                                       {
+                                           "word":  "langages,",
+                                           "end":  102.3,
+                                           "start":  101.68
+                                       },
+                                       {
+                                           "word":  "guider",
+                                           "end":  103.52,
+                                           "start":  102.94
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  104.52,
+                                           "start":  103.52
+                                       },
+                                       {
+                                           "word":  "pas.",
+                                           "end":  105.22,
+                                           "start":  104.52
+                                       },
+                                       {
+                                           "word":  "De",
+                                           "end":  108.6,
+                                           "start":  107.32
+                                       },
+                                       {
+                                           "word":  "Babel,",
+                                           "end":  109.4,
+                                           "start":  108.6
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  110.4,
+                                           "start":  109.4
+                                       }
+                                   ],
+                         "text":  "Confondons nos langages, guider nos pas. De Babel, nous",
+                         "start":  99.54
+                     },
+                     {
+                         "end":  117.38,
+                         "words":  [
+                                       {
+                                           "word":  "sommes",
+                                           "end":  110.94,
+                                           "start":  110.4
+                                       },
+                                       {
+                                           "word":  "dispersés,",
+                                           "end":  112.3,
+                                           "start":  110.94
+                                       },
+                                       {
+                                           "word":  "Mais",
+                                           "end":  113.98,
+                                           "start":  112.92
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  114.36,
+                                           "start":  113.98
+                                       },
+                                       {
+                                           "word":  "l\u0027esprit,",
+                                           "end":  114.86,
+                                           "start":  114.46
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  116.06,
+                                           "start":  115.06
+                                       },
+                                       {
+                                           "word":  "sommes",
+                                           "end":  116.74,
+                                           "start":  116.06
+                                       },
+                                       {
+                                           "word":  "rassemblés.",
+                                           "end":  117.38,
+                                           "start":  116.74
+                                       }
+                                   ],
+                         "text":  "sommes dispersés, Mais dans l\u0027esprit, nous sommes rassemblés.",
+                         "start":  110.4
+                     },
+                     {
+                         "end":  129.86,
+                         "words":  [
+                                       {
+                                           "word":  "Un",
+                                           "end":  119.52,
+                                           "start":  117.52
+                                       },
+                                       {
+                                           "word":  "même",
+                                           "end":  120.02,
+                                           "start":  119.52
+                                       },
+                                       {
+                                           "word":  "cœur,",
+                                           "end":  120.64,
+                                           "start":  120.02
+                                       },
+                                       {
+                                           "word":  "une",
+                                           "end":  121.78,
+                                           "start":  121.16
+                                       },
+                                       {
+                                           "word":  "même",
+                                           "end":  122.34,
+                                           "start":  121.78
+                                       },
+                                       {
+                                           "word":  "prière,",
+                                           "end":  123.52,
+                                           "start":  122.34
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  124.54,
+                                           "start":  123.92
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  124.86,
+                                           "start":  124.54
+                                       },
+                                       {
+                                           "word":  "diversité,",
+                                           "end":  126.78,
+                                           "start":  124.86
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  129.06,
+                                           "start":  126.8
+                                       },
+                                       {
+                                           "word":  "lumière",
+                                           "end":  129.86,
+                                           "start":  129.06
+                                       }
+                                   ],
+                         "text":  "Un même cœur, une même prière, Dans la diversité, ta lumière",
+                         "start":  117.52
+                     },
+                     {
+                         "end":  140.04,
+                         "words":  [
+                                       {
+                                           "word":  "claire.",
+                                           "end":  131.18,
+                                           "start":  129.86
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  133.78,
+                                           "start":  132.26
+                                       },
+                                       {
+                                           "word":  "descends",
+                                           "end":  134.74,
+                                           "start":  133.78
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  135.9,
+                                           "start":  135.34
+                                       },
+                                       {
+                                           "word":  "voie,",
+                                           "end":  136.26,
+                                           "start":  135.9
+                                       },
+                                       {
+                                           "word":  "La",
+                                           "end":  137.3,
+                                           "start":  136.26
+                                       },
+                                       {
+                                           "word":  "quête",
+                                           "end":  138.06,
+                                           "start":  137.3
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  138.6,
+                                           "start":  138.06
+                                       },
+                                       {
+                                           "word":  "cas,",
+                                           "end":  139.1,
+                                           "start":  138.7
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  140.04,
+                                           "start":  139.6
+                                       }
+                                   ],
+                         "text":  "claire. Seigneur, descends et voie, La quête des cas, la",
+                         "start":  129.86
+                     },
+                     {
+                         "end":  147.42,
+                         "words":  [
+                                       {
+                                           "word":  "voie",
+                                           "end":  140.46,
+                                           "start":  140.04
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  141.06,
+                                           "start":  140.46
+                                       },
+                                       {
+                                           "word":  "rois.",
+                                           "end":  141.78,
+                                           "start":  141.06
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  143.28,
+                                           "start":  142.36
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  143.92,
+                                           "start":  143.28
+                                       },
+                                       {
+                                           "word":  "union,",
+                                           "end":  144.64,
+                                           "start":  143.92
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  145.32,
+                                           "start":  144.98
+                                       },
+                                       {
+                                           "word":  "oublions",
+                                           "end":  146.6,
+                                           "start":  145.32
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  147.08,
+                                           "start":  146.6
+                                       },
+                                       {
+                                           "word":  "loi,",
+                                           "end":  147.42,
+                                           "start":  147.08
+                                       }
+                                   ],
+                         "text":  "voie des rois. Dans notre union, nous oublions ta loi,",
+                         "start":  140.04
+                     },
+                     {
+                         "end":  157.58,
+                         "words":  [
+                                       {
+                                           "word":  "Confondons",
+                                           "end":  149.36,
+                                           "start":  147.52
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  149.5,
+                                           "start":  149.36
+                                       },
+                                       {
+                                           "word":  "langages,",
+                                           "end":  150.68,
+                                           "start":  149.5
+                                       },
+                                       {
+                                           "word":  "guider",
+                                           "end":  151.48,
+                                           "start":  150.94
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  152.68,
+                                           "start":  151.48
+                                       },
+                                       {
+                                           "word":  "pas.",
+                                           "end":  153.26,
+                                           "start":  152.68
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  156.04,
+                                           "start":  154.79999999999998
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  156.66,
+                                           "start":  156.04
+                                       },
+                                       {
+                                           "word":  "langue,",
+                                           "end":  157.58,
+                                           "start":  156.66
+                                       }
+                                   ],
+                         "text":  "Confondons nos langages, guider nos pas. Dans chaque langue,",
+                         "start":  147.52
+                     },
+                     {
+                         "end":  166.36,
+                         "words":  [
+                                       {
+                                           "word":  "un",
+                                           "end":  159.1,
+                                           "start":  158.66
+                                       },
+                                       {
+                                           "word":  "champ",
+                                           "end":  159.54,
+                                           "start":  159.1
+                                       },
+                                       {
+                                           "word":  "s\u0027élève",
+                                           "end":  160.04,
+                                           "start":  159.64
+                                       },
+                                       {
+                                           "word":  "Pour",
+                                           "end":  161.78,
+                                           "start":  160.42
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  162.28,
+                                           "start":  161.78
+                                       },
+                                       {
+                                           "word":  "louer,",
+                                           "end":  163.18,
+                                           "start":  162.28
+                                       },
+                                       {
+                                           "word":  "pour",
+                                           "end":  163.84,
+                                           "start":  163.28
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  164.04,
+                                           "start":  163.84
+                                       },
+                                       {
+                                           "word":  "servir",
+                                           "end":  164.9,
+                                           "start":  164.04
+                                       },
+                                       {
+                                           "word":  "sans",
+                                           "end":  165.46,
+                                           "start":  164.9
+                                       },
+                                       {
+                                           "word":  "trêve.",
+                                           "end":  166.36,
+                                           "start":  165.46
+                                       }
+                                   ],
+                         "text":  "un champ s\u0027élève Pour te louer, pour te servir sans trêve.",
+                         "start":  158.66
+                     },
+                     {
+                         "end":  173.6,
+                         "words":  [
+                                       {
+                                           "word":  "Union",
+                                           "end":  168.12,
+                                           "start":  166.36
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  168.62,
+                                           "start":  168.22
+                                       },
+                                       {
+                                           "word":  "vistes,",
+                                           "end":  169.12,
+                                           "start":  168.72
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  170.06,
+                                           "start":  169.46
+                                       },
+                                       {
+                                           "word":  "battent",
+                                           "end":  170.56,
+                                           "start":  170.16
+                                       },
+                                       {
+                                           "word":  "ces",
+                                           "end":  171.06,
+                                           "start":  170.66
+                                       },
+                                       {
+                                           "word":  "sons.",
+                                           "end":  171.56,
+                                           "start":  171.16
+                                       },
+                                       {
+                                           "word":  "Une",
+                                           "end":  172.46,
+                                           "start":  171.3
+                                       },
+                                       {
+                                           "word":  "ville",
+                                           "end":  173.1,
+                                           "start":  172.46
+                                       },
+                                       {
+                                           "word":  "d\u0027amour,",
+                                           "end":  173.6,
+                                           "start":  173.2
+                                       }
+                                   ],
+                         "text":  "Union de vistes, nous battent ces sons. Une ville d\u0027amour,",
+                         "start":  166.36
+                     },
+                     {
+                         "end":  178.5,
+                         "words":  [
+                                       {
+                                           "word":  "une",
+                                           "end":  176.88,
+                                           "start":  175.64
+                                       },
+                                       {
+                                           "word":  "nouvelle",
+                                           "end":  177.5,
+                                           "start":  176.88
+                                       },
+                                       {
+                                           "word":  "vision.",
+                                           "end":  178.5,
+                                           "start":  177.94
+                                       }
+                                   ],
+                         "text":  "une nouvelle vision.",
+                         "start":  175.64
+                     }
+                 ]
+}

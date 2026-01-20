@@ -5,67 +5,167 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genese 44 | Bible Chantee Karaoke</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
-        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
-        .header h1{font-size:1.8em;color:#d4af37}
-        .player{max-width:800px;margin:20px auto;padding:0 20px}
-        audio{width:100%}
-        .lyrics{max-width:800px;margin:20px auto;padding:20px}
-        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
-        .line:hover{background:rgba(212,175,55,0.1)}
-        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
-        .line.passed{opacity:0.5}
-        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
-        .footer{text-align:center;padding:20px;color:#666}
-        .footer a{color:#d4af37}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
+        .header p { color: #888; }
+        .audio-player { 
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        audio { width: 100%; }
+        .lyrics { 
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        .line { 
+            padding: 12px 15px;
+            margin: 5px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .line .time { 
+            color: #666; 
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+        .line.active { 
+            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
+            color: #fff;
+            border-left: 4px solid #d4af37;
+            transform: scale(1.02);
+        }
+        .line.active .time { color: #d4af37; }
+        .line.past { opacity: 0.5; }
     </style>
 </head>
 <body>
-    <div class="header"><h1>Genese 44</h1><p>Bible Chantee Karaoke</p></div>
-    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_44_FR.mp3" type="audio/mpeg"></audio></div>
-    <div class="lyrics">
-        <div class="line" data-start="15.00" data-end="21.00"><span class="time">[0:15]</span>Dans le silence de la nuit Joseph attend les siens</div>
-        <div class="line" data-start="21.00" data-end="27.00"><span class="time">[0:21]</span>Des cœurs lourds de secrets Des âmes pleines de liens</div>
-        <div class="line" data-start="27.00" data-end="33.00"><span class="time">[0:27]</span>Ils sont venus de loin Avec l'espoir et la foi</div>
-        <div class="line" data-start="33.00" data-end="46.00"><span class="time">[0:33]</span>Mais un test les attend Pour voir qui est vraiment droit</div>
-        <div class="line" data-start="46.00" data-end="51.00"><span class="time">[0:46]</span>Lève-toi ô mon cœur des craintes Car l'amour a payé le prix</div>
-        <div class="line" data-start="51.00" data-end="58.00"><span class="time">[0:51]</span>Comme Juda pour Benjamin Je donnerai ma vie</div>
-        <div class="line" data-start="58.00" data-end="63.00"><span class="time">[0:58]</span>Pour sauver mon frère au Seigneur Mon âme à toi je l'élève</div>
-        <div class="line" data-start="63.00" data-end="72.00"><span class="time">[1:03]</span>Dans cette danse d'amour L'iniquité tu enlèves</div>
-        <div class="line" data-start="72.00" data-end="78.00"><span class="time">[1:12]</span>La coupe d'argent brille Dans l'ombre de l'accusation</div>
-        <div class="line" data-start="78.00" data-end="83.00"><span class="time">[1:18]</span>Mais au fond de l'épreuve Resplendit la rédemption</div>
-        <div class="line" data-start="83.00" data-end="89.00"><span class="time">[1:23]</span>Juda se tient devant Les larmes aux yeux pleines de foi</div>
-        <div class="line" data-start="89.00" data-end="98.00"><span class="time">[1:29]</span>Il offre son être entier Pour sauver son enfant roi</div>
-        <div class="line" data-start="98.00" data-end="103.00"><span class="time">[1:38]</span>Lève-toi ô mon cœur des craintes Car l'amour a payé le prix</div>
-        <div class="line" data-start="103.00" data-end="108.00"><span class="time">[1:43]</span>Comme Juda pour Benjamin Je donnerai ma vie</div>
-        <div class="line" data-start="108.00" data-end="114.00"><span class="time">[1:48]</span>Pour sauver mon frère au Seigneur Mon âme à toi je l'élève</div>
-        <div class="line" data-start="114.00" data-end="120.00"><span class="time">[1:54]</span>Dans cette danse d'amour L'iniquité tu enlèves</div>
-        <div class="line" data-start="120.00" data-end="129.00"><span class="time">[2:00]</span>Oh Joseph regarde l'amour Quand l'iniquité se déploie</div>
-        <div class="line" data-start="129.00" data-end="135.00"><span class="time">[2:09]</span>Tu as dit remonter en paix Laissez-le il est à moi</div>
-        <div class="line" data-start="135.00" data-end="144.00"><span class="time">[2:15]</span>Dans chaque sacrifice fait Un reflet de ta grâce</div>
-        <div class="line" data-start="144.00" data-end="151.00"><span class="time">[2:24]</span>Jésus toi qui es le chemin Prends-nous la face</div>
-        <div class="line" data-start="151.00" data-end="156.00"><span class="time">[2:31]</span>Lève-toi ô mon cœur des craintes Car l'amour a payé le prix</div>
-        <div class="line" data-start="156.00" data-end="162.00"><span class="time">[2:36]</span>Comme Juda pour Benjamin Je donnerai ma vie</div>
-        <div class="line" data-start="162.00" data-end="167.00"><span class="time">[2:42]</span>Pour sauver mon frère au Seigneur Mon âme à toi je l'élève</div>
-        <div class="line" data-start="167.00" data-end="177.00"><span class="time">[2:47]</span>Dans cette danse d'amour L'iniquité tu enlèves</div>
-        <div class="line" data-start="177.00" data-end="184.00"><span class="time">[2:57]</span>Dans la lumière de ta vérité Nous marchons vers la liberté</div>
-        <div class="line" data-start="184.00" data-end="189.00"><span class="time">[3:04]</span>Joseph et Juda Unis par l'amour</div>
-        <div class="line" data-start="189.00" data-end="202.00"><span class="time">[3:09]</span>Ensemble nous chantons pour toujours Amen</div>
+    <div class="container">
+        <div class="header">
+            <h1>Genese 44</h1>
+            <p>Bible Chantee Karaoke</p>
+        </div>
+        <div class="audio-player">
+            <audio id="audio" controls>
+                <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_44_FR.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="lyrics" id="lyrics">
+        <div class="line" data-start="15.00" data-end="19.00"><span class="time">[0:15]</span>Dans le silence de la nuit</div>
+        <div class="line" data-start="19.00" data-end="21.00"><span class="time">[0:19]</span>J'osais fattant les siens</div>
+        <div class="line" data-start="21.00" data-end="24.00"><span class="time">[0:21]</span>Des coeurs lourds de secrets</div>
+        <div class="line" data-start="24.00" data-end="27.00"><span class="time">[0:24]</span>Des âmes pleines de liens</div>
+        <div class="line" data-start="27.00" data-end="30.00"><span class="time">[0:27]</span>Ils sont venus de loin</div>
+        <div class="line" data-start="30.00" data-end="33.00"><span class="time">[0:30]</span>Avec l'espoir et la foi</div>
+        <div class="line" data-start="33.00" data-end="36.00"><span class="time">[0:33]</span>Mais un test les attend</div>
+        <div class="line" data-start="36.00" data-end="40.00"><span class="time">[0:36]</span>Pour voir qui est vraiment droit</div>
+        <div class="line" data-start="43.00" data-end="46.00"><span class="time">[0:43]</span>T'es le toit au mon coeur des craintes</div>
+        <div class="line" data-start="46.00" data-end="49.00"><span class="time">[0:46]</span>Car on va pouvoir appeler le prix</div>
+        <div class="line" data-start="49.00" data-end="51.00"><span class="time">[0:49]</span>Comme j'udap pour bain</div>
+        <div class="line" data-start="51.00" data-end="55.00"><span class="time">[0:51]</span>J'a main je donne de vrai ma vie</div>
+        <div class="line" data-start="55.00" data-end="58.00"><span class="time">[0:55]</span>Pour sauver mon frère au Seigneur</div>
+        <div class="line" data-start="58.00" data-end="61.00"><span class="time">[0:58]</span>Mon amat foie je l'élève</div>
+        <div class="line" data-start="61.00" data-end="63.00"><span class="time">[1:01]</span>Dans cette danse d'amour</div>
+        <div class="line" data-start="63.00" data-end="68.00"><span class="time">[1:03]</span>L'immiguité tu enlèves</div>
+        <div class="line" data-start="69.00" data-end="72.00"><span class="time">[1:09]</span>La coupe d'argent brille</div>
+        <div class="line" data-start="72.00" data-end="75.00"><span class="time">[1:12]</span>Dans l'ombre de l'accusation</div>
+        <div class="line" data-start="75.00" data-end="78.00"><span class="time">[1:15]</span>Mais au fond de les preuves</div>
+        <div class="line" data-start="78.00" data-end="81.00"><span class="time">[1:18]</span>Résplendit la rédemption</div>
+        <div class="line" data-start="81.00" data-end="83.00"><span class="time">[1:21]</span>J'udap se tient devant</div>
+        <div class="line" data-start="83.00" data-end="85.00"><span class="time">[1:23]</span>Les larmes aux yeux</div>
+        <div class="line" data-start="85.00" data-end="87.00"><span class="time">[1:25]</span>Plins de foi</div>
+        <div class="line" data-start="87.00" data-end="89.00"><span class="time">[1:27]</span>Ils offrent son être entier</div>
+        <div class="line" data-start="89.00" data-end="94.00"><span class="time">[1:29]</span>Pour sauver son enfant en roi</div>
+        <div class="line" data-start="97.00" data-end="98.00"><span class="time">[1:37]</span>Les meutes-toi</div>
+        <div class="line" data-start="98.00" data-end="100.00"><span class="time">[1:38]</span>Au mon coeur des craintes</div>
+        <div class="line" data-start="100.00" data-end="103.00"><span class="time">[1:40]</span>Car on va pouvoir appeler le prix</div>
+        <div class="line" data-start="103.00" data-end="105.00"><span class="time">[1:43]</span>Comme j'udap pour bain</div>
+        <div class="line" data-start="105.00" data-end="108.00"><span class="time">[1:45]</span>J'a main je donne de vrai ma vie</div>
+        <div class="line" data-start="108.00" data-end="111.00"><span class="time">[1:48]</span>Pour sauver mon frère au Seigneur</div>
+        <div class="line" data-start="111.00" data-end="114.00"><span class="time">[1:51]</span>Mon amat foie je l'élève</div>
+        <div class="line" data-start="114.00" data-end="117.00"><span class="time">[1:54]</span>Dans cette danse d'amour</div>
+        <div class="line" data-start="117.00" data-end="120.00"><span class="time">[1:57]</span>L'immiguité tu enlèves</div>
+        <div class="line" data-start="120.00" data-end="123.00"><span class="time">[2:00]</span>Aujourd'hui, regarde la mouffe</div>
+        <div class="line" data-start="123.00" data-end="126.00"><span class="time">[2:03]</span>Quand l'immiguité se déploie</div>
+        <div class="line" data-start="126.00" data-end="129.00"><span class="time">[2:06]</span>Tu as dit remonter en paix</div>
+        <div class="line" data-start="129.00" data-end="132.00"><span class="time">[2:09]</span>Laissez-le il est à moi</div>
+        <div class="line" data-start="132.00" data-end="135.00"><span class="time">[2:12]</span>Dans chaque sacrifice fait</div>
+        <div class="line" data-start="135.00" data-end="138.00"><span class="time">[2:15]</span>Un reflet de ta grache</div>
+        <div class="line" data-start="138.00" data-end="144.00"><span class="time">[2:18]</span>Et sur toi qui est le chemin</div>
+        <div class="line" data-start="144.00" data-end="147.00"><span class="time">[2:24]</span>Prends-nous la face</div>
+        <div class="line" data-start="147.00" data-end="151.00"><span class="time">[2:27]</span>Les meutes-toi au mon coeur des craintes</div>
+        <div class="line" data-start="151.00" data-end="154.00"><span class="time">[2:31]</span>Car la moure appeler le prix</div>
+        <div class="line" data-start="154.00" data-end="156.00"><span class="time">[2:34]</span>Comme j'udap pour bain</div>
+        <div class="line" data-start="156.00" data-end="159.00"><span class="time">[2:36]</span>J'a main je donne de vrai ma vie</div>
+        <div class="line" data-start="159.00" data-end="162.00"><span class="time">[2:39]</span>Pour sauver mon frère au Seigneur</div>
+        <div class="line" data-start="162.00" data-end="165.00"><span class="time">[2:42]</span>Mon amat foie je l'élève</div>
+        <div class="line" data-start="165.00" data-end="167.00"><span class="time">[2:45]</span>Dans cette danse d'amour</div>
+        <div class="line" data-start="167.00" data-end="171.00"><span class="time">[2:47]</span>L'immiguité tu enlèves</div>
+        <div class="line" data-start="171.00" data-end="174.00"><span class="time">[2:51]</span>Dans la lumière de ta vérité</div>
+        <div class="line" data-start="174.00" data-end="177.00"><span class="time">[2:54]</span>Nous marchons vers la liberté</div>
+        <div class="line" data-start="177.00" data-end="180.00"><span class="time">[2:57]</span>J'osefais judeur</div>
+        <div class="line" data-start="180.00" data-end="184.00"><span class="time">[3:00]</span>Unis par l'amour</div>
+        <div class="line" data-start="184.00" data-end="186.00"><span class="time">[3:04]</span>Danses-en bleus</div>
+        <div class="line" data-start="186.00" data-end="189.00"><span class="time">[3:06]</span>Nous chantons pour toujours</div>
+        <div class="line" data-start="189.00" data-end="195.00"><span class="time">[3:09]</span>Amel</div>
+        <div class="line" data-start="195.00" data-end="202.00"><span class="time">[3:15]</span>Amel</div>
+        </div>
     </div>
-    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
     <script>
-        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
-        audio.addEventListener('timeupdate',()=>{
-            const t=audio.currentTime;
-            lines.forEach(l=>{
-                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
-                l.classList.remove('active','passed');
-                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
-                else if(t>=e)l.classList.add('passed')
-            })
+        const audio = document.getElementById('audio');
+        const lines = document.querySelectorAll('.line');
+        const lyricsContainer = document.getElementById('lyrics');
+        
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            let activeIndex = -1;
+            
+            lines.forEach((line, index) => {
+                const start = parseFloat(line.dataset.start);
+                const end = parseFloat(line.dataset.end);
+                
+                line.classList.remove('active', 'past');
+                
+                if (currentTime >= start && currentTime < end) {
+                    line.classList.add('active');
+                    activeIndex = index;
+                } else if (currentTime >= end) {
+                    line.classList.add('past');
+                }
+            });
+            
+            if (activeIndex >= 0) {
+                const activeLine = lines[activeIndex];
+                const containerRect = lyricsContainer.getBoundingClientRect();
+                const lineRect = activeLine.getBoundingClientRect();
+                
+                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
+                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
         });
-        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+        
+        lines.forEach(line => {
+            line.addEventListener('click', () => {
+                audio.currentTime = parseFloat(line.dataset.start);
+                audio.play();
+            });
+        });
     </script>
 </body>
 </html>

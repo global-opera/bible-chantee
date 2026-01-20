@@ -1,84 +1,160 @@
 1
-00:00:09,619 --> 00:00:20,399
-Au commencement, ô Dieu, Tu as créé les cieux et la terre
+00:00:09,619 --> 00:00:14,960
+Au commencement, ô Dieu, Tu as créé,
 
 2
-00:00:20,399 --> 00:00:35,380
-Tout a été formé dans l'obscurité Ta lumière a jailli, un souffle de vie
+00:00:14,960 --> 00:00:20,399
+Les cieux et la terre, tout a été formé.
 
 3
-00:00:35,380 --> 00:00:45,820
-L'espoir s'est épanoui
+00:00:20,399 --> 00:00:26,280
+Dans l'obscurité, Ta lumière a jailli,
 
 4
-00:00:45,820 --> 00:01:02,250
-Loué sois-tu, créateur des cieux Ta gloire éclaire nos yeux
+00:00:26,379 --> 00:00:32,460
+Un souffle de vie, l'espoir s'est épanoui.
 
 5
-00:01:02,250 --> 00:01:07,819
-Dans chaque étoile, dans chaque mer Nous chantons, Seigneur, Ta lumière est notre rêve
+00:00:35,380 --> 00:00:40,219
+Loué sois-Tu, Créateur des cieux,
 
 6
-00:01:07,819 --> 00:01:11,129
-Tu as dit que la lumière soit Et les ténèbres ont fui sous ta voix
+00:00:40,500 --> 00:00:45,500
+Ta gloire éclaire nos yeux.
 
 7
-00:01:11,129 --> 00:01:20,560
-Le jour et la nuit, tu as séparé Dans chaque matin, ta grâce renouvelée
+00:00:45,820 --> 00:00:51,060
+Dans chaque étoile, dans chaque mer,
 
 8
-00:01:20,560 --> 00:01:31,560
-Loué sois-tu, créateur des cieux Ta gloire éclaire nos yeux
+00:00:52,060 --> 00:00:59,600
+Nous chantons, Seigneur, Ta lumière est notre air.
 
 9
-00:01:31,560 --> 00:01:46,599
-Dans chaque étoile, dans chaque mer Nous chantons, Seigneur, Ta lumière est notre rêve
+00:01:02,250 --> 00:01:04,760
+Tu as dit : « Que la lumière soit, »
 
 10
-00:01:46,599 --> 00:01:56,859
-Les eaux se rassemblent, la terre apparaît Les arbres en fleur, la verdure est là
+00:01:05,390 --> 00:01:07,599
+Et les ténèbres ont fui sous Ta voix.
 
 11
-00:01:56,859 --> 00:02:07,939
-Les fruits abondent, ta bonté se déploie Chaque créature chante Gloire à toi, Roi des rois
+00:01:07,819 --> 00:01:10,780
+Le jour et la nuit, Tu as séparés,
 
 12
-00:02:07,939 --> 00:02:19,580
-Loué sois-tu, créateur des cieux Ta gloire éclaire nos yeux
+00:01:11,129 --> 00:01:13,780
+Dans chaque matin, Ta grâce renouvelée.
 
 13
-00:02:19,580 --> 00:02:32,620
-Dans chaque étoile, dans chaque mer Nous chantons, Seigneur, Ta lumière est notre rêve
+00:01:14,920 --> 00:01:19,780
+Loué sois-Tu, Créateur des cieux,
 
 14
-00:02:32,620 --> 00:02:38,419
-Des luminaires brillent dans l'immensité Le soleil, la lune pour notre clarté
+00:01:20,560 --> 00:01:25,019
+Ta gloire éclaire nos yeux.
 
 15
-00:02:38,419 --> 00:02:48,299
-Les poissons dans l'eau, les oiseaux dans le ciel Tout est à sa place, tout est si essentiel
+00:01:25,560 --> 00:01:28,819
+Dans chaque étoile, dans chaque mer,
 
 16
-00:02:48,299 --> 00:02:53,240
-Loué sois-tu, créateur des cieux Ta gloire éclaire nos yeux
+00:01:31,560 --> 00:01:38,780
+Nous chantons, Seigneur, Ta lumière est notre air.
 
 17
-00:02:53,240 --> 00:03:06,460
-Dans chaque étoile, dans chaque mer Nous chantons, Seigneur, Ta lumière est notre rêve
+00:01:40,819 --> 00:01:46,319
+Les eaux se rassemblent, la terre apparaît,
 
 18
-00:03:06,460 --> 00:03:15,000
-Faisons l'homme à ta ressemblance Pour régner sur la terre dans l'espérance
+00:01:46,599 --> 00:01:51,939
+Les arbres en fleurs, la verdure est là.
 
 19
-00:03:15,000 --> 00:03:21,860
-À ton image nous sommes créés Pour glorifier, pour aimer, pour adorer
+00:01:52,040 --> 00:01:56,859
+Les fruits abondent, Ta bonté se déploie,
 
 20
-00:03:21,860 --> 00:03:32,780
-Loué sois-tu, créateur des cieux Ta gloire éclaire nos yeux
+00:01:56,859 --> 00:02:02,840
+Chaque créature chante, « Gloire à Toi, Roi des rois! »
 
 21
-00:03:32,780 --> 00:03:45,860
-Dans chaque étoile, dans chaque mer Nous chantons, Seigneur, Ta lumière est notre rêve
+00:02:02,560 --> 00:02:07,799
+Loué sois-Tu, Créateur des cieux,
+
+22
+00:02:07,939 --> 00:02:13,020
+Ta gloire éclaire nos yeux.
+
+23
+00:02:13,240 --> 00:02:18,599
+Dans chaque étoile, dans chaque mer,
+
+24
+00:02:19,580 --> 00:02:26,719
+Nous chantons, Seigneur, Ta lumière est notre air.
+
+25
+00:02:29,619 --> 00:02:31,900
+Des luminaires brillent dans l'immensité,
+
+26
+00:02:32,620 --> 00:02:35,280
+Le soleil, la lune, pour notre clarté.
+
+27
+00:02:35,699 --> 00:02:38,139
+Les poissons dans l'eau, les oiseaux dans le ciel,
+
+28
+00:02:38,419 --> 00:02:41,400
+Tout est à sa place, tout est si essentiel.
+
+29
+00:02:42,779 --> 00:02:47,300
+Loué sois-Tu, Créateur des cieux,
+
+30
+00:02:48,299 --> 00:02:52,560
+Ta gloire éclaire nos yeux.
+
+31
+00:02:53,240 --> 00:02:56,900
+Dans chaque étoile, dans chaque mer,
+
+32
+00:02:59,639 --> 00:03:06,360
+Nous chantons, Seigneur, Ta lumière est notre air.
+
+33
+00:03:06,460 --> 00:03:11,740
+« Faisons l'homme à Ta ressemblance »,
+
+34
+00:03:11,580 --> 00:03:14,520
+Pour régner sur la terre, dans l'espérance.
+
+35
+00:03:15,000 --> 00:03:17,479
+À Ton image, nous sommes créés,
+
+36
+00:03:17,639 --> 00:03:21,479
+Pour glorifier, pour aimer, pour adorer.
+
+37
+00:03:21,860 --> 00:03:26,479
+Loué sois-Tu, Créateur des cieux,
+
+38
+00:03:26,479 --> 00:03:32,080
+Ta gloire éclaire nos yeux.
+
+39
+00:03:32,780 --> 00:03:37,680
+Dans chaque étoile, dans chaque mer,
+
+40
+00:03:38,539 --> 00:03:45,860
+Nous chantons, Seigneur, Ta lumière est notre air.
 

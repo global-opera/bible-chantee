@@ -1,0 +1,1563 @@
+﻿{
+    "language":  "fr",
+    "text":  "... Dans la lumière de l\u0027aube Une voix se fait entendre\nDieu bénit nos aies La terre à défendre Soyez fécons, remplissez\nl\u0027horizon Les cieuses et la mer sont en ma raison Au arcanciel,\nsymbole de l\u0027alliance Entre ciel et terre Une douce présence\n\nAucune chair ne périrà dans les flots Mon amour éternel\npour vous Je le sais en mot Les animaux dansent La vie\nse réveille Tous en sous ma grâce Unis dans le vernet Ne\ncraignez rien Car je suis votre roi L\u0027alliance de paix\n\nJe la fais avec toi Au arcanciel, symbole de l\u0027alliance\nEntre ciel et terre Une douce présence Aucune chair ne\npérirà dans les flots Mon amour éternel pour vous Je le\nsais en mot Souviens-toi au mon peuple De ce pacte sacré\n\nJe suis votre refuge Dans la tempête l\u0027oubli Quand les\nnuèges s\u0027assombrissent Et que le vent souffle fort Regarde\nl\u0027art dans le ciel Je suis là Je te serre encore Au arcanciel,\nsymbole de l\u0027alliance Entre ciel et terre Une douce présence\n\nAucune chair ne périrà dans les flots Mon amour éternel\npour vous Je le sais en mot Avec Noé et ses fils Nous bâtissons\nl\u0027avenir Dans chaque heure la promesse Un dos souvenir\nL\u0027unité dans la diversité Mains dans la main Répendons\n\nl\u0027amour Sur ce chemin divin Au arcanciel, symbole de l\u0027alliance\nEntre ciel et terre Une douce présence Aucune chair ne\npérirà dans les flots Mon amour éternel pour vous Je le\nsais en mot L\u0027art dans le ciel Un rappel d\u0027espérance L\u0027alliance\n\nde Dieu Une éternelle danse Remplissons la terre de sa\nlumière Pour toujours une île Sous son amour sincère",
+    "segments":  [
+                     {
+                         "end":  32.88,
+                         "words":  [
+                                       {
+                                           "word":  "...",
+                                           "end":  0.5,
+                                           "start":  0.1
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  23.26,
+                                           "start":  21.860000000000003
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  23.64,
+                                           "start":  23.26
+                                       },
+                                       {
+                                           "word":  "lumière",
+                                           "end":  24.3,
+                                           "start":  23.64
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  25.1,
+                                           "start":  24.3
+                                       },
+                                       {
+                                           "word":  "l\u0027aube",
+                                           "end":  25.6,
+                                           "start":  25.200000000000003
+                                       },
+                                       {
+                                           "word":  "Une",
+                                           "end":  29.32,
+                                           "start":  27.92
+                                       },
+                                       {
+                                           "word":  "voix",
+                                           "end":  29.88,
+                                           "start":  29.32
+                                       },
+                                       {
+                                           "word":  "se",
+                                           "end":  30.32,
+                                           "start":  29.88
+                                       },
+                                       {
+                                           "word":  "fait",
+                                           "end":  30.6,
+                                           "start":  30.32
+                                       },
+                                       {
+                                           "word":  "entendre",
+                                           "end":  32.88,
+                                           "start":  30.6
+                                       }
+                                   ],
+                         "text":  "... Dans la lumière de l\u0027aube Une voix se fait entendre",
+                         "start":  0.1
+                     },
+                     {
+                         "end":  44.1,
+                         "words":  [
+                                       {
+                                           "word":  "Dieu",
+                                           "end":  34.9,
+                                           "start":  33.519999999999996
+                                       },
+                                       {
+                                           "word":  "bénit",
+                                           "end":  35.82,
+                                           "start":  34.9
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  36.32,
+                                           "start":  35.92
+                                       },
+                                       {
+                                           "word":  "aies",
+                                           "end":  36.82,
+                                           "start":  36.42
+                                       },
+                                       {
+                                           "word":  "La",
+                                           "end":  38.02,
+                                           "start":  36.76
+                                       },
+                                       {
+                                           "word":  "terre",
+                                           "end":  38.62,
+                                           "start":  38.02
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  39.16,
+                                           "start":  38.62
+                                       },
+                                       {
+                                           "word":  "défendre",
+                                           "end":  40.9,
+                                           "start":  39.16
+                                       },
+                                       {
+                                           "word":  "Soyez",
+                                           "end":  41.96,
+                                           "start":  40.9
+                                       },
+                                       {
+                                           "word":  "fécons,",
+                                           "end":  42.82,
+                                           "start":  41.96
+                                       },
+                                       {
+                                           "word":  "remplissez",
+                                           "end":  44.1,
+                                           "start":  42.82
+                                       }
+                                   ],
+                         "text":  "Dieu bénit nos aies La terre à défendre Soyez fécons, remplissez",
+                         "start":  33.519999999999996
+                     },
+                     {
+                         "end":  54.9,
+                         "words":  [
+                                       {
+                                           "word":  "l\u0027horizon",
+                                           "end":  44.6,
+                                           "start":  44.2
+                                       },
+                                       {
+                                           "word":  "Les",
+                                           "end":  46.64,
+                                           "start":  45.6
+                                       },
+                                       {
+                                           "word":  "cieuses",
+                                           "end":  47.1,
+                                           "start":  46.64
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  47.52,
+                                           "start":  47.1
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  47.98,
+                                           "start":  47.52
+                                       },
+                                       {
+                                           "word":  "mer",
+                                           "end":  48.48,
+                                           "start":  47.98
+                                       },
+                                       {
+                                           "word":  "sont",
+                                           "end":  49.88,
+                                           "start":  49.08
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  50.18,
+                                           "start":  49.88
+                                       },
+                                       {
+                                           "word":  "ma",
+                                           "end":  50.36,
+                                           "start":  50.18
+                                       },
+                                       {
+                                           "word":  "raison",
+                                           "end":  51.24,
+                                           "start":  50.36
+                                       },
+                                       {
+                                           "word":  "Au",
+                                           "end":  51.74,
+                                           "start":  51.34
+                                       },
+                                       {
+                                           "word":  "arcanciel,",
+                                           "end":  54.9,
+                                           "start":  54.14
+                                       }
+                                   ],
+                         "text":  "l\u0027horizon Les cieuses et la mer sont en ma raison Au arcanciel,",
+                         "start":  44.2
+                     },
+                     {
+                         "end":  64.14,
+                         "words":  [
+                                       {
+                                           "word":  "symbole",
+                                           "end":  57.22,
+                                           "start":  55.82
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  57.36,
+                                           "start":  57.22
+                                       },
+                                       {
+                                           "word":  "l\u0027alliance",
+                                           "end":  57.86,
+                                           "start":  57.46
+                                       },
+                                       {
+                                           "word":  "Entre",
+                                           "end":  59.68,
+                                           "start":  58.7
+                                       },
+                                       {
+                                           "word":  "ciel",
+                                           "end":  60.24,
+                                           "start":  59.68
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  60.78,
+                                           "start":  60.24
+                                       },
+                                       {
+                                           "word":  "terre",
+                                           "end":  61.22,
+                                           "start":  60.78
+                                       },
+                                       {
+                                           "word":  "Une",
+                                           "end":  62.24,
+                                           "start":  61.22
+                                       },
+                                       {
+                                           "word":  "douce",
+                                           "end":  62.86,
+                                           "start":  62.24
+                                       },
+                                       {
+                                           "word":  "présence",
+                                           "end":  64.14,
+                                           "start":  62.86
+                                       }
+                                   ],
+                         "text":  "symbole de l\u0027alliance Entre ciel et terre Une douce présence",
+                         "start":  55.82
+                     },
+                     {
+                         "end":  72.46,
+                         "words":  [
+                                       {
+                                           "word":  "Aucune",
+                                           "end":  65.8,
+                                           "start":  64.14
+                                       },
+                                       {
+                                           "word":  "chair",
+                                           "end":  66.08,
+                                           "start":  65.8
+                                       },
+                                       {
+                                           "word":  "ne",
+                                           "end":  66.4,
+                                           "start":  66.08
+                                       },
+                                       {
+                                           "word":  "périrà",
+                                           "end":  67.66,
+                                           "start":  66.4
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  68.5,
+                                           "start":  67.66
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  68.84,
+                                           "start":  68.5
+                                       },
+                                       {
+                                           "word":  "flots",
+                                           "end":  69.32,
+                                           "start":  68.84
+                                       },
+                                       {
+                                           "word":  "Mon",
+                                           "end":  70.3,
+                                           "start":  69.32
+                                       },
+                                       {
+                                           "word":  "amour",
+                                           "end":  71.16,
+                                           "start":  70.3
+                                       },
+                                       {
+                                           "word":  "éternel",
+                                           "end":  72.46,
+                                           "start":  71.16
+                                       }
+                                   ],
+                         "text":  "Aucune chair ne périrà dans les flots Mon amour éternel",
+                         "start":  64.14
+                     },
+                     {
+                         "end":  82.46,
+                         "words":  [
+                                       {
+                                           "word":  "pour",
+                                           "end":  72.74,
+                                           "start":  72.46
+                                       },
+                                       {
+                                           "word":  "vous",
+                                           "end":  73.12,
+                                           "start":  72.74
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  73.58,
+                                           "start":  73.12
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  73.7,
+                                           "start":  73.58
+                                       },
+                                       {
+                                           "word":  "sais",
+                                           "end":  74.44,
+                                           "start":  73.7
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  74.86,
+                                           "start":  74.44
+                                       },
+                                       {
+                                           "word":  "mot",
+                                           "end":  75.32,
+                                           "start":  74.86
+                                       },
+                                       {
+                                           "word":  "Les",
+                                           "end":  79.02,
+                                           "start":  77.839999999999989
+                                       },
+                                       {
+                                           "word":  "animaux",
+                                           "end":  80.14,
+                                           "start":  79.02
+                                       },
+                                       {
+                                           "word":  "dansent",
+                                           "end":  81.48,
+                                           "start":  80.14
+                                       },
+                                       {
+                                           "word":  "La",
+                                           "end":  82.2,
+                                           "start":  81.48
+                                       },
+                                       {
+                                           "word":  "vie",
+                                           "end":  82.46,
+                                           "start":  82.2
+                                       }
+                                   ],
+                         "text":  "pour vous Je le sais en mot Les animaux dansent La vie",
+                         "start":  72.46
+                     },
+                     {
+                         "end":  90.62,
+                         "words":  [
+                                       {
+                                           "word":  "se",
+                                           "end":  82.76,
+                                           "start":  82.46
+                                       },
+                                       {
+                                           "word":  "réveille",
+                                           "end":  84.18,
+                                           "start":  82.76
+                                       },
+                                       {
+                                           "word":  "Tous",
+                                           "end":  85.06,
+                                           "start":  84.18
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  85.56,
+                                           "start":  85.16
+                                       },
+                                       {
+                                           "word":  "sous",
+                                           "end":  85.82,
+                                           "start":  85.82
+                                       },
+                                       {
+                                           "word":  "ma",
+                                           "end":  86.14,
+                                           "start":  85.82
+                                       },
+                                       {
+                                           "word":  "grâce",
+                                           "end":  86.68,
+                                           "start":  86.14
+                                       },
+                                       {
+                                           "word":  "Unis",
+                                           "end":  87.92,
+                                           "start":  86.68
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  88.32,
+                                           "start":  87.92
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  88.44,
+                                           "start":  88.32
+                                       },
+                                       {
+                                           "word":  "vernet",
+                                           "end":  89.32,
+                                           "start":  88.44
+                                       },
+                                       {
+                                           "word":  "Ne",
+                                           "end":  90.62,
+                                           "start":  89.32
+                                       }
+                                   ],
+                         "text":  "se réveille Tous en sous ma grâce Unis dans le vernet Ne",
+                         "start":  82.46
+                     },
+                     {
+                         "end":  98,
+                         "words":  [
+                                       {
+                                           "word":  "craignez",
+                                           "end":  91.72,
+                                           "start":  90.62
+                                       },
+                                       {
+                                           "word":  "rien",
+                                           "end":  92.1,
+                                           "start":  91.72
+                                       },
+                                       {
+                                           "word":  "Car",
+                                           "end":  93.16,
+                                           "start":  92.1
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  93.32,
+                                           "start":  93.16
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  93.6,
+                                           "start":  93.32
+                                       },
+                                       {
+                                           "word":  "votre",
+                                           "end":  94.14,
+                                           "start":  93.6
+                                       },
+                                       {
+                                           "word":  "roi",
+                                           "end":  95.54,
+                                           "start":  94.14
+                                       },
+                                       {
+                                           "word":  "L\u0027alliance",
+                                           "end":  96.04,
+                                           "start":  95.64
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  97.4,
+                                           "start":  97.18
+                                       },
+                                       {
+                                           "word":  "paix",
+                                           "end":  98,
+                                           "start":  97.4
+                                       }
+                                   ],
+                         "text":  "craignez rien Car je suis votre roi L\u0027alliance de paix",
+                         "start":  90.62
+                     },
+                     {
+                         "end":  107.32,
+                         "words":  [
+                                       {
+                                           "word":  "Je",
+                                           "end":  98.8,
+                                           "start":  98
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  98.94,
+                                           "start":  98.8
+                                       },
+                                       {
+                                           "word":  "fais",
+                                           "end":  99.26,
+                                           "start":  98.94
+                                       },
+                                       {
+                                           "word":  "avec",
+                                           "end":  100.06,
+                                           "start":  99.26
+                                       },
+                                       {
+                                           "word":  "toi",
+                                           "end":  100.68,
+                                           "start":  100.06
+                                       },
+                                       {
+                                           "word":  "Au",
+                                           "end":  101.18,
+                                           "start":  100.78
+                                       },
+                                       {
+                                           "word":  "arcanciel,",
+                                           "end":  104.2,
+                                           "start":  103.56
+                                       },
+                                       {
+                                           "word":  "symbole",
+                                           "end":  106.64,
+                                           "start":  105
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  106.82,
+                                           "start":  106.64
+                                       },
+                                       {
+                                           "word":  "l\u0027alliance",
+                                           "end":  107.32,
+                                           "start":  106.91999999999999
+                                       }
+                                   ],
+                         "text":  "Je la fais avec toi Au arcanciel, symbole de l\u0027alliance",
+                         "start":  98
+                     },
+                     {
+                         "end":  115.8,
+                         "words":  [
+                                       {
+                                           "word":  "Entre",
+                                           "end":  108.64,
+                                           "start":  108.12
+                                       },
+                                       {
+                                           "word":  "ciel",
+                                           "end":  109.62,
+                                           "start":  108.64
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  110.18,
+                                           "start":  109.62
+                                       },
+                                       {
+                                           "word":  "terre",
+                                           "end":  110.64,
+                                           "start":  110.18
+                                       },
+                                       {
+                                           "word":  "Une",
+                                           "end":  111.66,
+                                           "start":  110.64
+                                       },
+                                       {
+                                           "word":  "douce",
+                                           "end":  112.26,
+                                           "start":  111.66
+                                       },
+                                       {
+                                           "word":  "présence",
+                                           "end":  113.64,
+                                           "start":  112.26
+                                       },
+                                       {
+                                           "word":  "Aucune",
+                                           "end":  115.2,
+                                           "start":  113.64
+                                       },
+                                       {
+                                           "word":  "chair",
+                                           "end":  115.48,
+                                           "start":  115.2
+                                       },
+                                       {
+                                           "word":  "ne",
+                                           "end":  115.8,
+                                           "start":  115.48
+                                       }
+                                   ],
+                         "text":  "Entre ciel et terre Une douce présence Aucune chair ne",
+                         "start":  108.12
+                     },
+                     {
+                         "end":  123.12,
+                         "words":  [
+                                       {
+                                           "word":  "périrà",
+                                           "end":  115.8,
+                                           "start":  115.8
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  117.38,
+                                           "start":  115.82
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  118.24,
+                                           "start":  117.38
+                                       },
+                                       {
+                                           "word":  "flots",
+                                           "end":  118.72,
+                                           "start":  118.24
+                                       },
+                                       {
+                                           "word":  "Mon",
+                                           "end":  119.6,
+                                           "start":  118.72
+                                       },
+                                       {
+                                           "word":  "amour",
+                                           "end":  120.56,
+                                           "start":  119.6
+                                       },
+                                       {
+                                           "word":  "éternel",
+                                           "end":  121.84,
+                                           "start":  120.56
+                                       },
+                                       {
+                                           "word":  "pour",
+                                           "end":  122.14,
+                                           "start":  121.84
+                                       },
+                                       {
+                                           "word":  "vous",
+                                           "end":  122.5,
+                                           "start":  122.14
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  122.96,
+                                           "start":  122.5
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  123.12,
+                                           "start":  122.96
+                                       }
+                                   ],
+                         "text":  "périrà dans les flots Mon amour éternel pour vous Je le",
+                         "start":  115.8
+                     },
+                     {
+                         "end":  133.2,
+                         "words":  [
+                                       {
+                                           "word":  "sais",
+                                           "end":  123.86,
+                                           "start":  123.12
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  124.24,
+                                           "start":  123.86
+                                       },
+                                       {
+                                           "word":  "mot",
+                                           "end":  124.66,
+                                           "start":  124.24
+                                       },
+                                       {
+                                           "word":  "Souviens-toi",
+                                           "end":  128.72,
+                                           "start":  127.76
+                                       },
+                                       {
+                                           "word":  "au",
+                                           "end":  129.22,
+                                           "start":  128.82
+                                       },
+                                       {
+                                           "word":  "mon",
+                                           "end":  129.78,
+                                           "start":  129.6
+                                       },
+                                       {
+                                           "word":  "peuple",
+                                           "end":  130.2,
+                                           "start":  129.78
+                                       },
+                                       {
+                                           "word":  "De",
+                                           "end":  131.24,
+                                           "start":  130.72
+                                       },
+                                       {
+                                           "word":  "ce",
+                                           "end":  131.4,
+                                           "start":  131.24
+                                       },
+                                       {
+                                           "word":  "pacte",
+                                           "end":  132.22,
+                                           "start":  131.4
+                                       },
+                                       {
+                                           "word":  "sacré",
+                                           "end":  133.2,
+                                           "start":  132.22
+                                       }
+                                   ],
+                         "text":  "sais en mot Souviens-toi au mon peuple De ce pacte sacré",
+                         "start":  123.12
+                     },
+                     {
+                         "end":  139.8,
+                         "words":  [
+                                       {
+                                           "word":  "Je",
+                                           "end":  134.24,
+                                           "start":  133.2
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  134.52,
+                                           "start":  134.24
+                                       },
+                                       {
+                                           "word":  "votre",
+                                           "end":  134.84,
+                                           "start":  134.52
+                                       },
+                                       {
+                                           "word":  "refuge",
+                                           "end":  135.6,
+                                           "start":  134.84
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  136.32,
+                                           "start":  135.6
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  136.5,
+                                           "start":  136.32
+                                       },
+                                       {
+                                           "word":  "tempête",
+                                           "end":  137.74,
+                                           "start":  136.5
+                                       },
+                                       {
+                                           "word":  "l\u0027oubli",
+                                           "end":  138.24,
+                                           "start":  137.84
+                                       },
+                                       {
+                                           "word":  "Quand",
+                                           "end":  139.6,
+                                           "start":  138.78
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  139.8,
+                                           "start":  139.6
+                                       }
+                                   ],
+                         "text":  "Je suis votre refuge Dans la tempête l\u0027oubli Quand les",
+                         "start":  133.2
+                     },
+                     {
+                         "end":  145.58,
+                         "words":  [
+                                       {
+                                           "word":  "nuèges",
+                                           "end":  140.3,
+                                           "start":  139.9
+                                       },
+                                       {
+                                           "word":  "s\u0027assombrissent",
+                                           "end":  140.8,
+                                           "start":  140.4
+                                       },
+                                       {
+                                           "word":  "Et",
+                                           "end":  142.42,
+                                           "start":  141.7
+                                       },
+                                       {
+                                           "word":  "que",
+                                           "end":  142.58,
+                                           "start":  142.42
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  142.82,
+                                           "start":  142.58
+                                       },
+                                       {
+                                           "word":  "vent",
+                                           "end":  143.14,
+                                           "start":  142.82
+                                       },
+                                       {
+                                           "word":  "souffle",
+                                           "end":  143.9,
+                                           "start":  143.14
+                                       },
+                                       {
+                                           "word":  "fort",
+                                           "end":  144.44,
+                                           "start":  143.9
+                                       },
+                                       {
+                                           "word":  "Regarde",
+                                           "end":  145.58,
+                                           "start":  144.44
+                                       }
+                                   ],
+                         "text":  "nuèges s\u0027assombrissent Et que le vent souffle fort Regarde",
+                         "start":  139.9
+                     },
+                     {
+                         "end":  151.46,
+                         "words":  [
+                                       {
+                                           "word":  "l\u0027art",
+                                           "end":  146.08,
+                                           "start":  145.68
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  146.58,
+                                           "start":  146.18
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  146.46,
+                                           "start":  146.46
+                                       },
+                                       {
+                                           "word":  "ciel",
+                                           "end":  146.96,
+                                           "start":  146.56
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  147.46,
+                                           "start":  147.06
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  147.96,
+                                           "start":  147.56
+                                       },
+                                       {
+                                           "word":  "là",
+                                           "end":  148.46,
+                                           "start":  148.06
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  148.96,
+                                           "start":  148.56
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  149.46,
+                                           "start":  149.06
+                                       },
+                                       {
+                                           "word":  "serre",
+                                           "end":  149.96,
+                                           "start":  149.56
+                                       },
+                                       {
+                                           "word":  "encore",
+                                           "end":  150.46,
+                                           "start":  150.06
+                                       },
+                                       {
+                                           "word":  "Au",
+                                           "end":  150.96,
+                                           "start":  150.56
+                                       },
+                                       {
+                                           "word":  "arcanciel,",
+                                           "end":  151.46,
+                                           "start":  151.06
+                                       }
+                                   ],
+                         "text":  "l\u0027art dans le ciel Je suis là Je te serre encore Au arcanciel,",
+                         "start":  145.68
+                     },
+                     {
+                         "end":  149.38,
+                         "words":  [
+                                       {
+                                           "word":  "symbole",
+                                           "end":  151.96,
+                                           "start":  151.56
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  152.46,
+                                           "start":  152.06
+                                       },
+                                       {
+                                           "word":  "l\u0027alliance",
+                                           "end":  152.96,
+                                           "start":  152.56
+                                       },
+                                       {
+                                           "word":  "Entre",
+                                           "end":  153.46,
+                                           "start":  153.06
+                                       },
+                                       {
+                                           "word":  "ciel",
+                                           "end":  153.96,
+                                           "start":  153.56
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  147.38,
+                                           "start":  147.38
+                                       },
+                                       {
+                                           "word":  "terre",
+                                           "end":  147.88,
+                                           "start":  147.48
+                                       },
+                                       {
+                                           "word":  "Une",
+                                           "end":  148.38,
+                                           "start":  147.98
+                                       },
+                                       {
+                                           "word":  "douce",
+                                           "end":  148.88,
+                                           "start":  148.48
+                                       },
+                                       {
+                                           "word":  "présence",
+                                           "end":  149.38,
+                                           "start":  148.98
+                                       }
+                                   ],
+                         "text":  "symbole de l\u0027alliance Entre ciel et terre Une douce présence",
+                         "start":  151.56
+                     },
+                     {
+                         "end":  154.38,
+                         "words":  [
+                                       {
+                                           "word":  "Aucune",
+                                           "end":  149.88,
+                                           "start":  149.48
+                                       },
+                                       {
+                                           "word":  "chair",
+                                           "end":  150.38,
+                                           "start":  149.98
+                                       },
+                                       {
+                                           "word":  "ne",
+                                           "end":  150.88,
+                                           "start":  150.48
+                                       },
+                                       {
+                                           "word":  "périrà",
+                                           "end":  151.38,
+                                           "start":  150.98
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  151.88,
+                                           "start":  151.48
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  152.38,
+                                           "start":  151.98
+                                       },
+                                       {
+                                           "word":  "flots",
+                                           "end":  152.88,
+                                           "start":  152.48
+                                       },
+                                       {
+                                           "word":  "Mon",
+                                           "end":  153.38,
+                                           "start":  152.98
+                                       },
+                                       {
+                                           "word":  "amour",
+                                           "end":  153.88,
+                                           "start":  153.48
+                                       },
+                                       {
+                                           "word":  "éternel",
+                                           "end":  154.38,
+                                           "start":  153.98
+                                       }
+                                   ],
+                         "text":  "Aucune chair ne périrà dans les flots Mon amour éternel",
+                         "start":  149.48
+                     },
+                     {
+                         "end":  163,
+                         "words":  [
+                                       {
+                                           "word":  "pour",
+                                           "end":  154.88,
+                                           "start":  154.48
+                                       },
+                                       {
+                                           "word":  "vous",
+                                           "end":  155.38,
+                                           "start":  154.98
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  147.78,
+                                           "start":  147.78
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  148.28,
+                                           "start":  147.88
+                                       },
+                                       {
+                                           "word":  "sais",
+                                           "end":  148.78,
+                                           "start":  148.38
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  155.34,
+                                           "start":  154.98
+                                       },
+                                       {
+                                           "word":  "mot",
+                                           "end":  155.84,
+                                           "start":  155.44
+                                       },
+                                       {
+                                           "word":  "Avec",
+                                           "end":  156.34,
+                                           "start":  155.94
+                                       },
+                                       {
+                                           "word":  "Noé",
+                                           "end":  156.84,
+                                           "start":  156.44
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  161,
+                                           "start":  160.52
+                                       },
+                                       {
+                                           "word":  "ses",
+                                           "end":  161.5,
+                                           "start":  161.1
+                                       },
+                                       {
+                                           "word":  "fils",
+                                           "end":  162,
+                                           "start":  161.6
+                                       },
+                                       {
+                                           "word":  "Nous",
+                                           "end":  162.5,
+                                           "start":  162.1
+                                       },
+                                       {
+                                           "word":  "bâtissons",
+                                           "end":  163,
+                                           "start":  162.6
+                                       }
+                                   ],
+                         "text":  "pour vous Je le sais en mot Avec Noé et ses fils Nous bâtissons",
+                         "start":  154.48
+                     },
+                     {
+                         "end":  172.24,
+                         "words":  [
+                                       {
+                                           "word":  "l\u0027avenir",
+                                           "end":  163.5,
+                                           "start":  163.1
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  168.74,
+                                           "start":  167.94
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  169.24,
+                                           "start":  168.84
+                                       },
+                                       {
+                                           "word":  "heure",
+                                           "end":  169.74,
+                                           "start":  169.34
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  170.24,
+                                           "start":  169.84
+                                       },
+                                       {
+                                           "word":  "promesse",
+                                           "end":  170.74,
+                                           "start":  170.34
+                                       },
+                                       {
+                                           "word":  "Un",
+                                           "end":  171.24,
+                                           "start":  170.84
+                                       },
+                                       {
+                                           "word":  "dos",
+                                           "end":  171.74,
+                                           "start":  171.34
+                                       },
+                                       {
+                                           "word":  "souvenir",
+                                           "end":  172.24,
+                                           "start":  171.84
+                                       }
+                                   ],
+                         "text":  "l\u0027avenir Dans chaque heure la promesse Un dos souvenir",
+                         "start":  163.1
+                     },
+                     {
+                         "end":  176.74,
+                         "words":  [
+                                       {
+                                           "word":  "L\u0027unité",
+                                           "end":  172.74,
+                                           "start":  172.34
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  173.24,
+                                           "start":  172.84
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  173.74,
+                                           "start":  173.34
+                                       },
+                                       {
+                                           "word":  "diversité",
+                                           "end":  174.24,
+                                           "start":  173.84
+                                       },
+                                       {
+                                           "word":  "Mains",
+                                           "end":  174.74,
+                                           "start":  174.34
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  175.24,
+                                           "start":  174.84
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  175.74,
+                                           "start":  175.34
+                                       },
+                                       {
+                                           "word":  "main",
+                                           "end":  176.24,
+                                           "start":  175.84
+                                       },
+                                       {
+                                           "word":  "Répendons",
+                                           "end":  176.74,
+                                           "start":  176.34
+                                       }
+                                   ],
+                         "text":  "L\u0027unité dans la diversité Mains dans la main Répendons",
+                         "start":  172.34
+                     },
+                     {
+                         "end":  181.74,
+                         "words":  [
+                                       {
+                                           "word":  "l\u0027amour",
+                                           "end":  177.24,
+                                           "start":  176.84
+                                       },
+                                       {
+                                           "word":  "Sur",
+                                           "end":  177.74,
+                                           "start":  177.34
+                                       },
+                                       {
+                                           "word":  "ce",
+                                           "end":  178.24,
+                                           "start":  177.84
+                                       },
+                                       {
+                                           "word":  "chemin",
+                                           "end":  178.74,
+                                           "start":  178.34
+                                       },
+                                       {
+                                           "word":  "divin",
+                                           "end":  179.24,
+                                           "start":  178.84
+                                       },
+                                       {
+                                           "word":  "Au",
+                                           "end":  179.74,
+                                           "start":  179.34
+                                       },
+                                       {
+                                           "word":  "arcanciel,",
+                                           "end":  180.24,
+                                           "start":  179.84
+                                       },
+                                       {
+                                           "word":  "symbole",
+                                           "end":  180.74,
+                                           "start":  180.34
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  181.24,
+                                           "start":  180.84
+                                       },
+                                       {
+                                           "word":  "l\u0027alliance",
+                                           "end":  181.74,
+                                           "start":  181.34
+                                       }
+                                   ],
+                         "text":  "l\u0027amour Sur ce chemin divin Au arcanciel, symbole de l\u0027alliance",
+                         "start":  176.84
+                     },
+                     {
+                         "end":  185.4,
+                         "words":  [
+                                       {
+                                           "word":  "Entre",
+                                           "end":  182.24,
+                                           "start":  181.84
+                                       },
+                                       {
+                                           "word":  "ciel",
+                                           "end":  182.74,
+                                           "start":  182.34
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  179.96,
+                                           "start":  179.58
+                                       },
+                                       {
+                                           "word":  "terre",
+                                           "end":  180.46,
+                                           "start":  180.06
+                                       },
+                                       {
+                                           "word":  "Une",
+                                           "end":  180.96,
+                                           "start":  180.56
+                                       },
+                                       {
+                                           "word":  "douce",
+                                           "end":  181.46,
+                                           "start":  181.06
+                                       },
+                                       {
+                                           "word":  "présence",
+                                           "end":  181.96,
+                                           "start":  181.56
+                                       },
+                                       {
+                                           "word":  "Aucune",
+                                           "end":  182.46,
+                                           "start":  182.06
+                                       },
+                                       {
+                                           "word":  "chair",
+                                           "end":  184.9,
+                                           "start":  184.58
+                                       },
+                                       {
+                                           "word":  "ne",
+                                           "end":  185.4,
+                                           "start":  185
+                                       }
+                                   ],
+                         "text":  "Entre ciel et terre Une douce présence Aucune chair ne",
+                         "start":  181.84
+                     },
+                     {
+                         "end":  194.94,
+                         "words":  [
+                                       {
+                                           "word":  "périrà",
+                                           "end":  185.9,
+                                           "start":  185.5
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  190.44,
+                                           "start":  190.2
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  190.94,
+                                           "start":  190.54
+                                       },
+                                       {
+                                           "word":  "flots",
+                                           "end":  191.44,
+                                           "start":  191.04
+                                       },
+                                       {
+                                           "word":  "Mon",
+                                           "end":  191.94,
+                                           "start":  191.54
+                                       },
+                                       {
+                                           "word":  "amour",
+                                           "end":  192.44,
+                                           "start":  192.04
+                                       },
+                                       {
+                                           "word":  "éternel",
+                                           "end":  192.94,
+                                           "start":  192.54
+                                       },
+                                       {
+                                           "word":  "pour",
+                                           "end":  193.44,
+                                           "start":  193.04
+                                       },
+                                       {
+                                           "word":  "vous",
+                                           "end":  193.94,
+                                           "start":  193.54
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  194.44,
+                                           "start":  194.04
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  194.94,
+                                           "start":  194.54
+                                       }
+                                   ],
+                         "text":  "périrà dans les flots Mon amour éternel pour vous Je le",
+                         "start":  185.5
+                     },
+                     {
+                         "end":  207.12,
+                         "words":  [
+                                       {
+                                           "word":  "sais",
+                                           "end":  195.44,
+                                           "start":  195.04
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  195.94,
+                                           "start":  195.54
+                                       },
+                                       {
+                                           "word":  "mot",
+                                           "end":  196.44,
+                                           "start":  196.04
+                                       },
+                                       {
+                                           "word":  "L\u0027art",
+                                           "end":  196.94,
+                                           "start":  196.54
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  194.36,
+                                           "start":  193.86
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  194.86,
+                                           "start":  194.46
+                                       },
+                                       {
+                                           "word":  "ciel",
+                                           "end":  205.12,
+                                           "start":  204.84
+                                       },
+                                       {
+                                           "word":  "Un",
+                                           "end":  205.62,
+                                           "start":  205.22
+                                       },
+                                       {
+                                           "word":  "rappel",
+                                           "end":  206.12,
+                                           "start":  205.72
+                                       },
+                                       {
+                                           "word":  "d\u0027espérance",
+                                           "end":  206.62,
+                                           "start":  206.22
+                                       },
+                                       {
+                                           "word":  "L\u0027alliance",
+                                           "end":  207.12,
+                                           "start":  206.72
+                                       }
+                                   ],
+                         "text":  "sais en mot L\u0027art dans le ciel Un rappel d\u0027espérance L\u0027alliance",
+                         "start":  195.04
+                     },
+                     {
+                         "end":  220.62,
+                         "words":  [
+                                       {
+                                           "word":  "de",
+                                           "end":  206.98,
+                                           "start":  206.66
+                                       },
+                                       {
+                                           "word":  "Dieu",
+                                           "end":  207.48,
+                                           "start":  207.07999999999998
+                                       },
+                                       {
+                                           "word":  "Une",
+                                           "end":  211.84,
+                                           "start":  211.04
+                                       },
+                                       {
+                                           "word":  "éternelle",
+                                           "end":  212.34,
+                                           "start":  211.94
+                                       },
+                                       {
+                                           "word":  "danse",
+                                           "end":  218.12,
+                                           "start":  217.32
+                                       },
+                                       {
+                                           "word":  "Remplissons",
+                                           "end":  218.62,
+                                           "start":  218.22
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  219.12,
+                                           "start":  218.72
+                                       },
+                                       {
+                                           "word":  "terre",
+                                           "end":  219.62,
+                                           "start":  219.22
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  220.12,
+                                           "start":  219.72
+                                       },
+                                       {
+                                           "word":  "sa",
+                                           "end":  220.62,
+                                           "start":  220.22
+                                       }
+                                   ],
+                         "text":  "de Dieu Une éternelle danse Remplissons la terre de sa",
+                         "start":  206.66
+                     },
+                     {
+                         "end":  225.86,
+                         "words":  [
+                                       {
+                                           "word":  "lumière",
+                                           "end":  221.12,
+                                           "start":  220.72
+                                       },
+                                       {
+                                           "word":  "Pour",
+                                           "end":  222.36,
+                                           "start":  222.1
+                                       },
+                                       {
+                                           "word":  "toujours",
+                                           "end":  222.86,
+                                           "start":  222.46
+                                       },
+                                       {
+                                           "word":  "une",
+                                           "end":  223.36,
+                                           "start":  222.96
+                                       },
+                                       {
+                                           "word":  "île",
+                                           "end":  223.86,
+                                           "start":  223.46
+                                       },
+                                       {
+                                           "word":  "Sous",
+                                           "end":  224.36,
+                                           "start":  223.96
+                                       },
+                                       {
+                                           "word":  "son",
+                                           "end":  224.86,
+                                           "start":  224.46
+                                       },
+                                       {
+                                           "word":  "amour",
+                                           "end":  225.36,
+                                           "start":  224.96
+                                       },
+                                       {
+                                           "word":  "sincère",
+                                           "end":  225.86,
+                                           "start":  225.46
+                                       }
+                                   ],
+                         "text":  "lumière Pour toujours une île Sous son amour sincère",
+                         "start":  220.72
+                     }
+                 ]
+}

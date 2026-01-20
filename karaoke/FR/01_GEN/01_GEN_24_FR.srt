@@ -1,72 +1,144 @@
 1
-00:00:11,000 --> 00:00:23,000
-Dans la nuit étoilée, Abraham a prié. L'éternel fidèle a entendu son cœur
+00:00:11,000 --> 00:00:17,000
+Dans la nuit et toilée, Abraham a prié
 
 2
-00:00:23,000 --> 00:00:33,000
-Il a envoyé son serviteur Pour chercher une promesse, un doux bonheur
+00:00:17,000 --> 00:00:23,000
+L'éternel fidèle à entendue son cœur
 
 3
-00:00:33,000 --> 00:00:45,000
-Sous la main de l'ancien serment scellé, Ne mène pas mon fils, mais dans la terre
+00:00:23,000 --> 00:00:28,000
+Il a envoyé son serviteur
 
 4
-00:00:45,000 --> 00:00:58,000
-Où la promesse a été révélée, Là, il trouvera celle qui l'éclaire
+00:00:28,000 --> 00:00:33,000
+Pour chercher une promis, un doule bonheur
 
 5
-00:00:58,000 --> 00:01:10,000
-Éternel, guide-nous dans ta lumière, Fais-nous voir ta bonté, ta miséricorde
+00:00:33,000 --> 00:00:39,000
+Sous la main de l'ancien, c'est renseller
 
 6
-00:01:10,000 --> 00:01:22,000
-Comme un ruisseau qui coule si sincère, Nous marchons en foi dans l'accord
+00:00:39,000 --> 00:00:45,000
+Ne mène pas mon fils, mais dans la tête
 
 7
-00:01:22,000 --> 00:01:33,000
-Près de la source, le serviteur attend, Il lève les yeux, implore avec foi
+00:00:45,000 --> 00:00:51,000
+Ou la promesse a été révélé
 
 8
-00:01:33,000 --> 00:01:45,000
-Que la jeune fille qui viendra Soit celle que tu as choisie pour moi
+00:00:51,000 --> 00:00:58,000
+Là il trouvera celle qui l'éclait
 
 9
-00:01:45,000 --> 00:01:55,000
-Et Rebecca, belle et pleine de grâce, S'approche avec sa cruche, cœur ouvert
+00:00:58,000 --> 00:01:04,000
+L'éternel qui de nous denta le mien
 
 10
-00:01:55,000 --> 00:02:09,000
-Elle offre à voir sa douce face, C'est ainsi que l'éternel révèle son mystère
+00:01:04,000 --> 00:01:10,000
+Fait nous voir ta banter ta miséricole
 
 11
-00:02:09,000 --> 00:02:20,000
-Éternel, guide-nous dans ta lumière, Fais-nous voir ta bonté, ta miséricorde
+00:01:10,000 --> 00:01:15,000
+Comunruisaud qui coule si sincère
 
 12
-00:02:20,000 --> 00:02:33,000
-Comme un ruisseau qui coule si sincère, Nous marchons en foi dans l'accord
+00:01:15,000 --> 00:01:22,000
+Nous m'achonds en foi dans la côte
 
 13
-00:02:33,000 --> 00:02:42,000
-Bénie soit l'éternel qui ne renonce jamais À sa fidélité, à sa promesse en fait
+00:01:22,000 --> 00:01:27,000
+Près de la source le serviteur attend
 
 14
-00:02:42,000 --> 00:02:57,000
-Dans chaque pas, nous voyons son amour, Nous célébrons aujourd'hui et toujours
+00:01:27,000 --> 00:01:33,000
+Il lève les yeux implore avec foi
 
 15
-00:02:57,000 --> 00:03:08,000
-Éternel, guide-nous dans ta lumière, Fais-nous voir ta bonté, ta miséricorde
+00:01:33,000 --> 00:01:38,000
+Que la jeune fille qui viendra
 
 16
-00:03:08,000 --> 00:03:21,000
-Comme un ruisseau qui coule si sincère, Nous marchons en foi dans l'accord
+00:01:38,000 --> 00:01:45,000
+Soit c'est que tu as choisi pour moi
 
 17
-00:03:21,000 --> 00:03:34,000
-Rebecca, au loin, embrasse son destin, Ensemble avec Isaac, un amour sans fin
+00:01:45,000 --> 00:01:50,000
+Et Rebecca vait les pleines de grâces
 
 18
-00:03:34,000 --> 00:03:46,000
-Dans le plan parfait de l'éternel, Nous marchons, confiants, sous son ciel
+00:01:50,000 --> 00:01:55,000
+Sa proche avec sa cruce, ce cœur ouvert
+
+19
+00:01:55,000 --> 00:02:01,000
+Elle offra boire sa douce force
+
+20
+00:02:01,000 --> 00:02:09,000
+C'est ainsi que l'éternel révèle son mystère
+
+21
+00:02:09,000 --> 00:02:15,000
+L'éternel qui de nous denta le mien
+
+22
+00:02:15,000 --> 00:02:20,000
+Fait nous voir ta banter ta miséricole
+
+23
+00:02:20,000 --> 00:02:26,000
+Comunruisaud qui coule si sincère
+
+24
+00:02:26,000 --> 00:02:33,000
+Nous m'achonds en foi dans la côte
+
+25
+00:02:33,000 --> 00:02:38,000
+Benis soit l'éternel qui ne renonce jamais
+
+26
+00:02:38,000 --> 00:02:42,000
+A sa fidélité et sa promesse
+
+27
+00:02:42,000 --> 00:02:49,000
+En fait dans chaque pas le voyons son amour
+
+28
+00:02:49,000 --> 00:02:57,000
+Nous célébrons aujourd'hui et toujours
+
+29
+00:02:57,000 --> 00:03:03,000
+Éternel qui de nous denta le mien
+
+30
+00:03:03,000 --> 00:03:08,000
+Fait nous voir ta banter ta miséricole
+
+31
+00:03:08,000 --> 00:03:14,000
+Comunruisaud qui coule si sincère
+
+32
+00:03:14,000 --> 00:03:21,000
+Nous m'achonds en foi dans la côte
+
+33
+00:03:21,000 --> 00:03:29,000
+Rebecca au loin, embrasse son destin
+
+34
+00:03:29,000 --> 00:03:34,000
+Ensemble avec Isaac, un amour sans fin
+
+35
+00:03:34,000 --> 00:03:39,000
+Dans le plan parfait de l'éternel
+
+36
+00:03:39,000 --> 00:03:46,000
+Nous marchons confiants sous son ciel
 

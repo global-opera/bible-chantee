@@ -5,61 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genese 1 | Bible Chantee Karaoke</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
-        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
-        .header h1{font-size:1.8em;color:#d4af37}
-        .player{max-width:800px;margin:20px auto;padding:0 20px}
-        audio{width:100%}
-        .lyrics{max-width:800px;margin:20px auto;padding:20px}
-        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
-        .line:hover{background:rgba(212,175,55,0.1)}
-        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
-        .line.passed{opacity:0.5}
-        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
-        .footer{text-align:center;padding:20px;color:#666}
-        .footer a{color:#d4af37}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
+        .header p { color: #888; }
+        .audio-player { 
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        audio { width: 100%; }
+        .lyrics { 
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        .line { 
+            padding: 12px 15px;
+            margin: 5px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .line .time { 
+            color: #666; 
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+        .line.active { 
+            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
+            color: #fff;
+            border-left: 4px solid #d4af37;
+            transform: scale(1.02);
+        }
+        .line.active .time { color: #d4af37; }
+        .line.past { opacity: 0.5; }
     </style>
 </head>
 <body>
-    <div class="header"><h1>Genese 1</h1><p>Bible Chantee Karaoke</p></div>
-    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_01_FR.mp3" type="audio/mpeg"></audio></div>
-    <div class="lyrics">
-        <div class="line" data-start="9.62" data-end="20.40"><span class="time">[0:09]</span>Au commencement, ô Dieu, Tu as créé les cieux et la terre</div>
-        <div class="line" data-start="20.40" data-end="35.38"><span class="time">[0:20]</span>Tout a été formé dans l'obscurité Ta lumière a jailli, un souffle de vie</div>
-        <div class="line" data-start="35.38" data-end="45.82"><span class="time">[0:35]</span>L'espoir s'est épanoui</div>
-        <div class="line" data-start="45.82" data-end="62.25"><span class="time">[0:45]</span>Loué sois-tu, créateur des cieux Ta gloire éclaire nos yeux</div>
-        <div class="line" data-start="62.25" data-end="67.82"><span class="time">[1:02]</span>Dans chaque étoile, dans chaque mer Nous chantons, Seigneur, Ta lumière est notre rêve</div>
-        <div class="line" data-start="67.82" data-end="71.13"><span class="time">[1:07]</span>Tu as dit que la lumière soit Et les ténèbres ont fui sous ta voix</div>
-        <div class="line" data-start="71.13" data-end="80.56"><span class="time">[1:11]</span>Le jour et la nuit, tu as séparé Dans chaque matin, ta grâce renouvelée</div>
-        <div class="line" data-start="80.56" data-end="91.56"><span class="time">[1:20]</span>Loué sois-tu, créateur des cieux Ta gloire éclaire nos yeux</div>
-        <div class="line" data-start="91.56" data-end="106.60"><span class="time">[1:31]</span>Dans chaque étoile, dans chaque mer Nous chantons, Seigneur, Ta lumière est notre rêve</div>
-        <div class="line" data-start="106.60" data-end="116.86"><span class="time">[1:46]</span>Les eaux se rassemblent, la terre apparaît Les arbres en fleur, la verdure est là</div>
-        <div class="line" data-start="116.86" data-end="127.94"><span class="time">[1:56]</span>Les fruits abondent, ta bonté se déploie Chaque créature chante Gloire à toi, Roi des rois</div>
-        <div class="line" data-start="127.94" data-end="139.58"><span class="time">[2:07]</span>Loué sois-tu, créateur des cieux Ta gloire éclaire nos yeux</div>
-        <div class="line" data-start="139.58" data-end="152.62"><span class="time">[2:19]</span>Dans chaque étoile, dans chaque mer Nous chantons, Seigneur, Ta lumière est notre rêve</div>
-        <div class="line" data-start="152.62" data-end="158.42"><span class="time">[2:32]</span>Des luminaires brillent dans l'immensité Le soleil, la lune pour notre clarté</div>
-        <div class="line" data-start="158.42" data-end="168.30"><span class="time">[2:38]</span>Les poissons dans l'eau, les oiseaux dans le ciel Tout est à sa place, tout est si essentiel</div>
-        <div class="line" data-start="168.30" data-end="173.24"><span class="time">[2:48]</span>Loué sois-tu, créateur des cieux Ta gloire éclaire nos yeux</div>
-        <div class="line" data-start="173.24" data-end="186.46"><span class="time">[2:53]</span>Dans chaque étoile, dans chaque mer Nous chantons, Seigneur, Ta lumière est notre rêve</div>
-        <div class="line" data-start="186.46" data-end="195.00"><span class="time">[3:06]</span>Faisons l'homme à ta ressemblance Pour régner sur la terre dans l'espérance</div>
-        <div class="line" data-start="195.00" data-end="201.86"><span class="time">[3:15]</span>À ton image nous sommes créés Pour glorifier, pour aimer, pour adorer</div>
-        <div class="line" data-start="201.86" data-end="212.78"><span class="time">[3:21]</span>Loué sois-tu, créateur des cieux Ta gloire éclaire nos yeux</div>
-        <div class="line" data-start="212.78" data-end="225.86"><span class="time">[3:32]</span>Dans chaque étoile, dans chaque mer Nous chantons, Seigneur, Ta lumière est notre rêve</div>
+    <div class="container">
+        <div class="header">
+            <h1>Genese 1</h1>
+            <p>Bible Chantee Karaoke</p>
+        </div>
+        <div class="audio-player">
+            <audio id="audio" controls>
+                <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_01_FR.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="lyrics" id="lyrics">
+        <div class="line" data-start="9.62" data-end="14.96"><span class="time">[0:09]</span>Au commencement, ô Dieu, Tu as créé,</div>
+        <div class="line" data-start="14.96" data-end="20.40"><span class="time">[0:14]</span>Les cieux et la terre, tout a été formé.</div>
+        <div class="line" data-start="20.40" data-end="26.28"><span class="time">[0:20]</span>Dans l'obscurité, Ta lumière a jailli,</div>
+        <div class="line" data-start="26.38" data-end="32.46"><span class="time">[0:26]</span>Un souffle de vie, l'espoir s'est épanoui.</div>
+        <div class="line" data-start="35.38" data-end="40.22"><span class="time">[0:35]</span>Loué sois-Tu, Créateur des cieux,</div>
+        <div class="line" data-start="40.50" data-end="45.50"><span class="time">[0:40]</span>Ta gloire éclaire nos yeux.</div>
+        <div class="line" data-start="45.82" data-end="51.06"><span class="time">[0:45]</span>Dans chaque étoile, dans chaque mer,</div>
+        <div class="line" data-start="52.06" data-end="59.60"><span class="time">[0:52]</span>Nous chantons, Seigneur, Ta lumière est notre air.</div>
+        <div class="line" data-start="62.25" data-end="64.76"><span class="time">[1:02]</span>Tu as dit : « Que la lumière soit, »</div>
+        <div class="line" data-start="65.39" data-end="67.60"><span class="time">[1:05]</span>Et les ténèbres ont fui sous Ta voix.</div>
+        <div class="line" data-start="67.82" data-end="70.78"><span class="time">[1:07]</span>Le jour et la nuit, Tu as séparés,</div>
+        <div class="line" data-start="71.13" data-end="73.78"><span class="time">[1:11]</span>Dans chaque matin, Ta grâce renouvelée.</div>
+        <div class="line" data-start="74.92" data-end="79.78"><span class="time">[1:14]</span>Loué sois-Tu, Créateur des cieux,</div>
+        <div class="line" data-start="80.56" data-end="85.02"><span class="time">[1:20]</span>Ta gloire éclaire nos yeux.</div>
+        <div class="line" data-start="85.56" data-end="88.82"><span class="time">[1:25]</span>Dans chaque étoile, dans chaque mer,</div>
+        <div class="line" data-start="91.56" data-end="98.78"><span class="time">[1:31]</span>Nous chantons, Seigneur, Ta lumière est notre air.</div>
+        <div class="line" data-start="100.82" data-end="106.32"><span class="time">[1:40]</span>Les eaux se rassemblent, la terre apparaît,</div>
+        <div class="line" data-start="106.60" data-end="111.94"><span class="time">[1:46]</span>Les arbres en fleurs, la verdure est là.</div>
+        <div class="line" data-start="112.04" data-end="116.86"><span class="time">[1:52]</span>Les fruits abondent, Ta bonté se déploie,</div>
+        <div class="line" data-start="116.86" data-end="122.84"><span class="time">[1:56]</span>Chaque créature chante, « Gloire à Toi, Roi des rois! »</div>
+        <div class="line" data-start="122.56" data-end="127.80"><span class="time">[2:02]</span>Loué sois-Tu, Créateur des cieux,</div>
+        <div class="line" data-start="127.94" data-end="133.02"><span class="time">[2:07]</span>Ta gloire éclaire nos yeux.</div>
+        <div class="line" data-start="133.24" data-end="138.60"><span class="time">[2:13]</span>Dans chaque étoile, dans chaque mer,</div>
+        <div class="line" data-start="139.58" data-end="146.72"><span class="time">[2:19]</span>Nous chantons, Seigneur, Ta lumière est notre air.</div>
+        <div class="line" data-start="149.62" data-end="151.90"><span class="time">[2:29]</span>Des luminaires brillent dans l'immensité,</div>
+        <div class="line" data-start="152.62" data-end="155.28"><span class="time">[2:32]</span>Le soleil, la lune, pour notre clarté.</div>
+        <div class="line" data-start="155.70" data-end="158.14"><span class="time">[2:35]</span>Les poissons dans l'eau, les oiseaux dans le ciel,</div>
+        <div class="line" data-start="158.42" data-end="161.40"><span class="time">[2:38]</span>Tout est à sa place, tout est si essentiel.</div>
+        <div class="line" data-start="162.78" data-end="167.30"><span class="time">[2:42]</span>Loué sois-Tu, Créateur des cieux,</div>
+        <div class="line" data-start="168.30" data-end="172.56"><span class="time">[2:48]</span>Ta gloire éclaire nos yeux.</div>
+        <div class="line" data-start="173.24" data-end="176.90"><span class="time">[2:53]</span>Dans chaque étoile, dans chaque mer,</div>
+        <div class="line" data-start="179.64" data-end="186.36"><span class="time">[2:59]</span>Nous chantons, Seigneur, Ta lumière est notre air.</div>
+        <div class="line" data-start="186.46" data-end="191.74"><span class="time">[3:06]</span>« Faisons l'homme à Ta ressemblance »,</div>
+        <div class="line" data-start="191.58" data-end="194.52"><span class="time">[3:11]</span>Pour régner sur la terre, dans l'espérance.</div>
+        <div class="line" data-start="195.00" data-end="197.48"><span class="time">[3:15]</span>À Ton image, nous sommes créés,</div>
+        <div class="line" data-start="197.64" data-end="201.48"><span class="time">[3:17]</span>Pour glorifier, pour aimer, pour adorer.</div>
+        <div class="line" data-start="201.86" data-end="206.48"><span class="time">[3:21]</span>Loué sois-Tu, Créateur des cieux,</div>
+        <div class="line" data-start="206.48" data-end="212.08"><span class="time">[3:26]</span>Ta gloire éclaire nos yeux.</div>
+        <div class="line" data-start="212.78" data-end="217.68"><span class="time">[3:32]</span>Dans chaque étoile, dans chaque mer,</div>
+        <div class="line" data-start="218.54" data-end="225.86"><span class="time">[3:38]</span>Nous chantons, Seigneur, Ta lumière est notre air.</div>
+        </div>
     </div>
-    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
     <script>
-        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
-        audio.addEventListener('timeupdate',()=>{
-            const t=audio.currentTime;
-            lines.forEach(l=>{
-                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
-                l.classList.remove('active','passed');
-                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
-                else if(t>=e)l.classList.add('passed')
-            })
+        const audio = document.getElementById('audio');
+        const lines = document.querySelectorAll('.line');
+        const lyricsContainer = document.getElementById('lyrics');
+        
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            let activeIndex = -1;
+            
+            lines.forEach((line, index) => {
+                const start = parseFloat(line.dataset.start);
+                const end = parseFloat(line.dataset.end);
+                
+                line.classList.remove('active', 'past');
+                
+                if (currentTime >= start && currentTime < end) {
+                    line.classList.add('active');
+                    activeIndex = index;
+                } else if (currentTime >= end) {
+                    line.classList.add('past');
+                }
+            });
+            
+            if (activeIndex >= 0) {
+                const activeLine = lines[activeIndex];
+                const containerRect = lyricsContainer.getBoundingClientRect();
+                const lineRect = activeLine.getBoundingClientRect();
+                
+                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
+                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
         });
-        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+        
+        lines.forEach(line => {
+            line.addEventListener('click', () => {
+                audio.currentTime = parseFloat(line.dataset.start);
+                audio.play();
+            });
+        });
     </script>
 </body>
 </html>

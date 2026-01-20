@@ -1,0 +1,1332 @@
+﻿{
+    "language":  "fr",
+    "text":  "Sur la terre où règne la violence, Les cœurs s\u0027égarent\nloin de l\u0027innocence, L\u0027éternel regardé, voilà douleur,\nIl pleure en silence, il pleure en son cœur. Mais au milieu\ndu désespoir, Noé a trouvé grâce un espoir à revoir, Dans\n\nl\u0027arche de promesse, Il marchait avec toi, Oh Seigneur\ndans ta lumière, je me tiens moi. Des géants sur la terre\ndes héros d\u0027antan, Mais leurs voix corrompu éteignent le\nvivant, L\u0027éternel parle avertissement éclève, Fais-moi\n\nl\u0027une arche, un refuge sur la mer. Mais au milieu du désespoir,\nNoé a trouvé grâce un espoir à revoir, Dans l\u0027arche de\npromesse, Il marchait avec toi, Oh Seigneur dans ta lumière,\nje me tiens moi. De part de, il vient à lui, tous les êtres\n\nde vie, Sous l\u0027œil de l\u0027esprit, dans cette empête, Ta main\nme guide, Je trouve ma paix dans ton amour, je réside.\nMais au milieu du désespoir, Noé a trouvé grâce un espoir\nà revoir, Dans l\u0027arche de promesse, Il marchait avec toi,\n\nOh Seigneur dans ta lumière, je me tiens moi. Seigneur,\ntu es mon refuge, ma vérité, Dans l\u0027arche de ta grâce,\nje suis en sécurité, Loin des eaux, tu multueuses, je chante\nta bonté. Oh éternelle, en toi, je suis restauré. Ces paroles\n\ns\u0027inspirent de l\u0027histoire de Noé et de l\u0027alliance de Dieu,\nCréant une atmosphère de culte cinématographique Qui invite\nà la réflexion et à l\u0027adoration.",
+    "segments":  [
+                     {
+                         "end":  22.28,
+                         "words":  [
+                                       {
+                                           "word":  "Sur",
+                                           "end":  15.1,
+                                           "start":  14.019999999999998
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  15.64,
+                                           "start":  15.1
+                                       },
+                                       {
+                                           "word":  "terre",
+                                           "end":  16.02,
+                                           "start":  15.64
+                                       },
+                                       {
+                                           "word":  "où",
+                                           "end":  16.46,
+                                           "start":  16.02
+                                       },
+                                       {
+                                           "word":  "règne",
+                                           "end":  17.24,
+                                           "start":  16.46
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  17.48,
+                                           "start":  17.24
+                                       },
+                                       {
+                                           "word":  "violence,",
+                                           "end":  18.18,
+                                           "start":  17.48
+                                       },
+                                       {
+                                           "word":  "Les",
+                                           "end":  21.04,
+                                           "start":  19.959999999999997
+                                       },
+                                       {
+                                           "word":  "cœurs",
+                                           "end":  21.78,
+                                           "start":  21.04
+                                       },
+                                       {
+                                           "word":  "s\u0027égarent",
+                                           "end":  22.28,
+                                           "start":  21.880000000000003
+                                       }
+                                   ],
+                         "text":  "Sur la terre où règne la violence, Les cœurs s\u0027égarent",
+                         "start":  14.019999999999998
+                     },
+                     {
+                         "end":  31.22,
+                         "words":  [
+                                       {
+                                           "word":  "loin",
+                                           "end":  23.18,
+                                           "start":  22.36
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  23.6,
+                                           "start":  23.18
+                                       },
+                                       {
+                                           "word":  "l\u0027innocence,",
+                                           "end":  24.1,
+                                           "start":  23.700000000000003
+                                       },
+                                       {
+                                           "word":  "L\u0027éternel",
+                                           "end":  24.6,
+                                           "start":  24.200000000000003
+                                       },
+                                       {
+                                           "word":  "regardé,",
+                                           "end":  29.02,
+                                           "start":  28.44
+                                       },
+                                       {
+                                           "word":  "voilà",
+                                           "end":  29.52,
+                                           "start":  29.12
+                                       },
+                                       {
+                                           "word":  "douleur,",
+                                           "end":  31.22,
+                                           "start":  30.28
+                                       }
+                                   ],
+                         "text":  "loin de l\u0027innocence, L\u0027éternel regardé, voilà douleur,",
+                         "start":  22.36
+                     },
+                     {
+                         "end":  41.46,
+                         "words":  [
+                                       {
+                                           "word":  "Il",
+                                           "end":  32.58,
+                                           "start":  31.22
+                                       },
+                                       {
+                                           "word":  "pleure",
+                                           "end":  33.26,
+                                           "start":  32.58
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  33.48,
+                                           "start":  33.26
+                                       },
+                                       {
+                                           "word":  "silence,",
+                                           "end":  34.06,
+                                           "start":  33.48
+                                       },
+                                       {
+                                           "word":  "il",
+                                           "end":  35.48,
+                                           "start":  34.92
+                                       },
+                                       {
+                                           "word":  "pleure",
+                                           "end":  36.06,
+                                           "start":  35.48
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  36.46,
+                                           "start":  36.06
+                                       },
+                                       {
+                                           "word":  "son",
+                                           "end":  36.94,
+                                           "start":  36.46
+                                       },
+                                       {
+                                           "word":  "cœur.",
+                                           "end":  37.3,
+                                           "start":  36.94
+                                       },
+                                       {
+                                           "word":  "Mais",
+                                           "end":  40.34,
+                                           "start":  39.180000000000007
+                                       },
+                                       {
+                                           "word":  "au",
+                                           "end":  40.52,
+                                           "start":  40.34
+                                       },
+                                       {
+                                           "word":  "milieu",
+                                           "end":  41.46,
+                                           "start":  40.52
+                                       }
+                                   ],
+                         "text":  "Il pleure en silence, il pleure en son cœur. Mais au milieu",
+                         "start":  31.22
+                     },
+                     {
+                         "end":  51.2,
+                         "words":  [
+                                       {
+                                           "word":  "du",
+                                           "end":  42.52,
+                                           "start":  41.46
+                                       },
+                                       {
+                                           "word":  "désespoir,",
+                                           "end":  43.84,
+                                           "start":  42.52
+                                       },
+                                       {
+                                           "word":  "Noé",
+                                           "end":  45.22,
+                                           "start":  43.84
+                                       },
+                                       {
+                                           "word":  "a",
+                                           "end":  45.62,
+                                           "start":  45.22
+                                       },
+                                       {
+                                           "word":  "trouvé",
+                                           "end":  46.06,
+                                           "start":  45.62
+                                       },
+                                       {
+                                           "word":  "grâce",
+                                           "end":  46.76,
+                                           "start":  46.06
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  47.64,
+                                           "start":  47.24
+                                       },
+                                       {
+                                           "word":  "espoir",
+                                           "end":  48.68,
+                                           "start":  47.64
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  49.02,
+                                           "start":  48.68
+                                       },
+                                       {
+                                           "word":  "revoir,",
+                                           "end":  49.88,
+                                           "start":  49.02
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  51.2,
+                                           "start":  49.88
+                                       }
+                                   ],
+                         "text":  "du désespoir, Noé a trouvé grâce un espoir à revoir, Dans",
+                         "start":  41.46
+                     },
+                     {
+                         "end":  59.46,
+                         "words":  [
+                                       {
+                                           "word":  "l\u0027arche",
+                                           "end":  51.7,
+                                           "start":  51.300000000000004
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  52.06,
+                                           "start":  52.02
+                                       },
+                                       {
+                                           "word":  "promesse,",
+                                           "end":  53.24,
+                                           "start":  52.06
+                                       },
+                                       {
+                                           "word":  "Il",
+                                           "end":  54.32,
+                                           "start":  53.24
+                                       },
+                                       {
+                                           "word":  "marchait",
+                                           "end":  55.14,
+                                           "start":  54.32
+                                       },
+                                       {
+                                           "word":  "avec",
+                                           "end":  55.7,
+                                           "start":  55.14
+                                       },
+                                       {
+                                           "word":  "toi,",
+                                           "end":  56.12,
+                                           "start":  55.7
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  56.62,
+                                           "start":  56.22
+                                       },
+                                       {
+                                           "word":  "Seigneur",
+                                           "end":  59.46,
+                                           "start":  58.2
+                                       }
+                                   ],
+                         "text":  "l\u0027arche de promesse, Il marchait avec toi, Oh Seigneur",
+                         "start":  51.300000000000004
+                     },
+                     {
+                         "end":  67.3,
+                         "words":  [
+                                       {
+                                           "word":  "dans",
+                                           "end":  59.84,
+                                           "start":  59.46
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  60.1,
+                                           "start":  59.84
+                                       },
+                                       {
+                                           "word":  "lumière,",
+                                           "end":  60.76,
+                                           "start":  60.1
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  61.42,
+                                           "start":  60.76
+                                       },
+                                       {
+                                           "word":  "me",
+                                           "end":  61.78,
+                                           "start":  61.42
+                                       },
+                                       {
+                                           "word":  "tiens",
+                                           "end":  62.4,
+                                           "start":  61.78
+                                       },
+                                       {
+                                           "word":  "moi.",
+                                           "end":  62.66,
+                                           "start":  62.4
+                                       },
+                                       {
+                                           "word":  "Des",
+                                           "end":  65.46,
+                                           "start":  64.22
+                                       },
+                                       {
+                                           "word":  "géants",
+                                           "end":  66.1,
+                                           "start":  65.46
+                                       },
+                                       {
+                                           "word":  "sur",
+                                           "end":  66.38,
+                                           "start":  66.1
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  66.76,
+                                           "start":  66.38
+                                       },
+                                       {
+                                           "word":  "terre",
+                                           "end":  67.3,
+                                           "start":  66.76
+                                       }
+                                   ],
+                         "text":  "dans ta lumière, je me tiens moi. Des géants sur la terre",
+                         "start":  59.46
+                     },
+                     {
+                         "end":  74.3,
+                         "words":  [
+                                       {
+                                           "word":  "des",
+                                           "end":  67.56,
+                                           "start":  67.3
+                                       },
+                                       {
+                                           "word":  "héros",
+                                           "end":  68.02,
+                                           "start":  67.56
+                                       },
+                                       {
+                                           "word":  "d\u0027antan,",
+                                           "end":  68.52,
+                                           "start":  68.11999999999999
+                                       },
+                                       {
+                                           "word":  "Mais",
+                                           "end":  71.52,
+                                           "start":  70.28
+                                       },
+                                       {
+                                           "word":  "leurs",
+                                           "end":  71.7,
+                                           "start":  71.52
+                                       },
+                                       {
+                                           "word":  "voix",
+                                           "end":  71.96,
+                                           "start":  71.7
+                                       },
+                                       {
+                                           "word":  "corrompu",
+                                           "end":  73,
+                                           "start":  71.96
+                                       },
+                                       {
+                                           "word":  "éteignent",
+                                           "end":  74,
+                                           "start":  73
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  74.3,
+                                           "start":  74
+                                       }
+                                   ],
+                         "text":  "des héros d\u0027antan, Mais leurs voix corrompu éteignent le",
+                         "start":  67.3
+                     },
+                     {
+                         "end":  82.22,
+                         "words":  [
+                                       {
+                                           "word":  "vivant,",
+                                           "end":  75.26,
+                                           "start":  74.3
+                                       },
+                                       {
+                                           "word":  "L\u0027éternel",
+                                           "end":  75.76,
+                                           "start":  75.36
+                                       },
+                                       {
+                                           "word":  "parle",
+                                           "end":  79.24,
+                                           "start":  79.02
+                                       },
+                                       {
+                                           "word":  "avertissement",
+                                           "end":  79.74,
+                                           "start":  79.339999999999989
+                                       },
+                                       {
+                                           "word":  "éclève,",
+                                           "end":  81.72,
+                                           "start":  80.7
+                                       },
+                                       {
+                                           "word":  "Fais-moi",
+                                           "end":  82.22,
+                                           "start":  81.82
+                                       }
+                                   ],
+                         "text":  "vivant, L\u0027éternel parle avertissement éclève, Fais-moi",
+                         "start":  74.3
+                     },
+                     {
+                         "end":  88.22,
+                         "words":  [
+                                       {
+                                           "word":  "l\u0027une",
+                                           "end":  82.72,
+                                           "start":  82.32
+                                       },
+                                       {
+                                           "word":  "arche,",
+                                           "end":  83.22,
+                                           "start":  82.82
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  83.72,
+                                           "start":  83.32
+                                       },
+                                       {
+                                           "word":  "refuge",
+                                           "end":  84.22,
+                                           "start":  83.82
+                                       },
+                                       {
+                                           "word":  "sur",
+                                           "end":  84.72,
+                                           "start":  84.32
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  85.22,
+                                           "start":  84.82
+                                       },
+                                       {
+                                           "word":  "mer.",
+                                           "end":  85.72,
+                                           "start":  85.32
+                                       },
+                                       {
+                                           "word":  "Mais",
+                                           "end":  86.22,
+                                           "start":  85.82
+                                       },
+                                       {
+                                           "word":  "au",
+                                           "end":  86.72,
+                                           "start":  86.32
+                                       },
+                                       {
+                                           "word":  "milieu",
+                                           "end":  87.22,
+                                           "start":  86.82
+                                       },
+                                       {
+                                           "word":  "du",
+                                           "end":  87.72,
+                                           "start":  87.32
+                                       },
+                                       {
+                                           "word":  "désespoir,",
+                                           "end":  88.22,
+                                           "start":  87.82
+                                       }
+                                   ],
+                         "text":  "l\u0027une arche, un refuge sur la mer. Mais au milieu du désespoir,",
+                         "start":  82.32
+                     },
+                     {
+                         "end":  93.72,
+                         "words":  [
+                                       {
+                                           "word":  "Noé",
+                                           "end":  88.72,
+                                           "start":  88.32
+                                       },
+                                       {
+                                           "word":  "a",
+                                           "end":  89.22,
+                                           "start":  88.82
+                                       },
+                                       {
+                                           "word":  "trouvé",
+                                           "end":  89.72,
+                                           "start":  89.32
+                                       },
+                                       {
+                                           "word":  "grâce",
+                                           "end":  90.22,
+                                           "start":  89.82
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  90.72,
+                                           "start":  90.32
+                                       },
+                                       {
+                                           "word":  "espoir",
+                                           "end":  91.22,
+                                           "start":  90.82
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  91.72,
+                                           "start":  91.32
+                                       },
+                                       {
+                                           "word":  "revoir,",
+                                           "end":  92.22,
+                                           "start":  91.82
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  92.72,
+                                           "start":  92.32
+                                       },
+                                       {
+                                           "word":  "l\u0027arche",
+                                           "end":  93.22,
+                                           "start":  92.82
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  93.72,
+                                           "start":  93.32
+                                       }
+                                   ],
+                         "text":  "Noé a trouvé grâce un espoir à revoir, Dans l\u0027arche de",
+                         "start":  88.32
+                     },
+                     {
+                         "end":  98.72,
+                         "words":  [
+                                       {
+                                           "word":  "promesse,",
+                                           "end":  94.22,
+                                           "start":  93.82
+                                       },
+                                       {
+                                           "word":  "Il",
+                                           "end":  94.72,
+                                           "start":  94.32
+                                       },
+                                       {
+                                           "word":  "marchait",
+                                           "end":  95.22,
+                                           "start":  94.82
+                                       },
+                                       {
+                                           "word":  "avec",
+                                           "end":  95.72,
+                                           "start":  95.32
+                                       },
+                                       {
+                                           "word":  "toi,",
+                                           "end":  96.22,
+                                           "start":  95.82
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  96.72,
+                                           "start":  96.32
+                                       },
+                                       {
+                                           "word":  "Seigneur",
+                                           "end":  97.22,
+                                           "start":  96.82
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  97.72,
+                                           "start":  97.32
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  98.22,
+                                           "start":  97.82
+                                       },
+                                       {
+                                           "word":  "lumière,",
+                                           "end":  98.72,
+                                           "start":  98.32
+                                       }
+                                   ],
+                         "text":  "promesse, Il marchait avec toi, Oh Seigneur dans ta lumière,",
+                         "start":  93.82
+                     },
+                     {
+                         "end":  88.88,
+                         "words":  [
+                                       {
+                                           "word":  "je",
+                                           "end":  99.22,
+                                           "start":  98.82
+                                       },
+                                       {
+                                           "word":  "me",
+                                           "end":  99.72,
+                                           "start":  99.32
+                                       },
+                                       {
+                                           "word":  "tiens",
+                                           "end":  100.22,
+                                           "start":  99.82
+                                       },
+                                       {
+                                           "word":  "moi.",
+                                           "end":  83.88,
+                                           "start":  83.52
+                                       },
+                                       {
+                                           "word":  "De",
+                                           "end":  84.38,
+                                           "start":  83.97999999999999
+                                       },
+                                       {
+                                           "word":  "part",
+                                           "end":  84.88,
+                                           "start":  84.47999999999999
+                                       },
+                                       {
+                                           "word":  "de,",
+                                           "end":  85.38,
+                                           "start":  84.97999999999999
+                                       },
+                                       {
+                                           "word":  "il",
+                                           "end":  85.88,
+                                           "start":  85.47999999999999
+                                       },
+                                       {
+                                           "word":  "vient",
+                                           "end":  86.38,
+                                           "start":  85.97999999999999
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  86.88,
+                                           "start":  86.47999999999999
+                                       },
+                                       {
+                                           "word":  "lui,",
+                                           "end":  87.38,
+                                           "start":  86.97999999999999
+                                       },
+                                       {
+                                           "word":  "tous",
+                                           "end":  87.88,
+                                           "start":  87.47999999999999
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  88.38,
+                                           "start":  87.97999999999999
+                                       },
+                                       {
+                                           "word":  "êtres",
+                                           "end":  88.88,
+                                           "start":  88.47999999999999
+                                       }
+                                   ],
+                         "text":  "je me tiens moi. De part de, il vient à lui, tous les êtres",
+                         "start":  98.82
+                     },
+                     {
+                         "end":  90.76,
+                         "words":  [
+                                       {
+                                           "word":  "de",
+                                           "end":  89.38,
+                                           "start":  88.97999999999999
+                                       },
+                                       {
+                                           "word":  "vie,",
+                                           "end":  89.88,
+                                           "start":  89.47999999999999
+                                       },
+                                       {
+                                           "word":  "Sous",
+                                           "end":  90.38,
+                                           "start":  89.97999999999999
+                                       },
+                                       {
+                                           "word":  "l\u0027œil",
+                                           "end":  90.88,
+                                           "start":  90.47999999999999
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  91.38,
+                                           "start":  90.97999999999999
+                                       },
+                                       {
+                                           "word":  "l\u0027esprit,",
+                                           "end":  91.88,
+                                           "start":  91.47999999999999
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  92.38,
+                                           "start":  91.97999999999999
+                                       },
+                                       {
+                                           "word":  "cette",
+                                           "end":  92.88,
+                                           "start":  92.47999999999999
+                                       },
+                                       {
+                                           "word":  "empête,",
+                                           "end":  93.38,
+                                           "start":  92.97999999999999
+                                       },
+                                       {
+                                           "word":  "Ta",
+                                           "end":  93.88,
+                                           "start":  93.47999999999999
+                                       },
+                                       {
+                                           "word":  "main",
+                                           "end":  90.76,
+                                           "start":  89.640000000000015
+                                       }
+                                   ],
+                         "text":  "de vie, Sous l\u0027œil de l\u0027esprit, dans cette empête, Ta main",
+                         "start":  88.97999999999999
+                     },
+                     {
+                         "end":  112.48,
+                         "words":  [
+                                       {
+                                           "word":  "me",
+                                           "end":  91.26,
+                                           "start":  90.86
+                                       },
+                                       {
+                                           "word":  "guide,",
+                                           "end":  91.76,
+                                           "start":  91.36
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  92.26,
+                                           "start":  91.86
+                                       },
+                                       {
+                                           "word":  "trouve",
+                                           "end":  96.6,
+                                           "start":  96.18
+                                       },
+                                       {
+                                           "word":  "ma",
+                                           "end":  97.1,
+                                           "start":  96.699999999999989
+                                       },
+                                       {
+                                           "word":  "paix",
+                                           "end":  97.6,
+                                           "start":  97.199999999999989
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  101.68,
+                                           "start":  100.42
+                                       },
+                                       {
+                                           "word":  "ton",
+                                           "end":  102.18,
+                                           "start":  101.78
+                                       },
+                                       {
+                                           "word":  "amour,",
+                                           "end":  102.68,
+                                           "start":  102.28
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  111.98,
+                                           "start":  111.3
+                                       },
+                                       {
+                                           "word":  "réside.",
+                                           "end":  112.48,
+                                           "start":  112.08
+                                       }
+                                   ],
+                         "text":  "me guide, Je trouve ma paix dans ton amour, je réside.",
+                         "start":  90.86
+                     },
+                     {
+                         "end":  117.98,
+                         "words":  [
+                                       {
+                                           "word":  "Mais",
+                                           "end":  112.98,
+                                           "start":  112.58
+                                       },
+                                       {
+                                           "word":  "au",
+                                           "end":  113.48,
+                                           "start":  113.08
+                                       },
+                                       {
+                                           "word":  "milieu",
+                                           "end":  113.98,
+                                           "start":  113.58
+                                       },
+                                       {
+                                           "word":  "du",
+                                           "end":  114.48,
+                                           "start":  114.08
+                                       },
+                                       {
+                                           "word":  "désespoir,",
+                                           "end":  114.98,
+                                           "start":  114.58
+                                       },
+                                       {
+                                           "word":  "Noé",
+                                           "end":  115.48,
+                                           "start":  115.08
+                                       },
+                                       {
+                                           "word":  "a",
+                                           "end":  115.98,
+                                           "start":  115.58
+                                       },
+                                       {
+                                           "word":  "trouvé",
+                                           "end":  116.48,
+                                           "start":  116.08
+                                       },
+                                       {
+                                           "word":  "grâce",
+                                           "end":  116.98,
+                                           "start":  116.58
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  117.48,
+                                           "start":  117.08
+                                       },
+                                       {
+                                           "word":  "espoir",
+                                           "end":  117.98,
+                                           "start":  117.58
+                                       }
+                                   ],
+                         "text":  "Mais au milieu du désespoir, Noé a trouvé grâce un espoir",
+                         "start":  112.58
+                     },
+                     {
+                         "end":  130.79999999999998,
+                         "words":  [
+                                       {
+                                           "word":  "à",
+                                           "end":  118.14,
+                                           "start":  117.94
+                                       },
+                                       {
+                                           "word":  "revoir,",
+                                           "end":  118.64,
+                                           "start":  118.24
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  127.3,
+                                           "start":  125.44
+                                       },
+                                       {
+                                           "word":  "l\u0027arche",
+                                           "end":  127.8,
+                                           "start":  127.39999999999999
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  128.29999999999998,
+                                           "start":  127.89999999999999
+                                       },
+                                       {
+                                           "word":  "promesse,",
+                                           "end":  128.79999999999998,
+                                           "start":  128.39999999999998
+                                       },
+                                       {
+                                           "word":  "Il",
+                                           "end":  129.29999999999998,
+                                           "start":  128.89999999999998
+                                       },
+                                       {
+                                           "word":  "marchait",
+                                           "end":  129.79999999999998,
+                                           "start":  129.39999999999998
+                                       },
+                                       {
+                                           "word":  "avec",
+                                           "end":  130.29999999999998,
+                                           "start":  129.89999999999998
+                                       },
+                                       {
+                                           "word":  "toi,",
+                                           "end":  130.79999999999998,
+                                           "start":  130.39999999999998
+                                       }
+                                   ],
+                         "text":  "à revoir, Dans l\u0027arche de promesse, Il marchait avec toi,",
+                         "start":  117.94
+                     },
+                     {
+                         "end":  139.34,
+                         "words":  [
+                                       {
+                                           "word":  "Oh",
+                                           "end":  131.29999999999998,
+                                           "start":  130.89999999999998
+                                       },
+                                       {
+                                           "word":  "Seigneur",
+                                           "end":  131.79999999999998,
+                                           "start":  131.39999999999998
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  135.72,
+                                           "start":  135.2
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  136.22,
+                                           "start":  135.82
+                                       },
+                                       {
+                                           "word":  "lumière,",
+                                           "end":  136.72,
+                                           "start":  136.32
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  137.34,
+                                           "start":  136.76
+                                       },
+                                       {
+                                           "word":  "me",
+                                           "end":  137.84,
+                                           "start":  137.44
+                                       },
+                                       {
+                                           "word":  "tiens",
+                                           "end":  138.34,
+                                           "start":  137.94
+                                       },
+                                       {
+                                           "word":  "moi.",
+                                           "end":  138.84,
+                                           "start":  138.44
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  139.34,
+                                           "start":  138.94
+                                       }
+                                   ],
+                         "text":  "Oh Seigneur dans ta lumière, je me tiens moi. Seigneur,",
+                         "start":  130.89999999999998
+                     },
+                     {
+                         "end":  161.66,
+                         "words":  [
+                                       {
+                                           "word":  "tu",
+                                           "end":  139.84,
+                                           "start":  139.44
+                                       },
+                                       {
+                                           "word":  "es",
+                                           "end":  140.34,
+                                           "start":  139.94
+                                       },
+                                       {
+                                           "word":  "mon",
+                                           "end":  140.84,
+                                           "start":  140.44
+                                       },
+                                       {
+                                           "word":  "refuge,",
+                                           "end":  141.34,
+                                           "start":  140.94
+                                       },
+                                       {
+                                           "word":  "ma",
+                                           "end":  141.84,
+                                           "start":  141.44
+                                       },
+                                       {
+                                           "word":  "vérité,",
+                                           "end":  142.34,
+                                           "start":  141.94
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  152.16,
+                                           "start":  150.94
+                                       },
+                                       {
+                                           "word":  "l\u0027arche",
+                                           "end":  152.66,
+                                           "start":  152.26
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  153.12,
+                                           "start":  152.98
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  161.16,
+                                           "start":  160.88
+                                       },
+                                       {
+                                           "word":  "grâce,",
+                                           "end":  161.66,
+                                           "start":  161.26
+                                       }
+                                   ],
+                         "text":  "tu es mon refuge, ma vérité, Dans l\u0027arche de ta grâce,",
+                         "start":  139.44
+                     },
+                     {
+                         "end":  181.34,
+                         "words":  [
+                                       {
+                                           "word":  "je",
+                                           "end":  162.46,
+                                           "start":  161.8
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  162.96,
+                                           "start":  162.56
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  163.46,
+                                           "start":  163.06
+                                       },
+                                       {
+                                           "word":  "sécurité,",
+                                           "end":  163.96,
+                                           "start":  163.56
+                                       },
+                                       {
+                                           "word":  "Loin",
+                                           "end":  164.46,
+                                           "start":  164.06
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  164.96,
+                                           "start":  164.56
+                                       },
+                                       {
+                                           "word":  "eaux,",
+                                           "end":  165.46,
+                                           "start":  165.06
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  167.38,
+                                           "start":  167.1
+                                       },
+                                       {
+                                           "word":  "multueuses,",
+                                           "end":  167.88,
+                                           "start":  167.48
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  173.7,
+                                           "start":  173.22
+                                       },
+                                       {
+                                           "word":  "chante",
+                                           "end":  181.34,
+                                           "start":  180.74
+                                       }
+                                   ],
+                         "text":  "je suis en sécurité, Loin des eaux, tu multueuses, je chante",
+                         "start":  161.8
+                     },
+                     {
+                         "end":  192.9,
+                         "words":  [
+                                       {
+                                           "word":  "ta",
+                                           "end":  181.64,
+                                           "start":  181.34
+                                       },
+                                       {
+                                           "word":  "bonté.",
+                                           "end":  182.68,
+                                           "start":  181.64
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  183.18,
+                                           "start":  182.78
+                                       },
+                                       {
+                                           "word":  "éternelle,",
+                                           "end":  185.74,
+                                           "start":  184.9
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  186.26,
+                                           "start":  185.74
+                                       },
+                                       {
+                                           "word":  "toi,",
+                                           "end":  186.54,
+                                           "start":  186.26
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  187.42,
+                                           "start":  186.54
+                                       },
+                                       {
+                                           "word":  "suis",
+                                           "end":  187.76,
+                                           "start":  187.42
+                                       },
+                                       {
+                                           "word":  "restauré.",
+                                           "end":  189.22,
+                                           "start":  187.76
+                                       },
+                                       {
+                                           "word":  "Ces",
+                                           "end":  192.38,
+                                           "start":  191.54
+                                       },
+                                       {
+                                           "word":  "paroles",
+                                           "end":  192.9,
+                                           "start":  192.38
+                                       }
+                                   ],
+                         "text":  "ta bonté. Oh éternelle, en toi, je suis restauré. Ces paroles",
+                         "start":  181.34
+                     },
+                     {
+                         "end":  196.5,
+                         "words":  [
+                                       {
+                                           "word":  "s\u0027inspirent",
+                                           "end":  193.4,
+                                           "start":  193
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  193.6,
+                                           "start":  193.48
+                                       },
+                                       {
+                                           "word":  "l\u0027histoire",
+                                           "end":  194.1,
+                                           "start":  193.7
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  194.2,
+                                           "start":  193.9
+                                       },
+                                       {
+                                           "word":  "Noé",
+                                           "end":  194.48,
+                                           "start":  194.2
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  195.44,
+                                           "start":  194.48
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  195.6,
+                                           "start":  195.44
+                                       },
+                                       {
+                                           "word":  "l\u0027alliance",
+                                           "end":  196.1,
+                                           "start":  195.7
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  196.24,
+                                           "start":  196.06
+                                       },
+                                       {
+                                           "word":  "Dieu,",
+                                           "end":  196.5,
+                                           "start":  196.24
+                                       }
+                                   ],
+                         "text":  "s\u0027inspirent de l\u0027histoire de Noé et de l\u0027alliance de Dieu,",
+                         "start":  193
+                     },
+                     {
+                         "end":  201.68,
+                         "words":  [
+                                       {
+                                           "word":  "Créant",
+                                           "end":  197.92,
+                                           "start":  196.5
+                                       },
+                                       {
+                                           "word":  "une",
+                                           "end":  198.02,
+                                           "start":  197.92
+                                       },
+                                       {
+                                           "word":  "atmosphère",
+                                           "end":  198.76,
+                                           "start":  198.02
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  198.92,
+                                           "start":  198.76
+                                       },
+                                       {
+                                           "word":  "culte",
+                                           "end":  199.38,
+                                           "start":  198.92
+                                       },
+                                       {
+                                           "word":  "cinématographique",
+                                           "end":  200.54,
+                                           "start":  199.38
+                                       },
+                                       {
+                                           "word":  "Qui",
+                                           "end":  201.4,
+                                           "start":  200.54
+                                       },
+                                       {
+                                           "word":  "invite",
+                                           "end":  201.68,
+                                           "start":  201.4
+                                       }
+                                   ],
+                         "text":  "Créant une atmosphère de culte cinématographique Qui invite",
+                         "start":  196.5
+                     },
+                     {
+                         "end":  204.46,
+                         "words":  [
+                                       {
+                                           "word":  "à",
+                                           "end":  201.9,
+                                           "start":  201.68
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  202.02,
+                                           "start":  201.9
+                                       },
+                                       {
+                                           "word":  "réflexion",
+                                           "end":  202.44,
+                                           "start":  202.02
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  203.88,
+                                           "start":  203.22
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  203.96,
+                                           "start":  203.88
+                                       },
+                                       {
+                                           "word":  "l\u0027adoration.",
+                                           "end":  204.46,
+                                           "start":  204.06
+                                       }
+                                   ],
+                         "text":  "à la réflexion et à l\u0027adoration.",
+                         "start":  201.68
+                     }
+                 ]
+}

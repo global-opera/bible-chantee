@@ -1,0 +1,1297 @@
+﻿{
+    "language":  "fr",
+    "text":  "... Dans l\u0027olongue des flots noé tu priais L\u0027arche battue\nmais l\u0027espoir ne s\u0027éteignait Dieu se souvint de toi de\ntous les vivants Un souffle sur la terre, le calme revenant\nSouviens-toi de nous, Seigneur des cieux Dans nos tempêtes,\n\nsoit notre veu Rastare nos cœurs comme tu as fait Fais-nous\nvoir la terre, là où l\u0027espoir est Car en jours passés,\nla colombe s\u0027en va Elle cherche un refuge mais elle ne\ntrouve pas Mais au soir, elle revient une feuille d\u0027olivier\n\nTon amour, Dieu, nous fait respirer Souviens-toi de nous,\nSeigneur des cieux Dans nos tempêtes, soit notre veu Rastare\nnos cœurs comme tu as fait Fais-nous voir la terre, là\noù l\u0027espoir est Quand les os se retirent et que le temps\n\ns\u0027éveille Tu parles à nouer une promesse en pareille Sors\nde l\u0027arche vivant, faites-le interfleurir Fais-compte et\nmultipliez comme un doux souvenir Souviens-toi de nous,\nSeigneur des cieux Dans nos tempêtes, soit notre veu Rastare\n\nnos cœurs comme tu as fait Fais-nous voir la terre, là\noù l\u0027espoir est Souviens-toi de nous, Seigneur des cieux\nDans nos tempêtes, soit notre veu Rastare nos cœurs comme\ntu as fait Fais-nous voir la terre où l\u0027amour est vrai\n\nTant que la terre suffisera, les saisons danseront Et nous\nchanterons ta fidélité Oh Dieu, jamais ne s\u0027épassera Souviens-toi\nde nous et entre nous vivons",
+    "segments":  [
+                     {
+                         "end":  18.66,
+                         "words":  [
+                                       {
+                                           "word":  "...",
+                                           "end":  0.5,
+                                           "start":  0.1
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  1,
+                                           "start":  0.6
+                                       },
+                                       {
+                                           "word":  "l\u0027olongue",
+                                           "end":  1.5,
+                                           "start":  1.1
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  2,
+                                           "start":  1.6
+                                       },
+                                       {
+                                           "word":  "flots",
+                                           "end":  2.5,
+                                           "start":  2.1
+                                       },
+                                       {
+                                           "word":  "noé",
+                                           "end":  3,
+                                           "start":  2.6
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  3.5,
+                                           "start":  3.1
+                                       },
+                                       {
+                                           "word":  "priais",
+                                           "end":  4,
+                                           "start":  3.6
+                                       },
+                                       {
+                                           "word":  "L\u0027arche",
+                                           "end":  4.5,
+                                           "start":  4.1
+                                       },
+                                       {
+                                           "word":  "battue",
+                                           "end":  18.66,
+                                           "start":  17.88
+                                       }
+                                   ],
+                         "text":  "... Dans l\u0027olongue des flots noé tu priais L\u0027arche battue",
+                         "start":  0.1
+                     },
+                     {
+                         "end":  23.66,
+                         "words":  [
+                                       {
+                                           "word":  "mais",
+                                           "end":  19.16,
+                                           "start":  18.76
+                                       },
+                                       {
+                                           "word":  "l\u0027espoir",
+                                           "end":  19.66,
+                                           "start":  19.26
+                                       },
+                                       {
+                                           "word":  "ne",
+                                           "end":  20.16,
+                                           "start":  19.76
+                                       },
+                                       {
+                                           "word":  "s\u0027éteignait",
+                                           "end":  20.66,
+                                           "start":  20.26
+                                       },
+                                       {
+                                           "word":  "Dieu",
+                                           "end":  21.16,
+                                           "start":  20.76
+                                       },
+                                       {
+                                           "word":  "se",
+                                           "end":  21.66,
+                                           "start":  21.26
+                                       },
+                                       {
+                                           "word":  "souvint",
+                                           "end":  22.16,
+                                           "start":  21.76
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  22.66,
+                                           "start":  22.26
+                                       },
+                                       {
+                                           "word":  "toi",
+                                           "end":  23.16,
+                                           "start":  22.76
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  23.66,
+                                           "start":  23.26
+                                       }
+                                   ],
+                         "text":  "mais l\u0027espoir ne s\u0027éteignait Dieu se souvint de toi de",
+                         "start":  18.76
+                     },
+                     {
+                         "end":  70.2,
+                         "words":  [
+                                       {
+                                           "word":  "tous",
+                                           "end":  24.16,
+                                           "start":  23.76
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  24.66,
+                                           "start":  24.26
+                                       },
+                                       {
+                                           "word":  "vivants",
+                                           "end":  25.16,
+                                           "start":  24.76
+                                       },
+                                       {
+                                           "word":  "Un",
+                                           "end":  66.7,
+                                           "start":  65.98
+                                       },
+                                       {
+                                           "word":  "souffle",
+                                           "end":  67.2,
+                                           "start":  66.8
+                                       },
+                                       {
+                                           "word":  "sur",
+                                           "end":  67.7,
+                                           "start":  67.3
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  68.2,
+                                           "start":  67.8
+                                       },
+                                       {
+                                           "word":  "terre,",
+                                           "end":  68.7,
+                                           "start":  68.3
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  69.2,
+                                           "start":  68.8
+                                       },
+                                       {
+                                           "word":  "calme",
+                                           "end":  69.7,
+                                           "start":  69.3
+                                       },
+                                       {
+                                           "word":  "revenant",
+                                           "end":  70.2,
+                                           "start":  69.8
+                                       }
+                                   ],
+                         "text":  "tous les vivants Un souffle sur la terre, le calme revenant",
+                         "start":  23.76
+                     },
+                     {
+                         "end":  74.7,
+                         "words":  [
+                                       {
+                                           "word":  "Souviens-toi",
+                                           "end":  70.7,
+                                           "start":  70.3
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  71.2,
+                                           "start":  70.8
+                                       },
+                                       {
+                                           "word":  "nous,",
+                                           "end":  71.7,
+                                           "start":  71.3
+                                       },
+                                       {
+                                           "word":  "Seigneur",
+                                           "end":  72.2,
+                                           "start":  71.8
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  72.7,
+                                           "start":  72.3
+                                       },
+                                       {
+                                           "word":  "cieux",
+                                           "end":  73.2,
+                                           "start":  72.8
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  73.7,
+                                           "start":  73.3
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  74.2,
+                                           "start":  73.8
+                                       },
+                                       {
+                                           "word":  "tempêtes,",
+                                           "end":  74.7,
+                                           "start":  74.3
+                                       }
+                                   ],
+                         "text":  "Souviens-toi de nous, Seigneur des cieux Dans nos tempêtes,",
+                         "start":  70.3
+                     },
+                     {
+                         "end":  80.72,
+                         "words":  [
+                                       {
+                                           "word":  "soit",
+                                           "end":  71.9,
+                                           "start":  71.28
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  72.4,
+                                           "start":  72
+                                       },
+                                       {
+                                           "word":  "veu",
+                                           "end":  72.9,
+                                           "start":  72.5
+                                       },
+                                       {
+                                           "word":  "Rastare",
+                                           "end":  73.4,
+                                           "start":  73
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  73.9,
+                                           "start":  73.5
+                                       },
+                                       {
+                                           "word":  "cœurs",
+                                           "end":  74.4,
+                                           "start":  74
+                                       },
+                                       {
+                                           "word":  "comme",
+                                           "end":  74.9,
+                                           "start":  74.5
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  75.4,
+                                           "start":  75
+                                       },
+                                       {
+                                           "word":  "as",
+                                           "end":  75.9,
+                                           "start":  75.5
+                                       },
+                                       {
+                                           "word":  "fait",
+                                           "end":  80.22,
+                                           "start":  79.78
+                                       },
+                                       {
+                                           "word":  "Fais-nous",
+                                           "end":  80.72,
+                                           "start":  80.32
+                                       }
+                                   ],
+                         "text":  "soit notre veu Rastare nos cœurs comme tu as fait Fais-nous",
+                         "start":  71.28
+                     },
+                     {
+                         "end":  86.22,
+                         "words":  [
+                                       {
+                                           "word":  "voir",
+                                           "end":  81.22,
+                                           "start":  80.82
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  81.72,
+                                           "start":  81.32
+                                       },
+                                       {
+                                           "word":  "terre,",
+                                           "end":  82.22,
+                                           "start":  81.82
+                                       },
+                                       {
+                                           "word":  "là",
+                                           "end":  82.72,
+                                           "start":  82.32
+                                       },
+                                       {
+                                           "word":  "où",
+                                           "end":  83.22,
+                                           "start":  82.82
+                                       },
+                                       {
+                                           "word":  "l\u0027espoir",
+                                           "end":  83.72,
+                                           "start":  83.32
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  84.22,
+                                           "start":  83.82
+                                       },
+                                       {
+                                           "word":  "Car",
+                                           "end":  84.72,
+                                           "start":  84.32
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  85.22,
+                                           "start":  84.82
+                                       },
+                                       {
+                                           "word":  "jours",
+                                           "end":  85.72,
+                                           "start":  85.32
+                                       },
+                                       {
+                                           "word":  "passés,",
+                                           "end":  86.22,
+                                           "start":  85.82
+                                       }
+                                   ],
+                         "text":  "voir la terre, là où l\u0027espoir est Car en jours passés,",
+                         "start":  80.82
+                     },
+                     {
+                         "end":  91.72,
+                         "words":  [
+                                       {
+                                           "word":  "la",
+                                           "end":  86.72,
+                                           "start":  86.32
+                                       },
+                                       {
+                                           "word":  "colombe",
+                                           "end":  87.22,
+                                           "start":  86.82
+                                       },
+                                       {
+                                           "word":  "s\u0027en",
+                                           "end":  87.72,
+                                           "start":  87.32
+                                       },
+                                       {
+                                           "word":  "va",
+                                           "end":  88.22,
+                                           "start":  87.82
+                                       },
+                                       {
+                                           "word":  "Elle",
+                                           "end":  88.72,
+                                           "start":  88.32
+                                       },
+                                       {
+                                           "word":  "cherche",
+                                           "end":  89.22,
+                                           "start":  88.82
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  89.72,
+                                           "start":  89.32
+                                       },
+                                       {
+                                           "word":  "refuge",
+                                           "end":  90.22,
+                                           "start":  89.82
+                                       },
+                                       {
+                                           "word":  "mais",
+                                           "end":  90.72,
+                                           "start":  90.32
+                                       },
+                                       {
+                                           "word":  "elle",
+                                           "end":  91.22,
+                                           "start":  90.82
+                                       },
+                                       {
+                                           "word":  "ne",
+                                           "end":  91.72,
+                                           "start":  91.32
+                                       }
+                                   ],
+                         "text":  "la colombe s\u0027en va Elle cherche un refuge mais elle ne",
+                         "start":  86.32
+                     },
+                     {
+                         "end":  96.72,
+                         "words":  [
+                                       {
+                                           "word":  "trouve",
+                                           "end":  92.22,
+                                           "start":  91.82
+                                       },
+                                       {
+                                           "word":  "pas",
+                                           "end":  92.72,
+                                           "start":  92.32
+                                       },
+                                       {
+                                           "word":  "Mais",
+                                           "end":  93.22,
+                                           "start":  92.82
+                                       },
+                                       {
+                                           "word":  "au",
+                                           "end":  93.72,
+                                           "start":  93.32
+                                       },
+                                       {
+                                           "word":  "soir,",
+                                           "end":  94.22,
+                                           "start":  93.82
+                                       },
+                                       {
+                                           "word":  "elle",
+                                           "end":  94.72,
+                                           "start":  94.32
+                                       },
+                                       {
+                                           "word":  "revient",
+                                           "end":  95.22,
+                                           "start":  94.82
+                                       },
+                                       {
+                                           "word":  "une",
+                                           "end":  95.72,
+                                           "start":  95.32
+                                       },
+                                       {
+                                           "word":  "feuille",
+                                           "end":  96.22,
+                                           "start":  95.82
+                                       },
+                                       {
+                                           "word":  "d\u0027olivier",
+                                           "end":  96.72,
+                                           "start":  96.32
+                                       }
+                                   ],
+                         "text":  "trouve pas Mais au soir, elle revient une feuille d\u0027olivier",
+                         "start":  91.82
+                     },
+                     {
+                         "end":  101.94,
+                         "words":  [
+                                       {
+                                           "word":  "Ton",
+                                           "end":  97.22,
+                                           "start":  96.82
+                                       },
+                                       {
+                                           "word":  "amour,",
+                                           "end":  97.72,
+                                           "start":  97.32
+                                       },
+                                       {
+                                           "word":  "Dieu,",
+                                           "end":  98.22,
+                                           "start":  97.82
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  85.92,
+                                           "start":  85.66
+                                       },
+                                       {
+                                           "word":  "fait",
+                                           "end":  86.42,
+                                           "start":  86.02
+                                       },
+                                       {
+                                           "word":  "respirer",
+                                           "end":  86.92,
+                                           "start":  86.52
+                                       },
+                                       {
+                                           "word":  "Souviens-toi",
+                                           "end":  89.76,
+                                           "start":  88.96
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  96.78,
+                                           "start":  96.54
+                                       },
+                                       {
+                                           "word":  "nous,",
+                                           "end":  101.94,
+                                           "start":  101.74
+                                       }
+                                   ],
+                         "text":  "Ton amour, Dieu, nous fait respirer Souviens-toi de nous,",
+                         "start":  96.82
+                     },
+                     {
+                         "end":  106.94,
+                         "words":  [
+                                       {
+                                           "word":  "Seigneur",
+                                           "end":  102.44,
+                                           "start":  102.03999999999999
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  102.94,
+                                           "start":  102.53999999999999
+                                       },
+                                       {
+                                           "word":  "cieux",
+                                           "end":  103.44,
+                                           "start":  103.03999999999999
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  103.94,
+                                           "start":  103.53999999999999
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  104.44,
+                                           "start":  104.03999999999999
+                                       },
+                                       {
+                                           "word":  "tempêtes,",
+                                           "end":  104.94,
+                                           "start":  104.53999999999999
+                                       },
+                                       {
+                                           "word":  "soit",
+                                           "end":  105.44,
+                                           "start":  105.03999999999999
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  105.94,
+                                           "start":  105.53999999999999
+                                       },
+                                       {
+                                           "word":  "veu",
+                                           "end":  106.44,
+                                           "start":  106.03999999999999
+                                       },
+                                       {
+                                           "word":  "Rastare",
+                                           "end":  106.94,
+                                           "start":  106.53999999999999
+                                       }
+                                   ],
+                         "text":  "Seigneur des cieux Dans nos tempêtes, soit notre veu Rastare",
+                         "start":  102.03999999999999
+                     },
+                     {
+                         "end":  104.1,
+                         "words":  [
+                                       {
+                                           "word":  "nos",
+                                           "end":  107.44,
+                                           "start":  107.03999999999999
+                                       },
+                                       {
+                                           "word":  "cœurs",
+                                           "end":  107.94,
+                                           "start":  107.53999999999999
+                                       },
+                                       {
+                                           "word":  "comme",
+                                           "end":  108.44,
+                                           "start":  108.03999999999999
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  108.94,
+                                           "start":  108.53999999999999
+                                       },
+                                       {
+                                           "word":  "as",
+                                           "end":  109.44,
+                                           "start":  109.03999999999999
+                                       },
+                                       {
+                                           "word":  "fait",
+                                           "end":  109.94,
+                                           "start":  109.53999999999999
+                                       },
+                                       {
+                                           "word":  "Fais-nous",
+                                           "end":  110.44,
+                                           "start":  110.03999999999999
+                                       },
+                                       {
+                                           "word":  "voir",
+                                           "end":  102.44,
+                                           "start":  101.94
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  102.7,
+                                           "start":  102.44
+                                       },
+                                       {
+                                           "word":  "terre,",
+                                           "end":  103,
+                                           "start":  102.7
+                                       },
+                                       {
+                                           "word":  "là",
+                                           "end":  104.1,
+                                           "start":  103.6
+                                       }
+                                   ],
+                         "text":  "nos cœurs comme tu as fait Fais-nous voir la terre, là",
+                         "start":  107.03999999999999
+                     },
+                     {
+                         "end":  111.88,
+                         "words":  [
+                                       {
+                                           "word":  "où",
+                                           "end":  104.5,
+                                           "start":  104.1
+                                       },
+                                       {
+                                           "word":  "l\u0027espoir",
+                                           "end":  105,
+                                           "start":  104.6
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  105.58,
+                                           "start":  105.4
+                                       },
+                                       {
+                                           "word":  "Quand",
+                                           "end":  108.26,
+                                           "start":  107.46
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  108.56,
+                                           "start":  108.26
+                                       },
+                                       {
+                                           "word":  "os",
+                                           "end":  109.06,
+                                           "start":  108.66
+                                       },
+                                       {
+                                           "word":  "se",
+                                           "end":  109.4,
+                                           "start":  109.02
+                                       },
+                                       {
+                                           "word":  "retirent",
+                                           "end":  110.74,
+                                           "start":  109.4
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  111.08,
+                                           "start":  110.74
+                                       },
+                                       {
+                                           "word":  "que",
+                                           "end":  111.18,
+                                           "start":  111.08
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  111.34,
+                                           "start":  111.18
+                                       },
+                                       {
+                                           "word":  "temps",
+                                           "end":  111.88,
+                                           "start":  111.34
+                                       }
+                                   ],
+                         "text":  "où l\u0027espoir est Quand les os se retirent et que le temps",
+                         "start":  104.1
+                     },
+                     {
+                         "end":  119.7,
+                         "words":  [
+                                       {
+                                           "word":  "s\u0027éveille",
+                                           "end":  112.38,
+                                           "start":  111.97999999999999
+                                       },
+                                       {
+                                           "word":  "Tu",
+                                           "end":  114.06,
+                                           "start":  113.7
+                                       },
+                                       {
+                                           "word":  "parles",
+                                           "end":  115.06,
+                                           "start":  114.06
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  115.22,
+                                           "start":  115.06
+                                       },
+                                       {
+                                           "word":  "nouer",
+                                           "end":  115.72,
+                                           "start":  115.32
+                                       },
+                                       {
+                                           "word":  "une",
+                                           "end":  116.5,
+                                           "start":  115.98
+                                       },
+                                       {
+                                           "word":  "promesse",
+                                           "end":  117.62,
+                                           "start":  116.5
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  118.02,
+                                           "start":  117.62
+                                       },
+                                       {
+                                           "word":  "pareille",
+                                           "end":  118.74,
+                                           "start":  118.02
+                                       },
+                                       {
+                                           "word":  "Sors",
+                                           "end":  119.7,
+                                           "start":  118.74
+                                       }
+                                   ],
+                         "text":  "s\u0027éveille Tu parles à nouer une promesse en pareille Sors",
+                         "start":  111.97999999999999
+                     },
+                     {
+                         "end":  125.92,
+                         "words":  [
+                                       {
+                                           "word":  "de",
+                                           "end":  119.9,
+                                           "start":  119.7
+                                       },
+                                       {
+                                           "word":  "l\u0027arche",
+                                           "end":  120.4,
+                                           "start":  120
+                                       },
+                                       {
+                                           "word":  "vivant,",
+                                           "end":  121.82,
+                                           "start":  120.58
+                                       },
+                                       {
+                                           "word":  "faites-le",
+                                           "end":  122.46,
+                                           "start":  121.88
+                                       },
+                                       {
+                                           "word":  "interfleurir",
+                                           "end":  122.96,
+                                           "start":  122.55999999999999
+                                       },
+                                       {
+                                           "word":  "Fais-compte",
+                                           "end":  123.46,
+                                           "start":  123.05999999999999
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  125.92,
+                                           "start":  125.66
+                                       }
+                                   ],
+                         "text":  "de l\u0027arche vivant, faites-le interfleurir Fais-compte et",
+                         "start":  119.7
+                     },
+                     {
+                         "end":  134.52,
+                         "words":  [
+                                       {
+                                           "word":  "multipliez",
+                                           "end":  127.16,
+                                           "start":  125.92
+                                       },
+                                       {
+                                           "word":  "comme",
+                                           "end":  128.26,
+                                           "start":  127.34
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  128.52,
+                                           "start":  128.26
+                                       },
+                                       {
+                                           "word":  "doux",
+                                           "end":  129.04,
+                                           "start":  128.52
+                                       },
+                                       {
+                                           "word":  "souvenir",
+                                           "end":  129.94,
+                                           "start":  129.04
+                                       },
+                                       {
+                                           "word":  "Souviens-toi",
+                                           "end":  133.48,
+                                           "start":  132.56
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  134.18,
+                                           "start":  133.74
+                                       },
+                                       {
+                                           "word":  "nous,",
+                                           "end":  134.52,
+                                           "start":  134.18
+                                       }
+                                   ],
+                         "text":  "multipliez comme un doux souvenir Souviens-toi de nous,",
+                         "start":  125.92
+                     },
+                     {
+                         "end":  143.06,
+                         "words":  [
+                                       {
+                                           "word":  "Seigneur",
+                                           "end":  136.62,
+                                           "start":  134.9
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  136.98,
+                                           "start":  136.62
+                                       },
+                                       {
+                                           "word":  "cieux",
+                                           "end":  137.5,
+                                           "start":  136.98
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  138.74,
+                                           "start":  138.08
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  139.14,
+                                           "start":  138.74
+                                       },
+                                       {
+                                           "word":  "tempêtes,",
+                                           "end":  140.36,
+                                           "start":  139.14
+                                       },
+                                       {
+                                           "word":  "soit",
+                                           "end":  141.66,
+                                           "start":  140.58
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  142.06,
+                                           "start":  141.66
+                                       },
+                                       {
+                                           "word":  "veu",
+                                           "end":  142.56,
+                                           "start":  142.16
+                                       },
+                                       {
+                                           "word":  "Rastare",
+                                           "end":  143.06,
+                                           "start":  142.66
+                                       }
+                                   ],
+                         "text":  "Seigneur des cieux Dans nos tempêtes, soit notre veu Rastare",
+                         "start":  134.9
+                     },
+                     {
+                         "end":  152.64,
+                         "words":  [
+                                       {
+                                           "word":  "nos",
+                                           "end":  145.56,
+                                           "start":  145.16
+                                       },
+                                       {
+                                           "word":  "cœurs",
+                                           "end":  146.52,
+                                           "start":  145.56
+                                       },
+                                       {
+                                           "word":  "comme",
+                                           "end":  147.56,
+                                           "start":  146.54
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  147.96,
+                                           "start":  147.56
+                                       },
+                                       {
+                                           "word":  "as",
+                                           "end":  148.4,
+                                           "start":  147.96
+                                       },
+                                       {
+                                           "word":  "fait",
+                                           "end":  148.84,
+                                           "start":  148.4
+                                       },
+                                       {
+                                           "word":  "Fais-nous",
+                                           "end":  150.28,
+                                           "start":  150
+                                       },
+                                       {
+                                           "word":  "voir",
+                                           "end":  151,
+                                           "start":  150.54
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  151.24,
+                                           "start":  151
+                                       },
+                                       {
+                                           "word":  "terre,",
+                                           "end":  151.74,
+                                           "start":  151.24
+                                       },
+                                       {
+                                           "word":  "là",
+                                           "end":  152.64,
+                                           "start":  151.76
+                                       }
+                                   ],
+                         "text":  "nos cœurs comme tu as fait Fais-nous voir la terre, là",
+                         "start":  145.16
+                     },
+                     {
+                         "end":  160.34,
+                         "words":  [
+                                       {
+                                           "word":  "où",
+                                           "end":  153.06,
+                                           "start":  152.64
+                                       },
+                                       {
+                                           "word":  "l\u0027espoir",
+                                           "end":  153.56,
+                                           "start":  153.16
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  154.2,
+                                           "start":  153.92
+                                       },
+                                       {
+                                           "word":  "Souviens-toi",
+                                           "end":  156.38,
+                                           "start":  155.51999999999998
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  157.06,
+                                           "start":  156.6
+                                       },
+                                       {
+                                           "word":  "nous,",
+                                           "end":  157.28,
+                                           "start":  157.06
+                                       },
+                                       {
+                                           "word":  "Seigneur",
+                                           "end":  159.52,
+                                           "start":  157.34
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  159.82,
+                                           "start":  159.52
+                                       },
+                                       {
+                                           "word":  "cieux",
+                                           "end":  160.34,
+                                           "start":  159.82
+                                       }
+                                   ],
+                         "text":  "où l\u0027espoir est Souviens-toi de nous, Seigneur des cieux",
+                         "start":  152.64
+                     },
+                     {
+                         "end":  170.42,
+                         "words":  [
+                                       {
+                                           "word":  "Dans",
+                                           "end":  161.6,
+                                           "start":  161
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  162,
+                                           "start":  161.6
+                                       },
+                                       {
+                                           "word":  "tempêtes,",
+                                           "end":  162.64,
+                                           "start":  162
+                                       },
+                                       {
+                                           "word":  "soit",
+                                           "end":  164.52,
+                                           "start":  163.38
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  164.98,
+                                           "start":  164.52
+                                       },
+                                       {
+                                           "word":  "veu",
+                                           "end":  165.48,
+                                           "start":  165.07999999999998
+                                       },
+                                       {
+                                           "word":  "Rastare",
+                                           "end":  165.98,
+                                           "start":  165.57999999999998
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  168.42,
+                                           "start":  168.04
+                                       },
+                                       {
+                                           "word":  "cœurs",
+                                           "end":  169.3,
+                                           "start":  168.42
+                                       },
+                                       {
+                                           "word":  "comme",
+                                           "end":  170.42,
+                                           "start":  169.5
+                                       }
+                                   ],
+                         "text":  "Dans nos tempêtes, soit notre veu Rastare nos cœurs comme",
+                         "start":  161
+                     },
+                     {
+                         "end":  177.02,
+                         "words":  [
+                                       {
+                                           "word":  "tu",
+                                           "end":  170.82,
+                                           "start":  170.42
+                                       },
+                                       {
+                                           "word":  "as",
+                                           "end":  171.26,
+                                           "start":  170.82
+                                       },
+                                       {
+                                           "word":  "fait",
+                                           "end":  171.66,
+                                           "start":  171.26
+                                       },
+                                       {
+                                           "word":  "Fais-nous",
+                                           "end":  173.06,
+                                           "start":  172.32
+                                       },
+                                       {
+                                           "word":  "voir",
+                                           "end":  173.82,
+                                           "start":  173.38
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  174.12,
+                                           "start":  173.82
+                                       },
+                                       {
+                                           "word":  "terre",
+                                           "end":  174.82,
+                                           "start":  174.12
+                                       },
+                                       {
+                                           "word":  "où",
+                                           "end":  175.52,
+                                           "start":  174.96
+                                       },
+                                       {
+                                           "word":  "l\u0027amour",
+                                           "end":  176.02,
+                                           "start":  175.62
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  176.7,
+                                           "start":  176.24
+                                       },
+                                       {
+                                           "word":  "vrai",
+                                           "end":  177.02,
+                                           "start":  176.7
+                                       }
+                                   ],
+                         "text":  "tu as fait Fais-nous voir la terre où l\u0027amour est vrai",
+                         "start":  170.42
+                     },
+                     {
+                         "end":  187.62,
+                         "words":  [
+                                       {
+                                           "word":  "Tant",
+                                           "end":  180.44,
+                                           "start":  180
+                                       },
+                                       {
+                                           "word":  "que",
+                                           "end":  180.86,
+                                           "start":  180.44
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  181.22,
+                                           "start":  180.86
+                                       },
+                                       {
+                                           "word":  "terre",
+                                           "end":  181.54,
+                                           "start":  181.22
+                                       },
+                                       {
+                                           "word":  "suffisera,",
+                                           "end":  182.76,
+                                           "start":  181.54
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  183.7,
+                                           "start":  182.76
+                                       },
+                                       {
+                                           "word":  "saisons",
+                                           "end":  184.46,
+                                           "start":  183.7
+                                       },
+                                       {
+                                           "word":  "danseront",
+                                           "end":  185.9,
+                                           "start":  184.46
+                                       },
+                                       {
+                                           "word":  "Et",
+                                           "end":  187.32,
+                                           "start":  185.9
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  187.62,
+                                           "start":  187.32
+                                       }
+                                   ],
+                         "text":  "Tant que la terre suffisera, les saisons danseront Et nous",
+                         "start":  180
+                     },
+                     {
+                         "end":  196.98,
+                         "words":  [
+                                       {
+                                           "word":  "chanterons",
+                                           "end":  188.82,
+                                           "start":  187.62
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  190.1,
+                                           "start":  189.4
+                                       },
+                                       {
+                                           "word":  "fidélité",
+                                           "end":  191.54,
+                                           "start":  190.1
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  192.04,
+                                           "start":  191.64
+                                       },
+                                       {
+                                           "word":  "Dieu,",
+                                           "end":  193.1,
+                                           "start":  192.3
+                                       },
+                                       {
+                                           "word":  "jamais",
+                                           "end":  193.92,
+                                           "start":  193.2
+                                       },
+                                       {
+                                           "word":  "ne",
+                                           "end":  194.4,
+                                           "start":  193.92
+                                       },
+                                       {
+                                           "word":  "s\u0027épassera",
+                                           "end":  194.9,
+                                           "start":  194.5
+                                       },
+                                       {
+                                           "word":  "Souviens-toi",
+                                           "end":  196.98,
+                                           "start":  195.72
+                                       }
+                                   ],
+                         "text":  "chanterons ta fidélité Oh Dieu, jamais ne s\u0027épassera Souviens-toi",
+                         "start":  187.62
+                     },
+                     {
+                         "end":  200.24,
+                         "words":  [
+                                       {
+                                           "word":  "de",
+                                           "end":  197.72,
+                                           "start":  197.26
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  197.9,
+                                           "start":  197.72
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  198.46,
+                                           "start":  198.08
+                                       },
+                                       {
+                                           "word":  "entre",
+                                           "end":  198.96,
+                                           "start":  198.46
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  199.4,
+                                           "start":  198.96
+                                       },
+                                       {
+                                           "word":  "vivons",
+                                           "end":  200.24,
+                                           "start":  199.4
+                                       }
+                                   ],
+                         "text":  "de nous et entre nous vivons",
+                         "start":  197.26
+                     }
+                 ]
+}

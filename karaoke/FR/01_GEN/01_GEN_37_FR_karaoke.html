@@ -5,56 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genese 37 | Bible Chantee Karaoke</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
-        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
-        .header h1{font-size:1.8em;color:#d4af37}
-        .player{max-width:800px;margin:20px auto;padding:0 20px}
-        audio{width:100%}
-        .lyrics{max-width:800px;margin:20px auto;padding:20px}
-        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
-        .line:hover{background:rgba(212,175,55,0.1)}
-        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
-        .line.passed{opacity:0.5}
-        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
-        .footer{text-align:center;padding:20px;color:#666}
-        .footer a{color:#d4af37}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
+        .header p { color: #888; }
+        .audio-player { 
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        audio { width: 100%; }
+        .lyrics { 
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        .line { 
+            padding: 12px 15px;
+            margin: 5px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .line .time { 
+            color: #666; 
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+        .line.active { 
+            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
+            color: #fff;
+            border-left: 4px solid #d4af37;
+            transform: scale(1.02);
+        }
+        .line.active .time { color: #d4af37; }
+        .line.past { opacity: 0.5; }
     </style>
 </head>
 <body>
-    <div class="header"><h1>Genese 37</h1><p>Bible Chantee Karaoke</p></div>
-    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_37_FR.mp3" type="audio/mpeg"></audio></div>
-    <div class="lyrics">
-        <div class="line" data-start="20.00" data-end="32.00"><span class="time">[0:20]</span>Dans le pays de Canaan, Jacob demeure Joseph, fils chéri, d'un amour qui l'effleure</div>
-        <div class="line" data-start="32.00" data-end="44.00"><span class="time">[0:32]</span>Ses frères dans l'ombre, leur haine se tisse Pour un rêve d'avenir, pour un cœur qui s'immise</div>
-        <div class="line" data-start="44.00" data-end="56.00"><span class="time">[0:44]</span>Ô Seigneur, tu vois nos luttes et nos peines Dans le silence, tu parles même quand tout s'éteigne</div>
-        <div class="line" data-start="56.00" data-end="66.00"><span class="time">[0:56]</span>Rappelle-nous dans nos cœurs la promesse Que les rêves de gloire sont un chant de tendresse</div>
-        <div class="line" data-start="66.00" data-end="75.00"><span class="time">[1:06]</span>Un songe se lève, les gerbes se prosternent Joseph s'avance, son cœur n'est pas enferme</div>
-        <div class="line" data-start="75.00" data-end="85.00"><span class="time">[1:15]</span>Ses frères envieux complotent dans la nuit Mets ta main au Dieu, guide et soutiens celui qui fuit</div>
-        <div class="line" data-start="85.00" data-end="97.00"><span class="time">[1:25]</span>Ô Seigneur, tu vois nos luttes et nos peines Dans le silence, tu parles même quand tout s'éteigne</div>
-        <div class="line" data-start="97.00" data-end="105.00"><span class="time">[1:37]</span>Rappelle-nous dans nos cœurs la promesse Que les rêves de gloire sont un chant de tendresse</div>
-        <div class="line" data-start="105.00" data-end="109.00"><span class="time">[1:45]</span>Dans la citerne sombre, la lumière s'éteint Mais dans la douleur, là où l'âme se feint</div>
-        <div class="line" data-start="109.00" data-end="121.00"><span class="time">[1:49]</span>Ruban un espoir pour sauver son frère Dans les bras du malheur s'éveille la lumière</div>
-        <div class="line" data-start="121.00" data-end="130.00"><span class="time">[2:01]</span>Ô Jacob, leurre, son cœur déchiré Une tunique teintée, un fils à jamais aimé</div>
-        <div class="line" data-start="130.00" data-end="140.00"><span class="time">[2:10]</span>Mais dans l'Égypte lointaine, le plan se dessine Joseph élevé par ta grâce divine</div>
-        <div class="line" data-start="140.00" data-end="150.00"><span class="time">[2:20]</span>Ô Seigneur, tu vois nos luttes et nos peines Dans le silence, tu parles même quand tout s'éteigne</div>
-        <div class="line" data-start="150.00" data-end="160.00"><span class="time">[2:30]</span>Rappelle-nous dans nos cœurs la promesse Que les rêves de gloire sont un chant de tendresse</div>
-        <div class="line" data-start="160.00" data-end="169.00"><span class="time">[2:40]</span>Dans chaque épreuve, tu es notre refuge Les rêves de gloire par ta main nous conduisent</div>
-        <div class="line" data-start="169.00" data-end="182.00"><span class="time">[2:49]</span>Fais de nous des témoins de ta fidélité Dans l'amour et la grâce pour l'éternité</div>
+    <div class="container">
+        <div class="header">
+            <h1>Genese 37</h1>
+            <p>Bible Chantee Karaoke</p>
+        </div>
+        <div class="audio-player">
+            <audio id="audio" controls>
+                <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_37_FR.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="lyrics" id="lyrics">
+        <div class="line" data-start="20.00" data-end="25.00"><span class="time">[0:20]</span>Dans le pays de Kanajakob de Mbure</div>
+        <div class="line" data-start="25.00" data-end="32.00"><span class="time">[0:25]</span>J'ose fichiris, donna-moi qui les fleurs, c'est frère dans l'ombre</div>
+        <div class="line" data-start="32.00" data-end="40.00"><span class="time">[0:32]</span>Leur en ce tissu, pour un rêve d'avenir pour un cœur qui s'immise</div>
+        <div class="line" data-start="40.00" data-end="44.00"><span class="time">[0:40]</span>Oh, c'est lieur, tu vois nos luttes et nos penes</div>
+        <div class="line" data-start="44.00" data-end="49.00"><span class="time">[0:44]</span>Dans le silence tu parles même quand tout s'éteigne</div>
+        <div class="line" data-start="50.00" data-end="56.00"><span class="time">[0:50]</span>Rappelent nous dans nos coeurs la promesse que les rêves de gloire</div>
+        <div class="line" data-start="56.00" data-end="59.00"><span class="time">[0:56]</span>sont achandes de temps reste</div>
+        <div class="line" data-start="61.00" data-end="66.00"><span class="time">[1:01]</span>Un son je se lève, les chers me se prostèrent</div>
+        <div class="line" data-start="66.00" data-end="70.00"><span class="time">[1:06]</span>J'osec sa avance, son cœur n'est pas en ferme</div>
+        <div class="line" data-start="70.00" data-end="75.00"><span class="time">[1:10]</span>Ces frères en vieux complottent dans la nuit</div>
+        <div class="line" data-start="75.00" data-end="81.00"><span class="time">[1:15]</span>Mais ta main au lieu qui déceoute bien ce qui fut</div>
+        <div class="line" data-start="81.00" data-end="85.00"><span class="time">[1:21]</span>Oh, c'est lieur, tu vois nos luttes et nos penes</div>
+        <div class="line" data-start="85.00" data-end="90.00"><span class="time">[1:25]</span>Dans le silence tu parles même quand tout s'éteigne</div>
+        <div class="line" data-start="90.00" data-end="97.00"><span class="time">[1:30]</span>Rappelent nous dans nos coeurs la promesse que les rêves de gloire</div>
+        <div class="line" data-start="97.00" data-end="100.00"><span class="time">[1:37]</span>sont achandes de temps reste</div>
+        <div class="line" data-start="100.00" data-end="105.00"><span class="time">[1:40]</span>Dans la citerne sombre la lumière c'est un</div>
+        <div class="line" data-start="105.00" data-end="109.00"><span class="time">[1:45]</span>Mais dans la douleur la où la me se fin</div>
+        <div class="line" data-start="109.00" data-end="114.00"><span class="time">[1:49]</span>Rubin un espoir pour sauver son frère</div>
+        <div class="line" data-start="114.00" data-end="121.00"><span class="time">[1:54]</span>Dans les bras du malheur ses veils la lumière</div>
+        <div class="line" data-start="121.00" data-end="125.00"><span class="time">[2:01]</span>Oh, Jacob leur son cœur déchirait</div>
+        <div class="line" data-start="125.00" data-end="130.00"><span class="time">[2:05]</span>Une tunicte intéin fissage à m'aimer</div>
+        <div class="line" data-start="130.00" data-end="135.00"><span class="time">[2:10]</span>Mais dans l'égypte lointaine le plan se dessine</div>
+        <div class="line" data-start="135.00" data-end="140.00"><span class="time">[2:15]</span>J'osec sa avance, son cœur n'est pas en ferme</div>
+        <div class="line" data-start="140.00" data-end="145.00"><span class="time">[2:20]</span>Oh, c'est lieur, tu vois nos luttes et nos penes</div>
+        <div class="line" data-start="145.00" data-end="150.00"><span class="time">[2:25]</span>Dans le silence tu parles même quand tout s'éteigne</div>
+        <div class="line" data-start="150.00" data-end="154.00"><span class="time">[2:30]</span>Rappelent nous nous dans nos coeurs la promesse</div>
+        <div class="line" data-start="154.00" data-end="160.00"><span class="time">[2:34]</span>que les rêves de gloire sont achandes de temps reste</div>
+        <div class="line" data-start="160.00" data-end="165.00"><span class="time">[2:40]</span>Dans chaque épreuve tu es notre fugeur</div>
+        <div class="line" data-start="165.00" data-end="169.00"><span class="time">[2:45]</span>Les rêves de gloire par ta main nous conduise</div>
+        <div class="line" data-start="169.00" data-end="174.00"><span class="time">[2:49]</span>Fait de nous détémoire de ta fidélité</div>
+        <div class="line" data-start="174.00" data-end="182.00"><span class="time">[2:54]</span>Dans la ce姿ARON nous tenant de mandat</div>
+        </div>
     </div>
-    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
     <script>
-        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
-        audio.addEventListener('timeupdate',()=>{
-            const t=audio.currentTime;
-            lines.forEach(l=>{
-                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
-                l.classList.remove('active','passed');
-                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
-                else if(t>=e)l.classList.add('passed')
-            })
+        const audio = document.getElementById('audio');
+        const lines = document.querySelectorAll('.line');
+        const lyricsContainer = document.getElementById('lyrics');
+        
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            let activeIndex = -1;
+            
+            lines.forEach((line, index) => {
+                const start = parseFloat(line.dataset.start);
+                const end = parseFloat(line.dataset.end);
+                
+                line.classList.remove('active', 'past');
+                
+                if (currentTime >= start && currentTime < end) {
+                    line.classList.add('active');
+                    activeIndex = index;
+                } else if (currentTime >= end) {
+                    line.classList.add('past');
+                }
+            });
+            
+            if (activeIndex >= 0) {
+                const activeLine = lines[activeIndex];
+                const containerRect = lyricsContainer.getBoundingClientRect();
+                const lineRect = activeLine.getBoundingClientRect();
+                
+                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
+                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
         });
-        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+        
+        lines.forEach(line => {
+            line.addEventListener('click', () => {
+                audio.currentTime = parseFloat(line.dataset.start);
+                audio.play();
+            });
+        });
     </script>
 </body>
 </html>

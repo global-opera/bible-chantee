@@ -5,55 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genese 50 | Bible Chantee Karaoke</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
-        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
-        .header h1{font-size:1.8em;color:#d4af37}
-        .player{max-width:800px;margin:20px auto;padding:0 20px}
-        audio{width:100%}
-        .lyrics{max-width:800px;margin:20px auto;padding:20px}
-        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
-        .line:hover{background:rgba(212,175,55,0.1)}
-        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
-        .line.passed{opacity:0.5}
-        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
-        .footer{text-align:center;padding:20px;color:#666}
-        .footer a{color:#d4af37}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
+        .header p { color: #888; }
+        .audio-player { 
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        audio { width: 100%; }
+        .lyrics { 
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        .line { 
+            padding: 12px 15px;
+            margin: 5px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .line .time { 
+            color: #666; 
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+        .line.active { 
+            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
+            color: #fff;
+            border-left: 4px solid #d4af37;
+            transform: scale(1.02);
+        }
+        .line.active .time { color: #d4af37; }
+        .line.past { opacity: 0.5; }
     </style>
 </head>
 <body>
-    <div class="header"><h1>Genese 50</h1><p>Bible Chantee Karaoke</p></div>
-    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_50_FR.mp3" type="audio/mpeg"></audio></div>
-    <div class="lyrics">
-        <div class="line" data-start="12.00" data-end="26.00"><span class="time">[0:12]</span>Sur le visage de mon père, je pleure Joseph au cœur lourd, l'amour demeure</div>
-        <div class="line" data-start="26.00" data-end="46.00"><span class="time">[0:26]</span>Embaumé dans la douleur, un adieu Soixante-dix jours de larmes, un hommage en feu</div>
-        <div class="line" data-start="46.00" data-end="53.00"><span class="time">[0:46]</span>Ô Dieu de nos pères, entend notre chant Dans le deuil et l'espoir, nous marchons confiants</div>
-        <div class="line" data-start="53.00" data-end="70.00"><span class="time">[0:53]</span>Promesse de Canaan, notre cœur t'appartient Nous verrons ta gloire dans l'éternel chemin</div>
-        <div class="line" data-start="70.00" data-end="83.00"><span class="time">[1:10]</span>Mon père m'a juré, je monte en prière Pour honorer ses rêves, sa foi sincère</div>
-        <div class="line" data-start="83.00" data-end="101.00"><span class="time">[1:23]</span>Dans le champ de Makpéla, il repose en paix Nous portons son héritage, nous avançons jamais en retard</div>
-        <div class="line" data-start="101.00" data-end="110.00"><span class="time">[1:41]</span>Ô Dieu de nos pères, entend notre chant Dans le deuil et l'espoir, nous marchons confiants</div>
-        <div class="line" data-start="110.00" data-end="130.00"><span class="time">[1:50]</span>Promesse de Canaan, notre cœur t'appartient Nous verrons ta gloire</div>
-        <div class="line" data-start="130.00" data-end="141.00"><span class="time">[2:10]</span>Pardonne-nous, ô Seigneur, comme Joseph a fait Transforme nos faiblesses en force, en vérité</div>
-        <div class="line" data-start="141.00" data-end="156.00"><span class="time">[2:21]</span>Dans l'amour et la grâce, nous trouvons notre voie Avec toi, nous avançons, main dans la main, en foi</div>
-        <div class="line" data-start="156.00" data-end="164.00"><span class="time">[2:36]</span>Ô Dieu de nos pères, entend notre chant Dans le deuil et l'espoir, nous marchons confiants</div>
-        <div class="line" data-start="164.00" data-end="178.00"><span class="time">[2:44]</span>Promesse de Canaan, notre cœur t'appartient Nous verrons ta gloire</div>
-        <div class="line" data-start="178.00" data-end="186.00"><span class="time">[2:58]</span>Joseph a cru, il a vu la lumière Dieu nous visitera et nous guidera sur cette terre</div>
-        <div class="line" data-start="186.00" data-end="198.00"><span class="time">[3:06]</span>Dans chaque larme, une promesse, une histoire Nous marchons vers Canaan</div>
-        <div class="line" data-start="198.00" data-end="212.00"><span class="time">[3:18]</span>Avec foi dans l'espoir</div>
+    <div class="container">
+        <div class="header">
+            <h1>Genese 50</h1>
+            <p>Bible Chantee Karaoke</p>
+        </div>
+        <div class="audio-player">
+            <audio id="audio" controls>
+                <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_50_FR.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="lyrics" id="lyrics">
+        <div class="line" data-start="12.00" data-end="19.00"><span class="time">[0:12]</span>Sur le visage de mon père, je pleure</div>
+        <div class="line" data-start="19.00" data-end="25.00"><span class="time">[0:19]</span>Je osais faut que lourd l'amour demeure</div>
+        <div class="line" data-start="26.00" data-end="31.00"><span class="time">[0:26]</span>Enbommé dans la douleur, un adieu</div>
+        <div class="line" data-start="31.00" data-end="40.00"><span class="time">[0:31]</span>Soit un 10 jours de l'âme, un homme agenfeu</div>
+        <div class="line" data-start="40.00" data-end="46.00"><span class="time">[0:40]</span>Au dieu de nos paix, en tant notre champ</div>
+        <div class="line" data-start="46.00" data-end="50.00"><span class="time">[0:46]</span>Dans le deuil et l'espoir</div>
+        <div class="line" data-start="50.00" data-end="53.00"><span class="time">[0:50]</span>Nous marchons en confiant</div>
+        <div class="line" data-start="53.00" data-end="59.00"><span class="time">[0:53]</span>On met ce de canada notre cœur ta partie</div>
+        <div class="line" data-start="59.00" data-end="65.00"><span class="time">[0:59]</span>Nous verrons ta gloire</div>
+        <div class="line" data-start="65.00" data-end="70.00"><span class="time">[1:05]</span>Dans les ternes chemin</div>
+        <div class="line" data-start="70.00" data-end="77.00"><span class="time">[1:10]</span>Mon père m'ajurait, je m'ont empruyé</div>
+        <div class="line" data-start="77.00" data-end="83.00"><span class="time">[1:17]</span>Pour honorer ces rêves sa foi sincère</div>
+        <div class="line" data-start="83.00" data-end="89.00"><span class="time">[1:23]</span>Dans le champ de ma paix, il repose en paix</div>
+        <div class="line" data-start="89.00" data-end="94.00"><span class="time">[1:29]</span>Nous portons son héritage, nous avançons</div>
+        <div class="line" data-start="94.00" data-end="101.00"><span class="time">[1:34]</span>Jamais en retard, au dieu de nos paix</div>
+        <div class="line" data-start="101.00" data-end="107.00"><span class="time">[1:41]</span>En tant notre champ dans le deuil et l'espoir</div>
+        <div class="line" data-start="107.00" data-end="110.00"><span class="time">[1:47]</span>Nous marchons en confiant</div>
+        <div class="line" data-start="110.00" data-end="117.00"><span class="time">[1:50]</span>On met ce de canada notre cœur ta partie</div>
+        <div class="line" data-start="117.00" data-end="124.00"><span class="time">[1:57]</span>Nous verrons ta gloire</div>
+        <div class="line" data-start="124.00" data-end="130.00"><span class="time">[2:04]</span>Dans le paix, dans le deuil et l'espoir</div>
+        <div class="line" data-start="130.00" data-end="135.00"><span class="time">[2:10]</span>Nous marchons en confiant</div>
+        <div class="line" data-start="135.00" data-end="141.00"><span class="time">[2:15]</span>On met ce de canada notre cœur ta partie</div>
+        <div class="line" data-start="141.00" data-end="147.00"><span class="time">[2:21]</span>Dans le champ de ma paix, il repose en paix</div>
+        <div class="line" data-start="147.00" data-end="153.00"><span class="time">[2:27]</span>Dans le ma paix, il repose en paix</div>
+        <div class="line" data-start="153.00" data-end="156.00"><span class="time">[2:33]</span>Dans le deuil et l'espoir</div>
+        <div class="line" data-start="156.00" data-end="159.00"><span class="time">[2:36]</span>Nous marchons en confiant</div>
+        <div class="line" data-start="159.00" data-end="164.00"><span class="time">[2:39]</span>On met ce de canada notre cœur ta partie</div>
+        <div class="line" data-start="164.00" data-end="169.00"><span class="time">[2:44]</span>Nous verrons ta gloire</div>
+        <div class="line" data-start="169.00" data-end="175.00"><span class="time">[2:49]</span>Dans le paix, il repose en paix</div>
+        <div class="line" data-start="175.00" data-end="178.00"><span class="time">[2:55]</span>Dans le deuil et l'espoir</div>
+        <div class="line" data-start="178.00" data-end="181.00"><span class="time">[2:58]</span>Nous marchons en confiant</div>
+        <div class="line" data-start="181.00" data-end="186.00"><span class="time">[3:01]</span>On met ce de canada notre cœur</div>
+        <div class="line" data-start="186.00" data-end="190.00"><span class="time">[3:06]</span>Dans le paix, dans le deuil et l'espoir</div>
+        <div class="line" data-start="190.00" data-end="194.00"><span class="time">[3:10]</span>Nous marchons en confiant</div>
+        <div class="line" data-start="194.00" data-end="198.00"><span class="time">[3:14]</span>On met ce de canada notre cœur</div>
+        <div class="line" data-start="198.00" data-end="201.00"><span class="time">[3:18]</span>On met ce de canada</div>
+        <div class="line" data-start="207.00" data-end="212.00"><span class="time">[3:27]</span>Avec foi dans l'espoir</div>
+        </div>
     </div>
-    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
     <script>
-        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
-        audio.addEventListener('timeupdate',()=>{
-            const t=audio.currentTime;
-            lines.forEach(l=>{
-                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
-                l.classList.remove('active','passed');
-                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
-                else if(t>=e)l.classList.add('passed')
-            })
+        const audio = document.getElementById('audio');
+        const lines = document.querySelectorAll('.line');
+        const lyricsContainer = document.getElementById('lyrics');
+        
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            let activeIndex = -1;
+            
+            lines.forEach((line, index) => {
+                const start = parseFloat(line.dataset.start);
+                const end = parseFloat(line.dataset.end);
+                
+                line.classList.remove('active', 'past');
+                
+                if (currentTime >= start && currentTime < end) {
+                    line.classList.add('active');
+                    activeIndex = index;
+                } else if (currentTime >= end) {
+                    line.classList.add('past');
+                }
+            });
+            
+            if (activeIndex >= 0) {
+                const activeLine = lines[activeIndex];
+                const containerRect = lyricsContainer.getBoundingClientRect();
+                const lineRect = activeLine.getBoundingClientRect();
+                
+                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
+                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
         });
-        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+        
+        lines.forEach(line => {
+            line.addEventListener('click', () => {
+                audio.currentTime = parseFloat(line.dataset.start);
+                audio.play();
+            });
+        });
     </script>
 </body>
 </html>

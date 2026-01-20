@@ -1,148 +1,288 @@
 1
-00:00:14,000 --> 00:00:20,000
-Dans l'ombre des doutes, j'entends ton appel
+00:00:14,000 --> 00:00:17,000
+Dans l'ombre des doutes
 
 2
-00:00:20,000 --> 00:00:28,000
-Éternel tu me guides, ta voix est mon ciel
+00:00:17,000 --> 00:00:20,000
+j'entends ton appel
 
 3
-00:00:28,000 --> 00:00:34,000
-Jacob le voyageur, au cœur en détresse
+00:00:20,000 --> 00:00:24,000
+et ternelle tu me guides
 
 4
-00:00:34,000 --> 00:00:43,000
-Regarde vers l'avenir, je suis ta promesse
+00:00:24,000 --> 00:00:27,000
+ta voix est mon ciel
 
 5
-00:00:43,000 --> 00:00:50,000
-Ô Dieu de mes frères, tu es ma lumière
+00:00:28,000 --> 00:00:31,000
+J'accompe le voyageur
 
 6
-00:00:50,000 --> 00:00:56,000
-Dans les nuits de l'angoisse, je trouve ta prière
+00:00:31,000 --> 00:00:34,000
+au coeur en détresse
 
 7
-00:00:56,000 --> 00:01:03,000
-Éloigne les ténèbres, tu es mon abri
+00:00:34,000 --> 00:00:38,000
+regard vers l'avenir
 
 8
-00:01:03,000 --> 00:01:12,000
-Je retourne à Bethel, là où tout a commencé
+00:00:38,000 --> 00:00:42,000
+je suis ta promesse
 
 9
-00:01:12,000 --> 00:01:19,000
-Les fils de Laban murmuraient dans l'air
+00:00:43,000 --> 00:00:47,000
+Au lieu de mes trèves
 
 10
-00:01:19,000 --> 00:01:23,000
-Mais ta main me protège, je sais que tu es prêt
+00:00:47,000 --> 00:00:50,000
+tu es malhumiaire
 
 11
-00:01:23,000 --> 00:01:30,000
-Ton ange dans les rêves, me dit de me lever
+00:00:50,000 --> 00:00:53,000
+dans les nuits de l'emploi
 
 12
-00:01:30,000 --> 00:01:37,000
-Vers le pays de ma naissance, je vais avancer
+00:00:53,000 --> 00:00:56,000
+je trouve ta prière
 
 13
-00:01:37,000 --> 00:01:47,000
-Ô Dieu de mes pères, tu es ma lumière
+00:00:56,000 --> 00:01:00,000
+et loigne l'éténaire
 
 14
-00:01:47,000 --> 00:01:53,000
-Dans les nuits de l'angoisse, je trouve ta prière
+00:01:00,000 --> 00:01:03,000
+tu es mon abeïn
 
 15
-00:01:53,000 --> 00:02:00,000
-Éloigne les ténèbres, tu es mon abri
+00:01:03,000 --> 00:01:06,000
+je retourne à béter
 
 16
-00:02:00,000 --> 00:02:07,000
-Je retourne à Bethel, là où tout a commencé
+00:01:06,000 --> 00:01:10,000
+là où tout a commencé
 
 17
-00:02:07,000 --> 00:02:14,000
-De l'obscurité, tu fais jaillir la clarté
+00:01:12,000 --> 00:01:15,000
+les fils de l'abond
 
 18
-00:02:14,000 --> 00:02:21,000
-Les promesses de demain, je suis prêt à les porter
+00:01:15,000 --> 00:01:19,000
+m'urmurait dans l'air
 
 19
-00:02:21,000 --> 00:02:28,000
-Dans l'union de nos cœurs, ta grâce nous unit
+00:01:19,000 --> 00:01:23,000
+met ta mère à protéger
 
 20
-00:02:28,000 --> 00:02:35,000
-Je marche sur le chemin où l'amour m'a conduit
+00:01:23,000 --> 00:01:26,000
+je sais que tu es prêt
 
 21
-00:02:35,000 --> 00:02:43,000
-Ô Dieu de mes pères, tu es ma lumière
+00:01:26,000 --> 00:01:30,000
+maintenant je dans les rêves
 
 22
-00:02:43,000 --> 00:02:50,000
-Dans les nuits de l'angoisse, je trouve ta prière
+00:01:30,000 --> 00:01:33,000
+me dis de me lever
 
 23
-00:02:50,000 --> 00:02:57,000
-Éloigne les ténèbres, tu es mon abri
+00:01:33,000 --> 00:01:37,000
+vers le pays de ma naissance
 
 24
-00:02:57,000 --> 00:03:03,000
-Je retourne à Bethel, là où tout a commencé
+00:01:37,000 --> 00:01:42,000
+je vais avancer
 
 25
-00:03:03,000 --> 00:03:12,000
-Les pierres nous rappellent des alliances scellées
+00:01:42,000 --> 00:01:47,000
+au lieu de mes pères
 
 26
-00:03:12,000 --> 00:03:16,000
-Chaque pas que je fais, avec foi je suis guidé
+00:01:47,000 --> 00:01:50,000
+tu es malhumiaire
 
 27
-00:03:16,000 --> 00:03:20,000
-Laban peut poursuivre, mais je ne crains rien
+00:01:50,000 --> 00:01:53,000
+dans les nuits de l'emploi
 
 28
-00:03:20,000 --> 00:03:22,000
-Car je suis en ta présence éternelle, mon soutien
+00:01:53,000 --> 00:01:57,000
+je trouve ta prière
 
 29
-00:03:22,000 --> 00:03:28,000
-Ô Dieu de mes pères, tu es ma lumière
+00:01:57,000 --> 00:02:00,000
+et loigne l'éténaire
 
 30
-00:03:28,000 --> 00:03:35,000
-Dans les nuits de l'angoisse, je trouve ta prière
+00:02:00,000 --> 00:02:04,000
+tu es mon abeïn
 
 31
-00:03:35,000 --> 00:03:41,000
-Éloigne les ténèbres, tu es mon abri
+00:02:04,000 --> 00:02:07,000
+je retourne à béter
 
 32
-00:03:41,000 --> 00:03:47,000
-Je retourne à Bethel, là où tout a commencé
+00:02:07,000 --> 00:02:11,000
+là où tout a commencé
 
 33
-00:03:47,000 --> 00:03:55,000
-Je retourne à Bethel, tu es mon roi
+00:02:11,000 --> 00:02:14,000
+de l'obscurité
 
 34
-00:03:55,000 --> 00:04:01,000
-Dans chaque battement, je me confie à toi
+00:02:14,000 --> 00:02:17,000
+tu fais j'ai eu la clavité
 
 35
-00:04:01,000 --> 00:04:08,000
-Ô Dieu de ma foi, je ne crains plus l'ennemi
+00:02:17,000 --> 00:02:21,000
+les promesses de demain
 
 36
-00:04:08,000 --> 00:04:16,000
-Je marche dans ta grâce pour l'éternité
+00:02:21,000 --> 00:02:24,000
+je suis prêt à l'éportée
 
 37
-00:04:16,000 --> 00:04:37,000
-Amen
+00:02:24,000 --> 00:02:28,000
+dans l'Union de Norka
+
+38
+00:02:28,000 --> 00:02:31,000
+ta grâce nous unies
+
+39
+00:02:31,000 --> 00:02:35,000
+je marche sur le chemin
+
+40
+00:02:35,000 --> 00:02:39,000
+où la moume a conduit
+
+41
+00:02:39,000 --> 00:02:43,000
+Oh Dieu de mes pères
+
+42
+00:02:43,000 --> 00:02:46,000
+tu es malhumiaire
+
+43
+00:02:46,000 --> 00:02:50,000
+dans les nuits de l'engouace
+
+44
+00:02:50,000 --> 00:02:53,000
+je trouve ta prière
+
+45
+00:02:53,000 --> 00:02:57,000
+et loigne l'éténaire
+
+46
+00:02:57,000 --> 00:03:00,000
+tu es mon abeïn
+
+47
+00:03:00,000 --> 00:03:03,000
+je retourne à béter
+
+48
+00:03:03,000 --> 00:03:09,000
+là où tout a commencé
+
+49
+00:03:09,000 --> 00:03:12,000
+les pères nous rappellent des alliances célé
+
+50
+00:03:12,000 --> 00:03:14,000
+chaque bac que je fais
+
+51
+00:03:14,000 --> 00:03:16,000
+avec foi je suis guidé
+
+52
+00:03:16,000 --> 00:03:18,000
+l'abande peut poursuivre
+
+53
+00:03:18,000 --> 00:03:20,000
+mes jeunes crèrent
+
+54
+00:03:20,000 --> 00:03:22,000
+car je suis en ta présence
+
+55
+00:03:22,000 --> 00:03:25,000
+et ternelment soutien
+
+56
+00:03:25,000 --> 00:03:28,000
+Oh Dieu de mes pères
+
+57
+00:03:28,000 --> 00:03:31,000
+tu es malhumiaire
+
+58
+00:03:31,000 --> 00:03:35,000
+dans les nuits de l'engouace
+
+59
+00:03:35,000 --> 00:03:38,000
+je trouve ta prière
+
+60
+00:03:38,000 --> 00:03:41,000
+et loigne l'éténaire
+
+61
+00:03:41,000 --> 00:03:44,000
+tu es mon abeïn
+
+62
+00:03:44,000 --> 00:03:47,000
+je retourne à béter
+
+63
+00:03:47,000 --> 00:03:52,000
+là où tout a commencé
+
+64
+00:03:52,000 --> 00:03:55,000
+je retourne à béter
+
+65
+00:03:55,000 --> 00:03:58,000
+tu es mon bois
+
+66
+00:03:58,000 --> 00:04:01,000
+dans chaque battement
+
+67
+00:04:01,000 --> 00:04:06,000
+je me confie à toi
+
+68
+00:04:06,000 --> 00:04:08,000
+Oh Dieu de ma foi
+
+69
+00:04:08,000 --> 00:04:12,000
+je le crampule et de mes
+
+70
+00:04:12,000 --> 00:04:16,000
+je marche dans ta grâce
+
+71
+00:04:16,000 --> 00:04:20,000
+pour l'hérité
+
+72
+00:04:20,000 --> 00:04:37,000
+Amen Amen Amen Amen Amen Amen Amen
 

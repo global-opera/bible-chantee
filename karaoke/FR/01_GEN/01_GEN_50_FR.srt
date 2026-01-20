@@ -1,60 +1,148 @@
 1
-00:00:12,000 --> 00:00:26,000
-Sur le visage de mon père, je pleure Joseph au cœur lourd, l'amour demeure
+00:00:12,000 --> 00:00:19,000
+Sur le visage de mon père, je pleure
 
 2
-00:00:26,000 --> 00:00:46,000
-Embaumé dans la douleur, un adieu Soixante-dix jours de larmes, un hommage en feu
+00:00:19,000 --> 00:00:25,000
+Je osais faut que lourd l'amour demeure
 
 3
-00:00:46,000 --> 00:00:53,000
-Ô Dieu de nos pères, entend notre chant Dans le deuil et l'espoir, nous marchons confiants
+00:00:26,000 --> 00:00:31,000
+Enbommé dans la douleur, un adieu
 
 4
-00:00:53,000 --> 00:01:10,000
-Promesse de Canaan, notre cœur t'appartient Nous verrons ta gloire dans l'éternel chemin
+00:00:31,000 --> 00:00:40,000
+Soit un 10 jours de l'âme, un homme agenfeu
 
 5
-00:01:10,000 --> 00:01:23,000
-Mon père m'a juré, je monte en prière Pour honorer ses rêves, sa foi sincère
+00:00:40,000 --> 00:00:46,000
+Au dieu de nos paix, en tant notre champ
 
 6
-00:01:23,000 --> 00:01:41,000
-Dans le champ de Makpéla, il repose en paix Nous portons son héritage, nous avançons jamais en retard
+00:00:46,000 --> 00:00:50,000
+Dans le deuil et l'espoir
 
 7
-00:01:41,000 --> 00:01:50,000
-Ô Dieu de nos pères, entend notre chant Dans le deuil et l'espoir, nous marchons confiants
+00:00:50,000 --> 00:00:53,000
+Nous marchons en confiant
 
 8
-00:01:50,000 --> 00:02:10,000
-Promesse de Canaan, notre cœur t'appartient Nous verrons ta gloire
+00:00:53,000 --> 00:00:59,000
+On met ce de canada notre cœur ta partie
 
 9
-00:02:10,000 --> 00:02:21,000
-Pardonne-nous, ô Seigneur, comme Joseph a fait Transforme nos faiblesses en force, en vérité
+00:00:59,000 --> 00:01:05,000
+Nous verrons ta gloire
 
 10
-00:02:21,000 --> 00:02:36,000
-Dans l'amour et la grâce, nous trouvons notre voie Avec toi, nous avançons, main dans la main, en foi
+00:01:05,000 --> 00:01:10,000
+Dans les ternes chemin
 
 11
-00:02:36,000 --> 00:02:44,000
-Ô Dieu de nos pères, entend notre chant Dans le deuil et l'espoir, nous marchons confiants
+00:01:10,000 --> 00:01:17,000
+Mon père m'ajurait, je m'ont empruyé
 
 12
-00:02:44,000 --> 00:02:58,000
-Promesse de Canaan, notre cœur t'appartient Nous verrons ta gloire
+00:01:17,000 --> 00:01:23,000
+Pour honorer ces rêves sa foi sincère
 
 13
-00:02:58,000 --> 00:03:06,000
-Joseph a cru, il a vu la lumière Dieu nous visitera et nous guidera sur cette terre
+00:01:23,000 --> 00:01:29,000
+Dans le champ de ma paix, il repose en paix
 
 14
-00:03:06,000 --> 00:03:18,000
-Dans chaque larme, une promesse, une histoire Nous marchons vers Canaan
+00:01:29,000 --> 00:01:34,000
+Nous portons son héritage, nous avançons
 
 15
-00:03:18,000 --> 00:03:32,000
+00:01:34,000 --> 00:01:41,000
+Jamais en retard, au dieu de nos paix
+
+16
+00:01:41,000 --> 00:01:47,000
+En tant notre champ dans le deuil et l'espoir
+
+17
+00:01:47,000 --> 00:01:50,000
+Nous marchons en confiant
+
+18
+00:01:50,000 --> 00:01:57,000
+On met ce de canada notre cœur ta partie
+
+19
+00:01:57,000 --> 00:02:04,000
+Nous verrons ta gloire
+
+20
+00:02:04,000 --> 00:02:10,000
+Dans le paix, dans le deuil et l'espoir
+
+21
+00:02:10,000 --> 00:02:15,000
+Nous marchons en confiant
+
+22
+00:02:15,000 --> 00:02:21,000
+On met ce de canada notre cœur ta partie
+
+23
+00:02:21,000 --> 00:02:27,000
+Dans le champ de ma paix, il repose en paix
+
+24
+00:02:27,000 --> 00:02:33,000
+Dans le ma paix, il repose en paix
+
+25
+00:02:33,000 --> 00:02:36,000
+Dans le deuil et l'espoir
+
+26
+00:02:36,000 --> 00:02:39,000
+Nous marchons en confiant
+
+27
+00:02:39,000 --> 00:02:44,000
+On met ce de canada notre cœur ta partie
+
+28
+00:02:44,000 --> 00:02:49,000
+Nous verrons ta gloire
+
+29
+00:02:49,000 --> 00:02:55,000
+Dans le paix, il repose en paix
+
+30
+00:02:55,000 --> 00:02:58,000
+Dans le deuil et l'espoir
+
+31
+00:02:58,000 --> 00:03:01,000
+Nous marchons en confiant
+
+32
+00:03:01,000 --> 00:03:06,000
+On met ce de canada notre cœur
+
+33
+00:03:06,000 --> 00:03:10,000
+Dans le paix, dans le deuil et l'espoir
+
+34
+00:03:10,000 --> 00:03:14,000
+Nous marchons en confiant
+
+35
+00:03:14,000 --> 00:03:18,000
+On met ce de canada notre cœur
+
+36
+00:03:18,000 --> 00:03:21,000
+On met ce de canada
+
+37
+00:03:27,000 --> 00:03:32,000
 Avec foi dans l'espoir
 

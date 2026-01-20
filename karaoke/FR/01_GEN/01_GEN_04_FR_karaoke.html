@@ -5,60 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genese 4 | Bible Chantee Karaoke</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
-        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
-        .header h1{font-size:1.8em;color:#d4af37}
-        .player{max-width:800px;margin:20px auto;padding:0 20px}
-        audio{width:100%}
-        .lyrics{max-width:800px;margin:20px auto;padding:20px}
-        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
-        .line:hover{background:rgba(212,175,55,0.1)}
-        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
-        .line.passed{opacity:0.5}
-        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
-        .footer{text-align:center;padding:20px;color:#666}
-        .footer a{color:#d4af37}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
+        .header p { color: #888; }
+        .audio-player { 
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        audio { width: 100%; }
+        .lyrics { 
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        .line { 
+            padding: 12px 15px;
+            margin: 5px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .line .time { 
+            color: #666; 
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+        .line.active { 
+            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
+            color: #fff;
+            border-left: 4px solid #d4af37;
+            transform: scale(1.02);
+        }
+        .line.active .time { color: #d4af37; }
+        .line.past { opacity: 0.5; }
     </style>
 </head>
 <body>
-    <div class="header"><h1>Genese 4</h1><p>Bible Chantee Karaoke</p></div>
-    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_04_FR.mp3" type="audio/mpeg"></audio></div>
-    <div class="lyrics">
-        <div class="line" data-start="11.70" data-end="23.06"><span class="time">[0:11]</span>Dans le jardin, au souffle divin, Adam et Ève, un amour sans fin</div>
-        <div class="line" data-start="23.06" data-end="30.38"><span class="time">[0:23]</span>Avec l'aide de l'Éternel, un fils aîné au cœur éternel</div>
-        <div class="line" data-start="30.38" data-end="47.88"><span class="time">[0:30]</span>Caïn, le laboureur de la terre, Abel, le berger, écho de lumière</div>
-        <div class="line" data-start="47.88" data-end="57.66"><span class="time">[0:47]</span>Des offrandes portées avec foi, l'Éternel regarda et il fit le choix</div>
-        <div class="line" data-start="57.66" data-end="61.96"><span class="time">[0:57]</span>Oh, dans la lumière de l'Éternel, Nos cœurs s'élèvent, nos âmes se révèlent</div>
-        <div class="line" data-start="61.96" data-end="77.80"><span class="time">[1:01]</span>Guide nos pas, Seigneur de bonté, Dans chaque lutte, en chaque vérité</div>
-        <div class="line" data-start="77.80" data-end="85.56"><span class="time">[1:17]</span>Mais Caïn, en colère, son cœur s'est éteint</div>
-        <div class="line" data-start="85.56" data-end="91.34"><span class="time">[1:25]</span>La voix du sang crie, un destin incertain</div>
-        <div class="line" data-start="91.34" data-end="98.50"><span class="time">[1:31]</span>Pourquoi es-tu troublé, oh Caïn, écoute, Le péché rôde dans l'ombre, il se glisse</div>
-        <div class="line" data-start="98.50" data-end="106.76"><span class="time">[1:38]</span>Tu dois dominer, ne laisse pas la nuit, La lumière d'en haut pour toujours nourrir</div>
-        <div class="line" data-start="106.76" data-end="113.84"><span class="time">[1:46]</span>Oh, dans la lumière de l'Éternel, Nos cœurs s'élèvent, nos âmes se révèlent</div>
-        <div class="line" data-start="113.84" data-end="121.60"><span class="time">[1:53]</span>Guide nos pas, Seigneur de bonté, Dans chaque lutte, en chaque vérité</div>
-        <div class="line" data-start="121.60" data-end="125.68"><span class="time">[2:01]</span>Et malgré la douleur, malgré la tristesse, ton amour ô Dieu nous donne la richesse</div>
-        <div class="line" data-start="125.68" data-end="139.04"><span class="time">[2:05]</span>Un signe sur Caïn, ta grâce infinie, Dans la terre de mort, ta voix nous unit</div>
-        <div class="line" data-start="139.04" data-end="149.74"><span class="time">[2:19]</span>Adam et Ève, un nouveau fils naît, Par lui l'espoir renaît, notre cœur s'apaise</div>
-        <div class="line" data-start="149.74" data-end="153.92"><span class="time">[2:29]</span>Oh, dans la lumière de l'Éternel, Nos cœurs s'élèvent, nos âmes se révèlent</div>
-        <div class="line" data-start="153.92" data-end="165.12"><span class="time">[2:33]</span>Guide nos pas, Seigneur de bonté, Dans chaque lutte, en chaque vérité</div>
-        <div class="line" data-start="165.12" data-end="176.10"><span class="time">[2:45]</span>Invoquons ton nom, ô Éternel, Dans notre histoire</div>
-        <div class="line" data-start="176.10" data-end="183.86"><span class="time">[2:56]</span>Un coeur, chacun au ciel, Avec confiance, nous marchons vers toi</div>
-        <div class="line" data-start="183.86" data-end="188.70"><span class="time">[3:03]</span>Dans la lumière de l'Éternel, Nous vivons en joie</div>
+    <div class="container">
+        <div class="header">
+            <h1>Genese 4</h1>
+            <p>Bible Chantee Karaoke</p>
+        </div>
+        <div class="audio-player">
+            <audio id="audio" controls>
+                <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_04_FR.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="lyrics" id="lyrics">
+        <div class="line" data-start="11.70" data-end="23.06"><span class="time">[0:11]</span>Dans le jardin, au souffle divin, Adam et Eve, un amour</div>
+        <div class="line" data-start="23.06" data-end="30.38"><span class="time">[0:23]</span>sans fin, Avec l'aide de l' Eternel, un fils est né au</div>
+        <div class="line" data-start="30.38" data-end="40.56"><span class="time">[0:30]</span>coeur éternel, Cayen, le laboureur de la terre, Abel, le</div>
+        <div class="line" data-start="40.56" data-end="47.78"><span class="time">[0:40]</span>berger écho de lumière, Des offrandes portées avec foi,</div>
+        <div class="line" data-start="47.88" data-end="57.66"><span class="time">[0:47]</span>L' Eternel regarda et il fit le choix. Oh, dans la lumière</div>
+        <div class="line" data-start="57.66" data-end="61.86"><span class="time">[0:57]</span>de l' Eternel, Nos coeurs célèbrent, nos âmes se révèlent,</div>
+        <div class="line" data-start="61.96" data-end="67.10"><span class="time">[1:01]</span>Qui donnent pas, Seigneur, de compter, Dans chaque lutte,</div>
+        <div class="line" data-start="67.10" data-end="75.74"><span class="time">[1:07]</span>dans chaque vérité. Mais Cayen, en colère, son coeur s'éteint,</div>
+        <div class="line" data-start="77.80" data-end="85.42"><span class="time">[1:17]</span>La voix du sang crie, un destin incertain. Pourquoi es-tu</div>
+        <div class="line" data-start="85.56" data-end="91.26"><span class="time">[1:25]</span>troublé, Oh Cayen, écoute, Le péché rôde dans l'ombre,</div>
+        <div class="line" data-start="91.34" data-end="98.50"><span class="time">[1:31]</span>il se glisse, Tu dois dominer, ne laisse pas la nuit. La</div>
+        <div class="line" data-start="98.50" data-end="106.76"><span class="time">[1:38]</span>lumière d'en haut, pour toujours nous huit. Oh, dans la</div>
+        <div class="line" data-start="106.76" data-end="110.96"><span class="time">[1:46]</span>lumière de l' Eternel, Nos coeurs célèbres, nos âmes se</div>
+        <div class="line" data-start="110.96" data-end="113.84"><span class="time">[1:50]</span>révèlent, Qui donnent pas, Seigneur, de compter, Dans chaque</div>
+        <div class="line" data-start="113.84" data-end="121.60"><span class="time">[1:53]</span>lutte, dans chaque vérité. Et malgré la douleur, malgré</div>
+        <div class="line" data-start="121.60" data-end="125.56"><span class="time">[2:01]</span>la tristesse, Son amour en Dieu nous donne la richesse,</div>
+        <div class="line" data-start="125.68" data-end="130.02"><span class="time">[2:05]</span>Un signe sur Cayen, sa grâce en finit, Dans la terre de</div>
+        <div class="line" data-start="130.12" data-end="138.22"><span class="time">[2:10]</span>North, ta voix nous unit, Adan et Ève, un nouveau fils,</div>
+        <div class="line" data-start="139.04" data-end="149.74"><span class="time">[2:19]</span>Par lui l'espoir en est, notre coeur s'apèse. Oh, dans</div>
+        <div class="line" data-start="149.74" data-end="153.92"><span class="time">[2:29]</span>la lumière de l' Eternel, Nos coeurs célèbres, nos âmes</div>
+        <div class="line" data-start="153.92" data-end="165.02"><span class="time">[2:33]</span>se révèlent, Qui donnent pas, Seigneur, de compter, Dans</div>
+        <div class="line" data-start="165.12" data-end="176.00"><span class="time">[2:45]</span>chaque lutte, dans chaque vérité. Un mot, compte ton nom,</div>
+        <div class="line" data-start="176.10" data-end="176.34"><span class="time">[2:56]</span>Pour Eternel, dans notre histoire. Un mot, compte ton nom,</div>
+        <div class="line" data-start="176.44" data-end="183.86"><span class="time">[2:56]</span>pour Eternel, Avec confiance nous marchons vers toi. Dans</div>
+        <div class="line" data-start="183.86" data-end="188.70"><span class="time">[3:03]</span>la lumière d' Eternel, Nous vivons en émoire.</div>
+        </div>
     </div>
-    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
     <script>
-        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
-        audio.addEventListener('timeupdate',()=>{
-            const t=audio.currentTime;
-            lines.forEach(l=>{
-                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
-                l.classList.remove('active','passed');
-                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
-                else if(t>=e)l.classList.add('passed')
-            })
+        const audio = document.getElementById('audio');
+        const lines = document.querySelectorAll('.line');
+        const lyricsContainer = document.getElementById('lyrics');
+        
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            let activeIndex = -1;
+            
+            lines.forEach((line, index) => {
+                const start = parseFloat(line.dataset.start);
+                const end = parseFloat(line.dataset.end);
+                
+                line.classList.remove('active', 'past');
+                
+                if (currentTime >= start && currentTime < end) {
+                    line.classList.add('active');
+                    activeIndex = index;
+                } else if (currentTime >= end) {
+                    line.classList.add('past');
+                }
+            });
+            
+            if (activeIndex >= 0) {
+                const activeLine = lines[activeIndex];
+                const containerRect = lyricsContainer.getBoundingClientRect();
+                const lineRect = activeLine.getBoundingClientRect();
+                
+                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
+                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
         });
-        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+        
+        lines.forEach(line => {
+            line.addEventListener('click', () => {
+                audio.currentTime = parseFloat(line.dataset.start);
+                audio.play();
+            });
+        });
     </script>
 </body>
 </html>

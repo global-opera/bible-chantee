@@ -1,128 +1,280 @@
 1
-00:00:13,000 --> 00:00:19,000
-Dans la terre de Cana, l'angoisse s'installe
+00:00:13,000 --> 00:00:16,000
+Dans la terre de Canaan
 
 2
-00:00:19,000 --> 00:00:25,000
-Jacob voit son peuple, la faim qui les ronge
+00:00:16,000 --> 00:00:19,000
+L'angoisse s'installe
 
 3
-00:00:25,000 --> 00:00:33,000
-Il dit à ses fils, ne restez pas là
+00:00:19,000 --> 00:00:22,000
+J'accorvois son peuple la fin
 
 4
-00:00:33,000 --> 00:00:42,000
-Il y a du blé en Égypte, allez, ne tardez pas
+00:00:22,000 --> 00:00:25,000
+Qui les ronge
 
 5
-00:00:42,000 --> 00:00:47,000
-Ô Seigneur, nous venons en quête de ta grâce
+00:00:25,000 --> 00:00:28,000
+Il dit à ses fils
 
 6
-00:00:47,000 --> 00:00:53,000
-Dans l'ombre et la douleur, ta lumière nous embrasse
+00:00:28,000 --> 00:00:30,000
+Ne restez pas là
 
 7
-00:00:53,000 --> 00:00:59,000
-Sentant nos cœurs criant, notre besoin d'amour
+00:00:30,000 --> 00:00:33,000
+Il y a du blé en égypte
 
 8
-00:00:59,000 --> 00:01:10,000
-Au milieu de la famille, nous cherchons ton secours
+00:00:33,000 --> 00:00:37,000
+Allez, ne tardez pas
 
 9
-00:01:10,000 --> 00:01:16,000
-Dix frères s'en vont et Joseph les attend
+00:00:39,000 --> 00:00:42,000
+Au Seigneur de Venom
 
 10
-00:01:16,000 --> 00:01:22,000
-Reconnaissant leurs visages, ils pleurent en secret
+00:00:42,000 --> 00:00:45,000
+Enquête de ta grâce
 
 11
-00:01:22,000 --> 00:01:27,000
-Vous êtes des espions, il leur dit en tremblant
+00:00:45,000 --> 00:00:47,000
+Dans l'ombre et la douleur
 
 12
-00:01:27,000 --> 00:01:29,000
-Mais dans son cœur, l'espoir comme un feu reste net
+00:00:47,000 --> 00:00:50,000
+Ta lumière nous embrasse
 
 13
-00:01:29,000 --> 00:01:35,000
-Ô Seigneur, nous venons en quête de ta grâce
+00:00:50,000 --> 00:00:53,000
+En tant nos coeurs clients
 
 14
-00:01:35,000 --> 00:01:44,000
-Dans l'ombre et la douleur, ta lumière nous embrasse
+00:00:53,000 --> 00:00:56,000
+Notre besoin d'amour
 
 15
-00:01:44,000 --> 00:01:50,000
-Sentant nos cœurs criant, notre besoin d'amour
+00:00:56,000 --> 00:00:59,000
+Au milieu de la famille
 
 16
-00:01:50,000 --> 00:01:55,000
-Au milieu de la famille, nous cherchons ton secours
+00:00:59,000 --> 00:01:02,000
+Nous cherchons
 
 17
-00:01:55,000 --> 00:02:04,000
-Tu es le Dieu des promesses, le refus des âmes
+00:01:02,000 --> 00:01:05,000
+Dans ce coup
 
 18
-00:02:04,000 --> 00:02:10,000
-Quand la peur nous assaille, tu es notre flamme
+00:01:08,000 --> 00:01:10,000
+Diffraire sans vaut
 
 19
-00:02:10,000 --> 00:02:19,000
-Comme Jacob, nous pleurons pour nos frères perdus
+00:01:10,000 --> 00:01:13,000
+Et Joseph les attend
 
 20
-00:02:19,000 --> 00:02:27,000
-Mais dans cette épreuve, ta main nous conduit
+00:01:13,000 --> 00:01:16,000
+Reconnaissant leurs visages
 
 21
-00:02:27,000 --> 00:02:33,000
-Leurs sacs se remplissent, l'argent leur est rendu
+00:01:16,000 --> 00:01:19,000
+Il pleurent secret
 
 22
-00:02:33,000 --> 00:02:39,000
-Inquiets, ils s'interrogent, que fait Dieu pour nous
+00:01:19,000 --> 00:01:22,000
+Vous êtes des espions
 
 23
-00:02:39,000 --> 00:02:45,000
-Mais dans le silence, une voix leur murmure
+00:01:22,000 --> 00:01:25,000
+Il leur dit tant de tremblant
 
 24
-00:02:45,000 --> 00:02:53,000
-Je suis avec vous, même dans l'aventure
+00:01:25,000 --> 00:01:27,000
+Mais dans son cœur
 
 25
-00:02:53,000 --> 00:03:02,000
-Ô Seigneur, nous venons en quête de ta grâce
+00:01:27,000 --> 00:01:28,000
+L'espoir
 
 26
-00:03:02,000 --> 00:03:08,000
-Dans l'ombre et la douleur, ta lumière nous embrasse
+00:01:28,000 --> 00:01:29,000
+Comme un feu
 
 27
-00:03:08,000 --> 00:03:13,000
-Sentant nos cœurs criant, notre besoin d'amour
+00:01:29,000 --> 00:01:32,000
+Prestené
 
 28
-00:03:13,000 --> 00:03:22,000
-Au milieu de la famille, nous cherchons ton secours
+00:01:32,000 --> 00:01:35,000
+Au Seigneur de Venom
 
 29
-00:03:22,000 --> 00:03:28,000
-Nous revenons au Dieu, avec foi à ton trône
+00:01:35,000 --> 00:01:38,000
+Enquête de ta grâce
 
 30
-00:03:28,000 --> 00:03:37,000
-Dans la détresse, ton amour nous couronne
+00:01:38,000 --> 00:01:41,000
+Dans l'ombre et la douleur
 
 31
-00:03:37,000 --> 00:03:42,000
-Danserons-nous un jour, à l'ombre de ta croix
+00:01:41,000 --> 00:01:44,000
+Ta lumière nous embrasse
 
 32
-00:03:42,000 --> 00:03:52,000
-Car en toi, nous vivons, notre espoir est en toi
+00:01:44,000 --> 00:01:47,000
+En tant nos coeurs clients
+
+33
+00:01:47,000 --> 00:01:50,000
+Notre besoin d'amour
+
+34
+00:01:50,000 --> 00:01:52,000
+Au milieu de la famille
+
+35
+00:01:52,000 --> 00:01:55,000
+Nous cherchons
+
+36
+00:01:55,000 --> 00:01:58,000
+Dans ce coup
+
+37
+00:02:01,000 --> 00:02:04,000
+Tu es le dieu des promesses
+
+38
+00:02:04,000 --> 00:02:07,000
+Le refus des âmes
+
+39
+00:02:07,000 --> 00:02:10,000
+Quand la peur nous assaille
+
+40
+00:02:10,000 --> 00:02:13,000
+Tu es notre flamme
+
+41
+00:02:13,000 --> 00:02:15,000
+Comme j'acombe nous pleurons
+
+42
+00:02:15,000 --> 00:02:19,000
+Pour nos frères perdus
+
+43
+00:02:19,000 --> 00:02:21,000
+Mais dans cet épreuve
+
+44
+00:02:21,000 --> 00:02:27,000
+T'as m'un ou conduit
+
+45
+00:02:27,000 --> 00:02:30,000
+Leur sac se remplisse
+
+46
+00:02:30,000 --> 00:02:33,000
+L'argent leur est rendu
+
+47
+00:02:33,000 --> 00:02:36,000
+Un qui est il s'interroge
+
+48
+00:02:36,000 --> 00:02:39,000
+Que fait Dieu pour nous
+
+49
+00:02:39,000 --> 00:02:42,000
+Mais dans le silence
+
+50
+00:02:42,000 --> 00:02:45,000
+Une voix leur muremure
+
+51
+00:02:45,000 --> 00:02:48,000
+Je suis avec vous
+
+52
+00:02:48,000 --> 00:02:53,000
+Même dans la vingt-uil
+
+53
+00:02:53,000 --> 00:02:56,000
+C'est la nous-benau
+
+54
+00:02:56,000 --> 00:02:59,000
+Enquête de ta grâce
+
+55
+00:02:59,000 --> 00:03:02,000
+Dans l'ombre et la douleur
+
+56
+00:03:02,000 --> 00:03:05,000
+Ta lumière nous embrasse
+
+57
+00:03:05,000 --> 00:03:08,000
+En tant nos coeurs clients
+
+58
+00:03:08,000 --> 00:03:11,000
+Notre besoin d'amour
+
+59
+00:03:11,000 --> 00:03:13,000
+Au milieu de la famille
+
+60
+00:03:13,000 --> 00:03:16,000
+Nous cherchons
+
+61
+00:03:16,000 --> 00:03:22,000
+Dans ce coup
+
+62
+00:03:22,000 --> 00:03:25,000
+Nous revenons au Dieu
+
+63
+00:03:25,000 --> 00:03:28,000
+Avec foi ton trône
+
+64
+00:03:28,000 --> 00:03:30,000
+Dans la détresse
+
+65
+00:03:30,000 --> 00:03:34,000
+Tant l'amour nous couronne
+
+66
+00:03:34,000 --> 00:03:37,000
+Dans ce renou un jour
+
+67
+00:03:37,000 --> 00:03:39,000
+À l'ombre de ta croix
+
+68
+00:03:39,000 --> 00:03:42,000
+Quarantois nous vivons
+
+69
+00:03:42,000 --> 00:03:45,000
+Notre espoir
+
+70
+00:03:45,000 --> 00:03:52,000
+Et ton trône
 

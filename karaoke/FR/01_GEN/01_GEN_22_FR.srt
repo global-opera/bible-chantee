@@ -1,96 +1,192 @@
 1
-00:00:00,000 --> 00:00:10,000
-Seigneur, Tu m'as appelée Comme Abraham, je réponds
+00:00:00,000 --> 00:00:07,000
+C'est l'heure du m'appeler
 
 2
-00:00:10,000 --> 00:00:16,000
-Me voici, oh, je suis là Dans la foi, je me tiens devant Toi
+00:00:07,000 --> 00:00:10,000
+Comme un brame je réponds
 
 3
-00:00:16,000 --> 00:00:26,000
-Ton cœur, un sacrifice Un fils, l'unique, l'amour
+00:00:10,000 --> 00:00:12,000
+Me voici au je suis là
 
 4
-00:00:26,000 --> 00:00:33,000
-Sur la montagne, je m'élève Pour adorer et te rendre gloire
+00:00:12,000 --> 00:00:16,000
+Dans la foi je me tiens devant toi
 
 5
-00:00:33,000 --> 00:00:43,000
-À la montagne de l'éternel Il sera pourvu
+00:00:16,000 --> 00:00:21,000
+Ton coeur un sacrifice un phénomien
 
 6
-00:00:43,000 --> 00:00:52,000
-Dans l'ombre de la promesse Je mets ma confiance en Toi
+00:00:21,000 --> 00:00:26,000
+Dans la foi je me tiens devant toi
 
 7
-00:00:52,000 --> 00:00:59,000
-Ô Dieu, Tu es fidèle Dans les épreuves, j'avancerai
+00:00:26,000 --> 00:00:30,000
+Ton coeur un sacrifice un phénomien
 
 8
-00:00:59,000 --> 00:01:07,000
-À la montagne de l'éternel Je sais que Tu pourvoiras
+00:00:30,000 --> 00:00:33,000
+L'unique l'amour sur la montagne
 
 9
-00:01:07,000 --> 00:01:13,000
-Isaac, sur l'autel Les larmes coulent, mais je crois
+00:00:33,000 --> 00:00:39,000
+Je m'élève pour adorer les te rendre glois
 
 10
-00:01:13,000 --> 00:01:20,000
-Quand le cœur est en détresse Ta voix me guide, je marche droit
+00:00:39,000 --> 00:00:43,000
+À la montagne de l'éternet
 
 11
-00:01:20,000 --> 00:01:26,000
-L'ange du ciel m'appelle N'aie crainte, je suis là
+00:00:43,000 --> 00:00:49,000
+Il sera pourvu dans l'embre de la promesse
 
 12
-00:01:26,000 --> 00:01:34,000
-Dans la pénombre, Tu brilles Je sais que Tu ne me lâcheras pas
+00:00:49,000 --> 00:00:52,000
+Je mets ma confiance en toi
 
 13
-00:01:34,000 --> 00:01:43,000
-À la montagne de l'éternel Il sera pourvu
+00:00:52,000 --> 00:00:56,000
+Au dieu tu es fidèle
 
 14
-00:01:43,000 --> 00:01:50,000
-Dans l'ombre de la promesse Je mets ma confiance en Toi
+00:00:56,000 --> 00:00:59,000
+Dans les épreuves je avancerai
 
 15
-00:01:50,000 --> 00:01:56,000
-Ô Dieu, Tu es fidèle Dans les épreuves, j'avancerai
+00:00:59,000 --> 00:01:02,000
+À la montagne de l'éternet
 
 16
-00:01:56,000 --> 00:02:08,000
-À la montagne de l'éternel Je sais que Tu pourvoiras
+00:01:02,000 --> 00:01:07,000
+Je sais que tu pourras
 
 17
-00:02:08,000 --> 00:02:17,000
-Les étoiles comme Ta promesse Le sable témoin de Ta bonté
+00:01:07,000 --> 00:01:10,000
+Ils acturent l'hôtel
 
 18
-00:02:17,000 --> 00:02:26,000
-Je marche dans l'assurance Que Tu es mon abat, mon roi
+00:01:10,000 --> 00:01:13,000
+Les larmes coulent mais je crois
 
 19
-00:02:26,000 --> 00:02:35,000
-À la montagne de l'éternel Il sera pourvu
+00:01:13,000 --> 00:01:16,000
+Quand le coeur est en détresse
 
 20
-00:02:35,000 --> 00:02:41,000
-Dans l'ombre de la promesse Je mets ma confiance en Toi
+00:01:16,000 --> 00:01:20,000
+Ta voie me guite je marche droit
 
 21
-00:02:41,000 --> 00:02:48,000
-Ô Dieu, Tu es fidèle Dans les épreuves, j'avancerai
+00:01:20,000 --> 00:01:23,000
+L'ange d'ici elle m'appelle
 
 22
-00:02:48,000 --> 00:02:55,000
-À la montagne de l'éternel Je sais que Tu pourvoiras
+00:01:23,000 --> 00:01:26,000
+Les craintes je suis là
 
 23
-00:02:55,000 --> 00:03:03,000
-Seigneur, je Te loue Pour chaque épreuve, je tiens
+00:01:26,000 --> 00:01:29,000
+Dans la pénombre tu bris
 
 24
-00:03:03,000 --> 00:03:10,000
-À la montagne de l'éternel Ma foi dans le sacrifice, Amen
+00:01:29,000 --> 00:01:34,000
+Je sais que tu ne me lâcheras pas
+
+25
+00:01:34,000 --> 00:01:38,000
+À la montagne de l'éternet
+
+26
+00:01:38,000 --> 00:01:43,000
+Il sera pourvu dans l'embre de la promesse
+
+27
+00:01:43,000 --> 00:01:46,000
+Je mets ma confiance en toi
+
+28
+00:01:46,000 --> 00:01:50,000
+Au dieu tu es fidèle
+
+29
+00:01:50,000 --> 00:01:53,000
+Dans les épreuves je avancerai
+
+30
+00:01:53,000 --> 00:01:56,000
+À la montagne de l'éternet
+
+31
+00:01:56,000 --> 00:02:01,000
+Je sais que tu pourras
+
+32
+00:02:01,000 --> 00:02:07,000
+Les étreuves comme ta promesse
+
+33
+00:02:08,000 --> 00:02:14,000
+Le sable témoin de ta beauté
+
+34
+00:02:14,000 --> 00:02:17,000
+Je marche dans la assurance
+
+35
+00:02:17,000 --> 00:02:22,000
+Que tu es mon abe
+
+36
+00:02:22,000 --> 00:02:26,000
+Mon
+
+37
+00:02:26,000 --> 00:02:29,000
+À la montagne de l'éternet
+
+38
+00:02:29,000 --> 00:02:35,000
+Il sera pourvu dans l'embre de la promesse
+
+39
+00:02:35,000 --> 00:02:38,000
+Je mets ma confiance en toi
+
+40
+00:02:38,000 --> 00:02:41,000
+Au dieu tu es fidèle
+
+41
+00:02:41,000 --> 00:02:44,000
+Dans les épreuves je avancerai
+
+42
+00:02:44,000 --> 00:02:48,000
+À la montagne de l'éternet
+
+43
+00:02:48,000 --> 00:02:52,000
+Je sais que tu pourras
+
+44
+00:02:52,000 --> 00:02:55,000
+Seigneur je te loup
+
+45
+00:02:55,000 --> 00:02:59,000
+Pour chaque épreuve je tiens
+
+46
+00:02:59,000 --> 00:03:03,000
+À la montagne de l'éternet
+
+47
+00:03:03,000 --> 00:03:07,000
+Ma foi dans le sacrifice
+
+48
+00:03:07,000 --> 00:03:10,000
+Amen
 

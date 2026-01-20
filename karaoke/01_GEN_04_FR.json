@@ -1,0 +1,1436 @@
+﻿{
+    "language":  "fr",
+    "text":  "Dans le jardin, au souffle divin, Adam et Eve, un amour\nsans fin, Avec l\u0027aide de l\u0027 Eternel, un fils est né au\ncoeur éternel, Cayen, le laboureur de la terre, Abel, le\nberger écho de lumière, Des offrandes portées avec foi,\n\nL\u0027 Eternel regarda et il fit le choix. Oh, dans la lumière\nde l\u0027 Eternel, Nos coeurs célèbrent, nos âmes se révèlent,\nQui donnent pas, Seigneur, de compter, Dans chaque lutte,\ndans chaque vérité. Mais Cayen, en colère, son coeur s\u0027éteint,\n\nLa voix du sang crie, un destin incertain. Pourquoi es-tu\ntroublé, Oh Cayen, écoute, Le péché rôde dans l\u0027ombre,\nil se glisse, Tu dois dominer, ne laisse pas la nuit. La\nlumière d\u0027en haut, pour toujours nous huit. Oh, dans la\n\nlumière de l\u0027 Eternel, Nos coeurs célèbres, nos âmes se\nrévèlent, Qui donnent pas, Seigneur, de compter, Dans chaque\nlutte, dans chaque vérité. Et malgré la douleur, malgré\nla tristesse, Son amour en Dieu nous donne la richesse,\n\nUn signe sur Cayen, sa grâce en finit, Dans la terre de\nNorth, ta voix nous unit, Adan et Ève, un nouveau fils,\nPar lui l\u0027espoir en est, notre coeur s\u0027apèse. Oh, dans\nla lumière de l\u0027 Eternel, Nos coeurs célèbres, nos âmes\n\nse révèlent, Qui donnent pas, Seigneur, de compter, Dans\nchaque lutte, dans chaque vérité. Un mot, compte ton nom,\nPour Eternel, dans notre histoire. Un mot, compte ton nom,\npour Eternel, Avec confiance nous marchons vers toi. Dans\n\nla lumière d\u0027 Eternel, Nous vivons en émoire.",
+    "segments":  [
+                     {
+                         "end":  23.06,
+                         "words":  [
+                                       {
+                                           "word":  "Dans",
+                                           "end":  13.1,
+                                           "start":  11.7
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  13.34,
+                                           "start":  13.1
+                                       },
+                                       {
+                                           "word":  "jardin,",
+                                           "end":  14.38,
+                                           "start":  13.34
+                                       },
+                                       {
+                                           "word":  "au",
+                                           "end":  15.72,
+                                           "start":  14.38
+                                       },
+                                       {
+                                           "word":  "souffle",
+                                           "end":  16.52,
+                                           "start":  15.72
+                                       },
+                                       {
+                                           "word":  "divin,",
+                                           "end":  17.68,
+                                           "start":  16.52
+                                       },
+                                       {
+                                           "word":  "Adam",
+                                           "end":  19.66,
+                                           "start":  17.68
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  20.18,
+                                           "start":  19.66
+                                       },
+                                       {
+                                           "word":  "Eve,",
+                                           "end":  20.68,
+                                           "start":  20.28
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  22.16,
+                                           "start":  21.66
+                                       },
+                                       {
+                                           "word":  "amour",
+                                           "end":  23.06,
+                                           "start":  22.16
+                                       }
+                                   ],
+                         "text":  "Dans le jardin, au souffle divin, Adam et Eve, un amour",
+                         "start":  11.7
+                     },
+                     {
+                         "end":  30.38,
+                         "words":  [
+                                       {
+                                           "word":  "sans",
+                                           "end":  23.36,
+                                           "start":  23.06
+                                       },
+                                       {
+                                           "word":  "fin,",
+                                           "end":  23.86,
+                                           "start":  23.36
+                                       },
+                                       {
+                                           "word":  "Avec",
+                                           "end":  26.5,
+                                           "start":  24.12
+                                       },
+                                       {
+                                           "word":  "l\u0027aide",
+                                           "end":  27,
+                                           "start":  26.6
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  27.5,
+                                           "start":  27.2
+                                       },
+                                       {
+                                           "word":  "l\u0027",
+                                           "end":  28,
+                                           "start":  27.6
+                                       },
+                                       {
+                                           "word":  "Eternel,",
+                                           "end":  28.5,
+                                           "start":  28.1
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  29.12,
+                                           "start":  28.52
+                                       },
+                                       {
+                                           "word":  "fils",
+                                           "end":  29.46,
+                                           "start":  29.12
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  29.96,
+                                           "start":  29.560000000000002
+                                       },
+                                       {
+                                           "word":  "né",
+                                           "end":  30.46,
+                                           "start":  30.060000000000002
+                                       },
+                                       {
+                                           "word":  "au",
+                                           "end":  30.38,
+                                           "start":  30.12
+                                       }
+                                   ],
+                         "text":  "sans fin, Avec l\u0027aide de l\u0027 Eternel, un fils est né au",
+                         "start":  23.06
+                     },
+                     {
+                         "end":  40.56,
+                         "words":  [
+                                       {
+                                           "word":  "coeur",
+                                           "end":  30.64,
+                                           "start":  30.38
+                                       },
+                                       {
+                                           "word":  "éternel,",
+                                           "end":  31.96,
+                                           "start":  30.64
+                                       },
+                                       {
+                                           "word":  "Cayen,",
+                                           "end":  32.46,
+                                           "start":  32.06
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  34.36,
+                                           "start":  33.48
+                                       },
+                                       {
+                                           "word":  "laboureur",
+                                           "end":  35.38,
+                                           "start":  34.36
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  35.62,
+                                           "start":  35.38
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  36.12,
+                                           "start":  35.62
+                                       },
+                                       {
+                                           "word":  "terre,",
+                                           "end":  36.74,
+                                           "start":  36.12
+                                       },
+                                       {
+                                           "word":  "Abel,",
+                                           "end":  39.92,
+                                           "start":  39
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  40.56,
+                                           "start":  40.1
+                                       }
+                                   ],
+                         "text":  "coeur éternel, Cayen, le laboureur de la terre, Abel, le",
+                         "start":  30.38
+                     },
+                     {
+                         "end":  47.78,
+                         "words":  [
+                                       {
+                                           "word":  "berger",
+                                           "end":  41.24,
+                                           "start":  40.56
+                                       },
+                                       {
+                                           "word":  "écho",
+                                           "end":  42.04,
+                                           "start":  41.38
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  42.3,
+                                           "start":  42.04
+                                       },
+                                       {
+                                           "word":  "lumière,",
+                                           "end":  42.76,
+                                           "start":  42.3
+                                       },
+                                       {
+                                           "word":  "Des",
+                                           "end":  45.52,
+                                           "start":  45.06
+                                       },
+                                       {
+                                           "word":  "offrandes",
+                                           "end":  46.36,
+                                           "start":  45.52
+                                       },
+                                       {
+                                           "word":  "portées",
+                                           "end":  47.02,
+                                           "start":  46.36
+                                       },
+                                       {
+                                           "word":  "avec",
+                                           "end":  47.38,
+                                           "start":  47.02
+                                       },
+                                       {
+                                           "word":  "foi,",
+                                           "end":  47.78,
+                                           "start":  47.38
+                                       }
+                                   ],
+                         "text":  "berger écho de lumière, Des offrandes portées avec foi,",
+                         "start":  40.56
+                     },
+                     {
+                         "end":  57.66,
+                         "words":  [
+                                       {
+                                           "word":  "L\u0027",
+                                           "end":  48.28,
+                                           "start":  47.88
+                                       },
+                                       {
+                                           "word":  "Eternel",
+                                           "end":  48.78,
+                                           "start":  48.38
+                                       },
+                                       {
+                                           "word":  "regarda",
+                                           "end":  50.54,
+                                           "start":  49.56
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  51.26,
+                                           "start":  50.54
+                                       },
+                                       {
+                                           "word":  "il",
+                                           "end":  51.72,
+                                           "start":  51.26
+                                       },
+                                       {
+                                           "word":  "fit",
+                                           "end":  52,
+                                           "start":  51.72
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  52.22,
+                                           "start":  52
+                                       },
+                                       {
+                                           "word":  "choix.",
+                                           "end":  52.6,
+                                           "start":  52.22
+                                       },
+                                       {
+                                           "word":  "Oh,",
+                                           "end":  56.26,
+                                           "start":  55.54
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  56.98,
+                                           "start":  56.26
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  57.16,
+                                           "start":  56.98
+                                       },
+                                       {
+                                           "word":  "lumière",
+                                           "end":  57.66,
+                                           "start":  57.16
+                                       }
+                                   ],
+                         "text":  "L\u0027 Eternel regarda et il fit le choix. Oh, dans la lumière",
+                         "start":  47.88
+                     },
+                     {
+                         "end":  61.86,
+                         "words":  [
+                                       {
+                                           "word":  "de",
+                                           "end":  58.02,
+                                           "start":  57.66
+                                       },
+                                       {
+                                           "word":  "l\u0027",
+                                           "end":  58.52,
+                                           "start":  58.120000000000005
+                                       },
+                                       {
+                                           "word":  "Eternel,",
+                                           "end":  59.02,
+                                           "start":  58.620000000000005
+                                       },
+                                       {
+                                           "word":  "Nos",
+                                           "end":  59.54,
+                                           "start":  59.02
+                                       },
+                                       {
+                                           "word":  "coeurs",
+                                           "end":  60.02,
+                                           "start":  59.54
+                                       },
+                                       {
+                                           "word":  "célèbrent,",
+                                           "end":  60.52,
+                                           "start":  60.120000000000005
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  60.82,
+                                           "start":  60.76
+                                       },
+                                       {
+                                           "word":  "âmes",
+                                           "end":  61.12,
+                                           "start":  60.82
+                                       },
+                                       {
+                                           "word":  "se",
+                                           "end":  61.38,
+                                           "start":  61.12
+                                       },
+                                       {
+                                           "word":  "révèlent,",
+                                           "end":  61.86,
+                                           "start":  61.38
+                                       }
+                                   ],
+                         "text":  "de l\u0027 Eternel, Nos coeurs célèbrent, nos âmes se révèlent,",
+                         "start":  57.66
+                     },
+                     {
+                         "end":  67.1,
+                         "words":  [
+                                       {
+                                           "word":  "Qui",
+                                           "end":  62.36,
+                                           "start":  61.96
+                                       },
+                                       {
+                                           "word":  "donnent",
+                                           "end":  62.86,
+                                           "start":  62.46
+                                       },
+                                       {
+                                           "word":  "pas,",
+                                           "end":  63.56,
+                                           "start":  63.16
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  64.4,
+                                           "start":  63.68
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  64.58,
+                                           "start":  64.4
+                                       },
+                                       {
+                                           "word":  "compter,",
+                                           "end":  65.08,
+                                           "start":  64.679999999999993
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  65.96,
+                                           "start":  65.42
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  66.3,
+                                           "start":  65.96
+                                       },
+                                       {
+                                           "word":  "lutte,",
+                                           "end":  67.1,
+                                           "start":  66.3
+                                       }
+                                   ],
+                         "text":  "Qui donnent pas, Seigneur, de compter, Dans chaque lutte,",
+                         "start":  61.96
+                     },
+                     {
+                         "end":  75.74,
+                         "words":  [
+                                       {
+                                           "word":  "dans",
+                                           "end":  67.26,
+                                           "start":  67.1
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  67.54,
+                                           "start":  67.26
+                                       },
+                                       {
+                                           "word":  "vérité.",
+                                           "end":  68.68,
+                                           "start":  67.54
+                                       },
+                                       {
+                                           "word":  "Mais",
+                                           "end":  72.72,
+                                           "start":  72.36
+                                       },
+                                       {
+                                           "word":  "Cayen,",
+                                           "end":  73.22,
+                                           "start":  72.82
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  73.72,
+                                           "start":  73.26
+                                       },
+                                       {
+                                           "word":  "colère,",
+                                           "end":  74.32,
+                                           "start":  73.72
+                                       },
+                                       {
+                                           "word":  "son",
+                                           "end":  74.9,
+                                           "start":  74.32
+                                       },
+                                       {
+                                           "word":  "coeur",
+                                           "end":  75.24,
+                                           "start":  74.9
+                                       },
+                                       {
+                                           "word":  "s\u0027éteint,",
+                                           "end":  75.74,
+                                           "start":  75.339999999999989
+                                       }
+                                   ],
+                         "text":  "dans chaque vérité. Mais Cayen, en colère, son coeur s\u0027éteint,",
+                         "start":  67.1
+                     },
+                     {
+                         "end":  85.42,
+                         "words":  [
+                                       {
+                                           "word":  "La",
+                                           "end":  78.52,
+                                           "start":  77.8
+                                       },
+                                       {
+                                           "word":  "voix",
+                                           "end":  78.8,
+                                           "start":  78.52
+                                       },
+                                       {
+                                           "word":  "du",
+                                           "end":  78.96,
+                                           "start":  78.8
+                                       },
+                                       {
+                                           "word":  "sang",
+                                           "end":  79.26,
+                                           "start":  78.96
+                                       },
+                                       {
+                                           "word":  "crie,",
+                                           "end":  79.82,
+                                           "start":  79.26
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  80.88,
+                                           "start":  79.96
+                                       },
+                                       {
+                                           "word":  "destin",
+                                           "end":  81.34,
+                                           "start":  80.88
+                                       },
+                                       {
+                                           "word":  "incertain.",
+                                           "end":  82.94,
+                                           "start":  81.34
+                                       },
+                                       {
+                                           "word":  "Pourquoi",
+                                           "end":  84.92,
+                                           "start":  84.2
+                                       },
+                                       {
+                                           "word":  "es-tu",
+                                           "end":  85.42,
+                                           "start":  85.02
+                                       }
+                                   ],
+                         "text":  "La voix du sang crie, un destin incertain. Pourquoi es-tu",
+                         "start":  77.8
+                     },
+                     {
+                         "end":  91.26,
+                         "words":  [
+                                       {
+                                           "word":  "troublé,",
+                                           "end":  86.74,
+                                           "start":  85.56
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  87.04,
+                                           "start":  86.74
+                                       },
+                                       {
+                                           "word":  "Cayen,",
+                                           "end":  87.54,
+                                           "start":  87.14
+                                       },
+                                       {
+                                           "word":  "écoute,",
+                                           "end":  88.82,
+                                           "start":  87.7
+                                       },
+                                       {
+                                           "word":  "Le",
+                                           "end":  89.5,
+                                           "start":  88.82
+                                       },
+                                       {
+                                           "word":  "péché",
+                                           "end":  89.96,
+                                           "start":  89.5
+                                       },
+                                       {
+                                           "word":  "rôde",
+                                           "end":  90.56,
+                                           "start":  89.96
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  90.76,
+                                           "start":  90.56
+                                       },
+                                       {
+                                           "word":  "l\u0027ombre,",
+                                           "end":  91.26,
+                                           "start":  90.86
+                                       }
+                                   ],
+                         "text":  "troublé, Oh Cayen, écoute, Le péché rôde dans l\u0027ombre,",
+                         "start":  85.56
+                     },
+                     {
+                         "end":  98.5,
+                         "words":  [
+                                       {
+                                           "word":  "il",
+                                           "end":  91.48,
+                                           "start":  91.34
+                                       },
+                                       {
+                                           "word":  "se",
+                                           "end":  91.68,
+                                           "start":  91.48
+                                       },
+                                       {
+                                           "word":  "glisse,",
+                                           "end":  92.56,
+                                           "start":  91.68
+                                       },
+                                       {
+                                           "word":  "Tu",
+                                           "end":  92.92,
+                                           "start":  92.62
+                                       },
+                                       {
+                                           "word":  "dois",
+                                           "end":  93.18,
+                                           "start":  92.92
+                                       },
+                                       {
+                                           "word":  "dominer,",
+                                           "end":  93.94,
+                                           "start":  93.18
+                                       },
+                                       {
+                                           "word":  "ne",
+                                           "end":  94.34,
+                                           "start":  93.96
+                                       },
+                                       {
+                                           "word":  "laisse",
+                                           "end":  94.62,
+                                           "start":  94.34
+                                       },
+                                       {
+                                           "word":  "pas",
+                                           "end":  94.96,
+                                           "start":  94.62
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  95.2,
+                                           "start":  94.96
+                                       },
+                                       {
+                                           "word":  "nuit.",
+                                           "end":  95.62,
+                                           "start":  95.2
+                                       },
+                                       {
+                                           "word":  "La",
+                                           "end":  98.5,
+                                           "start":  98.14
+                                       }
+                                   ],
+                         "text":  "il se glisse, Tu dois dominer, ne laisse pas la nuit. La",
+                         "start":  91.34
+                     },
+                     {
+                         "end":  106.76,
+                         "words":  [
+                                       {
+                                           "word":  "lumière",
+                                           "end":  99.06,
+                                           "start":  98.5
+                                       },
+                                       {
+                                           "word":  "d\u0027en",
+                                           "end":  99.56,
+                                           "start":  99.16
+                                       },
+                                       {
+                                           "word":  "haut,",
+                                           "end":  99.9,
+                                           "start":  99.52
+                                       },
+                                       {
+                                           "word":  "pour",
+                                           "end":  100.56,
+                                           "start":  100.08
+                                       },
+                                       {
+                                           "word":  "toujours",
+                                           "end":  101.22,
+                                           "start":  100.56
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  102.38,
+                                           "start":  101.22
+                                       },
+                                       {
+                                           "word":  "huit.",
+                                           "end":  102.88,
+                                           "start":  102.47999999999999
+                                       },
+                                       {
+                                           "word":  "Oh,",
+                                           "end":  105.62,
+                                           "start":  104.9
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  106.58,
+                                           "start":  105.86
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  106.76,
+                                           "start":  106.58
+                                       }
+                                   ],
+                         "text":  "lumière d\u0027en haut, pour toujours nous huit. Oh, dans la",
+                         "start":  98.5
+                     },
+                     {
+                         "end":  110.96,
+                         "words":  [
+                                       {
+                                           "word":  "lumière",
+                                           "end":  107.2,
+                                           "start":  106.76
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  107.42,
+                                           "start":  107.2
+                                       },
+                                       {
+                                           "word":  "l\u0027",
+                                           "end":  107.92,
+                                           "start":  107.52
+                                       },
+                                       {
+                                           "word":  "Eternel,",
+                                           "end":  108.42,
+                                           "start":  108.02
+                                       },
+                                       {
+                                           "word":  "Nos",
+                                           "end":  109.14,
+                                           "start":  108.8
+                                       },
+                                       {
+                                           "word":  "coeurs",
+                                           "end":  109.62,
+                                           "start":  109.14
+                                       },
+                                       {
+                                           "word":  "célèbres,",
+                                           "end":  110.12,
+                                           "start":  109.72
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  110.44,
+                                           "start":  110.36
+                                       },
+                                       {
+                                           "word":  "âmes",
+                                           "end":  110.74,
+                                           "start":  110.44
+                                       },
+                                       {
+                                           "word":  "se",
+                                           "end":  110.96,
+                                           "start":  110.74
+                                       }
+                                   ],
+                         "text":  "lumière de l\u0027 Eternel, Nos coeurs célèbres, nos âmes se",
+                         "start":  106.76
+                     },
+                     {
+                         "end":  113.84,
+                         "words":  [
+                                       {
+                                           "word":  "révèlent,",
+                                           "end":  112.06,
+                                           "start":  110.96
+                                       },
+                                       {
+                                           "word":  "Qui",
+                                           "end":  112.56,
+                                           "start":  112.16
+                                       },
+                                       {
+                                           "word":  "donnent",
+                                           "end":  113.06,
+                                           "start":  112.66
+                                       },
+                                       {
+                                           "word":  "pas,",
+                                           "end":  113.18,
+                                           "start":  112.76
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  113.84,
+                                           "start":  113.26
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  113.84,
+                                           "start":  113.84
+                                       },
+                                       {
+                                           "word":  "compter,",
+                                           "end":  114.34,
+                                           "start":  113.94
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  113.84,
+                                           "start":  113.84
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  113.84,
+                                           "start":  113.84
+                                       }
+                                   ],
+                         "text":  "révèlent, Qui donnent pas, Seigneur, de compter, Dans chaque",
+                         "start":  110.96
+                     },
+                     {
+                         "end":  121.6,
+                         "words":  [
+                                       {
+                                           "word":  "lutte,",
+                                           "end":  113.84,
+                                           "start":  113.84
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  113.84,
+                                           "start":  113.84
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  113.84,
+                                           "start":  113.84
+                                       },
+                                       {
+                                           "word":  "vérité.",
+                                           "end":  113.84,
+                                           "start":  113.84
+                                       },
+                                       {
+                                           "word":  "Et",
+                                           "end":  119.5,
+                                           "start":  119.04
+                                       },
+                                       {
+                                           "word":  "malgré",
+                                           "end":  120.02,
+                                           "start":  119.5
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  120.2,
+                                           "start":  120.02
+                                       },
+                                       {
+                                           "word":  "douleur,",
+                                           "end":  120.92,
+                                           "start":  120.2
+                                       },
+                                       {
+                                           "word":  "malgré",
+                                           "end":  121.6,
+                                           "start":  120.92
+                                       }
+                                   ],
+                         "text":  "lutte, dans chaque vérité. Et malgré la douleur, malgré",
+                         "start":  113.84
+                     },
+                     {
+                         "end":  125.56,
+                         "words":  [
+                                       {
+                                           "word":  "la",
+                                           "end":  121.76,
+                                           "start":  121.6
+                                       },
+                                       {
+                                           "word":  "tristesse,",
+                                           "end":  122.42,
+                                           "start":  121.76
+                                       },
+                                       {
+                                           "word":  "Son",
+                                           "end":  122.92,
+                                           "start":  122.52
+                                       },
+                                       {
+                                           "word":  "amour",
+                                           "end":  123.5,
+                                           "start":  122.94
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  124,
+                                           "start":  123.6
+                                       },
+                                       {
+                                           "word":  "Dieu",
+                                           "end":  123.84,
+                                           "start":  123.6
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  124.32,
+                                           "start":  123.84
+                                       },
+                                       {
+                                           "word":  "donne",
+                                           "end":  124.78,
+                                           "start":  124.32
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  125,
+                                           "start":  124.78
+                                       },
+                                       {
+                                           "word":  "richesse,",
+                                           "end":  125.56,
+                                           "start":  125
+                                       }
+                                   ],
+                         "text":  "la tristesse, Son amour en Dieu nous donne la richesse,",
+                         "start":  121.6
+                     },
+                     {
+                         "end":  130.02,
+                         "words":  [
+                                       {
+                                           "word":  "Un",
+                                           "end":  125.92,
+                                           "start":  125.68
+                                       },
+                                       {
+                                           "word":  "signe",
+                                           "end":  126.38,
+                                           "start":  125.92
+                                       },
+                                       {
+                                           "word":  "sur",
+                                           "end":  126.56,
+                                           "start":  126.38
+                                       },
+                                       {
+                                           "word":  "Cayen,",
+                                           "end":  127.06,
+                                           "start":  126.66
+                                       },
+                                       {
+                                           "word":  "sa",
+                                           "end":  127.56,
+                                           "start":  127.16
+                                       },
+                                       {
+                                           "word":  "grâce",
+                                           "end":  127.92,
+                                           "start":  127.5
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  128.42000000000002,
+                                           "start":  128.02
+                                       },
+                                       {
+                                           "word":  "finit,",
+                                           "end":  128.92000000000002,
+                                           "start":  128.52
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  129.32,
+                                           "start":  128.92
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  129.54,
+                                           "start":  129.32
+                                       },
+                                       {
+                                           "word":  "terre",
+                                           "end":  129.86,
+                                           "start":  129.54
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  130.02,
+                                           "start":  129.86
+                                       }
+                                   ],
+                         "text":  "Un signe sur Cayen, sa grâce en finit, Dans la terre de",
+                         "start":  125.68
+                     },
+                     {
+                         "end":  138.22,
+                         "words":  [
+                                       {
+                                           "word":  "North,",
+                                           "end":  130.52,
+                                           "start":  130.12
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  130.88,
+                                           "start":  130.54
+                                       },
+                                       {
+                                           "word":  "voix",
+                                           "end":  131.24,
+                                           "start":  130.88
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  131.42,
+                                           "start":  131.24
+                                       },
+                                       {
+                                           "word":  "unit,",
+                                           "end":  131.92,
+                                           "start":  131.42
+                                       },
+                                       {
+                                           "word":  "Adan",
+                                           "end":  134.92,
+                                           "start":  134
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  135.28,
+                                           "start":  134.92
+                                       },
+                                       {
+                                           "word":  "Ève,",
+                                           "end":  136.08,
+                                           "start":  135.28
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  136.66,
+                                           "start":  136.08
+                                       },
+                                       {
+                                           "word":  "nouveau",
+                                           "end":  137.28,
+                                           "start":  136.66
+                                       },
+                                       {
+                                           "word":  "fils,",
+                                           "end":  138.22,
+                                           "start":  137.28
+                                       }
+                                   ],
+                         "text":  "North, ta voix nous unit, Adan et Ève, un nouveau fils,",
+                         "start":  130.12
+                     },
+                     {
+                         "end":  149.74,
+                         "words":  [
+                                       {
+                                           "word":  "Par",
+                                           "end":  140.12,
+                                           "start":  139.04
+                                       },
+                                       {
+                                           "word":  "lui",
+                                           "end":  140.48,
+                                           "start":  140.12
+                                       },
+                                       {
+                                           "word":  "l\u0027espoir",
+                                           "end":  140.98,
+                                           "start":  140.57999999999998
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  141.48,
+                                           "start":  141.07999999999998
+                                       },
+                                       {
+                                           "word":  "est,",
+                                           "end":  143.84,
+                                           "start":  143.76
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  144.38,
+                                           "start":  143.86
+                                       },
+                                       {
+                                           "word":  "coeur",
+                                           "end":  144.38,
+                                           "start":  144.38
+                                       },
+                                       {
+                                           "word":  "s\u0027apèse.",
+                                           "end":  144.88,
+                                           "start":  144.48
+                                       },
+                                       {
+                                           "word":  "Oh,",
+                                           "end":  148.94,
+                                           "start":  148.14
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  149.74,
+                                           "start":  148.94
+                                       }
+                                   ],
+                         "text":  "Par lui l\u0027espoir en est, notre coeur s\u0027apèse. Oh, dans",
+                         "start":  139.04
+                     },
+                     {
+                         "end":  153.92,
+                         "words":  [
+                                       {
+                                           "word":  "la",
+                                           "end":  149.94,
+                                           "start":  149.74
+                                       },
+                                       {
+                                           "word":  "lumière",
+                                           "end":  150.4,
+                                           "start":  149.94
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  150.64,
+                                           "start":  150.4
+                                       },
+                                       {
+                                           "word":  "l\u0027",
+                                           "end":  151.14,
+                                           "start":  150.73999999999998
+                                       },
+                                       {
+                                           "word":  "Eternel,",
+                                           "end":  151.64,
+                                           "start":  151.23999999999998
+                                       },
+                                       {
+                                           "word":  "Nos",
+                                           "end":  152.32,
+                                           "start":  151.78
+                                       },
+                                       {
+                                           "word":  "coeurs",
+                                           "end":  152.8,
+                                           "start":  152.32
+                                       },
+                                       {
+                                           "word":  "célèbres,",
+                                           "end":  153.3,
+                                           "start":  152.9
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  153.64,
+                                           "start":  153.5
+                                       },
+                                       {
+                                           "word":  "âmes",
+                                           "end":  153.92,
+                                           "start":  153.64
+                                       }
+                                   ],
+                         "text":  "la lumière de l\u0027 Eternel, Nos coeurs célèbres, nos âmes",
+                         "start":  149.74
+                     },
+                     {
+                         "end":  165.02,
+                         "words":  [
+                                       {
+                                           "word":  "se",
+                                           "end":  154.14,
+                                           "start":  153.92
+                                       },
+                                       {
+                                           "word":  "révèlent,",
+                                           "end":  155.18,
+                                           "start":  154.14
+                                       },
+                                       {
+                                           "word":  "Qui",
+                                           "end":  155.68,
+                                           "start":  155.28
+                                       },
+                                       {
+                                           "word":  "donnent",
+                                           "end":  156.18,
+                                           "start":  155.78
+                                       },
+                                       {
+                                           "word":  "pas,",
+                                           "end":  156.36,
+                                           "start":  155.96
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  157.18,
+                                           "start":  156.46
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  157.34,
+                                           "start":  157.18
+                                       },
+                                       {
+                                           "word":  "compter,",
+                                           "end":  162.98,
+                                           "start":  162.16
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  165.02,
+                                           "start":  164.6
+                                       }
+                                   ],
+                         "text":  "se révèlent, Qui donnent pas, Seigneur, de compter, Dans",
+                         "start":  153.92
+                     },
+                     {
+                         "end":  176,
+                         "words":  [
+                                       {
+                                           "word":  "chaque",
+                                           "end":  165.52,
+                                           "start":  165.12
+                                       },
+                                       {
+                                           "word":  "lutte,",
+                                           "end":  166.02,
+                                           "start":  165.62
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  172.5,
+                                           "start":  172.04
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  173,
+                                           "start":  172.6
+                                       },
+                                       {
+                                           "word":  "vérité.",
+                                           "end":  173.5,
+                                           "start":  173.1
+                                       },
+                                       {
+                                           "word":  "Un",
+                                           "end":  174,
+                                           "start":  173.6
+                                       },
+                                       {
+                                           "word":  "mot,",
+                                           "end":  174.5,
+                                           "start":  174.1
+                                       },
+                                       {
+                                           "word":  "compte",
+                                           "end":  175,
+                                           "start":  174.6
+                                       },
+                                       {
+                                           "word":  "ton",
+                                           "end":  175.5,
+                                           "start":  175.1
+                                       },
+                                       {
+                                           "word":  "nom,",
+                                           "end":  176,
+                                           "start":  175.6
+                                       }
+                                   ],
+                         "text":  "chaque lutte, dans chaque vérité. Un mot, compte ton nom,",
+                         "start":  165.12
+                     },
+                     {
+                         "end":  176.34,
+                         "words":  [
+                                       {
+                                           "word":  "Pour",
+                                           "end":  176.5,
+                                           "start":  176.1
+                                       },
+                                       {
+                                           "word":  "Eternel,",
+                                           "end":  177,
+                                           "start":  176.6
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  173.84,
+                                           "start":  173.84
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  173.84,
+                                           "start":  173.84
+                                       },
+                                       {
+                                           "word":  "histoire.",
+                                           "end":  173.84,
+                                           "start":  173.84
+                                       },
+                                       {
+                                           "word":  "Un",
+                                           "end":  174.34,
+                                           "start":  173.94
+                                       },
+                                       {
+                                           "word":  "mot,",
+                                           "end":  174.84,
+                                           "start":  174.44
+                                       },
+                                       {
+                                           "word":  "compte",
+                                           "end":  175.34,
+                                           "start":  174.94
+                                       },
+                                       {
+                                           "word":  "ton",
+                                           "end":  175.84,
+                                           "start":  175.44
+                                       },
+                                       {
+                                           "word":  "nom,",
+                                           "end":  176.34,
+                                           "start":  175.94
+                                       }
+                                   ],
+                         "text":  "Pour Eternel, dans notre histoire. Un mot, compte ton nom,",
+                         "start":  176.1
+                     },
+                     {
+                         "end":  183.86,
+                         "words":  [
+                                       {
+                                           "word":  "pour",
+                                           "end":  176.84,
+                                           "start":  176.44
+                                       },
+                                       {
+                                           "word":  "Eternel,",
+                                           "end":  177.34,
+                                           "start":  176.94
+                                       },
+                                       {
+                                           "word":  "Avec",
+                                           "end":  177.84,
+                                           "start":  177.44
+                                       },
+                                       {
+                                           "word":  "confiance",
+                                           "end":  178.34,
+                                           "start":  177.94
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  178.82,
+                                           "start":  177.26
+                                       },
+                                       {
+                                           "word":  "marchons",
+                                           "end":  179.32,
+                                           "start":  178.92
+                                       },
+                                       {
+                                           "word":  "vers",
+                                           "end":  179.82,
+                                           "start":  179.42
+                                       },
+                                       {
+                                           "word":  "toi.",
+                                           "end":  180.32,
+                                           "start":  179.92
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  183.86,
+                                           "start":  182.56
+                                       }
+                                   ],
+                         "text":  "pour Eternel, Avec confiance nous marchons vers toi. Dans",
+                         "start":  176.44
+                     },
+                     {
+                         "end":  188.7,
+                         "words":  [
+                                       {
+                                           "word":  "la",
+                                           "end":  185.42,
+                                           "start":  183.86
+                                       },
+                                       {
+                                           "word":  "lumière",
+                                           "end":  186.76,
+                                           "start":  185.42
+                                       },
+                                       {
+                                           "word":  "d\u0027",
+                                           "end":  187.26,
+                                           "start":  186.85999999999999
+                                       },
+                                       {
+                                           "word":  "Eternel,",
+                                           "end":  187.76,
+                                           "start":  187.35999999999999
+                                       },
+                                       {
+                                           "word":  "Nous",
+                                           "end":  188.66,
+                                           "start":  188.64
+                                       },
+                                       {
+                                           "word":  "vivons",
+                                           "end":  188.68,
+                                           "start":  188.66
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  188.68,
+                                           "start":  188.68
+                                       },
+                                       {
+                                           "word":  "émoire.",
+                                           "end":  188.7,
+                                           "start":  188.68
+                                       }
+                                   ],
+                         "text":  "la lumière d\u0027 Eternel, Nous vivons en émoire.",
+                         "start":  183.86
+                     }
+                 ]
+}

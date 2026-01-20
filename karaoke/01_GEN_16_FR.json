@@ -1,0 +1,1424 @@
+﻿{
+    "language":  "fr",
+    "text":  "... Dans l\u0027ombre de la douleur, sa raie se tenait, son\ncoeur en détresse, un cri pour un enfant. Elle a donné\nsa servante, un espoir égaré, à bras maécouté, suivant\nce plan incertain. Oh Dieu, qui entend nos pleurs, dans\n\nle désert de nos coeurs, tu vois nos larmes, tu vois nos\ndouleurs, Ismaël, un fils de promesse. Dans la flexion,\nta grâce se dresse. À gare, cet enfli, la maîtresse lui\nfait mal. Près de la source vie, un ange l\u0027a trouvé, retourne\n\nvers elle, humilié toi, ma soeur. Je multiplierai ta lignée,\ntu seras béni. Oh Dieu, qui entend nos pleurs, dans le\ndésert de nos coeurs, tu vois nos larmes, tu vois nos douleurs,\nIsmaël, un fils de promesse. Dans la flexion, ta grâce\n\nse dresse. À ta héroï, le Dieu qui boit, dans la nuit,\ntu es ma lumière. Chaque cri, chaque larme, tu les entend.\nOh Seigneur, tu es notre refuge, notre espoir. Oh Dieu,\nqui entend nos pleurs, dans le désert de nos coeurs, tu\n\nvois nos larmes, tu vois nos douleurs, Ismaël, un fils\nde promesse. Quand les epreuves nous accablent, ta voix\nnous guide, dans chaque souffrance, ton amour nous délibre.\nSeigneur, nous te louons, dans la joie et les pleurs, car\n\ntu es notre force, notre éternel sauveur. Oh Dieu, qui\nentend nos pleurs, dans le désert de nos coeurs, tu vois\nnos larmes, tu vois nos douleurs, Ismaël, un fils de promesse.\nDans la flexion, ta grâce se dress.",
+    "segments":  [
+                     {
+                         "end":  18.62,
+                         "words":  [
+                                       {
+                                           "word":  "...",
+                                           "end":  0.5,
+                                           "start":  0.1
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  12.12,
+                                           "start":  10.96
+                                       },
+                                       {
+                                           "word":  "l\u0027ombre",
+                                           "end":  12.62,
+                                           "start":  12.219999999999999
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  13.02,
+                                           "start":  12.78
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  13.6,
+                                           "start":  13.02
+                                       },
+                                       {
+                                           "word":  "douleur,",
+                                           "end":  14.7,
+                                           "start":  13.6
+                                       },
+                                       {
+                                           "word":  "sa",
+                                           "end":  15.2,
+                                           "start":  14.799999999999999
+                                       },
+                                       {
+                                           "word":  "raie",
+                                           "end":  15.7,
+                                           "start":  15.299999999999999
+                                       },
+                                       {
+                                           "word":  "se",
+                                           "end":  16.64,
+                                           "start":  16.06
+                                       },
+                                       {
+                                           "word":  "tenait,",
+                                           "end":  17.3,
+                                           "start":  16.64
+                                       },
+                                       {
+                                           "word":  "son",
+                                           "end":  18.62,
+                                           "start":  17.3
+                                       }
+                                   ],
+                         "text":  "... Dans l\u0027ombre de la douleur, sa raie se tenait, son",
+                         "start":  0.1
+                     },
+                     {
+                         "end":  25.52,
+                         "words":  [
+                                       {
+                                           "word":  "coeur",
+                                           "end":  19.1,
+                                           "start":  18.62
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  19.68,
+                                           "start":  19.1
+                                       },
+                                       {
+                                           "word":  "détresse,",
+                                           "end":  20.62,
+                                           "start":  19.68
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  21.72,
+                                           "start":  21.1
+                                       },
+                                       {
+                                           "word":  "cri",
+                                           "end":  21.98,
+                                           "start":  21.72
+                                       },
+                                       {
+                                           "word":  "pour",
+                                           "end":  22.48,
+                                           "start":  21.98
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  22.76,
+                                           "start":  22.48
+                                       },
+                                       {
+                                           "word":  "enfant.",
+                                           "end":  23.52,
+                                           "start":  22.76
+                                       },
+                                       {
+                                           "word":  "Elle",
+                                           "end":  24.8,
+                                           "start":  23.52
+                                       },
+                                       {
+                                           "word":  "a",
+                                           "end":  25.2,
+                                           "start":  24.8
+                                       },
+                                       {
+                                           "word":  "donné",
+                                           "end":  25.52,
+                                           "start":  25.2
+                                       }
+                                   ],
+                         "text":  "coeur en détresse, un cri pour un enfant. Elle a donné",
+                         "start":  18.62
+                     },
+                     {
+                         "end":  34.48,
+                         "words":  [
+                                       {
+                                           "word":  "sa",
+                                           "end":  26,
+                                           "start":  25.52
+                                       },
+                                       {
+                                           "word":  "servante,",
+                                           "end":  27.14,
+                                           "start":  26
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  27.94,
+                                           "start":  27.14
+                                       },
+                                       {
+                                           "word":  "espoir",
+                                           "end":  29,
+                                           "start":  27.94
+                                       },
+                                       {
+                                           "word":  "égaré,",
+                                           "end":  29.92,
+                                           "start":  29
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  30.42,
+                                           "start":  30.020000000000003
+                                       },
+                                       {
+                                           "word":  "bras",
+                                           "end":  30.92,
+                                           "start":  30.520000000000003
+                                       },
+                                       {
+                                           "word":  "maécouté,",
+                                           "end":  31.42,
+                                           "start":  31.020000000000003
+                                       },
+                                       {
+                                           "word":  "suivant",
+                                           "end":  34.48,
+                                           "start":  33.22
+                                       }
+                                   ],
+                         "text":  "sa servante, un espoir égaré, à bras maécouté, suivant",
+                         "start":  25.52
+                     },
+                     {
+                         "end":  45.6,
+                         "words":  [
+                                       {
+                                           "word":  "ce",
+                                           "end":  34.72,
+                                           "start":  34.48
+                                       },
+                                       {
+                                           "word":  "plan",
+                                           "end":  35.16,
+                                           "start":  34.72
+                                       },
+                                       {
+                                           "word":  "incertain.",
+                                           "end":  36.42,
+                                           "start":  35.16
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  36.92,
+                                           "start":  36.52
+                                       },
+                                       {
+                                           "word":  "Dieu,",
+                                           "end":  39.66,
+                                           "start":  39.1
+                                       },
+                                       {
+                                           "word":  "qui",
+                                           "end":  40.36,
+                                           "start":  39.66
+                                       },
+                                       {
+                                           "word":  "entend",
+                                           "end":  41,
+                                           "start":  40.36
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  41.96,
+                                           "start":  41
+                                       },
+                                       {
+                                           "word":  "pleurs,",
+                                           "end":  42.74,
+                                           "start":  41.96
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  45.6,
+                                           "start":  44.2
+                                       }
+                                   ],
+                         "text":  "ce plan incertain. Oh Dieu, qui entend nos pleurs, dans",
+                         "start":  34.48
+                     },
+                     {
+                         "end":  54.8,
+                         "words":  [
+                                       {
+                                           "word":  "le",
+                                           "end":  45.94,
+                                           "start":  45.6
+                                       },
+                                       {
+                                           "word":  "désert",
+                                           "end":  47.08,
+                                           "start":  45.94
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  47.58,
+                                           "start":  47.08
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  48.42,
+                                           "start":  47.58
+                                       },
+                                       {
+                                           "word":  "coeurs,",
+                                           "end":  49.32,
+                                           "start":  48.42
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  51.22,
+                                           "start":  49.92
+                                       },
+                                       {
+                                           "word":  "vois",
+                                           "end":  51.62,
+                                           "start":  51.22
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  51.98,
+                                           "start":  51.62
+                                       },
+                                       {
+                                           "word":  "larmes,",
+                                           "end":  52.76,
+                                           "start":  51.98
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  54.1,
+                                           "start":  53.52
+                                       },
+                                       {
+                                           "word":  "vois",
+                                           "end":  54.42,
+                                           "start":  54.1
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  54.8,
+                                           "start":  54.42
+                                       }
+                                   ],
+                         "text":  "le désert de nos coeurs, tu vois nos larmes, tu vois nos",
+                         "start":  45.6
+                     },
+                     {
+                         "end":  73.24,
+                         "words":  [
+                                       {
+                                           "word":  "douleurs,",
+                                           "end":  55.7,
+                                           "start":  54.8
+                                       },
+                                       {
+                                           "word":  "Ismaël,",
+                                           "end":  58.72,
+                                           "start":  57.64
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  59.96,
+                                           "start":  58.92
+                                       },
+                                       {
+                                           "word":  "fils",
+                                           "end":  60.44,
+                                           "start":  59.96
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  61.18,
+                                           "start":  60.44
+                                       },
+                                       {
+                                           "word":  "promesse.",
+                                           "end":  62.02,
+                                           "start":  61.18
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  64.4,
+                                           "start":  63.320000000000007
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  72.74,
+                                           "start":  71.96
+                                       },
+                                       {
+                                           "word":  "flexion,",
+                                           "end":  73.24,
+                                           "start":  72.839999999999989
+                                       }
+                                   ],
+                         "text":  "douleurs, Ismaël, un fils de promesse. Dans la flexion,",
+                         "start":  54.8
+                     },
+                     {
+                         "end":  77.72,
+                         "words":  [
+                                       {
+                                           "word":  "ta",
+                                           "end":  73.74,
+                                           "start":  73.339999999999989
+                                       },
+                                       {
+                                           "word":  "grâce",
+                                           "end":  74.24,
+                                           "start":  73.839999999999989
+                                       },
+                                       {
+                                           "word":  "se",
+                                           "end":  74.74,
+                                           "start":  74.339999999999989
+                                       },
+                                       {
+                                           "word":  "dresse.",
+                                           "end":  75.24,
+                                           "start":  74.839999999999989
+                                       },
+                                       {
+                                           "word":  "À",
+                                           "end":  75.74,
+                                           "start":  75.339999999999989
+                                       },
+                                       {
+                                           "word":  "gare,",
+                                           "end":  76.24,
+                                           "start":  75.839999999999989
+                                       },
+                                       {
+                                           "word":  "cet",
+                                           "end":  76.74,
+                                           "start":  76.339999999999989
+                                       },
+                                       {
+                                           "word":  "enfli,",
+                                           "end":  77.24,
+                                           "start":  76.839999999999989
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  76.72,
+                                           "start":  76.6
+                                       },
+                                       {
+                                           "word":  "maîtresse",
+                                           "end":  77.22,
+                                           "start":  76.82
+                                       },
+                                       {
+                                           "word":  "lui",
+                                           "end":  77.72,
+                                           "start":  77.32
+                                       }
+                                   ],
+                         "text":  "ta grâce se dresse. À gare, cet enfli, la maîtresse lui",
+                         "start":  73.339999999999989
+                     },
+                     {
+                         "end":  83.46,
+                         "words":  [
+                                       {
+                                           "word":  "fait",
+                                           "end":  78.22,
+                                           "start":  77.82
+                                       },
+                                       {
+                                           "word":  "mal.",
+                                           "end":  78.72,
+                                           "start":  78.32
+                                       },
+                                       {
+                                           "word":  "Près",
+                                           "end":  79.22,
+                                           "start":  78.82
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  79.72,
+                                           "start":  79.32
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  80.22,
+                                           "start":  79.82
+                                       },
+                                       {
+                                           "word":  "source",
+                                           "end":  77.24,
+                                           "start":  76.72
+                                       },
+                                       {
+                                           "word":  "vie,",
+                                           "end":  77.74,
+                                           "start":  77.339999999999989
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  79.4,
+                                           "start":  78.84
+                                       },
+                                       {
+                                           "word":  "ange",
+                                           "end":  79.86,
+                                           "start":  79.4
+                                       },
+                                       {
+                                           "word":  "l\u0027a",
+                                           "end":  80.36,
+                                           "start":  79.96
+                                       },
+                                       {
+                                           "word":  "trouvé,",
+                                           "end":  80.7,
+                                           "start":  80.26
+                                       },
+                                       {
+                                           "word":  "retourne",
+                                           "end":  83.46,
+                                           "start":  82.1
+                                       }
+                                   ],
+                         "text":  "fait mal. Près de la source vie, un ange l\u0027a trouvé, retourne",
+                         "start":  77.82
+                     },
+                     {
+                         "end":  92.2,
+                         "words":  [
+                                       {
+                                           "word":  "vers",
+                                           "end":  83.8,
+                                           "start":  83.46
+                                       },
+                                       {
+                                           "word":  "elle,",
+                                           "end":  84.66,
+                                           "start":  83.8
+                                       },
+                                       {
+                                           "word":  "humilié",
+                                           "end":  86.24,
+                                           "start":  84.86
+                                       },
+                                       {
+                                           "word":  "toi,",
+                                           "end":  86.5,
+                                           "start":  86.24
+                                       },
+                                       {
+                                           "word":  "ma",
+                                           "end":  86.96,
+                                           "start":  86.5
+                                       },
+                                       {
+                                           "word":  "soeur.",
+                                           "end":  87.64,
+                                           "start":  86.96
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  89.06,
+                                           "start":  87.64
+                                       },
+                                       {
+                                           "word":  "multiplierai",
+                                           "end":  90.72,
+                                           "start":  89.06
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  91.38,
+                                           "start":  90.72
+                                       },
+                                       {
+                                           "word":  "lignée,",
+                                           "end":  92.2,
+                                           "start":  91.38
+                                       }
+                                   ],
+                         "text":  "vers elle, humilié toi, ma soeur. Je multiplierai ta lignée,",
+                         "start":  83.46
+                     },
+                     {
+                         "end":  103.54,
+                         "words":  [
+                                       {
+                                           "word":  "tu",
+                                           "end":  92.72,
+                                           "start":  92.38
+                                       },
+                                       {
+                                           "word":  "seras",
+                                           "end":  93.28,
+                                           "start":  92.72
+                                       },
+                                       {
+                                           "word":  "béni.",
+                                           "end":  93.96,
+                                           "start":  93.28
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  94.46,
+                                           "start":  94.059999999999988
+                                       },
+                                       {
+                                           "word":  "Dieu,",
+                                           "end":  97.24,
+                                           "start":  96.72
+                                       },
+                                       {
+                                           "word":  "qui",
+                                           "end":  97.92,
+                                           "start":  97.24
+                                       },
+                                       {
+                                           "word":  "entend",
+                                           "end":  98.72,
+                                           "start":  97.92
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  99.58,
+                                           "start":  98.72
+                                       },
+                                       {
+                                           "word":  "pleurs,",
+                                           "end":  100.3,
+                                           "start":  99.58
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  103.2,
+                                           "start":  101.84
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  103.54,
+                                           "start":  103.2
+                                       }
+                                   ],
+                         "text":  "tu seras béni. Oh Dieu, qui entend nos pleurs, dans le",
+                         "start":  92.38
+                     },
+                     {
+                         "end":  110.68,
+                         "words":  [
+                                       {
+                                           "word":  "désert",
+                                           "end":  104.7,
+                                           "start":  103.54
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  105.22,
+                                           "start":  104.7
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  106,
+                                           "start":  105.22
+                                       },
+                                       {
+                                           "word":  "coeurs,",
+                                           "end":  107.02,
+                                           "start":  106
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  108.94,
+                                           "start":  107.02
+                                       },
+                                       {
+                                           "word":  "vois",
+                                           "end":  109.3,
+                                           "start":  108.94
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  109.6,
+                                           "start":  109.3
+                                       },
+                                       {
+                                           "word":  "larmes,",
+                                           "end":  110.32,
+                                           "start":  109.6
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  110.68,
+                                           "start":  110.32
+                                       },
+                                       {
+                                           "word":  "vois",
+                                           "end":  110.68,
+                                           "start":  110.68
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  110.68,
+                                           "start":  110.68
+                                       },
+                                       {
+                                           "word":  "douleurs,",
+                                           "end":  110.68,
+                                           "start":  110.68
+                                       }
+                                   ],
+                         "text":  "désert de nos coeurs, tu vois nos larmes, tu vois nos douleurs,",
+                         "start":  103.54
+                     },
+                     {
+                         "end":  134.98,
+                         "words":  [
+                                       {
+                                           "word":  "Ismaël,",
+                                           "end":  116.74,
+                                           "start":  115.9
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  117.58,
+                                           "start":  116.74
+                                       },
+                                       {
+                                           "word":  "fils",
+                                           "end":  118.06,
+                                           "start":  117.58
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  118.74,
+                                           "start":  118.06
+                                       },
+                                       {
+                                           "word":  "promesse.",
+                                           "end":  119.58,
+                                           "start":  118.74
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  121.94,
+                                           "start":  121.1
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  133.48,
+                                           "start":  133.2
+                                       },
+                                       {
+                                           "word":  "flexion,",
+                                           "end":  133.98,
+                                           "start":  133.57999999999998
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  134.48,
+                                           "start":  134.07999999999998
+                                       },
+                                       {
+                                           "word":  "grâce",
+                                           "end":  134.98,
+                                           "start":  134.57999999999998
+                                       }
+                                   ],
+                         "text":  "Ismaël, un fils de promesse. Dans la flexion, ta grâce",
+                         "start":  115.9
+                     },
+                     {
+                         "end":  133.88,
+                         "words":  [
+                                       {
+                                           "word":  "se",
+                                           "end":  135.48,
+                                           "start":  135.07999999999998
+                                       },
+                                       {
+                                           "word":  "dresse.",
+                                           "end":  135.98,
+                                           "start":  135.57999999999998
+                                       },
+                                       {
+                                           "word":  "À",
+                                           "end":  136.48,
+                                           "start":  136.07999999999998
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  136.98,
+                                           "start":  136.57999999999998
+                                       },
+                                       {
+                                           "word":  "héroï,",
+                                           "end":  137.48,
+                                           "start":  137.07999999999998
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  137.98,
+                                           "start":  137.57999999999998
+                                       },
+                                       {
+                                           "word":  "Dieu",
+                                           "end":  138.48,
+                                           "start":  138.07999999999998
+                                       },
+                                       {
+                                           "word":  "qui",
+                                           "end":  138.98,
+                                           "start":  138.57999999999998
+                                       },
+                                       {
+                                           "word":  "boit,",
+                                           "end":  139.48,
+                                           "start":  139.07999999999998
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  139.98,
+                                           "start":  139.57999999999998
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  140.48,
+                                           "start":  140.07999999999998
+                                       },
+                                       {
+                                           "word":  "nuit,",
+                                           "end":  133.88,
+                                           "start":  133.48
+                                       }
+                                   ],
+                         "text":  "se dresse. À ta héroï, le Dieu qui boit, dans la nuit,",
+                         "start":  135.07999999999998
+                     },
+                     {
+                         "end":  138.78,
+                         "words":  [
+                                       {
+                                           "word":  "tu",
+                                           "end":  134.1,
+                                           "start":  133.9
+                                       },
+                                       {
+                                           "word":  "es",
+                                           "end":  134.38,
+                                           "start":  134.1
+                                       },
+                                       {
+                                           "word":  "ma",
+                                           "end":  134.7,
+                                           "start":  134.38
+                                       },
+                                       {
+                                           "word":  "lumière.",
+                                           "end":  135.32,
+                                           "start":  134.7
+                                       },
+                                       {
+                                           "word":  "Chaque",
+                                           "end":  136.06,
+                                           "start":  135.32
+                                       },
+                                       {
+                                           "word":  "cri,",
+                                           "end":  136.4,
+                                           "start":  136.06
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  136.78,
+                                           "start":  136.5
+                                       },
+                                       {
+                                           "word":  "larme,",
+                                           "end":  137.5,
+                                           "start":  136.78
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  137.74,
+                                           "start":  137.5
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  137.96,
+                                           "start":  137.74
+                                       },
+                                       {
+                                           "word":  "entend.",
+                                           "end":  138.78,
+                                           "start":  137.96
+                                       }
+                                   ],
+                         "text":  "tu es ma lumière. Chaque cri, chaque larme, tu les entend.",
+                         "start":  133.9
+                     },
+                     {
+                         "end":  151.52,
+                         "words":  [
+                                       {
+                                           "word":  "Oh",
+                                           "end":  139.9,
+                                           "start":  138.78
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  142.06,
+                                           "start":  140.68
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  143.84,
+                                           "start":  142.06
+                                       },
+                                       {
+                                           "word":  "es",
+                                           "end":  144.14,
+                                           "start":  143.84
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  144.48,
+                                           "start":  144.14
+                                       },
+                                       {
+                                           "word":  "refuge,",
+                                           "end":  145.38,
+                                           "start":  144.48
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  147.22,
+                                           "start":  145.98000000000002
+                                       },
+                                       {
+                                           "word":  "espoir.",
+                                           "end":  148.42,
+                                           "start":  147.22
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  150.52,
+                                           "start":  148.42
+                                       },
+                                       {
+                                           "word":  "Dieu,",
+                                           "end":  151.52,
+                                           "start":  151.52
+                                       }
+                                   ],
+                         "text":  "Oh Seigneur, tu es notre refuge, notre espoir. Oh Dieu,",
+                         "start":  138.78
+                     },
+                     {
+                         "end":  163.26,
+                         "words":  [
+                                       {
+                                           "word":  "qui",
+                                           "end":  152.32,
+                                           "start":  151.52
+                                       },
+                                       {
+                                           "word":  "entend",
+                                           "end":  153,
+                                           "start":  152.32
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  153.98,
+                                           "start":  153
+                                       },
+                                       {
+                                           "word":  "pleurs,",
+                                           "end":  154.7,
+                                           "start":  153.98
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  157.54,
+                                           "start":  156.18
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  157.94,
+                                           "start":  157.54
+                                       },
+                                       {
+                                           "word":  "désert",
+                                           "end":  159.08,
+                                           "start":  157.94
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  159.6,
+                                           "start":  159.08
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  160.46,
+                                           "start":  159.6
+                                       },
+                                       {
+                                           "word":  "coeurs,",
+                                           "end":  161.14,
+                                           "start":  160.46
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  163.26,
+                                           "start":  161.14
+                                       }
+                                   ],
+                         "text":  "qui entend nos pleurs, dans le désert de nos coeurs, tu",
+                         "start":  151.52
+                     },
+                     {
+                         "end":  169.02,
+                         "words":  [
+                                       {
+                                           "word":  "vois",
+                                           "end":  163.6,
+                                           "start":  163.26
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  163.98,
+                                           "start":  163.6
+                                       },
+                                       {
+                                           "word":  "larmes,",
+                                           "end":  164.72,
+                                           "start":  163.98
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  165.94,
+                                           "start":  164.72
+                                       },
+                                       {
+                                           "word":  "vois",
+                                           "end":  166.4,
+                                           "start":  165.94
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  166.84,
+                                           "start":  166.4
+                                       },
+                                       {
+                                           "word":  "douleurs,",
+                                           "end":  167.52,
+                                           "start":  166.84
+                                       },
+                                       {
+                                           "word":  "Ismaël,",
+                                           "end":  168.02,
+                                           "start":  167.62
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  168.52,
+                                           "start":  168.12
+                                       },
+                                       {
+                                           "word":  "fils",
+                                           "end":  169.02,
+                                           "start":  168.62
+                                       }
+                                   ],
+                         "text":  "vois nos larmes, tu vois nos douleurs, Ismaël, un fils",
+                         "start":  163.26
+                     },
+                     {
+                         "end":  168.24,
+                         "words":  [
+                                       {
+                                           "word":  "de",
+                                           "end":  169.52,
+                                           "start":  169.12
+                                       },
+                                       {
+                                           "word":  "promesse.",
+                                           "end":  170.02,
+                                           "start":  169.62
+                                       },
+                                       {
+                                           "word":  "Quand",
+                                           "end":  170.52,
+                                           "start":  170.12
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  171.02,
+                                           "start":  170.62
+                                       },
+                                       {
+                                           "word":  "epreuves",
+                                           "end":  171.52,
+                                           "start":  171.12
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  172.02,
+                                           "start":  171.62
+                                       },
+                                       {
+                                           "word":  "accablent,",
+                                           "end":  172.52,
+                                           "start":  172.12
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  173.02,
+                                           "start":  172.62
+                                       },
+                                       {
+                                           "word":  "voix",
+                                           "end":  168.24,
+                                           "start":  167.92
+                                       }
+                                   ],
+                         "text":  "de promesse. Quand les epreuves nous accablent, ta voix",
+                         "start":  169.12
+                     },
+                     {
+                         "end":  172.74,
+                         "words":  [
+                                       {
+                                           "word":  "nous",
+                                           "end":  168.74,
+                                           "start":  168.34
+                                       },
+                                       {
+                                           "word":  "guide,",
+                                           "end":  169.24,
+                                           "start":  168.84
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  169.74,
+                                           "start":  169.34
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  170.24,
+                                           "start":  169.84
+                                       },
+                                       {
+                                           "word":  "souffrance,",
+                                           "end":  170.74,
+                                           "start":  170.34
+                                       },
+                                       {
+                                           "word":  "ton",
+                                           "end":  171.24,
+                                           "start":  170.84
+                                       },
+                                       {
+                                           "word":  "amour",
+                                           "end":  171.74,
+                                           "start":  171.34
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  172.24,
+                                           "start":  171.84
+                                       },
+                                       {
+                                           "word":  "délibre.",
+                                           "end":  172.74,
+                                           "start":  172.34
+                                       }
+                                   ],
+                         "text":  "nous guide, dans chaque souffrance, ton amour nous délibre.",
+                         "start":  168.34
+                     },
+                     {
+                         "end":  173.64,
+                         "words":  [
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  173.24,
+                                           "start":  172.84
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  173.74,
+                                           "start":  173.34
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  174.24,
+                                           "start":  173.84
+                                       },
+                                       {
+                                           "word":  "louons,",
+                                           "end":  174.74,
+                                           "start":  174.34
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  175.24,
+                                           "start":  174.84
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  175.74,
+                                           "start":  175.34
+                                       },
+                                       {
+                                           "word":  "joie",
+                                           "end":  176.24,
+                                           "start":  175.84
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  172.14,
+                                           "start":  170.66
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  172.64,
+                                           "start":  172.23999999999998
+                                       },
+                                       {
+                                           "word":  "pleurs,",
+                                           "end":  173.14,
+                                           "start":  172.73999999999998
+                                       },
+                                       {
+                                           "word":  "car",
+                                           "end":  173.64,
+                                           "start":  173.23999999999998
+                                       }
+                                   ],
+                         "text":  "Seigneur, nous te louons, dans la joie et les pleurs, car",
+                         "start":  172.84
+                     },
+                     {
+                         "end":  176.14,
+                         "words":  [
+                                       {
+                                           "word":  "tu",
+                                           "end":  172.14,
+                                           "start":  172.14
+                                       },
+                                       {
+                                           "word":  "es",
+                                           "end":  172.14,
+                                           "start":  172.14
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  172.64,
+                                           "start":  172.23999999999998
+                                       },
+                                       {
+                                           "word":  "force,",
+                                           "end":  173.14,
+                                           "start":  172.73999999999998
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  173.64,
+                                           "start":  173.23999999999998
+                                       },
+                                       {
+                                           "word":  "éternel",
+                                           "end":  174.14,
+                                           "start":  173.73999999999998
+                                       },
+                                       {
+                                           "word":  "sauveur.",
+                                           "end":  174.64,
+                                           "start":  174.23999999999998
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  175.14,
+                                           "start":  174.73999999999998
+                                       },
+                                       {
+                                           "word":  "Dieu,",
+                                           "end":  175.64,
+                                           "start":  175.23999999999998
+                                       },
+                                       {
+                                           "word":  "qui",
+                                           "end":  176.14,
+                                           "start":  175.73999999999998
+                                       }
+                                   ],
+                         "text":  "tu es notre force, notre éternel sauveur. Oh Dieu, qui",
+                         "start":  172.14
+                     },
+                     {
+                         "end":  175.14,
+                         "words":  [
+                                       {
+                                           "word":  "entend",
+                                           "end":  176.64,
+                                           "start":  176.23999999999998
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  177.14,
+                                           "start":  176.73999999999998
+                                       },
+                                       {
+                                           "word":  "pleurs,",
+                                           "end":  177.64,
+                                           "start":  177.23999999999998
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  178.14,
+                                           "start":  177.73999999999998
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  178.64,
+                                           "start":  178.23999999999998
+                                       },
+                                       {
+                                           "word":  "désert",
+                                           "end":  179.14,
+                                           "start":  178.73999999999998
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  173.14,
+                                           "start":  172.22
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  173.64,
+                                           "start":  173.23999999999998
+                                       },
+                                       {
+                                           "word":  "coeurs,",
+                                           "end":  174.14,
+                                           "start":  173.73999999999998
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  174.64,
+                                           "start":  174.23999999999998
+                                       },
+                                       {
+                                           "word":  "vois",
+                                           "end":  175.14,
+                                           "start":  174.73999999999998
+                                       }
+                                   ],
+                         "text":  "entend nos pleurs, dans le désert de nos coeurs, tu vois",
+                         "start":  176.23999999999998
+                     },
+                     {
+                         "end":  175.58,
+                         "words":  [
+                                       {
+                                           "word":  "nos",
+                                           "end":  175.64,
+                                           "start":  175.23999999999998
+                                       },
+                                       {
+                                           "word":  "larmes,",
+                                           "end":  176.14,
+                                           "start":  175.73999999999998
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  176.64,
+                                           "start":  176.23999999999998
+                                       },
+                                       {
+                                           "word":  "vois",
+                                           "end":  177.14,
+                                           "start":  176.73999999999998
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  177.64,
+                                           "start":  177.23999999999998
+                                       },
+                                       {
+                                           "word":  "douleurs,",
+                                           "end":  178.14,
+                                           "start":  177.73999999999998
+                                       },
+                                       {
+                                           "word":  "Ismaël,",
+                                           "end":  178.64,
+                                           "start":  178.23999999999998
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  174.7,
+                                           "start":  174.1
+                                       },
+                                       {
+                                           "word":  "fils",
+                                           "end":  175,
+                                           "start":  174.7
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  175,
+                                           "start":  175
+                                       },
+                                       {
+                                           "word":  "promesse.",
+                                           "end":  175.58,
+                                           "start":  175
+                                       }
+                                   ],
+                         "text":  "nos larmes, tu vois nos douleurs, Ismaël, un fils de promesse.",
+                         "start":  175.23999999999998
+                     },
+                     {
+                         "end":  193.94,
+                         "words":  [
+                                       {
+                                           "word":  "Dans",
+                                           "end":  182.34,
+                                           "start":  180.66
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  191.44,
+                                           "start":  191.24
+                                       },
+                                       {
+                                           "word":  "flexion,",
+                                           "end":  191.94,
+                                           "start":  191.54
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  192.44,
+                                           "start":  192.04
+                                       },
+                                       {
+                                           "word":  "grâce",
+                                           "end":  192.94,
+                                           "start":  192.54
+                                       },
+                                       {
+                                           "word":  "se",
+                                           "end":  193.44,
+                                           "start":  193.04
+                                       },
+                                       {
+                                           "word":  "dress.",
+                                           "end":  193.94,
+                                           "start":  193.54
+                                       }
+                                   ],
+                         "text":  "Dans la flexion, ta grâce se dress.",
+                         "start":  180.66
+                     }
+                 ]
+}

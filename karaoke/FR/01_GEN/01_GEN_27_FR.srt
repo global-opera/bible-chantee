@@ -1,72 +1,144 @@
 1
-00:00:14,000 --> 00:00:26,000
-Dans l'ombre de la faim, Isaac parle Sa voix tremble, son cœur s'égare
+00:00:14,000 --> 00:00:20,000
+Dans l'oubre de la fin, Isaac parle
 
 2
-00:00:26,000 --> 00:00:38,000
-Mon fils Ezeviel chasse le gibier Prépare un mets que je puisse prier
+00:00:20,000 --> 00:00:26,000
+Sa voix tremble, son cœur s'égale
 
 3
-00:00:38,000 --> 00:00:50,000
-Rebecca entend, un plan se dessine Jacob l'étoile, l'héritier du divin
+00:00:26,000 --> 00:00:32,000
+On fise ses oeuvres, chasse le guillet bien
 
 4
-00:00:50,000 --> 00:01:04,000
-Dans les mains du destin, un choix à faire Un cœur emploie la lumière et la guerre
+00:00:32,000 --> 00:00:38,000
+Préparemment que je puisse prier
 
 5
-00:01:04,000 --> 00:01:17,000
-Ô dieu de promesses, entend notre chant Que ta bénédiction couvre chaque enfant
+00:00:38,000 --> 00:00:45,000
+Repais quand on se dessine
 
 6
-00:01:17,000 --> 00:01:33,000
-Unis dans la foi, nous marchons vers toi Dans la lueur de ta grâce, nous sommes en joie
+00:00:45,000 --> 00:00:50,000
+J'accoblée toile les ritiers du divin
 
 7
-00:01:33,000 --> 00:01:46,000
-Jacob s'approche, le cœur lourd de fardeau La voix de son frère, le souffle de l'écho
+00:00:50,000 --> 00:00:56,000
+Dans les mains du destin, choix fait
 
 8
-00:01:46,000 --> 00:01:58,000
-Isaac aveugle, touche les mains du fils La ruse et l'amour, l'histoire se tisse
+00:00:56,000 --> 00:01:04,000
+Un coeur en proie, la lumière et la guerre
 
 9
-00:01:58,000 --> 00:02:11,000
-La bénédiction coule comme une source Un héritage scellé par ta force
+00:01:04,000 --> 00:01:10,000
+Au dieu de promesse, entre notre chambre
 
 10
-00:02:11,000 --> 00:02:20,000
-Essu revient, la colère en son cœur Mais la promesse demeure, ô éternel notre sauveur
+00:01:10,000 --> 00:01:17,000
+Que t'as bénédiction, courre chaque enfant
 
 11
-00:02:20,000 --> 00:02:30,000
-Ô dieu de promesses, entend notre chant Que ta bénédiction couvre chaque enfant
+00:01:17,000 --> 00:01:23,000
+Unis dans la foi, nous marchons vers toi
 
 12
-00:02:30,000 --> 00:02:40,000
-Unis dans la foi, nous marchons vers toi Dans la lueur de ta grâce, nous sommes en joie
+00:01:23,000 --> 00:01:31,000
+Dans la lueur de ta grâce, nous sommes en émoire
 
 13
-00:02:40,000 --> 00:02:56,000
-Tu es le maître des temps et des cœurs Dans chaque épreuve, tu es notre lueur
+00:01:33,000 --> 00:01:39,000
+J'accopse approche le coeur lourd de Fardo
 
 14
-00:02:56,000 --> 00:03:09,000
-Quand la haine surgit et que le mal s'approche Nous restons fermes sous ta main qui nous touche
+00:01:39,000 --> 00:01:46,000
+La voie de son frère, le souffle de l'écho
 
 15
-00:03:09,000 --> 00:03:23,000
-Ô dieu de promesses, entend notre chant Que ta bénédiction couvre chaque enfant
+00:01:46,000 --> 00:01:52,000
+Isaac aveugle, touche les mains du fils
 
 16
-00:03:23,000 --> 00:03:35,000
-Unis dans la foi, nous marchons vers toi Dans la lueur de ta grâce, nous sommes en joie
+00:01:52,000 --> 00:01:58,000
+La ruse et l'amour, l'histoire se dis
 
 17
-00:03:35,000 --> 00:03:50,000
-Dans les champs de l'éternité, nous porterons ta vérité Que chaque âme entendue soit bénie par l'amour que tu as répandu
+00:01:58,000 --> 00:02:05,000
+La bénédiction, courre comme une source
 
 18
-00:03:50,000 --> 00:03:59,000
-Oh-oh-oh-oh-oh-oh-oh-oh-oh-oh
+00:02:05,000 --> 00:02:11,000
+Un héritage s'élépart à force
+
+19
+00:02:11,000 --> 00:02:17,000
+Et survient la colère en son coeur
+
+20
+00:02:17,000 --> 00:02:20,000
+Mais la promesse demeure
+
+21
+00:02:20,000 --> 00:02:24,000
+Au éternelle notre sauveur
+
+22
+00:02:24,000 --> 00:02:30,000
+Au vieux de promesse, entre notre chambre
+
+23
+00:02:30,000 --> 00:02:37,000
+Que t'as bénédiction, courre chaque enfant
+
+24
+00:02:37,000 --> 00:02:40,000
+Unis dans la foi, nous marchons vers toi
+
+25
+00:02:40,000 --> 00:02:50,000
+Dans la lueur de ta grâce, nous sommes en émoire
+
+26
+00:02:50,000 --> 00:02:56,000
+Tu es le maître des temps et des coeurs
+
+27
+00:02:56,000 --> 00:03:02,000
+Dans chaque épreuve, tu es notre lure
+
+28
+00:03:02,000 --> 00:03:09,000
+Quand la insurgie est que le mal s'approche
+
+29
+00:03:09,000 --> 00:03:17,000
+Nous restons fermes sous ta main qui nous touche
+
+30
+00:03:17,000 --> 00:03:23,000
+Au vieux de promesse, entre notre chambre
+
+31
+00:03:23,000 --> 00:03:30,000
+Que t'as bénédiction, courre chaque enfant
+
+32
+00:03:30,000 --> 00:03:35,000
+Unis dans la foi, nous marchons vers toi
+
+33
+00:03:35,000 --> 00:03:43,000
+Dans la lueur de ta grâce, nous sommes en émoire
+
+34
+00:03:43,000 --> 00:03:50,000
+Dans les champs de l'éternité, nous porterons ta vérité
+
+35
+00:03:50,000 --> 00:03:54,000
+Que chaque amantendu soit vénipère
+
+36
+00:03:54,000 --> 00:03:59,000
+La mouve que tu harais pendu
 

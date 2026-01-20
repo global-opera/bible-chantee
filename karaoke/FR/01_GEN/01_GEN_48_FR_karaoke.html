@@ -5,57 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genese 48 | Bible Chantee Karaoke</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
-        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
-        .header h1{font-size:1.8em;color:#d4af37}
-        .player{max-width:800px;margin:20px auto;padding:0 20px}
-        audio{width:100%}
-        .lyrics{max-width:800px;margin:20px auto;padding:20px}
-        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
-        .line:hover{background:rgba(212,175,55,0.1)}
-        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
-        .line.passed{opacity:0.5}
-        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
-        .footer{text-align:center;padding:20px;color:#666}
-        .footer a{color:#d4af37}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
+        .header p { color: #888; }
+        .audio-player { 
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        audio { width: 100%; }
+        .lyrics { 
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        .line { 
+            padding: 12px 15px;
+            margin: 5px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .line .time { 
+            color: #666; 
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+        .line.active { 
+            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
+            color: #fff;
+            border-left: 4px solid #d4af37;
+            transform: scale(1.02);
+        }
+        .line.active .time { color: #d4af37; }
+        .line.past { opacity: 0.5; }
     </style>
 </head>
 <body>
-    <div class="header"><h1>Genese 48</h1><p>Bible Chantee Karaoke</p></div>
-    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_48_FR.mp3" type="audio/mpeg"></audio></div>
-    <div class="lyrics">
-        <div class="line" data-start="10.00" data-end="27.00"><span class="time">[0:10]</span>Dans la nuit, ton père s'inquiète Joseph vient, il t'attend</div>
-        <div class="line" data-start="27.00" data-end="38.00"><span class="time">[0:27]</span>Les fils de ta promesse, Éphraïm et Manassé En avant, Israël sur son lit</div>
-        <div class="line" data-start="38.00" data-end="55.00"><span class="time">[0:38]</span>Rassemble sa force, il se souvient des promesses De la voie qui l'encourage</div>
-        <div class="line" data-start="55.00" data-end="65.00"><span class="time">[0:55]</span>Ô Dieu, bénis ces enfants Qu'ils portent ton nom comme Éphraïm Manassé</div>
-        <div class="line" data-start="65.00" data-end="77.00"><span class="time">[1:05]</span>Dans la terre promise, qu'ils marchent en ta lumière Leur avenir une prière, que ta gloire les éclaire</div>
-        <div class="line" data-start="77.00" data-end="90.00"><span class="time">[1:17]</span>Là, sur le chemin des Éphrata Rachel pleure mais l'espoir demeure</div>
-        <div class="line" data-start="90.00" data-end="102.00"><span class="time">[1:30]</span>Les yeux d'Israël s'illuminent De voir la vie d'un cœur vainqueur</div>
-        <div class="line" data-start="102.00" data-end="116.00"><span class="time">[1:42]</span>Il embrasse ses enfants Dans la foi, la promesse que l'ange qui m'a protégé</div>
-        <div class="line" data-start="116.00" data-end="129.00"><span class="time">[1:56]</span>Les garde en ta tendresse</div>
-        <div class="line" data-start="129.00" data-end="140.00"><span class="time">[2:09]</span>Ô Dieu, bénis ces enfants Qu'ils portent ton nom comme Éphraïm Manassé</div>
-        <div class="line" data-start="140.00" data-end="150.00"><span class="time">[2:20]</span>Dans la terre promise, qu'ils marchent en ta lumière Leur avenir une prière, que ta gloire les éclaire</div>
-        <div class="line" data-start="150.00" data-end="159.00"><span class="time">[2:30]</span>Et même si le monde tremble, ta main guide notre chemin Tu es le Dieu de mes pères de génération en génération</div>
-        <div class="line" data-start="159.00" data-end="173.00"><span class="time">[2:39]</span>Nous déclarons avec foi que de cette lignée Jaillira une multitude pour louer ta sainteté</div>
-        <div class="line" data-start="173.00" data-end="183.00"><span class="time">[2:53]</span>Ô Dieu, bénis ces enfants Qu'ils portent ton nom comme Éphraïm Manassé</div>
-        <div class="line" data-start="183.00" data-end="201.00"><span class="time">[3:03]</span>Dans la terre promise, qu'ils marchent en ta lumière Leur avenir une prière, que ta gloire les éclaire</div>
-        <div class="line" data-start="201.00" data-end="216.00"><span class="time">[3:21]</span>À jamais dans ton amour nous marcherons, Seigneur Avec la bénédiction de nos ancêtres en cœur</div>
-        <div class="line" data-start="216.00" data-end="230.00"><span class="time">[3:36]</span>Ô Dieu, bénis ces enfants Qu'ils portent ton nom pour l'éternité Nous chantons ta promesse, notre fondation</div>
+    <div class="container">
+        <div class="header">
+            <h1>Genese 48</h1>
+            <p>Bible Chantee Karaoke</p>
+        </div>
+        <div class="audio-player">
+            <audio id="audio" controls>
+                <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_48_FR.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="lyrics" id="lyrics">
+        <div class="line" data-start="10.00" data-end="16.00"><span class="time">[0:10]</span>Dans la nuit ton père s'inquiète</div>
+        <div class="line" data-start="16.00" data-end="23.00"><span class="time">[0:16]</span>J'oseviens il t'attend</div>
+        <div class="line" data-start="24.00" data-end="27.00"><span class="time">[0:24]</span>Les fils de ta promesse</div>
+        <div class="line" data-start="27.00" data-end="30.00"><span class="time">[0:27]</span>Les prêts et mes mains n'assé</div>
+        <div class="line" data-start="32.00" data-end="34.00"><span class="time">[0:32]</span>En avant</div>
+        <div class="line" data-start="34.00" data-end="38.00"><span class="time">[0:34]</span>Il serait sur son lit</div>
+        <div class="line" data-start="38.00" data-end="41.00"><span class="time">[0:38]</span>Rassemble sa force</div>
+        <div class="line" data-start="41.00" data-end="44.00"><span class="time">[0:41]</span>Il se souvienne des promesses</div>
+        <div class="line" data-start="44.00" data-end="49.00"><span class="time">[0:44]</span>De la voix qui l'encouragent</div>
+        <div class="line" data-start="50.00" data-end="55.00"><span class="time">[0:50]</span>Oh Dieu, bénisse ses enfants</div>
+        <div class="line" data-start="55.00" data-end="58.00"><span class="time">[0:55]</span>Qui le porte ton nom</div>
+        <div class="line" data-start="58.00" data-end="61.00"><span class="time">[0:58]</span>Comme les frayés, mes mains n'assé</div>
+        <div class="line" data-start="61.00" data-end="65.00"><span class="time">[1:01]</span>Dans la terre de ton père</div>
+        <div class="line" data-start="65.00" data-end="68.00"><span class="time">[1:05]</span>Qui le marche en ta lumière</div>
+        <div class="line" data-start="68.00" data-end="71.00"><span class="time">[1:08]</span>Le ravenir eut le prier</div>
+        <div class="line" data-start="71.00" data-end="76.00"><span class="time">[1:11]</span>Que ta gloire l'exéclève</div>
+        <div class="line" data-start="77.00" data-end="81.00"><span class="time">[1:17]</span>Là sur le chemin des pratas</div>
+        <div class="line" data-start="81.00" data-end="87.00"><span class="time">[1:21]</span>Rachèle pleure mais l'espoir de meu</div>
+        <div class="line" data-start="87.00" data-end="90.00"><span class="time">[1:27]</span>Mais Dieu discrèlse si lumine</div>
+        <div class="line" data-start="90.00" data-end="95.00"><span class="time">[1:30]</span>De voir la vie d'un coeur, vainqueur</div>
+        <div class="line" data-start="95.00" data-end="99.00"><span class="time">[1:35]</span>Il embrasse ses enfants</div>
+        <div class="line" data-start="99.00" data-end="102.00"><span class="time">[1:39]</span>Dans la fois la promesse</div>
+        <div class="line" data-start="102.00" data-end="105.00"><span class="time">[1:42]</span>Que l'enche qui m'a protégé</div>
+        <div class="line" data-start="105.00" data-end="111.00"><span class="time">[1:45]</span>Les gardes en ta tonresse</div>
+        <div class="line" data-start="111.00" data-end="116.00"><span class="time">[1:51]</span>Oh Dieu, bénisse ses enfants</div>
+        <div class="line" data-start="116.00" data-end="119.00"><span class="time">[1:56]</span>Qui le porte ton nom</div>
+        <div class="line" data-start="119.00" data-end="122.00"><span class="time">[1:59]</span>Comme les frayés, mes mains n'assé</div>
+        <div class="line" data-start="122.00" data-end="126.00"><span class="time">[2:02]</span>Dans la terre de ton père</div>
+        <div class="line" data-start="126.00" data-end="129.00"><span class="time">[2:06]</span>Qui le marche en ta lumière</div>
+        <div class="line" data-start="129.00" data-end="132.00"><span class="time">[2:09]</span>Le ravenir eut le prier</div>
+        <div class="line" data-start="132.00" data-end="137.00"><span class="time">[2:12]</span>Que ta gloire l'exéclève</div>
+        <div class="line" data-start="137.00" data-end="140.00"><span class="time">[2:17]</span>Et même si le monde tremble</div>
+        <div class="line" data-start="140.00" data-end="143.00"><span class="time">[2:20]</span>Ta main qui est de notre chemin</div>
+        <div class="line" data-start="143.00" data-end="147.00"><span class="time">[2:23]</span>Tu es le Dieu de mes pères de génération</div>
+        <div class="line" data-start="147.00" data-end="150.00"><span class="time">[2:27]</span>Génération</div>
+        <div class="line" data-start="150.00" data-end="153.00"><span class="time">[2:30]</span>Nous déclarons avec soi</div>
+        <div class="line" data-start="153.00" data-end="156.00"><span class="time">[2:33]</span>Que de cette linee est</div>
+        <div class="line" data-start="156.00" data-end="159.00"><span class="time">[2:36]</span>J'aira une multitude</div>
+        <div class="line" data-start="159.00" data-end="165.00"><span class="time">[2:39]</span>Pour lui être assainte de terre</div>
+        <div class="line" data-start="165.00" data-end="170.00"><span class="time">[2:45]</span>Oh Dieu, bénisse ses enfants</div>
+        <div class="line" data-start="170.00" data-end="173.00"><span class="time">[2:50]</span>Qui le porte ton nom</div>
+        <div class="line" data-start="173.00" data-end="177.00"><span class="time">[2:53]</span>Comme les frayés, mes mains n'assé</div>
+        <div class="line" data-start="177.00" data-end="180.00"><span class="time">[2:57]</span>Dans la terre de ton père</div>
+        <div class="line" data-start="180.00" data-end="183.00"><span class="time">[3:00]</span>Qui le marche en ta lumière</div>
+        <div class="line" data-start="183.00" data-end="186.00"><span class="time">[3:03]</span>Le ravenir eut le prier</div>
+        <div class="line" data-start="186.00" data-end="193.00"><span class="time">[3:06]</span>Que ta gloire l'exéclève</div>
+        <div class="line" data-start="193.00" data-end="198.00"><span class="time">[3:13]</span>A jamais dans ton amour</div>
+        <div class="line" data-start="198.00" data-end="201.00"><span class="time">[3:18]</span>Nous marcherons au Seigneur</div>
+        <div class="line" data-start="201.00" data-end="204.00"><span class="time">[3:21]</span>Avec la bénédiction</div>
+        <div class="line" data-start="204.00" data-end="209.00"><span class="time">[3:24]</span>De nos ancêtres en cœur</div>
+        <div class="line" data-start="209.00" data-end="215.00"><span class="time">[3:29]</span>Oh Dieu, bénisse ses enfants</div>
+        <div class="line" data-start="216.00" data-end="218.00"><span class="time">[3:36]</span>Qui le porte ton nom</div>
+        <div class="line" data-start="218.00" data-end="224.00"><span class="time">[3:38]</span>Pour les termités nous chantons</div>
+        <div class="line" data-start="224.00" data-end="230.00"><span class="time">[3:44]</span>Ta promesse notre fondation</div>
+        </div>
     </div>
-    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
     <script>
-        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
-        audio.addEventListener('timeupdate',()=>{
-            const t=audio.currentTime;
-            lines.forEach(l=>{
-                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
-                l.classList.remove('active','passed');
-                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
-                else if(t>=e)l.classList.add('passed')
-            })
+        const audio = document.getElementById('audio');
+        const lines = document.querySelectorAll('.line');
+        const lyricsContainer = document.getElementById('lyrics');
+        
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            let activeIndex = -1;
+            
+            lines.forEach((line, index) => {
+                const start = parseFloat(line.dataset.start);
+                const end = parseFloat(line.dataset.end);
+                
+                line.classList.remove('active', 'past');
+                
+                if (currentTime >= start && currentTime < end) {
+                    line.classList.add('active');
+                    activeIndex = index;
+                } else if (currentTime >= end) {
+                    line.classList.add('past');
+                }
+            });
+            
+            if (activeIndex >= 0) {
+                const activeLine = lines[activeIndex];
+                const containerRect = lyricsContainer.getBoundingClientRect();
+                const lineRect = activeLine.getBoundingClientRect();
+                
+                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
+                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
         });
-        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+        
+        lines.forEach(line => {
+            line.addEventListener('click', () => {
+                audio.currentTime = parseFloat(line.dataset.start);
+                audio.play();
+            });
+        });
     </script>
 </body>
 </html>

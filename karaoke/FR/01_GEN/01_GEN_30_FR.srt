@@ -1,112 +1,224 @@
 1
-00:00:13,000 --> 00:00:20,000
-Dans l'ombre de ma peine, je crie à toi
+00:00:13,000 --> 00:00:16,000
+Dans l'ombre de ma peine
 
 2
-00:00:20,000 --> 00:00:27,000
-Comme Rachel je cherche un enfant pour mon coeur
+00:00:16,000 --> 00:00:20,000
+Je crie à toi
 
 3
-00:00:27,000 --> 00:00:34,000
-Dans le silence, je lutte, je m'accroche à la foi
+00:00:20,000 --> 00:00:23,000
+Comme rachèles je cherche
 
 4
-00:00:34,000 --> 00:00:41,000
-Dieu, tu entends ma voix, tu es mon sauveur
+00:00:23,000 --> 00:00:27,000
+Un enfant pour mon coeur
 
 5
-00:00:41,000 --> 00:00:49,000
-Dieu de promesses, tu es celui qui donne
+00:00:27,000 --> 00:00:31,000
+Dans le silence je lute
 
 6
-00:00:49,000 --> 00:00:56,000
-Dans la nuit, ta lumière éclaire ma maison
+00:00:31,000 --> 00:00:34,000
+Je m'accroche à la fois
 
 7
-00:00:56,000 --> 00:01:04,000
-Au milieu des luttes, tu es ma couronne
+00:00:34,000 --> 00:00:38,000
+Tu as tu entends ma voix
 
 8
-00:01:04,000 --> 00:01:14,000
-Seigneur, je t'adore, tu es ma raison
+00:00:38,000 --> 00:00:41,000
+Tu es mon sauveur
 
 9
-00:01:14,000 --> 00:01:21,000
-Quand Léa pleurait dans la douleur
+00:00:41,000 --> 00:00:45,000
+Tu as de promesse
 
 10
-00:01:21,000 --> 00:01:28,000
-Toi, tu as vu son coeur et tu as répondu
+00:00:45,000 --> 00:00:49,000
+Tu es celui qui donne
 
 11
-00:01:28,000 --> 00:01:36,000
-Avec chaque fils, tu as comblé son âme
+00:00:49,000 --> 00:00:52,000
+Dans la nuit ta lumière
 
 12
-00:01:36,000 --> 00:01:43,000
-Dieu, dans chaque épreuve, ton amour est le fruit
+00:00:52,000 --> 00:00:56,000
+Et claire ma maison
 
 13
-00:01:43,000 --> 00:01:51,000
-Dieu de promesses, tu es celui qui donne
+00:00:56,000 --> 00:00:59,000
+Au milieu des luttes
 
 14
-00:01:51,000 --> 00:01:57,000
-Dans la nuit, ta lumière éclaire ma maison
+00:00:59,000 --> 00:01:04,000
+Tu es ma couronne
 
 15
-00:01:57,000 --> 00:02:05,000
-Au milieu des luttes, tu es ma couronne
+00:01:04,000 --> 00:01:07,000
+Seigneur je t'adore
 
 16
-00:02:05,000 --> 00:02:12,000
-Seigneur, je t'adore, tu es ma raison
+00:01:07,000 --> 00:01:11,000
+Tu es ma raison
 
 17
-00:02:12,000 --> 00:02:19,000
-Tu as exaucé Rachel, tu as enlevé l'opprobre
+00:01:14,000 --> 00:01:18,000
+Quand les appelerait
 
 18
-00:02:19,000 --> 00:02:26,000
-Dans chaque prière, tu es ma lueur d'espoir
+00:01:18,000 --> 00:01:21,000
+Dans la douleur
 
 19
-00:02:26,000 --> 00:02:34,000
-Seigneur, tu es fidèle et ton amour ne s'arrête
+00:01:21,000 --> 00:01:24,000
+Toi tu as vu son coeur
 
 20
-00:02:34,000 --> 00:02:41,000
-Avec chaque saison, tu renouvelles mes jours
+00:01:24,000 --> 00:01:28,000
+Et tu as répondu
 
 21
-00:02:41,000 --> 00:02:49,000
-Dieu de promesses, tu es celui qui donne
+00:01:28,000 --> 00:01:32,000
+Avec chaque fils
 
 22
-00:02:49,000 --> 00:02:55,000
-Dans la nuit, ta lumière éclaire ma maison
+00:01:32,000 --> 00:01:36,000
+Tu as comblé son amin
 
 23
-00:02:55,000 --> 00:03:03,000
-Au milieu des luttes, tu es ma couronne
+00:01:36,000 --> 00:01:39,000
+Tu es dans chaque épreuve
 
 24
-00:03:03,000 --> 00:03:10,000
-Seigneur, je t'adore, tu es ma raison
+00:01:39,000 --> 00:01:43,000
+Ton amour est le fruit
 
 25
-00:03:10,000 --> 00:03:17,000
-Dieu de promesses, je marche avec foi
+00:01:43,000 --> 00:01:47,000
+Tu as de promesse
 
 26
-00:03:17,000 --> 00:03:24,000
-Dans chaque fois, je sais que tu es là
+00:01:47,000 --> 00:01:51,000
+Tu es celui qui donne
 
 27
-00:03:24,000 --> 00:03:32,000
-Seigneur, je t'adore, tu es ma lumière
+00:01:51,000 --> 00:01:53,000
+Dans la nuit ta lumière
 
 28
-00:03:32,000 --> 00:03:39,000
-Pour l'éternité, je chanterai ta bonté
+00:01:53,000 --> 00:01:57,000
+Et claire ma maison
+
+29
+00:01:57,000 --> 00:02:01,000
+Au milieu des luttes
+
+30
+00:02:01,000 --> 00:02:05,000
+Tu es ma couronne
+
+31
+00:02:05,000 --> 00:02:09,000
+Seigneur je t'adore
+
+32
+00:02:09,000 --> 00:02:12,000
+Tu es ma raison
+
+33
+00:02:12,000 --> 00:02:15,000
+Tu as exocéraschèles
+
+34
+00:02:15,000 --> 00:02:19,000
+Tu as enlevé l'autre propre
+
+35
+00:02:19,000 --> 00:02:22,000
+Dans chaque prière
+
+36
+00:02:22,000 --> 00:02:26,000
+Tu es ma lueur d'espoir
+
+37
+00:02:26,000 --> 00:02:29,000
+Seigneur tu es fidélé
+
+38
+00:02:29,000 --> 00:02:34,000
+Son arône s'arrête
+
+39
+00:02:34,000 --> 00:02:37,000
+Avec chaque saison
+
+40
+00:02:37,000 --> 00:02:41,000
+Tu renouveles mes jours
+
+41
+00:02:41,000 --> 00:02:45,000
+Tu as de promesse
+
+42
+00:02:45,000 --> 00:02:49,000
+Tu es celui qui donne
+
+43
+00:02:49,000 --> 00:02:51,000
+Dans la nuit ta lumière
+
+44
+00:02:51,000 --> 00:02:55,000
+Et claire ma maison
+
+45
+00:02:55,000 --> 00:02:59,000
+Au milieu des luttes
+
+46
+00:02:59,000 --> 00:03:03,000
+Tu es ma couronne
+
+47
+00:03:03,000 --> 00:03:07,000
+Seigneur je t'adore
+
+48
+00:03:07,000 --> 00:03:10,000
+Tu es ma raison
+
+49
+00:03:10,000 --> 00:03:13,000
+Tu as de promesse
+
+50
+00:03:13,000 --> 00:03:17,000
+Je m'encha avec foi
+
+51
+00:03:17,000 --> 00:03:20,000
+Dans chaque fois
+
+52
+00:03:20,000 --> 00:03:24,000
+Je sais que tu es là
+
+53
+00:03:24,000 --> 00:03:28,000
+Seigneur je t'adore
+
+54
+00:03:28,000 --> 00:03:32,000
+Tu es ma lumière
+
+55
+00:03:32,000 --> 00:03:35,000
+Pour l'éternité
+
+56
+00:03:35,000 --> 00:03:39,000
+Je chante rétabendé
 

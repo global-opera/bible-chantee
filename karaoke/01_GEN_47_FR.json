@@ -1,0 +1,1537 @@
+{
+  "text": " ... Dans le pain de gosene Où l'espoir est né Joseph a conduit Son peuple a protégé Des brebis et des beaux Ils sont venus Fuyant la famille La grâce a résus O seigneur Dans ta volonté Tu nous rie nos âmes Tu viens nous sauver Dans l'obscurité Ta lumière brillera À jamais nous chanteons Dans le pain de gosene Tu as promès Notre refuge Notre maison Farah on a vu Et a donné sa main À j'acobé ses fils Une terre de pain Dans les preuves Ils ont trouvé la paix Leur cœur emplie de foi Ils se sont avancés O seigneur Dans ta volonté Tu nous rie nos âmes Tu viens nous sauver Dans l'obscurité Ta lumière brillera À jamais nous chanteons Dans le pain de gosene Tu as promès Notre refuge Notre maison Nous sommes des bellies Sur cette terre Avec toi, s'égeur Nous faisons nos prières Quand la famille ne rorde Quand le cœur est lourd Nous trouvons en toi Un amour toujours O seigneur Dans ta volonté Tu nous rie nos âmes Tu viens nous sauver Dans l'obscurité Ta lumière brillera À jamais nous chanteons Dans le pain de gosene Tu as promès Notre refuge Notre maison Notre maison Notre maison Notre maison Notre maison Notre maison Notre maison Notre maison Notre maison Notre maison Notre maison Dans le pain de gosene Nous resterons Avec nos carunis Nous te lourds À jamais s'égeure Nous te lourds Nous te lourds Dans ta grâce Un fini Nous marcherons",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 17.0,
+      "text": " ...",
+      "tokens": [
+        50364,
+        1097,
+        51214
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.37635911679735373,
+      "compression_ratio": 1.0673076923076923,
+      "no_speech_prob": 0.6571435332298279
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 17.0,
+      "end": 19.0,
+      "text": " Dans le pain de gosene",
+      "tokens": [
+        51214,
+        16897,
+        476,
+        1822,
+        368,
+        290,
+        329,
+        1450,
+        51314
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.37635911679735373,
+      "compression_ratio": 1.0673076923076923,
+      "no_speech_prob": 0.6571435332298279
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 19.0,
+      "end": 22.0,
+      "text": " Où l'espoir est né",
+      "tokens": [
+        51314,
+        422,
+        5035,
+        287,
+        6,
+        279,
+        2259,
+        347,
+        871,
+        7024,
+        51464
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.37635911679735373,
+      "compression_ratio": 1.0673076923076923,
+      "no_speech_prob": 0.6571435332298279
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 22.0,
+      "end": 24.0,
+      "text": " Joseph a conduit",
+      "tokens": [
+        51464,
+        508,
+        541,
+        950,
+        257,
+        15504,
+        270,
+        51564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.37635911679735373,
+      "compression_ratio": 1.0673076923076923,
+      "no_speech_prob": 0.6571435332298279
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 24.0,
+      "end": 26.0,
+      "text": " Son peuple a protégé",
+      "tokens": [
+        51564,
+        5185,
+        49186,
+        257,
+        1742,
+        9095,
+        526,
+        51664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.37635911679735373,
+      "compression_ratio": 1.0673076923076923,
+      "no_speech_prob": 0.6571435332298279
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 26.0,
+      "end": 29.0,
+      "text": " Des brebis et des beaux",
+      "tokens": [
+        51664,
+        3885,
+        1403,
+        65,
+        271,
+        1030,
+        730,
+        312,
+        7511,
+        51814
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.37635911679735373,
+      "compression_ratio": 1.0673076923076923,
+      "no_speech_prob": 0.6571435332298279
+    },
+    {
+      "id": 6,
+      "seek": 2900,
+      "start": 29.0,
+      "end": 31.0,
+      "text": " Ils sont venus",
+      "tokens": [
+        50364,
+        17979,
+        4900,
+        6138,
+        301,
+        50464
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2964143399839048,
+      "compression_ratio": 1.3397435897435896,
+      "no_speech_prob": 0.014238889329135418
+    },
+    {
+      "id": 7,
+      "seek": 2900,
+      "start": 31.0,
+      "end": 33.0,
+      "text": " Fuyant la famille",
+      "tokens": [
+        50464,
+        479,
+        7493,
+        394,
+        635,
+        28123,
+        50564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2964143399839048,
+      "compression_ratio": 1.3397435897435896,
+      "no_speech_prob": 0.014238889329135418
+    },
+    {
+      "id": 8,
+      "seek": 2900,
+      "start": 33.0,
+      "end": 37.0,
+      "text": " La grâce a résus",
+      "tokens": [
+        50564,
+        2369,
+        31180,
+        257,
+        14415,
+        301,
+        50764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2964143399839048,
+      "compression_ratio": 1.3397435897435896,
+      "no_speech_prob": 0.014238889329135418
+    },
+    {
+      "id": 9,
+      "seek": 2900,
+      "start": 37.0,
+      "end": 39.0,
+      "text": " O seigneur",
+      "tokens": [
+        50764,
+        422,
+        369,
+        26341,
+        374,
+        50864
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2964143399839048,
+      "compression_ratio": 1.3397435897435896,
+      "no_speech_prob": 0.014238889329135418
+    },
+    {
+      "id": 10,
+      "seek": 2900,
+      "start": 39.0,
+      "end": 41.0,
+      "text": " Dans ta volonté",
+      "tokens": [
+        50864,
+        16897,
+        1846,
+        40005,
+        526,
+        50964
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2964143399839048,
+      "compression_ratio": 1.3397435897435896,
+      "no_speech_prob": 0.014238889329135418
+    },
+    {
+      "id": 11,
+      "seek": 2900,
+      "start": 41.0,
+      "end": 44.0,
+      "text": " Tu nous rie nos âmes",
+      "tokens": [
+        50964,
+        7836,
+        4666,
+        367,
+        414,
+        3269,
+        20621,
+        5814,
+        51114
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2964143399839048,
+      "compression_ratio": 1.3397435897435896,
+      "no_speech_prob": 0.014238889329135418
+    },
+    {
+      "id": 12,
+      "seek": 2900,
+      "start": 44.0,
+      "end": 46.0,
+      "text": " Tu viens nous sauver",
+      "tokens": [
+        51114,
+        7836,
+        36421,
+        4666,
+        17828,
+        331,
+        51214
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2964143399839048,
+      "compression_ratio": 1.3397435897435896,
+      "no_speech_prob": 0.014238889329135418
+    },
+    {
+      "id": 13,
+      "seek": 2900,
+      "start": 46.0,
+      "end": 48.0,
+      "text": " Dans l'obscurité",
+      "tokens": [
+        51214,
+        16897,
+        287,
+        6,
+        16537,
+        14112,
+        5066,
+        51314
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2964143399839048,
+      "compression_ratio": 1.3397435897435896,
+      "no_speech_prob": 0.014238889329135418
+    },
+    {
+      "id": 14,
+      "seek": 2900,
+      "start": 48.0,
+      "end": 51.0,
+      "text": " Ta lumière brillera",
+      "tokens": [
+        51314,
+        6551,
+        43193,
+        8695,
+        1663,
+        51464
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2964143399839048,
+      "compression_ratio": 1.3397435897435896,
+      "no_speech_prob": 0.014238889329135418
+    },
+    {
+      "id": 15,
+      "seek": 2900,
+      "start": 51.0,
+      "end": 54.0,
+      "text": " À jamais nous chanteons",
+      "tokens": [
+        51464,
+        19018,
+        14540,
+        4666,
+        417,
+        2879,
+        892,
+        51614
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2964143399839048,
+      "compression_ratio": 1.3397435897435896,
+      "no_speech_prob": 0.014238889329135418
+    },
+    {
+      "id": 16,
+      "seek": 2900,
+      "start": 54.0,
+      "end": 57.0,
+      "text": " Dans le pain de gosene",
+      "tokens": [
+        51614,
+        16897,
+        476,
+        1822,
+        368,
+        290,
+        329,
+        1450,
+        51764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2964143399839048,
+      "compression_ratio": 1.3397435897435896,
+      "no_speech_prob": 0.014238889329135418
+    },
+    {
+      "id": 17,
+      "seek": 5700,
+      "start": 57.0,
+      "end": 59.0,
+      "text": " Tu as promès",
+      "tokens": [
+        50364,
+        7836,
+        382,
+        2234,
+        3645,
+        50464
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2925868215440195,
+      "compression_ratio": 1.2922077922077921,
+      "no_speech_prob": 0.0017809697892516851
+    },
+    {
+      "id": 18,
+      "seek": 5700,
+      "start": 59.0,
+      "end": 61.0,
+      "text": " Notre refuge",
+      "tokens": [
+        50464,
+        34663,
+        10991,
+        50564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2925868215440195,
+      "compression_ratio": 1.2922077922077921,
+      "no_speech_prob": 0.0017809697892516851
+    },
+    {
+      "id": 19,
+      "seek": 5700,
+      "start": 61.0,
+      "end": 63.0,
+      "text": " Notre maison",
+      "tokens": [
+        50564,
+        34663,
+        28511,
+        50664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2925868215440195,
+      "compression_ratio": 1.2922077922077921,
+      "no_speech_prob": 0.0017809697892516851
+    },
+    {
+      "id": 20,
+      "seek": 5700,
+      "start": 63.0,
+      "end": 67.0,
+      "text": " Farah on a vu",
+      "tokens": [
+        50664,
+        9067,
+        545,
+        322,
+        257,
+        9732,
+        50864
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2925868215440195,
+      "compression_ratio": 1.2922077922077921,
+      "no_speech_prob": 0.0017809697892516851
+    },
+    {
+      "id": 21,
+      "seek": 5700,
+      "start": 67.0,
+      "end": 69.0,
+      "text": " Et a donné sa main",
+      "tokens": [
+        50864,
+        3790,
+        257,
+        31165,
+        601,
+        2135,
+        50964
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2925868215440195,
+      "compression_ratio": 1.2922077922077921,
+      "no_speech_prob": 0.0017809697892516851
+    },
+    {
+      "id": 22,
+      "seek": 5700,
+      "start": 69.0,
+      "end": 71.0,
+      "text": " À j'acobé ses fils",
+      "tokens": [
+        50964,
+        19018,
+        361,
+        6,
+        326,
+        996,
+        526,
+        5385,
+        46190,
+        51064
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2925868215440195,
+      "compression_ratio": 1.2922077922077921,
+      "no_speech_prob": 0.0017809697892516851
+    },
+    {
+      "id": 23,
+      "seek": 5700,
+      "start": 71.0,
+      "end": 73.0,
+      "text": " Une terre de pain",
+      "tokens": [
+        51064,
+        16701,
+        31815,
+        368,
+        1822,
+        51164
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2925868215440195,
+      "compression_ratio": 1.2922077922077921,
+      "no_speech_prob": 0.0017809697892516851
+    },
+    {
+      "id": 24,
+      "seek": 5700,
+      "start": 73.0,
+      "end": 75.0,
+      "text": " Dans les preuves",
+      "tokens": [
+        51164,
+        16897,
+        1512,
+        659,
+        84,
+        977,
+        51264
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2925868215440195,
+      "compression_ratio": 1.2922077922077921,
+      "no_speech_prob": 0.0017809697892516851
+    },
+    {
+      "id": 25,
+      "seek": 5700,
+      "start": 75.0,
+      "end": 77.0,
+      "text": " Ils ont trouvé la paix",
+      "tokens": [
+        51264,
+        17979,
+        6592,
+        37742,
+        635,
+        2502,
+        970,
+        51364
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2925868215440195,
+      "compression_ratio": 1.2922077922077921,
+      "no_speech_prob": 0.0017809697892516851
+    },
+    {
+      "id": 26,
+      "seek": 5700,
+      "start": 77.0,
+      "end": 81.0,
+      "text": " Leur cœur emplie de foi",
+      "tokens": [
+        51364,
+        1456,
+        374,
+        43207,
+        846,
+        564,
+        414,
+        368,
+        6901,
+        51564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2925868215440195,
+      "compression_ratio": 1.2922077922077921,
+      "no_speech_prob": 0.0017809697892516851
+    },
+    {
+      "id": 27,
+      "seek": 5700,
+      "start": 81.0,
+      "end": 85.0,
+      "text": " Ils se sont avancés",
+      "tokens": [
+        51564,
+        17979,
+        369,
+        4900,
+        1305,
+        4463,
+        2191,
+        51764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2925868215440195,
+      "compression_ratio": 1.2922077922077921,
+      "no_speech_prob": 0.0017809697892516851
+    },
+    {
+      "id": 28,
+      "seek": 8500,
+      "start": 85.0,
+      "end": 89.0,
+      "text": " O seigneur",
+      "tokens": [
+        50364,
+        422,
+        369,
+        26341,
+        374,
+        50564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.052631133397420246,
+      "compression_ratio": 1.3873239436619718,
+      "no_speech_prob": 0.0032064670231193304
+    },
+    {
+      "id": 29,
+      "seek": 8500,
+      "start": 89.0,
+      "end": 91.0,
+      "text": " Dans ta volonté",
+      "tokens": [
+        50564,
+        16897,
+        1846,
+        40005,
+        526,
+        50664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.052631133397420246,
+      "compression_ratio": 1.3873239436619718,
+      "no_speech_prob": 0.0032064670231193304
+    },
+    {
+      "id": 30,
+      "seek": 8500,
+      "start": 91.0,
+      "end": 93.0,
+      "text": " Tu nous rie nos âmes",
+      "tokens": [
+        50664,
+        7836,
+        4666,
+        367,
+        414,
+        3269,
+        20621,
+        5814,
+        50764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.052631133397420246,
+      "compression_ratio": 1.3873239436619718,
+      "no_speech_prob": 0.0032064670231193304
+    },
+    {
+      "id": 31,
+      "seek": 8500,
+      "start": 93.0,
+      "end": 95.0,
+      "text": " Tu viens nous sauver",
+      "tokens": [
+        50764,
+        7836,
+        36421,
+        4666,
+        17828,
+        331,
+        50864
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.052631133397420246,
+      "compression_ratio": 1.3873239436619718,
+      "no_speech_prob": 0.0032064670231193304
+    },
+    {
+      "id": 32,
+      "seek": 8500,
+      "start": 95.0,
+      "end": 97.0,
+      "text": " Dans l'obscurité",
+      "tokens": [
+        50864,
+        16897,
+        287,
+        6,
+        16537,
+        14112,
+        5066,
+        50964
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.052631133397420246,
+      "compression_ratio": 1.3873239436619718,
+      "no_speech_prob": 0.0032064670231193304
+    },
+    {
+      "id": 33,
+      "seek": 8500,
+      "start": 97.0,
+      "end": 101.0,
+      "text": " Ta lumière brillera",
+      "tokens": [
+        50964,
+        6551,
+        43193,
+        8695,
+        1663,
+        51164
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.052631133397420246,
+      "compression_ratio": 1.3873239436619718,
+      "no_speech_prob": 0.0032064670231193304
+    },
+    {
+      "id": 34,
+      "seek": 8500,
+      "start": 101.0,
+      "end": 104.0,
+      "text": " À jamais nous chanteons",
+      "tokens": [
+        51164,
+        19018,
+        14540,
+        4666,
+        417,
+        2879,
+        892,
+        51314
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.052631133397420246,
+      "compression_ratio": 1.3873239436619718,
+      "no_speech_prob": 0.0032064670231193304
+    },
+    {
+      "id": 35,
+      "seek": 8500,
+      "start": 104.0,
+      "end": 106.0,
+      "text": " Dans le pain de gosene",
+      "tokens": [
+        51314,
+        16897,
+        476,
+        1822,
+        368,
+        290,
+        329,
+        1450,
+        51414
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.052631133397420246,
+      "compression_ratio": 1.3873239436619718,
+      "no_speech_prob": 0.0032064670231193304
+    },
+    {
+      "id": 36,
+      "seek": 8500,
+      "start": 106.0,
+      "end": 108.0,
+      "text": " Tu as promès",
+      "tokens": [
+        51414,
+        7836,
+        382,
+        2234,
+        3645,
+        51514
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.052631133397420246,
+      "compression_ratio": 1.3873239436619718,
+      "no_speech_prob": 0.0032064670231193304
+    },
+    {
+      "id": 37,
+      "seek": 8500,
+      "start": 108.0,
+      "end": 110.0,
+      "text": " Notre refuge",
+      "tokens": [
+        51514,
+        34663,
+        10991,
+        51614
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.052631133397420246,
+      "compression_ratio": 1.3873239436619718,
+      "no_speech_prob": 0.0032064670231193304
+    },
+    {
+      "id": 38,
+      "seek": 8500,
+      "start": 110.0,
+      "end": 114.0,
+      "text": " Notre maison",
+      "tokens": [
+        51614,
+        34663,
+        28511,
+        51814
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.052631133397420246,
+      "compression_ratio": 1.3873239436619718,
+      "no_speech_prob": 0.0032064670231193304
+    },
+    {
+      "id": 39,
+      "seek": 11400,
+      "start": 114.0,
+      "end": 116.0,
+      "text": " Nous sommes des bellies",
+      "tokens": [
+        50364,
+        15343,
+        25232,
+        730,
+        4549,
+        530,
+        50464
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22000067574637278,
+      "compression_ratio": 1.398936170212766,
+      "no_speech_prob": 0.0021208045072853565
+    },
+    {
+      "id": 40,
+      "seek": 11400,
+      "start": 116.0,
+      "end": 118.0,
+      "text": " Sur cette terre",
+      "tokens": [
+        50464,
+        6732,
+        5550,
+        31815,
+        50564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22000067574637278,
+      "compression_ratio": 1.398936170212766,
+      "no_speech_prob": 0.0021208045072853565
+    },
+    {
+      "id": 41,
+      "seek": 11400,
+      "start": 118.0,
+      "end": 120.0,
+      "text": " Avec toi, s'égeur",
+      "tokens": [
+        50564,
+        31720,
+        15648,
+        11,
+        262,
+        6,
+        526,
+        432,
+        374,
+        50664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22000067574637278,
+      "compression_ratio": 1.398936170212766,
+      "no_speech_prob": 0.0021208045072853565
+    },
+    {
+      "id": 42,
+      "seek": 11400,
+      "start": 120.0,
+      "end": 122.0,
+      "text": " Nous faisons nos prières",
+      "tokens": [
+        50664,
+        15343,
+        12153,
+        892,
+        3269,
+        1790,
+        13927,
+        50764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22000067574637278,
+      "compression_ratio": 1.398936170212766,
+      "no_speech_prob": 0.0021208045072853565
+    },
+    {
+      "id": 43,
+      "seek": 11400,
+      "start": 122.0,
+      "end": 124.0,
+      "text": " Quand la famille ne rorde",
+      "tokens": [
+        50764,
+        22015,
+        635,
+        28123,
+        408,
+        367,
+        15127,
+        50864
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22000067574637278,
+      "compression_ratio": 1.398936170212766,
+      "no_speech_prob": 0.0021208045072853565
+    },
+    {
+      "id": 44,
+      "seek": 11400,
+      "start": 124.0,
+      "end": 126.0,
+      "text": " Quand le cœur est lourd",
+      "tokens": [
+        50864,
+        22015,
+        476,
+        43207,
+        871,
+        287,
+        21764,
+        50964
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22000067574637278,
+      "compression_ratio": 1.398936170212766,
+      "no_speech_prob": 0.0021208045072853565
+    },
+    {
+      "id": 45,
+      "seek": 11400,
+      "start": 126.0,
+      "end": 128.0,
+      "text": " Nous trouvons en toi",
+      "tokens": [
+        50964,
+        15343,
+        3455,
+        85,
+        892,
+        465,
+        15648,
+        51064
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22000067574637278,
+      "compression_ratio": 1.398936170212766,
+      "no_speech_prob": 0.0021208045072853565
+    },
+    {
+      "id": 46,
+      "seek": 11400,
+      "start": 128.0,
+      "end": 130.0,
+      "text": " Un amour toujours",
+      "tokens": [
+        51064,
+        1156,
+        669,
+        396,
+        11936,
+        51164
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22000067574637278,
+      "compression_ratio": 1.398936170212766,
+      "no_speech_prob": 0.0021208045072853565
+    },
+    {
+      "id": 47,
+      "seek": 11400,
+      "start": 130.0,
+      "end": 132.0,
+      "text": " O seigneur",
+      "tokens": [
+        51164,
+        422,
+        369,
+        26341,
+        374,
+        51264
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22000067574637278,
+      "compression_ratio": 1.398936170212766,
+      "no_speech_prob": 0.0021208045072853565
+    },
+    {
+      "id": 48,
+      "seek": 11400,
+      "start": 132.0,
+      "end": 134.0,
+      "text": " Dans ta volonté",
+      "tokens": [
+        51264,
+        16897,
+        1846,
+        40005,
+        526,
+        51364
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22000067574637278,
+      "compression_ratio": 1.398936170212766,
+      "no_speech_prob": 0.0021208045072853565
+    },
+    {
+      "id": 49,
+      "seek": 11400,
+      "start": 134.0,
+      "end": 136.0,
+      "text": " Tu nous rie nos âmes",
+      "tokens": [
+        51364,
+        7836,
+        4666,
+        367,
+        414,
+        3269,
+        20621,
+        5814,
+        51464
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22000067574637278,
+      "compression_ratio": 1.398936170212766,
+      "no_speech_prob": 0.0021208045072853565
+    },
+    {
+      "id": 50,
+      "seek": 11400,
+      "start": 136.0,
+      "end": 138.0,
+      "text": " Tu viens nous sauver",
+      "tokens": [
+        51464,
+        7836,
+        36421,
+        4666,
+        17828,
+        331,
+        51564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22000067574637278,
+      "compression_ratio": 1.398936170212766,
+      "no_speech_prob": 0.0021208045072853565
+    },
+    {
+      "id": 51,
+      "seek": 11400,
+      "start": 138.0,
+      "end": 140.0,
+      "text": " Dans l'obscurité",
+      "tokens": [
+        51564,
+        16897,
+        287,
+        6,
+        16537,
+        14112,
+        5066,
+        51664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22000067574637278,
+      "compression_ratio": 1.398936170212766,
+      "no_speech_prob": 0.0021208045072853565
+    },
+    {
+      "id": 52,
+      "seek": 14000,
+      "start": 140.0,
+      "end": 142.0,
+      "text": " Ta lumière brillera",
+      "tokens": [
+        50364,
+        6551,
+        43193,
+        8695,
+        1663,
+        50464
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.16417553175741167,
+      "compression_ratio": 1.9509803921568627,
+      "no_speech_prob": 0.030505802482366562
+    },
+    {
+      "id": 53,
+      "seek": 14000,
+      "start": 142.0,
+      "end": 144.0,
+      "text": " À jamais nous chanteons",
+      "tokens": [
+        50464,
+        19018,
+        14540,
+        4666,
+        417,
+        2879,
+        892,
+        50564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.16417553175741167,
+      "compression_ratio": 1.9509803921568627,
+      "no_speech_prob": 0.030505802482366562
+    },
+    {
+      "id": 54,
+      "seek": 14000,
+      "start": 144.0,
+      "end": 146.0,
+      "text": " Dans le pain de gosene",
+      "tokens": [
+        50564,
+        16897,
+        476,
+        1822,
+        368,
+        290,
+        329,
+        1450,
+        50664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.16417553175741167,
+      "compression_ratio": 1.9509803921568627,
+      "no_speech_prob": 0.030505802482366562
+    },
+    {
+      "id": 55,
+      "seek": 14000,
+      "start": 146.0,
+      "end": 148.0,
+      "text": " Tu as promès",
+      "tokens": [
+        50664,
+        7836,
+        382,
+        2234,
+        3645,
+        50764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.16417553175741167,
+      "compression_ratio": 1.9509803921568627,
+      "no_speech_prob": 0.030505802482366562
+    },
+    {
+      "id": 56,
+      "seek": 14000,
+      "start": 148.0,
+      "end": 150.0,
+      "text": " Notre refuge",
+      "tokens": [
+        50764,
+        34663,
+        10991,
+        50864
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.16417553175741167,
+      "compression_ratio": 1.9509803921568627,
+      "no_speech_prob": 0.030505802482366562
+    },
+    {
+      "id": 57,
+      "seek": 14000,
+      "start": 150.0,
+      "end": 152.0,
+      "text": " Notre maison",
+      "tokens": [
+        50864,
+        34663,
+        28511,
+        50964
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.16417553175741167,
+      "compression_ratio": 1.9509803921568627,
+      "no_speech_prob": 0.030505802482366562
+    },
+    {
+      "id": 58,
+      "seek": 14000,
+      "start": 152.0,
+      "end": 154.0,
+      "text": " Notre maison",
+      "tokens": [
+        50964,
+        34663,
+        28511,
+        51064
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.16417553175741167,
+      "compression_ratio": 1.9509803921568627,
+      "no_speech_prob": 0.030505802482366562
+    },
+    {
+      "id": 59,
+      "seek": 14000,
+      "start": 154.0,
+      "end": 156.0,
+      "text": " Notre maison",
+      "tokens": [
+        51064,
+        34663,
+        28511,
+        51164
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.16417553175741167,
+      "compression_ratio": 1.9509803921568627,
+      "no_speech_prob": 0.030505802482366562
+    },
+    {
+      "id": 60,
+      "seek": 14000,
+      "start": 156.0,
+      "end": 158.0,
+      "text": " Notre maison",
+      "tokens": [
+        51164,
+        34663,
+        28511,
+        51264
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.16417553175741167,
+      "compression_ratio": 1.9509803921568627,
+      "no_speech_prob": 0.030505802482366562
+    },
+    {
+      "id": 61,
+      "seek": 14000,
+      "start": 158.0,
+      "end": 160.0,
+      "text": " Notre maison",
+      "tokens": [
+        51264,
+        34663,
+        28511,
+        51364
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.16417553175741167,
+      "compression_ratio": 1.9509803921568627,
+      "no_speech_prob": 0.030505802482366562
+    },
+    {
+      "id": 62,
+      "seek": 14000,
+      "start": 160.0,
+      "end": 162.0,
+      "text": " Notre maison",
+      "tokens": [
+        51364,
+        34663,
+        28511,
+        51464
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.16417553175741167,
+      "compression_ratio": 1.9509803921568627,
+      "no_speech_prob": 0.030505802482366562
+    },
+    {
+      "id": 63,
+      "seek": 14000,
+      "start": 162.0,
+      "end": 164.0,
+      "text": " Notre maison",
+      "tokens": [
+        51464,
+        34663,
+        28511,
+        51564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.16417553175741167,
+      "compression_ratio": 1.9509803921568627,
+      "no_speech_prob": 0.030505802482366562
+    },
+    {
+      "id": 64,
+      "seek": 14000,
+      "start": 164.0,
+      "end": 166.0,
+      "text": " Notre maison",
+      "tokens": [
+        51564,
+        34663,
+        28511,
+        51664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.16417553175741167,
+      "compression_ratio": 1.9509803921568627,
+      "no_speech_prob": 0.030505802482366562
+    },
+    {
+      "id": 65,
+      "seek": 16600,
+      "start": 166.0,
+      "end": 168.0,
+      "text": " Notre maison",
+      "tokens": [
+        50364,
+        34663,
+        28511,
+        50464
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.24803779698625394,
+      "compression_ratio": 1.5887096774193548,
+      "no_speech_prob": 0.004634695593267679
+    },
+    {
+      "id": 66,
+      "seek": 16600,
+      "start": 168.0,
+      "end": 170.0,
+      "text": " Notre maison",
+      "tokens": [
+        50464,
+        34663,
+        28511,
+        50564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.24803779698625394,
+      "compression_ratio": 1.5887096774193548,
+      "no_speech_prob": 0.004634695593267679
+    },
+    {
+      "id": 67,
+      "seek": 16600,
+      "start": 170.0,
+      "end": 172.0,
+      "text": " Notre maison",
+      "tokens": [
+        50564,
+        34663,
+        28511,
+        50664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.24803779698625394,
+      "compression_ratio": 1.5887096774193548,
+      "no_speech_prob": 0.004634695593267679
+    },
+    {
+      "id": 68,
+      "seek": 16600,
+      "start": 172.0,
+      "end": 174.0,
+      "text": " Dans le pain de gosene",
+      "tokens": [
+        50664,
+        16897,
+        476,
+        1822,
+        368,
+        290,
+        329,
+        1450,
+        50764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.24803779698625394,
+      "compression_ratio": 1.5887096774193548,
+      "no_speech_prob": 0.004634695593267679
+    },
+    {
+      "id": 69,
+      "seek": 16600,
+      "start": 174.0,
+      "end": 176.0,
+      "text": " Nous resterons",
+      "tokens": [
+        50764,
+        15343,
+        37197,
+        892,
+        50864
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.24803779698625394,
+      "compression_ratio": 1.5887096774193548,
+      "no_speech_prob": 0.004634695593267679
+    },
+    {
+      "id": 70,
+      "seek": 16600,
+      "start": 176.0,
+      "end": 178.0,
+      "text": " Avec nos carunis",
+      "tokens": [
+        50864,
+        31720,
+        3269,
+        1032,
+        409,
+        271,
+        50964
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.24803779698625394,
+      "compression_ratio": 1.5887096774193548,
+      "no_speech_prob": 0.004634695593267679
+    },
+    {
+      "id": 71,
+      "seek": 16600,
+      "start": 178.0,
+      "end": 180.0,
+      "text": " Nous te lourds",
+      "tokens": [
+        50964,
+        15343,
+        535,
+        287,
+        396,
+        16063,
+        51064
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.24803779698625394,
+      "compression_ratio": 1.5887096774193548,
+      "no_speech_prob": 0.004634695593267679
+    },
+    {
+      "id": 72,
+      "seek": 16600,
+      "start": 180.0,
+      "end": 182.0,
+      "text": " À jamais s'égeure",
+      "tokens": [
+        51064,
+        19018,
+        14540,
+        262,
+        6,
+        526,
+        432,
+        540,
+        51164
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.24803779698625394,
+      "compression_ratio": 1.5887096774193548,
+      "no_speech_prob": 0.004634695593267679
+    },
+    {
+      "id": 73,
+      "seek": 16600,
+      "start": 182.0,
+      "end": 184.0,
+      "text": " Nous te lourds",
+      "tokens": [
+        51164,
+        15343,
+        535,
+        287,
+        396,
+        16063,
+        51264
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.24803779698625394,
+      "compression_ratio": 1.5887096774193548,
+      "no_speech_prob": 0.004634695593267679
+    },
+    {
+      "id": 74,
+      "seek": 16600,
+      "start": 184.0,
+      "end": 186.0,
+      "text": " Nous te lourds",
+      "tokens": [
+        51264,
+        15343,
+        535,
+        287,
+        396,
+        16063,
+        51364
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.24803779698625394,
+      "compression_ratio": 1.5887096774193548,
+      "no_speech_prob": 0.004634695593267679
+    },
+    {
+      "id": 75,
+      "seek": 16600,
+      "start": 186.0,
+      "end": 188.0,
+      "text": " Dans ta grâce",
+      "tokens": [
+        51364,
+        16897,
+        1846,
+        31180,
+        51464
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.24803779698625394,
+      "compression_ratio": 1.5887096774193548,
+      "no_speech_prob": 0.004634695593267679
+    },
+    {
+      "id": 76,
+      "seek": 16600,
+      "start": 188.0,
+      "end": 190.0,
+      "text": " Un fini",
+      "tokens": [
+        51464,
+        1156,
+        40634,
+        51564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.24803779698625394,
+      "compression_ratio": 1.5887096774193548,
+      "no_speech_prob": 0.004634695593267679
+    },
+    {
+      "id": 77,
+      "seek": 16600,
+      "start": 190.0,
+      "end": 194.0,
+      "text": " Nous marcherons",
+      "tokens": [
+        51564,
+        15343,
+        8368,
+        260,
+        892,
+        51764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.24803779698625394,
+      "compression_ratio": 1.5887096774193548,
+      "no_speech_prob": 0.004634695593267679
+    }
+  ],
+  "language": "fr"
+}

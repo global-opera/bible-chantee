@@ -1,124 +1,252 @@
 1
-00:00:10,000 --> 00:00:21,000
-À Sichem, la terre a tremblé Dina, fille au cœur pur
+00:00:10,000 --> 00:00:16,000
+A succombe la terre à trembler
 
 2
-00:00:21,000 --> 00:00:35,000
-Dans la lumière, elle s'est égarée Si j'aime, prince, à troubler son murmure
+00:00:16,000 --> 00:00:21,000
+D'inat fille au cœur pure
 
 3
-00:00:35,000 --> 00:00:46,000
-Des promesses, des mots envoûtants Mais l'honneur fut brisé
+00:00:21,000 --> 00:00:27,000
+Dans la lumière elle s'est égarée
 
 4
-00:00:46,000 --> 00:00:56,000
-Les larmes coulent, le cœur en sang Une soeur, une douleur à jamais
+00:00:28,000 --> 00:00:33,000
+Si chame prince a troublé son mur mur
 
 5
-00:00:56,000 --> 00:01:04,000
-Ô Seigneur, entends notre cri Dans les ténèbres, ta lumière brille
+00:00:35,000 --> 00:00:39,000
+Dépromise de mon sang au temps
 
 6
-00:01:04,000 --> 00:01:09,000
-Rédemption pour ceux qui pleurent Couvre-nous de ta douce douceur
+00:00:41,000 --> 00:00:45,000
+Mais l'honneur fubrisé
 
 7
-00:01:09,000 --> 00:01:15,000
-Dans l'ombre de la douleur Nous cherchons ta cœur
+00:00:46,000 --> 00:00:50,000
+Les larmes coulent le cœur au sang
 
 8
-00:01:15,000 --> 00:01:23,000
-Viens, ô Dieu, restaurer nos vies Et guérir nos âmes
+00:00:51,000 --> 00:00:56,000
+Une sœur, une douleur a jamais
 
 9
-00:01:23,000 --> 00:01:36,000
-Nous prions ici À mort faire, à chercher la paix
+00:00:56,000 --> 00:01:01,000
+Au sœur entend notre cri
 
 10
-00:01:36,000 --> 00:01:47,000
-Des mots pour apaiser la tempête Mais la colère des filles s'est éveillée
+00:01:01,000 --> 00:01:04,000
+Dans les ténèbres
 
 11
-00:01:47,000 --> 00:02:00,000
-Pour la honte, un juste délit Nous ne céderons pas à l'opprobre
+00:01:04,000 --> 00:01:06,000
+T'as l'umière pris
 
 12
-00:02:00,000 --> 00:02:06,000
-On dit les croix unies Un pacte scellé par la douleur
+00:01:06,000 --> 00:01:09,000
+Rennoncions pour ceux qui pleurent
 
 13
-00:02:06,000 --> 00:02:13,000
-Pour l'honneur de notre ligne innée
+00:01:09,000 --> 00:01:12,000
+Courre-nous de ta douceuse douceur
 
 14
-00:02:13,000 --> 00:02:21,000
-Ô Seigneur, entends notre cri Dans les ténèbres, ta lumière brille
+00:01:12,000 --> 00:01:15,000
+Dans l'embre de la douleur
 
 15
-00:02:21,000 --> 00:02:26,000
-Rédemption pour ceux qui pleurent Couvre-nous de ta douce douceur
+00:01:15,000 --> 00:01:18,000
+Nous cherchons ta cœur
 
 16
-00:02:26,000 --> 00:02:36,000
-Dans l'ombre de la douleur Nous cherchons ta cœur
+00:01:18,000 --> 00:01:23,000
+Viens au Dieu restorer nos vies
 
 17
-00:02:36,000 --> 00:02:46,000
-Viens, ô Dieu, restaurer nos vies Et guérir nos âmes
+00:01:23,000 --> 00:01:29,000
+Et guérir nos âmes
 
 18
-00:02:46,000 --> 00:02:52,000
+00:01:29,000 --> 00:01:35,000
 Nous prions ici
 
 19
-00:02:52,000 --> 00:02:58,000
-Quand les épées ont frappé La ville a connu la fin
+00:01:36,000 --> 00:01:42,000
+Amorfer à chercher la paix
 
 20
-00:02:58,000 --> 00:03:04,000
-Mais dans ce chaos, une promesse Que tu es là même dans le chagrin
+00:01:42,000 --> 00:01:47,000
+Des mots pour appaiser la tempête
 
 21
-00:03:04,000 --> 00:03:09,000
-Dina, ô sœur, dans l'espoir Nous crions pour ta mémoire
+00:01:47,000 --> 00:01:52,000
+Mais la colère des filles s'étaient veillées
 
 22
-00:03:09,000 --> 00:03:18,000
-Rappelle-nous toujours ta lumière Dans la nuit, ton amour éclaire
+00:01:53,000 --> 00:01:59,000
+Pour l'un ont un juste délit
 
 23
-00:03:18,000 --> 00:03:23,000
-Ô Seigneur, entends notre cri Dans les ténèbres, ta lumière brille
+00:02:00,000 --> 00:02:04,000
+Nous ne s'édrons pas à l'oprobre
 
 24
-00:03:23,000 --> 00:03:29,000
-Rédemption pour ceux qui pleurent Couvre-nous de ta douce douceur
+00:02:04,000 --> 00:02:06,000
+En dit les voix unis
 
 25
-00:03:29,000 --> 00:03:36,000
-Dans l'ombre de la douleur Nous cherchons ta cœur
+00:02:06,000 --> 00:02:09,000
+Un pacte s'élépant la douleur
 
 26
-00:03:36,000 --> 00:03:46,000
-Viens, ô Dieu, restaurer nos vies Et guérir nos âmes
+00:02:09,000 --> 00:02:13,000
+Pour l'honneur de notre lignée
 
 27
-00:03:46,000 --> 00:03:52,000
-Nous prions ici
+00:02:13,000 --> 00:02:18,000
+Au sœur entend notre cri
 
 28
-00:03:52,000 --> 00:03:57,000
-Dans l'ombre, nous espérons Ta grâce nous conduit
+00:02:18,000 --> 00:02:21,000
+Dans les ténèbres
 
 29
-00:03:57,000 --> 00:04:03,000
-Rassemble nos cœurs au roi Dans ton amour, notre vie
+00:02:21,000 --> 00:02:23,000
+T'as l'umière pris
 
 30
-00:04:03,000 --> 00:04:09,000
-Dans l'ombre de la douleur Nous chantons pour ta gloire
+00:02:23,000 --> 00:02:26,000
+Rennoncions pour ceux qui pleurent
 
 31
-00:04:09,000 --> 00:04:18,000
-Pour chaque larme, chaque cœur Nous attendons un nouvel espoir
+00:02:26,000 --> 00:02:29,000
+Courre-nous de ta douceuse douceuse
+
+32
+00:02:29,000 --> 00:02:32,000
+Dans l'embre de la douleur
+
+33
+00:02:32,000 --> 00:02:36,000
+Nous cherchons ta cœur
+
+34
+00:02:36,000 --> 00:02:40,000
+Viens au Dieu restorer nos vies
+
+35
+00:02:40,000 --> 00:02:46,000
+Et guérir nos âmes
+
+36
+00:02:46,000 --> 00:02:49,000
+Nous prions ici
+
+37
+00:02:49,000 --> 00:02:52,000
+Quand les épées on frappait
+
+38
+00:02:52,000 --> 00:02:55,000
+La villa connu la fin
+
+39
+00:02:55,000 --> 00:02:58,000
+Mais dans ce cas où une promesse
+
+40
+00:02:58,000 --> 00:03:01,000
+Que tu es là même dans le chagrin
+
+41
+00:03:01,000 --> 00:03:04,000
+Dina au sœur dans l'espoir
+
+42
+00:03:04,000 --> 00:03:06,000
+Nous crions pour ta mémoire
+
+43
+00:03:06,000 --> 00:03:09,000
+Rappel nous toujours ta lumière
+
+44
+00:03:09,000 --> 00:03:14,000
+Dans la nuit ton amour est clair
+
+45
+00:03:14,000 --> 00:03:18,000
+Pour ces lieux entend notre cri
+
+46
+00:03:18,000 --> 00:03:21,000
+Dans les ténèbres
+
+47
+00:03:21,000 --> 00:03:23,000
+T'as l'umière pris
+
+48
+00:03:23,000 --> 00:03:26,000
+Rennoncions pour ceux qui pleurent
+
+49
+00:03:26,000 --> 00:03:29,000
+Courre-nous de ta douceuse douceuse
+
+50
+00:03:29,000 --> 00:03:32,000
+Dans l'embre de la douleur
+
+51
+00:03:32,000 --> 00:03:36,000
+Nous cherchons ta cœur
+
+52
+00:03:36,000 --> 00:03:41,000
+Viens au Dieu restorer nos vies
+
+53
+00:03:41,000 --> 00:03:46,000
+Et guérir nos âmes
+
+54
+00:03:46,000 --> 00:03:49,000
+Nous prions ici
+
+55
+00:03:49,000 --> 00:03:52,000
+Dans l'embre nous espérons
+
+56
+00:03:52,000 --> 00:03:55,000
+Ta grâce est nous conduire
+
+57
+00:03:55,000 --> 00:03:57,000
+Assemble nos coeurs au roi
+
+58
+00:03:57,000 --> 00:04:00,000
+Dans ton amour notre vie
+
+59
+00:04:00,000 --> 00:04:03,000
+Dans l'embre de la douleur
+
+60
+00:04:03,000 --> 00:04:06,000
+Nous chants ton portaglois
+
+61
+00:04:06,000 --> 00:04:09,000
+Pour chaque larme, chaque cœur
+
+62
+00:04:09,000 --> 00:04:15,000
+Nous attendons un nouvel espoir
+
+63
+00:04:15,000 --> 00:04:18,000
+Sab�öh
 

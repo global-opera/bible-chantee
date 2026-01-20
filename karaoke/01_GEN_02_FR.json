@@ -1,1 +1,1746 @@
-{"text": " Dans le silence d'un matin Les cieux et la terre partent \u00e0 main Chaque \u00e9toile, chaque prise Tout est bon, tout te glorifie Au septi\u00e8me jour, repos divin Tu as vu que tout est bien Le jardin des dames sanctifi\u00e9 L\u00e0 o\u00f9 l'homme a \u00e9t\u00e9 cr\u00e9\u00e9 Oh cr\u00e9ateur, prends nos c\u0153urs Dans la beaut\u00e9 de ta splendeur Nous nous tenons devant toi Dans le jardin o\u00f9 tout commence en foi L'arbre devine notre espoir En toi, Seigneur, nous voulons croire Dans chaque souffle, dans chaque chant Nous sommes unis Et nous te rendons De la poussi\u00e8re, un \u00eatre vivant Souffle de vie, amour \u00e9clatant Dans le jardin, tu as plant\u00e9 Des arbres d'amour, des fruits de libert\u00e9 Un fleuve coule, source de gr\u00e2ce Ta cr\u00e9ation douce et treinte embrasse L'homme et la femme, unis dans le lien Mus\u00e9e sans honte dans le dessin Oh cr\u00e9ateur, prends nos c\u0153urs Dans la beaut\u00e9 de ta splendeur Nous nous tenons devant toi Dans le jardin o\u00f9 tout commence en foi L'arbre devine notre espoir En toi, Seigneur, nous voulons croire Dans chaque souffle, dans chaque chant Dans chaque souffle, dans chaque chant Nous sommes unis Et nous te rendons Dans la lumi\u00e8re, nous marchons Mains dans la main, dans la raison Que ton amour guide nos pas Dans ce jardin o\u00f9 tu es l\u00e0 Nous te cherchons, oh Dieu fid\u00e8le Dans chaque pleur, dans l'\u00e9tincelle Rappelle-nous toujours ta voix Dans le jardin, Seigneur, fais-nous choix Oh cr\u00e9ateur, prends nos c\u0153urs Dans la beaut\u00e9 de ta splendeur Nous nous tenons devant toi Dans le jardin o\u00f9 tout commence en foi L'arbre devine notre espoir En toi, Seigneur, nous voulons croire Dans chaque souffle, dans chaque chant Nous sommes unis Et nous te rendons Dans le jardin de ta gr\u00e2ce Nous trouvons paix, douce place Oh cr\u00e9ateur, \u00e9ternel amour Nous te louons Jour apr\u00e8s jour", "segments": [{"id": 0, "seek": 0, "start": 0.0, "end": 29.92, "text": " Dans le silence d'un matin", "tokens": [50364, 16897, 476, 12239, 274, 6, 409, 33389, 51860], "temperature": 0.0, "avg_logprob": -0.8025064468383789, "compression_ratio": 0.7647058823529411, "no_speech_prob": 0.20584726333618164}, {"id": 1, "seek": 3000, "start": 30.0, "end": 35.0, "text": " Les cieux et la terre partent \u00e0 main", "tokens": [50364, 6965, 30596, 2449, 1030, 635, 31815, 644, 317, 1531, 2135, 50614], "temperature": 0.0, "avg_logprob": -0.17534928572805306, "compression_ratio": 1.3231707317073171, "no_speech_prob": 0.19742271304130554}, {"id": 2, "seek": 3000, "start": 35.0, "end": 38.0, "text": " Chaque \u00e9toile, chaque prise", "tokens": [50614, 12374, 1077, 1136, 1353, 794, 11, 18920, 49468, 50764], "temperature": 0.0, "avg_logprob": -0.17534928572805306, "compression_ratio": 1.3231707317073171, "no_speech_prob": 0.19742271304130554}, {"id": 3, "seek": 3000, "start": 38.0, "end": 41.0, "text": " Tout est bon, tout te glorifie", "tokens": [50764, 20453, 871, 4428, 11, 3486, 535, 26623, 42726, 50914], "temperature": 0.0, "avg_logprob": -0.17534928572805306, "compression_ratio": 1.3231707317073171, "no_speech_prob": 0.19742271304130554}, {"id": 4, "seek": 3000, "start": 41.0, "end": 45.0, "text": " Au septi\u00e8me jour, repos divin", "tokens": [50914, 12160, 23891, 24541, 2827, 11, 1085, 329, 3414, 259, 51114], "temperature": 0.0, "avg_logprob": -0.17534928572805306, "compression_ratio": 1.3231707317073171, "no_speech_prob": 0.19742271304130554}, {"id": 5, "seek": 3000, "start": 45.0, "end": 48.0, "text": " Tu as vu que tout est bien", "tokens": [51114, 7836, 382, 9732, 631, 3486, 871, 3610, 51264], "temperature": 0.0, "avg_logprob": -0.17534928572805306, "compression_ratio": 1.3231707317073171, "no_speech_prob": 0.19742271304130554}, {"id": 6, "seek": 3000, "start": 48.0, "end": 52.0, "text": " Le jardin des dames sanctifi\u00e9", "tokens": [51264, 1456, 46153, 259, 730, 274, 1632, 21794, 17638, 526, 51464], "temperature": 0.0, "avg_logprob": -0.17534928572805306, "compression_ratio": 1.3231707317073171, "no_speech_prob": 0.19742271304130554}, {"id": 7, "seek": 3000, "start": 52.0, "end": 56.0, "text": " L\u00e0 o\u00f9 l'homme a \u00e9t\u00e9 cr\u00e9\u00e9", "tokens": [51464, 22237, 9068, 287, 6, 38073, 257, 8862, 15609, 526, 51664], "temperature": 0.0, "avg_logprob": -0.17534928572805306, "compression_ratio": 1.3231707317073171, "no_speech_prob": 0.19742271304130554}, {"id": 8, "seek": 5600, "start": 56.0, "end": 60.0, "text": " Oh cr\u00e9ateur, prends nos c\u0153urs", "tokens": [50364, 876, 15609, 15540, 11, 46750, 3269, 41388, 2156, 50564], "temperature": 0.0, "avg_logprob": -0.107348913304946, "compression_ratio": 1.3977900552486189, "no_speech_prob": 0.007804316934198141}, {"id": 9, "seek": 5600, "start": 60.0, "end": 63.0, "text": " Dans la beaut\u00e9 de ta splendeur", "tokens": [50564, 16897, 635, 1869, 526, 368, 1846, 4732, 5445, 374, 50714], "temperature": 0.0, "avg_logprob": -0.107348913304946, "compression_ratio": 1.3977900552486189, "no_speech_prob": 0.007804316934198141}, {"id": 10, "seek": 5600, "start": 63.0, "end": 67.0, "text": " Nous nous tenons devant toi", "tokens": [50714, 15343, 4666, 2064, 892, 28982, 15648, 50914], "temperature": 0.0, "avg_logprob": -0.107348913304946, "compression_ratio": 1.3977900552486189, "no_speech_prob": 0.007804316934198141}, {"id": 11, "seek": 5600, "start": 67.0, "end": 70.0, "text": " Dans le jardin o\u00f9 tout commence en foi", "tokens": [50914, 16897, 476, 46153, 259, 9068, 3486, 18137, 465, 6901, 51064], "temperature": 0.0, "avg_logprob": -0.107348913304946, "compression_ratio": 1.3977900552486189, "no_speech_prob": 0.007804316934198141}, {"id": 12, "seek": 5600, "start": 70.0, "end": 73.0, "text": " L'arbre devine notre espoir", "tokens": [51064, 441, 6, 289, 2672, 1905, 533, 10349, 785, 2259, 347, 51214], "temperature": 0.0, "avg_logprob": -0.107348913304946, "compression_ratio": 1.3977900552486189, "no_speech_prob": 0.007804316934198141}, {"id": 13, "seek": 5600, "start": 73.0, "end": 77.0, "text": " En toi, Seigneur, nous voulons croire", "tokens": [51214, 2193, 15648, 11, 1100, 26341, 374, 11, 4666, 371, 3298, 892, 4848, 621, 51414], "temperature": 0.0, "avg_logprob": -0.107348913304946, "compression_ratio": 1.3977900552486189, "no_speech_prob": 0.007804316934198141}, {"id": 14, "seek": 5600, "start": 77.0, "end": 80.0, "text": " Dans chaque souffle, dans chaque chant", "tokens": [51414, 16897, 18920, 36966, 306, 11, 2680, 18920, 28280, 51564], "temperature": 0.0, "avg_logprob": -0.107348913304946, "compression_ratio": 1.3977900552486189, "no_speech_prob": 0.007804316934198141}, {"id": 15, "seek": 5600, "start": 80.0, "end": 83.0, "text": " Nous sommes unis", "tokens": [51564, 15343, 25232, 517, 271, 51714], "temperature": 0.0, "avg_logprob": -0.107348913304946, "compression_ratio": 1.3977900552486189, "no_speech_prob": 0.007804316934198141}, {"id": 16, "seek": 8300, "start": 83.0, "end": 87.0, "text": " Et nous te rendons", "tokens": [50364, 3790, 4666, 535, 6125, 892, 50564], "temperature": 0.0, "avg_logprob": -0.08005044836747019, "compression_ratio": 1.4010416666666667, "no_speech_prob": 0.006690264213830233}, {"id": 17, "seek": 8300, "start": 88.0, "end": 91.0, "text": " De la poussi\u00e8re, un \u00eatre vivant", "tokens": [50614, 1346, 635, 39140, 7691, 4212, 11, 517, 7418, 11005, 394, 50764], "temperature": 0.0, "avg_logprob": -0.08005044836747019, "compression_ratio": 1.4010416666666667, "no_speech_prob": 0.006690264213830233}, {"id": 18, "seek": 8300, "start": 91.0, "end": 94.0, "text": " Souffle de vie, amour \u00e9clatant", "tokens": [50764, 31458, 602, 306, 368, 4941, 11, 669, 396, 1136, 3474, 267, 394, 50914], "temperature": 0.0, "avg_logprob": -0.08005044836747019, "compression_ratio": 1.4010416666666667, "no_speech_prob": 0.006690264213830233}, {"id": 19, "seek": 8300, "start": 94.0, "end": 98.0, "text": " Dans le jardin, tu as plant\u00e9", "tokens": [50914, 16897, 476, 46153, 259, 11, 2604, 382, 3709, 526, 51114], "temperature": 0.0, "avg_logprob": -0.08005044836747019, "compression_ratio": 1.4010416666666667, "no_speech_prob": 0.006690264213830233}, {"id": 20, "seek": 8300, "start": 98.0, "end": 101.0, "text": " Des arbres d'amour, des fruits de libert\u00e9", "tokens": [51114, 3885, 25613, 495, 274, 6, 42921, 11, 730, 12148, 368, 49158, 51264], "temperature": 0.0, "avg_logprob": -0.08005044836747019, "compression_ratio": 1.4010416666666667, "no_speech_prob": 0.006690264213830233}, {"id": 21, "seek": 8300, "start": 101.0, "end": 105.0, "text": " Un fleuve coule, source de gr\u00e2ce", "tokens": [51264, 1156, 7025, 31564, 33644, 11, 4009, 368, 31180, 51464], "temperature": 0.0, "avg_logprob": -0.08005044836747019, "compression_ratio": 1.4010416666666667, "no_speech_prob": 0.006690264213830233}, {"id": 22, "seek": 8300, "start": 105.0, "end": 108.0, "text": " Ta cr\u00e9ation douce et treinte embrasse", "tokens": [51464, 6551, 15609, 399, 2482, 384, 1030, 2192, 12401, 9392, 8604, 51614], "temperature": 0.0, "avg_logprob": -0.08005044836747019, "compression_ratio": 1.4010416666666667, "no_speech_prob": 0.006690264213830233}, {"id": 23, "seek": 8300, "start": 108.0, "end": 111.0, "text": " L'homme et la femme, unis dans le lien", "tokens": [51614, 441, 6, 38073, 1030, 635, 27427, 11, 517, 271, 2680, 476, 32553, 51764], "temperature": 0.0, "avg_logprob": -0.08005044836747019, "compression_ratio": 1.4010416666666667, "no_speech_prob": 0.006690264213830233}, {"id": 24, "seek": 11100, "start": 111.0, "end": 115.0, "text": " Mus\u00e9e sans honte dans le dessin", "tokens": [50364, 3569, 3856, 12177, 276, 10219, 2680, 476, 6874, 259, 50564], "temperature": 0.0, "avg_logprob": -0.07188248104519314, "compression_ratio": 1.4308510638297873, "no_speech_prob": 0.02841974049806595}, {"id": 25, "seek": 11100, "start": 115.0, "end": 119.0, "text": " Oh cr\u00e9ateur, prends nos c\u0153urs", "tokens": [50564, 876, 15609, 15540, 11, 46750, 3269, 41388, 2156, 50764], "temperature": 0.0, "avg_logprob": -0.07188248104519314, "compression_ratio": 1.4308510638297873, "no_speech_prob": 0.02841974049806595}, {"id": 26, "seek": 11100, "start": 119.0, "end": 122.0, "text": " Dans la beaut\u00e9 de ta splendeur", "tokens": [50764, 16897, 635, 1869, 526, 368, 1846, 4732, 5445, 374, 50914], "temperature": 0.0, "avg_logprob": -0.07188248104519314, "compression_ratio": 1.4308510638297873, "no_speech_prob": 0.02841974049806595}, {"id": 27, "seek": 11100, "start": 122.0, "end": 125.0, "text": " Nous nous tenons devant toi", "tokens": [50914, 15343, 4666, 2064, 892, 28982, 15648, 51064], "temperature": 0.0, "avg_logprob": -0.07188248104519314, "compression_ratio": 1.4308510638297873, "no_speech_prob": 0.02841974049806595}, {"id": 28, "seek": 11100, "start": 125.0, "end": 128.0, "text": " Dans le jardin o\u00f9 tout commence en foi", "tokens": [51064, 16897, 476, 46153, 259, 9068, 3486, 18137, 465, 6901, 51214], "temperature": 0.0, "avg_logprob": -0.07188248104519314, "compression_ratio": 1.4308510638297873, "no_speech_prob": 0.02841974049806595}, {"id": 29, "seek": 11100, "start": 128.0, "end": 131.0, "text": " L'arbre devine notre espoir", "tokens": [51214, 441, 6, 289, 2672, 1905, 533, 10349, 785, 2259, 347, 51364], "temperature": 0.0, "avg_logprob": -0.07188248104519314, "compression_ratio": 1.4308510638297873, "no_speech_prob": 0.02841974049806595}, {"id": 30, "seek": 11100, "start": 131.0, "end": 135.0, "text": " En toi, Seigneur, nous voulons croire", "tokens": [51364, 2193, 15648, 11, 1100, 26341, 374, 11, 4666, 371, 3298, 892, 4848, 621, 51564], "temperature": 0.0, "avg_logprob": -0.07188248104519314, "compression_ratio": 1.4308510638297873, "no_speech_prob": 0.02841974049806595}, {"id": 31, "seek": 11100, "start": 135.0, "end": 138.0, "text": " Dans chaque souffle, dans chaque chant", "tokens": [51564, 16897, 18920, 36966, 306, 11, 2680, 18920, 28280, 51714], "temperature": 0.0, "avg_logprob": -0.07188248104519314, "compression_ratio": 1.4308510638297873, "no_speech_prob": 0.02841974049806595}, {"id": 32, "seek": 13800, "start": 138.0, "end": 141.0, "text": " Dans chaque souffle, dans chaque chant", "tokens": [50364, 16897, 18920, 36966, 306, 11, 2680, 18920, 28280, 50514], "temperature": 0.0, "avg_logprob": -0.08415720964732923, "compression_ratio": 1.4654088050314464, "no_speech_prob": 0.08025185763835907}, {"id": 33, "seek": 13800, "start": 141.0, "end": 144.0, "text": " Nous sommes unis", "tokens": [50514, 15343, 25232, 517, 271, 50664], "temperature": 0.0, "avg_logprob": -0.08415720964732923, "compression_ratio": 1.4654088050314464, "no_speech_prob": 0.08025185763835907}, {"id": 34, "seek": 13800, "start": 144.0, "end": 147.0, "text": " Et nous te rendons", "tokens": [50664, 3790, 4666, 535, 6125, 892, 50814], "temperature": 0.0, "avg_logprob": -0.08415720964732923, "compression_ratio": 1.4654088050314464, "no_speech_prob": 0.08025185763835907}, {"id": 35, "seek": 13800, "start": 148.0, "end": 151.0, "text": " Dans la lumi\u00e8re, nous marchons", "tokens": [50864, 16897, 635, 43193, 11, 4666, 8368, 892, 51014], "temperature": 0.0, "avg_logprob": -0.08415720964732923, "compression_ratio": 1.4654088050314464, "no_speech_prob": 0.08025185763835907}, {"id": 36, "seek": 13800, "start": 151.0, "end": 155.0, "text": " Mains dans la main, dans la raison", "tokens": [51014, 376, 2315, 2680, 635, 2135, 11, 2680, 635, 28402, 51214], "temperature": 0.0, "avg_logprob": -0.08415720964732923, "compression_ratio": 1.4654088050314464, "no_speech_prob": 0.08025185763835907}, {"id": 37, "seek": 13800, "start": 155.0, "end": 158.0, "text": " Que ton amour guide nos pas", "tokens": [51214, 4493, 2952, 669, 396, 5934, 3269, 1736, 51364], "temperature": 0.0, "avg_logprob": -0.08415720964732923, "compression_ratio": 1.4654088050314464, "no_speech_prob": 0.08025185763835907}, {"id": 38, "seek": 13800, "start": 158.0, "end": 162.0, "text": " Dans ce jardin o\u00f9 tu es l\u00e0", "tokens": [51364, 16897, 1769, 46153, 259, 9068, 2604, 785, 3684, 51564], "temperature": 0.0, "avg_logprob": -0.08415720964732923, "compression_ratio": 1.4654088050314464, "no_speech_prob": 0.08025185763835907}, {"id": 39, "seek": 13800, "start": 162.0, "end": 165.0, "text": " Nous te cherchons, oh Dieu fid\u00e8le", "tokens": [51564, 15343, 535, 12085, 339, 892, 11, 1954, 25610, 24553, 29844, 51714], "temperature": 0.0, "avg_logprob": -0.08415720964732923, "compression_ratio": 1.4654088050314464, "no_speech_prob": 0.08025185763835907}, {"id": 40, "seek": 16500, "start": 165.0, "end": 168.0, "text": " Dans chaque pleur, dans l'\u00e9tincelle", "tokens": [50364, 16897, 18920, 3362, 374, 11, 2680, 287, 6, 4051, 1236, 2447, 50514], "temperature": 0.0, "avg_logprob": -0.061260967464237426, "compression_ratio": 1.446236559139785, "no_speech_prob": 0.048062585294246674}, {"id": 41, "seek": 16500, "start": 168.0, "end": 172.0, "text": " Rappelle-nous toujours ta voix", "tokens": [50514, 497, 25543, 12, 47008, 11936, 1846, 37188, 50714], "temperature": 0.0, "avg_logprob": -0.061260967464237426, "compression_ratio": 1.446236559139785, "no_speech_prob": 0.048062585294246674}, {"id": 42, "seek": 16500, "start": 172.0, "end": 177.0, "text": " Dans le jardin, Seigneur, fais-nous choix", "tokens": [50714, 16897, 476, 46153, 259, 11, 1100, 26341, 374, 11, 12153, 12, 47008, 32688, 50964], "temperature": 0.0, "avg_logprob": -0.061260967464237426, "compression_ratio": 1.446236559139785, "no_speech_prob": 0.048062585294246674}, {"id": 43, "seek": 16500, "start": 177.0, "end": 180.0, "text": " Oh cr\u00e9ateur, prends nos c\u0153urs", "tokens": [50964, 876, 15609, 15540, 11, 46750, 3269, 41388, 2156, 51114], "temperature": 0.0, "avg_logprob": -0.061260967464237426, "compression_ratio": 1.446236559139785, "no_speech_prob": 0.048062585294246674}, {"id": 44, "seek": 16500, "start": 180.0, "end": 183.0, "text": " Dans la beaut\u00e9 de ta splendeur", "tokens": [51114, 16897, 635, 1869, 526, 368, 1846, 4732, 5445, 374, 51264], "temperature": 0.0, "avg_logprob": -0.061260967464237426, "compression_ratio": 1.446236559139785, "no_speech_prob": 0.048062585294246674}, {"id": 45, "seek": 16500, "start": 183.0, "end": 187.0, "text": " Nous nous tenons devant toi", "tokens": [51264, 15343, 4666, 2064, 892, 28982, 15648, 51464], "temperature": 0.0, "avg_logprob": -0.061260967464237426, "compression_ratio": 1.446236559139785, "no_speech_prob": 0.048062585294246674}, {"id": 46, "seek": 16500, "start": 187.0, "end": 190.0, "text": " Dans le jardin o\u00f9 tout commence en foi", "tokens": [51464, 16897, 476, 46153, 259, 9068, 3486, 18137, 465, 6901, 51614], "temperature": 0.0, "avg_logprob": -0.061260967464237426, "compression_ratio": 1.446236559139785, "no_speech_prob": 0.048062585294246674}, {"id": 47, "seek": 16500, "start": 190.0, "end": 193.0, "text": " L'arbre devine notre espoir", "tokens": [51614, 441, 6, 289, 2672, 1905, 533, 10349, 785, 2259, 347, 51764], "temperature": 0.0, "avg_logprob": -0.061260967464237426, "compression_ratio": 1.446236559139785, "no_speech_prob": 0.048062585294246674}, {"id": 48, "seek": 19300, "start": 193.0, "end": 196.0, "text": " En toi, Seigneur, nous voulons croire", "tokens": [50364, 2193, 15648, 11, 1100, 26341, 374, 11, 4666, 371, 3298, 892, 4848, 621, 50514], "temperature": 0.0, "avg_logprob": -0.05808872442979079, "compression_ratio": 1.3935483870967742, "no_speech_prob": 0.0020500430837273598}, {"id": 49, "seek": 19300, "start": 196.0, "end": 200.0, "text": " Dans chaque souffle, dans chaque chant", "tokens": [50514, 16897, 18920, 36966, 306, 11, 2680, 18920, 28280, 50714], "temperature": 0.0, "avg_logprob": -0.05808872442979079, "compression_ratio": 1.3935483870967742, "no_speech_prob": 0.0020500430837273598}, {"id": 50, "seek": 19300, "start": 200.0, "end": 203.0, "text": " Nous sommes unis", "tokens": [50714, 15343, 25232, 517, 271, 50864], "temperature": 0.0, "avg_logprob": -0.05808872442979079, "compression_ratio": 1.3935483870967742, "no_speech_prob": 0.0020500430837273598}, {"id": 51, "seek": 19300, "start": 203.0, "end": 206.0, "text": " Et nous te rendons", "tokens": [50864, 3790, 4666, 535, 6125, 892, 51014], "temperature": 0.0, "avg_logprob": -0.05808872442979079, "compression_ratio": 1.3935483870967742, "no_speech_prob": 0.0020500430837273598}, {"id": 52, "seek": 19300, "start": 207.0, "end": 210.0, "text": " Dans le jardin de ta gr\u00e2ce", "tokens": [51064, 16897, 476, 46153, 259, 368, 1846, 31180, 51214], "temperature": 0.0, "avg_logprob": -0.05808872442979079, "compression_ratio": 1.3935483870967742, "no_speech_prob": 0.0020500430837273598}, {"id": 53, "seek": 19300, "start": 210.0, "end": 214.0, "text": " Nous trouvons paix, douce place", "tokens": [51214, 15343, 3455, 85, 892, 2502, 970, 11, 2482, 384, 1081, 51414], "temperature": 0.0, "avg_logprob": -0.05808872442979079, "compression_ratio": 1.3935483870967742, "no_speech_prob": 0.0020500430837273598}, {"id": 54, "seek": 19300, "start": 214.0, "end": 217.0, "text": " Oh cr\u00e9ateur, \u00e9ternel amour", "tokens": [51414, 876, 15609, 15540, 11, 1136, 2231, 338, 669, 396, 51564], "temperature": 0.0, "avg_logprob": -0.05808872442979079, "compression_ratio": 1.3935483870967742, "no_speech_prob": 0.0020500430837273598}, {"id": 55, "seek": 19300, "start": 217.0, "end": 220.0, "text": " Nous te louons", "tokens": [51564, 15343, 535, 15185, 892, 51714], "temperature": 0.0, "avg_logprob": -0.05808872442979079, "compression_ratio": 1.3935483870967742, "no_speech_prob": 0.0020500430837273598}, {"id": 56, "seek": 22000, "start": 220.0, "end": 223.0, "text": " Jour apr\u00e8s jour", "tokens": [50364, 13483, 13274, 2827, 50514], "temperature": 0.0, "avg_logprob": -0.19580382108688354, "compression_ratio": 0.6956521739130435, "no_speech_prob": 0.07034219801425934}], "language": "French"}
+﻿{
+    "language":  "fr",
+    "text":  "... Dans le silence d\u0027un matin, Les cieux et la terre par\nta main, Chaque étoile, chaque prise, Tout est bon, tout\nglorifie Au septième jour, repos divin, Tu as vu que tout\nest bien Le jardin d\u0027Eden, sanctifié Là où l\u0027homme a été\n\ncréé Au créateur, en nos coeurs Dans la beauté de ta splendeur\nNous nous tenons devant toi Dans le jardin où tout commence\nen foi L\u0027arbre de vie, notre espoir En toi, Seigneur, nous\nvoulons croire Dans chaque souffle, dans chaque chant Nous\n\nsommes unis Et nous te rendons De la poussière, un être\nvivant Souffle de vie, amour éclatant Dans le jardin, tu\nas planté Des arbres d\u0027amour, des fruits de liberté Un\nfleuve coule, source de grâce Ta création, douce et tendre,\n\nt\u0027embrasse L\u0027homme et la femme, unis dans le lien Musée\nsans honte, dans le dessin Au créateur, en nos coeurs Dans\nla beauté de ta splendeur Nous nous tenons devant toi Dans\nle jardin où tout commence en foi L\u0027arbre de vie, notre\n\nespoir En toi, Seigneur, nous voulons croire Dans chaque\nsouffle, dans chaque chant Nous sommes unis Et nous te\nrendons Dans la lumière, nous marchons Mains dans la main,\ndans l\u0027horizon Que ton amour guide nos pas Dans ce jardin\n\noù tu es là Nous te cherchons, oh Dieu fidèle Dans chaque\npleur, dans l\u0027étincelle Rappele-nous toujours ta voix Dans\nle jardin, Seigneur, fais-nous choix Au créateur, en nos\ncoeurs Dans la beauté de ta splendeur Nous nous tenons\n\ndevant toi Dans le jardin où tout commence en foi L\u0027arbre\nde vie, notre espoir En toi, Seigneur, nous voulons croire\nDans chaque souffle, dans chaque chant Nous sommes unis\nEt nous te rendons Dans le jardin de ta grâce Nous trouvons\n\npaix, d\u0027où se place Au créateur, éternel amour Nous te\nlouons jour après jour",
+    "segments":  [
+                     {
+                         "end":  33.28,
+                         "words":  [
+                                       {
+                                           "word":  "...",
+                                           "end":  0.5,
+                                           "start":  0.1
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  27.04,
+                                           "start":  26.479999999999997
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  27.32,
+                                           "start":  27.04
+                                       },
+                                       {
+                                           "word":  "silence",
+                                           "end":  28,
+                                           "start":  27.32
+                                       },
+                                       {
+                                           "word":  "d\u0027un",
+                                           "end":  28.5,
+                                           "start":  28.1
+                                       },
+                                       {
+                                           "word":  "matin,",
+                                           "end":  29.12,
+                                           "start":  28.56
+                                       },
+                                       {
+                                           "word":  "Les",
+                                           "end":  30.92,
+                                           "start":  29.12
+                                       },
+                                       {
+                                           "word":  "cieux",
+                                           "end":  31.76,
+                                           "start":  30.92
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  32.14,
+                                           "start":  31.76
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  32.34,
+                                           "start":  32.14
+                                       },
+                                       {
+                                           "word":  "terre",
+                                           "end":  32.78,
+                                           "start":  32.34
+                                       },
+                                       {
+                                           "word":  "par",
+                                           "end":  33.28,
+                                           "start":  32.78
+                                       }
+                                   ],
+                         "text":  "... Dans le silence d\u0027un matin, Les cieux et la terre par",
+                         "start":  0.1
+                     },
+                     {
+                         "end":  39.98,
+                         "words":  [
+                                       {
+                                           "word":  "ta",
+                                           "end":  33.62,
+                                           "start":  33.28
+                                       },
+                                       {
+                                           "word":  "main,",
+                                           "end":  34.08,
+                                           "start":  33.62
+                                       },
+                                       {
+                                           "word":  "Chaque",
+                                           "end":  35.86,
+                                           "start":  34.08
+                                       },
+                                       {
+                                           "word":  "étoile,",
+                                           "end":  36.34,
+                                           "start":  35.86
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  36.84,
+                                           "start":  36.34
+                                       },
+                                       {
+                                           "word":  "prise,",
+                                           "end":  37.34,
+                                           "start":  36.940000000000005
+                                       },
+                                       {
+                                           "word":  "Tout",
+                                           "end":  39.06,
+                                           "start":  38.12
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  39.32,
+                                           "start":  39.06
+                                       },
+                                       {
+                                           "word":  "bon,",
+                                           "end":  39.6,
+                                           "start":  39.32
+                                       },
+                                       {
+                                           "word":  "tout",
+                                           "end":  39.98,
+                                           "start":  39.78
+                                       }
+                                   ],
+                         "text":  "ta main, Chaque étoile, chaque prise, Tout est bon, tout",
+                         "start":  33.28
+                     },
+                     {
+                         "end":  46.86,
+                         "words":  [
+                                       {
+                                           "word":  "glorifie",
+                                           "end":  41.08,
+                                           "start":  40.2
+                                       },
+                                       {
+                                           "word":  "Au",
+                                           "end":  41.92,
+                                           "start":  41.08
+                                       },
+                                       {
+                                           "word":  "septième",
+                                           "end":  42.64,
+                                           "start":  41.92
+                                       },
+                                       {
+                                           "word":  "jour,",
+                                           "end":  43.14,
+                                           "start":  42.64
+                                       },
+                                       {
+                                           "word":  "repos",
+                                           "end":  44.3,
+                                           "start":  43.3
+                                       },
+                                       {
+                                           "word":  "divin,",
+                                           "end":  44.9,
+                                           "start":  44.3
+                                       },
+                                       {
+                                           "word":  "Tu",
+                                           "end":  45.52,
+                                           "start":  44.9
+                                       },
+                                       {
+                                           "word":  "as",
+                                           "end":  45.88,
+                                           "start":  45.52
+                                       },
+                                       {
+                                           "word":  "vu",
+                                           "end":  46.2,
+                                           "start":  45.88
+                                       },
+                                       {
+                                           "word":  "que",
+                                           "end":  46.44,
+                                           "start":  46.2
+                                       },
+                                       {
+                                           "word":  "tout",
+                                           "end":  46.86,
+                                           "start":  46.44
+                                       }
+                                   ],
+                         "text":  "glorifie Au septième jour, repos divin, Tu as vu que tout",
+                         "start":  40.2
+                     },
+                     {
+                         "end":  54.12,
+                         "words":  [
+                                       {
+                                           "word":  "est",
+                                           "end":  47.14,
+                                           "start":  46.86
+                                       },
+                                       {
+                                           "word":  "bien",
+                                           "end":  47.6,
+                                           "start":  47.14
+                                       },
+                                       {
+                                           "word":  "Le",
+                                           "end":  48.74,
+                                           "start":  47.6
+                                       },
+                                       {
+                                           "word":  "jardin",
+                                           "end":  49.48,
+                                           "start":  48.74
+                                       },
+                                       {
+                                           "word":  "d\u0027Eden,",
+                                           "end":  49.98,
+                                           "start":  49.58
+                                       },
+                                       {
+                                           "word":  "sanctifié",
+                                           "end":  51.54,
+                                           "start":  50.12
+                                       },
+                                       {
+                                           "word":  "Là",
+                                           "end":  52.84,
+                                           "start":  51.54
+                                       },
+                                       {
+                                           "word":  "où",
+                                           "end":  53.08,
+                                           "start":  52.84
+                                       },
+                                       {
+                                           "word":  "l\u0027homme",
+                                           "end":  53.58,
+                                           "start":  53.18
+                                       },
+                                       {
+                                           "word":  "a",
+                                           "end":  53.78,
+                                           "start":  53.56
+                                       },
+                                       {
+                                           "word":  "été",
+                                           "end":  54.12,
+                                           "start":  53.78
+                                       }
+                                   ],
+                         "text":  "est bien Le jardin d\u0027Eden, sanctifié Là où l\u0027homme a été",
+                         "start":  46.86
+                     },
+                     {
+                         "end":  63.34,
+                         "words":  [
+                                       {
+                                           "word":  "créé",
+                                           "end":  55.22,
+                                           "start":  54.12
+                                       },
+                                       {
+                                           "word":  "Au",
+                                           "end":  57.48,
+                                           "start":  56.559999999999995
+                                       },
+                                       {
+                                           "word":  "créateur,",
+                                           "end":  58.4,
+                                           "start":  57.48
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  58.9,
+                                           "start":  58.5
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  59.4,
+                                           "start":  59
+                                       },
+                                       {
+                                           "word":  "coeurs",
+                                           "end":  59.9,
+                                           "start":  59.5
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  60.48,
+                                           "start":  59.1
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  60.84,
+                                           "start":  60.48
+                                       },
+                                       {
+                                           "word":  "beauté",
+                                           "end":  61.78,
+                                           "start":  60.84
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  62.06,
+                                           "start":  61.78
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  62.22,
+                                           "start":  62.06
+                                       },
+                                       {
+                                           "word":  "splendeur",
+                                           "end":  63.34,
+                                           "start":  62.22
+                                       }
+                                   ],
+                         "text":  "créé Au créateur, en nos coeurs Dans la beauté de ta splendeur",
+                         "start":  54.12
+                     },
+                     {
+                         "end":  69.62,
+                         "words":  [
+                                       {
+                                           "word":  "Nous",
+                                           "end":  63.98,
+                                           "start":  63.34
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  64.4,
+                                           "start":  63.98
+                                       },
+                                       {
+                                           "word":  "tenons",
+                                           "end":  65.12,
+                                           "start":  64.4
+                                       },
+                                       {
+                                           "word":  "devant",
+                                           "end":  65.88,
+                                           "start":  65.12
+                                       },
+                                       {
+                                           "word":  "toi",
+                                           "end":  66.62,
+                                           "start":  65.88
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  67.42,
+                                           "start":  66.62
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  67.78,
+                                           "start":  67.42
+                                       },
+                                       {
+                                           "word":  "jardin",
+                                           "end":  68.68,
+                                           "start":  67.78
+                                       },
+                                       {
+                                           "word":  "où",
+                                           "end":  68.92,
+                                           "start":  68.68
+                                       },
+                                       {
+                                           "word":  "tout",
+                                           "end":  69.14,
+                                           "start":  68.92
+                                       },
+                                       {
+                                           "word":  "commence",
+                                           "end":  69.62,
+                                           "start":  69.14
+                                       }
+                                   ],
+                         "text":  "Nous nous tenons devant toi Dans le jardin où tout commence",
+                         "start":  63.34
+                     },
+                     {
+                         "end":  75.76,
+                         "words":  [
+                                       {
+                                           "word":  "en",
+                                           "end":  69.84,
+                                           "start":  69.62
+                                       },
+                                       {
+                                           "word":  "foi",
+                                           "end":  70.24,
+                                           "start":  69.84
+                                       },
+                                       {
+                                           "word":  "L\u0027arbre",
+                                           "end":  70.74,
+                                           "start":  70.339999999999989
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  71.44,
+                                           "start":  71.26
+                                       },
+                                       {
+                                           "word":  "vie,",
+                                           "end":  71.98,
+                                           "start":  71.44
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  72.64,
+                                           "start":  72.14
+                                       },
+                                       {
+                                           "word":  "espoir",
+                                           "end":  73.58,
+                                           "start":  72.64
+                                       },
+                                       {
+                                           "word":  "En",
+                                           "end":  74.34,
+                                           "start":  73.58
+                                       },
+                                       {
+                                           "word":  "toi,",
+                                           "end":  74.68,
+                                           "start":  74.34
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  75.6,
+                                           "start":  74.68
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  75.76,
+                                           "start":  75.6
+                                       }
+                                   ],
+                         "text":  "en foi L\u0027arbre de vie, notre espoir En toi, Seigneur, nous",
+                         "start":  69.62
+                     },
+                     {
+                         "end":  81.12,
+                         "words":  [
+                                       {
+                                           "word":  "voulons",
+                                           "end":  76.48,
+                                           "start":  75.76
+                                       },
+                                       {
+                                           "word":  "croire",
+                                           "end":  77.02,
+                                           "start":  76.48
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  77.78,
+                                           "start":  77.02
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  78.18,
+                                           "start":  77.78
+                                       },
+                                       {
+                                           "word":  "souffle,",
+                                           "end":  79.26,
+                                           "start":  78.18
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  79.44,
+                                           "start":  79.26
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  79.96,
+                                           "start":  79.44
+                                       },
+                                       {
+                                           "word":  "chant",
+                                           "end":  80.54,
+                                           "start":  79.96
+                                       },
+                                       {
+                                           "word":  "Nous",
+                                           "end":  81.12,
+                                           "start":  80.54
+                                       }
+                                   ],
+                         "text":  "voulons croire Dans chaque souffle, dans chaque chant Nous",
+                         "start":  75.76
+                     },
+                     {
+                         "end":  90.34,
+                         "words":  [
+                                       {
+                                           "word":  "sommes",
+                                           "end":  81.62,
+                                           "start":  81.12
+                                       },
+                                       {
+                                           "word":  "unis",
+                                           "end":  82.48,
+                                           "start":  81.62
+                                       },
+                                       {
+                                           "word":  "Et",
+                                           "end":  83.84,
+                                           "start":  83.02000000000001
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  84.12,
+                                           "start":  83.84
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  84.68,
+                                           "start":  84.12
+                                       },
+                                       {
+                                           "word":  "rendons",
+                                           "end":  85.94,
+                                           "start":  84.68
+                                       },
+                                       {
+                                           "word":  "De",
+                                           "end":  88.4,
+                                           "start":  86.78
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  88.68,
+                                           "start":  88.4
+                                       },
+                                       {
+                                           "word":  "poussière,",
+                                           "end":  89.68,
+                                           "start":  88.68
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  89.96,
+                                           "start":  89.7
+                                       },
+                                       {
+                                           "word":  "être",
+                                           "end":  90.34,
+                                           "start":  89.96
+                                       }
+                                   ],
+                         "text":  "sommes unis Et nous te rendons De la poussière, un être",
+                         "start":  81.12
+                     },
+                     {
+                         "end":  96.94,
+                         "words":  [
+                                       {
+                                           "word":  "vivant",
+                                           "end":  91.14,
+                                           "start":  90.34
+                                       },
+                                       {
+                                           "word":  "Souffle",
+                                           "end":  92.22,
+                                           "start":  91.14
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  92.36,
+                                           "start":  92.22
+                                       },
+                                       {
+                                           "word":  "vie,",
+                                           "end":  92.74,
+                                           "start":  92.36
+                                       },
+                                       {
+                                           "word":  "amour",
+                                           "end":  93.76,
+                                           "start":  93
+                                       },
+                                       {
+                                           "word":  "éclatant",
+                                           "end":  94.48,
+                                           "start":  93.76
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  95.34,
+                                           "start":  94.48
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  95.58,
+                                           "start":  95.34
+                                       },
+                                       {
+                                           "word":  "jardin,",
+                                           "end":  96.4,
+                                           "start":  95.58
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  96.94,
+                                           "start":  96.4
+                                       }
+                                   ],
+                         "text":  "vivant Souffle de vie, amour éclatant Dans le jardin, tu",
+                         "start":  90.34
+                     },
+                     {
+                         "end":  102.2,
+                         "words":  [
+                                       {
+                                           "word":  "as",
+                                           "end":  97.32,
+                                           "start":  96.94
+                                       },
+                                       {
+                                           "word":  "planté",
+                                           "end":  97.98,
+                                           "start":  97.32
+                                       },
+                                       {
+                                           "word":  "Des",
+                                           "end":  98.5,
+                                           "start":  97.98
+                                       },
+                                       {
+                                           "word":  "arbres",
+                                           "end":  99.08,
+                                           "start":  98.5
+                                       },
+                                       {
+                                           "word":  "d\u0027amour,",
+                                           "end":  99.58,
+                                           "start":  99.179999999999993
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  99.86,
+                                           "start":  99.62
+                                       },
+                                       {
+                                           "word":  "fruits",
+                                           "end":  100.14,
+                                           "start":  99.86
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  100.42,
+                                           "start":  100.14
+                                       },
+                                       {
+                                           "word":  "liberté",
+                                           "end":  101.1,
+                                           "start":  100.42
+                                       },
+                                       {
+                                           "word":  "Un",
+                                           "end":  102.2,
+                                           "start":  101.1
+                                       }
+                                   ],
+                         "text":  "as planté Des arbres d\u0027amour, des fruits de liberté Un",
+                         "start":  96.94
+                     },
+                     {
+                         "end":  107.58,
+                         "words":  [
+                                       {
+                                           "word":  "fleuve",
+                                           "end":  102.74,
+                                           "start":  102.2
+                                       },
+                                       {
+                                           "word":  "coule,",
+                                           "end":  103.24,
+                                           "start":  102.83999999999999
+                                       },
+                                       {
+                                           "word":  "source",
+                                           "end":  103.94,
+                                           "start":  103.54
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  104.36,
+                                           "start":  103.94
+                                       },
+                                       {
+                                           "word":  "grâce",
+                                           "end":  104.78,
+                                           "start":  104.36
+                                       },
+                                       {
+                                           "word":  "Ta",
+                                           "end":  105.54,
+                                           "start":  104.78
+                                       },
+                                       {
+                                           "word":  "création,",
+                                           "end":  106.4,
+                                           "start":  105.54
+                                       },
+                                       {
+                                           "word":  "douce",
+                                           "end":  106.92,
+                                           "start":  106.4
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  107.08,
+                                           "start":  106.92
+                                       },
+                                       {
+                                           "word":  "tendre,",
+                                           "end":  107.58,
+                                           "start":  107.17999999999999
+                                       }
+                                   ],
+                         "text":  "fleuve coule, source de grâce Ta création, douce et tendre,",
+                         "start":  102.2
+                     },
+                     {
+                         "end":  112.12,
+                         "words":  [
+                                       {
+                                           "word":  "t\u0027embrasse",
+                                           "end":  108.08,
+                                           "start":  107.67999999999999
+                                       },
+                                       {
+                                           "word":  "L\u0027homme",
+                                           "end":  108.58,
+                                           "start":  108.17999999999999
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  109.36,
+                                           "start":  109.18
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  109.56,
+                                           "start":  109.36
+                                       },
+                                       {
+                                           "word":  "femme,",
+                                           "end":  109.98,
+                                           "start":  109.56
+                                       },
+                                       {
+                                           "word":  "unis",
+                                           "end":  110.88,
+                                           "start":  110.18
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  111.08,
+                                           "start":  110.88
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  111.28,
+                                           "start":  111.08
+                                       },
+                                       {
+                                           "word":  "lien",
+                                           "end":  111.62,
+                                           "start":  111.28
+                                       },
+                                       {
+                                           "word":  "Musée",
+                                           "end":  112.12,
+                                           "start":  111.72
+                                       }
+                                   ],
+                         "text":  "t\u0027embrasse L\u0027homme et la femme, unis dans le lien Musée",
+                         "start":  107.67999999999999
+                     },
+                     {
+                         "end":  120.38,
+                         "words":  [
+                                       {
+                                           "word":  "sans",
+                                           "end":  113.06,
+                                           "start":  112.74
+                                       },
+                                       {
+                                           "word":  "honte,",
+                                           "end":  113.6,
+                                           "start":  113.06
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  113.96,
+                                           "start":  113.6
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  114.34,
+                                           "start":  113.96
+                                       },
+                                       {
+                                           "word":  "dessin",
+                                           "end":  115.16,
+                                           "start":  114.34
+                                       },
+                                       {
+                                           "word":  "Au",
+                                           "end":  117.12,
+                                           "start":  116.78
+                                       },
+                                       {
+                                           "word":  "créateur,",
+                                           "end":  118.38,
+                                           "start":  117.12
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  118.88,
+                                           "start":  118.47999999999999
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  119.38,
+                                           "start":  118.97999999999999
+                                       },
+                                       {
+                                           "word":  "coeurs",
+                                           "end":  119.88,
+                                           "start":  119.47999999999999
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  120.38,
+                                           "start":  119.68
+                                       }
+                                   ],
+                         "text":  "sans honte, dans le dessin Au créateur, en nos coeurs Dans",
+                         "start":  112.74
+                     },
+                     {
+                         "end":  127.42,
+                         "words":  [
+                                       {
+                                           "word":  "la",
+                                           "end":  120.94,
+                                           "start":  120.38
+                                       },
+                                       {
+                                           "word":  "beauté",
+                                           "end":  121.8,
+                                           "start":  120.94
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  122.1,
+                                           "start":  121.8
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  122.24,
+                                           "start":  122.1
+                                       },
+                                       {
+                                           "word":  "splendeur",
+                                           "end":  123.42,
+                                           "start":  122.24
+                                       },
+                                       {
+                                           "word":  "Nous",
+                                           "end":  124,
+                                           "start":  123.42
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  124.42,
+                                           "start":  124
+                                       },
+                                       {
+                                           "word":  "tenons",
+                                           "end":  125.12,
+                                           "start":  124.42
+                                       },
+                                       {
+                                           "word":  "devant",
+                                           "end":  125.86,
+                                           "start":  125.12
+                                       },
+                                       {
+                                           "word":  "toi",
+                                           "end":  126.58,
+                                           "start":  125.86
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  127.42,
+                                           "start":  126.58
+                                       }
+                                   ],
+                         "text":  "la beauté de ta splendeur Nous nous tenons devant toi Dans",
+                         "start":  120.38
+                     },
+                     {
+                         "end":  132.66,
+                         "words":  [
+                                       {
+                                           "word":  "le",
+                                           "end":  127.78,
+                                           "start":  127.42
+                                       },
+                                       {
+                                           "word":  "jardin",
+                                           "end":  128.66,
+                                           "start":  127.78
+                                       },
+                                       {
+                                           "word":  "où",
+                                           "end":  128.92,
+                                           "start":  128.66
+                                       },
+                                       {
+                                           "word":  "tout",
+                                           "end":  129.14,
+                                           "start":  128.92
+                                       },
+                                       {
+                                           "word":  "commence",
+                                           "end":  129.62,
+                                           "start":  129.14
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  129.92,
+                                           "start":  129.62
+                                       },
+                                       {
+                                           "word":  "foi",
+                                           "end":  130.24,
+                                           "start":  129.92
+                                       },
+                                       {
+                                           "word":  "L\u0027arbre",
+                                           "end":  130.74,
+                                           "start":  130.34
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  131.46,
+                                           "start":  131.26
+                                       },
+                                       {
+                                           "word":  "vie,",
+                                           "end":  131.98,
+                                           "start":  131.46
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  132.66,
+                                           "start":  132.18
+                                       }
+                                   ],
+                         "text":  "le jardin où tout commence en foi L\u0027arbre de vie, notre",
+                         "start":  127.42
+                     },
+                     {
+                         "end":  138.18,
+                         "words":  [
+                                       {
+                                           "word":  "espoir",
+                                           "end":  133.6,
+                                           "start":  132.66
+                                       },
+                                       {
+                                           "word":  "En",
+                                           "end":  134.36,
+                                           "start":  133.6
+                                       },
+                                       {
+                                           "word":  "toi,",
+                                           "end":  134.68,
+                                           "start":  134.36
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  135.54,
+                                           "start":  134.68
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  135.78,
+                                           "start":  135.54
+                                       },
+                                       {
+                                           "word":  "voulons",
+                                           "end":  136.5,
+                                           "start":  135.78
+                                       },
+                                       {
+                                           "word":  "croire",
+                                           "end":  137.02,
+                                           "start":  136.5
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  137.78,
+                                           "start":  137.02
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  138.18,
+                                           "start":  137.78
+                                       }
+                                   ],
+                         "text":  "espoir En toi, Seigneur, nous voulons croire Dans chaque",
+                         "start":  132.66
+                     },
+                     {
+                         "end":  144.7,
+                         "words":  [
+                                       {
+                                           "word":  "souffle,",
+                                           "end":  139.24,
+                                           "start":  138.18
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  139.46,
+                                           "start":  139.24
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  139.94,
+                                           "start":  139.46
+                                       },
+                                       {
+                                           "word":  "chant",
+                                           "end":  140.52,
+                                           "start":  139.94
+                                       },
+                                       {
+                                           "word":  "Nous",
+                                           "end":  141.14,
+                                           "start":  140.52
+                                       },
+                                       {
+                                           "word":  "sommes",
+                                           "end":  141.64,
+                                           "start":  141.14
+                                       },
+                                       {
+                                           "word":  "unis",
+                                           "end":  142.44,
+                                           "start":  141.64
+                                       },
+                                       {
+                                           "word":  "Et",
+                                           "end":  143.86,
+                                           "start":  142.44
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  144.14,
+                                           "start":  143.86
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  144.7,
+                                           "start":  144.14
+                                       }
+                                   ],
+                         "text":  "souffle, dans chaque chant Nous sommes unis Et nous te",
+                         "start":  138.18
+                     },
+                     {
+                         "end":  152.78,
+                         "words":  [
+                                       {
+                                           "word":  "rendons",
+                                           "end":  145.9,
+                                           "start":  144.7
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  148.42,
+                                           "start":  147.51999999999998
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  148.72,
+                                           "start":  148.42
+                                       },
+                                       {
+                                           "word":  "lumière,",
+                                           "end":  149.32,
+                                           "start":  148.72
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  150.14,
+                                           "start":  149.44
+                                       },
+                                       {
+                                           "word":  "marchons",
+                                           "end":  150.92,
+                                           "start":  150.14
+                                       },
+                                       {
+                                           "word":  "Mains",
+                                           "end":  151.84,
+                                           "start":  150.92
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  152.2,
+                                           "start":  151.84
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  152.44,
+                                           "start":  152.2
+                                       },
+                                       {
+                                           "word":  "main,",
+                                           "end":  152.78,
+                                           "start":  152.44
+                                       }
+                                   ],
+                         "text":  "rendons Dans la lumière, nous marchons Mains dans la main,",
+                         "start":  144.7
+                     },
+                     {
+                         "end":  159.88,
+                         "words":  [
+                                       {
+                                           "word":  "dans",
+                                           "end":  153.42,
+                                           "start":  152.98
+                                       },
+                                       {
+                                           "word":  "l\u0027horizon",
+                                           "end":  153.92,
+                                           "start":  153.51999999999998
+                                       },
+                                       {
+                                           "word":  "Que",
+                                           "end":  155.26,
+                                           "start":  154.26
+                                       },
+                                       {
+                                           "word":  "ton",
+                                           "end":  155.62,
+                                           "start":  155.26
+                                       },
+                                       {
+                                           "word":  "amour",
+                                           "end":  156.38,
+                                           "start":  155.62
+                                       },
+                                       {
+                                           "word":  "guide",
+                                           "end":  157.1,
+                                           "start":  156.38
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  157.54,
+                                           "start":  157.1
+                                       },
+                                       {
+                                           "word":  "pas",
+                                           "end":  157.94,
+                                           "start":  157.54
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  158.7,
+                                           "start":  157.94
+                                       },
+                                       {
+                                           "word":  "ce",
+                                           "end":  159.04,
+                                           "start":  158.7
+                                       },
+                                       {
+                                           "word":  "jardin",
+                                           "end":  159.88,
+                                           "start":  159.04
+                                       }
+                                   ],
+                         "text":  "dans l\u0027horizon Que ton amour guide nos pas Dans ce jardin",
+                         "start":  152.98
+                     },
+                     {
+                         "end":  165.96,
+                         "words":  [
+                                       {
+                                           "word":  "où",
+                                           "end":  160.22,
+                                           "start":  159.88
+                                       },
+                                       {
+                                           "word":  "tu",
+                                           "end":  160.5,
+                                           "start":  160.22
+                                       },
+                                       {
+                                           "word":  "es",
+                                           "end":  160.78,
+                                           "start":  160.5
+                                       },
+                                       {
+                                           "word":  "là",
+                                           "end":  161.14,
+                                           "start":  160.78
+                                       },
+                                       {
+                                           "word":  "Nous",
+                                           "end":  162.12,
+                                           "start":  161.14
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  162.38,
+                                           "start":  162.12
+                                       },
+                                       {
+                                           "word":  "cherchons,",
+                                           "end":  163.42,
+                                           "start":  162.38
+                                       },
+                                       {
+                                           "word":  "oh",
+                                           "end":  163.92,
+                                           "start":  163.51999999999998
+                                       },
+                                       {
+                                           "word":  "Dieu",
+                                           "end":  164.22,
+                                           "start":  163.86
+                                       },
+                                       {
+                                           "word":  "fidèle",
+                                           "end":  164.82,
+                                           "start":  164.22
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  165.56,
+                                           "start":  164.82
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  165.96,
+                                           "start":  165.56
+                                       }
+                                   ],
+                         "text":  "où tu es là Nous te cherchons, oh Dieu fidèle Dans chaque",
+                         "start":  159.88
+                     },
+                     {
+                         "end":  172.5,
+                         "words":  [
+                                       {
+                                           "word":  "pleur,",
+                                           "end":  166.68,
+                                           "start":  165.96
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  167.16,
+                                           "start":  166.72
+                                       },
+                                       {
+                                           "word":  "l\u0027étincelle",
+                                           "end":  167.66,
+                                           "start":  167.26
+                                       },
+                                       {
+                                           "word":  "Rappele-nous",
+                                           "end":  169.36,
+                                           "start":  168.26
+                                       },
+                                       {
+                                           "word":  "toujours",
+                                           "end":  170.78,
+                                           "start":  169.86
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  171.34,
+                                           "start":  170.78
+                                       },
+                                       {
+                                           "word":  "voix",
+                                           "end":  171.6,
+                                           "start":  171.34
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  172.5,
+                                           "start":  171.6
+                                       }
+                                   ],
+                         "text":  "pleur, dans l\u0027étincelle Rappele-nous toujours ta voix Dans",
+                         "start":  165.96
+                     },
+                     {
+                         "end":  179.4,
+                         "words":  [
+                                       {
+                                           "word":  "le",
+                                           "end":  172.7,
+                                           "start":  172.5
+                                       },
+                                       {
+                                           "word":  "jardin,",
+                                           "end":  173.38,
+                                           "start":  172.7
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  173.98,
+                                           "start":  173.38
+                                       },
+                                       {
+                                           "word":  "fais-nous",
+                                           "end":  174.32,
+                                           "start":  173.98
+                                       },
+                                       {
+                                           "word":  "choix",
+                                           "end":  175.04,
+                                           "start":  174.58
+                                       },
+                                       {
+                                           "word":  "Au",
+                                           "end":  177.18,
+                                           "start":  176.78
+                                       },
+                                       {
+                                           "word":  "créateur,",
+                                           "end":  178.4,
+                                           "start":  177.18
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  178.9,
+                                           "start":  178.5
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  179.4,
+                                           "start":  179
+                                       }
+                                   ],
+                         "text":  "le jardin, Seigneur, fais-nous choix Au créateur, en nos",
+                         "start":  172.5
+                     },
+                     {
+                         "end":  185.12,
+                         "words":  [
+                                       {
+                                           "word":  "coeurs",
+                                           "end":  179.9,
+                                           "start":  179.5
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  180.38,
+                                           "start":  179.88
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  180.96,
+                                           "start":  180.38
+                                       },
+                                       {
+                                           "word":  "beauté",
+                                           "end":  181.78,
+                                           "start":  180.96
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  182.06,
+                                           "start":  181.78
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  182.18,
+                                           "start":  182.06
+                                       },
+                                       {
+                                           "word":  "splendeur",
+                                           "end":  183.4,
+                                           "start":  182.18
+                                       },
+                                       {
+                                           "word":  "Nous",
+                                           "end":  183.98,
+                                           "start":  183.4
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  184.4,
+                                           "start":  183.98
+                                       },
+                                       {
+                                           "word":  "tenons",
+                                           "end":  185.12,
+                                           "start":  184.4
+                                       }
+                                   ],
+                         "text":  "coeurs Dans la beauté de ta splendeur Nous nous tenons",
+                         "start":  179.5
+                     },
+                     {
+                         "end":  190.74,
+                         "words":  [
+                                       {
+                                           "word":  "devant",
+                                           "end":  185.88,
+                                           "start":  185.12
+                                       },
+                                       {
+                                           "word":  "toi",
+                                           "end":  186.6,
+                                           "start":  185.88
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  187.44,
+                                           "start":  186.6
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  187.82,
+                                           "start":  187.44
+                                       },
+                                       {
+                                           "word":  "jardin",
+                                           "end":  188.66,
+                                           "start":  187.82
+                                       },
+                                       {
+                                           "word":  "où",
+                                           "end":  188.92,
+                                           "start":  188.66
+                                       },
+                                       {
+                                           "word":  "tout",
+                                           "end":  189.12,
+                                           "start":  188.92
+                                       },
+                                       {
+                                           "word":  "commence",
+                                           "end":  189.64,
+                                           "start":  189.12
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  189.9,
+                                           "start":  189.64
+                                       },
+                                       {
+                                           "word":  "foi",
+                                           "end":  190.24,
+                                           "start":  189.9
+                                       },
+                                       {
+                                           "word":  "L\u0027arbre",
+                                           "end":  190.74,
+                                           "start":  190.34
+                                       }
+                                   ],
+                         "text":  "devant toi Dans le jardin où tout commence en foi L\u0027arbre",
+                         "start":  185.12
+                     },
+                     {
+                         "end":  197.04,
+                         "words":  [
+                                       {
+                                           "word":  "de",
+                                           "end":  191.48,
+                                           "start":  191.28
+                                       },
+                                       {
+                                           "word":  "vie,",
+                                           "end":  191.98,
+                                           "start":  191.48
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  192.64,
+                                           "start":  192.18
+                                       },
+                                       {
+                                           "word":  "espoir",
+                                           "end":  193.58,
+                                           "start":  192.64
+                                       },
+                                       {
+                                           "word":  "En",
+                                           "end":  194.32,
+                                           "start":  193.58
+                                       },
+                                       {
+                                           "word":  "toi,",
+                                           "end":  194.68,
+                                           "start":  194.32
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  195.58,
+                                           "start":  194.68
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  195.76,
+                                           "start":  195.58
+                                       },
+                                       {
+                                           "word":  "voulons",
+                                           "end":  196.48,
+                                           "start":  195.76
+                                       },
+                                       {
+                                           "word":  "croire",
+                                           "end":  197.04,
+                                           "start":  196.48
+                                       }
+                                   ],
+                         "text":  "de vie, notre espoir En toi, Seigneur, nous voulons croire",
+                         "start":  191.28
+                     },
+                     {
+                         "end":  202.46,
+                         "words":  [
+                                       {
+                                           "word":  "Dans",
+                                           "end":  197.72,
+                                           "start":  197.04
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  198.18,
+                                           "start":  197.72
+                                       },
+                                       {
+                                           "word":  "souffle,",
+                                           "end":  199.24,
+                                           "start":  198.18
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  199.44,
+                                           "start":  199.24
+                                       },
+                                       {
+                                           "word":  "chaque",
+                                           "end":  199.96,
+                                           "start":  199.44
+                                       },
+                                       {
+                                           "word":  "chant",
+                                           "end":  200.54,
+                                           "start":  199.96
+                                       },
+                                       {
+                                           "word":  "Nous",
+                                           "end":  201.14,
+                                           "start":  200.54
+                                       },
+                                       {
+                                           "word":  "sommes",
+                                           "end":  201.64,
+                                           "start":  201.14
+                                       },
+                                       {
+                                           "word":  "unis",
+                                           "end":  202.46,
+                                           "start":  201.64
+                                       }
+                                   ],
+                         "text":  "Dans chaque souffle, dans chaque chant Nous sommes unis",
+                         "start":  197.04
+                     },
+                     {
+                         "end":  212.18,
+                         "words":  [
+                                       {
+                                           "word":  "Et",
+                                           "end":  203.9,
+                                           "start":  203.2
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  204.14,
+                                           "start":  203.9
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  204.66,
+                                           "start":  204.14
+                                       },
+                                       {
+                                           "word":  "rendons",
+                                           "end":  205.98,
+                                           "start":  204.66
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  208.02,
+                                           "start":  205.98
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  208.36,
+                                           "start":  208.02
+                                       },
+                                       {
+                                           "word":  "jardin",
+                                           "end":  209.46,
+                                           "start":  208.36
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  210.16,
+                                           "start":  209.46
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  210.32,
+                                           "start":  210.16
+                                       },
+                                       {
+                                           "word":  "grâce",
+                                           "end":  211,
+                                           "start":  210.32
+                                       },
+                                       {
+                                           "word":  "Nous",
+                                           "end":  211.52,
+                                           "start":  211
+                                       },
+                                       {
+                                           "word":  "trouvons",
+                                           "end":  212.18,
+                                           "start":  211.52
+                                       }
+                                   ],
+                         "text":  "Et nous te rendons Dans le jardin de ta grâce Nous trouvons",
+                         "start":  203.2
+                     },
+                     {
+                         "end":  218.74,
+                         "words":  [
+                                       {
+                                           "word":  "paix,",
+                                           "end":  212.88,
+                                           "start":  212.18
+                                       },
+                                       {
+                                           "word":  "d\u0027où",
+                                           "end":  213.38,
+                                           "start":  212.98
+                                       },
+                                       {
+                                           "word":  "se",
+                                           "end":  213.88,
+                                           "start":  213.48
+                                       },
+                                       {
+                                           "word":  "place",
+                                           "end":  214.36,
+                                           "start":  213.88
+                                       },
+                                       {
+                                           "word":  "Au",
+                                           "end":  215.06,
+                                           "start":  214.36
+                                       },
+                                       {
+                                           "word":  "créateur,",
+                                           "end":  216.06,
+                                           "start":  215.06
+                                       },
+                                       {
+                                           "word":  "éternel",
+                                           "end":  217.22,
+                                           "start":  216.06
+                                       },
+                                       {
+                                           "word":  "amour",
+                                           "end":  217.86,
+                                           "start":  217.22
+                                       },
+                                       {
+                                           "word":  "Nous",
+                                           "end":  218.56,
+                                           "start":  217.86
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  218.74,
+                                           "start":  218.56
+                                       }
+                                   ],
+                         "text":  "paix, d\u0027où se place Au créateur, éternel amour Nous te",
+                         "start":  212.18
+                     },
+                     {
+                         "end":  223.22,
+                         "words":  [
+                                       {
+                                           "word":  "louons",
+                                           "end":  219.46,
+                                           "start":  218.74
+                                       },
+                                       {
+                                           "word":  "jour",
+                                           "end":  221.38,
+                                           "start":  220.08
+                                       },
+                                       {
+                                           "word":  "après",
+                                           "end":  222.26,
+                                           "start":  221.38
+                                       },
+                                       {
+                                           "word":  "jour",
+                                           "end":  223.22,
+                                           "start":  222.26
+                                       }
+                                   ],
+                         "text":  "louons jour après jour",
+                         "start":  218.74
+                     }
+                 ]
+}

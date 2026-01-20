@@ -1,68 +1,220 @@
 1
-00:00:00,000 --> 00:00:11,000
-Dans l'ombre des pleurs, il s'est dévoilé Joseph l'énigme au sien retrouvé
+00:00:00,000 --> 00:00:05,000
+Le mot de l'écho
 
 2
-00:00:11,000 --> 00:00:25,000
-Je suis Joseph, votre frère, oh mes frères Ne craignez plus, c'est l'amour qui éclaire
+00:00:05,000 --> 00:00:08,000
+L'écho
 
 3
-00:00:25,000 --> 00:00:40,000
-Dieu a tourné l'âme en lumière Dans la famille, il nous fait vivre
+00:00:08,000 --> 00:00:11,000
+Dans l'ombre des pleurs
 
 4
-00:00:40,000 --> 00:00:51,000
-Approchez-vous, venez dans sa douceur Le cœur restauré dans la grâce de mon sauveur
+00:00:11,000 --> 00:00:16,000
+Ils s'est dévoilés
 
 5
-00:00:51,000 --> 00:01:03,000
-Ils pleurent avec Benjamin, l'amour éternel Leurs cœurs se rejoignent, unissons nos voix
+00:00:16,000 --> 00:00:21,000
+J'osaves l'énigme aussi un retrouvé
 
 6
-00:01:03,000 --> 00:01:12,000
-Je vous envoie, n'ayez plus de peur Dieu m'a établi, je suis porteur de bonheur
+00:00:21,000 --> 00:00:25,000
+Je suis j'osaves votre frère
 
 7
-00:01:12,000 --> 00:01:24,000
-Dieu a tourné l'âme en lumière Dans la famille, il nous fait vivre
+00:00:25,000 --> 00:00:27,000
+Oh mes frères
 
 8
-00:01:24,000 --> 00:01:37,000
-Approchez-vous, venez dans sa douceur Le cœur restauré dans la grâce de mon sauveur
+00:00:27,000 --> 00:00:29,000
+Ne craignez plus
 
 9
-00:01:37,000 --> 00:01:49,000
-Hâtez-vous, venez, ne tardez pas Dans le pays de Goshen, il nous attend là
+00:00:29,000 --> 00:00:33,000
+C'est l'amour qui est clair
 
 10
-00:01:49,000 --> 00:02:00,000
-Venez à la table, goûtez sa bonté Tout ce qu'il a promis, il nous l'a donné
+00:00:34,000 --> 00:00:40,000
+Tu as tourné l'an mon miel
 
 11
-00:02:00,000 --> 00:02:12,000
-Dieu a tourné l'âme en lumière Dans la famille, il nous fait vivre
+00:00:40,000 --> 00:00:43,000
+Dans la famille
 
 12
-00:02:12,000 --> 00:02:24,000
-Approchez-vous, venez dans sa douceur Le cœur restauré dans la grâce de mon sauveur
+00:00:43,000 --> 00:00:46,000
+Il nous fait vivre
 
 13
-00:02:24,000 --> 00:02:36,000
-Joseph, notre frère dans l'éternité Son histoire nous guide vers la vérité
+00:00:46,000 --> 00:00:51,000
+Apochez-vous venait dans sa nousseur
 
 14
-00:02:36,000 --> 00:02:50,000
-Avec foi, nous marchons En lui, nous vivons
+00:00:51,000 --> 00:00:54,000
+Le coeur restaurait
 
 15
-00:02:50,000 --> 00:03:05,000
-Dans la lumière, unis pour toujours Nous chantons
+00:00:54,000 --> 00:00:59,000
+Dans la grâce de mon souveur
 
 16
-00:03:05,000 --> 00:03:17,000
-Dieu a tourné l'âme en lumière Dans la famille, il nous fait vivre
+00:01:01,000 --> 00:01:03,000
+Ils pleurent avec pas
 
 17
-00:03:17,000 --> 00:03:29,000
-Approchez-vous, venez dans sa douceur Le cœur restauré dans la grâce de mon sauveur
+00:01:03,000 --> 00:01:06,000
+Jamme l'amour éternait
+
+18
+00:01:06,000 --> 00:01:09,000
+Leur coeur se rejoigne
+
+19
+00:01:09,000 --> 00:01:12,000
+Une一 son au voie
+
+20
+00:01:12,000 --> 00:01:14,000
+Je vous envoie
+
+21
+00:01:14,000 --> 00:01:17,000
+N'ayez plus de peur
+
+22
+00:01:17,000 --> 00:01:19,000
+Dieu m'a établi
+
+23
+00:01:19,000 --> 00:01:23,000
+Je suis porteur de bonheur
+
+24
+00:01:24,000 --> 00:01:31,000
+Tu as tourné l'an mon miel
+
+25
+00:01:31,000 --> 00:01:34,000
+Dans la famille
+
+26
+00:01:34,000 --> 00:01:37,000
+Il nous fait vivre
+
+27
+00:01:37,000 --> 00:01:42,000
+Apochez-vous venait dans sa nousseur
+
+28
+00:01:42,000 --> 00:01:44,000
+Le coeur restaurait
+
+29
+00:01:44,000 --> 00:01:49,000
+Dans la grâce de mon souveur
+
+30
+00:01:49,000 --> 00:01:54,000
+A tes vous venait ne tarder pas
+
+31
+00:01:54,000 --> 00:01:56,000
+Dans le pays de Goseau
+
+32
+00:01:56,000 --> 00:02:00,000
+Et nous attend l'an
+
+33
+00:02:00,000 --> 00:02:03,000
+Venez à la table
+
+34
+00:02:03,000 --> 00:02:05,000
+Coutez sa bantée
+
+35
+00:02:05,000 --> 00:02:08,000
+Tout ce qu'il a promis
+
+36
+00:02:08,000 --> 00:02:12,000
+Nous la donnait
+
+37
+00:02:12,000 --> 00:02:18,000
+Tu as tourné l'an mon miel
+
+38
+00:02:18,000 --> 00:02:21,000
+Dans la famille
+
+39
+00:02:21,000 --> 00:02:24,000
+Il nous fait vivre
+
+40
+00:02:24,000 --> 00:02:29,000
+Apochez-vous venait dans sa nousseur
+
+41
+00:02:29,000 --> 00:02:32,000
+Le coeur restaurait
+
+42
+00:02:32,000 --> 00:02:36,000
+Dans la grâce de mon souveur
+
+43
+00:02:36,000 --> 00:02:41,000
+Goseau, notre frère dans l'éternité
+
+44
+00:02:41,000 --> 00:02:47,000
+Son histoire nous guide vers la vérité
+
+45
+00:02:47,000 --> 00:02:50,000
+Avec foi nous marchons
+
+46
+00:02:50,000 --> 00:02:53,000
+Dans lui nous vivons
+
+47
+00:02:53,000 --> 00:02:55,000
+Dans la lumière
+
+48
+00:02:55,000 --> 00:03:02,000
+Unis pour toujours nous chants on
+
+49
+00:03:02,000 --> 00:03:05,000
+Je chants on
+
+50
+00:03:05,000 --> 00:03:11,000
+Tu as tourné l'an mon miel
+
+51
+00:03:11,000 --> 00:03:14,000
+Dans la famille
+
+52
+00:03:14,000 --> 00:03:17,000
+Il nous fait vivre
+
+53
+00:03:17,000 --> 00:03:22,000
+Apochez-vous venait dans sa nousseur
+
+54
+00:03:22,000 --> 00:03:25,000
+Le coeur restaurait
+
+55
+00:03:25,000 --> 00:03:29,000
+Dans la grâce de mon souveur
 

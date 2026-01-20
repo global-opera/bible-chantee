@@ -1,128 +1,236 @@
 1
-00:00:11,000 --> 00:00:18,000
-Dans l'ombre du passé, Jacob a levé les yeux
+00:00:11,000 --> 00:00:15,000
+Dans l'ombre du passé
 
 2
-00:00:18,000 --> 00:00:25,000
-Un frère redouté, un cœur rempli de feux
+00:00:15,000 --> 00:00:18,000
+J'acobalever les yeux
 
 3
-00:00:25,000 --> 00:00:30,000
-Quatre cents hommes, des souvenirs blessés
+00:00:18,000 --> 00:00:21,000
+Un frère d'auté
 
 4
-00:00:30,000 --> 00:00:33,000
-Il s'est prosternés pour la paix espérée
+00:00:21,000 --> 00:00:25,000
+Un coeur empli de feu
 
 5
-00:00:33,000 --> 00:00:41,000
-Regarde, ô Seigneur, ta grâce sur nos vies
+00:00:25,000 --> 00:00:27,000
+400 hommes
 
 6
-00:00:41,000 --> 00:00:46,000
-Comme Jacob, nous venons
+00:00:27,000 --> 00:00:30,000
+Dissovenir blessé
 
 7
-00:00:46,000 --> 00:00:50,000
-Humble devant toi, accorde-nous la paix
+00:00:30,000 --> 00:00:33,000
+Il s'est prosterné
 
 8
-00:00:50,000 --> 00:00:57,000
-Unis dans l'amour, dans tes bras, Seigneur
+00:00:33,000 --> 00:00:38,000
+Pour l'apais espérer
 
 9
-00:00:57,000 --> 00:01:07,000
-Nous trouvons notre jour
+00:00:38,000 --> 00:00:41,000
+Regarde au Seigneur
 
 10
-00:01:07,000 --> 00:01:11,000
-Ésaü s'est approché, les larmes ont coulé
+00:00:41,000 --> 00:00:44,000
+T'agrasses sur nos vies
 
 11
-00:01:11,000 --> 00:01:17,000
-Un embrasement d'amour, les cœurs réconciliés
+00:00:44,000 --> 00:00:46,000
+Comme j'accords
 
 12
-00:01:17,000 --> 00:01:24,000
-Qui sont ceux-là, demandent avec tendresse
+00:00:46,000 --> 00:00:48,000
+Nous venons
 
 13
-00:01:24,000 --> 00:01:30,000
-Ce sont des dons de Dieu, un précieux héritage
+00:00:48,000 --> 00:00:50,000
+Un bleu devant toi
 
 14
-00:01:30,000 --> 00:01:38,000
-Regarde, ô Seigneur, ta grâce sur nos vies
+00:00:50,000 --> 00:00:53,000
+Acore de nous la paix
 
 15
-00:01:38,000 --> 00:01:43,000
-Comme Jacob, nous venons
+00:00:53,000 --> 00:00:57,000
+Unis dans l'amour
 
 16
-00:01:43,000 --> 00:01:47,000
-Humble devant toi, accorde-nous la paix
+00:00:57,000 --> 00:01:01,000
+Dans tes bras, Seigneur
 
 17
-00:01:47,000 --> 00:01:49,000
-Unis dans l'amour, dans tes bras, Seigneur
+00:01:01,000 --> 00:01:07,000
+Nous trouvons notre jour
 
 18
-00:01:49,000 --> 00:01:57,000
-Nous trouvons notre jour
+00:01:07,000 --> 00:01:11,000
+Et ça s'est approché
 
 19
-00:01:57,000 --> 00:02:04,000
-Dans la douceur des promesses, nous marchons
+00:01:11,000 --> 00:01:14,000
+Les larmes ont coulées
 
 20
-00:02:04,000 --> 00:02:09,000
-Avec foi, nous avançons, remplis de compassion
+00:01:14,000 --> 00:01:17,000
+Un embrassement d'amour
 
 21
-00:02:09,000 --> 00:02:17,000
-Tu es notre refuge, notre guide et notre roi
+00:01:17,000 --> 00:01:21,000
+Les coeurs conciliés
 
 22
-00:02:17,000 --> 00:02:23,000
-Nous bâtissons un autel pour toujours près de toi
+00:01:21,000 --> 00:01:24,000
+Qui sont ceux-là
 
 23
-00:02:23,000 --> 00:02:29,000
-Regarde, ô Seigneur, ta grâce sur nos vies
+00:01:24,000 --> 00:01:27,000
+Demandes avec tendresse
 
 24
-00:02:29,000 --> 00:02:36,000
-Comme Jacob, nous venons
+00:01:27,000 --> 00:01:30,000
+Ce sont des dons de Dieu
 
 25
-00:02:36,000 --> 00:02:40,000
-Humble devant toi, accorde-nous la paix
+00:01:30,000 --> 00:01:35,000
+Imprécieux héritage
 
 26
-00:02:40,000 --> 00:02:45,000
-Unis dans l'amour, dans tes bras, Seigneur
+00:01:35,000 --> 00:01:38,000
+Regarde au Seigneur
 
 27
-00:02:45,000 --> 00:02:53,000
-Nous trouvons notre jour
+00:01:38,000 --> 00:01:41,000
+T'agrasses sur nos vies
 
 28
-00:02:53,000 --> 00:03:01,000
-A l'ombre de l'autel, nous chantons en un
+00:01:41,000 --> 00:01:43,000
+Comme j'accords
 
 29
-00:03:01,000 --> 00:03:04,000
-Ton amour est sans fin
+00:01:43,000 --> 00:01:45,000
+Nous venons
 
 30
-00:03:04,000 --> 00:03:11,000
-Dans chaque souffle, chaque pas, nous te louons
+00:01:45,000 --> 00:01:47,000
+Un bleu devant toi
 
 31
-00:03:11,000 --> 00:03:17,000
-Seigneur, notre Rédempteur
+00:01:47,000 --> 00:01:49,000
+Acore de nous la paix
 
 32
-00:03:17,000 --> 00:03:25,000
-À jamais, nous t'adorons
+00:01:49,000 --> 00:01:53,000
+Unis dans l'amour
+
+33
+00:01:53,000 --> 00:01:57,000
+Dans tes bras, Seigneur
+
+34
+00:01:57,000 --> 00:02:01,000
+Nous trouvons notre jour
+
+35
+00:02:01,000 --> 00:02:04,000
+Dans la douceur des promesses
+
+36
+00:02:04,000 --> 00:02:06,000
+Nous marchons
+
+37
+00:02:06,000 --> 00:02:09,000
+Avec foie nous avançons
+
+38
+00:02:09,000 --> 00:02:14,000
+Rempli de compassion
+
+39
+00:02:14,000 --> 00:02:17,000
+Tu es notre refuge
+
+40
+00:02:17,000 --> 00:02:20,000
+Notre guillet, notre roi
+
+41
+00:02:20,000 --> 00:02:23,000
+Nous bâti son anotel
+
+42
+00:02:23,000 --> 00:02:29,000
+Pour toujours prêts de toi
+
+43
+00:02:29,000 --> 00:02:33,000
+Regarde au Seigneur
+
+44
+00:02:33,000 --> 00:02:36,000
+T'agrasses sur nos vies
+
+45
+00:02:36,000 --> 00:02:38,000
+Comme j'accords
+
+46
+00:02:38,000 --> 00:02:40,000
+Nous venons
+
+47
+00:02:40,000 --> 00:02:42,000
+Un bleu devant toi
+
+48
+00:02:42,000 --> 00:02:45,000
+Acore de nous la paix
+
+49
+00:02:45,000 --> 00:02:49,000
+Unis dans l'amour
+
+50
+00:02:49,000 --> 00:02:53,000
+Dans tes bras, Seigneur
+
+51
+00:02:53,000 --> 00:02:58,000
+Nous trouvons notre jour
+
+52
+00:02:58,000 --> 00:03:01,000
+A l'embre de l'hôtel
+
+53
+00:03:01,000 --> 00:03:04,000
+Nous chante en un
+
+54
+00:03:04,000 --> 00:03:07,000
+L'éloïse serait
+
+55
+00:03:07,000 --> 00:03:11,000
+Ton amour est enfin
+
+56
+00:03:11,000 --> 00:03:13,000
+Dans chaque souffle
+
+57
+00:03:13,000 --> 00:03:17,000
+Chaque pas nous te lons
+
+58
+00:03:17,000 --> 00:03:21,000
+Seigneur notre rédenter
+
+59
+00:03:21,000 --> 00:03:25,000
+A jamais nous t'adorons
 

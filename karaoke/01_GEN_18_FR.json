@@ -1,0 +1,1422 @@
+﻿{
+    "language":  "fr",
+    "text":  "Dans la chaleur du jour, un homme s\u0027est levé Sous les chaînes\nde marmerie L\u0027éterne est venue Trois hommes devant lui\nUn appel à aimer Abrame ses prospères Né, son cœur est\nperdu Oh Seigneur, ne passe pas loin de moi Accorde-moi\n\nta grâce Je t\u0027implore ici bas Fortifie mon âme Sous cette\narbre je reste Promis de revenir Au mon dieu je te teste\nIl a couru à Sarah Un repas préparé Un vautendré bon Un\ncœur à consoler Est-ce que Sarah ira Elle ne peut t\u0027espérer\n\nMais dans le temps fixé L\u0027éterne elle va agir Oh Seigneur,\nne passe pas loin de moi Accorde-moi ta grâce Je t\u0027implore\nici bas Fortifie mon âme Sous cette arbre je reste Promis\nde revenir Au mon dieu je te teste Auprès de toi Je me\n\ntiens en prière Pour les justes et les âmes Une lumière\nLoin de moi ce jugement Oh éternelle Accorde-nous la mise\net ricorde tous éternels Abrame un playdé Pour la vilain\ndétresse Cinquante juste qu\u0027en fera-tu au maître Pour chacun\n\nil espère Un cœur qui s\u0027adresse L\u0027éterne elle a promis\nIl ne délaisse Oh Seigneur, ne passe pas loin de moi Accorde-moi\nta grâce Je t\u0027implore ici bas Fortifie mon âme Sous cette\narbre je reste Promis de revenir Au mon dieu je te teste\n\nAuprès des chaînes de ma brise Je m\u0027incline Dans ta présence\nSeigneur je deviens divin Éternelle ta promesse Je la porte\nen moi Pour toujours à tes côtés Je vivrai en toi",
+    "segments":  [
+                     {
+                         "end":  21.54,
+                         "words":  [
+                                       {
+                                           "word":  "Dans",
+                                           "end":  13.62,
+                                           "start":  12.659999999999998
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  13.86,
+                                           "start":  13.62
+                                       },
+                                       {
+                                           "word":  "chaleur",
+                                           "end":  14.76,
+                                           "start":  13.86
+                                       },
+                                       {
+                                           "word":  "du",
+                                           "end":  15.06,
+                                           "start":  14.76
+                                       },
+                                       {
+                                           "word":  "jour,",
+                                           "end":  15.64,
+                                           "start":  15.06
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  17.36,
+                                           "start":  15.72
+                                       },
+                                       {
+                                           "word":  "homme",
+                                           "end":  17.84,
+                                           "start":  17.36
+                                       },
+                                       {
+                                           "word":  "s\u0027est",
+                                           "end":  18.34,
+                                           "start":  17.94
+                                       },
+                                       {
+                                           "word":  "levé",
+                                           "end":  19.14,
+                                           "start":  18.36
+                                       },
+                                       {
+                                           "word":  "Sous",
+                                           "end":  20.66,
+                                           "start":  19.14
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  20.8,
+                                           "start":  20.66
+                                       },
+                                       {
+                                           "word":  "chaînes",
+                                           "end":  21.54,
+                                           "start":  20.8
+                                       }
+                                   ],
+                         "text":  "Dans la chaleur du jour, un homme s\u0027est levé Sous les chaînes",
+                         "start":  12.659999999999998
+                     },
+                     {
+                         "end":  29.6,
+                         "words":  [
+                                       {
+                                           "word":  "de",
+                                           "end":  21.74,
+                                           "start":  21.54
+                                       },
+                                       {
+                                           "word":  "marmerie",
+                                           "end":  22.24,
+                                           "start":  21.84
+                                       },
+                                       {
+                                           "word":  "L\u0027éterne",
+                                           "end":  22.74,
+                                           "start":  22.34
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  25.28,
+                                           "start":  25.16
+                                       },
+                                       {
+                                           "word":  "venue",
+                                           "end":  26.18,
+                                           "start":  25.28
+                                       },
+                                       {
+                                           "word":  "Trois",
+                                           "end":  27.94,
+                                           "start":  26.18
+                                       },
+                                       {
+                                           "word":  "hommes",
+                                           "end":  28.38,
+                                           "start":  27.94
+                                       },
+                                       {
+                                           "word":  "devant",
+                                           "end":  28.86,
+                                           "start":  28.38
+                                       },
+                                       {
+                                           "word":  "lui",
+                                           "end":  29.6,
+                                           "start":  28.86
+                                       }
+                                   ],
+                         "text":  "de marmerie L\u0027éterne est venue Trois hommes devant lui",
+                         "start":  21.54
+                     },
+                     {
+                         "end":  37.86,
+                         "words":  [
+                                       {
+                                           "word":  "Un",
+                                           "end":  31.06,
+                                           "start":  29.88
+                                       },
+                                       {
+                                           "word":  "appel",
+                                           "end":  31.56,
+                                           "start":  31.06
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  32.2,
+                                           "start":  31.56
+                                       },
+                                       {
+                                           "word":  "aimer",
+                                           "end":  33.14,
+                                           "start":  32.2
+                                       },
+                                       {
+                                           "word":  "Abrame",
+                                           "end":  34.7,
+                                           "start":  33.14
+                                       },
+                                       {
+                                           "word":  "ses",
+                                           "end":  35.2,
+                                           "start":  34.800000000000004
+                                       },
+                                       {
+                                           "word":  "prospères",
+                                           "end":  36.64,
+                                           "start":  35.5
+                                       },
+                                       {
+                                           "word":  "Né,",
+                                           "end":  37.14,
+                                           "start":  36.74
+                                       },
+                                       {
+                                           "word":  "son",
+                                           "end":  37.14,
+                                           "start":  36.7
+                                       },
+                                       {
+                                           "word":  "cœur",
+                                           "end":  37.5,
+                                           "start":  37.14
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  37.86,
+                                           "start":  37.5
+                                       }
+                                   ],
+                         "text":  "Un appel à aimer Abrame ses prospères Né, son cœur est",
+                         "start":  29.88
+                     },
+                     {
+                         "end":  47.52,
+                         "words":  [
+                                       {
+                                           "word":  "perdu",
+                                           "end":  38.48,
+                                           "start":  37.86
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  38.98,
+                                           "start":  38.58
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  42.48,
+                                           "start":  41.44
+                                       },
+                                       {
+                                           "word":  "ne",
+                                           "end":  43.4,
+                                           "start":  42.48
+                                       },
+                                       {
+                                           "word":  "passe",
+                                           "end":  43.82,
+                                           "start":  43.4
+                                       },
+                                       {
+                                           "word":  "pas",
+                                           "end":  44.12,
+                                           "start":  43.82
+                                       },
+                                       {
+                                           "word":  "loin",
+                                           "end":  44.66,
+                                           "start":  44.12
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  45.08,
+                                           "start":  44.66
+                                       },
+                                       {
+                                           "word":  "moi",
+                                           "end":  45.46,
+                                           "start":  45.08
+                                       },
+                                       {
+                                           "word":  "Accorde-moi",
+                                           "end":  47.52,
+                                           "start":  46.7
+                                       }
+                                   ],
+                         "text":  "perdu Oh Seigneur, ne passe pas loin de moi Accorde-moi",
+                         "start":  37.86
+                     },
+                     {
+                         "end":  57.42,
+                         "words":  [
+                                       {
+                                           "word":  "ta",
+                                           "end":  48.22,
+                                           "start":  47.8
+                                       },
+                                       {
+                                           "word":  "grâce",
+                                           "end":  48.9,
+                                           "start":  48.22
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  50.14,
+                                           "start":  49.32
+                                       },
+                                       {
+                                           "word":  "t\u0027implore",
+                                           "end":  50.64,
+                                           "start":  50.24
+                                       },
+                                       {
+                                           "word":  "ici",
+                                           "end":  51.82,
+                                           "start":  51.12
+                                       },
+                                       {
+                                           "word":  "bas",
+                                           "end":  52.22,
+                                           "start":  51.82
+                                       },
+                                       {
+                                           "word":  "Fortifie",
+                                           "end":  54.74,
+                                           "start":  53.58
+                                       },
+                                       {
+                                           "word":  "mon",
+                                           "end":  55.26,
+                                           "start":  54.74
+                                       },
+                                       {
+                                           "word":  "âme",
+                                           "end":  56.24,
+                                           "start":  55.26
+                                       },
+                                       {
+                                           "word":  "Sous",
+                                           "end":  57.08,
+                                           "start":  56.34
+                                       },
+                                       {
+                                           "word":  "cette",
+                                           "end":  57.42,
+                                           "start":  57.08
+                                       }
+                                   ],
+                         "text":  "ta grâce Je t\u0027implore ici bas Fortifie mon âme Sous cette",
+                         "start":  47.8
+                     },
+                     {
+                         "end":  66.32,
+                         "words":  [
+                                       {
+                                           "word":  "arbre",
+                                           "end":  58.24,
+                                           "start":  57.42
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  58.82,
+                                           "start":  58.24
+                                       },
+                                       {
+                                           "word":  "reste",
+                                           "end":  59.38,
+                                           "start":  58.82
+                                       },
+                                       {
+                                           "word":  "Promis",
+                                           "end":  61.34,
+                                           "start":  59.38
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  61.5,
+                                           "start":  61.34
+                                       },
+                                       {
+                                           "word":  "revenir",
+                                           "end":  62.3,
+                                           "start":  61.5
+                                       },
+                                       {
+                                           "word":  "Au",
+                                           "end":  62.8,
+                                           "start":  62.4
+                                       },
+                                       {
+                                           "word":  "mon",
+                                           "end":  63.92,
+                                           "start":  63.62
+                                       },
+                                       {
+                                           "word":  "dieu",
+                                           "end":  64.38,
+                                           "start":  63.92
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  65.32,
+                                           "start":  64.64
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  65.82,
+                                           "start":  65.419999999999987
+                                       },
+                                       {
+                                           "word":  "teste",
+                                           "end":  66.32,
+                                           "start":  65.919999999999987
+                                       }
+                                   ],
+                         "text":  "arbre je reste Promis de revenir Au mon dieu je te teste",
+                         "start":  57.42
+                     },
+                     {
+                         "end":  79.9,
+                         "words":  [
+                                       {
+                                           "word":  "Il",
+                                           "end":  69.06,
+                                           "start":  66.82
+                                       },
+                                       {
+                                           "word":  "a",
+                                           "end":  69.32,
+                                           "start":  69.06
+                                       },
+                                       {
+                                           "word":  "couru",
+                                           "end":  69.88,
+                                           "start":  69.32
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  70.26,
+                                           "start":  69.88
+                                       },
+                                       {
+                                           "word":  "Sarah",
+                                           "end":  70.84,
+                                           "start":  70.26
+                                       },
+                                       {
+                                           "word":  "Un",
+                                           "end":  72.78,
+                                           "start":  71.38
+                                       },
+                                       {
+                                           "word":  "repas",
+                                           "end":  73.52,
+                                           "start":  72.78
+                                       },
+                                       {
+                                           "word":  "préparé",
+                                           "end":  74.88,
+                                           "start":  73.52
+                                       },
+                                       {
+                                           "word":  "Un",
+                                           "end":  76.46,
+                                           "start":  74.88
+                                       },
+                                       {
+                                           "word":  "vautendré",
+                                           "end":  76.96,
+                                           "start":  76.559999999999988
+                                       },
+                                       {
+                                           "word":  "bon",
+                                           "end":  78.16,
+                                           "start":  77.9
+                                       },
+                                       {
+                                           "word":  "Un",
+                                           "end":  79.9,
+                                           "start":  78.42
+                                       }
+                                   ],
+                         "text":  "Il a couru à Sarah Un repas préparé Un vautendré bon Un",
+                         "start":  66.82
+                     },
+                     {
+                         "end":  87.76,
+                         "words":  [
+                                       {
+                                           "word":  "cœur",
+                                           "end":  80.3,
+                                           "start":  79.9
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  80.68,
+                                           "start":  80.3
+                                       },
+                                       {
+                                           "word":  "consoler",
+                                           "end":  81.28,
+                                           "start":  80.68
+                                       },
+                                       {
+                                           "word":  "Est-ce",
+                                           "end":  83.22,
+                                           "start":  82.22
+                                       },
+                                       {
+                                           "word":  "que",
+                                           "end":  83.66,
+                                           "start":  83.6
+                                       },
+                                       {
+                                           "word":  "Sarah",
+                                           "end":  84.16,
+                                           "start":  83.66
+                                       },
+                                       {
+                                           "word":  "ira",
+                                           "end":  84.66,
+                                           "start":  84.259999999999991
+                                       },
+                                       {
+                                           "word":  "Elle",
+                                           "end":  86.64,
+                                           "start":  85.34
+                                       },
+                                       {
+                                           "word":  "ne",
+                                           "end":  86.92,
+                                           "start":  86.64
+                                       },
+                                       {
+                                           "word":  "peut",
+                                           "end":  87.26,
+                                           "start":  86.92
+                                       },
+                                       {
+                                           "word":  "t\u0027espérer",
+                                           "end":  87.76,
+                                           "start":  87.36
+                                       }
+                                   ],
+                         "text":  "cœur à consoler Est-ce que Sarah ira Elle ne peut t\u0027espérer",
+                         "start":  79.9
+                     },
+                     {
+                         "end":  98.06,
+                         "words":  [
+                                       {
+                                           "word":  "Mais",
+                                           "end":  90.34,
+                                           "start":  88.54
+                                       },
+                                       {
+                                           "word":  "dans",
+                                           "end":  90.66,
+                                           "start":  90.34
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  91.02,
+                                           "start":  90.66
+                                       },
+                                       {
+                                           "word":  "temps",
+                                           "end":  91.36,
+                                           "start":  91.02
+                                       },
+                                       {
+                                           "word":  "fixé",
+                                           "end":  92.36,
+                                           "start":  91.36
+                                       },
+                                       {
+                                           "word":  "L\u0027éterne",
+                                           "end":  92.86,
+                                           "start":  92.46
+                                       },
+                                       {
+                                           "word":  "elle",
+                                           "end":  93.36,
+                                           "start":  92.96
+                                       },
+                                       {
+                                           "word":  "va",
+                                           "end":  93.74,
+                                           "start":  93.5
+                                       },
+                                       {
+                                           "word":  "agir",
+                                           "end":  95.1,
+                                           "start":  93.74
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  95.6,
+                                           "start":  95.199999999999989
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  98.06,
+                                           "start":  96.62
+                                       }
+                                   ],
+                         "text":  "Mais dans le temps fixé L\u0027éterne elle va agir Oh Seigneur,",
+                         "start":  88.54
+                     },
+                     {
+                         "end":  106.28,
+                         "words":  [
+                                       {
+                                           "word":  "ne",
+                                           "end":  99.04,
+                                           "start":  98.06
+                                       },
+                                       {
+                                           "word":  "passe",
+                                           "end":  99.44,
+                                           "start":  99.04
+                                       },
+                                       {
+                                           "word":  "pas",
+                                           "end":  99.74,
+                                           "start":  99.44
+                                       },
+                                       {
+                                           "word":  "loin",
+                                           "end":  100.28,
+                                           "start":  99.74
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  100.68,
+                                           "start":  100.28
+                                       },
+                                       {
+                                           "word":  "moi",
+                                           "end":  101.12,
+                                           "start":  100.68
+                                       },
+                                       {
+                                           "word":  "Accorde-moi",
+                                           "end":  103.18,
+                                           "start":  101.12
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  103.88,
+                                           "start":  103.46
+                                       },
+                                       {
+                                           "word":  "grâce",
+                                           "end":  104.58,
+                                           "start":  103.88
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  105.78,
+                                           "start":  104.98
+                                       },
+                                       {
+                                           "word":  "t\u0027implore",
+                                           "end":  106.28,
+                                           "start":  105.88
+                                       }
+                                   ],
+                         "text":  "ne passe pas loin de moi Accorde-moi ta grâce Je t\u0027implore",
+                         "start":  98.06
+                     },
+                     {
+                         "end":  116.98,
+                         "words":  [
+                                       {
+                                           "word":  "ici",
+                                           "end":  107.48,
+                                           "start":  106.74
+                                       },
+                                       {
+                                           "word":  "bas",
+                                           "end":  107.84,
+                                           "start":  107.48
+                                       },
+                                       {
+                                           "word":  "Fortifie",
+                                           "end":  110.34,
+                                           "start":  109.3
+                                       },
+                                       {
+                                           "word":  "mon",
+                                           "end":  110.88,
+                                           "start":  110.34
+                                       },
+                                       {
+                                           "word":  "âme",
+                                           "end":  111.84,
+                                           "start":  110.88
+                                       },
+                                       {
+                                           "word":  "Sous",
+                                           "end":  112.84,
+                                           "start":  112.22
+                                       },
+                                       {
+                                           "word":  "cette",
+                                           "end":  113.08,
+                                           "start":  112.84
+                                       },
+                                       {
+                                           "word":  "arbre",
+                                           "end":  113.94,
+                                           "start":  113.08
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  114.48,
+                                           "start":  113.94
+                                       },
+                                       {
+                                           "word":  "reste",
+                                           "end":  115.04,
+                                           "start":  114.48
+                                       },
+                                       {
+                                           "word":  "Promis",
+                                           "end":  116.98,
+                                           "start":  115.04
+                                       }
+                                   ],
+                         "text":  "ici bas Fortifie mon âme Sous cette arbre je reste Promis",
+                         "start":  106.74
+                     },
+                     {
+                         "end":  126.94,
+                         "words":  [
+                                       {
+                                           "word":  "de",
+                                           "end":  117.12,
+                                           "start":  116.98
+                                       },
+                                       {
+                                           "word":  "revenir",
+                                           "end":  118.04,
+                                           "start":  117.12
+                                       },
+                                       {
+                                           "word":  "Au",
+                                           "end":  118.54,
+                                           "start":  118.14
+                                       },
+                                       {
+                                           "word":  "mon",
+                                           "end":  119.58,
+                                           "start":  119.28
+                                       },
+                                       {
+                                           "word":  "dieu",
+                                           "end":  120.06,
+                                           "start":  119.58
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  121,
+                                           "start":  120.3
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  121.5,
+                                           "start":  121.1
+                                       },
+                                       {
+                                           "word":  "teste",
+                                           "end":  122,
+                                           "start":  121.6
+                                       },
+                                       {
+                                           "word":  "Auprès",
+                                           "end":  124.66,
+                                           "start":  122.54
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  125,
+                                           "start":  124.66
+                                       },
+                                       {
+                                           "word":  "toi",
+                                           "end":  125.3,
+                                           "start":  125
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  126.66,
+                                           "start":  125.5
+                                       },
+                                       {
+                                           "word":  "me",
+                                           "end":  126.94,
+                                           "start":  126.66
+                                       }
+                                   ],
+                         "text":  "de revenir Au mon dieu je te teste Auprès de toi Je me",
+                         "start":  116.98
+                     },
+                     {
+                         "end":  135.5,
+                         "words":  [
+                                       {
+                                           "word":  "tiens",
+                                           "end":  127.68,
+                                           "start":  126.94
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  128.16,
+                                           "start":  127.68
+                                       },
+                                       {
+                                           "word":  "prière",
+                                           "end":  128.94,
+                                           "start":  128.16
+                                       },
+                                       {
+                                           "word":  "Pour",
+                                           "end":  131.6,
+                                           "start":  130.45999999999998
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  131.98,
+                                           "start":  131.6
+                                       },
+                                       {
+                                           "word":  "justes",
+                                           "end":  133.02,
+                                           "start":  131.98
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  133.24,
+                                           "start":  133.02
+                                       },
+                                       {
+                                           "word":  "les",
+                                           "end":  133.54,
+                                           "start":  133.24
+                                       },
+                                       {
+                                           "word":  "âmes",
+                                           "end":  134.52,
+                                           "start":  133.54
+                                       },
+                                       {
+                                           "word":  "Une",
+                                           "end":  134.92,
+                                           "start":  134.52
+                                       },
+                                       {
+                                           "word":  "lumière",
+                                           "end":  135.5,
+                                           "start":  134.92
+                                       }
+                                   ],
+                         "text":  "tiens en prière Pour les justes et les âmes Une lumière",
+                         "start":  126.94
+                     },
+                     {
+                         "end":  148.14,
+                         "words":  [
+                                       {
+                                           "word":  "Loin",
+                                           "end":  137.88,
+                                           "start":  136.73999999999998
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  138.52,
+                                           "start":  137.88
+                                       },
+                                       {
+                                           "word":  "moi",
+                                           "end":  138.9,
+                                           "start":  138.52
+                                       },
+                                       {
+                                           "word":  "ce",
+                                           "end":  139.86,
+                                           "start":  139.12
+                                       },
+                                       {
+                                           "word":  "jugement",
+                                           "end":  140.62,
+                                           "start":  139.86
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  141.12,
+                                           "start":  140.72
+                                       },
+                                       {
+                                           "word":  "éternelle",
+                                           "end":  144.16,
+                                           "start":  142.26
+                                       },
+                                       {
+                                           "word":  "Accorde-nous",
+                                           "end":  146.02,
+                                           "start":  145.42
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  146.74,
+                                           "start":  146.3
+                                       },
+                                       {
+                                           "word":  "mise",
+                                           "end":  148.14,
+                                           "start":  146.74
+                                       }
+                                   ],
+                         "text":  "Loin de moi ce jugement Oh éternelle Accorde-nous la mise",
+                         "start":  136.73999999999998
+                     },
+                     {
+                         "end":  156.9,
+                         "words":  [
+                                       {
+                                           "word":  "et",
+                                           "end":  148.88,
+                                           "start":  148.64
+                                       },
+                                       {
+                                           "word":  "ricorde",
+                                           "end":  149.38,
+                                           "start":  148.98
+                                       },
+                                       {
+                                           "word":  "tous",
+                                           "end":  149.88,
+                                           "start":  149.48
+                                       },
+                                       {
+                                           "word":  "éternels",
+                                           "end":  150.1,
+                                           "start":  148.88
+                                       },
+                                       {
+                                           "word":  "Abrame",
+                                           "end":  153.08,
+                                           "start":  152.49
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  153.58,
+                                           "start":  153.18
+                                       },
+                                       {
+                                           "word":  "playdé",
+                                           "end":  154.36,
+                                           "start":  153.78
+                                       },
+                                       {
+                                           "word":  "Pour",
+                                           "end":  156.22,
+                                           "start":  154.36
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  156.5,
+                                           "start":  156.22
+                                       },
+                                       {
+                                           "word":  "vilain",
+                                           "end":  156.9,
+                                           "start":  156.5
+                                       }
+                                   ],
+                         "text":  "et ricorde tous éternels Abrame un playdé Pour la vilain",
+                         "start":  148.64
+                     },
+                     {
+                         "end":  166.74,
+                         "words":  [
+                                       {
+                                           "word":  "détresse",
+                                           "end":  158.42,
+                                           "start":  157.5
+                                       },
+                                       {
+                                           "word":  "Cinquante",
+                                           "end":  159.9,
+                                           "start":  159.06
+                                       },
+                                       {
+                                           "word":  "juste",
+                                           "end":  160.86,
+                                           "start":  159.9
+                                       },
+                                       {
+                                           "word":  "qu\u0027en",
+                                           "end":  161.36,
+                                           "start":  160.96
+                                       },
+                                       {
+                                           "word":  "fera-tu",
+                                           "end":  161.56,
+                                           "start":  161.1
+                                       },
+                                       {
+                                           "word":  "au",
+                                           "end":  162.06,
+                                           "start":  161.66
+                                       },
+                                       {
+                                           "word":  "maître",
+                                           "end":  164.24,
+                                           "start":  163.42
+                                       },
+                                       {
+                                           "word":  "Pour",
+                                           "end":  166.38,
+                                           "start":  165.42
+                                       },
+                                       {
+                                           "word":  "chacun",
+                                           "end":  166.74,
+                                           "start":  166.38
+                                       }
+                                   ],
+                         "text":  "détresse Cinquante juste qu\u0027en fera-tu au maître Pour chacun",
+                         "start":  157.5
+                     },
+                     {
+                         "end":  175.82,
+                         "words":  [
+                                       {
+                                           "word":  "il",
+                                           "end":  168.18,
+                                           "start":  167.48
+                                       },
+                                       {
+                                           "word":  "espère",
+                                           "end":  169.08,
+                                           "start":  168.18
+                                       },
+                                       {
+                                           "word":  "Un",
+                                           "end":  169.92,
+                                           "start":  169.08
+                                       },
+                                       {
+                                           "word":  "cœur",
+                                           "end":  170.4,
+                                           "start":  169.92
+                                       },
+                                       {
+                                           "word":  "qui",
+                                           "end":  170.72,
+                                           "start":  170.4
+                                       },
+                                       {
+                                           "word":  "s\u0027adresse",
+                                           "end":  171.22,
+                                           "start":  170.82
+                                       },
+                                       {
+                                           "word":  "L\u0027éterne",
+                                           "end":  171.72,
+                                           "start":  171.32
+                                       },
+                                       {
+                                           "word":  "elle",
+                                           "end":  172.22,
+                                           "start":  171.82
+                                       },
+                                       {
+                                           "word":  "a",
+                                           "end":  174.8,
+                                           "start":  174.68
+                                       },
+                                       {
+                                           "word":  "promis",
+                                           "end":  175.82,
+                                           "start":  174.8
+                                       }
+                                   ],
+                         "text":  "il espère Un cœur qui s\u0027adresse L\u0027éterne elle a promis",
+                         "start":  167.48
+                     },
+                     {
+                         "end":  186.64,
+                         "words":  [
+                                       {
+                                           "word":  "Il",
+                                           "end":  176.36,
+                                           "start":  175.82
+                                       },
+                                       {
+                                           "word":  "ne",
+                                           "end":  176.5,
+                                           "start":  176.36
+                                       },
+                                       {
+                                           "word":  "délaisse",
+                                           "end":  178.52,
+                                           "start":  176.5
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  179.02,
+                                           "start":  178.62
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  181.5,
+                                           "start":  180.12
+                                       },
+                                       {
+                                           "word":  "ne",
+                                           "end":  182.52,
+                                           "start":  181.5
+                                       },
+                                       {
+                                           "word":  "passe",
+                                           "end":  182.92,
+                                           "start":  182.52
+                                       },
+                                       {
+                                           "word":  "pas",
+                                           "end":  183.22,
+                                           "start":  182.92
+                                       },
+                                       {
+                                           "word":  "loin",
+                                           "end":  183.74,
+                                           "start":  183.22
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  184.16,
+                                           "start":  183.74
+                                       },
+                                       {
+                                           "word":  "moi",
+                                           "end":  184.6,
+                                           "start":  184.16
+                                       },
+                                       {
+                                           "word":  "Accorde-moi",
+                                           "end":  186.64,
+                                           "start":  185.18
+                                       }
+                                   ],
+                         "text":  "Il ne délaisse Oh Seigneur, ne passe pas loin de moi Accorde-moi",
+                         "start":  175.82
+                     },
+                     {
+                         "end":  196.54,
+                         "words":  [
+                                       {
+                                           "word":  "ta",
+                                           "end":  187.38,
+                                           "start":  186.94
+                                       },
+                                       {
+                                           "word":  "grâce",
+                                           "end":  188.08,
+                                           "start":  187.38
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  189.26,
+                                           "start":  188.44
+                                       },
+                                       {
+                                           "word":  "t\u0027implore",
+                                           "end":  189.76,
+                                           "start":  189.35999999999999
+                                       },
+                                       {
+                                           "word":  "ici",
+                                           "end":  191.02,
+                                           "start":  190.24
+                                       },
+                                       {
+                                           "word":  "bas",
+                                           "end":  191.34,
+                                           "start":  191.02
+                                       },
+                                       {
+                                           "word":  "Fortifie",
+                                           "end":  193.8,
+                                           "start":  192
+                                       },
+                                       {
+                                           "word":  "mon",
+                                           "end":  194.36,
+                                           "start":  193.8
+                                       },
+                                       {
+                                           "word":  "âme",
+                                           "end":  195.4,
+                                           "start":  194.36
+                                       },
+                                       {
+                                           "word":  "Sous",
+                                           "end":  196.34,
+                                           "start":  195.4
+                                       },
+                                       {
+                                           "word":  "cette",
+                                           "end":  196.54,
+                                           "start":  196.34
+                                       }
+                                   ],
+                         "text":  "ta grâce Je t\u0027implore ici bas Fortifie mon âme Sous cette",
+                         "start":  186.94
+                     },
+                     {
+                         "end":  205.5,
+                         "words":  [
+                                       {
+                                           "word":  "arbre",
+                                           "end":  197.38,
+                                           "start":  196.54
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  197.96,
+                                           "start":  197.38
+                                       },
+                                       {
+                                           "word":  "reste",
+                                           "end":  198.72,
+                                           "start":  197.96
+                                       },
+                                       {
+                                           "word":  "Promis",
+                                           "end":  200.46,
+                                           "start":  198.72
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  200.6,
+                                           "start":  200.46
+                                       },
+                                       {
+                                           "word":  "revenir",
+                                           "end":  201.32,
+                                           "start":  200.6
+                                       },
+                                       {
+                                           "word":  "Au",
+                                           "end":  201.82,
+                                           "start":  201.42
+                                       },
+                                       {
+                                           "word":  "mon",
+                                           "end":  203.04,
+                                           "start":  202.72
+                                       },
+                                       {
+                                           "word":  "dieu",
+                                           "end":  203.54,
+                                           "start":  203.04
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  204.5,
+                                           "start":  203.68
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  205,
+                                           "start":  204.6
+                                       },
+                                       {
+                                           "word":  "teste",
+                                           "end":  205.5,
+                                           "start":  205.1
+                                       }
+                                   ],
+                         "text":  "arbre je reste Promis de revenir Au mon dieu je te teste",
+                         "start":  196.54
+                     },
+                     {
+                         "end":  219.54,
+                         "words":  [
+                                       {
+                                           "word":  "Auprès",
+                                           "end":  208.54,
+                                           "start":  208.18
+                                       },
+                                       {
+                                           "word":  "des",
+                                           "end":  208.68,
+                                           "start":  208.54
+                                       },
+                                       {
+                                           "word":  "chaînes",
+                                           "end":  209.18,
+                                           "start":  208.78
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  209.7,
+                                           "start":  209.42
+                                       },
+                                       {
+                                           "word":  "ma",
+                                           "end":  210.2,
+                                           "start":  209.79999999999998
+                                       },
+                                       {
+                                           "word":  "brise",
+                                           "end":  210.7,
+                                           "start":  210.29999999999998
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  211.32,
+                                           "start":  210.54
+                                       },
+                                       {
+                                           "word":  "m\u0027incline",
+                                           "end":  211.82,
+                                           "start":  211.42
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  214.46,
+                                           "start":  214.04
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  215.38,
+                                           "start":  214.46
+                                       },
+                                       {
+                                           "word":  "présence",
+                                           "end":  219.54,
+                                           "start":  219.54
+                                       }
+                                   ],
+                         "text":  "Auprès des chaînes de ma brise Je m\u0027incline Dans ta présence",
+                         "start":  208.18
+                     },
+                     {
+                         "end":  226.94,
+                         "words":  [
+                                       {
+                                           "word":  "Seigneur",
+                                           "end":  219.54,
+                                           "start":  219.54
+                                       },
+                                       {
+                                           "word":  "je",
+                                           "end":  219.54,
+                                           "start":  219.54
+                                       },
+                                       {
+                                           "word":  "deviens",
+                                           "end":  219.54,
+                                           "start":  219.54
+                                       },
+                                       {
+                                           "word":  "divin",
+                                           "end":  220.04,
+                                           "start":  219.64
+                                       },
+                                       {
+                                           "word":  "Éternelle",
+                                           "end":  222.94,
+                                           "start":  221.78
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  223.74,
+                                           "start":  222.94
+                                       },
+                                       {
+                                           "word":  "promesse",
+                                           "end":  224.32,
+                                           "start":  223.74
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  225.94,
+                                           "start":  225.94
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  226.44,
+                                           "start":  226.04
+                                       },
+                                       {
+                                           "word":  "porte",
+                                           "end":  226.94,
+                                           "start":  226.54
+                                       }
+                                   ],
+                         "text":  "Seigneur je deviens divin Éternelle ta promesse Je la porte",
+                         "start":  219.54
+                     },
+                     {
+                         "end":  233.36,
+                         "words":  [
+                                       {
+                                           "word":  "en",
+                                           "end":  227.52,
+                                           "start":  227.28
+                                       },
+                                       {
+                                           "word":  "moi",
+                                           "end":  227.92,
+                                           "start":  227.52
+                                       },
+                                       {
+                                           "word":  "Pour",
+                                           "end":  229.26,
+                                           "start":  229.26
+                                       },
+                                       {
+                                           "word":  "toujours",
+                                           "end":  229.8,
+                                           "start":  229.26
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  230.66,
+                                           "start":  229.8
+                                       },
+                                       {
+                                           "word":  "tes",
+                                           "end":  230.94,
+                                           "start":  230.66
+                                       },
+                                       {
+                                           "word":  "côtés",
+                                           "end":  231.3,
+                                           "start":  230.94
+                                       },
+                                       {
+                                           "word":  "Je",
+                                           "end":  231.86,
+                                           "start":  231.3
+                                       },
+                                       {
+                                           "word":  "vivrai",
+                                           "end":  232.56,
+                                           "start":  231.86
+                                       },
+                                       {
+                                           "word":  "en",
+                                           "end":  232.96,
+                                           "start":  232.56
+                                       },
+                                       {
+                                           "word":  "toi",
+                                           "end":  233.36,
+                                           "start":  232.96
+                                       }
+                                   ],
+                         "text":  "en moi Pour toujours à tes côtés Je vivrai en toi",
+                         "start":  227.28
+                     }
+                 ]
+}

@@ -5,64 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genese 10 | Bible Chantee Karaoke</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
-        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
-        .header h1{font-size:1.8em;color:#d4af37}
-        .player{max-width:800px;margin:20px auto;padding:0 20px}
-        audio{width:100%}
-        .lyrics{max-width:800px;margin:20px auto;padding:20px}
-        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
-        .line:hover{background:rgba(212,175,55,0.1)}
-        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
-        .line.passed{opacity:0.5}
-        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
-        .footer{text-align:center;padding:20px;color:#666}
-        .footer a{color:#d4af37}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e8e8e8;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
+        .header p { color: #888; }
+        .audio-player { 
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        audio { width: 100%; }
+        .lyrics { 
+            background: rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 25px;
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+        .line { 
+            padding: 12px 15px;
+            margin: 5px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .line .time { 
+            color: #666; 
+            font-size: 0.8em;
+            margin-right: 10px;
+        }
+        .line.active { 
+            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
+            color: #fff;
+            border-left: 4px solid #d4af37;
+            transform: scale(1.02);
+        }
+        .line.active .time { color: #d4af37; }
+        .line.past { opacity: 0.5; }
     </style>
 </head>
 <body>
-    <div class="header"><h1>Genese 10</h1><p>Bible Chantee Karaoke</p></div>
-    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_10_FR.mp3" type="audio/mpeg"></audio></div>
-    <div class="lyrics">
-        <div class="line" data-start="0.10" data-end="5.10"><span class="time">[0:00]</span>Voici la postérité, le don de ta grâce</div>
-        <div class="line" data-start="5.10" data-end="144.72"><span class="time">[0:05]</span>Sem, Cham et Japhet en l'unité nous embrassons</div>
-        <div class="line" data-start="144.72" data-end="151.54"><span class="time">[2:24]</span>Des fils de la promesse, des cœurs enflammés</div>
-        <div class="line" data-start="151.54" data-end="161.46"><span class="time">[2:31]</span>De chaque langue, chaque nation, nous levons nos chants</div>
-        <div class="line" data-start="161.46" data-end="170.32"><span class="time">[2:41]</span>Ô Seigneur, regarde l'époque de l'aube au crépuscule</div>
-        <div class="line" data-start="170.32" data-end="173.48"><span class="time">[2:50]</span>Nous adorons dans la diversité ta gloire s'épanouie</div>
-        <div class="line" data-start="173.48" data-end="173.48"><span class="time">[2:53]</span>Unis dans la foi, nous élevons nos voix</div>
-        <div class="line" data-start="173.48" data-end="177.48"><span class="time">[2:53]</span>De Nimrod à Cana, l'histoire se tisse</div>
-        <div class="line" data-start="177.48" data-end="182.98"><span class="time">[2:57]</span>Des royaumes bâtis, des luttes et des cris</div>
-        <div class="line" data-start="182.98" data-end="187.48"><span class="time">[3:02]</span>Mais ta main est présente dans chaque génération</div>
-        <div class="line" data-start="187.48" data-end="192.48"><span class="time">[3:07]</span>Nous sommes les témoins de ta rédemption</div>
-        <div class="line" data-start="192.48" data-end="196.98"><span class="time">[3:12]</span>Ô Seigneur, regarde l'époque de l'aube au crépuscule</div>
-        <div class="line" data-start="196.98" data-end="201.48"><span class="time">[3:16]</span>Nous adorons dans la diversité ta gloire s'épanouie</div>
-        <div class="line" data-start="201.48" data-end="207.48"><span class="time">[3:21]</span>Unis dans la foi, nous élevons nos voix</div>
-        <div class="line" data-start="207.48" data-end="211.48"><span class="time">[3:27]</span>De Mécha aux montagnes d'Orient, les fils de sang</div>
-        <div class="line" data-start="211.48" data-end="216.98"><span class="time">[3:31]</span>Ta promesse un fondement, nous marchons ensemble</div>
-        <div class="line" data-start="216.98" data-end="221.98"><span class="time">[3:36]</span>Main dans la main vers la lumière où règne le chemin</div>
-        <div class="line" data-start="221.98" data-end="221.98"><span class="time">[3:41]</span>Ô Seigneur, regarde l'époque de l'aube au crépuscule</div>
-        <div class="line" data-start="221.98" data-end="226.48"><span class="time">[3:41]</span>Nous adorons dans la diversité ta gloire s'épanouie</div>
-        <div class="line" data-start="226.48" data-end="231.98"><span class="time">[3:46]</span>Unis dans la foi, nous élevons nos voix</div>
-        <div class="line" data-start="231.98" data-end="235.98"><span class="time">[3:51]</span>Les nations se lèvent, un chant d'harmonie</div>
-        <div class="line" data-start="235.98" data-end="241.48"><span class="time">[3:55]</span>Dans l'amour parfait, nous vivons en unité</div>
-        <div class="line" data-start="241.48" data-end="178.56"><span class="time">[4:01]</span>Voici la postérité, une œuvre de ta main</div>
-        <div class="line" data-start="178.56" data-end="181.46"><span class="time">[2:58]</span>Pour toujours nous adorons, ô Éternel Amen</div>
+    <div class="container">
+        <div class="header">
+            <h1>Genese 10</h1>
+            <p>Bible Chantee Karaoke</p>
+        </div>
+        <div class="audio-player">
+            <audio id="audio" controls>
+                <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_10_FR.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="lyrics" id="lyrics">
+        <div class="line" data-start="0.10" data-end="5.00"><span class="time">[0:00]</span>Voici l'impostérité, le don de ta grâce, Saint- Chem et</div>
+        <div class="line" data-start="5.10" data-end="144.62"><span class="time">[0:05]</span>Japez, dans l'unité nous embrassons, des fils de la promesse,</div>
+        <div class="line" data-start="144.72" data-end="148.62"><span class="time">[2:24]</span>des coeurs enflammés, de chaque langue, chaque nation,</div>
+        <div class="line" data-start="151.54" data-end="161.36"><span class="time">[2:31]</span>nous levons nos champs. Oh Seigneur, regarde les peurs</div>
+        <div class="line" data-start="161.46" data-end="167.56"><span class="time">[2:41]</span>de l'eau boucrée, plus qu'une, nous adorons dans la diversité,</div>
+        <div class="line" data-start="170.32" data-end="173.38"><span class="time">[2:50]</span>ta gloire s'est panouie, unie dans la foi, nous t'élevons,</div>
+        <div class="line" data-start="173.48" data-end="177.38"><span class="time">[2:53]</span>au Roi. De nombreux d'acanales, l'histoire se tissent,</div>
+        <div class="line" data-start="177.48" data-end="182.88"><span class="time">[2:57]</span>des royaumes bâtis, des luttes et des cris, mais ta main</div>
+        <div class="line" data-start="182.98" data-end="187.38"><span class="time">[3:02]</span>est présente dans chaque génération, nous sommes les témoins</div>
+        <div class="line" data-start="187.48" data-end="192.38"><span class="time">[3:07]</span>de ta rédemption. Oh Seigneur, regarde les peurs de l'eau</div>
+        <div class="line" data-start="192.48" data-end="196.88"><span class="time">[3:12]</span>boucrée, plus qu'une, nous adorons dans la diversité, ta</div>
+        <div class="line" data-start="196.98" data-end="201.38"><span class="time">[3:16]</span>gloire s'est panouie, unie dans la foi, nous t'élevons,</div>
+        <div class="line" data-start="201.48" data-end="207.38"><span class="time">[3:21]</span>au Roi. De mes chats au montagne d' Orient, les fils de</div>
+        <div class="line" data-start="207.48" data-end="211.38"><span class="time">[3:27]</span>sang, ta promesse, un fondement, nous marchons ensemble,</div>
+        <div class="line" data-start="211.48" data-end="216.88"><span class="time">[3:31]</span>main dans la main, vers la lumière, pour règne le chemin.</div>
+        <div class="line" data-start="216.98" data-end="221.88"><span class="time">[3:36]</span>Oh Seigneur, regarde les peurs de l'eau boucrée, plus qu'une,</div>
+        <div class="line" data-start="221.98" data-end="226.38"><span class="time">[3:41]</span>nous adorons dans la diversité, ta gloire s'est panouie,</div>
+        <div class="line" data-start="226.48" data-end="231.88"><span class="time">[3:46]</span>unie dans la foi, nous t'élevons, au Roi. Les nations se</div>
+        <div class="line" data-start="231.98" data-end="235.88"><span class="time">[3:51]</span>lèvent, un champ d'harmonie, dans l'amour parfait, nous</div>
+        <div class="line" data-start="235.98" data-end="241.38"><span class="time">[3:55]</span>vivons en unie, voici la posterité, une oeuvre de ta main,</div>
+        <div class="line" data-start="241.48" data-end="178.46"><span class="time">[4:01]</span>pour toujours nous t'adorons, au Eternel, Amen. Sous-titres</div>
+        <div class="line" data-start="178.56" data-end="181.46"><span class="time">[2:58]</span>réalisés par la communauté d' Amara.org</div>
+        </div>
     </div>
-    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
     <script>
-        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
-        audio.addEventListener('timeupdate',()=>{
-            const t=audio.currentTime;
-            lines.forEach(l=>{
-                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
-                l.classList.remove('active','passed');
-                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
-                else if(t>=e)l.classList.add('passed')
-            })
+        const audio = document.getElementById('audio');
+        const lines = document.querySelectorAll('.line');
+        const lyricsContainer = document.getElementById('lyrics');
+        
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            let activeIndex = -1;
+            
+            lines.forEach((line, index) => {
+                const start = parseFloat(line.dataset.start);
+                const end = parseFloat(line.dataset.end);
+                
+                line.classList.remove('active', 'past');
+                
+                if (currentTime >= start && currentTime < end) {
+                    line.classList.add('active');
+                    activeIndex = index;
+                } else if (currentTime >= end) {
+                    line.classList.add('past');
+                }
+            });
+            
+            if (activeIndex >= 0) {
+                const activeLine = lines[activeIndex];
+                const containerRect = lyricsContainer.getBoundingClientRect();
+                const lineRect = activeLine.getBoundingClientRect();
+                
+                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
+                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
         });
-        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+        
+        lines.forEach(line => {
+            line.addEventListener('click', () => {
+                audio.currentTime = parseFloat(line.dataset.start);
+                audio.play();
+            });
+        });
     </script>
 </body>
 </html>

@@ -1,0 +1,990 @@
+﻿{
+    "language":  "fr",
+    "text":  "Dans le jardin où l\u0027innocence priait L\u0027éternel marché sa\nvoix nous guidait Mais un serpent rusé avec ses mots A\ntroubler nos cœurs et nous a fait faux Oh Seigneur, nous\nsommes revenus De l\u0027on où nous avons vécu Par ta grâce,\n\nnous voulons marcher Vers la lumière à jamais te louer\nLa femme a pris le fruit défendu Elle a partagé et l\u0027homme\na perdu Leurs yeux s\u0027ouvrir, la honte est entrée Dans ce\njardin, tout a changé Oh Seigneur, nous sommes revenus\n\nDe l\u0027ombre où nous avons vécu Par ta grâce, nous voulons\nmarcher Vers la lumière à jamais te louer Mais l\u0027éternel\nen sa bonté Nous a vécu de sa vérité Dans la souffrance,\nune promesse Un sauveur viendra notre richesse Oh Seigneur,\n\nnous sommes revenus De l\u0027ombre où nous avons vécu Par ta\ngrâce, nous voulons marcher Vers la lumière à jamais te\nlouer Dans le jardin, chemin redonné Par le sang versé,\nnous sommes sauvés Eternel, notre coeur te célèbre Pour\n\nla vie, pour l\u0027amour, pour le rêve",
+    "segments":  [
+                     {
+                         "end":  22.5,
+                         "words":  [
+                                       {
+                                           "word":  "Dans",
+                                           "end":  13.28,
+                                           "start":  11.88
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  13.7,
+                                           "start":  13.28
+                                       },
+                                       {
+                                           "word":  "jardin",
+                                           "end":  14.74,
+                                           "start":  13.7
+                                       },
+                                       {
+                                           "word":  "où",
+                                           "end":  15.74,
+                                           "start":  14.74
+                                       },
+                                       {
+                                           "word":  "l\u0027innocence",
+                                           "end":  16.24,
+                                           "start":  15.84
+                                       },
+                                       {
+                                           "word":  "priait",
+                                           "end":  16.74,
+                                           "start":  16.34
+                                       },
+                                       {
+                                           "word":  "L\u0027éternel",
+                                           "end":  17.24,
+                                           "start":  16.84
+                                       },
+                                       {
+                                           "word":  "marché",
+                                           "end":  21.76,
+                                           "start":  20.84
+                                       },
+                                       {
+                                           "word":  "sa",
+                                           "end":  22.5,
+                                           "start":  21.76
+                                       }
+                                   ],
+                         "text":  "Dans le jardin où l\u0027innocence priait L\u0027éternel marché sa",
+                         "start":  11.88
+                     },
+                     {
+                         "end":  33.12,
+                         "words":  [
+                                       {
+                                           "word":  "voix",
+                                           "end":  22.9,
+                                           "start":  22.5
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  23.46,
+                                           "start":  22.9
+                                       },
+                                       {
+                                           "word":  "guidait",
+                                           "end":  24.6,
+                                           "start":  23.46
+                                       },
+                                       {
+                                           "word":  "Mais",
+                                           "end":  26.9,
+                                           "start":  24.6
+                                       },
+                                       {
+                                           "word":  "un",
+                                           "end":  27.2,
+                                           "start":  26.9
+                                       },
+                                       {
+                                           "word":  "serpent",
+                                           "end":  27.78,
+                                           "start":  27.2
+                                       },
+                                       {
+                                           "word":  "rusé",
+                                           "end":  29.38,
+                                           "start":  27.78
+                                       },
+                                       {
+                                           "word":  "avec",
+                                           "end":  30.44,
+                                           "start":  29.38
+                                       },
+                                       {
+                                           "word":  "ses",
+                                           "end":  31.02,
+                                           "start":  30.44
+                                       },
+                                       {
+                                           "word":  "mots",
+                                           "end":  31.4,
+                                           "start":  31.02
+                                       },
+                                       {
+                                           "word":  "A",
+                                           "end":  33.12,
+                                           "start":  31.4
+                                       }
+                                   ],
+                         "text":  "voix nous guidait Mais un serpent rusé avec ses mots A",
+                         "start":  22.5
+                     },
+                     {
+                         "end":  42.06,
+                         "words":  [
+                                       {
+                                           "word":  "troubler",
+                                           "end":  33.88,
+                                           "start":  33.12
+                                       },
+                                       {
+                                           "word":  "nos",
+                                           "end":  34.08,
+                                           "start":  33.88
+                                       },
+                                       {
+                                           "word":  "cœurs",
+                                           "end":  34.74,
+                                           "start":  34.08
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  35.68,
+                                           "start":  34.74
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  35.96,
+                                           "start":  35.68
+                                       },
+                                       {
+                                           "word":  "a",
+                                           "end":  36.56,
+                                           "start":  35.96
+                                       },
+                                       {
+                                           "word":  "fait",
+                                           "end":  37.22,
+                                           "start":  36.56
+                                       },
+                                       {
+                                           "word":  "faux",
+                                           "end":  37.92,
+                                           "start":  37.22
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  38.42,
+                                           "start":  38.02
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  41.2,
+                                           "start":  39.98
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  42.06,
+                                           "start":  41.2
+                                       }
+                                   ],
+                         "text":  "troubler nos cœurs et nous a fait faux Oh Seigneur, nous",
+                         "start":  33.12
+                     },
+                     {
+                         "end":  54.34,
+                         "words":  [
+                                       {
+                                           "word":  "sommes",
+                                           "end":  42.84,
+                                           "start":  42.06
+                                       },
+                                       {
+                                           "word":  "revenus",
+                                           "end":  43.34,
+                                           "start":  42.940000000000005
+                                       },
+                                       {
+                                           "word":  "De",
+                                           "end":  46.5,
+                                           "start":  44.6
+                                       },
+                                       {
+                                           "word":  "l\u0027on",
+                                           "end":  47,
+                                           "start":  46.6
+                                       },
+                                       {
+                                           "word":  "où",
+                                           "end":  48.72,
+                                           "start":  48
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  48.84,
+                                           "start":  48.72
+                                       },
+                                       {
+                                           "word":  "avons",
+                                           "end":  49.4,
+                                           "start":  48.84
+                                       },
+                                       {
+                                           "word":  "vécu",
+                                           "end":  50.74,
+                                           "start":  49.4
+                                       },
+                                       {
+                                           "word":  "Par",
+                                           "end":  53.14,
+                                           "start":  51.74
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  53.58,
+                                           "start":  53.14
+                                       },
+                                       {
+                                           "word":  "grâce,",
+                                           "end":  54.34,
+                                           "start":  53.58
+                                       }
+                                   ],
+                         "text":  "sommes revenus De l\u0027on où nous avons vécu Par ta grâce,",
+                         "start":  42.06
+                     },
+                     {
+                         "end":  63.56,
+                         "words":  [
+                                       {
+                                           "word":  "nous",
+                                           "end":  55.2,
+                                           "start":  54.6
+                                       },
+                                       {
+                                           "word":  "voulons",
+                                           "end":  56.2,
+                                           "start":  55.2
+                                       },
+                                       {
+                                           "word":  "marcher",
+                                           "end":  57.2,
+                                           "start":  56.2
+                                       },
+                                       {
+                                           "word":  "Vers",
+                                           "end":  58.92,
+                                           "start":  58.22
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  59.34,
+                                           "start":  58.92
+                                       },
+                                       {
+                                           "word":  "lumière",
+                                           "end":  60.14,
+                                           "start":  59.34
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  61.42,
+                                           "start":  60.14
+                                       },
+                                       {
+                                           "word":  "jamais",
+                                           "end":  62.2,
+                                           "start":  61.42
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  62.6,
+                                           "start":  62.2
+                                       },
+                                       {
+                                           "word":  "louer",
+                                           "end":  63.56,
+                                           "start":  62.6
+                                       }
+                                   ],
+                         "text":  "nous voulons marcher Vers la lumière à jamais te louer",
+                         "start":  54.6
+                     },
+                     {
+                         "end":  78.94,
+                         "words":  [
+                                       {
+                                           "word":  "La",
+                                           "end":  69.08,
+                                           "start":  68.38
+                                       },
+                                       {
+                                           "word":  "femme",
+                                           "end":  69.72,
+                                           "start":  69.08
+                                       },
+                                       {
+                                           "word":  "a",
+                                           "end":  70.02,
+                                           "start":  69.72
+                                       },
+                                       {
+                                           "word":  "pris",
+                                           "end":  70.3,
+                                           "start":  70.02
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  71.92,
+                                           "start":  70.3
+                                       },
+                                       {
+                                           "word":  "fruit",
+                                           "end":  72.48,
+                                           "start":  71.92
+                                       },
+                                       {
+                                           "word":  "défendu",
+                                           "end":  73.72,
+                                           "start":  72.48
+                                       },
+                                       {
+                                           "word":  "Elle",
+                                           "end":  75.98,
+                                           "start":  75.28
+                                       },
+                                       {
+                                           "word":  "a",
+                                           "end":  76.2,
+                                           "start":  75.98
+                                       },
+                                       {
+                                           "word":  "partagé",
+                                           "end":  77.52,
+                                           "start":  76.2
+                                       },
+                                       {
+                                           "word":  "et",
+                                           "end":  78.44,
+                                           "start":  77.52
+                                       },
+                                       {
+                                           "word":  "l\u0027homme",
+                                           "end":  78.94,
+                                           "start":  78.539999999999992
+                                       }
+                                   ],
+                         "text":  "La femme a pris le fruit défendu Elle a partagé et l\u0027homme",
+                         "start":  68.38
+                     },
+                     {
+                         "end":  89.58,
+                         "words":  [
+                                       {
+                                           "word":  "a",
+                                           "end":  79.28,
+                                           "start":  79.04
+                                       },
+                                       {
+                                           "word":  "perdu",
+                                           "end":  80.28,
+                                           "start":  79.28
+                                       },
+                                       {
+                                           "word":  "Leurs",
+                                           "end":  82.9,
+                                           "start":  82.2
+                                       },
+                                       {
+                                           "word":  "yeux",
+                                           "end":  83.08,
+                                           "start":  82.9
+                                       },
+                                       {
+                                           "word":  "s\u0027ouvrir,",
+                                           "end":  83.58,
+                                           "start":  83.179999999999993
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  84.8,
+                                           "start":  84.6
+                                       },
+                                       {
+                                           "word":  "honte",
+                                           "end":  85.66,
+                                           "start":  84.8
+                                       },
+                                       {
+                                           "word":  "est",
+                                           "end":  86.02,
+                                           "start":  85.66
+                                       },
+                                       {
+                                           "word":  "entrée",
+                                           "end":  87.34,
+                                           "start":  86.02
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  89.28,
+                                           "start":  88.58
+                                       },
+                                       {
+                                           "word":  "ce",
+                                           "end":  89.58,
+                                           "start":  89.28
+                                       }
+                                   ],
+                         "text":  "a perdu Leurs yeux s\u0027ouvrir, la honte est entrée Dans ce",
+                         "start":  79.04
+                     },
+                     {
+                         "end":  100.2,
+                         "words":  [
+                                       {
+                                           "word":  "jardin,",
+                                           "end":  90.6,
+                                           "start":  89.58
+                                       },
+                                       {
+                                           "word":  "tout",
+                                           "end":  91.7,
+                                           "start":  91
+                                       },
+                                       {
+                                           "word":  "a",
+                                           "end":  92.42,
+                                           "start":  91.7
+                                       },
+                                       {
+                                           "word":  "changé",
+                                           "end":  93.5,
+                                           "start":  92.42
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  94,
+                                           "start":  93.6
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  97.02,
+                                           "start":  95.92
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  97.94,
+                                           "start":  97.02
+                                       },
+                                       {
+                                           "word":  "sommes",
+                                           "end":  98.52,
+                                           "start":  97.94
+                                       },
+                                       {
+                                           "word":  "revenus",
+                                           "end":  100.2,
+                                           "start":  98.52
+                                       }
+                                   ],
+                         "text":  "jardin, tout a changé Oh Seigneur, nous sommes revenus",
+                         "start":  89.58
+                     },
+                     {
+                         "end":  112.02,
+                         "words":  [
+                                       {
+                                           "word":  "De",
+                                           "end":  102.38,
+                                           "start":  101.6
+                                       },
+                                       {
+                                           "word":  "l\u0027ombre",
+                                           "end":  102.88,
+                                           "start":  102.47999999999999
+                                       },
+                                       {
+                                           "word":  "où",
+                                           "end":  104.06,
+                                           "start":  103.74
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  104.7,
+                                           "start":  104.06
+                                       },
+                                       {
+                                           "word":  "avons",
+                                           "end":  105.24,
+                                           "start":  104.7
+                                       },
+                                       {
+                                           "word":  "vécu",
+                                           "end":  106.62,
+                                           "start":  105.24
+                                       },
+                                       {
+                                           "word":  "Par",
+                                           "end":  109.02,
+                                           "start":  108.32
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  109.46,
+                                           "start":  109.02
+                                       },
+                                       {
+                                           "word":  "grâce,",
+                                           "end":  110.24,
+                                           "start":  109.46
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  111.1,
+                                           "start":  110.24
+                                       },
+                                       {
+                                           "word":  "voulons",
+                                           "end":  112.02,
+                                           "start":  111.1
+                                       }
+                                   ],
+                         "text":  "De l\u0027ombre où nous avons vécu Par ta grâce, nous voulons",
+                         "start":  101.6
+                     },
+                     {
+                         "end":  125.52,
+                         "words":  [
+                                       {
+                                           "word":  "marcher",
+                                           "end":  113.04,
+                                           "start":  112.02
+                                       },
+                                       {
+                                           "word":  "Vers",
+                                           "end":  114.78,
+                                           "start":  113.04
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  115.24,
+                                           "start":  114.78
+                                       },
+                                       {
+                                           "word":  "lumière",
+                                           "end":  116.06,
+                                           "start":  115.24
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  117.3,
+                                           "start":  116.06
+                                       },
+                                       {
+                                           "word":  "jamais",
+                                           "end":  118.08,
+                                           "start":  117.3
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  118.48,
+                                           "start":  118.08
+                                       },
+                                       {
+                                           "word":  "louer",
+                                           "end":  119.68,
+                                           "start":  118.48
+                                       },
+                                       {
+                                           "word":  "Mais",
+                                           "end":  125.02,
+                                           "start":  123.62
+                                       },
+                                       {
+                                           "word":  "l\u0027éternel",
+                                           "end":  125.52,
+                                           "start":  125.11999999999999
+                                       }
+                                   ],
+                         "text":  "marcher Vers la lumière à jamais te louer Mais l\u0027éternel",
+                         "start":  112.02
+                     },
+                     {
+                         "end":  140.04,
+                         "words":  [
+                                       {
+                                           "word":  "en",
+                                           "end":  128.44,
+                                           "start":  127.3
+                                       },
+                                       {
+                                           "word":  "sa",
+                                           "end":  128.7,
+                                           "start":  128.44
+                                       },
+                                       {
+                                           "word":  "bonté",
+                                           "end":  129.82,
+                                           "start":  128.7
+                                       },
+                                       {
+                                           "word":  "Nous",
+                                           "end":  131.64,
+                                           "start":  129.82
+                                       },
+                                       {
+                                           "word":  "a",
+                                           "end":  132.1,
+                                           "start":  131.64
+                                       },
+                                       {
+                                           "word":  "vécu",
+                                           "end":  132.6,
+                                           "start":  132.2
+                                       },
+                                       {
+                                           "word":  "de",
+                                           "end":  134.58,
+                                           "start":  132.7
+                                       },
+                                       {
+                                           "word":  "sa",
+                                           "end":  134.86,
+                                           "start":  134.58
+                                       },
+                                       {
+                                           "word":  "vérité",
+                                           "end":  136.7,
+                                           "start":  134.86
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  138.2,
+                                           "start":  136.8
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  138.6,
+                                           "start":  138.2
+                                       },
+                                       {
+                                           "word":  "souffrance,",
+                                           "end":  140.04,
+                                           "start":  138.6
+                                       }
+                                   ],
+                         "text":  "en sa bonté Nous a vécu de sa vérité Dans la souffrance,",
+                         "start":  127.3
+                     },
+                     {
+                         "end":  156.12,
+                         "words":  [
+                                       {
+                                           "word":  "une",
+                                           "end":  141.6,
+                                           "start":  140.04
+                                       },
+                                       {
+                                           "word":  "promesse",
+                                           "end":  143,
+                                           "start":  141.6
+                                       },
+                                       {
+                                           "word":  "Un",
+                                           "end":  144.72,
+                                           "start":  144.02
+                                       },
+                                       {
+                                           "word":  "sauveur",
+                                           "end":  145.56,
+                                           "start":  144.72
+                                       },
+                                       {
+                                           "word":  "viendra",
+                                           "end":  146.14,
+                                           "start":  145.56
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  148.14,
+                                           "start":  146.74
+                                       },
+                                       {
+                                           "word":  "richesse",
+                                           "end":  152.18,
+                                           "start":  148.14
+                                       },
+                                       {
+                                           "word":  "Oh",
+                                           "end":  152.68,
+                                           "start":  152.28
+                                       },
+                                       {
+                                           "word":  "Seigneur,",
+                                           "end":  156.12,
+                                           "start":  154.88
+                                       }
+                                   ],
+                         "text":  "une promesse Un sauveur viendra notre richesse Oh Seigneur,",
+                         "start":  140.04
+                     },
+                     {
+                         "end":  168.62,
+                         "words":  [
+                                       {
+                                           "word":  "nous",
+                                           "end":  157.12,
+                                           "start":  156.12
+                                       },
+                                       {
+                                           "word":  "sommes",
+                                           "end":  157.66,
+                                           "start":  157.12
+                                       },
+                                       {
+                                           "word":  "revenus",
+                                           "end":  158.98,
+                                           "start":  157.66
+                                       },
+                                       {
+                                           "word":  "De",
+                                           "end":  161.56,
+                                           "start":  160.86
+                                       },
+                                       {
+                                           "word":  "l\u0027ombre",
+                                           "end":  162.06,
+                                           "start":  161.66
+                                       },
+                                       {
+                                           "word":  "où",
+                                           "end":  163.76,
+                                           "start":  162.9
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  163.86,
+                                           "start":  163.76
+                                       },
+                                       {
+                                           "word":  "avons",
+                                           "end":  164.46,
+                                           "start":  163.86
+                                       },
+                                       {
+                                           "word":  "vécu",
+                                           "end":  165.82,
+                                           "start":  164.46
+                                       },
+                                       {
+                                           "word":  "Par",
+                                           "end":  168.2,
+                                           "start":  165.82
+                                       },
+                                       {
+                                           "word":  "ta",
+                                           "end":  168.62,
+                                           "start":  168.2
+                                       }
+                                   ],
+                         "text":  "nous sommes revenus De l\u0027ombre où nous avons vécu Par ta",
+                         "start":  156.12
+                     },
+                     {
+                         "end":  177.66,
+                         "words":  [
+                                       {
+                                           "word":  "grâce,",
+                                           "end":  169.34,
+                                           "start":  168.62
+                                       },
+                                       {
+                                           "word":  "nous",
+                                           "end":  170.26,
+                                           "start":  169.34
+                                       },
+                                       {
+                                           "word":  "voulons",
+                                           "end":  171.22,
+                                           "start":  170.26
+                                       },
+                                       {
+                                           "word":  "marcher",
+                                           "end":  172.18,
+                                           "start":  171.22
+                                       },
+                                       {
+                                           "word":  "Vers",
+                                           "end":  173.98,
+                                           "start":  172.82
+                                       },
+                                       {
+                                           "word":  "la",
+                                           "end":  174.4,
+                                           "start":  173.98
+                                       },
+                                       {
+                                           "word":  "lumière",
+                                           "end":  175.2,
+                                           "start":  174.4
+                                       },
+                                       {
+                                           "word":  "à",
+                                           "end":  176.48,
+                                           "start":  175.2
+                                       },
+                                       {
+                                           "word":  "jamais",
+                                           "end":  177.26,
+                                           "start":  176.48
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  177.66,
+                                           "start":  177.26
+                                       }
+                                   ],
+                         "text":  "grâce, nous voulons marcher Vers la lumière à jamais te",
+                         "start":  168.62
+                     },
+                     {
+                         "end":  188.96,
+                         "words":  [
+                                       {
+                                           "word":  "louer",
+                                           "end":  178.58,
+                                           "start":  177.66
+                                       },
+                                       {
+                                           "word":  "Dans",
+                                           "end":  180.92,
+                                           "start":  179.52
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  181.3,
+                                           "start":  180.92
+                                       },
+                                       {
+                                           "word":  "jardin,",
+                                           "end":  182.4,
+                                           "start":  181.3
+                                       },
+                                       {
+                                           "word":  "chemin",
+                                           "end":  183.84,
+                                           "start":  183.3
+                                       },
+                                       {
+                                           "word":  "redonné",
+                                           "end":  185.54,
+                                           "start":  183.84
+                                       },
+                                       {
+                                           "word":  "Par",
+                                           "end":  187.5,
+                                           "start":  186.1
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  187.68,
+                                           "start":  187.5
+                                       },
+                                       {
+                                           "word":  "sang",
+                                           "end":  188.04,
+                                           "start":  187.68
+                                       },
+                                       {
+                                           "word":  "versé,",
+                                           "end":  188.96,
+                                           "start":  188.04
+                                       }
+                                   ],
+                         "text":  "louer Dans le jardin, chemin redonné Par le sang versé,",
+                         "start":  177.66
+                     },
+                     {
+                         "end":  201.04,
+                         "words":  [
+                                       {
+                                           "word":  "nous",
+                                           "end":  190.36,
+                                           "start":  189.66000000000005
+                                       },
+                                       {
+                                           "word":  "sommes",
+                                           "end":  191.16,
+                                           "start":  190.36
+                                       },
+                                       {
+                                           "word":  "sauvés",
+                                           "end":  192.46,
+                                           "start":  191.16
+                                       },
+                                       {
+                                           "word":  "Eternel,",
+                                           "end":  192.96,
+                                           "start":  192.56
+                                       },
+                                       {
+                                           "word":  "notre",
+                                           "end":  196.56,
+                                           "start":  195.22
+                                       },
+                                       {
+                                           "word":  "coeur",
+                                           "end":  197.06,
+                                           "start":  196.66
+                                       },
+                                       {
+                                           "word":  "te",
+                                           "end":  197.52,
+                                           "start":  197.34
+                                       },
+                                       {
+                                           "word":  "célèbre",
+                                           "end":  198.84,
+                                           "start":  197.52
+                                       },
+                                       {
+                                           "word":  "Pour",
+                                           "end":  201.04,
+                                           "start":  200.36
+                                       }
+                                   ],
+                         "text":  "nous sommes sauvés Eternel, notre coeur te célèbre Pour",
+                         "start":  189.66000000000005
+                     },
+                     {
+                         "end":  205.46,
+                         "words":  [
+                                       {
+                                           "word":  "la",
+                                           "end":  201.52,
+                                           "start":  201.04
+                                       },
+                                       {
+                                           "word":  "vie,",
+                                           "end":  201.84,
+                                           "start":  201.52
+                                       },
+                                       {
+                                           "word":  "pour",
+                                           "end":  202.78,
+                                           "start":  202.1
+                                       },
+                                       {
+                                           "word":  "l\u0027amour,",
+                                           "end":  203.28,
+                                           "start":  202.88
+                                       },
+                                       {
+                                           "word":  "pour",
+                                           "end":  204.36,
+                                           "start":  203.54
+                                       },
+                                       {
+                                           "word":  "le",
+                                           "end":  204.76,
+                                           "start":  204.36
+                                       },
+                                       {
+                                           "word":  "rêve",
+                                           "end":  205.46,
+                                           "start":  204.76
+                                       }
+                                   ],
+                         "text":  "la vie, pour l\u0027amour, pour le rêve",
+                         "start":  201.04
+                     }
+                 ]
+}
