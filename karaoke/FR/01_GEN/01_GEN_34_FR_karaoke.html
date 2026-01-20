@@ -3,169 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 34 | Bible Chantee Karaoke</title>
+    <title>Genese 34 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 34</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 34 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_34_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="10.00" data-end="16.00"><span class="time">[0:10]</span>A succombe la terre à trembler</div>
-        <div class="line" data-start="16.00" data-end="21.00"><span class="time">[0:16]</span>D'inat fille au cœur pure</div>
-        <div class="line" data-start="21.00" data-end="27.00"><span class="time">[0:21]</span>Dans la lumière elle s'est égarée</div>
-        <div class="line" data-start="28.00" data-end="33.00"><span class="time">[0:28]</span>Si chame prince a troublé son mur mur</div>
-        <div class="line" data-start="35.00" data-end="39.00"><span class="time">[0:35]</span>Dépromise de mon sang au temps</div>
-        <div class="line" data-start="41.00" data-end="45.00"><span class="time">[0:41]</span>Mais l'honneur fubrisé</div>
-        <div class="line" data-start="46.00" data-end="50.00"><span class="time">[0:46]</span>Les larmes coulent le cœur au sang</div>
-        <div class="line" data-start="51.00" data-end="56.00"><span class="time">[0:51]</span>Une sœur, une douleur a jamais</div>
-        <div class="line" data-start="56.00" data-end="61.00"><span class="time">[0:56]</span>Au sœur entend notre cri</div>
-        <div class="line" data-start="61.00" data-end="64.00"><span class="time">[1:01]</span>Dans les ténèbres</div>
-        <div class="line" data-start="64.00" data-end="66.00"><span class="time">[1:04]</span>T'as l'umière pris</div>
-        <div class="line" data-start="66.00" data-end="69.00"><span class="time">[1:06]</span>Rennoncions pour ceux qui pleurent</div>
-        <div class="line" data-start="69.00" data-end="72.00"><span class="time">[1:09]</span>Courre-nous de ta douceuse douceur</div>
-        <div class="line" data-start="72.00" data-end="75.00"><span class="time">[1:12]</span>Dans l'embre de la douleur</div>
-        <div class="line" data-start="75.00" data-end="78.00"><span class="time">[1:15]</span>Nous cherchons ta cœur</div>
-        <div class="line" data-start="78.00" data-end="83.00"><span class="time">[1:18]</span>Viens au Dieu restorer nos vies</div>
-        <div class="line" data-start="83.00" data-end="89.00"><span class="time">[1:23]</span>Et guérir nos âmes</div>
-        <div class="line" data-start="89.00" data-end="95.00"><span class="time">[1:29]</span>Nous prions ici</div>
-        <div class="line" data-start="96.00" data-end="102.00"><span class="time">[1:36]</span>Amorfer à chercher la paix</div>
-        <div class="line" data-start="102.00" data-end="107.00"><span class="time">[1:42]</span>Des mots pour appaiser la tempête</div>
-        <div class="line" data-start="107.00" data-end="112.00"><span class="time">[1:47]</span>Mais la colère des filles s'étaient veillées</div>
-        <div class="line" data-start="113.00" data-end="119.00"><span class="time">[1:53]</span>Pour l'un ont un juste délit</div>
-        <div class="line" data-start="120.00" data-end="124.00"><span class="time">[2:00]</span>Nous ne s'édrons pas à l'oprobre</div>
-        <div class="line" data-start="124.00" data-end="126.00"><span class="time">[2:04]</span>En dit les voix unis</div>
-        <div class="line" data-start="126.00" data-end="129.00"><span class="time">[2:06]</span>Un pacte s'élépant la douleur</div>
-        <div class="line" data-start="129.00" data-end="133.00"><span class="time">[2:09]</span>Pour l'honneur de notre lignée</div>
-        <div class="line" data-start="133.00" data-end="138.00"><span class="time">[2:13]</span>Au sœur entend notre cri</div>
-        <div class="line" data-start="138.00" data-end="141.00"><span class="time">[2:18]</span>Dans les ténèbres</div>
-        <div class="line" data-start="141.00" data-end="143.00"><span class="time">[2:21]</span>T'as l'umière pris</div>
-        <div class="line" data-start="143.00" data-end="146.00"><span class="time">[2:23]</span>Rennoncions pour ceux qui pleurent</div>
-        <div class="line" data-start="146.00" data-end="149.00"><span class="time">[2:26]</span>Courre-nous de ta douceuse douceuse</div>
-        <div class="line" data-start="149.00" data-end="152.00"><span class="time">[2:29]</span>Dans l'embre de la douleur</div>
-        <div class="line" data-start="152.00" data-end="156.00"><span class="time">[2:32]</span>Nous cherchons ta cœur</div>
-        <div class="line" data-start="156.00" data-end="160.00"><span class="time">[2:36]</span>Viens au Dieu restorer nos vies</div>
-        <div class="line" data-start="160.00" data-end="166.00"><span class="time">[2:40]</span>Et guérir nos âmes</div>
-        <div class="line" data-start="166.00" data-end="169.00"><span class="time">[2:46]</span>Nous prions ici</div>
-        <div class="line" data-start="169.00" data-end="172.00"><span class="time">[2:49]</span>Quand les épées on frappait</div>
-        <div class="line" data-start="172.00" data-end="175.00"><span class="time">[2:52]</span>La villa connu la fin</div>
-        <div class="line" data-start="175.00" data-end="178.00"><span class="time">[2:55]</span>Mais dans ce cas où une promesse</div>
-        <div class="line" data-start="178.00" data-end="181.00"><span class="time">[2:58]</span>Que tu es là même dans le chagrin</div>
-        <div class="line" data-start="181.00" data-end="184.00"><span class="time">[3:01]</span>Dina au sœur dans l'espoir</div>
-        <div class="line" data-start="184.00" data-end="186.00"><span class="time">[3:04]</span>Nous crions pour ta mémoire</div>
-        <div class="line" data-start="186.00" data-end="189.00"><span class="time">[3:06]</span>Rappel nous toujours ta lumière</div>
-        <div class="line" data-start="189.00" data-end="194.00"><span class="time">[3:09]</span>Dans la nuit ton amour est clair</div>
-        <div class="line" data-start="194.00" data-end="198.00"><span class="time">[3:14]</span>Pour ces lieux entend notre cri</div>
-        <div class="line" data-start="198.00" data-end="201.00"><span class="time">[3:18]</span>Dans les ténèbres</div>
-        <div class="line" data-start="201.00" data-end="203.00"><span class="time">[3:21]</span>T'as l'umière pris</div>
-        <div class="line" data-start="203.00" data-end="206.00"><span class="time">[3:23]</span>Rennoncions pour ceux qui pleurent</div>
-        <div class="line" data-start="206.00" data-end="209.00"><span class="time">[3:26]</span>Courre-nous de ta douceuse douceuse</div>
-        <div class="line" data-start="209.00" data-end="212.00"><span class="time">[3:29]</span>Dans l'embre de la douleur</div>
-        <div class="line" data-start="212.00" data-end="216.00"><span class="time">[3:32]</span>Nous cherchons ta cœur</div>
-        <div class="line" data-start="216.00" data-end="221.00"><span class="time">[3:36]</span>Viens au Dieu restorer nos vies</div>
-        <div class="line" data-start="221.00" data-end="226.00"><span class="time">[3:41]</span>Et guérir nos âmes</div>
-        <div class="line" data-start="226.00" data-end="229.00"><span class="time">[3:46]</span>Nous prions ici</div>
-        <div class="line" data-start="229.00" data-end="232.00"><span class="time">[3:49]</span>Dans l'embre nous espérons</div>
-        <div class="line" data-start="232.00" data-end="235.00"><span class="time">[3:52]</span>Ta grâce est nous conduire</div>
-        <div class="line" data-start="235.00" data-end="237.00"><span class="time">[3:55]</span>Assemble nos coeurs au roi</div>
-        <div class="line" data-start="237.00" data-end="240.00"><span class="time">[3:57]</span>Dans ton amour notre vie</div>
-        <div class="line" data-start="240.00" data-end="243.00"><span class="time">[4:00]</span>Dans l'embre de la douleur</div>
-        <div class="line" data-start="243.00" data-end="246.00"><span class="time">[4:03]</span>Nous chants ton portaglois</div>
-        <div class="line" data-start="246.00" data-end="249.00"><span class="time">[4:06]</span>Pour chaque larme, chaque cœur</div>
-        <div class="line" data-start="249.00" data-end="255.00"><span class="time">[4:09]</span>Nous attendons un nouvel espoir</div>
-        <div class="line" data-start="255.00" data-end="258.00"><span class="time">[4:15]</span>Sab�öh</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="10.00" data-end="16.00"><span class="time">[0:10]</span>À Sichem, la terre a tremblé</div>
+        <div class="line" data-start="16.00" data-end="21.00"><span class="time">[0:16]</span>Dina, fille au cœur pur</div>
+        <div class="line" data-start="21.00" data-end="28.00"><span class="time">[0:21]</span>Dans la lumière, elle s'est égarée</div>
+        <div class="line" data-start="28.00" data-end="35.00"><span class="time">[0:28]</span>Si j'aime, prince, à troubler son murmure</div>
+        <div class="line" data-start="35.00" data-end="41.00"><span class="time">[0:35]</span>Des promesses, des mots envoûtants Mais</div>
+        <div class="line" data-start="41.00" data-end="46.00"><span class="time">[0:41]</span>l'honneur fut brisé Les</div>
+        <div class="line" data-start="46.00" data-end="51.00"><span class="time">[0:46]</span>larmes coulent, le cœur en sang</div>
+        <div class="line" data-start="51.00" data-end="56.00"><span class="time">[0:51]</span>Une soeur, une douleur à jamais</div>
+        <div class="line" data-start="56.00" data-end="61.00"><span class="time">[0:56]</span>Ô Seigneur, entends notre</div>
+        <div class="line" data-start="61.00" data-end="64.00"><span class="time">[1:01]</span>cri Dans les</div>
+        <div class="line" data-start="64.00" data-end="66.00"><span class="time">[1:04]</span>ténèbres, ta lumière</div>
+        <div class="line" data-start="66.00" data-end="69.00"><span class="time">[1:06]</span>brille Rédemption pour ceux qui pleurent</div>
+        <div class="line" data-start="69.00" data-end="72.00"><span class="time">[1:09]</span>Couvre-nous de ta douce douceur Dans</div>
+        <div class="line" data-start="72.00" data-end="75.00"><span class="time">[1:12]</span>l'ombre de la douleur Nous</div>
+        <div class="line" data-start="75.00" data-end="78.00"><span class="time">[1:15]</span>cherchons ta cœur Viens,</div>
+        <div class="line" data-start="78.00" data-end="83.00"><span class="time">[1:18]</span>ô Dieu, restaurer nos vies Et</div>
+        <div class="line" data-start="83.00" data-end="89.00"><span class="time">[1:23]</span>guérir nos âmes</div>
+        <div class="line" data-start="89.00" data-end="96.00"><span class="time">[1:29]</span>Nous prions ici</div>
+        <div class="line" data-start="96.00" data-end="102.00"><span class="time">[1:36]</span>À mort faire, à chercher</div>
+        <div class="line" data-start="102.00" data-end="107.00"><span class="time">[1:42]</span>la paix Des mots pour apaiser</div>
+        <div class="line" data-start="107.00" data-end="113.00"><span class="time">[1:47]</span>la tempête Mais la colère des filles s'est</div>
+        <div class="line" data-start="113.00" data-end="120.00"><span class="time">[1:53]</span>éveillée Pour la honte, un</div>
+        <div class="line" data-start="120.00" data-end="124.00"><span class="time">[2:00]</span>juste délit Nous ne céderons pas</div>
+        <div class="line" data-start="124.00" data-end="126.00"><span class="time">[2:04]</span>à l'opprobre On dit</div>
+        <div class="line" data-start="126.00" data-end="129.00"><span class="time">[2:06]</span>les croix unies Un pacte</div>
+        <div class="line" data-start="129.00" data-end="133.00"><span class="time">[2:09]</span>scellé par la douleur Pour l'honneur</div>
+        <div class="line" data-start="133.00" data-end="138.00"><span class="time">[2:13]</span>de notre ligne innée</div>
+        <div class="line" data-start="138.00" data-end="141.00"><span class="time">[2:18]</span>Ô Seigneur, entends</div>
+        <div class="line" data-start="141.00" data-end="143.00"><span class="time">[2:21]</span>notre cri Dans</div>
+        <div class="line" data-start="143.00" data-end="146.00"><span class="time">[2:23]</span>les ténèbres, ta lumière brille Rédemption</div>
+        <div class="line" data-start="146.00" data-end="149.00"><span class="time">[2:26]</span>pour ceux qui pleurent Couvre-nous de</div>
+        <div class="line" data-start="149.00" data-end="152.00"><span class="time">[2:29]</span>ta douce douceur Dans l'ombre</div>
+        <div class="line" data-start="152.00" data-end="156.00"><span class="time">[2:32]</span>de la douleur Nous</div>
+        <div class="line" data-start="156.00" data-end="160.00"><span class="time">[2:36]</span>cherchons ta cœur Viens, ô Dieu,</div>
+        <div class="line" data-start="160.00" data-end="166.00"><span class="time">[2:40]</span>restaurer nos vies</div>
+        <div class="line" data-start="166.00" data-end="169.00"><span class="time">[2:46]</span>Et guérir nos</div>
+        <div class="line" data-start="169.00" data-end="172.00"><span class="time">[2:49]</span>âmes Nous prions ici Quand</div>
+        <div class="line" data-start="172.00" data-end="175.00"><span class="time">[2:52]</span>les épées ont frappé</div>
+        <div class="line" data-start="175.00" data-end="178.00"><span class="time">[2:55]</span>La ville a connu la fin</div>
+        <div class="line" data-start="178.00" data-end="181.00"><span class="time">[2:58]</span>Mais dans ce chaos, une promesse</div>
+        <div class="line" data-start="181.00" data-end="184.00"><span class="time">[3:01]</span>Que tu es là même</div>
+        <div class="line" data-start="184.00" data-end="186.00"><span class="time">[3:04]</span>dans le chagrin Dina, ô</div>
+        <div class="line" data-start="186.00" data-end="189.00"><span class="time">[3:06]</span>sœur, dans l'espoir Nous crions pour</div>
+        <div class="line" data-start="189.00" data-end="194.00"><span class="time">[3:09]</span>ta mémoire Rappelle-nous toujours ta lumière</div>
+        <div class="line" data-start="194.00" data-end="198.00"><span class="time">[3:14]</span>Dans la nuit, ton amour éclaire</div>
+        <div class="line" data-start="198.00" data-end="201.00"><span class="time">[3:18]</span>Ô Seigneur, entends</div>
+        <div class="line" data-start="201.00" data-end="203.00"><span class="time">[3:21]</span>notre cri Dans</div>
+        <div class="line" data-start="203.00" data-end="206.00"><span class="time">[3:23]</span>les ténèbres, ta lumière brille Rédemption</div>
+        <div class="line" data-start="206.00" data-end="209.00"><span class="time">[3:26]</span>pour ceux qui pleurent Couvre-nous de</div>
+        <div class="line" data-start="209.00" data-end="212.00"><span class="time">[3:29]</span>ta douce douceur Dans l'ombre</div>
+        <div class="line" data-start="212.00" data-end="216.00"><span class="time">[3:32]</span>de la douleur Nous</div>
+        <div class="line" data-start="216.00" data-end="221.00"><span class="time">[3:36]</span>cherchons ta cœur Viens, ô Dieu,</div>
+        <div class="line" data-start="221.00" data-end="226.00"><span class="time">[3:41]</span>restaurer nos vies</div>
+        <div class="line" data-start="226.00" data-end="229.00"><span class="time">[3:46]</span>Et guérir nos</div>
+        <div class="line" data-start="229.00" data-end="232.00"><span class="time">[3:49]</span>âmes Nous prions ici Dans</div>
+        <div class="line" data-start="232.00" data-end="235.00"><span class="time">[3:52]</span>l'ombre, nous espérons Ta grâce</div>
+        <div class="line" data-start="235.00" data-end="237.00"><span class="time">[3:55]</span>nous conduit Rassemble nos cœurs</div>
+        <div class="line" data-start="237.00" data-end="240.00"><span class="time">[3:57]</span>au roi Dans ton</div>
+        <div class="line" data-start="240.00" data-end="243.00"><span class="time">[4:00]</span>amour, notre vie Dans l'ombre</div>
+        <div class="line" data-start="243.00" data-end="246.00"><span class="time">[4:03]</span>de la douleur Nous chantons</div>
+        <div class="line" data-start="246.00" data-end="249.00"><span class="time">[4:06]</span>pour ta gloire Pour chaque larme,</div>
+        <div class="line" data-start="249.00" data-end="255.00"><span class="time">[4:09]</span>chaque cœur Nous attendons un nouvel</div>
+        <div class="line" data-start="255.00" data-end="258.00"><span class="time">[4:15]</span>espoir</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

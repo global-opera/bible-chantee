@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Test FR_V2 Corrigé - Job 5</title>
+  <style>
+    body {
+      background: #1a1a2e;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #F5CB42;
+      border-bottom: 2px solid #F5CB42;
+      padding-bottom: 10px;
+    }
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .panel {
+      background: rgba(30, 58, 95, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .panel h2 {
+      color: #F5CB42;
+      margin-top: 0;
+    }
+    .error {
+      background-color: rgba(255, 0, 0, 0.2);
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+    .fixed {
+      background-color: rgba(0, 255, 0, 0.2);
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+    #status {
+      background: rgba(0,0,0,0.3);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .success { color: #0f0; }
+    .info { color: #F5CB42; }
+  </style>
+</head>
+<body>
+  <h1>🎵 Test Lyrics FR_V2 Corrigé</h1>
+
+  <div id="status">
+    <p class="info">📊 Chargement et comparaison...</p>
+  </div>
+
+  <div class="comparison">
+    <div class="panel">
+      <h2>❌ FR_V1 (Original avec erreur)</h2>
+      <div id="v1Content"></div>
+    </div>
+    <div class="panel">
+      <h2>✅ FR_V2 (Corrigé)</h2>
+      <div id="v2Content"></div>
+    </div>
+  </div>
+
+  <script>
+    const statusDiv = document.getElementById('status');
+    const v1Content = document.getElementById('v1Content');
+    const v2Content = document.getElementById('v2Content');
+
+    async function loadAndCompare() {
+      try {
+        // Charger FR_V1 depuis l'extraction
+        const v1Response = await fetch('file:///C:/temp/FR_V1_extraction/18_JOB/18_JOB_05_FR.txt');
+        let v1Text = await v1Response.text();
+
+        // Charger FR_V2 corrigé
+        const v2Url = 'lyrics_v2/18_JOB/18_JOB_005_FR.txt';
+        const v2Response = await fetch(v2Url);
+        let v2Text = await v2Response.text();
+
+        statusDiv.innerHTML = '<p class="success">✅ Fichiers chargés</p>';
+
+        // Nettoyer pour affichage
+        function cleanForDisplay(text) {
+          // Supprimer tags
+          text = text.replace(/\\[TITLE\\][\\s\\S]*?\\[LYRICS\\]/gi, '');
+          text = text.replace(/\\[STYLE\\][\\s\\S]*/gi, '');
+          text = text.replace(/\\[(Verse|Chorus|Bridge|Outro).*?\\]/gi, '');
+
+          // Supprimer caractères spéciaux
+          text = text.replace(/¶/g, '');
+          text = text.replace(/\\u00B6/g, '');
+
+          // Supprimer nom fichier
+          text = text.replace(/^\\d{2}_[A-Z]+_\\d+_FR\\s*/gm, '');
+
+          return text.trim();
+        }
+
+        v1Text = cleanForDisplay(v1Text);
+        v2Text = cleanForDisplay(v2Text);
+
+        // Highlighter les différences
+        function highlightText(text, searchTerm, className) {
+          const regex = new RegExp(`(${searchTerm})`, 'gi');
+          return text.replace(regex, `<span class="${className}">$1</span>`);
+        }
+
+        // V1: mettre "maman" en rouge si présent
+        const v1Html = highlightText(v1Text.replace(/\\n/g, '<br>'), 'maman', 'error');
+
+        // V2: mettre "main" ou "âme" en vert si corrigé
+        let v2Html = highlightText(v2Text.replace(/\\n/g, '<br>'), 'main', 'fixed');
+        v2Html = highlightText(v2Html, 'âme', 'fixed');
+
+        v1Content.innerHTML = '<pre style="white-space: pre-wrap; line-height: 1.6;">' + v1Html + '</pre>';
+        v2Content.innerHTML = '<pre style="white-space: pre-wrap; line-height: 1.6;">' + v2Html + '</pre>';
+
+        // Vérifications
+        statusDiv.innerHTML += '<p class="info">🔍 Vérifications:</p>';
+
+        const checks = [
+          { test: !v2Html.includes('maman'), msg: 'Aucun "maman" dans V2' },
+          { test: v2Html.includes('main'), msg: '"main" présent dans V2' },
+          { test: !v2Html.includes('¶'), msg: 'Caractères ¶ supprimés' },
+          { test: v1Html.length > 100 && v2Html.length > 100, msg: 'Contenu substantiel' }
+        ];
+
+        checks.forEach(check => {
+          const icon = check.test ? '✅' : '❌';
+          const className = check.test ? 'success' : 'error';
+          statusDiv.innerHTML += `<p class="${className}">${icon} ${check.msg}</p>`;
+        });
+
+        const allPassed = checks.every(c => c.test);
+        if (allPassed) {
+          statusDiv.innerHTML += '<p class="success" style="font-size: 18px; font-weight: bold; margin-top: 20px;">🎉 CORRECTION RÉUSSIE!</p>';
+        }
+
+      } catch (error) {
+        statusDiv.innerHTML += `<p class="error">❌ ERREUR: ${error.message}</p>`;
+        console.error(error);
+      }
+    }
+
+    loadAndCompare();
+  </script>
+</body>
+</html>

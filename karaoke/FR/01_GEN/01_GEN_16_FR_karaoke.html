@@ -3,130 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 16 | Bible Chantee Karaoke</title>
+    <title>Genese 16 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 16</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 16 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_16_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="0.10" data-end="18.62"><span class="time">[0:00]</span>... Dans l'ombre de la douleur, sa raie se tenait, son</div>
-        <div class="line" data-start="18.62" data-end="25.52"><span class="time">[0:18]</span>coeur en détresse, un cri pour un enfant. Elle a donné</div>
-        <div class="line" data-start="25.52" data-end="34.48"><span class="time">[0:25]</span>sa servante, un espoir égaré, à bras maécouté, suivant</div>
-        <div class="line" data-start="34.48" data-end="45.60"><span class="time">[0:34]</span>ce plan incertain. Oh Dieu, qui entend nos pleurs, dans</div>
-        <div class="line" data-start="45.60" data-end="54.80"><span class="time">[0:45]</span>le désert de nos coeurs, tu vois nos larmes, tu vois nos</div>
-        <div class="line" data-start="54.80" data-end="73.24"><span class="time">[0:54]</span>douleurs, Ismaël, un fils de promesse. Dans la flexion,</div>
-        <div class="line" data-start="73.34" data-end="77.72"><span class="time">[1:13]</span>ta grâce se dresse. À gare, cet enfli, la maîtresse lui</div>
-        <div class="line" data-start="77.82" data-end="83.46"><span class="time">[1:17]</span>fait mal. Près de la source vie, un ange l'a trouvé, retourne</div>
-        <div class="line" data-start="83.46" data-end="92.20"><span class="time">[1:23]</span>vers elle, humilié toi, ma soeur. Je multiplierai ta lignée,</div>
-        <div class="line" data-start="92.38" data-end="103.54"><span class="time">[1:32]</span>tu seras béni. Oh Dieu, qui entend nos pleurs, dans le</div>
-        <div class="line" data-start="103.54" data-end="110.68"><span class="time">[1:43]</span>désert de nos coeurs, tu vois nos larmes, tu vois nos douleurs,</div>
-        <div class="line" data-start="115.90" data-end="134.98"><span class="time">[1:55]</span>Ismaël, un fils de promesse. Dans la flexion, ta grâce</div>
-        <div class="line" data-start="135.08" data-end="133.88"><span class="time">[2:15]</span>se dresse. À ta héroï, le Dieu qui boit, dans la nuit,</div>
-        <div class="line" data-start="133.90" data-end="138.78"><span class="time">[2:13]</span>tu es ma lumière. Chaque cri, chaque larme, tu les entend.</div>
-        <div class="line" data-start="138.78" data-end="151.52"><span class="time">[2:18]</span>Oh Seigneur, tu es notre refuge, notre espoir. Oh Dieu,</div>
-        <div class="line" data-start="151.52" data-end="163.26"><span class="time">[2:31]</span>qui entend nos pleurs, dans le désert de nos coeurs, tu</div>
-        <div class="line" data-start="163.26" data-end="169.02"><span class="time">[2:43]</span>vois nos larmes, tu vois nos douleurs, Ismaël, un fils</div>
-        <div class="line" data-start="169.12" data-end="168.24"><span class="time">[2:49]</span>de promesse. Quand les epreuves nous accablent, ta voix</div>
-        <div class="line" data-start="168.34" data-end="172.74"><span class="time">[2:48]</span>nous guide, dans chaque souffrance, ton amour nous délibre.</div>
-        <div class="line" data-start="172.84" data-end="173.64"><span class="time">[2:52]</span>Seigneur, nous te louons, dans la joie et les pleurs, car</div>
-        <div class="line" data-start="172.14" data-end="176.14"><span class="time">[2:52]</span>tu es notre force, notre éternel sauveur. Oh Dieu, qui</div>
-        <div class="line" data-start="176.24" data-end="175.14"><span class="time">[2:56]</span>entend nos pleurs, dans le désert de nos coeurs, tu vois</div>
-        <div class="line" data-start="175.24" data-end="175.58"><span class="time">[2:55]</span>nos larmes, tu vois nos douleurs, Ismaël, un fils de promesse.</div>
-        <div class="line" data-start="180.66" data-end="193.94"><span class="time">[3:00]</span>Dans la flexion, ta grâce se dress.</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="0.10" data-end="18.62"><span class="time">[0:00]</span>Dans l'ombre de la douleur, Saraï se tenait Son cœur</div>
+        <div class="line" data-start="18.62" data-end="25.52"><span class="time">[0:18]</span>en détresse, un cri pour un enfant Elle a donné</div>
+        <div class="line" data-start="25.52" data-end="34.48"><span class="time">[0:25]</span>sa servante, un espoir égaré Abraham a écouté, suivant ce</div>
+        <div class="line" data-start="34.48" data-end="45.60"><span class="time">[0:34]</span>plan incertain Ô Dieu qui entend nos pleurs Dans le</div>
+        <div class="line" data-start="45.60" data-end="54.80"><span class="time">[0:45]</span>désert de nos cœurs Tu vois nos larmes, tu vois</div>
+        <div class="line" data-start="54.80" data-end="73.34"><span class="time">[0:54]</span>nos douleurs Ismaël, un fils de promesse Dans l'affliction, ta</div>
+        <div class="line" data-start="73.34" data-end="77.82"><span class="time">[1:13]</span>grâce se dresse Agar s'est enfui, la maîtresse lui fit</div>
+        <div class="line" data-start="77.82" data-end="83.46"><span class="time">[1:17]</span>mal Près de la source vive, un ange l'a trouvée Retourne</div>
+        <div class="line" data-start="83.46" data-end="92.38"><span class="time">[1:23]</span>vers elle, humilie-toi ma sœur Je multiplierai ta lignée, tu seras</div>
+        <div class="line" data-start="92.38" data-end="103.54"><span class="time">[1:32]</span>bénie Ô Dieu qui entend nos pleurs Dans le désert</div>
+        <div class="line" data-start="103.54" data-end="115.90"><span class="time">[1:43]</span>de nos cœurs Tu vois nos larmes, tu vois nos douleurs</div>
+        <div class="line" data-start="115.90" data-end="135.08"><span class="time">[1:55]</span>Ismaël, un fils de promesse Dans l'affliction, ta grâce se</div>
+        <div class="line" data-start="135.08" data-end="133.90"><span class="time">[2:15]</span>dresse Atta El-Roï, le Dieu qui voit Dans la nuit,</div>
+        <div class="line" data-start="133.90" data-end="138.78"><span class="time">[2:13]</span>tu es ma lumière Chaque cri, chaque larme, tu les</div>
+        <div class="line" data-start="138.78" data-end="151.52"><span class="time">[2:18]</span>entends Seigneur, tu es notre refuge, notre espoir Ô Dieu</div>
+        <div class="line" data-start="151.52" data-end="163.26"><span class="time">[2:31]</span>qui entend nos pleurs Dans le désert de nos cœurs</div>
+        <div class="line" data-start="163.26" data-end="169.12"><span class="time">[2:43]</span>Tu vois nos larmes, tu vois nos douleurs Ismaël, un</div>
+        <div class="line" data-start="169.12" data-end="168.34"><span class="time">[2:49]</span>fils de promesse Quand l'épreuve nous accable, ta voix nous</div>
+        <div class="line" data-start="168.34" data-end="172.84"><span class="time">[2:48]</span>guide Dans chaque souffrance, ton amour nous délivre Seigneur, nous te</div>
+        <div class="line" data-start="172.84" data-end="172.14"><span class="time">[2:52]</span>louons dans la joie et les pleurs Car tu es</div>
+        <div class="line" data-start="172.14" data-end="176.24"><span class="time">[2:52]</span>notre force, notre éternelle sauveur Ô Dieu qui entend nos</div>
+        <div class="line" data-start="176.24" data-end="175.24"><span class="time">[2:56]</span>pleurs Dans le désert de nos cœurs Tu vois nos</div>
+        <div class="line" data-start="175.24" data-end="180.66"><span class="time">[2:55]</span>larmes, tu vois nos douleurs Ismaël, un fils de promesse Dans</div>
+        <div class="line" data-start="180.66" data-end="193.94"><span class="time">[3:00]</span>l'affliction, ta grâce se dresse</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

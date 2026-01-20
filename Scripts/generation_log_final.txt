@@ -1,0 +1,4481 @@
+[OK] Cles API chargees depuis les variables d'environnement
+================================================================================
+  GENERATION COMPLETE BIBLE FR - 66 LIVRES
+================================================================================
+
+Total chapitres à générer: 1189
+Estimation temps: ~49.5 heures
+Coût estimé: ~14268 crédits Suno
+
+
+================================================================================
+[1/66] Genèse (01_GEN) - 50 chapitres
+================================================================================
+✅ SKIP - Genèse déjà complet (50/50)
+
+================================================================================
+[2/66] Exode (02_EXO) - 40 chapitres
+================================================================================
+✅ SKIP - Exode déjà complet (40/40)
+
+================================================================================
+[3/66] Lévitique (03_LEV) - 27 chapitres
+================================================================================
+✅ SKIP - Lévitique déjà complet (27/27)
+
+================================================================================
+[4/66] Nombres (04_NUM) - 36 chapitres
+================================================================================
+✅ SKIP - Nombres déjà complet (36/36)
+
+================================================================================
+[5/66] Deutéronome (05_DEU) - 34 chapitres
+================================================================================
+✅ SKIP - Deutéronome déjà complet (34/34)
+
+================================================================================
+[6/66] Josué (06_JOS) - 24 chapitres
+================================================================================
+✅ SKIP - Josué déjà complet (24/24)
+
+================================================================================
+[7/66] Juges (07_JDG) - 21 chapitres
+================================================================================
+✅ SKIP - Juges déjà complet (21/21)
+
+================================================================================
+[8/66] Ruth (08_RUT) - 4 chapitres
+================================================================================
+✅ SKIP - Ruth déjà complet (4/4)
+
+================================================================================
+[9/66] 1 Samuel (09_1SAM) - 31 chapitres
+================================================================================
+📝 RESUME - 1/31 déjà générés
+🚀 GENERATION - 1 Samuel...
+[CREDITS] 18991.2
+
+======================================================================
+  GENERATION SUNO API - 09_1SAM [FR]
+======================================================================
+Fichiers trouves: 31
+Dossier sortie: G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM
+
+--- [1/31] Chapitre 1 ---
+Titre: 09_1SAM_01_FR
+Style: French worship, 72 BPM
+[API] Generation: 09_1SAM_01_FR
+[API] Style: French worship, 72 BPM
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 39b7ad8e8f122cedbe718c64740a095f
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_01.mp3
+[OK] Telechargement termine
+
+--- [2/31] Chapitre 2 ---
+Titre: 09_1SAM_02_FR
+Style: French worship, 72 BPM
+[API] Generation: 09_1SAM_02_FR
+[API] Style: French worship, 72 BPM
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: dd13327aacaa1273c78a2c71c386626a
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_02.mp3
+[OK] Telechargement termine
+
+--- [3/31] Chapitre 3 ---
+Titre: 09_1SAM_03_FR
+Style: French worship, 72 BPM
+[API] Generation: 09_1SAM_03_FR
+[API] Style: French worship, 72 BPM
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 03ebfe0458d34f76267f58ebff031ae0
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_03.mp3
+[OK] Telechargement termine
+
+--- [4/31] Chapitre 4 ---
+Titre: 09_1SAM_04_FR
+Style: French worship, 72 BPM
+[API] Generation: 09_1SAM_04_FR
+[API] Style: French worship, 72 BPM
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: ff1a41f02afe1e8b86c760ccd616a187
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_04.mp3
+[OK] Telechargement termine
+
+--- [5/31] Chapitre 5 ---
+Titre: 09_1SAM_05_FR
+Style: French worship, 72 BPM
+[API] Generation: 09_1SAM_05_FR
+[API] Style: French worship, 72 BPM
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: d9081903617cececfc664d5a18842e1a
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_05.mp3
+[OK] Telechargement termine
+
+--- [6/31] Chapitre 6 ---
+Titre: 09_1SAM_06_FR
+Style: French worship, 72 BPM
+[API] Generation: 09_1SAM_06_FR
+[API] Style: French worship, 72 BPM
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 65817664b25dd27d118b052d95472a92
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_06.mp3
+[OK] Telechargement termine
+
+--- [7/31] Chapitre 7 ---
+Titre: 09_1SAM_07_FR
+Style: French worship, 72 BPM
+[API] Generation: 09_1SAM_07_FR
+[API] Style: French worship, 72 BPM
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: f2468c42e87dcfe9f9b1cf562070bcfb
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [8/31] Chapitre 8 ---
+Titre: 09_1SAM_08_FR
+Style: French worship, 72 BPM
+[API] Generation: 09_1SAM_08_FR
+[API] Style: French worship, 72 BPM
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 9e4243e96742df0607895614e25681be
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_08.mp3
+[OK] Telechargement termine
+
+--- [9/31] Chapitre 9 ---
+Titre: 09_1SAM_09_FR
+Style: 
+[API] Generation: 09_1SAM_09_FR
+[API] Style: 
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: a2aa9b21fc47e42618e8cb2329b73923
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_09.mp3
+[OK] Telechargement termine
+
+--- [10/31] Chapitre 10 ---
+Titre: 09_1SAM_10_FR
+Style: 
+[API] Generation: 09_1SAM_10_FR
+[API] Style: 
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 03a6758fdc5222e8d717b74f749eff41
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_10.mp3
+[OK] Telechargement termine
+
+--- [11/31] Chapitre 11 ---
+Titre: 09_1SAM_11_FR
+Style: 
+[API] Generation: 09_1SAM_11_FR
+[API] Style: 
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 9b09527d34d2c1895b5473f09c59743d
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_11.mp3
+[OK] Telechargement termine
+
+--- [12/31] Chapitre 12 ---
+Titre: 09_1SAM_12_FR
+Style: 
+[API] Generation: 09_1SAM_12_FR
+[API] Style: 
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 6c1449ec9c1b27e27797c0af714e6956
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_12.mp3
+[OK] Telechargement termine
+
+--- [13/31] Chapitre 13 ---
+Titre: 09_1SAM_13_FR
+Style: 
+[API] Generation: 09_1SAM_13_FR
+[API] Style: 
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 02f47b99cda923e2c55ee33b3eb6b0cd
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_13.mp3
+[OK] Telechargement termine
+
+--- [14/31] Chapitre 14 ---
+Titre: 09_1SAM_14_FR
+Style: 
+[API] Generation: 09_1SAM_14_FR
+[API] Style: 
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 743c510efbee81e5bfd32bde405f9a22
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_14.mp3
+[OK] Telechargement termine
+
+--- [15/31] Chapitre 15 ---
+Titre: 09_1SAM_15_FR
+Style: 
+[API] Generation: 09_1SAM_15_FR
+[API] Style: 
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 5656e36fce8efbaeb0e6e8bb053765a5
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_15.mp3
+[OK] Telechargement termine
+
+--- [16/31] Chapitre 16 ---
+Titre: 09_1SAM_16_FR
+Style: 
+[API] Generation: 09_1SAM_16_FR
+[API] Style: 
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: f3d96290ae0cd02bfb4c65fb98955be7
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_16.mp3
+[OK] Telechargement termine
+
+--- [17/31] Chapitre 17 ---
+Titre: 09_1SAM_17_FR
+Style: 
+[API] Generation: 09_1SAM_17_FR
+[API] Style: 
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 3afdf906da43d22e8d4837b3c207cd24
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_17.mp3
+[OK] Telechargement termine
+
+--- [18/31] Chapitre 18 ---
+Titre: 09_1SAM_18_FR
+Style: 
+[API] Generation: 09_1SAM_18_FR
+[API] Style: 
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: d17a5ab23de75c9818e432fd106ded88
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_18.mp3
+[OK] Telechargement termine
+
+--- [19/31] Chapitre 19 ---
+Titre: 09_1SAM_19_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 09_1SAM_19_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 640b2abcbc603474fb2284f7cef27d90
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_19.mp3
+[OK] Telechargement termine
+
+--- [20/31] Chapitre 20 ---
+Titre: 09_1SAM_20_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 09_1SAM_20_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: e71b0218805e0f4d9315c58f956edf08
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_20.mp3
+[OK] Telechargement termine
+
+--- [21/31] Chapitre 21 ---
+Titre: 09_1SAM_21_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 09_1SAM_21_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 505ac031c8076dfcfb2f5e9b27dbb979
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [22/31] Chapitre 22 ---
+Titre: 09_1SAM_22_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 09_1SAM_22_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 8a3526e125e308b4320949a3161c2dfd
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_22.mp3
+[OK] Telechargement termine
+
+--- [23/31] Chapitre 23 ---
+Titre: 09_1SAM_23_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 09_1SAM_23_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: d740fdc195de09d8da6eb40155ae94d3
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_23.mp3
+[OK] Telechargement termine
+
+--- [24/31] Chapitre 24 ---
+Titre: 09_1SAM_24_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 09_1SAM_24_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 5cd16d478efd21d7ec985081dab6f329
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [25/31] Chapitre 25 ---
+Titre: 09_1SAM_25_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 09_1SAM_25_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 6e53ffb94e22222f8b7e63826e26b5e2
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_25.mp3
+[OK] Telechargement termine
+
+--- [26/31] Chapitre 26 ---
+Titre: 09_1SAM_26_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 09_1SAM_26_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: c193de66b375212ceaade9a59494189a
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_26.mp3
+[OK] Telechargement termine
+
+--- [27/31] Chapitre 27 ---
+Titre: 09_1SAM_27_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 09_1SAM_27_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: cc312679b8fe29a863c5ffea56d3f6a2
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_27.mp3
+[OK] Telechargement termine
+
+--- [28/31] Chapitre 28 ---
+Titre: 09_1SAM_28_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 09_1SAM_28_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 1324fb2d7092cd6aaba8bf0690f13ab5
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: PENDING
+[60s] Status: PENDING
+[70s] Status: PENDING
+[80s] Status: PENDING
+[90s] Status: PENDING
+[100s] Status: PENDING
+[110s] Status: PENDING
+[120s] Status: PENDING
+[130s] Status: PENDING
+[140s] Status: PENDING
+[150s] Status: PENDING
+[160s] Status: PENDING
+[170s] Status: PENDING
+[TIMEOUT] Temps maximum atteint
+
+--- [29/31] Chapitre 29 ---
+Titre: 09_1SAM_29_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 09_1SAM_29_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 8ccf38c38a5c7cdc7d4e92b27485b6d8
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: PENDING
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [30/31] Chapitre 30 ---
+Titre: 09_1SAM_30_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 09_1SAM_30_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 87cfe8b12ce5d58ea2825bbca13baef2
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: PENDING
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [31/31] Chapitre 31 ---
+Titre: 09_1SAM_31_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 09_1SAM_31_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: dd0222c4f36e19effac5f2216a30ced2
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: PENDING
+[60s] Status: PENDING
+[70s] Status: PENDING
+[80s] Status: PENDING
+[90s] Status: PENDING
+[100s] Status: PENDING
+[110s] Status: PENDING
+[120s] Status: PENDING
+[130s] Status: PENDING
+[140s] Status: PENDING
+[150s] Status: PENDING
+[160s] Status: PENDING
+[170s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\09_1SAM\09_1SAM_31.mp3
+[OK] Telechargement termine
+
+======================================================================
+  TERMINE!
+======================================================================
+⚠️ 1 Samuel PARTIEL (29/31)
+
+================================================================================
+[10/66] 2 Samuel (10_2SAM) - 24 chapitres
+================================================================================
+📝 RESUME - 1/24 déjà générés
+🚀 GENERATION - 2 Samuel...
+[CREDITS] 18235.2
+
+======================================================================
+  GENERATION SUNO API - 10_2SAM [FR]
+======================================================================
+Fichiers trouves: 24
+Dossier sortie: G:\Mon Drive\01 BibleChantee\Suno_Output\FR\10_2SAM
+
+--- [1/24] Chapitre 1 ---
+Titre: 10_2SAM_01_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_01_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 45b57778afa12c5a079f8eff2522f713
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [2/24] Chapitre 2 ---
+Titre: 10_2SAM_02_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_02_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 056b9c76c3e5f955b5d604ba70a58ae1
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\10_2SAM\10_2SAM_02.mp3
+[OK] Telechargement termine
+
+--- [3/24] Chapitre 3 ---
+Titre: 10_2SAM_03_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_03_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: bda66a0be8caa26adebffd109f04a070
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: PENDING
+[60s] Status: PENDING
+[70s] Status: PENDING
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [4/24] Chapitre 4 ---
+Titre: 10_2SAM_04_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_04_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: a840d55e9e97559f1953ca9b9ef34bb2
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\10_2SAM\10_2SAM_04.mp3
+[OK] Telechargement termine
+
+--- [5/24] Chapitre 5 ---
+Titre: 10_2SAM_05_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_05_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 10b6204d9280e37535099711f6d95b86
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\10_2SAM\10_2SAM_05.mp3
+[OK] Telechargement termine
+
+--- [6/24] Chapitre 6 ---
+Titre: 10_2SAM_06_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_06_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 827d5dc8415166a3228d5be82b2d77d1
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [7/24] Chapitre 7 ---
+Titre: 10_2SAM_07_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_07_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: a877d07d3e8009e98e823a2cb17016b1
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\10_2SAM\10_2SAM_07.mp3
+[OK] Telechargement termine
+
+--- [8/24] Chapitre 8 ---
+Titre: 10_2SAM_08_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_08_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: e104f064acd88752ed7656a4721c130c
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\10_2SAM\10_2SAM_08.mp3
+[OK] Telechargement termine
+
+--- [9/24] Chapitre 9 ---
+Titre: 10_2SAM_09_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_09_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 9f5f3740ef670d54171a762643680c02
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\10_2SAM\10_2SAM_09.mp3
+[OK] Telechargement termine
+
+--- [10/24] Chapitre 10 ---
+Titre: 10_2SAM_10_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_10_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: d60556f93d5622262e5c35c16cad8643
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\10_2SAM\10_2SAM_10.mp3
+[OK] Telechargement termine
+
+--- [11/24] Chapitre 11 ---
+Titre: 10_2SAM_11_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_11_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 72f8b37f162f57ecef5dfab63f7994cd
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\10_2SAM\10_2SAM_11.mp3
+[OK] Telechargement termine
+
+--- [12/24] Chapitre 12 ---
+Titre: 10_2SAM_12_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_12_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 1dc67600a6236349a8e2166755c1010a
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [13/24] Chapitre 13 ---
+Titre: 10_2SAM_13_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_13_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 4d4b60bcab81e8d57190d020a91771fd
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\10_2SAM\10_2SAM_13.mp3
+[OK] Telechargement termine
+
+--- [14/24] Chapitre 14 ---
+Titre: 10_2SAM_14_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_14_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 44b16591616e2f093baf833f2052061b
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\10_2SAM\10_2SAM_14.mp3
+[OK] Telechargement termine
+
+--- [15/24] Chapitre 15 ---
+Titre: 10_2SAM_15_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_15_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: c3879e81c5875edae39d3ad0fc69ab94
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [16/24] Chapitre 16 ---
+Titre: 10_2SAM_16_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_16_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: f8b9c18e8dd8b3995dfa577e8ef45502
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [17/24] Chapitre 17 ---
+Titre: 10_2SAM_17_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_17_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 6f4abfab927ef29a9ef5454e53a67f75
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: PENDING
+[60s] Status: PENDING
+[70s] Status: PENDING
+[80s] Status: PENDING
+[90s] Status: PENDING
+[100s] Status: PENDING
+[110s] Status: PENDING
+[120s] Status: PENDING
+[130s] Status: PENDING
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\10_2SAM\10_2SAM_17.mp3
+[OK] Telechargement termine
+
+--- [18/24] Chapitre 18 ---
+Titre: 10_2SAM_18_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_18_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 4ec8ed23ae67efbf2430c7bec0616bf8
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [19/24] Chapitre 19 ---
+Titre: 10_2SAM_19_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_19_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 61ba177bf7daf1bfa3a3fb54137d7813
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\10_2SAM\10_2SAM_19.mp3
+[OK] Telechargement termine
+
+--- [20/24] Chapitre 20 ---
+Titre: 10_2SAM_20_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_20_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 33bb376ddd122c2d49d5aa44b202fbc5
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: PENDING
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [21/24] Chapitre 21 ---
+Titre: 10_2SAM_21_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_21_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: d6abbb7a79c51d61c7e61150d8c3a93c
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\10_2SAM\10_2SAM_21.mp3
+[OK] Telechargement termine
+
+--- [22/24] Chapitre 22 ---
+Titre: 10_2SAM_22_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_22_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 8e58a56fb62c1489ee3be3c0571ab162
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [23/24] Chapitre 23 ---
+Titre: 10_2SAM_23_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_23_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: bf906009973be4633992bf9d15150545
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\10_2SAM\10_2SAM_23.mp3
+[OK] Telechargement termine
+
+--- [24/24] Chapitre 24 ---
+Titre: 10_2SAM_24_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 10_2SAM_24_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: d8ec6ad55b26f8d93fd987821be6657f
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\10_2SAM\10_2SAM_24.mp3
+[OK] Telechargement termine
+
+======================================================================
+  TERMINE!
+======================================================================
+⚠️ 2 Samuel PARTIEL (19/24)
+
+================================================================================
+[11/66] 1 Rois (11_1KI) - 22 chapitres
+================================================================================
+📝 RESUME - 14/22 déjà générés
+🚀 GENERATION - 1 Rois...
+[CREDITS] 17659.2
+
+======================================================================
+  GENERATION SUNO API - 11_1KI [FR]
+======================================================================
+Fichiers trouves: 22
+Dossier sortie: G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI
+
+--- [1/22] Chapitre 1 ---
+Titre: 11_1KI_01_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_01_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: e64a7b0dddf103d5da386ced8e297407
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: PENDING
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [2/22] Chapitre 2 ---
+Titre: 11_1KI_02_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_02_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: ba712a1e396664c30437f3a35f77c560
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_02.mp3
+[OK] Telechargement termine
+
+--- [3/22] Chapitre 3 ---
+Titre: 11_1KI_03_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_03_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 29b2e00615cc69b2eafddc4e8cc9e8ed
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_03.mp3
+[OK] Telechargement termine
+
+--- [4/22] Chapitre 4 ---
+Titre: 11_1KI_04_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_04_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 61669bfab0f8ec9496a05ee28bef9e44
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_04.mp3
+[OK] Telechargement termine
+
+--- [5/22] Chapitre 5 ---
+Titre: 11_1KI_05_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_05_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 8f83d007a708dc30bcacf27998262eab
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_05.mp3
+[OK] Telechargement termine
+
+--- [6/22] Chapitre 6 ---
+Titre: 11_1KI_06_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_06_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 8192e35761371e1f12207acc6ff7d8ee
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_06.mp3
+[OK] Telechargement termine
+
+--- [7/22] Chapitre 7 ---
+Titre: 11_1KI_07_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_07_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 439ce8b469c0565575b330d6df3a6701
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_07.mp3
+[OK] Telechargement termine
+
+--- [8/22] Chapitre 8 ---
+Titre: 11_1KI_08_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_08_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: daa024a106be1f352fc8b3ad021be803
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [9/22] Chapitre 9 ---
+Titre: 11_1KI_09_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_09_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: b4b27c42cc4c0995ab98074dcb22f9d4
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_09.mp3
+[OK] Telechargement termine
+
+--- [10/22] Chapitre 10 ---
+Titre: 11_1KI_10_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_10_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 52ce7595ab5a530fdf40b2bb903f4ba7
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_10.mp3
+[OK] Telechargement termine
+
+--- [11/22] Chapitre 11 ---
+Titre: 11_1KI_11_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_11_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: c56f175207f098970d1a842295777914
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_11.mp3
+[OK] Telechargement termine
+
+--- [12/22] Chapitre 12 ---
+Titre: 11_1KI_12_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_12_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 9d130b202c4cbfbb3e9659b652374f00
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_12.mp3
+[OK] Telechargement termine
+
+--- [13/22] Chapitre 13 ---
+Titre: 11_1KI_13_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_13_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: e6ac79c75a9245a489fa5274cfb60162
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: PENDING
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_13.mp3
+[OK] Telechargement termine
+
+--- [14/22] Chapitre 14 ---
+Titre: 11_1KI_14_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_14_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 5b4eb4bdc085ac4517fbceaffbd7074d
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_14.mp3
+[OK] Telechargement termine
+
+--- [15/22] Chapitre 15 ---
+Titre: 11_1KI_15_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_15_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 615787e34c2e52e9dd0514486b0bf188
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: PENDING
+[60s] Status: PENDING
+[70s] Status: PENDING
+[80s] Status: PENDING
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_15.mp3
+[OK] Telechargement termine
+
+--- [16/22] Chapitre 16 ---
+Titre: 11_1KI_16_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_16_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: d8f1d06cbca6a0a7c168e18c5dd46e0a
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_16.mp3
+[OK] Telechargement termine
+
+--- [17/22] Chapitre 17 ---
+Titre: 11_1KI_17_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_17_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 931c43d3abc65a58c8e0d937a72cf9fc
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_17.mp3
+[OK] Telechargement termine
+
+--- [18/22] Chapitre 18 ---
+Titre: 11_1KI_18_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_18_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: c309521394488c882b1b4152ddcd4e12
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_18.mp3
+[OK] Telechargement termine
+
+--- [19/22] Chapitre 19 ---
+Titre: 11_1KI_19_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_19_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: a5b475503744bee8e2c02d617cddbba0
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_19.mp3
+[OK] Telechargement termine
+
+--- [20/22] Chapitre 20 ---
+Titre: 11_1KI_20_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_20_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: b8d28fdefde11c8f05af3f24282d7cd6
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_20.mp3
+[OK] Telechargement termine
+
+--- [21/22] Chapitre 21 ---
+Titre: 11_1KI_21_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_21_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 19d270b9068a08de202bdb0d9e238a3d
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_21.mp3
+[OK] Telechargement termine
+
+--- [22/22] Chapitre 22 ---
+Titre: 11_1KI_22_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 11_1KI_22_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 1be73f22bb2593ed2a4a7a4f36a2cefc
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\11_1KI\11_1KI_22.mp3
+[OK] Telechargement termine
+
+======================================================================
+  TERMINE!
+======================================================================
+⚠️ 1 Rois PARTIEL (34/22)
+
+================================================================================
+[12/66] 2 Rois (12_2KI) - 25 chapitres
+================================================================================
+📝 RESUME - 3/25 déjà générés
+🚀 GENERATION - 2 Rois...
+[CREDITS] 17119.2
+
+======================================================================
+  GENERATION SUNO API - 12_2KI [FR]
+======================================================================
+Fichiers trouves: 25
+Dossier sortie: G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI
+
+--- [1/25] Chapitre 1 ---
+Titre: 12_2KI_01_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_01_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: d323394992d9d9d8f83017d9439e44bc
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_01.mp3
+[OK] Telechargement termine
+
+--- [2/25] Chapitre 2 ---
+Titre: 12_2KI_02_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_02_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 93cb2e7f43c57f29724178bb7c266300
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_02.mp3
+[OK] Telechargement termine
+
+--- [3/25] Chapitre 3 ---
+Titre: 12_2KI_03_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_03_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: f37fe85baec0f5e9e8809373f04e1a59
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_03.mp3
+[OK] Telechargement termine
+
+--- [4/25] Chapitre 4 ---
+Titre: 12_2KI_04_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_04_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 45301a449c07284628afe86ee765dcb6
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [5/25] Chapitre 5 ---
+Titre: 12_2KI_05_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_05_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: eae42ced67033c84a420e600a3f65b9e
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [6/25] Chapitre 6 ---
+Titre: 12_2KI_06_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_06_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 54cadc4aba5465e2df978b8458bf78d5
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_06.mp3
+[OK] Telechargement termine
+
+--- [7/25] Chapitre 7 ---
+Titre: 12_2KI_07_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_07_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 7448857e119840c0fb9ac7594607cff3
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_07.mp3
+[OK] Telechargement termine
+
+--- [8/25] Chapitre 8 ---
+Titre: 12_2KI_08_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_08_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 60948c3d8e58a7d51ef72dcb35147eb1
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_08.mp3
+[OK] Telechargement termine
+
+--- [9/25] Chapitre 9 ---
+Titre: 12_2KI_09_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_09_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 94890fa0a76e6f6757493cce33fa4325
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_09.mp3
+[OK] Telechargement termine
+
+--- [10/25] Chapitre 10 ---
+Titre: 12_2KI_10_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_10_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 366e4170a2fcefb2b4ccc470f3b2b2c7
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [11/25] Chapitre 11 ---
+Titre: 12_2KI_11_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_11_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: d852f5d4a30332c9adde14d64f928760
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_11.mp3
+[OK] Telechargement termine
+
+--- [12/25] Chapitre 12 ---
+Titre: 12_2KI_12_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_12_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 5356adb76c78670febc0e472a8dcfef1
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_12.mp3
+[OK] Telechargement termine
+
+--- [13/25] Chapitre 13 ---
+Titre: 12_2KI_13_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_13_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: faf0a4c8661f39305978342bdc08090f
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_13.mp3
+[OK] Telechargement termine
+
+--- [14/25] Chapitre 14 ---
+Titre: 12_2KI_14_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_14_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: fa32efdedd64bdf69b0a4eabfc225f81
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_14.mp3
+[OK] Telechargement termine
+
+--- [15/25] Chapitre 15 ---
+Titre: 12_2KI_15_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_15_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: f5b3ceb526da5ab0b2de31f4e5907c64
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_15.mp3
+[OK] Telechargement termine
+
+--- [16/25] Chapitre 16 ---
+Titre: 12_2KI_16_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_16_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 1b56ecc3d1c1fac137d88c0e66900417
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_16.mp3
+[OK] Telechargement termine
+
+--- [17/25] Chapitre 17 ---
+Titre: 12_2KI_17_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_17_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 612dac82689daeb6fcb8b47128220e13
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_17.mp3
+[OK] Telechargement termine
+
+--- [18/25] Chapitre 18 ---
+Titre: 12_2KI_18_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_18_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 7d2a1debbf7685454ba79637bfa84da4
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_18.mp3
+[OK] Telechargement termine
+
+--- [19/25] Chapitre 19 ---
+Titre: 12_2KI_19_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_19_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 0f87b361593b0334859281b5f9ee4011
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_19.mp3
+[OK] Telechargement termine
+
+--- [20/25] Chapitre 20 ---
+Titre: 12_2KI_20_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_20_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 7025ab6ffd0f499bff4ca3998f0dbbae
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_20.mp3
+[OK] Telechargement termine
+
+--- [21/25] Chapitre 21 ---
+Titre: 12_2KI_21_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_21_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 7cbb368b80f60d17fb35d16e6434b75a
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_21.mp3
+[OK] Telechargement termine
+
+--- [22/25] Chapitre 22 ---
+Titre: 12_2KI_22_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_22_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 704596b4f2bdf3e61dce434608d19630
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_22.mp3
+[OK] Telechargement termine
+
+--- [23/25] Chapitre 23 ---
+Titre: 12_2KI_23_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_23_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: e161be81a4deb01a9657f4b517425e5b
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_23.mp3
+[OK] Telechargement termine
+
+--- [24/25] Chapitre 24 ---
+Titre: 12_2KI_24_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_24_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 096aaefee4e094ae1d5d1664cd29a874
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_24.mp3
+[OK] Telechargement termine
+
+--- [25/25] Chapitre 25 ---
+Titre: 12_2KI_25_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 12_2KI_25_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 57f4288a31fd2023b284cd1c273bcf31
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\12_2KI\12_2KI_25.mp3
+[OK] Telechargement termine
+
+======================================================================
+  TERMINE!
+======================================================================
+⚠️ 2 Rois PARTIEL (24/25)
+
+================================================================================
+[13/66] 1 Chroniques (13_1CH) - 29 chapitres
+================================================================================
+📝 RESUME - 3/29 déjà générés
+🚀 GENERATION - 1 Chroniques...
+[CREDITS] 16519.2
+
+======================================================================
+  GENERATION SUNO API - 13_1CH [FR]
+======================================================================
+Fichiers trouves: 29
+Dossier sortie: G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH
+
+--- [1/29] Chapitre 1 ---
+Titre: 13_1CH_01_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_01_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 196c228f506d45dec7dfa65f9f75effc
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_01.mp3
+[OK] Telechargement termine
+
+--- [2/29] Chapitre 2 ---
+Titre: 13_1CH_02_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_02_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 447faf13bbe56be315a490149ce66f9f
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_02.mp3
+[OK] Telechargement termine
+
+--- [3/29] Chapitre 3 ---
+Titre: 13_1CH_03_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_03_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: ae97dfdab6f55fca0b69f1904f505a38
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_03.mp3
+[OK] Telechargement termine
+
+--- [4/29] Chapitre 4 ---
+Titre: 13_1CH_04_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_04_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: f6371b55d4559e09d184b78f016f91ab
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_04.mp3
+[OK] Telechargement termine
+
+--- [5/29] Chapitre 5 ---
+Titre: 13_1CH_05_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_05_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: fcd3c14df69c4ff96138bae60dd133f9
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_05.mp3
+[OK] Telechargement termine
+
+--- [6/29] Chapitre 6 ---
+Titre: 13_1CH_06_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_06_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 58a69bed2d34a6b43c01eff050ce783d
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [7/29] Chapitre 7 ---
+Titre: 13_1CH_07_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_07_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 747c9ec2679f1e300ebc342dbbab9c85
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_07.mp3
+[OK] Telechargement termine
+
+--- [8/29] Chapitre 8 ---
+Titre: 13_1CH_08_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_08_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 9ee5e13c4cc03a431e226f8a2694a068
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_08.mp3
+[OK] Telechargement termine
+
+--- [9/29] Chapitre 9 ---
+Titre: 13_1CH_09_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_09_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: a9f4eae79e66efaa0f256982c02f019c
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_09.mp3
+[OK] Telechargement termine
+
+--- [10/29] Chapitre 10 ---
+Titre: 13_1CH_10_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_10_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 4debed0032036747d1566af50c40fd84
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_10.mp3
+[OK] Telechargement termine
+
+--- [11/29] Chapitre 11 ---
+Titre: 13_1CH_11_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_11_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: e708ac46be766ad32dbfb4be9cdaed3b
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_11.mp3
+[OK] Telechargement termine
+
+--- [12/29] Chapitre 12 ---
+Titre: 13_1CH_12_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_12_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 60aa63862344b898f97a2214f8695a53
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_12.mp3
+[OK] Telechargement termine
+
+--- [13/29] Chapitre 13 ---
+Titre: 13_1CH_13_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_13_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 0a01e31d1c9f3d119ec2faaf5515b710
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_13.mp3
+[OK] Telechargement termine
+
+--- [14/29] Chapitre 14 ---
+Titre: 13_1CH_14_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_14_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 6266c8729098468e4b3867be162ada3d
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_14.mp3
+[OK] Telechargement termine
+
+--- [15/29] Chapitre 15 ---
+Titre: 13_1CH_15_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_15_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 287fe3cd045130557b604830b13180bd
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_15.mp3
+[OK] Telechargement termine
+
+--- [16/29] Chapitre 16 ---
+Titre: 13_1CH_16_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_16_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 97c498efb369bb5923fc89bc889004ec
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: PENDING
+[60s] Status: PENDING
+[70s] Status: PENDING
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [17/29] Chapitre 17 ---
+Titre: 13_1CH_17_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_17_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 9cd2405575798c65135cc3262d9315b9
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [18/29] Chapitre 18 ---
+Titre: 13_1CH_18_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_18_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 0b1fbccb0156fb84b7d1d3f109502893
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_18.mp3
+[OK] Telechargement termine
+
+--- [19/29] Chapitre 19 ---
+Titre: 13_1CH_19_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_19_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 119e4e1fdd7aa1057f7d9100f33b7e6a
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: PENDING
+[60s] Status: PENDING
+[70s] Status: PENDING
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: TEXT_SUCCESS
+[170s] Status: TEXT_SUCCESS
+[TIMEOUT] Temps maximum atteint
+
+--- [20/29] Chapitre 20 ---
+Titre: 13_1CH_20_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_20_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 2d59db30fa05393a95ade24428df4600
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_20.mp3
+[OK] Telechargement termine
+
+--- [21/29] Chapitre 21 ---
+Titre: 13_1CH_21_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_21_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 5ae7720c1e66473032865055669937d2
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_21.mp3
+[OK] Telechargement termine
+
+--- [22/29] Chapitre 22 ---
+Titre: 13_1CH_22_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_22_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 685b3833de087450e238c116dd4dd24d
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_22.mp3
+[OK] Telechargement termine
+
+--- [23/29] Chapitre 23 ---
+Titre: 13_1CH_23_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_23_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: b068f5e50d19a51d7af35d04c7d21b7f
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_23.mp3
+[OK] Telechargement termine
+
+--- [24/29] Chapitre 24 ---
+Titre: 13_1CH_24_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_24_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 39e46b792ff7165d621f13a2007bb94b
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: SUCCESS
+[OK] Generation terminee! (status: SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_24.mp3
+[OK] Telechargement termine
+
+--- [25/29] Chapitre 25 ---
+Titre: 13_1CH_25_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_25_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 42f60ace4bdc82daa68c4a475f365edd
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_25.mp3
+[OK] Telechargement termine
+
+--- [26/29] Chapitre 26 ---
+Titre: 13_1CH_26_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_26_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 5c4c994144ccd90b9a5e55f2b166c166
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_26.mp3
+[OK] Telechargement termine
+
+--- [27/29] Chapitre 27 ---
+Titre: 13_1CH_27_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_27_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: e00ebb5b1c4cedb5be9d5ad8db6e1047
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[ERROR] Status check failed: 525
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_27.mp3
+[OK] Telechargement termine
+
+--- [28/29] Chapitre 28 ---
+Titre: 13_1CH_28_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_28_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 20b1ecdd7a9c0cbe363e5aaad188837a
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_28.mp3
+[OK] Telechargement termine
+
+--- [29/29] Chapitre 29 ---
+Titre: 13_1CH_29_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 13_1CH_29_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: ea718b7e28bdf046da7a17fcf0aa0c1f
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: TEXT_SUCCESS
+[160s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\13_1CH\13_1CH_29.mp3
+[OK] Telechargement termine
+
+======================================================================
+  TERMINE!
+======================================================================
+⚠️ 1 Chroniques PARTIEL (27/29)
+
+================================================================================
+[14/66] 2 Chroniques (14_2CH) - 36 chapitres
+================================================================================
+📝 RESUME - 2/36 déjà générés
+🚀 GENERATION - 2 Chroniques...
+[CREDITS] 15835.2
+
+======================================================================
+  GENERATION SUNO API - 14_2CH [FR]
+======================================================================
+Fichiers trouves: 36
+Dossier sortie: G:\Mon Drive\01 BibleChantee\Suno_Output\FR\14_2CH
+
+--- [1/36] Chapitre 1 ---
+Titre: 14_2CH_01_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 14_2CH_01_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 7c2c883183946344fa78d78a4a00feb8
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\14_2CH\14_2CH_01.mp3
+[OK] Telechargement termine
+
+--- [2/36] Chapitre 2 ---
+Titre: 14_2CH_02_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 14_2CH_02_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 117bdf98c69b7d822707b8d786cee7d5
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\14_2CH\14_2CH_02.mp3
+[OK] Telechargement termine
+
+--- [3/36] Chapitre 3 ---
+Titre: 14_2CH_03_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 14_2CH_03_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 66380e845dfc61b2440617a9fbdf318a
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: PENDING
+[40s] Status: PENDING
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: TEXT_SUCCESS
+[140s] Status: TEXT_SUCCESS
+[150s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\14_2CH\14_2CH_03.mp3
+[OK] Telechargement termine
+
+--- [4/36] Chapitre 4 ---
+Titre: 14_2CH_04_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 14_2CH_04_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: 4c70c115799b701986cdb2ee11baf372
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: PENDING
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: TEXT_SUCCESS
+[130s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\14_2CH\14_2CH_04.mp3
+[OK] Telechargement termine
+
+--- [5/36] Chapitre 5 ---
+Titre: 14_2CH_05_FR
+Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Generation: 14_2CH_05_FR
+[API] Style: epic orchestral worship, 90 BPM, orchestral strings, piano, French horn, timpani, French modern chanson, variété française, male vocal warm tenor, clear diction, cinematic film score atmosphere, reverent tone
+[API] Model: V4_5ALL
+[API] Parametres avances: ['styleWeight', 'weirdnessConstraint', 'audioWeight']
+[OK] Task created: a5b061ccd488f65f48e0ac2d1da1532a
+[WAIT] Attente de la generation (max 180s)...
+[0s] Status: PENDING
+[10s] Status: PENDING
+[20s] Status: TEXT_SUCCESS
+[30s] Status: TEXT_SUCCESS
+[40s] Status: TEXT_SUCCESS
+[50s] Status: TEXT_SUCCESS
+[60s] Status: TEXT_SUCCESS
+[70s] Status: TEXT_SUCCESS
+[80s] Status: TEXT_SUCCESS
+[90s] Status: TEXT_SUCCESS
+[100s] Status: TEXT_SUCCESS
+[110s] Status: TEXT_SUCCESS
+[120s] Status: FIRST_SUCCESS
+[OK] Generation terminee! (status: FIRST_SUCCESS)
+[DOWNLOAD] Telechargement vers G:\Mon Drive\01 BibleChantee\Suno_Output\FR\14_2CH\14_2CH_05.mp3
+[OK] Telechargement termine
+
+--- [6/36] Chapitre 6 ---
+❌ ERREUR 2 Chroniques: [Errno 2] No such file or directory: 'G:\\Mon Drive\\01 BibleChantee\\Lyrics\\FR\\14_2CH\\14_2CH_06_FR.txt'
+
+================================================================================
+[15/66] Esdras (15_EZR) - 10 chapitres
+================================================================================
+🚀 GENERATION - Esdras...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\15_EZR
+⚠️ Esdras PARTIEL (0/10)
+
+================================================================================
+[16/66] Néhémie (16_NEH) - 13 chapitres
+================================================================================
+🚀 GENERATION - Néhémie...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\16_NEH
+⚠️ Néhémie PARTIEL (0/13)
+
+================================================================================
+[17/66] Esther (17_EST) - 10 chapitres
+================================================================================
+🚀 GENERATION - Esther...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\17_EST
+⚠️ Esther PARTIEL (0/10)
+
+================================================================================
+[18/66] Job (18_JOB) - 42 chapitres
+================================================================================
+🚀 GENERATION - Job...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\18_JOB
+⚠️ Job PARTIEL (0/42)
+
+================================================================================
+[19/66] Psaumes (19_PSA) - 150 chapitres
+================================================================================
+🚀 GENERATION - Psaumes...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\19_PSA
+⚠️ Psaumes PARTIEL (0/150)
+
+================================================================================
+[20/66] Proverbes (20_PRO) - 31 chapitres
+================================================================================
+🚀 GENERATION - Proverbes...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\20_PRO
+⚠️ Proverbes PARTIEL (0/31)
+
+================================================================================
+[21/66] Ecclésiaste (21_ECC) - 12 chapitres
+================================================================================
+🚀 GENERATION - Ecclésiaste...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\21_ECC
+⚠️ Ecclésiaste PARTIEL (0/12)
+
+================================================================================
+[22/66] Cantique (22_SON) - 8 chapitres
+================================================================================
+🚀 GENERATION - Cantique...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\22_SON
+⚠️ Cantique PARTIEL (0/8)
+
+================================================================================
+[23/66] Ésaïe (23_ISA) - 66 chapitres
+================================================================================
+🚀 GENERATION - Ésaïe...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\23_ISA
+⚠️ Ésaïe PARTIEL (0/66)
+
+================================================================================
+[24/66] Jérémie (24_JER) - 52 chapitres
+================================================================================
+🚀 GENERATION - Jérémie...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\24_JER
+⚠️ Jérémie PARTIEL (0/52)
+
+================================================================================
+[25/66] Lamentations (25_LAM) - 5 chapitres
+================================================================================
+🚀 GENERATION - Lamentations...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\25_LAM
+⚠️ Lamentations PARTIEL (0/5)
+
+================================================================================
+[26/66] Ézéchiel (26_EZE) - 48 chapitres
+================================================================================
+🚀 GENERATION - Ézéchiel...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\26_EZE
+⚠️ Ézéchiel PARTIEL (0/48)
+
+================================================================================
+[27/66] Daniel (27_DAN) - 12 chapitres
+================================================================================
+🚀 GENERATION - Daniel...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\27_DAN
+⚠️ Daniel PARTIEL (0/12)
+
+================================================================================
+[28/66] Osée (28_HOS) - 14 chapitres
+================================================================================
+🚀 GENERATION - Osée...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\28_HOS
+⚠️ Osée PARTIEL (0/14)
+
+================================================================================
+[29/66] Joël (29_JOE) - 3 chapitres
+================================================================================
+🚀 GENERATION - Joël...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\29_JOE
+⚠️ Joël PARTIEL (0/3)
+
+================================================================================
+[30/66] Amos (30_AMO) - 9 chapitres
+================================================================================
+🚀 GENERATION - Amos...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\30_AMO
+⚠️ Amos PARTIEL (0/9)
+
+================================================================================
+[31/66] Abdias (31_OBA) - 1 chapitres
+================================================================================
+🚀 GENERATION - Abdias...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\31_OBA
+⚠️ Abdias PARTIEL (0/1)
+
+================================================================================
+[32/66] Jonas (32_JON) - 4 chapitres
+================================================================================
+🚀 GENERATION - Jonas...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\32_JON
+⚠️ Jonas PARTIEL (0/4)
+
+================================================================================
+[33/66] Michée (33_MIC) - 7 chapitres
+================================================================================
+🚀 GENERATION - Michée...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\33_MIC
+⚠️ Michée PARTIEL (0/7)
+
+================================================================================
+[34/66] Nahum (34_NAH) - 3 chapitres
+================================================================================
+🚀 GENERATION - Nahum...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\34_NAH
+⚠️ Nahum PARTIEL (0/3)
+
+================================================================================
+[35/66] Habacuc (35_HAB) - 3 chapitres
+================================================================================
+🚀 GENERATION - Habacuc...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\35_HAB
+⚠️ Habacuc PARTIEL (0/3)
+
+================================================================================
+[36/66] Sophonie (36_ZEP) - 3 chapitres
+================================================================================
+🚀 GENERATION - Sophonie...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\36_ZEP
+⚠️ Sophonie PARTIEL (0/3)
+
+================================================================================
+[37/66] Aggée (37_HAG) - 2 chapitres
+================================================================================
+🚀 GENERATION - Aggée...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\37_HAG
+⚠️ Aggée PARTIEL (0/2)
+
+================================================================================
+[38/66] Zacharie (38_ZEC) - 14 chapitres
+================================================================================
+🚀 GENERATION - Zacharie...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\38_ZEC
+⚠️ Zacharie PARTIEL (0/14)
+
+================================================================================
+[39/66] Malachie (39_MAL) - 4 chapitres
+================================================================================
+🚀 GENERATION - Malachie...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\39_MAL
+⚠️ Malachie PARTIEL (0/4)
+
+================================================================================
+[40/66] Matthieu (40_MAT) - 28 chapitres
+================================================================================
+🚀 GENERATION - Matthieu...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\40_MAT
+⚠️ Matthieu PARTIEL (0/28)
+
+================================================================================
+[41/66] Marc (41_MAR) - 16 chapitres
+================================================================================
+🚀 GENERATION - Marc...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\41_MAR
+⚠️ Marc PARTIEL (0/16)
+
+================================================================================
+[42/66] Luc (42_LUK) - 24 chapitres
+================================================================================
+🚀 GENERATION - Luc...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\42_LUK
+⚠️ Luc PARTIEL (0/24)
+
+================================================================================
+[43/66] Jean (43_JOH) - 21 chapitres
+================================================================================
+🚀 GENERATION - Jean...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\43_JOH
+⚠️ Jean PARTIEL (0/21)
+
+================================================================================
+[44/66] Actes (44_ACT) - 28 chapitres
+================================================================================
+🚀 GENERATION - Actes...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\44_ACT
+⚠️ Actes PARTIEL (0/28)
+
+================================================================================
+[45/66] Romains (45_ROM) - 16 chapitres
+================================================================================
+🚀 GENERATION - Romains...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\45_ROM
+⚠️ Romains PARTIEL (0/16)
+
+================================================================================
+[46/66] 1 Corinthiens (46_1CO) - 16 chapitres
+================================================================================
+🚀 GENERATION - 1 Corinthiens...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\46_1CO
+⚠️ 1 Corinthiens PARTIEL (0/16)
+
+================================================================================
+[47/66] 2 Corinthiens (47_2CO) - 13 chapitres
+================================================================================
+🚀 GENERATION - 2 Corinthiens...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\47_2CO
+⚠️ 2 Corinthiens PARTIEL (0/13)
+
+================================================================================
+[48/66] Galates (48_GAL) - 6 chapitres
+================================================================================
+🚀 GENERATION - Galates...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\48_GAL
+⚠️ Galates PARTIEL (0/6)
+
+================================================================================
+[49/66] Éphésiens (49_EPH) - 6 chapitres
+================================================================================
+🚀 GENERATION - Éphésiens...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\49_EPH
+⚠️ Éphésiens PARTIEL (0/6)
+
+================================================================================
+[50/66] Philippiens (50_PHP) - 4 chapitres
+================================================================================
+🚀 GENERATION - Philippiens...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\50_PHP
+⚠️ Philippiens PARTIEL (0/4)
+
+================================================================================
+[51/66] Colossiens (51_COL) - 4 chapitres
+================================================================================
+🚀 GENERATION - Colossiens...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\51_COL
+⚠️ Colossiens PARTIEL (0/4)
+
+================================================================================
+[52/66] 1 Thessaloniciens (52_1TH) - 5 chapitres
+================================================================================
+🚀 GENERATION - 1 Thessaloniciens...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\52_1TH
+⚠️ 1 Thessaloniciens PARTIEL (0/5)
+
+================================================================================
+[53/66] 2 Thessaloniciens (53_2TH) - 3 chapitres
+================================================================================
+🚀 GENERATION - 2 Thessaloniciens...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\53_2TH
+⚠️ 2 Thessaloniciens PARTIEL (0/3)
+
+================================================================================
+[54/66] 1 Timothée (54_1TI) - 6 chapitres
+================================================================================
+🚀 GENERATION - 1 Timothée...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\54_1TI
+⚠️ 1 Timothée PARTIEL (0/6)
+
+================================================================================
+[55/66] 2 Timothée (55_2TI) - 4 chapitres
+================================================================================
+🚀 GENERATION - 2 Timothée...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\55_2TI
+⚠️ 2 Timothée PARTIEL (0/4)
+
+================================================================================
+[56/66] Tite (56_TIT) - 3 chapitres
+================================================================================
+🚀 GENERATION - Tite...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\56_TIT
+⚠️ Tite PARTIEL (0/3)
+
+================================================================================
+[57/66] Philémon (57_PHM) - 1 chapitres
+================================================================================
+🚀 GENERATION - Philémon...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\57_PHM
+⚠️ Philémon PARTIEL (0/1)
+
+================================================================================
+[58/66] Hébreux (58_HEB) - 13 chapitres
+================================================================================
+🚀 GENERATION - Hébreux...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\58_HEB
+⚠️ Hébreux PARTIEL (0/13)
+
+================================================================================
+[59/66] Jacques (59_JAS) - 5 chapitres
+================================================================================
+🚀 GENERATION - Jacques...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\59_JAS
+⚠️ Jacques PARTIEL (0/5)
+
+================================================================================
+[60/66] 1 Pierre (60_1PE) - 5 chapitres
+================================================================================
+🚀 GENERATION - 1 Pierre...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\60_1PE
+⚠️ 1 Pierre PARTIEL (0/5)
+
+================================================================================
+[61/66] 2 Pierre (61_2PE) - 3 chapitres
+================================================================================
+🚀 GENERATION - 2 Pierre...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\61_2PE
+⚠️ 2 Pierre PARTIEL (0/3)
+
+================================================================================
+[62/66] 1 Jean (62_1JO) - 5 chapitres
+================================================================================
+🚀 GENERATION - 1 Jean...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\62_1JO
+⚠️ 1 Jean PARTIEL (0/5)
+
+================================================================================
+[63/66] 2 Jean (63_2JO) - 1 chapitres
+================================================================================
+🚀 GENERATION - 2 Jean...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\63_2JO
+⚠️ 2 Jean PARTIEL (0/1)
+
+================================================================================
+[64/66] 3 Jean (64_3JO) - 1 chapitres
+================================================================================
+🚀 GENERATION - 3 Jean...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\64_3JO
+⚠️ 3 Jean PARTIEL (0/1)
+
+================================================================================
+[65/66] Jude (65_JUD) - 1 chapitres
+================================================================================
+🚀 GENERATION - Jude...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\65_JUD
+⚠️ Jude PARTIEL (0/1)
+
+================================================================================
+[66/66] Apocalypse (66_REV) - 22 chapitres
+================================================================================
+🚀 GENERATION - Apocalypse...
+[CREDITS] 15715.2
+[ERROR] Dossier introuvable: G:\Mon Drive\01 BibleChantee\Lyrics\FR\66_REV
+⚠️ Apocalypse PARTIEL (0/22)
+
+================================================================================
+  🎉 GENERATION TERMINEE!
+================================================================================
+Livres complets: 8/66
+Chapitres générés: 371/1189
+Taux complétion: 31.2%
+
+📂 Dossier sortie: C:\ScriptBible\bible-chantee\Suno_Output\FR

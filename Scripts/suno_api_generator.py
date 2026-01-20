@@ -7,8 +7,8 @@ import io
 from pathlib import Path
 from api_key import SUNO_API_KEY
 
-# Configurer l'encodage UTF-8
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+# Configurer l'encodage UTF-8 (commenté car cause des problèmes avec les scripts appelants)
+# sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 # Configuration
 SUNO_BASE_URL = "https://api.sunoapi.org/api/v1"
@@ -320,8 +320,8 @@ def process_book(lang_code, book_code, api_key, output_dir=None, start_chapter=1
     generator.check_credits()
 
     # Trouver tous les fichiers du livre
-    project_root = Path(__file__).parent.parent
-    lyrics_dir = project_root / f"Lyrics/{lang_code}/{book_code}"
+    # Chemin absolu vers les lyrics V1 (Whisper) - 66 livres complets
+    lyrics_dir = Path(r"G:\Mon Drive\01 BibleChantee\Lyrics") / f"{lang_code}/{book_code}"
 
     if not lyrics_dir.exists():
         print(f"[ERROR] Dossier introuvable: {lyrics_dir}")
@@ -335,8 +335,8 @@ def process_book(lang_code, book_code, api_key, output_dir=None, start_chapter=1
 
     # Output directory
     if not output_dir:
-        project_root = Path(__file__).parent.parent
-        output_dir = project_root / f"Suno_Output_V2/{lang_code}/{book_code}"
+        # Chemin absolu vers Suno_Output
+        output_dir = Path(r"G:\Mon Drive\01 BibleChantee\Suno_Output") / f"{lang_code}/{book_code}"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"\n{'='*70}")

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Test Audio</title>
+</head>
+<body style="padding: 50px; font-family: Arial;">
+  <h1>Test Audio Bible Chantée</h1>
+
+  <h2>Test V1</h2>
+  <p>Genèse Chapitre 1 (V1):</p>
+  <audio controls src="audio_v1/01_GEN/01_GEN_01_FR.mp3" style="width: 100%;"></audio>
+  <p><small>Chemin: audio_v1/01_GEN/01_GEN_01_FR.mp3</small></p>
+
+  <hr>
+
+  <h2>Test V2</h2>
+  <p>Genèse Chapitre 1 (V2):</p>
+  <audio controls src="audio_v2/01_GEN/01_GEN_001_v1.mp3" style="width: 100%;"></audio>
+  <p><small>Chemin: audio_v2/01_GEN/01_GEN_001_v1.mp3</small></p>
+
+  <hr>
+
+  <h2>Test Dynamique</h2>
+  <button onclick="testDynamic()">Charger et jouer Genèse 1 (V1)</button>
+  <audio id="dynamicPlayer" controls style="width: 100%; margin-top: 10px;"></audio>
+
+  <script>
+    function testDynamic() {
+      const player = document.getElementById('dynamicPlayer');
+      const url = 'audio_v1/01_GEN/01_GEN_01_FR.mp3';
+      console.log('Loading:', url);
+      player.src = url;
+      player.load();
+      player.play().then(() => {
+        console.log('✅ Lecture démarrée');
+      }).catch(err => {
+        console.error('❌ Erreur lecture:', err);
+        alert('Erreur: ' + err.message);
+      });
+    }
+
+    // Test au chargement
+    console.log('Test Audio - Page chargée');
+    console.log('Serveur:', window.location.origin);
+  </script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Job V2 - Vérification rapide</title>
+  <style>
+    body {
+      background: #1a1a2e;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #F5CB42;
+      text-align: center;
+      border-bottom: 3px solid #F5CB42;
+      padding-bottom: 15px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .chapter-card {
+      background: rgba(30, 58, 95, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      transition: all 0.3s;
+    }
+    .chapter-card:hover {
+      border-color: #F5CB42;
+      transform: translateY(-5px);
+    }
+    .chapter-card h3 {
+      color: #F5CB42;
+      margin: 0 0 15px 0;
+      font-size: 18px;
+    }
+    .chapter-card pre {
+      white-space: pre-wrap;
+      line-height: 1.6;
+      font-size: 14px;
+      margin: 0;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .status {
+      background: rgba(0,0,0,0.3);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .success { color: #0f0; }
+    .error { color: #f00; }
+    .warning { color: #ff0; }
+    .fixed {
+      background-color: rgba(0, 255, 0, 0.3);
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-weight: bold;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #F5CB42;
+      color: #1a1a2e;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin: 5px;
+      transition: all 0.3s;
+    }
+    .btn:hover {
+      background: #FFD700;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>🎵 Test Job V2 - Chapitres avec corrections</h1>
+
+  <div class="status" id="status">
+    <p>⏳ Chargement des chapitres corrigés...</p>
+  </div>
+
+  <div style="text-align: center; margin: 20px 0;">
+    <a href="lecteur.html?book=18&chapter=5&lang=FR&version=v2" class="btn" target="_blank">
+      🎧 Ouvrir Job 5 dans le lecteur
+    </a>
+    <a href="lecteur.html?book=18&chapter=6&lang=FR&version=v2" class="btn" target="_blank">
+      🎧 Ouvrir Job 6 dans le lecteur
+    </a>
+  </div>
+
+  <div class="grid" id="chapters"></div>
+
+  <script>
+    const statusDiv = document.getElementById('status');
+    const chaptersDiv = document.getElementById('chapters');
+
+    // Chapitres avec corrections (ceux qui avaient "maman")
+    const correctedChapters = [5, 6];
+
+    // Tous les chapitres à tester
+    const testChapters = [1, 5, 6, 42];
+
+    async function loadChapter(chapterNum) {
+      const paddedChapter = String(chapterNum).padStart(3, '0');
+      const url = `lyrics_v2/18_JOB/18_JOB_${paddedChapter}_FR.txt`;
+
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+        let text = await response.text();
+
+        // Nettoyer pour affichage
+        text = text.replace(/\[TITLE\][\s\S]*?\[LYRICS\]/gi, '');
+        text = text.replace(/\[STYLE\][\s\S]*/gi, '');
+        text = text.replace(/\[(Verse|Chorus|Bridge|Outro|Intro|Pre-Chorus).*?\]/gi, '');
+        text = text.replace(/18_JOB_\d+_FR/g, '');
+        text = text.replace(/¶/g, '');
+        text = text.trim();
+
+        // Limiter à 500 caractères pour aperçu
+        const preview = text.substring(0, 500) + (text.length > 500 ? '...' : '');
+
+        // Vérifications
+        const hasMaman = /maman/i.test(text);
+        const hasMain = /\bmain\b/i.test(text);
+        const hasWeirdChars = /[Ǹ��ǽǦ]/g.test(text);
+
+        let status = '';
+        if (hasMaman) {
+          status = '<span class="error">❌ Contient "maman"</span>';
+        } else if (hasMain && correctedChapters.includes(chapterNum)) {
+          status = '<span class="success">✅ Corrigé ("main" présent)</span>';
+        } else {
+          status = '<span class="success">✅ OK</span>';
+        }
+
+        if (hasWeirdChars) {
+          status += '<br><span class="warning">⚠️ Caractères bizarres détectés</span>';
+        }
+
+        // Highlighter "main" si corrigé
+        let displayText = preview;
+        if (correctedChapters.includes(chapterNum) && hasMain) {
+          displayText = displayText.replace(/\b(main)\b/gi, '<span class="fixed">$1</span>');
+        }
+
+        return {
+          chapter: chapterNum,
+          status: status,
+          text: displayText,
+          length: text.length
+        };
+
+      } catch (error) {
+        return {
+          chapter: chapterNum,
+          status: `<span class="error">❌ Erreur: ${error.message}</span>`,
+          text: '',
+          length: 0
+        };
+      }
+    }
+
+    async function loadAllChapters() {
+      statusDiv.innerHTML = '<p class="success">⏳ Chargement de ' + testChapters.length + ' chapitres...</p>';
+
+      const results = await Promise.all(testChapters.map(ch => loadChapter(ch)));
+
+      chaptersDiv.innerHTML = '';
+
+      results.forEach(result => {
+        const card = document.createElement('div');
+        card.className = 'chapter-card';
+        card.innerHTML = `
+          <h3>Job Chapitre ${result.chapter} ${correctedChapters.includes(result.chapter) ? '⭐' : ''}</h3>
+          <div style="margin-bottom: 10px;">${result.status}</div>
+          <div style="color: #999; font-size: 12px; margin-bottom: 10px;">
+            Taille: ${result.length} caractères
+          </div>
+          <pre>${result.text}</pre>
+          <div style="margin-top: 15px;">
+            <a href="lecteur.html?book=18&chapter=${result.chapter}&lang=FR&version=v2"
+               class="btn"
+               target="_blank"
+               style="font-size: 12px; padding: 5px 10px;">
+              Ouvrir dans le lecteur
+            </a>
+          </div>
+        `;
+        chaptersDiv.appendChild(card);
+      });
+
+      // Vérifications globales
+      const allOk = results.every(r => !r.status.includes('❌'));
+      const correctedCount = results.filter(r => r.status.includes('Corrigé')).length;
+
+      statusDiv.innerHTML = `
+        <p class="${allOk ? 'success' : 'warning'}">
+          ${allOk ? '🎉 TOUS LES TESTS RÉUSSIS!' : '⚠️ Certains tests ont échoué'}
+        </p>
+        <p>
+          Chapitres testés: ${results.length}<br>
+          Chapitres corrigés: ${correctedCount}/2<br>
+          Statut: ${allOk ? 'Prêt pour production ✅' : 'Révision nécessaire ⚠️'}
+        </p>
+      `;
+    }
+
+    loadAllChapters();
+  </script>
+</body>
+</html>

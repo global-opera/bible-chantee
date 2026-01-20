@@ -3,125 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 11 | Bible Chantee Karaoke</title>
+    <title>Genese 11 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 11</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 11 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_11_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="0.10" data-end="19.14"><span class="time">[0:00]</span>... Dans la plaine de Chineards, Un peuple unis, un seul</div>
-        <div class="line" data-start="19.14" data-end="27.52"><span class="time">[0:19]</span>espoir, Ils bâtissent des rêves, des murs vers le ciel,</div>
-        <div class="line" data-start="27.52" data-end="35.92"><span class="time">[0:27]</span>Ensemble ils cherchent à faire leur nom. Au Seigneur, descends</div>
-        <div class="line" data-start="36.56" data-end="45.10"><span class="time">[0:36]</span>et voie, La quête des cas, la voie des rois. Dans notre</div>
-        <div class="line" data-start="45.10" data-end="52.68"><span class="time">[0:45]</span>union, nous oublions ta loi, Confondons nos langages, guider</div>
-        <div class="line" data-start="52.68" data-end="65.96"><span class="time">[0:52]</span>nos cas. Ils rêvaient d'une tour qui touche les yeux, Ignorant</div>
-        <div class="line" data-start="65.96" data-end="73.04"><span class="time">[1:05]</span>que leur gueuille est un piège dangereux. L'éternel observa,</div>
-        <div class="line" data-start="73.04" data-end="80.68"><span class="time">[1:13]</span>le cœur en est moi, Et dans son amour, ils changent à leur</div>
-        <div class="line" data-start="80.68" data-end="91.10"><span class="time">[1:20]</span>voie. Au Seigneur, descends et voie, La quête des cas,</div>
-        <div class="line" data-start="91.56" data-end="99.54"><span class="time">[1:31]</span>la voie des rois. Dans notre union, nous oublions ta loi,</div>
-        <div class="line" data-start="99.54" data-end="110.40"><span class="time">[1:39]</span>Confondons nos langages, guider nos pas. De Babel, nous</div>
-        <div class="line" data-start="110.40" data-end="117.38"><span class="time">[1:50]</span>sommes dispersés, Mais dans l'esprit, nous sommes rassemblés.</div>
-        <div class="line" data-start="117.52" data-end="129.86"><span class="time">[1:57]</span>Un même cœur, une même prière, Dans la diversité, ta lumière</div>
-        <div class="line" data-start="129.86" data-end="140.04"><span class="time">[2:09]</span>claire. Seigneur, descends et voie, La quête des cas, la</div>
-        <div class="line" data-start="140.04" data-end="147.42"><span class="time">[2:20]</span>voie des rois. Dans notre union, nous oublions ta loi,</div>
-        <div class="line" data-start="147.52" data-end="157.58"><span class="time">[2:27]</span>Confondons nos langages, guider nos pas. Dans chaque langue,</div>
-        <div class="line" data-start="158.66" data-end="166.36"><span class="time">[2:38]</span>un champ s'élève Pour te louer, pour te servir sans trêve.</div>
-        <div class="line" data-start="166.36" data-end="173.60"><span class="time">[2:46]</span>Union de vistes, nous battent ces sons. Une ville d'amour,</div>
-        <div class="line" data-start="175.64" data-end="178.50"><span class="time">[2:55]</span>une nouvelle vision.</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="0.10" data-end="19.14"><span class="time">[0:00]</span>Dans la plaine de Shinear Un peuple uni, un seul</div>
+        <div class="line" data-start="19.14" data-end="27.52"><span class="time">[0:19]</span>espoir Ils bâtissent des rêves, des murs vers le ciel</div>
+        <div class="line" data-start="27.52" data-end="36.56"><span class="time">[0:27]</span>Ensemble ils cherchent à faire leur nom Ô Seigneur, tes plans</div>
+        <div class="line" data-start="36.56" data-end="45.10"><span class="time">[0:36]</span>évoquent La quête des coeurs, la voie des rois Dans</div>
+        <div class="line" data-start="45.10" data-end="52.68"><span class="time">[0:45]</span>notre union, nous oublions ta loi Qu'en font nos langages et</div>
+        <div class="line" data-start="52.68" data-end="65.96"><span class="time">[0:52]</span>de nos corps Ils rêvaient d'une tour qui touche les cieux</div>
+        <div class="line" data-start="65.96" data-end="73.04"><span class="time">[1:05]</span>Ignorant que l'orgueil est un piège dangereux L'Éternel observa le cœur</div>
+        <div class="line" data-start="73.04" data-end="80.68"><span class="time">[1:13]</span>en joie Et dans son amour, il changea leur voie</div>
+        <div class="line" data-start="80.68" data-end="91.56"><span class="time">[1:20]</span>Ô Seigneur, tes plans évoquent La quête des coeurs, la</div>
+        <div class="line" data-start="91.56" data-end="99.54"><span class="time">[1:31]</span>voie des rois Dans notre union, nous oublions ta loi</div>
+        <div class="line" data-start="99.54" data-end="110.40"><span class="time">[1:39]</span>Qu'en font nos langages et de nos corps De Babel,</div>
+        <div class="line" data-start="110.40" data-end="117.52"><span class="time">[1:50]</span>nous sommes dispersés Mais dans l'esprit, nous sommes rassemblés Un même</div>
+        <div class="line" data-start="117.52" data-end="129.86"><span class="time">[1:57]</span>cœur, une même prière Dans la diversité, ta lumière clair Ô</div>
+        <div class="line" data-start="129.86" data-end="140.04"><span class="time">[2:09]</span>Seigneur, tes plans évoquent La quête des coeurs, la voie</div>
+        <div class="line" data-start="140.04" data-end="147.52"><span class="time">[2:20]</span>des rois Dans notre union, nous oublions ta loi Qu'en</div>
+        <div class="line" data-start="147.52" data-end="158.66"><span class="time">[2:27]</span>font nos langages et de nos corps Dans chaque langue, un</div>
+        <div class="line" data-start="158.66" data-end="166.36"><span class="time">[2:38]</span>chant s'élève Pour te louer, pour te servir sans trêve</div>
+        <div class="line" data-start="166.36" data-end="175.64"><span class="time">[2:46]</span>Unis en Christ, nous bâtissons Une ville d'amour, une nouvelle</div>
+        <div class="line" data-start="175.64" data-end="178.50"><span class="time">[2:55]</span>vision</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

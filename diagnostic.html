@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Diagnostic Bible Chantée</title>
+  <style>
+    body { font-family: monospace; padding: 20px; background: #1a1a1a; color: #0f0; }
+    .success { color: #0f0; }
+    .error { color: #f00; }
+    .warning { color: #ff0; }
+    .info { color: #0ff; }
+    pre { background: #000; padding: 10px; border: 1px solid #0f0; }
+  </style>
+</head>
+<body>
+  <h1>🔍 DIAGNOSTIC BIBLE CHANTÉE</h1>
+  <pre id="log"></pre>
+  <hr>
+  <h2>Test Audio</h2>
+  <button onclick="testAudio()" style="padding: 20px; font-size: 18px; cursor: pointer;">
+    ▶ Tester Genèse 1 (V1)
+  </button>
+  <audio id="testPlayer" controls style="width: 100%; margin-top: 20px;"></audio>
+
+  <script>
+    const log = document.getElementById('log');
+
+    function print(msg, type = 'info') {
+      const span = document.createElement('span');
+      span.className = type;
+      span.textContent = msg + '\n';
+      log.appendChild(span);
+      console.log(msg);
+    }
+
+    print('=== DIAGNOSTIC DÉMARRÉ ===', 'info');
+    print('');
+
+    // Test 1: Vérifier l'emplacement
+    print('[1] Location:', 'info');
+    print('  Origin: ' + window.location.origin);
+    print('  Pathname: ' + window.location.pathname);
+    print('');
+
+    // Test 2: Vérifier les jonctions
+    print('[2] Test accès aux jonctions:', 'info');
+    const testUrls = [
+      'audio_v1/01_GEN/01_GEN_01_FR.mp3',
+      'audio_v2/01_GEN/01_GEN_001_v1.mp3',
+      'lyrics_v1/01_GEN/01_GEN_01_FR.txt',
+      'lyrics_v2/01_GEN/01_GEN_001_FR.txt'
+    ];
+
+    async function testFiles() {
+      for (const url of testUrls) {
+        try {
+          const start = Date.now();
+          const response = await fetch(url, { method: 'HEAD' });
+          const duration = Date.now() - start;
+
+          if (response.ok) {
+            const size = response.headers.get('Content-Length');
+            const sizeKB = size ? (parseInt(size) / 1024).toFixed(1) : '?';
+            print(`  ✅ ${url} (${sizeKB} KB, ${duration}ms)`, 'success');
+          } else {
+            print(`  ❌ ${url} (HTTP ${response.status})`, 'error');
+          }
+        } catch (error) {
+          print(`  ❌ ${url} (${error.message})`, 'error');
+        }
+      }
+
+      print('');
+      print('[3] Prêt pour le test audio', 'success');
+      print('  Cliquez sur le bouton ci-dessus', 'info');
+    }
+
+    testFiles();
+
+    async function testAudio() {
+      print('');
+      print('[4] Test lecture audio...', 'info');
+
+      const player = document.getElementById('testPlayer');
+      const url = 'audio_v1/01_GEN/01_GEN_01_FR.mp3';
+
+      print('  Chargement: ' + url);
+
+      player.addEventListener('loadstart', () => {
+        print('  🔄 Chargement démarré...', 'warning');
+      });
+
+      player.addEventListener('canplay', () => {
+        print('  ✅ Fichier prêt à jouer!', 'success');
+      });
+
+      player.addEventListener('playing', () => {
+        print('  ▶ LECTURE EN COURS!', 'success');
+      });
+
+      player.addEventListener('error', (e) => {
+        print('  ❌ ERREUR: ' + (player.error ? player.error.message : 'Inconnue'), 'error');
+      });
+
+      player.addEventListener('stalled', () => {
+        print('  ⏸️ Mise en mémoire tampon...', 'warning');
+      });
+
+      player.addEventListener('waiting', () => {
+        print('  ⏳ En attente de données...', 'warning');
+      });
+
+      try {
+        player.src = url;
+        player.load();
+        const startTime = Date.now();
+        print('  Tentative de lecture...');
+
+        await player.play();
+        const loadTime = Date.now() - startTime;
+        print(`  ✅ SUCCÈS! Démarrage après ${loadTime}ms`, 'success');
+      } catch (error) {
+        print('  ❌ Échec: ' + error.message, 'error');
+        print('  Code erreur: ' + error.name, 'error');
+
+        if (error.name === 'NotAllowedError') {
+          print('  ⚠️ Le navigateur bloque l\'autoplay', 'warning');
+          print('  💡 Solution: Activez le son ou interagissez d\'abord', 'info');
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -3,127 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 12 | Bible Chantee Karaoke</title>
+    <title>Genese 12 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 12</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 12 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_12_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="11.84" data-end="22.10"><span class="time">[0:11]</span>Sors de ta terre, suis ma voix L'éternel parle, il est</div>
-        <div class="line" data-start="22.10" data-end="30.84"><span class="time">[0:22]</span>avec toi Une de chat rend vers le pays Promis à brambler</div>
-        <div class="line" data-start="30.94" data-end="41.70"><span class="time">[0:30]</span>toile de demain Tu es choisi Je ferai de toi une grande</div>
-        <div class="line" data-start="41.70" data-end="51.24"><span class="time">[0:41]</span>nation Ta bénédiction sera ma révélation Les familles de</div>
-        <div class="line" data-start="51.24" data-end="59.58"><span class="time">[0:51]</span>la terre en toi seront unies Dans l'amour du père, nos</div>
-        <div class="line" data-start="59.58" data-end="67.68"><span class="time">[0:59]</span>cœurs sont épanouis Dans la vallée de six chaînes, ils</div>
-        <div class="line" data-start="67.68" data-end="74.70"><span class="time">[1:07]</span>te montrent le chemin Un hôtel d'adoration, nos cœurs Levez</div>
-        <div class="line" data-start="74.70" data-end="82.16"><span class="time">[1:14]</span>vers l'ascension Malgré les tempêtes, ta foi ne faiblira</div>
-        <div class="line" data-start="82.16" data-end="89.74"><span class="time">[1:22]</span>pas Car l'éternel est avec toi, il te guidera Je ferai</div>
-        <div class="line" data-start="89.74" data-end="99.98"><span class="time">[1:29]</span>de toi une grande nation Ta bénédiction sera ma révélation</div>
-        <div class="line" data-start="99.98" data-end="108.70"><span class="time">[1:39]</span>Les familles de la terre en toi seront unies Dans l'amour</div>
-        <div class="line" data-start="108.90" data-end="117.80"><span class="time">[1:48]</span>du père, nos cœurs sont épanouis Confiance en l'éternel</div>
-        <div class="line" data-start="118.66" data-end="124.44"><span class="time">[1:58]</span>quand la femme in frappilée Notre ciel ne craint rien avance</div>
-        <div class="line" data-start="124.44" data-end="131.32"><span class="time">[2:04]</span>avec foi Chaque promesse est un pas vers la joie Je ferai</div>
-        <div class="line" data-start="131.32" data-end="141.60"><span class="time">[2:11]</span>de toi une grande nation Ta bénédiction sera ma révélation</div>
-        <div class="line" data-start="142.50" data-end="150.30"><span class="time">[2:22]</span>Les familles de la terre en toi seront unies Dans l'amour</div>
-        <div class="line" data-start="150.36" data-end="159.94"><span class="time">[2:30]</span>du père, nos cœurs sont épanouis Sors de ta terre, avance</div>
-        <div class="line" data-start="159.94" data-end="167.08"><span class="time">[2:39]</span>en lumière Abrame notre père, dans la foi, nous sommes</div>
-        <div class="line" data-start="167.08" data-end="177.04"><span class="time">[2:47]</span>frères L'éternel nous guide main dans la main Dans la promesse,</div>
-        <div class="line" data-start="177.46" data-end="182.66"><span class="time">[2:57]</span>nous marcherons demain Sous-titres par la communauté d'</div>
-        <div class="line" data-start="182.76" data-end="183.16"><span class="time">[3:02]</span>Amara.org</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="11.84" data-end="22.10"><span class="time">[0:11]</span>Sors de ta terre, suis ma voix L'éternel parle, il</div>
+        <div class="line" data-start="22.10" data-end="30.94"><span class="time">[0:22]</span>est avec toi De Charan vers le pays promis Abram l'étoile</div>
+        <div class="line" data-start="30.94" data-end="41.70"><span class="time">[0:30]</span>de demain, tu es choisi Je ferai de toi une</div>
+        <div class="line" data-start="41.70" data-end="51.24"><span class="time">[0:41]</span>grande nation Ta bénédiction sera ma révélation Les familles de la</div>
+        <div class="line" data-start="51.24" data-end="59.58"><span class="time">[0:51]</span>terre en toi seront unies Dans l'amour du Père, nos</div>
+        <div class="line" data-start="59.58" data-end="67.68"><span class="time">[0:59]</span>cœurs sont épanouis Dans la vallée de Sichem, ils te</div>
+        <div class="line" data-start="67.68" data-end="74.70"><span class="time">[1:07]</span>montrent le chemin Un autel d'adoration, nos cœurs levés vers l'ascension</div>
+        <div class="line" data-start="74.70" data-end="82.16"><span class="time">[1:14]</span>Malgré les tempêtes, ta foi ne faiblira pas Car l'éternel est</div>
+        <div class="line" data-start="82.16" data-end="89.74"><span class="time">[1:22]</span>avec toi, il te guidera Je ferai de toi une</div>
+        <div class="line" data-start="89.74" data-end="99.98"><span class="time">[1:29]</span>grande nation Ta bénédiction sera ma révélation Les familles de la</div>
+        <div class="line" data-start="99.98" data-end="108.90"><span class="time">[1:39]</span>terre en toi seront unies Dans l'amour du Père, nos cœurs</div>
+        <div class="line" data-start="108.90" data-end="118.66"><span class="time">[1:48]</span>sont épanouis Oh, confiance en l'éternel Quand la famine frappe,</div>
+        <div class="line" data-start="118.66" data-end="124.44"><span class="time">[1:58]</span>il est notre ciel Ne crains rien, avance avec foi Chaque</div>
+        <div class="line" data-start="124.44" data-end="131.32"><span class="time">[2:04]</span>promesse est un pas vers la joie Je ferai de toi</div>
+        <div class="line" data-start="131.32" data-end="142.50"><span class="time">[2:11]</span>une grande nation Ta bénédiction sera ma révélation Les familles de</div>
+        <div class="line" data-start="142.50" data-end="150.36"><span class="time">[2:22]</span>la terre en toi seront unies Dans l'amour du Père, nos</div>
+        <div class="line" data-start="150.36" data-end="159.94"><span class="time">[2:30]</span>cœurs sont épanouis Sors de ta terre, avance en lumière Abram</div>
+        <div class="line" data-start="159.94" data-end="167.08"><span class="time">[2:39]</span>notre Père, dans la foi nous sommes frères L'éternel nous</div>
+        <div class="line" data-start="167.08" data-end="177.04"><span class="time">[2:47]</span>guide, main dans la main Dans la promesse, nous marcherons demain</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

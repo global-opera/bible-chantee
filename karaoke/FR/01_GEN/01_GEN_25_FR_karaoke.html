@@ -3,144 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 25 | Bible Chantee Karaoke</title>
+    <title>Genese 25 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 25</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 25 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_25_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="13.00" data-end="19.00"><span class="time">[0:13]</span>Dans la vallée des ancêtres</div>
-        <div class="line" data-start="19.00" data-end="26.00"><span class="time">[0:19]</span>Abra marcha avec foi</div>
-        <div class="line" data-start="26.00" data-end="31.00"><span class="time">[0:26]</span>Qu'est-tu rassin ouvel compagnie</div>
-        <div class="line" data-start="31.00" data-end="38.00"><span class="time">[0:31]</span>Porta des filles une lignère en des mois</div>
-        <div class="line" data-start="38.00" data-end="45.00"><span class="time">[0:38]</span>Ils a clérité en sur le don</div>
-        <div class="line" data-start="45.00" data-end="51.00"><span class="time">[0:45]</span>Tous les biens de son père pour sa mission</div>
-        <div class="line" data-start="52.00" data-end="56.00"><span class="time">[0:52]</span>Il vécu des jours en sagesse</div>
-        <div class="line" data-start="56.00" data-end="62.00"><span class="time">[0:56]</span>Rassincier dans la paix de ses promesses</div>
-        <div class="line" data-start="62.00" data-end="66.00"><span class="time">[1:02]</span>Au dieu de nos pères</div>
-        <div class="line" data-start="66.00" data-end="74.00"><span class="time">[1:06]</span>Nous t'adorons dans les héritages d'Arabes</div>
-        <div class="line" data-start="74.00" data-end="79.00"><span class="time">[1:14]</span>Nous chantons t'avontés des générations</div>
-        <div class="line" data-start="79.00" data-end="89.00"><span class="time">[1:19]</span>Nous marchons maintenant</div>
-        <div class="line" data-start="89.00" data-end="96.00"><span class="time">[1:29]</span>Rebecastéris l'un plaurait</div>
-        <div class="line" data-start="96.00" data-end="102.00"><span class="time">[1:36]</span>Les ternelles entandies sont cris</div>
-        <div class="line" data-start="102.00" data-end="108.00"><span class="time">[1:42]</span>De nations se formènent en elle</div>
-        <div class="line" data-start="108.00" data-end="115.00"><span class="time">[1:48]</span>Dans son ventre le destin s'est panoui</div>
-        <div class="line" data-start="115.00" data-end="122.00"><span class="time">[1:55]</span>Et sur le chasseur le fort</div>
-        <div class="line" data-start="122.00" data-end="128.00"><span class="time">[2:02]</span>J'accomme le doule porteur de sors</div>
-        <div class="line" data-start="128.00" data-end="133.00"><span class="time">[2:08]</span>Dans le tumulte un choix fut fait</div>
-        <div class="line" data-start="133.00" data-end="139.00"><span class="time">[2:13]</span>Le droit d'Enesse a un trésor délaissé</div>
-        <div class="line" data-start="139.00" data-end="142.00"><span class="time">[2:19]</span>Au dieu de nos pères</div>
-        <div class="line" data-start="142.00" data-end="151.00"><span class="time">[2:22]</span>Nous t'adorons dans les héritages d'Arabes</div>
-        <div class="line" data-start="151.00" data-end="156.00"><span class="time">[2:31]</span>Nous chantons t'avontés des générations</div>
-        <div class="line" data-start="156.00" data-end="166.00"><span class="time">[2:36]</span>Nous marchons maintenant</div>
-        <div class="line" data-start="166.00" data-end="172.00"><span class="time">[2:46]</span>De la poussière tu as fait des royaumes</div>
-        <div class="line" data-start="172.00" data-end="179.00"><span class="time">[2:52]</span>Des promesses tu as se mes l'espoir</div>
-        <div class="line" data-start="179.00" data-end="185.00"><span class="time">[2:59]</span>Dans nos coeurs une histoire se forme</div>
-        <div class="line" data-start="185.00" data-end="191.00"><span class="time">[3:05]</span>Te rend en gloire notre foire notre miroir</div>
-        <div class="line" data-start="191.00" data-end="197.00"><span class="time">[3:11]</span>Au dieu de nos pères nous t'adorons</div>
-        <div class="line" data-start="197.00" data-end="203.00"><span class="time">[3:17]</span>Dans les héritages d'Arabes</div>
-        <div class="line" data-start="203.00" data-end="208.00"><span class="time">[3:23]</span>Nous chantons t'avontés des générations</div>
-        <div class="line" data-start="208.00" data-end="214.00"><span class="time">[3:28]</span>Nous marchons maintenant</div>
-        <div class="line" data-start="214.00" data-end="217.00"><span class="time">[3:34]</span>Dans la main</div>
-        <div class="line" data-start="217.00" data-end="223.00"><span class="time">[3:37]</span>Vassagez de ta grâce infinie</div>
-        <div class="line" data-start="223.00" data-end="228.00"><span class="time">[3:43]</span>Nous marchons aux dieux vers l'éternité</div>
-        <div class="line" data-start="228.00" data-end="233.00"><span class="time">[3:48]</span>Dans les héritages de la foi</div>
-        <div class="line" data-start="233.00" data-end="239.00"><span class="time">[3:53]</span>Nous t'adorons notre joie</div>
-        <div class="line" data-start="239.00" data-end="242.00"><span class="time">[3:59]</span>notre voie</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="13.00" data-end="19.00"><span class="time">[0:13]</span>Dans la vallée des ancêtres,</div>
+        <div class="line" data-start="19.00" data-end="26.00"><span class="time">[0:19]</span>Abraham marcha avec foi</div>
+        <div class="line" data-start="26.00" data-end="31.00"><span class="time">[0:26]</span>Kéturah, sa nouvelle compagne, Porta des</div>
+        <div class="line" data-start="31.00" data-end="38.00"><span class="time">[0:31]</span>fils une lignée en joie Isaac, l'héritier,</div>
+        <div class="line" data-start="38.00" data-end="45.00"><span class="time">[0:38]</span>reçut le don, Tous les</div>
+        <div class="line" data-start="45.00" data-end="52.00"><span class="time">[0:45]</span>biens de son père pour sa mission Il</div>
+        <div class="line" data-start="52.00" data-end="56.00"><span class="time">[0:52]</span>vécut des jours en sagesse,</div>
+        <div class="line" data-start="56.00" data-end="62.00"><span class="time">[0:56]</span>Rassasiés dans la paix de ses promesses</div>
+        <div class="line" data-start="62.00" data-end="66.00"><span class="time">[1:02]</span>Ô Dieu de nos</div>
+        <div class="line" data-start="66.00" data-end="74.00"><span class="time">[1:06]</span>pères, nous t'adorons Dans l'héritage d'Abraham Nous chantons</div>
+        <div class="line" data-start="74.00" data-end="79.00"><span class="time">[1:14]</span>ta bonté, Des générations en ta lumière</div>
+        <div class="line" data-start="79.00" data-end="89.00"><span class="time">[1:19]</span>Nous marchons, main dans</div>
+        <div class="line" data-start="89.00" data-end="96.00"><span class="time">[1:29]</span>la main Rebecca, stérile, implorait,</div>
+        <div class="line" data-start="96.00" data-end="102.00"><span class="time">[1:36]</span>L'éternel entendit son cri Deux nations</div>
+        <div class="line" data-start="102.00" data-end="108.00"><span class="time">[1:42]</span>se formaient en elle, Dans son</div>
+        <div class="line" data-start="108.00" data-end="115.00"><span class="time">[1:48]</span>ventre, le destin s'épanouit Ésaü, le chasseur,</div>
+        <div class="line" data-start="115.00" data-end="122.00"><span class="time">[1:55]</span>le fort, Jacob, le doux,</div>
+        <div class="line" data-start="122.00" data-end="128.00"><span class="time">[2:02]</span>le porteur de sort Dans le</div>
+        <div class="line" data-start="128.00" data-end="133.00"><span class="time">[2:08]</span>tumulte, un choix fut fait, Le</div>
+        <div class="line" data-start="133.00" data-end="139.00"><span class="time">[2:13]</span>droit d'aînesse, un trésor délaissé Ô Dieu</div>
+        <div class="line" data-start="139.00" data-end="142.00"><span class="time">[2:19]</span>de nos pères, nous</div>
+        <div class="line" data-start="142.00" data-end="151.00"><span class="time">[2:22]</span>t'adorons Dans l'héritage d'Abraham Nous chantons ta bonté,</div>
+        <div class="line" data-start="151.00" data-end="156.00"><span class="time">[2:31]</span>Des générations en ta lumière Nous marchons,</div>
+        <div class="line" data-start="156.00" data-end="166.00"><span class="time">[2:36]</span>main dans la main</div>
+        <div class="line" data-start="166.00" data-end="172.00"><span class="time">[2:46]</span>De la poussière, tu as fait des</div>
+        <div class="line" data-start="172.00" data-end="179.00"><span class="time">[2:52]</span>royaumes, Des promesses, tu as semé</div>
+        <div class="line" data-start="179.00" data-end="185.00"><span class="time">[2:59]</span>l'espoir Dans nos cœurs, une histoire se</div>
+        <div class="line" data-start="185.00" data-end="191.00"><span class="time">[3:05]</span>forme, Nous te rendons gloire, notre phare, notre</div>
+        <div class="line" data-start="191.00" data-end="197.00"><span class="time">[3:11]</span>miroir Ô Dieu de nos pères,</div>
+        <div class="line" data-start="197.00" data-end="203.00"><span class="time">[3:17]</span>nous t'adorons Dans l'héritage d'Abraham</div>
+        <div class="line" data-start="203.00" data-end="208.00"><span class="time">[3:23]</span>Nous chantons ta bonté, Des générations en</div>
+        <div class="line" data-start="208.00" data-end="214.00"><span class="time">[3:28]</span>ta lumière Nous marchons,</div>
+        <div class="line" data-start="214.00" data-end="217.00"><span class="time">[3:34]</span>main dans</div>
+        <div class="line" data-start="217.00" data-end="223.00"><span class="time">[3:37]</span>la main Passagier de ta</div>
+        <div class="line" data-start="223.00" data-end="228.00"><span class="time">[3:43]</span>grâce infinie, Nous marchons, ô Dieu, vers</div>
+        <div class="line" data-start="228.00" data-end="233.00"><span class="time">[3:48]</span>l'éternité Dans l'héritage de la</div>
+        <div class="line" data-start="233.00" data-end="239.00"><span class="time">[3:53]</span>foi, Nous t'adorons, notre joie,</div>
+        <div class="line" data-start="239.00" data-end="242.00"><span class="time">[3:59]</span>notre voix</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Paroles V2 - Genèse 1</title>
+  <style>
+    body {
+      background: #1a1a2e;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #F5CB42;
+      border-bottom: 2px solid #F5CB42;
+      padding-bottom: 10px;
+    }
+    #status {
+      background: rgba(0,0,0,0.3);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    #lyricsContent {
+      background: rgba(30, 58, 95, 0.5);
+      padding: 30px;
+      border-radius: 15px;
+      line-height: 1.8;
+      max-height: 400px;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+    }
+    #lyricsContent::-webkit-scrollbar {
+      width: 6px;
+    }
+    #lyricsContent::-webkit-scrollbar-thumb {
+      background: rgba(212, 175, 55, 0.5);
+      border-radius: 3px;
+    }
+    #lyricsContent::-webkit-scrollbar-thumb:hover {
+      background: rgba(212, 175, 55, 0.7);
+    }
+    .success { color: #0f0; }
+    .error { color: #f00; }
+    .info { color: #F5CB42; }
+  </style>
+</head>
+<body>
+  <h1>🎵 Test Paroles V2 - Genèse 1</h1>
+
+  <div id="status">
+    <p class="info">⏳ Chargement des paroles...</p>
+  </div>
+
+  <div id="lyricsContent"></div>
+
+  <script>
+    const statusDiv = document.getElementById('status');
+    const lyricsContent = document.getElementById('lyricsContent');
+
+    async function testParolesV2() {
+      const lyricsUrl = 'lyrics_v2/01_GEN/01_GEN_001_FR.txt';
+
+      try {
+        statusDiv.innerHTML = `<p class="info">📡 Chargement: ${lyricsUrl}</p>`;
+
+        const response = await fetch(lyricsUrl);
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        let lyrics = await response.text();
+
+        statusDiv.innerHTML += `<p class="success">✅ Fichier chargé: ${lyrics.length} caractères</p>`;
+
+        // Appliquer le même traitement que loadLyricsV2
+
+        // 1. Supprimer caractères spéciaux parasites
+        lyrics = lyrics.replace(/¶/g, '');
+        lyrics = lyrics.replace(/\u00B6/g, '');
+        lyrics = lyrics.replace(/[§†‡•◦]/g, '');
+
+        // 2. Supprimer nom de fichier
+        lyrics = lyrics.replace(/^\d{2}_[A-Z]{3}_\d{2,3}_[A-Z]{2}\s*/gm, '');
+
+        // 3. Supprimer tous les tags
+        lyrics = lyrics.replace(/\[(Verse|Chorus|Final Chorus|Bridge|Outro|Intro|Pre-Chorus|Instrumental|Spoken Word|TITLE|LYRICS|STYLE).*?\]/gi, '');
+
+        // 4. Supprimer [STYLE] et tout ce qui suit
+        const styleIndex = lyrics.indexOf('[STYLE]');
+        if (styleIndex !== -1) {
+          lyrics = lyrics.substring(0, styleIndex);
+        }
+
+        // 5. Supprimer lignes vides au début
+        lyrics = lyrics.replace(/^\s*\n+/, '');
+
+        // 6. Joindre les lignes qui ne finissent pas par ponctuation
+        lyrics = lyrics.replace(/([^.!?,:\n])\n([^\n])/g, '$1 $2');
+
+        // 7. Normaliser espaces multiples
+        lyrics = lyrics.replace(/  +/g, ' ');
+
+        // 8. Supprimer espaces en début de ligne
+        lyrics = lyrics.replace(/^\s+/gm, '');
+
+        // 9. Garder strophes séparées
+        lyrics = lyrics.replace(/\n{3,}/g, '\n\n');
+
+        // 10. Trim
+        lyrics = lyrics.trim();
+
+        statusDiv.innerHTML += `<p class="success">✅ Nettoyage effectué: ${lyrics.length} caractères</p>`;
+
+        // 11. Formatter en HTML
+        const paragraphs = lyrics.split('\n\n').filter(p => p.trim().length > 0);
+        const html = paragraphs.map(p => {
+          const lines = p.split('\n').filter(l => l.trim()).join('<br>');
+          return '<p style="margin: 0 0 1.5em 0; line-height: 1.8;">' + lines + '</p>';
+        }).join('');
+
+        lyricsContent.innerHTML = html;
+
+        statusDiv.innerHTML += `<p class="success">✅ Affichage réussi: ${paragraphs.length} paragraphes</p>`;
+
+        // Vérifications
+        statusDiv.innerHTML += '<p class="info">🔍 Vérifications:</p>';
+
+        const checks = [
+          { test: !html.includes('¶'), msg: 'Caractères ¶ supprimés' },
+          { test: !html.includes('[Verse'), msg: 'Tags [Verse] supprimés' },
+          { test: !html.includes('[Chorus'), msg: 'Tags [Chorus] supprimés' },
+          { test: !html.includes('[Bridge'), msg: 'Tags [Bridge] supprimés' },
+          { test: !html.includes('01_GEN_001_FR'), msg: 'Nom de fichier supprimé' },
+          { test: paragraphs.length >= 4, msg: `${paragraphs.length} paragraphes détectés` },
+          { test: html.length > 500, msg: `Contenu substantiel (${html.length} chars)` }
+        ];
+
+        checks.forEach(check => {
+          const icon = check.test ? '✅' : '❌';
+          const className = check.test ? 'success' : 'error';
+          statusDiv.innerHTML += `<p class="${className}">${icon} ${check.msg}</p>`;
+        });
+
+        const allPassed = checks.every(c => c.test);
+        if (allPassed) {
+          statusDiv.innerHTML += '<p class="success" style="font-size: 18px; font-weight: bold; margin-top: 20px;">🎉 TOUS LES TESTS RÉUSSIS!</p>';
+        } else {
+          statusDiv.innerHTML += '<p class="error" style="font-size: 18px; font-weight: bold; margin-top: 20px;">⚠️ CERTAINS TESTS ONT ÉCHOUÉ</p>';
+        }
+
+      } catch (error) {
+        statusDiv.innerHTML += `<p class="error">❌ ERREUR: ${error.message}</p>`;
+        lyricsContent.innerHTML = `<p style="color: #f88;">Erreur: ${error.message}</p>`;
+        console.error(error);
+      }
+    }
+
+    // Lancer le test automatiquement
+    testParolesV2();
+  </script>
+</body>
+</html>

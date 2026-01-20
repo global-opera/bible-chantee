@@ -1,16 +1,12 @@
+functionsDirectory = "C:\\ScriptBible\\bible-chantee\\netlify\\functions"
+functionsDirectoryOrigin = "default"
+headersOrigin = "config"
 redirectsOrigin = "config"
-plugins = []
-headers = []
-
-[functions]
-
-[functions."*"]
 
 [build]
 publish = "C:\\ScriptBible\\bible-chantee"
 publishOrigin = "config"
-commandOrigin = "config"
-command = "echo 'No build needed'"
+functions = "C:\\ScriptBible\\bible-chantee\\netlify\\functions"
 
 [build.environment]
 
@@ -26,11 +22,313 @@ command = "echo 'No build needed'"
 
 [build.services]
 
+[functions]
+
+[functions."*"]
+
+[[plugins]]
+origin = "ui"
+package = "@netlify/plugin-lighthouse"
+pinned_version = "6"
+
+[plugins.inputs]
+
+[[headers]]
+for = "/.well-known/assetlinks.json"
+
+[headers.values]
+Content-Type = "application/json"
+Access-Control-Allow-Origin = "*"
+
+[[headers]]
+for = "/manifest.json"
+
+[headers.values]
+Content-Type = "application/manifest+json"
+Access-Control-Allow-Origin = "*"
+
+[[headers]]
+for = "/service-worker.js"
+
+[headers.values]
+Content-Type = "application/javascript"
+Service-Worker-Allowed = "/"
+
+[[headers]]
+for = "/index.html"
+
+[headers.values]
+Cache-Control = "no-store"
+
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200.0
+from = "/promessas"
+to = "/promesses.html"
+status = 301.0
 force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/promessas/"
+to = "/promesses.html"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/promesses"
+to = "/promesses.html"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/promesses/"
+to = "/promesses.html"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/lecteur"
+to = "/lecteur.html"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/lecteur/"
+to = "/lecteur.html"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/confessions"
+to = "/confessions.html"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/confessions/"
+to = "/confessions.html"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/bible"
+to = "/bible.html"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/bible/"
+to = "/bible.html"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/Scripts/*"
+to = "/index.html"
+status = 404.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/Lyrics/*"
+to = "/index.html"
+status = 404.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/.git-hooks/*"
+to = "/index.html"
+status = 404.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/lecteur"
+to = "/lecteur.html"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/lecteur/*"
+to = "/lecteur.html"
+status = 200.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/demo*"
+to = "/lecteur.html"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/crowdfunding*"
+to = "/lecteur.html"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/contact*"
+to = "/lecteur.html"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/pricing*"
+to = "/lecteur.html"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/html%20old/*"
+to = "/lecteur.html"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/Scripts/*"
+to = "/lecteur.html"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/mnt/*"
+to = "/lecteur.html"
+status = 302.0
+force = true
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/bible-chantee-fr-site/*"
+to = "/lecteur.html"
+status = 302.0
+force = true
 
 [redirects.query]
 

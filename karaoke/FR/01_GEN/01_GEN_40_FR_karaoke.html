@@ -3,134 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 40 | Bible Chantee Karaoke</title>
+    <title>Genese 40 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 40</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 40 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_40_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="11.00" data-end="17.00"><span class="time">[0:11]</span>Dans l'ombre de la nuit de cœur en prisonné</div>
-        <div class="line" data-start="17.00" data-end="22.00"><span class="time">[0:17]</span>Le rêve plein de l'armes leurs a me tout augmenté</div>
-        <div class="line" data-start="22.00" data-end="28.00"><span class="time">[0:22]</span>Chosephome de foi en tant leur crainte</div>
-        <div class="line" data-start="28.00" data-end="33.00"><span class="time">[0:28]</span>Et raconter-moi le Dieu donne l'explication</div>
-        <div class="line" data-start="33.00" data-end="38.00"><span class="time">[0:33]</span>Souviens-toi de moi, quand elle grâce rien à</div>
-        <div class="line" data-start="38.00" data-end="44.00"><span class="time">[0:38]</span>Rappel à faire un haut l'espoir dans mes pas</div>
-        <div class="line" data-start="44.00" data-end="49.00"><span class="time">[0:44]</span>Dans la vie de ma paix je priverai toi</div>
-        <div class="line" data-start="49.00" data-end="56.00"><span class="time">[0:49]</span>Et ternel mon reçu je m'allumière mon roi</div>
-        <div class="line" data-start="57.00" data-end="62.00"><span class="time">[0:57]</span>Trois sarmands de joie des raisins appréciés</div>
-        <div class="line" data-start="62.00" data-end="67.00"><span class="time">[1:02]</span>Les chansons retrouvera son honneur sa place</div>
-        <div class="line" data-start="67.00" data-end="73.00"><span class="time">[1:07]</span>Mais le panétier lace entendra la fin</div>
-        <div class="line" data-start="73.00" data-end="80.00"><span class="time">[1:13]</span>Choseph le prévien, le destin est insertant</div>
-        <div class="line" data-start="80.00" data-end="85.00"><span class="time">[1:20]</span>Souviens-toi de moi, quand l'être reviendra</div>
-        <div class="line" data-start="85.00" data-end="92.00"><span class="time">[1:25]</span>Rappel à faire un haut l'espoir dans mes pas</div>
-        <div class="line" data-start="92.00" data-end="97.00"><span class="time">[1:32]</span>Dans la vie de ma paix je priverai toi</div>
-        <div class="line" data-start="97.00" data-end="104.00"><span class="time">[1:37]</span>Et ternel mon reçu je m'allumière mon roi</div>
-        <div class="line" data-start="105.00" data-end="109.00"><span class="time">[1:45]</span>Où étudie au monde Dieu dans cette obscurité</div>
-        <div class="line" data-start="109.00" data-end="114.00"><span class="time">[1:49]</span>T'appremesse et ma force Marie elle claretait</div>
-        <div class="line" data-start="114.00" data-end="119.00"><span class="time">[1:54]</span>Je reste dans la tente dans la foi je me tiens</div>
-        <div class="line" data-start="119.00" data-end="125.00"><span class="time">[1:59]</span>Car au-delà des ombres tu es créé mon chemin</div>
-        <div class="line" data-start="126.00" data-end="131.00"><span class="time">[2:06]</span>Souviens-toi de moi, quand la grâce vient de moi</div>
-        <div class="line" data-start="131.00" data-end="137.00"><span class="time">[2:11]</span>Rappel à faire un haut l'espoir dans mes pas</div>
-        <div class="line" data-start="137.00" data-end="143.00"><span class="time">[2:17]</span>Dans la vie de ma paix je priverai toi</div>
-        <div class="line" data-start="143.00" data-end="148.00"><span class="time">[2:23]</span>Et ternel mon reçu je m'allumière mon roi</div>
-        <div class="line" data-start="148.00" data-end="156.00"><span class="time">[2:28]</span>Choseph a éparer malgré le désespoir dans la prison de son reu</div>
-        <div class="line" data-start="156.00" data-end="165.00"><span class="time">[2:36]</span>Il a vu l'espoir, rappel toi, s'ignore de chaque cœur brisé</div>
-        <div class="line" data-start="165.00" data-end="180.00"><span class="time">[2:45]</span>Dans la nuit des hommes fais nous libérer</div>
-        <div class="line" data-start="195.00" data-end="204.00"><span class="time">[3:15]</span>Dans la vie de ma paix je priverai toi</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="11.00" data-end="17.00"><span class="time">[0:11]</span>Dans l'ombre de la nuit, deux cœurs</div>
+        <div class="line" data-start="17.00" data-end="22.00"><span class="time">[0:17]</span>emprisonnés Leurs rêves pleins de larmes, leurs âmes</div>
+        <div class="line" data-start="22.00" data-end="28.00"><span class="time">[0:22]</span>tourmentées Joseph, homme de foi, entend leur</div>
+        <div class="line" data-start="28.00" data-end="33.00"><span class="time">[0:28]</span>crainte Il dit, racontez-moi, le Dieu donne</div>
+        <div class="line" data-start="33.00" data-end="38.00"><span class="time">[0:33]</span>l'explication Souviens-toi de moi, quand la grâce viendra</div>
+        <div class="line" data-start="38.00" data-end="44.00"><span class="time">[0:38]</span>Rappelle à Pharaon, l'espoir dans mes pas Dans</div>
+        <div class="line" data-start="44.00" data-end="49.00"><span class="time">[0:44]</span>la nuit de ma peine, je crie</div>
+        <div class="line" data-start="49.00" data-end="57.00"><span class="time">[0:49]</span>vers toi Éternel mon refuge, ma lumière,</div>
+        <div class="line" data-start="57.00" data-end="62.00"><span class="time">[0:57]</span>mon roi Trois sarments de joie, des raisins</div>
+        <div class="line" data-start="62.00" data-end="67.00"><span class="time">[1:02]</span>appressés L'échanson retrouvera son honneur, sa place Mais</div>
+        <div class="line" data-start="67.00" data-end="73.00"><span class="time">[1:07]</span>le panétier, hélas, entendra la fin</div>
+        <div class="line" data-start="73.00" data-end="80.00"><span class="time">[1:13]</span>Joseph le prévient, le destin est incertain</div>
+        <div class="line" data-start="80.00" data-end="85.00"><span class="time">[1:20]</span>Souviens-toi de moi, quand la grâce viendra</div>
+        <div class="line" data-start="85.00" data-end="92.00"><span class="time">[1:25]</span>Rappelle à Pharaon, l'espoir dans mes pas Dans</div>
+        <div class="line" data-start="92.00" data-end="97.00"><span class="time">[1:32]</span>la nuit de ma peine, je crie</div>
+        <div class="line" data-start="97.00" data-end="105.00"><span class="time">[1:37]</span>vers toi Éternel mon refuge, ma lumière,</div>
+        <div class="line" data-start="105.00" data-end="109.00"><span class="time">[1:45]</span>mon roi Où es-tu, ô mon Dieu, dans</div>
+        <div class="line" data-start="109.00" data-end="114.00"><span class="time">[1:49]</span>cette obscurité Ta promesse est ma force, ma</div>
+        <div class="line" data-start="114.00" data-end="119.00"><span class="time">[1:54]</span>réelle clarté Je reste dans l'attente, dans la</div>
+        <div class="line" data-start="119.00" data-end="126.00"><span class="time">[1:59]</span>foi, je me tiens Car au-delà des ombres,</div>
+        <div class="line" data-start="126.00" data-end="131.00"><span class="time">[2:06]</span>tu écris mon chemin Souviens-toi de moi, quand</div>
+        <div class="line" data-start="131.00" data-end="137.00"><span class="time">[2:11]</span>la grâce viendra Rappelle à Pharaon, l'espoir dans</div>
+        <div class="line" data-start="137.00" data-end="143.00"><span class="time">[2:17]</span>mes pas Dans la nuit de ma</div>
+        <div class="line" data-start="143.00" data-end="148.00"><span class="time">[2:23]</span>peine, je crie vers toi Éternel mon</div>
+        <div class="line" data-start="148.00" data-end="156.00"><span class="time">[2:28]</span>refuge, ma lumière, mon roi Joseph a espéré, malgré le désespoir</div>
+        <div class="line" data-start="156.00" data-end="165.00"><span class="time">[2:36]</span>Dans la prison sombre, il a vu l'espoir Rappelle-toi Seigneur,</div>
+        <div class="line" data-start="165.00" data-end="195.00"><span class="time">[2:45]</span>de chaque cœur brisé Dans la nuit</div>
+        <div class="line" data-start="195.00" data-end="204.00"><span class="time">[3:15]</span>des hommes Fais-nous libérer</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

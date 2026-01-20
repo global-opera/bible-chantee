@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Lecteur Local - Bible Chantée</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: linear-gradient(180deg, #1E3A5F 0%, #162B46 100%);
+      min-height: 100vh;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: white;
+      padding: 50px;
+    }
+    .container { max-width: 600px; margin: 0 auto; }
+    h1 { color: #FFD700; margin-bottom: 30px; text-align: center; }
+    .version-toggle {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    .version-btn {
+      padding: 15px 30px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 10px;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+    .version-btn.active {
+      background: rgba(212,175,55,0.2);
+      border-color: #D4AF37;
+      color: #D4AF37;
+      box-shadow: 0 0 15px rgba(212,175,55,0.3);
+    }
+    .player-section {
+      background: #243F66;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    button {
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      background: #FFD700;
+      color: #1E3A5F;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background: #FFC700;
+      transform: scale(1.05);
+    }
+    audio {
+      width: 100%;
+      margin-top: 20px;
+    }
+    #info {
+      background: #162B46;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      font-family: monospace;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .success { color: #0f0; }
+    .error { color: #f00; }
+    .warning { color: #ff0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎵 Test Lecteur Local</h1>
+
+    <div class="version-toggle">
+      <button class="version-btn active" id="btnV1">V1 Local (3 fichiers)</button>
+      <button class="version-btn" id="btnV2">V2 Local (3 fichiers)</button>
+    </div>
+
+    <div class="player-section">
+      <h2 style="text-align: center; margin-bottom: 20px;">Genèse</h2>
+
+      <div class="controls">
+        <button onclick="loadChapter(1)">Chapitre 1</button>
+        <button onclick="loadChapter(2)">Chapitre 2</button>
+        <button onclick="loadChapter(3)">Chapitre 3</button>
+      </div>
+
+      <audio id="player" controls></audio>
+    </div>
+
+    <div id="info"></div>
+  </div>
+
+  <script>
+    let currentVersion = 'v1';
+    const player = document.getElementById('player');
+    const info = document.getElementById('info');
+    const btnV1 = document.getElementById('btnV1');
+    const btnV2 = document.getElementById('btnV2');
+
+    function log(msg, type = 'info') {
+      const span = document.createElement('div');
+      span.className = type;
+      span.textContent = msg;
+      info.appendChild(span);
+      console.log(msg);
+    }
+
+    function clearLog() {
+      info.innerHTML = '';
+    }
+
+    btnV1.addEventListener('click', () => {
+      currentVersion = 'v1';
+      btnV1.classList.add('active');
+      btnV2.classList.remove('active');
+      log('✓ Basculé en V1 (audio_v1_local)', 'success');
+    });
+
+    btnV2.addEventListener('click', () => {
+      currentVersion = 'v2';
+      btnV2.classList.add('active');
+      btnV1.classList.remove('active');
+      log('✓ Basculé en V2 (audio_v2_local)', 'success');
+    });
+
+    async function loadChapter(chapter) {
+      clearLog();
+      log(`Chargement Genèse ${chapter} (${currentVersion.toUpperCase()})...`);
+
+      let url;
+      if (currentVersion === 'v1') {
+        const ch = String(chapter).padStart(2, '0');
+        url = `audio_v1_local/01_GEN/01_GEN_${ch}_FR.mp3`;
+      } else {
+        const ch = String(chapter).padStart(3, '0');
+        url = `audio_v2_local/01_GEN/01_GEN_${ch}_v1.mp3`;
+      }
+
+      log(`URL: ${url}`);
+
+      // Test existence
+      try {
+        const testStart = Date.now();
+        const response = await fetch(url, { method: 'HEAD' });
+        const testDuration = Date.now() - testStart;
+
+        if (!response.ok) {
+          log(`❌ Fichier non trouvé (HTTP ${response.status})`, 'error');
+          return;
+        }
+
+        const size = response.headers.get('Content-Length');
+        const sizeMB = size ? (parseInt(size) / 1024 / 1024).toFixed(1) : '?';
+        log(`✓ Fichier trouvé: ${sizeMB} MB (test: ${testDuration}ms)`, 'success');
+      } catch (error) {
+        log(`❌ Erreur fetch: ${error.message}`, 'error');
+        return;
+      }
+
+      // Charger l'audio
+      player.addEventListener('loadstart', () => {
+        log('⏳ Chargement audio...', 'warning');
+      }, { once: true });
+
+      player.addEventListener('canplay', () => {
+        log('✅ Prêt à jouer!', 'success');
+      }, { once: true });
+
+      player.addEventListener('playing', () => {
+        log('▶ LECTURE EN COURS!', 'success');
+      }, { once: true });
+
+      player.addEventListener('error', (e) => {
+        log(`❌ ERREUR AUDIO: ${player.error ? player.error.message : 'Inconnue'}`, 'error');
+      }, { once: true });
+
+      try {
+        player.src = url;
+        player.load();
+
+        log('Tentative de lecture...');
+        const playStart = Date.now();
+        await player.play();
+        const playDuration = Date.now() - playStart;
+        log(`✅ SUCCÈS! Démarré après ${playDuration}ms`, 'success');
+      } catch (error) {
+        log(`❌ Erreur play: ${error.message}`, 'error');
+        if (error.name === 'NotAllowedError') {
+          log('⚠️ Le navigateur bloque l\'autoplay - cliquez d\'abord sur play', 'warning');
+        }
+      }
+    }
+
+    log('Page chargée - Prêt!', 'success');
+    log('Cliquez sur un bouton chapitre pour tester', 'info');
+  </script>
+</body>
+</html>

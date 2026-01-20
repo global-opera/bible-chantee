@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Genèse 1 V4 - Suno V5 Test Final</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
+      min-height: 100vh;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: white;
+      padding: 40px 20px;
+    }
+    .container { max-width: 1000px; margin: 0 auto; }
+
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+    }
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .hero .subtitle {
+      font-size: 20px;
+      opacity: 0.9;
+    }
+
+    .main-player {
+      background: linear-gradient(135deg, #0f0 0%, #0a0 100%);
+      padding: 40px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 40px rgba(0, 255, 0, 0.2);
+    }
+    .main-player h2 {
+      color: #000;
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .main-player .info {
+      background: rgba(0,0,0,0.2);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      color: #000;
+      font-weight: 600;
+    }
+    .main-player .info strong {
+      color: #000;
+      font-size: 18px;
+    }
+    audio {
+      width: 100%;
+      margin: 20px 0;
+      height: 60px;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .version-card {
+      background: #2a2a3e;
+      padding: 25px;
+      border-radius: 15px;
+      border-left: 5px solid;
+    }
+    .version-card.old { border-color: #666; }
+    .version-card h3 {
+      color: #FFD700;
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+    .version-card audio {
+      height: 40px;
+      margin: 10px 0;
+    }
+    .version-card .status {
+      font-size: 13px;
+      padding: 8px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .status.error { background: rgba(255,0,0,0.2); color: #f88; }
+    .status.warning { background: rgba(255,255,0,0.2); color: #ff8; }
+
+    .technical {
+      background: #1a1a2e;
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 30px;
+      border: 2px solid #667eea;
+    }
+    .technical h3 {
+      color: #667eea;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .tech-item {
+      background: rgba(102, 126, 234, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+    }
+    .tech-item .label {
+      color: #888;
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+    .tech-item .value {
+      color: #0f0;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .next-steps {
+      background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 30px;
+      color: #000;
+    }
+    .next-steps h3 {
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+    .next-steps ol {
+      margin-left: 25px;
+      line-height: 2;
+      font-size: 16px;
+    }
+    .next-steps strong {
+      font-weight: 800;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <h1>🎵 GENÈSE 1 - VERSION 4</h1>
+      <div class="subtitle">Suno V5 • Diction française optimisée</div>
+    </div>
+
+    <div class="main-player">
+      <h2>✨ VERSION FINALE (V4 - Suno V5)</h2>
+
+      <div class="info">
+        <p><strong>Paroles:</strong> "Au commencement" (sans modification)</p>
+        <p><strong>Modèle:</strong> Suno V5 (meilleure qualité vocale)</p>
+        <p><strong>Style:</strong> French sacred music, clear male vocals, precise French diction</p>
+        <p><strong>Génération:</strong> 90 secondes</p>
+        <p><strong>Taille:</strong> 2.6 MB (optimisé)</p>
+      </div>
+
+      <audio controls autoplay src="audio_v2/01_GEN/01_GEN_001_v1.mp3" id="mainPlayer"></audio>
+
+      <div style="text-align: center; margin-top: 20px; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px;">
+        <p style="font-size: 18px; color: #000; font-weight: 700;">
+          🎯 ÉCOUTEZ: Le modèle V5 devrait prononcer clairement "AU commencement"
+        </p>
+      </div>
+    </div>
+
+    <div class="technical">
+      <h3>📊 Détails techniques V4</h3>
+      <div class="tech-grid">
+        <div class="tech-item">
+          <div class="label">Modèle AI</div>
+          <div class="value">Suno V5</div>
+        </div>
+        <div class="tech-item">
+          <div class="label">Style Weight</div>
+          <div class="value">0.8</div>
+        </div>
+        <div class="tech-item">
+          <div class="label">Weirdness</div>
+          <div class="value">0.3</div>
+        </div>
+        <div class="tech-item">
+          <div class="label">Audio Weight</div>
+          <div class="value">0.7</div>
+        </div>
+        <div class="tech-item">
+          <div class="label">Tempo</div>
+          <div class="value">70 BPM</div>
+        </div>
+        <div class="tech-item">
+          <div class="label">Durée génération</div>
+          <div class="value">90s</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="color: #FFD700; margin: 30px 0 20px;">📂 Versions précédentes (référence)</h3>
+    <div class="comparison">
+      <div class="version-card old">
+        <h3>V3: "Au début, au commencement"</h3>
+        <audio controls src="audio_v2/01_GEN/01_GEN_001_v1_V3.mp3"></audio>
+        <div class="status warning">
+          ⚠️ Paroles modifiées - Non acceptable
+        </div>
+      </div>
+
+      <div class="version-card old">
+        <h3>V2: Première tentative</h3>
+        <audio controls src="audio_v2/01_GEN/01_GEN_001_v1_V2.mp3"></audio>
+        <div class="status error">
+          ❌ Prononçait "COMME au commencement"
+        </div>
+      </div>
+
+      <div class="version-card old">
+        <h3>V1: Original</h3>
+        <audio controls src="audio_v2/01_GEN/01_GEN_001_v1_OLD.mp3"></audio>
+        <div class="status error">
+          ❌ Prononçait "A commencement"
+        </div>
+      </div>
+    </div>
+
+    <div class="next-steps">
+      <h3>✅ PROCHAINES ÉTAPES</h3>
+      <ol>
+        <li>🎧 <strong>Écoutez la V4</strong> (lecteur principal ci-dessus)</li>
+        <li>✅ <strong>Si "Au commencement" est correct:</strong>
+          <ul style="margin-top: 5px;">
+            <li>Supprimez V1, V2, V3</li>
+            <li>Gardez V4 comme version finale</li>
+            <li>Utilisez le fichier lyrics <code>01_GEN_001_FR_V4.txt</code> pour les futurs chapitres</li>
+          </ul>
+        </li>
+        <li>❌ <strong>Si problème persiste:</strong>
+          <ul style="margin-top: 5px;">
+            <li>Option 1: Essayer style différent (chanson parlée?)</li>
+            <li>Option 2: Utiliser un autre service TTS</li>
+            <li>Option 3: Modifier légèrement: "Ô commencement"</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px; padding: 20px; background: rgba(102,126,234,0.1); border-radius: 10px;">
+      <p style="color: #888; font-size: 14px;">
+        💾 Toutes les versions sont sauvegardées dans:<br>
+        <code style="color: #667eea;">G:\Mon Drive\01 BibleChantee\Suno_Output\FR_V2\01_GEN\</code>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    console.log('=== GENÈSE 1 V4 - SUNO V5 ===');
+    console.log('V4 (actuelle - V5): audio_v2/01_GEN/01_GEN_001_v1.mp3');
+    console.log('Fichier: 2.6 MB - Optimisé');
+
+    const player = document.getElementById('mainPlayer');
+    player.addEventListener('loadedmetadata', () => {
+      console.log(`✅ Durée: ${Math.round(player.duration)}s`);
+    });
+
+    player.addEventListener('play', () => {
+      console.log('▶ Lecture V4 démarrée - Écoutez "Au commencement"');
+    });
+  </script>
+</body>
+</html>

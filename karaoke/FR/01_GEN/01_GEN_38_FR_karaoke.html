@@ -3,164 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 38 | Bible Chantee Karaoke</title>
+    <title>Genese 38 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 38</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 38 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_38_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
+        
+        <div class="lyrics-container" id="lyrics">
         <div class="line" data-start="11.00" data-end="15.00"><span class="time">[0:11]</span>Dans les ombres de la douleur</div>
-        <div class="line" data-start="15.00" data-end="18.00"><span class="time">[0:15]</span>Ta marre au seuil de son cœur</div>
-        <div class="line" data-start="18.00" data-end="21.00"><span class="time">[0:18]</span>Les sangs derrière son vœu vache</div>
-        <div class="line" data-start="21.00" data-end="24.00"><span class="time">[0:21]</span>Elle cherche un nouveau rivage</div>
-        <div class="line" data-start="24.00" data-end="27.00"><span class="time">[0:24]</span>J'ai d'aperdu dans ses peurs</div>
-        <div class="line" data-start="27.00" data-end="30.00"><span class="time">[0:27]</span>Les loignements l'ont fardo</div>
-        <div class="line" data-start="30.00" data-end="33.00"><span class="time">[0:30]</span>Mais au-delà des ténèbres</div>
-        <div class="line" data-start="33.00" data-end="39.00"><span class="time">[0:33]</span>Les ternels t'y se sont à bloc</div>
-        <div class="line" data-start="39.00" data-end="43.00"><span class="time">[0:39]</span>Au dieu de promesse</div>
-        <div class="line" data-start="43.00" data-end="46.00"><span class="time">[0:43]</span>Dans le silence tu as dit</div>
-        <div class="line" data-start="46.00" data-end="49.00"><span class="time">[0:46]</span>Ton plan serait vrai</div>
-        <div class="line" data-start="49.00" data-end="52.00"><span class="time">[0:49]</span>Mais mon milieu des nuits</div>
-        <div class="line" data-start="52.00" data-end="55.00"><span class="time">[0:52]</span>Ton amour ne fait jamais</div>
-        <div class="line" data-start="55.00" data-end="59.00"><span class="time">[0:55]</span>Dans chaque histoire tu es là</div>
-        <div class="line" data-start="59.00" data-end="62.00"><span class="time">[0:59]</span>Tissons des viands au secret</div>
-        <div class="line" data-start="62.00" data-end="67.00"><span class="time">[1:02]</span>Pour ceux qui espèrent en toi</div>
-        <div class="line" data-start="69.00" data-end="72.00"><span class="time">[1:09]</span>Les actions cachées et les choix</div>
-        <div class="line" data-start="72.00" data-end="75.00"><span class="time">[1:12]</span>Ta marre avec fois s'approche</div>
-        <div class="line" data-start="75.00" data-end="78.00"><span class="time">[1:15]</span>Un gage d'amour délienbrisé</div>
-        <div class="line" data-start="78.00" data-end="82.00"><span class="time">[1:18]</span>Pour la vie elle se va déterminer</div>
-        <div class="line" data-start="82.00" data-end="85.00"><span class="time">[1:22]</span>J'ai d'un lignon</div>
-        <div class="line" data-start="85.00" data-end="88.00"><span class="time">[1:25]</span>Ne vois pas la lumière</div>
-        <div class="line" data-start="88.00" data-end="91.00"><span class="time">[1:28]</span>Mais l'amour et la grasse</div>
-        <div class="line" data-start="91.00" data-end="95.00"><span class="time">[1:31]</span>Franchissent toutes les barrières</div>
-        <div class="line" data-start="95.00" data-end="98.00"><span class="time">[1:35]</span>En vieux de promesse</div>
-        <div class="line" data-start="98.00" data-end="101.00"><span class="time">[1:38]</span>Dans le silence tu as dit</div>
-        <div class="line" data-start="101.00" data-end="104.00"><span class="time">[1:41]</span>Ton plan serait vrai</div>
-        <div class="line" data-start="104.00" data-end="107.00"><span class="time">[1:44]</span>Mais mon milieu des nuits</div>
-        <div class="line" data-start="107.00" data-end="110.00"><span class="time">[1:47]</span>Ton amour ne fait jamais</div>
-        <div class="line" data-start="110.00" data-end="113.00"><span class="time">[1:50]</span>Dans chaque histoire tu es là</div>
-        <div class="line" data-start="113.00" data-end="116.00"><span class="time">[1:53]</span>Tissons des viands au secret</div>
-        <div class="line" data-start="116.00" data-end="122.00"><span class="time">[1:56]</span>Pour ceux qui espèrent en toi</div>
-        <div class="line" data-start="122.00" data-end="126.00"><span class="time">[2:02]</span>Et lorsque tout semble perdu</div>
-        <div class="line" data-start="126.00" data-end="129.00"><span class="time">[2:06]</span>Tu es le dieu qui restore</div>
-        <div class="line" data-start="129.00" data-end="132.00"><span class="time">[2:09]</span>Dans les lames tu es frusant</div>
-        <div class="line" data-start="132.00" data-end="135.00"><span class="time">[2:12]</span>Ramanant l'espérance encore</div>
-        <div class="line" data-start="135.00" data-end="137.00"><span class="time">[2:15]</span>Pérés et râches</div>
-        <div class="line" data-start="137.00" data-end="138.00"><span class="time">[2:17]</span>Un héritage</div>
-        <div class="line" data-start="138.00" data-end="140.00"><span class="time">[2:18]</span>N'est de l'amour</div>
-        <div class="line" data-start="140.00" data-end="142.00"><span class="time">[2:20]</span>Et de le courage</div>
-        <div class="line" data-start="142.00" data-end="143.00"><span class="time">[2:22]</span>Dans nos luttes</div>
-        <div class="line" data-start="143.00" data-end="145.00"><span class="time">[2:23]</span>Dans nos combat</div>
-        <div class="line" data-start="145.00" data-end="149.00"><span class="time">[2:25]</span>Tu es fidèle tu es là</div>
-        <div class="line" data-start="149.00" data-end="152.00"><span class="time">[2:29]</span>En vieux de promesse</div>
-        <div class="line" data-start="152.00" data-end="155.00"><span class="time">[2:32]</span>Dans le silence tu agit</div>
-        <div class="line" data-start="155.00" data-end="158.00"><span class="time">[2:35]</span>Ton plan serait vrai</div>
-        <div class="line" data-start="158.00" data-end="161.00"><span class="time">[2:38]</span>Mais mon milieu des nuits</div>
-        <div class="line" data-start="161.00" data-end="167.00"><span class="time">[2:41]</span>Ton amour ne fait jamais</div>
-        <div class="line" data-start="167.00" data-end="170.00"><span class="time">[2:47]</span>Dans le silence tu agit</div>
-        <div class="line" data-start="170.00" data-end="176.00"><span class="time">[2:50]</span>Pour ceux qui espèrent en toi</div>
-        <div class="line" data-start="176.00" data-end="179.00"><span class="time">[2:56]</span>Au coeur de la promesse</div>
-        <div class="line" data-start="179.00" data-end="182.00"><span class="time">[2:59]</span>Nous marchons dans ta lumière</div>
-        <div class="line" data-start="182.00" data-end="185.00"><span class="time">[3:02]</span>Dans chaque paille benédiction</div>
-        <div class="line" data-start="185.00" data-end="188.00"><span class="time">[3:05]</span>Nous chantons notre adoration</div>
-        <div class="line" data-start="188.00" data-end="190.00"><span class="time">[3:08]</span>De promesse</div>
+        <div class="line" data-start="15.00" data-end="18.00"><span class="time">[0:15]</span>Tamar au seuil de son cœur</div>
+        <div class="line" data-start="18.00" data-end="21.00"><span class="time">[0:18]</span>Laissant derrière son veuvage Elle cherche</div>
+        <div class="line" data-start="21.00" data-end="24.00"><span class="time">[0:21]</span>un nouveau rivage Juda perdu dans</div>
+        <div class="line" data-start="24.00" data-end="27.00"><span class="time">[0:24]</span>ses peurs L'éloignement, un lourd fardeau</div>
+        <div class="line" data-start="27.00" data-end="30.00"><span class="time">[0:27]</span>Dans les ombres de la</div>
+        <div class="line" data-start="30.00" data-end="33.00"><span class="time">[0:30]</span>douleur Tamar au seuil de</div>
+        <div class="line" data-start="33.00" data-end="39.00"><span class="time">[0:33]</span>son cœur L'éloignement, un lourd fardeau</div>
+        <div class="line" data-start="39.00" data-end="43.00"><span class="time">[0:39]</span>Mais au-delà des ténèbres</div>
+        <div class="line" data-start="43.00" data-end="46.00"><span class="time">[0:43]</span>L'éternel tisse son tableau Ô</div>
+        <div class="line" data-start="46.00" data-end="49.00"><span class="time">[0:46]</span>Dieu de promesses Dans</div>
+        <div class="line" data-start="49.00" data-end="52.00"><span class="time">[0:49]</span>le silence tu agis Ton</div>
+        <div class="line" data-start="52.00" data-end="55.00"><span class="time">[0:52]</span>plan se révèle Même au</div>
+        <div class="line" data-start="55.00" data-end="59.00"><span class="time">[0:55]</span>milieu des nuits Ton amour ne</div>
+        <div class="line" data-start="59.00" data-end="62.00"><span class="time">[0:59]</span>faillit jamais Dans chaque histoire tu</div>
+        <div class="line" data-start="62.00" data-end="69.00"><span class="time">[1:02]</span>es là Tissant des vies en</div>
+        <div class="line" data-start="69.00" data-end="72.00"><span class="time">[1:09]</span>secret Pour ceux qui espèrent en</div>
+        <div class="line" data-start="72.00" data-end="75.00"><span class="time">[1:12]</span>toi Les actions cachées, les choix</div>
+        <div class="line" data-start="75.00" data-end="78.00"><span class="time">[1:15]</span>Tamar avec foi s'approche Un</div>
+        <div class="line" data-start="78.00" data-end="82.00"><span class="time">[1:18]</span>gage d'amour, des liens brisés Pour la</div>
+        <div class="line" data-start="82.00" data-end="85.00"><span class="time">[1:22]</span>vie elle se</div>
+        <div class="line" data-start="85.00" data-end="88.00"><span class="time">[1:25]</span>bat déterminée Juda dans</div>
+        <div class="line" data-start="88.00" data-end="91.00"><span class="time">[1:28]</span>l'ignorance Ne voit pas la</div>
+        <div class="line" data-start="91.00" data-end="95.00"><span class="time">[1:31]</span>lumière Mais l'amour et la grâce Franchissent</div>
+        <div class="line" data-start="95.00" data-end="98.00"><span class="time">[1:35]</span>toutes les barrières Ô</div>
+        <div class="line" data-start="98.00" data-end="101.00"><span class="time">[1:38]</span>Dieu de promesses Dans le</div>
+        <div class="line" data-start="101.00" data-end="104.00"><span class="time">[1:41]</span>silence tu agis Ton</div>
+        <div class="line" data-start="104.00" data-end="107.00"><span class="time">[1:44]</span>plan se révèle Même au</div>
+        <div class="line" data-start="107.00" data-end="110.00"><span class="time">[1:47]</span>milieu des nuits Son amour</div>
+        <div class="line" data-start="110.00" data-end="113.00"><span class="time">[1:50]</span>ne faillit jamais Dans chaque histoire</div>
+        <div class="line" data-start="113.00" data-end="116.00"><span class="time">[1:53]</span>tu es là Tissant des vies</div>
+        <div class="line" data-start="116.00" data-end="122.00"><span class="time">[1:56]</span>en secret Pour ceux qui espèrent</div>
+        <div class="line" data-start="122.00" data-end="126.00"><span class="time">[2:02]</span>en toi Et lorsque tout semble</div>
+        <div class="line" data-start="126.00" data-end="129.00"><span class="time">[2:06]</span>perdu Tu es le Dieu</div>
+        <div class="line" data-start="129.00" data-end="132.00"><span class="time">[2:09]</span>qui restaure Dans les larmes tu</div>
+        <div class="line" data-start="132.00" data-end="135.00"><span class="time">[2:12]</span>es présent Ramenant l'espérance encore</div>
+        <div class="line" data-start="135.00" data-end="137.00"><span class="time">[2:15]</span>Pérets et Zérach,</div>
+        <div class="line" data-start="137.00" data-end="138.00"><span class="time">[2:17]</span>un héritage</div>
+        <div class="line" data-start="138.00" data-end="140.00"><span class="time">[2:18]</span>Né de l'amour</div>
+        <div class="line" data-start="140.00" data-end="142.00"><span class="time">[2:20]</span>et du courage</div>
+        <div class="line" data-start="142.00" data-end="143.00"><span class="time">[2:22]</span>Dans nos luttes,</div>
+        <div class="line" data-start="143.00" data-end="145.00"><span class="time">[2:23]</span>dans nos combats</div>
+        <div class="line" data-start="145.00" data-end="149.00"><span class="time">[2:25]</span>Tu es fidèle, tu</div>
+        <div class="line" data-start="149.00" data-end="152.00"><span class="time">[2:29]</span>es là Ô Dieu</div>
+        <div class="line" data-start="152.00" data-end="155.00"><span class="time">[2:32]</span>de promesses Dans le silence</div>
+        <div class="line" data-start="155.00" data-end="158.00"><span class="time">[2:35]</span>tu agis Ton plan</div>
+        <div class="line" data-start="158.00" data-end="161.00"><span class="time">[2:38]</span>se révèle Même au milieu</div>
+        <div class="line" data-start="161.00" data-end="167.00"><span class="time">[2:41]</span>des nuits Ton amour ne</div>
+        <div class="line" data-start="167.00" data-end="170.00"><span class="time">[2:47]</span>faillit jamais Tissant des vies</div>
+        <div class="line" data-start="170.00" data-end="176.00"><span class="time">[2:50]</span>en secret Pour ceux qui espèrent</div>
+        <div class="line" data-start="176.00" data-end="179.00"><span class="time">[2:56]</span>en toi Au cœur de</div>
+        <div class="line" data-start="179.00" data-end="182.00"><span class="time">[2:59]</span>la promesse Nous marchons dans ta</div>
+        <div class="line" data-start="182.00" data-end="185.00"><span class="time">[3:02]</span>lumière Dans chaque pas une bénédiction</div>
+        <div class="line" data-start="185.00" data-end="188.00"><span class="time">[3:05]</span>Nous chantons notre adoration Ô Dieu</div>
+        <div class="line" data-start="188.00" data-end="190.00"><span class="time">[3:08]</span>de promesses</div>
         <div class="line" data-start="190.00" data-end="193.00"><span class="time">[3:10]</span>Nous te rendons gloire</div>
-        <div class="line" data-start="193.00" data-end="199.00"><span class="time">[3:13]</span>Pour sa vie transformée</div>
-        <div class="line" data-start="199.00" data-end="210.00"><span class="time">[3:19]</span>Nous célébrons ton histoire</div>
+        <div class="line" data-start="193.00" data-end="199.00"><span class="time">[3:13]</span>Pour chaque vie transformée Nous</div>
+        <div class="line" data-start="199.00" data-end="210.00"><span class="time">[3:19]</span>célébrons ton histoire</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

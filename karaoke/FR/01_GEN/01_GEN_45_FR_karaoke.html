@@ -3,161 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 45 | Bible Chantee Karaoke</title>
+    <title>Genese 45 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 45</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 45 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_45_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="0.00" data-end="5.00"><span class="time">[0:00]</span>Le mot de l'écho</div>
-        <div class="line" data-start="5.00" data-end="8.00"><span class="time">[0:05]</span>L'écho</div>
-        <div class="line" data-start="8.00" data-end="11.00"><span class="time">[0:08]</span>Dans l'ombre des pleurs</div>
-        <div class="line" data-start="11.00" data-end="16.00"><span class="time">[0:11]</span>Ils s'est dévoilés</div>
-        <div class="line" data-start="16.00" data-end="21.00"><span class="time">[0:16]</span>J'osaves l'énigme aussi un retrouvé</div>
-        <div class="line" data-start="21.00" data-end="25.00"><span class="time">[0:21]</span>Je suis j'osaves votre frère</div>
-        <div class="line" data-start="25.00" data-end="27.00"><span class="time">[0:25]</span>Oh mes frères</div>
-        <div class="line" data-start="27.00" data-end="29.00"><span class="time">[0:27]</span>Ne craignez plus</div>
-        <div class="line" data-start="29.00" data-end="33.00"><span class="time">[0:29]</span>C'est l'amour qui est clair</div>
-        <div class="line" data-start="34.00" data-end="40.00"><span class="time">[0:34]</span>Tu as tourné l'an mon miel</div>
-        <div class="line" data-start="40.00" data-end="43.00"><span class="time">[0:40]</span>Dans la famille</div>
-        <div class="line" data-start="43.00" data-end="46.00"><span class="time">[0:43]</span>Il nous fait vivre</div>
-        <div class="line" data-start="46.00" data-end="51.00"><span class="time">[0:46]</span>Apochez-vous venait dans sa nousseur</div>
-        <div class="line" data-start="51.00" data-end="54.00"><span class="time">[0:51]</span>Le coeur restaurait</div>
-        <div class="line" data-start="54.00" data-end="59.00"><span class="time">[0:54]</span>Dans la grâce de mon souveur</div>
-        <div class="line" data-start="61.00" data-end="63.00"><span class="time">[1:01]</span>Ils pleurent avec pas</div>
-        <div class="line" data-start="63.00" data-end="66.00"><span class="time">[1:03]</span>Jamme l'amour éternait</div>
-        <div class="line" data-start="66.00" data-end="69.00"><span class="time">[1:06]</span>Leur coeur se rejoigne</div>
-        <div class="line" data-start="69.00" data-end="72.00"><span class="time">[1:09]</span>Une一 son au voie</div>
-        <div class="line" data-start="72.00" data-end="74.00"><span class="time">[1:12]</span>Je vous envoie</div>
-        <div class="line" data-start="74.00" data-end="77.00"><span class="time">[1:14]</span>N'ayez plus de peur</div>
-        <div class="line" data-start="77.00" data-end="79.00"><span class="time">[1:17]</span>Dieu m'a établi</div>
-        <div class="line" data-start="79.00" data-end="83.00"><span class="time">[1:19]</span>Je suis porteur de bonheur</div>
-        <div class="line" data-start="84.00" data-end="91.00"><span class="time">[1:24]</span>Tu as tourné l'an mon miel</div>
-        <div class="line" data-start="91.00" data-end="94.00"><span class="time">[1:31]</span>Dans la famille</div>
-        <div class="line" data-start="94.00" data-end="97.00"><span class="time">[1:34]</span>Il nous fait vivre</div>
-        <div class="line" data-start="97.00" data-end="102.00"><span class="time">[1:37]</span>Apochez-vous venait dans sa nousseur</div>
-        <div class="line" data-start="102.00" data-end="104.00"><span class="time">[1:42]</span>Le coeur restaurait</div>
-        <div class="line" data-start="104.00" data-end="109.00"><span class="time">[1:44]</span>Dans la grâce de mon souveur</div>
-        <div class="line" data-start="109.00" data-end="114.00"><span class="time">[1:49]</span>A tes vous venait ne tarder pas</div>
-        <div class="line" data-start="114.00" data-end="116.00"><span class="time">[1:54]</span>Dans le pays de Goseau</div>
-        <div class="line" data-start="116.00" data-end="120.00"><span class="time">[1:56]</span>Et nous attend l'an</div>
-        <div class="line" data-start="120.00" data-end="123.00"><span class="time">[2:00]</span>Venez à la table</div>
-        <div class="line" data-start="123.00" data-end="125.00"><span class="time">[2:03]</span>Coutez sa bantée</div>
-        <div class="line" data-start="125.00" data-end="128.00"><span class="time">[2:05]</span>Tout ce qu'il a promis</div>
-        <div class="line" data-start="128.00" data-end="132.00"><span class="time">[2:08]</span>Nous la donnait</div>
-        <div class="line" data-start="132.00" data-end="138.00"><span class="time">[2:12]</span>Tu as tourné l'an mon miel</div>
-        <div class="line" data-start="138.00" data-end="141.00"><span class="time">[2:18]</span>Dans la famille</div>
-        <div class="line" data-start="141.00" data-end="144.00"><span class="time">[2:21]</span>Il nous fait vivre</div>
-        <div class="line" data-start="144.00" data-end="149.00"><span class="time">[2:24]</span>Apochez-vous venait dans sa nousseur</div>
-        <div class="line" data-start="149.00" data-end="152.00"><span class="time">[2:29]</span>Le coeur restaurait</div>
-        <div class="line" data-start="152.00" data-end="156.00"><span class="time">[2:32]</span>Dans la grâce de mon souveur</div>
-        <div class="line" data-start="156.00" data-end="161.00"><span class="time">[2:36]</span>Goseau, notre frère dans l'éternité</div>
-        <div class="line" data-start="161.00" data-end="167.00"><span class="time">[2:41]</span>Son histoire nous guide vers la vérité</div>
-        <div class="line" data-start="167.00" data-end="170.00"><span class="time">[2:47]</span>Avec foi nous marchons</div>
-        <div class="line" data-start="170.00" data-end="173.00"><span class="time">[2:50]</span>Dans lui nous vivons</div>
-        <div class="line" data-start="173.00" data-end="175.00"><span class="time">[2:53]</span>Dans la lumière</div>
-        <div class="line" data-start="175.00" data-end="182.00"><span class="time">[2:55]</span>Unis pour toujours nous chants on</div>
-        <div class="line" data-start="182.00" data-end="185.00"><span class="time">[3:02]</span>Je chants on</div>
-        <div class="line" data-start="185.00" data-end="191.00"><span class="time">[3:05]</span>Tu as tourné l'an mon miel</div>
-        <div class="line" data-start="191.00" data-end="194.00"><span class="time">[3:11]</span>Dans la famille</div>
-        <div class="line" data-start="194.00" data-end="197.00"><span class="time">[3:14]</span>Il nous fait vivre</div>
-        <div class="line" data-start="197.00" data-end="202.00"><span class="time">[3:17]</span>Apochez-vous venait dans sa nousseur</div>
-        <div class="line" data-start="202.00" data-end="205.00"><span class="time">[3:22]</span>Le coeur restaurait</div>
-        <div class="line" data-start="205.00" data-end="209.00"><span class="time">[3:25]</span>Dans la grâce de mon souveur</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="0.00" data-end="5.00"><span class="time">[0:00]</span>Dans l'ombre des</div>
+        <div class="line" data-start="5.00" data-end="8.00"><span class="time">[0:05]</span>pleurs,</div>
+        <div class="line" data-start="8.00" data-end="11.00"><span class="time">[0:08]</span>il s'est dévoilé Joseph</div>
+        <div class="line" data-start="11.00" data-end="16.00"><span class="time">[0:11]</span>l'énigme au sien</div>
+        <div class="line" data-start="16.00" data-end="21.00"><span class="time">[0:16]</span>retrouvé Je suis Joseph, votre frère,</div>
+        <div class="line" data-start="21.00" data-end="25.00"><span class="time">[0:21]</span>oh mes frères Ne craignez</div>
+        <div class="line" data-start="25.00" data-end="27.00"><span class="time">[0:25]</span>plus, c'est</div>
+        <div class="line" data-start="27.00" data-end="29.00"><span class="time">[0:27]</span>l'amour qui éclaire</div>
+        <div class="line" data-start="29.00" data-end="34.00"><span class="time">[0:29]</span>Dieu a tourné l'âme en</div>
+        <div class="line" data-start="34.00" data-end="40.00"><span class="time">[0:34]</span>lumière Dans la famille, il</div>
+        <div class="line" data-start="40.00" data-end="43.00"><span class="time">[0:40]</span>nous fait vivre</div>
+        <div class="line" data-start="43.00" data-end="46.00"><span class="time">[0:43]</span>Approchez-vous, venez dans</div>
+        <div class="line" data-start="46.00" data-end="51.00"><span class="time">[0:46]</span>sa douceur Le cœur restauré dans</div>
+        <div class="line" data-start="51.00" data-end="54.00"><span class="time">[0:51]</span>la grâce de</div>
+        <div class="line" data-start="54.00" data-end="61.00"><span class="time">[0:54]</span>mon sauveur Ils pleurent avec</div>
+        <div class="line" data-start="61.00" data-end="63.00"><span class="time">[1:01]</span>Benjamin, l'amour éternel Leurs</div>
+        <div class="line" data-start="63.00" data-end="66.00"><span class="time">[1:03]</span>cœurs se rejoignent, unissons</div>
+        <div class="line" data-start="66.00" data-end="69.00"><span class="time">[1:06]</span>nos voix Je vous</div>
+        <div class="line" data-start="69.00" data-end="72.00"><span class="time">[1:09]</span>envoie, n'ayez plus</div>
+        <div class="line" data-start="72.00" data-end="74.00"><span class="time">[1:12]</span>de peur Dieu</div>
+        <div class="line" data-start="74.00" data-end="77.00"><span class="time">[1:14]</span>m'a établi, je</div>
+        <div class="line" data-start="77.00" data-end="79.00"><span class="time">[1:17]</span>suis porteur de</div>
+        <div class="line" data-start="79.00" data-end="84.00"><span class="time">[1:19]</span>bonheur Dieu a tourné l'âme</div>
+        <div class="line" data-start="84.00" data-end="91.00"><span class="time">[1:24]</span>en lumière Dans la famille,</div>
+        <div class="line" data-start="91.00" data-end="94.00"><span class="time">[1:31]</span>il nous fait</div>
+        <div class="line" data-start="94.00" data-end="97.00"><span class="time">[1:34]</span>vivre Approchez-vous, venez</div>
+        <div class="line" data-start="97.00" data-end="102.00"><span class="time">[1:37]</span>dans sa douceur Le cœur restauré</div>
+        <div class="line" data-start="102.00" data-end="104.00"><span class="time">[1:42]</span>dans la grâce</div>
+        <div class="line" data-start="104.00" data-end="109.00"><span class="time">[1:44]</span>de mon sauveur Hâtez-vous, venez,</div>
+        <div class="line" data-start="109.00" data-end="114.00"><span class="time">[1:49]</span>ne tardez pas Dans le pays</div>
+        <div class="line" data-start="114.00" data-end="116.00"><span class="time">[1:54]</span>de Goshen, il nous</div>
+        <div class="line" data-start="116.00" data-end="120.00"><span class="time">[1:56]</span>attend là Venez</div>
+        <div class="line" data-start="120.00" data-end="123.00"><span class="time">[2:00]</span>à la table,</div>
+        <div class="line" data-start="123.00" data-end="125.00"><span class="time">[2:03]</span>goûtez sa bonté</div>
+        <div class="line" data-start="125.00" data-end="128.00"><span class="time">[2:05]</span>Tout ce qu'il a</div>
+        <div class="line" data-start="128.00" data-end="132.00"><span class="time">[2:08]</span>promis, il nous</div>
+        <div class="line" data-start="132.00" data-end="138.00"><span class="time">[2:12]</span>l'a donné Dieu a tourné</div>
+        <div class="line" data-start="138.00" data-end="141.00"><span class="time">[2:18]</span>l'âme en lumière</div>
+        <div class="line" data-start="141.00" data-end="144.00"><span class="time">[2:21]</span>Dans la famille,</div>
+        <div class="line" data-start="144.00" data-end="149.00"><span class="time">[2:24]</span>il nous fait vivre Approchez-vous, venez</div>
+        <div class="line" data-start="149.00" data-end="152.00"><span class="time">[2:29]</span>dans sa douceur</div>
+        <div class="line" data-start="152.00" data-end="156.00"><span class="time">[2:32]</span>Le cœur restauré dans la</div>
+        <div class="line" data-start="156.00" data-end="161.00"><span class="time">[2:36]</span>grâce de mon sauveur Joseph, notre</div>
+        <div class="line" data-start="161.00" data-end="167.00"><span class="time">[2:41]</span>frère dans l'éternité Son histoire nous guide</div>
+        <div class="line" data-start="167.00" data-end="170.00"><span class="time">[2:47]</span>vers la vérité Avec</div>
+        <div class="line" data-start="170.00" data-end="173.00"><span class="time">[2:50]</span>foi, nous marchons En</div>
+        <div class="line" data-start="173.00" data-end="175.00"><span class="time">[2:53]</span>lui, nous vivons</div>
+        <div class="line" data-start="175.00" data-end="182.00"><span class="time">[2:55]</span>Dans la lumière, unis pour toujours</div>
+        <div class="line" data-start="182.00" data-end="185.00"><span class="time">[3:02]</span>Nous chantons</div>
+        <div class="line" data-start="185.00" data-end="191.00"><span class="time">[3:05]</span>Dieu a tourné l'âme en</div>
+        <div class="line" data-start="191.00" data-end="194.00"><span class="time">[3:11]</span>lumière Dans la</div>
+        <div class="line" data-start="194.00" data-end="197.00"><span class="time">[3:14]</span>famille, il nous</div>
+        <div class="line" data-start="197.00" data-end="202.00"><span class="time">[3:17]</span>fait vivre Approchez-vous, venez dans sa</div>
+        <div class="line" data-start="202.00" data-end="205.00"><span class="time">[3:22]</span>douceur Le cœur</div>
+        <div class="line" data-start="205.00" data-end="209.00"><span class="time">[3:25]</span>restauré dans la grâce de mon sauveur</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

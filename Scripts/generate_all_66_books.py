@@ -76,8 +76,8 @@ BIBLE_BOOKS = [
 
 def count_existing_mp3s(book_code):
     """Compte les MP3 déjà générés pour un livre"""
-    project_root = Path(__file__).parent.parent
-    output_dir = project_root / f"Suno_Output/FR/{book_code}"
+    # Chemin absolu vers Suno_Output
+    output_dir = Path(r"G:\Mon Drive\01 BibleChantee\Suno_Output") / f"FR/{book_code}"
     if not output_dir.exists():
         return 0
     return len(list(output_dir.glob("*.mp3")))

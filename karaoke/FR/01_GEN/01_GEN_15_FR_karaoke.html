@@ -3,124 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 15 | Bible Chantee Karaoke</title>
+    <title>Genese 15 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 15</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 15 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_15_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="12.32" data-end="23.10"><span class="time">[0:12]</span>Dans la nuit tu m'appelais Abrand le craint point je suis</div>
-        <div class="line" data-start="23.10" data-end="35.28"><span class="time">[0:23]</span>là Mon bouclier ta récompense Je t'invite à croire en ma</div>
-        <div class="line" data-start="35.28" data-end="48.02"><span class="time">[0:35]</span>voix Regarde les étoiles contelées Comme la promesse que</div>
-        <div class="line" data-start="48.12" data-end="59.98"><span class="time">[0:48]</span>j'ai faite Ta descendance un peu blanche je m'as Je suis</div>
-        <div class="line" data-start="60.08" data-end="67.82"><span class="time">[1:00]</span>l'éternel je suis avec toi Dans l'ombre une frayeur massage</div>
-        <div class="line" data-start="67.92" data-end="80.06"><span class="time">[1:07]</span>Mets ta lumière au Seigneur éclaire Des générations un</div>
-        <div class="line" data-start="80.06" data-end="91.44"><span class="time">[1:20]</span>héritage Je te donne ce pays t'attends Regarde les étoiles</div>
-        <div class="line" data-start="91.54" data-end="103.96"><span class="time">[1:31]</span>contelées Comme la promesse que j'ai faite Ta descendance</div>
-        <div class="line" data-start="103.98" data-end="124.82"><span class="time">[1:43]</span>un peu blanche je m'as Je suis l'éternel je suis avec toi</div>
-        <div class="line" data-start="124.92" data-end="136.90"><span class="time">[2:04]</span>Quand l'obscurité s'étend sur le monde Je t'assure je suis</div>
-        <div class="line" data-start="137.00" data-end="146.86"><span class="time">[2:17]</span>là pour guider À travers les épreuves ma main t'entoure</div>
-        <div class="line" data-start="146.96" data-end="149.94"><span class="time">[2:26]</span>Je ferai alliance je ne t'abandonnerai jamais Regarde les</div>
-        <div class="line" data-start="149.94" data-end="158.42"><span class="time">[2:29]</span>étoiles contelées Comme la promesse que j'ai faite Ta descendance</div>
-        <div class="line" data-start="158.44" data-end="186.80"><span class="time">[2:38]</span>un peu blanche je m'as Je suis l'éternel je suis avec toi</div>
-        <div class="line" data-start="186.90" data-end="190.48"><span class="time">[3:06]</span>Dans chaque génération je suis fidèle Promesse éternelle</div>
-        <div class="line" data-start="190.20" data-end="194.24"><span class="time">[3:10]</span>je t'emmène Abrame marche avec moi Je suis l'éternel je</div>
-        <div class="line" data-start="194.34" data-end="198.00"><span class="time">[3:14]</span>suis ton roi Sous-titres réalisés par la communauté d'</div>
-        <div class="line" data-start="198.10" data-end="198.50"><span class="time">[3:18]</span>Amara.org</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="12.32" data-end="23.10"><span class="time">[0:12]</span>Dans la nuit, tu m'as appelée Abram, ne crains point, je</div>
+        <div class="line" data-start="23.10" data-end="35.28"><span class="time">[0:23]</span>suis là Mon bouclier, ta récompense Je t'invite à croire en</div>
+        <div class="line" data-start="35.28" data-end="48.12"><span class="time">[0:35]</span>ma voix Regarde les étoiles qu'on te lève Comme la promesse</div>
+        <div class="line" data-start="48.12" data-end="60.08"><span class="time">[0:48]</span>que j'ai faite Ta descendance, un peuple en chemin Je suis</div>
+        <div class="line" data-start="60.08" data-end="67.92"><span class="time">[1:00]</span>l'éternel, je suis avec toi Dans l'ombre, une frayeur m'assaille Mais</div>
+        <div class="line" data-start="67.92" data-end="80.06"><span class="time">[1:07]</span>ta lumière, ô Seigneur, est claire Des générations, un héritage</div>
+        <div class="line" data-start="80.06" data-end="91.54"><span class="time">[1:20]</span>Je te donne ce pays, ta terre Regarde les étoiles qu'on</div>
+        <div class="line" data-start="91.54" data-end="103.98"><span class="time">[1:31]</span>te lève Comme la promesse que j'ai faite Ta descendance, un</div>
+        <div class="line" data-start="103.98" data-end="124.92"><span class="time">[1:43]</span>peuple en chemin Je suis l'éternel, je suis avec toi Quand</div>
+        <div class="line" data-start="124.92" data-end="137.00"><span class="time">[2:04]</span>l'obscurité s'étend sur le monde Je t'assure, je suis là pour</div>
+        <div class="line" data-start="137.00" data-end="146.96"><span class="time">[2:17]</span>guider À travers les épreuves, ma main t'entoure Je ferai</div>
+        <div class="line" data-start="146.96" data-end="149.94"><span class="time">[2:26]</span>alliance, je ne t'abandonnerai jamais Regarde les étoiles qu'on te lève</div>
+        <div class="line" data-start="149.94" data-end="158.44"><span class="time">[2:29]</span>Comme la promesse que j'ai faite Ta descendance, un peuple en chemin</div>
+        <div class="line" data-start="158.44" data-end="186.90"><span class="time">[2:38]</span>Je suis l'éternel, je suis avec toi Dans chaque génération, je</div>
+        <div class="line" data-start="186.90" data-end="190.20"><span class="time">[3:06]</span>suis fidèle Ta promesse éternelle, je t'emmène Abram, marche avec moi</div>
+        <div class="line" data-start="190.20" data-end="194.24"><span class="time">[3:10]</span>Je suis l'éternel, je suis ton roi</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karaoke - Genese 2 - Le Jardin d'Eden</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a2360,#1a3a5c,#0a1628);min-height:100vh;color:#fff;display:flex;flex-direction:column;align-items:center;padding:20px}
+h1{color:#d4af37;margin-bottom:20px;font-size:2em;text-shadow:2px 2px 4px rgba(0,0,0,0.5)}
+.player{width:100%;max-width:800px;background:rgba(0,0,0,0.4);border-radius:15px;padding:20px;margin-bottom:20px}
+audio{width:100%}
+.time{text-align:center;color:#d4af37;margin:10px 0;font-size:1.1em}
+.lyrics{width:100%;max-width:800px;background:rgba(255,255,255,0.95);border-radius:15px;padding:30px;color:#333;font-size:1.15em;line-height:1.9;text-align:center;max-height:550px;overflow-y:auto}
+.couplet{padding:15px 20px;margin:10px 0;border-radius:12px;opacity:0.4;cursor:pointer;transition:all 0.3s ease;border-left:4px solid transparent}
+.couplet:hover{opacity:0.7;background:rgba(212,175,55,0.1)}
+.couplet.active{background:linear-gradient(135deg,rgba(212,175,55,0.2),rgba(245,214,112,0.15));color:#1a2360;font-weight:500;opacity:1;border-left:4px solid #d4af37;box-shadow:0 4px 20px rgba(212,175,55,0.2)}
+.couplet.past{opacity:0.5;color:#666}
+.couplet-num{display:inline-block;background:#d4af37;color:#1a2360;font-size:0.7em;padding:2px 8px;border-radius:10px;margin-bottom:8px;font-weight:bold}
+.controls{display:flex;gap:15px;justify-content:center;margin:15px 0}
+.controls button{background:#d4af37;color:#1a2360;border:none;padding:12px 25px;border-radius:25px;cursor:pointer;font-weight:bold;font-size:1em;transition:all 0.2s}
+.controls button:hover{background:#f5d670;transform:scale(1.05)}
+.info{margin-top:20px;color:#d4af37;font-size:0.9em;text-align:center;line-height:1.6}
+</style>
+</head>
+<body>
+<h1>Genese 2 - Le Jardin d'Eden</h1>
+<div class="player">
+    <audio id="audio" controls>
+        <source src="file:///C:/ScriptBible/bible-chantee/audio_v1/01_GEN/01_GEN_02_FR.mp3" type="audio/mpeg">
+    </audio>
+    <div class="time"><span id="current">0:00</span> / <span id="duration">0:00</span></div>
+    <div class="controls">
+        <button onclick="skip(-10)">-10s</button>
+        <button onclick="toggle()" id="playBtn">Play</button>
+        <button onclick="skip(10)">+10s</button>
+    </div>
+</div>
+<div class="lyrics" id="lyrics">
+
+    <div class="couplet" data-start="0" data-end="25">
+        <span class="couplet-num">INTRO</span><br>
+        Dans le silence d'un matin<br>
+        Les cieux et la terre par ta main<br>
+        Chaque etoile, chaque brise<br>
+        Tout est bon, tout te glorifie
+    </div>
+
+    <div class="couplet" data-start="25" data-end="45">
+        <span class="couplet-num">COUPLET 1</span><br>
+        Au septieme jour, repos divin<br>
+        Tu as vu que tout est bien<br>
+        Le jardin de l'Eden sanctifie<br>
+        La ou l'homme a ete cree
+    </div>
+
+    <div class="couplet" data-start="45" data-end="75">
+        <span class="couplet-num">REFRAIN</span><br>
+        O Createur, prends nos coeurs<br>
+        Dans la beaute de ta splendeur<br>
+        Nous nous tenons devant toi<br>
+        Dans le jardin ou tout commence en foi<br>
+        L'arbre de vie, notre espoir<br>
+        En toi, Seigneur, nous voulons croire
+    </div>
+
+    <div class="couplet" data-start="75" data-end="95">
+        <span class="couplet-num">PONT</span><br>
+        Dans chaque souffle, dans chaque chant<br>
+        Nous sommes unis<br>
+        Et nous te rendons<br>
+        De la poussiere, un etre vivant<br>
+        Souffle de vie, amour eclatant
+    </div>
+
+    <div class="couplet" data-start="95" data-end="120">
+        <span class="couplet-num">COUPLET 2</span><br>
+        Dans le jardin, tu as plante<br>
+        Des arbres d'amour, des fruits de liberte<br>
+        Un fleuve coule, source de grace<br>
+        Ta creation, douce et tendre, t'embrasse
+    </div>
+
+    <div class="couplet" data-start="120" data-end="150">
+        <span class="couplet-num">COUPLET 3</span><br>
+        L'homme et la femme, unis dans le lien<br>
+        Nus sans honte dans le dessin<br>
+        O Createur, prends nos coeurs<br>
+        Dans la beaute de ta splendeur
+    </div>
+
+    <div class="couplet" data-start="150" data-end="180">
+        <span class="couplet-num">REFRAIN</span><br>
+        Nous nous tenons devant toi<br>
+        Dans le jardin ou tout commence en foi<br>
+        L'arbre de vie, notre espoir<br>
+        En toi, Seigneur, nous voulons croire<br>
+        Dans chaque souffle, dans chaque chant<br>
+        Nous sommes unis, et nous te rendons
+    </div>
+
+    <div class="couplet" data-start="180" data-end="210">
+        <span class="couplet-num">COUPLET 4</span><br>
+        Dans la lumiere, nous marchons<br>
+        Main dans la main, dans la raison<br>
+        Que ton amour guide nos pas<br>
+        Dans ce jardin ou tu es la<br>
+        Nous te cherchons, o Dieu fidele
+    </div>
+
+    <div class="couplet" data-start="210" data-end="240">
+        <span class="couplet-num">PONT</span><br>
+        Dans chaque pleur, dans l'etincelle<br>
+        Rappelle-nous toujours ta voix<br>
+        Dans le jardin, Seigneur, fais-nous choix<br>
+        O Createur, prends nos coeurs<br>
+        Dans la beaute de ta splendeur
+    </div>
+
+    <div class="couplet" data-start="240" data-end="280">
+        <span class="couplet-num">REFRAIN FINAL</span><br>
+        Nous nous tenons devant toi<br>
+        Dans le jardin ou tout commence en foi<br>
+        L'arbre de vie, notre espoir<br>
+        En toi, Seigneur, nous voulons croire<br>
+        Dans chaque souffle, dans chaque chant<br>
+        Nous sommes unis, et nous te rendons
+    </div>
+
+    <div class="couplet" data-start="280" data-end="320">
+        <span class="couplet-num">OUTRO</span><br>
+        Dans le jardin de ta grace<br>
+        Nous trouvons paix, douce place<br>
+        O Createur, eternel amour<br>
+        Nous te louons<br>
+        Jour apres jour
+    </div>
+
+</div>
+<div class="info">
+    Bible Chantee - Karaoke Genese 2 - Le Jardin d'Eden<br>
+    Cliquez sur un couplet pour sauter | Espace = Play/Pause | Fleches = +/-10s
+</div>
+<script>
+const audio=document.getElementById('audio');
+const couplets=document.querySelectorAll('.couplet');
+const playBtn=document.getElementById('playBtn');
+const currentEl=document.getElementById('current');
+const durationEl=document.getElementById('duration');
+
+function fmt(s){return Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0')}
+
+audio.addEventListener('loadedmetadata',()=>durationEl.textContent=fmt(audio.duration));
+audio.addEventListener('timeupdate',()=>{
+    currentEl.textContent=fmt(audio.currentTime);
+    const t=audio.currentTime;
+    couplets.forEach(c=>{
+        const s=+c.dataset.start,e=+c.dataset.end;
+        c.classList.remove('active','past');
+        if(t>=s&&t<e){c.classList.add('active');c.scrollIntoView({behavior:'smooth',block:'center'})}
+        else if(t>=e)c.classList.add('past')
+    })
+});
+audio.addEventListener('play',()=>playBtn.textContent='Pause');
+audio.addEventListener('pause',()=>playBtn.textContent='Play');
+
+couplets.forEach(c=>c.addEventListener('click',()=>{audio.currentTime=+c.dataset.start;audio.play()}));
+
+function toggle(){audio.paused?audio.play():audio.pause()}
+function skip(n){audio.currentTime=Math.max(0,Math.min(audio.duration,audio.currentTime+n))}
+
+document.addEventListener('keydown',e=>{
+    if(e.code==='Space'){e.preventDefault();toggle()}
+    else if(e.code==='ArrowLeft')skip(-10);
+    else if(e.code==='ArrowRight')skip(10)
+});
+</script>
+</body>
+</html>

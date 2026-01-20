@@ -3,124 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 5 | Bible Chantee Karaoke</title>
+    <title>Genese 5 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 5</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 5 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_05_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="10.80" data-end="23.32"><span class="time">[0:10]</span>Dans le jardin tu as créé L'homme et la femme à ton image</div>
-        <div class="line" data-start="23.32" data-end="33.98"><span class="time">[0:23]</span>béni par ta main Notre héritage nous marchons Seigneux</div>
-        <div class="line" data-start="33.98" data-end="49.82"><span class="time">[0:33]</span>dans ta vérité A ta ressemblance nous sommes né Dans l'amour</div>
-        <div class="line" data-start="50.36" data-end="63.62"><span class="time">[0:50]</span>nous voulons marcher De génération en génération Nous chantons</div>
-        <div class="line" data-start="63.62" data-end="76.04"><span class="time">[1:03]</span>ta grande création Cette énoge dans la lumière Leur vie</div>
-        <div class="line" data-start="76.04" data-end="87.18"><span class="time">[1:16]</span>un récit de ta bonté Et nos marchards avec toi cher Père</div>
-        <div class="line" data-start="87.84" data-end="97.26"><span class="time">[1:27]</span>Unis par ta grâce nous voulons prier A ta ressemblance</div>
-        <div class="line" data-start="97.26" data-end="109.84"><span class="time">[1:37]</span>nous sommes né Dans l'amour nous voulons marcher De génération</div>
-        <div class="line" data-start="109.84" data-end="125.24"><span class="time">[1:49]</span>en génération Nous chantons ta grande création Noé un espoir</div>
-        <div class="line" data-start="125.24" data-end="136.82"><span class="time">[2:05]</span>dans la tempête Un futur une promesse à jamais Oh Seigneux</div>
-        <div class="line" data-start="136.82" data-end="160.76"><span class="time">[2:16]</span>nous te cherchons Qui ne nous parle Dans cette vision A</div>
-        <div class="line" data-start="173.66" data-end="197.92"><span class="time">[2:53]</span>ta ressemblance nous sommes né Dans l'amour nous voulons</div>
-        <div class="line" data-start="198.02" data-end="200.26"><span class="time">[3:18]</span>marcher De génération en génération Nous chantons ta grande</div>
-        <div class="line" data-start="212.84" data-end="217.40"><span class="time">[3:32]</span>création Dans chaque souffle chaque prière Nous te louons</div>
-        <div class="line" data-start="217.50" data-end="222.40"><span class="time">[3:37]</span>pour notre lumière A ta ressemblance nous sommes né Pour</div>
-        <div class="line" data-start="222.50" data-end="214.18"><span class="time">[3:42]</span>t'agoir notre cœur est engagé Ces paroles évoquent la création</div>
-        <div class="line" data-start="214.28" data-end="219.50"><span class="time">[3:34]</span>et la continité de la vie Selon le plan divin tout en restant</div>
-        <div class="line" data-start="219.50" data-end="221.14"><span class="time">[3:39]</span>fidèles au texte biblique</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="10.80" data-end="23.32"><span class="time">[0:10]</span>Dans le jardin, tu as créé l'homme et la femme</div>
+        <div class="line" data-start="23.32" data-end="33.98"><span class="time">[0:23]</span>à ton image Béni par ta main, notre héritage Nous</div>
+        <div class="line" data-start="33.98" data-end="50.36"><span class="time">[0:33]</span>marchons, Seigneur, dans ta vérité A ta ressemblance, nous sommes nés</div>
+        <div class="line" data-start="50.36" data-end="63.62"><span class="time">[0:50]</span>Dans l'amour, nous voulons marcher De génération en génération Nous chantons</div>
+        <div class="line" data-start="63.62" data-end="76.04"><span class="time">[1:03]</span>ta grande création Seth, dans la lumière Leur vie, un</div>
+        <div class="line" data-start="76.04" data-end="87.84"><span class="time">[1:16]</span>récit de ta bonté Hénoch marcha avec toi, cher Père</div>
+        <div class="line" data-start="87.84" data-end="97.26"><span class="time">[1:27]</span>Unis par ta grâce, nous voulons prier A ta ressemblance,</div>
+        <div class="line" data-start="97.26" data-end="109.84"><span class="time">[1:37]</span>nous sommes nés Dans l'amour, nous voulons marcher De génération en</div>
+        <div class="line" data-start="109.84" data-end="125.24"><span class="time">[1:49]</span>génération Nous chantons ta grande création Noé, un espoir dans la</div>
+        <div class="line" data-start="125.24" data-end="136.82"><span class="time">[2:05]</span>tempête Un futur, une promesse à jamais Ô Seigneur, nous</div>
+        <div class="line" data-start="136.82" data-end="173.66"><span class="time">[2:16]</span>te cherchons Guide nos pas Dans cette vision A ta</div>
+        <div class="line" data-start="173.66" data-end="198.02"><span class="time">[2:53]</span>ressemblance, nous sommes nés Dans l'amour, nous voulons marcher De</div>
+        <div class="line" data-start="198.02" data-end="212.84"><span class="time">[3:18]</span>génération en génération Nous chantons ta grande création Dans chaque</div>
+        <div class="line" data-start="212.84" data-end="217.50"><span class="time">[3:32]</span>souffle Chaque prière Nous te louons Pour notre lumière A</div>
+        <div class="line" data-start="217.50" data-end="222.50"><span class="time">[3:37]</span>ta ressemblance, nous sommes nés Pour ta gloire, notre cœur</div>
+        <div class="line" data-start="222.50" data-end="214.28"><span class="time">[3:42]</span>est engagé Ces paroles évoquent la création et la continuité de</div>
+        <div class="line" data-start="214.28" data-end="219.50"><span class="time">[3:34]</span>la vie Selon le plan divin, tout en restant fidèles aux</div>
+        <div class="line" data-start="219.50" data-end="221.14"><span class="time">[3:39]</span>textes bibliques</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

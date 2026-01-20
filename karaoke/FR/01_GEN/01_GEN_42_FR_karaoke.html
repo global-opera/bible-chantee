@@ -3,176 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 42 | Bible Chantee Karaoke</title>
+    <title>Genese 42 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 42</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 42 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_42_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="13.00" data-end="16.00"><span class="time">[0:13]</span>Dans la terre de Canaan</div>
-        <div class="line" data-start="16.00" data-end="19.00"><span class="time">[0:16]</span>L'angoisse s'installe</div>
-        <div class="line" data-start="19.00" data-end="22.00"><span class="time">[0:19]</span>J'accorvois son peuple la fin</div>
-        <div class="line" data-start="22.00" data-end="25.00"><span class="time">[0:22]</span>Qui les ronge</div>
-        <div class="line" data-start="25.00" data-end="28.00"><span class="time">[0:25]</span>Il dit à ses fils</div>
-        <div class="line" data-start="28.00" data-end="30.00"><span class="time">[0:28]</span>Ne restez pas là</div>
-        <div class="line" data-start="30.00" data-end="33.00"><span class="time">[0:30]</span>Il y a du blé en égypte</div>
-        <div class="line" data-start="33.00" data-end="37.00"><span class="time">[0:33]</span>Allez, ne tardez pas</div>
-        <div class="line" data-start="39.00" data-end="42.00"><span class="time">[0:39]</span>Au Seigneur de Venom</div>
-        <div class="line" data-start="42.00" data-end="45.00"><span class="time">[0:42]</span>Enquête de ta grâce</div>
-        <div class="line" data-start="45.00" data-end="47.00"><span class="time">[0:45]</span>Dans l'ombre et la douleur</div>
-        <div class="line" data-start="47.00" data-end="50.00"><span class="time">[0:47]</span>Ta lumière nous embrasse</div>
-        <div class="line" data-start="50.00" data-end="53.00"><span class="time">[0:50]</span>En tant nos coeurs clients</div>
-        <div class="line" data-start="53.00" data-end="56.00"><span class="time">[0:53]</span>Notre besoin d'amour</div>
-        <div class="line" data-start="56.00" data-end="59.00"><span class="time">[0:56]</span>Au milieu de la famille</div>
-        <div class="line" data-start="59.00" data-end="62.00"><span class="time">[0:59]</span>Nous cherchons</div>
-        <div class="line" data-start="62.00" data-end="65.00"><span class="time">[1:02]</span>Dans ce coup</div>
-        <div class="line" data-start="68.00" data-end="70.00"><span class="time">[1:08]</span>Diffraire sans vaut</div>
-        <div class="line" data-start="70.00" data-end="73.00"><span class="time">[1:10]</span>Et Joseph les attend</div>
-        <div class="line" data-start="73.00" data-end="76.00"><span class="time">[1:13]</span>Reconnaissant leurs visages</div>
-        <div class="line" data-start="76.00" data-end="79.00"><span class="time">[1:16]</span>Il pleurent secret</div>
-        <div class="line" data-start="79.00" data-end="82.00"><span class="time">[1:19]</span>Vous êtes des espions</div>
-        <div class="line" data-start="82.00" data-end="85.00"><span class="time">[1:22]</span>Il leur dit tant de tremblant</div>
-        <div class="line" data-start="85.00" data-end="87.00"><span class="time">[1:25]</span>Mais dans son cœur</div>
-        <div class="line" data-start="87.00" data-end="88.00"><span class="time">[1:27]</span>L'espoir</div>
-        <div class="line" data-start="88.00" data-end="89.00"><span class="time">[1:28]</span>Comme un feu</div>
-        <div class="line" data-start="89.00" data-end="92.00"><span class="time">[1:29]</span>Prestené</div>
-        <div class="line" data-start="92.00" data-end="95.00"><span class="time">[1:32]</span>Au Seigneur de Venom</div>
-        <div class="line" data-start="95.00" data-end="98.00"><span class="time">[1:35]</span>Enquête de ta grâce</div>
-        <div class="line" data-start="98.00" data-end="101.00"><span class="time">[1:38]</span>Dans l'ombre et la douleur</div>
-        <div class="line" data-start="101.00" data-end="104.00"><span class="time">[1:41]</span>Ta lumière nous embrasse</div>
-        <div class="line" data-start="104.00" data-end="107.00"><span class="time">[1:44]</span>En tant nos coeurs clients</div>
-        <div class="line" data-start="107.00" data-end="110.00"><span class="time">[1:47]</span>Notre besoin d'amour</div>
-        <div class="line" data-start="110.00" data-end="112.00"><span class="time">[1:50]</span>Au milieu de la famille</div>
-        <div class="line" data-start="112.00" data-end="115.00"><span class="time">[1:52]</span>Nous cherchons</div>
-        <div class="line" data-start="115.00" data-end="118.00"><span class="time">[1:55]</span>Dans ce coup</div>
-        <div class="line" data-start="121.00" data-end="124.00"><span class="time">[2:01]</span>Tu es le dieu des promesses</div>
-        <div class="line" data-start="124.00" data-end="127.00"><span class="time">[2:04]</span>Le refus des âmes</div>
-        <div class="line" data-start="127.00" data-end="130.00"><span class="time">[2:07]</span>Quand la peur nous assaille</div>
-        <div class="line" data-start="130.00" data-end="133.00"><span class="time">[2:10]</span>Tu es notre flamme</div>
-        <div class="line" data-start="133.00" data-end="135.00"><span class="time">[2:13]</span>Comme j'acombe nous pleurons</div>
-        <div class="line" data-start="135.00" data-end="139.00"><span class="time">[2:15]</span>Pour nos frères perdus</div>
-        <div class="line" data-start="139.00" data-end="141.00"><span class="time">[2:19]</span>Mais dans cet épreuve</div>
-        <div class="line" data-start="141.00" data-end="147.00"><span class="time">[2:21]</span>T'as m'un ou conduit</div>
-        <div class="line" data-start="147.00" data-end="150.00"><span class="time">[2:27]</span>Leur sac se remplisse</div>
-        <div class="line" data-start="150.00" data-end="153.00"><span class="time">[2:30]</span>L'argent leur est rendu</div>
-        <div class="line" data-start="153.00" data-end="156.00"><span class="time">[2:33]</span>Un qui est il s'interroge</div>
-        <div class="line" data-start="156.00" data-end="159.00"><span class="time">[2:36]</span>Que fait Dieu pour nous</div>
-        <div class="line" data-start="159.00" data-end="162.00"><span class="time">[2:39]</span>Mais dans le silence</div>
-        <div class="line" data-start="162.00" data-end="165.00"><span class="time">[2:42]</span>Une voix leur muremure</div>
-        <div class="line" data-start="165.00" data-end="168.00"><span class="time">[2:45]</span>Je suis avec vous</div>
-        <div class="line" data-start="168.00" data-end="173.00"><span class="time">[2:48]</span>Même dans la vingt-uil</div>
-        <div class="line" data-start="173.00" data-end="176.00"><span class="time">[2:53]</span>C'est la nous-benau</div>
-        <div class="line" data-start="176.00" data-end="179.00"><span class="time">[2:56]</span>Enquête de ta grâce</div>
-        <div class="line" data-start="179.00" data-end="182.00"><span class="time">[2:59]</span>Dans l'ombre et la douleur</div>
-        <div class="line" data-start="182.00" data-end="185.00"><span class="time">[3:02]</span>Ta lumière nous embrasse</div>
-        <div class="line" data-start="185.00" data-end="188.00"><span class="time">[3:05]</span>En tant nos coeurs clients</div>
-        <div class="line" data-start="188.00" data-end="191.00"><span class="time">[3:08]</span>Notre besoin d'amour</div>
-        <div class="line" data-start="191.00" data-end="193.00"><span class="time">[3:11]</span>Au milieu de la famille</div>
-        <div class="line" data-start="193.00" data-end="196.00"><span class="time">[3:13]</span>Nous cherchons</div>
-        <div class="line" data-start="196.00" data-end="202.00"><span class="time">[3:16]</span>Dans ce coup</div>
-        <div class="line" data-start="202.00" data-end="205.00"><span class="time">[3:22]</span>Nous revenons au Dieu</div>
-        <div class="line" data-start="205.00" data-end="208.00"><span class="time">[3:25]</span>Avec foi ton trône</div>
-        <div class="line" data-start="208.00" data-end="210.00"><span class="time">[3:28]</span>Dans la détresse</div>
-        <div class="line" data-start="210.00" data-end="214.00"><span class="time">[3:30]</span>Tant l'amour nous couronne</div>
-        <div class="line" data-start="214.00" data-end="217.00"><span class="time">[3:34]</span>Dans ce renou un jour</div>
-        <div class="line" data-start="217.00" data-end="219.00"><span class="time">[3:37]</span>À l'ombre de ta croix</div>
-        <div class="line" data-start="219.00" data-end="222.00"><span class="time">[3:39]</span>Quarantois nous vivons</div>
-        <div class="line" data-start="222.00" data-end="225.00"><span class="time">[3:42]</span>Notre espoir</div>
-        <div class="line" data-start="225.00" data-end="232.00"><span class="time">[3:45]</span>Et ton trône</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="13.00" data-end="16.00"><span class="time">[0:13]</span>Dans la terre de</div>
+        <div class="line" data-start="16.00" data-end="19.00"><span class="time">[0:16]</span>Cana, l'angoisse s'installe Jacob</div>
+        <div class="line" data-start="19.00" data-end="22.00"><span class="time">[0:19]</span>voit son peuple, la faim</div>
+        <div class="line" data-start="22.00" data-end="25.00"><span class="time">[0:22]</span>qui les ronge</div>
+        <div class="line" data-start="25.00" data-end="28.00"><span class="time">[0:25]</span>Il dit à</div>
+        <div class="line" data-start="28.00" data-end="30.00"><span class="time">[0:28]</span>ses fils, ne</div>
+        <div class="line" data-start="30.00" data-end="33.00"><span class="time">[0:30]</span>restez pas là Il</div>
+        <div class="line" data-start="33.00" data-end="39.00"><span class="time">[0:33]</span>y a du blé</div>
+        <div class="line" data-start="39.00" data-end="42.00"><span class="time">[0:39]</span>en Égypte, allez, ne</div>
+        <div class="line" data-start="42.00" data-end="45.00"><span class="time">[0:42]</span>tardez pas Ô Seigneur,</div>
+        <div class="line" data-start="45.00" data-end="47.00"><span class="time">[0:45]</span>nous venons en quête de</div>
+        <div class="line" data-start="47.00" data-end="50.00"><span class="time">[0:47]</span>ta grâce Dans l'ombre et</div>
+        <div class="line" data-start="50.00" data-end="53.00"><span class="time">[0:50]</span>la douleur, ta lumière nous</div>
+        <div class="line" data-start="53.00" data-end="56.00"><span class="time">[0:53]</span>embrasse Sentant nos cœurs</div>
+        <div class="line" data-start="56.00" data-end="59.00"><span class="time">[0:56]</span>criant, notre besoin d'amour</div>
+        <div class="line" data-start="59.00" data-end="62.00"><span class="time">[0:59]</span>Au milieu de</div>
+        <div class="line" data-start="62.00" data-end="68.00"><span class="time">[1:02]</span>la famille,</div>
+        <div class="line" data-start="68.00" data-end="70.00"><span class="time">[1:08]</span>nous cherchons ton secours</div>
+        <div class="line" data-start="70.00" data-end="73.00"><span class="time">[1:10]</span>Dix frères s'en vont</div>
+        <div class="line" data-start="73.00" data-end="76.00"><span class="time">[1:13]</span>et Joseph les attend Reconnaissant</div>
+        <div class="line" data-start="76.00" data-end="79.00"><span class="time">[1:16]</span>leurs visages, ils</div>
+        <div class="line" data-start="79.00" data-end="82.00"><span class="time">[1:19]</span>pleurent en secret Vous</div>
+        <div class="line" data-start="82.00" data-end="85.00"><span class="time">[1:22]</span>êtes des espions, il leur</div>
+        <div class="line" data-start="85.00" data-end="87.00"><span class="time">[1:25]</span>dit en tremblant</div>
+        <div class="line" data-start="87.00" data-end="88.00"><span class="time">[1:27]</span>Mais dans</div>
+        <div class="line" data-start="88.00" data-end="89.00"><span class="time">[1:28]</span>son cœur,</div>
+        <div class="line" data-start="89.00" data-end="92.00"><span class="time">[1:29]</span>l'espoir comme</div>
+        <div class="line" data-start="92.00" data-end="95.00"><span class="time">[1:32]</span>un feu reste net</div>
+        <div class="line" data-start="95.00" data-end="98.00"><span class="time">[1:35]</span>Ô Seigneur, nous venons</div>
+        <div class="line" data-start="98.00" data-end="101.00"><span class="time">[1:38]</span>en quête de ta grâce</div>
+        <div class="line" data-start="101.00" data-end="104.00"><span class="time">[1:41]</span>Dans l'ombre et la douleur,</div>
+        <div class="line" data-start="104.00" data-end="107.00"><span class="time">[1:44]</span>ta lumière nous embrasse Sentant</div>
+        <div class="line" data-start="107.00" data-end="110.00"><span class="time">[1:47]</span>nos cœurs criant, notre</div>
+        <div class="line" data-start="110.00" data-end="112.00"><span class="time">[1:50]</span>besoin d'amour Au milieu</div>
+        <div class="line" data-start="112.00" data-end="115.00"><span class="time">[1:52]</span>de la famille,</div>
+        <div class="line" data-start="115.00" data-end="121.00"><span class="time">[1:55]</span>nous cherchons</div>
+        <div class="line" data-start="121.00" data-end="124.00"><span class="time">[2:01]</span>ton secours Tu es le</div>
+        <div class="line" data-start="124.00" data-end="127.00"><span class="time">[2:04]</span>Dieu des promesses,</div>
+        <div class="line" data-start="127.00" data-end="130.00"><span class="time">[2:07]</span>le refus des âmes Quand</div>
+        <div class="line" data-start="130.00" data-end="133.00"><span class="time">[2:10]</span>la peur nous</div>
+        <div class="line" data-start="133.00" data-end="135.00"><span class="time">[2:13]</span>assaille, tu es notre flamme</div>
+        <div class="line" data-start="135.00" data-end="139.00"><span class="time">[2:15]</span>Comme Jacob, nous pleurons</div>
+        <div class="line" data-start="139.00" data-end="141.00"><span class="time">[2:19]</span>pour nos frères perdus</div>
+        <div class="line" data-start="141.00" data-end="147.00"><span class="time">[2:21]</span>Mais dans cette épreuve,</div>
+        <div class="line" data-start="147.00" data-end="150.00"><span class="time">[2:27]</span>ta main nous conduit</div>
+        <div class="line" data-start="150.00" data-end="153.00"><span class="time">[2:30]</span>Leurs sacs se remplissent,</div>
+        <div class="line" data-start="153.00" data-end="156.00"><span class="time">[2:33]</span>l'argent leur est rendu Inquiets,</div>
+        <div class="line" data-start="156.00" data-end="159.00"><span class="time">[2:36]</span>ils s'interrogent, que fait</div>
+        <div class="line" data-start="159.00" data-end="162.00"><span class="time">[2:39]</span>Dieu pour nous Mais</div>
+        <div class="line" data-start="162.00" data-end="165.00"><span class="time">[2:42]</span>dans le silence, une</div>
+        <div class="line" data-start="165.00" data-end="168.00"><span class="time">[2:45]</span>voix leur murmure</div>
+        <div class="line" data-start="168.00" data-end="173.00"><span class="time">[2:48]</span>Je suis avec vous,</div>
+        <div class="line" data-start="173.00" data-end="176.00"><span class="time">[2:53]</span>même dans l'aventure Ô</div>
+        <div class="line" data-start="176.00" data-end="179.00"><span class="time">[2:56]</span>Seigneur, nous venons en</div>
+        <div class="line" data-start="179.00" data-end="182.00"><span class="time">[2:59]</span>quête de ta grâce Dans</div>
+        <div class="line" data-start="182.00" data-end="185.00"><span class="time">[3:02]</span>l'ombre et la douleur, ta</div>
+        <div class="line" data-start="185.00" data-end="188.00"><span class="time">[3:05]</span>lumière nous embrasse Sentant nos</div>
+        <div class="line" data-start="188.00" data-end="191.00"><span class="time">[3:08]</span>cœurs criant, notre besoin</div>
+        <div class="line" data-start="191.00" data-end="193.00"><span class="time">[3:11]</span>d'amour Au milieu de</div>
+        <div class="line" data-start="193.00" data-end="196.00"><span class="time">[3:13]</span>la famille, nous</div>
+        <div class="line" data-start="196.00" data-end="202.00"><span class="time">[3:16]</span>cherchons ton</div>
+        <div class="line" data-start="202.00" data-end="205.00"><span class="time">[3:22]</span>secours Nous revenons au</div>
+        <div class="line" data-start="205.00" data-end="208.00"><span class="time">[3:25]</span>Dieu, avec foi</div>
+        <div class="line" data-start="208.00" data-end="210.00"><span class="time">[3:28]</span>à ton trône</div>
+        <div class="line" data-start="210.00" data-end="214.00"><span class="time">[3:30]</span>Dans la détresse, ton amour</div>
+        <div class="line" data-start="214.00" data-end="217.00"><span class="time">[3:34]</span>nous couronne Danserons-nous un</div>
+        <div class="line" data-start="217.00" data-end="219.00"><span class="time">[3:37]</span>jour, à l'ombre de</div>
+        <div class="line" data-start="219.00" data-end="222.00"><span class="time">[3:39]</span>ta croix Car en</div>
+        <div class="line" data-start="222.00" data-end="225.00"><span class="time">[3:42]</span>toi, nous</div>
+        <div class="line" data-start="225.00" data-end="232.00"><span class="time">[3:45]</span>vivons, notre espoir est en toi</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

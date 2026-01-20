@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Karaoke Genese 1</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Segoe UI,sans-serif;background:linear-gradient(135deg,#1a2360,#1a3a5c,#0a1628);min-height:100vh;color:#fff;display:flex;flex-direction:column;align-items:center;padding:20px}
+h1{color:#d4af37;margin-bottom:20px;font-size:2em}
+.player{width:100%;max-width:800px;background:rgba(0,0,0,0.4);border-radius:15px;padding:20px;margin-bottom:20px}
+audio{width:100%}
+.lyrics{width:100%;max-width:800px;background:rgba(255,255,255,0.95);border-radius:15px;padding:30px;color:#333;font-size:1.2em;line-height:2;text-align:center}
+.line{padding:10px;margin:5px 0;border-radius:8px;opacity:0.5;cursor:pointer;transition:all 0.3s}
+.line:hover{opacity:0.8;background:rgba(212,175,55,0.2)}
+.line.active{background:linear-gradient(135deg,#d4af37,#f5d670);color:#1a2360;font-weight:bold;opacity:1;transform:scale(1.02)}
+.line.past{opacity:0.7;color:#666}
+.controls{display:flex;gap:10px;justify-content:center;margin:15px 0}
+.controls button{background:#d4af37;color:#1a2360;border:none;padding:10px 20px;border-radius:25px;cursor:pointer;font-weight:bold}
+</style>
+</head>
+<body>
+<h1>Genese 1 - Au Commencement</h1>
+<div class="player">
+<audio id="audio" controls><source src="file:///C:/ScriptBible/bible-chantee/audio_v1/01_GEN/01_GEN_01_FR.mp3" type="audio/mpeg"></audio>
+<div class="controls">
+<button onclick="audio.currentTime-=10">-10s</button>
+<button onclick="audio.paused?audio.play():audio.pause()">Play/Pause</button>
+<button onclick="audio.currentTime+=10">+10s</button>
+</div>
+</div>
+<div class="lyrics" id="lyrics">
+<div class="line" data-start="0" data-end="29">Au commencement, o Dieu, Tu as cree les cieux et la terre<br>Tout a ete forme dans l'obscurite, Ta lumiere a jailli, un souffle de vie</div>
+<div class="line" data-start="29" data-end="34">L'espoir s'est epanoui</div>
+<div class="line" data-start="34" data-end="62">Loue sois-tu, createur des cieux, Ta gloire eclaire nos yeux<br>Dans chaque etoile, dans chaque mer, Nous chantons Seigneur, ta lumiere est notre reine</div>
+<div class="line" data-start="62" data-end="74">Tu as dit que la lumiere soit, Et les tenebres ont fui sous ta voix<br>Le jour et la nuit tu as separe, Dans chaque matin ta grace renouvelee</div>
+<div class="line" data-start="74" data-end="101">Loue sois-tu, createur des cieux, Ta gloire eclaire nos yeux<br>Dans chaque etoile, dans chaque mer, Nous chantons Seigneur, ta lumiere est notre reine</div>
+<div class="line" data-start="101" data-end="122">Les eaux se rassemblent, la terre apparait<br>Les arbres en fleurs, la verdure est la<br>Les fruits abondent, ta bonte se deploie, Chaque creature chante Gloire a toi, roi des rois</div>
+<div class="line" data-start="122" data-end="150">Loue sois-tu, createur des cieux, Ta gloire eclaire nos yeux<br>Dans chaque etoile, dans chaque mer, Nous chantons Seigneur, ta lumiere est notre reine</div>
+<div class="line" data-start="150" data-end="162">Des luminaires brillent dans l'immensite<br>Le soleil, la lune pour notre clarte<br>Les poissons dans l'eau, les oiseaux dans le ciel, Tout est a sa place, tout est si essentiel</div>
+<div class="line" data-start="162" data-end="189">Loue sois-tu, createur des cieux, Ta gloire eclaire nos yeux<br>Dans chaque etoile, dans chaque mer, Nous chantons Seigneur, ta lumiere est notre reine</div>
+<div class="line" data-start="189" data-end="201">Faisons l'homme a ta ressemblance, Pour regner sur la terre dans l'esperance<br>A ton image nous sommes crees, Pour glorifier, pour aimer, pour adorer</div>
+<div class="line" data-start="201" data-end="235">Loue sois-tu, createur des cieux, Ta gloire eclaire nos yeux<br>Dans chaque etoile, dans chaque mer, Nous chantons Seigneur, ta lumiere est notre reine</div>
+</div>
+<script>
+const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
+audio.addEventListener('timeupdate',()=>{const t=audio.currentTime;lines.forEach(l=>{const s=+l.dataset.start,e=+l.dataset.end;l.classList.remove('active','past');if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}else if(t>=e)l.classList.add('past')})});
+lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=+l.dataset.start;audio.play()}));
+</script>
+</body>
+</html>

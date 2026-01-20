@@ -158,6 +158,72 @@
     return (s.length === 1) ? ('0'+s) : s;
   }
 
+  function padChapterForFilename(ch) {
+    var n = Number(ch);
+    if (!Number.isFinite(n)) return String(ch);
+    if (n < 100) return String(n).padStart(2, "0");
+    return String(n).padStart(3, "0");
+  }
+
+  function resolveBookKey(bookCode) {
+    var bc = String(bookCode || "").trim().toUpperCase();
+
+    // Déjà au bon format: "01_GEN"
+    if (/^\d{2}_[A-Z0-9]+$/.test(bc)) return bc;
+
+    // Essaie de retrouver via une liste de livres déjà présente dans player.js
+    // Cherche un tableau global du type BOOKS / BOOK_LIST / books
+    var lists = [
+      window.BOOKS,
+      window.BOOK_LIST,
+      window.books,
+      (typeof BOOKS !== "undefined" ? BOOKS : null),
+      (typeof BOOK_LIST !== "undefined" ? BOOK_LIST : null),
+      (typeof books !== "undefined" ? books : null),
+    ].filter(Boolean);
+
+    // Normalise en une liste de codes "01_GEN"
+    var all = [];
+    for (var i = 0; i < lists.length; i++) {
+      var arr = lists[i];
+      if (!Array.isArray(arr)) continue;
+      for (var j = 0; j < arr.length; j++) {
+        var it = arr[j];
+        if (!it) continue;
+
+        // cas: string "01_GEN"
+        if (typeof it === "string" && /^\d{2}_[A-Z0-9]+$/.test(it.toUpperCase())) {
+          all.push(it.toUpperCase());
+          continue;
+        }
+
+        // cas: object { code:"01_GEN" } / { key:"01_GEN" } / { id:"01_GEN" } / { value:"01_GEN" }
+        var cand =
+          (it.code || it.key || it.id || it.value || it.book || it.bookKey || "");
+        cand = String(cand).toUpperCase();
+        if (/^\d{2}_[A-Z0-9]+$/.test(cand)) all.push(cand);
+      }
+    }
+
+    // Si bookCode = "01" → match sur préfixe
+    if (/^\d{2}$/.test(bc)) {
+      for (var k = 0; k < all.length; k++) {
+        if (all[k].slice(0, 2) === bc) return all[k];
+      }
+    }
+
+    // Si bookCode = "GEN" → match sur suffixe
+    if (/^[A-Z0-9]{3,}$/.test(bc)) {
+      for (var k2 = 0; k2 < all.length; k2++) {
+        var parts = all[k2].split("_");
+        if (parts[1] === bc) return all[k2];
+      }
+    }
+
+    // Fallback: on retourne ce qu'on a (ça fera un log clair)
+    return bc;
+  }
+
   function safeText(s){
     return (s == null) ? '' : String(s);
   }
@@ -207,8 +273,11 @@
 
   function getLyricsUrl(lang, bookCode, chapter){
     var L = normLang(lang);
-    var bc = String(bookCode||'').toUpperCase();
-    return './V3/lyrics/' + L + '/' + bc + '/' + bc + '_' + pad2(chapter) + '_' + L + '.txt';
+    var bk = resolveBookKey(bookCode);
+    var ch = padChapterForFilename(chapter);
+    var fileName = bk + "_" + ch + "_" + L + ".txt";
+    var relPath = "lyrics/" + L + "/" + bk + "/" + fileName;
+    return new URL(relPath, document.baseURI).toString();
   }
 
   // -------- AUDIO (tolérant) --------
@@ -618,19 +687,90 @@
     document.addEventListener('bc:lang', function(){ labelButtons(); }, true);
   }
 
+  function cleanLyricsV2(text){
+    // Nettoyer les tags Suno
+    return text
+      .split('\n')
+      .filter(function(line){
+        var trimmed = line.trim();
+        if(/^\[TITLE\]$/i.test(trimmed)) return false;
+        if(/^\[LYRICS\]$/i.test(trimmed)) return false;
+        if(/^\[STYLE\]$/i.test(trimmed)) return false;
+        if(/^\[TITLE\]/i.test(trimmed)) return false;
+        if(/^\[STYLE\]/i.test(trimmed)) return false;
+        return true;
+      })
+      .map(function(line){
+        return line
+          .replace(/\[Verse\s*\d*\]/gi, '')
+          .replace(/\[Chorus\]/gi, '')
+          .replace(/\[Bridge\]/gi, '')
+          .replace(/\[Pre-Chorus\]/gi, '')
+          .replace(/\[Intro\]/gi, '')
+          .replace(/\[Outro\]/gi, '')
+          .replace(/\[Spoken Word\]/gi, '')
+          .trim();
+      })
+      .filter(function(line){ return line.length > 0; })
+      .join('\n')
+      .trim();
+  }
+
   async function loadLyrics(lang, bookCode, chapter){
     var box = findLyricsBox();
     if(!box) return '';
 
-    var url = getLyricsUrl(lang, bookCode, chapter);
+    // Fallback sur variables globales si paramètres manquants
+    var L = normLang(lang || window.currentLang || window.CURRENT_LANG || getLang());
+    var bc = bookCode || window.currentBookCode || window.currentBook || window.selectedBook || window.bookCode;
+    var ch = chapter || window.currentChapter || window.selectedChapter || window.chapter || 1;
+
+    // Check if V1/V2 system is active (for lecteur.html or pages with version toggle)
+    var currentVersion = 'v2'; // Default to V2 (new behavior)
+    try {
+      if(typeof window.currentVersion !== 'undefined'){
+        currentVersion = window.currentVersion;
+      }
+    } catch(e){}
+
+    // V1: Show message pointing to V2
+    if(L === 'FR' && String(currentVersion).toLowerCase() === 'v1'){
+      box.innerHTML = '<div style="text-align: center; padding: 40px; color: #F5CB42; font-size: 18px;">🎵 Paroles disponibles en V2</div>';
+      return '';
+    }
+
+    // V2: Fetch and display cleaned lyrics
+    var url = getLyricsUrl(L, bc, ch);
+
     try{
-      var r = await fetch(url, { cache:'no-store' });
-      if(!r.ok) throw new Error('HTTP '+r.status);
-      var t = await r.text();
-      setBoxText(box, t);
-      return t;
+      var res = await fetch(url, { cache:'no-store' });
+
+      var ct = (res.headers.get("content-type") || "").toLowerCase();
+      console.log("[LYRICS V2] URL:", url, "STATUS:", res.status, res.statusText, "CT:", ct);
+
+      if(!res.ok) throw new Error('HTTP ' + res.status + ' ' + res.statusText);
+
+      var text = await res.text();
+
+      // Si le serveur renvoie du HTML (listing de dossier / 404 custom), on bloque
+      if(text && text.trim().startsWith("<")){
+        throw new Error("HTML reçu au lieu d'un .txt (chemin incorrect)");
+      }
+
+      // Clean V2 lyrics (remove Suno tags)
+      var cleaned = cleanLyricsV2(text);
+      setBoxText(box, cleaned);
+      return cleaned;
+
     }catch(e){
-      setBoxText(box, '—');
+      console.error("[LYRICS V2] Failed to fetch:", e, url);
+
+      // If V2 lyrics not available, show waiting message
+      if(L === 'FR' && String(currentVersion).toLowerCase() === 'v2'){
+        box.innerHTML = '<div style="text-align: center; padding: 40px; color: #F5CB42; font-size: 18px;">⏳ Paroles V2 bientôt disponibles<br><small style="color: #999; font-size: 14px;">' + String(e.message || e) + '</small></div>';
+      } else {
+        setBoxText(box, '—');
+      }
       return '';
     }
   }
@@ -878,6 +1018,8 @@
   };
 
 })();
+
+
 
 
 

@@ -3,136 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 2 | Bible Chantee Karaoke</title>
+    <title>Genese 2 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 2</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 2 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_02_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="0.10" data-end="33.28"><span class="time">[0:00]</span>... Dans le silence d'un matin, Les cieux et la terre par</div>
-        <div class="line" data-start="33.28" data-end="39.98"><span class="time">[0:33]</span>ta main, Chaque étoile, chaque prise, Tout est bon, tout</div>
-        <div class="line" data-start="40.20" data-end="46.86"><span class="time">[0:40]</span>glorifie Au septième jour, repos divin, Tu as vu que tout</div>
-        <div class="line" data-start="46.86" data-end="54.12"><span class="time">[0:46]</span>est bien Le jardin d'Eden, sanctifié Là où l'homme a été</div>
-        <div class="line" data-start="54.12" data-end="63.34"><span class="time">[0:54]</span>créé Au créateur, en nos coeurs Dans la beauté de ta splendeur</div>
-        <div class="line" data-start="63.34" data-end="69.62"><span class="time">[1:03]</span>Nous nous tenons devant toi Dans le jardin où tout commence</div>
-        <div class="line" data-start="69.62" data-end="75.76"><span class="time">[1:09]</span>en foi L'arbre de vie, notre espoir En toi, Seigneur, nous</div>
-        <div class="line" data-start="75.76" data-end="81.12"><span class="time">[1:15]</span>voulons croire Dans chaque souffle, dans chaque chant Nous</div>
-        <div class="line" data-start="81.12" data-end="90.34"><span class="time">[1:21]</span>sommes unis Et nous te rendons De la poussière, un être</div>
-        <div class="line" data-start="90.34" data-end="96.94"><span class="time">[1:30]</span>vivant Souffle de vie, amour éclatant Dans le jardin, tu</div>
-        <div class="line" data-start="96.94" data-end="102.20"><span class="time">[1:36]</span>as planté Des arbres d'amour, des fruits de liberté Un</div>
-        <div class="line" data-start="102.20" data-end="107.58"><span class="time">[1:42]</span>fleuve coule, source de grâce Ta création, douce et tendre,</div>
-        <div class="line" data-start="107.68" data-end="112.12"><span class="time">[1:47]</span>t'embrasse L'homme et la femme, unis dans le lien Musée</div>
-        <div class="line" data-start="112.74" data-end="120.38"><span class="time">[1:52]</span>sans honte, dans le dessin Au créateur, en nos coeurs Dans</div>
-        <div class="line" data-start="120.38" data-end="127.42"><span class="time">[2:00]</span>la beauté de ta splendeur Nous nous tenons devant toi Dans</div>
-        <div class="line" data-start="127.42" data-end="132.66"><span class="time">[2:07]</span>le jardin où tout commence en foi L'arbre de vie, notre</div>
-        <div class="line" data-start="132.66" data-end="138.18"><span class="time">[2:12]</span>espoir En toi, Seigneur, nous voulons croire Dans chaque</div>
-        <div class="line" data-start="138.18" data-end="144.70"><span class="time">[2:18]</span>souffle, dans chaque chant Nous sommes unis Et nous te</div>
-        <div class="line" data-start="144.70" data-end="152.78"><span class="time">[2:24]</span>rendons Dans la lumière, nous marchons Mains dans la main,</div>
-        <div class="line" data-start="152.98" data-end="159.88"><span class="time">[2:32]</span>dans l'horizon Que ton amour guide nos pas Dans ce jardin</div>
-        <div class="line" data-start="159.88" data-end="165.96"><span class="time">[2:39]</span>où tu es là Nous te cherchons, oh Dieu fidèle Dans chaque</div>
-        <div class="line" data-start="165.96" data-end="172.50"><span class="time">[2:45]</span>pleur, dans l'étincelle Rappele-nous toujours ta voix Dans</div>
-        <div class="line" data-start="172.50" data-end="179.40"><span class="time">[2:52]</span>le jardin, Seigneur, fais-nous choix Au créateur, en nos</div>
-        <div class="line" data-start="179.50" data-end="185.12"><span class="time">[2:59]</span>coeurs Dans la beauté de ta splendeur Nous nous tenons</div>
-        <div class="line" data-start="185.12" data-end="190.74"><span class="time">[3:05]</span>devant toi Dans le jardin où tout commence en foi L'arbre</div>
-        <div class="line" data-start="191.28" data-end="197.04"><span class="time">[3:11]</span>de vie, notre espoir En toi, Seigneur, nous voulons croire</div>
-        <div class="line" data-start="197.04" data-end="202.46"><span class="time">[3:17]</span>Dans chaque souffle, dans chaque chant Nous sommes unis</div>
-        <div class="line" data-start="203.20" data-end="212.18"><span class="time">[3:23]</span>Et nous te rendons Dans le jardin de ta grâce Nous trouvons</div>
-        <div class="line" data-start="212.18" data-end="218.74"><span class="time">[3:32]</span>paix, d'où se place Au créateur, éternel amour Nous te</div>
-        <div class="line" data-start="218.74" data-end="223.22"><span class="time">[3:38]</span>louons jour après jour</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="0.10" data-end="33.28"><span class="time">[0:00]</span>Dans le silence d'un matin Dans le silence d'un matin Les</div>
+        <div class="line" data-start="33.28" data-end="40.20"><span class="time">[0:33]</span>cieux et la terre par ta main Chaque étoile, chaque</div>
+        <div class="line" data-start="40.20" data-end="46.86"><span class="time">[0:40]</span>brise Tout est bon, tout te glorifie Au septième jour, repos</div>
+        <div class="line" data-start="46.86" data-end="54.12"><span class="time">[0:46]</span>divin Tu as vu que tout est bien le jardin</div>
+        <div class="line" data-start="54.12" data-end="63.34"><span class="time">[0:54]</span>d'Éden sanctifié Là où l'homme a été créé Ô Créateur, prends nos</div>
+        <div class="line" data-start="63.34" data-end="69.62"><span class="time">[1:03]</span>cœurs Dans la beauté de ta splendeur Nous nous tenons devant</div>
+        <div class="line" data-start="69.62" data-end="75.76"><span class="time">[1:09]</span>toi Dans le jardin où tout commence en foi L'arbre de</div>
+        <div class="line" data-start="75.76" data-end="81.12"><span class="time">[1:15]</span>vie, notre espoir En toi, Seigneur, nous voulons croire Dans chaque</div>
+        <div class="line" data-start="81.12" data-end="90.34"><span class="time">[1:21]</span>souffle, dans chaque chant Nous sommes unis Et nous te</div>
+        <div class="line" data-start="90.34" data-end="96.94"><span class="time">[1:30]</span>rendons De la poussière, un être vivant Souffle de vie,</div>
+        <div class="line" data-start="96.94" data-end="102.20"><span class="time">[1:36]</span>amour éclatant Dans le jardin, tu as planté Des arbres</div>
+        <div class="line" data-start="102.20" data-end="107.68"><span class="time">[1:42]</span>d'amour, des fruits de liberté Un fleuve coule, source de grâce</div>
+        <div class="line" data-start="107.68" data-end="112.74"><span class="time">[1:47]</span>Ta création, douce et tendre, t'embrasse L'homme et la femme,</div>
+        <div class="line" data-start="112.74" data-end="120.38"><span class="time">[1:52]</span>unis dans le lien Nus sans honte dans le dessein Ô</div>
+        <div class="line" data-start="120.38" data-end="127.42"><span class="time">[2:00]</span>Créateur, prends nos cœurs Dans la beauté de ta splendeur Nous</div>
+        <div class="line" data-start="127.42" data-end="132.66"><span class="time">[2:07]</span>nous tenons devant toi Dans le jardin où tout commence</div>
+        <div class="line" data-start="132.66" data-end="138.18"><span class="time">[2:12]</span>en foi L'arbre de vie, notre espoir En toi, Seigneur,</div>
+        <div class="line" data-start="138.18" data-end="144.70"><span class="time">[2:18]</span>nous voulons croire Dans chaque souffle, dans chaque chant Nous</div>
+        <div class="line" data-start="144.70" data-end="152.98"><span class="time">[2:24]</span>sommes unis Et nous te rendons Dans la lumière, nous marchons</div>
+        <div class="line" data-start="152.98" data-end="159.88"><span class="time">[2:32]</span>Main dans la main, dans la raison Que ton amour guide</div>
+        <div class="line" data-start="159.88" data-end="165.96"><span class="time">[2:39]</span>nos pas Dans ce jardin où tu es là Nous te</div>
+        <div class="line" data-start="165.96" data-end="172.50"><span class="time">[2:45]</span>cherchons, ô Dieu fidèle dans chaque pleur, dans l'étincelle Rappelle-nous toujours</div>
+        <div class="line" data-start="172.50" data-end="179.50"><span class="time">[2:52]</span>ta voix Dans le jardin, Seigneur, guide notre choix Ô</div>
+        <div class="line" data-start="179.50" data-end="185.12"><span class="time">[2:59]</span>Créateur, prends nos cœurs Dans la beauté de ta splendeur</div>
+        <div class="line" data-start="185.12" data-end="191.28"><span class="time">[3:05]</span>Nous nous tenons devant toi Dans le jardin où tout commence</div>
+        <div class="line" data-start="191.28" data-end="197.04"><span class="time">[3:11]</span>en foi L'arbre de vie, notre espoir En toi, Seigneur, nous</div>
+        <div class="line" data-start="197.04" data-end="203.20"><span class="time">[3:17]</span>voulons croire Dans chaque souffle, dans chaque chant Nous sommes</div>
+        <div class="line" data-start="203.20" data-end="212.18"><span class="time">[3:23]</span>unis Et nous te rendons Dans le jardin de ta grâce</div>
+        <div class="line" data-start="212.18" data-end="218.74"><span class="time">[3:32]</span>Nous trouvons paix, douce place Ô Créateur, éternel amour Nous</div>
+        <div class="line" data-start="218.74" data-end="223.22"><span class="time">[3:38]</span>te louons Jour après jour</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

@@ -3,134 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 41 | Bible Chantee Karaoke</title>
+    <title>Genese 41 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 41</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 41 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_41_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="14.00" data-end="20.00"><span class="time">[0:14]</span>Sur les rives du fleuve, un rêve séveille</div>
-        <div class="line" data-start="20.00" data-end="26.00"><span class="time">[0:20]</span>Farah envoie les vaches, belles sont pareilles</div>
-        <div class="line" data-start="26.00" data-end="31.00"><span class="time">[0:26]</span>Cette grâce pleine de vie, dans ce soule ciel</div>
-        <div class="line" data-start="31.00" data-end="37.00"><span class="time">[0:31]</span>Mais derrière l'ombre la famille de la baie</div>
-        <div class="line" data-start="37.00" data-end="42.00"><span class="time">[0:37]</span>Au Seigneur, tu es notre guide</div>
-        <div class="line" data-start="42.00" data-end="47.00"><span class="time">[0:42]</span>Dans la bonance et les preuves du État</div>
-        <div class="line" data-start="47.00" data-end="53.00"><span class="time">[0:47]</span>Dans le nous-sagesse et de nous savoir</div>
-        <div class="line" data-start="53.00" data-end="60.00"><span class="time">[0:53]</span>Dans chaque saison notre espoir</div>
-        <div class="line" data-start="60.00" data-end="65.00"><span class="time">[1:00]</span>J'oseph le rêve à peuler dans la nuit</div>
-        <div class="line" data-start="65.00" data-end="68.00"><span class="time">[1:05]</span>Il dit ce n'est pas moi</div>
-        <div class="line" data-start="68.00" data-end="74.00"><span class="time">[1:08]</span>Mais Dieu qui conduit les années de joie</div>
-        <div class="line" data-start="74.00" data-end="82.00"><span class="time">[1:14]</span>Suivi de l'absence prépare nos coeurs à la confiance</div>
-        <div class="line" data-start="82.00" data-end="87.00"><span class="time">[1:22]</span>Dans ce pauvre Seigneur, tu es notre guide</div>
-        <div class="line" data-start="87.00" data-end="92.00"><span class="time">[1:27]</span>Dans la bonance et les preuves du État</div>
-        <div class="line" data-start="92.00" data-end="98.00"><span class="time">[1:32]</span>Dans le nous-sagesse et de nous savoir</div>
-        <div class="line" data-start="98.00" data-end="105.00"><span class="time">[1:38]</span>Dans chaque saison notre espoir</div>
-        <div class="line" data-start="105.00" data-end="110.00"><span class="time">[1:45]</span>Quand le pain se fera que la terre pleure</div>
-        <div class="line" data-start="110.00" data-end="116.00"><span class="time">[1:50]</span>Nous courrons vers toi Seigneur, notre lieu</div>
-        <div class="line" data-start="116.00" data-end="121.00"><span class="time">[1:56]</span>Comme Joseph nous rassemblerons</div>
-        <div class="line" data-start="121.00" data-end="130.00"><span class="time">[2:01]</span>Les grains de ta grâce nous nous appuyerons</div>
-        <div class="line" data-start="130.00" data-end="135.00"><span class="time">[2:10]</span>Au Seigneur, tu es notre guide</div>
-        <div class="line" data-start="135.00" data-end="139.00"><span class="time">[2:15]</span>Dans la bonance et les preuves du État</div>
-        <div class="line" data-start="139.00" data-end="147.00"><span class="time">[2:19]</span>Dans le nous-sagesse et de nous savoir</div>
-        <div class="line" data-start="147.00" data-end="154.00"><span class="time">[2:27]</span>Dans chaque saison notre espoir</div>
-        <div class="line" data-start="154.00" data-end="159.00"><span class="time">[2:34]</span>Dans la famille et la bonance</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="14.00" data-end="20.00"><span class="time">[0:14]</span>Sur les rives du fleuve Un rêve</div>
+        <div class="line" data-start="20.00" data-end="26.00"><span class="time">[0:20]</span>s'éveille Pharaon voit les vaches Belles, sans pareil</div>
+        <div class="line" data-start="26.00" data-end="31.00"><span class="time">[0:26]</span>Cette grâce pleine de vie Danse sous le</div>
+        <div class="line" data-start="31.00" data-end="37.00"><span class="time">[0:31]</span>ciel Mais derrière l'ombre La famine de l'abeille</div>
+        <div class="line" data-start="37.00" data-end="42.00"><span class="time">[0:37]</span>Ô Seigneur, Tu es notre</div>
+        <div class="line" data-start="42.00" data-end="47.00"><span class="time">[0:42]</span>guide Dans l'abondance et l'épreuve Tu es</div>
+        <div class="line" data-start="47.00" data-end="53.00"><span class="time">[0:47]</span>là Donne-nous sagesse Aide-nous à voir Dans</div>
+        <div class="line" data-start="53.00" data-end="60.00"><span class="time">[0:53]</span>chaque saison Notre espoir Joseph,</div>
+        <div class="line" data-start="60.00" data-end="65.00"><span class="time">[1:00]</span>le rêveur Appelé dans la nuit</div>
+        <div class="line" data-start="65.00" data-end="68.00"><span class="time">[1:05]</span>Il dit ce n'est</div>
+        <div class="line" data-start="68.00" data-end="74.00"><span class="time">[1:08]</span>pas moi Mais Dieu qui conduit Les</div>
+        <div class="line" data-start="74.00" data-end="82.00"><span class="time">[1:14]</span>années de joie Suivies de l'absence Prépare nos cœurs</div>
+        <div class="line" data-start="82.00" data-end="87.00"><span class="time">[1:22]</span>A la confiance Ô Seigneur, Tu es</div>
+        <div class="line" data-start="87.00" data-end="92.00"><span class="time">[1:27]</span>notre guide Dans l'abondance et l'épreuve Tu</div>
+        <div class="line" data-start="92.00" data-end="98.00"><span class="time">[1:32]</span>es là Donne-nous sagesse Aide-nous à voir</div>
+        <div class="line" data-start="98.00" data-end="105.00"><span class="time">[1:38]</span>Dans chaque saison Notre espoir</div>
+        <div class="line" data-start="105.00" data-end="110.00"><span class="time">[1:45]</span>Quand le pain se fait rare Que</div>
+        <div class="line" data-start="110.00" data-end="116.00"><span class="time">[1:50]</span>la terre pleure Nous courrons vers toi Seigneur,</div>
+        <div class="line" data-start="116.00" data-end="121.00"><span class="time">[1:56]</span>notre lueur Comme Joseph Nous</div>
+        <div class="line" data-start="121.00" data-end="130.00"><span class="time">[2:01]</span>rassemblerons Les grains de ta grâce Nous nous</div>
+        <div class="line" data-start="130.00" data-end="135.00"><span class="time">[2:10]</span>appuierons Ô Seigneur, Tu es</div>
+        <div class="line" data-start="135.00" data-end="139.00"><span class="time">[2:15]</span>notre guide Dans l'abondance et l'épreuve Tu</div>
+        <div class="line" data-start="139.00" data-end="147.00"><span class="time">[2:19]</span>es là Donne-nous sagesse Aide-nous à voir</div>
+        <div class="line" data-start="147.00" data-end="154.00"><span class="time">[2:27]</span>Dans chaque saison Notre espoir</div>
+        <div class="line" data-start="154.00" data-end="159.00"><span class="time">[2:34]</span>Dans la famine et l'abondance</div>
         <div class="line" data-start="159.00" data-end="165.00"><span class="time">[2:39]</span>Nous chantons ta fidélité</div>
-        <div class="line" data-start="165.00" data-end="170.00"><span class="time">[2:45]</span>Avec foi, nous savons son</div>
-        <div class="line" data-start="170.00" data-end="177.00"><span class="time">[2:50]</span>Qu'à rentrer nous sommes unis</div>
+        <div class="line" data-start="165.00" data-end="170.00"><span class="time">[2:45]</span>Avec foi nous avançons</div>
+        <div class="line" data-start="170.00" data-end="177.00"><span class="time">[2:50]</span>Car en toi nous sommes unis</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

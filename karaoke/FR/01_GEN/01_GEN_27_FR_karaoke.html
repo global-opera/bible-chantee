@@ -3,142 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 27 | Bible Chantee Karaoke</title>
+    <title>Genese 27 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 27</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 27 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_27_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="14.00" data-end="20.00"><span class="time">[0:14]</span>Dans l'oubre de la fin, Isaac parle</div>
-        <div class="line" data-start="20.00" data-end="26.00"><span class="time">[0:20]</span>Sa voix tremble, son cœur s'égale</div>
-        <div class="line" data-start="26.00" data-end="32.00"><span class="time">[0:26]</span>On fise ses oeuvres, chasse le guillet bien</div>
-        <div class="line" data-start="32.00" data-end="38.00"><span class="time">[0:32]</span>Préparemment que je puisse prier</div>
-        <div class="line" data-start="38.00" data-end="45.00"><span class="time">[0:38]</span>Repais quand on se dessine</div>
-        <div class="line" data-start="45.00" data-end="50.00"><span class="time">[0:45]</span>J'accoblée toile les ritiers du divin</div>
-        <div class="line" data-start="50.00" data-end="56.00"><span class="time">[0:50]</span>Dans les mains du destin, choix fait</div>
-        <div class="line" data-start="56.00" data-end="64.00"><span class="time">[0:56]</span>Un coeur en proie, la lumière et la guerre</div>
-        <div class="line" data-start="64.00" data-end="70.00"><span class="time">[1:04]</span>Au dieu de promesse, entre notre chambre</div>
-        <div class="line" data-start="70.00" data-end="77.00"><span class="time">[1:10]</span>Que t'as bénédiction, courre chaque enfant</div>
-        <div class="line" data-start="77.00" data-end="83.00"><span class="time">[1:17]</span>Unis dans la foi, nous marchons vers toi</div>
-        <div class="line" data-start="83.00" data-end="91.00"><span class="time">[1:23]</span>Dans la lueur de ta grâce, nous sommes en émoire</div>
-        <div class="line" data-start="93.00" data-end="99.00"><span class="time">[1:33]</span>J'accopse approche le coeur lourd de Fardo</div>
-        <div class="line" data-start="99.00" data-end="106.00"><span class="time">[1:39]</span>La voie de son frère, le souffle de l'écho</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="14.00" data-end="20.00"><span class="time">[0:14]</span>Dans l'ombre de la faim, Isaac parle</div>
+        <div class="line" data-start="20.00" data-end="26.00"><span class="time">[0:20]</span>Sa voix tremble, son cœur s'égare</div>
+        <div class="line" data-start="26.00" data-end="32.00"><span class="time">[0:26]</span>Mon fils Ezeviel chasse le gibier Prépare un</div>
+        <div class="line" data-start="32.00" data-end="38.00"><span class="time">[0:32]</span>mets que je puisse prier Rebecca</div>
+        <div class="line" data-start="38.00" data-end="45.00"><span class="time">[0:38]</span>entend, un plan se dessine</div>
+        <div class="line" data-start="45.00" data-end="50.00"><span class="time">[0:45]</span>Jacob l'étoile, l'héritier du divin Dans les</div>
+        <div class="line" data-start="50.00" data-end="56.00"><span class="time">[0:50]</span>mains du destin, un choix à faire</div>
+        <div class="line" data-start="56.00" data-end="64.00"><span class="time">[0:56]</span>Un cœur emploie la lumière et la guerre</div>
+        <div class="line" data-start="64.00" data-end="70.00"><span class="time">[1:04]</span>Ô dieu de promesses, entend notre chant</div>
+        <div class="line" data-start="70.00" data-end="77.00"><span class="time">[1:10]</span>Que ta bénédiction couvre chaque enfant Unis dans</div>
+        <div class="line" data-start="77.00" data-end="83.00"><span class="time">[1:17]</span>la foi, nous marchons vers toi Dans</div>
+        <div class="line" data-start="83.00" data-end="93.00"><span class="time">[1:23]</span>la lueur de ta grâce, nous sommes en joie</div>
+        <div class="line" data-start="93.00" data-end="99.00"><span class="time">[1:33]</span>Jacob s'approche, le cœur lourd de fardeau La</div>
+        <div class="line" data-start="99.00" data-end="106.00"><span class="time">[1:39]</span>voix de son frère, le souffle de l'écho</div>
         <div class="line" data-start="106.00" data-end="112.00"><span class="time">[1:46]</span>Isaac aveugle, touche les mains du fils</div>
-        <div class="line" data-start="112.00" data-end="118.00"><span class="time">[1:52]</span>La ruse et l'amour, l'histoire se dis</div>
-        <div class="line" data-start="118.00" data-end="125.00"><span class="time">[1:58]</span>La bénédiction, courre comme une source</div>
-        <div class="line" data-start="125.00" data-end="131.00"><span class="time">[2:05]</span>Un héritage s'élépart à force</div>
-        <div class="line" data-start="131.00" data-end="137.00"><span class="time">[2:11]</span>Et survient la colère en son coeur</div>
-        <div class="line" data-start="137.00" data-end="140.00"><span class="time">[2:17]</span>Mais la promesse demeure</div>
-        <div class="line" data-start="140.00" data-end="144.00"><span class="time">[2:20]</span>Au éternelle notre sauveur</div>
-        <div class="line" data-start="144.00" data-end="150.00"><span class="time">[2:24]</span>Au vieux de promesse, entre notre chambre</div>
-        <div class="line" data-start="150.00" data-end="157.00"><span class="time">[2:30]</span>Que t'as bénédiction, courre chaque enfant</div>
-        <div class="line" data-start="157.00" data-end="160.00"><span class="time">[2:37]</span>Unis dans la foi, nous marchons vers toi</div>
-        <div class="line" data-start="160.00" data-end="170.00"><span class="time">[2:40]</span>Dans la lueur de ta grâce, nous sommes en émoire</div>
-        <div class="line" data-start="170.00" data-end="176.00"><span class="time">[2:50]</span>Tu es le maître des temps et des coeurs</div>
-        <div class="line" data-start="176.00" data-end="182.00"><span class="time">[2:56]</span>Dans chaque épreuve, tu es notre lure</div>
-        <div class="line" data-start="182.00" data-end="189.00"><span class="time">[3:02]</span>Quand la insurgie est que le mal s'approche</div>
-        <div class="line" data-start="189.00" data-end="197.00"><span class="time">[3:09]</span>Nous restons fermes sous ta main qui nous touche</div>
-        <div class="line" data-start="197.00" data-end="203.00"><span class="time">[3:17]</span>Au vieux de promesse, entre notre chambre</div>
-        <div class="line" data-start="203.00" data-end="210.00"><span class="time">[3:23]</span>Que t'as bénédiction, courre chaque enfant</div>
-        <div class="line" data-start="210.00" data-end="215.00"><span class="time">[3:30]</span>Unis dans la foi, nous marchons vers toi</div>
-        <div class="line" data-start="215.00" data-end="223.00"><span class="time">[3:35]</span>Dans la lueur de ta grâce, nous sommes en émoire</div>
-        <div class="line" data-start="223.00" data-end="230.00"><span class="time">[3:43]</span>Dans les champs de l'éternité, nous porterons ta vérité</div>
-        <div class="line" data-start="230.00" data-end="234.00"><span class="time">[3:50]</span>Que chaque amantendu soit vénipère</div>
-        <div class="line" data-start="234.00" data-end="239.00"><span class="time">[3:54]</span>La mouve que tu harais pendu</div>
+        <div class="line" data-start="112.00" data-end="118.00"><span class="time">[1:52]</span>La ruse et l'amour, l'histoire se tisse</div>
+        <div class="line" data-start="118.00" data-end="125.00"><span class="time">[1:58]</span>La bénédiction coule comme une source Un</div>
+        <div class="line" data-start="125.00" data-end="131.00"><span class="time">[2:05]</span>héritage scellé par ta force</div>
+        <div class="line" data-start="131.00" data-end="137.00"><span class="time">[2:11]</span>Essu revient, la colère en son</div>
+        <div class="line" data-start="137.00" data-end="140.00"><span class="time">[2:17]</span>cœur Mais la promesse demeure,</div>
+        <div class="line" data-start="140.00" data-end="144.00"><span class="time">[2:20]</span>ô éternel notre sauveur Ô</div>
+        <div class="line" data-start="144.00" data-end="150.00"><span class="time">[2:24]</span>dieu de promesses, entend notre chant Que ta</div>
+        <div class="line" data-start="150.00" data-end="157.00"><span class="time">[2:30]</span>bénédiction couvre chaque enfant Unis dans la foi,</div>
+        <div class="line" data-start="157.00" data-end="160.00"><span class="time">[2:37]</span>nous marchons vers toi Dans la lueur</div>
+        <div class="line" data-start="160.00" data-end="170.00"><span class="time">[2:40]</span>de ta grâce, nous sommes en joie Tu es</div>
+        <div class="line" data-start="170.00" data-end="176.00"><span class="time">[2:50]</span>le maître des temps et des cœurs</div>
+        <div class="line" data-start="176.00" data-end="182.00"><span class="time">[2:56]</span>Dans chaque épreuve, tu es notre lueur</div>
+        <div class="line" data-start="182.00" data-end="189.00"><span class="time">[3:02]</span>Quand la haine surgit et que le mal</div>
+        <div class="line" data-start="189.00" data-end="197.00"><span class="time">[3:09]</span>s'approche Nous restons fermes sous ta main qui nous</div>
+        <div class="line" data-start="197.00" data-end="203.00"><span class="time">[3:17]</span>touche Ô dieu de promesses, entend notre chant</div>
+        <div class="line" data-start="203.00" data-end="210.00"><span class="time">[3:23]</span>Que ta bénédiction couvre chaque enfant Unis dans</div>
+        <div class="line" data-start="210.00" data-end="215.00"><span class="time">[3:30]</span>la foi, nous marchons vers toi Dans</div>
+        <div class="line" data-start="215.00" data-end="223.00"><span class="time">[3:35]</span>la lueur de ta grâce, nous sommes en joie</div>
+        <div class="line" data-start="223.00" data-end="230.00"><span class="time">[3:43]</span>Dans les champs de l'éternité, nous porterons ta vérité Que</div>
+        <div class="line" data-start="230.00" data-end="234.00"><span class="time">[3:50]</span>chaque âme entendue soit bénie par</div>
+        <div class="line" data-start="234.00" data-end="239.00"><span class="time">[3:54]</span>l'amour que tu as répandu Oh-oh-oh-oh-oh-oh-oh-oh-oh-oh</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

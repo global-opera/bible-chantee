@@ -3,183 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 47 | Bible Chantee Karaoke</title>
+    <title>Genese 47 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 47</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 47 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_47_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="17.00" data-end="19.00"><span class="time">[0:17]</span>Dans le pain de gosene</div>
-        <div class="line" data-start="19.00" data-end="22.00"><span class="time">[0:19]</span>Où l'espoir est né</div>
-        <div class="line" data-start="22.00" data-end="24.00"><span class="time">[0:22]</span>Joseph a conduit</div>
-        <div class="line" data-start="24.00" data-end="26.00"><span class="time">[0:24]</span>Son peuple a protégé</div>
-        <div class="line" data-start="26.00" data-end="29.00"><span class="time">[0:26]</span>Des brebis et des beaux</div>
-        <div class="line" data-start="29.00" data-end="31.00"><span class="time">[0:29]</span>Ils sont venus</div>
-        <div class="line" data-start="31.00" data-end="33.00"><span class="time">[0:31]</span>Fuyant la famille</div>
-        <div class="line" data-start="33.00" data-end="37.00"><span class="time">[0:33]</span>La grâce a résus</div>
-        <div class="line" data-start="37.00" data-end="39.00"><span class="time">[0:37]</span>O seigneur</div>
-        <div class="line" data-start="39.00" data-end="41.00"><span class="time">[0:39]</span>Dans ta volonté</div>
-        <div class="line" data-start="41.00" data-end="44.00"><span class="time">[0:41]</span>Tu nous rie nos âmes</div>
-        <div class="line" data-start="44.00" data-end="46.00"><span class="time">[0:44]</span>Tu viens nous sauver</div>
-        <div class="line" data-start="46.00" data-end="48.00"><span class="time">[0:46]</span>Dans l'obscurité</div>
-        <div class="line" data-start="48.00" data-end="51.00"><span class="time">[0:48]</span>Ta lumière brillera</div>
-        <div class="line" data-start="51.00" data-end="54.00"><span class="time">[0:51]</span>À jamais nous chanteons</div>
-        <div class="line" data-start="54.00" data-end="57.00"><span class="time">[0:54]</span>Dans le pain de gosene</div>
-        <div class="line" data-start="57.00" data-end="59.00"><span class="time">[0:57]</span>Tu as promès</div>
-        <div class="line" data-start="59.00" data-end="61.00"><span class="time">[0:59]</span>Notre refuge</div>
-        <div class="line" data-start="61.00" data-end="63.00"><span class="time">[1:01]</span>Notre maison</div>
-        <div class="line" data-start="63.00" data-end="67.00"><span class="time">[1:03]</span>Farah on a vu</div>
-        <div class="line" data-start="67.00" data-end="69.00"><span class="time">[1:07]</span>Et a donné sa main</div>
-        <div class="line" data-start="69.00" data-end="71.00"><span class="time">[1:09]</span>À j'acobé ses fils</div>
-        <div class="line" data-start="71.00" data-end="73.00"><span class="time">[1:11]</span>Une terre de pain</div>
-        <div class="line" data-start="73.00" data-end="75.00"><span class="time">[1:13]</span>Dans les preuves</div>
-        <div class="line" data-start="75.00" data-end="77.00"><span class="time">[1:15]</span>Ils ont trouvé la paix</div>
-        <div class="line" data-start="77.00" data-end="81.00"><span class="time">[1:17]</span>Leur cœur emplie de foi</div>
-        <div class="line" data-start="81.00" data-end="85.00"><span class="time">[1:21]</span>Ils se sont avancés</div>
-        <div class="line" data-start="85.00" data-end="89.00"><span class="time">[1:25]</span>O seigneur</div>
-        <div class="line" data-start="89.00" data-end="91.00"><span class="time">[1:29]</span>Dans ta volonté</div>
-        <div class="line" data-start="91.00" data-end="93.00"><span class="time">[1:31]</span>Tu nous rie nos âmes</div>
-        <div class="line" data-start="93.00" data-end="95.00"><span class="time">[1:33]</span>Tu viens nous sauver</div>
-        <div class="line" data-start="95.00" data-end="97.00"><span class="time">[1:35]</span>Dans l'obscurité</div>
-        <div class="line" data-start="97.00" data-end="101.00"><span class="time">[1:37]</span>Ta lumière brillera</div>
-        <div class="line" data-start="101.00" data-end="104.00"><span class="time">[1:41]</span>À jamais nous chanteons</div>
-        <div class="line" data-start="104.00" data-end="106.00"><span class="time">[1:44]</span>Dans le pain de gosene</div>
-        <div class="line" data-start="106.00" data-end="108.00"><span class="time">[1:46]</span>Tu as promès</div>
-        <div class="line" data-start="108.00" data-end="110.00"><span class="time">[1:48]</span>Notre refuge</div>
-        <div class="line" data-start="110.00" data-end="114.00"><span class="time">[1:50]</span>Notre maison</div>
-        <div class="line" data-start="114.00" data-end="116.00"><span class="time">[1:54]</span>Nous sommes des bellies</div>
-        <div class="line" data-start="116.00" data-end="118.00"><span class="time">[1:56]</span>Sur cette terre</div>
-        <div class="line" data-start="118.00" data-end="120.00"><span class="time">[1:58]</span>Avec toi, s'égeur</div>
-        <div class="line" data-start="120.00" data-end="122.00"><span class="time">[2:00]</span>Nous faisons nos prières</div>
-        <div class="line" data-start="122.00" data-end="124.00"><span class="time">[2:02]</span>Quand la famille ne rorde</div>
-        <div class="line" data-start="124.00" data-end="126.00"><span class="time">[2:04]</span>Quand le cœur est lourd</div>
-        <div class="line" data-start="126.00" data-end="128.00"><span class="time">[2:06]</span>Nous trouvons en toi</div>
-        <div class="line" data-start="128.00" data-end="130.00"><span class="time">[2:08]</span>Un amour toujours</div>
-        <div class="line" data-start="130.00" data-end="132.00"><span class="time">[2:10]</span>O seigneur</div>
-        <div class="line" data-start="132.00" data-end="134.00"><span class="time">[2:12]</span>Dans ta volonté</div>
-        <div class="line" data-start="134.00" data-end="136.00"><span class="time">[2:14]</span>Tu nous rie nos âmes</div>
-        <div class="line" data-start="136.00" data-end="138.00"><span class="time">[2:16]</span>Tu viens nous sauver</div>
-        <div class="line" data-start="138.00" data-end="140.00"><span class="time">[2:18]</span>Dans l'obscurité</div>
-        <div class="line" data-start="140.00" data-end="142.00"><span class="time">[2:20]</span>Ta lumière brillera</div>
-        <div class="line" data-start="142.00" data-end="144.00"><span class="time">[2:22]</span>À jamais nous chanteons</div>
-        <div class="line" data-start="144.00" data-end="146.00"><span class="time">[2:24]</span>Dans le pain de gosene</div>
-        <div class="line" data-start="146.00" data-end="148.00"><span class="time">[2:26]</span>Tu as promès</div>
-        <div class="line" data-start="148.00" data-end="150.00"><span class="time">[2:28]</span>Notre refuge</div>
-        <div class="line" data-start="150.00" data-end="152.00"><span class="time">[2:30]</span>Notre maison</div>
-        <div class="line" data-start="152.00" data-end="154.00"><span class="time">[2:32]</span>Notre maison</div>
-        <div class="line" data-start="154.00" data-end="156.00"><span class="time">[2:34]</span>Notre maison</div>
-        <div class="line" data-start="156.00" data-end="158.00"><span class="time">[2:36]</span>Notre maison</div>
-        <div class="line" data-start="158.00" data-end="160.00"><span class="time">[2:38]</span>Notre maison</div>
-        <div class="line" data-start="160.00" data-end="162.00"><span class="time">[2:40]</span>Notre maison</div>
-        <div class="line" data-start="162.00" data-end="164.00"><span class="time">[2:42]</span>Notre maison</div>
-        <div class="line" data-start="164.00" data-end="166.00"><span class="time">[2:44]</span>Notre maison</div>
-        <div class="line" data-start="166.00" data-end="168.00"><span class="time">[2:46]</span>Notre maison</div>
-        <div class="line" data-start="168.00" data-end="170.00"><span class="time">[2:48]</span>Notre maison</div>
-        <div class="line" data-start="170.00" data-end="172.00"><span class="time">[2:50]</span>Notre maison</div>
-        <div class="line" data-start="172.00" data-end="174.00"><span class="time">[2:52]</span>Dans le pain de gosene</div>
-        <div class="line" data-start="174.00" data-end="176.00"><span class="time">[2:54]</span>Nous resterons</div>
-        <div class="line" data-start="176.00" data-end="178.00"><span class="time">[2:56]</span>Avec nos carunis</div>
-        <div class="line" data-start="178.00" data-end="180.00"><span class="time">[2:58]</span>Nous te lourds</div>
-        <div class="line" data-start="180.00" data-end="182.00"><span class="time">[3:00]</span>À jamais s'égeure</div>
-        <div class="line" data-start="182.00" data-end="184.00"><span class="time">[3:02]</span>Nous te lourds</div>
-        <div class="line" data-start="184.00" data-end="186.00"><span class="time">[3:04]</span>Nous te lourds</div>
-        <div class="line" data-start="186.00" data-end="188.00"><span class="time">[3:06]</span>Dans ta grâce</div>
-        <div class="line" data-start="188.00" data-end="190.00"><span class="time">[3:08]</span>Un fini</div>
-        <div class="line" data-start="190.00" data-end="194.00"><span class="time">[3:10]</span>Nous marcherons</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="17.00" data-end="19.00"><span class="time">[0:17]</span>Dans le pays de</div>
+        <div class="line" data-start="19.00" data-end="22.00"><span class="time">[0:19]</span>Goshen, où l'espoir</div>
+        <div class="line" data-start="22.00" data-end="24.00"><span class="time">[0:22]</span>est né, Joseph</div>
+        <div class="line" data-start="24.00" data-end="26.00"><span class="time">[0:24]</span>a conduit, son</div>
+        <div class="line" data-start="26.00" data-end="29.00"><span class="time">[0:26]</span>peuple a protégé Des</div>
+        <div class="line" data-start="29.00" data-end="31.00"><span class="time">[0:29]</span>brebis et</div>
+        <div class="line" data-start="31.00" data-end="33.00"><span class="time">[0:31]</span>des bœufs, ils</div>
+        <div class="line" data-start="33.00" data-end="37.00"><span class="time">[0:33]</span>sont venus. Fuyant</div>
+        <div class="line" data-start="37.00" data-end="39.00"><span class="time">[0:37]</span>la famine,</div>
+        <div class="line" data-start="39.00" data-end="41.00"><span class="time">[0:39]</span>la grâce a</div>
+        <div class="line" data-start="41.00" data-end="44.00"><span class="time">[0:41]</span>résu Ô Seigneur,</div>
+        <div class="line" data-start="44.00" data-end="46.00"><span class="time">[0:44]</span>dans ta bonté,</div>
+        <div class="line" data-start="46.00" data-end="48.00"><span class="time">[0:46]</span>tu nourris nos</div>
+        <div class="line" data-start="48.00" data-end="51.00"><span class="time">[0:48]</span>âmes, tu viens</div>
+        <div class="line" data-start="51.00" data-end="54.00"><span class="time">[0:51]</span>nous sauver. Dans l'obscurité,</div>
+        <div class="line" data-start="54.00" data-end="57.00"><span class="time">[0:54]</span>ta lumière brillera. À</div>
+        <div class="line" data-start="57.00" data-end="59.00"><span class="time">[0:57]</span>jamais, nous</div>
+        <div class="line" data-start="59.00" data-end="61.00"><span class="time">[0:59]</span>chantons dans</div>
+        <div class="line" data-start="61.00" data-end="63.00"><span class="time">[1:01]</span>le pays</div>
+        <div class="line" data-start="63.00" data-end="67.00"><span class="time">[1:03]</span>de Goshen,</div>
+        <div class="line" data-start="67.00" data-end="69.00"><span class="time">[1:07]</span>ta promesse, notre</div>
+        <div class="line" data-start="69.00" data-end="71.00"><span class="time">[1:09]</span>refuge, notre maison</div>
+        <div class="line" data-start="71.00" data-end="73.00"><span class="time">[1:11]</span>Pharaon a vu</div>
+        <div class="line" data-start="73.00" data-end="75.00"><span class="time">[1:13]</span>et a donné</div>
+        <div class="line" data-start="75.00" data-end="77.00"><span class="time">[1:15]</span>sa main à Jacob</div>
+        <div class="line" data-start="77.00" data-end="81.00"><span class="time">[1:17]</span>et ses fils, une</div>
+        <div class="line" data-start="81.00" data-end="85.00"><span class="time">[1:21]</span>terre de pain.</div>
+        <div class="line" data-start="85.00" data-end="89.00"><span class="time">[1:25]</span>Dans l'épreuve,</div>
+        <div class="line" data-start="89.00" data-end="91.00"><span class="time">[1:29]</span>ils ont trouvé</div>
+        <div class="line" data-start="91.00" data-end="93.00"><span class="time">[1:31]</span>la paix. Leur</div>
+        <div class="line" data-start="93.00" data-end="95.00"><span class="time">[1:33]</span>cœur rempli de</div>
+        <div class="line" data-start="95.00" data-end="97.00"><span class="time">[1:35]</span>foi, ils se</div>
+        <div class="line" data-start="97.00" data-end="101.00"><span class="time">[1:37]</span>sont avancés Ô</div>
+        <div class="line" data-start="101.00" data-end="104.00"><span class="time">[1:41]</span>Seigneur, dans ta bonté,</div>
+        <div class="line" data-start="104.00" data-end="106.00"><span class="time">[1:44]</span>tu nourris nos âmes,</div>
+        <div class="line" data-start="106.00" data-end="108.00"><span class="time">[1:46]</span>tu viens</div>
+        <div class="line" data-start="108.00" data-end="110.00"><span class="time">[1:48]</span>nous sauver.</div>
+        <div class="line" data-start="110.00" data-end="114.00"><span class="time">[1:50]</span>Dans l'obscurité,</div>
+        <div class="line" data-start="114.00" data-end="116.00"><span class="time">[1:54]</span>ta lumière brillera. À</div>
+        <div class="line" data-start="116.00" data-end="118.00"><span class="time">[1:56]</span>jamais, nous chantons</div>
+        <div class="line" data-start="118.00" data-end="120.00"><span class="time">[1:58]</span>dans le pays</div>
+        <div class="line" data-start="120.00" data-end="122.00"><span class="time">[2:00]</span>de Goshen, ta promesse,</div>
+        <div class="line" data-start="122.00" data-end="124.00"><span class="time">[2:02]</span>notre refuge, notre maison</div>
+        <div class="line" data-start="124.00" data-end="126.00"><span class="time">[2:04]</span>Nous sommes des pèlerins</div>
+        <div class="line" data-start="126.00" data-end="128.00"><span class="time">[2:06]</span>sur cette terre.</div>
+        <div class="line" data-start="128.00" data-end="130.00"><span class="time">[2:08]</span>Avec toi, Seigneur,</div>
+        <div class="line" data-start="130.00" data-end="132.00"><span class="time">[2:10]</span>nous faisons</div>
+        <div class="line" data-start="132.00" data-end="134.00"><span class="time">[2:12]</span>nos prières. Quand</div>
+        <div class="line" data-start="134.00" data-end="136.00"><span class="time">[2:14]</span>la famine rôde,</div>
+        <div class="line" data-start="136.00" data-end="138.00"><span class="time">[2:16]</span>quand le cœur</div>
+        <div class="line" data-start="138.00" data-end="140.00"><span class="time">[2:18]</span>est lourd, nous</div>
+        <div class="line" data-start="140.00" data-end="142.00"><span class="time">[2:20]</span>trouvons en toi</div>
+        <div class="line" data-start="142.00" data-end="144.00"><span class="time">[2:22]</span>un amour toujours Ô</div>
+        <div class="line" data-start="144.00" data-end="146.00"><span class="time">[2:24]</span>Seigneur, dans ta bonté,</div>
+        <div class="line" data-start="146.00" data-end="148.00"><span class="time">[2:26]</span>tu nourris</div>
+        <div class="line" data-start="148.00" data-end="150.00"><span class="time">[2:28]</span>nos âmes,</div>
+        <div class="line" data-start="150.00" data-end="152.00"><span class="time">[2:30]</span>tu viens</div>
+        <div class="line" data-start="152.00" data-end="154.00"><span class="time">[2:32]</span>nous sauver.</div>
+        <div class="line" data-start="154.00" data-end="156.00"><span class="time">[2:34]</span>Dans l'obscurité,</div>
+        <div class="line" data-start="156.00" data-end="158.00"><span class="time">[2:36]</span>ta lumière</div>
+        <div class="line" data-start="158.00" data-end="160.00"><span class="time">[2:38]</span>brillera. À</div>
+        <div class="line" data-start="160.00" data-end="162.00"><span class="time">[2:40]</span>jamais, nous</div>
+        <div class="line" data-start="162.00" data-end="164.00"><span class="time">[2:42]</span>chantons dans</div>
+        <div class="line" data-start="164.00" data-end="166.00"><span class="time">[2:44]</span>le pays</div>
+        <div class="line" data-start="166.00" data-end="168.00"><span class="time">[2:46]</span>de Goshen,</div>
+        <div class="line" data-start="168.00" data-end="170.00"><span class="time">[2:48]</span>ta promesse,</div>
+        <div class="line" data-start="170.00" data-end="172.00"><span class="time">[2:50]</span>notre refuge,</div>
+        <div class="line" data-start="172.00" data-end="174.00"><span class="time">[2:52]</span>notre maison Dans le</div>
+        <div class="line" data-start="174.00" data-end="176.00"><span class="time">[2:54]</span>pays de</div>
+        <div class="line" data-start="176.00" data-end="178.00"><span class="time">[2:56]</span>Goshen, nous resterons</div>
+        <div class="line" data-start="178.00" data-end="180.00"><span class="time">[2:58]</span>avec nos</div>
+        <div class="line" data-start="180.00" data-end="182.00"><span class="time">[3:00]</span>cœurs unis. Nous</div>
+        <div class="line" data-start="182.00" data-end="184.00"><span class="time">[3:02]</span>te louons</div>
+        <div class="line" data-start="184.00" data-end="186.00"><span class="time">[3:04]</span>à jamais,</div>
+        <div class="line" data-start="186.00" data-end="188.00"><span class="time">[3:06]</span>Seigneur. Nous</div>
+        <div class="line" data-start="188.00" data-end="190.00"><span class="time">[3:08]</span>t'appartenons</div>
+        <div class="line" data-start="190.00" data-end="194.00"><span class="time">[3:10]</span>dans ta grâce infinie. Nous marcherons</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

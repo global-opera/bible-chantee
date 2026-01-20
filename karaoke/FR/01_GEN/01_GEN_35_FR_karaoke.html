@@ -3,162 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 35 | Bible Chantee Karaoke</title>
+    <title>Genese 35 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 35</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 35 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_35_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="13.52" data-end="18.48"><span class="time">[0:13]</span>Seigneur tu as dit âge à cop</div>
-        <div class="line" data-start="18.48" data-end="22.36"><span class="time">[0:18]</span>Mon tabétal lève toi</div>
-        <div class="line" data-start="22.36" data-end="25.80"><span class="time">[0:22]</span>Dressin nôtel je suis là</div>
-        <div class="line" data-start="25.80" data-end="28.16"><span class="time">[0:25]</span>Dans la détresse</div>
-        <div class="line" data-start="28.16" data-end="32.28"><span class="time">[0:28]</span>Je suis ton roi</div>
-        <div class="line" data-start="32.28" data-end="38.20"><span class="time">[0:32]</span>Autre l'édiocétre en gée purifie ton coeur</div>
-        <div class="line" data-start="38.20" data-end="40.72"><span class="time">[0:38]</span>Change de vêtement</div>
-        <div class="line" data-start="40.72" data-end="44.72"><span class="time">[0:40]</span>Bien cher je m'a douceur</div>
-        <div class="line" data-start="44.72" data-end="47.40"><span class="time">[0:44]</span>Nous nous lève au rond</div>
-        <div class="line" data-start="47.40" data-end="51.16"><span class="time">[0:47]</span>Pour monter à bêtail</div>
-        <div class="line" data-start="51.16" data-end="53.16"><span class="time">[0:51]</span>Là où tu es</div>
-        <div class="line" data-start="53.16" data-end="56.76"><span class="time">[0:53]</span>Là où je t'adorer</div>
-        <div class="line" data-start="56.76" data-end="60.32"><span class="time">[0:56]</span>Elle bête telle je te célèbre</div>
-        <div class="line" data-start="60.32" data-end="63.56"><span class="time">[1:00]</span>Dieu de promesse</div>
-        <div class="line" data-start="63.56" data-end="66.00"><span class="time">[1:03]</span>Tu es avec moi</div>
-        <div class="line" data-start="66.00" data-end="69.96"><span class="time">[1:06]</span>Dans le voyage de ma vie</div>
-        <div class="line" data-start="71.96" data-end="76.60"><span class="time">[1:11]</span>Ils ont donné leurs idors</div>
-        <div class="line" data-start="77.56" data-end="79.40"><span class="time">[1:17]</span>Les anneaux d'éran</div>
-        <div class="line" data-start="79.40" data-end="81.84"><span class="time">[1:19]</span>Chaque co-ba enterré</div>
-        <div class="line" data-start="81.84" data-end="83.64"><span class="time">[1:21]</span>Sous le chaine</div>
-        <div class="line" data-start="83.64" data-end="85.52"><span class="time">[1:23]</span>leur silence</div>
-        <div class="line" data-start="85.52" data-end="88.28"><span class="time">[1:25]</span>La terreur de Dieu</div>
-        <div class="line" data-start="88.28" data-end="92.08"><span class="time">[1:28]</span>Sur les villes s'est répandu</div>
-        <div class="line" data-start="92.08" data-end="95.28"><span class="time">[1:32]</span>Et dans ce lieu sacré</div>
-        <div class="line" data-start="95.28" data-end="99.12"><span class="time">[1:35]</span>Ta gloire est reconnue</div>
-        <div class="line" data-start="99.12" data-end="101.72"><span class="time">[1:39]</span>Nous nous lève au rond</div>
-        <div class="line" data-start="101.72" data-end="105.52"><span class="time">[1:41]</span>Pour monter à bêtail</div>
-        <div class="line" data-start="105.52" data-end="107.52"><span class="time">[1:45]</span>Là où tu es</div>
-        <div class="line" data-start="107.52" data-end="111.20"><span class="time">[1:47]</span>Là où je t'adorer</div>
-        <div class="line" data-start="111.20" data-end="114.72"><span class="time">[1:51]</span>Elle bête telle je te célèbre</div>
-        <div class="line" data-start="114.72" data-end="117.92"><span class="time">[1:54]</span>Dieu de promesse</div>
-        <div class="line" data-start="117.92" data-end="120.32"><span class="time">[1:57]</span>Tu es avec moi</div>
-        <div class="line" data-start="120.32" data-end="125.12"><span class="time">[2:00]</span>Dans le voyage de ma vie</div>
-        <div class="line" data-start="125.12" data-end="128.32"><span class="time">[2:05]</span>Tu es le Dieu tout cuissant</div>
-        <div class="line" data-start="128.32" data-end="131.92"><span class="time">[2:08]</span>Il serait sumapé</div>
-        <div class="line" data-start="131.92" data-end="134.92"><span class="time">[2:11]</span>Dans ta bénédiction</div>
-        <div class="line" data-start="134.92" data-end="137.92"><span class="time">[2:14]</span>Je suis renouvelée</div>
-        <div class="line" data-start="137.92" data-end="141.12"><span class="time">[2:17]</span>Fait qu'on supromède</div>
-        <div class="line" data-start="141.12" data-end="144.12"><span class="time">[2:21]</span>T'es nation et tronde</div>
-        <div class="line" data-start="144.12" data-end="146.52"><span class="time">[2:24]</span>Dans son amour</div>
-        <div class="line" data-start="146.52" data-end="150.32"><span class="time">[2:26]</span>Je trouve ma raison</div>
-        <div class="line" data-start="150.32" data-end="152.92"><span class="time">[2:30]</span>Nous nous lèverons</div>
-        <div class="line" data-start="152.92" data-end="156.72"><span class="time">[2:32]</span>Pour monter à bêtail</div>
-        <div class="line" data-start="156.72" data-end="158.72"><span class="time">[2:36]</span>Là où tu es</div>
-        <div class="line" data-start="158.72" data-end="162.32"><span class="time">[2:38]</span>Là où je t'adorer</div>
-        <div class="line" data-start="162.32" data-end="165.92"><span class="time">[2:42]</span>Elle bête telle je te célèbre</div>
-        <div class="line" data-start="165.92" data-end="169.12"><span class="time">[2:45]</span>Dieu de promesse</div>
-        <div class="line" data-start="169.12" data-end="171.72"><span class="time">[2:49]</span>Tu es avec moi</div>
-        <div class="line" data-start="171.72" data-end="176.92"><span class="time">[2:51]</span>Dans le voyage de ma vie</div>
-        <div class="line" data-start="176.92" data-end="182.72"><span class="time">[2:56]</span>S'émeu je monte à bêtail</div>
-        <div class="line" data-start="182.72" data-end="184.52"><span class="time">[3:02]</span>Dans ta présence</div>
-        <div class="line" data-start="184.52" data-end="185.92"><span class="time">[3:04]</span>Je me tient</div>
-        <div class="line" data-start="185.92" data-end="187.52"><span class="time">[3:05]</span>Tu es mon refus</div>
-        <div class="line" data-start="187.52" data-end="189.32"><span class="time">[3:07]</span>Je m'alumière</div>
-        <div class="line" data-start="189.32" data-end="191.32"><span class="time">[3:09]</span>À jamais</div>
-        <div class="line" data-start="191.32" data-end="194.52"><span class="time">[3:11]</span>Je serai le tient</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="13.52" data-end="18.48"><span class="time">[0:13]</span>Seigneur, tu as dit à Jacob</div>
+        <div class="line" data-start="18.48" data-end="22.36"><span class="time">[0:18]</span>Mon tab est tel,</div>
+        <div class="line" data-start="22.36" data-end="25.80"><span class="time">[0:22]</span>lève-toi, dresse un autel Je</div>
+        <div class="line" data-start="25.80" data-end="28.16"><span class="time">[0:25]</span>suis là, dans</div>
+        <div class="line" data-start="28.16" data-end="32.28"><span class="time">[0:28]</span>la détresse, je</div>
+        <div class="line" data-start="32.28" data-end="38.20"><span class="time">[0:32]</span>suis ton roi Hôte les dieux étrangers, purifie</div>
+        <div class="line" data-start="38.20" data-end="40.72"><span class="time">[0:38]</span>ton cœur Change de</div>
+        <div class="line" data-start="40.72" data-end="44.72"><span class="time">[0:40]</span>vêtements, viens cherche ma douceur</div>
+        <div class="line" data-start="44.72" data-end="47.40"><span class="time">[0:44]</span>Nous nous lèverons, pour monter</div>
+        <div class="line" data-start="47.40" data-end="51.16"><span class="time">[0:47]</span>à Bethel Là où</div>
+        <div class="line" data-start="51.16" data-end="53.16"><span class="time">[0:51]</span>tu es,</div>
+        <div class="line" data-start="53.16" data-end="56.76"><span class="time">[0:53]</span>là où je t'adorais</div>
+        <div class="line" data-start="56.76" data-end="60.32"><span class="time">[0:56]</span>El Bethel, je te célèbre, Dieu</div>
+        <div class="line" data-start="60.32" data-end="63.56"><span class="time">[1:00]</span>de promesses Tu</div>
+        <div class="line" data-start="63.56" data-end="66.00"><span class="time">[1:03]</span>es avec moi,</div>
+        <div class="line" data-start="66.00" data-end="71.96"><span class="time">[1:06]</span>dans le voyage de ma</div>
+        <div class="line" data-start="71.96" data-end="77.56"><span class="time">[1:11]</span>vie Ils ont donné leurs</div>
+        <div class="line" data-start="77.56" data-end="79.40"><span class="time">[1:17]</span>idoles Les anneaux des</div>
+        <div class="line" data-start="79.40" data-end="81.84"><span class="time">[1:19]</span>rangs, Jacob a enterré</div>
+        <div class="line" data-start="81.84" data-end="83.64"><span class="time">[1:21]</span>Sous le chêne,</div>
+        <div class="line" data-start="83.64" data-end="85.52"><span class="time">[1:23]</span>leur silence La</div>
+        <div class="line" data-start="85.52" data-end="88.28"><span class="time">[1:25]</span>terreur de Dieu, sur</div>
+        <div class="line" data-start="88.28" data-end="92.08"><span class="time">[1:28]</span>les villes s'est répandue Et dans</div>
+        <div class="line" data-start="92.08" data-end="95.28"><span class="time">[1:32]</span>ce lieu sacré, ta</div>
+        <div class="line" data-start="95.28" data-end="99.12"><span class="time">[1:35]</span>gloire est reconnue Nous nous</div>
+        <div class="line" data-start="99.12" data-end="101.72"><span class="time">[1:39]</span>lèverons, pour monter à Bethel</div>
+        <div class="line" data-start="101.72" data-end="105.52"><span class="time">[1:41]</span>Là où tu es,</div>
+        <div class="line" data-start="105.52" data-end="107.52"><span class="time">[1:45]</span>là où</div>
+        <div class="line" data-start="107.52" data-end="111.20"><span class="time">[1:47]</span>je t'adorais El Bethel,</div>
+        <div class="line" data-start="111.20" data-end="114.72"><span class="time">[1:51]</span>je te célèbre, Dieu de promesses</div>
+        <div class="line" data-start="114.72" data-end="117.92"><span class="time">[1:54]</span>Tu es avec</div>
+        <div class="line" data-start="117.92" data-end="120.32"><span class="time">[1:57]</span>moi, dans le</div>
+        <div class="line" data-start="120.32" data-end="125.12"><span class="time">[2:00]</span>voyage de ma vie Tu</div>
+        <div class="line" data-start="125.12" data-end="128.32"><span class="time">[2:05]</span>es le Dieu tout-puissant, Israël tu</div>
+        <div class="line" data-start="128.32" data-end="131.92"><span class="time">[2:08]</span>m'as appelée Dans</div>
+        <div class="line" data-start="131.92" data-end="134.92"><span class="time">[2:11]</span>ta bénédiction, je suis</div>
+        <div class="line" data-start="134.92" data-end="137.92"><span class="time">[2:14]</span>renouvelée Fécond, tu promets,</div>
+        <div class="line" data-start="137.92" data-end="141.12"><span class="time">[2:17]</span>des nations naîtront Dans</div>
+        <div class="line" data-start="141.12" data-end="144.12"><span class="time">[2:21]</span>ton amour, je trouve</div>
+        <div class="line" data-start="144.12" data-end="146.52"><span class="time">[2:24]</span>ma raison Nous</div>
+        <div class="line" data-start="146.52" data-end="150.32"><span class="time">[2:26]</span>nous lèverons, pour monter</div>
+        <div class="line" data-start="150.32" data-end="152.92"><span class="time">[2:30]</span>à Bethel Là où</div>
+        <div class="line" data-start="152.92" data-end="156.72"><span class="time">[2:32]</span>tu es, là où</div>
+        <div class="line" data-start="156.72" data-end="158.72"><span class="time">[2:36]</span>je t'adorais</div>
+        <div class="line" data-start="158.72" data-end="162.32"><span class="time">[2:38]</span>El Bethel, je te</div>
+        <div class="line" data-start="162.32" data-end="165.92"><span class="time">[2:42]</span>célèbre, Dieu de promesses Tu es</div>
+        <div class="line" data-start="165.92" data-end="169.12"><span class="time">[2:45]</span>avec moi, dans</div>
+        <div class="line" data-start="169.12" data-end="171.72"><span class="time">[2:49]</span>le voyage de</div>
+        <div class="line" data-start="171.72" data-end="176.92"><span class="time">[2:51]</span>ma vie Seigneur, je monte</div>
+        <div class="line" data-start="176.92" data-end="182.72"><span class="time">[2:56]</span>à Bethel Dans ta présence,</div>
+        <div class="line" data-start="182.72" data-end="184.52"><span class="time">[3:02]</span>je me tiens</div>
+        <div class="line" data-start="184.52" data-end="185.92"><span class="time">[3:04]</span>Tu es</div>
+        <div class="line" data-start="185.92" data-end="187.52"><span class="time">[3:05]</span>mon refuge, ma</div>
+        <div class="line" data-start="187.52" data-end="189.32"><span class="time">[3:07]</span>lumière À jamais,</div>
+        <div class="line" data-start="189.32" data-end="191.32"><span class="time">[3:09]</span>je serai</div>
+        <div class="line" data-start="191.32" data-end="194.52"><span class="time">[3:11]</span>le tien</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

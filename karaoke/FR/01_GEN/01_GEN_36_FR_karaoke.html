@@ -3,138 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 36 | Bible Chantee Karaoke</title>
+    <title>Genese 36 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 36</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 36 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_36_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="12.00" data-end="18.00"><span class="time">[0:12]</span>Dans les vallées de canin et seuls s'élevé</div>
-        <div class="line" data-start="18.00" data-end="25.00"><span class="time">[0:18]</span>Un homme de la terre s'est racine en crée</div>
-        <div class="line" data-start="25.00" data-end="32.00"><span class="time">[0:25]</span>Ada basse-masse au lit va me dans ses bras</div>
-        <div class="line" data-start="32.00" data-end="37.00"><span class="time">[0:32]</span>Un amour qui s'est panouillé comme un drame</div>
-        <div class="line" data-start="37.00" data-end="44.00"><span class="time">[0:37]</span>Écoute au terre les récits des ancêtres</div>
-        <div class="line" data-start="44.00" data-end="50.00"><span class="time">[0:44]</span>Et super des domaines, un héritage à connaître</div>
-        <div class="line" data-start="50.00" data-end="56.00"><span class="time">[0:50]</span>Détribuques et céléres des chefs qui marchent</div>
-        <div class="line" data-start="56.00" data-end="65.00"><span class="time">[0:56]</span>Dans la lumière de la promesse de recueur s'intage</div>
-        <div class="line" data-start="65.00" data-end="72.00"><span class="time">[1:05]</span>Et les phases réouelles géouche et courrient</div>
-        <div class="line" data-start="72.00" data-end="78.00"><span class="time">[1:12]</span>Les fils de la souleur mon son gravé</div>
-        <div class="line" data-start="79.00" data-end="85.00"><span class="time">[1:19]</span>Dans la montagne de séère ensemble s'établissent</div>
-        <div class="line" data-start="85.00" data-end="92.00"><span class="time">[1:25]</span>Riché, savondante le foyer les unis</div>
-        <div class="line" data-start="92.00" data-end="98.00"><span class="time">[1:32]</span>S'écoute au terre les récits des ancêtres</div>
-        <div class="line" data-start="98.00" data-end="105.00"><span class="time">[1:38]</span>Et super des domaines, un héritage à connaître</div>
-        <div class="line" data-start="105.00" data-end="111.00"><span class="time">[1:45]</span>Détribuques et céléres des chefs qui marchent</div>
-        <div class="line" data-start="111.00" data-end="118.00"><span class="time">[1:51]</span>Dans la lumière de la promesse de recueur s'intage</div>
-        <div class="line" data-start="118.00" data-end="124.00"><span class="time">[1:58]</span>D'hribière de grâces dans le désert</div>
-        <div class="line" data-start="124.00" data-end="130.00"><span class="time">[2:04]</span>Un à trouver des sourds se déclare</div>
-        <div class="line" data-start="130.00" data-end="136.00"><span class="time">[2:10]</span>Les oriens et leurs chefs ensemble nous chantons</div>
-        <div class="line" data-start="136.00" data-end="142.00"><span class="time">[2:16]</span>L'histoire d'un peuple en unisson nos voies sous le ciel</div>
-        <div class="line" data-start="142.00" data-end="146.00"><span class="time">[2:22]</span>L'union</div>
-        <div class="line" data-start="146.00" data-end="153.00"><span class="time">[2:26]</span>Écoute au terre les récits des ancêtres</div>
-        <div class="line" data-start="153.00" data-end="159.00"><span class="time">[2:33]</span>Et super des domaines, un héritage à connaître</div>
-        <div class="line" data-start="159.00" data-end="165.00"><span class="time">[2:39]</span>Détribuques et céléres des chefs qui marchent</div>
-        <div class="line" data-start="165.00" data-end="171.00"><span class="time">[2:45]</span>Dans la lumière de la promesse de recueur s'intage</div>
-        <div class="line" data-start="171.00" data-end="177.00"><span class="time">[2:51]</span>Ainsi se lève les pétames dans la gloire de Dieu</div>
-        <div class="line" data-start="177.00" data-end="184.00"><span class="time">[2:57]</span>Les sangres nous sommes dans la alliance céléres</div>
-        <div class="line" data-start="184.00" data-end="190.00"><span class="time">[3:04]</span>Et nous n'y dans la gloire à jamais nous marcherons</div>
-        <div class="line" data-start="198.00" data-end="202.00"><span class="time">[3:18]</span>C'est paroles évoques, l'héritage des dommes</div>
-        <div class="line" data-start="202.00" data-end="206.00"><span class="time">[3:22]</span>Et les liens familaux tout en restant fidèle à la narration publique</div>
-        <div class="line" data-start="206.00" data-end="210.00"><span class="time">[3:26]</span>Tout en ayant un style poétique et chantant</div>
-        <div class="line" data-start="210.00" data-end="215.00"><span class="time">[3:30]</span>Adapter pour un moment de l'ouange en communauté</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="12.00" data-end="18.00"><span class="time">[0:12]</span>Dans les vallées de Cana, les Sahus</div>
+        <div class="line" data-start="18.00" data-end="25.00"><span class="time">[0:18]</span>s'élevaient Un homme de la terre, ses</div>
+        <div class="line" data-start="25.00" data-end="32.00"><span class="time">[0:25]</span>racines ancrées Ada, Basmath, Olibama Dans ses</div>
+        <div class="line" data-start="32.00" data-end="37.00"><span class="time">[0:32]</span>bras, un amour qui s'épanouit comme un</div>
+        <div class="line" data-start="37.00" data-end="44.00"><span class="time">[0:37]</span>drame Écoute, ô terre, les récits des</div>
+        <div class="line" data-start="44.00" data-end="50.00"><span class="time">[0:44]</span>ancêtres Ésaü, père des Édomites, un héritage à</div>
+        <div class="line" data-start="50.00" data-end="56.00"><span class="time">[0:50]</span>connaître Des tribus qui s'élèvent, des chefs qui</div>
+        <div class="line" data-start="56.00" data-end="65.00"><span class="time">[0:56]</span>marchent Dans la lumière de la promesse, leurs cœurs</div>
+        <div class="line" data-start="65.00" data-end="72.00"><span class="time">[1:05]</span>s'attachent Eliphaz, Réuel, Géo, Shekoré Les fils de</div>
+        <div class="line" data-start="72.00" data-end="79.00"><span class="time">[1:12]</span>Asu, leurs noms sont gravés Dans</div>
+        <div class="line" data-start="79.00" data-end="85.00"><span class="time">[1:19]</span>la montagne de Séir, ensemble ils s'établissent Richesse</div>
+        <div class="line" data-start="85.00" data-end="92.00"><span class="time">[1:25]</span>abondante, leur foi les unit Écoute,</div>
+        <div class="line" data-start="92.00" data-end="98.00"><span class="time">[1:32]</span>ô terre, les récits des ancêtres Ésaü,</div>
+        <div class="line" data-start="98.00" data-end="105.00"><span class="time">[1:38]</span>père des Édomites, un héritage à connaître Des</div>
+        <div class="line" data-start="105.00" data-end="111.00"><span class="time">[1:45]</span>tribus qui s'élèvent, des chefs qui marchent Dans</div>
+        <div class="line" data-start="111.00" data-end="118.00"><span class="time">[1:51]</span>la lumière de la promesse, leurs cœurs s'attachent Des</div>
+        <div class="line" data-start="118.00" data-end="124.00"><span class="time">[1:58]</span>rivières de grâce dans le désert</div>
+        <div class="line" data-start="124.00" data-end="130.00"><span class="time">[2:04]</span>Anna trouvait des sources d'éclair Les</div>
+        <div class="line" data-start="130.00" data-end="136.00"><span class="time">[2:10]</span>Oriens et leurs chèvres, ensemble nous chantons L'histoire</div>
+        <div class="line" data-start="136.00" data-end="142.00"><span class="time">[2:16]</span>d'un peuple, en unissant nos voix sous le ciel d'union</div>
+        <div class="line" data-start="142.00" data-end="146.00"><span class="time">[2:22]</span>Écoute,</div>
+        <div class="line" data-start="146.00" data-end="153.00"><span class="time">[2:26]</span>ô terre, les récits des ancêtres Ésaü,</div>
+        <div class="line" data-start="153.00" data-end="159.00"><span class="time">[2:33]</span>père des Édomites, un héritage à connaître Des</div>
+        <div class="line" data-start="159.00" data-end="165.00"><span class="time">[2:39]</span>tribus qui s'élèvent, des chefs qui marchent Dans</div>
+        <div class="line" data-start="165.00" data-end="171.00"><span class="time">[2:45]</span>la lumière de la promesse, leurs cœurs s'attachent Ainsi</div>
+        <div class="line" data-start="171.00" data-end="177.00"><span class="time">[2:51]</span>se lèvent les fils des dômes dans la</div>
+        <div class="line" data-start="177.00" data-end="184.00"><span class="time">[2:57]</span>gloire de Dieu Et semble nous sommes dans</div>
+        <div class="line" data-start="184.00" data-end="198.00"><span class="time">[3:04]</span>l'alliance célèbre Réunis dans la croix, à jamais nous</div>
+        <div class="line" data-start="198.00" data-end="202.00"><span class="time">[3:18]</span>marcherons Ces paroles évoquent l'héritage des dômes et</div>
+        <div class="line" data-start="202.00" data-end="206.00"><span class="time">[3:22]</span>les liens familiaux tout en restant fidèles à la narration biblique tout</div>
+        <div class="line" data-start="206.00" data-end="210.00"><span class="time">[3:26]</span>en ayant un style poétique et chantant</div>
+        <div class="line" data-start="210.00" data-end="215.00"><span class="time">[3:30]</span>adapté pour un moment de louange en communauté</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

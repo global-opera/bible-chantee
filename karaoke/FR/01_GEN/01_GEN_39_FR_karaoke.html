@@ -3,134 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 39 | Bible Chantee Karaoke</title>
+    <title>Genese 39 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 39</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 39 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_39_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="22.00" data-end="28.00"><span class="time">[0:22]</span>Dans l'ombre de l'Égypte, Joseph s'est tenu</div>
-        <div class="line" data-start="28.50" data-end="34.00"><span class="time">[0:28]</span>Et rangé capit, mais son coeur est à Dieu</div>
-        <div class="line" data-start="34.00" data-end="39.00"><span class="time">[0:34]</span>L'éternel était avec lui, sa lumière brillait</div>
-        <div class="line" data-start="39.00" data-end="47.00"><span class="time">[0:39]</span>Dans la maison de Petit-Farre, il prospérait</div>
-        <div class="line" data-start="47.00" data-end="53.00"><span class="time">[0:47]</span>Oh, Seigneur, tu es ma force ma lumière</div>
-        <div class="line" data-start="53.00" data-end="59.00"><span class="time">[0:53]</span>Dans les épreuves, je m'appuie sur ta prière</div>
-        <div class="line" data-start="59.00" data-end="64.00"><span class="time">[0:59]</span>Tout ce que je fais, je le fais pour toi</div>
-        <div class="line" data-start="64.00" data-end="71.00"><span class="time">[1:04]</span>Dans la maison de l'étranger, je marche en foi</div>
-        <div class="line" data-start="71.00" data-end="76.00"><span class="time">[1:11]</span>La femme du maître avec des mots séduisant</div>
-        <div class="line" data-start="76.00" data-end="82.00"><span class="time">[1:16]</span>Attentée Joseph, mais il est resté vivant</div>
-        <div class="line" data-start="82.00" data-end="88.00"><span class="time">[1:22]</span>Comment ferait-je mal péché contre mon roi</div>
-        <div class="line" data-start="88.00" data-end="96.00"><span class="time">[1:28]</span>Il a fui le péché sa foi était sa voix</div>
-        <div class="line" data-start="96.00" data-end="101.00"><span class="time">[1:36]</span>Oh, Seigneur, tu es ma force ma lumière</div>
-        <div class="line" data-start="101.00" data-end="107.00"><span class="time">[1:41]</span>Dans les épreuves, je m'appuie sur ta prière</div>
-        <div class="line" data-start="107.00" data-end="113.00"><span class="time">[1:47]</span>Tout ce que je fais, je le fais pour toi</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="22.00" data-end="28.50"><span class="time">[0:22]</span>Dans l'ombre de l'Égypte, Joseph s'est tenu Étrange</div>
+        <div class="line" data-start="28.50" data-end="34.00"><span class="time">[0:28]</span>et captif, mais son cœur est à Dieu</div>
+        <div class="line" data-start="34.00" data-end="39.00"><span class="time">[0:34]</span>L'Éternel était avec lui, sa lumière brillait Dans la</div>
+        <div class="line" data-start="39.00" data-end="47.00"><span class="time">[0:39]</span>maison de Potiphar, il prospérait Ô Seigneur, Tu es</div>
+        <div class="line" data-start="47.00" data-end="53.00"><span class="time">[0:47]</span>ma force, ma lumière Dans les épreuves, je</div>
+        <div class="line" data-start="53.00" data-end="59.00"><span class="time">[0:53]</span>m'appuie sur Ta prière Tout ce que je fais,</div>
+        <div class="line" data-start="59.00" data-end="64.00"><span class="time">[0:59]</span>je le fais pour Toi Dans la maison</div>
+        <div class="line" data-start="64.00" data-end="71.00"><span class="time">[1:04]</span>de l'étranger, je marche en foi La femme du</div>
+        <div class="line" data-start="71.00" data-end="76.00"><span class="time">[1:11]</span>maître, avec des mots séduisants A tenté Joseph,</div>
+        <div class="line" data-start="76.00" data-end="82.00"><span class="time">[1:16]</span>mais il est resté vivant Comment ferais-je un</div>
+        <div class="line" data-start="82.00" data-end="88.00"><span class="time">[1:22]</span>mal, péché contre mon roi Il a fui</div>
+        <div class="line" data-start="88.00" data-end="96.00"><span class="time">[1:28]</span>le péché, sa foi était sa voie Ô</div>
+        <div class="line" data-start="96.00" data-end="101.00"><span class="time">[1:36]</span>Seigneur, Tu es ma force, ma lumière Dans</div>
+        <div class="line" data-start="101.00" data-end="107.00"><span class="time">[1:41]</span>les épreuves, je m'appuie sur Ta prière Tout ce</div>
+        <div class="line" data-start="107.00" data-end="113.00"><span class="time">[1:47]</span>que je fais, je le fais pour Toi</div>
         <div class="line" data-start="113.00" data-end="119.00"><span class="time">[1:53]</span>Dans la maison de l'étranger, je marche en foi</div>
-        <div class="line" data-start="119.00" data-end="125.00"><span class="time">[1:59]</span>Il m'aime dans la prison, t'abontais ma compagne</div>
-        <div class="line" data-start="125.00" data-end="130.00"><span class="time">[2:05]</span>Le chef m'élève, t'agrasses, me gagne</div>
-        <div class="line" data-start="130.00" data-end="136.00"><span class="time">[2:10]</span>Tout ce que je touche, je le fais pour ta gloire</div>
-        <div class="line" data-start="136.00" data-end="143.00"><span class="time">[2:16]</span>Dans les ténèbres, je vois ta vie, toi</div>
-        <div class="line" data-start="143.00" data-end="149.00"><span class="time">[2:23]</span>Oh, Seigneur, tu es ma force ma lumière</div>
-        <div class="line" data-start="149.00" data-end="155.00"><span class="time">[2:29]</span>Dans les épreuves, je m'appuie sur ta prière</div>
-        <div class="line" data-start="155.00" data-end="160.00"><span class="time">[2:35]</span>Tout ce que je fais, je le fais pour toi</div>
-        <div class="line" data-start="160.00" data-end="166.00"><span class="time">[2:40]</span>Dans la maison de l'étranger, je marche en foi</div>
-        <div class="line" data-start="166.00" data-end="171.00"><span class="time">[2:46]</span>Dans la maison de l'étranger, je suis emplée</div>
-        <div class="line" data-start="171.00" data-end="177.00"><span class="time">[2:51]</span>Les derniers, les tabés, moi, je suis protégée</div>
-        <div class="line" data-start="177.00" data-end="184.00"><span class="time">[2:57]</span>Dans la maison de l'étranger, je brille en vérité</div>
-        <div class="line" data-start="184.00" data-end="195.00"><span class="time">[3:04]</span>Qu'à rentre toute chose, je sais que je suis aimé</div>
+        <div class="line" data-start="119.00" data-end="125.00"><span class="time">[1:59]</span>Et même dans la prison, Ta bonté m'accompagne Le</div>
+        <div class="line" data-start="125.00" data-end="130.00"><span class="time">[2:05]</span>chef m'élève, Ta grâce me gagne Tout</div>
+        <div class="line" data-start="130.00" data-end="136.00"><span class="time">[2:10]</span>ce que je touche, je le fais pour Ta</div>
+        <div class="line" data-start="136.00" data-end="143.00"><span class="time">[2:16]</span>gloire Dans les ténèbres, je vois Ta victoire</div>
+        <div class="line" data-start="143.00" data-end="149.00"><span class="time">[2:23]</span>Ô Seigneur, Tu es ma force, ma lumière</div>
+        <div class="line" data-start="149.00" data-end="155.00"><span class="time">[2:29]</span>Dans les épreuves, je m'appuie sur Ta prière Tout</div>
+        <div class="line" data-start="155.00" data-end="160.00"><span class="time">[2:35]</span>ce que je fais, je le fais pour</div>
+        <div class="line" data-start="160.00" data-end="166.00"><span class="time">[2:40]</span>Toi Dans la maison de l'étranger, je marche en</div>
+        <div class="line" data-start="166.00" data-end="171.00"><span class="time">[2:46]</span>foi Dans la maison de l'étranger, je suis en</div>
+        <div class="line" data-start="171.00" data-end="177.00"><span class="time">[2:51]</span>paix L'Éternel est avec moi, je suis protégé Dans</div>
+        <div class="line" data-start="177.00" data-end="184.00"><span class="time">[2:57]</span>la maison de l'étranger, je brille en vérité Car en</div>
+        <div class="line" data-start="184.00" data-end="195.00"><span class="time">[3:04]</span>toutes choses, je sais que je suis aimé</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

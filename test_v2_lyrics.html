@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Test Paroles V2</title>
+</head>
+<body>
+  <h1>Test Chargement Paroles V2</h1>
+  <div id="output"></div>
+  <pre id="content" style="white-space: pre-wrap; background: #f0f0f0; padding: 20px;"></pre>
+
+  <script>
+    const output = document.getElementById('output');
+    const content = document.getElementById('content');
+
+    async function testLoadV2() {
+      const lyricsUrl = 'lyrics_v2/01_GEN/01_GEN_001_FR.txt';
+
+      output.innerHTML = `<p>Chargement: ${lyricsUrl}</p>`;
+
+      try {
+        const response = await fetch(lyricsUrl);
+        output.innerHTML += `<p>Status: ${response.status} ${response.ok ? 'OK' : 'ERREUR'}</p>`;
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        let lyrics = await response.text();
+        output.innerHTML += `<p>Longueur: ${lyrics.length} caractères</p>`;
+
+        // Afficher le contenu brut
+        content.textContent = lyrics;
+
+        // Test nettoyage caractères spéciaux
+        lyrics = lyrics.replace(/¶/g, '');
+        lyrics = lyrics.replace(/\u00B6/g, '');
+        lyrics = lyrics.replace(/[§†‡•◦]/g, '');
+        lyrics = lyrics.replace(/^\s+/gm, '');
+
+        output.innerHTML += `<p style="color: green;">✅ Chargement réussi!</p>`;
+        output.innerHTML += `<p>Après nettoyage: ${lyrics.length} caractères</p>`;
+
+      } catch (error) {
+        output.innerHTML += `<p style="color: red;">❌ ERREUR: ${error.message}</p>`;
+        console.error(error);
+      }
+    }
+
+    testLoadV2();
+  </script>
+</body>
+</html>

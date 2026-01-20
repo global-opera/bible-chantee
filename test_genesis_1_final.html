@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Genèse 1 - VERSION FINALE</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: linear-gradient(180deg, #1E3A5F 0%, #162B46 100%);
+      min-height: 100vh;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: white;
+      padding: 50px 20px;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+
+    .hero {
+      background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+      padding: 50px;
+      border-radius: 25px;
+      text-align: center;
+      margin-bottom: 40px;
+      box-shadow: 0 15px 50px rgba(255, 215, 0, 0.3);
+    }
+    .hero h1 {
+      color: #1E3A5F;
+      font-size: 48px;
+      margin-bottom: 15px;
+      font-weight: 900;
+    }
+    .hero .badge {
+      background: #1E3A5F;
+      color: #FFD700;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-weight: 700;
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .player-main {
+      background: #243F66;
+      padding: 40px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      border: 3px solid #FFD700;
+    }
+    .player-main h2 {
+      color: #FFD700;
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .specs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+    .spec-item {
+      background: rgba(0,0,0,0.2);
+      padding: 15px;
+      border-radius: 10px;
+      border-left: 3px solid #FFD700;
+    }
+    .spec-item .label {
+      color: #888;
+      font-size: 12px;
+      margin-bottom: 5px;
+    }
+    .spec-item .value {
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    audio {
+      width: 100%;
+      height: 60px;
+      margin: 20px 0;
+    }
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(255,215,0,0.2), rgba(255,165,0,0.2));
+      padding: 25px;
+      border-radius: 15px;
+      border: 2px solid #FFD700;
+      margin: 20px 0;
+    }
+    .highlight-box h3 {
+      color: #FFD700;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+    .highlight-box p {
+      line-height: 1.8;
+      font-size: 16px;
+    }
+    .highlight-box .lyrics {
+      background: rgba(0,0,0,0.3);
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+      font-style: italic;
+      color: #FFD700;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .comparison {
+      background: #162B46;
+      padding: 30px;
+      border-radius: 15px;
+      margin: 30px 0;
+    }
+    .comparison h3 {
+      color: #FFD700;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .version-row {
+      background: #243F66;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      border-left: 5px solid;
+    }
+    .version-row.current { border-color: #0f0; }
+    .version-row.old { border-color: #666; }
+    .version-row h4 {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .version-row audio {
+      height: 40px;
+      margin: 10px 0 0 0;
+    }
+    .status-badge {
+      padding: 5px 12px;
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .status-badge.success { background: #0f0; color: #000; }
+    .status-badge.error { background: #f00; color: #fff; }
+
+    .next-steps {
+      background: linear-gradient(135deg, #0f0 0%, #0a0 100%);
+      padding: 35px;
+      border-radius: 20px;
+      color: #000;
+      margin-top: 30px;
+    }
+    .next-steps h3 {
+      font-size: 26px;
+      margin-bottom: 20px;
+      font-weight: 900;
+    }
+    .next-steps ol {
+      margin-left: 25px;
+      line-height: 2.2;
+      font-size: 17px;
+      font-weight: 600;
+    }
+    .next-steps code {
+      background: rgba(0,0,0,0.2);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <h1>🎵 GENÈSE 1 - VERSION FINALE</h1>
+      <div class="badge">Suno V5 • Style Orchestral Original</div>
+    </div>
+
+    <div class="player-main">
+      <h2>✨ VERSION V5 - STYLE ORIGINAL RESTAURÉ</h2>
+
+      <div class="specs">
+        <div class="spec-item">
+          <div class="label">Modèle AI</div>
+          <div class="value">Suno V5</div>
+        </div>
+        <div class="spec-item">
+          <div class="label">Style</div>
+          <div class="value">Orchestral Epic</div>
+        </div>
+        <div class="spec-item">
+          <div class="label">Tempo</div>
+          <div class="value">90 BPM</div>
+        </div>
+        <div class="spec-item">
+          <div class="label">Taille</div>
+          <div class="value">3.8 MB</div>
+        </div>
+        <div class="spec-item">
+          <div class="label">Génération</div>
+          <div class="value">90 secondes</div>
+        </div>
+        <div class="spec-item">
+          <div class="label">Qualité vocale</div>
+          <div class="value">Optimale</div>
+        </div>
+      </div>
+
+      <audio controls autoplay src="audio_v2/01_GEN/01_GEN_001_v1.mp3" id="finalPlayer"></audio>
+
+      <div class="highlight-box">
+        <h3>🎯 STYLE MUSICAL (restauré)</h3>
+        <p>
+          <strong>epic orchestral worship</strong> • 90 BPM • orchestral strings • piano • French horn • timpani •
+          <strong>French modern chanson</strong> • variété française • male vocal warm tenor •
+          <strong>clear diction</strong> • cinematic film score atmosphere • reverent tone
+        </p>
+        <div class="lyrics">
+          "Au commencement, Dieu créa les cieux et la terre"
+        </div>
+      </div>
+    </div>
+
+    <div class="comparison">
+      <h3>📊 Historique des versions</h3>
+
+      <div class="version-row current">
+        <h4>
+          <span style="color: #0f0; font-weight: 900;">✅ V5 FINALE (actuelle)</span>
+          <span class="status-badge success">SUNO V5 • STYLE ORIGINAL</span>
+        </h4>
+        <p style="font-size: 14px; color: rgba(255,255,255,0.7); margin-top: 5px;">
+          Modèle V5 + Style orchestral original 90 BPM + "Au commencement"
+        </p>
+      </div>
+
+      <div class="version-row old">
+        <h4>
+          <span style="color: #888;">V4 (mauvais style)</span>
+          <span class="status-badge error">❌ Style modifié</span>
+        </h4>
+        <p style="font-size: 14px; color: rgba(255,255,255,0.5);">
+          Suno V5 mais avec "sacred music" 70 BPM (pas le style voulu)
+        </p>
+        <audio controls src="audio_v2/01_GEN/01_GEN_001_v1_V4_WRONG_STYLE.mp3"></audio>
+      </div>
+
+      <div class="version-row old">
+        <h4>
+          <span style="color: #888;">V3</span>
+          <span class="status-badge error">❌ Paroles modifiées</span>
+        </h4>
+        <p style="font-size: 14px; color: rgba(255,255,255,0.5);">
+          "Au début, au commencement" - Non acceptable
+        </p>
+        <audio controls src="audio_v2/01_GEN/01_GEN_001_v1_V3.mp3"></audio>
+      </div>
+
+      <div class="version-row old">
+        <h4>
+          <span style="color: #888;">V2</span>
+          <span class="status-badge error">❌ "Comme au commencement"</span>
+        </h4>
+        <audio controls src="audio_v2/01_GEN/01_GEN_001_v1_V2.mp3"></audio>
+      </div>
+
+      <div class="version-row old">
+        <h4>
+          <span style="color: #888;">V1 (original)</span>
+          <span class="status-badge error">❌ "A commencement"</span>
+        </h4>
+        <audio controls src="audio_v2/01_GEN/01_GEN_001_v1_OLD.mp3"></audio>
+      </div>
+    </div>
+
+    <div class="next-steps">
+      <h3>✅ ÉTAPES FINALES</h3>
+      <ol>
+        <li>🎧 <strong>Écoutez la V5 FINALE</strong> ci-dessus (lecture auto)</li>
+        <li>
+          ✅ <strong>Si "Au commencement" est bien prononcé:</strong>
+          <ul style="margin-top: 10px; margin-bottom: 10px;">
+            <li>Supprimez les anciennes versions (V1, V2, V3, V4)</li>
+            <li>Gardez <code>01_GEN_001_v1.mp3</code> comme version finale</li>
+            <li>Utilisez <code>01_GEN_001_FR_V4.txt</code> (avec style original) pour les prochains chapitres</li>
+          </ul>
+        </li>
+        <li>
+          ❌ <strong>Si problème persiste:</strong> Il faudra peut-être accepter une légère modification des paroles ou utiliser un autre outil TTS
+        </li>
+      </ol>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; padding: 25px; background: rgba(255,215,0,0.1); border-radius: 15px; border: 2px solid #FFD700;">
+      <h4 style="color: #FFD700; margin-bottom: 15px; font-size: 20px;">💾 FICHIERS DISPONIBLES</h4>
+      <p style="color: rgba(255,255,255,0.8); line-height: 1.8;">
+        <strong>Emplacement:</strong><br>
+        <code style="background: rgba(0,0,0,0.3); padding: 8px 15px; border-radius: 8px; display: inline-block; margin-top: 10px;">
+          G:\Mon Drive\01 BibleChantee\Suno_Output\FR_V2\01_GEN\
+        </code>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    console.log('=== GENÈSE 1 - VERSION FINALE V5 ===');
+    console.log('Fichier: audio_v2/01_GEN/01_GEN_001_v1.mp3');
+    console.log('Modèle: Suno V5');
+    console.log('Style: Epic orchestral worship 90 BPM (ORIGINAL)');
+    console.log('Taille: 3.8 MB');
+
+    const player = document.getElementById('finalPlayer');
+    player.addEventListener('loadedmetadata', () => {
+      console.log(`✅ Durée: ${Math.round(player.duration)}s`);
+    });
+
+    player.addEventListener('play', () => {
+      console.log('▶ LECTURE V5 - Écoutez "Au commencement"');
+    });
+
+    player.addEventListener('canplaythrough', () => {
+      console.log('✅ Audio prêt');
+    });
+  </script>
+</body>
+</html>

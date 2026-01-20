@@ -3,154 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 22 | Bible Chantee Karaoke</title>
+    <title>Genese 22 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 22</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 22 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_22_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="0.00" data-end="7.00"><span class="time">[0:00]</span>C'est l'heure du m'appeler</div>
-        <div class="line" data-start="7.00" data-end="10.00"><span class="time">[0:07]</span>Comme un brame je réponds</div>
-        <div class="line" data-start="10.00" data-end="12.00"><span class="time">[0:10]</span>Me voici au je suis là</div>
-        <div class="line" data-start="12.00" data-end="16.00"><span class="time">[0:12]</span>Dans la foi je me tiens devant toi</div>
-        <div class="line" data-start="16.00" data-end="21.00"><span class="time">[0:16]</span>Ton coeur un sacrifice un phénomien</div>
-        <div class="line" data-start="21.00" data-end="26.00"><span class="time">[0:21]</span>Dans la foi je me tiens devant toi</div>
-        <div class="line" data-start="26.00" data-end="30.00"><span class="time">[0:26]</span>Ton coeur un sacrifice un phénomien</div>
-        <div class="line" data-start="30.00" data-end="33.00"><span class="time">[0:30]</span>L'unique l'amour sur la montagne</div>
-        <div class="line" data-start="33.00" data-end="39.00"><span class="time">[0:33]</span>Je m'élève pour adorer les te rendre glois</div>
-        <div class="line" data-start="39.00" data-end="43.00"><span class="time">[0:39]</span>À la montagne de l'éternet</div>
-        <div class="line" data-start="43.00" data-end="49.00"><span class="time">[0:43]</span>Il sera pourvu dans l'embre de la promesse</div>
-        <div class="line" data-start="49.00" data-end="52.00"><span class="time">[0:49]</span>Je mets ma confiance en toi</div>
-        <div class="line" data-start="52.00" data-end="56.00"><span class="time">[0:52]</span>Au dieu tu es fidèle</div>
-        <div class="line" data-start="56.00" data-end="59.00"><span class="time">[0:56]</span>Dans les épreuves je avancerai</div>
-        <div class="line" data-start="59.00" data-end="62.00"><span class="time">[0:59]</span>À la montagne de l'éternet</div>
-        <div class="line" data-start="62.00" data-end="67.00"><span class="time">[1:02]</span>Je sais que tu pourras</div>
-        <div class="line" data-start="67.00" data-end="70.00"><span class="time">[1:07]</span>Ils acturent l'hôtel</div>
-        <div class="line" data-start="70.00" data-end="73.00"><span class="time">[1:10]</span>Les larmes coulent mais je crois</div>
-        <div class="line" data-start="73.00" data-end="76.00"><span class="time">[1:13]</span>Quand le coeur est en détresse</div>
-        <div class="line" data-start="76.00" data-end="80.00"><span class="time">[1:16]</span>Ta voie me guite je marche droit</div>
-        <div class="line" data-start="80.00" data-end="83.00"><span class="time">[1:20]</span>L'ange d'ici elle m'appelle</div>
-        <div class="line" data-start="83.00" data-end="86.00"><span class="time">[1:23]</span>Les craintes je suis là</div>
-        <div class="line" data-start="86.00" data-end="89.00"><span class="time">[1:26]</span>Dans la pénombre tu bris</div>
-        <div class="line" data-start="89.00" data-end="94.00"><span class="time">[1:29]</span>Je sais que tu ne me lâcheras pas</div>
-        <div class="line" data-start="94.00" data-end="98.00"><span class="time">[1:34]</span>À la montagne de l'éternet</div>
-        <div class="line" data-start="98.00" data-end="103.00"><span class="time">[1:38]</span>Il sera pourvu dans l'embre de la promesse</div>
-        <div class="line" data-start="103.00" data-end="106.00"><span class="time">[1:43]</span>Je mets ma confiance en toi</div>
-        <div class="line" data-start="106.00" data-end="110.00"><span class="time">[1:46]</span>Au dieu tu es fidèle</div>
-        <div class="line" data-start="110.00" data-end="113.00"><span class="time">[1:50]</span>Dans les épreuves je avancerai</div>
-        <div class="line" data-start="113.00" data-end="116.00"><span class="time">[1:53]</span>À la montagne de l'éternet</div>
-        <div class="line" data-start="116.00" data-end="121.00"><span class="time">[1:56]</span>Je sais que tu pourras</div>
-        <div class="line" data-start="121.00" data-end="127.00"><span class="time">[2:01]</span>Les étreuves comme ta promesse</div>
-        <div class="line" data-start="128.00" data-end="134.00"><span class="time">[2:08]</span>Le sable témoin de ta beauté</div>
-        <div class="line" data-start="134.00" data-end="137.00"><span class="time">[2:14]</span>Je marche dans la assurance</div>
-        <div class="line" data-start="137.00" data-end="142.00"><span class="time">[2:17]</span>Que tu es mon abe</div>
-        <div class="line" data-start="142.00" data-end="146.00"><span class="time">[2:22]</span>Mon</div>
-        <div class="line" data-start="146.00" data-end="149.00"><span class="time">[2:26]</span>À la montagne de l'éternet</div>
-        <div class="line" data-start="149.00" data-end="155.00"><span class="time">[2:29]</span>Il sera pourvu dans l'embre de la promesse</div>
-        <div class="line" data-start="155.00" data-end="158.00"><span class="time">[2:35]</span>Je mets ma confiance en toi</div>
-        <div class="line" data-start="158.00" data-end="161.00"><span class="time">[2:38]</span>Au dieu tu es fidèle</div>
-        <div class="line" data-start="161.00" data-end="164.00"><span class="time">[2:41]</span>Dans les épreuves je avancerai</div>
-        <div class="line" data-start="164.00" data-end="168.00"><span class="time">[2:44]</span>À la montagne de l'éternet</div>
-        <div class="line" data-start="168.00" data-end="172.00"><span class="time">[2:48]</span>Je sais que tu pourras</div>
-        <div class="line" data-start="172.00" data-end="175.00"><span class="time">[2:52]</span>Seigneur je te loup</div>
-        <div class="line" data-start="175.00" data-end="179.00"><span class="time">[2:55]</span>Pour chaque épreuve je tiens</div>
-        <div class="line" data-start="179.00" data-end="183.00"><span class="time">[2:59]</span>À la montagne de l'éternet</div>
-        <div class="line" data-start="183.00" data-end="187.00"><span class="time">[3:03]</span>Ma foi dans le sacrifice</div>
-        <div class="line" data-start="187.00" data-end="190.00"><span class="time">[3:07]</span>Amen</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="0.00" data-end="7.00"><span class="time">[0:00]</span>Seigneur, Tu m'as appelée Comme</div>
+        <div class="line" data-start="7.00" data-end="10.00"><span class="time">[0:07]</span>Abraham, je réponds Me voici,</div>
+        <div class="line" data-start="10.00" data-end="12.00"><span class="time">[0:10]</span>oh, je suis là</div>
+        <div class="line" data-start="12.00" data-end="16.00"><span class="time">[0:12]</span>Dans la foi, je me tiens</div>
+        <div class="line" data-start="16.00" data-end="21.00"><span class="time">[0:16]</span>devant Toi Ton cœur, un sacrifice</div>
+        <div class="line" data-start="21.00" data-end="26.00"><span class="time">[0:21]</span>Un fils, l'unique, l'amour Sur la</div>
+        <div class="line" data-start="26.00" data-end="30.00"><span class="time">[0:26]</span>montagne, je m'élève Pour adorer et</div>
+        <div class="line" data-start="30.00" data-end="33.00"><span class="time">[0:30]</span>te rendre gloire À la montagne</div>
+        <div class="line" data-start="33.00" data-end="39.00"><span class="time">[0:33]</span>de l'éternel Il sera pourvu Dans l'ombre de</div>
+        <div class="line" data-start="39.00" data-end="43.00"><span class="time">[0:39]</span>la promesse Je mets ma</div>
+        <div class="line" data-start="43.00" data-end="49.00"><span class="time">[0:43]</span>confiance en Toi Ô Dieu, Tu es fidèle</div>
+        <div class="line" data-start="49.00" data-end="52.00"><span class="time">[0:49]</span>Dans les épreuves, j'avancerai À</div>
+        <div class="line" data-start="52.00" data-end="56.00"><span class="time">[0:52]</span>la montagne de l'éternel</div>
+        <div class="line" data-start="56.00" data-end="59.00"><span class="time">[0:56]</span>Je sais que Tu pourvoiras Isaac,</div>
+        <div class="line" data-start="59.00" data-end="62.00"><span class="time">[0:59]</span>sur l'autel Les larmes coulent,</div>
+        <div class="line" data-start="62.00" data-end="67.00"><span class="time">[1:02]</span>mais je crois Quand</div>
+        <div class="line" data-start="67.00" data-end="70.00"><span class="time">[1:07]</span>le cœur est en</div>
+        <div class="line" data-start="70.00" data-end="73.00"><span class="time">[1:10]</span>détresse Ta voix me guide, je</div>
+        <div class="line" data-start="73.00" data-end="76.00"><span class="time">[1:13]</span>marche droit L'ange du ciel m'appelle</div>
+        <div class="line" data-start="76.00" data-end="80.00"><span class="time">[1:16]</span>N'aie crainte, je suis là Dans</div>
+        <div class="line" data-start="80.00" data-end="83.00"><span class="time">[1:20]</span>la pénombre, Tu brilles Je</div>
+        <div class="line" data-start="83.00" data-end="86.00"><span class="time">[1:23]</span>sais que Tu ne</div>
+        <div class="line" data-start="86.00" data-end="89.00"><span class="time">[1:26]</span>me lâcheras pas À la</div>
+        <div class="line" data-start="89.00" data-end="94.00"><span class="time">[1:29]</span>montagne de l'éternel Il sera pourvu</div>
+        <div class="line" data-start="94.00" data-end="98.00"><span class="time">[1:34]</span>Dans l'ombre de la promesse</div>
+        <div class="line" data-start="98.00" data-end="103.00"><span class="time">[1:38]</span>Je mets ma confiance en Toi Ô Dieu,</div>
+        <div class="line" data-start="103.00" data-end="106.00"><span class="time">[1:43]</span>Tu es fidèle Dans les</div>
+        <div class="line" data-start="106.00" data-end="110.00"><span class="time">[1:46]</span>épreuves, j'avancerai À la</div>
+        <div class="line" data-start="110.00" data-end="113.00"><span class="time">[1:50]</span>montagne de l'éternel Je sais que</div>
+        <div class="line" data-start="113.00" data-end="116.00"><span class="time">[1:53]</span>Tu pourvoiras Les étoiles comme</div>
+        <div class="line" data-start="116.00" data-end="121.00"><span class="time">[1:56]</span>Ta promesse Le sable</div>
+        <div class="line" data-start="121.00" data-end="128.00"><span class="time">[2:01]</span>témoin de Ta bonté Je marche</div>
+        <div class="line" data-start="128.00" data-end="134.00"><span class="time">[2:08]</span>dans l'assurance Que Tu es</div>
+        <div class="line" data-start="134.00" data-end="137.00"><span class="time">[2:14]</span>mon abat, mon roi À</div>
+        <div class="line" data-start="137.00" data-end="142.00"><span class="time">[2:17]</span>la montagne de</div>
+        <div class="line" data-start="142.00" data-end="146.00"><span class="time">[2:22]</span>l'éternel</div>
+        <div class="line" data-start="146.00" data-end="149.00"><span class="time">[2:26]</span>Il sera pourvu Dans l'ombre</div>
+        <div class="line" data-start="149.00" data-end="155.00"><span class="time">[2:29]</span>de la promesse Je mets ma confiance en</div>
+        <div class="line" data-start="155.00" data-end="158.00"><span class="time">[2:35]</span>Toi Ô Dieu, Tu es</div>
+        <div class="line" data-start="158.00" data-end="161.00"><span class="time">[2:38]</span>fidèle Dans les épreuves,</div>
+        <div class="line" data-start="161.00" data-end="164.00"><span class="time">[2:41]</span>j'avancerai À la montagne de l'éternel</div>
+        <div class="line" data-start="164.00" data-end="168.00"><span class="time">[2:44]</span>Je sais que Tu pourvoiras</div>
+        <div class="line" data-start="168.00" data-end="172.00"><span class="time">[2:48]</span>Seigneur, je Te loue</div>
+        <div class="line" data-start="172.00" data-end="175.00"><span class="time">[2:52]</span>Pour chaque épreuve, je</div>
+        <div class="line" data-start="175.00" data-end="179.00"><span class="time">[2:55]</span>tiens À la montagne de</div>
+        <div class="line" data-start="179.00" data-end="183.00"><span class="time">[2:59]</span>l'éternel Ma foi dans le</div>
+        <div class="line" data-start="183.00" data-end="187.00"><span class="time">[3:03]</span>sacrifice, Amen</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

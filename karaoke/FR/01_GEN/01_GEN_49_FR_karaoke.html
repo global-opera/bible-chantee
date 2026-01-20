@@ -3,160 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 49 | Bible Chantee Karaoke</title>
+    <title>Genese 49 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 49</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 49 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_49_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="14.00" data-end="20.00"><span class="time">[0:14]</span>Rassemblez-vous au fils de Jacob</div>
-        <div class="line" data-start="20.00" data-end="26.00"><span class="time">[0:20]</span>Écoutez la voix de votre père</div>
-        <div class="line" data-start="26.00" data-end="31.00"><span class="time">[0:26]</span>Dans les temps à venir je vous annonce</div>
-        <div class="line" data-start="31.00" data-end="39.00"><span class="time">[0:31]</span>Les promesses du ciel, la lumière sur la terre</div>
-        <div class="line" data-start="39.00" data-end="45.00"><span class="time">[0:39]</span>Rubene-toi ma force et ma vigueur</div>
-        <div class="line" data-start="45.00" data-end="51.00"><span class="time">[0:45]</span>Mais la préminence s'est éloignée</div>
-        <div class="line" data-start="52.00" data-end="57.00"><span class="time">[0:52]</span>Dans la colère des coeurs en douleur</div>
-        <div class="line" data-start="57.00" data-end="63.00"><span class="time">[0:57]</span>La paix au signeur vient nous donner</div>
-        <div class="line" data-start="63.00" data-end="70.00"><span class="time">[1:03]</span>Oh j'udas, y'en estribu</div>
-        <div class="line" data-start="70.00" data-end="76.00"><span class="time">[1:10]</span>Le septre ne s'éloignera jamais</div>
-        <div class="line" data-start="76.00" data-end="80.00"><span class="time">[1:16]</span>Nous nous prostèrenons devant ta croix</div>
-        <div class="line" data-start="80.00" data-end="83.00"><span class="time">[1:20]</span>Tant à grâce nous sommes renouvelés</div>
-        <div class="line" data-start="83.00" data-end="86.00"><span class="time">[1:23]</span>Les bénédictions t'embrquent comme la plume</div>
-        <div class="line" data-start="86.00" data-end="89.00"><span class="time">[1:26]</span>Sur nous odieux nous le vende en cœur</div>
-        <div class="line" data-start="89.00" data-end="92.00"><span class="time">[1:29]</span>Dans la lumière de ta vérité</div>
-        <div class="line" data-start="92.00" data-end="97.00"><span class="time">[1:32]</span>Nous trouvons notre force, notre ferveur</div>
-        <div class="line" data-start="99.00" data-end="104.00"><span class="time">[1:39]</span>Ça boule en sur la mer et ça car au far d'eau</div>
-        <div class="line" data-start="105.00" data-end="111.00"><span class="time">[1:45]</span>D'un le juge serpent sur le chemin</div>
-        <div class="line" data-start="111.00" data-end="118.00"><span class="time">[1:51]</span>Gada saïe mais fort dans le calme</div>
-        <div class="line" data-start="118.00" data-end="125.00"><span class="time">[1:58]</span>A zédé mais pour les rois quel destin</div>
-        <div class="line" data-start="125.00" data-end="131.00"><span class="time">[2:05]</span>J'osef, je t'en donne un arme vertile</div>
-        <div class="line" data-start="132.00" data-end="136.00"><span class="time">[2:12]</span>Fortifié pour le diat d'Issrèh</div>
-        <div class="line" data-start="138.00" data-end="143.00"><span class="time">[2:18]</span>Des bénédictions qui s'élèrent sublime</div>
-        <div class="line" data-start="143.00" data-end="150.00"><span class="time">[2:23]</span>Sur la tête du prince s'éterner</div>
-        <div class="line" data-start="150.00" data-end="156.00"><span class="time">[2:30]</span>Oh j'udas, y'en estribu</div>
-        <div class="line" data-start="157.00" data-end="163.00"><span class="time">[2:37]</span>Le septre ne s'éloignera jamais</div>
-        <div class="line" data-start="163.00" data-end="166.00"><span class="time">[2:43]</span>Nous nous prostèrenons devant ta croix</div>
-        <div class="line" data-start="166.00" data-end="169.00"><span class="time">[2:46]</span>Tant à grâce nous sommes renouvelés</div>
-        <div class="line" data-start="169.00" data-end="173.00"><span class="time">[2:49]</span>Les bénédictions t'embrquent comme la plume</div>
-        <div class="line" data-start="173.00" data-end="176.00"><span class="time">[2:53]</span>Sur nous odieux nous le vende en cœur</div>
-        <div class="line" data-start="176.00" data-end="179.00"><span class="time">[2:56]</span>Dans la lumière de ta vérité</div>
-        <div class="line" data-start="179.00" data-end="185.00"><span class="time">[2:59]</span>Nous trouvons notre force, notre ferveur</div>
-        <div class="line" data-start="186.00" data-end="190.00"><span class="time">[3:06]</span>Un jameau qui déchire matin et soir</div>
-        <div class="line" data-start="190.00" data-end="193.00"><span class="time">[3:10]</span>Il partage le but un</div>
-        <div class="line" data-start="195.00" data-end="198.00"><span class="time">[3:15]</span>Dans chaque épreuve nous te brillons</div>
-        <div class="line" data-start="198.00" data-end="203.00"><span class="time">[3:18]</span>Rassemble nous, signer dans ta main</div>
-        <div class="line" data-start="205.00" data-end="211.00"><span class="time">[3:25]</span>Nous marchons dans la liens sous ta promesse tout ce nuit</div>
-        <div class="line" data-start="211.00" data-end="217.00"><span class="time">[3:31]</span>Dans l'amour nous trouvons l'espérance</div>
-        <div class="line" data-start="217.00" data-end="226.00"><span class="time">[3:37]</span>En toi, notre Dieu nous sommes ravis</div>
-        <div class="line" data-start="226.00" data-end="232.00"><span class="time">[3:46]</span>Oh j'udas, y'en estribu</div>
-        <div class="line" data-start="232.00" data-end="239.00"><span class="time">[3:52]</span>Le septre ne s'éloignera jamais</div>
-        <div class="line" data-start="240.00" data-end="243.00"><span class="time">[4:00]</span>Nous nous prostèrenons devant ta croix</div>
-        <div class="line" data-start="243.00" data-end="246.00"><span class="time">[4:03]</span>Tant à grâce nous sommes renouvelés</div>
-        <div class="line" data-start="246.00" data-end="249.00"><span class="time">[4:06]</span>Les bénédictions t'embrquent comme la plume</div>
-        <div class="line" data-start="249.00" data-end="253.00"><span class="time">[4:09]</span>Sur nous odieux nous le vende en cœur</div>
-        <div class="line" data-start="253.00" data-end="256.00"><span class="time">[4:13]</span>Dans la lumière de ta vérité</div>
-        <div class="line" data-start="256.00" data-end="260.00"><span class="time">[4:16]</span>Nous trouvons notre force, notre ferveur</div>
-        <div class="line" data-start="261.00" data-end="267.00"><span class="time">[4:21]</span>Les bénédictions de jacques dans l'unité</div>
-        <div class="line" data-start="267.00" data-end="273.00"><span class="time">[4:27]</span>Les promesses de Dieu a jamais cravé</div>
-        <div class="line" data-start="273.00" data-end="279.00"><span class="time">[4:33]</span>Nous marchons ensemble dans la vérité</div>
-        <div class="line" data-start="279.00" data-end="289.00"><span class="time">[4:39]</span>Sout à grâce notre identité amène</div>
-        <div class="line" data-start="290.00" data-end="295.00"><span class="time">[4:50]</span>Nous nous sommes ravis</div>
-        <div class="line" data-start="295.00" data-end="298.00"><span class="time">[4:55]</span>Nous nous sommes ravis</div>
-        <div class="line" data-start="298.00" data-end="301.00"><span class="time">[4:58]</span>Nous nous sommes ravis</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="14.00" data-end="20.00"><span class="time">[0:14]</span>Rassemblez-vous, ô fils de Jacob</div>
+        <div class="line" data-start="20.00" data-end="26.00"><span class="time">[0:20]</span>Écoutez la voix de votre</div>
+        <div class="line" data-start="26.00" data-end="31.00"><span class="time">[0:26]</span>père Dans les temps à venir</div>
+        <div class="line" data-start="31.00" data-end="39.00"><span class="time">[0:31]</span>je vous annonce Les promesses du ciel, la</div>
+        <div class="line" data-start="39.00" data-end="45.00"><span class="time">[0:39]</span>lumière sur la terre Ruben-toi ma</div>
+        <div class="line" data-start="45.00" data-end="52.00"><span class="time">[0:45]</span>force et ma vigueur Mais la</div>
+        <div class="line" data-start="52.00" data-end="57.00"><span class="time">[0:52]</span>prééminence s'est éloignée Dans la colère</div>
+        <div class="line" data-start="57.00" data-end="63.00"><span class="time">[0:57]</span>des cœurs en douleur La paix</div>
+        <div class="line" data-start="63.00" data-end="70.00"><span class="time">[1:03]</span>au Seigneur vient nous</div>
+        <div class="line" data-start="70.00" data-end="76.00"><span class="time">[1:10]</span>donner Ô Juda, lion des</div>
+        <div class="line" data-start="76.00" data-end="80.00"><span class="time">[1:16]</span>tribus Le sceptre ne s'éloignera jamais</div>
+        <div class="line" data-start="80.00" data-end="83.00"><span class="time">[1:20]</span>Nous nous prosternons devant ta croix</div>
+        <div class="line" data-start="83.00" data-end="86.00"><span class="time">[1:23]</span>Dans ta grâce nous sommes renouvelés Les</div>
+        <div class="line" data-start="86.00" data-end="89.00"><span class="time">[1:26]</span>bénédictions tombent comme la pluie Sur</div>
+        <div class="line" data-start="89.00" data-end="92.00"><span class="time">[1:29]</span>nous, ô Dieu, nous levons</div>
+        <div class="line" data-start="92.00" data-end="99.00"><span class="time">[1:32]</span>nos cœurs Dans la lumière de ta</div>
+        <div class="line" data-start="99.00" data-end="105.00"><span class="time">[1:39]</span>vérité Nous trouvons notre force, notre ferveur Zabulon</div>
+        <div class="line" data-start="105.00" data-end="111.00"><span class="time">[1:45]</span>sur la mer, Issachar au fardeau</div>
+        <div class="line" data-start="111.00" data-end="118.00"><span class="time">[1:51]</span>Dan le juge, serpent sur le</div>
+        <div class="line" data-start="118.00" data-end="125.00"><span class="time">[1:58]</span>chemin Gad à Siméon est fort</div>
+        <div class="line" data-start="125.00" data-end="132.00"><span class="time">[2:05]</span>dans le chaos Aser donne des</div>
+        <div class="line" data-start="132.00" data-end="138.00"><span class="time">[2:12]</span>mets pour les rois, quel</div>
+        <div class="line" data-start="138.00" data-end="143.00"><span class="time">[2:18]</span>destin Joseph rejeton d'un arbre fertile</div>
+        <div class="line" data-start="143.00" data-end="150.00"><span class="time">[2:23]</span>Fortifié par le Dieu d'Israël</div>
+        <div class="line" data-start="150.00" data-end="157.00"><span class="time">[2:30]</span>Des bénédictions qui s'élèvent</div>
+        <div class="line" data-start="157.00" data-end="163.00"><span class="time">[2:37]</span>sublimes Sur la tête du</div>
+        <div class="line" data-start="163.00" data-end="166.00"><span class="time">[2:43]</span>prince éternel Ô Juda, lion des</div>
+        <div class="line" data-start="166.00" data-end="169.00"><span class="time">[2:46]</span>tribus Le sceptre ne s'éloignera jamais</div>
+        <div class="line" data-start="169.00" data-end="173.00"><span class="time">[2:49]</span>Nous nous prosternons devant ta croix Dans</div>
+        <div class="line" data-start="173.00" data-end="176.00"><span class="time">[2:53]</span>ta grâce nous sommes renouvelés Les</div>
+        <div class="line" data-start="176.00" data-end="179.00"><span class="time">[2:56]</span>bénédictions tombent comme la pluie</div>
+        <div class="line" data-start="179.00" data-end="186.00"><span class="time">[2:59]</span>Sur nous, ô Dieu, nous levons nos</div>
+        <div class="line" data-start="186.00" data-end="190.00"><span class="time">[3:06]</span>cœurs Dans la lumière de ta</div>
+        <div class="line" data-start="190.00" data-end="195.00"><span class="time">[3:10]</span>vérité Nous trouvons</div>
+        <div class="line" data-start="195.00" data-end="198.00"><span class="time">[3:15]</span>notre force, notre ferveur Benjamin loup</div>
+        <div class="line" data-start="198.00" data-end="205.00"><span class="time">[3:18]</span>qui déchire matin et soir Il</div>
+        <div class="line" data-start="205.00" data-end="211.00"><span class="time">[3:25]</span>partage le butin Dans chaque épreuve nous te prions Rassemble-nous,</div>
+        <div class="line" data-start="211.00" data-end="217.00"><span class="time">[3:31]</span>Seigneur, dans ta main Nous marchons</div>
+        <div class="line" data-start="217.00" data-end="226.00"><span class="time">[3:37]</span>dans l'alliance Sous ta promesse tous</div>
+        <div class="line" data-start="226.00" data-end="232.00"><span class="time">[3:46]</span>unis Dans l'amour nous</div>
+        <div class="line" data-start="232.00" data-end="240.00"><span class="time">[3:52]</span>trouvons l'espérance En toi, notre</div>
+        <div class="line" data-start="240.00" data-end="243.00"><span class="time">[4:00]</span>Dieu, nous sommes ravis Ô Juda,</div>
+        <div class="line" data-start="243.00" data-end="246.00"><span class="time">[4:03]</span>lion des tribus Le sceptre ne</div>
+        <div class="line" data-start="246.00" data-end="249.00"><span class="time">[4:06]</span>s'éloignera jamais Nous nous prosternons devant ta</div>
+        <div class="line" data-start="249.00" data-end="253.00"><span class="time">[4:09]</span>croix Dans ta grâce nous sommes</div>
+        <div class="line" data-start="253.00" data-end="256.00"><span class="time">[4:13]</span>renouvelés Les bénédictions tombent comme</div>
+        <div class="line" data-start="256.00" data-end="261.00"><span class="time">[4:16]</span>la pluie Sur nous, ô Dieu, nous</div>
+        <div class="line" data-start="261.00" data-end="267.00"><span class="time">[4:21]</span>levons nos cœurs Dans la lumière de</div>
+        <div class="line" data-start="267.00" data-end="273.00"><span class="time">[4:27]</span>ta vérité Nous trouvons notre force,</div>
+        <div class="line" data-start="273.00" data-end="279.00"><span class="time">[4:33]</span>notre ferveur Bénédiction de Jacob dans</div>
+        <div class="line" data-start="279.00" data-end="290.00"><span class="time">[4:39]</span>l'unité Les promesses de Dieu à</div>
+        <div class="line" data-start="290.00" data-end="295.00"><span class="time">[4:50]</span>jamais gravées Nous marchons</div>
+        <div class="line" data-start="295.00" data-end="298.00"><span class="time">[4:55]</span>ensemble dans la vérité</div>
+        <div class="line" data-start="298.00" data-end="301.00"><span class="time">[4:58]</span>Sous ta grâce, notre identité Amen</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>

@@ -3,142 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genese 24 | Bible Chantee Karaoke</title>
+    <title>Genese 24 - Bible Chantee Karaoke</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
+        body {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #e8e8e8;
             min-height: 100vh;
+            font-family: 'Segoe UI', sans-serif;
+            color: white;
             padding: 20px;
         }
         .container { max-width: 800px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { color: #d4af37; font-size: 2em; margin-bottom: 10px; }
-        .header p { color: #888; }
-        .audio-player { 
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .audio-controls {
+            text-align: center;
             margin-bottom: 30px;
         }
-        audio { width: 100%; }
-        .lyrics { 
-            background: rgba(0,0,0,0.3);
+        audio { width: 100%; max-width: 500px; }
+        .lyrics-container {
+            background: rgba(255,255,255,0.05);
             border-radius: 15px;
-            padding: 25px;
-            max-height: 60vh;
+            padding: 20px;
+            min-height: 300px;
+            max-height: 70vh;
             overflow-y: auto;
         }
-        .line { 
+        .line {
             padding: 12px 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             border-radius: 8px;
-            transition: all 0.3s ease;
             font-size: 1.1em;
             line-height: 1.6;
+            transition: all 0.3s ease;
+            opacity: 0.5;
         }
-        .line .time { display: none; }
-        .line.active { 
-            background: linear-gradient(90deg, rgba(212,175,55,0.3) 0%, rgba(212,175,55,0.1) 100%);
-            color: #fff;
-            border-left: 4px solid #d4af37;
-            transform: scale(1.02);
+        .line.active-block {
+            background: linear-gradient(90deg, rgba(255,215,0,0.3), rgba(255,215,0,0.1));
+            border-left: 4px solid #ffd700;
+            opacity: 1;
         }
-        .line.active .time { color: #d4af37; }
-        .line.past { opacity: 0.5; }
+        .line.passed {
+            opacity: 0.3;
+        }
+        .time {
+            display: none;
+        }
+        .home-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background: #ffd700;
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .home-btn:hover { background: #ffed4a; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Genese 24</h1>
-            <p>Bible Chantee Karaoke</p>
-        </div>
-        <div class="audio-player">
+        <h1>🎤 Genese 24 - Bible Chantee Karaoke</h1>
+        
+        <div class="audio-controls">
             <audio id="audio" controls>
                 <source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_24_FR.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="lyrics" id="lyrics">
-        <div class="line" data-start="11.00" data-end="17.00"><span class="time">[0:11]</span>Dans la nuit et toilée, Abraham a prié</div>
-        <div class="line" data-start="17.00" data-end="23.00"><span class="time">[0:17]</span>L'éternel fidèle à entendue son cœur</div>
-        <div class="line" data-start="23.00" data-end="28.00"><span class="time">[0:23]</span>Il a envoyé son serviteur</div>
-        <div class="line" data-start="28.00" data-end="33.00"><span class="time">[0:28]</span>Pour chercher une promis, un doule bonheur</div>
-        <div class="line" data-start="33.00" data-end="39.00"><span class="time">[0:33]</span>Sous la main de l'ancien, c'est renseller</div>
-        <div class="line" data-start="39.00" data-end="45.00"><span class="time">[0:39]</span>Ne mène pas mon fils, mais dans la tête</div>
-        <div class="line" data-start="45.00" data-end="51.00"><span class="time">[0:45]</span>Ou la promesse a été révélé</div>
-        <div class="line" data-start="51.00" data-end="58.00"><span class="time">[0:51]</span>Là il trouvera celle qui l'éclait</div>
-        <div class="line" data-start="58.00" data-end="64.00"><span class="time">[0:58]</span>L'éternel qui de nous denta le mien</div>
-        <div class="line" data-start="64.00" data-end="70.00"><span class="time">[1:04]</span>Fait nous voir ta banter ta miséricole</div>
-        <div class="line" data-start="70.00" data-end="75.00"><span class="time">[1:10]</span>Comunruisaud qui coule si sincère</div>
-        <div class="line" data-start="75.00" data-end="82.00"><span class="time">[1:15]</span>Nous m'achonds en foi dans la côte</div>
-        <div class="line" data-start="82.00" data-end="87.00"><span class="time">[1:22]</span>Près de la source le serviteur attend</div>
-        <div class="line" data-start="87.00" data-end="93.00"><span class="time">[1:27]</span>Il lève les yeux implore avec foi</div>
-        <div class="line" data-start="93.00" data-end="98.00"><span class="time">[1:33]</span>Que la jeune fille qui viendra</div>
-        <div class="line" data-start="98.00" data-end="105.00"><span class="time">[1:38]</span>Soit c'est que tu as choisi pour moi</div>
-        <div class="line" data-start="105.00" data-end="110.00"><span class="time">[1:45]</span>Et Rebecca vait les pleines de grâces</div>
-        <div class="line" data-start="110.00" data-end="115.00"><span class="time">[1:50]</span>Sa proche avec sa cruce, ce cœur ouvert</div>
-        <div class="line" data-start="115.00" data-end="121.00"><span class="time">[1:55]</span>Elle offra boire sa douce force</div>
-        <div class="line" data-start="121.00" data-end="129.00"><span class="time">[2:01]</span>C'est ainsi que l'éternel révèle son mystère</div>
-        <div class="line" data-start="129.00" data-end="135.00"><span class="time">[2:09]</span>L'éternel qui de nous denta le mien</div>
-        <div class="line" data-start="135.00" data-end="140.00"><span class="time">[2:15]</span>Fait nous voir ta banter ta miséricole</div>
-        <div class="line" data-start="140.00" data-end="146.00"><span class="time">[2:20]</span>Comunruisaud qui coule si sincère</div>
-        <div class="line" data-start="146.00" data-end="153.00"><span class="time">[2:26]</span>Nous m'achonds en foi dans la côte</div>
-        <div class="line" data-start="153.00" data-end="158.00"><span class="time">[2:33]</span>Benis soit l'éternel qui ne renonce jamais</div>
-        <div class="line" data-start="158.00" data-end="162.00"><span class="time">[2:38]</span>A sa fidélité et sa promesse</div>
-        <div class="line" data-start="162.00" data-end="169.00"><span class="time">[2:42]</span>En fait dans chaque pas le voyons son amour</div>
-        <div class="line" data-start="169.00" data-end="177.00"><span class="time">[2:49]</span>Nous célébrons aujourd'hui et toujours</div>
-        <div class="line" data-start="177.00" data-end="183.00"><span class="time">[2:57]</span>Éternel qui de nous denta le mien</div>
-        <div class="line" data-start="183.00" data-end="188.00"><span class="time">[3:03]</span>Fait nous voir ta banter ta miséricole</div>
-        <div class="line" data-start="188.00" data-end="194.00"><span class="time">[3:08]</span>Comunruisaud qui coule si sincère</div>
-        <div class="line" data-start="194.00" data-end="201.00"><span class="time">[3:14]</span>Nous m'achonds en foi dans la côte</div>
-        <div class="line" data-start="201.00" data-end="209.00"><span class="time">[3:21]</span>Rebecca au loin, embrasse son destin</div>
-        <div class="line" data-start="209.00" data-end="214.00"><span class="time">[3:29]</span>Ensemble avec Isaac, un amour sans fin</div>
-        <div class="line" data-start="214.00" data-end="219.00"><span class="time">[3:34]</span>Dans le plan parfait de l'éternel</div>
-        <div class="line" data-start="219.00" data-end="226.00"><span class="time">[3:39]</span>Nous marchons confiants sous son ciel</div>
+        
+        <div class="lyrics-container" id="lyrics">
+        <div class="line" data-start="11.00" data-end="17.00"><span class="time">[0:11]</span>Dans la nuit étoilée, Abraham a prié.</div>
+        <div class="line" data-start="17.00" data-end="23.00"><span class="time">[0:17]</span>L'éternel fidèle a entendu son cœur Il</div>
+        <div class="line" data-start="23.00" data-end="28.00"><span class="time">[0:23]</span>a envoyé son serviteur Pour</div>
+        <div class="line" data-start="28.00" data-end="33.00"><span class="time">[0:28]</span>chercher une promesse, un doux bonheur Sous la</div>
+        <div class="line" data-start="33.00" data-end="39.00"><span class="time">[0:33]</span>main de l'ancien serment scellé, Ne mène</div>
+        <div class="line" data-start="39.00" data-end="45.00"><span class="time">[0:39]</span>pas mon fils, mais dans la terre</div>
+        <div class="line" data-start="45.00" data-end="51.00"><span class="time">[0:45]</span>Où la promesse a été</div>
+        <div class="line" data-start="51.00" data-end="58.00"><span class="time">[0:51]</span>révélée, Là, il trouvera celle qui</div>
+        <div class="line" data-start="58.00" data-end="64.00"><span class="time">[0:58]</span>l'éclaire Éternel, guide-nous dans ta lumière,</div>
+        <div class="line" data-start="64.00" data-end="70.00"><span class="time">[1:04]</span>Fais-nous voir ta bonté, ta miséricorde Comme</div>
+        <div class="line" data-start="70.00" data-end="75.00"><span class="time">[1:10]</span>un ruisseau qui coule si sincère,</div>
+        <div class="line" data-start="75.00" data-end="82.00"><span class="time">[1:15]</span>Nous marchons en foi dans l'accord</div>
+        <div class="line" data-start="82.00" data-end="87.00"><span class="time">[1:22]</span>Près de la source, le serviteur attend,</div>
+        <div class="line" data-start="87.00" data-end="93.00"><span class="time">[1:27]</span>Il lève les yeux, implore avec</div>
+        <div class="line" data-start="93.00" data-end="98.00"><span class="time">[1:33]</span>foi Que la jeune fille</div>
+        <div class="line" data-start="98.00" data-end="105.00"><span class="time">[1:38]</span>qui viendra Soit celle que tu as</div>
+        <div class="line" data-start="105.00" data-end="110.00"><span class="time">[1:45]</span>choisie pour moi Et Rebecca, belle et</div>
+        <div class="line" data-start="110.00" data-end="115.00"><span class="time">[1:50]</span>pleine de grâce, S'approche avec sa cruche,</div>
+        <div class="line" data-start="115.00" data-end="121.00"><span class="time">[1:55]</span>cœur ouvert Elle offre à voir</div>
+        <div class="line" data-start="121.00" data-end="129.00"><span class="time">[2:01]</span>sa douce face, C'est ainsi que l'éternel révèle</div>
+        <div class="line" data-start="129.00" data-end="135.00"><span class="time">[2:09]</span>son mystère Éternel, guide-nous dans ta</div>
+        <div class="line" data-start="135.00" data-end="140.00"><span class="time">[2:15]</span>lumière, Fais-nous voir ta bonté, ta miséricorde</div>
+        <div class="line" data-start="140.00" data-end="146.00"><span class="time">[2:20]</span>Comme un ruisseau qui coule si</div>
+        <div class="line" data-start="146.00" data-end="153.00"><span class="time">[2:26]</span>sincère, Nous marchons en foi dans</div>
+        <div class="line" data-start="153.00" data-end="158.00"><span class="time">[2:33]</span>l'accord Bénie soit l'éternel qui ne renonce jamais</div>
+        <div class="line" data-start="158.00" data-end="162.00"><span class="time">[2:38]</span>À sa fidélité, à sa</div>
+        <div class="line" data-start="162.00" data-end="169.00"><span class="time">[2:42]</span>promesse en fait Dans chaque pas, nous voyons</div>
+        <div class="line" data-start="169.00" data-end="177.00"><span class="time">[2:49]</span>son amour, Nous célébrons aujourd'hui et toujours</div>
+        <div class="line" data-start="177.00" data-end="183.00"><span class="time">[2:57]</span>Éternel, guide-nous dans ta lumière, Fais-nous</div>
+        <div class="line" data-start="183.00" data-end="188.00"><span class="time">[3:03]</span>voir ta bonté, ta miséricorde Comme un</div>
+        <div class="line" data-start="188.00" data-end="194.00"><span class="time">[3:08]</span>ruisseau qui coule si sincère, Nous</div>
+        <div class="line" data-start="194.00" data-end="201.00"><span class="time">[3:14]</span>marchons en foi dans l'accord Rebecca,</div>
+        <div class="line" data-start="201.00" data-end="209.00"><span class="time">[3:21]</span>au loin, embrasse son destin, Ensemble avec</div>
+        <div class="line" data-start="209.00" data-end="214.00"><span class="time">[3:29]</span>Isaac, un amour sans fin Dans le</div>
+        <div class="line" data-start="214.00" data-end="219.00"><span class="time">[3:34]</span>plan parfait de l'éternel, Nous marchons,</div>
+        <div class="line" data-start="219.00" data-end="226.00"><span class="time">[3:39]</span>confiants, sous son ciel</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="../../../lecteur.html" class="home-btn">🏠 Retour au lecteur</a>
         </div>
     </div>
+    
     <script>
         const audio = document.getElementById('audio');
         const lines = document.querySelectorAll('.line');
-        const lyricsContainer = document.getElementById('lyrics');
         
         audio.addEventListener('timeupdate', () => {
             const currentTime = audio.currentTime;
             let activeIndex = -1;
             
+            // Trouver la ligne active (celle du milieu du bloc)
             lines.forEach((line, index) => {
                 const start = parseFloat(line.dataset.start);
                 const end = parseFloat(line.dataset.end);
                 
-                line.classList.remove('active', 'past');
-                
                 if (currentTime >= start && currentTime < end) {
-                    line.classList.add('active');
                     activeIndex = index;
-                } else if (currentTime >= end) {
-                    line.classList.add('past');
                 }
             });
             
-            if (activeIndex >= 0) {
-                const activeLine = lines[activeIndex];
-                const containerRect = lyricsContainer.getBoundingClientRect();
-                const lineRect = activeLine.getBoundingClientRect();
+            // Appliquer les classes : bloc de 3 lignes surlignées
+            lines.forEach((line, index) => {
+                line.classList.remove('active-block', 'passed');
                 
-                if (lineRect.top < containerRect.top || lineRect.bottom > containerRect.bottom) {
-                    activeLine.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Surligner ligne précédente + active + suivante (bloc de 3)
+                if (index >= activeIndex - 1 && index <= activeIndex + 1 && activeIndex >= 0) {
+                    line.classList.add('active-block');
+                } else if (index < activeIndex - 1) {
+                    line.classList.add('passed');
                 }
-            }
-        });
-        
-        lines.forEach(line => {
-            line.addEventListener('click', () => {
-                audio.currentTime = parseFloat(line.dataset.start);
-                audio.play();
             });
+            
+            // Scroll pour garder le bloc visible
+            if (activeIndex >= 0 && lines[activeIndex]) {
+                lines[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
         });
     </script>
 </body>
