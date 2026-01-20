@@ -3184,7 +3184,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
       const chapter = String(currentChapter).padStart(2, '0'); // ex: "01"
       const lang = currentLang; // ex: "FR"
       
-      const karaokeUrl = `/karaoke/${lang}/${book}/${book}_${chapter}_${lang}_karaoke.html`;
+      const karaokeUrl = `./karaoke/${lang}/${book}/${book}_${chapter}_${lang}_karaoke.html`;
       
       // Ouvrir dans un nouvel onglet
       window.open(karaokeUrl, '_blank');
