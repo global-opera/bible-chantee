@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genese 3 | Bible Chantee Karaoke</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
+        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
+        .header h1{font-size:1.8em;color:#d4af37}
+        .player{max-width:800px;margin:20px auto;padding:0 20px}
+        audio{width:100%}
+        .lyrics{max-width:800px;margin:20px auto;padding:20px}
+        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
+        .line:hover{background:rgba(212,175,55,0.1)}
+        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
+        .line.passed{opacity:0.5}
+        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
+        .footer{text-align:center;padding:20px;color:#666}
+        .footer a{color:#d4af37}
+    </style>
+</head>
+<body>
+    <div class="header"><h1>Genese 3</h1><p>Bible Chantee Karaoke</p></div>
+    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_03_FR.mp3" type="audio/mpeg"></audio></div>
+    <div class="lyrics">
+        <div class="line" data-start="11.88" data-end="22.50"><span class="time">[0:11]</span>Dans le jardin où l'innocence brillait L'Éternel marchait, sa voie nous guidait</div>
+        <div class="line" data-start="22.50" data-end="33.12"><span class="time">[0:22]</span>Mais un serpent rusé avec ses mots A troublé nos cœurs et nous a fait faux</div>
+        <div class="line" data-start="33.12" data-end="54.60"><span class="time">[0:33]</span>Ô Seigneur, nous sommes revenus De l'ombre où nous avons vécu</div>
+        <div class="line" data-start="54.60" data-end="68.38"><span class="time">[0:54]</span>Par ta grâce, nous voulons marcher Vers la lumière à jamais te louer</div>
+        <div class="line" data-start="68.38" data-end="79.04"><span class="time">[1:08]</span>La femme a pris le fruit défendu Elle a partagé et l'homme a perdu</div>
+        <div class="line" data-start="79.04" data-end="89.58"><span class="time">[1:19]</span>Leurs yeux s'ouvrirent, la honte est entrée Dans ce jardin, tout a changé</div>
+        <div class="line" data-start="89.58" data-end="101.60"><span class="time">[1:29]</span>Ô Seigneur, nous sommes revenus De l'ombre où nous avons vécu</div>
+        <div class="line" data-start="101.60" data-end="127.30"><span class="time">[1:41]</span>Par ta grâce, nous voulons marcher Vers la lumière à jamais te louer</div>
+        <div class="line" data-start="127.30" data-end="140.04"><span class="time">[2:07]</span>Mais l'éternel, en sa bonté Nous a vêtus de sa vérité</div>
+        <div class="line" data-start="140.04" data-end="156.12"><span class="time">[2:20]</span>Dans la souffrance, une promesse Un sauveur viendra, notre richesse</div>
+        <div class="line" data-start="156.12" data-end="168.62"><span class="time">[2:36]</span>Ô Seigneur, nous sommes revenus De l'ombre où nous avons vécu</div>
+        <div class="line" data-start="168.62" data-end="189.66"><span class="time">[2:48]</span>Par ta grâce, nous voulons marcher Vers la lumière à jamais te louer</div>
+        <div class="line" data-start="189.66" data-end="201.04"><span class="time">[3:09]</span>Dans le jardin, un chemin redonné Par le sang versé, nous sommes sauvés</div>
+        <div class="line" data-start="201.04" data-end="205.46"><span class="time">[3:21]</span>Éternel, notre cœur te célèbre Pour la vie, pour l'amour, pour le rêve</div>
+    </div>
+    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
+    <script>
+        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
+        audio.addEventListener('timeupdate',()=>{
+            const t=audio.currentTime;
+            lines.forEach(l=>{
+                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
+                l.classList.remove('active','passed');
+                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
+                else if(t>=e)l.classList.add('passed')
+            })
+        });
+        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+    </script>
+</body>
+</html>

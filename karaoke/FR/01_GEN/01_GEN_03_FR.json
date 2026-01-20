@@ -1,0 +1,2002 @@
+{
+  "text": " Dans le jardin où l'innocence priait Les ternels marchés, sa voix d'eau qui dé. Mais en serpents russés avec ces mots A troublé nos coeurs et nous a fait faux. Oh, signer, nous sommes renu. De l'eau, nous nous avons vécu. Par ta grâce, nous voulons marcher vers la lumière A jamais te louer. La femme a pris le fruit défendu. Elle a partagé et l'homme a perdu. Lors y'est ouvrir, la honte est entrée. Dans ce jardin tout a changé. Oh, signer, nous sommes revenus. De l'eau, nous nous avons vécu. Par ta grâce, nous voulons marcher vers la lumière A jamais te louer. Mais l'éternel en savonté Nous avons tué de sa vérité Dans la souffrance, une promesse Un sauveur viandra notre richesse. Oh, signer, nous sommes revenus. De l'eau, nous nous avons vécu. Par ta grâce, nous voulons marcher vers la lumière A jamais te louer. Dans le jardin, je m'a redonner Par le sang verser, nous sommes souverts. Eternel, notre coeur te célèbreux Pour la vie, pour la moure, pour le rêver. Et pour la vie, pour la vie, pour le rêver.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 12.06,
+      "end": 18.92,
+      "text": " Dans le jardin où l'innocence priait",
+      "tokens": [
+        50364,
+        16897,
+        476,
+        46153,
+        259,
+        9068,
+        287,
+        6,
+        7729,
+        905,
+        655,
+        1790,
+        1001,
+        51364
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.5685380697250366,
+      "compression_ratio": 0.8222222222222222,
+      "no_speech_prob": 0.21202458441257477,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 12.06,
+          "end": 13.46,
+          "probability": 0.20474094152450562
+        },
+        {
+          "word": " le",
+          "start": 13.46,
+          "end": 13.9,
+          "probability": 0.9772926568984985
+        },
+        {
+          "word": " jardin",
+          "start": 13.9,
+          "end": 14.96,
+          "probability": 0.9957226514816284
+        },
+        {
+          "word": " où",
+          "start": 14.96,
+          "end": 15.92,
+          "probability": 0.33962664008140564
+        },
+        {
+          "word": " l",
+          "start": 15.92,
+          "end": 16.4,
+          "probability": 0.879069447517395
+        },
+        {
+          "word": "'innocence",
+          "start": 16.4,
+          "end": 17.02,
+          "probability": 0.7043165825307369
+        },
+        {
+          "word": " priait",
+          "start": 17.02,
+          "end": 18.92,
+          "probability": 0.7542944252490997
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 1892,
+      "start": 19.92,
+      "end": 24.72,
+      "text": " Les ternels marchés, sa voix d'eau qui dé.",
+      "tokens": [
+        50414,
+        6965,
+        256,
+        1248,
+        1625,
+        8368,
+        2191,
+        11,
+        601,
+        37188,
+        274,
+        6,
+        22290,
+        1956,
+        2795,
+        13,
+        50714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.5105371272310297,
+      "compression_ratio": 1.135135135135135,
+      "no_speech_prob": 0.060806434601545334,
+      "words": [
+        {
+          "word": " Les",
+          "start": 19.59,
+          "end": 20.2,
+          "probability": 0.542512059211731
+        },
+        {
+          "word": " ternels",
+          "start": 20.2,
+          "end": 20.76,
+          "probability": 0.7208763460318247
+        },
+        {
+          "word": " marchés,",
+          "start": 20.76,
+          "end": 21.72,
+          "probability": 0.894746869802475
+        },
+        {
+          "word": " sa",
+          "start": 22.34,
+          "end": 22.7,
+          "probability": 0.6821114420890808
+        },
+        {
+          "word": " voix",
+          "start": 22.7,
+          "end": 23.0,
+          "probability": 0.8497589826583862
+        },
+        {
+          "word": " d",
+          "start": 23.0,
+          "end": 23.62,
+          "probability": 0.543752908706665
+        },
+        {
+          "word": "'eau",
+          "start": 23.62,
+          "end": 23.92,
+          "probability": 0.7701937854290009
+        },
+        {
+          "word": " qui",
+          "start": 23.92,
+          "end": 24.26,
+          "probability": 0.5991768836975098
+        },
+        {
+          "word": " dé.",
+          "start": 24.26,
+          "end": 24.72,
+          "probability": 0.23162351548671722
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 1892,
+      "start": 26.92,
+      "end": 31.74,
+      "text": " Mais en serpents russés avec ces mots",
+      "tokens": [
+        50764,
+        6313,
+        465,
+        816,
+        79,
+        791,
+        367,
+        2023,
+        2191,
+        4163,
+        7879,
+        34009,
+        51014
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.5105371272310297,
+      "compression_ratio": 1.135135135135135,
+      "no_speech_prob": 0.060806434601545334,
+      "words": [
+        {
+          "word": " Mais",
+          "start": 26.37,
+          "end": 26.98,
+          "probability": 0.5799846649169922
+        },
+        {
+          "word": " en",
+          "start": 26.98,
+          "end": 27.32,
+          "probability": 0.7783530354499817
+        },
+        {
+          "word": " serpents",
+          "start": 27.32,
+          "end": 28.2,
+          "probability": 0.5994396011034647
+        },
+        {
+          "word": " russés",
+          "start": 28.2,
+          "end": 29.56,
+          "probability": 0.4553612619638443
+        },
+        {
+          "word": " avec",
+          "start": 29.56,
+          "end": 30.62,
+          "probability": 0.8432023525238037
+        },
+        {
+          "word": " ces",
+          "start": 30.62,
+          "end": 31.16,
+          "probability": 0.5147948861122131
+        },
+        {
+          "word": " mots",
+          "start": 31.16,
+          "end": 31.74,
+          "probability": 0.9794249534606934
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 1892,
+      "start": 32.92,
+      "end": 38.42,
+      "text": " A troublé nos coeurs et nous a fait faux.",
+      "tokens": [
+        51064,
+        316,
+        3455,
+        5199,
+        526,
+        3269,
+        12155,
+        2156,
+        1030,
+        4666,
+        257,
+        3887,
+        36659,
+        13,
+        51364
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.5105371272310297,
+      "compression_ratio": 1.135135135135135,
+      "no_speech_prob": 0.060806434601545334,
+      "words": [
+        {
+          "word": " A",
+          "start": 32.69,
+          "end": 33.3,
+          "probability": 0.030544307082891464
+        },
+        {
+          "word": " troublé",
+          "start": 33.3,
+          "end": 33.94,
+          "probability": 0.6444929838180542
+        },
+        {
+          "word": " nos",
+          "start": 33.94,
+          "end": 34.2,
+          "probability": 0.9025580286979675
+        },
+        {
+          "word": " coeurs",
+          "start": 34.2,
+          "end": 35.4,
+          "probability": 0.39549708366394043
+        },
+        {
+          "word": " et",
+          "start": 35.4,
+          "end": 35.8,
+          "probability": 0.5315883159637451
+        },
+        {
+          "word": " nous",
+          "start": 35.8,
+          "end": 36.22,
+          "probability": 0.9830113649368286
+        },
+        {
+          "word": " a",
+          "start": 36.22,
+          "end": 36.86,
+          "probability": 0.8436314463615417
+        },
+        {
+          "word": " fait",
+          "start": 36.86,
+          "end": 37.36,
+          "probability": 0.9077566266059875
+        },
+        {
+          "word": " faux.",
+          "start": 37.36,
+          "end": 38.42,
+          "probability": 0.8473983407020569
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 3842,
+      "start": 39.42,
+      "end": 44.08,
+      "text": " Oh, signer, nous sommes renu.",
+      "tokens": [
+        50414,
+        876,
+        11,
+        1465,
+        260,
+        11,
+        4666,
+        25232,
+        8124,
+        84,
+        13,
+        50714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.44199615478515625,
+      "compression_ratio": 1.1754385964912282,
+      "no_speech_prob": 0.11126618087291718,
+      "words": [
+        {
+          "word": " Oh,",
+          "start": 39.42,
+          "end": 40.3,
+          "probability": 0.31857728958129883
+        },
+        {
+          "word": " signer,",
+          "start": 40.48,
+          "end": 41.04,
+          "probability": 0.2784566357731819
+        },
+        {
+          "word": " nous",
+          "start": 42.06,
+          "end": 42.24,
+          "probability": 0.993889331817627
+        },
+        {
+          "word": " sommes",
+          "start": 42.24,
+          "end": 42.94,
+          "probability": 0.9954061508178711
+        },
+        {
+          "word": " renu.",
+          "start": 42.94,
+          "end": 44.08,
+          "probability": 0.2993544265627861
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 3842,
+      "start": 46.56,
+      "end": 51.22,
+      "text": " De l'eau, nous nous avons vécu.",
+      "tokens": [
+        50764,
+        1346,
+        287,
+        6,
+        22290,
+        11,
+        4666,
+        4666,
+        18990,
+        371,
+        9062,
+        84,
+        13,
+        51064
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.44199615478515625,
+      "compression_ratio": 1.1754385964912282,
+      "no_speech_prob": 0.11126618087291718,
+      "words": [
+        {
+          "word": " De",
+          "start": 46.56,
+          "end": 46.84,
+          "probability": 0.8638493418693542
+        },
+        {
+          "word": " l",
+          "start": 46.84,
+          "end": 47.1,
+          "probability": 0.6483532786369324
+        },
+        {
+          "word": "'eau,",
+          "start": 47.1,
+          "end": 47.64,
+          "probability": 0.7671422362327576
+        },
+        {
+          "word": " nous",
+          "start": 48.68,
+          "end": 48.86,
+          "probability": 0.8492346405982971
+        },
+        {
+          "word": " nous",
+          "start": 48.86,
+          "end": 49.12,
+          "probability": 0.7136257886886597
+        },
+        {
+          "word": " avons",
+          "start": 49.12,
+          "end": 49.58,
+          "probability": 0.8861750364303589
+        },
+        {
+          "word": " vécu.",
+          "start": 49.58,
+          "end": 51.22,
+          "probability": 0.8865351875623068
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 3842,
+      "start": 53.04,
+      "end": 60.28,
+      "text": " Par ta grâce, nous voulons marcher vers la lumière",
+      "tokens": [
+        51114,
+        3457,
+        1846,
+        31180,
+        11,
+        4666,
+        371,
+        3298,
+        892,
+        8368,
+        260,
+        1774,
+        635,
+        43193,
+        51464
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.44199615478515625,
+      "compression_ratio": 1.1754385964912282,
+      "no_speech_prob": 0.11126618087291718,
+      "words": [
+        {
+          "word": " Par",
+          "start": 53.04,
+          "end": 53.46,
+          "probability": 0.48541006445884705
+        },
+        {
+          "word": " ta",
+          "start": 53.46,
+          "end": 53.72,
+          "probability": 0.9155671000480652
+        },
+        {
+          "word": " grâce,",
+          "start": 53.72,
+          "end": 54.82,
+          "probability": 0.20621207356452942
+        },
+        {
+          "word": " nous",
+          "start": 55.24,
+          "end": 55.46,
+          "probability": 0.9901900887489319
+        },
+        {
+          "word": " voulons",
+          "start": 55.46,
+          "end": 56.26,
+          "probability": 0.9694217244784037
+        },
+        {
+          "word": " marcher",
+          "start": 56.26,
+          "end": 57.5,
+          "probability": 0.9328489601612091
+        },
+        {
+          "word": " vers",
+          "start": 57.5,
+          "end": 59.12,
+          "probability": 0.6665238738059998
+        },
+        {
+          "word": " la",
+          "start": 59.12,
+          "end": 59.6,
+          "probability": 0.9878308176994324
+        },
+        {
+          "word": " lumière",
+          "start": 59.6,
+          "end": 60.28,
+          "probability": 0.9702693223953247
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 3842,
+      "start": 61.42,
+      "end": 63.9,
+      "text": " A jamais te louer.",
+      "tokens": [
+        51514,
+        316,
+        14540,
+        535,
+        15185,
+        260,
+        13,
+        51714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.44199615478515625,
+      "compression_ratio": 1.1754385964912282,
+      "no_speech_prob": 0.11126618087291718,
+      "words": [
+        {
+          "word": " A",
+          "start": 61.0,
+          "end": 61.66,
+          "probability": 0.019186794757843018
+        },
+        {
+          "word": " jamais",
+          "start": 61.66,
+          "end": 62.26,
+          "probability": 0.9831795692443848
+        },
+        {
+          "word": " te",
+          "start": 62.26,
+          "end": 62.9,
+          "probability": 0.8217343688011169
+        },
+        {
+          "word": " louer.",
+          "start": 62.9,
+          "end": 63.9,
+          "probability": 0.652069091796875
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "seek": 6842,
+      "start": 68.42,
+      "end": 74.26,
+      "text": " La femme a pris le fruit défendu.",
+      "tokens": [
+        50364,
+        2369,
+        27427,
+        257,
+        16163,
+        476,
+        6773,
+        2795,
+        18676,
+        84,
+        13,
+        50664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.32903994832720074,
+      "compression_ratio": 1.2033898305084745,
+      "no_speech_prob": 0.005534905008971691,
+      "words": [
+        {
+          "word": " La",
+          "start": 68.42,
+          "end": 69.3,
+          "probability": 0.3622846305370331
+        },
+        {
+          "word": " femme",
+          "start": 69.3,
+          "end": 69.66,
+          "probability": 0.9612501263618469
+        },
+        {
+          "word": " a",
+          "start": 69.66,
+          "end": 70.14,
+          "probability": 0.9208436012268066
+        },
+        {
+          "word": " pris",
+          "start": 70.14,
+          "end": 70.44,
+          "probability": 0.974037766456604
+        },
+        {
+          "word": " le",
+          "start": 70.44,
+          "end": 72.16,
+          "probability": 0.2137376070022583
+        },
+        {
+          "word": " fruit",
+          "start": 72.16,
+          "end": 72.56,
+          "probability": 0.9498412013053894
+        },
+        {
+          "word": " défendu.",
+          "start": 72.56,
+          "end": 74.26,
+          "probability": 0.8528217673301697
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "seek": 6842,
+      "start": 75.42,
+      "end": 80.5,
+      "text": " Elle a partagé et l'homme a perdu.",
+      "tokens": [
+        50714,
+        16227,
+        257,
+        644,
+        559,
+        526,
+        1030,
+        287,
+        6,
+        38073,
+        257,
+        44759,
+        13,
+        51014
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.32903994832720074,
+      "compression_ratio": 1.2033898305084745,
+      "no_speech_prob": 0.005534905008971691,
+      "words": [
+        {
+          "word": " Elle",
+          "start": 75.42,
+          "end": 76.14,
+          "probability": 0.7316104769706726
+        },
+        {
+          "word": " a",
+          "start": 76.14,
+          "end": 76.34,
+          "probability": 0.985145092010498
+        },
+        {
+          "word": " partagé",
+          "start": 76.34,
+          "end": 77.54,
+          "probability": 0.9528525074323019
+        },
+        {
+          "word": " et",
+          "start": 77.54,
+          "end": 78.5,
+          "probability": 0.5721392035484314
+        },
+        {
+          "word": " l",
+          "start": 78.5,
+          "end": 78.94,
+          "probability": 0.9588937759399414
+        },
+        {
+          "word": "'homme",
+          "start": 78.94,
+          "end": 79.22,
+          "probability": 0.8381012380123138
+        },
+        {
+          "word": " a",
+          "start": 79.22,
+          "end": 79.7,
+          "probability": 0.9943987727165222
+        },
+        {
+          "word": " perdu.",
+          "start": 79.7,
+          "end": 80.5,
+          "probability": 0.9693964123725891
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "seek": 6842,
+      "start": 82.0,
+      "end": 87.42,
+      "text": " Lors y'est ouvrir, la honte est entrée.",
+      "tokens": [
+        51064,
+        441,
+        830,
+        288,
+        6,
+        377,
+        21157,
+        10949,
+        11,
+        635,
+        276,
+        10219,
+        871,
+        8041,
+        3856,
+        13,
+        51364
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.32903994832720074,
+      "compression_ratio": 1.2033898305084745,
+      "no_speech_prob": 0.005534905008971691,
+      "words": [
+        {
+          "word": " Lors",
+          "start": 82.0,
+          "end": 82.94,
+          "probability": 0.8607439696788788
+        },
+        {
+          "word": " y",
+          "start": 82.94,
+          "end": 83.12,
+          "probability": 0.10960868000984192
+        },
+        {
+          "word": "'est",
+          "start": 83.12,
+          "end": 83.2,
+          "probability": 0.2528117448091507
+        },
+        {
+          "word": " ouvrir,",
+          "start": 83.2,
+          "end": 84.28,
+          "probability": 0.5567419677972794
+        },
+        {
+          "word": " la",
+          "start": 84.86,
+          "end": 85.04,
+          "probability": 0.684959352016449
+        },
+        {
+          "word": " honte",
+          "start": 85.04,
+          "end": 85.68,
+          "probability": 0.5562928095459938
+        },
+        {
+          "word": " est",
+          "start": 85.68,
+          "end": 86.24,
+          "probability": 0.9874820709228516
+        },
+        {
+          "word": " entrée.",
+          "start": 86.24,
+          "end": 87.42,
+          "probability": 0.957746297121048
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "seek": 6842,
+      "start": 88.92,
+      "end": 94.6,
+      "text": " Dans ce jardin tout a changé.",
+      "tokens": [
+        51414,
+        16897,
+        1769,
+        46153,
+        259,
+        3486,
+        257,
+        1534,
+        526,
+        13,
+        51714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.32903994832720074,
+      "compression_ratio": 1.2033898305084745,
+      "no_speech_prob": 0.005534905008971691,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 88.92,
+          "end": 89.44,
+          "probability": 0.9883361458778381
+        },
+        {
+          "word": " ce",
+          "start": 89.44,
+          "end": 89.8,
+          "probability": 0.9982084035873413
+        },
+        {
+          "word": " jardin",
+          "start": 89.8,
+          "end": 90.7,
+          "probability": 0.9938186407089233
+        },
+        {
+          "word": " tout",
+          "start": 90.7,
+          "end": 92.02,
+          "probability": 0.3571111559867859
+        },
+        {
+          "word": " a",
+          "start": 92.02,
+          "end": 92.74,
+          "probability": 0.776357114315033
+        },
+        {
+          "word": " changé.",
+          "start": 92.74,
+          "end": 94.6,
+          "probability": 0.9835225939750671
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "seek": 9460,
+      "start": 95.6,
+      "end": 100.94,
+      "text": " Oh, signer, nous sommes revenus.",
+      "tokens": [
+        50414,
+        876,
+        11,
+        1465,
+        260,
+        11,
+        4666,
+        25232,
+        6158,
+        301,
+        13,
+        50714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.07247591495513916,
+      "compression_ratio": 1.191304347826087,
+      "no_speech_prob": 0.0053090061992406845,
+      "words": [
+        {
+          "word": " Oh,",
+          "start": 95.52,
+          "end": 96.16,
+          "probability": 0.25463780760765076
+        },
+        {
+          "word": " signer,",
+          "start": 96.36,
+          "end": 96.88,
+          "probability": 0.12373018078505993
+        },
+        {
+          "word": " nous",
+          "start": 97.9,
+          "end": 98.12,
+          "probability": 0.9812811017036438
+        },
+        {
+          "word": " sommes",
+          "start": 98.12,
+          "end": 98.82,
+          "probability": 0.9941565990447998
+        },
+        {
+          "word": " revenus.",
+          "start": 98.82,
+          "end": 100.94,
+          "probability": 0.9458810091018677
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "seek": 9460,
+      "start": 102.6,
+      "end": 106.66,
+      "text": " De l'eau, nous nous avons vécu.",
+      "tokens": [
+        50764,
+        1346,
+        287,
+        6,
+        22290,
+        11,
+        4666,
+        4666,
+        18990,
+        371,
+        9062,
+        84,
+        13,
+        51014
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.07247591495513916,
+      "compression_ratio": 1.191304347826087,
+      "no_speech_prob": 0.0053090061992406845,
+      "words": [
+        {
+          "word": " De",
+          "start": 102.04,
+          "end": 102.68,
+          "probability": 0.8993921279907227
+        },
+        {
+          "word": " l",
+          "start": 102.68,
+          "end": 102.98,
+          "probability": 0.55022132396698
+        },
+        {
+          "word": "'eau,",
+          "start": 102.98,
+          "end": 103.4,
+          "probability": 0.4978698219638318
+        },
+        {
+          "word": " nous",
+          "start": 103.78,
+          "end": 104.68,
+          "probability": 0.21893982589244843
+        },
+        {
+          "word": " nous",
+          "start": 104.68,
+          "end": 105.0,
+          "probability": 0.20025266706943512
+        },
+        {
+          "word": " avons",
+          "start": 105.0,
+          "end": 105.5,
+          "probability": 0.3043600916862488
+        },
+        {
+          "word": " vécu.",
+          "start": 105.5,
+          "end": 106.66,
+          "probability": 0.9057448705037435
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "seek": 9460,
+      "start": 108.74,
+      "end": 116.16,
+      "text": " Par ta grâce, nous voulons marcher vers la lumière",
+      "tokens": [
+        51064,
+        3457,
+        1846,
+        31180,
+        11,
+        4666,
+        371,
+        3298,
+        892,
+        8368,
+        260,
+        1774,
+        635,
+        43193,
+        51464
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.07247591495513916,
+      "compression_ratio": 1.191304347826087,
+      "no_speech_prob": 0.0053090061992406845,
+      "words": [
+        {
+          "word": " Par",
+          "start": 108.74,
+          "end": 109.34,
+          "probability": 0.4018173813819885
+        },
+        {
+          "word": " ta",
+          "start": 109.34,
+          "end": 109.58,
+          "probability": 0.7184039950370789
+        },
+        {
+          "word": " grâce,",
+          "start": 109.58,
+          "end": 110.74,
+          "probability": 0.31055694818496704
+        },
+        {
+          "word": " nous",
+          "start": 111.14,
+          "end": 111.4,
+          "probability": 0.987950325012207
+        },
+        {
+          "word": " voulons",
+          "start": 111.4,
+          "end": 112.16,
+          "probability": 0.9486370086669922
+        },
+        {
+          "word": " marcher",
+          "start": 112.16,
+          "end": 113.32,
+          "probability": 0.9363042712211609
+        },
+        {
+          "word": " vers",
+          "start": 113.32,
+          "end": 114.94,
+          "probability": 0.4841366112232208
+        },
+        {
+          "word": " la",
+          "start": 114.94,
+          "end": 115.5,
+          "probability": 0.9611924290657043
+        },
+        {
+          "word": " lumière",
+          "start": 115.5,
+          "end": 116.16,
+          "probability": 0.8217586278915405
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "seek": 9460,
+      "start": 116.16,
+      "end": 120.08,
+      "text": " A jamais te louer.",
+      "tokens": [
+        51514,
+        316,
+        14540,
+        535,
+        15185,
+        260,
+        13,
+        51814
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.07247591495513916,
+      "compression_ratio": 1.191304347826087,
+      "no_speech_prob": 0.0053090061992406845,
+      "words": [
+        {
+          "word": " A",
+          "start": 116.16,
+          "end": 117.52,
+          "probability": 0.01860249601304531
+        },
+        {
+          "word": " jamais",
+          "start": 117.52,
+          "end": 118.14,
+          "probability": 0.9923254251480103
+        },
+        {
+          "word": " te",
+          "start": 118.14,
+          "end": 118.76,
+          "probability": 0.6863038539886475
+        },
+        {
+          "word": " louer.",
+          "start": 118.76,
+          "end": 120.08,
+          "probability": 0.6958580315113068
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "seek": 12460,
+      "start": 124.6,
+      "end": 129.74,
+      "text": " Mais l'éternel en savonté",
+      "tokens": [
+        50364,
+        6313,
+        287,
+        6,
+        526,
+        2231,
+        338,
+        465,
+        11163,
+        896,
+        526,
+        50614
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.34560311358907947,
+      "compression_ratio": 1.1559633027522935,
+      "no_speech_prob": 0.0019430611282587051,
+      "words": [
+        {
+          "word": " Mais",
+          "start": 124.6,
+          "end": 125.24,
+          "probability": 0.7699849009513855
+        },
+        {
+          "word": " l",
+          "start": 125.24,
+          "end": 125.6,
+          "probability": 0.9326640367507935
+        },
+        {
+          "word": "'éternel",
+          "start": 125.6,
+          "end": 127.42,
+          "probability": 0.6733477115631104
+        },
+        {
+          "word": " en",
+          "start": 127.42,
+          "end": 128.52,
+          "probability": 0.7550722360610962
+        },
+        {
+          "word": " savonté",
+          "start": 128.52,
+          "end": 129.74,
+          "probability": 0.4998263617356618
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "seek": 12460,
+      "start": 130.6,
+      "end": 137.04,
+      "text": " Nous avons tué de sa vérité",
+      "tokens": [
+        50664,
+        15343,
+        18990,
+        2604,
+        526,
+        368,
+        601,
+        30678,
+        526,
+        50964
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.34560311358907947,
+      "compression_ratio": 1.1559633027522935,
+      "no_speech_prob": 0.0019430611282587051,
+      "words": [
+        {
+          "word": " Nous",
+          "start": 130.6,
+          "end": 131.78,
+          "probability": 0.7524554133415222
+        },
+        {
+          "word": " avons",
+          "start": 131.78,
+          "end": 132.52,
+          "probability": 0.2781111001968384
+        },
+        {
+          "word": " tué",
+          "start": 132.52,
+          "end": 134.0,
+          "probability": 0.6029335558414459
+        },
+        {
+          "word": " de",
+          "start": 134.0,
+          "end": 134.74,
+          "probability": 0.9444912672042847
+        },
+        {
+          "word": " sa",
+          "start": 134.74,
+          "end": 135.06,
+          "probability": 0.9618226289749146
+        },
+        {
+          "word": " vérité",
+          "start": 135.06,
+          "end": 137.04,
+          "probability": 0.9517413973808289
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "seek": 12460,
+      "start": 137.6,
+      "end": 143.12,
+      "text": " Dans la souffrance, une promesse",
+      "tokens": [
+        51014,
+        16897,
+        635,
+        36966,
+        32493,
+        11,
+        2251,
+        2234,
+        7357,
+        51314
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.34560311358907947,
+      "compression_ratio": 1.1559633027522935,
+      "no_speech_prob": 0.0019430611282587051,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 137.6,
+          "end": 138.42,
+          "probability": 0.8833747506141663
+        },
+        {
+          "word": " la",
+          "start": 138.42,
+          "end": 138.84,
+          "probability": 0.9720537662506104
+        },
+        {
+          "word": " souffrance,",
+          "start": 138.84,
+          "end": 140.26,
+          "probability": 0.9803215563297272
+        },
+        {
+          "word": " une",
+          "start": 140.26,
+          "end": 141.92,
+          "probability": 0.6509757041931152
+        },
+        {
+          "word": " promesse",
+          "start": 141.92,
+          "end": 143.12,
+          "probability": 0.8738825917243958
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "seek": 12460,
+      "start": 144.6,
+      "end": 152.5,
+      "text": " Un sauveur viandra notre richesse.",
+      "tokens": [
+        51364,
+        1156,
+        17828,
+        303,
+        374,
+        1932,
+        474,
+        424,
+        10349,
+        4593,
+        7357,
+        13,
+        51814
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.34560311358907947,
+      "compression_ratio": 1.1559633027522935,
+      "no_speech_prob": 0.0019430611282587051,
+      "words": [
+        {
+          "word": " Un",
+          "start": 144.26000000000002,
+          "end": 144.96,
+          "probability": 0.26930922269821167
+        },
+        {
+          "word": " sauveur",
+          "start": 144.96,
+          "end": 145.64,
+          "probability": 0.7810724377632141
+        },
+        {
+          "word": " viandra",
+          "start": 145.64,
+          "end": 146.4,
+          "probability": 0.4256484905878703
+        },
+        {
+          "word": " notre",
+          "start": 146.4,
+          "end": 147.94,
+          "probability": 0.3944380581378937
+        },
+        {
+          "word": " richesse.",
+          "start": 147.94,
+          "end": 152.5,
+          "probability": 0.9286023378372192
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "seek": 15460,
+      "start": 154.6,
+      "end": 159.82,
+      "text": " Oh, signer, nous sommes revenus.",
+      "tokens": [
+        50364,
+        876,
+        11,
+        1465,
+        260,
+        11,
+        4666,
+        25232,
+        6158,
+        301,
+        13,
+        50664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.07619203305711933,
+      "compression_ratio": 1.191304347826087,
+      "no_speech_prob": 0.0017718211747705936,
+      "words": [
+        {
+          "word": " Oh,",
+          "start": 154.6,
+          "end": 155.1,
+          "probability": 0.020032888278365135
+        },
+        {
+          "word": " signer,",
+          "start": 155.3,
+          "end": 156.08,
+          "probability": 0.3806607350707054
+        },
+        {
+          "word": " nous",
+          "start": 156.74,
+          "end": 157.32,
+          "probability": 0.9854317307472229
+        },
+        {
+          "word": " sommes",
+          "start": 157.32,
+          "end": 157.82,
+          "probability": 0.9723424315452576
+        },
+        {
+          "word": " revenus.",
+          "start": 157.82,
+          "end": 159.82,
+          "probability": 0.8652417659759521
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "seek": 15460,
+      "start": 161.14,
+      "end": 166.52,
+      "text": " De l'eau, nous nous avons vécu.",
+      "tokens": [
+        50714,
+        1346,
+        287,
+        6,
+        22290,
+        11,
+        4666,
+        4666,
+        18990,
+        371,
+        9062,
+        84,
+        13,
+        51014
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.07619203305711933,
+      "compression_ratio": 1.191304347826087,
+      "no_speech_prob": 0.0017718211747705936,
+      "words": [
+        {
+          "word": " De",
+          "start": 161.14,
+          "end": 161.84,
+          "probability": 0.9032292366027832
+        },
+        {
+          "word": " l",
+          "start": 161.84,
+          "end": 162.2,
+          "probability": 0.7220128774642944
+        },
+        {
+          "word": "'eau,",
+          "start": 162.2,
+          "end": 162.48,
+          "probability": 0.5177215356379747
+        },
+        {
+          "word": " nous",
+          "start": 163.28,
+          "end": 163.84,
+          "probability": 0.03053220547735691
+        },
+        {
+          "word": " nous",
+          "start": 163.84,
+          "end": 164.18,
+          "probability": 0.15983246266841888
+        },
+        {
+          "word": " avons",
+          "start": 164.18,
+          "end": 164.58,
+          "probability": 0.14539338648319244
+        },
+        {
+          "word": " vécu.",
+          "start": 164.58,
+          "end": 166.52,
+          "probability": 0.9708247383435568
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "seek": 15460,
+      "start": 167.4,
+      "end": 175.36,
+      "text": " Par ta grâce, nous voulons marcher vers la lumière",
+      "tokens": [
+        51064,
+        3457,
+        1846,
+        31180,
+        11,
+        4666,
+        371,
+        3298,
+        892,
+        8368,
+        260,
+        1774,
+        635,
+        43193,
+        51414
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.07619203305711933,
+      "compression_ratio": 1.191304347826087,
+      "no_speech_prob": 0.0017718211747705936,
+      "words": [
+        {
+          "word": " Par",
+          "start": 167.4,
+          "end": 168.48,
+          "probability": 0.14893944561481476
+        },
+        {
+          "word": " ta",
+          "start": 168.48,
+          "end": 168.74,
+          "probability": 0.9796525239944458
+        },
+        {
+          "word": " grâce,",
+          "start": 168.74,
+          "end": 169.76,
+          "probability": 0.27228111028671265
+        },
+        {
+          "word": " nous",
+          "start": 170.32,
+          "end": 170.56,
+          "probability": 0.9930651187896729
+        },
+        {
+          "word": " voulons",
+          "start": 170.56,
+          "end": 171.26,
+          "probability": 0.9319301644961039
+        },
+        {
+          "word": " marcher",
+          "start": 171.26,
+          "end": 172.58,
+          "probability": 0.9456354379653931
+        },
+        {
+          "word": " vers",
+          "start": 172.58,
+          "end": 174.18,
+          "probability": 0.42048877477645874
+        },
+        {
+          "word": " la",
+          "start": 174.18,
+          "end": 174.68,
+          "probability": 0.9507495760917664
+        },
+        {
+          "word": " lumière",
+          "start": 174.68,
+          "end": 175.36,
+          "probability": 0.9535587430000305
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "seek": 15460,
+      "start": 176.6,
+      "end": 179.18,
+      "text": " A jamais te louer.",
+      "tokens": [
+        51464,
+        316,
+        14540,
+        535,
+        15185,
+        260,
+        13,
+        51664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.07619203305711933,
+      "compression_ratio": 1.191304347826087,
+      "no_speech_prob": 0.0017718211747705936,
+      "words": [
+        {
+          "word": " A",
+          "start": 176.02999999999997,
+          "end": 176.7,
+          "probability": 0.030740484595298767
+        },
+        {
+          "word": " jamais",
+          "start": 176.7,
+          "end": 177.28,
+          "probability": 0.9923855066299438
+        },
+        {
+          "word": " te",
+          "start": 177.28,
+          "end": 177.92,
+          "probability": 0.8665263056755066
+        },
+        {
+          "word": " louer.",
+          "start": 177.92,
+          "end": 179.18,
+          "probability": 0.9687200784683228
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "seek": 17918,
+      "start": 180.18,
+      "end": 185.5,
+      "text": " Dans le jardin, je m'a redonner",
+      "tokens": [
+        50414,
+        16897,
+        476,
+        46153,
+        259,
+        11,
+        1506,
+        275,
+        6,
+        64,
+        2182,
+        38885,
+        50714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4047526326672784,
+      "compression_ratio": 1.2644628099173554,
+      "no_speech_prob": 0.07155665010213852,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 180.18,
+          "end": 181.18,
+          "probability": 0.8448370695114136
+        },
+        {
+          "word": " le",
+          "start": 181.18,
+          "end": 181.54,
+          "probability": 0.9891531467437744
+        },
+        {
+          "word": " jardin,",
+          "start": 181.54,
+          "end": 182.46,
+          "probability": 0.9976222813129425
+        },
+        {
+          "word": " je",
+          "start": 183.62,
+          "end": 183.7,
+          "probability": 0.9099798202514648
+        },
+        {
+          "word": " m",
+          "start": 183.7,
+          "end": 183.96,
+          "probability": 0.9569794535636902
+        },
+        {
+          "word": "'a",
+          "start": 183.96,
+          "end": 184.28,
+          "probability": 0.7990295588970184
+        },
+        {
+          "word": " redonner",
+          "start": 184.28,
+          "end": 185.5,
+          "probability": 0.5481679290533066
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "seek": 17918,
+      "start": 187.18,
+      "end": 193.5,
+      "text": " Par le sang verser, nous sommes souverts.",
+      "tokens": [
+        50764,
+        3457,
+        476,
+        9980,
+        1774,
+        260,
+        11,
+        4666,
+        25232,
+        6926,
+        331,
+        1373,
+        13,
+        51114
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4047526326672784,
+      "compression_ratio": 1.2644628099173554,
+      "no_speech_prob": 0.07155665010213852,
+      "words": [
+        {
+          "word": " Par",
+          "start": 187.06,
+          "end": 187.62,
+          "probability": 0.27160724997520447
+        },
+        {
+          "word": " le",
+          "start": 187.62,
+          "end": 187.8,
+          "probability": 0.7525736689567566
+        },
+        {
+          "word": " sang",
+          "start": 187.8,
+          "end": 188.1,
+          "probability": 0.43306511640548706
+        },
+        {
+          "word": " verser,",
+          "start": 188.1,
+          "end": 189.18,
+          "probability": 0.39513665437698364
+        },
+        {
+          "word": " nous",
+          "start": 189.98,
+          "end": 190.68,
+          "probability": 0.7999747395515442
+        },
+        {
+          "word": " sommes",
+          "start": 190.68,
+          "end": 191.46,
+          "probability": 0.9941978454589844
+        },
+        {
+          "word": " souverts.",
+          "start": 191.46,
+          "end": 193.5,
+          "probability": 0.5414058466752371
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "seek": 17918,
+      "start": 195.18,
+      "end": 200.18,
+      "text": " Eternel, notre coeur te célèbreux",
+      "tokens": [
+        51164,
+        462,
+        2231,
+        338,
+        11,
+        10349,
+        45781,
+        535,
+        29064,
+        1462,
+        2672,
+        2449,
+        51414
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4047526326672784,
+      "compression_ratio": 1.2644628099173554,
+      "no_speech_prob": 0.07155665010213852,
+      "words": [
+        {
+          "word": " Eternel,",
+          "start": 195.18,
+          "end": 195.76,
+          "probability": 0.44602788674334687
+        },
+        {
+          "word": " notre",
+          "start": 196.12,
+          "end": 196.78,
+          "probability": 0.9883689880371094
+        },
+        {
+          "word": " coeur",
+          "start": 196.78,
+          "end": 197.26,
+          "probability": 0.3340381979942322
+        },
+        {
+          "word": " te",
+          "start": 197.26,
+          "end": 197.82,
+          "probability": 0.7067941427230835
+        },
+        {
+          "word": " célèbreux",
+          "start": 197.82,
+          "end": 200.18,
+          "probability": 0.8425759971141815
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "seek": 17918,
+      "start": 200.84,
+      "end": 206.02,
+      "text": " Pour la vie, pour la moure, pour le rêver.",
+      "tokens": [
+        51464,
+        8732,
+        635,
+        4941,
+        11,
+        2016,
+        635,
+        275,
+        263,
+        265,
+        11,
+        2016,
+        476,
+        38240,
+        331,
+        13,
+        51814
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4047526326672784,
+      "compression_ratio": 1.2644628099173554,
+      "no_speech_prob": 0.07155665010213852,
+      "words": [
+        {
+          "word": " Pour",
+          "start": 200.84,
+          "end": 201.26,
+          "probability": 0.7080211639404297
+        },
+        {
+          "word": " la",
+          "start": 201.26,
+          "end": 201.62,
+          "probability": 0.976423442363739
+        },
+        {
+          "word": " vie,",
+          "start": 201.62,
+          "end": 201.98,
+          "probability": 0.9959491491317749
+        },
+        {
+          "word": " pour",
+          "start": 202.72,
+          "end": 202.9,
+          "probability": 0.9959468245506287
+        },
+        {
+          "word": " la",
+          "start": 202.9,
+          "end": 203.28,
+          "probability": 0.40390545129776
+        },
+        {
+          "word": " moure,",
+          "start": 203.28,
+          "end": 203.96,
+          "probability": 0.451938937107722
+        },
+        {
+          "word": " pour",
+          "start": 204.36,
+          "end": 204.56,
+          "probability": 0.9978958368301392
+        },
+        {
+          "word": " le",
+          "start": 204.56,
+          "end": 204.92,
+          "probability": 0.9301243424415588
+        },
+        {
+          "word": " rêver.",
+          "start": 204.92,
+          "end": 206.02,
+          "probability": 0.7921299338340759
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "seek": 20918,
+      "start": 211.7,
+      "end": 213.1,
+      "text": " Et pour la vie, pour la vie, pour le rêver.",
+      "tokens": [
+        50364,
+        3790,
+        2016,
+        635,
+        4941,
+        11,
+        2016,
+        635,
+        4941,
+        11,
+        2016,
+        476,
+        38240,
+        331,
+        13,
+        50664
+      ],
+      "temperature": 0.2,
+      "avg_logprob": -0.49583388819839014,
+      "compression_ratio": 2.3421052631578947,
+      "no_speech_prob": 0.5115031003952026,
+      "words": [
+        {
+          "word": " Et",
+          "start": 211.7,
+          "end": 213.1,
+          "probability": 0.0142538296058774
+        },
+        {
+          "word": " pour",
+          "start": 213.1,
+          "end": 213.1,
+          "probability": 0.029078135266900063
+        },
+        {
+          "word": " la",
+          "start": 213.1,
+          "end": 213.1,
+          "probability": 0.048422571271657944
+        },
+        {
+          "word": " vie,",
+          "start": 213.1,
+          "end": 213.1,
+          "probability": 0.01643376424908638
+        },
+        {
+          "word": " pour",
+          "start": 213.1,
+          "end": 213.1,
+          "probability": 0.022253548726439476
+        },
+        {
+          "word": " la",
+          "start": 213.1,
+          "end": 213.1,
+          "probability": 0.15540152788162231
+        },
+        {
+          "word": " vie,",
+          "start": 213.1,
+          "end": 213.1,
+          "probability": 0.36938077211380005
+        },
+        {
+          "word": " pour",
+          "start": 213.1,
+          "end": 213.1,
+          "probability": 0.29607075452804565
+        },
+        {
+          "word": " le",
+          "start": 213.1,
+          "end": 213.1,
+          "probability": 0.029712200164794922
+        },
+        {
+          "word": " rêver.",
+          "start": 213.1,
+          "end": 213.1,
+          "probability": 0.1733550382195972
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "seek": 20918,
+      "start": 213.1,
+      "end": 213.1,
+      "text": "",
+      "tokens": [],
+      "temperature": 0.2,
+      "avg_logprob": -0.49583388819839014,
+      "compression_ratio": 2.3421052631578947,
+      "no_speech_prob": 0.5115031003952026,
+      "words": []
+    }
+  ],
+  "language": "fr"
+}

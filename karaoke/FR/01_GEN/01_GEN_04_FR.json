@@ -1,0 +1,2743 @@
+{
+  "text": " ... Dans le jardin, au souffle d'ivin A d'en rêve, un amour sans fin Avec l'aide de l'éternel, un fils s'énée au cœur et ternel Caient le laboreur de la terre A Bel, le berger et coût de lumière Des offrants de porter avec foi L'éternel regarda et il fila choi Oh, dans la lumière de l'éternel Nos coeurs célèves, nos âmes sur l'évél Qui ne denont pas, s'ignorent de monter Dans chaque lutte, dans chaque vérité Mais c'est un encolaire son cœur s'est éteint La voie du sang cri, un destin certain Pourquoi tu troublais en caïen écoutes Le péchéraulte dans l'ombre il se glisse Tu dois dominer, ne laisse pas la nuit La lumière d'en haut pour toujours nous Oh, dans la lumière de l'éternel Nos coeurs célèves, nos âmes sur l'évél Qui ne denont pas, s'ignorent de monter Dans chaque lutte, dans chaque vérité Et malgré la douleur, malgré la triste Son amour en Dieu nous donne la riche Un signe sur caïen, sa grâce s'en finit Dans la terre de nôtre, ta voix nous unit A dans l'érein, un nouveau fils, et par lui l'espoir Remet notre cœur sa pèse Oh, dans la lumière de l'éternel Nos coeurs célèves, nos âmes sur l'évél Qui ne denont pas, s'ignorent de monter Dans chaque lutte, dans chaque vérité Un beau compte ton nom, et terner dans notre histoire Je ferai que c'est pas avec confiance Nous marchons vers toi Dans la lumière d'éternel Nous vivons en émoins Nous vivons en émoins",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 8.780000000000001,
+      "end": 10.08,
+      "text": " ...",
+      "tokens": [
+        50364,
+        1097,
+        51014
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.5317299582741477,
+      "compression_ratio": 0.9452054794520548,
+      "no_speech_prob": 0.19881212711334229,
+      "words": [
+        {
+          "word": " ...",
+          "start": 8.780000000000001,
+          "end": 10.08,
+          "probability": 0.04124346375465393
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 13.0,
+      "end": 18.0,
+      "text": " Dans le jardin, au souffle d'ivin",
+      "tokens": [
+        51014,
+        16897,
+        476,
+        46153,
+        259,
+        11,
+        1609,
+        36966,
+        306,
+        274,
+        6,
+        592,
+        259,
+        51314
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.5317299582741477,
+      "compression_ratio": 0.9452054794520548,
+      "no_speech_prob": 0.19881212711334229,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 12.59,
+          "end": 13.24,
+          "probability": 0.043086837977170944
+        },
+        {
+          "word": " le",
+          "start": 13.24,
+          "end": 13.5,
+          "probability": 0.9864965081214905
+        },
+        {
+          "word": " jardin,",
+          "start": 13.5,
+          "end": 14.7,
+          "probability": 0.9969775080680847
+        },
+        {
+          "word": " au",
+          "start": 15.58,
+          "end": 15.92,
+          "probability": 0.6571327447891235
+        },
+        {
+          "word": " souffle",
+          "start": 15.92,
+          "end": 16.52,
+          "probability": 0.9319815933704376
+        },
+        {
+          "word": " d",
+          "start": 16.52,
+          "end": 16.94,
+          "probability": 0.568726658821106
+        },
+        {
+          "word": "'ivin",
+          "start": 16.94,
+          "end": 18.0,
+          "probability": 0.7842826048533121
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 19.0,
+      "end": 24.46,
+      "text": " A d'en rêve, un amour sans fin",
+      "tokens": [
+        51314,
+        316,
+        274,
+        6,
+        268,
+        38240,
+        303,
+        11,
+        517,
+        669,
+        396,
+        12177,
+        962,
+        51664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.5317299582741477,
+      "compression_ratio": 0.9452054794520548,
+      "no_speech_prob": 0.19881212711334229,
+      "words": [
+        {
+          "word": " A",
+          "start": 18.990000000000002,
+          "end": 19.64,
+          "probability": 0.06289871037006378
+        },
+        {
+          "word": " d",
+          "start": 19.64,
+          "end": 19.86,
+          "probability": 0.7637962698936462
+        },
+        {
+          "word": "'en",
+          "start": 19.86,
+          "end": 20.04,
+          "probability": 0.7411056458950043
+        },
+        {
+          "word": " rêve,",
+          "start": 20.04,
+          "end": 21.72,
+          "probability": 0.4638408124446869
+        },
+        {
+          "word": " un",
+          "start": 22.2,
+          "end": 22.38,
+          "probability": 0.42235302925109863
+        },
+        {
+          "word": " amour",
+          "start": 22.38,
+          "end": 23.08,
+          "probability": 0.9564422070980072
+        },
+        {
+          "word": " sans",
+          "start": 23.08,
+          "end": 23.52,
+          "probability": 0.7598242163658142
+        },
+        {
+          "word": " fin",
+          "start": 23.52,
+          "end": 24.46,
+          "probability": 0.8898194432258606
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 2446,
+      "start": 25.66,
+      "end": 32.38,
+      "text": " Avec l'aide de l'éternel, un fils s'énée au cœur et ternel",
+      "tokens": [
+        50414,
+        31720,
+        287,
+        6,
+        41980,
+        368,
+        287,
+        6,
+        526,
+        2231,
+        338,
+        11,
+        517,
+        46190,
+        262,
+        6,
+        3516,
+        3856,
+        1609,
+        43207,
+        1030,
+        256,
+        1248,
+        338,
+        50764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.44261528273760264,
+      "compression_ratio": 1.2635658914728682,
+      "no_speech_prob": 0.039277512580156326,
+      "words": [
+        {
+          "word": " Avec",
+          "start": 25.66,
+          "end": 26.6,
+          "probability": 0.7289646863937378
+        },
+        {
+          "word": " l",
+          "start": 26.6,
+          "end": 26.96,
+          "probability": 0.758469820022583
+        },
+        {
+          "word": "'aide",
+          "start": 26.96,
+          "end": 27.32,
+          "probability": 0.8860017359256744
+        },
+        {
+          "word": " de",
+          "start": 27.32,
+          "end": 27.58,
+          "probability": 0.8625559210777283
+        },
+        {
+          "word": " l",
+          "start": 27.58,
+          "end": 27.72,
+          "probability": 0.9423897862434387
+        },
+        {
+          "word": "'éternel,",
+          "start": 27.72,
+          "end": 28.88,
+          "probability": 0.6583141982555389
+        },
+        {
+          "word": " un",
+          "start": 29.14,
+          "end": 29.36,
+          "probability": 0.7096871137619019
+        },
+        {
+          "word": " fils",
+          "start": 29.36,
+          "end": 29.48,
+          "probability": 0.40508657693862915
+        },
+        {
+          "word": " s",
+          "start": 29.48,
+          "end": 29.94,
+          "probability": 0.43482479453086853
+        },
+        {
+          "word": "'énée",
+          "start": 29.94,
+          "end": 30.14,
+          "probability": 0.4325347642103831
+        },
+        {
+          "word": " au",
+          "start": 30.14,
+          "end": 30.46,
+          "probability": 0.9614572525024414
+        },
+        {
+          "word": " cœur",
+          "start": 30.46,
+          "end": 30.8,
+          "probability": 0.5609947443008423
+        },
+        {
+          "word": " et",
+          "start": 30.8,
+          "end": 31.1,
+          "probability": 0.2901424467563629
+        },
+        {
+          "word": " ternel",
+          "start": 31.1,
+          "end": 32.38,
+          "probability": 0.6296178996562958
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 2446,
+      "start": 32.38,
+      "end": 37.24,
+      "text": " Caient le laboreur de la terre",
+      "tokens": [
+        50764,
+        7544,
+        1196,
+        476,
+        5938,
+        13629,
+        368,
+        635,
+        31815,
+        51064
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.44261528273760264,
+      "compression_ratio": 1.2635658914728682,
+      "no_speech_prob": 0.039277512580156326,
+      "words": [
+        {
+          "word": " Caient",
+          "start": 32.38,
+          "end": 33.26,
+          "probability": 0.5409460812807083
+        },
+        {
+          "word": " le",
+          "start": 33.26,
+          "end": 34.48,
+          "probability": 0.9532650113105774
+        },
+        {
+          "word": " laboreur",
+          "start": 34.48,
+          "end": 35.28,
+          "probability": 0.333967462182045
+        },
+        {
+          "word": " de",
+          "start": 35.28,
+          "end": 35.74,
+          "probability": 0.9986461997032166
+        },
+        {
+          "word": " la",
+          "start": 35.74,
+          "end": 36.36,
+          "probability": 0.7140219807624817
+        },
+        {
+          "word": " terre",
+          "start": 36.36,
+          "end": 37.24,
+          "probability": 0.856735110282898
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 2446,
+      "start": 38.53999999999999,
+      "end": 43.06,
+      "text": " A Bel, le berger et coût de lumière",
+      "tokens": [
+        51064,
+        316,
+        6248,
+        11,
+        476,
+        5948,
+        1321,
+        1030,
+        598,
+        30692,
+        368,
+        43193,
+        51364
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.44261528273760264,
+      "compression_ratio": 1.2635658914728682,
+      "no_speech_prob": 0.039277512580156326,
+      "words": [
+        {
+          "word": " A",
+          "start": 38.53999999999999,
+          "end": 39.48,
+          "probability": 0.1474134624004364
+        },
+        {
+          "word": " Bel,",
+          "start": 39.48,
+          "end": 39.76,
+          "probability": 0.052137911319732666
+        },
+        {
+          "word": " le",
+          "start": 40.6,
+          "end": 40.68,
+          "probability": 0.9675950407981873
+        },
+        {
+          "word": " berger",
+          "start": 40.68,
+          "end": 41.24,
+          "probability": 0.6189239323139191
+        },
+        {
+          "word": " et",
+          "start": 41.24,
+          "end": 41.82,
+          "probability": 0.34217286109924316
+        },
+        {
+          "word": " coût",
+          "start": 41.82,
+          "end": 42.34,
+          "probability": 0.6080538928508759
+        },
+        {
+          "word": " de",
+          "start": 42.34,
+          "end": 42.5,
+          "probability": 0.9925051927566528
+        },
+        {
+          "word": " lumière",
+          "start": 42.5,
+          "end": 43.06,
+          "probability": 0.8862303495407104
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 2446,
+      "start": 44.72,
+      "end": 47.96,
+      "text": " Des offrants de porter avec foi",
+      "tokens": [
+        51364,
+        3885,
+        766,
+        10968,
+        368,
+        41628,
+        4163,
+        6901,
+        51564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.44261528273760264,
+      "compression_ratio": 1.2635658914728682,
+      "no_speech_prob": 0.039277512580156326,
+      "words": [
+        {
+          "word": " Des",
+          "start": 44.72,
+          "end": 45.66,
+          "probability": 0.8657066226005554
+        },
+        {
+          "word": " offrants",
+          "start": 45.66,
+          "end": 46.14,
+          "probability": 0.5482287704944611
+        },
+        {
+          "word": " de",
+          "start": 46.14,
+          "end": 46.44,
+          "probability": 0.967466413974762
+        },
+        {
+          "word": " porter",
+          "start": 46.44,
+          "end": 46.9,
+          "probability": 0.8876101970672607
+        },
+        {
+          "word": " avec",
+          "start": 46.9,
+          "end": 47.44,
+          "probability": 0.9768781661987305
+        },
+        {
+          "word": " foi",
+          "start": 47.44,
+          "end": 47.96,
+          "probability": 0.6651024222373962
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 4796,
+      "start": 47.96,
+      "end": 54.34,
+      "text": " L'éternel regarda et il fila choi",
+      "tokens": [
+        50364,
+        441,
+        6,
+        526,
+        2231,
+        338,
+        3843,
+        64,
+        1030,
+        1930,
+        1387,
+        64,
+        417,
+        4869,
+        50664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4729863519537939,
+      "compression_ratio": 1.3287671232876712,
+      "no_speech_prob": 0.018767373636364937,
+      "words": [
+        {
+          "word": " L",
+          "start": 47.96,
+          "end": 49.06,
+          "probability": 0.140419602394104
+        },
+        {
+          "word": "'éternel",
+          "start": 49.06,
+          "end": 49.6,
+          "probability": 0.6201209425926208
+        },
+        {
+          "word": " regarda",
+          "start": 49.6,
+          "end": 50.72,
+          "probability": 0.6915098279714584
+        },
+        {
+          "word": " et",
+          "start": 50.72,
+          "end": 51.5,
+          "probability": 0.6448003053665161
+        },
+        {
+          "word": " il",
+          "start": 51.5,
+          "end": 51.84,
+          "probability": 0.9860068559646606
+        },
+        {
+          "word": " fila",
+          "start": 51.84,
+          "end": 52.32,
+          "probability": 0.4440391808748245
+        },
+        {
+          "word": " choi",
+          "start": 52.32,
+          "end": 54.34,
+          "probability": 0.2598496675491333
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "seek": 4796,
+      "start": 55.48,
+      "end": 59.26,
+      "text": " Oh, dans la lumière de l'éternel",
+      "tokens": [
+        50664,
+        876,
+        11,
+        2680,
+        635,
+        43193,
+        368,
+        287,
+        6,
+        526,
+        2231,
+        338,
+        50914
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4729863519537939,
+      "compression_ratio": 1.3287671232876712,
+      "no_speech_prob": 0.018767373636364937,
+      "words": [
+        {
+          "word": " Oh,",
+          "start": 55.48,
+          "end": 56.28,
+          "probability": 0.44800490140914917
+        },
+        {
+          "word": " dans",
+          "start": 57.18,
+          "end": 57.18,
+          "probability": 0.7501232028007507
+        },
+        {
+          "word": " la",
+          "start": 57.18,
+          "end": 57.32,
+          "probability": 0.993139922618866
+        },
+        {
+          "word": " lumière",
+          "start": 57.32,
+          "end": 57.68,
+          "probability": 0.9964841604232788
+        },
+        {
+          "word": " de",
+          "start": 57.68,
+          "end": 58.12,
+          "probability": 0.9719746708869934
+        },
+        {
+          "word": " l",
+          "start": 58.12,
+          "end": 58.3,
+          "probability": 0.9964589476585388
+        },
+        {
+          "word": "'éternel",
+          "start": 58.3,
+          "end": 59.26,
+          "probability": 0.9519699066877365
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "seek": 4796,
+      "start": 59.26,
+      "end": 62.22,
+      "text": " Nos coeurs célèves, nos âmes sur l'évél",
+      "tokens": [
+        50914,
+        18749,
+        12155,
+        2156,
+        29064,
+        1462,
+        977,
+        11,
+        3269,
+        20621,
+        5814,
+        1022,
+        287,
+        6,
+        26375,
+        8025,
+        51064
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4729863519537939,
+      "compression_ratio": 1.3287671232876712,
+      "no_speech_prob": 0.018767373636364937,
+      "words": [
+        {
+          "word": " Nos",
+          "start": 59.26,
+          "end": 59.72,
+          "probability": 0.19615037739276886
+        },
+        {
+          "word": " coeurs",
+          "start": 59.72,
+          "end": 60.1,
+          "probability": 0.8239302933216095
+        },
+        {
+          "word": " célèves,",
+          "start": 60.1,
+          "end": 60.68,
+          "probability": 0.6095210313796997
+        },
+        {
+          "word": " nos",
+          "start": 60.78,
+          "end": 60.9,
+          "probability": 0.6022592186927795
+        },
+        {
+          "word": " âmes",
+          "start": 60.9,
+          "end": 61.2,
+          "probability": 0.5033504664897919
+        },
+        {
+          "word": " sur",
+          "start": 61.2,
+          "end": 61.54,
+          "probability": 0.17309892177581787
+        },
+        {
+          "word": " l",
+          "start": 61.54,
+          "end": 61.84,
+          "probability": 0.152370423078537
+        },
+        {
+          "word": "'évél",
+          "start": 61.84,
+          "end": 62.22,
+          "probability": 0.5796588460604349
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "seek": 4796,
+      "start": 62.22,
+      "end": 65.22,
+      "text": " Qui ne denont pas, s'ignorent de monter",
+      "tokens": [
+        51064,
+        27361,
+        408,
+        1441,
+        896,
+        1736,
+        11,
+        262,
+        6,
+        788,
+        418,
+        580,
+        368,
+        47945,
+        51214
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4729863519537939,
+      "compression_ratio": 1.3287671232876712,
+      "no_speech_prob": 0.018767373636364937,
+      "words": [
+        {
+          "word": " Qui",
+          "start": 62.22,
+          "end": 62.92,
+          "probability": 0.3279486298561096
+        },
+        {
+          "word": " ne",
+          "start": 62.92,
+          "end": 63.04,
+          "probability": 0.16972801089286804
+        },
+        {
+          "word": " denont",
+          "start": 63.04,
+          "end": 63.36,
+          "probability": 0.09200394526124
+        },
+        {
+          "word": " pas,",
+          "start": 63.36,
+          "end": 63.72,
+          "probability": 0.9993144273757935
+        },
+        {
+          "word": " s",
+          "start": 64.02,
+          "end": 64.02,
+          "probability": 0.29139479994773865
+        },
+        {
+          "word": "'ignorent",
+          "start": 64.02,
+          "end": 64.58,
+          "probability": 0.8450676947832108
+        },
+        {
+          "word": " de",
+          "start": 64.58,
+          "end": 64.7,
+          "probability": 0.9599935412406921
+        },
+        {
+          "word": " monter",
+          "start": 64.7,
+          "end": 65.22,
+          "probability": 0.20378205180168152
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "seek": 4796,
+      "start": 65.22,
+      "end": 70.96000000000001,
+      "text": " Dans chaque lutte, dans chaque vérité",
+      "tokens": [
+        51214,
+        16897,
+        18920,
+        38319,
+        975,
+        11,
+        2680,
+        18920,
+        30678,
+        526,
+        51514
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4729863519537939,
+      "compression_ratio": 1.3287671232876712,
+      "no_speech_prob": 0.018767373636364937,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 65.22,
+          "end": 66.02,
+          "probability": 0.8481698632240295
+        },
+        {
+          "word": " chaque",
+          "start": 66.02,
+          "end": 66.42,
+          "probability": 0.9279718995094299
+        },
+        {
+          "word": " lutte,",
+          "start": 66.42,
+          "end": 67.18,
+          "probability": 0.8286922872066498
+        },
+        {
+          "word": " dans",
+          "start": 67.18,
+          "end": 67.3,
+          "probability": 0.897810697555542
+        },
+        {
+          "word": " chaque",
+          "start": 67.3,
+          "end": 67.6,
+          "probability": 0.9967036843299866
+        },
+        {
+          "word": " vérité",
+          "start": 67.6,
+          "end": 70.96000000000001,
+          "probability": 0.9571329951286316
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "seek": 7096,
+      "start": 71.98,
+      "end": 76.66,
+      "text": " Mais c'est un encolaire son cœur s'est éteint",
+      "tokens": [
+        50414,
+        6313,
+        269,
+        6,
+        377,
+        517,
+        2058,
+        4711,
+        621,
+        1872,
+        43207,
+        262,
+        6,
+        377,
+        1136,
+        975,
+        686,
+        50664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.41234774271647134,
+      "compression_ratio": 1.3312101910828025,
+      "no_speech_prob": 0.027958568185567856,
+      "words": [
+        {
+          "word": " Mais",
+          "start": 71.98,
+          "end": 72.78,
+          "probability": 0.14373262226581573
+        },
+        {
+          "word": " c",
+          "start": 72.78,
+          "end": 73.0,
+          "probability": 0.23353122174739838
+        },
+        {
+          "word": "'est",
+          "start": 73.0,
+          "end": 73.42,
+          "probability": 0.8873399198055267
+        },
+        {
+          "word": " un",
+          "start": 73.42,
+          "end": 73.42,
+          "probability": 0.33986538648605347
+        },
+        {
+          "word": " encolaire",
+          "start": 73.42,
+          "end": 74.64,
+          "probability": 0.6260395844777426
+        },
+        {
+          "word": " son",
+          "start": 74.64,
+          "end": 75.04,
+          "probability": 0.589462399482727
+        },
+        {
+          "word": " cœur",
+          "start": 75.04,
+          "end": 75.36,
+          "probability": 0.5861615538597107
+        },
+        {
+          "word": " s",
+          "start": 75.36,
+          "end": 75.66,
+          "probability": 0.4505157768726349
+        },
+        {
+          "word": "'est",
+          "start": 75.66,
+          "end": 75.78,
+          "probability": 0.7251340746879578
+        },
+        {
+          "word": " éteint",
+          "start": 75.78,
+          "end": 76.66,
+          "probability": 0.6852466662724813
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "seek": 7096,
+      "start": 77.8,
+      "end": 83.06,
+      "text": " La voie du sang cri, un destin certain",
+      "tokens": [
+        50664,
+        2369,
+        1650,
+        414,
+        1581,
+        9980,
+        12815,
+        11,
+        517,
+        40254,
+        1629,
+        50964
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.41234774271647134,
+      "compression_ratio": 1.3312101910828025,
+      "no_speech_prob": 0.027958568185567856,
+      "words": [
+        {
+          "word": " La",
+          "start": 77.8,
+          "end": 78.6,
+          "probability": 0.5568620562553406
+        },
+        {
+          "word": " voie",
+          "start": 78.6,
+          "end": 78.86,
+          "probability": 0.7022658586502075
+        },
+        {
+          "word": " du",
+          "start": 78.86,
+          "end": 79.06,
+          "probability": 0.9545586705207825
+        },
+        {
+          "word": " sang",
+          "start": 79.06,
+          "end": 79.3,
+          "probability": 0.9468827843666077
+        },
+        {
+          "word": " cri,",
+          "start": 79.3,
+          "end": 79.78,
+          "probability": 0.4822191894054413
+        },
+        {
+          "word": " un",
+          "start": 80.74,
+          "end": 81.04,
+          "probability": 0.7548582553863525
+        },
+        {
+          "word": " destin",
+          "start": 81.04,
+          "end": 81.44,
+          "probability": 0.9448412656784058
+        },
+        {
+          "word": " certain",
+          "start": 81.44,
+          "end": 83.06,
+          "probability": 0.5376225113868713
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "seek": 7096,
+      "start": 84.3,
+      "end": 89.22,
+      "text": " Pourquoi tu troublais en caïen écoutes",
+      "tokens": [
+        50964,
+        30333,
+        2604,
+        3455,
+        5199,
+        1527,
+        465,
+        1335,
+        15487,
+        268,
+        15175,
+        346,
+        279,
+        51264
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.41234774271647134,
+      "compression_ratio": 1.3312101910828025,
+      "no_speech_prob": 0.027958568185567856,
+      "words": [
+        {
+          "word": " Pourquoi",
+          "start": 84.3,
+          "end": 85.1,
+          "probability": 0.7254332900047302
+        },
+        {
+          "word": " tu",
+          "start": 85.1,
+          "end": 85.7,
+          "probability": 0.7437964677810669
+        },
+        {
+          "word": " troublais",
+          "start": 85.7,
+          "end": 86.68,
+          "probability": 0.5250831544399261
+        },
+        {
+          "word": " en",
+          "start": 86.68,
+          "end": 87.1,
+          "probability": 0.23498967289924622
+        },
+        {
+          "word": " caïen",
+          "start": 87.1,
+          "end": 87.88,
+          "probability": 0.47874640425046283
+        },
+        {
+          "word": " écoutes",
+          "start": 87.88,
+          "end": 89.22,
+          "probability": 0.7548174460728964
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "seek": 7096,
+      "start": 89.22,
+      "end": 91.96,
+      "text": " Le péchéraulte dans l'ombre il se glisse",
+      "tokens": [
+        51264,
+        1456,
+        29507,
+        11131,
+        424,
+        723,
+        68,
+        2680,
+        287,
+        6,
+        298,
+        2672,
+        1930,
+        369,
+        1563,
+        7746,
+        51414
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.41234774271647134,
+      "compression_ratio": 1.3312101910828025,
+      "no_speech_prob": 0.027958568185567856,
+      "words": [
+        {
+          "word": " Le",
+          "start": 89.22,
+          "end": 89.6,
+          "probability": 0.5355479121208191
+        },
+        {
+          "word": " péchéraulte",
+          "start": 89.6,
+          "end": 90.64,
+          "probability": 0.47066207230091095
+        },
+        {
+          "word": " dans",
+          "start": 90.64,
+          "end": 90.84,
+          "probability": 0.6424744129180908
+        },
+        {
+          "word": " l",
+          "start": 90.84,
+          "end": 91.0,
+          "probability": 0.9916831254959106
+        },
+        {
+          "word": "'ombre",
+          "start": 91.0,
+          "end": 91.38,
+          "probability": 0.7469340562820435
+        },
+        {
+          "word": " il",
+          "start": 91.38,
+          "end": 91.72,
+          "probability": 0.4727739095687866
+        },
+        {
+          "word": " se",
+          "start": 91.72,
+          "end": 91.92,
+          "probability": 0.9719148874282837
+        },
+        {
+          "word": " glisse",
+          "start": 91.92,
+          "end": 92.32000000000001,
+          "probability": 0.8751631081104279
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "seek": 7096,
+      "start": 92.6,
+      "end": 96.46,
+      "text": " Tu dois dominer, ne laisse pas la nuit",
+      "tokens": [
+        51414,
+        7836,
+        11854,
+        3285,
+        4564,
+        11,
+        408,
+        30969,
+        1736,
+        635,
+        38467,
+        51664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.41234774271647134,
+      "compression_ratio": 1.3312101910828025,
+      "no_speech_prob": 0.027958568185567856,
+      "words": [
+        {
+          "word": " Tu",
+          "start": 92.6,
+          "end": 93.04,
+          "probability": 0.8098642826080322
+        },
+        {
+          "word": " dois",
+          "start": 93.04,
+          "end": 93.26,
+          "probability": 0.8487315773963928
+        },
+        {
+          "word": " dominer,",
+          "start": 93.26,
+          "end": 94.02,
+          "probability": 0.8399967551231384
+        },
+        {
+          "word": " ne",
+          "start": 94.36,
+          "end": 94.44,
+          "probability": 0.9313426613807678
+        },
+        {
+          "word": " laisse",
+          "start": 94.44,
+          "end": 94.66,
+          "probability": 0.9501250982284546
+        },
+        {
+          "word": " pas",
+          "start": 94.66,
+          "end": 95.02,
+          "probability": 0.9938934445381165
+        },
+        {
+          "word": " la",
+          "start": 95.02,
+          "end": 95.36,
+          "probability": 0.8945546746253967
+        },
+        {
+          "word": " nuit",
+          "start": 95.36,
+          "end": 96.46,
+          "probability": 0.9977421760559082
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "seek": 9646,
+      "start": 97.9,
+      "end": 102.0,
+      "text": " La lumière d'en haut pour toujours nous",
+      "tokens": [
+        50414,
+        2369,
+        43193,
+        274,
+        6,
+        268,
+        29032,
+        2016,
+        11936,
+        4666,
+        50714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.10720403570877879,
+      "compression_ratio": 1.4919786096256684,
+      "no_speech_prob": 0.042945973575115204,
+      "words": [
+        {
+          "word": " La",
+          "start": 97.9,
+          "end": 98.66,
+          "probability": 0.21141333878040314
+        },
+        {
+          "word": " lumière",
+          "start": 98.66,
+          "end": 99.08,
+          "probability": 0.98974609375
+        },
+        {
+          "word": " d",
+          "start": 99.08,
+          "end": 99.54,
+          "probability": 0.8031309247016907
+        },
+        {
+          "word": "'en",
+          "start": 99.54,
+          "end": 99.74,
+          "probability": 0.742800310254097
+        },
+        {
+          "word": " haut",
+          "start": 99.74,
+          "end": 100.5,
+          "probability": 0.8151731491088867
+        },
+        {
+          "word": " pour",
+          "start": 100.5,
+          "end": 100.72,
+          "probability": 0.6305198669433594
+        },
+        {
+          "word": " toujours",
+          "start": 100.72,
+          "end": 101.32,
+          "probability": 0.9689861536026001
+        },
+        {
+          "word": " nous",
+          "start": 101.32,
+          "end": 102.0,
+          "probability": 0.970427930355072
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "seek": 9646,
+      "start": 104.9,
+      "end": 108.92,
+      "text": " Oh, dans la lumière de l'éternel",
+      "tokens": [
+        50714,
+        876,
+        11,
+        2680,
+        635,
+        43193,
+        368,
+        287,
+        6,
+        526,
+        2231,
+        338,
+        50964
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.10720403570877879,
+      "compression_ratio": 1.4919786096256684,
+      "no_speech_prob": 0.042945973575115204,
+      "words": [
+        {
+          "word": " Oh,",
+          "start": 104.9,
+          "end": 105.66,
+          "probability": 0.005029363092035055
+        },
+        {
+          "word": " dans",
+          "start": 106.5,
+          "end": 106.72,
+          "probability": 0.9551456570625305
+        },
+        {
+          "word": " la",
+          "start": 106.72,
+          "end": 106.92,
+          "probability": 0.9928227663040161
+        },
+        {
+          "word": " lumière",
+          "start": 106.92,
+          "end": 107.24,
+          "probability": 0.9995218515396118
+        },
+        {
+          "word": " de",
+          "start": 107.24,
+          "end": 107.5,
+          "probability": 0.9909752011299133
+        },
+        {
+          "word": " l",
+          "start": 107.5,
+          "end": 107.66,
+          "probability": 0.95467209815979
+        },
+        {
+          "word": "'éternel",
+          "start": 107.66,
+          "end": 108.92,
+          "probability": 0.6911267414689064
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "seek": 9646,
+      "start": 108.92,
+      "end": 111.68,
+      "text": " Nos coeurs célèves, nos âmes sur l'évél",
+      "tokens": [
+        50964,
+        18749,
+        12155,
+        2156,
+        29064,
+        1462,
+        977,
+        11,
+        3269,
+        20621,
+        5814,
+        1022,
+        287,
+        6,
+        26375,
+        8025,
+        51114
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.10720403570877879,
+      "compression_ratio": 1.4919786096256684,
+      "no_speech_prob": 0.042945973575115204,
+      "words": [
+        {
+          "word": " Nos",
+          "start": 108.92,
+          "end": 109.3,
+          "probability": 0.050476960837841034
+        },
+        {
+          "word": " coeurs",
+          "start": 109.3,
+          "end": 109.68,
+          "probability": 0.7168174535036087
+        },
+        {
+          "word": " célèves,",
+          "start": 109.68,
+          "end": 110.36,
+          "probability": 0.5168289144833883
+        },
+        {
+          "word": " nos",
+          "start": 110.38,
+          "end": 110.68,
+          "probability": 0.809612512588501
+        },
+        {
+          "word": " âmes",
+          "start": 110.68,
+          "end": 110.82,
+          "probability": 0.7609569728374481
+        },
+        {
+          "word": " sur",
+          "start": 110.82,
+          "end": 111.16,
+          "probability": 0.016502760350704193
+        },
+        {
+          "word": " l",
+          "start": 111.16,
+          "end": 111.46,
+          "probability": 0.02428615838289261
+        },
+        {
+          "word": "'évél",
+          "start": 111.46,
+          "end": 111.68,
+          "probability": 0.3363935030065477
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "seek": 9646,
+      "start": 111.68,
+      "end": 114.82,
+      "text": " Qui ne denont pas, s'ignorent de monter",
+      "tokens": [
+        51114,
+        27361,
+        408,
+        1441,
+        896,
+        1736,
+        11,
+        262,
+        6,
+        788,
+        418,
+        580,
+        368,
+        47945,
+        51264
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.10720403570877879,
+      "compression_ratio": 1.4919786096256684,
+      "no_speech_prob": 0.042945973575115204,
+      "words": [
+        {
+          "word": " Qui",
+          "start": 111.68,
+          "end": 112.5,
+          "probability": 0.003256081137806177
+        },
+        {
+          "word": " ne",
+          "start": 112.5,
+          "end": 112.68,
+          "probability": 0.6613655090332031
+        },
+        {
+          "word": " denont",
+          "start": 112.68,
+          "end": 112.94,
+          "probability": 0.002949741239717696
+        },
+        {
+          "word": " pas,",
+          "start": 112.94,
+          "end": 113.32,
+          "probability": 0.9994179010391235
+        },
+        {
+          "word": " s",
+          "start": 113.56,
+          "end": 113.62,
+          "probability": 0.1770608127117157
+        },
+        {
+          "word": "'ignorent",
+          "start": 113.62,
+          "end": 114.18,
+          "probability": 0.656488448381424
+        },
+        {
+          "word": " de",
+          "start": 114.18,
+          "end": 114.32,
+          "probability": 0.9572892785072327
+        },
+        {
+          "word": " monter",
+          "start": 114.32,
+          "end": 114.82,
+          "probability": 0.06953317672014236
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "seek": 9646,
+      "start": 114.82,
+      "end": 118.46,
+      "text": " Dans chaque lutte, dans chaque vérité",
+      "tokens": [
+        51264,
+        16897,
+        18920,
+        38319,
+        975,
+        11,
+        2680,
+        18920,
+        30678,
+        526,
+        51464
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.10720403570877879,
+      "compression_ratio": 1.4919786096256684,
+      "no_speech_prob": 0.042945973575115204,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 114.82,
+          "end": 115.6,
+          "probability": 0.4865191578865051
+        },
+        {
+          "word": " chaque",
+          "start": 115.6,
+          "end": 115.92,
+          "probability": 0.9130403995513916
+        },
+        {
+          "word": " lutte,",
+          "start": 115.92,
+          "end": 116.72,
+          "probability": 0.6013760194182396
+        },
+        {
+          "word": " dans",
+          "start": 116.72,
+          "end": 116.86,
+          "probability": 0.9827191829681396
+        },
+        {
+          "word": " chaque",
+          "start": 116.86,
+          "end": 117.14,
+          "probability": 0.9964955449104309
+        },
+        {
+          "word": " vérité",
+          "start": 117.14,
+          "end": 118.46,
+          "probability": 0.9431118965148926
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "seek": 9646,
+      "start": 119.24,
+      "end": 122.2,
+      "text": " Et malgré la douleur, malgré la triste",
+      "tokens": [
+        51464,
+        3790,
+        2806,
+        36341,
+        635,
+        2482,
+        306,
+        374,
+        11,
+        2806,
+        36341,
+        635,
+        33526,
+        51664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.10720403570877879,
+      "compression_ratio": 1.4919786096256684,
+      "no_speech_prob": 0.042945973575115204,
+      "words": [
+        {
+          "word": " Et",
+          "start": 119.24,
+          "end": 119.68,
+          "probability": 0.7124027609825134
+        },
+        {
+          "word": " malgré",
+          "start": 119.68,
+          "end": 120.08,
+          "probability": 0.9642448127269745
+        },
+        {
+          "word": " la",
+          "start": 120.08,
+          "end": 120.32,
+          "probability": 0.7462902069091797
+        },
+        {
+          "word": " douleur,",
+          "start": 120.32,
+          "end": 121.06,
+          "probability": 0.9703224500020345
+        },
+        {
+          "word": " malgré",
+          "start": 121.06,
+          "end": 121.66,
+          "probability": 0.997712254524231
+        },
+        {
+          "word": " la",
+          "start": 121.66,
+          "end": 121.9,
+          "probability": 0.9796046018600464
+        },
+        {
+          "word": " triste",
+          "start": 121.9,
+          "end": 122.2,
+          "probability": 0.7230371832847595
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "seek": 9646,
+      "start": 122.2,
+      "end": 125.6,
+      "text": " Son amour en Dieu nous donne la riche",
+      "tokens": [
+        51664,
+        5185,
+        669,
+        396,
+        465,
+        25610,
+        4666,
+        21837,
+        635,
+        4593,
+        68,
+        51814
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.10720403570877879,
+      "compression_ratio": 1.4919786096256684,
+      "no_speech_prob": 0.042945973575115204,
+      "words": [
+        {
+          "word": " Son",
+          "start": 122.2,
+          "end": 123.06,
+          "probability": 0.6983115077018738
+        },
+        {
+          "word": " amour",
+          "start": 123.06,
+          "end": 123.52,
+          "probability": 0.9207745492458344
+        },
+        {
+          "word": " en",
+          "start": 123.52,
+          "end": 123.78,
+          "probability": 0.5127816200256348
+        },
+        {
+          "word": " Dieu",
+          "start": 123.78,
+          "end": 123.98,
+          "probability": 0.9276944994926453
+        },
+        {
+          "word": " nous",
+          "start": 123.98,
+          "end": 124.48,
+          "probability": 0.7396859526634216
+        },
+        {
+          "word": " donne",
+          "start": 124.48,
+          "end": 124.76,
+          "probability": 0.9715544581413269
+        },
+        {
+          "word": " la",
+          "start": 124.76,
+          "end": 125.14,
+          "probability": 0.9235975742340088
+        },
+        {
+          "word": " riche",
+          "start": 125.14,
+          "end": 125.6,
+          "probability": 0.8985739052295685
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "seek": 12560,
+      "start": 125.6,
+      "end": 128.6,
+      "text": " Un signe sur caïen, sa grâce s'en finit",
+      "tokens": [
+        50364,
+        1156,
+        4556,
+        716,
+        1022,
+        1335,
+        15487,
+        268,
+        11,
+        601,
+        31180,
+        262,
+        6,
+        268,
+        962,
+        270,
+        50514
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4141151829769737,
+      "compression_ratio": 1.3101604278074865,
+      "no_speech_prob": 0.007983548566699028,
+      "words": [
+        {
+          "word": " Un",
+          "start": 125.6,
+          "end": 126.04,
+          "probability": 0.11609835922718048
+        },
+        {
+          "word": " signe",
+          "start": 126.04,
+          "end": 126.38,
+          "probability": 0.9188919961452484
+        },
+        {
+          "word": " sur",
+          "start": 126.38,
+          "end": 126.68,
+          "probability": 0.9464501142501831
+        },
+        {
+          "word": " caïen,",
+          "start": 126.68,
+          "end": 127.36,
+          "probability": 0.3113655981918176
+        },
+        {
+          "word": " sa",
+          "start": 127.52,
+          "end": 127.64,
+          "probability": 0.17896193265914917
+        },
+        {
+          "word": " grâce",
+          "start": 127.64,
+          "end": 127.88,
+          "probability": 0.5330992937088013
+        },
+        {
+          "word": " s",
+          "start": 127.88,
+          "end": 128.24,
+          "probability": 0.1273217797279358
+        },
+        {
+          "word": "'en",
+          "start": 128.24,
+          "end": 128.28,
+          "probability": 0.9149210155010223
+        },
+        {
+          "word": " finit",
+          "start": 128.28,
+          "end": 128.64,
+          "probability": 0.8304463624954224
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "seek": 12560,
+      "start": 129.18,
+      "end": 133.72,
+      "text": " Dans la terre de nôtre, ta voix nous unit",
+      "tokens": [
+        50514,
+        16897,
+        635,
+        31815,
+        368,
+        297,
+        2851,
+        3599,
+        11,
+        1846,
+        37188,
+        4666,
+        517,
+        270,
+        50814
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4141151829769737,
+      "compression_ratio": 1.3101604278074865,
+      "no_speech_prob": 0.007983548566699028,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 129.18,
+          "end": 129.46,
+          "probability": 0.26220640540122986
+        },
+        {
+          "word": " la",
+          "start": 129.46,
+          "end": 129.64,
+          "probability": 0.8848663568496704
+        },
+        {
+          "word": " terre",
+          "start": 129.64,
+          "end": 129.84,
+          "probability": 0.9019961953163147
+        },
+        {
+          "word": " de",
+          "start": 129.84,
+          "end": 130.2,
+          "probability": 0.963898241519928
+        },
+        {
+          "word": " nôtre,",
+          "start": 130.2,
+          "end": 130.78,
+          "probability": 0.4343027373154958
+        },
+        {
+          "word": " ta",
+          "start": 130.8,
+          "end": 131.08,
+          "probability": 0.5664178133010864
+        },
+        {
+          "word": " voix",
+          "start": 131.08,
+          "end": 131.3,
+          "probability": 0.7241203188896179
+        },
+        {
+          "word": " nous",
+          "start": 131.3,
+          "end": 131.58,
+          "probability": 0.992979109287262
+        },
+        {
+          "word": " unit",
+          "start": 131.58,
+          "end": 133.72,
+          "probability": 0.5488936603069305
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "seek": 12560,
+      "start": 134.6,
+      "end": 141.72,
+      "text": " A dans l'érein, un nouveau fils, et par lui l'espoir",
+      "tokens": [
+        50814,
+        316,
+        2680,
+        287,
+        6,
+        526,
+        265,
+        259,
+        11,
+        517,
+        23326,
+        46190,
+        11,
+        1030,
+        971,
+        8783,
+        287,
+        6,
+        279,
+        2259,
+        347,
+        51164
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4141151829769737,
+      "compression_ratio": 1.3101604278074865,
+      "no_speech_prob": 0.007983548566699028,
+      "words": [
+        {
+          "word": " A",
+          "start": 134.51999999999998,
+          "end": 134.88,
+          "probability": 0.255775511264801
+        },
+        {
+          "word": " dans",
+          "start": 134.88,
+          "end": 135.2,
+          "probability": 0.540848433971405
+        },
+        {
+          "word": " l",
+          "start": 135.2,
+          "end": 135.5,
+          "probability": 0.1116144135594368
+        },
+        {
+          "word": "'érein,",
+          "start": 135.5,
+          "end": 136.5,
+          "probability": 0.5026108417659998
+        },
+        {
+          "word": " un",
+          "start": 136.5,
+          "end": 136.98,
+          "probability": 0.7600201964378357
+        },
+        {
+          "word": " nouveau",
+          "start": 136.98,
+          "end": 137.32,
+          "probability": 0.9661930799484253
+        },
+        {
+          "word": " fils,",
+          "start": 137.32,
+          "end": 138.4,
+          "probability": 0.3619135618209839
+        },
+        {
+          "word": " et",
+          "start": 138.9,
+          "end": 139.26,
+          "probability": 0.08212422579526901
+        },
+        {
+          "word": " par",
+          "start": 139.26,
+          "end": 140.3,
+          "probability": 0.5731328129768372
+        },
+        {
+          "word": " lui",
+          "start": 140.3,
+          "end": 140.66,
+          "probability": 0.6892699003219604
+        },
+        {
+          "word": " l",
+          "start": 140.66,
+          "end": 141.06,
+          "probability": 0.7214435935020447
+        },
+        {
+          "word": "'espoir",
+          "start": 141.06,
+          "end": 141.72,
+          "probability": 0.9077556729316711
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "seek": 12560,
+      "start": 141.72,
+      "end": 147.92,
+      "text": " Remet notre cœur sa pèse",
+      "tokens": [
+        51164,
+        4080,
+        302,
+        10349,
+        43207,
+        601,
+        280,
+        45238,
+        51514
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4141151829769737,
+      "compression_ratio": 1.3101604278074865,
+      "no_speech_prob": 0.007983548566699028,
+      "words": [
+        {
+          "word": " Remet",
+          "start": 141.72,
+          "end": 142.3,
+          "probability": 0.2459753099246882
+        },
+        {
+          "word": " notre",
+          "start": 142.3,
+          "end": 143.34,
+          "probability": 0.8360955119132996
+        },
+        {
+          "word": " cœur",
+          "start": 143.34,
+          "end": 144.06,
+          "probability": 0.5933542847633362
+        },
+        {
+          "word": " sa",
+          "start": 144.06,
+          "end": 144.78,
+          "probability": 0.69193434715271
+        },
+        {
+          "word": " pèse",
+          "start": 144.78,
+          "end": 147.92,
+          "probability": 0.6072637438774109
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "seek": 12560,
+      "start": 148.6,
+      "end": 152.02,
+      "text": " Oh, dans la lumière de l'éternel",
+      "tokens": [
+        51514,
+        876,
+        11,
+        2680,
+        635,
+        43193,
+        368,
+        287,
+        6,
+        526,
+        2231,
+        338,
+        51664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4141151829769737,
+      "compression_ratio": 1.3101604278074865,
+      "no_speech_prob": 0.007983548566699028,
+      "words": [
+        {
+          "word": " Oh,",
+          "start": 148.57999999999998,
+          "end": 148.94,
+          "probability": 0.37531983852386475
+        },
+        {
+          "word": " dans",
+          "start": 149.68,
+          "end": 149.88,
+          "probability": 0.9766725301742554
+        },
+        {
+          "word": " la",
+          "start": 149.88,
+          "end": 150.1,
+          "probability": 0.9667755365371704
+        },
+        {
+          "word": " lumière",
+          "start": 150.1,
+          "end": 150.36,
+          "probability": 0.9531682729721069
+        },
+        {
+          "word": " de",
+          "start": 150.36,
+          "end": 150.7,
+          "probability": 0.9857892394065857
+        },
+        {
+          "word": " l",
+          "start": 150.7,
+          "end": 150.94,
+          "probability": 0.8739631772041321
+        },
+        {
+          "word": "'éternel",
+          "start": 150.94,
+          "end": 152.02,
+          "probability": 0.481716544367373
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "seek": 12560,
+      "start": 152.02,
+      "end": 154.94,
+      "text": " Nos coeurs célèves, nos âmes sur l'évél",
+      "tokens": [
+        51664,
+        18749,
+        12155,
+        2156,
+        29064,
+        1462,
+        977,
+        11,
+        3269,
+        20621,
+        5814,
+        1022,
+        287,
+        6,
+        26375,
+        8025,
+        51814
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.4141151829769737,
+      "compression_ratio": 1.3101604278074865,
+      "no_speech_prob": 0.007983548566699028,
+      "words": [
+        {
+          "word": " Nos",
+          "start": 152.02,
+          "end": 152.5,
+          "probability": 0.046334780752658844
+        },
+        {
+          "word": " coeurs",
+          "start": 152.5,
+          "end": 152.9,
+          "probability": 0.8278575837612152
+        },
+        {
+          "word": " célèves,",
+          "start": 152.9,
+          "end": 153.48,
+          "probability": 0.3639303846284747
+        },
+        {
+          "word": " nos",
+          "start": 153.6,
+          "end": 153.76,
+          "probability": 0.6044893264770508
+        },
+        {
+          "word": " âmes",
+          "start": 153.76,
+          "end": 154.02,
+          "probability": 0.7248035967350006
+        },
+        {
+          "word": " sur",
+          "start": 154.02,
+          "end": 154.36,
+          "probability": 0.11049148440361023
+        },
+        {
+          "word": " l",
+          "start": 154.36,
+          "end": 154.62,
+          "probability": 0.08581723272800446
+        },
+        {
+          "word": "'évél",
+          "start": 154.62,
+          "end": 154.94,
+          "probability": 0.39531419922908145
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "seek": 15494,
+      "start": 154.94,
+      "end": 158.04,
+      "text": " Qui ne denont pas, s'ignorent de monter",
+      "tokens": [
+        50364,
+        27361,
+        408,
+        1441,
+        896,
+        1736,
+        11,
+        262,
+        6,
+        788,
+        418,
+        580,
+        368,
+        47945,
+        50514
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.3742767044260532,
+      "compression_ratio": 1.4080459770114941,
+      "no_speech_prob": 0.011064821854233742,
+      "words": [
+        {
+          "word": " Qui",
+          "start": 154.94,
+          "end": 155.7,
+          "probability": 0.044847674667835236
+        },
+        {
+          "word": " ne",
+          "start": 155.7,
+          "end": 155.84,
+          "probability": 0.16133162379264832
+        },
+        {
+          "word": " denont",
+          "start": 155.84,
+          "end": 156.14,
+          "probability": 0.01607058063382283
+        },
+        {
+          "word": " pas,",
+          "start": 156.14,
+          "end": 156.48,
+          "probability": 0.9993263483047485
+        },
+        {
+          "word": " s",
+          "start": 156.76,
+          "end": 156.82,
+          "probability": 0.19146950542926788
+        },
+        {
+          "word": "'ignorent",
+          "start": 156.82,
+          "end": 157.36,
+          "probability": 0.614179752767086
+        },
+        {
+          "word": " de",
+          "start": 157.36,
+          "end": 157.5,
+          "probability": 0.9597726464271545
+        },
+        {
+          "word": " monter",
+          "start": 157.5,
+          "end": 158.04,
+          "probability": 0.27490830421447754
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "seek": 15494,
+      "start": 158.04,
+      "end": 160.94,
+      "text": " Dans chaque lutte, dans chaque vérité",
+      "tokens": [
+        50514,
+        16897,
+        18920,
+        38319,
+        975,
+        11,
+        2680,
+        18920,
+        30678,
+        526,
+        50664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.3742767044260532,
+      "compression_ratio": 1.4080459770114941,
+      "no_speech_prob": 0.011064821854233742,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 158.04,
+          "end": 158.82,
+          "probability": 0.17960244417190552
+        },
+        {
+          "word": " chaque",
+          "start": 158.82,
+          "end": 159.28,
+          "probability": 0.8776404857635498
+        },
+        {
+          "word": " lutte,",
+          "start": 159.28,
+          "end": 159.92,
+          "probability": 0.6189045161008835
+        },
+        {
+          "word": " dans",
+          "start": 159.92,
+          "end": 160.08,
+          "probability": 0.9756261110305786
+        },
+        {
+          "word": " chaque",
+          "start": 160.08,
+          "end": 160.36,
+          "probability": 0.9966013431549072
+        },
+        {
+          "word": " vérité",
+          "start": 160.36,
+          "end": 160.94,
+          "probability": 0.9096696376800537
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "seek": 15494,
+      "start": 161.66,
+      "end": 166.44,
+      "text": " Un beau compte ton nom, et terner dans notre histoire",
+      "tokens": [
+        50664,
+        1156,
+        29891,
+        19424,
+        2952,
+        5369,
+        11,
+        1030,
+        1796,
+        1193,
+        2680,
+        10349,
+        31202,
+        50914
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.3742767044260532,
+      "compression_ratio": 1.4080459770114941,
+      "no_speech_prob": 0.011064821854233742,
+      "words": [
+        {
+          "word": " Un",
+          "start": 161.66,
+          "end": 162.0,
+          "probability": 0.8778876662254333
+        },
+        {
+          "word": " beau",
+          "start": 162.0,
+          "end": 162.32,
+          "probability": 0.16107124090194702
+        },
+        {
+          "word": " compte",
+          "start": 162.32,
+          "end": 162.6,
+          "probability": 0.20211054384708405
+        },
+        {
+          "word": " ton",
+          "start": 162.6,
+          "end": 163.06,
+          "probability": 0.2657395899295807
+        },
+        {
+          "word": " nom,",
+          "start": 163.06,
+          "end": 163.5,
+          "probability": 0.909882128238678
+        },
+        {
+          "word": " et",
+          "start": 163.56,
+          "end": 163.86,
+          "probability": 0.05424584448337555
+        },
+        {
+          "word": " terner",
+          "start": 163.86,
+          "end": 164.48,
+          "probability": 0.18652915954589844
+        },
+        {
+          "word": " dans",
+          "start": 164.48,
+          "end": 165.1,
+          "probability": 0.5721191167831421
+        },
+        {
+          "word": " notre",
+          "start": 165.1,
+          "end": 165.74,
+          "probability": 0.9756669402122498
+        },
+        {
+          "word": " histoire",
+          "start": 165.74,
+          "end": 166.44,
+          "probability": 0.9508855938911438
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "seek": 15494,
+      "start": 166.44,
+      "end": 169.32,
+      "text": " Je ferai que c'est pas avec confiance",
+      "tokens": [
+        50914,
+        2588,
+        7202,
+        1301,
+        631,
+        269,
+        6,
+        377,
+        1736,
+        4163,
+        43213,
+        51064
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.3742767044260532,
+      "compression_ratio": 1.4080459770114941,
+      "no_speech_prob": 0.011064821854233742,
+      "words": [
+        {
+          "word": " Je",
+          "start": 166.44,
+          "end": 166.9,
+          "probability": 0.07874768227338791
+        },
+        {
+          "word": " ferai",
+          "start": 166.9,
+          "end": 167.18,
+          "probability": 0.46989408880472183
+        },
+        {
+          "word": " que",
+          "start": 167.18,
+          "end": 167.3,
+          "probability": 0.4952807128429413
+        },
+        {
+          "word": " c",
+          "start": 167.3,
+          "end": 167.68,
+          "probability": 0.3212299644947052
+        },
+        {
+          "word": "'est",
+          "start": 167.68,
+          "end": 167.68,
+          "probability": 0.9229066371917725
+        },
+        {
+          "word": " pas",
+          "start": 167.68,
+          "end": 168.26,
+          "probability": 0.3419926166534424
+        },
+        {
+          "word": " avec",
+          "start": 168.26,
+          "end": 168.62,
+          "probability": 0.7941260933876038
+        },
+        {
+          "word": " confiance",
+          "start": 168.62,
+          "end": 169.32,
+          "probability": 0.9741578698158264
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "seek": 15494,
+      "start": 169.32,
+      "end": 171.3,
+      "text": " Nous marchons vers toi",
+      "tokens": [
+        51064,
+        15343,
+        8368,
+        892,
+        1774,
+        15648,
+        51164
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.3742767044260532,
+      "compression_ratio": 1.4080459770114941,
+      "no_speech_prob": 0.011064821854233742,
+      "words": [
+        {
+          "word": " Nous",
+          "start": 169.32,
+          "end": 169.7,
+          "probability": 0.2964729964733124
+        },
+        {
+          "word": " marchons",
+          "start": 169.7,
+          "end": 170.26,
+          "probability": 0.6462725251913071
+        },
+        {
+          "word": " vers",
+          "start": 170.26,
+          "end": 170.54,
+          "probability": 0.9796593189239502
+        },
+        {
+          "word": " toi",
+          "start": 170.54,
+          "end": 171.3,
+          "probability": 0.9968324303627014
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "seek": 15494,
+      "start": 171.3,
+      "end": 178.4,
+      "text": " Dans la lumière d'éternel",
+      "tokens": [
+        51164,
+        16897,
+        635,
+        43193,
+        274,
+        6,
+        526,
+        2231,
+        338,
+        51514
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.3742767044260532,
+      "compression_ratio": 1.4080459770114941,
+      "no_speech_prob": 0.011064821854233742,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 171.3,
+          "end": 172.74,
+          "probability": 0.8081571459770203
+        },
+        {
+          "word": " la",
+          "start": 172.74,
+          "end": 173.7,
+          "probability": 0.9897935390472412
+        },
+        {
+          "word": " lumière",
+          "start": 173.7,
+          "end": 174.62,
+          "probability": 0.9896173477172852
+        },
+        {
+          "word": " d",
+          "start": 174.62,
+          "end": 176.0,
+          "probability": 0.39141857624053955
+        },
+        {
+          "word": "'éternel",
+          "start": 176.0,
+          "end": 178.4,
+          "probability": 0.6720912754535675
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "seek": 15494,
+      "start": 178.4,
+      "end": 183.5,
+      "text": " Nous vivons en émoins",
+      "tokens": [
+        51514,
+        15343,
+        11005,
+        892,
+        465,
+        1136,
+        3280,
+        1292,
+        51814
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.3742767044260532,
+      "compression_ratio": 1.4080459770114941,
+      "no_speech_prob": 0.011064821854233742,
+      "words": [
+        {
+          "word": " Nous",
+          "start": 178.4,
+          "end": 178.9,
+          "probability": 0.9730879664421082
+        },
+        {
+          "word": " vivons",
+          "start": 178.9,
+          "end": 179.66,
+          "probability": 0.9702483713626862
+        },
+        {
+          "word": " en",
+          "start": 179.66,
+          "end": 180.1,
+          "probability": 0.9828560948371887
+        },
+        {
+          "word": " émoins",
+          "start": 180.1,
+          "end": 183.5,
+          "probability": 0.4281296332677205
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "seek": 18494,
+      "start": 187.54,
+      "end": 188.94,
+      "text": " Nous vivons en émoins",
+      "tokens": [
+        50364,
+        15343,
+        11005,
+        892,
+        465,
+        1136,
+        3280,
+        1292,
+        50514
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.5002779006958008,
+      "compression_ratio": 0.7333333333333333,
+      "no_speech_prob": 0.544578492641449,
+      "words": [
+        {
+          "word": " Nous",
+          "start": 187.54,
+          "end": 188.94,
+          "probability": 0.004268102813512087
+        },
+        {
+          "word": " vivons",
+          "start": 188.94,
+          "end": 188.94,
+          "probability": 0.49651061883196235
+        },
+        {
+          "word": " en",
+          "start": 188.94,
+          "end": 188.94,
+          "probability": 0.042280688881874084
+        },
+        {
+          "word": " émoins",
+          "start": 188.94,
+          "end": 188.94,
+          "probability": 0.01862261025235057
+        }
+      ]
+    }
+  ],
+  "language": "fr"
+}

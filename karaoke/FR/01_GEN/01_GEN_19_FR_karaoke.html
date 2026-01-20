@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genese 19 | Bible Chantee Karaoke</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
+        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
+        .header h1{font-size:1.8em;color:#d4af37}
+        .player{max-width:800px;margin:20px auto;padding:0 20px}
+        audio{width:100%}
+        .lyrics{max-width:800px;margin:20px auto;padding:20px}
+        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
+        .line:hover{background:rgba(212,175,55,0.1)}
+        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
+        .line.passed{opacity:0.5}
+        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
+        .footer{text-align:center;padding:20px;color:#666}
+        .footer a{color:#d4af37}
+    </style>
+</head>
+<body>
+    <div class="header"><h1>Genese 19</h1><p>Bible Chantee Karaoke</p></div>
+    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_19_FR.mp3" type="audio/mpeg"></audio></div>
+    <div class="lyrics">
+        <div class="line" data-start="10.04" data-end="19.12"><span class="time">[0:10]</span>Dans la nuit sombre, l'angoisse s'élève À Sodome, la voix des amants détresse</div>
+        <div class="line" data-start="19.12" data-end="35.40"><span class="time">[0:19]</span>L'hôte en prière reçoit des envoyés Des hommes de lumière, un chemin à tracer</div>
+        <div class="line" data-start="35.40" data-end="44.14"><span class="time">[0:35]</span>Ô Seigneur, Tu es notre refuge Dans la tempête, Ta main nous conduit</div>
+        <div class="line" data-start="44.14" data-end="50.54"><span class="time">[0:44]</span>Sauve-nous, nous implorons Ne regarde pas en arrière</div>
+        <div class="line" data-start="50.54" data-end="65.46"><span class="time">[0:50]</span>Vers la montagne, notre cœur s'élève Dans l'ombre de Ta grâce, nous vivrons</div>
+        <div class="line" data-start="65.46" data-end="73.38"><span class="time">[1:05]</span>Les portes se ferment, la foule est en colère Lot défend, les étrangers bravent Canaan</div>
+        <div class="line" data-start="73.38" data-end="81.60"><span class="time">[1:13]</span>Des anges puissants, sa voix résonne Lève-toi, fuis, vers la vie, Tu résonnes</div>
+        <div class="line" data-start="81.60" data-end="96.76"><span class="time">[1:21]</span>Ô Seigneur, Tu es notre refuge Dans la tempête, Ta main nous conduit</div>
+        <div class="line" data-start="96.76" data-end="104.36"><span class="time">[1:36]</span>Sauve-nous, nous implorons Ne regarde pas en arrière</div>
+        <div class="line" data-start="104.36" data-end="122.40"><span class="time">[1:44]</span>Vers la montagne, notre cœur s'élève Dans l'ombre de Ta grâce, nous vivrons</div>
+        <div class="line" data-start="122.40" data-end="130.30"><span class="time">[2:02]</span>Le soleil se lève, la ville s'effondre Au cœur de la nuit, Ta promesse abonde</div>
+        <div class="line" data-start="130.30" data-end="139.72"><span class="time">[2:10]</span>Souviens-toi d'Abraham, de la foi qui sauve Dans le chaos, Ta miséricorde abrouve</div>
+        <div class="line" data-start="139.72" data-end="154.30"><span class="time">[2:19]</span>Ô Seigneur, Tu es notre refuge Dans la tempête, Ta main nous conduit</div>
+        <div class="line" data-start="154.30" data-end="161.80"><span class="time">[2:34]</span>Sauve-nous, nous implorons Ne regarde pas en arrière</div>
+        <div class="line" data-start="161.80" data-end="170.88"><span class="time">[2:41]</span>Vers la montagne, notre cœur s'élève Dans l'ombre de Ta grâce, nous vivrons</div>
+        <div class="line" data-start="170.88" data-end="188.46"><span class="time">[2:50]</span>Dans la lumière, nos âmes s'uniront Ô Seigneur, en Toi nous espérons</div>
+        <div class="line" data-start="188.46" data-end="198.06"><span class="time">[3:08]</span>Dans l'ombre de Ta grâce, nous vivrons Dans l'ombre de Ta grâce, nous vivrons</div>
+        <div class="line" data-start="198.06" data-end="202.92"><span class="time">[3:18]</span>Ces paroles s'inspirent de l'histoire de l'hôte et de la miséricorde divine</div>
+        <div class="line" data-start="202.92" data-end="211.78"><span class="time">[3:22]</span>Elles sont conçues pour être chantées dans un cadre de culte</div>
+        <div class="line" data-start="211.78" data-end="212.70"><span class="time">[3:31]</span>évoquant des thèmes de refuge, de protection et de foi dans les épreuves</div>
+    </div>
+    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
+    <script>
+        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
+        audio.addEventListener('timeupdate',()=>{
+            const t=audio.currentTime;
+            lines.forEach(l=>{
+                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
+                l.classList.remove('active','passed');
+                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
+                else if(t>=e)l.classList.add('passed')
+            })
+        });
+        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+    </script>
+</body>
+</html>

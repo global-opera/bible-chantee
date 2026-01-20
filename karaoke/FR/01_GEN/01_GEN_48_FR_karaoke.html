@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genese 48 | Bible Chantee Karaoke</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
+        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
+        .header h1{font-size:1.8em;color:#d4af37}
+        .player{max-width:800px;margin:20px auto;padding:0 20px}
+        audio{width:100%}
+        .lyrics{max-width:800px;margin:20px auto;padding:20px}
+        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
+        .line:hover{background:rgba(212,175,55,0.1)}
+        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
+        .line.passed{opacity:0.5}
+        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
+        .footer{text-align:center;padding:20px;color:#666}
+        .footer a{color:#d4af37}
+    </style>
+</head>
+<body>
+    <div class="header"><h1>Genese 48</h1><p>Bible Chantee Karaoke</p></div>
+    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_48_FR.mp3" type="audio/mpeg"></audio></div>
+    <div class="lyrics">
+        <div class="line" data-start="10.00" data-end="27.00"><span class="time">[0:10]</span>Dans la nuit, ton père s'inquiète Joseph vient, il t'attend</div>
+        <div class="line" data-start="27.00" data-end="38.00"><span class="time">[0:27]</span>Les fils de ta promesse, Éphraïm et Manassé En avant, Israël sur son lit</div>
+        <div class="line" data-start="38.00" data-end="55.00"><span class="time">[0:38]</span>Rassemble sa force, il se souvient des promesses De la voie qui l'encourage</div>
+        <div class="line" data-start="55.00" data-end="65.00"><span class="time">[0:55]</span>Ô Dieu, bénis ces enfants Qu'ils portent ton nom comme Éphraïm Manassé</div>
+        <div class="line" data-start="65.00" data-end="77.00"><span class="time">[1:05]</span>Dans la terre promise, qu'ils marchent en ta lumière Leur avenir une prière, que ta gloire les éclaire</div>
+        <div class="line" data-start="77.00" data-end="90.00"><span class="time">[1:17]</span>Là, sur le chemin des Éphrata Rachel pleure mais l'espoir demeure</div>
+        <div class="line" data-start="90.00" data-end="102.00"><span class="time">[1:30]</span>Les yeux d'Israël s'illuminent De voir la vie d'un cœur vainqueur</div>
+        <div class="line" data-start="102.00" data-end="116.00"><span class="time">[1:42]</span>Il embrasse ses enfants Dans la foi, la promesse que l'ange qui m'a protégé</div>
+        <div class="line" data-start="116.00" data-end="129.00"><span class="time">[1:56]</span>Les garde en ta tendresse</div>
+        <div class="line" data-start="129.00" data-end="140.00"><span class="time">[2:09]</span>Ô Dieu, bénis ces enfants Qu'ils portent ton nom comme Éphraïm Manassé</div>
+        <div class="line" data-start="140.00" data-end="150.00"><span class="time">[2:20]</span>Dans la terre promise, qu'ils marchent en ta lumière Leur avenir une prière, que ta gloire les éclaire</div>
+        <div class="line" data-start="150.00" data-end="159.00"><span class="time">[2:30]</span>Et même si le monde tremble, ta main guide notre chemin Tu es le Dieu de mes pères de génération en génération</div>
+        <div class="line" data-start="159.00" data-end="173.00"><span class="time">[2:39]</span>Nous déclarons avec foi que de cette lignée Jaillira une multitude pour louer ta sainteté</div>
+        <div class="line" data-start="173.00" data-end="183.00"><span class="time">[2:53]</span>Ô Dieu, bénis ces enfants Qu'ils portent ton nom comme Éphraïm Manassé</div>
+        <div class="line" data-start="183.00" data-end="201.00"><span class="time">[3:03]</span>Dans la terre promise, qu'ils marchent en ta lumière Leur avenir une prière, que ta gloire les éclaire</div>
+        <div class="line" data-start="201.00" data-end="216.00"><span class="time">[3:21]</span>À jamais dans ton amour nous marcherons, Seigneur Avec la bénédiction de nos ancêtres en cœur</div>
+        <div class="line" data-start="216.00" data-end="230.00"><span class="time">[3:36]</span>Ô Dieu, bénis ces enfants Qu'ils portent ton nom pour l'éternité Nous chantons ta promesse, notre fondation</div>
+    </div>
+    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
+    <script>
+        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
+        audio.addEventListener('timeupdate',()=>{
+            const t=audio.currentTime;
+            lines.forEach(l=>{
+                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
+                l.classList.remove('active','passed');
+                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
+                else if(t>=e)l.classList.add('passed')
+            })
+        });
+        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+    </script>
+</body>
+</html>

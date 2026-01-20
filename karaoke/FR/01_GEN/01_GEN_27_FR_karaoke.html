@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genese 27 | Bible Chantee Karaoke</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
+        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
+        .header h1{font-size:1.8em;color:#d4af37}
+        .player{max-width:800px;margin:20px auto;padding:0 20px}
+        audio{width:100%}
+        .lyrics{max-width:800px;margin:20px auto;padding:20px}
+        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
+        .line:hover{background:rgba(212,175,55,0.1)}
+        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
+        .line.passed{opacity:0.5}
+        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
+        .footer{text-align:center;padding:20px;color:#666}
+        .footer a{color:#d4af37}
+    </style>
+</head>
+<body>
+    <div class="header"><h1>Genese 27</h1><p>Bible Chantee Karaoke</p></div>
+    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_27_FR.mp3" type="audio/mpeg"></audio></div>
+    <div class="lyrics">
+        <div class="line" data-start="14.00" data-end="26.00"><span class="time">[0:14]</span>Dans l'ombre de la faim, Isaac parle Sa voix tremble, son cœur s'égare</div>
+        <div class="line" data-start="26.00" data-end="38.00"><span class="time">[0:26]</span>Mon fils Ezeviel chasse le gibier Prépare un mets que je puisse prier</div>
+        <div class="line" data-start="38.00" data-end="50.00"><span class="time">[0:38]</span>Rebecca entend, un plan se dessine Jacob l'étoile, l'héritier du divin</div>
+        <div class="line" data-start="50.00" data-end="64.00"><span class="time">[0:50]</span>Dans les mains du destin, un choix à faire Un cœur emploie la lumière et la guerre</div>
+        <div class="line" data-start="64.00" data-end="77.00"><span class="time">[1:04]</span>Ô dieu de promesses, entend notre chant Que ta bénédiction couvre chaque enfant</div>
+        <div class="line" data-start="77.00" data-end="93.00"><span class="time">[1:17]</span>Unis dans la foi, nous marchons vers toi Dans la lueur de ta grâce, nous sommes en joie</div>
+        <div class="line" data-start="93.00" data-end="106.00"><span class="time">[1:33]</span>Jacob s'approche, le cœur lourd de fardeau La voix de son frère, le souffle de l'écho</div>
+        <div class="line" data-start="106.00" data-end="118.00"><span class="time">[1:46]</span>Isaac aveugle, touche les mains du fils La ruse et l'amour, l'histoire se tisse</div>
+        <div class="line" data-start="118.00" data-end="131.00"><span class="time">[1:58]</span>La bénédiction coule comme une source Un héritage scellé par ta force</div>
+        <div class="line" data-start="131.00" data-end="140.00"><span class="time">[2:11]</span>Essu revient, la colère en son cœur Mais la promesse demeure, ô éternel notre sauveur</div>
+        <div class="line" data-start="140.00" data-end="150.00"><span class="time">[2:20]</span>Ô dieu de promesses, entend notre chant Que ta bénédiction couvre chaque enfant</div>
+        <div class="line" data-start="150.00" data-end="160.00"><span class="time">[2:30]</span>Unis dans la foi, nous marchons vers toi Dans la lueur de ta grâce, nous sommes en joie</div>
+        <div class="line" data-start="160.00" data-end="176.00"><span class="time">[2:40]</span>Tu es le maître des temps et des cœurs Dans chaque épreuve, tu es notre lueur</div>
+        <div class="line" data-start="176.00" data-end="189.00"><span class="time">[2:56]</span>Quand la haine surgit et que le mal s'approche Nous restons fermes sous ta main qui nous touche</div>
+        <div class="line" data-start="189.00" data-end="203.00"><span class="time">[3:09]</span>Ô dieu de promesses, entend notre chant Que ta bénédiction couvre chaque enfant</div>
+        <div class="line" data-start="203.00" data-end="215.00"><span class="time">[3:23]</span>Unis dans la foi, nous marchons vers toi Dans la lueur de ta grâce, nous sommes en joie</div>
+        <div class="line" data-start="215.00" data-end="230.00"><span class="time">[3:35]</span>Dans les champs de l'éternité, nous porterons ta vérité Que chaque âme entendue soit bénie par l'amour que tu as répandu</div>
+        <div class="line" data-start="230.00" data-end="239.00"><span class="time">[3:50]</span>Oh-oh-oh-oh-oh-oh-oh-oh-oh-oh</div>
+    </div>
+    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
+    <script>
+        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
+        audio.addEventListener('timeupdate',()=>{
+            const t=audio.currentTime;
+            lines.forEach(l=>{
+                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
+                l.classList.remove('active','passed');
+                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
+                else if(t>=e)l.classList.add('passed')
+            })
+        });
+        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+    </script>
+</body>
+</html>

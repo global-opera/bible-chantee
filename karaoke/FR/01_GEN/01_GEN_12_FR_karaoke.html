@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genese 12 | Bible Chantee Karaoke</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
+        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
+        .header h1{font-size:1.8em;color:#d4af37}
+        .player{max-width:800px;margin:20px auto;padding:0 20px}
+        audio{width:100%}
+        .lyrics{max-width:800px;margin:20px auto;padding:20px}
+        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
+        .line:hover{background:rgba(212,175,55,0.1)}
+        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
+        .line.passed{opacity:0.5}
+        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
+        .footer{text-align:center;padding:20px;color:#666}
+        .footer a{color:#d4af37}
+    </style>
+</head>
+<body>
+    <div class="header"><h1>Genese 12</h1><p>Bible Chantee Karaoke</p></div>
+    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_12_FR.mp3" type="audio/mpeg"></audio></div>
+    <div class="lyrics">
+        <div class="line" data-start="11.84" data-end="30.94"><span class="time">[0:11]</span>Sors de ta terre, suis ma voix L'éternel parle, il est avec toi</div>
+        <div class="line" data-start="30.94" data-end="41.70"><span class="time">[0:30]</span>De Charan vers le pays promis Abram l'étoile de demain, tu es choisi</div>
+        <div class="line" data-start="41.70" data-end="59.58"><span class="time">[0:41]</span>Je ferai de toi une grande nation Ta bénédiction sera ma révélation</div>
+        <div class="line" data-start="59.58" data-end="67.68"><span class="time">[0:59]</span>Les familles de la terre en toi seront unies Dans l'amour du Père, nos cœurs sont épanouis</div>
+        <div class="line" data-start="67.68" data-end="82.16"><span class="time">[1:07]</span>Dans la vallée de Sichem, ils te montrent le chemin Un autel d'adoration, nos cœurs levés vers l'ascension</div>
+        <div class="line" data-start="82.16" data-end="99.98"><span class="time">[1:22]</span>Malgré les tempêtes, ta foi ne faiblira pas Car l'éternel est avec toi, il te guidera</div>
+        <div class="line" data-start="99.98" data-end="108.90"><span class="time">[1:39]</span>Je ferai de toi une grande nation Ta bénédiction sera ma révélation</div>
+        <div class="line" data-start="108.90" data-end="124.44"><span class="time">[1:48]</span>Les familles de la terre en toi seront unies Dans l'amour du Père, nos cœurs sont épanouis</div>
+        <div class="line" data-start="124.44" data-end="142.50"><span class="time">[2:04]</span>Oh, confiance en l'éternel Quand la famine frappe, il est notre ciel Ne crains rien, avance avec foi Chaque promesse est un pas vers la joie</div>
+        <div class="line" data-start="142.50" data-end="150.36"><span class="time">[2:22]</span>Je ferai de toi une grande nation Ta bénédiction sera ma révélation</div>
+        <div class="line" data-start="150.36" data-end="167.08"><span class="time">[2:30]</span>Les familles de la terre en toi seront unies Dans l'amour du Père, nos cœurs sont épanouis</div>
+        <div class="line" data-start="167.08" data-end="177.46"><span class="time">[2:47]</span>Sors de ta terre, avance en lumière Abram notre Père, dans la foi nous sommes frères</div>
+        <div class="line" data-start="177.46" data-end="183.16"><span class="time">[2:57]</span>L'éternel nous guide, main dans la main Dans la promesse, nous marcherons demain</div>
+    </div>
+    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
+    <script>
+        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
+        audio.addEventListener('timeupdate',()=>{
+            const t=audio.currentTime;
+            lines.forEach(l=>{
+                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
+                l.classList.remove('active','passed');
+                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
+                else if(t>=e)l.classList.add('passed')
+            })
+        });
+        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+    </script>
+</body>
+</html>

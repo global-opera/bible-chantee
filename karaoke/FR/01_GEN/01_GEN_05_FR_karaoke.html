@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genese 5 | Bible Chantee Karaoke</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
+        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
+        .header h1{font-size:1.8em;color:#d4af37}
+        .player{max-width:800px;margin:20px auto;padding:0 20px}
+        audio{width:100%}
+        .lyrics{max-width:800px;margin:20px auto;padding:20px}
+        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
+        .line:hover{background:rgba(212,175,55,0.1)}
+        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
+        .line.passed{opacity:0.5}
+        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
+        .footer{text-align:center;padding:20px;color:#666}
+        .footer a{color:#d4af37}
+    </style>
+</head>
+<body>
+    <div class="header"><h1>Genese 5</h1><p>Bible Chantee Karaoke</p></div>
+    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_05_FR.mp3" type="audio/mpeg"></audio></div>
+    <div class="lyrics">
+        <div class="line" data-start="10.80" data-end="23.32"><span class="time">[0:10]</span>Dans le jardin, tu as créé l'homme et la femme à ton image</div>
+        <div class="line" data-start="23.32" data-end="33.98"><span class="time">[0:23]</span>Béni par ta main, notre héritage Nous marchons, Seigneur, dans ta vérité</div>
+        <div class="line" data-start="33.98" data-end="50.36"><span class="time">[0:33]</span>A ta ressemblance, nous sommes nés Dans l'amour, nous voulons marcher</div>
+        <div class="line" data-start="50.36" data-end="63.62"><span class="time">[0:50]</span>De génération en génération Nous chantons ta grande création</div>
+        <div class="line" data-start="63.62" data-end="87.84"><span class="time">[1:03]</span>Seth, dans la lumière Leur vie, un récit de ta bonté</div>
+        <div class="line" data-start="87.84" data-end="97.26"><span class="time">[1:27]</span>Hénoch marcha avec toi, cher Père Unis par ta grâce, nous voulons prier</div>
+        <div class="line" data-start="97.26" data-end="109.84"><span class="time">[1:37]</span>A ta ressemblance, nous sommes nés Dans l'amour, nous voulons marcher</div>
+        <div class="line" data-start="109.84" data-end="125.24"><span class="time">[1:49]</span>De génération en génération Nous chantons ta grande création</div>
+        <div class="line" data-start="125.24" data-end="136.82"><span class="time">[2:05]</span>Noé, un espoir dans la tempête Un futur, une promesse à jamais</div>
+        <div class="line" data-start="136.82" data-end="173.66"><span class="time">[2:16]</span>Ô Seigneur, nous te cherchons Guide nos pas</div>
+        <div class="line" data-start="173.66" data-end="198.02"><span class="time">[2:53]</span>Dans cette vision A ta ressemblance, nous sommes nés Dans l'amour, nous voulons marcher</div>
+        <div class="line" data-start="198.02" data-end="217.50"><span class="time">[3:18]</span>De génération en génération Nous chantons ta grande création</div>
+        <div class="line" data-start="217.50" data-end="222.50"><span class="time">[3:37]</span>Dans chaque souffle Chaque prière Nous te louons</div>
+        <div class="line" data-start="222.50" data-end="214.28"><span class="time">[3:42]</span>Pour notre lumière A ta ressemblance, nous sommes nés Pour ta gloire, notre cœur est engagé</div>
+        <div class="line" data-start="214.28" data-end="219.50"><span class="time">[3:34]</span>Ces paroles évoquent la création et la continuité de la vie</div>
+        <div class="line" data-start="219.50" data-end="221.14"><span class="time">[3:39]</span>Selon le plan divin, tout en restant fidèles aux textes bibliques</div>
+    </div>
+    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
+    <script>
+        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
+        audio.addEventListener('timeupdate',()=>{
+            const t=audio.currentTime;
+            lines.forEach(l=>{
+                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
+                l.classList.remove('active','passed');
+                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
+                else if(t>=e)l.classList.add('passed')
+            })
+        });
+        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genese 25 | Bible Chantee Karaoke</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
+        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
+        .header h1{font-size:1.8em;color:#d4af37}
+        .player{max-width:800px;margin:20px auto;padding:0 20px}
+        audio{width:100%}
+        .lyrics{max-width:800px;margin:20px auto;padding:20px}
+        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
+        .line:hover{background:rgba(212,175,55,0.1)}
+        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
+        .line.passed{opacity:0.5}
+        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
+        .footer{text-align:center;padding:20px;color:#666}
+        .footer a{color:#d4af37}
+    </style>
+</head>
+<body>
+    <div class="header"><h1>Genese 25</h1><p>Bible Chantee Karaoke</p></div>
+    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_25_FR.mp3" type="audio/mpeg"></audio></div>
+    <div class="lyrics">
+        <div class="line" data-start="13.00" data-end="26.00"><span class="time">[0:13]</span>Dans la vallée des ancêtres, Abraham marcha avec foi</div>
+        <div class="line" data-start="26.00" data-end="38.00"><span class="time">[0:26]</span>Kéturah, sa nouvelle compagne, Porta des fils une lignée en joie</div>
+        <div class="line" data-start="38.00" data-end="45.00"><span class="time">[0:38]</span>Isaac, l'héritier, reçut le don, Tous les biens de son père pour sa mission</div>
+        <div class="line" data-start="45.00" data-end="56.00"><span class="time">[0:45]</span>Il vécut des jours en sagesse, Rassasiés dans la paix de ses promesses</div>
+        <div class="line" data-start="56.00" data-end="66.00"><span class="time">[0:56]</span>Ô Dieu de nos pères, nous t'adorons Dans l'héritage d'Abraham</div>
+        <div class="line" data-start="66.00" data-end="79.00"><span class="time">[1:06]</span>Nous chantons ta bonté, Des générations en ta lumière</div>
+        <div class="line" data-start="79.00" data-end="96.00"><span class="time">[1:19]</span>Nous marchons, main dans la main</div>
+        <div class="line" data-start="96.00" data-end="102.00"><span class="time">[1:36]</span>Rebecca, stérile, implorait, L'éternel entendit son cri</div>
+        <div class="line" data-start="102.00" data-end="115.00"><span class="time">[1:42]</span>Deux nations se formaient en elle, Dans son ventre, le destin s'épanouit</div>
+        <div class="line" data-start="115.00" data-end="128.00"><span class="time">[1:55]</span>Ésaü, le chasseur, le fort, Jacob, le doux, le porteur de sort</div>
+        <div class="line" data-start="128.00" data-end="139.00"><span class="time">[2:08]</span>Dans le tumulte, un choix fut fait, Le droit d'aînesse, un trésor délaissé</div>
+        <div class="line" data-start="139.00" data-end="151.00"><span class="time">[2:19]</span>Ô Dieu de nos pères, nous t'adorons Dans l'héritage d'Abraham</div>
+        <div class="line" data-start="151.00" data-end="166.00"><span class="time">[2:31]</span>Nous chantons ta bonté, Des générations en ta lumière</div>
+        <div class="line" data-start="166.00" data-end="172.00"><span class="time">[2:46]</span>Nous marchons, main dans la main</div>
+        <div class="line" data-start="172.00" data-end="185.00"><span class="time">[2:52]</span>De la poussière, tu as fait des royaumes, Des promesses, tu as semé l'espoir</div>
+        <div class="line" data-start="185.00" data-end="197.00"><span class="time">[3:05]</span>Dans nos cœurs, une histoire se forme, Nous te rendons gloire, notre phare, notre miroir</div>
+        <div class="line" data-start="197.00" data-end="208.00"><span class="time">[3:17]</span>Ô Dieu de nos pères, nous t'adorons Dans l'héritage d'Abraham</div>
+        <div class="line" data-start="208.00" data-end="217.00"><span class="time">[3:28]</span>Nous chantons ta bonté, Des générations en ta lumière</div>
+        <div class="line" data-start="217.00" data-end="223.00"><span class="time">[3:37]</span>Nous marchons, main dans la main</div>
+        <div class="line" data-start="223.00" data-end="233.00"><span class="time">[3:43]</span>Passagier de ta grâce infinie, Nous marchons, ô Dieu, vers l'éternité</div>
+        <div class="line" data-start="233.00" data-end="242.00"><span class="time">[3:53]</span>Dans l'héritage de la foi, Nous t'adorons, notre joie, notre voix</div>
+    </div>
+    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
+    <script>
+        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
+        audio.addEventListener('timeupdate',()=>{
+            const t=audio.currentTime;
+            lines.forEach(l=>{
+                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
+                l.classList.remove('active','passed');
+                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
+                else if(t>=e)l.classList.add('passed')
+            })
+        });
+        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+    </script>
+</body>
+</html>

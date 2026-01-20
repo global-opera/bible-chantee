@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genese 7 | Bible Chantee Karaoke</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
+        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
+        .header h1{font-size:1.8em;color:#d4af37}
+        .player{max-width:800px;margin:20px auto;padding:0 20px}
+        audio{width:100%}
+        .lyrics{max-width:800px;margin:20px auto;padding:20px}
+        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
+        .line:hover{background:rgba(212,175,55,0.1)}
+        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
+        .line.passed{opacity:0.5}
+        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
+        .footer{text-align:center;padding:20px;color:#666}
+        .footer a{color:#d4af37}
+    </style>
+</head>
+<body>
+    <div class="header"><h1>Genese 7</h1><p>Bible Chantee Karaoke</p></div>
+    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_07_FR.mp3" type="audio/mpeg"></audio></div>
+    <div class="lyrics">
+        <div class="line" data-start="0.10" data-end="5.60"><span class="time">[0:00]</span>Dans la nuit, l'Éternel a parlé À Noé, le Juste, il a guidé</div>
+        <div class="line" data-start="5.60" data-end="16.60"><span class="time">[0:05]</span>Entre dans l'arche avec ta famille Car j'ai vu ta foi, ta vie scintille</div>
+        <div class="line" data-start="16.60" data-end="21.10"><span class="time">[0:16]</span>Lève les yeux, regarde les cieux Dieu fait briller l'espoir</div>
+        <div class="line" data-start="21.10" data-end="26.10"><span class="time">[0:21]</span>Dans la tempête, nous sommes en toi L'arche de l'Éternel, notre abri, notre foi</div>
+        <div class="line" data-start="26.10" data-end="30.10"><span class="time">[0:26]</span>Sept couples d'animaux en procession Dans l'arche, unis par la création</div>
+        <div class="line" data-start="30.10" data-end="39.60"><span class="time">[0:30]</span>Les pluies viendront quarante jours Mais avec toi Seigneur, nous avons l'amour</div>
+        <div class="line" data-start="39.60" data-end="44.10"><span class="time">[0:39]</span>Lève les yeux, regarde les cieux Dieu fait briller l'espoir</div>
+        <div class="line" data-start="44.10" data-end="49.10"><span class="time">[0:44]</span>Dans la tempête, nous sommes en toi L'arche de l'Éternel, notre abri, notre foi</div>
+        <div class="line" data-start="49.10" data-end="54.60"><span class="time">[0:49]</span>Et quand les eaux montent, nous ne craignons rien Ta promesse nous porte, nous sommes entre tes mains</div>
+        <div class="line" data-start="54.60" data-end="65.10"><span class="time">[0:54]</span>L'Éternel ferme la porte en toi Nous trouvons la vie</div>
+        <div class="line" data-start="65.10" data-end="69.60"><span class="time">[1:05]</span>Dans ce refuge, nous sommes unis Pour l'éternité, en toi, nous vivons</div>
+        <div class="line" data-start="69.60" data-end="74.60"><span class="time">[1:09]</span>Lève les yeux, regarde les cieux Dieu fait briller l'espoir</div>
+        <div class="line" data-start="74.60" data-end="79.10"><span class="time">[1:14]</span>Dans la tempête, nous sommes en toi L'Arche de l'Éternel, notre abri, notre foi</div>
+        <div class="line" data-start="79.10" data-end="89.10"><span class="time">[1:19]</span>L'Arche de l'Éternel, notre cœur est en toi Dans chaque tempête, nous chantons ta gloire</div>
+        <div class="line" data-start="89.10" data-end="90.50"><span class="time">[1:29]</span>Oh-oh-oh-oh-oh-oah</div>
+    </div>
+    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
+    <script>
+        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
+        audio.addEventListener('timeupdate',()=>{
+            const t=audio.currentTime;
+            lines.forEach(l=>{
+                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
+                l.classList.remove('active','passed');
+                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
+                else if(t>=e)l.classList.add('passed')
+            })
+        });
+        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+    </script>
+</body>
+</html>

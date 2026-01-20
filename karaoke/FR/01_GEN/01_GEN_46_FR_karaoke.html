@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genese 46 | Bible Chantee Karaoke</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
+        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
+        .header h1{font-size:1.8em;color:#d4af37}
+        .player{max-width:800px;margin:20px auto;padding:0 20px}
+        audio{width:100%}
+        .lyrics{max-width:800px;margin:20px auto;padding:20px}
+        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
+        .line:hover{background:rgba(212,175,55,0.1)}
+        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
+        .line.passed{opacity:0.5}
+        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
+        .footer{text-align:center;padding:20px;color:#666}
+        .footer a{color:#d4af37}
+    </style>
+</head>
+<body>
+    <div class="header"><h1>Genese 46</h1><p>Bible Chantee Karaoke</p></div>
+    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_46_FR.mp3" type="audio/mpeg"></audio></div>
+    <div class="lyrics">
+        <div class="line" data-start="0.00" data-end="3.78"><span class="time">[0:00]</span>Israël, au mon cœur, à Beer-Shéba, sacrifices sont offerts, le dieu d'Isaac dans la nuit, sa voix résonne, ne crains point, je suis avec toi</div>
+        <div class="line" data-start="3.78" data-end="13.60"><span class="time">[0:03]</span>Descends en Égypte, là je te ferai grandir, une nation nouvelle, par ma main tu vas fleurir</div>
+        <div class="line" data-start="13.60" data-end="27.68"><span class="time">[0:13]</span>Je descendrai avec toi, dans la douleur et le temps, et de la terre d'Égypte, je te ferai remonter lentement</div>
+        <div class="line" data-start="27.68" data-end="39.88"><span class="time">[0:27]</span>L'écharpe de Pharaon, pour notre voyage, Jacob et sa famille, ensemble dans ce paysage</div>
+        <div class="line" data-start="39.88" data-end="54.88"><span class="time">[0:39]</span>Les fils et les filles, une promesse à porter, soixante-dix âmes, unies pour avancer</div>
+        <div class="line" data-start="54.88" data-end="68.88"><span class="time">[0:54]</span>Descends en Égypte, là je te ferai grandir, une nation nouvelle, par ma main tu vas fleurir</div>
+        <div class="line" data-start="68.88" data-end="78.88"><span class="time">[1:08]</span>Je descendrai avec toi, dans la douleur et le temps, et de la terre d'Égypte, je te ferai remonter lentement</div>
+        <div class="line" data-start="78.88" data-end="97.88"><span class="time">[1:18]</span>Joseph attend, le cœur plein de joie, à son père il court, les tendres sous le ciel</div>
+        <div class="line" data-start="97.88" data-end="107.88"><span class="time">[1:37]</span>J'ai vu ton visage, ô mon père ma foi, que je me rends en paix, tant que tu es là, éternel</div>
+        <div class="line" data-start="107.88" data-end="124.88"><span class="time">[1:47]</span>Descends en Égypte, là je te ferai grandir, une nation nouvelle, par ma main tu vas fleurir</div>
+        <div class="line" data-start="124.88" data-end="134.88"><span class="time">[2:04]</span>Je descendrai avec toi, dans la douleur et le temps, et de la terre d'Égypte, je te ferai remonter lentement</div>
+        <div class="line" data-start="134.88" data-end="155.88"><span class="time">[2:14]</span>Ô Seigneur, guide nos pas, dans les ténèbres, tu es notre roi</div>
+        <div class="line" data-start="155.88" data-end="170.88"><span class="time">[2:35]</span>Nous marchons ensemble, en ta lumière, vers la terre promise, ta grâce notre prière</div>
+    </div>
+    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
+    <script>
+        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
+        audio.addEventListener('timeupdate',()=>{
+            const t=audio.currentTime;
+            lines.forEach(l=>{
+                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
+                l.classList.remove('active','passed');
+                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
+                else if(t>=e)l.classList.add('passed')
+            })
+        });
+        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+    </script>
+</body>
+</html>

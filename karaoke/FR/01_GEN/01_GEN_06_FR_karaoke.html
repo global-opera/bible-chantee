@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genese 6 | Bible Chantee Karaoke</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
+        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
+        .header h1{font-size:1.8em;color:#d4af37}
+        .player{max-width:800px;margin:20px auto;padding:0 20px}
+        audio{width:100%}
+        .lyrics{max-width:800px;margin:20px auto;padding:20px}
+        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
+        .line:hover{background:rgba(212,175,55,0.1)}
+        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
+        .line.passed{opacity:0.5}
+        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
+        .footer{text-align:center;padding:20px;color:#666}
+        .footer a{color:#d4af37}
+    </style>
+</head>
+<body>
+    <div class="header"><h1>Genese 6</h1><p>Bible Chantee Karaoke</p></div>
+    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_06_FR.mp3" type="audio/mpeg"></audio></div>
+    <div class="lyrics">
+        <div class="line" data-start="14.02" data-end="22.36"><span class="time">[0:14]</span>Sur la terre où règne la violence Les cœurs s'égarent loin de l'innocence</div>
+        <div class="line" data-start="22.36" data-end="31.22"><span class="time">[0:22]</span>L'éternel regard dévoile la douleur Il pleure en silence, il pleure en son cœur</div>
+        <div class="line" data-start="31.22" data-end="51.30"><span class="time">[0:31]</span>Mais au milieu du désespoir Noé a trouvé grâce, un espoir à revoir</div>
+        <div class="line" data-start="51.30" data-end="59.46"><span class="time">[0:51]</span>Dans l'arche de promesse Il marchait avec toi</div>
+        <div class="line" data-start="59.46" data-end="67.30"><span class="time">[0:59]</span>Ô Seigneur, dans ta lumière Je me tiens, moi</div>
+        <div class="line" data-start="67.30" data-end="74.30"><span class="time">[1:07]</span>Des géants sur la terre, des héros d'antan Mais leur voix corrompue éteint le vivant</div>
+        <div class="line" data-start="74.30" data-end="82.32"><span class="time">[1:14]</span>L'éternel par l'avertissement éclaire Fais-moi une arche, un refuge sur la mer</div>
+        <div class="line" data-start="82.32" data-end="93.82"><span class="time">[1:22]</span>Mais au milieu du désespoir Noé a trouvé grâce, un espoir à revoir</div>
+        <div class="line" data-start="93.82" data-end="98.82"><span class="time">[1:33]</span>Dans l'arche de promesse Il marchait avec toi</div>
+        <div class="line" data-start="98.82" data-end="88.98"><span class="time">[1:38]</span>Ô Seigneur, dans ta lumière Je me tiens, moi</div>
+        <div class="line" data-start="88.98" data-end="90.86"><span class="time">[1:28]</span>Deux par deux, il vient à lui Tous les êtres de vie</div>
+        <div class="line" data-start="90.86" data-end="117.94"><span class="time">[1:30]</span>Sous l'œil de l'esprit Dans cette tempête, ta main me guide</div>
+        <div class="line" data-start="117.94" data-end="130.90"><span class="time">[1:57]</span>Je trouve ma paix, dans ton amour je réside</div>
+        <div class="line" data-start="130.90" data-end="139.44"><span class="time">[2:10]</span>Mais au milieu du désespoir Noé a trouvé grâce, un espoir à revoir</div>
+        <div class="line" data-start="139.44" data-end="161.80"><span class="time">[2:19]</span>Dans l'arche de promesse Il marchait avec toi</div>
+        <div class="line" data-start="161.80" data-end="181.34"><span class="time">[2:41]</span>Ô Seigneur, dans ta lumière Je me tiens, moi</div>
+        <div class="line" data-start="181.34" data-end="196.50"><span class="time">[3:01]</span>Seigneur, tu es mon refuge, ma vérité Dans l'arche de ta grâce, je suis en sécurité</div>
+        <div class="line" data-start="196.50" data-end="201.68"><span class="time">[3:16]</span>Loin des eaux tumultueuses Je chante ta bonté</div>
+        <div class="line" data-start="201.68" data-end="204.46"><span class="time">[3:21]</span>Ô éternel en toi, je suis restauré</div>
+    </div>
+    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
+    <script>
+        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
+        audio.addEventListener('timeupdate',()=>{
+            const t=audio.currentTime;
+            lines.forEach(l=>{
+                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
+                l.classList.remove('active','passed');
+                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
+                else if(t>=e)l.classList.add('passed')
+            })
+        });
+        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+    </script>
+</body>
+</html>

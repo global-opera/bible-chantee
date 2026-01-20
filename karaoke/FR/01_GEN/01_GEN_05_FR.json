@@ -1,0 +1,2597 @@
+{
+  "text": " ... Dans le jardin tu accrées L'homme est la femme A ton image Beni part à main Notre héritage nous marche on s'énieu Dans ta vérité À ta ressemblance Nous sommes né Dans la mou Nous voulons marcher De génération En génération Nous chants on Ta grande création C'était l'oche Dans la lumière Et leur vie un récit de ta volonté Et notre marcha Avec toi chère paix Unis par ta grâce Nous voulons prier À ta ressemblance Nous sommes né Dans la mou Nous voulons marcher De génération En génération Nous chants on Ta grande création Noël Un espoir dans la tempête Un futur Une promise à jamais Où s'énieu Notre cherchant Qui ne nos pas Dans cette vision À ta ressemblance Nous sommes Dans la mou Nous voulons marcher De génération En génération Nous chants on Ta grande création Dans chaque souffle Dans chaque souffle Chaque prière Nous te lourdes Nous t'ellons Notre lumière Notre création À ta ressemblance Nous sommes né Dans chaque souffle Dans chaque souffle Dans chaque souffle C'est paroles et vocs La création et la continité de la vie Selon le plan divin Tout en restant fidèle au texte public",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 7.199999999999999,
+      "end": 8.6,
+      "text": " ...",
+      "tokens": [
+        50364,
+        1097,
+        50964
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.49697819271603144,
+      "compression_ratio": 0.9759036144578314,
+      "no_speech_prob": 0.39911535382270813,
+      "words": [
+        {
+          "word": " ...",
+          "start": 7.199999999999999,
+          "end": 8.6,
+          "probability": 0.04118232801556587
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 8.6,
+      "end": 14.08,
+      "text": " Dans le jardin",
+      "tokens": [
+        50964,
+        16897,
+        476,
+        46153,
+        259,
+        51114
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.49697819271603144,
+      "compression_ratio": 0.9759036144578314,
+      "no_speech_prob": 0.39911535382270813,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 8.6,
+          "end": 9.68,
+          "probability": 0.011687620542943478
+        },
+        {
+          "word": " le",
+          "start": 9.68,
+          "end": 12.88,
+          "probability": 0.9783851504325867
+        },
+        {
+          "word": " jardin",
+          "start": 12.88,
+          "end": 14.08,
+          "probability": 0.9918391704559326
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 15.0,
+      "end": 17.82,
+      "text": " tu accrées",
+      "tokens": [
+        51114,
+        2604,
+        1317,
+        81,
+        6836,
+        51264
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.49697819271603144,
+      "compression_ratio": 0.9759036144578314,
+      "no_speech_prob": 0.39911535382270813,
+      "words": [
+        {
+          "word": " tu",
+          "start": 15.0,
+          "end": 15.72,
+          "probability": 0.31856492161750793
+        },
+        {
+          "word": " accrées",
+          "start": 15.72,
+          "end": 17.82,
+          "probability": 0.3792549967765808
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 17.82,
+      "end": 20.66,
+      "text": " L'homme est la femme",
+      "tokens": [
+        51264,
+        441,
+        6,
+        38073,
+        871,
+        635,
+        27427,
+        51414
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.49697819271603144,
+      "compression_ratio": 0.9759036144578314,
+      "no_speech_prob": 0.39911535382270813,
+      "words": [
+        {
+          "word": " L",
+          "start": 17.82,
+          "end": 19.0,
+          "probability": 0.5228518843650818
+        },
+        {
+          "word": "'homme",
+          "start": 19.0,
+          "end": 19.34,
+          "probability": 0.5505006313323975
+        },
+        {
+          "word": " est",
+          "start": 19.34,
+          "end": 19.62,
+          "probability": 0.8390119075775146
+        },
+        {
+          "word": " la",
+          "start": 19.62,
+          "end": 19.96,
+          "probability": 0.9057067632675171
+        },
+        {
+          "word": " femme",
+          "start": 19.96,
+          "end": 20.66,
+          "probability": 0.9012529253959656
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 20.66,
+      "end": 23.52,
+      "text": " A ton image",
+      "tokens": [
+        51414,
+        316,
+        2952,
+        3256,
+        51614
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.49697819271603144,
+      "compression_ratio": 0.9759036144578314,
+      "no_speech_prob": 0.39911535382270813,
+      "words": [
+        {
+          "word": " A",
+          "start": 20.66,
+          "end": 21.36,
+          "probability": 0.04155353829264641
+        },
+        {
+          "word": " ton",
+          "start": 21.36,
+          "end": 22.12,
+          "probability": 0.984730064868927
+        },
+        {
+          "word": " image",
+          "start": 22.12,
+          "end": 23.52,
+          "probability": 0.8457537889480591
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 25.0,
+      "end": 27.62,
+      "text": " Beni part à main",
+      "tokens": [
+        51614,
+        3964,
+        72,
+        644,
+        1531,
+        2135,
+        51764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.49697819271603144,
+      "compression_ratio": 0.9759036144578314,
+      "no_speech_prob": 0.39911535382270813,
+      "words": [
+        {
+          "word": " Beni",
+          "start": 25.0,
+          "end": 25.78,
+          "probability": 0.5101325958967209
+        },
+        {
+          "word": " part",
+          "start": 25.78,
+          "end": 26.28,
+          "probability": 0.5275310277938843
+        },
+        {
+          "word": " à",
+          "start": 26.28,
+          "end": 26.68,
+          "probability": 0.8015735149383545
+        },
+        {
+          "word": " main",
+          "start": 26.68,
+          "end": 27.62,
+          "probability": 0.3777890205383301
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 2762,
+      "start": 28.62,
+      "end": 34.28,
+      "text": " Notre héritage nous marche on s'énieu",
+      "tokens": [
+        50414,
+        34663,
+        32537,
+        3210,
+        609,
+        4666,
+        32631,
+        322,
+        262,
+        6,
+        526,
+        2766,
+        84,
+        50714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.33597878615061444,
+      "compression_ratio": 1.24,
+      "no_speech_prob": 0.013552254997193813,
+      "words": [
+        {
+          "word": " Notre",
+          "start": 28.52,
+          "end": 29.22,
+          "probability": 0.9168106317520142
+        },
+        {
+          "word": " héritage",
+          "start": 29.22,
+          "end": 30.62,
+          "probability": 0.9057026902834574
+        },
+        {
+          "word": " nous",
+          "start": 30.62,
+          "end": 31.6,
+          "probability": 0.9636203646659851
+        },
+        {
+          "word": " marche",
+          "start": 31.6,
+          "end": 32.4,
+          "probability": 0.2853335440158844
+        },
+        {
+          "word": " on",
+          "start": 32.4,
+          "end": 32.78,
+          "probability": 0.24036522209644318
+        },
+        {
+          "word": " s",
+          "start": 32.78,
+          "end": 33.16,
+          "probability": 0.4500581622123718
+        },
+        {
+          "word": "'énieu",
+          "start": 33.16,
+          "end": 34.28,
+          "probability": 0.5355716198682785
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 2762,
+      "start": 34.28,
+      "end": 40.6,
+      "text": " Dans ta vérité",
+      "tokens": [
+        50714,
+        16897,
+        1846,
+        30678,
+        526,
+        51014
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.33597878615061444,
+      "compression_ratio": 1.24,
+      "no_speech_prob": 0.013552254997193813,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 34.28,
+          "end": 35.36,
+          "probability": 0.12256664037704468
+        },
+        {
+          "word": " ta",
+          "start": 35.36,
+          "end": 35.7,
+          "probability": 0.9917609691619873
+        },
+        {
+          "word": " vérité",
+          "start": 35.7,
+          "end": 40.6,
+          "probability": 0.9843542277812958
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "seek": 2762,
+      "start": 41.620000000000005,
+      "end": 44.36,
+      "text": " À ta ressemblance",
+      "tokens": [
+        51064,
+        19018,
+        1846,
+        725,
+        15750,
+        37271,
+        51214
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.33597878615061444,
+      "compression_ratio": 1.24,
+      "no_speech_prob": 0.013552254997193813,
+      "words": [
+        {
+          "word": " À",
+          "start": 41.379999999999995,
+          "end": 42.08,
+          "probability": 0.17465142905712128
+        },
+        {
+          "word": " ta",
+          "start": 42.08,
+          "end": 42.36,
+          "probability": 0.997359573841095
+        },
+        {
+          "word": " ressemblance",
+          "start": 42.36,
+          "end": 44.36,
+          "probability": 0.7481404443581899
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "seek": 2762,
+      "start": 44.36,
+      "end": 47.18,
+      "text": " Nous sommes né",
+      "tokens": [
+        51214,
+        15343,
+        25232,
+        7024,
+        51414
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.33597878615061444,
+      "compression_ratio": 1.24,
+      "no_speech_prob": 0.013552254997193813,
+      "words": [
+        {
+          "word": " Nous",
+          "start": 44.36,
+          "end": 45.68,
+          "probability": 0.4240398108959198
+        },
+        {
+          "word": " sommes",
+          "start": 45.68,
+          "end": 46.42,
+          "probability": 0.9422281384468079
+        },
+        {
+          "word": " né",
+          "start": 46.42,
+          "end": 47.18,
+          "probability": 0.5480937957763672
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "seek": 2762,
+      "start": 48.620000000000005,
+      "end": 50.62,
+      "text": " Dans la mou",
+      "tokens": [
+        51414,
+        16897,
+        635,
+        275,
+        263,
+        51514
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.33597878615061444,
+      "compression_ratio": 1.24,
+      "no_speech_prob": 0.013552254997193813,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 48.620000000000005,
+          "end": 49.52,
+          "probability": 0.6996254920959473
+        },
+        {
+          "word": " la",
+          "start": 49.52,
+          "end": 49.96,
+          "probability": 0.7922184467315674
+        },
+        {
+          "word": " mou",
+          "start": 49.96,
+          "end": 50.62,
+          "probability": 0.7275672256946564
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "seek": 2762,
+      "start": 50.62,
+      "end": 53.94,
+      "text": " Nous voulons marcher",
+      "tokens": [
+        51514,
+        15343,
+        371,
+        3298,
+        892,
+        8368,
+        260,
+        51714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.33597878615061444,
+      "compression_ratio": 1.24,
+      "no_speech_prob": 0.013552254997193813,
+      "words": [
+        {
+          "word": " Nous",
+          "start": 50.62,
+          "end": 51.6,
+          "probability": 0.413193017244339
+        },
+        {
+          "word": " voulons",
+          "start": 51.6,
+          "end": 52.66,
+          "probability": 0.89449010292689
+        },
+        {
+          "word": " marcher",
+          "start": 52.66,
+          "end": 53.94,
+          "probability": 0.9670312702655792
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "seek": 5394,
+      "start": 53.94,
+      "end": 56.88,
+      "text": " De génération",
+      "tokens": [
+        50364,
+        1346,
+        14575,
+        27901,
+        50564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2841493606567383,
+      "compression_ratio": 1.2363636363636363,
+      "no_speech_prob": 0.020488601177930832,
+      "words": [
+        {
+          "word": " De",
+          "start": 53.94,
+          "end": 54.9,
+          "probability": 0.05607360601425171
+        },
+        {
+          "word": " génération",
+          "start": 54.9,
+          "end": 56.88,
+          "probability": 0.9421857595443726
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "seek": 5394,
+      "start": 57.94,
+      "end": 60.44,
+      "text": " En génération",
+      "tokens": [
+        50564,
+        2193,
+        14575,
+        27901,
+        50714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2841493606567383,
+      "compression_ratio": 1.2363636363636363,
+      "no_speech_prob": 0.020488601177930832,
+      "words": [
+        {
+          "word": " En",
+          "start": 57.58,
+          "end": 58.28,
+          "probability": 0.1370650827884674
+        },
+        {
+          "word": " génération",
+          "start": 58.28,
+          "end": 60.44,
+          "probability": 0.9907145798206329
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "seek": 5394,
+      "start": 60.44,
+      "end": 64.0,
+      "text": " Nous chants on",
+      "tokens": [
+        50714,
+        15343,
+        417,
+        1719,
+        322,
+        50864
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2841493606567383,
+      "compression_ratio": 1.2363636363636363,
+      "no_speech_prob": 0.020488601177930832,
+      "words": [
+        {
+          "word": " Nous",
+          "start": 60.44,
+          "end": 62.08,
+          "probability": 0.6907789707183838
+        },
+        {
+          "word": " chants",
+          "start": 62.08,
+          "end": 62.98,
+          "probability": 0.5750468969345093
+        },
+        {
+          "word": " on",
+          "start": 62.98,
+          "end": 64.0,
+          "probability": 0.030563419684767723
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "seek": 5394,
+      "start": 64.0,
+      "end": 67.02,
+      "text": " Ta grande création",
+      "tokens": [
+        50864,
+        6551,
+        8883,
+        15609,
+        399,
+        51064
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2841493606567383,
+      "compression_ratio": 1.2363636363636363,
+      "no_speech_prob": 0.020488601177930832,
+      "words": [
+        {
+          "word": " Ta",
+          "start": 64.0,
+          "end": 64.94,
+          "probability": 0.19941459596157074
+        },
+        {
+          "word": " grande",
+          "start": 64.94,
+          "end": 65.68,
+          "probability": 0.9274007678031921
+        },
+        {
+          "word": " création",
+          "start": 65.68,
+          "end": 67.02,
+          "probability": 0.9086814224720001
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "seek": 5394,
+      "start": 67.94,
+      "end": 71.44,
+      "text": " C'était l'oche",
+      "tokens": [
+        51064,
+        383,
+        6,
+        9743,
+        287,
+        6,
+        78,
+        1876,
+        51214
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2841493606567383,
+      "compression_ratio": 1.2363636363636363,
+      "no_speech_prob": 0.020488601177930832,
+      "words": [
+        {
+          "word": " C",
+          "start": 67.94,
+          "end": 68.98,
+          "probability": 0.7640476822853088
+        },
+        {
+          "word": "'était",
+          "start": 68.98,
+          "end": 69.54,
+          "probability": 0.859839916229248
+        },
+        {
+          "word": " l",
+          "start": 69.54,
+          "end": 70.42,
+          "probability": 0.32265186309814453
+        },
+        {
+          "word": "'oche",
+          "start": 70.42,
+          "end": 71.44,
+          "probability": 0.7605457603931427
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "seek": 5394,
+      "start": 71.44,
+      "end": 73.62,
+      "text": " Dans la lumière",
+      "tokens": [
+        51214,
+        16897,
+        635,
+        43193,
+        51364
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2841493606567383,
+      "compression_ratio": 1.2363636363636363,
+      "no_speech_prob": 0.020488601177930832,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 71.44,
+          "end": 72.4,
+          "probability": 0.5073753595352173
+        },
+        {
+          "word": " la",
+          "start": 72.4,
+          "end": 72.98,
+          "probability": 0.9544904232025146
+        },
+        {
+          "word": " lumière",
+          "start": 72.98,
+          "end": 73.62,
+          "probability": 0.9044431447982788
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "seek": 5394,
+      "start": 73.62,
+      "end": 80.94,
+      "text": " Et leur vie un récit de ta volonté",
+      "tokens": [
+        51364,
+        3790,
+        9580,
+        4941,
+        517,
+        3960,
+        45135,
+        368,
+        1846,
+        40005,
+        526,
+        51714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2841493606567383,
+      "compression_ratio": 1.2363636363636363,
+      "no_speech_prob": 0.020488601177930832,
+      "words": [
+        {
+          "word": " Et",
+          "start": 73.62,
+          "end": 74.66,
+          "probability": 0.6120492219924927
+        },
+        {
+          "word": " leur",
+          "start": 74.66,
+          "end": 75.78,
+          "probability": 0.8186771273612976
+        },
+        {
+          "word": " vie",
+          "start": 75.78,
+          "end": 76.16,
+          "probability": 0.9858527183532715
+        },
+        {
+          "word": " un",
+          "start": 76.16,
+          "end": 76.72,
+          "probability": 0.7618820667266846
+        },
+        {
+          "word": " récit",
+          "start": 76.72,
+          "end": 77.76,
+          "probability": 0.9095373749732971
+        },
+        {
+          "word": " de",
+          "start": 77.76,
+          "end": 78.7,
+          "probability": 0.3590466380119324
+        },
+        {
+          "word": " ta",
+          "start": 78.7,
+          "end": 79.38,
+          "probability": 0.17863956093788147
+        },
+        {
+          "word": " volonté",
+          "start": 79.38,
+          "end": 80.94,
+          "probability": 0.7324068993330002
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "seek": 8094,
+      "start": 80.94,
+      "end": 84.14,
+      "text": " Et notre marcha",
+      "tokens": [
+        50364,
+        3790,
+        10349,
+        8368,
+        64,
+        50514
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22925440470377603,
+      "compression_ratio": 1.2241379310344827,
+      "no_speech_prob": 0.0033568767830729485,
+      "words": [
+        {
+          "word": " Et",
+          "start": 80.94,
+          "end": 82.12,
+          "probability": 0.6600291132926941
+        },
+        {
+          "word": " notre",
+          "start": 82.12,
+          "end": 82.66,
+          "probability": 0.14517882466316223
+        },
+        {
+          "word": " marcha",
+          "start": 82.66,
+          "end": 84.14,
+          "probability": 0.7919895648956299
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "seek": 8094,
+      "start": 84.14,
+      "end": 86.94,
+      "text": " Avec toi chère paix",
+      "tokens": [
+        50514,
+        31720,
+        15648,
+        417,
+        4212,
+        2502,
+        970,
+        50664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22925440470377603,
+      "compression_ratio": 1.2241379310344827,
+      "no_speech_prob": 0.0033568767830729485,
+      "words": [
+        {
+          "word": " Avec",
+          "start": 84.14,
+          "end": 85.32,
+          "probability": 0.01150200329720974
+        },
+        {
+          "word": " toi",
+          "start": 85.32,
+          "end": 85.92,
+          "probability": 0.9792250990867615
+        },
+        {
+          "word": " chère",
+          "start": 85.92,
+          "end": 86.66,
+          "probability": 0.23876319080591202
+        },
+        {
+          "word": " paix",
+          "start": 86.66,
+          "end": 87.36,
+          "probability": 0.6726784110069275
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "seek": 8094,
+      "start": 87.94,
+      "end": 90.58,
+      "text": " Unis par ta grâce",
+      "tokens": [
+        50664,
+        1156,
+        271,
+        971,
+        1846,
+        31180,
+        50864
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22925440470377603,
+      "compression_ratio": 1.2241379310344827,
+      "no_speech_prob": 0.0033568767830729485,
+      "words": [
+        {
+          "word": " Unis",
+          "start": 87.94,
+          "end": 88.82,
+          "probability": 0.3976975083351135
+        },
+        {
+          "word": " par",
+          "start": 88.82,
+          "end": 89.36,
+          "probability": 0.8533122539520264
+        },
+        {
+          "word": " ta",
+          "start": 89.36,
+          "end": 89.94,
+          "probability": 0.9763255715370178
+        },
+        {
+          "word": " grâce",
+          "start": 89.94,
+          "end": 90.58,
+          "probability": 0.4024684429168701
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "seek": 8094,
+      "start": 90.58,
+      "end": 94.46,
+      "text": " Nous voulons prier",
+      "tokens": [
+        50864,
+        15343,
+        371,
+        3298,
+        892,
+        1790,
+        260,
+        51064
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22925440470377603,
+      "compression_ratio": 1.2241379310344827,
+      "no_speech_prob": 0.0033568767830729485,
+      "words": [
+        {
+          "word": " Nous",
+          "start": 90.58,
+          "end": 91.58,
+          "probability": 0.8965707421302795
+        },
+        {
+          "word": " voulons",
+          "start": 91.58,
+          "end": 92.5,
+          "probability": 0.9224884311358134
+        },
+        {
+          "word": " prier",
+          "start": 92.5,
+          "end": 94.46,
+          "probability": 0.8936712443828583
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "seek": 8094,
+      "start": 94.46,
+      "end": 97.68,
+      "text": " À ta ressemblance",
+      "tokens": [
+        51064,
+        19018,
+        1846,
+        725,
+        15750,
+        37271,
+        51214
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22925440470377603,
+      "compression_ratio": 1.2241379310344827,
+      "no_speech_prob": 0.0033568767830729485,
+      "words": [
+        {
+          "word": " À",
+          "start": 94.46,
+          "end": 95.36,
+          "probability": 0.2731735408306122
+        },
+        {
+          "word": " ta",
+          "start": 95.36,
+          "end": 95.7,
+          "probability": 0.9932786822319031
+        },
+        {
+          "word": " ressemblance",
+          "start": 95.7,
+          "end": 97.68,
+          "probability": 0.7439726690451304
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "seek": 8094,
+      "start": 97.68,
+      "end": 100.6,
+      "text": " Nous sommes né",
+      "tokens": [
+        51214,
+        15343,
+        25232,
+        7024,
+        51414
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22925440470377603,
+      "compression_ratio": 1.2241379310344827,
+      "no_speech_prob": 0.0033568767830729485,
+      "words": [
+        {
+          "word": " Nous",
+          "start": 97.68,
+          "end": 99.04,
+          "probability": 0.9675700664520264
+        },
+        {
+          "word": " sommes",
+          "start": 99.04,
+          "end": 99.74,
+          "probability": 0.9806274771690369
+        },
+        {
+          "word": " né",
+          "start": 99.74,
+          "end": 100.6,
+          "probability": 0.3473496437072754
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "seek": 8094,
+      "start": 101.94,
+      "end": 103.84,
+      "text": " Dans la mou",
+      "tokens": [
+        51414,
+        16897,
+        635,
+        275,
+        263,
+        51514
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22925440470377603,
+      "compression_ratio": 1.2241379310344827,
+      "no_speech_prob": 0.0033568767830729485,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 101.94,
+          "end": 102.82,
+          "probability": 0.8641632199287415
+        },
+        {
+          "word": " la",
+          "start": 102.82,
+          "end": 103.3,
+          "probability": 0.5659102201461792
+        },
+        {
+          "word": " mou",
+          "start": 103.3,
+          "end": 103.84,
+          "probability": 0.36992259323596954
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "seek": 8094,
+      "start": 103.84,
+      "end": 107.5,
+      "text": " Nous voulons marcher",
+      "tokens": [
+        51514,
+        15343,
+        371,
+        3298,
+        892,
+        8368,
+        260,
+        51714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.22925440470377603,
+      "compression_ratio": 1.2241379310344827,
+      "no_speech_prob": 0.0033568767830729485,
+      "words": [
+        {
+          "word": " Nous",
+          "start": 103.84,
+          "end": 104.9,
+          "probability": 0.6059402823448181
+        },
+        {
+          "word": " voulons",
+          "start": 104.9,
+          "end": 105.86,
+          "probability": 0.9980879028638204
+        },
+        {
+          "word": " marcher",
+          "start": 105.86,
+          "end": 107.5,
+          "probability": 0.9716032147407532
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "seek": 10750,
+      "start": 107.5,
+      "end": 110.1,
+      "text": " De génération",
+      "tokens": [
+        50364,
+        1346,
+        14575,
+        27901,
+        50514
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.17793703079223633,
+      "compression_ratio": 1.2264150943396226,
+      "no_speech_prob": 0.0013721850700676441,
+      "words": [
+        {
+          "word": " De",
+          "start": 107.5,
+          "end": 108.22,
+          "probability": 0.13374029099941254
+        },
+        {
+          "word": " génération",
+          "start": 108.22,
+          "end": 110.1,
+          "probability": 0.9051363468170166
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "seek": 10750,
+      "start": 110.1,
+      "end": 113.7,
+      "text": " En génération",
+      "tokens": [
+        50514,
+        2193,
+        14575,
+        27901,
+        50714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.17793703079223633,
+      "compression_ratio": 1.2264150943396226,
+      "no_speech_prob": 0.0013721850700676441,
+      "words": [
+        {
+          "word": " En",
+          "start": 110.1,
+          "end": 111.56,
+          "probability": 0.19926795363426208
+        },
+        {
+          "word": " génération",
+          "start": 111.56,
+          "end": 113.7,
+          "probability": 0.9957494735717773
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "seek": 10750,
+      "start": 114.5,
+      "end": 117.3,
+      "text": " Nous chants on",
+      "tokens": [
+        50714,
+        15343,
+        417,
+        1719,
+        322,
+        50864
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.17793703079223633,
+      "compression_ratio": 1.2264150943396226,
+      "no_speech_prob": 0.0013721850700676441,
+      "words": [
+        {
+          "word": " Nous",
+          "start": 114.5,
+          "end": 115.4,
+          "probability": 0.9079617857933044
+        },
+        {
+          "word": " chants",
+          "start": 115.4,
+          "end": 116.4,
+          "probability": 0.4322662949562073
+        },
+        {
+          "word": " on",
+          "start": 116.4,
+          "end": 117.3,
+          "probability": 0.01423895824700594
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "seek": 10750,
+      "start": 117.3,
+      "end": 120.5,
+      "text": " Ta grande création",
+      "tokens": [
+        50864,
+        6551,
+        8883,
+        15609,
+        399,
+        51114
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.17793703079223633,
+      "compression_ratio": 1.2264150943396226,
+      "no_speech_prob": 0.0013721850700676441,
+      "words": [
+        {
+          "word": " Ta",
+          "start": 117.3,
+          "end": 118.26,
+          "probability": 0.1917065680027008
+        },
+        {
+          "word": " grande",
+          "start": 118.26,
+          "end": 119.02,
+          "probability": 0.9323987364768982
+        },
+        {
+          "word": " création",
+          "start": 119.02,
+          "end": 120.5,
+          "probability": 0.9596973657608032
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "seek": 10750,
+      "start": 122.5,
+      "end": 123.36,
+      "text": " Noël",
+      "tokens": [
+        51114,
+        883,
+        36343,
+        51214
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.17793703079223633,
+      "compression_ratio": 1.2264150943396226,
+      "no_speech_prob": 0.0013721850700676441,
+      "words": [
+        {
+          "word": " Noël",
+          "start": 122.5,
+          "end": 123.36,
+          "probability": 0.2740321345627308
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "seek": 10750,
+      "start": 124.5,
+      "end": 127.24,
+      "text": " Un espoir dans la tempête",
+      "tokens": [
+        51214,
+        1156,
+        785,
+        2259,
+        347,
+        2680,
+        635,
+        18274,
+        12943,
+        51364
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.17793703079223633,
+      "compression_ratio": 1.2264150943396226,
+      "no_speech_prob": 0.0013721850700676441,
+      "words": [
+        {
+          "word": " Un",
+          "start": 123.84,
+          "end": 124.54,
+          "probability": 0.7020477056503296
+        },
+        {
+          "word": " espoir",
+          "start": 124.54,
+          "end": 125.34,
+          "probability": 0.9450461268424988
+        },
+        {
+          "word": " dans",
+          "start": 125.34,
+          "end": 125.72,
+          "probability": 0.9829972982406616
+        },
+        {
+          "word": " la",
+          "start": 125.72,
+          "end": 125.98,
+          "probability": 0.8797255754470825
+        },
+        {
+          "word": " tempête",
+          "start": 125.98,
+          "end": 127.24,
+          "probability": 0.8269014656543732
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "seek": 10750,
+      "start": 127.24,
+      "end": 130.08,
+      "text": " Un futur",
+      "tokens": [
+        51364,
+        1156,
+        25840,
+        51514
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.17793703079223633,
+      "compression_ratio": 1.2264150943396226,
+      "no_speech_prob": 0.0013721850700676441,
+      "words": [
+        {
+          "word": " Un",
+          "start": 127.24,
+          "end": 128.86,
+          "probability": 0.7781842350959778
+        },
+        {
+          "word": " futur",
+          "start": 128.86,
+          "end": 130.08,
+          "probability": 0.7113004326820374
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "seek": 10750,
+      "start": 130.08,
+      "end": 133.46,
+      "text": " Une promise à jamais",
+      "tokens": [
+        51514,
+        16701,
+        6228,
+        1531,
+        14540,
+        51714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.17793703079223633,
+      "compression_ratio": 1.2264150943396226,
+      "no_speech_prob": 0.0013721850700676441,
+      "words": [
+        {
+          "word": " Une",
+          "start": 130.08,
+          "end": 131.16,
+          "probability": 0.08424409478902817
+        },
+        {
+          "word": " promise",
+          "start": 131.16,
+          "end": 131.72,
+          "probability": 0.3653830885887146
+        },
+        {
+          "word": " à",
+          "start": 131.72,
+          "end": 132.72,
+          "probability": 0.5868306756019592
+        },
+        {
+          "word": " jamais",
+          "start": 132.72,
+          "end": 133.46,
+          "probability": 0.9947094917297363
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "seek": 13346,
+      "start": 133.46,
+      "end": 136.86,
+      "text": " Où s'énieu",
+      "tokens": [
+        50364,
+        422,
+        5035,
+        262,
+        6,
+        526,
+        2766,
+        84,
+        50564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.33223011276938696,
+      "compression_ratio": 1.0721649484536082,
+      "no_speech_prob": 0.03747441992163658,
+      "words": [
+        {
+          "word": " Où",
+          "start": 133.46,
+          "end": 136.04,
+          "probability": 0.08587890863418579
+        },
+        {
+          "word": " s",
+          "start": 136.04,
+          "end": 136.04,
+          "probability": 0.038850076496601105
+        },
+        {
+          "word": "'énieu",
+          "start": 136.04,
+          "end": 136.86,
+          "probability": 0.4276582673192024
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "seek": 13346,
+      "start": 137.46,
+      "end": 140.0,
+      "text": " Notre cherchant",
+      "tokens": [
+        50564,
+        34663,
+        12085,
+        24628,
+        50764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.33223011276938696,
+      "compression_ratio": 1.0721649484536082,
+      "no_speech_prob": 0.03747441992163658,
+      "words": [
+        {
+          "word": " Notre",
+          "start": 137.46,
+          "end": 138.26,
+          "probability": 0.0014851687010377645
+        },
+        {
+          "word": " cherchant",
+          "start": 138.26,
+          "end": 140.0,
+          "probability": 0.6508021950721741
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "seek": 13346,
+      "start": 141.46,
+      "end": 144.42,
+      "text": " Qui ne nos pas",
+      "tokens": [
+        50764,
+        27361,
+        408,
+        3269,
+        1736,
+        51114
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.33223011276938696,
+      "compression_ratio": 1.0721649484536082,
+      "no_speech_prob": 0.03747441992163658,
+      "words": [
+        {
+          "word": " Qui",
+          "start": 141.36,
+          "end": 142.06,
+          "probability": 0.4863843023777008
+        },
+        {
+          "word": " ne",
+          "start": 142.06,
+          "end": 142.36,
+          "probability": 0.25039681792259216
+        },
+        {
+          "word": " nos",
+          "start": 142.36,
+          "end": 142.84,
+          "probability": 0.3955892026424408
+        },
+        {
+          "word": " pas",
+          "start": 142.84,
+          "end": 144.42,
+          "probability": 0.7978091835975647
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "seek": 13346,
+      "start": 148.46,
+      "end": 150.16,
+      "text": " Dans cette vision",
+      "tokens": [
+        51114,
+        16897,
+        5550,
+        5201,
+        51264
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.33223011276938696,
+      "compression_ratio": 1.0721649484536082,
+      "no_speech_prob": 0.03747441992163658,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 147.98000000000002,
+          "end": 148.68,
+          "probability": 0.34744420647621155
+        },
+        {
+          "word": " cette",
+          "start": 148.68,
+          "end": 149.3,
+          "probability": 0.9938259124755859
+        },
+        {
+          "word": " vision",
+          "start": 149.3,
+          "end": 150.16,
+          "probability": 0.976256251335144
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "seek": 13346,
+      "start": 151.46,
+      "end": 154.32,
+      "text": " À ta ressemblance",
+      "tokens": [
+        51264,
+        19018,
+        1846,
+        725,
+        15750,
+        37271,
+        51464
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.33223011276938696,
+      "compression_ratio": 1.0721649484536082,
+      "no_speech_prob": 0.03747441992163658,
+      "words": [
+        {
+          "word": " À",
+          "start": 151.38000000000002,
+          "end": 152.08,
+          "probability": 0.0717976912856102
+        },
+        {
+          "word": " ta",
+          "start": 152.08,
+          "end": 152.38,
+          "probability": 0.9899528622627258
+        },
+        {
+          "word": " ressemblance",
+          "start": 152.38,
+          "end": 154.32,
+          "probability": 0.7731935580571493
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "seek": 13346,
+      "start": 155.46,
+      "end": 156.44,
+      "text": " Nous sommes",
+      "tokens": [
+        51464,
+        15343,
+        25232,
+        51664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.33223011276938696,
+      "compression_ratio": 1.0721649484536082,
+      "no_speech_prob": 0.03747441992163658,
+      "words": [
+        {
+          "word": " Nous",
+          "start": 154.98000000000002,
+          "end": 155.68,
+          "probability": 0.884870707988739
+        },
+        {
+          "word": " sommes",
+          "start": 155.68,
+          "end": 156.44,
+          "probability": 0.8577582240104675
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "seek": 13346,
+      "start": 159.46,
+      "end": 160.48,
+      "text": " Dans la mou",
+      "tokens": [
+        51664,
+        16897,
+        635,
+        275,
+        263,
+        51764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.33223011276938696,
+      "compression_ratio": 1.0721649484536082,
+      "no_speech_prob": 0.03747441992163658,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 158.78,
+          "end": 159.48,
+          "probability": 0.6383059620857239
+        },
+        {
+          "word": " la",
+          "start": 159.48,
+          "end": 159.98,
+          "probability": 0.3588481843471527
+        },
+        {
+          "word": " mou",
+          "start": 159.98,
+          "end": 160.48,
+          "probability": 0.6190440952777863
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "seek": 16048,
+      "start": 160.48,
+      "end": 163.88,
+      "text": " Nous voulons marcher",
+      "tokens": [
+        50364,
+        15343,
+        371,
+        3298,
+        892,
+        8368,
+        260,
+        50564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2066338857014974,
+      "compression_ratio": 1.4495412844036697,
+      "no_speech_prob": 0.0091378940269351,
+      "words": [
+        {
+          "word": " Nous",
+          "start": 160.48,
+          "end": 161.62,
+          "probability": 0.40643173456192017
+        },
+        {
+          "word": " voulons",
+          "start": 161.62,
+          "end": 162.72,
+          "probability": 0.9153176546096802
+        },
+        {
+          "word": " marcher",
+          "start": 162.72,
+          "end": 163.88,
+          "probability": 0.9547805190086365
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "seek": 16048,
+      "start": 164.48,
+      "end": 166.84,
+      "text": " De génération",
+      "tokens": [
+        50564,
+        1346,
+        14575,
+        27901,
+        50714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2066338857014974,
+      "compression_ratio": 1.4495412844036697,
+      "no_speech_prob": 0.0091378940269351,
+      "words": [
+        {
+          "word": " De",
+          "start": 164.18,
+          "end": 164.88,
+          "probability": 0.10584064573049545
+        },
+        {
+          "word": " génération",
+          "start": 164.88,
+          "end": 166.84,
+          "probability": 0.8739379644393921
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "seek": 16048,
+      "start": 167.48,
+      "end": 170.24,
+      "text": " En génération",
+      "tokens": [
+        50714,
+        2193,
+        14575,
+        27901,
+        50914
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2066338857014974,
+      "compression_ratio": 1.4495412844036697,
+      "no_speech_prob": 0.0091378940269351,
+      "words": [
+        {
+          "word": " En",
+          "start": 167.48,
+          "end": 168.24,
+          "probability": 0.5369904637336731
+        },
+        {
+          "word": " génération",
+          "start": 168.24,
+          "end": 170.24,
+          "probability": 0.9914832413196564
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "seek": 16048,
+      "start": 171.48,
+      "end": 173.88,
+      "text": " Nous chants on",
+      "tokens": [
+        50914,
+        15343,
+        417,
+        1719,
+        322,
+        51064
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2066338857014974,
+      "compression_ratio": 1.4495412844036697,
+      "no_speech_prob": 0.0091378940269351,
+      "words": [
+        {
+          "word": " Nous",
+          "start": 171.38000000000002,
+          "end": 172.08,
+          "probability": 0.8836596012115479
+        },
+        {
+          "word": " chants",
+          "start": 172.08,
+          "end": 173.0,
+          "probability": 0.5383769422769547
+        },
+        {
+          "word": " on",
+          "start": 173.0,
+          "end": 173.88,
+          "probability": 0.006005634553730488
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "seek": 16048,
+      "start": 174.48,
+      "end": 177.14,
+      "text": " Ta grande création",
+      "tokens": [
+        51064,
+        6551,
+        8883,
+        15609,
+        399,
+        51264
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2066338857014974,
+      "compression_ratio": 1.4495412844036697,
+      "no_speech_prob": 0.0091378940269351,
+      "words": [
+        {
+          "word": " Ta",
+          "start": 174.20000000000002,
+          "end": 174.9,
+          "probability": 0.037663206458091736
+        },
+        {
+          "word": " grande",
+          "start": 174.9,
+          "end": 175.52,
+          "probability": 0.9439141750335693
+        },
+        {
+          "word": " création",
+          "start": 175.52,
+          "end": 177.14,
+          "probability": 0.9886573255062103
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "seek": 16048,
+      "start": 178.48,
+      "end": 180.66,
+      "text": " Dans chaque souffle",
+      "tokens": [
+        51264,
+        16897,
+        18920,
+        36966,
+        306,
+        51364
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2066338857014974,
+      "compression_ratio": 1.4495412844036697,
+      "no_speech_prob": 0.0091378940269351,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 178.36,
+          "end": 179.06,
+          "probability": 0.738122284412384
+        },
+        {
+          "word": " chaque",
+          "start": 179.06,
+          "end": 179.6,
+          "probability": 0.8323498368263245
+        },
+        {
+          "word": " souffle",
+          "start": 179.6,
+          "end": 180.66,
+          "probability": 0.8613968789577484
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "seek": 16048,
+      "start": 180.66,
+      "end": 182.2,
+      "text": " Dans chaque souffle",
+      "tokens": [
+        51364,
+        16897,
+        18920,
+        36966,
+        306,
+        51464
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2066338857014974,
+      "compression_ratio": 1.4495412844036697,
+      "no_speech_prob": 0.0091378940269351,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 180.66,
+          "end": 181.06,
+          "probability": 0.10347726941108704
+        },
+        {
+          "word": " chaque",
+          "start": 181.06,
+          "end": 181.34,
+          "probability": 0.9400944113731384
+        },
+        {
+          "word": " souffle",
+          "start": 181.34,
+          "end": 182.2,
+          "probability": 0.9727606177330017
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "seek": 16048,
+      "start": 182.2,
+      "end": 183.6,
+      "text": " Chaque prière",
+      "tokens": [
+        51464,
+        12374,
+        1077,
+        1790,
+        4212,
+        51564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2066338857014974,
+      "compression_ratio": 1.4495412844036697,
+      "no_speech_prob": 0.0091378940269351,
+      "words": [
+        {
+          "word": " Chaque",
+          "start": 182.2,
+          "end": 182.68,
+          "probability": 0.5312962830066681
+        },
+        {
+          "word": " prière",
+          "start": 182.68,
+          "end": 183.6,
+          "probability": 0.48135023061331594
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "seek": 16048,
+      "start": 184.48,
+      "end": 187.2,
+      "text": " Nous te lourdes",
+      "tokens": [
+        51564,
+        15343,
+        535,
+        287,
+        396,
+        14792,
+        51714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2066338857014974,
+      "compression_ratio": 1.4495412844036697,
+      "no_speech_prob": 0.0091378940269351,
+      "words": [
+        {
+          "word": " Nous",
+          "start": 184.48,
+          "end": 185.7,
+          "probability": 0.23024757206439972
+        },
+        {
+          "word": " te",
+          "start": 185.7,
+          "end": 186.14,
+          "probability": 0.7412843108177185
+        },
+        {
+          "word": " lourdes",
+          "start": 186.14,
+          "end": 187.2,
+          "probability": 0.49546777208646137
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "seek": 18720,
+      "start": 187.2,
+      "end": 188.3,
+      "text": " Nous t'ellons",
+      "tokens": [
+        50364,
+        15343,
+        256,
+        6,
+        898,
+        892,
+        50464
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.39537505099647924,
+      "compression_ratio": 1.7,
+      "no_speech_prob": 0.004178714472800493,
+      "words": [
+        {
+          "word": " Nous",
+          "start": 187.2,
+          "end": 187.44,
+          "probability": 0.16605441272258759
+        },
+        {
+          "word": " t",
+          "start": 187.44,
+          "end": 187.82,
+          "probability": 0.07440368831157684
+        },
+        {
+          "word": "'ellons",
+          "start": 187.82,
+          "end": 188.3,
+          "probability": 0.5450986673434576
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "seek": 18720,
+      "start": 188.3,
+      "end": 190.02,
+      "text": " Notre lumière",
+      "tokens": [
+        50464,
+        34663,
+        43193,
+        50564
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.39537505099647924,
+      "compression_ratio": 1.7,
+      "no_speech_prob": 0.004178714472800493,
+      "words": [
+        {
+          "word": " Notre",
+          "start": 188.3,
+          "end": 189.06,
+          "probability": 0.0052404566667973995
+        },
+        {
+          "word": " lumière",
+          "start": 189.06,
+          "end": 190.02,
+          "probability": 0.7752569913864136
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "seek": 18720,
+      "start": 190.02,
+      "end": 192.16,
+      "text": " Notre création",
+      "tokens": [
+        50564,
+        34663,
+        15609,
+        399,
+        50664
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.39537505099647924,
+      "compression_ratio": 1.7,
+      "no_speech_prob": 0.004178714472800493,
+      "words": [
+        {
+          "word": " Notre",
+          "start": 190.02,
+          "end": 191.02,
+          "probability": 0.5563556551933289
+        },
+        {
+          "word": " création",
+          "start": 191.02,
+          "end": 192.16,
+          "probability": 0.08267000294290483
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "seek": 18720,
+      "start": 192.16,
+      "end": 193.34,
+      "text": " À ta ressemblance",
+      "tokens": [
+        50664,
+        19018,
+        1846,
+        725,
+        15750,
+        37271,
+        50764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.39537505099647924,
+      "compression_ratio": 1.7,
+      "no_speech_prob": 0.004178714472800493,
+      "words": [
+        {
+          "word": " À",
+          "start": 192.16,
+          "end": 192.16,
+          "probability": 2.2899401301401667e-05
+        },
+        {
+          "word": " ta",
+          "start": 192.16,
+          "end": 192.38,
+          "probability": 0.5032487511634827
+        },
+        {
+          "word": " ressemblance",
+          "start": 192.38,
+          "end": 193.34,
+          "probability": 0.5701882888873419
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "seek": 18720,
+      "start": 194.74,
+      "end": 197.12,
+      "text": " Nous sommes né",
+      "tokens": [
+        50764,
+        15343,
+        25232,
+        7024,
+        50914
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.39537505099647924,
+      "compression_ratio": 1.7,
+      "no_speech_prob": 0.004178714472800493,
+      "words": [
+        {
+          "word": " Nous",
+          "start": 194.74,
+          "end": 195.88,
+          "probability": 0.4399988651275635
+        },
+        {
+          "word": " sommes",
+          "start": 195.88,
+          "end": 196.58,
+          "probability": 0.9937343001365662
+        },
+        {
+          "word": " né",
+          "start": 196.58,
+          "end": 197.12,
+          "probability": 0.03427992761135101
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "seek": 18720,
+      "start": 198.2,
+      "end": 200.56,
+      "text": " Dans chaque souffle",
+      "tokens": [
+        50914,
+        16897,
+        18920,
+        36966,
+        306,
+        51064
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.39537505099647924,
+      "compression_ratio": 1.7,
+      "no_speech_prob": 0.004178714472800493,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 198.2,
+          "end": 199.4,
+          "probability": 0.0004708617925643921
+        },
+        {
+          "word": " chaque",
+          "start": 199.4,
+          "end": 200.04,
+          "probability": 5.290047192829661e-05
+        },
+        {
+          "word": " souffle",
+          "start": 200.04,
+          "end": 200.56,
+          "probability": 0.45455912762190565
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "seek": 18720,
+      "start": 200.56,
+      "end": 203.3,
+      "text": " Dans chaque souffle",
+      "tokens": [
+        51064,
+        16897,
+        18920,
+        36966,
+        306,
+        51214
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.39537505099647924,
+      "compression_ratio": 1.7,
+      "no_speech_prob": 0.004178714472800493,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 200.56,
+          "end": 200.56,
+          "probability": 0.006254651118069887
+        },
+        {
+          "word": " chaque",
+          "start": 200.56,
+          "end": 201.52,
+          "probability": 0.016970282420516014
+        },
+        {
+          "word": " souffle",
+          "start": 201.52,
+          "end": 203.3,
+          "probability": 0.8296061754226685
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "seek": 18720,
+      "start": 203.3,
+      "end": 203.34,
+      "text": " Dans chaque souffle",
+      "tokens": [
+        51214,
+        16897,
+        18920,
+        36966,
+        306,
+        51364
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.39537505099647924,
+      "compression_ratio": 1.7,
+      "no_speech_prob": 0.004178714472800493,
+      "words": [
+        {
+          "word": " Dans",
+          "start": 203.3,
+          "end": 203.3,
+          "probability": 0.10063785314559937
+        },
+        {
+          "word": " chaque",
+          "start": 203.3,
+          "end": 203.3,
+          "probability": 0.3089887201786041
+        },
+        {
+          "word": " souffle",
+          "start": 203.3,
+          "end": 203.34,
+          "probability": 0.9809806048870087
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "seek": 18720,
+      "start": 203.34,
+      "end": 203.34,
+      "text": "",
+      "tokens": [],
+      "temperature": 0.0,
+      "avg_logprob": -0.39537505099647924,
+      "compression_ratio": 1.7,
+      "no_speech_prob": 0.004178714472800493,
+      "words": []
+    },
+    {
+      "id": 60,
+      "seek": 18720,
+      "start": 203.34,
+      "end": 211.94,
+      "text": " C'est paroles et vocs",
+      "tokens": [
+        51514,
+        383,
+        6,
+        377,
+        971,
+        7456,
+        1030,
+        1650,
+        14368,
+        51614
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.39537505099647924,
+      "compression_ratio": 1.7,
+      "no_speech_prob": 0.004178714472800493,
+      "words": [
+        {
+          "word": " C",
+          "start": 203.34,
+          "end": 203.34,
+          "probability": 0.007636557333171368
+        },
+        {
+          "word": "'est",
+          "start": 203.34,
+          "end": 211.0,
+          "probability": 0.9641633331775665
+        },
+        {
+          "word": " paroles",
+          "start": 211.0,
+          "end": 211.42,
+          "probability": 0.32930470257997513
+        },
+        {
+          "word": " et",
+          "start": 211.42,
+          "end": 211.6,
+          "probability": 0.4326975643634796
+        },
+        {
+          "word": " vocs",
+          "start": 211.6,
+          "end": 211.94,
+          "probability": 0.30808521807193756
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "seek": 18720,
+      "start": 211.94,
+      "end": 214.92,
+      "text": " La création et la continité de la vie",
+      "tokens": [
+        51614,
+        2369,
+        15609,
+        399,
+        1030,
+        635,
+        1421,
+        5066,
+        368,
+        635,
+        4941,
+        51764
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.39537505099647924,
+      "compression_ratio": 1.7,
+      "no_speech_prob": 0.004178714472800493,
+      "words": [
+        {
+          "word": " La",
+          "start": 211.94,
+          "end": 212.86,
+          "probability": 0.9232903718948364
+        },
+        {
+          "word": " création",
+          "start": 212.86,
+          "end": 213.46,
+          "probability": 0.9960607588291168
+        },
+        {
+          "word": " et",
+          "start": 213.46,
+          "end": 213.66,
+          "probability": 0.8890992403030396
+        },
+        {
+          "word": " la",
+          "start": 213.66,
+          "end": 213.76,
+          "probability": 0.9707978367805481
+        },
+        {
+          "word": " continité",
+          "start": 213.76,
+          "end": 214.4,
+          "probability": 0.6398977637290955
+        },
+        {
+          "word": " de",
+          "start": 214.4,
+          "end": 214.56,
+          "probability": 0.9395959377288818
+        },
+        {
+          "word": " la",
+          "start": 214.56,
+          "end": 214.7,
+          "probability": 0.9712921977043152
+        },
+        {
+          "word": " vie",
+          "start": 214.7,
+          "end": 214.92,
+          "probability": 0.9988669157028198
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "seek": 21492,
+      "start": 215.68,
+      "end": 217.24,
+      "text": " Selon le plan divin",
+      "tokens": [
+        50364,
+        10736,
+        266,
+        476,
+        1393,
+        3414,
+        259,
+        50514
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2538785026186988,
+      "compression_ratio": 0.9076923076923077,
+      "no_speech_prob": 0.2527102828025818,
+      "words": [
+        {
+          "word": " Selon",
+          "start": 215.68,
+          "end": 216.36,
+          "probability": 0.6086631342768669
+        },
+        {
+          "word": " le",
+          "start": 216.36,
+          "end": 216.5,
+          "probability": 0.9785555601119995
+        },
+        {
+          "word": " plan",
+          "start": 216.5,
+          "end": 216.76,
+          "probability": 0.8155125379562378
+        },
+        {
+          "word": " divin",
+          "start": 216.76,
+          "end": 217.24,
+          "probability": 0.6913468688726425
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "seek": 21492,
+      "start": 218.35999999999999,
+      "end": 220.98,
+      "text": " Tout en restant fidèle au texte public",
+      "tokens": [
+        50514,
+        20453,
+        465,
+        1472,
+        394,
+        24553,
+        29844,
+        1609,
+        2487,
+        68,
+        1908,
+        50714
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.2538785026186988,
+      "compression_ratio": 0.9076923076923077,
+      "no_speech_prob": 0.2527102828025818,
+      "words": [
+        {
+          "word": " Tout",
+          "start": 218.35999999999999,
+          "end": 219.04,
+          "probability": 0.04395370930433273
+        },
+        {
+          "word": " en",
+          "start": 219.04,
+          "end": 219.22,
+          "probability": 0.9161486625671387
+        },
+        {
+          "word": " restant",
+          "start": 219.22,
+          "end": 219.56,
+          "probability": 0.9193982481956482
+        },
+        {
+          "word": " fidèle",
+          "start": 219.56,
+          "end": 219.98,
+          "probability": 0.7444449663162231
+        },
+        {
+          "word": " au",
+          "start": 219.98,
+          "end": 220.14,
+          "probability": 0.564499020576477
+        },
+        {
+          "word": " texte",
+          "start": 220.14,
+          "end": 220.68,
+          "probability": 0.9510326683521271
+        },
+        {
+          "word": " public",
+          "start": 220.68,
+          "end": 220.98,
+          "probability": 0.5150153636932373
+        }
+      ]
+    }
+  ],
+  "language": "fr"
+}

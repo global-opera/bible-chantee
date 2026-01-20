@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genese 37 | Bible Chantee Karaoke</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a1a2e,#16213e);min-height:100vh;color:#fff}
+        .header{text-align:center;padding:20px;background:rgba(0,0,0,0.3);border-bottom:2px solid #d4af37}
+        .header h1{font-size:1.8em;color:#d4af37}
+        .player{max-width:800px;margin:20px auto;padding:0 20px}
+        audio{width:100%}
+        .lyrics{max-width:800px;margin:20px auto;padding:20px}
+        .line{font-size:1.1em;padding:8px 12px;margin:4px 0;border-radius:6px;cursor:pointer;transition:all 0.3s}
+        .line:hover{background:rgba(212,175,55,0.1)}
+        .line.active{background:rgba(212,175,55,0.3);border-left:4px solid #d4af37}
+        .line.passed{opacity:0.5}
+        .time{font-size:0.7em;color:#888;margin-right:8px;font-family:monospace}
+        .footer{text-align:center;padding:20px;color:#666}
+        .footer a{color:#d4af37}
+    </style>
+</head>
+<body>
+    <div class="header"><h1>Genese 37</h1><p>Bible Chantee Karaoke</p></div>
+    <div class="player"><audio id="audio" controls><source src="https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/FR/01_GEN/01_GEN_37_FR.mp3" type="audio/mpeg"></audio></div>
+    <div class="lyrics">
+        <div class="line" data-start="20.00" data-end="32.00"><span class="time">[0:20]</span>Dans le pays de Canaan, Jacob demeure Joseph, fils chéri, d'un amour qui l'effleure</div>
+        <div class="line" data-start="32.00" data-end="44.00"><span class="time">[0:32]</span>Ses frères dans l'ombre, leur haine se tisse Pour un rêve d'avenir, pour un cœur qui s'immise</div>
+        <div class="line" data-start="44.00" data-end="56.00"><span class="time">[0:44]</span>Ô Seigneur, tu vois nos luttes et nos peines Dans le silence, tu parles même quand tout s'éteigne</div>
+        <div class="line" data-start="56.00" data-end="66.00"><span class="time">[0:56]</span>Rappelle-nous dans nos cœurs la promesse Que les rêves de gloire sont un chant de tendresse</div>
+        <div class="line" data-start="66.00" data-end="75.00"><span class="time">[1:06]</span>Un songe se lève, les gerbes se prosternent Joseph s'avance, son cœur n'est pas enferme</div>
+        <div class="line" data-start="75.00" data-end="85.00"><span class="time">[1:15]</span>Ses frères envieux complotent dans la nuit Mets ta main au Dieu, guide et soutiens celui qui fuit</div>
+        <div class="line" data-start="85.00" data-end="97.00"><span class="time">[1:25]</span>Ô Seigneur, tu vois nos luttes et nos peines Dans le silence, tu parles même quand tout s'éteigne</div>
+        <div class="line" data-start="97.00" data-end="105.00"><span class="time">[1:37]</span>Rappelle-nous dans nos cœurs la promesse Que les rêves de gloire sont un chant de tendresse</div>
+        <div class="line" data-start="105.00" data-end="109.00"><span class="time">[1:45]</span>Dans la citerne sombre, la lumière s'éteint Mais dans la douleur, là où l'âme se feint</div>
+        <div class="line" data-start="109.00" data-end="121.00"><span class="time">[1:49]</span>Ruban un espoir pour sauver son frère Dans les bras du malheur s'éveille la lumière</div>
+        <div class="line" data-start="121.00" data-end="130.00"><span class="time">[2:01]</span>Ô Jacob, leurre, son cœur déchiré Une tunique teintée, un fils à jamais aimé</div>
+        <div class="line" data-start="130.00" data-end="140.00"><span class="time">[2:10]</span>Mais dans l'Égypte lointaine, le plan se dessine Joseph élevé par ta grâce divine</div>
+        <div class="line" data-start="140.00" data-end="150.00"><span class="time">[2:20]</span>Ô Seigneur, tu vois nos luttes et nos peines Dans le silence, tu parles même quand tout s'éteigne</div>
+        <div class="line" data-start="150.00" data-end="160.00"><span class="time">[2:30]</span>Rappelle-nous dans nos cœurs la promesse Que les rêves de gloire sont un chant de tendresse</div>
+        <div class="line" data-start="160.00" data-end="169.00"><span class="time">[2:40]</span>Dans chaque épreuve, tu es notre refuge Les rêves de gloire par ta main nous conduisent</div>
+        <div class="line" data-start="169.00" data-end="182.00"><span class="time">[2:49]</span>Fais de nous des témoins de ta fidélité Dans l'amour et la grâce pour l'éternité</div>
+    </div>
+    <div class="footer"><a href="https://biblechantee.com">biblechantee.com</a></div>
+    <script>
+        const audio=document.getElementById('audio'),lines=document.querySelectorAll('.line');
+        audio.addEventListener('timeupdate',()=>{
+            const t=audio.currentTime;
+            lines.forEach(l=>{
+                const s=parseFloat(l.dataset.start),e=parseFloat(l.dataset.end);
+                l.classList.remove('active','passed');
+                if(t>=s&&t<e){l.classList.add('active');l.scrollIntoView({behavior:'smooth',block:'center'})}
+                else if(t>=e)l.classList.add('passed')
+            })
+        });
+        lines.forEach(l=>l.addEventListener('click',()=>{audio.currentTime=parseFloat(l.dataset.start);audio.play()}))
+    </script>
+</body>
+</html>
