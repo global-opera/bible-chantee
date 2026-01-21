@@ -1,6 +1,6 @@
 // Paroles des chapitres - Bible Chantee
 // Source: Lyrics/FR_V1/ (paroles nettoyees)
-// Auto-genere: 2026-01-21 08:23
+// Auto-genere: 2026-01-21 09:21
 window.chapterLyrics = {
     "01": {
         1: `Genese - Chapitre 01
