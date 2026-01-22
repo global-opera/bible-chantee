@@ -1245,7 +1245,7 @@ function isVerseLikeEN(s){
 /* ===== END EN TITLES HARDENING ===== */
 </script>
     <script src="lyrics-data.js?v=20260114f"></script>
-    <script src="lyrics-data-fr.js?v=20260122"></script>
+    <script src="lyrics-data-fr.js?v=20260122b"></script>
     <script src="lyrics-data-en.js"></script>
     <script src="lyrics-data-pt.js"></script>
     <script src="lyrics-data-es.js"></script>
@@ -2003,7 +2003,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
         // Obtenir les paroles depuis window.chapterLyrics{LANG} (uniforme pour toutes langues)
         const lyricsVarName = `chapterLyrics${lang}`;
         const lyricsDataSource = window[lyricsVarName];
-        console.log('[LYRICS] Variable name:', lyricsVarName, 'exists:', !!lyricsDataSource);
+        console.log('[LYRICS] Book:', bookNumber, 'Lang:', lang, 'Using:', lyricsVarName, 'exists:', !!lyricsDataSource);
 
         if (!lyricsDataSource) {
           console.error('[LYRICS] Data source not found:', lyricsVarName);
