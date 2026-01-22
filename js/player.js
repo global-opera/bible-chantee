@@ -276,7 +276,7 @@
     var bk = resolveBookKey(bookCode);
     var ch = padChapterForFilename(chapter);
     var fileName = bk + "_" + ch + "_" + L + ".txt";
-    var relPath = "lyrics/" + L + "/" + bk + "/" + fileName;
+    var relPath = "data/lyrics/" + L + "/" + bk + "/" + fileName;
     return new URL(relPath, document.baseURI).toString();
   }
 
@@ -1018,6 +1018,7 @@
   };
 
 })();
+
 
 
 
