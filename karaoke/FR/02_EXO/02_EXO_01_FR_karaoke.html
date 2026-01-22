@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exode 1 - Karaoké</title>
+    <style>
+        body { background: #1a1a2e; color: white; font-family: Arial; text-align: center; padding: 20px; }
+        h1 { color: #eab308; }
+        #lyrics { font-size: 1.5em; line-height: 2; max-width: 800px; margin: 0 auto; }
+        .line { padding: 10px; margin: 5px 0; border-radius: 5px; transition: all 0.3s; }
+        .line.active { background: #3b82f6; color: white; font-weight: bold; }
+        .line.past { color: #666; }
+        audio { width: 100%; max-width: 600px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>Exode 1 - Karaoké</h1>
+    <audio id="audio" controls>
+        <source src="02_EXO_01_FR.mp3" type="audio/mpeg">
+    </audio>
+    <div id="lyrics">        <div class="line" data-start="10" data-end="16">Voici les noms des fils d'Israël</div>
+        <div class="line" data-start="16.56" data-end="20.56">Ruben, Simeon, Levi, Judah</div>
+        <div class="line" data-start="22.52" data-end="28">Issachar, Zabulon, Benjamin, Dan, Nephtali, Gad, Aser, Soixante-dix âmes unies en voyage</div>
+        <div class="line" data-start="28" data-end="31.8">Joseph en Égypte, témoin des âges</div>
+        <div class="line" data-start="31.8" data-end="38.52">Ô Dieu, Tu es notre force et notre chant, Dans l'épreuve, nous levons nos mains</div>
+        <div class="line" data-start="38.52" data-end="43.16">Malgré l'oppression, nous restons confiants</div>
+        <div class="line" data-start="44" data-end="49.74">Tu es notre refuge, notre chemin</div>
+        <div class="line" data-start="49.74" data-end="55.08">Le roi s'éleva, ignorant le passé</div>
+        <div class="line" data-start="64.32" data-end="68.58">Il vit un peuple puissant, multiplie</div>
+        <div class="line" data-start="70" data-end="74.78">Il trama des plans pour nous écraser</div>
+        <div class="line" data-start="76" data-end="80.54">Mais plus on opprime, plus on se lève en vérité</div>
+        <div class="line" data-start="80.54" data-end="85.84">Des villes bâties, un lourd fardeau, Mais ta main, Seigneur, nous garde en haut</div>
+        <div class="line" data-start="86.54" data-end="92.08">Oh Dieu, tu es notre force et notre chant, Dans l'épreuve, nous levons nos mains</div>
+        <div class="line" data-start="92.08" data-end="96.7">Malgré l'oppression, nous restons confiants</div>
+        <div class="line" data-start="96.7" data-end="103.54">Tu es notre refuge, notre chemin</div>
+        <div class="line" data-start="103.54" data-end="111.54">Des sages femmes courageuses et pleines de foi</div>
+        <div class="line" data-start="113.68" data-end="118.38">Face à Pharaon, elles ont dit non par toi</div>
+        <div class="line" data-start="118.38" data-end="123.7">Elles sauveraient des vies avec crainte et amour</div>
+        <div class="line" data-start="123.7" data-end="129.54">Leur cœur en action pour un nouvel aurore</div>
+        <div class="line" data-start="129.54" data-end="134.72">Tu as béni leur choix, ta grâce sur elles</div>
+        <div class="line" data-start="135.54" data-end="139.02">Le peuple grandit sous ta providence éternelle</div>
+        <div class="line" data-start="139.54" data-end="145.74">Ô Dieu, tu es notre force et notre chant, Dans l'épreuve, nous levons nos mains</div>
+        <div class="line" data-start="145.74" data-end="150.54">Malgré l'oppression, nous restons confiants</div>
+        <div class="line" data-start="151.54" data-end="156.54">Tu es notre refuge, notre chemin</div>
+        <div class="line" data-start="156.54" data-end="163.26">Dans les larmes et les cris, nous élèvons nos voix</div>
+        <div class="line" data-start="163.26" data-end="169.74">Car tu es notre abri, nous ne craindrons pas</div>
+        <div class="line" data-start="169.74" data-end="172.62">Ta promesse est notre lumière</div>
+        <div class="line" data-start="172.62" data-end="179.36">Dans les ténèbres, tu es notre prière</div>
+        <div class="line" data-start="180.44" data-end="185.18">Oh Dieu, tu es notre force et notre chant, Dans l'épreuve, nous levons nos mains</div>
+        <div class="line" data-start="190.1" data-end="196.48">Malgré l'oppression, nous restons confiants, Tu es notre refuge, notre chemin</div>
+        <div class="line" data-start="196.48" data-end="201.76">Dans l'oppression, ta grâce persiste, Ton peuple grandit, ta promesse existe</div>
+        <div class="line" data-start="202.36" data-end="208.02">Gloire à toi, notre libérateur</div>
+        <div class="line" data-start="208.02" data-end="215">Nous t'adorons, ô sauveur</div>
+    </div>
+    <script>
+        const audio = document.getElementById('audio');
+        const lines = document.querySelectorAll('.line');
+        
+        audio.addEventListener('timeupdate', () => {
+            const time = audio.currentTime;
+            lines.forEach(line => {
+                const start = parseFloat(line.dataset.start);
+                const end = parseFloat(line.dataset.end);
+                line.classList.remove('active', 'past');
+                if (time >= start && time < end) {
+                    line.classList.add('active');
+                    line.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else if (time >= end) {
+                    line.classList.add('past');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
