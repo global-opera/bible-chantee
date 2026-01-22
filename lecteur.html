@@ -1823,20 +1823,49 @@ const audioPlayer = document.querySelector('#audioPlayer');
     function getAudioUrl(book, chapter, lang) {
       // Construire URL directement depuis Cloudflare R2
       // Format: https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/{LANG}/{BOOK}/{BOOK}_{CHAPTER}_{LANG}.mp3
-      // Exemple: .../FR/01_GEN/01_GEN_001_FR.mp3
-      const chapterPadded = String(chapter).padStart(3, '0');
+      // Exemple: .../FR/01_GEN/01_GEN_01_FR.mp3
+      const chapterPadded = String(chapter).padStart(2, '0');
       const langUpper = lang.toUpperCase();
-      return `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${langUpper}/${book}/${book}_${chapterPadded}_${langUpper}.mp3`;
+      const base = `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${langUpper}/${book}/${book}_${chapterPadded}_${langUpper}`;
+      return {
+        primary: `${base}.mp3`,
+        fallback: `${base}_v1.mp3`
+      };
+    }
+
+    // Helper: Assigner audio avec fallback automatique pour fichiers _v1
+    function setAudioWithFallback(audioEl, urls, autoplay = false) {
+      let triedFallback = false;
+
+      audioEl.onerror = () => {
+        if (!triedFallback && urls.fallback) {
+          triedFallback = true;
+          console.warn('[AUDIO] Primary failed, trying fallback:', urls.fallback);
+          audioEl.src = urls.fallback;
+          audioEl.load();
+          if (autoplay) {
+            audioEl.play().catch(e => console.log('Lecture bloquée:', e));
+          }
+        } else {
+          console.error('[AUDIO] Both URLs failed:', audioEl.src);
+        }
+      };
+
+      console.log('[AUDIO] Loading primary URL:', urls.primary);
+      audioEl.src = urls.primary;
+      audioEl.load();
+
+      if (autoplay) {
+        audioEl.play().catch(e => console.log('Lecture bloquée:', e));
+      }
     }
 
     // Charger et jouer un chapitre
     function loadAndPlayChapter(book, chapter, lang) {
       window.currentBook = book;
       window.currentChapter = parseInt(chapter);
-      const audioUrl = getAudioUrl(book, chapter, lang);
-      audioPlayer.src = audioUrl;
-      audioPlayer.load();
-      audioPlayer.play().catch(e => console.log('Lecture bloquée:', e));
+      const audioUrls = getAudioUrl(book, chapter, lang);
+      setAudioWithFallback(audioPlayer, audioUrls, true);
       isPlaying = true;
       playBtn.textContent = '⏸';
       updateLikeButton(); // Mettre à jour le bouton like
@@ -2178,9 +2207,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
         // Recharger le chapitre actuel avec la nouvelle langue
         if (currentBook && currentChapter) {
           // Charger l'audio SANS lancer la lecture automatique
-          const audioUrl = getAudioUrl(currentBook, currentChapter, currentLang);
-          audioPlayer.src = audioUrl;
-          audioPlayer.load();
+          const audioUrls = getAudioUrl(currentBook, currentChapter, currentLang);
+          setAudioWithFallback(audioPlayer, audioUrls, false);
 
           loadLyrics(currentBook, currentChapter, currentLang);
           loadBibleText(currentBook, currentChapter, currentLang);
@@ -2315,9 +2343,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
       // Charger et jouer le chapitre
       currentBook = item.book;
       currentChapter = item.chapter;
-      const url = getAudioUrl(item.book, item.chapter, currentLang);
-      audioPlayer.src = url;
-      audioPlayer.play();
+      const urls = getAudioUrl(item.book, item.chapter, currentLang);
+      setAudioWithFallback(audioPlayer, urls, true);
 
       isPlaying = true;
       radioPlaying = true;
@@ -2567,9 +2594,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
         if (isPlaying) {
           loadAndPlayChapter(currentBook, prevChapter, currentLang);
         } else {
-          const audioUrl = getAudioUrl(currentBook, prevChapter, currentLang);
-          audioPlayer.src = audioUrl;
-          audioPlayer.load();
+          const audioUrls = getAudioUrl(currentBook, prevChapter, currentLang);
+          setAudioWithFallback(audioPlayer, audioUrls, false);
         }
         // Mettre à jour les paroles/bible
         if (document.querySelector('#lyricsContent').style.display !== 'none') {
@@ -2606,9 +2632,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
         if (isPlaying) {
           loadAndPlayChapter(currentBook, nextChapter, currentLang);
         } else {
-          const audioUrl = getAudioUrl(currentBook, nextChapter, currentLang);
-          audioPlayer.src = audioUrl;
-          audioPlayer.load();
+          const audioUrls = getAudioUrl(currentBook, nextChapter, currentLang);
+          setAudioWithFallback(audioPlayer, audioUrls, false);
         }
         // Mettre à jour les paroles/bible
         if (document.querySelector('#lyricsContent').style.display !== 'none') {
@@ -2976,9 +3001,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
         // Préparer l'audio mais NE PAS lancer automatiquement
         // L'utilisateur doit cliquer sur Play pour démarrer
         if (urlBook || urlChapter) {
-          const audioUrl = getAudioUrl(bookCode, currentChapter, currentLang);
-          audioPlayer.src = audioUrl;
-          audioPlayer.load();
+          const audioUrls = getAudioUrl(bookCode, currentChapter, currentLang);
+          setAudioWithFallback(audioPlayer, audioUrls, false);
           // Ne pas appeler .play() - attendre le clic utilisateur
         }
 
@@ -3010,9 +3034,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
             if (isPlaying) {
               loadAndPlayChapter(currentBook, chapterNum, currentLang);
             } else {
-              const audioUrl = getAudioUrl(currentBook, chapterNum, currentLang);
-              audioPlayer.src = audioUrl;
-              audioPlayer.load();
+              const audioUrls = getAudioUrl(currentBook, chapterNum, currentLang);
+              setAudioWithFallback(audioPlayer, audioUrls, false);
             }
 
             // Mettre à jour les paroles si on est en mode paroles
