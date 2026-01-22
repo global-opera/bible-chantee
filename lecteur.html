@@ -1610,8 +1610,8 @@ function isVerseLikeEN(s){
     let isRadioMode = false;
     let isFavorited = false;
     let isAutoplayEnabled = false;
-    let currentBook = '01_GEN';
-    let currentChapter = 1;
+    window.currentBook = '01_GEN';
+    window.currentChapter = 1;
 
     // Variables Radio
     let radioPlaylist = [];
@@ -1831,8 +1831,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
     // Charger et jouer un chapitre
     function loadAndPlayChapter(book, chapter, lang) {
-      currentBook = book;
-      currentChapter = parseInt(chapter);
+      window.currentBook = book;
+      window.currentChapter = parseInt(chapter);
       const audioUrl = getAudioUrl(book, chapter, lang);
       audioPlayer.src = audioUrl;
       audioPlayer.load();
@@ -3200,6 +3200,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
 </body>
 </html>
+
+
 
 
 
