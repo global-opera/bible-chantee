@@ -1954,54 +1954,55 @@ const audioPlayer = document.querySelector('#audioPlayer');
       return text;
     }
 
-    // Charger et afficher les paroles
-    function loadLyrics(bookCode, chapter, lang) {
+    // Charger et afficher les paroles depuis fichiers .txt
+    async function loadLyrics(bookCode, chapter, lang) {
       const lyricsContent = document.querySelector('#lyricsContent');
       lyricsContent.innerHTML = '<p style="color: #999; font-style: italic;">Chargement des paroles...</p>';
 
       try {
-        // Trouver le numéro du livre
-        const bookData = BOOKS.find(b => b.code === bookCode);
-        if (!bookData) {
-          lyricsContent.innerHTML = '<p style="color: #f88;">Livre non trouvé</p>';
+        const chapterPadded = String(chapter).padStart(2, '0');
+        const langUpper = lang.toUpperCase();
+        const lyricsUrl = `data/lyrics/${langUpper}/${bookCode}/${bookCode}_${chapterPadded}_${langUpper}.txt`;
+        
+        console.log('[Lyrics] Fetching:', lyricsUrl);
+        
+        const response = await fetch(lyricsUrl, { cache: 'no-store' });
+        
+        if (!response.ok) {
+          console.warn('[Lyrics] Not found:', lyricsUrl, response.status);
+          lyricsContent.innerHTML = `<p style="color: #999; font-style: italic;">Paroles non disponibles en ${lang}.</p>`;
           return;
         }
-        const bookNumber = bookData.num; // "01", "02", etc. - already formatted with leading zeros
-
-        // Obtenir les paroles depuis window.chapterLyrics{LANG}
-        // FR: window.chapterLyrics, EN: window.chapterLyricsEN, etc.
-        const lyricsVarName = lang === 'FR' ? 'chapterLyrics' : `chapterLyrics${lang}`;
-        const lyricsData = window[lyricsVarName];
-
-        if (!lyricsData) {
+        
+        let lyrics = await response.text();
+        
+        if (lyrics.trim().startsWith('<')) {
+          console.warn('[Lyrics] Received HTML instead of text');
           lyricsContent.innerHTML = `<p style="color: #999; font-style: italic;">Paroles non disponibles en ${lang}.</p>`;
           return;
         }
 
-        // Extraire les paroles du chapitre
-        let lyrics = lyricsData[bookNumber] && lyricsData[bookNumber][chapter];
+        lyrics = cleanLyrics(lyrics);
 
-        if (!lyrics) {
+        if (!lyrics.trim()) {
           lyricsContent.innerHTML = '<p style="color: #999;">Paroles non disponibles pour ce chapitre</p>';
           return;
         }
 
-        // Nettoyer les paroles AVANT le formatage HTML
-        lyrics = cleanLyrics(lyrics);
-
-        // Convertir les sauts de ligne en HTML
-        // \n\n = séparation entre strophes
-        // \n simple = fusionné en espace pour paragraphe fluide
         const paragraphs = lyrics.split('\n\n');
         const html = paragraphs.map(p => {
-          const lines = p.replace(/\n/g, ' '); // Paragraphe fluide justifié
+          const lines = p.replace(/\n/g, ' ');
           return '<p style="margin: 0 0 1.2em 0; text-align: justify; text-justify: inter-word; line-height: 1.7;">' + lines + '</p>';
         }).join('');
+        
         lyricsContent.innerHTML = html;
+        console.log('[Lyrics] Loaded successfully');
+        
       } catch (error) {
-        console.error('Erreur chargement paroles:', error);
+        console.error('[Lyrics] Error:', error);
         lyricsContent.innerHTML = '<p style="color: #f88;">Erreur de chargement des paroles</p>';
       }
+    }
     }
 
     // Charger et afficher le texte biblique
@@ -3200,6 +3201,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
 </body>
 </html>
+
 
 
 
