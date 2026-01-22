@@ -1245,6 +1245,7 @@ function isVerseLikeEN(s){
 /* ===== END EN TITLES HARDENING ===== */
 </script>
     <script src="lyrics-data.js?v=20260114f"></script>
+    <script src="lyrics-data-fr.js?v=20260122"></script>
     <script src="lyrics-data-en.js"></script>
     <script src="lyrics-data-pt.js"></script>
     <script src="lyrics-data-es.js"></script>
@@ -1985,6 +1986,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
     // Charger et afficher les paroles depuis lyrics-data.js
     function loadLyrics(bookCode, chapter, lang) {
+      console.log('[LYRICS] Loading:', bookCode, chapter, lang);
       const lyricsContent = document.querySelector('#lyricsContent');
       lyricsContent.innerHTML = '<p style="color: #999; font-style: italic;">Chargement des paroles...</p>';
 
@@ -1992,6 +1994,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
         // Trouver le numéro du livre
         const bookData = window.BOOKS ? window.BOOKS.find(b => b.code === bookCode) : null;
         if (!bookData) {
+          console.error('[LYRICS] Book not found:', bookCode);
           lyricsContent.innerHTML = '<p style="color: #f88;">Livre non trouvé</p>';
           return;
         }
@@ -2000,8 +2003,10 @@ const audioPlayer = document.querySelector('#audioPlayer');
         // Obtenir les paroles depuis window.chapterLyrics{LANG} (uniforme pour toutes langues)
         const lyricsVarName = `chapterLyrics${lang}`;
         const lyricsDataSource = window[lyricsVarName];
+        console.log('[LYRICS] Variable name:', lyricsVarName, 'exists:', !!lyricsDataSource);
 
         if (!lyricsDataSource) {
+          console.error('[LYRICS] Data source not found:', lyricsVarName);
           lyricsContent.innerHTML = `<p style="color: #999; font-style: italic;">Paroles non disponibles en ${lang}.</p>`;
           return;
         }
