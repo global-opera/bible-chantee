@@ -145,3 +145,14 @@ tools/fix_chapter_titles.js
 # Lyrics archive (too large for git)
 lyrics-archive/
 lyrics-archive.zip
+
+# Archives et backups obsolètes (cleanup 2026-01-22)
+_archive_*/
+V3_*/
+snapshot*/
+SNAPSHOT_*/
+BACKUP_*/
+**/lecteur_*.html
+**/lecteur-v*.html
+**/lecteur.*.html
+**/lecteur.backup*.html
