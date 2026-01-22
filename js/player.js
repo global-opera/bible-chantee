@@ -792,12 +792,9 @@
     setAudioFor(lang, bookCode, chapter);
     await loadBible(lang, bookCode, chapter);
 
-    // Skip setHeaderTitleLine if lecteur.html manages its own header
-    if(!document.getElementById('headerSubtitle')){
-      loadLyrics(lang, bookCode, chapter).then(function(lyricsText){
-        setHeaderTitleLine(lang, bookCode, chapter, lyricsText);
-      });
-    }
+    // Load lyrics and update header (setHeaderTitleLine handles headerSubtitle internally)
+    var lyricsText = await loadLyrics(lang, bookCode, chapter);
+    setHeaderTitleLine(lang, bookCode, chapter, lyricsText);
   }
 
   function refreshAll(resetChapter){
@@ -1018,6 +1015,7 @@
   };
 
 })();
+
 
 
 
