@@ -156,3 +156,9 @@ BACKUP_*/
 **/lecteur-v*.html
 **/lecteur.*.html
 **/lecteur.backup*.html
+
+# Snapshots (cleanup 2026-01-22 - keep latest only outside repo)
+*snapshot*/
+bc_snapshot*/
+_snapshot*/
+.snapshots/
