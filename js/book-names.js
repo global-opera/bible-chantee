@@ -108,18 +108,36 @@
     "65_JUD": "Giuda", "66_REV": "Apocalisse"
   };
 
+  var TL = {
+    "01_GEN": "Genesis", "02_EXO": "Exodo", "03_LEV": "Levitico", "04_NUM": "Mga Bilang", "05_DEU": "Deuteronomio",
+    "06_JOS": "Josue", "07_JDG": "Mga Hukom", "08_RUT": "Ruth", "09_1SA": "1 Samuel", "10_2SA": "2 Samuel",
+    "11_1KI": "1 Mga Hari", "12_2KI": "2 Mga Hari", "13_1CH": "1 Mga Cronica", "14_2CH": "2 Mga Cronica", "15_EZR": "Ezra",
+    "16_NEH": "Nehemias", "17_EST": "Esther", "18_JOB": "Job", "19_PSA": "Mga Awit", "20_PRO": "Mga Kawikaan",
+    "21_ECC": "Mangangaral", "22_SNG": "Awit ni Solomon", "23_ISA": "Isaias", "24_JER": "Jeremias",
+    "25_LAM": "Mga Panaghoy", "26_EZK": "Ezekiel", "27_DAN": "Daniel", "28_HOS": "Oseas", "29_JOL": "Joel",
+    "30_AMO": "Amos", "31_OBA": "Obadias", "32_JON": "Jonas", "33_MIC": "Mikas", "34_NAM": "Nahum",
+    "35_HAB": "Habakuk", "36_ZEP": "Zefanias", "37_HAG": "Hagai", "38_ZEC": "Zacarias", "39_MAL": "Malakias",
+    "40_MAT": "Mateo", "41_MRK": "Marcos", "42_LUK": "Lucas", "43_JHN": "Juan", "44_ACT": "Mga Gawa",
+    "45_ROM": "Mga Taga-Roma", "46_1CO": "1 Mga Taga-Corinto", "47_2CO": "2 Mga Taga-Corinto", "48_GAL": "Mga Taga-Galacia",
+    "49_EPH": "Mga Taga-Efeso", "50_PHP": "Mga Taga-Filipos", "51_COL": "Mga Taga-Colosas", "52_1TH": "1 Mga Taga-Tesalonica",
+    "53_2TH": "2 Mga Taga-Tesalonica", "54_1TI": "1 Timoteo", "55_2TI": "2 Timoteo", "56_TIT": "Tito",
+    "57_PHM": "Filemon", "58_HEB": "Mga Hebreo", "59_JAS": "Santiago", "60_1PE": "1 Pedro",
+    "61_2PE": "2 Pedro", "62_1JN": "1 Juan", "63_2JN": "2 Juan", "64_3JN": "3 Juan",
+    "65_JUD": "Judas", "66_REV": "Pahayag"
+  };
+
   function clone(o) { var r = {}; for (var k in o) r[k] = o[k]; return r; }
 
   window.BOOK_NAMES = window.BOOK_NAMES || {};
   window.BOOK_NAMES.FR = FR; window.BOOK_NAMES.EN = EN; window.BOOK_NAMES.PT = PT;
   window.BOOK_NAMES.ES = ES; window.BOOK_NAMES.DE = DE; window.BOOK_NAMES.IT = IT;
+  window.BOOK_NAMES.TL = TL;
 
   // Langues "à venir" : fallback EN (pour éviter les codes visibles)
   window.BOOK_NAMES.AR = window.BOOK_NAMES.AR || clone(EN);
   window.BOOK_NAMES.RU = window.BOOK_NAMES.RU || clone(EN);
   window.BOOK_NAMES.ZH = window.BOOK_NAMES.ZH || clone(EN);
   window.BOOK_NAMES.HI = window.BOOK_NAMES.HI || clone(EN);
-  window.BOOK_NAMES.TL = window.BOOK_NAMES.TL || clone(EN);
   window.BOOK_NAMES.SW = window.BOOK_NAMES.SW || clone(EN);
   window.BOOK_NAMES.KO = window.BOOK_NAMES.KO || clone(EN);
 
