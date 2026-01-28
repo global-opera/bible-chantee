@@ -1414,7 +1414,8 @@ function isVerseLikeEN(s){
           <div class="time" id="timeDisplay">00:00 / 00:00</div>
           <div class="player-controls">
             <button class="control-btn add-radio-btn" id="favoriteBtn" title="Ajouter à la radio"><span class="plus-icon">+</span><span class="radio-icon">📻</span></button>
-            <button class="control-btn" id="karaokeBtn" title="Karaoké" onclick="openKaraoke()">🎤</button>
+            <!-- KARAOKÉ TEMPORAIREMENT DÉSACTIVÉ -->
+            <!-- <button class="control-btn" id="karaokeBtn" title="Karaoké" onclick="openKaraoke()">🎤</button> -->
             <button class="control-btn autoplay-btn" id="autoplayBtn" title="Lecture continue">🔁</button>
             <button class="control-btn share-btn" id="shareBtn" title="Partager">
               <svg viewBox="0 0 100 100" class="share-icon">
@@ -1444,7 +1445,7 @@ function isVerseLikeEN(s){
           <div class="content-title" id="contentTitle">Paroles</div>
 
           <!-- Paroles (affiché par défaut) -->
-          <div class="lyrics-text" id="lyricsContent" style="display: block;">
+          <div class="lyrics-text" id="lyricsContent" style="display: none;">
             [Verse 1]<br>
             Au commencement, Dieu créa<br>
             Les cieux et la terre, Il forma<br>
