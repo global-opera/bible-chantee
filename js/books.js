@@ -22,7 +22,7 @@
     { num: "19", code: "19_PSA", chapters: 150 },
     { num: "20", code: "20_PRO", chapters: 31 },
     { num: "21", code: "21_ECC", chapters: 12 },
-    { num: "22", code: "22_SON", chapters: 8 },
+    { num: "22", code: "22_SNG", chapters: 8 },
     { num: "23", code: "23_ISA", chapters: 66 },
     { num: "24", code: "24_JER", chapters: 52 },
     { num: "25", code: "25_LAM", chapters: 5 },
