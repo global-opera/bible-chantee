@@ -22604,34 +22604,41 @@ en cœur, en notre Dieu civil Tu relèveras, tu redresseras
 Tout l'éternité Nous voulons te louer`,
     },
     "31": {
-        1: `... Éternel, tu parles avec force Ta voix résonne parmi
-les nations Les orgueilleux, tu les abas Dans leur fierté,
-ils sont perdus au Seigneur Le jour de l'Éternel est proche
-Pour toutes les nations, il est là Où est l'orgueil, où
+        1: `[Verse 1]
+¶ Prophétie d'Abdias.
+Ainsi parle le Seigneur, l'Eternel, sur Edom:
+-Nous avons appris une nouvelle de la part de l'Eternel, Et un messager a été envoyé parmi les nations:
+Levez-vous, marchons contre Edom pour lui faire la guerre!
 
-est la gloire Dans ces lèvres, t'as juste six au roi des
-rois Les sages des dômes, tu les feras disparaître La honte
-courira, ceux qui ont péché Ne te réjouis pas des malheurs
-Car le mal s'en retournera sur toi Le jour de l'Éternel
+[Verse 2]
+- Voici, je te rendrai petit parmi les nations, Tu seras l'objet du plus grand mépris.
+L'orgueil de ton coeur t'a égaré, Toi qui habites le creux des rochers, Qui t'assieds sur les hauteurs, Et qui dis en toi-même:
+Qui me précipitera jusqu'à terre?
+Quand tu placerais ton nid aussi haut que celui de l'aigle, Quand tu le placerais parmi les étoiles, Je t'en précipiterai, dit l'Eternel.
 
-est proche Pour toutes les nations, il est là Où est l'orgueil,
-où est la gloire Dans ces lèvres, t'as juste six au roi
-des rois Mais sur la montagne de Sion Le salue viendra,
-la lumière brillera La maison de Jacob, un feu ardent et
+[Pre-Chorus]
+-Nous avons appris une nouvelle de la part de l'Eternel, Et un messager a été envoyé parmi les nations:
+Ainsi parle le Seigneur, l'Eternel, sur Edom:
 
-essu Comme de la paille, disparaîtra Le jour de l'Éternel
-est proche Pour toutes les nations, il est là Où est l'orgueil,
-où est la gloire Dans ces lèvres, t'as juste six au roi
-des rois Des libérateurs monteront avec force Pour juger
+[Chorus]
+Ainsi parle le Seigneur, l'Eternel, sur Edom:
+Ainsi parle le Seigneur, l'Eternel, sur Edom:
 
-la montagne déçue À toi, Éternel, le règne appartient Nous
-levons nos voies, nous te louons à mer Le jour de l'Éternel
-est proche Pour toutes les nations, il est là Où est l'orgueil,
-où est la gloire Dans ces lèvres, t'as juste six au roi
+[Verse 3]
+Si des voleurs, des pillards, viennent de nuit chez toi, Comme te voilà dévasté!
+Mais enlèvent-ils plus qu'ils ne peuvent?
+Si des vendangeurs viennent chez toi, Ne laissent-ils rien à grappiller?...
+Ah!
 
-des rois Éternel, notre espoir et notre chante Nous t'adorons
-dans ta présence, nous sommes vivants Amen, Amen au roi
-des rois Dans le jour de l'Éternel Nous serons à toi`,
+[Bridge]
+comme Esaü est fouillé!
+Comme ses trésors sont découverts!
+Tous tes alliés t'ont chassé jusqu'à la frontière, Tes amis t'ont joué, t'ont dominé, Ceux qui mangeaient ton pain t'ont dressé des pièges, Et tu n'as pas su t'en apercevoir!
+N'est-ce pas en ce jour, dit l'Eternel, Que je ferai disparaître d'Edom les sages, Et de la montagne d'Esaü l'intelligence?
+
+[Final Chorus]
+Ainsi parle le Seigneur, l'Eternel, sur Edom:
+Ainsi parle le Seigneur, l'Eternel, sur Edom:`,
     },
     "32": {
         1: `Dans l'ombre de la mer, je fuiais Loin de ta voix, mon
