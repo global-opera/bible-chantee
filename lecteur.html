@@ -2909,13 +2909,17 @@ const audioPlayer = document.querySelector('#audioPlayer');
     // Initialisation: populate dropdowns et mettre à jour le sous-titre
     (function initialize() {
       try {
+        console.log('[INIT] Starting initialize...');
+        console.log('[INIT] window.BOOKS exists?', !!window.BOOKS);
+        console.log('[INIT] window.BOOKS length:', window.BOOKS ? window.BOOKS.length : 'N/A');
+
         // Read URL parameters
         const urlParams = new URLSearchParams(window.location.search);
         const urlBook = urlParams.get('book');
         const urlChapter = urlParams.get('chapter');
         const urlLang = urlParams.get('lang');
 
-        console.log('Lecteur initialize:', { urlBook, urlChapter, urlLang, fullUrl: window.location.href });
+        console.log('[INIT] Lecteur initialize:', { urlBook, urlChapter, urlLang, fullUrl: window.location.href });
 
         // Set language from URL if provided, otherwise from localStorage
         if (urlLang) {
@@ -3057,7 +3061,9 @@ const audioPlayer = document.querySelector('#audioPlayer');
           });
         }
       } catch (error) {
-        console.error('Initialize error:', error);
+        console.error('[INIT ERROR] Initialize error:', error);
+        console.error('[INIT ERROR] Error stack:', error.stack);
+        alert('ERREUR INITIALIZATION: ' + error.message + ' - Voir console F12');
         // Fallback to default
         populateBooksDropdown();
         const bookCode = '01_GEN';
