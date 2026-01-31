@@ -697,17 +697,31 @@
 
         audio.src = audioUrl;
 
-        // Charger les paroles depuis lyrics-data
+        // Charger les paroles depuis window.chapterLyrics{LANG}
         const lyricsBox = document.getElementById('lyricsBox');
         lyricsBox.textContent = 'Chargement des paroles...';
 
-        // Chercher les paroles dans window.lyricsDataFR ou lyricsDataEN, etc.
-        const lyricsVarName = 'lyricsData' + lang.toUpperCase();
-        const lyricsData = window[lyricsVarName];
+        // Structure: window.chapterLyricsFR["43"]["1"] pour Jean chapitre 1
+        const lyricsVarName = `chapterLyrics${langUpper}`;
+        const lyricsDataSource = window[lyricsVarName];
 
-        if (lyricsData && lyricsData[bookCode] && lyricsData[bookCode][ref.chapter]) {
-            const lyrics = lyricsData[bookCode][ref.chapter];
-            lyricsBox.textContent = lyrics;
+        console.log('[LYRICS] Loading:', { lyricsVarName, exists: !!lyricsDataSource, bookNum, chapter: ref.chapter });
+
+        if (lyricsDataSource && lyricsDataSource[bookNum] && lyricsDataSource[bookNum][ref.chapter]) {
+            let lyrics = lyricsDataSource[bookNum][ref.chapter];
+
+            // Nettoyer et formater les paroles
+            if (lyrics && lyrics.trim()) {
+                // Convertir en HTML avec paragraphes
+                const paragraphs = lyrics.split('\n\n');
+                const html = paragraphs.map(p => {
+                    const lines = p.split('\n').join('<br>');
+                    return '<p style="margin: 0 0 1em 0;">' + lines + '</p>';
+                }).join('');
+                lyricsBox.innerHTML = html;
+            } else {
+                lyricsBox.textContent = `${confession[0]}\n\n${confession[1]}\n\n[Paroles non disponibles]`;
+            }
         } else {
             lyricsBox.textContent = `${confession[0]}\n\n${confession[1]}\n\n[Paroles non disponibles pour ce chapitre]`;
         }
