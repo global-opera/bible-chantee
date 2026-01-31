@@ -545,19 +545,37 @@
             const card = document.createElement('a');
             card.className = 'confession-card';
             const ref = CONFESSION_REFS[i];
-            card.href = `lecteur.html?book=${ref.book}&chapter=${ref.chapter}&lang=${lang}`;
-            console.log(`[DEBUG] Confession ${i}: href="${card.href}", ref=`, ref, `lang=${lang}`);
+
+            // Ensure lang is valid, fallback to currentLang or FR
+            const safeLang = lang || currentLang || 'FR';
+
+            // Build URL with proper encoding
+            const targetUrl = `./lecteur.html?book=${ref.book}&chapter=${ref.chapter}&lang=${safeLang}`;
+            card.setAttribute('href', targetUrl);
+
+            console.log(`[DEBUG] Confession ${i}: href="${targetUrl}", ref=`, ref, `lang=${safeLang}`);
 
             const star = document.createElement('span');
             star.className = 'favorite-star' + (isFavorite(lang, i) ? ' favorited' : '');
             star.textContent = isFavorite(lang, i) ? '★' : '☆';
-            star.onclick = (e) => toggleFavorite(lang, i, e);
+            star.onclick = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleFavorite(lang, i, e);
+                return false;
+            };
 
-            card.innerHTML = `
-                <div class="confession-icon">${ICONS[i]}</div>
-                <div class="confession-title">${item[0]}</div>
-            `;
-            card.insertBefore(star, card.firstChild);
+            const icon = document.createElement('div');
+            icon.className = 'confession-icon';
+            icon.textContent = ICONS[i];
+
+            const title = document.createElement('div');
+            title.className = 'confession-title';
+            title.textContent = item[0];
+
+            card.appendChild(star);
+            card.appendChild(icon);
+            card.appendChild(title);
             grid.appendChild(card);
         });
     }
