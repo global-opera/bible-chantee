@@ -12,17 +12,19 @@
 [context.production]
 
 
-  [[context.production.redirects]]
-    from = "/lecteur"
-    to = "/lecteur.html"
-    status = 200
-    force = true
-
-  [[context.production.redirects]]
-    from = "/lecteur/*"
-    to = "/lecteur.html"
-    status = 200
-    force = true
+  # REMOVED: These redirects were stripping query parameters
+  # lecteur.html exists as a file, no redirect needed
+  # [[context.production.redirects]]
+  #   from = "/lecteur"
+  #   to = "/lecteur.html"
+  #   status = 200
+  #   force = true
+  #
+  # [[context.production.redirects]]
+  #   from = "/lecteur/*"
+  #   to = "/lecteur.html"
+  #   status = 200
+  #   force = true
   [[context.production.redirects]]
     from = "/demo*"
     to = "/lecteur.html"
@@ -84,14 +86,16 @@
   status = 301
   force = true
 
-[[redirects]]
-  from = "/lecteur"
-  to = "/lecteur.html"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/lecteur/*"
-  to = "/lecteur.html"
-  status = 200
-  force = true
+# REMOVED: These redirects were stripping query parameters
+# lecteur.html exists as a file, no redirect needed
+# [[redirects]]
+#   from = "/lecteur"
+#   to = "/lecteur.html"
+#   status = 200
+#   force = true
+#
+# [[redirects]]
+#   from = "/lecteur/*"
+#   to = "/lecteur.html"
+#   status = 200
+#   force = true
