@@ -649,86 +649,84 @@
         });
     }
 
-    // Ouvrir le player overlay (comme prières)
+    // Ouvrir le player overlay avec audio/paroles CONFESSIONS
     function openPlayer(index, lang) {
-        const ref = CONFESSION_REFS[index];
-        if (!ref) return;
-
         const d = DATA[lang] || DATA.FR;
         const confession = d.items[index];
 
         // Afficher le titre
         document.getElementById('playerTitle').textContent = confession[0];
 
-        // Trouver le code du livre (ex: 43 → 43_JOH)
-        const bookNum = ref.book.padStart(2, '0');
-        let bookCode = bookNum + '_XXX'; // fallback
+        const langUpper = lang.toUpperCase();
+        const confNum = String(index + 1).padStart(2, '0'); // 0 → "01", 1 → "02", etc.
 
-        if (window.BOOKS) {
-            const bookData = window.BOOKS.find(b => b.num === bookNum);
-            if (bookData) {
-                bookCode = bookData.code;
-            }
+        // Audio depuis archive.org (confessions spécifiques, pas chapitres bibliques!)
+        const audioVarName = `audioUrlsConfessions${langUpper}`;
+        const audioUrls = window[audioVarName];
+
+        let audioUrl = null;
+        if (audioUrls && audioUrls[confNum]) {
+            audioUrl = audioUrls[confNum];
         }
 
-        const chapterNum = ref.chapter.padStart(2, '0');
-        const langUpper = lang.toUpperCase();
-
-        // Construire l'URL audio correcte (même format que lecteur.html)
-        const baseUrl = `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${langUpper}/${bookCode}/${bookCode}_${chapterNum}_${langUpper}`;
-        const audioUrl = `${baseUrl}.mp3`;
-        const audioFallback = `${baseUrl}_v1.mp3`;
-
-        console.log('[PLAYER] Loading:', { bookCode, chapterNum, audioUrl, fallback: audioFallback });
+        console.log('[PLAYER] Loading confession:', { index, confNum, lang, audioUrl });
 
         const audio = document.getElementById('confessionAudio');
 
-        // Gestion fallback pour _v1
-        let triedFallback = false;
-        audio.onerror = function() {
-            if (!triedFallback) {
-                console.log('[PLAYER] Primary failed, trying fallback:', audioFallback);
-                triedFallback = true;
-                audio.src = audioFallback;
-            } else {
-                console.error('[PLAYER] Both URLs failed');
-            }
-        };
+        if (audioUrl) {
+            audio.src = audioUrl;
+        } else {
+            console.error('[PLAYER] No audio URL for confession', confNum, lang);
+        }
 
-        audio.src = audioUrl;
-
-        // Charger paroles du chapitre (comme lecteur.html)
+        // Charger paroles depuis lyrics/confessions/{LANG}/
         const lyricsBox = document.getElementById('lyricsBox');
         lyricsBox.textContent = 'Chargement des paroles...';
 
-        const lyricsVarName = `chapterLyrics${langUpper}`;
-        const lyricsDataSource = window[lyricsVarName];
+        // Les fichiers sont nommés: 01_Joie.txt, 02_Gueri.txt, etc.
+        // Mais on ne connait pas le nom exact, on doit utiliser le numéro
+        // Pour l'instant, afficher message en attendant mapping
+        const lyricsFileName = getLyricsFileName(confNum, langUpper);
+        const lyricsUrl = `/lyrics/confessions/${langUpper}/${lyricsFileName}`;
 
-        if (lyricsDataSource && lyricsDataSource[bookNum] && lyricsDataSource[bookNum][ref.chapter]) {
-            let lyrics = lyricsDataSource[bookNum][ref.chapter];
-
-            if (lyrics && lyrics.trim()) {
-                // Formater comme lecteur.html
-                const paragraphs = lyrics.split('\n\n');
-                const html = paragraphs.map(p => {
-                    const lines = p.split('\n').join('<br>');
-                    return '<p style="margin: 0 0 1em 0;">' + lines + '</p>';
-                }).join('');
-                lyricsBox.innerHTML = html;
-            } else {
-                lyricsBox.textContent = 'Paroles non disponibles';
-            }
-        } else {
-            lyricsBox.textContent = 'Paroles non disponibles pour ce chapitre';
-        }
+        fetch(lyricsUrl)
+            .then(r => r.ok ? r.text() : Promise.reject('Not found'))
+            .then(lyrics => {
+                if (lyrics && lyrics.trim()) {
+                    // Formater avec paragraphes
+                    const html = lyrics.split('\n\n').map(p => {
+                        return '<p style="margin: 0 0 1em 0;">' + p.split('\n').join('<br>') + '</p>';
+                    }).join('');
+                    lyricsBox.innerHTML = html;
+                } else {
+                    lyricsBox.textContent = `${confession[0]}\n\n${confession[1]}`;
+                }
+            })
+            .catch(err => {
+                console.error('[PLAYER] Lyrics fetch error:', err);
+                lyricsBox.textContent = `${confession[0]}\n\n${confession[1]}\n\n[Paroles non disponibles]`;
+            });
 
         // Afficher l'overlay
         document.getElementById('playerOverlay').classList.add('active');
 
         // Tenter de lire l'audio
-        audio.play().catch(function(err) {
-            console.error('[PLAYER] Audio play error:', err);
-        });
+        if (audioUrl) {
+            audio.play().catch(function(err) {
+                console.error('[PLAYER] Audio play error:', err);
+            });
+        }
+    }
+
+    // Mapping numéro confession → nom fichier lyrics
+    function getLyricsFileName(confNum, lang) {
+        const mapping = {
+            '01': 'Joie', '02': 'Gueri', '03': 'Sante', '04': 'Vainqueur',
+            '05': 'Prospere', '06': 'Reconnaissant', '07': 'Heureux',
+            '08': 'Beni', '09': 'Amen', '10': 'Shalom'
+        };
+        const name = mapping[confNum] || 'Unknown';
+        return `${confNum}_${name}.txt`;
     }
 
     // Fermer le player
@@ -748,14 +746,9 @@
     });
     </script>
 
-  <script src="/js/books.js"></script>
-  <script src="/lyrics-data-fr.js"></script>
-  <script src="/lyrics-data-en.js"></script>
-  <script src="/lyrics-data-pt.js"></script>
-  <script src="/lyrics-data-es.js"></script>
-  <script src="/lyrics-data-de.js"></script>
-  <script src="/lyrics-data-it.js"></script>
-  <script src="/translations.js"></script>
+  <script src="/audio-urls-confessions-fr.js"></script>
+  <script src="/audio-urls-confessions-pt.js"></script>
+  <script src="/translations.js">
   <script src="/translations-extra.js"></script>
   <script src="/i18n.js"></script>
   <script src="/lang-shared.js"></script>
