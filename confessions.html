@@ -509,6 +509,7 @@
     }
 
     function render(lang) {
+        console.log('[DEBUG] render() called with lang:', lang, 'type:', typeof lang);
         currentLang = lang;
         const d = DATA[lang] || DATA.FR;
 
@@ -545,6 +546,7 @@
             card.className = 'confession-card';
             const ref = CONFESSION_REFS[i];
             card.href = `lecteur.html?book=${ref.book}&chapter=${ref.chapter}&lang=${lang}`;
+            console.log(`[DEBUG] Confession ${i}: href="${card.href}", ref=`, ref, `lang=${lang}`);
 
             const star = document.createElement('span');
             star.className = 'favorite-star' + (isFavorite(lang, i) ? ' favorited' : '');
