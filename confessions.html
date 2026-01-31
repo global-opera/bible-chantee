@@ -697,24 +697,30 @@
 
         audio.src = audioUrl;
 
-        // Afficher la confession (pas le chapitre biblique complet)
+        // Charger paroles du chapitre (comme lecteur.html)
         const lyricsBox = document.getElementById('lyricsBox');
+        lyricsBox.textContent = 'Chargement des paroles...';
 
-        // Afficher simplement la confession et sa référence
-        lyricsBox.innerHTML = `
-            <div style="text-align: center; margin-bottom: 2em;">
-                <p style="font-size: 1.3em; font-weight: bold; color: #f5c842; margin-bottom: 0.5em;">
-                    ${confession[0]}
-                </p>
-                <p style="font-style: italic; color: #aaa;">
-                    ${confession[1]}
-                </p>
-            </div>
-            <p style="color: #999; font-size: 0.9em; line-height: 1.8;">
-                Cette confession est basée sur la Parole de Dieu.<br><br>
-                Écoutez le chapitre biblique chanté et méditez sur cette vérité pour votre vie.
-            </p>
-        `;
+        const lyricsVarName = `chapterLyrics${langUpper}`;
+        const lyricsDataSource = window[lyricsVarName];
+
+        if (lyricsDataSource && lyricsDataSource[bookNum] && lyricsDataSource[bookNum][ref.chapter]) {
+            let lyrics = lyricsDataSource[bookNum][ref.chapter];
+
+            if (lyrics && lyrics.trim()) {
+                // Formater comme lecteur.html
+                const paragraphs = lyrics.split('\n\n');
+                const html = paragraphs.map(p => {
+                    const lines = p.split('\n').join('<br>');
+                    return '<p style="margin: 0 0 1em 0;">' + lines + '</p>';
+                }).join('');
+                lyricsBox.innerHTML = html;
+            } else {
+                lyricsBox.textContent = 'Paroles non disponibles';
+            }
+        } else {
+            lyricsBox.textContent = 'Paroles non disponibles pour ce chapitre';
+        }
 
         // Afficher l'overlay
         document.getElementById('playerOverlay').classList.add('active');
