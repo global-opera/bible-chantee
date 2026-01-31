@@ -553,21 +553,28 @@
             card.className = 'confession-card';
             const ref = CONFESSION_REFS[i];
 
+            console.log(`[DEBUG BEFORE] i=${i}, ref=`, ref, `CONFESSION_REFS[${i}]=`, CONFESSION_REFS[i]);
+            console.log(`[DEBUG BEFORE] ref.book="${ref ? ref.book : 'REF IS NULL'}", ref.chapter="${ref ? ref.chapter : 'REF IS NULL'}"`);
+
             // Ensure lang is valid, fallback to currentLang or FR
             const safeLang = lang || currentLang || 'FR';
 
             // Build URL with proper encoding
-            const targetUrl = `/lecteur.html?book=${ref.book}&chapter=${ref.chapter}&lang=${safeLang}`;
+            const bookNum = ref ? ref.book : '01';
+            const chapterNum = ref ? ref.chapter : '1';
+            const targetUrl = `/lecteur.html?book=${bookNum}&chapter=${chapterNum}&lang=${safeLang}`;
 
-            console.log(`[DEBUG] Confession ${i}: targetUrl="${targetUrl}", ref=`, ref, `lang=${safeLang}`);
+            console.log(`[DEBUG AFTER] targetUrl="${targetUrl}"`);
 
             // Click handler for card - navigate to chapter
             card.onclick = function(e) {
+                console.log('[DEBUG CLICK] onclick triggered! e.target=', e.target, 'targetUrl=', targetUrl);
                 // Check if click was on the star
                 if (e.target.classList.contains('favorite-star')) {
+                    console.log('[DEBUG CLICK] Click was on star, ignoring');
                     return; // Let star handle its own click
                 }
-                console.log('[DEBUG] Navigating to:', targetUrl);
+                console.log('[DEBUG CLICK] Navigating to:', targetUrl);
                 window.location.href = targetUrl;
             };
 
