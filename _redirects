@@ -8,9 +8,9 @@
 /promesses       /promesses.html 301
 /promesses/      /promesses.html 301
 
-# Lecteur
-/lecteur         /lecteur.html 301
-/lecteur/        /lecteur.html 301
+# Lecteur - REMOVED: possible query param stripping
+# /lecteur         /lecteur.html 301
+# /lecteur/        /lecteur.html 301
 
 # Confessions
 /confessions     /confessions.html 301
