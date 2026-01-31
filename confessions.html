@@ -573,13 +573,18 @@
 
                 // Click handler with values properly captured
                 card.addEventListener('click', function(e) {
+                    // Stop event from bubbling to parent elements
+                    e.preventDefault();
+                    e.stopPropagation();
+
                     // Check if click was on the star
                     if (e.target.classList.contains('favorite-star')) {
                         return; // Let star handle its own click
                     }
+
                     console.log(`[CLICK] Navigating to: ${targetUrl}`);
                     window.location.href = targetUrl;
-                });
+                }, true); // Use capture phase
 
                 const star = document.createElement('span');
                 star.className = 'favorite-star' + (isFavorite(lang, index) ? ' favorited' : '');
