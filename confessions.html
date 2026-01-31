@@ -672,13 +672,29 @@
         }
 
         const chapterNum = ref.chapter.padStart(2, '0');
+        const langUpper = lang.toUpperCase();
 
-        // Construire l'URL audio correcte
-        const audioUrl = `https://pub-3cd733a582d34728bf0a52b1029a1397.r2.dev/${lang}/${bookCode}/${bookCode}_${chapterNum}_${lang}.mp3`;
+        // Construire l'URL audio correcte (même format que lecteur.html)
+        const baseUrl = `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${langUpper}/${bookCode}/${bookCode}_${chapterNum}_${langUpper}`;
+        const audioUrl = `${baseUrl}.mp3`;
+        const audioFallback = `${baseUrl}_v1.mp3`;
 
-        console.log('[PLAYER] Loading:', { bookCode, chapterNum, audioUrl });
+        console.log('[PLAYER] Loading:', { bookCode, chapterNum, audioUrl, fallback: audioFallback });
 
         const audio = document.getElementById('confessionAudio');
+
+        // Gestion fallback pour _v1
+        let triedFallback = false;
+        audio.onerror = function() {
+            if (!triedFallback) {
+                console.log('[PLAYER] Primary failed, trying fallback:', audioFallback);
+                triedFallback = true;
+                audio.src = audioFallback;
+            } else {
+                console.error('[PLAYER] Both URLs failed');
+            }
+        };
+
         audio.src = audioUrl;
 
         // Charger les paroles depuis lyrics-data
