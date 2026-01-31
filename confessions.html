@@ -660,27 +660,47 @@
         // Afficher le titre
         document.getElementById('playerTitle').textContent = confession[0];
 
-        // Construire l'URL audio
+        // Trouver le code du livre (ex: 43 → 43_JOH)
         const bookNum = ref.book.padStart(2, '0');
+        let bookCode = bookNum + '_XXX'; // fallback
+
+        if (window.BOOKS) {
+            const bookData = window.BOOKS.find(b => b.num === bookNum);
+            if (bookData) {
+                bookCode = bookData.code;
+            }
+        }
+
         const chapterNum = ref.chapter.padStart(2, '0');
-        const audioUrl = `https://pub-3cd733a582d34728bf0a52b1029a1397.r2.dev/${lang}/${bookNum}_*//${bookNum}_*_${chapterNum}_${lang}.mp3`;
 
-        console.log('[PLAYER] Loading audio:', audioUrl);
-        document.getElementById('confessionAudio').src = audioUrl;
+        // Construire l'URL audio correcte
+        const audioUrl = `https://pub-3cd733a582d34728bf0a52b1029a1397.r2.dev/${lang}/${bookCode}/${bookCode}_${chapterNum}_${lang}.mp3`;
 
-        // Charger les paroles
+        console.log('[PLAYER] Loading:', { bookCode, chapterNum, audioUrl });
+
+        const audio = document.getElementById('confessionAudio');
+        audio.src = audioUrl;
+
+        // Charger les paroles depuis lyrics-data
         const lyricsBox = document.getElementById('lyricsBox');
         lyricsBox.textContent = 'Chargement des paroles...';
 
-        // TODO: Charger les vraies paroles depuis lyrics-data-fr.js
-        // Pour l'instant, afficher une indication
-        lyricsBox.textContent = `${confession[0]}\n\n${confession[1]}\n\nÉcoute du chapitre biblique...`;
+        // Chercher les paroles dans window.lyricsDataFR ou lyricsDataEN, etc.
+        const lyricsVarName = 'lyricsData' + lang.toUpperCase();
+        const lyricsData = window[lyricsVarName];
+
+        if (lyricsData && lyricsData[bookCode] && lyricsData[bookCode][ref.chapter]) {
+            const lyrics = lyricsData[bookCode][ref.chapter];
+            lyricsBox.textContent = lyrics;
+        } else {
+            lyricsBox.textContent = `${confession[0]}\n\n${confession[1]}\n\n[Paroles non disponibles pour ce chapitre]`;
+        }
 
         // Afficher l'overlay
         document.getElementById('playerOverlay').classList.add('active');
 
         // Tenter de lire l'audio
-        document.getElementById('confessionAudio').play().catch(function(err) {
+        audio.play().catch(function(err) {
             console.error('[PLAYER] Audio play error:', err);
         });
     }
@@ -702,6 +722,13 @@
     });
     </script>
 
+  <script src="/js/books.js"></script>
+  <script src="/lyrics-data-fr.js"></script>
+  <script src="/lyrics-data-en.js"></script>
+  <script src="/lyrics-data-pt.js"></script>
+  <script src="/lyrics-data-es.js"></script>
+  <script src="/lyrics-data-de.js"></script>
+  <script src="/lyrics-data-it.js"></script>
   <script src="/translations.js"></script>
   <script src="/translations-extra.js"></script>
   <script src="/i18n.js"></script>
