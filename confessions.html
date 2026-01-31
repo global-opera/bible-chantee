@@ -549,55 +549,59 @@
                 return;
             }
 
-            const card = document.createElement('div');
-            card.className = 'confession-card';
-            const ref = CONFESSION_REFS[i];
+            // Create card using IIFE to capture values properly
+            (function(index, itemData) {
+                const card = document.createElement('div');
+                card.className = 'confession-card';
+                card.style.cursor = 'pointer'; // Ensure cursor shows it's clickable
 
-            console.log(`[DEBUG BEFORE] i=${i}, ref=`, ref, `CONFESSION_REFS[${i}]=`, CONFESSION_REFS[i]);
-            console.log(`[DEBUG BEFORE] ref.book="${ref ? ref.book : 'REF IS NULL'}", ref.chapter="${ref ? ref.chapter : 'REF IS NULL'}"`);
-
-            // Ensure lang is valid, fallback to currentLang or FR
-            const safeLang = lang || currentLang || 'FR';
-
-            // Build URL with proper encoding
-            const bookNum = ref ? ref.book : '01';
-            const chapterNum = ref ? ref.chapter : '1';
-            const targetUrl = `/lecteur.html?book=${bookNum}&chapter=${chapterNum}&lang=${safeLang}`;
-
-            console.log(`[DEBUG AFTER] targetUrl="${targetUrl}"`);
-
-            // Click handler for card - navigate to chapter
-            card.onclick = function(e) {
-                console.log('[DEBUG CLICK] onclick triggered! e.target=', e.target, 'targetUrl=', targetUrl);
-                // Check if click was on the star
-                if (e.target.classList.contains('favorite-star')) {
-                    console.log('[DEBUG CLICK] Click was on star, ignoring');
-                    return; // Let star handle its own click
+                const ref = CONFESSION_REFS[index];
+                if (!ref) {
+                    console.error(`[ERROR] No ref found for index ${index}`);
+                    return;
                 }
-                console.log('[DEBUG CLICK] Navigating to:', targetUrl);
-                window.location.href = targetUrl;
-            };
 
-            const star = document.createElement('span');
-            star.className = 'favorite-star' + (isFavorite(lang, i) ? ' favorited' : '');
-            star.textContent = isFavorite(lang, i) ? '★' : '☆';
-            star.onclick = (e) => {
-                e.stopPropagation();
-                toggleFavorite(lang, i, e);
-            };
+                // Ensure lang is valid, fallback to currentLang or FR
+                const safeLang = lang || currentLang || 'FR';
 
-            const icon = document.createElement('div');
-            icon.className = 'confession-icon';
-            icon.textContent = ICONS[i];
+                // Build URL - captured in this closure
+                const bookNum = ref.book;
+                const chapterNum = ref.chapter;
+                const targetUrl = `lecteur.html?book=${bookNum}&chapter=${chapterNum}&lang=${safeLang}`;
 
-            const title = document.createElement('div');
-            title.className = 'confession-title';
-            title.textContent = item[0];
+                console.log(`[DEBUG] Confession ${index}: book=${bookNum}, chapter=${chapterNum}, lang=${safeLang}, URL="${targetUrl}"`);
 
-            card.appendChild(star);
-            card.appendChild(icon);
-            card.appendChild(title);
-            grid.appendChild(card);
+                // Click handler with values properly captured
+                card.addEventListener('click', function(e) {
+                    // Check if click was on the star
+                    if (e.target.classList.contains('favorite-star')) {
+                        return; // Let star handle its own click
+                    }
+                    console.log(`[CLICK] Navigating to: ${targetUrl}`);
+                    window.location.href = targetUrl;
+                });
+
+                const star = document.createElement('span');
+                star.className = 'favorite-star' + (isFavorite(lang, index) ? ' favorited' : '');
+                star.textContent = isFavorite(lang, index) ? '★' : '☆';
+                star.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    toggleFavorite(lang, index, e);
+                });
+
+                const icon = document.createElement('div');
+                icon.className = 'confession-icon';
+                icon.textContent = ICONS[index];
+
+                const title = document.createElement('div');
+                title.className = 'confession-title';
+                title.textContent = itemData[0];
+
+                card.appendChild(star);
+                card.appendChild(icon);
+                card.appendChild(title);
+                grid.appendChild(card);
+            })(i, item);
         });
     }
 
