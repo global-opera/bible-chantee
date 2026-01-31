@@ -127,7 +127,57 @@
             font-weight: normal;
             line-height: 1.2;
         }
-        
+
+
+        /* Player Overlay (copié de prieres.html) */
+        .player-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        .player-overlay.active { display: block; }
+        .player-container { max-width: 500px; margin: 20px auto; padding: 20px; }
+        .close-btn {
+            display: block;
+            text-align: right;
+            color: #f5c842;
+            font-size: 30px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            user-select: none;
+        }
+        .player-title {
+            color: #f5c842;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .player-box {
+            background: rgba(30, 58, 95, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+        }
+        .player-box audio {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .lyrics-box {
+            background: #162B46;
+            border-radius: 10px;
+            padding: 15px;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
         @media (max-width: 480px) {
             h1 { font-size: 1.8rem; }
         }
@@ -150,12 +200,17 @@
 
         <div class="confessions-grid" id="confessionsGrid"></div>
         <div class="empty-state" id="emptyState" style="display:none;"></div>
+    </div>
 
-        <!-- TEST LINK -->
-        <div style="text-align: center; margin-top: 20px;">
-            <a href="./lecteur.html?book=43&chapter=1&lang=FR" style="color: yellow; padding: 10px; border: 2px solid yellow; display: inline-block;">
-                TEST DIRECT: Jean 1 (cliquez ici)
-            </a>
+    <!-- Player Overlay -->
+    <div class="player-overlay" id="playerOverlay">
+        <div class="player-container">
+            <span class="close-btn" onclick="closePlayer()">✕</span>
+            <h2 class="player-title" id="playerTitle">Confession</h2>
+            <div class="player-box">
+                <audio id="confessionAudio" controls></audio>
+                <div class="lyrics-box" id="lyricsBox">Chargement...</div>
+            </div>
         </div>
     </div>
 
@@ -561,30 +616,14 @@
                     return;
                 }
 
-                // Ensure lang is valid, fallback to currentLang or FR
-                const safeLang = lang || currentLang || 'FR';
-
-                // Build URL - captured in this closure
-                const bookNum = ref.book;
-                const chapterNum = ref.chapter;
-                const targetUrl = `lecteur.html?book=${bookNum}&chapter=${chapterNum}&lang=${safeLang}`;
-
-                console.log(`[DEBUG] Confession ${index}: book=${bookNum}, chapter=${chapterNum}, lang=${safeLang}, URL="${targetUrl}"`);
-
-                // Click handler with values properly captured
+                // Click handler - ouvre overlay player (comme prières)
                 card.addEventListener('click', function(e) {
-                    // Stop event from bubbling to parent elements
-                    e.preventDefault();
-                    e.stopPropagation();
-
-                    // Check if click was on the star
+                    // Don't open player if clicking on star
                     if (e.target.classList.contains('favorite-star')) {
-                        return; // Let star handle its own click
+                        return;
                     }
-
-                    console.log(`[CLICK] Navigating to: ${targetUrl}`);
-                    window.location.href = targetUrl;
-                }, true); // Use capture phase
+                    openPlayer(index, lang);
+                });
 
                 const star = document.createElement('span');
                 star.className = 'favorite-star' + (isFavorite(lang, index) ? ' favorited' : '');
@@ -608,6 +647,53 @@
                 grid.appendChild(card);
             })(i, item);
         });
+    }
+
+    // Ouvrir le player overlay (comme prières)
+    function openPlayer(index, lang) {
+        const ref = CONFESSION_REFS[index];
+        if (!ref) return;
+
+        const d = DATA[lang] || DATA.FR;
+        const confession = d.items[index];
+
+        // Afficher le titre
+        document.getElementById('playerTitle').textContent = confession[0];
+
+        // Construire l'URL audio
+        const bookNum = ref.book.padStart(2, '0');
+        const chapterNum = ref.chapter.padStart(2, '0');
+        const audioUrl = `https://pub-3cd733a582d34728bf0a52b1029a1397.r2.dev/${lang}/${bookNum}_*//${bookNum}_*_${chapterNum}_${lang}.mp3`;
+
+        console.log('[PLAYER] Loading audio:', audioUrl);
+        document.getElementById('confessionAudio').src = audioUrl;
+
+        // Charger les paroles
+        const lyricsBox = document.getElementById('lyricsBox');
+        lyricsBox.textContent = 'Chargement des paroles...';
+
+        // TODO: Charger les vraies paroles depuis lyrics-data-fr.js
+        // Pour l'instant, afficher une indication
+        lyricsBox.textContent = `${confession[0]}\n\n${confession[1]}\n\nÉcoute du chapitre biblique...`;
+
+        // Afficher l'overlay
+        document.getElementById('playerOverlay').classList.add('active');
+
+        // Tenter de lire l'audio
+        document.getElementById('confessionAudio').play().catch(function(err) {
+            console.error('[PLAYER] Audio play error:', err);
+        });
+    }
+
+    // Fermer le player
+    function closePlayer() {
+        const overlay = document.getElementById('playerOverlay');
+        overlay.classList.remove('active');
+
+        // Arrêter l'audio
+        const audio = document.getElementById('confessionAudio');
+        audio.pause();
+        audio.src = '';
     }
 
     document.addEventListener('DOMContentLoaded', function() {
