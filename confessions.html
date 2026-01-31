@@ -660,40 +660,49 @@
         const langUpper = lang.toUpperCase();
         const confNum = String(index + 1).padStart(2, '0'); // 0 → "01", 1 → "02", etc.
 
-        // Audio depuis archive.org (confessions spécifiques, pas chapitres bibliques!)
-        const audioVarName = `audioUrlsConfessions${langUpper}`;
-        const audioUrls = window[audioVarName];
+        // Audio depuis archive.org (confessions spécifiques)
+        // Langues disponibles: FR, PT. Fallback vers FR si non disponible
+        let audioVarName = `audioUrlsConfessions${langUpper}`;
+        let audioUrls = window[audioVarName];
+        let audioLang = langUpper;
 
-        let audioUrl = null;
-        if (audioUrls && audioUrls[confNum]) {
-            audioUrl = audioUrls[confNum];
+        // Fallback vers FR si langue audio pas disponible
+        if (!audioUrls || !audioUrls[confNum]) {
+            console.log('[PLAYER] Audio not available for', langUpper, ', falling back to FR');
+            audioVarName = 'audioUrlsConfessionsFR';
+            audioUrls = window[audioVarName];
+            audioLang = 'FR';
         }
 
-        console.log('[PLAYER] Loading confession:', { index, confNum, lang, audioUrl });
+        let audioUrl = audioUrls && audioUrls[confNum] ? audioUrls[confNum] : null;
+
+        console.log('[PLAYER] Loading confession:', { index, confNum, lang: langUpper, audioLang, audioUrl });
 
         const audio = document.getElementById('confessionAudio');
 
         if (audioUrl) {
             audio.src = audioUrl;
         } else {
-            console.error('[PLAYER] No audio URL for confession', confNum, lang);
+            console.error('[PLAYER] No audio URL for confession', confNum);
         }
 
         // Charger paroles depuis lyrics/confessions/{LANG}/
         const lyricsBox = document.getElementById('lyricsBox');
         lyricsBox.textContent = 'Chargement des paroles...';
 
-        // Les fichiers sont nommés: 01_Joie.txt, 02_Gueri.txt, etc.
-        // Mais on ne connait pas le nom exact, on doit utiliser le numéro
-        // Pour l'instant, afficher message en attendant mapping
         const lyricsFileName = getLyricsFileName(confNum, langUpper);
         const lyricsUrl = `/lyrics/confessions/${langUpper}/${lyricsFileName}`;
 
+        // Essayer langue demandée, sinon fallback FR
         fetch(lyricsUrl)
-            .then(r => r.ok ? r.text() : Promise.reject('Not found'))
+            .then(r => {
+                if (r.ok) return r.text();
+                // Fallback vers FR si langue pas disponible
+                console.log('[PLAYER] Lyrics not found for', langUpper, ', trying FR');
+                return fetch(`/lyrics/confessions/FR/${getLyricsFileName(confNum, 'FR')}`).then(r2 => r2.text());
+            })
             .then(lyrics => {
                 if (lyrics && lyrics.trim()) {
-                    // Formater avec paragraphes
                     const html = lyrics.split('\n\n').map(p => {
                         return '<p style="margin: 0 0 1em 0;">' + p.split('\n').join('<br>') + '</p>';
                     }).join('');
