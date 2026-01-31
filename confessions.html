@@ -150,6 +150,13 @@
 
         <div class="confessions-grid" id="confessionsGrid"></div>
         <div class="empty-state" id="emptyState" style="display:none;"></div>
+
+        <!-- TEST LINK -->
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="./lecteur.html?book=43&chapter=1&lang=FR" style="color: yellow; padding: 10px; border: 2px solid yellow; display: inline-block;">
+                TEST DIRECT: Jean 1 (cliquez ici)
+            </a>
+        </div>
     </div>
 
     <script>
@@ -542,7 +549,7 @@
                 return;
             }
 
-            const card = document.createElement('a');
+            const card = document.createElement('div');
             card.className = 'confession-card';
             const ref = CONFESSION_REFS[i];
 
@@ -550,19 +557,26 @@
             const safeLang = lang || currentLang || 'FR';
 
             // Build URL with proper encoding
-            const targetUrl = `./lecteur.html?book=${ref.book}&chapter=${ref.chapter}&lang=${safeLang}`;
-            card.setAttribute('href', targetUrl);
+            const targetUrl = `/lecteur.html?book=${ref.book}&chapter=${ref.chapter}&lang=${safeLang}`;
 
-            console.log(`[DEBUG] Confession ${i}: href="${targetUrl}", ref=`, ref, `lang=${safeLang}`);
+            console.log(`[DEBUG] Confession ${i}: targetUrl="${targetUrl}", ref=`, ref, `lang=${safeLang}`);
+
+            // Click handler for card - navigate to chapter
+            card.onclick = function(e) {
+                // Check if click was on the star
+                if (e.target.classList.contains('favorite-star')) {
+                    return; // Let star handle its own click
+                }
+                console.log('[DEBUG] Navigating to:', targetUrl);
+                window.location.href = targetUrl;
+            };
 
             const star = document.createElement('span');
             star.className = 'favorite-star' + (isFavorite(lang, i) ? ' favorited' : '');
             star.textContent = isFavorite(lang, i) ? '★' : '☆';
             star.onclick = (e) => {
-                e.preventDefault();
                 e.stopPropagation();
                 toggleFavorite(lang, i, e);
-                return false;
             };
 
             const icon = document.createElement('div');
