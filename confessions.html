@@ -727,14 +727,49 @@
         }
     }
 
-    // Mapping numéro confession → nom fichier lyrics
+    // Mapping numéro confession → nom fichier lyrics (par langue)
     function getLyricsFileName(confNum, lang) {
-        const mapping = {
-            '01': 'Joie', '02': 'Gueri', '03': 'Sante', '04': 'Vainqueur',
-            '05': 'Prospere', '06': 'Reconnaissant', '07': 'Heureux',
-            '08': 'Beni', '09': 'Amen', '10': 'Shalom'
+        const mappings = {
+            FR: { '01': 'Joie', '02': 'Gueri', '03': 'Sante', '04': 'Vainqueur',
+                  '05': 'Prospere', '06': 'Reconnaissant', '07': 'Heureux',
+                  '08': 'Beni', '09': 'Amen', '10': 'Shalom' },
+            EN: { '01': 'Joy', '02': 'Healed', '03': 'Health', '04': 'Conqueror',
+                  '05': 'Prosper', '06': 'Grateful', '07': 'Happy',
+                  '08': 'Blessed', '09': 'Amen', '10': 'Shalom' },
+            ES: { '01': 'Alegria', '02': 'Sanado', '03': 'Salud', '04': 'Vencedor',
+                  '05': 'Prospero', '06': 'Agradecido', '07': 'Feliz',
+                  '08': 'Bendecido', '09': 'Amen', '10': 'Shalom' },
+            PT: { '01': 'Alegria', '02': 'Curado', '03': 'Saude', '04': 'Vencedor',
+                  '05': 'Prospero', '06': 'Grato', '07': 'Feliz',
+                  '08': 'Abencoado', '09': 'Amem', '10': 'Shalom' },
+            DE: { '01': 'Freude', '02': 'Geheilt', '03': 'Gesundheit', '04': 'Ueberwinder',
+                  '05': 'Wohlstand', '06': 'Dankbar', '07': 'Gluecklich',
+                  '08': 'Gesegnet', '09': 'Amen', '10': 'Shalom' },
+            IT: { '01': 'Gioia', '02': 'Guarito', '03': 'Salute', '04': 'Vincitore',
+                  '05': 'Prospero', '06': 'Grato', '07': 'Felice',
+                  '08': 'Benedetto', '09': 'Amen', '10': 'Shalom' },
+            AR: { '01': 'Farah', '02': 'Shifa', '03': 'Siha', '04': 'Ghalib',
+                  '05': 'Najah', '06': 'Shukr', '07': 'Saada',
+                  '08': 'Baraka', '09': 'Amin', '10': 'Salam' },
+            HI: { '01': 'Anand', '02': 'Changa', '03': 'Swasthya', '04': 'Vijayi',
+                  '05': 'Samriddhi', '06': 'Dhanyavad', '07': 'Khushi',
+                  '08': 'Ashirwad', '09': 'Amen', '10': 'Shalom' },
+            RU: { '01': 'Radost', '02': 'Istselenie', '03': 'Zdorovie', '04': 'Pobeditel',
+                  '05': 'Protsvetanie', '06': 'Blagodarnost', '07': 'Schastie',
+                  '08': 'Blagoslovenie', '09': 'Amin', '10': 'Shalom' },
+            SW: { '01': 'Furaha', '02': 'Uponyaji', '03': 'Afya', '04': 'Mshindi',
+                  '05': 'Ustawi', '06': 'Shukrani', '07': 'Furaha',
+                  '08': 'Baraka', '09': 'Amina', '10': 'Shalom' },
+            TL: { '01': 'Kagalakan', '02': 'Kagalingan', '03': 'Kalusugan', '04': 'Tagumpay',
+                  '05': 'Kasaganaan', '06': 'Pasasalamat', '07': 'Kaligayahan',
+                  '08': 'Pagpapala', '09': 'Amen', '10': 'Shalom' },
+            ZH: { '01': 'Xile', '02': 'Yizhi', '03': 'Jiankang', '04': 'Deshenglizhe',
+                  '05': 'Chansheng', '06': 'Ganen', '07': 'Xingfu',
+                  '08': 'Zhufu', '09': 'Amen', '10': 'Shalom' }
         };
-        const name = mapping[confNum] || 'Unknown';
+
+        const langMapping = mappings[lang] || mappings.FR; // fallback to FR if lang not found
+        const name = langMapping[confNum] || 'Unknown';
         return `${confNum}_${name}.txt`;
     }
 
