@@ -2134,7 +2134,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
         // Formater le texte
         let html = '';
         verses.forEach(v => {
-          html += `<sup style="color: #F5CB42; font-weight: bold;">${v.verse}</sup> ${v.text}\n\n`;
+          html += `<sup style="color: #F5CB42; font-weight: bold;">${v.verse}</sup> ${v.text.replace(/¶/g, '')}\n\n`;
         });
 
         bibleContent.innerHTML = html;
