@@ -378,5 +378,70 @@ const SemanticEngine = {
 
         const names = BOOK_NAMES[bookCode];
         return names ? (names[lang] || names['FR']) : bookCode;
+    },
+
+    /**
+     * Enrichir SEMANTIC_MAP avec le dictionnaire complet
+     */
+    enrichSemanticMap: function() {
+        if (!window.SemanticDictionary) {
+            console.warn('[Semantic] Dictionary not loaded yet');
+            return;
+        }
+
+        // Enrichir avec les 12 familles
+        Object.keys(SemanticDictionary).forEach(familyKey => {
+            if (familyKey === 'themes_modernes') return; // Traité séparément
+
+            const family = SemanticDictionary[familyKey];
+            const chapters = family.chapters || [];
+
+            // Pour chaque langue
+            ['FR', 'EN', 'PT', 'ES', 'DE', 'IT', 'TL'].forEach(lang => {
+                const keywords = family[lang] || [];
+
+                keywords.forEach(keyword => {
+                    const key = keyword.toLowerCase().trim();
+                    if (!this.SEMANTIC_MAP[key]) {
+                        this.SEMANTIC_MAP[key] = {
+                            families: [familyKey],
+                            chapters: chapters
+                        };
+                    }
+                });
+            });
+        });
+
+        // Enrichir avec les thèmes modernes
+        if (SemanticDictionary.themes_modernes) {
+            Object.keys(SemanticDictionary.themes_modernes).forEach(themeKey => {
+                const theme = SemanticDictionary.themes_modernes[themeKey];
+
+                ['FR', 'EN', 'PT', 'ES', 'DE', 'IT', 'TL'].forEach(lang => {
+                    const keywords = theme[lang] || [];
+
+                    keywords.forEach(keyword => {
+                        const key = keyword.toLowerCase().trim();
+                        if (!this.SEMANTIC_MAP[key]) {
+                            this.SEMANTIC_MAP[key] = {
+                                families: theme.families || [],
+                                chapters: theme.chapters || []
+                            };
+                        }
+                    });
+                });
+            });
+        }
+
+        console.log('[Semantic] Dictionary loaded:', Object.keys(this.SEMANTIC_MAP).length, 'keywords');
     }
 };
+
+// Auto-enrichissement au chargement
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => SemanticEngine.enrichSemanticMap(), 100);
+    });
+} else {
+    setTimeout(() => SemanticEngine.enrichSemanticMap(), 100);
+}
