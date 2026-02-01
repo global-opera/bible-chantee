@@ -2052,11 +2052,11 @@ const audioPlayer = document.querySelector('#audioPlayer');
           return;
         }
 
-        // Formatage par défaut (paragraphes)
+        // Formatage avec sections séparées
         const paragraphs = lyrics.split('\n\n');
         const html = paragraphs.map(p => {
           const lines = p.split('\n').join('<br>');
-          return '<p style="margin: 0 0 1em 0;">' + lines + '</p>';
+          return '<p style="margin: 0 0 1.5em 0; padding-bottom: 1em; border-bottom: 1px solid rgba(245,203,66,0.2);">' + lines + '</p>';
         }).join('');
 
         lyricsContent.innerHTML = html;
