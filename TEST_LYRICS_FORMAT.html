@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test: Format Paroles avec Structure</title>
+    <link rel="stylesheet" href="css/lyrics-style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+        .test-header {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .test-controls {
+            margin: 20px 0;
+        }
+        .test-controls select {
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .test-display {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            min-height: 400px;
+        }
+        .success { color: green; font-weight: bold; }
+        .error { color: red; font-weight: bold; }
+        h1 { color: #333; margin: 0 0 10px 0; }
+        .stats { color: #666; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="test-header">
+        <h1>🎵 Test: Format Paroles avec Structure</h1>
+        <p class="stats">Source: lyrics-data-prompts.js (prompts Suno avec tags [Verse]/[Chorus])</p>
+
+        <div class="test-controls">
+            <label for="chapterSelect">Choisir un chapitre:</label>
+            <select id="chapterSelect">
+                <option value="01:1">Genèse 1</option>
+                <option value="01:2">Genèse 2</option>
+                <option value="01:3">Genèse 3</option>
+                <option value="01:9">Genèse 9</option>
+                <option value="19:23">Psaume 23</option>
+                <option value="19:46">Psaume 46</option>
+                <option value="19:91">Psaume 91</option>
+                <option value="40:11">Matthieu 11</option>
+                <option value="43:3">Jean 3</option>
+                <option value="43:14">Jean 14</option>
+            </select>
+        </div>
+
+        <div id="status"></div>
+    </div>
+
+    <div class="test-display" id="lyricsDisplay">
+        <p style="color: #999; text-align: center;">Sélectionnez un chapitre ci-dessus</p>
+    </div>
+
+    <script src="js/lyrics-data-prompts.js"></script>
+    <script src="js/lyrics-formatter.js"></script>
+    <script>
+        // Test au chargement
+        window.addEventListener('DOMContentLoaded', () => {
+            const statusDiv = document.getElementById('status');
+            const chapterSelect = document.getElementById('chapterSelect');
+            const lyricsDisplay = document.getElementById('lyricsDisplay');
+
+            // Vérifier que les scripts sont chargés
+            if (typeof window.chapterLyricsPrompts !== 'undefined') {
+                const bookCount = Object.keys(window.chapterLyricsPrompts).length;
+                const chapterCount = Object.values(window.chapterLyricsPrompts)
+                    .reduce((sum, book) => sum + Object.keys(book).length, 0);
+
+                statusDiv.innerHTML = `
+                    <p class="success">✓ chapterLyricsPrompts chargé</p>
+                    <p class="stats">${bookCount} livres, ${chapterCount} chapitres</p>
+                `;
+            } else {
+                statusDiv.innerHTML = '<p class="error">✗ chapterLyricsPrompts non chargé</p>';
+            }
+
+            if (typeof window.LyricsFormatter !== 'undefined') {
+                statusDiv.innerHTML += '<p class="success">✓ LyricsFormatter chargé</p>';
+            } else {
+                statusDiv.innerHTML += '<p class="error">✗ LyricsFormatter non chargé</p>';
+            }
+
+            // Gestionnaire de changement de chapitre
+            chapterSelect.addEventListener('change', (e) => {
+                const [book, chapter] = e.target.value.split(':');
+                displayLyrics(book, parseInt(chapter));
+            });
+
+            // Fonction d'affichage
+            function displayLyrics(book, chapter) {
+                console.log(`[TEST] Affichage ${book}:${chapter}`);
+
+                if (!window.chapterLyricsPrompts[book] || !window.chapterLyricsPrompts[book][chapter]) {
+                    lyricsDisplay.innerHTML = '<p class="lyrics-empty">Paroles non trouvées</p>';
+                    return;
+                }
+
+                const rawLyrics = window.chapterLyricsPrompts[book][chapter];
+                console.log('[TEST] Paroles brutes:', rawLyrics.substring(0, 200) + '...');
+
+                // Formatter avec LyricsFormatter
+                const formattedHtml = LyricsFormatter.format(rawLyrics);
+                console.log('[TEST] HTML formaté:', formattedHtml.substring(0, 200) + '...');
+
+                // Afficher
+                lyricsDisplay.innerHTML = formattedHtml;
+
+                // Stats
+                const tagCount = (rawLyrics.match(/\[/g) || []).length;
+                console.log(`[TEST] ${tagCount} tags structurels trouvés`);
+            }
+
+            // Afficher Genèse 1 par défaut
+            displayLyrics('01', 1);
+        });
+    </script>
+</body>
+</html>

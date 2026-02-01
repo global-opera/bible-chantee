@@ -1,0 +1,197 @@
+/**
+ * Styles pour les paroles avec structure [Verse]/[Chorus]
+ * Format élégant et lisible
+ */
+
+/* Conteneur principal */
+.lyrics-container {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Section de paroles (Verse, Chorus, etc.) */
+.lyrics-section {
+    margin-bottom: 2rem;
+    padding: 0.5rem 0;
+}
+
+/* Tag de section (Couplet 1, Refrain, etc.) */
+.lyrics-tag {
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #888;
+    margin-bottom: 0.8rem;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Paragraphe de paroles */
+.lyrics-paragraph {
+    margin: 0 0 1rem 0;
+    text-align: left;
+}
+
+/* Styles spécifiques par type de section */
+
+/* Couplet (Verse) */
+.lyrics-verse {
+    padding-left: 0;
+}
+
+.lyrics-verse .lyrics-tag {
+    color: #666;
+}
+
+/* Pré-refrain (Pre-Chorus) */
+.lyrics-pre-chorus {
+    padding-left: 1rem;
+    border-left: 3px solid #ddd;
+}
+
+.lyrics-pre-chorus .lyrics-tag {
+    color: #999;
+}
+
+/* Refrain (Chorus) */
+.lyrics-chorus,
+.lyrics-final-chorus {
+    padding: 1rem;
+    background: linear-gradient(135deg, rgba(245, 203, 66, 0.08) 0%, rgba(245, 203, 66, 0.15) 100%);
+    border-left: 4px solid #F5CB42;
+    border-radius: 4px;
+    font-style: italic;
+    margin-bottom: 2.5rem;
+}
+
+.lyrics-chorus .lyrics-tag,
+.lyrics-final-chorus .lyrics-tag {
+    color: #F5CB42;
+    font-weight: 700;
+}
+
+.lyrics-chorus .lyrics-paragraph,
+.lyrics-final-chorus .lyrics-paragraph {
+    color: #444;
+}
+
+/* Pont (Bridge) */
+.lyrics-bridge {
+    padding-left: 1.5rem;
+    border-left: 3px solid #aaa;
+    font-style: italic;
+}
+
+.lyrics-bridge .lyrics-tag {
+    color: #777;
+}
+
+/* Outro/Final */
+.lyrics-outro {
+    padding-left: 1rem;
+    opacity: 0.9;
+}
+
+.lyrics-outro .lyrics-tag {
+    color: #888;
+}
+
+/* Introduction */
+.lyrics-intro {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.lyrics-intro .lyrics-tag {
+    color: #999;
+}
+
+/* Message paroles vides */
+.lyrics-empty {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    padding: 2rem;
+}
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark) {
+    .lyrics-container {
+        color: #ddd;
+    }
+
+    .lyrics-tag {
+        color: #aaa;
+    }
+
+    .lyrics-verse .lyrics-tag {
+        color: #bbb;
+    }
+
+    .lyrics-chorus,
+    .lyrics-final-chorus {
+        background: linear-gradient(135deg, rgba(245, 203, 66, 0.12) 0%, rgba(245, 203, 66, 0.20) 100%);
+        border-left-color: #F5CB42;
+    }
+
+    .lyrics-chorus .lyrics-tag,
+    .lyrics-final-chorus .lyrics-tag {
+        color: #F5CB42;
+    }
+
+    .lyrics-chorus .lyrics-paragraph,
+    .lyrics-final-chorus .lyrics-paragraph {
+        color: #e0e0e0;
+    }
+
+    .lyrics-bridge {
+        border-left-color: #666;
+    }
+
+    .lyrics-empty {
+        color: #888;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .lyrics-container {
+        font-size: 0.95rem;
+        padding: 0.5rem;
+    }
+
+    .lyrics-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .lyrics-chorus,
+    .lyrics-final-chorus {
+        padding: 0.75rem;
+    }
+
+    .lyrics-pre-chorus,
+    .lyrics-bridge {
+        padding-left: 0.75rem;
+    }
+}
+
+/* Animation d'entrée */
+.lyrics-section {
+    animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

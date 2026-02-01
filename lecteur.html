@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bible Chantée - Lecteur Audio</title>
   <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="css/lyrics-style.css">
 
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TX3ETCKJQZ"></script>
@@ -2001,7 +2002,30 @@ const audioPlayer = document.querySelector('#audioPlayer');
         }
         const bookNumber = bookData.num; // "01", "02", etc.
 
-        // Obtenir les paroles depuis window.chapterLyrics{LANG} (uniforme pour toutes langues)
+        // === PRIORITÉ 1: PROMPTS SUNO STRUCTURÉS (FR uniquement) ===
+        if (lang === 'FR' && window.chapterLyricsPrompts && window.LyricsFormatter) {
+          const prompts = window.chapterLyricsPrompts;
+
+          if (prompts[bookNumber] && prompts[bookNumber][chapter]) {
+            const rawLyrics = prompts[bookNumber][chapter];
+
+            // Vérifier que c'est bien un prompt structuré
+            if (rawLyrics && rawLyrics.includes('[Verse')) {
+              console.log('[LYRICS] ✓ Using structured prompts (FR)');
+              console.log('[LYRICS] Raw lyrics length:', rawLyrics.length);
+              console.log('[LYRICS] Has [Verse tags:', rawLyrics.includes('[Verse'));
+
+              // Formatter avec LyricsFormatter (sans cleanLyrics!)
+              const formattedHtml = window.LyricsFormatter.format(rawLyrics);
+              lyricsContent.innerHTML = formattedHtml;
+              console.log('[LYRICS] ✓ Formatted with LyricsFormatter');
+              return; // EXIT - Ne pas continuer avec l'ancien système
+            }
+          }
+        }
+
+        // === FALLBACK: ANCIEN SYSTÈME (tous langues + FR si prompts indisponibles) ===
+        console.log('[LYRICS] Fallback to old system');
         const lyricsVarName = `chapterLyrics${lang}`;
         const lyricsDataSource = window[lyricsVarName];
         console.log('[LYRICS] Book:', bookNumber, 'Lang:', lang, 'Using:', lyricsVarName, 'exists:', !!lyricsDataSource);
@@ -2012,7 +2036,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
           return;
         }
 
-        // Extraire les paroles du chapitre (structure: lyricsDataSource["01"][1])
+        // Extraire les paroles du chapitre
         let lyrics = lyricsDataSource[bookNumber] && lyricsDataSource[bookNumber][chapter];
 
         if (!lyrics) {
@@ -2020,7 +2044,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
           return;
         }
 
-        // Nettoyer les paroles AVANT le formatage HTML
+        // Nettoyer les paroles (supprime les tags [Verse], etc.)
         lyrics = cleanLyrics(lyrics);
 
         if (!lyrics.trim()) {
@@ -2028,7 +2052,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
           return;
         }
 
-        // Convertir les sauts de ligne en HTML
+        // Formatage par défaut (paragraphes)
         const paragraphs = lyrics.split('\n\n');
         const html = paragraphs.map(p => {
           const lines = p.split('\n').join('<br>');
@@ -2036,10 +2060,10 @@ const audioPlayer = document.querySelector('#audioPlayer');
         }).join('');
 
         lyricsContent.innerHTML = html;
-        console.log('[Lyrics] Loaded successfully:', bookCode, chapter, lang);
+        console.log('[LYRICS] Loaded successfully (old format):', bookCode, chapter, lang);
 
       } catch (error) {
-        console.error('[Lyrics] Error:', error);
+        console.error('[LYRICS] Error:', error);
         lyricsContent.innerHTML = '<p style="color: #f88;">Erreur de chargement des paroles</p>';
       }
     }
@@ -3076,7 +3100,13 @@ const audioPlayer = document.querySelector('#audioPlayer');
   </script>
 
   <!-- SEMANTIC SEARCH ENGINE -->
+  <script src="js/semantic-dictionary.js"></script>
   <script src="js/semantic-engine.js"></script>
+
+  <!-- LYRICS FORMATTER (paroles structurées) -->
+  <script src="js/lyrics-data-prompts.js"></script>
+  <script src="js/lyrics-formatter.js"></script>
+
   <script>
     // Recherche sémantique
     const searchInput = document.getElementById('searchInput');
