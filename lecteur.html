@@ -2047,6 +2047,19 @@ const audioPlayer = document.querySelector('#audioPlayer');
         // Nettoyer les paroles (supprime les tags [Verse], etc.)
         lyrics = cleanLyrics(lyrics);
 
+        // Supprimer les répétitions du titre (première ligne)
+        const firstLine = lyrics.split('\n')[0].trim();
+        if (firstLine.length > 15) {
+          let found = false;
+          lyrics = lyrics.split('\n').filter(line => {
+            if (line.trim() === firstLine) {
+              if (!found) { found = true; return true; }
+              return false; // Supprimer les doublons
+            }
+            return true;
+          }).join('\n');
+        }
+
         if (!lyrics.trim()) {
           lyricsContent.innerHTML = '<p style="color: #999;">Paroles non disponibles pour ce chapitre</p>';
           return;
