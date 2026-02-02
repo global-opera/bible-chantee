@@ -1826,8 +1826,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
     function getAudioUrl(book, chapter, lang) {
       // Construire URL directement depuis Cloudflare R2
       // Format: https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/{LANG}/{BOOK}/{BOOK}_{CHAPTER}_{LANG}.mp3
-      // Exemple: .../FR/01_GEN/01_GEN_01_FR.mp3
-      const chapterPadded = String(chapter).padStart(2, '0');
+      // Exemple: .../FR/01_GEN/01_GEN_001_FR.mp3
+      const chapterPadded = String(chapter).padStart(3, '0');
       const langUpper = lang.toUpperCase();
       const base = `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${langUpper}/${book}/${book}_${chapterPadded}_${langUpper}`;
       return {
