@@ -383,9 +383,21 @@
 
         document.getElementById("playerTitle").textContent = p.title;
 
-        // Build audio URL with proper encoding
-        var audioUrl = AUDIO_BASE + encodeURIComponent(p.audio);
-        console.log("Loading audio:", audioUrl);
+        // Load audio URL from window.audioUrlsPrayers{LANG} (same as confessions)
+        var langUpper = currentLang.toUpperCase();
+        var audioVarName = 'audioUrlsPrayers' + langUpper;
+        var audioUrls = window[audioVarName];
+        var prayerNum = String(index + 1).padStart(2, '0'); // Convert 0->01, 1->02, etc.
+        var audioUrl = audioUrls && audioUrls[prayerNum] ? audioUrls[prayerNum] : null;
+
+        // Fallback to old system if no URL found
+        if (!audioUrl) {
+            audioUrl = AUDIO_BASE + encodeURIComponent(p.audio);
+            console.warn("Using fallback audio URL:", audioUrl);
+        } else {
+            console.log("Loading audio from audioUrlsPrayers" + langUpper + ":", audioUrl);
+        }
+
         document.getElementById("audio").src = audioUrl;
 
         // Load lyrics
@@ -459,5 +471,8 @@
 
     render();
     </script>
+
+    <!-- Audio URLs for prayers (like confessions system) -->
+    <script src="audio-urls-prayers-fr.js"></script>
 </body>
 </html>
