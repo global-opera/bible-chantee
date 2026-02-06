@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test URLs Bible Chantée - Phase 3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .controls {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        button.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        button.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        button.secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        button.secondary:hover {
+            background: #5a6268;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .stats {
+            padding: 20px 30px;
+            background: #e9ecef;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+
+        .stat-box.success .stat-value {
+            color: #28a745;
+        }
+
+        .stat-box.error .stat-value {
+            color: #dc3545;
+        }
+
+        .stat-box.testing .stat-value {
+            color: #ffc107;
+        }
+
+        .results {
+            padding: 30px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .test-item {
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ccc;
+            background: #f8f9fa;
+            transition: all 0.3s;
+        }
+
+        .test-item.testing {
+            background: #fff3cd;
+            border-left-color: #ffc107;
+        }
+
+        .test-item.success {
+            background: #d4edda;
+            border-left-color: #28a745;
+        }
+
+        .test-item.error {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+        }
+
+        .test-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .test-file {
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .test-status {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .test-status.success {
+            background: #28a745;
+            color: white;
+        }
+
+        .test-status.error {
+            background: #dc3545;
+            color: white;
+        }
+
+        .test-status.testing {
+            background: #ffc107;
+            color: #000;
+        }
+
+        .test-url {
+            font-size: 0.9em;
+            color: #6c757d;
+            word-break: break-all;
+            margin-top: 5px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: #e9ecef;
+            margin: 20px 0;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s;
+        }
+
+        .select-wrapper {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            font-size: 1em;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6c757d;
+        }
+
+        .empty-state svg {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Test URLs Bible Chantée</h1>
+            <p class="subtitle">Phase 3 - Vérification Migration R2</p>
+        </header>
+
+        <div class="controls">
+            <div class="select-wrapper">
+                <select id="testMode">
+                    <option value="sample">Test échantillon (10 URLs par fichier)</option>
+                    <option value="confessions">Test Confessions uniquement (30 URLs)</option>
+                    <option value="all">Test TOUTES les URLs (7214 URLs)</option>
+                </select>
+            </div>
+            <button class="primary" onclick="startTest()" id="startBtn">
+                Démarrer les Tests
+            </button>
+            <button class="secondary" onclick="clearResults()" id="clearBtn">
+                Effacer
+            </button>
+        </div>
+
+        <div class="stats" id="stats" style="display: none;">
+            <div class="stat-box">
+                <div class="stat-value" id="totalCount">0</div>
+                <div class="stat-label">Total</div>
+            </div>
+            <div class="stat-box testing">
+                <div class="stat-value" id="testingCount">0</div>
+                <div class="stat-label">En cours</div>
+            </div>
+            <div class="stat-box success">
+                <div class="stat-value" id="successCount">0</div>
+                <div class="stat-label">Succès</div>
+            </div>
+            <div class="stat-box error">
+                <div class="stat-value" id="errorCount">0</div>
+                <div class="stat-label">Échecs</div>
+            </div>
+        </div>
+
+        <div class="progress-bar" id="progressBar" style="display: none;">
+            <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+        </div>
+
+        <div class="results" id="results">
+            <div class="empty-state">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <p>Sélectionnez un mode de test et cliquez sur "Démarrer les Tests"</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="audio-urls-fr.js"></script>
+    <script src="audio-urls-en.js"></script>
+    <script src="audio-urls-pt.js"></script>
+    <script src="audio-urls-es.js"></script>
+    <script src="audio-urls-de.js"></script>
+    <script src="audio-urls-it.js"></script>
+    <script src="audio-urls-confessions-fr.js"></script>
+    <script src="audio-urls-confessions-pt.js"></script>
+    <script src="audio-urls-confessions-tl.js"></script>
+    <script src="audio-urls-promesses-fr.js"></script>
+    <script src="audio-urls-promessas-pt.js"></script>
+
+    <script>
+        let stats = {
+            total: 0,
+            testing: 0,
+            success: 0,
+            error: 0
+        };
+
+        function updateStats() {
+            document.getElementById('totalCount').textContent = stats.total;
+            document.getElementById('testingCount').textContent = stats.testing;
+            document.getElementById('successCount').textContent = stats.success;
+            document.getElementById('errorCount').textContent = stats.error;
+
+            const progress = stats.total > 0 ? ((stats.success + stats.error) / stats.total * 100) : 0;
+            document.getElementById('progressFill').style.width = progress + '%';
+        }
+
+        function clearResults() {
+            document.getElementById('results').innerHTML = '<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><p>Sélectionnez un mode de test et cliquez sur "Démarrer les Tests"</p></div>';
+            document.getElementById('stats').style.display = 'none';
+            document.getElementById('progressBar').style.display = 'none';
+            stats = { total: 0, testing: 0, success: 0, error: 0 };
+        }
+
+        async function testUrl(url, filename) {
+            const testId = `test-${Date.now()}-${Math.random()}`;
+            const resultsDiv = document.getElementById('results');
+
+            // Créer l'élément de test
+            const testItem = document.createElement('div');
+            testItem.className = 'test-item testing';
+            testItem.id = testId;
+            testItem.innerHTML = `
+                <div class="test-header">
+                    <span class="test-file">${filename}</span>
+                    <span class="test-status testing">Testing...</span>
+                </div>
+                <div class="test-url">${url}</div>
+            `;
+
+            if (resultsDiv.querySelector('.empty-state')) {
+                resultsDiv.innerHTML = '';
+            }
+            resultsDiv.insertBefore(testItem, resultsDiv.firstChild);
+
+            stats.testing++;
+            updateStats();
+
+            try {
+                const response = await fetch(url, { method: 'HEAD' });
+
+                stats.testing--;
+                if (response.ok) {
+                    stats.success++;
+                    testItem.className = 'test-item success';
+                    testItem.querySelector('.test-status').className = 'test-status success';
+                    testItem.querySelector('.test-status').textContent = 'OK';
+                } else {
+                    stats.error++;
+                    testItem.className = 'test-item error';
+                    testItem.querySelector('.test-status').className = 'test-status error';
+                    testItem.querySelector('.test-status').textContent = `Error ${response.status}`;
+                }
+            } catch (error) {
+                stats.testing--;
+                stats.error++;
+                testItem.className = 'test-item error';
+                testItem.querySelector('.test-status').className = 'test-status error';
+                testItem.querySelector('.test-status').textContent = 'Network Error';
+            }
+
+            updateStats();
+        }
+
+        function getRandomUrls(obj, count, filename) {
+            const urls = [];
+            const keys = Object.keys(obj);
+
+            if (typeof obj[keys[0]] === 'object') {
+                // Format imbriqué (Bible)
+                for (let bookKey of keys) {
+                    const chapters = Object.keys(obj[bookKey]);
+                    for (let chapterKey of chapters.slice(0, Math.ceil(count / keys.length))) {
+                        urls.push({ url: obj[bookKey][chapterKey], filename });
+                    }
+                    if (urls.length >= count) break;
+                }
+            } else {
+                // Format plat (Confessions/Promesses)
+                for (let key of keys.slice(0, count)) {
+                    urls.push({ url: obj[key], filename });
+                }
+            }
+
+            return urls.slice(0, count);
+        }
+
+        function getAllUrls(obj, filename) {
+            const urls = [];
+            const keys = Object.keys(obj);
+
+            if (typeof obj[keys[0]] === 'object') {
+                // Format imbriqué (Bible)
+                for (let bookKey of keys) {
+                    const chapters = Object.keys(obj[bookKey]);
+                    for (let chapterKey of chapters) {
+                        urls.push({ url: obj[bookKey][chapterKey], filename });
+                    }
+                }
+            } else {
+                // Format plat (Confessions/Promesses)
+                for (let key of keys) {
+                    urls.push({ url: obj[key], filename });
+                }
+            }
+
+            return urls;
+        }
+
+        async function startTest() {
+            const mode = document.getElementById('testMode').value;
+            const startBtn = document.getElementById('startBtn');
+            const clearBtn = document.getElementById('clearBtn');
+
+            clearResults();
+
+            document.getElementById('stats').style.display = 'grid';
+            document.getElementById('progressBar').style.display = 'block';
+
+            startBtn.disabled = true;
+            clearBtn.disabled = true;
+
+            let urlsToTest = [];
+
+            if (mode === 'sample') {
+                // 10 URLs par fichier
+                const audioSources = [
+                    { data: window.audioUrlsFR, name: 'audio-urls-fr.js' },
+                    { data: window.audioUrlsEN, name: 'audio-urls-en.js' },
+                    { data: window.audioUrlsPT, name: 'audio-urls-pt.js' },
+                    { data: window.audioUrlsES, name: 'audio-urls-es.js' },
+                    { data: window.audioUrlsDE, name: 'audio-urls-de.js' },
+                    { data: window.audioUrlsIT, name: 'audio-urls-it.js' },
+                    { data: window.audioUrlsConfessionsFR, name: 'confessions-fr.js' },
+                    { data: window.audioUrlsConfessionsPT, name: 'confessions-pt.js' },
+                    { data: window.audioUrlsConfessionsTL, name: 'confessions-tl.js' },
+                    { data: window.audioUrlsPromessesFR, name: 'promesses-fr.js' },
+                    { data: window.audioUrlsPromessasPT, name: 'promessas-pt.js' },
+                ];
+
+                for (let source of audioSources) {
+                    if (source.data) {
+                        urlsToTest.push(...getRandomUrls(source.data, 10, source.name));
+                    }
+                }
+            } else if (mode === 'confessions') {
+                // Toutes les confessions
+                if (window.audioUrlsConfessionsFR) {
+                    urlsToTest.push(...getAllUrls(window.audioUrlsConfessionsFR, 'confessions-fr.js'));
+                }
+                if (window.audioUrlsConfessionsPT) {
+                    urlsToTest.push(...getAllUrls(window.audioUrlsConfessionsPT, 'confessions-pt.js'));
+                }
+                if (window.audioUrlsConfessionsTL) {
+                    urlsToTest.push(...getAllUrls(window.audioUrlsConfessionsTL, 'confessions-tl.js'));
+                }
+            } else {
+                // Toutes les URLs
+                const audioSources = [
+                    { data: window.audioUrlsFR, name: 'audio-urls-fr.js' },
+                    { data: window.audioUrlsEN, name: 'audio-urls-en.js' },
+                    { data: window.audioUrlsPT, name: 'audio-urls-pt.js' },
+                    { data: window.audioUrlsES, name: 'audio-urls-es.js' },
+                    { data: window.audioUrlsDE, name: 'audio-urls-de.js' },
+                    { data: window.audioUrlsIT, name: 'audio-urls-it.js' },
+                    { data: window.audioUrlsConfessionsFR, name: 'confessions-fr.js' },
+                    { data: window.audioUrlsConfessionsPT, name: 'confessions-pt.js' },
+                    { data: window.audioUrlsConfessionsTL, name: 'confessions-tl.js' },
+                    { data: window.audioUrlsPromessesFR, name: 'promesses-fr.js' },
+                    { data: window.audioUrlsPromessasPT, name: 'promessas-pt.js' },
+                ];
+
+                for (let source of audioSources) {
+                    if (source.data) {
+                        urlsToTest.push(...getAllUrls(source.data, source.name));
+                    }
+                }
+            }
+
+            stats.total = urlsToTest.length;
+            updateStats();
+
+            // Tester 5 URLs en parallèle
+            const batchSize = 5;
+            for (let i = 0; i < urlsToTest.length; i += batchSize) {
+                const batch = urlsToTest.slice(i, i + batchSize);
+                await Promise.all(batch.map(item => testUrl(item.url, item.filename)));
+            }
+
+            startBtn.disabled = false;
+            clearBtn.disabled = false;
+        }
+    </script>
+</body>
+</html>

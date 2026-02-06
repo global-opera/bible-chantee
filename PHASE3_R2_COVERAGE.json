@@ -1,0 +1,217 @@
+{
+  "checked": 30,
+  "exists": 0,
+  "missing": 30,
+  "files": [
+    {
+      "lang": "FR",
+      "original_name": "01_Joie.mp3",
+      "r2_path": "confessions/FR_01_Joie.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/FR_01_Joie.mp3",
+      "exists": false
+    },
+    {
+      "lang": "FR",
+      "original_name": "02_Gueri.mp3",
+      "r2_path": "confessions/FR_02_Gueri.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/FR_02_Gueri.mp3",
+      "exists": false
+    },
+    {
+      "lang": "FR",
+      "original_name": "03_Sante.mp3",
+      "r2_path": "confessions/FR_03_Sante.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/FR_03_Sante.mp3",
+      "exists": false
+    },
+    {
+      "lang": "FR",
+      "original_name": "04_Vainqueur.mp3",
+      "r2_path": "confessions/FR_04_Vainqueur.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/FR_04_Vainqueur.mp3",
+      "exists": false
+    },
+    {
+      "lang": "FR",
+      "original_name": "05_Prospere.mp3",
+      "r2_path": "confessions/FR_05_Prospere.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/FR_05_Prospere.mp3",
+      "exists": false
+    },
+    {
+      "lang": "FR",
+      "original_name": "06_Reconnaissant.mp3",
+      "r2_path": "confessions/FR_06_Reconnaissant.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/FR_06_Reconnaissant.mp3",
+      "exists": false
+    },
+    {
+      "lang": "FR",
+      "original_name": "07_Heureux.mp3",
+      "r2_path": "confessions/FR_07_Heureux.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/FR_07_Heureux.mp3",
+      "exists": false
+    },
+    {
+      "lang": "FR",
+      "original_name": "08_Beni.mp3",
+      "r2_path": "confessions/FR_08_Beni.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/FR_08_Beni.mp3",
+      "exists": false
+    },
+    {
+      "lang": "FR",
+      "original_name": "09_Amen.mp3",
+      "r2_path": "confessions/FR_09_Amen.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/FR_09_Amen.mp3",
+      "exists": false
+    },
+    {
+      "lang": "FR",
+      "original_name": "10_Shalom.mp3",
+      "r2_path": "confessions/FR_10_Shalom.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/FR_10_Shalom.mp3",
+      "exists": false
+    },
+    {
+      "lang": "PT",
+      "original_name": "01_Alegria.mp3",
+      "r2_path": "confessions/PT_01_Alegria.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/PT_01_Alegria.mp3",
+      "exists": false
+    },
+    {
+      "lang": "PT",
+      "original_name": "02_Curado.mp3",
+      "r2_path": "confessions/PT_02_Curado.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/PT_02_Curado.mp3",
+      "exists": false
+    },
+    {
+      "lang": "PT",
+      "original_name": "03_Saude.mp3",
+      "r2_path": "confessions/PT_03_Saude.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/PT_03_Saude.mp3",
+      "exists": false
+    },
+    {
+      "lang": "PT",
+      "original_name": "04_Vencedor.mp3",
+      "r2_path": "confessions/PT_04_Vencedor.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/PT_04_Vencedor.mp3",
+      "exists": false
+    },
+    {
+      "lang": "PT",
+      "original_name": "05_Prospero.mp3",
+      "r2_path": "confessions/PT_05_Prospero.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/PT_05_Prospero.mp3",
+      "exists": false
+    },
+    {
+      "lang": "PT",
+      "original_name": "06_Grato.mp3",
+      "r2_path": "confessions/PT_06_Grato.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/PT_06_Grato.mp3",
+      "exists": false
+    },
+    {
+      "lang": "PT",
+      "original_name": "07_Feliz.mp3",
+      "r2_path": "confessions/PT_07_Feliz.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/PT_07_Feliz.mp3",
+      "exists": false
+    },
+    {
+      "lang": "PT",
+      "original_name": "08_Abencoado.mp3",
+      "r2_path": "confessions/PT_08_Abencoado.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/PT_08_Abencoado.mp3",
+      "exists": false
+    },
+    {
+      "lang": "PT",
+      "original_name": "09_Amem.mp3",
+      "r2_path": "confessions/PT_09_Amem.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/PT_09_Amem.mp3",
+      "exists": false
+    },
+    {
+      "lang": "PT",
+      "original_name": "10_Shalom.mp3",
+      "r2_path": "confessions/PT_10_Shalom.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/PT_10_Shalom.mp3",
+      "exists": false
+    },
+    {
+      "lang": "TL",
+      "original_name": "01_Kagalakan.mp3",
+      "r2_path": "confessions/TL_01_Kagalakan.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/TL_01_Kagalakan.mp3",
+      "exists": false
+    },
+    {
+      "lang": "TL",
+      "original_name": "02_Kagalingan.mp3",
+      "r2_path": "confessions/TL_02_Kagalingan.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/TL_02_Kagalingan.mp3",
+      "exists": false
+    },
+    {
+      "lang": "TL",
+      "original_name": "03_Kalusugan.mp3",
+      "r2_path": "confessions/TL_03_Kalusugan.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/TL_03_Kalusugan.mp3",
+      "exists": false
+    },
+    {
+      "lang": "TL",
+      "original_name": "04_Tagumpay.mp3",
+      "r2_path": "confessions/TL_04_Tagumpay.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/TL_04_Tagumpay.mp3",
+      "exists": false
+    },
+    {
+      "lang": "TL",
+      "original_name": "05_Kasaganaan.mp3",
+      "r2_path": "confessions/TL_05_Kasaganaan.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/TL_05_Kasaganaan.mp3",
+      "exists": false
+    },
+    {
+      "lang": "TL",
+      "original_name": "06_Pasasalamat.mp3",
+      "r2_path": "confessions/TL_06_Pasasalamat.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/TL_06_Pasasalamat.mp3",
+      "exists": false
+    },
+    {
+      "lang": "TL",
+      "original_name": "07_Kaligayahan.mp3",
+      "r2_path": "confessions/TL_07_Kaligayahan.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/TL_07_Kaligayahan.mp3",
+      "exists": false
+    },
+    {
+      "lang": "TL",
+      "original_name": "08_Pagpapala.mp3",
+      "r2_path": "confessions/TL_08_Pagpapala.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/TL_08_Pagpapala.mp3",
+      "exists": false
+    },
+    {
+      "lang": "TL",
+      "original_name": "09_Amen.mp3",
+      "r2_path": "confessions/TL_09_Amen.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/TL_09_Amen.mp3",
+      "exists": false
+    },
+    {
+      "lang": "TL",
+      "original_name": "10_Shalom.mp3",
+      "r2_path": "confessions/TL_10_Shalom.mp3",
+      "r2_url": "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/confessions/TL_10_Shalom.mp3",
+      "exists": false
+    }
+  ]
+}

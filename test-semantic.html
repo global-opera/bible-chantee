@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Semantic Dictionary Integration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            background: #ecf0f1;
+            border-radius: 5px;
+        }
+        .success {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .error {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        .info {
+            color: #3498db;
+        }
+        input {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #bdc3c7;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        #results {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Test Semantic Dictionary Integration</h1>
+
+        <div class="test-section">
+            <h2>1. Vérification du chargement</h2>
+            <div id="loadStatus"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>2. Statistiques du dictionnaire</h2>
+            <div id="stats"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>3. Test de recherche</h2>
+            <input type="text" id="searchInput" placeholder="Entrez un mot (ex: espérance, burnout, paix...)">
+            <button onclick="testSearch()">Rechercher</button>
+            <div id="results"></div>
+        </div>
+
+        <div class="test-section">
+            <h2>4. Tests automatiques</h2>
+            <div id="autoTests"></div>
+            <button onclick="runAutoTests()">Lancer les tests</button>
+        </div>
+    </div>
+
+    <!-- CHARGEMENT DES SCRIPTS -->
+    <script src="js/semantic-dictionary.js"></script>
+    <script src="js/semantic-engine.js"></script>
+
+    <script>
+        // Attendre le chargement
+        setTimeout(() => {
+            checkLoading();
+            showStats();
+        }, 200);
+
+        function checkLoading() {
+            const statusDiv = document.getElementById('loadStatus');
+            let html = '';
+
+            // Vérifier SemanticDictionary
+            if (window.SemanticDictionary) {
+                html += '<p class="success">✓ SemanticDictionary chargé</p>';
+                const familyCount = Object.keys(SemanticDictionary).filter(k => k !== 'themes_modernes').length;
+                html += `<p class="info">- ${familyCount} familles thématiques</p>`;
+                if (SemanticDictionary.themes_modernes) {
+                    const themeCount = Object.keys(SemanticDictionary.themes_modernes).length;
+                    html += `<p class="info">- ${themeCount} thèmes modernes</p>`;
+                }
+            } else {
+                html += '<p class="error">✗ SemanticDictionary NON chargé</p>';
+            }
+
+            // Vérifier SemanticEngine
+            if (window.SemanticEngine) {
+                html += '<p class="success">✓ SemanticEngine chargé</p>';
+            } else {
+                html += '<p class="error">✗ SemanticEngine NON chargé</p>';
+            }
+
+            statusDiv.innerHTML = html;
+        }
+
+        function showStats() {
+            const statsDiv = document.getElementById('stats');
+            if (!SemanticEngine || !SemanticEngine.SEMANTIC_MAP) {
+                statsDiv.innerHTML = '<p class="error">SEMANTIC_MAP non disponible</p>';
+                return;
+            }
+
+            const totalKeywords = Object.keys(SemanticEngine.SEMANTIC_MAP).length;
+            statsDiv.innerHTML = `
+                <p class="success">Total de mots-clés indexés: <strong>${totalKeywords}</strong></p>
+                <p class="info">Le dictionnaire enrichi a été intégré avec succès!</p>
+            `;
+        }
+
+        function testSearch() {
+            const input = document.getElementById('searchInput');
+            const resultsDiv = document.getElementById('results');
+            const query = input.value.trim();
+
+            if (!query) {
+                resultsDiv.innerHTML = '<p class="error">Veuillez entrer un mot</p>';
+                return;
+            }
+
+            const results = SemanticEngine.search(query, 'FR', 8);
+
+            if (results.length === 0) {
+                resultsDiv.innerHTML = `<p class="error">Aucun résultat pour "${query}"</p>`;
+                return;
+            }
+
+            let html = `<p class="success">Résultats pour "${query}":</p><ul>`;
+            results.forEach(r => {
+                html += `<li>${r.chapter} (score: ${r.score})</li>`;
+            });
+            html += '</ul>';
+            resultsDiv.innerHTML = html;
+        }
+
+        function runAutoTests() {
+            const testsDiv = document.getElementById('autoTests');
+            const testWords = [
+                { word: 'espérance', lang: 'FR', expected: true },
+                { word: 'hope', lang: 'EN', expected: true },
+                { word: 'burnout', lang: 'FR', expected: true },
+                { word: 'depression', lang: 'EN', expected: true },
+                { word: 'paix', lang: 'FR', expected: true },
+                { word: 'sagesse', lang: 'FR', expected: true },
+                { word: 'diyos', lang: 'TL', expected: true },
+                { word: 'pag-asa', lang: 'TL', expected: true },
+                { word: 'gott', lang: 'DE', expected: true }
+            ];
+
+            let html = '<h3>Résultats des tests:</h3>';
+            let passed = 0;
+            let failed = 0;
+
+            testWords.forEach(test => {
+                const results = SemanticEngine.search(test.word, test.lang, 5);
+                const success = (results.length > 0) === test.expected;
+
+                if (success) {
+                    passed++;
+                    html += `<p class="success">✓ "${test.word}" (${test.lang}): ${results.length} résultats</p>`;
+                } else {
+                    failed++;
+                    html += `<p class="error">✗ "${test.word}" (${test.lang}): échec</p>`;
+                }
+            });
+
+            html += `<hr><p><strong>Total: ${passed} réussis, ${failed} échoués</strong></p>`;
+            testsDiv.innerHTML = html;
+        }
+    </script>
+</body>
+</html>

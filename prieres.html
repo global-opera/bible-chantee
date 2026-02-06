@@ -115,6 +115,12 @@
         </div>
     </div>
 
+    <!-- Audio URLs for prayers - MUST load BEFORE inline script -->
+    <script src="/audio-urls-prayers-fr.js"></script>
+    <script src="/audio-urls-prayers-en.js"></script>
+    <script src="/audio-urls-prayers-pt.js"></script>
+    <script src="/audio-urls-prayers-tl.js"></script>
+
     <script>
     var AUDIO_BASE = "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/prayers/";
     var LYRICS_BASE = "lyrics/prayers/";
@@ -383,27 +389,20 @@
 
         document.getElementById("playerTitle").textContent = p.title;
 
-        // Build correct R2 URL: prayers/{LANG}/{filename}
+        // Load audio URL from window.audioUrlsPrayers{LANG} (same as confessions)
         var langUpper = currentLang.toUpperCase();
+        var audioVarName = 'audioUrlsPrayers' + langUpper;
+        var audioUrls = window[audioVarName];
         var prayerNum = String(index + 1).padStart(2, '0'); // Convert 0->01, 1->02, etc.
+        var audioUrl = audioUrls && audioUrls[prayerNum] ? audioUrls[prayerNum] : null;
 
-        // Map prayer titles to R2 filenames
-        var filenameMap = {
-            FR: {
-                '01': 'Notre_Pere.mp3',
-                '02': 'DAbord_Je_Te_Cherche.mp3',
-                '03': 'Priere_de_delivrance.mp3',
-                '04': 'Reconnaissance.mp3',
-                '05': 'Tu_Es_Ma_Protection.mp3'
-            }
-        };
-
-        var filename = filenameMap[langUpper] && filenameMap[langUpper][prayerNum];
-        var audioUrl = filename
-            ? "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/prayers/" + langUpper + "/" + filename
-            : AUDIO_BASE + encodeURIComponent(p.audio);
-
-        console.log("Loading prayer audio:", audioUrl);
+        // Fallback to old system if no URL found
+        if (!audioUrl) {
+            audioUrl = AUDIO_BASE + encodeURIComponent(p.audio);
+            console.warn("Using fallback audio URL:", audioUrl);
+        } else {
+            console.log("Loading audio from audioUrlsPrayers" + langUpper + ":", audioUrl);
+        }
 
         var audioEl = document.getElementById("audio");
         audioEl.src = audioUrl;
@@ -480,8 +479,5 @@
 
     render();
     </script>
-
-    <!-- Audio URLs for prayers (like confessions system) -->
-    <script src="/audio-urls-prayers-fr.js"></script>
 </body>
 </html>
