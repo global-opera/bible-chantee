@@ -398,7 +398,9 @@
             console.log("Loading audio from audioUrlsPrayers" + langUpper + ":", audioUrl);
         }
 
-        document.getElementById("audio").src = audioUrl;
+        var audioEl = document.getElementById("audio");
+        audioEl.src = audioUrl;
+        audioEl.load(); // Force browser to load the new source
 
         // Load lyrics
         var lyricsBox = document.getElementById("lyricsBox");
@@ -473,6 +475,6 @@
     </script>
 
     <!-- Audio URLs for prayers (like confessions system) -->
-    <script src="audio-urls-prayers-fr.js"></script>
+    <script src="/audio-urls-prayers-fr.js"></script>
 </body>
 </html>
