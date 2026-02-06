@@ -162,6 +162,27 @@
         .lyrics-box.active {
             display: block;
         }
+
+        /* Styles for formatted lyrics (Couplet 1, Refrain, etc.) */
+        .lyrics-container {
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        .lyrics-section {
+            margin-bottom: 20px;
+        }
+        .lyrics-tag {
+            font-weight: bold;
+            color: #f5c842;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .lyrics-paragraph {
+            color: #e0e0e0;
+            margin-bottom: 12px;
+        }
         
         .no-audio {
             color: #8899aa;
@@ -589,21 +610,34 @@
         }
     }
 
-    // Load lyrics from JSON file
+    // Load lyrics from window.chapterLyricsPrompts (same as lecteur.html)
     async function loadLyrics(psalmNum, lang, lyricsId) {
         const lyricsBox = document.getElementById(lyricsId);
         const langData = THEMES_DATA[lang] || THEMES_DATA.FR;
-        const langUpper = lang.toUpperCase();
 
         // Check cache first
         const cacheKey = `lyrics-${psalmNum}-${lang}`;
         if (contentCache[cacheKey]) {
-            lyricsBox.textContent = contentCache[cacheKey];
+            lyricsBox.innerHTML = contentCache[cacheKey];
             return;
         }
 
         try {
-            // Load lyrics from JSON file (lyrics/ES.json, lyrics/FR.json, etc.)
+            // Pour FR: utiliser window.chapterLyricsPrompts (paroles structurées avec tags [Verse], [Chorus])
+            if (lang === 'FR' && window.chapterLyricsPrompts && window.LyricsFormatter) {
+                const rawLyrics = window.chapterLyricsPrompts['19'] && window.chapterLyricsPrompts['19'][psalmNum];
+
+                if (rawLyrics && rawLyrics.includes('[Verse')) {
+                    // Formater avec LyricsFormatter (convertit [Verse 1] → "Couplet 1", [Chorus] → "Refrain", etc.)
+                    const formattedHTML = window.LyricsFormatter.format(rawLyrics);
+                    contentCache[cacheKey] = formattedHTML;
+                    lyricsBox.innerHTML = formattedHTML;
+                    return;
+                }
+            }
+
+            // Fallback: charger depuis JSON pour les autres langues
+            const langUpper = lang.toUpperCase();
             const response = await fetch(`lyrics/${langUpper}.json`);
             if (response.ok) {
                 const data = await response.json();
@@ -852,6 +886,8 @@
   <script src="js/audio-urls-es.js"></script>
   <script src="js/audio-urls-de.js"></script>
   <script src="js/audio-urls-it.js"></script>
+  <script src="js/lyrics-data-prompts.js"></script>
+  <script src="js/lyrics-formatter.js"></script>
   <script src="/translations.js"></script>
   <script src="/translations-extra.js"></script>
   <script src="/i18n.js"></script>
