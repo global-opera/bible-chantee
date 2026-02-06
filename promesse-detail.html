@@ -527,7 +527,7 @@
         } else {
             // Restore lyrics from cache or reload
             if (contentCache[`lyrics-${psalmNum}-${currentLang}`]) {
-                lyricsBox.textContent = contentCache[`lyrics-${psalmNum}-${currentLang}`];
+                lyricsBox.innerHTML = contentCache[`lyrics-${psalmNum}-${currentLang}`];
             }
             lyricsBox.classList.add('active');
             button.classList.add('active');
