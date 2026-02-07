@@ -1,0 +1,27 @@
+¶ De David.
+Béni soit l'Eternel, mon rocher, Qui exerce mes mains au combat, Mes doigts à la bataille, Mon bienfaiteur et ma forteresse, Ma haute retraite et mon libérateur, Mon bouclier, celui qui est mon refuge, Qui m'assujettit mon peuple!
+Eternel, qu'est-ce que l'homme, pour que tu le connaisses?
+Le fils de l'homme, pour que tu prennes garde à lui?
+
+L'homme est semblable à un souffle, Ses jours sont comme l'ombre qui passe.
+Eternel, abaisse tes cieux, et descends!
+Touche les montagnes, et qu'elles soient fumantes!
+Fais briller les éclairs, et disperse mes ennemis!
+
+Eternel, qu'est-ce que l'homme, pour que tu le connaisses?
+
+Eternel, qu'est-ce que l'homme, pour que tu le connaisses?
+Eternel, qu'est-ce que l'homme, pour que tu le connaisses?
+
+Lance tes flèches, et mets-les en déroute!
+Etends tes mains d'en haut;
+Délivre-moi et sauve-moi des grandes eaux, De la main des fils de l'étranger, Dont la bouche profère la fausseté, Et dont la droite est une droite mensongère.
+¶ O Dieu!
+
+je te chanterai un cantique nouveau, Je te célébrerai sur le luth à dix cordes.
+Toi, qui donnes le salut aux rois, Qui sauvas du glaive meurtrier David, ton serviteur, Délivre-moi et sauve-moi de la main des fils de l'étranger, Dont la bouche profère la fausseté, Et dont la droite est une droite mensongère!...
+Nos fils sont comme des plantes Qui croissent dans leur jeunesse;
+Nos filles comme les colonnes sculptées Qui font l'ornement des palais.
+
+Eternel, qu'est-ce que l'homme, pour que tu le connaisses?
+Eternel, qu'est-ce que l'homme, pour que tu le connaisses?

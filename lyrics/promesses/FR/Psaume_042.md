@@ -1,0 +1,27 @@
+¶ Au chef des chantres.
+Cantique des fils de Koré.
+Comme une biche soupire après des courants d'eau, Ainsi mon âme soupire après toi, ô Dieu!
+Mon âme a soif de Dieu, du Dieu vivant:
+
+Quand irai-je et paraîtrai-je devant la face de Dieu?
+Mes larmes sont ma nourriture jour et nuit, Pendant qu'on me dit sans cesse:
+Où est ton Dieu?
+Je me rappelle avec effusion de coeur Quand je marchais entouré de la foule, Et que je m'avançais à sa tête vers la maison de Dieu, Au milieu des cris de joie et des actions de grâces D'une multitude en fête.
+
+Comme une biche soupire après des courants d'eau, Ainsi mon âme soupire après toi, ô Dieu!
+
+Comme une biche soupire après des courants d'eau, Ainsi mon âme soupire après toi, ô Dieu!
+Comme une biche soupire après des courants d'eau, Ainsi mon âme soupire après toi, ô Dieu!
+
+Pourquoi t'abats-tu, mon âme, et gémis-tu au dedans de moi?
+Espère en Dieu, car je le louerai encore;
+Il est mon salut et mon Dieu.
+¶ Mon âme est abattue au dedans de moi:
+
+Aussi c'est à toi que je pense, depuis le pays du Jourdain, Depuis l'Hermon, depuis la montagne de Mitsear.
+Un flot appelle un autre flot au bruit de tes ondées;
+Toutes tes vagues et tous tes flots passent sur moi.
+Le jour, l'Eternel m'accordait sa grâce;
+
+Comme une biche soupire après des courants d'eau, Ainsi mon âme soupire après toi, ô Dieu!
+Comme une biche soupire après des courants d'eau, Ainsi mon âme soupire après toi, ô Dieu!

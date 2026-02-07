@@ -1,0 +1,45 @@
+Make a Joyful Shout to the Lord
+
+In the stillness, we gather, hearts alive,
+With joyful noise, we lift our praise on high.
+All the earth, let your voices ring,
+Come before His presence, let the heavens sing.
+
+We serve the Lord with gladness,
+In His love, we find our way.
+With thanksgiving in our hearts,
+We bless His name today.
+For He is good, His mercy never ends,
+His truth will guide us through the ages,
+Forever our faithful friend.
+
+He is our Shepherd, we are His own,
+In His pasture, we find our home.
+He made us, we are crafted by His hand,
+In His embrace, we forever stand.
+
+We serve the Lord with gladness,
+In His love, we find our way.
+With thanksgiving in our hearts,
+We bless His name today.
+For He is good, His mercy never ends,
+His truth will guide us through the ages,
+Forever our faithful friend.
+
+Enter His gates with a heart full of praise,
+With every breath, we lift His name,
+For His love endures, through every trial and tear,
+In every moment, we know He is near.
+
+We serve the Lord with gladness,
+In His love, we find our way.
+With thanksgiving in our hearts,
+We bless His name today.
+For He is good, His mercy never ends,
+His truth will guide us through the ages,
+Forever our faithful friend.
+
+Make a joyful noise, let the heavens proclaim,
+The goodness of our God, forever the same.
+With hearts aligned, we gather and sing,
+In His presence, our praises will ring.

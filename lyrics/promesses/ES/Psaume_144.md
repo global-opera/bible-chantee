@@ -1,0 +1,40 @@
+Bienaventurado el Pueblo
+
+Bendito seas, oh Jehová, mi roca,
+Tú enseñas mis manos, me das la victoria.
+Eres mi escudo, en Ti confío,
+Mi libertador, siempre estás conmigo.
+
+Coro
+Oh Jehová, inclina los cielos,
+Desciende a nosotros, ven con tu fuego.
+Dame tu mano, redímeme hoy,
+De las aguas profundas, yo clamo a Ti, oh Rey.
+
+¿Qué es el hombre, que de él te acuerdas?
+Como sombra pasa, su vida es tan quieta.
+Mas en tu gracia, hallamos consuelo,
+Por tu misericordia, yo canto en el cielo.
+
+Coro
+Oh Jehová, inclina los cielos,
+Desciende a nosotros, ven con tu fuego.
+Dame tu mano, redímeme hoy,
+De las aguas profundas, yo clamo a Ti, oh Rey.
+
+Puente
+Redímeme, sálvame, oh Dios de amor,
+Que nuestras hijas sean como flores de esplendor.
+Nuestros hijos crezcan, fuerte en su andar,
+Que en Ti encontramos, razón para alabar.
+
+Coro
+Oh Jehová, inclina los cielos,
+Desciende a nosotros, ven con tu fuego.
+Dame tu mano, redímeme hoy,
+De las aguas profundas, yo clamo a Ti, oh Rey.
+
+Bienaventurado es el pueblo,
+Cuyo Dios es Jehová,
+En Ti hallamos paz y esperanza,
+Por siempre en Ti confiaré.
