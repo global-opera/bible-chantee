@@ -1,19 +1,22 @@
-Nel silenzio metto ordine
-Tra Dio che io cerco e cio che sento
-E cio che vive dell'assalto, busogno
-E la tua che a volte dimentico
+Nel silenzio metto ordine,
+Tra dio che io cerco e cio che sento
+E cio che vive del assalto busogno,
+E la Tua che a volte dimentico.
 
-Ho imparato a riempire i vuoti
-A rincorrere i pesi del tempo
-Ma oggi cambio l'ordine, ritorno a te
+Ho imparato a riempire i vuoti,
+A rincorrere i pesi delle domande.
+Ma oggi cambio l'ordine,
+Ritorno a Te.
 
-Prima ti cerco, tu mi aspetti nel cuore
-Ritorno a te
+Prima Ti cerco,
+Tu mi aspetti nel cuore,
+Ritorno a Te.
 
-Quando il cammino si fa incerto
-Quando la mente diventa entrata
-Tu resti presente, Signore
-La mia bustola sei tu
+Quando il cammino si fa incerto,
+Quando la mente diventa entrata,
+Tu resti presente, Signore,
+La mia bussola sei Tu.
 
-Prima ti cerco, tu mi aspetti nel cuore
-Ritorno a te
+Prima Ti cerco,
+Tu mi aspetti nel cuore,
+Ritorno a Te.
