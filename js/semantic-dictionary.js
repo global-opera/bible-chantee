@@ -1153,13 +1153,190 @@ const SemanticDictionary = {
             chapters: ["19_PSA_037", "20_PRO_006", "40_MAT_006", "50_PHP_004", "59_JAS_002"]
         },
         maladie_grave: {
-            FR: ["cancer", "maladie grave", "hospitalisation", "traitement", "guérison"],
-            EN: ["cancer", "serious illness", "hospitalization", "treatment", "healing"],
-            PT: ["câncer", "doença grave", "hospitalização", "tratamento", "cura"],
-            ES: ["cáncer", "enfermedad grave", "hospitalización", "tratamiento", "sanación"],
-            DE: ["krebs", "schwere krankheit", "krankenhausaufenthalt", "behandlung", "heilung"],
-            IT: ["cancro", "malattia grave", "ospedalizzazione", "trattamento", "guarigione"],            TL: ["kanser", "malubhang sakit", "pagpapagamot", "paggaling"],            families: ["souffrance_epreuves", "guerison_restauration"],
-            chapters: ["19_PSA_041", "19_PSA_103", "23_ISA_053", "40_MAT_008", "59_JAS_005"]
+            FR: [
+                // Mots de base (CRITIQUES - étaient manquants!)
+                "malade", "maladie", "souffrant", "souffrance", "douleur", "mal", "patient", "malaise",
+                "infirme", "handicapé", "paralysé", "aveugle", "sourd", "muet", "boiteux", "estropié",
+
+                // Maladies spécifiques
+                "lèpre", "lépreux", "fièvre", "hémorragie", "plaie", "blessure", "fracture", "ulcère",
+                "cancer", "tumeur", "infection", "épidémie", "peste", "contagion", "virus", "bactérie",
+
+                // Symptômes
+                "toux", "faiblesse", "fatigue", "épuisement", "agonie", "tourment", "martyre", "calvaire",
+                "souffrir", "endurer", "supporter", "affliction", "languissant", "mourant", "agonisant",
+
+                // Contexte médical
+                "guérir", "guérison", "rétablissement", "convalescence", "santé", "sain", "rétabli",
+                "remède", "médicament", "traitement", "soin", "médecin", "docteur", "infirmier", "thérapeute",
+                "hôpital", "clinique", "hospitalisation", "soigner", "rétablir", "restaurer", "recouvrer",
+
+                // Miracles de guérison
+                "miracle", "miraculeusement", "toucher", "imposer les mains", "foi qui guérit", "guérisseur",
+
+                // Expressions bibliques
+                "sur son lit de mort", "au seuil de la mort", "à l'article de la mort",
+                "entre la vie et la mort", "grabataire", "alité", "cloué au lit", "impotent",
+                "langueur", "infirmité", "débilité", "invalidité", "incurable", "incapacité"
+            ],
+            EN: [
+                // Base words (CRITICAL - were missing!)
+                "sick", "sickness", "ill", "illness", "disease", "ailment", "suffering", "pain", "hurt",
+                "patient", "unwell", "ailing", "disabled", "handicapped", "paralyzed", "blind", "deaf",
+                "mute", "lame", "crippled", "afflicted",
+
+                // Specific diseases
+                "leprosy", "leper", "fever", "hemorrhage", "wound", "injury", "fracture", "ulcer",
+                "cancer", "tumor", "infection", "epidemic", "plague", "contagion", "virus", "bacteria",
+
+                // Symptoms
+                "cough", "weakness", "fatigue", "exhaustion", "agony", "torment", "ordeal", "trial",
+                "suffer", "endure", "bear", "affliction", "languishing", "dying", "agonizing",
+
+                // Medical context
+                "heal", "healing", "cure", "recovery", "health", "healthy", "restored", "healed",
+                "remedy", "medicine", "treatment", "care", "doctor", "physician", "nurse", "therapist",
+                "hospital", "clinic", "hospitalization", "treat", "restore", "recover", "recuperate",
+
+                // Healing miracles
+                "miracle", "miraculously", "touch", "lay hands", "faith healing", "healer",
+
+                // Biblical expressions
+                "on deathbed", "at death's door", "bedridden", "infirm", "invalid", "impotent",
+                "languor", "infirmity", "debility", "disability", "incurable", "incapacity"
+            ],
+            PT: [
+                // Palavras básicas (CRÍTICAS - estavam faltando!)
+                "doente", "doença", "sofrendo", "sofrimento", "dor", "mal", "paciente", "mal-estar",
+                "enfermo", "deficiente", "paralisado", "cego", "surdo", "mudo", "coxo", "aleijado",
+
+                // Doenças específicas
+                "lepra", "leproso", "febre", "hemorragia", "ferida", "lesão", "fratura", "úlcera",
+                "câncer", "tumor", "infecção", "epidemia", "peste", "contágio", "vírus", "bactéria",
+
+                // Sintomas
+                "tosse", "fraqueza", "fadiga", "exaustão", "agonia", "tormento", "martírio", "calvário",
+                "sofrer", "suportar", "aguentar", "aflição", "languidez", "moribundo", "agonizante",
+
+                // Contexto médico
+                "curar", "cura", "recuperação", "convalescença", "saúde", "saudável", "recuperado",
+                "remédio", "medicamento", "tratamento", "cuidado", "médico", "doutor", "enfermeiro",
+                "hospital", "clínica", "hospitalização", "tratar", "restaurar", "recuperar",
+
+                // Milagres de cura
+                "milagre", "milagrosamente", "tocar", "impor as mãos", "fé que cura", "curador",
+
+                // Expressões bíblicas
+                "no leito de morte", "às portas da morte", "acamado", "inválido", "impotente",
+                "languor", "enfermidade", "debilidade", "incapacidade", "incurável"
+            ],
+            ES: [
+                // Palabras básicas (CRÍTICAS - ¡faltaban!)
+                "enfermo", "enfermedad", "sufriendo", "sufrimiento", "dolor", "mal", "paciente", "malestar",
+                "doliente", "discapacitado", "paralizado", "ciego", "sordo", "mudo", "cojo", "lisiado",
+
+                // Enfermedades específicas
+                "lepra", "leproso", "fiebre", "hemorragia", "herida", "lesión", "fractura", "úlcera",
+                "cáncer", "tumor", "infección", "epidemia", "peste", "contagio", "virus", "bacteria",
+
+                // Síntomas
+                "tos", "debilidad", "fatiga", "agotamiento", "agonía", "tormento", "martirio", "calvario",
+                "sufrir", "soportar", "aguantar", "aflicción", "languidez", "moribundo", "agonizante",
+
+                // Contexto médico
+                "sanar", "sanación", "recuperación", "convalecencia", "salud", "sano", "recuperado",
+                "remedio", "medicamento", "tratamiento", "cuidado", "médico", "doctor", "enfermero",
+                "hospital", "clínica", "hospitalización", "tratar", "restaurar", "recuperar",
+
+                // Milagros de sanación
+                "milagro", "milagrosamente", "tocar", "imponer las manos", "fe que sana", "sanador",
+
+                // Expresiones bíblicas
+                "en lecho de muerte", "a las puertas de la muerte", "postrado", "inválido", "impotente",
+                "languidez", "enfermedad", "debilidad", "incapacidad", "incurable"
+            ],
+            DE: [
+                // Grundwörter (KRITISCH - fehlten!)
+                "krank", "krankheit", "leidend", "leiden", "schmerz", "übel", "patient", "unwohlsein",
+                "gebrechlich", "behindert", "gelähmt", "blind", "taub", "stumm", "lahm", "verkrüppelt",
+
+                // Spezifische Krankheiten
+                "lepra", "aussätzig", "fieber", "blutung", "wunde", "verletzung", "bruch", "geschwür",
+                "krebs", "tumor", "infektion", "epidemie", "pest", "ansteckung", "virus", "bakterie",
+
+                // Symptome
+                "husten", "schwäche", "müdigkeit", "erschöpfung", "qual", "pein", "martyrium",
+                "leiden", "ertragen", "aushalten", "bedrängnis", "siech", "sterbend", "im sterben liegend",
+
+                // Medizinischer Kontext
+                "heilen", "heilung", "genesung", "rekonvaleszenz", "gesundheit", "gesund", "genesen",
+                "heilmittel", "medikament", "behandlung", "pflege", "arzt", "doktor", "krankenschwester",
+                "krankenhaus", "klinik", "krankenhausaufenthalt", "behandeln", "wiederherstellen",
+
+                // Heilungswunder
+                "wunder", "wunderbarerweise", "berühren", "hände auflegen", "glaube der heilt", "heiler",
+
+                // Biblische Ausdrücke
+                "auf dem sterbebett", "an der schwelle des todes", "bettlägerig", "invalid", "kraftlos",
+                "siechheit", "gebrechen", "schwäche", "unfähigkeit", "unheilbar"
+            ],
+            IT: [
+                // Parole di base (CRITICHE - mancavano!)
+                "malato", "malattia", "sofferente", "sofferenza", "dolore", "male", "paziente", "malessere",
+                "infermo", "disabile", "paralizzato", "cieco", "sordo", "muto", "zoppo", "storpio",
+
+                // Malattie specifiche
+                "lebbra", "lebbroso", "febbre", "emorragia", "ferita", "lesione", "frattura", "ulcera",
+                "cancro", "tumore", "infezione", "epidemia", "peste", "contagio", "virus", "batterio",
+
+                // Sintomi
+                "tosse", "debolezza", "fatica", "esaurimento", "agonia", "tormento", "martirio", "calvario",
+                "soffrire", "sopportare", "reggere", "afflizione", "languente", "morente", "agonizzante",
+
+                // Contesto medico
+                "guarire", "guarigione", "recupero", "convalescenza", "salute", "sano", "guarito",
+                "rimedio", "medicina", "trattamento", "cura", "medico", "dottore", "infermiere",
+                "ospedale", "clinica", "ospedalizzazione", "curare", "ristabilire", "recuperare",
+
+                // Miracoli di guarigione
+                "miracolo", "miracolosamente", "toccare", "imporre le mani", "fede che guarisce", "guaritore",
+
+                // Espressioni bibliche
+                "sul letto di morte", "alle porte della morte", "allettato", "invalido", "impotente",
+                "languore", "infermità", "debolezza", "incapacità", "incurabile"
+            ],
+            TL: [
+                "may sakit", "sakit", "naghihirap", "paghihirap", "kirot", "pasyente", "hindi maganda pakiramdam",
+                "mahina", "kapansanan", "paralitiko", "bulag", "bingi", "pipi", "pilay",
+                "ketong", "lagnat", "dugo", "sugat", "bali", "kanser", "tumor", "impeksyon",
+                "salot", "virus", "ubo", "pagod", "gutom", "gumaling", "paggaling", "pagpapagamot",
+                "lunas", "gamot", "doktor", "nars", "ospital", "klinika", "himala", "hipuin",
+                "patong ng kamay", "pananampalataya", "manggagamot", "sa bingit ng kamatayan",
+                "nakahiga", "walang lakas", "walang pag-asa", "di na gagaling"
+            ],
+            families: ["souffrance_epreuves", "guerison_restauration"],
+            chapters: [
+                // Chapitres existants (5)
+                "19_PSA_041", "19_PSA_103", "23_ISA_053", "40_MAT_008", "59_JAS_005",
+
+                // NOUVEAUX: Miracles de guérison de Jésus (Évangiles)
+                "40_MAT_009", "40_MAT_015", "40_MAT_020",
+                "41_MRK_001", "41_MRK_002", "41_MRK_005", "41_MRK_007", "41_MRK_008", "41_MRK_010",
+                "42_LUK_004", "42_LUK_005", "42_LUK_007", "42_LUK_008", "42_LUK_013", "42_LUK_017", "42_LUK_018",
+                "43_JOH_005", "43_JOH_009", "43_JOH_011",
+
+                // NOUVEAUX: Guérisons dans Actes
+                "44_ACT_003", "44_ACT_005", "44_ACT_009", "44_ACT_014", "44_ACT_028",
+
+                // NOUVEAUX: Psaumes sur la maladie/guérison
+                "19_PSA_006", "19_PSA_030", "19_PSA_038", "19_PSA_102", "19_PSA_107", "19_PSA_147",
+
+                // NOUVEAUX: Job et la souffrance physique
+                "18_JOB_002", "18_JOB_007", "18_JOB_033",
+
+                // NOUVEAUX: Isaïe - guérison spirituelle et physique
+                "23_ISA_001", "23_ISA_030", "23_ISA_038", "23_ISA_058", "23_ISA_061"
+            ]
         },
         deuil: {
             FR: ["deuil", "mort", "décès", "perte", "funérailles", "chagrin"],
@@ -1221,8 +1398,199 @@ const SemanticDictionary = {
             PT: ["nascimento", "bebê", "gravidez", "paternidade", "educação", "família"],
             ES: ["nacimiento", "bebé", "embarazo", "paternidad", "educación", "familia"],
             DE: ["geburt", "baby", "schwangerschaft", "elternschaft", "erziehung", "familie"],
-            IT: ["nascita", "bambino", "gravidanza", "genitorialità", "educazione", "famiglia"],            TL: ["kapanganakan", "sanggol", "pagbubuntis", "pagiging magulang", "pamilya"],            families: ["amour_relations", "vie_responsabilite"],
+            IT: ["nascita", "bambino", "gravidanza", "genitorialità", "educazione", "famiglia"],
+            TL: ["kapanganakan", "sanggol", "pagbubuntis", "pagiging magulang", "pamilya"],
+            families: ["amour_relations", "vie_responsabilite"],
             chapters: ["01_GEN_021", "19_PSA_127", "19_PSA_128", "19_PSA_139", "42_LUK_001", "42_LUK_002"]
+        },
+        addiction: {
+            FR: [
+                "addiction", "dépendance", "alcool", "drogue", "ivresse", "ivrogne", "alcoolique",
+                "toxicomanie", "compulsif", "vice", "assuétude", "accoutumance", "esclavage",
+                "libération", "délivrance", "sobriété", "abstinence", "tentation", "chute",
+                "rechute", "rétablissement", "guérison", "liberté"
+            ],
+            EN: [
+                "addiction", "dependency", "alcohol", "drugs", "drunkenness", "drunkard", "alcoholic",
+                "substance abuse", "compulsive", "vice", "habit", "bondage", "enslavement",
+                "deliverance", "sobriety", "abstinence", "temptation", "fall", "relapse",
+                "recovery", "healing", "freedom"
+            ],
+            PT: [
+                "vício", "dependência", "álcool", "drogas", "embriaguez", "bêbado", "alcoólatra",
+                "toxicomania", "compulsivo", "hábito", "escravidão", "libertação", "sobriedade",
+                "abstinência", "tentação", "queda", "recaída", "recuperação", "cura", "liberdade"
+            ],
+            ES: [
+                "adicción", "dependencia", "alcohol", "drogas", "embriaguez", "borracho", "alcohólico",
+                "toxicomanía", "compulsivo", "vicio", "esclavitud", "liberación", "sobriedad",
+                "abstinencia", "tentación", "caída", "recaída", "recuperación", "sanación", "libertad"
+            ],
+            DE: [
+                "sucht", "abhängigkeit", "alkohol", "drogen", "trunkenheit", "trinker", "alkoholiker",
+                "drogensucht", "zwanghaft", "laster", "knechtschaft", "befreiung", "nüchternheit",
+                "enthaltsamkeit", "versuchung", "fall", "rückfall", "genesung", "heilung", "freiheit"
+            ],
+            IT: [
+                "dipendenza", "alcol", "droga", "ubriachezza", "ubriaco", "alcolista", "tossicodipendenza",
+                "compulsivo", "vizio", "schiavitù", "liberazione", "sobrietà", "astinenza",
+                "tentazione", "caduta", "ricaduta", "recupero", "guarigione", "libertà"
+            ],
+            TL: [
+                "bisyo", "adiksiyon", "alkohol", "droga", "paglalasing", "lasenggo", "alkoholiko",
+                "pagkakaalipin", "kalayaan", "paggaling", "tukso", "pagbagsak", "pagbangon"
+            ],
+            families: ["peche_chute", "guerison_restauration"],
+            chapters: ["20_PRO_020", "20_PRO_023", "23_ISA_005", "45_ROM_013", "46_1CO_006", "49_EPH_005", "48_GAL_005"]
+        },
+        violence: {
+            FR: [
+                "violence", "abus", "maltraitance", "agression", "viol", "harcèlement", "persécution",
+                "brutalité", "cruauté", "torture", "intimidation", "menace", "terrorisme",
+                "victimisation", "traumatisme", "protection", "refuge", "justice", "vengeance",
+                "pardon", "guérison", "rétablissement", "défense", "soutien"
+            ],
+            EN: [
+                "violence", "abuse", "mistreatment", "assault", "rape", "harassment", "persecution",
+                "brutality", "cruelty", "torture", "intimidation", "threat", "terrorism",
+                "victimization", "trauma", "protection", "refuge", "justice", "revenge",
+                "forgiveness", "healing", "recovery", "defense", "support"
+            ],
+            PT: [
+                "violência", "abuso", "maus-tratos", "agressão", "estupro", "assédio", "perseguição",
+                "brutalidade", "crueldade", "tortura", "intimidação", "ameaça", "terrorismo",
+                "vitimização", "trauma", "proteção", "refúgio", "justiça", "vingança",
+                "perdão", "cura", "recuperação", "defesa", "apoio"
+            ],
+            ES: [
+                "violencia", "abuso", "maltrato", "agresión", "violación", "acoso", "persecución",
+                "brutalidad", "crueldad", "tortura", "intimidación", "amenaza", "terrorismo",
+                "victimización", "trauma", "protección", "refugio", "justicia", "venganza",
+                "perdón", "sanación", "recuperación", "defensa", "apoyo"
+            ],
+            DE: [
+                "gewalt", "missbrauch", "misshandlung", "angriff", "vergewaltigung", "belästigung",
+                "verfolgung", "brutalität", "grausamkeit", "folter", "einschüchterung", "drohung",
+                "terrorismus", "viktimisierung", "trauma", "schutz", "zuflucht", "gerechtigkeit",
+                "rache", "vergebung", "heilung", "genesung", "verteidigung", "unterstützung"
+            ],
+            IT: [
+                "violenza", "abuso", "maltrattamento", "aggressione", "stupro", "molestie",
+                "persecuzione", "brutalità", "crudeltà", "tortura", "intimidazione", "minaccia",
+                "terrorismo", "vittimizzazione", "trauma", "protezione", "rifugio", "giustizia",
+                "vendetta", "perdono", "guarigione", "recupero", "difesa", "sostegno"
+            ],
+            TL: [
+                "karahasan", "pang-aabuso", "pagsalakay", "panggagahasa", "pang-aapi", "pag-uusig",
+                "pagpapahirap", "banta", "trauma", "proteksyon", "kanlungan", "hustisya",
+                "paghihiganti", "kapatawaran", "paggaling", "suporta"
+            ],
+            families: ["souffrance_epreuves", "combat_spirituel"],
+            chapters: ["19_PSA_010", "19_PSA_140", "19_PSA_142", "40_MAT_005", "45_ROM_012", "60_1PE_003", "60_1PE_004"]
+        },
+        dette: {
+            FR: [
+                "dette", "endettement", "créancier", "débiteur", "emprunt", "prêt", "intérêt",
+                "faillite", "ruine financière", "banqueroute", "insolvabilité", "huissier",
+                "recouvrement", "saisie", "pauvreté", "précarité", "remboursement",
+                "libération", "annulation", "remise", "jubilé", "générosité", "don",
+                "contentement", "suffisance", "provision", "providence"
+            ],
+            EN: [
+                "debt", "indebtedness", "creditor", "debtor", "loan", "borrowing", "interest",
+                "bankruptcy", "financial ruin", "insolvency", "collector", "recovery",
+                "seizure", "poverty", "precarity", "repayment", "release", "cancellation",
+                "forgiveness", "jubilee", "generosity", "gift", "contentment", "sufficiency",
+                "provision", "providence"
+            ],
+            PT: [
+                "dívida", "endividamento", "credor", "devedor", "empréstimo", "juros",
+                "falência", "ruína financeira", "insolvência", "cobrador", "recuperação",
+                "penhora", "pobreza", "precariedade", "reembolso", "libertação", "cancelamento",
+                "perdão", "jubileu", "generosidade", "presente", "contentamento", "suficiência",
+                "provisão", "providência"
+            ],
+            ES: [
+                "deuda", "endeudamiento", "acreedor", "deudor", "préstamo", "interés",
+                "quiebra", "ruina financiera", "insolvencia", "cobrador", "recuperación",
+                "embargo", "pobreza", "precariedad", "reembolso", "liberación", "cancelación",
+                "perdón", "jubileo", "generosidad", "regalo", "contentamiento", "suficiencia",
+                "provisión", "providencia"
+            ],
+            DE: [
+                "schuld", "verschuldung", "gläubiger", "schuldner", "darlehen", "zinsen",
+                "konkurs", "finanzieller ruin", "zahlungsunfähigkeit", "eintreiber",
+                "pfändung", "armut", "unsicherheit", "rückzahlung", "befreiung", "erlass",
+                "vergebung", "jubeljahr", "großzügigkeit", "geschenk", "zufriedenheit",
+                "genügsamkeit", "versorgung", "vorsehung"
+            ],
+            IT: [
+                "debito", "indebitamento", "creditore", "debitore", "prestito", "interesse",
+                "fallimento", "rovina finanziaria", "insolvenza", "esattore", "pignoramento",
+                "povertà", "precarietà", "rimborso", "liberazione", "cancellazione",
+                "perdono", "giubileo", "generosità", "dono", "contentezza", "sufficienza",
+                "provvidenza"
+            ],
+            TL: [
+                "utang", "pagkakautang", "umuutang", "may utang", "pautang", "tubo",
+                "pagkabangkarote", "pagkalugi", "kahirapan", "pagbabayad", "kalayaan",
+                "kapatawaran", "jubileo", "kagandahang-loob", "kaloob", "kasiyahan",
+                "sapat", "pag-aalaga", "paghahandog"
+            ],
+            families: ["vie_responsabilite", "souffrance_epreuves"],
+            chapters: ["05_DEU_015", "16_NEH_005", "19_PSA_037", "20_PRO_022", "40_MAT_006", "40_MAT_018", "42_LUK_016"]
+        },
+        guerre: {
+            FR: [
+                "guerre", "conflit armé", "bataille", "combat", "soldat", "armée", "ennemi",
+                "adversaire", "invasion", "siège", "conquête", "défaite", "victoire",
+                "réfugié", "déplacé", "exode", "destruction", "ruine", "dévastation",
+                "paix", "réconciliation", "cessez-le-feu", "armistice", "traité",
+                "protection", "défense", "fortification", "bouclier", "courage", "bravoure"
+            ],
+            EN: [
+                "war", "armed conflict", "battle", "combat", "soldier", "army", "enemy",
+                "adversary", "invasion", "siege", "conquest", "defeat", "victory",
+                "refugee", "displaced", "exodus", "destruction", "ruin", "devastation",
+                "peace", "reconciliation", "ceasefire", "armistice", "treaty",
+                "protection", "defense", "fortification", "shield", "courage", "bravery"
+            ],
+            PT: [
+                "guerra", "conflito armado", "batalha", "combate", "soldado", "exército", "inimigo",
+                "adversário", "invasão", "cerco", "conquista", "derrota", "vitória",
+                "refugiado", "deslocado", "êxodo", "destruição", "ruína", "devastação",
+                "paz", "reconciliação", "cessar-fogo", "armistício", "tratado",
+                "proteção", "defesa", "fortificação", "escudo", "coragem", "bravura"
+            ],
+            ES: [
+                "guerra", "conflicto armado", "batalla", "combate", "soldado", "ejército", "enemigo",
+                "adversario", "invasión", "sitio", "conquista", "derrota", "victoria",
+                "refugiado", "desplazado", "éxodo", "destrucción", "ruina", "devastación",
+                "paz", "reconciliación", "alto el fuego", "armisticio", "tratado",
+                "protección", "defensa", "fortificación", "escudo", "valor", "valentía"
+            ],
+            DE: [
+                "krieg", "bewaffneter konflikt", "schlacht", "kampf", "soldat", "armee", "feind",
+                "gegner", "invasion", "belagerung", "eroberung", "niederlage", "sieg",
+                "flüchtling", "vertriebener", "exodus", "zerstörung", "ruine", "verheerung",
+                "frieden", "versöhnung", "waffenstillstand", "vertrag",
+                "schutz", "verteidigung", "befestigung", "schild", "mut", "tapferkeit"
+            ],
+            IT: [
+                "guerra", "conflitto armato", "battaglia", "combattimento", "soldato", "esercito",
+                "nemico", "avversario", "invasione", "assedio", "conquista", "sconfitta", "vittoria",
+                "rifugiato", "sfollato", "esodo", "distruzione", "rovina", "devastazione",
+                "pace", "riconciliazione", "cessate il fuoco", "armistizio", "trattato",
+                "protezione", "difesa", "fortificazione", "scudo", "coraggio", "valore"
+            ],
+            TL: [
+                "digmaan", "labanan", "pakikipaglaban", "sundalo", "hukbo", "kaaway",
+                "kalaban", "pagsalakay", "pagkubkob", "pagsakop", "pagkatalo", "tagumpay",
+                "refugee", "takas", "pagkawasak", "pagkasira", "kapayapaan", "pagkakasundo",
+                "tigil-putukan", "kasunduan", "proteksyon", "depensa", "kalasag", "tapang"
+            ],
+            families: ["combat_spirituel", "souffrance_epreuves"],
+            chapters: ["02_EXO_014", "06_JOS_006", "09_1SA_017", "19_PSA_018", "19_PSA_020", "19_PSA_144", "49_EPH_006"]
         }
     }
 };

@@ -3134,6 +3134,42 @@ const audioPlayer = document.querySelector('#audioPlayer');
     })();
   </script>
 
+  <!-- TITRES DES CHAPITRES (pour recherche sémantique dans titres) -->
+  <script>
+    // Charger les titres de manière asynchrone pour recherche dans titres
+    window.chapterTitles = {};
+
+    async function loadTitles(lang) {
+        try {
+            const response = await fetch(`titles/${lang}.json`);
+            if (response.ok) {
+                window.chapterTitles[lang] = await response.json();
+                console.log(`[Titles] Loaded ${lang}:`, Object.keys(window.chapterTitles[lang]).length, 'books');
+            } else {
+                console.warn(`[Titles] Failed to load ${lang}: HTTP ${response.status}`);
+            }
+        } catch (e) {
+            console.warn(`[Titles] Failed to load ${lang}:`, e.message);
+        }
+    }
+
+    // Charger les titres FR par défaut au chargement de la page
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            loadTitles('FR');
+        });
+    } else {
+        loadTitles('FR');
+    }
+
+    // Fonction pour charger les titres d'autres langues à la demande
+    window.loadTitlesForLanguage = function(lang) {
+        if (!window.chapterTitles[lang]) {
+            loadTitles(lang);
+        }
+    };
+  </script>
+
   <!-- SEMANTIC SEARCH ENGINE -->
   <script src="js/semantic-dictionary.js"></script>
   <script src="js/semantic-engine.js"></script>

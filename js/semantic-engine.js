@@ -262,8 +262,21 @@ const SemanticEngine = {
     search: function(query, lang = 'FR', maxResults = 8) {
         const normalized = this.normalizeQuery(query);
 
-        // Chercher dans la map sémantique
-        const match = this.SEMANTIC_MAP[normalized];
+        // 1. RECHERCHE EXACTE (priorité 100)
+        let match = this.SEMANTIC_MAP[normalized];
+
+        // 2. RECHERCHE FLOUE si pas de match exact
+        if (!match) {
+            match = this.fuzzySearch(normalized);
+        }
+
+        // 3. RECHERCHE DANS LES TITRES si toujours pas de match
+        if (!match || (match.chapters && match.chapters.length === 0)) {
+            const titleResults = this.searchInTitles(query, lang);
+            if (titleResults.length > 0) {
+                return titleResults.slice(0, maxResults);
+            }
+        }
 
         if (!match) {
             return [];
@@ -298,6 +311,147 @@ const SemanticEngine = {
         }
 
         return results.slice(0, maxResults);
+    },
+
+    /**
+     * Recherche floue avec stemming simple et distance de Levenshtein
+     * @param {string} query - Mot normalisé
+     * @returns {Object|null} Match trouvé ou null
+     */
+    fuzzySearch: function(query) {
+        // Stemming simple: enlever suffixes communs
+        const stem = this.simpleStem(query);
+
+        // Chercher des mots-clés qui commencent par le stem
+        for (const [key, value] of Object.entries(this.SEMANTIC_MAP)) {
+            if (key.startsWith(stem) || stem.startsWith(key.substring(0, Math.min(4, key.length)))) {
+                console.log('[Semantic] Fuzzy match (stem):', query, '→', key);
+                return value;
+            }
+
+            // Distance de Levenshtein <= 2
+            if (this.levenshtein(query, key) <= 2) {
+                console.log('[Semantic] Fuzzy match (levenshtein):', query, '→', key);
+                return value;
+            }
+        }
+
+        return null;
+    },
+
+    /**
+     * Stemming simple FR/EN/PT/ES
+     * @param {string} word - Mot à stemmer
+     * @returns {string} Stem du mot
+     */
+    simpleStem: function(word) {
+        // Suffixes à enlever (FR/EN/PT/ES)
+        const suffixes = ['ment', 'tion', 'eur', 'euse', 'ance', 'ence', 'ie', 'ing', 'ed', 'es', 'e', 's'];
+
+        for (const suffix of suffixes) {
+            if (word.endsWith(suffix) && word.length > suffix.length + 3) {
+                return word.slice(0, -suffix.length);
+            }
+        }
+
+        return word;
+    },
+
+    /**
+     * Distance de Levenshtein (distance d'édition)
+     * @param {string} a - Premier mot
+     * @param {string} b - Second mot
+     * @returns {number} Distance d'édition
+     */
+    levenshtein: function(a, b) {
+        if (a.length === 0) return b.length;
+        if (b.length === 0) return a.length;
+
+        const matrix = [];
+
+        for (let i = 0; i <= b.length; i++) {
+            matrix[i] = [i];
+        }
+
+        for (let j = 0; j <= a.length; j++) {
+            matrix[0][j] = j;
+        }
+
+        for (let i = 1; i <= b.length; i++) {
+            for (let j = 1; j <= a.length; j++) {
+                if (b.charAt(i - 1) === a.charAt(j - 1)) {
+                    matrix[i][j] = matrix[i - 1][j - 1];
+                } else {
+                    matrix[i][j] = Math.min(
+                        matrix[i - 1][j - 1] + 1, // substitution
+                        matrix[i][j - 1] + 1,     // insertion
+                        matrix[i - 1][j] + 1      // deletion
+                    );
+                }
+            }
+        }
+
+        return matrix[b.length][a.length];
+    },
+
+    /**
+     * Recherche dans les titres des chansons
+     * @param {string} query - Mot recherché
+     * @param {string} lang - Langue (FR, EN, PT, ES, DE, IT, TL)
+     * @returns {Array} Liste de {chapter, score, title}
+     */
+    searchInTitles: function(query, lang = 'FR') {
+        // Charger les titres depuis titles/{LANG}.json
+        if (!window.chapterTitles || !window.chapterTitles[lang]) {
+            console.warn('[Semantic] Titles not loaded for', lang);
+            return [];
+        }
+
+        const titles = window.chapterTitles[lang];
+        const normalized = this.normalizeQuery(query);
+        const results = [];
+
+        // Parcourir tous les titres
+        for (const [bookNum, chapters] of Object.entries(titles)) {
+            for (const [chapterNum, title] of Object.entries(chapters)) {
+                const normalizedTitle = this.normalizeQuery(title);
+
+                // Recherche exacte ou partielle dans le titre
+                if (normalizedTitle.includes(normalized)) {
+                    const bookCode = this.getBookCode(parseInt(bookNum));
+                    const chapterId = `${bookCode}_${String(chapterNum).padStart(3, '0')}`;
+
+                    results.push({
+                        chapter: chapterId,
+                        score: 90, // Score élevé pour match dans titre
+                        title: title
+                    });
+                }
+            }
+        }
+
+        return results;
+    },
+
+    /**
+     * Convertir book number (1-66) en book code (01_GEN, etc.)
+     * @param {number} bookNum - Numéro du livre (1-66)
+     * @returns {string} Code du livre
+     */
+    getBookCode: function(bookNum) {
+        const bookCodes = [
+            "01_GEN", "02_EXO", "03_LEV", "04_NUM", "05_DEU", "06_JOS", "07_JDG", "08_RUT",
+            "09_1SA", "10_2SA", "11_1KI", "12_2KI", "13_1CH", "14_2CH", "15_EZR", "16_NEH",
+            "17_EST", "18_JOB", "19_PSA", "20_PRO", "21_ECC", "22_SNG", "23_ISA", "24_JER",
+            "25_LAM", "26_EZK", "27_DAN", "28_HOS", "29_JOL", "30_AMO", "31_OBA", "32_JON",
+            "33_MIC", "34_NAH", "35_HAB", "36_ZEP", "37_HAG", "38_ZEC", "39_MAL", "40_MAT",
+            "41_MRK", "42_LUK", "43_JOH", "44_ACT", "45_ROM", "46_1CO", "47_2CO", "48_GAL",
+            "49_EPH", "50_PHP", "51_COL", "52_1TH", "53_2TH", "54_1TI", "55_2TI", "56_TIT",
+            "57_PHM", "58_HEB", "59_JAM", "60_1PE", "61_2PE", "62_1JO", "63_2JO", "64_3JO",
+            "65_JUD", "66_REV"
+        ];
+
+        return bookCodes[bookNum - 1] || "UNKNOWN";
     },
 
     /**
