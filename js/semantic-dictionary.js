@@ -2907,3 +2907,8 @@ const SemanticDictionary = {
         }
     }
 };
+
+// Export global pour utilisation dans semantic-engine.js
+if (typeof window !== 'undefined') {
+    window.SemanticDictionary = SemanticDictionary;
+}
