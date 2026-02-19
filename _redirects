@@ -5,6 +5,8 @@
 /api/premium-claim   /.netlify/functions/premium-claim   200
 /api/stats           /.netlify/functions/stats           200
 /api/get-analytics   /.netlify/functions/get-analytics   200
+/api/youtube-stats    /.netlify/functions/youtube-stats   200
+/api/facebook-stats   /.netlify/functions/facebook-stats  200
 
 # Rediriger pages "completes" vers biblechantee.com
 /lecteur.html    https://biblechantee.com/lecteur.html    301
