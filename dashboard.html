@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Bible ChantÃ©e - Statistiques</title>
+    <title>Dashboard Bible Chantée - Statistiques</title>
 
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -13,9 +13,12 @@
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());h
+        gtag('js', new Date());
         gtag('config', 'G-TX3ETCKJQZ');
     </script>
+
+    <!-- Country Coordinates Database (all countries) -->
+    <script src="js/country-coords.js"></script>
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -474,7 +477,119 @@
         }
         .lang-btn:hover { background: rgba(255,255,255,0.12); }
 
+        /* Period selector */
+        .period-selector {
+            margin-top: 15px;
+            display: inline-flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .period-label {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-right: 5px;
+        }
+        .period-btn {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.25);
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        .period-btn.active {
+            border-color: #00ff00;
+            color: #00ff00;
+            background: rgba(0,255,0,0.1);
+        }
+        .period-btn:hover { background: rgba(255,255,255,0.15); }
+
+        /* AI Analysis Section */
+        .ai-analysis-section {
+            background: linear-gradient(135deg, #1a1a3e, #2a2a5e);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,215,0,0.3);
+        }
+        .ai-analysis-content {
+            background: rgba(255, 215, 0, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            max-height: 450px;
+            overflow-y: auto;
+        }
+        .ai-analysis-content h2 {
+            color: #ffd700;
+            font-size: 1.1em;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .ai-analysis-content h3 {
+            color: #4facfe;
+            font-size: 1em;
+            margin-top: 12px;
+            margin-bottom: 8px;
+        }
+        .ai-analysis-content p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .ai-analysis-content ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        .ai-analysis-content li {
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 5px;
+            line-height: 1.5;
+        }
+        .ai-analysis-content strong {
+            color: #ffd700;
+        }
+        .ai-analysis-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85em;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .ai-analysis-content .loading {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-style: italic;
+        }
+        .btn-ai-refresh {
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            border: none;
+            border-radius: 8px;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .btn-ai-refresh:hover {
+            transform: scale(1.05);
+        }
+
+        /* BC_CLEAR_CACHE_SITE_ONLY_V1 */
+        #bcClearCacheWrap{position:fixed;right:14px;bottom:14px;z-index:99999}
+        #clearCacheBtn{
+            padding:8px 14px;border-radius:10px;border:1px solid #f0c36d;
+            background:#2c2f5b;color:#fff;cursor:pointer;font-size:14px
+        }
+        #clearCacheBtn:hover{opacity:.85}
+
 </style>
+<script src="js/clear-cache.js?v=1"></script>
 </head>
 <body>
     <div class="header">
@@ -485,6 +600,16 @@
             <button class="lang-btn" data-lang="EN">EN</button>
             <button class="lang-btn" data-lang="PT">PT</button>
             <button class="lang-btn" data-lang="ES">ES</button>
+            <button class="lang-btn" data-lang="DE">DE</button>
+            <button class="lang-btn" data-lang="IT">IT</button>
+            <button class="lang-btn" data-lang="TL">TL</button>
+        </div>
+        <div class="period-selector" id="periodSelector">
+            <span class="period-label" data-i18n="period-label">Période:</span>
+            <button class="period-btn" data-period="24h" data-i18n="period-24h">24h</button>
+            <button class="period-btn" data-period="7days" data-i18n="period-7days">7 jours</button>
+            <button class="period-btn" data-period="30days" data-i18n="period-30days">30 jours</button>
+            <button class="period-btn active" data-period="all" data-i18n="period-all">Tout</button>
         </div>
         <div class="live-indicator" id="liveIndicator">
             <span class="live-dot"></span>
@@ -502,32 +627,38 @@
         <!-- Stats Cards -->
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-icon">ð¥</div>
+                <div class="stat-icon">👥</div>
                 <div class="stat-value" id="totalVisitors">0</div>
                 <div class="stat-label" data-i18n="stat-visitors-today">Visiteurs aujourd'hui</div>
                 <div class="stat-change positive" id="visitorsChange">-</div>
                 <div id="liveVisitorsBadge" style="display:flex;align-items:center;gap:5px;margin-top:6px;background:rgba(255,59,48,0.15);border:1px solid rgba(255,59,48,0.4);border-radius:20px;padding:3px 10px;font-size:0.72rem;color:#ff6b6b;font-weight:600;justify-content:center;"><span style="width:7px;height:7px;background:#ff4444;border-radius:50%;display:inline-block;animation:livePulse 1.2s ease-in-out infinite;flex-shrink:0;"></span> <span id="liveVisitorsCount">...</span></div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">ð</div>
+                <div class="stat-icon">🌎</div>
                 <div class="stat-value" id="totalCountries">0</div>
                 <div class="stat-label" data-i18n="stat-countries-active">Pays actifs</div>
                 <div class="stat-change positive" id="countriesChange">-</div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">ðµ</div>
+                <div class="stat-icon">🎵</div>
                 <div class="stat-value" id="totalListens">0</div>
                 <div class="stat-label" data-i18n="stat-audio-plays">Ecoutes audio</div>
                 <div class="stat-change positive" id="listensChange">-</div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">ð</div>
+                <div class="stat-icon">🙏</div>
+                <div class="stat-value" id="totalPrayers">40</div>
+                <div class="stat-label" data-i18n="stat-prayers">Prieres disponibles</div>
+                <div class="stat-change positive" id="prayersChange" data-i18n="prayers-change">7 langues</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🔔</div>
                 <div class="stat-value" id="totalShares">0</div>
                 <div class="stat-label" data-i18n="stat-shares">Partages</div>
                 <div class="stat-change positive" id="sharesChange">-</div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">ð§</div>
+                <div class="stat-icon">📧</div>
                 <div class="stat-value" id="totalSignups">0</div>
                 <div class="stat-label" data-i18n="stat-signups">Inscriptions</div>
                 <div class="stat-change positive" id="signupsChange">-</div>
@@ -536,7 +667,7 @@
 
         <!-- Map Section -->
         <div class="map-section">
-            <div class="section-title"><span class="section-emoji">ðºï¸</span> <span data-i18n="section-world">Visiteurs dans le monde</span></div>
+            <div class="section-title"><span class="section-emoji">🗺️</span> <span data-i18n="section-world">Visiteurs dans le monde</span></div>
             <div id="map"></div>
             <div class="map-legend">
                 <div class="legend-item">
@@ -554,58 +685,40 @@
             </div>
         </div>
 
-        <!-- Progress Section -->
+        <!-- Prayer Statistics Section -->
         <div class="progress-section">
-            <div class="section-title"><span class="section-emoji">ð</span> <span data-i18n="section-progress">Progression Generation MP3</span></div>
-            <div class="progress-grid">
-                <div class="progress-item">
-                    <div class="progress-header">
-                        <div class="progress-lang">
-                            <span class="progress-flag">ð«ð·</span>
-                            <span data-i18n="lang-fr">Francais</span>
+            <div class="section-title"><span class="section-emoji">🙏</span> <span data-i18n="section-prayer-stats">Statistiques des Prieres</span></div>
+            <div class="two-columns" style="margin: 0;">
+                <div class="panel" style="background: rgba(0,0,0,0.3); padding: 20px;">
+                    <h3 style="color: #FFD700; margin-bottom: 15px; font-size: 1.1rem;" data-i18n="prayer-favorites-title">Favoris Utilisateur</h3>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 20px;">
+                        <div style="text-align: center; background: rgba(255,215,0,0.1); padding: 15px; border-radius: 10px;">
+                            <div style="font-size: 2rem; font-weight: bold; color: #FFD700;" id="totalFavorites">0</div>
+                            <div style="color: #aaa; font-size: 0.85rem;" data-i18n="total-favorites">Total favoris</div>
                         </div>
-                        <span id="progressFR">1189/1189</span>
+                        <div style="text-align: center; background: rgba(0,255,0,0.1); padding: 15px; border-radius: 10px;">
+                            <div style="font-size: 2rem; font-weight: bold; color: #00ff00;" id="mostFavoritedLang">-</div>
+                            <div style="color: #aaa; font-size: 0.85rem;" data-i18n="most-favorited-lang">Langue favorite</div>
+                        </div>
                     </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill complete" style="width: 100%"></div>
+                    <div id="favoritesByLanguage">
+                        <!-- Filled by JS -->
                     </div>
                 </div>
-                <div class="progress-item">
-                    <div class="progress-header">
-                        <div class="progress-lang">
-                            <span class="progress-flag">ð¬ð§</span>
-                            <span data-i18n="lang-en">English</span>
-                        </div>
-                        <span id="progressEN">1189/1189</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill complete" style="width: 100%"></div>
-                    </div>
+                <div class="panel" style="background: rgba(0,0,0,0.3); padding: 20px;">
+                    <h3 style="color: #FFD700; margin-bottom: 15px; font-size: 1.1rem;" data-i18n="prayer-distribution-title">Distribution des Prieres</h3>
+                    <ul class="top-list" id="prayersDistribution">
+                        <!-- Filled by JS -->
+                    </ul>
                 </div>
-                <div class="progress-item">
-                    <div class="progress-header">
-                        <div class="progress-lang">
-                            <span class="progress-flag">ð§ð·</span>
-                            <span data-i18n="lang-pt">Portugues</span>
-                        </div>
-                        <span id="progressPT">1189/1189</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill complete" style="width: 100%"></div>
-                    </div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-header">
-                        <div class="progress-lang">
-                            <span class="progress-flag">ðªð¸</span>
-                            <span data-i18n="lang-es">Espanol</span>
-                        </div>
-                        <span id="progressES">1189/1189</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill complete" style="width: 100%"></div>
-                    </div>
-                </div>
+            </div>
+        </div>
+
+        <!-- Progress Section (Dynamic from lang-config.json) -->
+        <div class="progress-section">
+            <div class="section-title"><span class="section-emoji">📊</span> <span data-i18n="section-progress">Progression Generation MP3</span></div>
+            <div class="progress-grid" id="languageProgressGrid">
+                <!-- Filled dynamically by lang-config.js -->
             </div>
         </div>
 
@@ -613,7 +726,7 @@
         <div class="two-columns">
             <!-- Top Countries -->
             <div class="panel">
-                <div class="section-title"><span class="section-emoji">ð</span> <span data-i18n="section-top-countries">Top Pays</span></div>
+                <div class="section-title"><span class="section-emoji">🏆</span> <span data-i18n="section-top-countries">Top Pays</span></div>
                 <ul class="top-list" id="topCountries">
                     <!-- Filled by JS -->
                 </ul>
@@ -621,7 +734,7 @@
 
             <!-- Top Pages -->
             <div class="panel">
-                <div class="section-title"><span class="section-emoji">ð</span> <span data-i18n="section-top-pages">Pages les plus vues</span></div>
+                <div class="section-title"><span class="section-emoji">📄</span> <span data-i18n="section-top-pages">Pages les plus vues</span></div>
                 <ul class="top-list" id="topPages">
                     <!-- Filled by JS -->
                 </ul>
@@ -631,7 +744,7 @@
         <div class="two-columns">
             <!-- Events -->
             <div class="panel">
-                <div class="section-title"><span class="section-emoji">â¡</span> <span data-i18n="section-events">Evenements GA4</span></div>
+                <div class="section-title"><span class="section-emoji">⚡</span> <span data-i18n="section-events">Evenements GA4</span></div>
                 <ul class="top-list" id="eventsList">
                     <!-- Filled by JS -->
                 </ul>
@@ -639,15 +752,84 @@
 
             <!-- Activity Feed -->
             <div class="panel">
-                <div class="section-title"><span class="section-emoji">ð</span> <span data-i18n="section-activity">Activite recente</span></div>
+                <div class="section-title"><span class="section-emoji">🕙</span> <span data-i18n="section-activity">Activite recente</span></div>
                 <div class="activity-feed" id="activityFeed">
                     <!-- Filled by JS -->
                 </div>
             </div>
         </div>
 
-<!-- SECTION YOUTUBE STATISTICS - VERSION COMBINÃE -->
-<section id="yt-section" style="
+        <!-- AI Analysis Section -->
+        <div class="ai-analysis-section">
+            <div class="section-title"><span class="section-emoji">💡</span> <span data-i18n="section-ai-analysis">Analyse IA</span></div>
+            <div class="ai-analysis-content" id="aiAnalysisContent">
+                <p class="loading">Chargement de l'analyse...</p>
+            </div>
+            <div class="ai-analysis-footer">
+                <span id="aiAnalysisDate">Derniere mise a jour: --</span>
+                <button class="btn-ai-refresh" onclick="loadAIAnalysis()">🔄 Actualiser</button>
+            </div>
+        </div>
+
+        <!-- CARTES RÉSEAUX SOCIAUX - RÉSUMÉS COMPACTS -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 15px 20px 15px;">
+
+          <!-- CARTE YOUTUBE COMPACT -->
+          <div style="background: linear-gradient(135deg, rgba(255, 0, 0, 0.15), rgba(0, 0, 0, 0.4)); border: 2px solid #FF4444; border-radius: 12px; padding: 20px; cursor: pointer; transition: transform 0.3s;" onclick="document.querySelector('section').scrollIntoView({behavior: 'smooth'})">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+              <span style="font-size: 32px;">📺</span>
+              <div>
+                <h3 style="margin: 0; color: #FF4444; font-size: 18px; font-weight: bold;">YouTube</h3>
+                <p style="margin: 0; font-size: 11px; color: #999;">@SungBible-Biblechantee</p>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+              <div style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 6px;">
+                <div style="font-size: 10px; color: #aaa; margin-bottom: 3px;">ABONNÉS</div>
+                <div style="font-size: 20px; font-weight: bold; color: #FFD700;">241</div>
+              </div>
+              <div style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 6px;">
+                <div style="font-size: 10px; color: #aaa; margin-bottom: 3px;">VUES (28J)</div>
+                <div style="font-size: 20px; font-weight: bold; color: #FFD700;">1,1k</div>
+              </div>
+            </div>
+            <div style="display: flex; gap: 8px; font-size: 11px;">
+              <span style="background: rgba(74, 170, 74, 0.2); color: #4A4; padding: 4px 8px; border-radius: 4px; font-weight: bold;">↑ 551% vues</span>
+              <span style="background: rgba(74, 170, 74, 0.2); color: #4A4; padding: 4px 8px; border-radius: 4px; font-weight: bold;">↑ 456% durée</span>
+            </div>
+            <div style="text-align: center; margin-top: 12px; font-size: 10px; color: #999;">📊 Cliquez pour voir les détails</div>
+          </div>
+
+          <!-- CARTE FACEBOOK COMPACT -->
+          <div style="background: linear-gradient(135deg, rgba(24, 119, 242, 0.15), rgba(0, 0, 0, 0.4)); border: 2px solid #1877F2; border-radius: 12px; padding: 20px; cursor: pointer; transition: transform 0.3s;" onclick="document.querySelectorAll('section')[1].scrollIntoView({behavior: 'smooth'})">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 15px;">
+              <span style="font-size: 32px;">📘</span>
+              <div>
+                <h3 style="margin: 0; color: #1877F2; font-size: 18px; font-weight: bold;">Facebook</h3>
+                <p style="margin: 0; font-size: 11px; color: #999;">Bible Chantée • Reels</p>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+              <div style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 6px;">
+                <div style="font-size: 10px; color: #aaa; margin-bottom: 3px;">FOLLOWERS</div>
+                <div style="font-size: 20px; font-weight: bold; color: #FFD700;">113</div>
+              </div>
+              <div style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 6px;">
+                <div style="font-size: 10px; color: #aaa; margin-bottom: 3px;">INTERACTIONS (28J)</div>
+                <div style="font-size: 20px; font-weight: bold; color: #FFD700;">37,4k</div>
+              </div>
+            </div>
+            <div style="display: flex; gap: 8px; font-size: 11px;">
+              <span style="background: rgba(74, 170, 74, 0.2); color: #4A4; padding: 4px 8px; border-radius: 4px; font-weight: bold;">↑ 54.8% followers</span>
+              <span style="background: rgba(74, 170, 74, 0.2); color: #4A4; padding: 4px 8px; border-radius: 4px; font-weight: bold;">↑ 24k% interact.</span>
+            </div>
+            <div style="text-align: center; margin-top: 12px; font-size: 10px; color: #999;">📊 Cliquez pour voir les détails</div>
+          </div>
+
+        </div>
+
+<!-- SECTION YOUTUBE STATISTICS - VERSION COMBINÉE -->
+<section style="
   margin: 30px 15px;
   padding: 20px;
   background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
@@ -657,42 +839,42 @@
 ">
 
 <div style="display: flex; align-items: center; margin-bottom: 25px;">
-  <span style="font-size: 36px; margin-right: 15px;">ðº</span>
+  <span style="font-size: 36px; margin-right: 15px;">📺</span>
   <div>
     <h2 style="margin: 0; color: #FFD700; font-size: 32px; font-weight: bold;">Statistiques YouTube</h2>
-    <p style="margin: 5px 0 0 0; color: #aaa; font-size: 12px;">Bible ChantÃ©e â¢ Analyse cumulative</p>
+    <p style="margin: 5px 0 0 0; color: #aaa; font-size: 12px;">Bible Chantée • Analyse cumulative</p>
   </div>
 </div>
 
-<!-- CARTES PRINCIPALES - CHIFFRES COMBINÃS -->
+<!-- CARTES PRINCIPALES - CHIFFRES COMBINÉS -->
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 25px;">
 
   <!-- CARTE 1: VUES TOTALES -->
   <div style="background: rgba(30, 30, 60, 0.9); padding: 20px; border-radius: 10px; border: 2px solid #FF6666; position: relative;">
-    <div style="font-size: 13px; color: #aaa; margin-bottom: 8px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">ð VUES</div>
+    <div style="font-size: 13px; color: #aaa; margin-bottom: 8px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">📈 VUES</div>
 
     <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px;">
-      <div style="font-size: 36px; font-weight: bold; color: #FFD700;" data-yt="total-views">1 400</div>
+      <div style="font-size: 36px; font-weight: bold; color: #FFD700;">1 300</div>
       <div style="font-size: 12px; color: #999;">total (lifetime)</div>
     </div>
 
     <div style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px; margin-bottom: 12px;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-        <span style="font-size: 11px; color: #aaa;">ð 28 derniers jours</span>
-        <span style="font-size: 11px; color: #4A4; font-weight: bold;">+551% ð¥</span>
+        <span style="font-size: 11px; color: #aaa;">📅 28 derniers jours</span>
+        <span style="font-size: 11px; color: #4A4; font-weight: bold;">+551% 🔥</span>
       </div>
-      <div style="font-size: 22px; font-weight: bold; color: #FFD700;">1 132</div>
-      <div style="font-size: 10px; color: #999; margin-top: 4px;">80.9% du total (donnÃ©es rÃ©centes)</div>
+      <div style="font-size: 22px; font-weight: bold; color: #FFD700;">1 100</div>
+      <div style="font-size: 10px; color: #999; margin-top: 4px;">84.6% du total (données récentes)</div>
     </div>
 
     <div style="background: rgba(74, 170, 74, 0.15); padding: 8px; border-radius: 4px; text-align: center;">
-      <div style="font-size: 10px; color: #4A4;">â Croissance explosive</div>
+      <div style="font-size: 10px; color: #4A4;">✅ Croissance explosive</div>
     </div>
   </div>
 
-  <!-- CARTE 2: DURÃE DE VISIONNAGE -->
+  <!-- CARTE 2: DURÉE DE VISIONNAGE -->
   <div style="background: rgba(30, 30, 60, 0.9); padding: 20px; border-radius: 10px; border: 2px solid #FF6666;">
-    <div style="font-size: 13px; color: #aaa; margin-bottom: 8px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">â±ï¸ DURÃE VISIONNAGE</div>
+    <div style="font-size: 13px; color: #aaa; margin-bottom: 8px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">⏱️ DURÉE VISIONNAGE</div>
 
     <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px;">
       <div style="font-size: 36px; font-weight: bold; color: #FFD700;">34.3 h</div>
@@ -701,44 +883,44 @@
 
     <div style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px; margin-bottom: 12px;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-        <span style="font-size: 11px; color: #aaa;">ð 28 derniers jours</span>
-        <span style="font-size: 11px; color: #4A4; font-weight: bold;">+456% ð¥</span>
+        <span style="font-size: 11px; color: #aaa;">📅 28 derniers jours</span>
+        <span style="font-size: 11px; color: #4A4; font-weight: bold;">+456% 🔥</span>
       </div>
       <div style="font-size: 22px; font-weight: bold; color: #FFD700;">26.0 h</div>
-      <div style="font-size: 10px; color: #999; margin-top: 4px;">75.8% du total (trÃ¨s actif)</div>
+      <div style="font-size: 10px; color: #999; margin-top: 4px;">75.8% du total (très actif)</div>
     </div>
 
     <div style="background: rgba(74, 170, 74, 0.15); padding: 8px; border-radius: 4px; text-align: center;">
-      <div style="font-size: 10px; color: #4A4;">â Engagement fort</div>
+      <div style="font-size: 10px; color: #4A4;">✅ Engagement fort</div>
     </div>
   </div>
 
-  <!-- CARTE 3: ABONNÃS -->
+  <!-- CARTE 3: ABONNÉS -->
   <div style="background: rgba(30, 30, 60, 0.9); padding: 20px; border-radius: 10px; border: 2px solid #FF6666;">
-    <div style="font-size: 13px; color: #aaa; margin-bottom: 8px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">ð¥ ABONNÃS</div>
+    <div style="font-size: 13px; color: #aaa; margin-bottom: 8px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">👥 ABONNÉS</div>
 
     <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px;">
-      <div style="font-size: 36px; font-weight: bold; color: #FFD700;" data-yt="subscribers">815</div>
+      <div style="font-size: 36px; font-weight: bold; color: #FFD700;">241</div>
       <div style="font-size: 12px; color: #999;">actuels</div>
     </div>
 
     <div style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px; margin-bottom: 12px;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-        <span style="font-size: 11px; color: #aaa;">ð Nouveaux (28j)</span>
-        <span style="font-size: 11px; color: #4A4; font-weight: bold;">+54 ð</span>
+        <span style="font-size: 11px; color: #aaa;">📅 Nouveaux (28j)</span>
+        <span style="font-size: 11px; color: #4A4; font-weight: bold;">+54 👍</span>
       </div>
       <div style="font-size: 16px; font-weight: bold; color: #FFD700;">~1.9/jour</div>
-      <div style="font-size: 10px; color: #999; margin-top: 4px;">Croissance stable et rÃ©guliÃ¨re</div>
+      <div style="font-size: 10px; color: #999; margin-top: 4px;">Croissance stable et régulière</div>
     </div>
 
     <div style="background: rgba(74, 170, 74, 0.15); padding: 8px; border-radius: 4px; text-align: center;">
-      <div style="font-size: 10px; color: #4A4;">â Proche monÃ©tisation (1000)</div>
+      <div style="font-size: 10px; color: #4A4;">✅ Proche monétisation (1000)</div>
     </div>
   </div>
 
   <!-- CARTE 4: SPECTATEURS UNIQUES -->
   <div style="background: rgba(30, 30, 60, 0.9); padding: 20px; border-radius: 10px; border: 2px solid #FF6666;">
-    <div style="font-size: 13px; color: #aaa; margin-bottom: 8px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">ðï¸ SPECTATEURS</div>
+    <div style="font-size: 13px; color: #aaa; margin-bottom: 8px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">👁️ SPECTATEURS</div>
 
     <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px;">
       <div style="font-size: 36px; font-weight: bold; color: #FFD700;">~261</div>
@@ -747,14 +929,14 @@
 
     <div style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px; margin-bottom: 12px;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-        <span style="font-size: 11px; color: #aaa;">ð Ratio</span>
+        <span style="font-size: 11px; color: #aaa;">📊 Ratio</span>
         <span style="font-size: 11px; color: #FFD700; font-weight: bold;">4.3 vues/personne</span>
       </div>
       <div style="font-size: 14px; color: #999; margin-top: 8px;">Audience en croissance<br>Engagement moyen: 6.0 min/personne</div>
     </div>
 
     <div style="background: rgba(74, 170, 74, 0.15); padding: 8px; border-radius: 4px; text-align: center;">
-      <div style="font-size: 10px; color: #4A4;">â Audience diversifiÃ©e</div>
+      <div style="font-size: 10px; color: #4A4;">✅ Audience diversifiée</div>
     </div>
   </div>
 
@@ -764,30 +946,30 @@
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
 
   <div style="background: rgba(30, 30, 60, 0.9); padding: 18px; border-radius: 10px; border-left: 5px solid #FFD700;">
-    <h3 style="color: #FFD700; margin: 0 0 12px 0; font-size: 16px;">ð #1 - Le Message Biblique</h3>
+    <h3 style="color: #FFD700; margin: 0 0 12px 0; font-size: 16px;">🏆 #1 - Le Message Biblique</h3>
 
     <div style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 6px; margin-bottom: 10px;">
       <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
         <span style="font-size: 11px; color: #aaa;">Vues totales</span>
-        <span style="font-size: 14px; font-weight: bold; color: #4A4;">761 vues</span>
+        <span style="font-size: 14px; font-weight: bold; color: #4A4;">807 vues</span>
       </div>
       <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
         <span style="font-size: 11px; color: #aaa;">% du total (28j)</span>
-        <span style="font-size: 12px; color: #FFD700;">67.2% ð¥</span>
+        <span style="font-size: 12px; color: #FFD700;">73.4% 🔥</span>
       </div>
       <div style="display: flex; justify-content: space-between;">
-        <span style="font-size: 11px; color: #aaa;">RÃ©tention</span>
+        <span style="font-size: 11px; color: #aaa;">Rétention</span>
         <span style="font-size: 12px; color: #4A4;">0:58 (20%)</span>
       </div>
     </div>
 
     <div style="background: rgba(74, 170, 74, 0.1); padding: 8px; border-radius: 4px; text-align: center; font-size: 11px; color: #4A4;">
-      â­ Ultra performante - RÃ©pliquer ce format
+      ⭐ Ultra performante - Répliquer ce format
     </div>
   </div>
 
   <div style="background: rgba(30, 30, 60, 0.9); padding: 18px; border-radius: 10px; border-left: 5px solid #FFD700;">
-    <h3 style="color: #FFD700; margin: 0 0 12px 0; font-size: 16px;">ð¥ #2 - Exode ChantÃ©</h3>
+    <h3 style="color: #FFD700; margin: 0 0 12px 0; font-size: 16px;">🥈 #2 - Exode Chanté</h3>
 
     <div style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 6px; margin-bottom: 10px;">
       <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
@@ -799,21 +981,21 @@
         <span style="font-size: 12px; color: #FFD700;">2.9%</span>
       </div>
       <div style="display: flex; justify-content: space-between;">
-        <span style="font-size: 11px; color: #aaa;">RÃ©tention</span>
+        <span style="font-size: 11px; color: #aaa;">Rétention</span>
         <span style="font-size: 12px; color: #4A4;">0:43 (17%)</span>
       </div>
     </div>
 
     <div style="background: rgba(255, 102, 102, 0.1); padding: 8px; border-radius: 4px; text-align: center; font-size: 11px; color: #FF9999;">
-      â ï¸ Ã amÃ©liorer - Promouvoir davantage
+      ⚠️ À améliorer - Promouvoir davantage
     </div>
   </div>
 
 </div>
 
-<!-- RÃSUMÃ ANALYTIQUE -->
+<!-- RÉSUMÉ ANALYTIQUE -->
 <div style="background: rgba(30, 30, 60, 0.9); padding: 18px; border-radius: 10px; border: 2px solid #4A4; margin-bottom: 20px;">
-  <h3 style="color: #4A4; margin: 0 0 12px 0; font-size: 18px;">ð Analyse Cumulative</h3>
+  <h3 style="color: #4A4; margin: 0 0 12px 0; font-size: 18px;">📊 Analyse Cumulative</h3>
 
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
 
@@ -824,20 +1006,20 @@
     </div>
 
     <div style="padding: 10px; background: rgba(74, 170, 74, 0.1); border-radius: 6px;">
-      <div style="font-size: 12px; color: #aaa; margin-bottom: 4px;">Taux RÃ©tention Moy</div>
+      <div style="font-size: 12px; color: #aaa; margin-bottom: 4px;">Taux Rétention Moy</div>
       <div style="font-size: 24px; font-weight: bold; color: #4A4;">19.5%</div>
-      <div style="font-size: 10px; color: #999;">Excellent (qualitÃ© prouvÃ©e)</div>
+      <div style="font-size: 10px; color: #999;">Excellent (qualité prouvée)</div>
     </div>
 
     <div style="padding: 10px; background: rgba(74, 170, 74, 0.1); border-radius: 6px;">
-      <div style="font-size: 12px; color: #aaa; margin-bottom: 4px;">Vues/AbonnÃ©</div>
-      <div style="font-size: 24px; font-weight: bold; color: #4A4;">1.39</div>
-      <div style="font-size: 10px; color: #999;">Engagement fort</div>
+      <div style="font-size: 12px; color: #aaa; margin-bottom: 4px;">Vues/Abonné</div>
+      <div style="font-size: 24px; font-weight: bold; color: #4A4;">14.7</div>
+      <div style="font-size: 10px; color: #999;">Engagement exceptionnel</div>
     </div>
 
     <div style="padding: 10px; background: rgba(74, 170, 74, 0.1); border-radius: 6px;">
-      <div style="font-size: 12px; color: #aaa; margin-bottom: 4px;">RÃ©cence de Croissance</div>
-      <div style="font-size: 20px; font-weight: bold; color: #4A4;">80.9%</div>
+      <div style="font-size: 12px; color: #aaa; margin-bottom: 4px;">Récence de Croissance</div>
+      <div style="font-size: 20px; font-weight: bold; color: #4A4;">84.6%</div>
       <div style="font-size: 10px; color: #999;">En 28 jours seulement</div>
     </div>
 
@@ -846,16 +1028,16 @@
 
 <!-- OBJECTIFS 90 JOURS -->
 <div style="background: linear-gradient(135deg, rgba(74, 170, 74, 0.2), rgba(255, 215, 0, 0.1)); padding: 18px; border-radius: 10px; border: 2px dashed #FFD700; margin-bottom: 20px;">
-  <h3 style="color: #FFD700; margin: 0 0 12px 0; font-size: 18px;">ð¯ Objectifs 90 Jours</h3>
+  <h3 style="color: #FFD700; margin: 0 0 12px 0; font-size: 18px;">🎯 Objectifs 90 Jours</h3>
 
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
 
     <div style="padding: 12px; background: rgba(0,0,0,0.2); border-radius: 6px;">
-      <div style="font-size: 11px; color: #aaa; margin-bottom: 4px;">ABONNÃS CIBLE</div>
+      <div style="font-size: 11px; color: #aaa; margin-bottom: 4px;">ABONNÉS CIBLE</div>
       <div style="font-size: 28px; font-weight: bold; color: #FFD700;">1 500</div>
       <div style="display: flex; justify-content: space-between; font-size: 10px; color: #999; margin-top: 4px;">
-        <span>Actuel: 815</span>
-        <span>+685 (+84%)</span>
+        <span>Actuel: 241</span>
+        <span>+1 425 (+1900%)</span>
       </div>
     </div>
 
@@ -863,8 +1045,8 @@
       <div style="font-size: 11px; color: #aaa; margin-bottom: 4px;">VUES CIBLE</div>
       <div style="font-size: 28px; font-weight: bold; color: #FFD700;">3 000</div>
       <div style="display: flex; justify-content: space-between; font-size: 10px; color: #999; margin-top: 4px;">
-        <span>Actuel: 1.4k</span>
-        <span>+1.6k (+114%)</span>
+        <span>Actuel: 1.3k</span>
+        <span>+1.7k (+131%)</span>
       </div>
     </div>
 
@@ -878,7 +1060,7 @@
     </div>
 
     <div style="padding: 12px; background: rgba(0,0,0,0.2); border-radius: 6px;">
-      <div style="font-size: 11px; color: #aaa; margin-bottom: 4px;">FRÃQUENCE CIBLE</div>
+      <div style="font-size: 11px; color: #aaa; margin-bottom: 4px;">FRÉQUENCE CIBLE</div>
       <div style="font-size: 28px; font-weight: bold; color: #FFD700;">2/sem</div>
       <div style="display: flex; justify-content: space-between; font-size: 10px; color: #999; margin-top: 4px;">
         <span>Actuel: 1/sem</span>
@@ -891,63 +1073,289 @@
 
 <!-- FOOTER -->
 <div style="text-align: center; font-size: 10px; color: #999; padding: 12px; border-top: 1px solid #444;">
-  ð Analyse Cumulative â¢ Mise Ã  jour: 15/02/2026 22:33<br>
-  <strong>PÃ©riodes :</strong> Lifetime (1 avr. 2007 â 14 fÃ©vr. 2026) | 28 jours (18 janv. â 14 fÃ©vr. 2026)<br>
+  📊 Analyse Cumulative • Mise à jour: 16/02/2026<br>
+  <strong>Périodes :</strong> Lifetime (1 avr. 2007 → 16 févr. 2026) | 28 jours (19 janv. → 16 févr. 2026)<br>
   Source: YouTube Studio Analytics
+</div>
+
+</section>
+
+<!-- SECTION FACEBOOK STATISTICS - REELS & INTERACTIONS -->
+<section style="
+  margin: 30px 15px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(24, 119, 242, 0.1), rgba(0, 0, 0, 0.3));
+  border: 2px solid #1877F2;
+  border-radius: 12px;
+  color: #fff;
+">
+
+<div style="display: flex; align-items: center; margin-bottom: 25px;">
+  <span style="font-size: 36px; margin-right: 15px;">📘</span>
+  <div>
+    <h2 style="margin: 0; color: #1877F2; font-size: 32px; font-weight: bold;">Statistiques Facebook</h2>
+    <p style="margin: 5px 0 0 0; color: #aaa; font-size: 12px;">Bible Chantée • Reels & Interactions</p>
+  </div>
+</div>
+
+<!-- CARTES PRINCIPALES - MÉTRIQUES FACEBOOK -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 25px;">
+
+  <!-- CARTE 1: FOLLOWERS -->
+  <div style="background: rgba(30, 30, 60, 0.9); padding: 20px; border-radius: 10px; border: 2px solid #1877F2; position: relative;">
+    <div style="font-size: 13px; color: #aaa; margin-bottom: 8px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">👥 FOLLOWERS</div>
+
+    <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px;">
+      <div style="font-size: 36px; font-weight: bold; color: #FFD700;">113</div>
+      <div style="font-size: 12px; color: #999;">actuels</div>
+    </div>
+
+    <div style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px; margin-bottom: 12px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+        <span style="font-size: 11px; color: #aaa;">📅 28 derniers jours</span>
+        <span style="font-size: 11px; color: #4A4; font-weight: bold;">+54.8% 🔥</span>
+      </div>
+      <div style="font-size: 22px; font-weight: bold; color: #FFD700;">+40</div>
+      <div style="font-size: 10px; color: #999; margin-top: 4px;">~1.4 nouveaux followers/jour</div>
+    </div>
+
+    <div style="background: rgba(74, 170, 74, 0.15); padding: 8px; border-radius: 4px; text-align: center;">
+      <div style="font-size: 10px; color: #4A4;">✅ Croissance stable</div>
+    </div>
+  </div>
+
+  <!-- CARTE 2: INTERACTIONS -->
+  <div style="background: rgba(30, 30, 60, 0.9); padding: 20px; border-radius: 10px; border: 2px solid #1877F2;">
+    <div style="font-size: 13px; color: #aaa; margin-bottom: 8px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">💬 INTERACTIONS</div>
+
+    <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px;">
+      <div style="font-size: 36px; font-weight: bold; color: #FFD700;">37.4k</div>
+      <div style="font-size: 12px; color: #999;">total (28j)</div>
+    </div>
+
+    <div style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px; margin-bottom: 12px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+        <span style="font-size: 11px; color: #aaa;">📊 Croissance</span>
+        <span style="font-size: 11px; color: #4A4; font-weight: bold;">+24 498% 🚀</span>
+      </div>
+      <div style="font-size: 14px; color: #ddd; margin-top: 8px;">
+        👍 35.2k réactions<br>
+        💬 1.5k commentaires<br>
+        🔄 673 partages
+      </div>
+    </div>
+
+    <div style="background: rgba(74, 170, 74, 0.15); padding: 8px; border-radius: 4px; text-align: center;">
+      <div style="font-size: 10px; color: #4A4;">✅ Engagement explosif</div>
+    </div>
+  </div>
+
+  <!-- CARTE 3: TYPE DE CONTENU -->
+  <div style="background: rgba(30, 30, 60, 0.9); padding: 20px; border-radius: 10px; border: 2px solid #1877F2;">
+    <div style="font-size: 13px; color: #aaa; margin-bottom: 8px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">🎬 TYPE DE CONTENU</div>
+
+    <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px;">
+      <div style="font-size: 36px; font-weight: bold; color: #FFD700;">97%</div>
+      <div style="font-size: 12px; color: #999;">Reels</div>
+    </div>
+
+    <div style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px; margin-bottom: 12px;">
+      <div style="font-size: 11px; color: #aaa; margin-bottom: 8px;">Répartition des interactions</div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+        <span style="font-size: 12px; color: #ddd;">Reels</span>
+        <span style="font-size: 12px; font-weight: bold; color: #FFD700;">97.1%</span>
+      </div>
+      <div style="display: flex; justify-content: space-between;">
+        <span style="font-size: 12px; color: #ddd;">Texte</span>
+        <span style="font-size: 12px; color: #999;">2.9%</span>
+      </div>
+    </div>
+
+    <div style="background: rgba(74, 170, 74, 0.15); padding: 8px; border-radius: 4px; text-align: center;">
+      <div style="font-size: 10px; color: #4A4;">✅ Format vidéo dominant</div>
+    </div>
+  </div>
+
+  <!-- CARTE 4: AUDIENCE -->
+  <div style="background: rgba(30, 30, 60, 0.9); padding: 20px; border-radius: 10px; border: 2px solid #1877F2;">
+    <div style="font-size: 13px; color: #aaa; margin-bottom: 8px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">🌍 AUDIENCE</div>
+
+    <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px;">
+      <div style="font-size: 36px; font-weight: bold; color: #FFD700;">99.9%</div>
+      <div style="font-size: 12px; color: #999;">non-followers</div>
+    </div>
+
+    <div style="background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px; margin-bottom: 12px;">
+      <div style="font-size: 11px; color: #aaa; margin-bottom: 8px;">Portée virale exceptionnelle</div>
+      <div style="font-size: 14px; color: #ddd; margin-top: 8px;">
+        🌍 Madagascar: 66.8%<br>
+        🌏 Philippines: 19.8%<br>
+        🌍 Bénin: 2.9%
+      </div>
+    </div>
+
+    <div style="background: rgba(74, 170, 74, 0.15); padding: 8px; border-radius: 4px; text-align: center;">
+      <div style="font-size: 10px; color: #4A4;">✅ Portée organique forte</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ANALYSE DÉMOGRAPHIQUE -->
+<div style="background: rgba(30, 30, 60, 0.9); padding: 18px; border-radius: 10px; border: 2px solid #1877F2; margin-bottom: 20px;">
+  <h3 style="color: #1877F2; margin: 0 0 12px 0; font-size: 18px;">📊 Analyse Démographique</h3>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+
+    <div style="padding: 10px; background: rgba(24, 119, 242, 0.1); border-radius: 6px;">
+      <div style="font-size: 12px; color: #aaa; margin-bottom: 4px;">Âge Principal</div>
+      <div style="font-size: 24px; font-weight: bold; color: #1877F2;">18-24 ans</div>
+      <div style="font-size: 10px; color: #999;">32.4% de l'audience</div>
+    </div>
+
+    <div style="padding: 10px; background: rgba(24, 119, 242, 0.1); border-radius: 6px;">
+      <div style="font-size: 12px; color: #aaa; margin-bottom: 4px;">Taux d'Engagement</div>
+      <div style="font-size: 24px; font-weight: bold; color: #1877F2;">331x</div>
+      <div style="font-size: 10px; color: #999;">Interactions / Followers</div>
+    </div>
+
+    <div style="padding: 10px; background: rgba(24, 119, 242, 0.1); border-radius: 6px;">
+      <div style="font-size: 12px; color: #aaa; margin-bottom: 4px;">Portée Virale</div>
+      <div style="font-size: 24px; font-weight: bold; color: #1877F2;">99.9%</div>
+      <div style="font-size: 10px; color: #999;">Hors de la base followers</div>
+    </div>
+
+    <div style="padding: 10px; background: rgba(24, 119, 242, 0.1); border-radius: 6px;">
+      <div style="font-size: 12px; color: #aaa; margin-bottom: 4px;">Format Gagnant</div>
+      <div style="font-size: 20px; font-weight: bold; color: #1877F2;">Reels</div>
+      <div style="font-size: 10px; color: #999;">97.1% des interactions</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- OBJECTIFS 90 JOURS -->
+<div style="background: linear-gradient(135deg, rgba(24, 119, 242, 0.2), rgba(255, 215, 0, 0.1)); padding: 18px; border-radius: 10px; border: 2px dashed #1877F2; margin-bottom: 20px;">
+  <h3 style="color: #1877F2; margin: 0 0 12px 0; font-size: 18px;">🎯 Objectifs 90 Jours</h3>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+
+    <div style="padding: 12px; background: rgba(0,0,0,0.2); border-radius: 6px;">
+      <div style="font-size: 11px; color: #aaa; margin-bottom: 4px;">FOLLOWERS CIBLE</div>
+      <div style="font-size: 28px; font-weight: bold; color: #FFD700;">500</div>
+      <div style="display: flex; justify-content: space-between; font-size: 10px; color: #999; margin-top: 4px;">
+        <span>Actuel: 113</span>
+        <span>+387 (+342%)</span>
+      </div>
+    </div>
+
+    <div style="padding: 12px; background: rgba(0,0,0,0.2); border-radius: 6px;">
+      <div style="font-size: 11px; color: #aaa; margin-bottom: 4px;">INTERACTIONS CIBLE</div>
+      <div style="font-size: 28px; font-weight: bold; color: #FFD700;">100k</div>
+      <div style="display: flex; justify-content: space-between; font-size: 10px; color: #999; margin-top: 4px;">
+        <span>Actuel: 37.4k</span>
+        <span>+62.6k (+167%)</span>
+      </div>
+    </div>
+
+    <div style="padding: 12px; background: rgba(0,0,0,0.2); border-radius: 6px;">
+      <div style="font-size: 11px; color: #aaa; margin-bottom: 4px;">REELS CIBLE</div>
+      <div style="font-size: 28px; font-weight: bold; color: #FFD700;">20+</div>
+      <div style="display: flex; justify-content: space-between; font-size: 10px; color: #999; margin-top: 4px;">
+        <span>Par mois</span>
+        <span>Régularité clé</span>
+      </div>
+    </div>
+
+    <div style="padding: 12px; background: rgba(0,0,0,0.2); border-radius: 6px;">
+      <div style="font-size: 11px; color: #aaa; margin-bottom: 4px;">PORTÉE CIBLE</div>
+      <div style="font-size: 28px; font-weight: bold; color: #FFD700;">1M+</div>
+      <div style="display: flex; justify-content: space-between; font-size: 10px; color: #999; margin-top: 4px;">
+        <span>Personnes touchées</span>
+        <span>Viralité</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div style="text-align: center; font-size: 10px; color: #999; padding: 12px; border-top: 1px solid #444;">
+  📊 Analyse Reels & Interactions • Mise à jour: 16/02/2026<br>
+  <strong>Période :</strong> 28 jours (19 janv. → 16 févr. 2026)<br>
+  Source: Meta Business Suite Analytics
 </div>
 
 </section>
     </div>
 
     <div class="footer">
-        <span data-i18n="footer-brand">Bible ChantÃ©e</span> &copy; 2025 | <span data-i18n="footer-ga4">Donnees Google Analytics 4</span> | <span data-i18n="footer-refresh">Rafraichissement toutes les 30 secondes</span>
+        <span data-i18n="footer-brand">Bible Chantée</span> &copy; 2025 | <span data-i18n="footer-ga4">Donnees Google Analytics 4</span> | <span data-i18n="footer-refresh">Rafraichissement toutes les 30 secondes</span>
     </div>
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/lang-config.js"></script>
 
-    
-    <!-- Section Statistiques Facebook (mis à jour automatiquement via Meta Graph API) -->
-    <section id="fb-section" style="
-  margin: 30px 15px;
-  padding: 20px;
-  background: linear-gradient(135deg, rgba(24, 119, 242, 0.1) 0%, rgba(8, 102, 255, 0.05) 100%);
-  border: 1px solid rgba(24, 119, 242, 0.3);
-  border-radius: 16px;
-">
-        <div style="display: flex; align-items: center; margin-bottom: 25px;">
-            <span style="font-size: 1.5em; margin-right: 10px;">📘</span>
-            <div>
-                <h2 style="font-size: 1.4em; color: #FFD700;">Statistiques Facebook</h2>
-                <p style="color: #aaa; font-size: 0.9em;">Bible Chantée • Reels &amp; Interactions</p>
-            </div>
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
-            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 12px;">
-                <div style="color: #aaa; font-size: 0.8em; margin-bottom: 8px;">👥 FOLLOWERS</div>
-                <div data-fb="followers" style="font-size: 1.8em; font-weight: bold; color: #1877F2;">--</div>
-                <div>
-                    <span style="color: #aaa; font-size: 0.8em;">📅 28 derniers jours</span>
-                    <span data-fb="new-followers" style="color: #00ff88; margin-left: 8px;">--</span>
-                </div>
-            </div>
-            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 12px;">
-                <div style="color: #aaa; font-size: 0.8em; margin-bottom: 8px;">💬 INTERACTIONS</div>
-                <div data-fb="interactions" style="font-size: 1.8em; font-weight: bold; color: #FFD700;">--</div>
-                <div data-fb="likes" style="color: #aaa; font-size: 0.85em;">-- réactions</div>
-            </div>
-            <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 12px;">
-                <div style="color: #aaa; font-size: 0.8em; margin-bottom: 8px;">🎬 TYPE DE CONTENU</div>
-                <div data-fb="reels-pct" style="font-size: 1.8em; font-weight: bold; color: #00ff88;">--%</div>
-                <div style="color: #aaa; font-size: 0.85em;">Reels</div>
-            </div>
-        </div>
-        <div style="margin-top: 15px; color: #aaa; font-size: 0.75em; text-align: center;">
-            <span data-fb="updated-at">Chargement en cours...</span>
-        </div>
-    </section>
+    <script>
+        // =====================================================
+        // AI ANALYSIS FROM GITHUB
+        // =====================================================
+        async function loadAIAnalysis() {
+            const contentDiv = document.getElementById('aiAnalysisContent');
+            const dateSpan = document.getElementById('aiAnalysisDate');
+            
+            try {
+                contentDiv.innerHTML = '<p class="loading">Chargement de l\'analyse...</p>';
+                
+                // Charger le fichier depuis GitHub (avec cache-busting)
+                const response = await fetch(
+                    'https://raw.githubusercontent.com/global-opera/bible-chantee/main/data/ai-analysis.json?t=' + Date.now()
+                );
+                
+                if (!response.ok) throw new Error('Erreur de chargement');
+                
+                const text = await response.text();
+                
+                // Convertir le Markdown en HTML simple
+                const html = markdownToHtml(text);
+                contentDiv.innerHTML = html;
+                
+                // Mettre a jour la date
+                dateSpan.textContent = 'Mise a jour: ' + new Date().toLocaleString('fr-FR');
+                
+            } catch (error) {
+                console.error('Erreur chargement analyse IA:', error);
+                contentDiv.innerHTML = '<p class="loading">Impossible de charger l\'analyse. Reessayez plus tard.</p>';
+            }
+        }
 
-<script>
+        // Convertisseur Markdown simple vers HTML
+        function markdownToHtml(md) {
+            let html = md
+                // Titres
+                .replace(/^### \*\*(.*?)\*\*$/gm, '<h3>$1</h3>')
+                .replace(/^### (.*?)$/gm, '<h3>$1</h3>')
+                .replace(/^## (.*?)$/gm, '<h2>$1</h2>')
+                // Gras
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                // Listes
+                .replace(/^- (.*?)$/gm, '<li>$1</li>')
+                // Paragraphes
+                .split('\n\n').map(p => {
+                    if (p.startsWith('<h') || p.startsWith('<li') || p.startsWith('<ul')) return p;
+                    if (p.trim() === '') return '';
+                    return '<p>' + p + '</p>';
+                }).join('\n')
+                // Nettoyer les listes
+                .replace(/(<li>[\s\S]*?<\/li>)(\s*<li>)/g, '$1$2')
+                .replace(/(<li>)/g, '<ul>$1')
+                .replace(/(<\/li>)(?!\s*<li>)/g, '$1</ul>')
+                .replace(/<\/ul>\s*<ul>/g, '');
+            
+            return html;
+        }
+
         // =====================================================
         // CONFIGURATION
         // =====================================================
@@ -956,66 +1364,66 @@
             STATS_API: '/api/get-analytics',
 
             // Intervalle de rafraichissement (ms)
-            REFRESH_INTERVAL: 30000,
+            REFRESH_INTERVAL: 30000
 
-            // Coordonnees des pays (pour la carte)
-            COUNTRY_COORDS: {
-                'Switzerland': { lat: 46.818, lng: 8.227, flag: 'ð¨ð­' },
-                'France': { lat: 46.603, lng: 1.888, flag: 'ð«ð·' },
-                'Brazil': { lat: -14.235, lng: -51.925, flag: 'ð§ð·' },
-                'Portugal': { lat: 39.399, lng: -8.224, flag: 'ðµð¹' },
-                'United States': { lat: 37.090, lng: -95.712, flag: 'ðºð¸' },
-                'Canada': { lat: 56.130, lng: -106.346, flag: 'ð¨ð¦' },
-                'Belgium': { lat: 50.503, lng: 4.469, flag: 'ð§ðª' },
-                'Spain': { lat: 40.463, lng: -3.749, flag: 'ðªð¸' },
-                'Germany': { lat: 51.165, lng: 10.451, flag: 'ð©ðª' },
-                'Italy': { lat: 41.871, lng: 12.567, flag: 'ð®ð¹' },
-                'United Kingdom': { lat: 55.378, lng: -3.435, flag: 'ð¬ð§' },
-                'Argentina': { lat: -38.416, lng: -63.616, flag: 'ð¦ð·' },
-                'Mexico': { lat: 23.634, lng: -102.552, flag: 'ð²ð½' },
-                'Netherlands': { lat: 52.132, lng: 5.291, flag: 'ð³ð±' },
-                'Australia': { lat: -25.274, lng: 133.775, flag: 'ð¦ðº' }
-            }
+            // Note: Country coordinates moved to js/country-coords.js (auto-loaded)
+            // Use window.getCountryCoords(countryName) to get {lat, lng}
         };
 
         // =====================================================
-        // I18N (FR / EN / PT / ES)
+        // I18N (FR / EN / PT / ES / DE / IT)
         // =====================================================
-        const SUPPORTED_LANGS = ['FR','EN','PT','ES'];
-        let UI_LANG = (localStorage.getItem('bc_lang') || 'FR').toUpperCase();
-        if (!SUPPORTED_LANGS.includes(UI_LANG)) UI_LANG = 'FR';
+        const SUPPORTED_LANGS = ['FR','EN','PT','ES','DE','IT','TL'];
+        let UI_LANG = (window.BC_LANG ? BC_LANG.resolveLang() : (localStorage.getItem('bc_lang') || 'EN')).toUpperCase();
+        if (!SUPPORTED_LANGS.includes(UI_LANG)) UI_LANG = (window.BC_LANG ? BC_LANG.resolveLang() : 'EN');
 
         const I18N = {
             FR: {
-                title: "Dashboard Bible ChantÃ©e - Statistiques",
-                headerTitle: "Dashboard Bible ChantÃ©e",
-                headerSubtitle: "Statistiques mondiales en temps rÃ©el",
+                title: "Dashboard Bible Chantée - Statistiques",
+                headerTitle: "Dashboard Bible Chantée",
+                headerSubtitle: "Statistiques mondiales en temps réel",
                 statVisitorsToday: "Visiteurs aujourd'hui",
                 statCountriesActive: "Pays actifs",
-                statAudioPlays: "Ãcoutes audio",
+                statAudioPlays: "Écoutes audio",
+                statPrayers: "Prières disponibles",
+                prayersChange: "7 langues",
                 statShares: "Partages",
                 statSignups: "Inscriptions",
                 sectionWorld: "Visiteurs dans le monde",
-                sectionProgress: "Progression GÃ©nÃ©ration MP3",
+                sectionPrayerStats: "Statistiques des Prières",
+                prayerFavoritesTitle: "Favoris Utilisateur",
+                totalFavorites: "Total favoris",
+                mostFavoritedLang: "Langue favorite",
+                prayerDistributionTitle: "Distribution des Prières",
+                sectionProgress: "Progression Génération MP3",
                 sectionTopCountries: "Top Pays",
                 sectionTopPages: "Pages les plus vues",
-                sectionEvents: "ÃvÃ©nements GA4",
-                sectionActivity: "ActivitÃ© rÃ©cente",
+                sectionEvents: "Événements GA4",
+                sectionActivity: "Activité récente",
                 legendHigh: "100+ visiteurs",
                 legendMedium: "50-99 visiteurs",
                 legendLow: "1-49 visiteurs",
-                langFR: "FranÃ§ais",
+                langFR: "Français",
                 langEN: "English",
-                langPT: "PortuguÃªs",
-                langES: "EspaÃ±ol",
-                dataConnecting: "Connexion Ã  Google Analytics 4â¦",
-                dataLive: "DonnÃ©es Google Analytics 4 en temps rÃ©el",
-                dataDemo: "Mode dÃ©monstration - API non disponible",
+                langPT: "Português",
+                langES: "Español",
+                langDE: "Deutsch",
+                langIT: "Italiano",
+                dataConnecting: "Connexion à Google Analytics 4…",
+                dataLive: "Données Google Analytics 4 en temps réel",
+                dataDemo: "Mode démonstration - API non disponible",
                 live: "LIVE",
                 agoMinutes: (n) => `Il y a ${n} min`,
-                footerBrand: "Bible ChantÃ©e",
-                footerGA4: "DonnÃ©es Google Analytics 4",
-                footerRefresh: "RafraÃ®chissement toutes les 30 secondes"
+                footerBrand: "Bible Chantée",
+                footerGA4: "Données Google Analytics 4",
+                footerRefresh: "Rafraîchissement toutes les 30 secondes",
+                periodLabel: "Période:",
+                period24h: "24h",
+                period7days: "7 jours",
+                period30days: "30 jours",
+                periodAll: "Tout",
+                prayersAvailable: "prières",
+                noFavorites: "Aucun favori enregistré"
             },
             EN: {
                 title: "Sung Bible Dashboard - Stats",
@@ -1024,9 +1432,16 @@
                 statVisitorsToday: "Visitors today",
                 statCountriesActive: "Active countries",
                 statAudioPlays: "Audio plays",
+                statPrayers: "Prayers available",
+                prayersChange: "7 languages",
                 statShares: "Shares",
                 statSignups: "Signups",
                 sectionWorld: "Visitors around the world",
+                sectionPrayerStats: "Prayer Statistics",
+                prayerFavoritesTitle: "User Favorites",
+                totalFavorites: "Total favorites",
+                mostFavoritedLang: "Favorite language",
+                prayerDistributionTitle: "Prayer Distribution",
                 sectionProgress: "MP3 Generation Progress",
                 sectionTopCountries: "Top Countries",
                 sectionTopPages: "Top Pages",
@@ -1035,111 +1450,168 @@
                 legendHigh: "100+ visitors",
                 legendMedium: "50-99 visitors",
                 legendLow: "1-49 visitors",
-                langFR: "FranÃ§ais",
+                langFR: "Français",
                 langEN: "English",
-                langPT: "PortuguÃªs",
-                langES: "EspaÃ±ol",
-                dataConnecting: "Connecting to Google Analytics 4â¦",
+                langPT: "Português",
+                langES: "Español",
+                langDE: "German",
+                langIT: "Italian",
+                dataConnecting: "Connecting to Google Analytics 4…",
                 dataLive: "Google Analytics 4 real-time data",
                 dataDemo: "Demo mode - API unavailable",
                 live: "LIVE",
                 agoMinutes: (n) => `${n} min ago`,
                 footerBrand: "Sung Bible",
                 footerGA4: "Google Analytics 4 data",
-                footerRefresh: "Refresh every 30 seconds"
+                footerRefresh: "Refresh every 30 seconds",
+                periodLabel: "Period:",
+                period24h: "24h",
+                period7days: "7 days",
+                period30days: "30 days",
+                periodAll: "All",
+                prayersAvailable: "prayers",
+                noFavorites: "No favorites recorded"
             },
             PT: {
-                title: "Painel BÃ­blia Cantada - EstatÃ­sticas",
-                headerTitle: "Painel BÃ­blia Cantada",
-                headerSubtitle: "EstatÃ­sticas globais em tempo real",
+                title: "Painel Bíblia Cantada - Estatísticas",
+                headerTitle: "Painel Bíblia Cantada",
+                headerSubtitle: "Estatísticas globais em tempo real",
                 statVisitorsToday: "Visitantes hoje",
-                statCountriesActive: "PaÃ­ses ativos",
-                statAudioPlays: "ReproduÃ§Ãµes de Ã¡udio",
+                statCountriesActive: "Países ativos",
+                statAudioPlays: "Reproduções de áudio",
+                statPrayers: "Orações disponíveis",
+                prayersChange: "7 idiomas",
                 statShares: "Compartilhamentos",
-                statSignups: "InscriÃ§Ãµes",
+                statSignups: "Inscrições",
                 sectionWorld: "Visitantes no mundo",
-                sectionProgress: "Progresso da GeraÃ§Ã£o MP3",
-                sectionTopCountries: "Top PaÃ­ses",
-                sectionTopPages: "PÃ¡ginas mais vistas",
+                sectionPrayerStats: "Estatísticas de Orações",
+                prayerFavoritesTitle: "Favoritos do Usuário",
+                totalFavorites: "Total de favoritos",
+                mostFavoritedLang: "Idioma favorito",
+                prayerDistributionTitle: "Distribuição de Orações",
+                sectionProgress: "Progresso da Geração MP3",
+                sectionTopCountries: "Top Países",
+                sectionTopPages: "Páginas mais vistas",
                 sectionEvents: "Eventos GA4",
                 sectionActivity: "Atividade recente",
                 legendHigh: "100+ visitantes",
                 legendMedium: "50-99 visitantes",
                 legendLow: "1-49 visitantes",
-                langFR: "FranÃ§ais",
+                langFR: "Français",
                 langEN: "English",
-                langPT: "PortuguÃªs",
-                langES: "EspaÃ±ol",
-                dataConnecting: "Conectando ao Google Analytics 4â¦",
+                langPT: "Português",
+                langES: "Español",
+                langDE: "Alemão",
+                langIT: "Italiano",
+                dataConnecting: "Conectando ao Google Analytics 4…",
                 dataLive: "Dados do Google Analytics 4 em tempo real",
-                dataDemo: "Modo demonstraÃ§Ã£o - API indisponÃ­vel",
+                dataDemo: "Modo demonstração - API indisponível",
                 live: "AO VIVO",
-                agoMinutes: (n) => `HÃ¡ ${n} min`,
-                footerBrand: "BÃ­blia Cantada",
+                agoMinutes: (n) => `Há ${n} min`,
+                footerBrand: "Bíblia Cantada",
                 footerGA4: "Dados do Google Analytics 4",
-                footerRefresh: "AtualizaÃ§Ã£o a cada 30 segundos"
+                footerRefresh: "Atualização a cada 30 segundos",
+                periodLabel: "Período:",
+                period24h: "24h",
+                period7days: "7 dias",
+                period30days: "30 dias",
+                periodAll: "Tudo",
+                prayersAvailable: "orações",
+                noFavorites: "Nenhum favorito registrado"
             },
             ES: {
-                title: "Panel Biblia Cantada - EstadÃ­sticas",
+                title: "Panel Biblia Cantada - Estadísticas",
                 headerTitle: "Panel Biblia Cantada",
-                headerSubtitle: "EstadÃ­sticas globales en tiempo real",
+                headerSubtitle: "Estadísticas globales en tiempo real",
                 statVisitorsToday: "Visitantes hoy",
-                statCountriesActive: "PaÃ­ses activos",
+                statCountriesActive: "Países activos",
                 statAudioPlays: "Reproducciones de audio",
+                statPrayers: "Oraciones disponibles",
+                prayersChange: "7 idiomas",
                 statShares: "Compartidos",
                 statSignups: "Inscripciones",
                 sectionWorld: "Visitantes en el mundo",
-                sectionProgress: "Progreso de GeneraciÃ³n MP3",
-                sectionTopCountries: "Top PaÃ­ses",
-                sectionTopPages: "PÃ¡ginas mÃ¡s vistas",
+                sectionPrayerStats: "Estadísticas de Oraciones",
+                prayerFavoritesTitle: "Favoritos del Usuario",
+                totalFavorites: "Total de favoritos",
+                mostFavoritedLang: "Idioma favorito",
+                prayerDistributionTitle: "Distribución de Oraciones",
+                sectionProgress: "Progreso de Generación MP3",
+                sectionTopCountries: "Top Países",
+                sectionTopPages: "Páginas más vistas",
                 sectionEvents: "Eventos GA4",
                 sectionActivity: "Actividad reciente",
                 legendHigh: "100+ visitantes",
                 legendMedium: "50-99 visitantes",
                 legendLow: "1-49 visitantes",
-                langFR: "FranÃ§ais",
+                langFR: "Français",
                 langEN: "English",
-                langPT: "PortuguÃªs",
-                langES: "EspaÃ±ol",
-                dataConnecting: "Conectando a Google Analytics 4â¦",
+                langPT: "Português",
+                langES: "Español",
+                langDE: "Alemán",
+                langIT: "Italiano",
+                dataConnecting: "Conectando a Google Analytics 4…",
                 dataLive: "Datos de Google Analytics 4 en tiempo real",
-                dataDemo: "Modo demostraciÃ³n - API no disponible",
+                dataDemo: "Modo demostración - API no disponible",
                 live: "EN VIVO",
                 agoMinutes: (n) => `Hace ${n} min`,
                 footerBrand: "Biblia Cantada",
                 footerGA4: "Datos de Google Analytics 4",
-                footerRefresh: "ActualizaciÃ³n cada 30 segundos"
+                footerRefresh: "Actualización cada 30 segundos",
+                periodLabel: "Período:",
+                period24h: "24h",
+                period7days: "7 días",
+                period30days: "30 días",
+                periodAll: "Todo",
+                prayersAvailable: "oraciones",
+                noFavorites: "No hay favoritos registrados"
             },
             DE: {
-                title: "Dashboard Gesungene Bibel - Statistiken",
-                headerTitle: "Dashboard Gesungene Bibel",
-                headerSubtitle: "Weltweite Statistiken in Echtzeit",
+                title: "Gesungene Bibel Dashboard - Statistiken",
+                headerTitle: "Gesungene Bibel Dashboard",
+                headerSubtitle: "Weltweite Echtzeitstatistiken",
                 statVisitorsToday: "Besucher heute",
-                statCountriesActive: "Aktive L\u00e4nder",
+                statCountriesActive: "Aktive Länder",
                 statAudioPlays: "Audio-Wiedergaben",
-                statShares: "Geteilte Inhalte",
+                statPrayers: "Gebete verfügbar",
+                prayersChange: "7 Sprachen",
+                statShares: "Geteilt",
                 statSignups: "Anmeldungen",
-                sectionWorld: "Besucher in der Welt",
-                sectionProgress: "MP3-Generierungsfortschritt",
-                sectionTopCountries: "Top-L\u00e4nder",
+                sectionWorld: "Besucher weltweit",
+                sectionPrayerStats: "Gebetsstatistiken",
+                prayerFavoritesTitle: "Benutzerfavoriten",
+                totalFavorites: "Gesamt Favoriten",
+                mostFavoritedLang: "Lieblingssprache",
+                prayerDistributionTitle: "Gebetsverteilung",
+                sectionProgress: "MP3-Generierung Fortschritt",
+                sectionTopCountries: "Top-Länder",
                 sectionTopPages: "Meistbesuchte Seiten",
                 sectionEvents: "GA4-Ereignisse",
-                sectionActivity: "Letzte Aktivit\u00e4t",
+                sectionActivity: "Letzte Aktivität",
                 legendHigh: "100+ Besucher",
                 legendMedium: "50-99 Besucher",
                 legendLow: "1-49 Besucher",
-                langFR: "Franz\u00f6sisch",
+                langFR: "Französisch",
                 langEN: "Englisch",
                 langPT: "Portugiesisch",
                 langES: "Spanisch",
-                dataConnecting: "Verbindung zu Google Analytics 4...",
-                dataLive: "Google Analytics 4 Echtzeit-Daten",
-                dataDemo: "Demo-Modus - API nicht verf\u00fcgbar",
+                langDE: "Deutsch",
+                langIT: "Italienisch",
+                dataConnecting: "Verbindung zu Google Analytics 4…",
+                dataLive: "Google Analytics 4-Echtzeitdaten",
+                dataDemo: "Demo-Modus - API nicht verfügbar",
                 live: "LIVE",
-                agoMinutes: (n) => `Vor ${n} Min`,
+                agoMinutes: (n) => `Vor ${n} Min.`,
                 footerBrand: "Gesungene Bibel",
-                footerGA4: "Google Analytics 4 Daten",
-                footerRefresh: "Aktualisierung alle 30 Sekunden"
+                footerGA4: "Google Analytics 4-Daten",
+                footerRefresh: "Aktualisierung alle 30 Sekunden",
+                periodLabel: "Zeitraum:",
+                period24h: "24h",
+                period7days: "7 Tage",
+                period30days: "30 Tage",
+                periodAll: "Alle",
+                prayersAvailable: "Gebete",
+                noFavorites: "Keine Favoriten aufgezeichnet"
             },
             IT: {
                 title: "Dashboard Bibbia Cantata - Statistiche",
@@ -1148,14 +1620,21 @@
                 statVisitorsToday: "Visitatori oggi",
                 statCountriesActive: "Paesi attivi",
                 statAudioPlays: "Riproduzioni audio",
+                statPrayers: "Preghiere disponibili",
+                prayersChange: "7 lingue",
                 statShares: "Condivisioni",
                 statSignups: "Iscrizioni",
                 sectionWorld: "Visitatori nel mondo",
+                sectionPrayerStats: "Statistiche Preghiere",
+                prayerFavoritesTitle: "Preferiti Utente",
+                totalFavorites: "Totale preferiti",
+                mostFavoritedLang: "Lingua preferita",
+                prayerDistributionTitle: "Distribuzione Preghiere",
                 sectionProgress: "Progresso generazione MP3",
                 sectionTopCountries: "Top Paesi",
-                sectionTopPages: "Pagine pi\u00f9 viste",
+                sectionTopPages: "Pagine più viste",
                 sectionEvents: "Eventi GA4",
-                sectionActivity: "Attivit\u00e0 recente",
+                sectionActivity: "Attività recente",
                 legendHigh: "100+ visitatori",
                 legendMedium: "50-99 visitatori",
                 legendLow: "1-49 visitatori",
@@ -1163,30 +1642,46 @@
                 langEN: "Inglese",
                 langPT: "Portoghese",
                 langES: "Spagnolo",
-                dataConnecting: "Connessione a Google Analytics 4...",
+                langDE: "Tedesco",
+                langIT: "Italiano",
+                dataConnecting: "Connessione a Google Analytics 4…",
                 dataLive: "Dati Google Analytics 4 in tempo reale",
-                dataDemo: "Modalit\u00e0 demo - API non disponibile",
+                dataDemo: "Modalità demo - API non disponibile",
                 live: "LIVE",
                 agoMinutes: (n) => `${n} min fa`,
                 footerBrand: "Bibbia Cantata",
                 footerGA4: "Dati Google Analytics 4",
-                footerRefresh: "Aggiornamento ogni 30 secondi"
+                footerRefresh: "Aggiornamento ogni 30 secondi",
+                periodLabel: "Periodo:",
+                period24h: "24h",
+                period7days: "7 giorni",
+                period30days: "30 giorni",
+                periodAll: "Tutto",
+                prayersAvailable: "preghiere",
+                noFavorites: "Nessun preferito registrato"
             },
             TL: {
-                title: "Dashboard Awiting Bibliya - Istatistika",
-                headerTitle: "Dashboard Awiting Bibliya",
-                headerSubtitle: "Pandaigdigang istatistika sa real time",
+                title: "Dashboard Bible Chantée - Istatistika",
+                headerTitle: "Dashboard Bible Chantée",
+                headerSubtitle: "Pandaigdigang istatistika sa real-time",
                 statVisitorsToday: "Mga bisita ngayon",
                 statCountriesActive: "Aktibong mga bansa",
                 statAudioPlays: "Mga paglalaro ng audio",
+                statPrayers: "Mga panalangin na available",
+                prayersChange: "7 wika",
                 statShares: "Mga pagbabahagi",
                 statSignups: "Mga pagpaparehistro",
-                sectionWorld: "Mga bisita sa mundo",
-                sectionProgress: "Progreso ng MP3 na henerasyion",
-                sectionTopCountries: "Nangungunang Bansa",
-                sectionTopPages: "Pinaka-binisitang Pahina",
+                sectionWorld: "Mga bisita sa buong mundo",
+                sectionPrayerStats: "Istatistika ng Panalangin",
+                prayerFavoritesTitle: "Mga Paborito ng User",
+                totalFavorites: "Kabuuang paborito",
+                mostFavoritedLang: "Paboritong wika",
+                prayerDistributionTitle: "Distribusyon ng Panalangin",
+                sectionProgress: "Progreso ng Pagbuo ng MP3",
+                sectionTopCountries: "Nangungunang mga Bansa",
+                sectionTopPages: "Pinaka-tiningnan na mga pahina",
                 sectionEvents: "Mga Kaganapan ng GA4",
-                sectionActivity: "Kamakailang Aktibidad",
+                sectionActivity: "Kamakailang aktibidad",
                 legendHigh: "100+ bisita",
                 legendMedium: "50-99 bisita",
                 legendLow: "1-49 bisita",
@@ -1194,14 +1689,23 @@
                 langEN: "Ingles",
                 langPT: "Portuges",
                 langES: "Espanyol",
-                dataConnecting: "Kumokonekta sa Google Analytics 4...",
-                dataLive: "Real-time na datos mula sa Google Analytics 4",
+                langDE: "Aleman",
+                langIT: "Italyano",
+                dataConnecting: "Kumokonekta sa Google Analytics 4…",
+                dataLive: "Real-time na data ng Google Analytics 4",
                 dataDemo: "Demo mode - Hindi available ang API",
                 live: "LIVE",
-                agoMinutes: (n) => `${n} min nakalipas`,
-                footerBrand: "Awiting Bibliya",
+                agoMinutes: (n) => `${n} min ang nakalipas`,
+                footerBrand: "Bible Chantée",
                 footerGA4: "Data ng Google Analytics 4",
-                footerRefresh: "Ina-update bawat 30 segundo"
+                footerRefresh: "Pag-refresh bawat 30 segundo",
+                periodLabel: "Panahon:",
+                period24h: "24h",
+                period7days: "7 araw",
+                period30days: "30 araw",
+                periodAll: "Lahat",
+                prayersAvailable: "panalangin",
+                noFavorites: "Walang naitala na paborito"
             }
         };
 
@@ -1221,9 +1725,16 @@
                 "stat-visitors-today": t.statVisitorsToday,
                 "stat-countries-active": t.statCountriesActive,
                 "stat-audio-plays": t.statAudioPlays,
+                "stat-prayers": t.statPrayers,
+                "prayers-change": t.prayersChange,
                 "stat-shares": t.statShares,
                 "stat-signups": t.statSignups,
                 "section-world": t.sectionWorld,
+                "section-prayer-stats": t.sectionPrayerStats,
+                "prayer-favorites-title": t.prayerFavoritesTitle,
+                "total-favorites": t.totalFavorites,
+                "most-favorited-lang": t.mostFavoritedLang,
+                "prayer-distribution-title": t.prayerDistributionTitle,
                 "section-progress": t.sectionProgress,
                 "section-top-countries": t.sectionTopCountries,
                 "section-top-pages": t.sectionTopPages,
@@ -1238,7 +1749,12 @@
                 "lang-es": t.langES,
                 "footer-brand": t.footerBrand,
                 "footer-ga4": t.footerGA4,
-                "footer-refresh": t.footerRefresh
+                "footer-refresh": t.footerRefresh,
+                "period-label": t.periodLabel,
+                "period-24h": t.period24h,
+                "period-7days": t.period7days,
+                "period-30days": t.period30days,
+                "period-all": t.periodAll
             };
 
             document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -1265,6 +1781,35 @@
                 localStorage.setItem('bc_lang', L);
                 UI_LANG = L;
                 applyI18n();
+                // Re-render prayer statistics with new language
+                renderPrayerStatistics();
+            });
+        }
+
+        function initPeriodSelector() {
+            const ps = document.getElementById('periodSelector');
+            if (!ps) return;
+            ps.addEventListener('click', async (e) => {
+                const btn = e.target.closest('.period-btn');
+                if (!btn) return;
+                const period = btn.getAttribute('data-period') || 'all';
+
+                // Mettre à jour l'UI
+                ps.querySelectorAll('.period-btn').forEach(b => {
+                    b.classList.toggle('active', b.getAttribute('data-period') === period);
+                });
+
+                // Sauvegarder et recharger les données
+                CURRENT_PERIOD = period;
+                localStorage.setItem('bc_period', period);
+                await refresh();
+            });
+
+            // Restaurer la période sauvegardée
+            const savedPeriod = localStorage.getItem('bc_period') || 'all';
+            CURRENT_PERIOD = savedPeriod;
+            ps.querySelectorAll('.period-btn').forEach(b => {
+                b.classList.toggle('active', b.getAttribute('data-period') === savedPeriod);
             });
         }
 
@@ -1299,9 +1844,14 @@
             markers.forEach(m => map.removeLayer(m));
             markers = [];
 
+            console.log('📍 Pays reçus pour la carte:', countries.map(c => c.name));
+
             countries.forEach(country => {
-                const coords = CONFIG.COUNTRY_COORDS[country.name];
-                if (!coords) return;
+                const coords = window.getCountryCoords(country.name);
+                if (!coords) {
+                    // Country not found in database - already logged by getCountryCoords()
+                    return;
+                }
 
                 const radius = Math.max(8, Math.min(30, country.visitors * 3));
                 let color = '#00ff00';
@@ -1317,7 +1867,18 @@
                     fillOpacity: 0.6
                 }).addTo(map);
 
-                const cities = country.cities ? country.cities.map(c => c.name || c).join(', ') : '';
+                // Extract city names safely (handle strings, objects with .name, and objects without .name)
+                const cities = country.cities ?
+                    country.cities
+                        .map(c => {
+                            if (typeof c === 'string') return c;
+                            if (c && typeof c === 'object' && c.name) return c.name;
+                            return null; // Skip invalid entries
+                        })
+                        .filter(c => c !== null) // Remove null entries
+                        .join(', ')
+                    : '';
+
                 marker.bindPopup(`
                     <div style="text-align:center;">
                         <div style="font-size:1.5rem;">${coords.flag}</div>
@@ -1329,17 +1890,190 @@
 
                 markers.push(marker);
             });
+
+            console.log('✅ Marqueurs ajoutés sur la carte:', markers.length);
+        }
+
+        // =====================================================
+        // LANGUAGE PROGRESS (Dynamic from lang-config.json)
+        // =====================================================
+
+        async function renderLanguageProgress() {
+            try {
+                const config = await LANG_CONFIG.load();
+                const grid = document.getElementById('languageProgressGrid');
+
+                if (!grid) return;
+
+                // Clear existing content
+                grid.innerHTML = '';
+
+                // Render each language
+                Object.entries(config.languages).forEach(([code, lang]) => {
+                    const progress = Math.round((lang.chapters / config.totalChapters) * 100);
+                    const statusClass = lang.status === 'complete' ? 'complete' : 'progress';
+
+                    const item = document.createElement('div');
+                    item.className = 'progress-item';
+                    item.innerHTML = `
+                        <div class="progress-header">
+                            <div class="progress-lang">
+                                <span class="progress-flag">${lang.flag}</span>
+                                <span data-i18n="lang-${code.toLowerCase()}">${lang.name}</span>
+                            </div>
+                            <span id="progress${code}">${lang.chapters}/${config.totalChapters}</span>
+                        </div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill ${statusClass}" style="width: ${progress}%"></div>
+                        </div>
+                    `;
+                    grid.appendChild(item);
+                });
+
+                console.log(`✅ Language progress rendered: ${Object.keys(config.languages).length} languages`);
+            } catch (error) {
+                console.error('Error rendering language progress:', error);
+            }
+        }
+
+        // =====================================================
+        // PRAYER STATISTICS
+        // =====================================================
+
+        // Prayer counts per language (from prayers.html)
+        // Prayer counts per language (auto-counted from audio-urls-prayers-*.js files)
+        // Last updated: 2026-02-12
+        const PRAYER_COUNTS = {
+            FR: 5,
+            EN: 6,
+            ES: 6,
+            DE: 5,  // Fixed: was 6, actual is 5
+            IT: 6,
+            PT: 4,  // Fixed: was 5, actual is 4
+            TL: 6
+        };
+
+        const LANG_FLAGS = {
+            FR: 'FR',
+            EN: 'EN',
+            ES: 'ES',
+            DE: 'DE',
+            IT: 'IT',
+            PT: 'PT',
+            TL: 'TL'
+        };
+
+        function getPrayerFavorites() {
+            try {
+                const stored = localStorage.getItem("bc_prayer_favorites");
+                return stored ? JSON.parse(stored) : {};
+            } catch (e) {
+                console.error("Error reading prayer favorites:", e);
+                return {};
+            }
+        }
+
+        function analyzePrayerFavorites() {
+            const favorites = getPrayerFavorites();
+            const byLanguage = {};
+
+            // Count favorites per language
+            Object.keys(favorites).forEach(key => {
+                const lang = key.split('_')[0]; // Extract language code (e.g., "FR" from "FR_0")
+                if (!byLanguage[lang]) {
+                    byLanguage[lang] = 0;
+                }
+                byLanguage[lang]++;
+            });
+
+            // Find most favorited language
+            let mostFavoritedLang = '-';
+            let maxCount = 0;
+            Object.entries(byLanguage).forEach(([lang, count]) => {
+                if (count > maxCount) {
+                    maxCount = count;
+                    mostFavoritedLang = lang;
+                }
+            });
+
+            return {
+                total: Object.keys(favorites).length,
+                byLanguage: byLanguage,
+                mostFavoritedLang: mostFavoritedLang
+            };
+        }
+
+        function renderPrayerStatistics() {
+            const stats = analyzePrayerFavorites();
+            const t = T();
+
+            // Update total favorites
+            document.getElementById('totalFavorites').textContent = stats.total;
+
+            // Update most favorited language
+            const mostFavLangEl = document.getElementById('mostFavoritedLang');
+            if (stats.mostFavoritedLang !== '-') {
+                mostFavLangEl.textContent = LANG_FLAGS[stats.mostFavoritedLang] + ' ' + stats.mostFavoritedLang;
+            } else {
+                mostFavLangEl.textContent = '-';
+            }
+
+            // Render favorites by language
+            const favsByLangEl = document.getElementById('favoritesByLanguage');
+            if (stats.total === 0) {
+                favsByLangEl.innerHTML = `<div style="text-align:center;color:#888;padding:20px;">${t.noFavorites}</div>`;
+            } else {
+                const sortedLangs = Object.entries(stats.byLanguage)
+                    .sort((a, b) => b[1] - a[1]);
+
+                favsByLangEl.innerHTML = sortedLangs.map(([lang, count]) => {
+                    const percentage = Math.round((count / stats.total) * 100);
+                    return `
+                        <div style="margin-bottom: 12px;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.9rem;">
+                                <span>${LANG_FLAGS[lang]} ${lang}</span>
+                                <span style="color: #FFD700; font-weight: bold;">${count}</span>
+                            </div>
+                            <div style="height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden;">
+                                <div style="height: 100%; width: ${percentage}%; background: linear-gradient(90deg, #FFD700, #FFA500); transition: width 0.5s;"></div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // Render prayer distribution by language
+            const distributionEl = document.getElementById('prayersDistribution');
+            const langEntries = Object.entries(PRAYER_COUNTS);
+
+            distributionEl.innerHTML = langEntries.map(([lang, count], i) => {
+                const favCount = stats.byLanguage[lang] || 0;
+                return `
+                    <li>
+                        <span class="rank">${LANG_FLAGS[lang]}</span>
+                        <div class="info">
+                            <div class="name">${lang}</div>
+                            <div class="detail">${favCount} ${t.prayersAvailable} favorites</div>
+                        </div>
+                        <span class="value">${count}</span>
+                    </li>
+                `;
+            }).join('');
+
+            console.log('✅ Prayer statistics rendered:', stats);
         }
 
         // =====================================================
         // API GA4 + STATS
         // =====================================================
-        async function fetchGA4Data() {
+        let CURRENT_PERIOD = 'all'; // Période sélectionnée
+
+        async function fetchGA4Data(period = 'all') {
             try {
-                // Appeler les deux endpoints en parallÃ¨le
+                // Appeler les deux endpoints en parallèle avec le paramètre de période
                 const [analyticsResponse, statsResponse] = await Promise.all([
                     fetch(CONFIG.STATS_API),
-                    fetch('/api/stats')
+                    fetch(`/api/stats?period=${period}`)
                 ]);
 
                 if (!analyticsResponse.ok) throw new Error('Analytics API Error: ' + analyticsResponse.status);
@@ -1351,7 +2085,7 @@
                 if (analyticsData.error) throw new Error(analyticsData.error);
                 if (statsData.error) throw new Error(statsData.error);
 
-                // Fusionner les donnÃ©es: garder analytics pour tout, mais remplacer les Ã©vÃ©nements par stats
+                // Fusionner les données: garder analytics pour tout, mais remplacer les événements par stats
                 return {
                     ...analyticsData,
                     stats: statsData
@@ -1379,16 +2113,16 @@
             document.getElementById('countriesChange').textContent = countries.length + ' pays actifs';
 
             // Evenements (depuis stats.js: Netlify Forms + GA4)
-            const stats = data.stats || {};
-            const listens = stats.listens_total || 0;
-            const shares = stats.shares_total || 0;
-            const signups = stats.signups_total || 0;
+            const stats = (data && data.stats) ? data.stats : (data || {});
+            const listens = (stats.listens_total ?? (data?.events?.audio_play ?? 0));
+            const shares  = (stats.shares_total  ?? (data?.events?.share ?? 0));
+            const signups = (stats.signups_total ?? 0);
 
             document.getElementById('totalListens').textContent = listens.toLocaleString();
-            document.getElementById('listensChange').textContent = 'GA4 7j';
+            document.getElementById('listensChange').textContent = 'GA4 28j';
 
             document.getElementById('totalShares').textContent = shares.toLocaleString();
-            document.getElementById('sharesChange').textContent = 'GA4 7j';
+            document.getElementById('sharesChange').textContent = 'GA4 28j';
 
             document.getElementById('totalSignups').textContent = signups.toLocaleString();
             document.getElementById('signupsChange').textContent = 'Netlify Forms';
@@ -1402,14 +2136,23 @@
             }
 
             list.innerHTML = countries.slice(0, 10).map((c, i) => {
-                const coords = CONFIG.COUNTRY_COORDS[c.name];
-                const flag = coords ? coords.flag : 'ð';
-                const cities = c.cities ? c.cities.slice(0, 2).map(city => city.name || city).join(', ') : '';
+                // Extract city names safely
+                const cities = c.cities ?
+                    c.cities
+                        .slice(0, 2)
+                        .map(city => {
+                            if (typeof city === 'string') return city;
+                            if (city && typeof city === 'object' && city.name) return city.name;
+                            return null;
+                        })
+                        .filter(city => city !== null)
+                        .join(', ')
+                    : '';
                 return `
                     <li>
                         <span class="rank">${i + 1}</span>
                         <div class="info">
-                            <div class="name">${flag} ${c.name}</div>
+                            <div class="name">${c.name}</div>
                             ${cities ? '<div class="detail">' + cities + '</div>' : ''}
                         </div>
                         <span class="value">${c.visitors}</span>
@@ -1448,14 +2191,14 @@
             }
 
             const eventIcons = {
-                'first_visit': 'ð',
-                'session_start': 'ð¢',
-                'page_view': 'ð',
-                'audio_play': 'ðµ',
-                'share': 'ð',
-                'sign_up': 'ð§',
-                'view_lyrics': 'ð',
-                'language_change': 'ð'
+                'first_visit': '👋',
+                'session_start': '🟢',
+                'page_view': '📄',
+                'audio_play': '🎵',
+                'share': '🔔',
+                'sign_up': '📧',
+                'view_lyrics': '📜',
+                'language_change': '🌐'
             };
 
             const sortedEvents = Object.entries(events)
@@ -1463,7 +2206,7 @@
                 .slice(0, 8);
 
             list.innerHTML = sortedEvents.map(([name, count], i) => {
-                const icon = eventIcons[name] || 'â¡';
+                const icon = eventIcons[name] || '⚡';
                 return `
                     <li>
                         <span class="rank">${icon}</span>
@@ -1485,7 +2228,16 @@
             countries.forEach(c => {
                 if (c.cities) {
                     c.cities.forEach(city => {
-                        const cityName = city.name || city;
+                        // Extract city name safely
+                        let cityName;
+                        if (typeof city === 'string') {
+                            cityName = city;
+                        } else if (city && typeof city === 'object' && city.name) {
+                            cityName = city.name;
+                        } else {
+                            return; // Skip invalid city entries
+                        }
+
                         activities.push({
                             type: 'visit',
                             title: 'Visiteur',
@@ -1523,11 +2275,11 @@
                 return;
             }
 
-            const icons = { listen: 'ðµ', visit: 'ð', share: 'âï¸', signup: 'ð§', page: 'ð' };
+            const icons = { listen: '🎵', visit: '🌍', share: '↗️', signup: '📧', page: '📄' };
 
             feed.innerHTML = activities.slice(0, 10).map(a => `
                 <div class="activity-item">
-                    <div class="activity-icon ${a.type}">${icons[a.type] || 'â¡'}</div>
+                    <div class="activity-icon ${a.type}">${icons[a.type] || '⚡'}</div>
                     <div class="activity-content">
                         <div class="activity-title">${a.title}</div>
                         <div class="activity-detail">${a.detail}</div>
@@ -1571,18 +2323,51 @@
             indicator.classList.remove('error');
             document.getElementById('liveStatus').textContent = 'MAJ...';
 
-            const data = await fetchGA4Data();
+            const data = await fetchGA4Data(CURRENT_PERIOD);
+
+            console.log('📊 Données GA4 reçues:', data);
 
             if (data && !data.error) {
                 isUsingRealData = true;
                 lastApiData = data;
 
-                updateStats(data);
-                updateTopCountries(data.today?.countries || []);
+                console.log('🌍 Liste des pays:', data.today?.countries);
+
+                // Filtrer les pays valides
+                const allCountries = data.today?.countries || [];
+                const validCountries = allCountries.filter(c =>
+                    c.name && c.name !== '(not set)' && c.name.trim() !== ''
+                );
+
+                // Debug: afficher les pays "(not set)" avec leurs villes
+                const notSetCountries = allCountries.filter(c =>
+                    !c.name || c.name === '(not set)' || c.name.trim() === ''
+                );
+                if (notSetCountries.length > 0) {
+                    console.warn('⚠️ Pays "(not set)" détectés:', notSetCountries.length);
+                    notSetCountries.forEach(c => {
+                        const cities = c.cities ? c.cities.map(city => city.name || city).join(', ') : 'Aucune ville';
+                        console.log(`   → "${c.name}" - ${c.visitors} visiteurs - Villes: ${cities}`);
+                    });
+                }
+
+                console.log('✅ Pays valides pour affichage:', validCountries.length, validCountries.map(c => c.name));
+
+                // Créer un objet data modifié avec les pays filtrés
+                const filteredData = {
+                    ...data,
+                    today: {
+                        ...data.today,
+                        countries: validCountries
+                    }
+                };
+
+                updateStats(filteredData);
+                updateTopCountries(validCountries);
                 updateTopPages(data.topPages || []);
                 updateEvents(data.events || {});
-                updateActivity(data);
-                updateMap(data.today?.countries || []);
+                updateActivity(filteredData);
+                updateMap(validCountries);
                 setDataSource(true);
             } else {
                 setDataSource(false, 'Erreur connexion API GA4');
@@ -1596,108 +2381,148 @@
         // =====================================================
         document.addEventListener('DOMContentLoaded', function() {
             initLangSwitch();
+            initPeriodSelector();
             applyI18n();
+
+            // Render language progress from config
+            renderLanguageProgress();
+
+            // Render prayer statistics
+            renderPrayerStatistics();
+
             // Premier chargement
             refresh();
 
+            // Charger l'analyse IA
+            loadAIAnalysis();
+
             // Rafraichissement auto
-    
-        // === Attribution automatique des IDs aux sections sociales ===
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('section').forEach(s => {
-                const h2 = s.querySelector('h2');
-                if (h2 && h2.textContent.includes('YouTube') && !s.id) s.id = 'yt-section';
-                if (h2 && h2.textContent.includes('Facebook') && !s.id) s.id = 'fb-section';
-            });
-        });
-
-        // =====================================================
-        // AUTO-UPDATE: Statistiques YouTube & Facebook (API)
-        // =====================================================
-        let _ytCache = null, _fbCache = null, _ytCacheTime = 0, _fbCacheTime = 0;
-        const SOCIAL_TTL = 3600000;
-
-        async function fetchSocialStats() {
-            const now = Date.now();
-            const promises = [];
-            if (!_ytCache || (now - _ytCacheTime) > SOCIAL_TTL) {
-                promises.push(
-                    fetch('/api/youtube-stats')
-                        .then(r => r.ok ? r.json() : null)
-                        .then(d => { if (d && !d.error) { _ytCache = d; _ytCacheTime = now; } })
-                        .catch(() => {})
-                );
-            }
-            if (!_fbCache || (now - _fbCacheTime) > SOCIAL_TTL) {
-                promises.push(
-                    fetch('/api/facebook-stats')
-                        .then(r => r.ok ? r.json() : null)
-                        .then(d => { if (d && !d.error) { _fbCache = d; _fbCacheTime = now; } })
-                        .catch(() => {})
-                );
-            }
-            if (promises.length > 0) await Promise.allSettled(promises);
-            if (_ytCache) updateYTDisplay(_ytCache);
-            if (_fbCache) updateFBDisplay(_fbCache);
-        }
-
-        function updateYTDisplay(yt) {
-            try {
-                const section = document.getElementById('yt-section');
-                if (!section) return;
-                section.querySelectorAll('[data-yt]').forEach(el => {
-                    const k = el.getAttribute('data-yt');
-                    if (k === 'subscribers' && yt.channel) el.textContent = yt.channel.subscribers.toLocaleString('fr-FR');
-                    if (k === 'total-views' && yt.channel) el.textContent = (yt.channel.totalViews / 1000).toFixed(1) + ' k';
-                    if (k === 'updated-at') el.textContent = yt.updatedAt || '';
-                    if (k === 'top1-views' && yt.topVideos && yt.topVideos[0]) el.textContent = yt.topVideos[0].views.toLocaleString('fr-FR') + ' vues';
-                });
-            } catch(e) { console.warn('YT display error:', e); }
-        }
-
-        function updateFBDisplay(fb) {
-            try {
-                const section = document.getElementById('fb-section');
-                if (!section) return;
-                section.querySelectorAll('[data-fb]').forEach(el => {
-                    const k = el.getAttribute('data-fb');
-                    if (k === 'followers' && fb.page) el.textContent = fb.page.followers.toLocaleString('fr-FR') + ' actuels';
-                    if (k === 'interactions' && fb.interactions28d) el.textContent = (fb.interactions28d.total / 1000).toFixed(1) + 'k';
-                    if (k === 'reels-pct' && fb.content) el.textContent = fb.content.reelsPct + '%';
-                    if (k === 'new-followers' && fb.page) el.textContent = '+' + fb.page.newFollowers28d;
-                    if (k === 'likes' && fb.interactions28d) el.textContent = fb.interactions28d.likes.toLocaleString('fr-FR') + ' réactions';
-                    if (k === 'updated-at') el.textContent = fb.updatedAt || '';
-                });
-            } catch(e) { console.warn('FB display error:', e); }
-        }
-
-        fetchSocialStats();
-        setInterval(fetchSocialStats, SOCIAL_TTL);
-
-        setInterval(refresh, CONFIG.REFRESH_INTERVAL);
+            setInterval(refresh, CONFIG.REFRESH_INTERVAL);
 
         // Live visitors indicator
         function updateLiveVisitors() {
-            const items = document.querySelectorAll('.activity-item');
-            let count = 0;
+            var items = document.querySelectorAll('.activity-item'), count = 0;
             items.forEach(function(item) {
-                const text = item.textContent;
-                const m = text.match(/(\d+)\s*min/i);
-                const s = text.match(/\d+\s*sec/i);
-                if (s) count++;
-                else if (m && parseInt(m[1]) <= 30) count++;
+                var text = item.textContent, m = text.match(/(\d+)\s*min/i), s = text.match(/\d+\s*sec/i);
+                if (s) count++; else if (m && parseInt(m[1]) <= 30) count++;
             });
             var el = document.getElementById('liveVisitorsCount');
-            if (el) {
-                var lang = (UI_LANG || 'FR');
-                var labels = {FR: count+' visiteurs en direct', EN: count+' live visitors', PT: count+' visitantes ao vivo', ES: count+' visitantes en vivo', DE: count+' Besucher live', IT: count+' visitatori in diretta', TL: count+' bisita live'};
-                el.textContent = count > 0 ? (labels[lang] || labels.FR) : '● LIVE';
-            }
+            if (el) { var lang = (typeof UI_LANG !== 'undefined' ? UI_LANG : 'FR'), labels = {FR: count+' visiteurs en direct', EN: count+' live visitors', PT: count+' visitantes ao vivo', ES: count+' visitantes en vivo', DE: count+' Besucher live', IT: count+' visitatori in diretta', TL: count+' bisita live'}; el.textContent = count > 0 ? (labels[lang] || labels.FR) : '\u25CF LIVE'; }
         }
         updateLiveVisitors();
         setInterval(updateLiveVisitors, 30000);
-
         });
     </script>
+
+  <div id="bcClearCacheWrap" style="position:fixed;right:14px;bottom:14px;z-index:99999">
+    <button id="clearCacheBtn" onclick="bcClearCache()"
+      style="padding:8px 14px;border-radius:10px;border:1px solid #f0c36d;background:#2c2f5b;color:#fff;cursor:pointer;font-size:14px">
+      🧹 Vider le cache
+    </button>
+  </div>
+
+  <script src="/translations.js"></script>
+  <script src="/translations-extra.js"></script>
+  <script src="/i18n.js"></script>
+  <script src="/lang-shared.js"></script>
+
+  <!-- Dynamic Social Stats Loader -->
+  <script>
+  (function() {
+    const STATS_URL = 'https://raw.githubusercontent.com/global-opera/bible-chantee/main/data/social-stats.json?t=' + Date.now();
+    
+    function fmt(n, decimals) {
+      n = Number(n);
+      if (n >= 1000000) return (n/1000000).toFixed(decimals||1) + 'M';
+      if (n >= 1000) return (n/1000).toFixed(decimals||1).replace('.', ',') + 'k';
+      return String(n);
+    }
+    
+    // Replace text in leaf elements matching exact value
+    function replaceLeafText(oldVal, newVal) {
+      let count = 0;
+      document.querySelectorAll('div,span').forEach(el => {
+        if (el.children.length === 0 && el.textContent.trim() === String(oldVal)) {
+          el.textContent = String(newVal);
+          count++;
+        }
+      });
+      return count;
+    }
+    
+    // Replace partial match in leaf elements
+    function replaceLeafPartial(pattern, replaceFn) {
+      document.querySelectorAll('div,span').forEach(el => {
+        if (el.children.length === 0) {
+          const t = el.textContent.trim();
+          if (pattern.test(t)) {
+            const newVal = replaceFn(t);
+            if (newVal !== null) el.textContent = newVal;
+          }
+        }
+      });
+    }
+    
+    fetch(STATS_URL)
+      .then(r => r.json())
+      .then(s => {
+        const yt = s.youtube;
+        const fb = s.facebook;
+        
+        // --- YouTube ---
+        // Subscribers count (appears in mini card + stats section)
+        replaceLeafText(241, yt.subscribers_current);
+        replaceLeafText('241', yt.subscribers_current);
+        
+        // New subscribers badge: "+54 🔥" or "Nouveaux (28j)"
+        replaceLeafPartial(/^\+\d+\s+🔥$/, t => '+' + yt.subscribers_new_28d + ' 🔥');
+        
+        // Daily subscribers avg: "~1.9/jour"
+        replaceLeafText('~1.9/jour', '~' + yt.daily_subscribers_avg + '/jour');
+        replaceLeafPartial(/^~[\d.]+\/jour$/, t => '~' + yt.daily_subscribers_avg + '/jour');
+        
+        // Views 28d: "1 100"
+        replaceLeafText('1 100', yt.views_28d >= 1000 ? Math.round(yt.views_28d/100)/10 + ' ' + String(yt.views_28d%1000).padStart(3,'0') : String(yt.views_28d));
+        
+        // Views growth: "+551%"
+        replaceLeafPartial(/^\+551%\s*🔥?$/, t => '+' + yt.views_growth_pct + '%' + (t.includes('🔥') ? ' 🔥' : ''));
+        
+        // Watch time: "34.3 h"
+        replaceLeafPartial(/^34\.3\s*h$/, t => yt.watch_time_total_h + ' h');
+        replaceLeafPartial(/^26\.0\s*h$/, t => yt.watch_time_28d_h + ' h');
+        
+        // Watch time growth: "+456%"
+        replaceLeafPartial(/^\+456%\s*🔥?$/, t => '+' + yt.watch_time_growth_pct + '%' + (t.includes('🔥') ? ' 🔥' : ''));
+        
+        // Unique viewers
+        replaceLeafPartial(/^~261$/, t => '~' + yt.unique_viewers_28d);
+        replaceLeafText('~261', '~' + yt.unique_viewers_28d);
+        
+        // --- Facebook ---
+        // Followers count (appears in mini card + stats section)
+        replaceLeafText(113, fb.followers_current);
+        replaceLeafText('113', fb.followers_current);
+        
+        // Interactions total
+        replaceLeafText('37,4k', fmt(fb.interactions_total_28d));
+        replaceLeafPartial(/^37[,.]4k$/, t => fmt(fb.interactions_total_28d));
+        
+        // Growth badges in mini cards
+        replaceLeafPartial(/^\+54\.8%\s+followers$/, t => '+' + fb.followers_growth_pct + '% followers');
+        replaceLeafPartial(/^\+24k\s+interact$/, t => '+' + fmt(fb.interactions_total_28d) + ' interact');
+        
+        // Interactions growth pct
+        replaceLeafPartial(/^\+24[,.]488%\s*🔥?$|^\+24k\s*🔥?$/, t => '+' + fmt(fb.interactions_growth_pct) + '%' + (t.includes('🔥') ? ' 🔥' : ''));
+        
+        console.log('[Bible Chantée] Social stats loaded:', {yt: yt.subscribers_current, fb: fb.followers_current, updated: s.last_updated});
+      })
+      .catch(e => console.warn('[Bible Chantée] Social stats load failed:', e));
+  })();
+  </script>
 </body>
 </html>
+
+
+
+
+
