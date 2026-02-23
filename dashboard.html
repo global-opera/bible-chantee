@@ -506,6 +506,7 @@
                 <div class="stat-value" id="totalVisitors">0</div>
                 <div class="stat-label" data-i18n="stat-visitors-today">Visiteurs aujourd'hui</div>
                 <div class="stat-change positive" id="visitorsChange">-</div>
+                <div id="liveVisitorsBadge" style="display:flex;align-items:center;gap:5px;margin-top:6px;background:rgba(255,59,48,0.15);border:1px solid rgba(255,59,48,0.4);border-radius:20px;padding:3px 10px;font-size:0.72rem;color:#ff6b6b;font-weight:600;justify-content:center;"><span style="width:7px;height:7px;background:#ff4444;border-radius:50%;display:inline-block;animation:livePulse 1.2s ease-in-out infinite;flex-shrink:0;"></span> <span id="liveVisitorsCount">...</span></div>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">ð</div>
@@ -1108,6 +1109,99 @@
                 footerBrand: "Biblia Cantada",
                 footerGA4: "Datos de Google Analytics 4",
                 footerRefresh: "ActualizaciÃ³n cada 30 segundos"
+            },
+            DE: {
+                title: "Dashboard Gesungene Bibel - Statistiken",
+                headerTitle: "Dashboard Gesungene Bibel",
+                headerSubtitle: "Weltweite Statistiken in Echtzeit",
+                statVisitorsToday: "Besucher heute",
+                statCountriesActive: "Aktive L\u00e4nder",
+                statAudioPlays: "Audio-Wiedergaben",
+                statShares: "Geteilte Inhalte",
+                statSignups: "Anmeldungen",
+                sectionWorld: "Besucher in der Welt",
+                sectionProgress: "MP3-Generierungsfortschritt",
+                sectionTopCountries: "Top-L\u00e4nder",
+                sectionTopPages: "Meistbesuchte Seiten",
+                sectionEvents: "GA4-Ereignisse",
+                sectionActivity: "Letzte Aktivit\u00e4t",
+                legendHigh: "100+ Besucher",
+                legendMedium: "50-99 Besucher",
+                legendLow: "1-49 Besucher",
+                langFR: "Franz\u00f6sisch",
+                langEN: "Englisch",
+                langPT: "Portugiesisch",
+                langES: "Spanisch",
+                dataConnecting: "Verbindung zu Google Analytics 4...",
+                dataLive: "Google Analytics 4 Echtzeit-Daten",
+                dataDemo: "Demo-Modus - API nicht verf\u00fcgbar",
+                live: "LIVE",
+                agoMinutes: (n) => `Vor ${n} Min`,
+                footerBrand: "Gesungene Bibel",
+                footerGA4: "Google Analytics 4 Daten",
+                footerRefresh: "Aktualisierung alle 30 Sekunden"
+            },
+            IT: {
+                title: "Dashboard Bibbia Cantata - Statistiche",
+                headerTitle: "Dashboard Bibbia Cantata",
+                headerSubtitle: "Statistiche globali in tempo reale",
+                statVisitorsToday: "Visitatori oggi",
+                statCountriesActive: "Paesi attivi",
+                statAudioPlays: "Riproduzioni audio",
+                statShares: "Condivisioni",
+                statSignups: "Iscrizioni",
+                sectionWorld: "Visitatori nel mondo",
+                sectionProgress: "Progresso generazione MP3",
+                sectionTopCountries: "Top Paesi",
+                sectionTopPages: "Pagine pi\u00f9 viste",
+                sectionEvents: "Eventi GA4",
+                sectionActivity: "Attivit\u00e0 recente",
+                legendHigh: "100+ visitatori",
+                legendMedium: "50-99 visitatori",
+                legendLow: "1-49 visitatori",
+                langFR: "Francese",
+                langEN: "Inglese",
+                langPT: "Portoghese",
+                langES: "Spagnolo",
+                dataConnecting: "Connessione a Google Analytics 4...",
+                dataLive: "Dati Google Analytics 4 in tempo reale",
+                dataDemo: "Modalit\u00e0 demo - API non disponibile",
+                live: "LIVE",
+                agoMinutes: (n) => `${n} min fa`,
+                footerBrand: "Bibbia Cantata",
+                footerGA4: "Dati Google Analytics 4",
+                footerRefresh: "Aggiornamento ogni 30 secondi"
+            },
+            TL: {
+                title: "Dashboard Awiting Bibliya - Istatistika",
+                headerTitle: "Dashboard Awiting Bibliya",
+                headerSubtitle: "Pandaigdigang istatistika sa real time",
+                statVisitorsToday: "Mga bisita ngayon",
+                statCountriesActive: "Aktibong mga bansa",
+                statAudioPlays: "Mga paglalaro ng audio",
+                statShares: "Mga pagbabahagi",
+                statSignups: "Mga pagpaparehistro",
+                sectionWorld: "Mga bisita sa mundo",
+                sectionProgress: "Progreso ng MP3 na henerasyion",
+                sectionTopCountries: "Nangungunang Bansa",
+                sectionTopPages: "Pinaka-binisitang Pahina",
+                sectionEvents: "Mga Kaganapan ng GA4",
+                sectionActivity: "Kamakailang Aktibidad",
+                legendHigh: "100+ bisita",
+                legendMedium: "50-99 bisita",
+                legendLow: "1-49 bisita",
+                langFR: "Pranses",
+                langEN: "Ingles",
+                langPT: "Portuges",
+                langES: "Espanyol",
+                dataConnecting: "Kumokonekta sa Google Analytics 4...",
+                dataLive: "Real-time na datos mula sa Google Analytics 4",
+                dataDemo: "Demo mode - Hindi available ang API",
+                live: "LIVE",
+                agoMinutes: (n) => `${n} min nakalipas`,
+                footerBrand: "Awiting Bibliya",
+                footerGA4: "Data ng Google Analytics 4",
+                footerRefresh: "Ina-update bawat 30 segundo"
             }
         };
 
@@ -1581,6 +1675,28 @@
         setInterval(fetchSocialStats, SOCIAL_TTL);
 
         setInterval(refresh, CONFIG.REFRESH_INTERVAL);
+
+        // Live visitors indicator
+        function updateLiveVisitors() {
+            const items = document.querySelectorAll('.activity-item');
+            let count = 0;
+            items.forEach(function(item) {
+                const text = item.textContent;
+                const m = text.match(/(\d+)\s*min/i);
+                const s = text.match(/\d+\s*sec/i);
+                if (s) count++;
+                else if (m && parseInt(m[1]) <= 30) count++;
+            });
+            var el = document.getElementById('liveVisitorsCount');
+            if (el) {
+                var lang = (UI_LANG || 'FR');
+                var labels = {FR: count+' visiteurs en direct', EN: count+' live visitors', PT: count+' visitantes ao vivo', ES: count+' visitantes en vivo', DE: count+' Besucher live', IT: count+' visitatori in diretta', TL: count+' bisita live'};
+                el.textContent = count > 0 ? (labels[lang] || labels.FR) : '● LIVE';
+            }
+        }
+        updateLiveVisitors();
+        setInterval(updateLiveVisitors, 30000);
+
         });
     </script>
 </body>
