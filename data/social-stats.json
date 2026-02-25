@@ -1,7 +1,7 @@
 {
               "youtube": {
-                              "subscribers_current": 760,
-                              "subscribers_new_28d": 589,
+                              "subscribers_current": 1070,
+                              "subscribers_new_28d": 310,
                               "subscribers_growth_pct": 999,
                               "views_total": 20121,
                               "views_28d": 18821,
@@ -18,7 +18,7 @@
                               "target_90d_subscribers": 2000,
                               "target_90d_views": 50000,
                               "target_90d_watch_time_h": 600,
-                              "updated_at": "2026-02-23T18:24:00Z"
+                              "updated_at": "2026-02-25T23:19:00Z"
               },
               "facebook": {
                               "followers_current": 176,
@@ -33,7 +33,7 @@
                               "shares_28d": 793,
                               "content_type_reels_pct": 97.7,
                               "non_followers_reach_pct": 99.9,
-                              "updated_at": "2026-02-23T18:24:00Z"
+                              "updated_at": "2026-02-25T23:19:00Z"
               },
-              "last_updated": "2026-02-23T18:24:00Z"
+              "last_updated": "2026-02-25T23:19:00Z"
 }
