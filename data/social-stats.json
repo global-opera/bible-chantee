@@ -18,22 +18,22 @@
                               "target_90d_subscribers": 2000,
                               "target_90d_views": 50000,
                               "target_90d_watch_time_h": 600,
-                              "updated_at": "2026-02-25T23:19:00Z"
+                              "updated_at": "2026-02-26T10:26:00Z"
               },
               "facebook": {
-                              "followers_current": 176,
+                              "followers_current": 178,
                               "followers_new_28d": 98,
                               "followers_growth_pct": 125.6,
-                              "views_28d": 497319,
-                              "views_3sec_28d": 177388,
-                              "interactions_total_28d": 47115,
-                              "interactions_growth_pct": 16259,
-                              "reactions_28d": 44358,
-                              "comments_28d": 1964,
-                              "shares_28d": 793,
-                              "content_type_reels_pct": 97.7,
-                              "non_followers_reach_pct": 99.9,
-                              "updated_at": "2026-02-25T23:19:00Z"
+                              "views_28d": 457833,
+                              "views_3sec_28d": 161063,
+                              "interactions_total_28d": 43826,
+                              "interactions_growth_pct": 1123.5,
+                              "reactions_28d": 41341,
+                              "comments_28d": 1792,
+                              "shares_28d": 693,
+                              "content_type_reels_pct": 97.5,
+                              "non_followers_reach_pct": 99.8,
+                              "updated_at": "2026-02-26T10:26:00Z"
               },
-              "last_updated": "2026-02-25T23:19:00Z"
+              "last_updated": "2026-02-26T10:26:00Z"
 }
