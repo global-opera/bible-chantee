@@ -1967,6 +1967,9 @@ const audioPlayer = document.querySelector('#audioPlayer');
       text = text.replace(/^\uFEFF/, '');
       text = text.replace(/\uFEFF/g, '');
 
+      // 10b. Supprimer le caractère ¶ (pilcrow - marqueur de paragraphe Segond 1910)
+      text = text.replace(/¶\s*/g, '');
+
       // 11. Convertir tous les doubles sauts de ligne en simples (élimine les lignes vides partout)
       text = text.replace(/\n\n+/g, '\n');
 
@@ -2086,7 +2089,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
         // Formater le texte
         let html = '';
         verses.forEach(v => {
-          html += `<sup style="color: #F5CB42; font-weight: bold;">${v.verse}</sup> ${v.text}\n\n`;
+          const cleanText = v.text.replace(/^¶\s*/g, '').trim();
+          html += `<p style="margin: 0 0 0.6em 0; line-height: 1.6;"><sup style="color: #F5CB42; font-weight: bold; margin-right: 3px;">${v.verse}</sup>${cleanText}</p>`;
         });
 
         bibleContent.innerHTML = html;
