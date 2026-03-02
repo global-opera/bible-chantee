@@ -14,13 +14,13 @@
     EN: 'bibles/en_bible_kjv_1611.json',
     PT: 'bibles/pt_bible_almeida_acf.json',
     ES: 'bibles/es_bible_reina_valera_1909.json',
-    DE: null,
-    IT: null,
+    DE: 'bibles/de_bible_luther_1912.json',
+    IT: 'bibles/it_bible_diodati_1649.json',
     AR: null,
     RU: null,
     ZH: null,
     HI: null,
-    TL: null,
+    TL: 'bibles/tl_bible_old_tagalog.json',
     SW: null
   };
 
