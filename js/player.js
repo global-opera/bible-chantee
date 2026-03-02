@@ -887,7 +887,7 @@
       }
       if(lang){
         if(btn.closest && btn.closest('#bcToggleWrap')) return;
-        if(btn.closest && btn.closest('.bc-lang-row')) {
+        if(btn.closest && btn.closest('.bc-lang-row, .flags-row')) {
           e.preventDefault();
           setLang(lang);
         }
