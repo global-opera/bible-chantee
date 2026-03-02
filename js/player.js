@@ -50,6 +50,13 @@
     NUM_TO_BOOK_CODE[BOOK_CODE_TO_NUM[code]] = code;
   }
 
+  // Alias locaux pour codes anciens/variants (normalisés vers le code canonique)
+  var LOCAL_BOOK_CODE_ALIASES = {
+    '22_SON': '22_SNG',  // Song of Solomon variant
+    '25_EZK': '26_EZK',  // Ezekiel ancien numérotage
+    '26_EZE': '26_EZK'   // Ezekiel suffixe alternatif
+  };
+
   function normLang(x){ return String(x || 'FR').toUpperCase(); }
 
   function getLang(){
@@ -97,6 +104,7 @@
     try{
       if(window.BOOK_CODE_ALIASES && window.BOOK_CODE_ALIASES[c]) c = window.BOOK_CODE_ALIASES[c];
     }catch(e){}
+    if(LOCAL_BOOK_CODE_ALIASES[c]) c = LOCAL_BOOK_CODE_ALIASES[c];
     return c;
   }
 
@@ -360,13 +368,15 @@
     var L = normLang(lang);
     var url = resolveAudioUrl(L, bookCode, chapter);
 
+    try{ audio.pause(); }catch(e){}
+
     if(url){
       try{
         audio.src = url;
+        audio.currentTime = 0;
         audio.load();
       }catch(e){}
     }else{
-      // pas d'audio trouvé -> laisser vide
       try{
         audio.removeAttribute('src');
         audio.load();
@@ -567,7 +577,9 @@
       (function(n){
         btn.addEventListener('click', function(){
           setActiveChapter(n);
-          refreshAll(false);
+          ensureToggleUI();
+          setupAutoplayListener();
+          refreshContent();
         });
       })(i);
       wrap.appendChild(btn);
@@ -858,7 +870,9 @@
           renderChaptersFor(code);
           setActiveChapter(1);
         }
-        refreshAll(false);
+        ensureToggleUI();
+        setupAutoplayListener();
+        refreshContent();
       });
     }
 
@@ -1012,12 +1026,7 @@
 
     setupAutoplayListener();
     refreshAll(false);
-    setTimeout(function(){ refreshAll(false); }, 150);
-    setTimeout(function(){ refreshAll(false); }, 600);
-    setTimeout(function(){
-      refreshAll(false);
-      tryAutoplay();
-    }, 1200);
+    setTimeout(tryAutoplay, 1200);
   }
 
   if(document.readyState === 'loading'){
