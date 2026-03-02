@@ -32,6 +32,17 @@ function cleanLyrics(text) {
   text = text.replace(/\n{3,}/g, '\n\n');
   text = text.replace(/^\n+/, '');
   text = text.replace(/\n+$/, '');
+  // 16. Auto-groupement si bloc trop dense (paroles sans \n\n entre strophes)
+  const _paras = text.split('\n\n').filter(p => p.trim());
+  const _maxParaLines = Math.max(..._paras.map(p => p.split('\n').filter(l => l.trim()).length));
+  if (_maxParaLines > 6) {
+    const _allLines = text.split('\n').filter(l => l.trim());
+    const stanzas = [];
+    for (let i = 0; i < _allLines.length; i += 4) {
+      stanzas.push(_allLines.slice(i, i + 4).join('\n'));
+    }
+    text = stanzas.join('\n\n');
+  }
   return text;
 }
 
