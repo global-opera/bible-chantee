@@ -2066,7 +2066,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
         let bibleData = bibleCache[filename];
 
         if (!bibleData) {
-          const response = await fetch(`bible/${filename}`);
+          const response = await fetch(`bibles/${filename}`);
           if (!response.ok) {
             bibleContent.innerHTML = '<p style="color: #f88;">Fichier Bible introuvable</p>';
             return;
