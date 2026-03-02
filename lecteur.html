@@ -878,6 +878,7 @@
 
     #lyricsContent {
       line-height: 1.4;
+      white-space: pre-wrap;
     }
 
     .bible-text {
@@ -2028,14 +2029,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
           return;
         }
 
-        // Convertir les sauts de ligne en HTML
-        const paragraphs = lyrics.split('\n\n');
-        const html = paragraphs.map(p => {
-          const lines = p.split('\n').join('<br>');
-          return '<p style="margin: 0 0 1em 0;">' + lines + '</p>';
-        }).join('');
-
-        lyricsContent.innerHTML = html;
+        // Affichage direct (white-space: pre-wrap gère les sauts de ligne)
+        lyricsContent.textContent = lyrics;
         console.log('[Lyrics] Loaded successfully:', bookCode, chapter, lang);
 
       } catch (error) {
