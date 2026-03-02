@@ -1968,10 +1968,13 @@ const audioPlayer = document.querySelector('#audioPlayer');
       text = text.replace(/\uFEFF/g, '');
 
       // 10b. Convertir ¶ en séparateur de couplet (pilcrow = début de section Segond 1910)
-      // Ne pas supprimer : ¶ marque un nouveau couplet, le conserver comme PARAGRAPH_BREAK
       text = text.replace(/\n*¶\s*/g, '###PARAGRAPH_BREAK###');
 
-      // 11. Convertir tous les doubles sauts de ligne en simples (élimine les lignes vides partout)
+      // 10c. Préserver les doubles sauts de ligne comme séparateurs de couplets
+      // AVANT step 11 qui les détruirait
+      text = text.replace(/\n\n+/g, '###PARAGRAPH_BREAK###');
+
+      // 11. Convertir les sauts de ligne simples restants (normalement rien de double n'est plus là)
       text = text.replace(/\n\n+/g, '\n');
 
       // 12. Restaurer les vraies séparations de couplets (marqueurs -> double saut)
