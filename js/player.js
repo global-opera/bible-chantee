@@ -10,18 +10,18 @@
   var LANGS = ['FR','EN','PT','ES','DE','IT','AR','RU','ZH','HI','TL','SW','KO'];
 
   var BIBLE_FILES = {
-    FR: 'V3/bible/fr_bible_segond1910.json',
-    EN: 'V3/bible/en_bible_kjv_1611.json',
-    PT: 'V3/bible/pt_bible_almeida_acf.json',
-    ES: 'V3/bible/es_bible_reina_valera_1909.json',
-    DE: 'V3/bible/de_bible_luther_1912.json',
-    IT: 'V3/bible/it_bible_diodati_1649.json',
-    AR: 'V3/bible/ar_bible_van_dyck_1865.json',
-    RU: 'V3/bible/ru_bible_synodal.json',
-    ZH: 'V3/bible/zh_bible_cuv_1919.json',
-    HI: 'V3/bible/hi_bible_bfbs_1914_publicdomain.json',
-    TL: 'V3/bible/tl_bible_old_tagalog.json',
-    SW: 'V3/bible/sw_bible_swahili_publicdomain.json'
+    FR: 'bibles/fr_bible_segond1910.json',
+    EN: 'bibles/en_bible_kjv_1611.json',
+    PT: 'bibles/pt_bible_almeida_acf.json',
+    ES: 'bibles/es_bible_reina_valera_1909.json',
+    DE: null,
+    IT: null,
+    AR: null,
+    RU: null,
+    ZH: null,
+    HI: null,
+    TL: null,
+    SW: null
   };
 
   var bibleCache = {};
