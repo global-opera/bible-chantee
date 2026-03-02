@@ -135,6 +135,38 @@ sections-promesses.js.bak*
 # CSV / exports divers
 ########################################
 query-results.csv
+errors_*.csv
 
 *.bak_mp3fix
+
+########################################
+# Archives locales (jamais pusher)
+########################################
+_archive/
+lyrics-archive/
+archives/
+
+########################################
+# Outils locaux
+########################################
+tools/
+scripts-local/
+
+########################################
+# Backups versionnés JS
+########################################
+*.backup-v1
+*.backup-v2
+*.orig
+
+########################################
+# Documentation locale
+########################################
+BIBLE_CHANTEE_DOCUMENT_MAITRE.md
+notes_locales.md
+
+########################################
+# Fichiers de test locaux
+########################################
+player.js
 
