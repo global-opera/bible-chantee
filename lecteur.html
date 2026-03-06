@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+h<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -1938,15 +1938,15 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
       // 4. MARQUER les vraies séparations de couplets (tags de section)
       // Français: [Verset], [Couplet], [Refrain], [Strophe]
-      // Anglais: [Verse], [Chorus], [Bridge], [Outro], [Intro], [Spoken Word]
+      // Anglais: [Verse], [Chorus], [Bridge], [Outro], [Intro], [Pre-Chorus|Spoken Word]
       // Espagnol: [Verso], [Coro], [Puente]
       // Portugais: [Verso], [Refrão], [Ponte], [Fim]
 
       // D'abord, supprimer les markdown ** ** autour des sections
-      text = text.replace(/\*\*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*)\]\*\*/gi, '[$1]');
+      text = text.replace(/\*\*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Pre-Chorus|Spoken Word)[^\]]*)\]\*\*/gi, '[$1]');
 
       // Remplacer les tags de section par un marqueur unique
-      text = text.replace(/\s*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*)\]\s*/gi, '###PARAGRAPH_BREAK###');
+      text = text.replace(/\s*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Pre-Chorus|Spoken Word)[^\]]*)\]\s*/gi, '###PARAGRAPH_BREAK###');
 
       // 5. Supprimer les lignes de section avec deux-points (Verse 1:, Chorus:, etc.)
       // Format: "Verse 1:  " ou "Verso 1:  " ou "Coro  " etc.
