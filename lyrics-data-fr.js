@@ -1,3 +1,15 @@
+
+
+// FIX: Override unstructured FR lyrics with structured data from lyrics-data.js
+// lyrics-data.js has 65 books with proper [Verse], [Couplet], [Refrain] structure
+// lyrics-data-fr.js book 34 (Nahum) is preserved as it's missing from main
+(function() {
+  if (window.chapterLyrics && window.chapterLyricsFR) {
+    Object.keys(window.chapterLyrics).forEach(function(book) {
+      window.chapterLyricsFR[book] = window.chapterLyrics[book];
+    });
+  }
+})();
 // Lyrics FR - Français
 // Source: FR/ (books 01-17) + FR_V2/ (books 18-66)
 // Auto-generated: 2026-01-23
