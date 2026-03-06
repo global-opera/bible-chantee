@@ -1,8 +1,8 @@
-/* Bible Chantée V3 — player.js (standalone, tolerant)
+/* Bible ChantÃ©e V3 â player.js (standalone, tolerant)
    - Noms livres: BOOK_NAMES + aliases BOOK_CODE_ALIASES
    - Audio: supporte AUDIO_URLS, AUDIO_URLS_FR, AUDIO_URLS_fr, AUDIO_URLS_PT, etc.
    - Bible: supporte BC_BIBLE, BIBLE, BIBLE_TEXTS, BIBLE_FR, BIBLE_fr, BC_BIBLE_FR, etc.
-   - Toggle simple Paroles/Bible dans le même panneau
+   - Toggle simple Paroles/Bible dans le mÃªme panneau
 */
 (function () {
   'use strict';
@@ -50,10 +50,10 @@
     NUM_TO_BOOK_CODE[BOOK_CODE_TO_NUM[code]] = code;
   }
 
-  // Alias locaux pour codes anciens/variants (normalisés vers le code canonique)
+  // Alias locaux pour codes anciens/variants (normalisÃ©s vers le code canonique)
   var LOCAL_BOOK_CODE_ALIASES = {
     '22_SON': '22_SNG',  // Song of Solomon variant
-    '25_EZK': '26_EZK',  // Ezekiel ancien numérotage
+    '25_EZK': '26_EZK',  // Ezekiel ancien numÃ©rotage
     '26_EZE': '26_EZK'   // Ezekiel suffixe alternatif
   };
 
@@ -121,8 +121,8 @@
   function getChapterWord(lang){
     var L = normLang(lang);
     var map = {
-      FR:'Chapitre', EN:'Chapter', PT:'Capítulo', ES:'Capítulo', DE:'Kapitel', IT:'Capitolo',
-      AR:'الفصل', RU:'Глава', ZH:'章', HI:'अध्याय', TL:'Kabanata', SW:'Sura', KO:'장'
+      FR:'Chapitre', EN:'Chapter', PT:'CapÃ­tulo', ES:'CapÃ­tulo', DE:'Kapitel', IT:'Capitolo',
+      AR:'Ø§ÙÙØµÙ', RU:'ÐÐ»Ð°Ð²Ð°', ZH:'ç« ', HI:'à¤à¤§à¥à¤¯à¤¾à¤¯', TL:'Kabanata', SW:'Sura', KO:'ì¥'
     };
     return map[L] || map.FR;
   }
@@ -185,10 +185,10 @@
   function resolveBookKey(bookCode) {
     var bc = String(bookCode || "").trim().toUpperCase();
 
-    // Déjà au bon format: "01_GEN"
+    // DÃ©jÃ  au bon format: "01_GEN"
     if (/^\d{2}_[A-Z0-9]+$/.test(bc)) return bc;
 
-    // Essaie de retrouver via une liste de livres déjà présente dans player.js
+    // Essaie de retrouver via une liste de livres dÃ©jÃ  prÃ©sente dans player.js
     // Cherche un tableau global du type BOOKS / BOOK_LIST / books
     var lists = [
       window.BOOKS,
@@ -222,14 +222,14 @@
       }
     }
 
-    // Si bookCode = "01" → match sur préfixe
+    // Si bookCode = "01" â match sur prÃ©fixe
     if (/^\d{2}$/.test(bc)) {
       for (var k = 0; k < all.length; k++) {
         if (all[k].slice(0, 2) === bc) return all[k];
       }
     }
 
-    // Si bookCode = "GEN" → match sur suffixe
+    // Si bookCode = "GEN" â match sur suffixe
     if (/^[A-Z0-9]{3,}$/.test(bc)) {
       for (var k2 = 0; k2 < all.length; k2++) {
         var parts = all[k2].split("_");
@@ -237,7 +237,7 @@
       }
     }
 
-    // Fallback: on retourne ce qu'on a (ça fera un log clair)
+    // Fallback: on retourne ce qu'on a (Ã§a fera un log clair)
     return bc;
   }
 
@@ -297,7 +297,7 @@
     return new URL(relPath, document.baseURI).toString();
   }
 
-  // -------- AUDIO (tolérant) --------
+  // -------- AUDIO (tolÃ©rant) --------
 
   function getAudioMapsForLang(L){
     var out = [];
@@ -347,7 +347,7 @@
         if(typeof mm[pad2(chapter)] === 'string') return mm[pad2(chapter)];
       }
 
-      // parfois clé sans langue
+      // parfois clÃ© sans langue
       if(typeof m[key3] === 'string') return m[key3];
       if(typeof m[key4] === 'string') return m[key4];
 
@@ -358,7 +358,9 @@
       var u = tryMap(maps[i]);
       if(u) return u;
     }
-    return '';
+    // Fallback: construct R2 CDN URL directly when no audio maps exist
+    var chPad = pad2(chapter);
+    return 'https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/' + L + '/' + bc + '/' + bc + '_' + chPad + '_' + L + '.mp3';
   }
 
   function setAudioFor(lang, bookCode, chapter){
@@ -384,7 +386,7 @@
     }
   }
 
-  // -------- BIBLE (tolérant) --------
+  // -------- BIBLE (tolÃ©rant) --------
 
   function normalizeBibleValue(v){
     if(v == null) return '';
@@ -515,7 +517,7 @@
       }
     }
 
-    setBoxText(box, '—');
+    setBoxText(box, 'â');
     return '';
   }
 
@@ -611,13 +613,13 @@
       if(title){
         var parts = title.split(/\s-\s/);
         if(parts.length >= 2) title = parts.slice(1).join(' - ').trim();
-        parts = title.split(/\s—\s/);
-        if(parts.length >= 2) title = parts.slice(1).join(' — ').trim();
+        parts = title.split(/\sâ\s/);
+        if(parts.length >= 2) title = parts.slice(1).join(' â ').trim();
       }
     }catch(e){}
 
-    var line = name + ' — ' + getChapterWord(L) + ' ' + chapter;
-    if(title) line = name + ' ' + chapter + ' — ' + title;
+    var line = name + ' â ' + getChapterWord(L) + ' ' + chapter;
+    if(title) line = name + ' ' + chapter + ' â ' + title;
 
     ht.textContent = line;
   }
@@ -659,7 +661,7 @@
         }
       }catch(e){}
       bLyrics.textContent = tLyrics || (L==='EN'?'Lyrics':(L==='PT'?'Letras':(L==='ES'?'Letras':(L==='DE'?'Liedtext':(L==='IT'?'Testo':'Paroles')))));
-      bBible.textContent  = tBible  || (L==='EN'?'Bible':(L==='PT'?'Bíblia':(L==='ES'?'Biblia':(L==='DE'?'Bibel':(L==='IT'?'Bibbia':'Bible')))));
+      bBible.textContent  = tBible  || (L==='EN'?'Bible':(L==='PT'?'BÃ­blia':(L==='ES'?'Biblia':(L==='DE'?'Bibel':(L==='IT'?'Bibbia':'Bible')))));
     }
 
     function setMode(mode){
@@ -741,7 +743,7 @@
     var box = findLyricsBox();
     if(!box) return '';
 
-    // Fallback sur variables globales si paramètres manquants
+    // Fallback sur variables globales si paramÃ¨tres manquants
     var L = normLang(lang || window.currentLang || window.CURRENT_LANG || getLang());
     var bc = bookCode || window.currentBookCode || window.currentBook || window.selectedBook || window.bookCode;
     var ch = chapter || window.currentChapter || window.selectedChapter || window.chapter || 1;
@@ -756,7 +758,7 @@
 
     // V1: Show message pointing to V2
     if(L === 'FR' && String(currentVersion).toLowerCase() === 'v1'){
-      box.innerHTML = '<div style="text-align: center; padding: 40px; color: #F5CB42; font-size: 18px;">🎵 Paroles disponibles en V2</div>';
+      box.innerHTML = '<div style="text-align: center; padding: 40px; color: #F5CB42; font-size: 18px;">ðµ Paroles disponibles en V2</div>';
       return '';
     }
 
@@ -775,7 +777,7 @@
 
       // Si le serveur renvoie du HTML (listing de dossier / 404 custom), on bloque
       if(text && text.trim().startsWith("<")){
-        throw new Error("HTML reçu au lieu d'un .txt (chemin incorrect)");
+        throw new Error("HTML reÃ§u au lieu d'un .txt (chemin incorrect)");
       }
 
       // Clean V2 lyrics (remove Suno tags)
@@ -788,9 +790,9 @@
 
       // If V2 lyrics not available, show waiting message
       if(L === 'FR' && String(currentVersion).toLowerCase() === 'v2'){
-        box.innerHTML = '<div style="text-align: center; padding: 40px; color: #F5CB42; font-size: 18px;">⏳ Paroles V2 bientôt disponibles<br><small style="color: #999; font-size: 14px;">' + String(e.message || e) + '</small></div>';
+        box.innerHTML = '<div style="text-align: center; padding: 40px; color: #F5CB42; font-size: 18px;">â³ Paroles V2 bientÃ´t disponibles<br><small style="color: #999; font-size: 14px;">' + String(e.message || e) + '</small></div>';
       } else {
-        setBoxText(box, '—');
+        setBoxText(box, 'â');
       }
       return '';
     }
@@ -826,7 +828,7 @@
 
     var bookCode = getSelectedBookCode();
 
-    // Si on a des paramètres URL, les utiliser en priorité
+    // Si on a des paramÃ¨tres URL, les utiliser en prioritÃ©
     if(urlBookCode){
       console.log('[refreshAll] Using urlBookCode:', urlBookCode);
       bookCode = urlBookCode;
@@ -841,7 +843,7 @@
     }
 
     if(bookCode){
-      // Sauvegarder le chapitre AVANT de détruire les boutons
+      // Sauvegarder le chapitre AVANT de dÃ©truire les boutons
       var savedChapter = getSelectedChapter();
 
       renderChaptersFor(bookCode);
@@ -927,7 +929,7 @@
           console.log('[loadFromURL] bookCode found:', bookCode);
 
           if (bookCode) {
-            // Stocker les valeurs pour les appliquer après que le DOM soit créé
+            // Stocker les valeurs pour les appliquer aprÃ¨s que le DOM soit crÃ©Ã©
             urlBookCode = bookCode;
             console.log('[loadFromURL] Stored urlBookCode:', urlBookCode);
 
