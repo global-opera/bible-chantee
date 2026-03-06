@@ -268,7 +268,10 @@
       var t = (active.getAttribute('data-chapter') || active.textContent || '').trim();
       if(/^\d+$/.test(t)) return parseInt(t,10);
     }
-    return 1;
+// Fallback: check <select> element (lecteur.html uses select, not buttons)
+           var sel = document.getElementById('chapterSelect');
+           if(sel && sel.value && /^\d+$/.test(sel.value)) return parseInt(sel.value, 10);
+           return 1;
   }
 
   function setActiveChapter(n){
