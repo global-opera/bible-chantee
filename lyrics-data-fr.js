@@ -1,6 +1,6 @@
 // Paroles des chapitres - Bible Chantee
-// Source: Lyrics/FR/ (fichiers 2-chiffres uniquement - audio matching)
-// Genere: 2026-03-07 20:05:34
+// Source: Lyrics/FR/ (2-chiffres=audio; 3-chiffres=fallback Whisper pour PSA 100-150)
+// Genere: 2026-03-07 20:25:57
 window.chapterLyricsFR = {
     "01": {
         1: `[Verse 1]
@@ -20108,6 +20108,1681 @@ Exaltez l'Eternel, notre Dieu, Et prosternez-vous sur sa montagne sainte!
 [Final Chorus]
 Il est assis sur les chérubins:
 Il est assis sur les chérubins:`,
+        100: `[Verse 1]
+Poussez des cris Entrez,
+entrez dans ses portes Avec des louanges,
+un cœur en or Célébrez son nom,
+sa bonté forte Sa fidélité à jamais encore Sachez qu'il
+
+[Chorus]
+est Dieu,
+le Créateur Nous lui appartenons,
+son doux troupeau Dans ses bras,
+nous trouvons la douceur Sa bonté nous guide,
+
+[Verse 3]
+nous met nos repos Entrez,
+entrez dans ses portes Avec des louanges,
+un cœur en or Célébrez son nom,
+sa bonté forte Sa fidélité à jamais encore Car l'éternel
+
+[Verse 4]
+est bon,
+éternellement Sa grâce nous enveloppe,
+nous garde en vivant De génération en génération Sa lumière
+éclaire notre direction Entrez,
+
+[Chorus]
+entrez dans ses portes Avec des louanges,
+un cœur en or Célébrez son nom,
+sa bonté forte Sa fidélité à jamais encore Entrez,
+entrez dans ses portes Avec des louanges,
+
+[Verse 6]
+un cœur en or Célébrez son nom,
+sa bonté forte Sa fidélité à jamais encore Poussez des
+cris Au peuple en fête L'on l'éternel Notre Dieu Avec
+joie En sa présence Nous chantons,
+
+[Outro]
+nous chantons Au Dieu Au Dieu Au Dieu Au Dieu`,
+        101: `[Verse]
+Je chanterai Dans l'intégrité de mon cœur Je marcherai rempli
+de ta douceur Fais briller ta lumière en moi Guide mes pas au
+roi des rois Je ne mettrai rien de mauvais devant mes yeux Je
+hais la voix des pécheurs au Dieu Dieu, éloigne de moi le cœur
+pervers Donne-moi force, fais de moi un homme sincère Dans l'intégrité
+de mon cœur Je marcherai rempli de ta douceur Fais briller ta
+lumière en moi Guide mes pas au roi des rois Chaque matin, je
+me lève pour prier Anéantissant les ombres de l'obscurité Regarde
+sur les fidèles Fais-les demeurer dans ta présence Seigneur, fais-les
+avancer Dans l'intégrité de mon cœur Je marcherai rempli de ta
+douceur Fais briller ta lumière en moi Guide mes pas au roi des
+rois Dans l'intégrité de mon cœur Je marcherai rempli de ta douceur
+Fais briller ta lumière en moi Guide mes pas au roi des rois Au
+roi des rois Au éternel, je chante ta bonté Dans l'intégrité,
+je veux te louer Chaque jour, dans ta paix, je marcherai Près
+de toi, Seigneur, je resterai Chaque matin, je me lève pour prier
+Anéantissant les ombres de l'obscurité`,
+        102: `[Verse]
+Dans ma détresse, je me tourne vers toi Éternel, entends mon cri,
+n'éloigne pas ta voix Mes jours s'évanouissent, comme fumée dans
+l'air Mon cœur se dessèche, je t'implore en prière Éternel, tu
+es ma lumière Dans la nuit, je cherche ta clarté Restaure mon
+âme Comble mes pleurs À toi, je donne mes douleurs Comme un oiseau
+seul, sur un toit je m'égare Je mange la poussière, pleure en
+mes déboires Mais toi, oh Seigneur, tu règnes à jamais Ta mémoire
+dure, de génération en génération Éternel, tu es ma lumière Dans
+la nuit, je cherche ta clarté Restaure mon âme Comble mes pleurs
+À toi Je donne mes douleurs Tu es attentif aux cris des captifs
+Tu délivres ceux qui sont dans la nuit Rebâtissons, montre ta
+gloire Que tous les royaumes te rendent hommage Je célèbre ta
+bonté, Seigneur Ma voix s'élève dans l'ombre Je sais que ta lumière
+me lève Éternel, tu es ma lumière Dans la nuit, je cherche ta
+clarté Restaure mon âme Comble mes pleurs À toi, je donne mes
+douleurs Quand les peuples s'arrêtent, je me dis que je suis un
+homme Quand les hommes s'assembleront Pour louer ton nom Dans
+l'unisson Éternel, écoute ma prière Je t'adore maintenant et à
+jamais Éternel, tu es ma lumière Dans la nuit, je cherche ta clarté
+Restaure mon âme Comble mes pleurs À toi, je donne mes douleurs
+Sous-titres par Jérémy Diaz Sous-titres par Jérémy Diaz Sous-titres
+par Jérémy Diaz`,
+        103: `[Verse]
+Mon âme bénit l'éternel Mon âme bénit l'éternel Que tout en moi
+chante son nom Il pardonne nos iniquités Il guérit nos cœurs blessés
+Dans la fosse il nous délivre Sa bonté nous fait revivre Bénit
+l'éternel, ô mon âme N'oublie aucun de ses bienfaits Sa miséricorde
+est sans drame Il nous aime à jamais Ô l'éternel, notre refuge
+En lui nous trouvons la paix Comme un père il prend soin De ceux
+qui en lui se confient Sa bonté s'étend à demain Il se souvient
+de nos vies Il éloigne nos transgressions Nous comble de ses bénédictions
+Bénit l'éternel, ô mon âme N'oublie aucun de ses bienfaits Sa
+miséricorde est sans drame Il nous aime à jamais Ô l'éternel,
+notre refuge En lui nous trouvons la paix L'éternel règne en haut
+des cieux Son trône est fort et glorieux Ses voies sont justes
+et pleines de grâce Dans chaque épreuve il nous embrasse A jamais
+sa bonté demeure Pour ceux qui lui ont donné la grâce Pour ceux
+qui le craignent et leur curse Bénit l'éternel, ô mon âme N'oublie
+aucun de ses bienfaits Sa miséricorde est sans drame Il nous aime
+à jamais Ô l'éternel, notre refuge En lui nous trouvons la paix
+Bénit l'éternel, ô mon âme N'oublie aucun de ses bienfaits Sa
+miséricorde est sans drame Il nous aime à jamais Ô l'éternel,
+notre refuge En lui nous trouvons la paix Dans chaque épreuve
+il nous embrasse A jamais sa bonté demeure Son trône est fort
+et glorieux Sa miséricorde est sans drame Il nous aime à jamais
+Ô l'éternel, notre refuge N'oublie aucun de ses bienfaits Sa miséricorde
+est sans drame Il nous aime à jamais`,
+        104: `[Verse 1]
+...
+Mon âme,
+bénis l'Éternel,
+Toi qui es grand,
+
+[Chorus]
+ô Dieu éternel,
+Revêtu de lumière,
+éclat divin,
+Sur les cieux,
+
+[Verse 3]
+tu es en tes mains.
+L'Éternel,
+tu es ma louange,
+Dans ta grâce,
+
+[Verse 4]
+je me plonge.
+Créateur de tout ce qui vit,
+Révèle-moi ton amour,
+ô Éternel,
+
+[Chorus]
+ici.
+Il forme les vents,
+messagers du ciel,
+Et les flammes de feu,
+
+[Verse 6]
+tes serviteurs fidèles.
+Les montagnes s'élèvent,
+les vallées s'inclinent à ta voie.
+Toute terre s'illumine.
+
+[Verse 7]
+L'Éternel,
+tu es ma louange,
+Dans ta grâce,
+je me plonge.
+
+[Chorus]
+Créateur de tout ce qui vit,
+Révèle-moi ton amour,
+ô Éternel,
+ici.
+
+[Verse 9]
+Que ta gloire,
+Seigneur,
+demeure à jamais.
+Je chanterai ta bonté au mont Rond en vérité.
+
+[Verse 10]
+Chaque souffle que tu donnes,
+Je te l'offre dans ta présence.
+Je suis libre,
+je m'insurre.
+
+[Chorus]
+L'Éternel,
+tu es ma louange,
+Révèle-moi ton amour,
+ô Éternel,
+
+[Verse 12]
+ici.
+Ma louange,
+dans ta grâce je me plonge Créateur de tout ce
+qui vit Révèle-moi ton amour,
+
+[Verse 13]
+ô éternel ici À chaque soir je contemple ta beauté
+Les étoiles brillent témoin de ta vérité Je veux me
+réjouir tant que je vivrai Mon cœur célèbre,
+je te célébrerai Éternel,
+
+[Chorus]
+tu es ma louange Dans ta grâce je me plonge
+Créateur de tout ce qui vit Révèle-moi ton amour,
+ô éternel ici Mon âme bénit l'éternel Louons-le,
+chantons ce doux appel Dans la nuit comme au matin
+
+[Outro]
+Je chanterai pour l'éternel Amen`,
+        105: `[Verse 1]
+Louez l'éternel Dans l'ombre et la lumière Il est notre
+espérance Glorifiez son Saint Nom Élevez vos voix en chant
+Il est notre refuge,
+notre roi En Lui nous trouvons la foi Souvenons-nous des
+
+[Chorus]
+prodigies repassées Des miracles qu'Il a faits,
+de Sa fidélité De l'Alliance qu'Il a scellée Pour mille
+générations,
+Il nous a libérés Glorifiez son Saint Nom Élevez vos
+
+[Verse 3]
+voix en chant Il est notre refuge,
+notre roi En Lui nous trouvons la foi Il a
+changé nos cœurs Dans la nuit,
+les lumières Au désert,
+
+[Verse 4]
+Il est le pain Avec Lui,
+nous ne craindrons rien Il a donné des terres aux
+nations Pour que nous gardions Ses commandements Il a fait
+sortir Son peuple dans l'allégresse Chantons ensemble,
+
+[Chorus]
+célébrons Sa tendresse Glorifiez son Saint Nom Et levez vos
+voix en chant Il est notre refuge,
+notre roi En Lui nous trouvons la foi Nous et
+l'Éternel dans l'unité Pour Ses promesses et Sa bonté À
+
+[Verse 6]
+jamais nous proclamerons Son amour,
+notre chant,
+notre raison Ces paroles évoquent la grandeur de Dieu Et
+s'appuient sur les Écritures Tout en créant une atmosphère d'adoration
+
+[Outro]
+Douce et contubadrée`,
+        106: `[Verse 1]
+Louez l'éternel Oh mon cœur,
+ensemble nous chantons sa louange Sauve-nous,
+oh Dieu de grâce Souviens-toi de nous dans ta bienveillance
+Rassemble-nous de toutes les nations Pour célébrer ton saint nom
+
+[Chorus]
+Amen,
+louons l'éternel Nous avons péché comme nos pères Oublions tes
+œuvres,
+ta grande bonté Mais dans nos pleurs,
+
+[Verse 3]
+tu entends nos voix Et par amour,
+tu nous délivres encore Sauve-nous,
+oh Dieu de grâce Souviens-toi de nous dans ta bienveillance
+Rassemble-nous de toutes les nations Pour célébrer ton saint nom
+
+[Verse 4]
+Amen,
+louons l'éternel Dans le désert,
+tu as fait des miracles À la mer rouge,
+tu as ouvert le chemin Nous chantons pour la joie
+
+[Chorus]
+de ton peuple éternel Nous te glorifions Sauve-nous,
+oh Dieu de grâce Souviens-toi de nous dans ta bienveillance
+Rassemble-nous de toutes les nations Pour célébrer ton saint nom
+Amen,
+
+[Outro]
+louons l'éternel Amen Béni soit l'éternel Éternité en éternité Et
+que tout le peuple dise Amen Louez l'éternel Louez l'éternel`,
+        107: `[Verse 1]
+L'Éternel Jamais nous chantons De l'Orient du Nord vers son
+amour Errant dans le désert,
+nous cherchions Une ville où notre cœur pourrait reposer Dans
+la soif et la faim Nous crions à toi,
+
+[Chorus]
+ô Éternel Viens nous délivrer,
+qu'il loue l'Éternel Pour sa bonté,
+ses merveilles parmi nous Ô exalté,
+il apaise nos âmes Il comble nos cœurs L'Éternel est
+
+[Verse 3]
+notre force Notre sauveur Captifs dans les ténèbres Nous pleurions
+Révoltés,
+nous avions perdu le chemin Mais dans notre détresse Nous
+crions Il brise nos chaînes Il rompt le chagrin Il
+
+[Verse 4]
+nous sort des ombres,
+il nous éclaire Sa lumière chasse nos peurs et nos
+peines Nous chantons sa grâce,
+son amour,
+
+[Chorus]
+sa prière Pour ses merveilles,
+nous le louons sans cesse Qu'il loue l'Éternel Pour sa
+bonté,
+ses merveilles parmi nous Ô exalté,
+
+[Verse 6]
+il apaise nos âmes Il comble nos cœurs L'Éternel est
+notre force Notre sauveur Dans la tempête,
+il calme les flots Sur la terre,
+il calme les flots Sur les grandes eaux,
+
+[Verse 7]
+nous voyons ses mots Il nous conduit,
+il nous rassure Nous arrivons au port Notre âme est
+pure Qu'il loue l'Éternel Pour sa bonté Ses merveilles parmi
+nous Ô exalté Il apaise nos âmes Il nous conduit,
+
+[Chorus]
+il nous rassure Il nous rend,
+il nous gagne Il comble nos cœurs L'Éternel est notre
+force Notre sauveur Loué l'Éternel Car il est bon Pour
+toujours chantons En unisson Il change le désert Pour toujours
+
+[Outro]
+chantons En un jardin Nous lui offrons nos cœurs Notre
+chemin Notre chemin`,
+        108: `[Verse]
+Mon cœur affermi Lutéap, l'aube me hante Ta bonté s'élève au-dessus
+des cieux Ta fidélité brille, éclare à Dieu Éleve-toi sur les
+cieux, ô Dieu Que ta gloire inonde la terre Je te louerai parmi
+Je te louerai parmi Les peuples, je chanterai Ta grâce et ta lumière
+Sauve, ô Seigneur, par ta droite Des livres tes bien-aimés, ô
+Maître Dans la bataille, sois notre guide Avec toi, nos cœurs
+sont en vie Éleve-toi sur les cieux, ô Dieu Que ta gloire inonde
+la terre Je te louerai parmi Les peuples, je chanterai Ta grâce
+et ta lumière Qui nous mènera dans la ville forte Et nous mènera
+dans la ville forte Et nous mènera dans la ville forte Et nous
+mènera dans la ville forte N'est-ce pas toi, ô Dieu, qui nous
+escortes Le secours de l'homme est vanité Avec toi, nous ferons
+des exploits En vérité Éleve-toi sur les cieux, ô Dieu Que ta
+gloire inonde la terre Je te louerai parmi les peuples Je chanterai
+ta grâce et ta lumière Éleve-toi, ô Dieu, dans nos cœurs À jamais
+nous chanterons ta splendeur Dans les ombres, ta lumière nous
+guide Avec toi, notre âme est libre Épanouie Épanouie Épanouie`,
+        109: `[Verse 1]
+Au Dieu de ma louange Ne reste pas silencieux Face
+aux voix de haine Qui m'assaillent Ils parlent avec mensonge
+Cherchant à me dire Cherchant à me blesser Mais dans
+la prière Je viens à ton cœur Libère-moi Seigneur Par
+
+[Chorus]
+ta bonté Dans l'ombre où la douleur Je t'invoque Ton
+nom est ma force Ma vérité Je me tiens devant
+toi Oh éternel Écoute ma voix Il me rend le
+mal pour le bien Comme un objet d'eau propre Je
+
+[Verse 3]
+suis accablée Mais je sais que ta main me soutient
+Et que tu es mon cœur Je suis accablée Et
+que tu es mon cœur Et que tu es mon
+cœur Et que tu es mon cœur Et que tu
+
+[Verse 4]
+es mon cœur Et que tu es mon cœur Et
+que tu es mon cœur Et que tu es mon
+cœur Et que tu es là Dans ma tempête À
+mes côtés Libère-moi Seigneur Par ta bonté Dans l'ombre où
+
+[Chorus]
+la douleur Je t'invoque Ton nom est ma force Ma
+vie est ma force Ma vérité Je me tiens devant
+toi Oh éternel Écoute ma voix Quand ils maudissent Toi
+tu bénis Quand l'injustice se lève Je m'accroche à toi
+
+[Verse 6]
+Je m'accroche à toi Je m'accroche à toi Je m'accroche
+à toi Je m'accroche à toi Je m'accroche à toi
+Je m'accroche à toi Tu es ma lumière dans la
+nuit Je louerai toujours,
+
+[Verse 7]
+ma voix s'élèvera Libère-moi Seigneur par ta bonté Dans l'ombre
+où la douleur Je t'invoque,
+ton nom est ma force,
+ma vérité Je me tiens devant toi,
+
+[Outro]
+ô éternel Écoute ma voix Je te célèbre au milieu
+de la foule Car à ma droite tu es là,
+éternel mon secours Je t'adore pour l'éternité`,
+        110: `[Verse 1]
+Seigneur,
+à ta droite je me tiens Dans la lumière de
+ta sainteté Tu as étendu le sceptre de puissance Au
+milieu de mes ennemis je suis en paix Je viens
+
+[Chorus]
+Seigneur comme une rosée Rassemblée par ta grâce je suis
+renouvelée À ta droite je demeure dans la promesse de
+ton cœur Tu es mon sacrificateur pour toujours,
+oh mon rédempteur À ta droite je m'élève dans la
+
+[Verse 3]
+force que tu m'as mis Tu révèles,
+Seigneur,
+tu es ma lumière Dans la nuit,
+tu es ma prière Ton peuple se lève ardent et
+
+[Verse 4]
+fort En ornement sacré nous proclamons Ta majesté,
+ô roi des cieux Dans la bataille,
+tu es notre chant Le jour de ta colère,
+je crains rien Car dans ta justice je trouve le
+
+[Chorus]
+chemin À ta droite je demeure dans la promesse de
+ton cœur Tu es mon sacrificateur pour toujours,
+oh mon rédempteur À ta droite je m'élève dans la
+force que tu révèles Seigneur,
+
+[Verse 6]
+tu es ma lumière dans la nuit Tu es ma
+prière Tu brises les chaînes,
+tu relèves les cœurs Dans le torrent de ta grâce,
+je trouve mon bonheur Oh Seigneur,
+
+[Verse 7]
+tu es fidèle,
+ton amour est éternel Je me tiens devant toi,
+avec confiance je t'adore À ta droite je demeure dans
+la promesse de ton cœur Tu es mon sacrificateur pour
+
+[Chorus]
+toujours,
+oh mon rédempteur À ta droite je m'élève dans la
+force que tu révèles Seigneur,
+tu es ma lumière dans la nuit Tu es ma
+
+[Outro]
+prière Seigneur,
+tu es ma prière À ta droite je m'élève À
+ta droite je m'élève Seigneur,
+tu es ma prière À ta droite je m'élève`,
+        111: `[Verse 1]
+L'Éternel Gloire à toi,
+miséricordieux,
+ta justice,
+Seigneur,
+
+[Chorus]
+brille dans les cieux.
+Tu es fidèle,
+toujours présent,
+dans ta lumière,
+
+[Verse 3]
+je trouve l'instant.
+Il a laissé en nous la mémoire des merveilles,
+son alliance est forte,
+sa bonté nous éveille.
+
+[Verse 4]
+Il nourrit ceux qui craignent son nom,
+sa puissance éclaire notre horizon.
+Gloire à toi,
+miséricordieux,
+
+[Chorus]
+ta justice,
+Seigneur,
+brille dans les cieux.
+Tu es fidèle,
+
+[Verse 6]
+toujours présent,
+dans ta lumière,
+je trouve l'instant.
+La crainte de l'Éternel,
+
+[Verse 7]
+c'est le chemin de la sagesse.
+Tous ceux qui te cherchent trouvent en toi leur richesse.
+Oh que ta gloire subsiste à jamais,
+dans nos cœurs,
+
+[Chorus]
+notre louange à jamais.
+Gloire à toi,
+miséricordieux,
+ta justice,
+
+[Verse 9]
+Seigneur,
+brille dans les cieux.
+Tu es fidèle,
+toujours présent,
+
+[Verse 10]
+dans ta lumière,
+je trouve l'instant.
+Gloire à toi,
+miséricordieux,
+
+[Chorus]
+ta justice,
+Seigneur,
+brille dans les cieux.
+Tu es fidèle,
+
+[Verse 12]
+toujours présent,
+dans ta lumière,
+je trouve l'instant.
+Loué l'Éternel de tout mon cœur,
+
+[Verse 13]
+je chante sa grandeur,
+je chante son amour auprès de toi.
+Je trouve la paix,
+l'Éternel,
+
+[Outro]
+mon Dieu,
+je te louerai.`,
+        112: `[Verse]
+Louer l'éternel Dans ses bras d'amour, je trouve ma douceur Heureux,
+heureux, l'homme qui croit Sa lumière brille, même dans les nuits
+froides Il ne craint point, son cœur est en paix Confiant en toi,
+éternel Je me tiens debout Sa postérité, bénie sur cette terre
+La justice éclaire, les âmes en prière Il fait des largesses,
+donne aux indigents Sa mémoire dure, pour tous les terres Heureux,
+heureux, l'homme qui croit Sa lumière brille, même dans les nuits
+froides Il ne craint point, son cœur est en paix Confiant en toi,
+éternel Je me tiens debout Dans les temps, je suis en paix Heureux,
+heureux, l'homme qui croit Dans les ténèbres, ta lumière se lève
+Pour le miséricordieux, ta grâce s'achève Mon cœur est affermi,
+je regarde en avant Car en toi, je me tiens fort et confiant Heureux,
+heureux, l'homme qui croit Sa lumière brille, même dans les nuits
+froides Il ne craint point, son cœur est en paix Confiant en toi,
+éternel Je me tiens debout Sa lumière brille, même dans les nuits
+froides Il ne craint point, son cœur est en paix Confiant en toi,
+éternel Il ne craint point, son cœur est en paix Confiant en toi,
+éternel Loué l'éternel, mon âme exalte-le Dans chaque promesse,
+je trouve mon vœu Loué l'éternel, mon âme exalte-le Heureux, l'homme
+en toi, pour l'éternité Ta justice subsiste Je veux te louer`,
+        113: `[Verse]
+L'Éternel Le béni exalté dans l'espace Dès l'aube du jour jusqu'à
+la nuit tombée Que nos cœurs s'unissent pour le glorifier L'Éternel
+est élevé, sa gloire dans les cieux Du lever au couchant, je chante
+son nom Loué l'Éternel Pour toujours je l'adorerai Dans la joie
+et la paix Son amour ne cessera jamais Qui est semblable à notre
+Dieu vivant Il contemple la terre Il contemple la terre Il abaisse
+les regards Des cieux jusqu'à la poussière Il élève le pauvre
+Avec les grands il place ceux qu'il adore L'Éternel est élevé,
+sa gloire dans les cieux Du lever au couchant, je chante son nom
+Loué l'Éternel Pour toujours je l'adorerai Dans la joie et la
+paix Son amour ne cessera jamais Il donne une maison à celles
+qui pleurent Transforme la stérilité en douce lueur Une mère joyeuse
+entourée d'enfants L'Éternel ne s'éloigne pas, il s'éloigne tout
+en lui Notre force, notre abri puissant L'Éternel est élevé, sa
+gloire dans les cieux Tu le fais au couchant, je chante son nom
+Loué l'Éternel, pour toujours je l'adorerai Dans la joie et la
+paix, son amour Son amour ne cessera jamais Loué, loué, loué,
+loué l'Éternel Son amour est éternel Loué, loué, loué l'Éternel
+Pour toujours je l'adorerai Loué, loué, loué l'Éternel`,
+        114: `[Verse]
+Quand Israël sortit d'Égypte Ta main puissante nous a guidés La
+maison de Jacob en liberté Vers un sanctuaire tu nous as menés
+Judas notre refuge, Israël notre demeure Dans chaque tempête tu
+es notre douceur Ô mère, qu'as-tu pour t'enfuir ? Jourdain, pourquoi
+retourner en arrière ? Montagne, trembler devant Lui Ô terre,
+adore le Dieu de lumière Il change le roc en étoile Et la source
+jaillit des lieux durs Devant ton trône nous chantons Dans ta
+présence nous sommes sûrs Les montagnes sautent comme des béliers
+Les collines dansent en ta faveur Quand le ciel s'ouvre pour nous
+révéler Ta grâce Seigneur est notre lueur Chaque promesse que
+tu as faite Nous rappelle ta fidélité Dans nos cœurs chantons
+sans cesse Ta bonté est notre vérité Ô mère, qu'as-tu pour t'enfuir
+? Jourdain, pourquoi retourner en arrière ? Montagne, trembler
+devant Lui Ô terre, adore le Dieu de lumière Il change le roc
+en étoile Et la source jaillit des lieux durs Devant ton trône
+nous chantons Dans ta présence nous sommes sûrs Tremble, ô terre,
+devant le Seigneur Lève les mains Offre-lui ton cœur Il est le
+rocher de notre salut Dans chaque prière ton amour est vu Ô mère,
+qu'as-tu pour t'enfuir ? Jourdain, pourquoi retourner en arrière
+? Jourdain, pourquoi retourner en arrière ? Montagne, trembler
+devant Lui Ô terre, adore le Dieu de lumière Il change le roc
+en étoile Et la source jaillit des lieux durs Devant ton trône
+nous chantons Dans ta présence nous sommes sûrs Devant ton trône
+nous nous tenons Seigneur, notre cœur, notre chanson Tu es notre
+refuge, notre paix Pour l'éternité nous te louerons Pour l'éternité
+nous te louerons`,
+        115: `[Verse 1]
+L'Éternel Nous donnons gloire À cause de ta bonté,
+ta fidélité Tu es notre espoir,
+notre victoire Les nations demandent où est notre Dieu Nous
+savons qu'il est là,
+
+[Chorus]
+au ciel majestueux L'Éternel Notre secours,
+notre bouclier En lui nous plaçons Notre confiance Il se
+souvient de nous Il va nous bénir À jamais nous
+chanterons Sa louange Leurs idoles sont de l'or et de
+
+[Verse 3]
+l'argent Mais elles ne parlent pas De la mort De
+la mort Elles sont muettes Elles n'ont pas de vie
+Ne ressentent rien Nous,
+nous adorons celui qui nous aime Israël,
+
+[Verse 4]
+confie-toi en l'Éternel Il est notre force,
+notre fidèle appel L'Éternel Notre secours,
+notre victoire Notre secours,
+notre bouclier En lui nous plaçons Notre confiance Il se
+
+[Chorus]
+souvient de nous Il va nous bénir À jamais nous
+chanterons Sa louange Les cieux sont à toi Éternel La
+terre,
+fils de l'or La terre,
+
+[Verse 6]
+fils de l'or Nous te célébrons maintenant et toujours Loué
+l'Éternel Nous chantons d'un cœur pur Les petits et les
+grands Tous ensemble Nous te bénissons Notre âme se rassemble
+L'Éternel Notre secours,
+
+[Verse 7]
+notre bouclier En lui nous plaçons Notre confiance Il se
+souvient de nous Il va nous bénir À jamais nous
+chanterons Sa louange Dès maintenant et à jamais Nous bénirons
+l'Éternel Nous chanterons l'Éternel Loué l'Éternel Louez le saint Dans
+
+[Chorus]
+la douceur de son amour Dans la douceur de son
+amour Nous avançons Piano,
+percussions ,
+versets et tour considerés Nous pourris Makoura Que shown Yara
+
+[Outro]
+Val unterschied Les gens ne pourraient y chybaquer`,
+        116: `[Verse]
+J'aime l'éternel J'aime la mort, j'étais entourée Dans la détresse,
+oh Seigneur, je t'ai appelée Mon âme, retourne à ton repos Car
+l'éternel t'a fait du bien Il a sauvé mon âme des pleurs Je marcherai,
+je marcherai Devant lui avec ferveur Il est miséricordieux, plein
+de compassion Il garde les simples, il entend ma raison J'étais
+malheureux, mais il m'a relevé Je lui offrirai des louanges pour
+l'éternité Mon âme, retourne à ton repos Car l'éternel t'a fait
+du bien Il a sauvé mon âme des pleurs Je marcherai, je marcherai
+Devant lui avec ferveur Comment rendra l'éternel Tous ses bienfaits
+envers moi ? J'élèverai la coupe des délivrances Dans la détresse,
+oh Seigneur, je t'ai appelée Mon âme, retourne à ton repos Car
+l'éternel t'a fait du bien Il a sauvé mon âme des pleurs Je marcherai,
+je marcherai Dans la présence de son peuple Je le louerai Mon
+âme, retourne à ton repos Car l'éternel t'a fait du bien Il a
+sauvé mon âme des pleurs Je marcherai, je marcherai Devant lui
+avec ferveur Écoute-moi, oh éternel Je t'ai appelée Je suis ton
+serviteur Je t'offrirai un sacrifice Un chant de chœur Dans l'épargne
+de ta maison Je louerai, je louerai Avec gratitude des passions`,
+        117: `[Verse 1]
+Dans l'ombre de la nuit Jésus,
+le Père et la Mère Sa fidélité éternelle s'étend Quand
+les vagues de la vie menacent nos âmes Tu es
+notre refuge,
+
+[Chorus]
+notre doux drame Dans les larmes et les joies Tu
+es présent Ta promesse,
+un phare jamais vacillant Louez l'éternel,
+vous toutes les nations Célébrez-le en toute adoration Sa bonté
+
+[Verse 3]
+pour nous est grande Sa fidélité éternelle s'étend Tes bras
+nous accueillent Au amour parfait Dans la tempête,
+tu es notre paix Nous chantons unis Ton nom avec
+ferveur Dans la lumière Nous trouvons notre cœur Louez l'éternel,
+
+[Verse 4]
+vous toutes les nations Célébrez-le en toute adoration Sa bonté
+pour nous est grande Son nom,
+son nom de Père et de Mère Louez l'éternel,
+vous toutes les nations Nous chantons unis Ton nom avec
+
+[Chorus]
+ferveur Dans la lumière Nous trouvons notre cœur Pour nous
+est grande sa fidélité éternelle C'est temps Louer l'éternel à
+jamais nous chanterons Dans chaque battement nous porterons Sa bonté,
+sa fidélité,
+
+[Outro]
+notre chant Louer l'éternel,
+notre Dieu,
+notre amour`,
+        118: `[Verse 1]
+L'Éternel Dans les pleurs et dans les chants Il est
+ma force,
+mon refuge,
+ma paix Où irais-je si tu es là ?
+
+[Chorus]
+Dans la détresse,
+tu es ma voix L'Éternel m'allume Ta lumière est ma
+force Je lève mes yeux,
+je te louerai Les nages,
+
+[Verse 3]
+on m'entoure comme des abeilles Mais par ta puissance,
+je me tiens debout Mieux vaut chercher en toi L'éveil
+que de craindre les hommes Toi seule,
+tu es doux Où irais-je si tu es là ?
+
+[Verse 4]
+Dans la détresse,
+tu es ma voix L'Éternel,
+ma lumière et ma force Je lève mes yeux,
+je te louerai L'Éternel ouvre les portes de la paix
+
+[Chorus]
+Je viendrai,
+je louerai ton nom La pierre rejetée est devenue l'envoi
+de mon cœur La pierre rejetée est devenue l'envoi de
+mon cœur La pierre rejetée est devenue l'envoi de mon
+
+[Verse 6]
+cœur L'Éternel ouvre les portes de la paix La pierre
+rejetée est devenue l'envoi de mon cœur La pierre rejetée
+est devenue l'envoi de mon cœur Leyeh,
+à toi de profiter Dans le spectreаяz I erecte unplugeeeeeef
+
+[Verse 7]
+For didn't come anas Ma lumière et ma force,
+je lève les yeux Je te louerai Béni soit celui
+qui vient Dans le nom de l'éternel Nous chantons Louez
+l'éternel Car il est bon Sa miséricorde dure à jamais
+
+[Outro]
+Sous-titres par Jérémy Diaz`,
+        119: `[Verse]
+Sous-titrage Société Radio-Canada Je trouve ma vie Tu es ma lumière,
+ma mélodie Ouvre mes yeux Seigneur, je te prie Enseigne-moi tes
+statuts, oh Marie Je sers ta vérité dans mon cœur Pour ne pas
+pécher au monde rédempteur Tes commandements, douce vérité Ma
+joie, ma force, ma sécurité Dans ta parole, je trouve ma vie Tu
+es ma lumière, ma mélodie Ouvre mes yeux Seigneur, je te prie
+Enseigne-moi tes statuts, oh Marie Quand l'angoisse m'atteint,
+je crie vers toi Délivre-moi, fais briller ta foi Je choisis la
+voie de la vérité Ta bonté, oh Seigneur, me fait avancer Dans
+ta parole, je trouve ma vie Tu es ma lumière, ma mélodie Tu es
+ma vie Tu es ma lumière, ma mélodie Ouvre mes yeux Seigneur, je
+te prie Enseigne-moi tes statuts, oh Marie Je suis errant, cherche
+ton serviteur Ne me cache pas en moi ta douceur Ta promesse est
+ma consolation en toi J'ai trouvé ma direction Dans ta parole,
+je trouve ma vie Tu es ma lumière, ma mélodie Ouvre mes yeux Seigneur,
+je te prie Enseigne-moi tes statuts, oh Marie Je suis à toi, oh
+éternel Je m'en remets Rends-moi la vie selon tes préceptes Je
+te loue, je m'attache à ta bonté Dans ta parole, je trouve ma
+vérité`,
+        120: `[Verse]
+Dans ma détresse, Seigneur, j'élève ma voix Vers Toi je crie,
+Tu es mon espoir Délivre mon âme des mensonges sournois De la
+langue trompeuse, Seigneur, j'implore Ô Éternel, entends ma prière
+Dans l'obscurité, Tu es ma lumière Je cherche la paix, mais le
+monde est en guerre En Toi seul, je trouve ma terre Malheureux
+suis-je dans ce monde égaré À mes chèques je demeure, loin de
+Ta paix Les temps de Kédah, où l'amour est blessé Mais en Toi,
+ô Seigneur, je veux reposer Ô Éternel, entends ma prière Dans
+l'obscurité, Tu es ma lumière Je cherche la paix, mais le monde
+est en guerre En Toi seul, je trouve ma terre Quand les flèches
+du guerrier volent dans la nuit Je m'accroche à Ta promesse, Tu
+es mon abri Avec des charbons ardents, Tu purifies mon cœur Dans
+Ta présence, je trouve ma douceur Ô Éternel, entends ma prière
+Dans l'obscurité, Tu es ma lumière Je cherche la paix, mais le
+monde est en guerre En Toi seul, je trouve ma terre Dans ma détresse,
+à Toi je crie Délivre-moi, Seigneur, de tout ce qui nuit Je suis
+pour la paix En Toi je m'appuie Dans Ta grâce, pour toujours je
+suis unie`,
+        121: `[Verse 1]
+J'élève mes yeux vers les montagnes D'où viendra mon secours,
+oh Seigneur C'est toi seule qui es ma force,
+ma lumière Créateur des cieux,
+mon protecteur L'Éternel,
+
+[Chorus]
+mon ombre à ma droite Il veille sur moi,
+il ne sommeille pas Dans les jours de peine,
+je trouve ma joie Mon âme en sécurité Repose en
+toi Il ne permettra pas que je chancelle Celui qui
+
+[Verse 3]
+garde Israël,
+oh quel amour Le soleil ne frappera point ma chair
+Ni la lune,
+la nuit Avec son lourd délire Il ne remettra pas
+
+[Verse 4]
+de rire J'éveille sur moi,
+il ne sommeille pas L'Éternel,
+mon ombre à ma droite Il veille sur moi,
+il ne sommeille pas Dans les jours de peine,
+
+[Chorus]
+je trouve ma joie Mon âme en sécurité Repose en
+toi Oh,
+mon Dieu,
+mon Dieu J'élève mes yeux vers les montagnes D'où viendra
+
+[Verse 6]
+mon secours,
+oh Seigneur C'est toi seule qui es ma force,
+ma lumière Créateur des cieux,
+mon protecteur L'Éternel,
+
+[Verse 7]
+mon ombre à ma droite Il veille sur moi,
+il ne sommeille pas Dans les jours de peine,
+je trouve ma joie Mon âme en sécurité Repose en
+toi Garde-moi Seigneur de tout mal Dans chaque part Dieu
+
+[Chorus]
+est mon idéal Mon départ,
+mon arrivée Dès maintenant pour l'éternité Éternel,
+mon bras,
+ma droite Il veille sur moi,
+
+[Verse 9]
+il ne sommeille pas Dans les jours de peine je
+trouve ma joie Mon âme en sécurité Où que j'aille
+je sais que tu es là Où que j'aille je
+sais que tu es là Mon secours vient de l'éternel
+
+[Outro]
+À jamais je marche dans ta lumière Avec toi je
+suis éternellement fidèle Avec toi je suis éternelle`,
+        122: `[Verse]
+Dans la joie je m'élève Quand on dit allons vers toi À la maison
+de l'éternel Mon cœur trouve sa voie Nos pieds s'arrêtent Dans
+la ville de paix Jérusalem, ô ma demeure C'est là que je veux
+rester Ô Jérusalem, tu es unie Dans l'amour, dans l'harmonie Les
+tribus s'élèvent chantant Louons le nom, notre sauveur vivant
+Que la paix repose Dans tes murs, ô Saint-Lieu À cause de toi,
+Seigneur Mon âme trouve le bonheur Trône de justice là Dans la
+maison de David Je cherche la paix Pour mes frères, pour mes amis
+À cause de l'éternel Je fais des voeux pour ton bien Que la tranquillité
+s'étende Dans chaque cœur, chaque lien Ô Jérusalem, tu es unie
+Dans l'amour, dans l'harmonie Les tribus s'élèvent chantant Louons
+le nom, notre sauveur vivant Que la paix repose Dans tes murs,
+ô Saint-Lieu À cause de toi, Seigneur Mon âme trouve le bonheur
+Trône de justice là Demande la paix, ô ma vie Que ce qui t'aime
+soit comblé Dans ton sein que règne l'amour À jamais, Seigneur,
+je t'adorerai Dans chaque instant, je t'invoque Ma prière monte
+vers toi Pour ta gloire, je me prosterne Jérusalem, en toi, je
+crois Ô Jérusalem, tu es unie Dans l'amour, dans l'harmonie Les
+tribus s'élèvent chantant Louons le nom, notre sauveur vivant
+Que la paix repose Dans tes murs, ô Saint-Lieu À cause de toi,
+Seigneur Mon âme trouve le bonheur À ta maison, je viens Dans
+la joie et le chagrin Seigneur, guide mes pas Dans ta paix, je
+suis en toi`,
+        123: `[Verse 1]
+Je lève mes yeux vers toi Seigneur dans les cieux
+Comme des serviteurs Nous attendons au Dieu Nos cœurs sont
+en attente De ta grâce infinie Jusqu'à ce que ta
+bonté Sur nous se manifeste ici Aie pitié de nous,
+
+[Chorus]
+ô Éternel Aie pitié de nos âmes en peine Nous
+sommes lassés du mépris Des moqueries,
+des cœurs enchaînés Regarde vers nous Seigneur dans les cieux
+Apporte-nous ta douceur dans la nuit Nous t'adorons Ton amour
+
+[Verse 3]
+est notre raison Comme une servante Je scrute ta main
+Pour recevoir ta lumière Dans ce monde incertain Nos âmes
+sont rassasiées Et nos cœurs sont en attente Des rires,
+des orgueilleux Mais en toi nous espérons Ton regard est
+
+[Verse 4]
+précieux Aie pitié de nous,
+ô Éternel Aie pitié de nos âmes en peine Nous
+sommes lassés du mépris Des moqueries,
+des cœurs enchaînés Regarde vers nous,
+
+[Chorus]
+Seigneur Apporte-nous ta douceur dans la nuit Nous t'adorons Ton
+amour est notre raison Oh,
+oh,
+oh,
+
+[Verse 6]
+oh Oh Dieu,
+notre refuge Nous levons nos voix Dans la douleur et
+l'épreuve Nous trouvons en toi la joie Dans la douleur
+et l'épreuve Nous trouvons en toi la joie Dans la
+
+[Verse 7]
+douleur et l'épreuve Ton cœur est notre abri Ton cœur
+est notre abri Ta bonté nous soutient Dans chaque lutte
+au Notre-Roi Nous chantons pour un lendemain Et pitié de
+nous,
+
+[Chorus]
+ô Éternel Et pitié de nos âmes en peine Nous
+sommes lassés du mépris Des moqueries,
+des cœurs enchaînés Regarde vers nous,
+Seigneur Aie pitié de nous,
+
+[Verse 9]
+ô Éternel Et pitié de nos âmes en peine Dans
+chaque lutte au Notre-Roi Regarde vers nous,
+Seigneur Aie pitié de nous,
+ô Éternel Et pitié de nos âmes en peine Regarde
+
+[Verse 10]
+vers nous,
+Seigneur Apporte-nous ta douceur Dans la nuit,
+nous t'addorons Ton amour est notre raison Je lève mes
+yeux vers toi Seigneur dans les cieux Nos cœurs sont
+
+[Outro]
+en attente de ta grâce infinie.
+Amen.`,
+        124: `[Verse]
+Sous-titrage MFP. Sous-titrage MFP. Sous-titrage MFP. Sous-titrage
+MFP. Sous-titrage MFP. Sous-titrage MFP. Sous-titrage MFP. Sous-titrage
+MFP. Sous-titrage MFP.`,
+        125: `[Verse 1]
+Seigneur,
+je me confie en toi Comme la montagne de Sion
+Tu es ma force,
+mon refuge Pour toujours je t'adorerai Entoure-moi de ta grâce
+
+[Chorus]
+Comme les montagnes autour de Jérusalem Ta paix,
+Seigneur,
+est à moi Sur ton peuple,
+à jamais Je me tiens en toi Le sceptre des
+
+[Verse 3]
+méchants ne règnera pas Sur le cœur des justes,
+ô mon roi Répands tes bienfaits sur les bons Sur
+ceux qui marchent dans la lumière Entoure-moi de ta grâce
+Comme les montagnes autour de Jérusalem Ta paix,
+
+[Verse 4]
+Seigneur,
+est à moi Seigneur,
+sur ton peuple À jamais,
+je me tiens en toi Éternel,
+
+[Chorus]
+tu es ma sécurité Dans les épreuves,
+je te louerai Guide mes pas,
+garde mon cœur Sur les voies droites,
+je marcherai Entoure-moi de ta grâce Comme les montagnes autour
+
+[Verse 6]
+de Jérusalem Ta paix,
+Seigneur,
+est à moi Sur ton peuple,
+à jamais Je me tiens en toi Que la paix
+
+[Outro]
+soit sur Israël Sur tout ce qui t'appelle En toi
+je trouve mon repos À jamais Je t'adorerai Je t'adorerai
+Je t'adorerai Je t'adorerai`,
+        126: `[Verse]
+Quand l'éternel a ramené Des chants chantés, des cris d'allégresse
+Les nations ont vu ta grande promesse L'éternel a fait pour nous
+de grandes choses, oh oui Nous dansons dans la lumière de ta gloire
+infinie Ramène au cœur, Seigneur, comme des ruisseaux en fleurs
+Nous sommes dans la joie avec toi, notre vainqueur Dans les pleurs
+et les larmes, nous semons avec foi Mais la moisson est grande
+quand tu es près de moi Celui qui marche en pleurant porte une
+semence Reviens avec allégresse dans ta douce présence L'éternel
+a fait pour nous de grandes choses, oh oui Nous dansons dans la
+lumière de ta gloire infinie Ramène au cœur, Seigneur Comme des
+ruisseaux en fleurs Nous sommes dans la joie avec toi, notre vainqueur
+Oh, éternel Entends nos cris Dans la nuit Ta lumière, lui Nous
+marchons Main dans la main Vers la promesse, notre destin Dans
+chaque nuit Que l'âme, une prière Dans chaque cœur, une lumière
+Nous te louons, nous te cherchons Oh, notre Dieu, notre raison
+L'éternel a fait pour nous de grandes choses, oh oui Nous dansons
+dans la lumière de ta gloire infinie Ramène au cœur, Seigneur
+Comme des ruisseaux en fleurs Nous sommes dans la joie avec toi,
+notre vainqueur L'éternel a fait des merveilles pour nous, oh
+notre merveille Dans la joie, nous chantons Notre cœur en adoration
+Dans la joie, nous chantons notre cœur en adoration Oh, hey !`,
+        127: `[Verse]
+Seigneur, tu bâtis notre maison Sans toi, tout est vain, tout
+est illusion Dans la nuit, ta lumière nous garde Ton amour, notre
+refuge, jamais ne tarde Héritage de l'éternel Nos fils, notre
+récompense Dans la paix, nous nous reposons Sous ton nez, notre
+espérance Quand le matin se lève en douceur Nous nous levons,
+porteurs de ta ferveur Sous ton nez, notre espérance Sous ton
+nez, notre espérance Les combats, nous les livrons en prière Avec
+toi, Seigneur, rien ne nous désespère Héritage de l'éternel Nos
+fils, notre récompense Dans la paix, nous nous reposons Dans la
+paix, nous nous reposons Sous ton nez, notre espérance Comme des
+flèches dans la main du guerrier Nos enfants, dans ta grâce, vont
+s'élever Heureux l'homme qui en a besoin Il a rempli son carcoir
+Dans les épreuves Nous serons dans ta foi Héritage de l'éternel
+Nos fils, notre récompense Dans la paix, nous nous reposons Dans
+la paix, nous nous reposons Sous ton nez, notre espérance Héritage
+de l'éternel Nos fils, notre récompense Dans la paix, nous nous
+reposons Dans la paix, nous nous reposons Sous ton nez, notre
+espérance En toi, notre cœur trouve sa voie Seigneur, avec toi
+nous sommes en joie Nous sommes en paix Sous ton nez, notre espérance
+Nous nous reposons`,
+        128: `[Verse 1]
+Heureux l'homme qui craint l'éternel Qui marche dans ses voies,
+son appel Dans le fruit de ses mains,
+il trouve la joie Dans l'amour de sa maison,
+il voit la foi Ô éternel,
+
+[Chorus]
+bénis-nous de ta lumière Dans chaque jour,
+fais briller ta miséricorde Regarde Jérusalem,
+notre héritage Que ta paix repose sur notre passage Sa
+femme,
+
+[Verse 3]
+comme une vigne,
+elle fleurit Dans le sein de la maison,
+elle s'épanouit Ses fils,
+comme des oliviers,
+
+[Verse 4]
+ils grandissent Entourant la table,
+dans l'amour,
+ils se nourrissent Ô éternel,
+bénis-nous de ta lumière Dans chaque jour,
+
+[Chorus]
+fais briller ta miséricorde Regarde Jérusalem,
+notre héritage Que ta paix repose sur notre passage L'éternel
+te bénira de Sion Tu verras le bonheur de chaque
+saison Les fils de tes filles,
+
+[Verse 6]
+dans la grâce marcheront Que la paix soit sur Israël,
+notre nation Ô éternel,
+bénis-nous de ta lumière Dans chaque jour,
+fais briller ta miséricorde Regarde Jérusalem,
+
+[Verse 7]
+notre héritage Que ta paix repose sur notre passage Que
+ta paix repose sur notre passage Que ta paix repose
+sur notre passage Ô éternel,
+avec nous,
+
+[Outro]
+tu es le sage Heureux l'homme qui craint l'éternel Dans
+l'amour de ta grâce,
+il s'éveille Dans l'amour de ta grâce,
+il s'éveille`,
+        129: `[Verse]
+Dans la douleur j'ai grandi Opprimé depuis ma jeunesse Mais dans
+l'ombre je me tiens Car ta lumière est ma richesse Les laboureurs
+ont fouillé mon dos Des sillons de larmes j'ai porté Mais tu es
+juste, oh mon Dieu Les cordes des méchants Tu as coupé Qu'ils
+soient confondus Ceux qui haïssent Comme l'herbe qui se fâle Je
+m'accroche à ta promesse Dans ta grâce je m'examine Béni Seigneur
+Ceux qui te cherchent Que ta paix soit sur nos cœurs Dans la louange
+je me lève En toi je trouve Mon bonheur Les moissonneurs passent
+sans voix Les gerbes sèchent abandonnées Mais ta main Seigneur
+me restaure Ta bénédiction je l'ai espérée Les voix s'élèvent
+dans le silence Pour ta gloire, ô Roi des cieux Je proclame ta
+délivrance Dans la nuit, je chante heureux Qu'ils soient confondus,
+ceux qui haïssent Comme l'herbe qui se fâle Je m'accroche à ta
+promesse Dans ta grâce, je m'examine Béni Seigneur, ceux qui te
+cherchent Que ta paix soit sur nos cœurs Dans la louange, je me
+lève En toi, je trouve mon bonheur Ô Seigneur, je t'invoque Dans
+les larmes, je t'adore Ta fidélité me porte Mon âme te cherche
+encore Quoi qu'il arrive, je sais Avec toi, je suis fort Dans
+la tempête, je m'éveille En ta présence, je sors Qu'ils soient
+confondus Ceux qui haïssent Comme l'herbe qui se fâle Je m'accroche
+à ta promesse Dans ta grâce, je m'examine Béni Seigneur, ceux
+qui te cherchent Que ta paix soit sur nos cœurs Dans la louange,
+je me lève En toi, je trouve mon bonheur Ô Éternel, je te glorifie
+Je t'invoque dans la gloire Dans la nuit, je chante heureux Qu'ils
+soient confondus Ceux qui haïssent Comme l'herbe qui se fâle Je
+m'accroche à ta promesse Dans ta grâce, je m'examine Béni Seigneur,
+ceux qui te cherchent Que ta paix soit sur nos cœurs Dans la louange,
+je me lève En toi, je trouve mon bonheur Ô Éternel, je te glorifie
+Ma voix s'élève Dans l'adoration Dans chaque lutte Je te crie
+Toi mon refuge Ma libération En toi, je trouve mon bonheur Ô Éternel,
+je te glorifie Ma voix s'élève Dans l'adoration Dans chaque lutte
+Je te crie Toi mon refuge Ma libération Je t'éclaircisse Je t'éclaircisse
+Dans la nuit, je m'examine Béni Seigneur, ceux qui te cherchent
+Que ta paix soit sur nos cœurs Dans la nuit, je me lève En toi,
+je me lève Je t'invoque dans la gloire Dans la nuit, je chante
+heureux Mon refuge, ma libération.`,
+        130: `[Verse]
+Du fond de l'abîme, Seigneur je crie Écoute ma voix, oh mon Dieu
+je t'implore Tes oreilles j'attends-t-il à ma souffrance Dans
+l'angoisse je cherche ta rédemption encore J'espère en l'éternel,
+mon âme espère Je compte sur ta promesse, oh lumière Plus que
+l'égard, je veille et je prie Ma foi repose en toi, mon abri Si
+tu gardais, oh Dieu, nos iniquités Qui pourraient se tenir devant
+ta sainteté Mais ton pardon, ta grâce infinie Nous rappelle que
+l'amour c'est ta vie J'espère en l'éternel, mon âme espère Je
+compte sur ta promesse, oh lumière Plus que l'égard, je veille
+et je prie Ma foi repose en toi, mon abri Israël, mets ton espoir
+en l'éternel Sa miséricorde coule, douce et éternelle Rédemption,
+la grâce de Dieu, la grâce de Dieu Rédemption en abondance, il
+nous rachète De toutes nos iniquités, il nous libère J'espère
+en l'éternel, mon âme espère Je compte sur ta promesse, oh lumière
+Plus que l'égard, je veille et je prie Ma foi repose en toi, mon
+abri Dans l'attente, je chante ta bonté Éternel, je sais que tu
+es à mes côtés Mon cœur te rend gloire En toutes saisons Tu es
+ma force, ma paix, mon horizon Tu es ma force, ma paix, mon horizon
+Mon repose pour toi à mon tour Tu es monsheva, mon amour, mon
+amour Mon compote, mon amour, mon peau Mon désir, mon vainqueur,
+mon argent Mon nom, mon wallpaper, mon amour Mon joujeur, mon
+amour, mon avenir`,
+        131: `[Verse 1]
+Éternel,
+mon cœur est apaisé Dans ta présence,
+je viens m'ancrer Ni orgueil,
+ni fierté en moi Juste un souffle,
+
+[Chorus]
+un doux émoi Mets ton espoir en l'éternel Aujourd'hui,
+pour l'éternité Comme un oiseau,
+comme un oiseau Comme un enfant dans les bras de
+sa mère Je me repose,
+
+[Verse 3]
+je suis en sécurité Loin des choses trop grandes pour
+moi Je cherche ta paix,
+ô mon oiseau Comme un enfant dans les bras de
+sa mère Je me repose,
+
+[Verse 4]
+je suis en sécurité Comme un enfant au sein de
+la foi J'abandonne mes doutes,
+je crois Mets ton espoir en l'éternel Aujourd'hui,
+pour l'éternité Comme un enfant dans les bras de sa
+
+[Chorus]
+mère Je me repose,
+je suis en sécurité Je me repose,
+je suis en sécurité Israël lève les yeux vers lui
+En toutes choses,
+
+[Verse 6]
+il est là,
+ici Ta lumière,
+Seigneur,
+éclaire nos pas Ta lumière,
+
+[Verse 7]
+Seigneur,
+éclaire nos pas Dans l'amour,
+nous vivons en toi Dans l'amour,
+nous vivons en toi Mets ton espoir en l'éternel Aujourd'hui,
+
+[Chorus]
+pour l'éternité Comme un enfant dans les bras de sa
+mère Je me repose,
+je suis en sécurité Je me repose,
+je suis en sécurité Mon âme est tranquille En toi,
+
+[Outro]
+je trouve mon asile Espoir en toi,
+pour toujours Mon cœur chante dans l'amour Mon cœur chante
+dans l'amour`,
+        132: `[Verse]
+Sous-titrage ST' 501 Sous-titrage ST' 501 Sous-titrage ST' 501
+Sous-titrage ST' 501 Sous-titrage ST' 501 Sous-titrage ST' 501`,
+        133: `[Verse]
+Oh qu'il est doux, qu'il est bon De vivre en frères, main dans
+la main Dans l'amour de notre Sauveur Unis dans la paix, dans
+le chemin Comme l'huile précieuse sur le cœur Descends sur nous,
+ô Seigneur Comme la rosée sur les monts Ta bénédiction nous donne
+vie éternellement Sur la barbe d'Aaron Tu as déversé ta grâce
+infinie Ta sainteté dans l'unité Nous trouvons la force Ensemble,
+Seigneur, nous te louons encore Comme l'huile précieuse sur le
+cœur Descends sur nous, ô Seigneur Comme l'huile précieuse sur
+le cœur Descends sur nous, ô Seigneur Comme la rosée sur les monts
+Ta bénédiction nous donne vie éternellement Dans la communion
+de ton saint nom Nous t'adorons notre réfugié, Seigneur Le refuge,
+notre don, c'est là que l'éternel envoie la lumière, la vie pour
+l'éternité. Le refuge, notre don, c'est là que l'éternel envoie
+la lumière, la vie pour l'éternité. Le refuge, notre don, c'est
+là que l'éternel envoie la lumière, la vie pour l'éternité. En
+adoration.`,
+        134: `[Verse 1]
+Dans la nuit nous venons Serviteur de l'Éternel Dans sa
+maison nous nous tenons Nos cœurs s'élèvent fidèles Nous levons
+nos mains vers le ciel Pour te bénir,
+ô Dieu fidèle Dans le silence nous tibotons Ta présence,
+
+[Chorus]
+notre consolation Bénis l'Éternel,
+ô notre Roi De Sion,
+ta grâce nous emplit Toi qui as fait les cieux,
+la terre Nous t'adorons éternellement ici Dans l'obscurité,
+
+[Verse 3]
+ta lumière brille Dans nos âmes,
+tu es notre guide Des profondeurs,
+nous te cherchons Éternel,
+notre unique raison Ta bonté nous accompagne Chaque souffle,
+
+[Verse 4]
+chaque matin Nous élevons nos voix ensemble Pour te louer,
+ô Dieu d'amour Bénis l'Éternel,
+ô notre Roi De Sion,
+ta grâce nous emplit Toi qui as fait les cieux,
+
+[Chorus]
+la terre Nous t'adorons éternellement ici Nous levons nos mains
+vers le sanctuaire Où ta gloire se révèle Dans le
+chant de nos cœurs sincères Nous nous unissons à l'Assemblée
+Bénis l'Éternel à jamais Dans la nuit,
+
+[Verse 6]
+dans le jour Nous proclamons ta fidélité Ô Dieu de
+notre amour Bénis l'Éternel,
+ô notre Roi De Sion,
+ta grâce nous emplit Toi qui as fait les cieux,
+
+[Outro]
+la terre Nous t'adorons éternellement Bénis l'Éternel Nous t'adorons dans
+ta maison Éternellement Amen Amen Amen Amen`,
+        135: `[Verse 1]
+L'eau est l'éternel au serviteur Dans sa maison chantons nos
+cœurs Il est bon,
+sa grâce est grande Dans l'épargne,
+notre voix s'élance L'eau est l'éternel,
+
+[Chorus]
+chantez son nom Il est fidèle,
+notre fondation De génération en génération Éternel,
+tu es notre salvation Il fait éclore les nuages de
+ses trésors Il fait des mirages,
+
+[Verse 3]
+il frappe les nations Il délivre pour Israël Son peuple
+est libre L'eau est l'éternel,
+chantez son nom Il est fidèle,
+notre fondation De génération en génération Éternel,
+
+[Verse 4]
+tu es notre salvation Les idoles des hommes sont muettes
+Elles n'ont ni souffle,
+ni promesse Mais toi éternel,
+tu es vivant Ton nom subsiste,
+
+[Chorus]
+toujours présent L'eau est l'éternel,
+chantez son nom Il est fidèle,
+notre fondation L'eau est l'éternel,
+chantez son nom Il est fidèle,
+
+[Verse 6]
+notre fondation De génération en génération Il est fidèle,
+notre fondation De génération en génération Éternel,
+tu es notre salvation Maison d'Israël À toi nous venons
+Bénissons l'éternel,
+
+[Verse 7]
+chantez son nom Il est fidèle,
+notre fondation Éternel,
+pequented,
+magnifique Rue,
+
+[Chorus]
+commune,
+abbez Nous devons grandir scribes Sur vous nous Bénissons l'éternel
+Avec passion,
+dans la prière Nos cœurs s'élèvent À Jérusalem Nos âmes
+
+[Verse 9]
+s'achèvent Louez l'éternel Chantez son nom De génération en génération
+Éternel,
+tu es notre salvation Loué l'éternel à jamais Dans son
+amour nous sommes en paix Éternel,
+
+[Outro]
+ton nom est notre chant À jamais,
+pour l'éternité Nous t'attendons`,
+        136: `[Verse]
+Louez l'Éternel Un éternel cadeau Car sa miséricorde durera toujours
+Dans l'ombre il éclaire nos jours Chantons ensemble dans l'unité
+L'Éternel, notre dignité Il a créé les cieux brillants Avec amour
+il nous tient d'antan La terre flottant sur les eaux Sa promesse
+un merveilleux cadeau Car sa miséricorde durera toujours Dans
+l'ombre il éclaire nos jours Chantons ensemble dans l'unité L'Éternel,
+notre dignité Il a délivré son peuple en détresse Par sa main
+forte il a mis fin à l'ivresse Dans le désert il a guidé les hommes
+Il a mis fin à l'ivresse Et nos pas Sa miséricorde Jamais il ne
+s'en va Il se souvient de nous Oh quel amour Quand nous étions
+faibles Il est notre secours La nourriture pour toute chair Dans
+ses bras Nous trouvons la lumière La nourriture pour toute chair
+Car sa miséricorde durera toujours Dans l'ombre il éclaire nos
+jours Chantons ensemble dans l'unité L'Éternel, notre dignité
+Louez le Dieu des cieux L'Éternel, notre dignité Sa miséricorde,
+un chant précieux Pour l'éternité nous chanterons Sa bonté, notre
+adoration Chantons ensemble dans l'unité`,
+        137: `[Verse]
+Sur les bords des fleuves Oh mon Dieu, sur cette terre loin de
+toi Si je t'oublie, Jérusalem Que ma voix se taise, que ma joie
+s'éteigne Nos vainqueurs demandent des chants Mais nos pleurs
+s'élèvent brûlants Rappelle-nous Seigneur de ta promesse Restaure
+nos cœurs, apporte ta tendresse Comment chanter, oh mon Dieu Sur
+cette terre loin de toi Si je t'oublie, Jérusalem Que ma voix
+se taise, que ma joie s'éteigne Éternel, souviens-toi de nos peines
+Des cris, des dents, de la haine Mais dans la douleur, nous espérons
+Que ta lumière brille dans nos horizons Comment chanter, oh mon
+Dieu Sur cette terre loin de toi Si je t'oublie, Jérusalem Que
+ma voix se taise, que ma joie s'éteigne Que ma voix se taise,
+que ma joie s'éteigne Comment chanter, oh mon Dieu Sur cette terre
+loin de toi Si je t'oublie, Jérusalem Que ma voix se taise, que
+ma joie s'éteigne Rappelle-nous Seigneur de Sion Fais de notre
+cœur ta maison Dans la souffrance, nous t'adorons Jusqu'à ce que
+nous chancions en union Jusqu'à ce que nous nous réunions Dans
+la souffrance, nous t'adorons`,
+        138: `[Verse]
+De tout mon cœur Je chante avec ferveur Je me prosterne dans ton
+saint temps À cause de ta bonté, ô Seigneur, ma lueur Ta renommée
+s'est accrue Vra l'accomplissement de tes promesses Tous les rois
+te loueront Gloire à toi, ô Éternel Dans la tendresse Quand j'appelle,
+tu es là, tu réponds Tu rassures, fortifie mon âme Dans la détresse,
+tu es mon soutien Ta main sur moi, ô Dieu, je te proclame Ta renommée
+S'est accrue Vra l'accomplissement de tes promesses Tous les rois
+te loueront Gloire à toi, ô Éternel Dans la tendresse Élevé, tu
+vois les humbles Tu reconnais les cœurs brisés Ta bonté dure toujours
+N'abandonne pas tes œufs, Seigneur, bien aimé Ta renommée s'est
+accrue Vra l'accomplissement de tes promesses Tous les rois te
+loueront Gloire à toi, ô Éternel Tu reconnais les cœurs brisés
+Gloire à toi, ô Éternel Ta renommée s'est accrue Vra l'accomplissement
+de tes promesses Tous les rois te loueront Gloire à toi, ô Éternel
+Dans la tendresse L'Éternel agira en ma faveur Dans ton amour
+je trouve ma valeur Ta bonté dure toujours N'abandonne pas les
+œuvres de tes mains Seigneur`,
+        139: `[Verse]
+Éternel Quand je me lève, ta présence m'entoure, douce élève Où
+irai-je, loin de ta lumière ? Où fuirai-je ta douce prière ? Dans
+les cieux ou dans la nuit ? Tu es la Seigneur, avec moi, épris
+Tes pensées, ô Dieu, sont si profondes Plus nombreuses que les
+grains de l'ombre Quand je suis perdue dans les ténèbres Ta lumière
+brille et mon cœur célèbre Où irai-je, loin de ta lumière ? Où
+fuirai-je ta douce prière ? Où fuirai-je ta douce prière ? Dans
+les cieux ou dans la nuit ? Tu es la Seigneur, avec moi, épris
+Sonde-moi, ô Dieu, connais mon cœur Éprouve mes pensées, ô mon
+Sauveur Guide mes pas sur la voie d'éternité Je t'aime, je t'aime,
+je t'aime, je t'aime Je t'aime, je t'aime, je t'aime, je t'aime
+Je veux marcher en toi reposé Où irai-je, loin de ta lumière ?
+Où fuirai-je ta douce prière ? Dans les cieux ou dans la nuit
+? Tu es la Seigneur, avec moi, épris Où fuirai-je ta douce prière
+? Où fuirai-je ta douce prière ? Je t'aime, je t'aime, je t'aime,
+je t'aime`,
+        140: `[Verse]
+Éternel, entends ma voix Des hommes méchants, préserve-moi Le
+venin de leurs lèvres me guette dans la nuit Mais je crie vers
+toi, tu es mon refuge, mon abri Délivre-moi, oh Seigneur, de l'ombre
+et de la peur Ta force est mon salut, je me tiens devant toi Mon
+cœur en l'homme, tu es ma lumière, ma voix Les orgueilleux dressent
+des pièges, leurs ruses m'entourent, oh Dieu Mais je place ma
+confiance dans ta bonté, ta vérité Tu couvres ma tête dans le
+combat, je suis en sécurité Délivre-moi, oh Seigneur, de l'ombre
+et de la peur Délivre-moi, oh Seigneur, de l'ombre et de la peur
+Ta force est mon salut, je me tiens devant toi Mon cœur en l'homme,
+tu es ma lumière, ma voix Délivre-moi, oh Seigneur, de l'ombre
+et de la peur Ta force est mon salut, je me tiens devant toi Mon
+cœur en l'homme, tu es ma lumière, ma voix Que l'iniquité retombe
+sur ceux qui m'entourent Mais moi je louerai ton nom, les justes
+chantent ta gloire Devant ta face Nous vivrons dans l'espoir Délivre-moi,
+oh Seigneur, de l'ombre et de la peur Ta force est mon salut,
+je me tiens devant toi Mon cœur en l'homme, tu es ma lumière,
+ma voix Délivre-moi, oh Seigneur, de l'ombre et de la peur Ta
+force est mon salut, je me tiens devant toi`,
+        141: `[Verse]
+Éternel, j'invoque ta présence Viens en a, t'écoutes ma voix Ma
+prière s'élève en silence Comme l'enceinte, je cherche ta foi
+Ô éternel, je lève les mains Comme une offrande à la fin du jour
+Garde ma bouche, ô mon Seigneur Dans ta bonté, je trouve l'amour
+Ne permets pas que mon cœur chancelle Face aux ténèbres qui m'entourent
+Avec le juste, je me rebelle Pour ta lumière, je fais le tour
+Ô éternel, je lève les mains Comme une offrande à la fin du jour
+Garde ma bouche, ô mon Seigneur Dans ta bonté, je trouve l'amour
+Vers toi, je lève les yeux Mon refuge, je t'adore Protège mon
+âme des épreuves Mon âme des épreuves Mon âme des épreuves Mon
+âme des épreuves Mon âme des épreuves Mon âme des épreuves Mon
+âme des épreuves Mes lieux où le mal peut encore s'implorer Ô
+éternel, je lève les mains Comme une offrande à la fin du jour
+Garde ma bouche, ô mon Seigneur Dans ta bonté, je trouve l'amour
+Dans ta bonté, je trouve l'amour N'abandonne pas, ô éternel Je
+cherche en toi la vérité Que les méchants tombent en duel Et que
+moi, je paie pour toi Je paie pour toi Que je puisse te louer
+Et que moi, je paie pour toi Et que moi, je paie pour toi`,
+        142: `[Verse]
+Dans la nuit sombre Je crie à toi Ma voix s'élève éternelle Entends-moi
+Dans ma détresse Je viens à toi Tu connais mon sentier Guide mes
+pas Oh mon refuge, ma lumière Dans cette vallée de l'ombre Je
+t'espère Quand tout semble perdu Je t'invoque Délivre mon âme
+Oh mon roc À droite je regarde Personne ne me voit Tous mes refuges
+Semblent loin de moi Mais je crie vers toi Je t'invoque Ma forteresse
+Sois attentif éternelle À ma détresse Oh oh oh Oh mon refuge,
+ma lumière Dans cette vallée de l'ombre Je t'espère Quand tout
+semble perdu Je t'invoque Délivre mon âme Oh mon roc Tire-moi
+de cette prison Que je célèbre ton nom Les justes viendront m'entourer
+Quand ta bonté viendra m'emplir Oh mon roc Oh mon roc Tire-moi
+de cette prison Que je célèbre ton nom Les justes viendront m'entourer
+Quand ta bonté viendra m'emplir Oh mon roc Tire-moi de cette prison
+Que je crie vers toi Oh mon roc Tire-moi de cette prison Que je
+crie vers toi Oh oh oh Oh oh oh Oh oh oh Oh mon refuge, ma lumière
+Dans cette vallée de l'ombre Je t'espère Quand tout semble perdu
+Je t'invoque Délivre mon âme, ô mon roc Éternel, je m'appuie sur
+toi Tu es mon partage, ma joie Dans la tempête, je tiens ferme
+Mon cœur te loue, ô mon éternel`,
+        143: `[Verse 1]
+Éternel,
+écoute ma prière Prête l'oreille à ma supplication Dans ta
+fidélité,
+exauce-moi Car seul en toi je trouve ma raison L'ennemi
+
+[Chorus]
+poursuit mon âme Dans les ténèbres,
+il m'a fait sombrer Mon cœur est troublé,
+abattu en moi Vers toi Seigneur,
+je viens m'humilier Hâte-toi,
+
+[Verse 3]
+ô Éternel,
+viens à moi Ne me cache pas ta face,
+je t'implore Fais-moi entendre ta bonté Je confie mon âme
+à toi encore Je me souviens des jours passés Méditant
+
+[Verse 4]
+sur toutes tes œuvres Je tends mes mains Le cœur
+me dit Je suis raffamée Comme terre desséchée Je te
+cherche Enseigne-moi,
+montre-moi ta voie Car en toi je mets toute ma
+
+[Chorus]
+foi Délivre-moi de mes ennemis Mon refuge,
+c'est toi,
+ô mon roi Hâte-toi,
+ô Éternel,
+
+[Verse 6]
+viens à moi Ne me cache pas ta face,
+je t'implore Fais-moi entendre ta bonté Je te prie,
+mon refuge,
+c'est toi,
+
+[Verse 7]
+mon roi Je confie mon âme à toi encore Dans
+ta bonté,
+ô Éternel Rends-moi la vie,
+retire ma peine Conduis-moi sur le chemin droit Je suis
+
+[Chorus]
+ton cesseur,
+mon amour Je t'aime,
+mon amour,
+mon amour Je t'aime,
+
+[Verse 9]
+mon amour,
+mon amour Tu es mon serviteur,
+je te rends grâce Hâte-toi,
+ô Éternel,
+
+[Verse 10]
+viens à moi Ne me cache pas ta face,
+je t'implore Fais-moi entendre ta bonté Je confie mon âme
+à toi encore Ô Éternel,
+tu es ma lumière Dans la détresse,
+
+[Outro]
+j'élève ma voix Fais de moi selon ta volonté Pour
+l'éternité`,
+        144: `[Verse]
+Béni soit l'éternel mon rocher Il guide mes mains dans le combat
+Ma forteresse, mon refuge Dans l'ombre, il éclaire mes peurs Ô
+Seigneur, je t'exale dans la tempête Tu es là, libérateur, tu
+es ma force En toi, je trouve ma paix Quel est l'homme pour que
+tu prennes soin Un souffle fragile dans le vent Mais tu descends,
+tu entends mon cri Ton amour, Seigneur, me soutient Ô Seigneur,
+je t'exale dans la tempête Tu es là, libérateur, tu es ma force
+En toi, je trouve ma paix Ô Seigneur, je t'exale dans la tempête
+Tu es là, libérateur, tu es ma force En toi, je trouve ma paix
+Fais briller ta lumière Disperse mes ennemis De ta main et ton
+mot Délivre-moi, ô mon Dieu Je chanterai un cantique nouveau Sur
+le lutte, je te louerai Ô Seigneur, je t'exale dans la tempête
+Tu es là, libérateur, tu es ma force Tu es là, libérateur, tu
+es ma force En toi, je trouve ma paix Hen toi, je trouve ma paix
+Heureux le peuple Dans l'éternel est Dieu Dans ses bras Nous trouvons
+le salut Heureux le peuple Qui célèbre son nom Mon rocher ma vie
+Mon chant ma raison Heureux le peuple Mon chant ma raison Mon
+chant ma raison Félicitations Éloque le peuple Éloque le peuple
+Ô Seigneur, je t'éteins, amène, tu es le libérateur Jure ma force
+en toi, je trouve ma paix Dans tes bras, je t'éteins, amène, tu
+es le libérateur Jure ma force en toi, je trouve ma paix`,
+        145: `[Verse 1]
+Je t'exalterai Avec un cœur en foi,
+célébrant ta bonté,
+ton amour,
+ta douceur Éternel,
+
+[Chorus]
+tu es grand,
+digne de louanges Ta grandeur est insondable,
+oh,
+que je te chante Chaque génération,
+
+[Verse 3]
+tes œuvres célèbres Proclamons ta majesté,
+ta gloueur qui s'élève Je dirai ta splendeur,
+ta puissance redoutable Ta bonté infinie,
+ô Dieu inébranlable Tu soutiens ceux qui tombent,
+
+[Verse 4]
+tu redresses les courbées Tes mains pleines de grâce viennent
+nous rassasier Éternel,
+tu es grand,
+digne de louanges Ta grandeur est insondable,
+
+[Chorus]
+oh,
+que je te chante Chaque génération,
+tes œuvres célèbres Proclamons ta majesté,
+ta gloueur qui s'élève Près de tous ceux qui t'invoquent
+
+[Verse 6]
+Tu entends leurs cris,
+tu es leur secours Ta miséricorde,
+douce et fidèle Éternel en toi,
+tu es grand,
+
+[Verse 7]
+digne de louanges Je trouve mon amour Éternel,
+tu es grand,
+digne de louanges Ta grandeur est insondable,
+oh,
+
+[Chorus]
+que je te chante Chaque génération,
+tes œuvres célèbres Proclamons ta majesté,
+ta gloueur qui s'élève Que ma bouche publie,
+louange à l'éternel Que toutes chaires bébés,
+
+[Outro]
+que toutes chères bébés Que tous les hommes bénissent son
+nom éternel À toujours et à perpétuité Nous t'adorons Seigneur,
+en toute sincérité En toute sincérité`,
+        146: `[Verse]
+L'Où l'éternel mon âme chante Je louerai tant que je vivrai Dans
+chaque souffle, en chaque instant Je célébrerai celui qui est
+vrai Heureux celui qui s'appuie sur toi Dieu de Jacob, un refuge
+en toi Tu as fait les cieux, la mer, la terre Garde ma foi, ô
+Dieu de lumière Ne mets pas ta confiance en l'or Ils ne peuvent
+sauver leur souffle sans bar Mais toi, tu es le juste, le bon
+Tu es ma force, mon abri, ma foi Heureux celui qui s'appuie sur
+toi Dieu de Jacob, un refuge en toi Tu as fait les cieux, la mer,
+la terre Garde ma foi, ô Dieu de lumière Tu fais droit aux opprimés
+Tu nourris l'affamé Tu délivres les captifs Ouvre les yeux des
+aveugles Réveille les yeux des aveugles Réveille les yeux des
+aveugles Et dresse ceux qui sont courbés Tu es amour, tu es vérité
+Heureux celui qui s'appuie sur toi Dieu de Jacob, un refuge en
+toi Tu as fait les cieux, la mer, la terre Garde ma foi, ô Dieu
+de lumière Je crois, oh Dieu de lumière Heureux celui qui s'appuie
+sur toi Dieu de Jacob, un refuge en toi Tu as fait les cieux,
+la mer, la terre Garde ma foi, oh Dieu de lumière Et dresse ceux
+qui sont courbés Heureux celui qui s'appuie sur toi Dieu de Jacob,
+un refuge en toi Tu as fait les cieux, la mer, la terre Pour l'éternité
+Ton amour subsiste à jamais Loue l'éternel Ô mon âme Je chanterai
+Je louerai`,
+        147: `[Verse]
+L'Éternel Le Seigneur en sa main, il pense nos blessures, il est
+notre soutien. Chantez à l'Éternel avec action de grâce, célébrez
+notre Dieu, que son amour embrasse. Il compte les étoiles, les
+appelle par nom, notre Seigneur est grand. Éternel fondement.
+Il couvre les cieux, prépare la pluie, fait germer l'air, il donne
+vie. Au petit du corbeau, il répond dans le ciel, il pourvoit
+à nos besoins. Amen. Chantez à l'Éternel avec action de grâce,
+célébrez notre Dieu, que son amour embrasse. Il compte les étoiles,
+les appelle par nom, notre Seigneur est grand. Éternel fondement.
+Chantez à l'Éternel avec action de grâce, célébrez notre Dieu,
+que son amour embrasse. Chantez à l'Éternel avec action de grâce,
+célébrez notre Dieu, que son amour embrasse. Chantez à l'Éternel
+avec action de grâce, célébrez notre Dieu, que son amour embrasse.
+Chantez à l'Éternel avec action de grâce, célébrez notre Dieu,
+que son amour embrasse. Chantez à l'Éternel avec action de grâce,
+célébrez notre Dieu, que son amour embrasse. Chantez à l'Éternel
+avec action de grâce, célébrez notre Dieu, que son amour embrasse.
+Chantez à l'Éternel avec action de grâce, célébrez notre Dieu,
+que son amour embrasse. Chantez à l'Éternel avec action de grâce,
+célébrez notre Dieu, que son amour embrasse. Chantez à l'Éternel
+avec action de grâce, célébrez notre Dieu, que son amour embrasse.
+Chantez à l'Éternel avec action de grâce Célébrez notre Dieu,
+que son amour embrasse Il compte les étoiles, les appelle par
+nom Notre Seigneur est grand, éternel, fonde Louez l'Éternel,
+son amour est parfait Il est notre refuge, en Lui nous sommes
+en paix Louez l'Éternel, pour toujours chanter Son cœur est notre
+demeure, en Lui nous allons rester`,
+        148: `[Verse 1]
+Dans les cieux Louez,
+louez,
+louez son nom Majesté au-dessus des cieux Il a créé
+par sa parole Louez l'éternel,
+
+[Chorus]
+il est fidèle Des profondeurs élèvent un cri Monstres des
+mers et abîmes Feu,
+grêle,
+neige et tempête Tout ce qui vit exécute ses ordres
+
+[Verse 3]
+Louez,
+louez,
+louez son nom Majesté au-dessus des cieux Il a créé
+par sa parole Louez l'éternel,
+
+[Verse 4]
+il est fidèle Jeune et vieux,
+unissons nos voix Rois et peuples,
+levons nos mains Pour le peuple qui lui est proche
+Louez l'éternel,
+
+[Chorus]
+notre roi Louez,
+louez,
+louez son nom Majesté au-dessus des cieux Il a créé
+par sa parole Louez l'éternel,
+
+[Outro]
+il est fidèle Louez l'éternel pour sa bonté Son nom
+veut l'été lever Nous sommes un éternel Nous te glorifions
+Amen Amen`,
+        149: `[Verse 1]
+L'Éternel L'Éternel L'Éternel Chante et danse en son nom glorieux
+Célébrer,
+adorer le roi des cieux Il prend plaisir dans nos
+chants sincères L'Éternel nous sauve,
+
+[Chorus]
+il nous éclaire Louange dans nos bouches,
+un glaive à deux tranchants Pour exercer la justice Nous
+marchons vaillamment Des chaînes brisées,
+les oppresseurs tremblent C'est une gloire pour ses fidèles Qu'ils
+
+[Verse 3]
+se rassemblent Chante et danse en son nom glorieux Célébrer,
+adorer le roi des cieux Il prend plaisir dans nos
+chants sincères Louange dans nos chants sincères L'Éternel nous sauve,
+il nous éclaire Louer l'Éternel avec amour et foi dans
+
+[Verse 4]
+chaque cœur Il fait sa loi,
+chanter à l'Éternel Un cantique nouveau,
+sa bonté éternelle Le sepulcre de la vie,
+la vie de Dieu Le sepulcre de la vie,
+
+[Chorus]
+la vie de Dieu Le sepulcre de la vie,
+la vie de Dieu Le sepulcre de la vie,
+la vie de Dieu Le sepulcre de la vie,
+la vie de Dieu Le sepulcre de l'épicerie,
+
+[Outro]
+la vie d'un prophète Beaux cadeaux`,
+        150: `[Verse]
+Sous-titrage Société Radio-Canada Son amour pour nous jamais ne
+s'arrête Louez-le, louez-le pour ses hauts faits Louez-le, louez-le
+pour sa bonté Que tout ce qui respire chante en vérité Louez l'éternel
+à jamais, à jamais Avec la trompette, faisons résonner Des hymnes
+de joie, la terre va vibrer Le lutte est là, ensemble en harmonie
+Nos cœurs se réjouissent, c'est la mélodie Louez-le, louez-le
+pour ses hauts faits Louez-le, louez-le pour sa bonté Que tout
+ce qui respire chante en vérité Louez l'éternel à jamais, à jamais
+Tambourins et danses célébront son nom Les instruments à cordes
+chantent sa passion Si balles sonores retentissaient Ensemble
+unissons nos voix pour l'élever Louez-le, louez-le pour ses hauts
+faits Louez-le, louez-le pour sa bonté Que tout ce qui respire
+chante en vérité Louez l'éternel à jamais Tout ce qui respire
+élève une prière Dans chaque battement, notre cœur s'éclaire Louez
+l'éternel pour sa grandeur Célébrons ensemble notre sauveur Louez-le,
+louez-le pour ses hauts faits Louez-le, louez-le pour sa bonté
+Que tout ce qui respire chante en vérité Louez l'éternel à jamais
+Louez-le, louez-le pour ses hauts faits Louez-le, louez-le pour
+sa bonté Que tout ce qui respire chante en vérité Louez-le, louez-le
+pour sa grandeur Louez l'éternel à jamais Louez-le, louez-le pour
+sa grandeur Louez l'éternel à jamais`,
     },
     "20": {
         1: `[Verse 1]
