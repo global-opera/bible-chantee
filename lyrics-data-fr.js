@@ -4,12 +4,48 @@
 window.chapterLyricsFR = {
 
     "01": {
-        1: `﻿[Verse 1] Au commencement, ô Dieu, Tu as
-créé, Les cieux et la terre, tout a été
-formé.
-Dans l'obscurité, Ta lumière a jailli, Un
+        1: `Genèse 1 – Que la lumière soit
 
-souffle de vie, l'espoir s'est épanoui.`,
+[Couplet 1 – Voix femme]
+Au commencement tout était vide,
+La nuit couvrait l’abîme sans voix,
+Ton Esprit planait sur les eaux profondes,
+Et Ton silence préparait la loi.
+
+Puis Ta parole fend les ténèbres,
+Un seul mot ouvre l’horizon,
+La lumière naît dans l’obéissance
+À la voix de la création.
+
+[Pré-refrain]
+Quand Tu parles, le chaos recule.
+
+[Refrain – Duo]
+Que la lumière soit,
+Et la nuit s’enfuit,
+Que la lumière soit,
+Et la vie jaillit.
+Tout prend forme à Ta voix,
+Tout respire par Ton nom,
+Tu es le commencement de toutes choses,
+Le premier battement du monde et de l’homme.
+
+[Couplet 2 – Voix homme]
+Tu sépares les eaux et le ciel,
+Tu dresses les terres et les mers,
+Tu sèmes les plantes et les saisons,
+Tu appelles chaque étoile par son mystère.
+
+Le soleil se lève sur Ton ordre,
+La lune garde le temps de Ta main,
+Chaque jour répond à Ton regard
+Et la création suit Ton chemin.
+
+[Refrain – Duo]
+Que la lumière soit…
+
+[Outro]
+Tout ce que Tu dis devient vie.`,
         2: `... Dans le silence d'un matin, Les cieux et la terre par
 ta main, Chaque étoile, chaque prise, Tout est bon, tout
 glorifie Au septième jour, repos divin, Tu as vu que tout
