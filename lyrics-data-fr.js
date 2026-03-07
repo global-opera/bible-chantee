@@ -30592,15 +30592,41 @@ Tu es notre refuge, notre feu Dans la paix, nous trouvons
 l'âme Seigneux, nous nous confions en toi Dans chaque pas,
 chaque choix Ta vérité, notre voix Nous marchons, nous
 marchons en toi`,
-        8: `...
-...
-...
-...
+        8: `[Verse 1]
+La tribulation Au Seigneur nous venons Pour partager notre don
+Dans l'unité nous marchons Ta bonté,
+notre chanson Par ta pauvreté Nous sommes comblés Dans l'amour
+nous voulons exceller Comme Tite,
 
-...
-...
-...
-...`,
+[Chorus]
+nous agissons avec zèle Notre foi se lève,
+notre cœur s'émerveille Nous donnons nos vies,
+tout ce que nous sommes Pour ta gloire Seigneur,
+dans ce que nous faisons Au Seigneur nous venons Pour
+
+[Verse 3]
+partager notre don Dans l'unité nous marchons Ta bonté,
+notre chanson Par ta pauvreté Nous sommes comblés Dans l'amour
+nous voulons exceller À face des églises,
+notre charité Dans l'égalité,
+
+[Verse 4]
+nous voulons donner Riche de ta grâce,
+nous serons unis Pour ta gloire Seigneur Pour ta gloire
+Seigneur,
+nous vivons en nous-mêmes En amie Au Seigneur nous venons
+
+[Chorus]
+Pour partager notre don Dans l'unité nous marchons Ta bonté,
+notre chanson Par ta pauvreté Nous sommes comblés Dans l'amour
+nous voulons exceller Dans l'abondance de ta grâce Nous marchons
+avec foi Pour chaque cœur qui s'émerveille Dans l'amour nous
+
+[Outro]
+voulons exceller Pour ta gloire Seigneur,
+nous venons pour te joindre Dans l'amour nous voulons exceller
+Dans l'amour nous voulons exceller Pour chaque cœur qui s'embrasse
+Nous te louons au roi Amen Amen Amen Amen`,
         9: `... Seigneur, je viens devant toi Avec un cœur qui désire
 donner Commence meur dans la joie Pour ceux qui sont dans
 le besoin Oh oui Mon âme s'ouvre à ta lumière Je veux partager
