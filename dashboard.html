@@ -2069,31 +2069,27 @@
         let CURRENT_PERIOD = 'all'; // Période sélectionnée
 
         async function fetchGA4Data(period = 'all') {
-            try {
-                // Appeler les deux endpoints en parallèle avec le paramètre de période
-                const [analyticsResponse, statsResponse] = await Promise.all([
-                    fetch(CONFIG.STATS_API),
-                    fetch(`/api/stats?period=${period}`)
-                ]);
+            // Appeler les deux endpoints indépendamment (l'un peut échouer sans bloquer l'autre)
+            const [analyticsResult, statsResult] = await Promise.allSettled([
+                fetch(CONFIG.STATS_API).then(r => r.ok ? r.json() : Promise.reject('GA4 ' + r.status)),
+                fetch(`/api/stats?period=${period}`).then(r => r.ok ? r.json() : Promise.reject('Stats ' + r.status))
+            ]);
 
-                if (!analyticsResponse.ok) throw new Error('Analytics API Error: ' + analyticsResponse.status);
-                if (!statsResponse.ok) throw new Error('Stats API Error: ' + statsResponse.status);
+            const analyticsData = analyticsResult.status === 'fulfilled' ? analyticsResult.value : null;
+            const statsData     = statsResult.status    === 'fulfilled' ? statsResult.value    : null;
 
-                const analyticsData = await analyticsResponse.json();
-                const statsData = await statsResponse.json();
+            if (analyticsResult.status === 'rejected') console.warn('GA4 API indisponible:', analyticsResult.reason);
+            if (statsResult.status    === 'rejected') console.warn('Stats API indisponible:', statsResult.reason);
 
-                if (analyticsData.error) throw new Error(analyticsData.error);
-                if (statsData.error) throw new Error(statsData.error);
+            // Si les deux échouent → null (mode erreur)
+            if (!analyticsData && !statsData) return null;
 
-                // Fusionner les données: garder analytics pour tout, mais remplacer les événements par stats
-                return {
-                    ...analyticsData,
-                    stats: statsData
-                };
-            } catch (error) {
-                console.error('Erreur API:', error);
-                return null;
-            }
+            // Fusionner: GA4 pour pays/visiteurs, stats pour écoutes/inscriptions
+            return {
+                ...(analyticsData || {}),
+                stats: statsData,
+                _ga4Available: !!analyticsData
+            };
         }
 
         // =====================================================
@@ -2368,7 +2364,7 @@
                 updateEvents(data.events || {});
                 updateActivity(filteredData);
                 updateMap(validCountries);
-                setDataSource(true);
+                setDataSource(data._ga4Available !== false);
             } else {
                 setDataSource(false, 'Erreur connexion API GA4');
             }
