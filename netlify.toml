@@ -1,3 +1,10 @@
+[build.processing.html]
+  pretty_urls = false
+
+[build.processing.js]
+  bundle = false
+  minify = false
+
 [[redirects]]
   from = "/"
   to = "/lecteur.html"

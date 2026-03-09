@@ -1,6 +1,6 @@
 // BIBLE CHANTÉE - Adaptateur dictionnaire sémantique V2
 // Convertit window.SemanticDictionary (ancien format) → window.SEMANTIC_DICTIONARY (V2)
-// Doit être chargé APRÈS semantic-dictionary.js et AVANT semantic-engine.js
+// Robuste au chargement async du dictionnaire (fallback window.load)
 
 (function() {
   'use strict';
@@ -27,12 +27,24 @@
     return newDict;
   }
 
-  if (window.SemanticDictionary) {
-    window.SEMANTIC_DICTIONARY = convert(window.SemanticDictionary);
-    var total = Object.keys(window.SEMANTIC_DICTIONARY).length;
-    console.log('[SemanticAdapter] Converti: ' + total + ' themes → window.SEMANTIC_DICTIONARY');
-  } else {
-    console.error('[SemanticAdapter] window.SemanticDictionary introuvable');
+  function run() {
+    if (window.SEMANTIC_DICTIONARY) return; // déjà initialisé
+    if (window.SemanticDictionary) {
+      window.SEMANTIC_DICTIONARY = convert(window.SemanticDictionary);
+      var total = Object.keys(window.SEMANTIC_DICTIONARY).length;
+      console.log('[SemanticAdapter] Converti: ' + total + ' themes -> window.SEMANTIC_DICTIONARY');
+    } else {
+      console.warn('[SemanticAdapter] window.SemanticDictionary pas encore disponible');
+    }
+  }
+
+  // Tentative immédiate (chargement synchrone normal)
+  run();
+
+  // Fallback si semantic-dictionary.js est chargé async :
+  // window.load garantit que tous les scripts async sont terminés
+  if (!window.SEMANTIC_DICTIONARY) {
+    window.addEventListener('load', run);
   }
 
 })();
