@@ -1219,7 +1219,7 @@
   </style>
     <script src="js/books.js"></script>
     <script src="js/book-names.js"></script>
-    <script src="js/player.js"></script>
+    <!-- player.js retiré le 2026-03-08 : interférence dual-player, voir audit_player_audio_flow_complet.txt -->
     <script src="js/chapter-titles.js?v=3"></script>
 <script>
 /* ===== EN TITLES HARDENING (AUTO-PATCH) =====
@@ -1821,14 +1821,44 @@ const audioPlayer = document.querySelector('#audioPlayer');
     const playBtn = document.querySelector('#playBtn');
     let isPlaying = false;
 
+    // Helper: Résoudre le code R2 pour un livre
+    // Certains livres utilisent un code de dossier/fichier différent sur R2
+    // par rapport au code books.js (ex: 41_MAR → dossier 41_MRK sur R2)
+    // Vérifié via audio-urls-fr.js le 2026-03-08
+    function resolveR2Codes(book) {
+      // Alias dossier R2 : books.js code → code canonique utilisé par R2
+      const R2_FOLDER_ALIASES = {
+        '26_EZE': '26_EZK',
+        '29_JOE': '29_JOL',
+        '41_MAR': '41_MRK',
+        '43_JOH': '43_JHN',
+        '59_JAM': '59_JAS',
+        '62_1JO': '62_1JN',
+        '63_2JO': '63_2JN',
+        '64_3JO': '64_3JN'
+      };
+      // Alias fichier R2 : seulement quand le préfixe fichier diffère aussi
+      // (Jean et Jacques utilisent le code canonique pour le fichier aussi)
+      const R2_FILE_ALIASES = {
+        '43_JOH': '43_JHN',
+        '59_JAM': '59_JAS'
+      };
+      return {
+        folder: R2_FOLDER_ALIASES[book] || book,
+        file:   R2_FILE_ALIASES[book]   || book
+      };
+    }
+
     // Helper: Obtenir URL audio pour un chapitre
     function getAudioUrl(book, chapter, lang) {
       // Construire URL directement depuis Cloudflare R2
-      // Format: https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/{LANG}/{BOOK}/{BOOK}_{CHAPTER}_{LANG}.mp3
+      // Format: https://pub-...r2.dev/{LANG}/{FOLDER}/{FILE}_{CHAPTER}_{LANG}.mp3
       // Exemple: .../FR/01_GEN/01_GEN_01_FR.mp3
+      // Exemple aliasé: .../FR/41_MRK/41_MAR_01_FR.mp3
       const chapterPadded = String(chapter).padStart(2, '0');
       const langUpper = lang.toUpperCase();
-      const base = `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${langUpper}/${book}/${book}_${chapterPadded}_${langUpper}`;
+      const r2 = resolveR2Codes(book);
+      const base = `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${langUpper}/${r2.folder}/${r2.file}_${chapterPadded}_${langUpper}`;
       return {
         primary: `${base}.mp3`,
         fallback: `${base}_v1.mp3`
@@ -3091,6 +3121,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
   </script>
 
   <!-- SEMANTIC SEARCH ENGINE -->
+  <script src="js/semantic-dictionary.js"></script>
+  <script src="js/semantic-adapter-v2.js"></script>
   <script src="js/semantic-engine.js"></script>
   <script>
     // Recherche sémantique
