@@ -3135,7 +3135,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
         const bookCode = parts[0] + '_' + parts[1];
         const chapterNum = parseInt(parts[2]);
 
-        const bookName = SemanticEngine.getBookName(parts[1], currentLang);
+        const bookName = getBookName(bookCode, currentLang);
 
         return `
           <div class="result-card" onclick="playSearchResult('${bookCode}', ${chapterNum})">
