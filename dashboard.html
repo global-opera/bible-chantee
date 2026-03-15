@@ -706,19 +706,45 @@
             </div>
         </div>
 
-        <!-- Map Section -->
+        <!-- Map Section - Platform Streams -->
         <div class="map-section">
-            <div class="section-title"><span class="section-emoji">🗺️</span> <span data-i18n="section-world">Visiteurs dans le monde</span></div>
+            <div class="section-title"><span class="section-emoji">🗺️</span> Écoutes mondiales par plateforme</div>
+
+            <!-- Summary Stats (filled by JS) -->
+            <div id="streamSummary" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:18px;"></div>
+
+            <!-- Map Tabs -->
             <div class="map-tabs">
-                <button class="map-tab active" id="mapTabVisitors" onclick="setMapView('visitors')">🌍 Vue Visiteurs</button>
-                <button class="map-tab" id="mapTabPlatform" onclick="setMapView('platform')">🎵 Vue Plateforme</button>
+                <button class="map-tab active" id="mapTabPlatform" onclick="setMapView('platform')">🎵 Vue Plateforme</button>
                 <button class="map-tab" id="mapTabLanguage" onclick="setMapView('language')">🌐 Vue Langue</button>
+                <button class="map-tab" id="mapTabRevenue" onclick="setMapView('revenue')">💰 Vue Revenus</button>
             </div>
+
             <div id="map"></div>
-            <div class="map-legend-dynamic" id="mapLegend">
-                <div class="legend-item"><div class="legend-dot high"></div><span data-i18n="legend-high">1000+ visiteurs</span></div>
-                <div class="legend-item"><div class="legend-dot medium"></div><span data-i18n="legend-medium">500-999 visiteurs</span></div>
-                <div class="legend-item"><div class="legend-dot low"></div><span data-i18n="legend-low">1-499 visiteurs</span></div>
+
+            <!-- Dynamic Legend -->
+            <div class="map-legend-dynamic" id="mapLegend"></div>
+
+            <!-- Streams Table -->
+            <div style="margin-top:22px;">
+                <h3 style="color:#FFD700;font-size:1rem;margin-bottom:10px;">📊 Détail par pays</h3>
+                <div class="countries-table-wrap">
+                    <table class="countries-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Pays</th>
+                                <th>Plateforme</th>
+                                <th>Écoutes</th>
+                                <th>Revenu est.</th>
+                                <th>Langue</th>
+                                <th>Croissance</th>
+                                <th>Score viral</th>
+                            </tr>
+                        </thead>
+                        <tbody id="streamTableBody"><!-- Filled by JS --></tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
@@ -2531,7 +2557,183 @@
         }
 
         // =====================================================
-        // DEMO COUNTRIES DATA (35 pays)
+        // PLATFORM STREAMS — fetch-based
+        // =====================================================
+        const PLATFORM_COLORS = {
+            youtube:  '#FF0000',
+            spotify:  '#1DB954',
+            apple:    '#ffffff',
+            amazon:   '#FF9900',
+            deezer:   '#a238ff',
+            facebook: '#1877F2'
+        };
+        const PLATFORM_LABELS = {
+            youtube:  'YouTube Music',
+            spotify:  'Spotify',
+            apple:    'Apple Music',
+            amazon:   'Amazon Music',
+            deezer:   'Deezer',
+            facebook: 'Facebook'
+        };
+        // Revenue per stream in USD (industry estimates)
+        const PLATFORM_PAYOUTS = {
+            spotify:  0.0035,
+            apple:    0.0070,
+            youtube:  0.0010,
+            amazon:   0.0040,
+            deezer:   0.0060,
+            facebook: 0.0015
+        };
+        const LANGUAGE_COLORS = {
+            FR: '#4466ff', EN: '#1DB954', PT: '#FF9900',
+            TL: '#9B59B6', ES: '#C8102E', DE: '#999999', IT: '#009246', MG: '#FF6B6B'
+        };
+        const LANG_NAMES = { FR:'Français', EN:'English', PT:'Português', TL:'Tagalog', ES:'Español', DE:'Deutsch', IT:'Italiano', MG:'Malagasy' };
+        const LANG_FLAGS = { FR:'🇫🇷', EN:'🇬🇧', PT:'🇧🇷', TL:'🇵🇭', ES:'🇪🇸', DE:'🇩🇪', IT:'🇮🇹', MG:'🇲🇬' };
+
+        let currentMapView = 'platform';
+        let streamData = [];
+
+        function loadStreamData() {
+            fetch('/data/platform-streams.json')
+                .then(r => r.json())
+                .then(data => {
+                    streamData = data;
+                    renderStreamSummary(data);
+                    renderStreamMap(data);
+                    renderStreamTable(data);
+                    updateMapLegend('platform');
+                })
+                .catch(err => console.warn('platform-streams.json:', err));
+        }
+
+        function renderStreamSummary(data) {
+            const totalStreams  = data.reduce((s, p) => s + p.streams, 0);
+            const platforms     = [...new Set(data.map(p => p.platform))];
+            const languages     = [...new Set(data.map(p => p.language))];
+
+            // Dominant platform
+            const platTotals = {};
+            data.forEach(p => { platTotals[p.platform] = (platTotals[p.platform]||0) + p.streams; });
+            const domPlat  = Object.entries(platTotals).sort((a,b) => b[1]-a[1])[0];
+            const domPct   = Math.round(domPlat[1] / totalStreams * 100);
+
+            // Total estimated revenue
+            const totalRevenue = data.reduce((s, p) => s + p.streams * (PLATFORM_PAYOUTS[p.platform]||0), 0);
+
+            // Top growth country (viral = growth × streams)
+            const topViral = [...data].sort((a,b) => (b.growth*b.streams) - (a.growth*a.streams))[0];
+
+            const el = document.getElementById('streamSummary');
+            if (!el) return;
+            el.innerHTML = [
+                { icon:'🎵', val: totalStreams.toLocaleString(),              label:'Total écoutes',          color:'#FFD700' },
+                { icon:'🌍', val: data.length,                                label:'Pays actifs',            color:'#FFD700' },
+                { icon:'📱', val: platforms.length,                           label:'Plateformes',            color:'#FFD700' },
+                { icon:'🗣️', val: languages.length,                           label:'Langues',                color:'#FFD700' },
+                { icon:'🏆', val: PLATFORM_LABELS[domPlat[0]],               sub: domPct+'%', label:'Plateforme dominante', color: PLATFORM_COLORS[domPlat[0]] },
+                { icon:'💰', val: '$'+totalRevenue.toFixed(0),               label:'Revenu estimé (demo)',   color:'#00cc66' },
+                { icon:'🔥', val: topViral.flag+' '+topViral.country,        sub: '+'+topViral.growth+'% × '+topViral.streams, label:'Plus viral',  color:'#ff6666' }
+            ].map(s => `
+                <div style="background:rgba(0,0,0,0.3);border-radius:10px;padding:12px;text-align:center;border:1px solid rgba(255,255,255,0.07);">
+                    <div style="font-size:1.3rem;">${s.icon}</div>
+                    <div style="font-weight:bold;color:${s.color};font-size:${s.val.length>10?'0.85rem':'1.15rem'};margin-top:4px;">${s.val}</div>
+                    ${s.sub ? `<div style="font-size:0.72rem;color:#aaa;">${s.sub}</div>` : ''}
+                    <div style="color:#777;font-size:0.72rem;margin-top:3px;">${s.label}</div>
+                </div>`).join('');
+        }
+
+        function renderStreamMap(data) {
+            markers.forEach(m => map.removeLayer(m));
+            markers = [];
+            data.forEach(p => {
+                let color;
+                if (currentMapView === 'language') {
+                    color = LANGUAGE_COLORS[p.language] || '#888';
+                } else if (currentMapView === 'revenue') {
+                    const rev = p.streams * (PLATFORM_PAYOUTS[p.platform]||0);
+                    color = rev > 5 ? '#ff4444' : rev > 2 ? '#FFD700' : '#00cc66';
+                } else {
+                    color = PLATFORM_COLORS[p.platform] || '#888';
+                }
+                const size = Math.max(6, Math.log(p.streams) * 4);
+                const marker = L.circleMarker([p.lat, p.lng], {
+                    radius: size, color: color, fillColor: color, fillOpacity: 0.75, weight: 1.5
+                }).addTo(map);
+                const rev = (p.streams * (PLATFORM_PAYOUTS[p.platform]||0)).toFixed(2);
+                const viralScore = (p.growth * p.streams / 1000).toFixed(1);
+                marker.bindPopup(`
+                    <div style="text-align:center;min-width:160px;">
+                        <div style="font-size:1.8rem;">${p.flag}</div>
+                        <strong>${p.country}</strong><br>
+                        <span style="color:${PLATFORM_COLORS[p.platform]};font-weight:bold;">${PLATFORM_LABELS[p.platform]}</span><br>
+                        <span style="color:#FFD700;">🎵 ${p.streams.toLocaleString()}</span> écoutes<br>
+                        <span style="color:#00cc66;">💰 $${rev}</span> revenu est.<br>
+                        <small>${LANG_FLAGS[p.language]||''} ${p.language} &nbsp;•&nbsp; <span style="color:#ffcc44;">📈 +${p.growth}%</span> &nbsp;•&nbsp; 🔥 ${viralScore}k</small>
+                    </div>`);
+                markers.push(marker);
+            });
+        }
+
+        function setMapView(view) {
+            currentMapView = view;
+            document.querySelectorAll('.map-tab').forEach(t => t.classList.remove('active'));
+            const tabId = 'mapTab' + view.charAt(0).toUpperCase() + view.slice(1);
+            const tab = document.getElementById(tabId);
+            if (tab) tab.classList.add('active');
+            renderStreamMap(streamData);
+            updateMapLegend(view);
+        }
+
+        function updateMapLegend(view) {
+            const legend = document.getElementById('mapLegend');
+            if (!legend) return;
+            if (view === 'language') {
+                legend.innerHTML = Object.entries(LANGUAGE_COLORS)
+                    .filter(([c]) => streamData.some(p => p.language === c))
+                    .map(([code, color]) => `<div class="legend-item"><div class="legend-dot" style="background:${color};width:14px;height:14px;border-radius:50%;"></div><span>${LANG_FLAGS[code]||''} ${LANG_NAMES[code]||code}</span></div>`)
+                    .join('');
+            } else if (view === 'revenue') {
+                legend.innerHTML = `
+                    <div class="legend-item"><div class="legend-dot" style="background:#ff4444;width:14px;height:14px;border-radius:50%;"></div><span>&gt; $5</span></div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#FFD700;width:14px;height:14px;border-radius:50%;"></div><span>$2–$5</span></div>
+                    <div class="legend-item"><div class="legend-dot" style="background:#00cc66;width:14px;height:14px;border-radius:50%;"></div><span>&lt; $2</span></div>`;
+            } else {
+                legend.innerHTML = Object.entries(PLATFORM_COLORS)
+                    .filter(([k]) => streamData.some(p => p.platform === k))
+                    .map(([key, color]) => `<div class="legend-item"><div class="legend-dot" style="background:${color};width:14px;height:14px;border-radius:50%;border:1px solid rgba(255,255,255,0.3);"></div><span>${PLATFORM_LABELS[key]}</span></div>`)
+                    .join('');
+            }
+        }
+
+        function renderStreamTable(data) {
+            const tbody = document.getElementById('streamTableBody');
+            if (!tbody) return;
+            const sorted = [...data].sort((a, b) => b.streams - a.streams);
+            tbody.innerHTML = sorted.map((p, i) => {
+                const platColor = PLATFORM_COLORS[p.platform] || '#888';
+                const gClass = p.growth > 20 ? 'g-high' : p.growth > 10 ? 'g-mid' : 'g-low';
+                const rev = (p.streams * (PLATFORM_PAYOUTS[p.platform]||0)).toFixed(2);
+                const viral = (p.growth * p.streams / 1000).toFixed(1);
+                return `<tr>
+                    <td style="color:#FFD700;font-weight:bold;">${i+1}</td>
+                    <td>${p.flag} ${p.country}</td>
+                    <td><span class="platform-badge" style="background:${platColor}22;color:${platColor};">${PLATFORM_LABELS[p.platform]}</span></td>
+                    <td style="color:#FFD700;font-weight:bold;">${p.streams.toLocaleString()}</td>
+                    <td style="color:#00cc66;">$${rev}</td>
+                    <td>${LANG_FLAGS[p.language]||''} ${p.language}</td>
+                    <td><span class="growth-val ${gClass}">+${p.growth}%</span></td>
+                    <td style="color:#ff9944;font-weight:bold;">${viral}k 🔥</td>
+                </tr>`;
+            }).join('');
+        }
+
+        function getLangFlag(lang) {
+            return (LANG_FLAGS[lang] || '') + ' ' + lang;
+        }
+
+        // =====================================================
+        // LEGACY placeholder (replaced by DEMO_COUNTRIES block below — kept for countriesTableBody compat)
         // =====================================================
         const DEMO_COUNTRIES = [
             { name: 'Madagascar',    flag: '🇲🇬', visitors: 1850, platform: 'YouTube Music', platClass: 'pb-yt', language: 'FR', growth: 32 },
@@ -2698,12 +2900,8 @@
             // Render prayer statistics
             renderPrayerStatistics();
 
-            // Render demo countries table
-            renderCountriesTable();
-
-            // Init demo map markers + legend
-            refreshMapMarkersDemo();
-            updateMapLegend('visitors');
+            // Load stream data from JSON → map + table + summary
+            loadStreamData();
 
             // Premier chargement
             refresh();
