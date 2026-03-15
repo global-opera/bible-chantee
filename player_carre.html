@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bible Chantée Player</title>
+<script src="/js/fr-audio-map.js?v=1"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  @keyframes pulse { 0%,100%{opacity:.2} 50%{opacity:1} }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #c9a84c40; border-radius: 2px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+var useState = React.useState;
+var useEffect = React.useEffect;
+var useRef = React.useRef;
+
+var AUDIO_BASE = "https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev";
+
+var R2_FOLDER_ALIASES = {
+  "26_EZE": "26_EZK", "29_JOE": "29_JOL", "41_MAR": "41_MRK",
+  "43_JOH": "43_JHN", "59_JAM": "59_JAS",
+  "62_1JO": "62_1JN", "63_2JO": "63_2JN", "64_3JO": "64_3JN"
+};
+var R2_FILE_ALIASES = { "43_JOH": "43_JHN", "59_JAM": "59_JAS" };
+
+function resolveR2Codes(book) {
+  return { folder: R2_FOLDER_ALIASES[book] || book, file: R2_FILE_ALIASES[book] || book };
+}
+
+function getAudioUrl(langCode, mode, bookFileCode, chapter, bookIdx) {
+  // Bible audio FR : utiliser les fichiers Suno V5 depuis audio.biblechantee.com
+  if (langCode === "fr" && mode === "audio" && typeof FR_AUDIO_MAP !== "undefined" && bookIdx !== undefined) {
+    var chapData = FR_AUDIO_MAP[bookIdx] && FR_AUDIO_MAP[bookIdx][chapter];
+    if (chapData && chapData.length > 0) {
+      return { primary: chapData[0], fallback: chapData[1] || null, parts: chapData };
+    }
+  }
+  // Autres langues / Bible chantee : URL R2 standard
+  var lang = langCode.toUpperCase();
+  var chStr = String(chapter).padStart(2, "0");
+  var r2 = resolveR2Codes(bookFileCode);
+  var base = AUDIO_BASE + "/" + lang + "/" + r2.folder + "/" + r2.file + "_" + chStr + "_" + lang;
+  return { primary: base + ".mp3", fallback: base + "_v1.mp3", parts: null };
+}
+
+var BOOKS = [
+  { id: "GEN", fc: "01_GEN", ch: 50 }, { id: "EXO", fc: "02_EXO", ch: 40 }, { id: "LEV", fc: "03_LEV", ch: 27 }, { id: "NUM", fc: "04_NUM", ch: 36 }, { id: "DEU", fc: "05_DEU", ch: 34 },
+  { id: "JOS", fc: "06_JOS", ch: 24 }, { id: "JDG", fc: "07_JDG", ch: 21 }, { id: "RUT", fc: "08_RUT", ch: 4 }, { id: "1SA", fc: "09_1SA", ch: 31 }, { id: "2SA", fc: "10_2SA", ch: 24 },
+  { id: "1KI", fc: "11_1KI", ch: 22 }, { id: "2KI", fc: "12_2KI", ch: 25 }, { id: "1CH", fc: "13_1CH", ch: 29 }, { id: "2CH", fc: "14_2CH", ch: 36 }, { id: "EZR", fc: "15_EZR", ch: 10 },
+  { id: "NEH", fc: "16_NEH", ch: 13 }, { id: "EST", fc: "17_EST", ch: 10 }, { id: "JOB", fc: "18_JOB", ch: 42 }, { id: "PSA", fc: "19_PSA", ch: 150 }, { id: "PRO", fc: "20_PRO", ch: 31 },
+  { id: "ECC", fc: "21_ECC", ch: 12 }, { id: "SNG", fc: "22_SNG", ch: 8 }, { id: "ISA", fc: "23_ISA", ch: 66 }, { id: "JER", fc: "24_JER", ch: 52 }, { id: "LAM", fc: "25_LAM", ch: 5 },
+  { id: "EZK", fc: "26_EZK", ch: 48 }, { id: "DAN", fc: "27_DAN", ch: 12 }, { id: "HOS", fc: "28_HOS", ch: 14 }, { id: "JOL", fc: "29_JOL", ch: 3 }, { id: "AMO", fc: "30_AMO", ch: 9 },
+  { id: "OBA", fc: "31_OBA", ch: 1 }, { id: "JON", fc: "32_JON", ch: 4 }, { id: "MIC", fc: "33_MIC", ch: 7 }, { id: "NAH", fc: "34_NAH", ch: 3 }, { id: "HAB", fc: "35_HAB", ch: 3 },
+  { id: "ZEP", fc: "36_ZEP", ch: 3 }, { id: "HAG", fc: "37_HAG", ch: 2 }, { id: "ZEC", fc: "38_ZEC", ch: 14 }, { id: "MAL", fc: "39_MAL", ch: 4 },
+  { id: "MAT", fc: "40_MAT", ch: 28 }, { id: "MAR", fc: "41_MAR", ch: 16 }, { id: "LUK", fc: "42_LUK", ch: 24 }, { id: "JOH", fc: "43_JOH", ch: 21 }, { id: "ACT", fc: "44_ACT", ch: 28 },
+  { id: "ROM", fc: "45_ROM", ch: 16 }, { id: "1CO", fc: "46_1CO", ch: 16 }, { id: "2CO", fc: "47_2CO", ch: 13 }, { id: "GAL", fc: "48_GAL", ch: 6 }, { id: "EPH", fc: "49_EPH", ch: 6 },
+  { id: "PHP", fc: "50_PHP", ch: 4 }, { id: "COL", fc: "51_COL", ch: 4 }, { id: "1TH", fc: "52_1TH", ch: 5 }, { id: "2TH", fc: "53_2TH", ch: 3 }, { id: "1TI", fc: "54_1TI", ch: 6 },
+  { id: "2TI", fc: "55_2TI", ch: 4 }, { id: "TIT", fc: "56_TIT", ch: 3 }, { id: "PHM", fc: "57_PHM", ch: 1 }, { id: "HEB", fc: "58_HEB", ch: 13 }, { id: "JAS", fc: "59_JAS", ch: 5 },
+  { id: "1PE", fc: "60_1PE", ch: 5 }, { id: "2PE", fc: "61_2PE", ch: 3 }, { id: "1JN", fc: "62_1JN", ch: 5 }, { id: "2JN", fc: "63_2JN", ch: 1 }, { id: "3JN", fc: "64_3JN", ch: 1 },
+  { id: "JUD", fc: "65_JUD", ch: 1 }, { id: "REV", fc: "66_REV", ch: 22 },
+];
+
+var BOOK_NAMES = {
+  fr: ["Genèse","Exode","Lévitique","Nombres","Deutéronome","Josué","Juges","Ruth","1 Samuel","2 Samuel","1 Rois","2 Rois","1 Chroniques","2 Chroniques","Esdras","Néhémie","Esther","Job","Psaumes","Proverbes","Ecclésiaste","Cantique des Cantiques","Ésaïe","Jérémie","Lamentations","Ézéchiel","Daniel","Osée","Joël","Amos","Abdias","Jonas","Michée","Nahum","Habacuc","Sophonie","Aggée","Zacharie","Malachie","Matthieu","Marc","Luc","Jean","Actes","Romains","1 Corinthiens","2 Corinthiens","Galates","Éphésiens","Philippiens","Colossiens","1 Thessaloniciens","2 Thessaloniciens","1 Timothée","2 Timothée","Tite","Philémon","Hébreux","Jacques","1 Pierre","2 Pierre","1 Jean","2 Jean","3 Jean","Jude","Apocalypse"],
+  en: ["Genesis","Exodus","Leviticus","Numbers","Deuteronomy","Joshua","Judges","Ruth","1 Samuel","2 Samuel","1 Kings","2 Kings","1 Chronicles","2 Chronicles","Ezra","Nehemiah","Esther","Job","Psalms","Proverbs","Ecclesiastes","Song of Solomon","Isaiah","Jeremiah","Lamentations","Ezekiel","Daniel","Hosea","Joel","Amos","Obadiah","Jonah","Micah","Nahum","Habakkuk","Zephaniah","Haggai","Zechariah","Malachi","Matthew","Mark","Luke","John","Acts","Romans","1 Corinthians","2 Corinthians","Galatians","Ephesians","Philippians","Colossians","1 Thessalonians","2 Thessalonians","1 Timothy","2 Timothy","Titus","Philemon","Hebrews","James","1 Peter","2 Peter","1 John","2 John","3 John","Jude","Revelation"],
+  es: ["Génesis","Éxodo","Levítico","Números","Deuteronomio","Josué","Jueces","Rut","1 Samuel","2 Samuel","1 Reyes","2 Reyes","1 Crónicas","2 Crónicas","Esdras","Nehemías","Ester","Job","Salmos","Proverbios","Eclesiastés","Cantar de los Cantares","Isaías","Jeremías","Lamentaciones","Ezequiel","Daniel","Oseas","Joel","Amós","Abdías","Jonás","Miqueas","Nahúm","Habacuc","Sofonías","Hageo","Zacarías","Malaquías","Mateo","Marcos","Lucas","Juan","Hechos","Romanos","1 Corintios","2 Corintios","Gálatas","Efesios","Filipenses","Colosenses","1 Tesalonicenses","2 Tesalonicenses","1 Timoteo","2 Timoteo","Tito","Filemón","Hebreos","Santiago","1 Pedro","2 Pedro","1 Juan","2 Juan","3 Juan","Judas","Apocalipsis"],
+  de: ["Genesis","Exodus","Levitikus","Numeri","Deuteronomium","Josua","Richter","Rut","1 Samuel","2 Samuel","1 Könige","2 Könige","1 Chronik","2 Chronik","Esra","Nehemia","Ester","Hiob","Psalmen","Sprüche","Prediger","Hohelied","Jesaja","Jeremia","Klagelieder","Hesekiel","Daniel","Hosea","Joel","Amos","Obadja","Jona","Micha","Nahum","Habakuk","Zefanja","Haggai","Sacharja","Maleachi","Matthäus","Markus","Lukas","Johannes","Apostelgeschichte","Römer","1 Korinther","2 Korinther","Galater","Epheser","Philipper","Kolosser","1 Thessalonicher","2 Thessalonicher","1 Timotheus","2 Timotheus","Titus","Philemon","Hebräer","Jakobus","1 Petrus","2 Petrus","1 Johannes","2 Johannes","3 Johannes","Judas","Offenbarung"],
+  it: ["Genesi","Esodo","Levitico","Numeri","Deuteronomio","Giosuè","Giudici","Rut","1 Samuele","2 Samuele","1 Re","2 Re","1 Cronache","2 Cronache","Esdra","Neemia","Ester","Giobbe","Salmi","Proverbi","Ecclesiaste","Cantico dei Cantici","Isaia","Geremia","Lamentazioni","Ezechiele","Daniele","Osea","Gioele","Amos","Abdia","Giona","Michea","Naum","Abacuc","Sofonia","Aggeo","Zaccaria","Malachia","Matteo","Marco","Luca","Giovanni","Atti","Romani","1 Corinzi","2 Corinzi","Galati","Efesini","Filippesi","Colossesi","1 Tessalonicesi","2 Tessalonicesi","1 Timoteo","2 Timoteo","Tito","Filemone","Ebrei","Giacomo","1 Pietro","2 Pietro","1 Giovanni","2 Giovanni","3 Giovanni","Giuda","Apocalisse"],
+  pt: ["Gênesis","Êxodo","Levítico","Números","Deuteronômio","Josué","Juízes","Rute","1 Samuel","2 Samuel","1 Reis","2 Reis","1 Crônicas","2 Crônicas","Esdras","Neemias","Ester","Jó","Salmos","Provérbios","Eclesiastes","Cânticos","Isaías","Jeremias","Lamentações","Ezequiel","Daniel","Oséias","Joel","Amós","Obadias","Jonas","Miquéias","Naum","Habacuque","Sofonias","Ageu","Zacarias","Malaquias","Mateus","Marcos","Lucas","João","Atos","Romanos","1 Coríntios","2 Coríntios","Gálatas","Efésios","Filipenses","Colossenses","1 Tessalonicenses","2 Tessalonicenses","1 Timóteo","2 Timóteo","Tito","Filemom","Hebreus","Tiago","1 Pedro","2 Pedro","1 João","2 João","3 João","Judas","Apocalipse"],
+  tl: ["Genesis","Exodo","Levitico","Mga Bilang","Deuteronomio","Josue","Mga Hukom","Ruth","1 Samuel","2 Samuel","1 Mga Hari","2 Mga Hari","1 Mga Cronica","2 Mga Cronica","Ezra","Nehemias","Ester","Job","Mga Awit","Mga Kawikaan","Mangangaral","Awit ni Solomon","Isaias","Jeremias","Mga Panaghoy","Ezekiel","Daniel","Hosea","Joel","Amos","Obadias","Jonas","Mikas","Nahum","Habakuk","Zefanias","Hagai","Zacarias","Malakias","Mateo","Marcos","Lucas","Juan","Mga Gawa","Roma","1 Corinto","2 Corinto","Galacia","Efeso","Filipos","Colosas","1 Tesalonica","2 Tesalonica","1 Timoteo","2 Timoteo","Tito","Filemon","Mga Hebreo","Santiago","1 Pedro","2 Pedro","1 Juan","2 Juan","3 Juan","Judas","Pahayag"],
+};
+
+var UI = {
+  fr: { chooseLang: "Choisir langue", mainMenu: "Menu principal", bibleSung: "Bible chantée", bibleAudio: "Bible audio", playlists: "Playlists", resume: "Continuer lecture", settings: "Réglages", chapter: "Chapitre", changeLang: "Changer langue", volume: "Volume", brightness: "Luminosité", bluetooth: "Bluetooth", info: "Informations", back: "retour", menu: "Menu", cont: "Continuer", backMenu: "Retour menu", fullBible: "Bible complète", newTestament: "Nouveau Testament", psalms: "Psaumes", plan365: "Plan 365 jours", promises: "Promesses", enabled: "Activé", disabled: "Désactivé", searchDevice: "Rechercher appareil", firmware: "Firmware", memory: "Mémoire", languages: "Langues", books: "Livres" },
+  en: { chooseLang: "Choose language", mainMenu: "Main menu", bibleSung: "Sung Bible", bibleAudio: "Audio Bible", playlists: "Playlists", resume: "Resume playback", settings: "Settings", chapter: "Chapter", changeLang: "Change language", volume: "Volume", brightness: "Brightness", bluetooth: "Bluetooth", info: "Information", back: "back", menu: "Menu", cont: "Continue", backMenu: "Back to menu", fullBible: "Full Bible", newTestament: "New Testament", psalms: "Psalms", plan365: "365 day plan", promises: "Promises", enabled: "Enabled", disabled: "Disabled", searchDevice: "Search device", firmware: "Firmware", memory: "Memory", languages: "Languages", books: "Books" },
+  es: { chooseLang: "Elegir idioma", mainMenu: "Menú principal", bibleSung: "Biblia cantada", bibleAudio: "Biblia audio", playlists: "Listas", resume: "Continuar", settings: "Ajustes", chapter: "Capítulo", changeLang: "Cambiar idioma", volume: "Volumen", brightness: "Brillo", bluetooth: "Bluetooth", info: "Información", back: "volver", menu: "Menú", cont: "Continuar", backMenu: "Volver al menú", fullBible: "Biblia completa", newTestament: "Nuevo Testamento", psalms: "Salmos", plan365: "Plan 365 días", promises: "Promesas", enabled: "Activado", disabled: "Desactivado", searchDevice: "Buscar dispositivo", firmware: "Firmware", memory: "Memoria", languages: "Idiomas", books: "Libros" },
+  de: { chooseLang: "Sprache wählen", mainMenu: "Hauptmenü", bibleSung: "Gesungene Bibel", bibleAudio: "Audio Bibel", playlists: "Playlists", resume: "Wiedergabe fortsetzen", settings: "Einstellungen", chapter: "Kapitel", changeLang: "Sprache ändern", volume: "Lautstärke", brightness: "Helligkeit", bluetooth: "Bluetooth", info: "Informationen", back: "zurück", menu: "Menü", cont: "Fortsetzen", backMenu: "Zurück zum Menü", fullBible: "Ganze Bibel", newTestament: "Neues Testament", psalms: "Psalmen", plan365: "365 Tage Plan", promises: "Verheißungen", enabled: "Aktiviert", disabled: "Deaktiviert", searchDevice: "Gerät suchen", firmware: "Firmware", memory: "Speicher", languages: "Sprachen", books: "Bücher" },
+  it: { chooseLang: "Scegli lingua", mainMenu: "Menu principale", bibleSung: "Bibbia cantata", bibleAudio: "Bibbia audio", playlists: "Playlist", resume: "Riprendi ascolto", settings: "Impostazioni", chapter: "Capitolo", changeLang: "Cambia lingua", volume: "Volume", brightness: "Luminosità", bluetooth: "Bluetooth", info: "Informazioni", back: "indietro", menu: "Menu", cont: "Continua", backMenu: "Torna al menu", fullBible: "Bibbia completa", newTestament: "Nuovo Testamento", psalms: "Salmi", plan365: "Piano 365 giorni", promises: "Promesse", enabled: "Attivato", disabled: "Disattivato", searchDevice: "Cerca dispositivo", firmware: "Firmware", memory: "Memoria", languages: "Lingue", books: "Libri" },
+  pt: { chooseLang: "Escolher idioma", mainMenu: "Menu principal", bibleSung: "Bíblia cantada", bibleAudio: "Bíblia áudio", playlists: "Playlists", resume: "Continuar", settings: "Configurações", chapter: "Capítulo", changeLang: "Mudar idioma", volume: "Volume", brightness: "Brilho", bluetooth: "Bluetooth", info: "Informações", back: "voltar", menu: "Menu", cont: "Continuar", backMenu: "Voltar ao menu", fullBible: "Bíblia completa", newTestament: "Novo Testamento", psalms: "Salmos", plan365: "Plano 365 dias", promises: "Promessas", enabled: "Ativado", disabled: "Desativado", searchDevice: "Procurar dispositivo", firmware: "Firmware", memory: "Memória", languages: "Idiomas", books: "Livros" },
+  tl: { chooseLang: "Pumili ng wika", mainMenu: "Pangunahing menu", bibleSung: "Kinantang Biblia", bibleAudio: "Audio Biblia", playlists: "Mga Playlist", resume: "Ipagpatuloy", settings: "Mga Setting", chapter: "Kabanata", changeLang: "Palitan ang wika", volume: "Volume", brightness: "Liwanag", bluetooth: "Bluetooth", info: "Impormasyon", back: "bumalik", menu: "Menu", cont: "Ipagpatuloy", backMenu: "Balik sa menu", fullBible: "Buong Biblia", newTestament: "Bagong Tipan", psalms: "Mga Awit", plan365: "Plano 365 araw", promises: "Mga Pangako", enabled: "Naka-on", disabled: "Naka-off", searchDevice: "Maghanap ng device", firmware: "Firmware", memory: "Memorya", languages: "Mga Wika", books: "Mga Aklat" },
+};
+
+var LANGUAGES = [
+  { code: "fr", flag: "\u{1F1EB}\u{1F1F7}", label: "Français" },
+  { code: "en", flag: "\u{1F1FA}\u{1F1F8}", label: "English" },
+  { code: "es", flag: "\u{1F1EA}\u{1F1F8}", label: "Español" },
+  { code: "de", flag: "\u{1F1E9}\u{1F1EA}", label: "Deutsch" },
+  { code: "it", flag: "\u{1F1EE}\u{1F1F9}", label: "Italiano" },
+  { code: "pt", flag: "\u{1F1E7}\u{1F1F7}", label: "Português" },
+  { code: "tl", flag: "\u{1F1F5}\u{1F1ED}", label: "Tagalog" },
+];
+
+var navy = "#0f1740"; var navyLight = "#1a2454"; var navyMid = "#243068";
+var screenBg = "#0a1230"; var screenText = "#d4daf0";
+var gold = "#c9a84c"; var goldLight = "#e2c96a"; var goldDim = "#8a7434";
+var white = "#f0ede4"; var whiteDim = "#a0a8c0";
+
+function fmtTime(s) { var m = Math.floor(s / 60); var sec = s % 60; return String(m).padStart(2, "0") + ":" + String(sec).padStart(2, "0"); }
+
+function BarSlider(props) {
+  var filled = Math.round((props.value / (props.max || 10)) * 10);
+  return (<div style={{ fontFamily: "monospace", fontSize: 22, letterSpacing: 2, color: gold }}>{"\u2588".repeat(filled)}<span style={{ opacity: 0.2, color: whiteDim }}>{"\u2588".repeat(10 - filled)}</span></div>);
+}
+
+function ScreenTitle(props) {
+  return (<div style={{ color: gold, fontSize: 13, fontWeight: 700, letterSpacing: 1.5, marginBottom: 6, textTransform: "uppercase", textAlign: "center", borderBottom: "1px solid " + navyMid, paddingBottom: 5 }}>{props.label}</div>);
+}
+
+function MenuItem(props) {
+  return (<div onClick={props.onClick} style={{ padding: "5px 10px", cursor: "pointer", fontSize: 14, fontWeight: props.isSelected ? 700 : 400, color: props.isSelected ? navy : screenText, background: props.isSelected ? gold : "transparent", borderRadius: 4, transition: "all 0.1s" }}>{props.flag ? props.flag + " " + props.label : props.label}</div>);
+}
+
+function PhysBtn(props) {
+  return (<button onClick={props.onClick} style={{ width: 36, height: 36, background: props.accent ? "linear-gradient(180deg, " + gold + ", " + goldDim + ")" : "linear-gradient(180deg, " + navyMid + ", " + navy + ")", border: "1.5px solid " + (props.accent ? gold : gold + "40"), borderRadius: 7, color: props.accent ? navy : gold, fontSize: 13, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: props.accent ? "0 2px 6px " + gold + "30, inset 0 1px 0 rgba(255,255,255,0.15)" : "0 2px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)" }} onMouseDown={function(e) { e.currentTarget.style.transform = "scale(0.93)"; }} onMouseUp={function(e) { e.currentTarget.style.transform = "scale(1)"; }}>{props.label}</button>);
+}
+
+function SmallBtn(props) {
+  return (<button onClick={props.onClick} style={{ background: navyMid, border: "1px solid " + gold + "50", color: gold, borderRadius: 6, width: 36, height: 36, cursor: "pointer", fontSize: 18, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center" }}>{props.label}</button>);
+}
+
+function BibleChanteePlayer() {
+  var _s = useState("boot"); var screen = _s[0]; var setScreen = _s[1];
+  var _bp = useState(0); var bootPhase = _bp[0]; var setBootPhase = _bp[1];
+  var _l = useState(0); var lang = _l[0]; var setLang = _l[1];
+  var _mi = useState(0); var mainIdx = _mi[0]; var setMainIdx = _mi[1];
+  var _bi = useState(0); var bookIdx = _bi[0]; var setBookIdx = _bi[1];
+  var _ci = useState(0); var chapIdx = _ci[0]; var setChapIdx = _ci[1];
+  var _pi = useState(0); var playlistIdx = _pi[0]; var setPlaylistIdx = _pi[1];
+  var _si = useState(0); var settingsIdx = _si[0]; var setSettingsIdx = _si[1];
+  var _bti = useState(0); var btIdx = _bti[0]; var setBtIdx = _bti[1];
+  var _pl = useState(false); var playing = _pl[0]; var setPlaying = _pl[1];
+  var _el = useState(0); var elapsed = _el[0]; var setElapsed = _el[1];
+  var _dur = useState(0); var duration = _dur[0]; var setDuration = _dur[1];
+  var _vo = useState(6); var vol = _vo[0]; var setVol = _vo[1];
+  var _br = useState(5); var bright = _br[0]; var setBright = _br[1];
+  var _qu = useState(null); var queuedUrl = _qu[0]; var setQueuedUrl = _qu[1];
+  var audioRef = useRef(null);
+
+  var langCode = LANGUAGES[lang].code;
+  var t = UI[langCode];
+  function bookName(idx) { return BOOK_NAMES[langCode][idx]; }
+
+  useEffect(function() { audioRef.current = new Audio(); audioRef.current.preload = "metadata"; return function() { if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; } }; }, []);
+  useEffect(function() { if (audioRef.current) audioRef.current.volume = vol / 10; }, [vol]);
+
+  useEffect(function() {
+    if (!audioRef.current) return;
+    var audio = audioRef.current;
+    function onTime() { setElapsed(Math.floor(audio.currentTime)); }
+    function onMeta() { setDuration(Math.floor(audio.duration) || 0); }
+    function onEnded() {
+      // Si une partie suivante est en file, la jouer
+      if (queuedUrl) {
+        var nextUrl = queuedUrl;
+        setQueuedUrl(null);
+        setElapsed(0); setDuration(0);
+        audio.src = nextUrl; audio.load(); audio.play().catch(function() {});
+        return;
+      }
+      // Sinon avancer au chapitre/livre suivant
+      if (chapIdx < BOOKS[bookIdx].ch - 1) { setChapIdx(function(c) { return c + 1; }); }
+      else if (bookIdx < BOOKS.length - 1) { setBookIdx(function(b) { return b + 1; }); setChapIdx(0); }
+      else { setPlaying(false); }
+    }
+    audio.addEventListener("timeupdate", onTime); audio.addEventListener("loadedmetadata", onMeta); audio.addEventListener("ended", onEnded);
+    return function() { audio.removeEventListener("timeupdate", onTime); audio.removeEventListener("loadedmetadata", onMeta); audio.removeEventListener("ended", onEnded); };
+  }, [bookIdx, chapIdx, queuedUrl]);
+
+  function loadAndPlay(bIdx, cIdx) {
+    if (!audioRef.current) return;
+    var audio = audioRef.current;
+    var mode = (screen === "playSang" || screen === "chapterSang" || screen === "bookSang") ? "sang" : "audio";
+    var urls = getAudioUrl(langCode, mode, BOOKS[bIdx].fc, cIdx + 1, bIdx);
+    var triedFallback = false;
+    // Stocker la partie 2 en file si elle existe
+    setQueuedUrl((urls.parts && urls.parts.length > 1) ? urls.parts[1] : null);
+    audio.onerror = function() { if (!triedFallback && urls.fallback) { triedFallback = true; audio.src = urls.fallback; audio.load(); audio.play().catch(function() {}); } };
+    audio.src = urls.primary; audio.load(); setElapsed(0); setDuration(0); audio.play().catch(function() {}); setPlaying(true);
+  }
+
+  useEffect(function() { if (!audioRef.current || !audioRef.current.src) return; if (playing) { audioRef.current.play().catch(function() {}); } else { audioRef.current.pause(); } }, [playing]);
+  useEffect(function() { if (screen !== "boot") return; var t1 = setTimeout(function() { setBootPhase(1); }, 2000); var t2 = setTimeout(function() { setScreen("lang"); }, 2800); return function() { clearTimeout(t1); clearTimeout(t2); }; }, [screen]);
+
+  function goMain(i) { setMainIdx(i); if (i === 0) setScreen("bookSang"); if (i === 1) setScreen("bookAudio"); if (i === 2) setScreen("playlists"); if (i === 3) setScreen("resume"); if (i === 4) setScreen("settings"); }
+  function goSettings(i) { setSettingsIdx(i); if (i === 0) setScreen("lang"); if (i === 1) setScreen("volume"); if (i === 2) setScreen("brightness"); if (i === 3) setScreen("bluetooth"); if (i === 4) setScreen("info"); }
+  function selectBook(idx) { setBookIdx(idx); setChapIdx(0); if (screen === "bookSang") setScreen("chapterSang"); else setScreen("chapterAudio"); }
+  function selectChapter(idx) { setChapIdx(idx); if (screen === "chapterSang") setScreen("playSang"); else setScreen("playAudio"); setTimeout(function() { loadAndPlay(bookIdx, idx); }, 50); }
+
+  var curLang = LANGUAGES[lang]; var curBook = BOOKS[bookIdx]; var totalTime = duration || 1;
+  var mainMenuItems = [t.bibleSung, t.bibleAudio, t.playlists, t.resume, t.settings];
+  var settingsItems = [t.changeLang, t.volume, t.brightness, t.bluetooth, t.info];
+  var playlistItems = [t.fullBible, t.newTestament, t.psalms, t.plan365, t.promises];
+  var btOptions = [t.enabled, t.disabled, t.searchDevice];
+
+  return (
+    <div style={{ minHeight: "100vh", background: "linear-gradient(145deg, #2a1f0a 0%, #1a1508 40%, #0d0f1a 100%)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <div style={{ width: 330, height: 330, background: "linear-gradient(160deg, " + navyLight + ", " + navy + ")", borderRadius: 22, boxShadow: "0 0 0 2.5px " + gold + "50, 0 0 0 5px " + navy + ", 0 24px 60px rgba(0,0,0,0.7)", padding: 14, display: "flex", flexDirection: "column", gap: 14 }}>
+        <div style={{ background: screenBg, borderRadius: 12, border: "2.5px solid " + gold, height: 202, boxSizing: "border-box", display: "flex", flexDirection: "column", overflow: "hidden", boxShadow: "inset 0 2px 10px rgba(0,0,0,0.7), 0 0 14px " + gold + "12", filter: "brightness(" + (0.6 + bright * 0.06) + ")" }}>
+
+          {screen === "boot" && (
+            <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", opacity: bootPhase === 1 ? 0 : 1, transition: "opacity 0.6s", background: "#1a2460" }}>
+              <div style={{ width: 180, height: 160, borderRadius: 18, border: "3px solid " + gold, background: "linear-gradient(180deg, #232b6a 0%, #1a2158 100%)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden", boxShadow: "0 0 20px " + gold + "20" }}>
+                <svg width="160" height="90" viewBox="0 0 160 90" style={{ position: "absolute", top: 20 }}><line x1="10" y1="18" x2="150" y2="18" stroke={gold} strokeWidth="1.5" opacity="0.7" /><line x1="10" y1="33" x2="150" y2="33" stroke={gold} strokeWidth="1.5" opacity="0.7" /><line x1="10" y1="48" x2="150" y2="48" stroke={gold} strokeWidth="1.5" opacity="0.7" /><line x1="10" y1="63" x2="150" y2="63" stroke={gold} strokeWidth="1.5" opacity="0.7" /><line x1="10" y1="78" x2="150" y2="78" stroke={gold} strokeWidth="1.5" opacity="0.7" /></svg>
+                <div style={{ fontSize: 72, color: gold, lineHeight: 1, marginTop: -8, filter: "drop-shadow(0 2px 8px " + gold + "60)", fontFamily: "serif", zIndex: 1 }}>{"\u{1D11E}"}</div>
+                <div style={{ color: gold, fontSize: 14, fontWeight: 700, letterSpacing: 2, fontFamily: "Georgia, serif", marginTop: -4, zIndex: 1 }}>Bible</div>
+              </div>
+              <div style={{ color: gold, fontSize: 14, fontWeight: 700, letterSpacing: 2, fontFamily: "Georgia, serif", marginTop: 8 }}>Chantée</div>
+              <div style={{ color: whiteDim, fontSize: 11, letterSpacing: 3, fontWeight: 300, marginTop: 2 }}>Player</div>
+              <div style={{ display: "flex", gap: 6, marginTop: 8 }}><div style={{ width: 5, height: 5, borderRadius: "50%", background: gold, animation: "pulse 1.2s 0s infinite" }} /><div style={{ width: 5, height: 5, borderRadius: "50%", background: gold, animation: "pulse 1.2s 0.3s infinite" }} /><div style={{ width: 5, height: 5, borderRadius: "50%", background: gold, animation: "pulse 1.2s 0.6s infinite" }} /></div>
+            </div>
+          )}
+
+          {screen === "lang" && (<div style={{ flex: 1, padding: "8px 12px 6px", display: "flex", flexDirection: "column", overflow: "hidden" }}><ScreenTitle label={t.chooseLang} /><div style={{ flex: 1, overflowY: "auto" }}>{LANGUAGES.map(function(l, i) { return <MenuItem key={i} label={l.label} flag={l.flag} isSelected={i === lang} onClick={function() { if (i === lang) { setScreen("main"); } else { setLang(i); setTimeout(function() { setScreen("main"); }, 150); } }} />; })}</div></div>)}
+
+          {screen === "main" && (<div style={{ flex: 1, padding: "8px 12px 6px", display: "flex", flexDirection: "column", overflow: "hidden" }}><div style={{ borderTop: "1px solid " + navyMid, marginBottom: 4 }}><ScreenTitle label={t.mainMenu} /></div><div style={{ flex: 1, overflowY: "auto", borderBottom: "1px solid " + gold }}><div style={{ display: "flex", flexDirection: "column", gap: 2 }}>{mainMenuItems.map(function(item, i) { return <MenuItem key={i} label={item} isSelected={i === mainIdx} onClick={function() { goMain(i); }} />; })}</div></div></div>)}
+
+          {(screen === "bookSang" || screen === "bookAudio") && (<div style={{ flex: 1, padding: "8px 12px 6px", display: "flex", flexDirection: "column", overflow: "hidden" }}><ScreenTitle label={screen === "bookSang" ? t.bibleSung : t.bibleAudio} /><div style={{ flex: 1, overflowY: "auto" }}>{BOOKS.map(function(b, i) { return <MenuItem key={b.id} label={bookName(i)} isSelected={i === bookIdx} onClick={function() { selectBook(i); }} />; })}</div></div>)}
+
+          {(screen === "chapterSang" || screen === "chapterAudio") && (<div style={{ flex: 1, padding: "8px 12px 6px", display: "flex", flexDirection: "column", overflow: "hidden" }}><ScreenTitle label={bookName(bookIdx)} /><div style={{ flex: 1, overflowY: "auto" }}>{Array.from({ length: curBook.ch }, function(_, i) { return i; }).map(function(ci) { return <MenuItem key={ci} label={t.chapter + " " + (ci + 1)} isSelected={ci === chapIdx} onClick={function() { selectChapter(ci); }} />; })}</div></div>)}
+
+          {(screen === "playSang" || screen === "playAudio") && (
+            <div style={{ flex: 1, padding: "8px 12px 6px", display: "flex", flexDirection: "column", gap: 0 }}>
+              <div style={{ color: gold, fontSize: 13, fontWeight: 700, letterSpacing: 1.5, textTransform: "uppercase", textAlign: "center", paddingBottom: 8, borderBottom: "1px solid " + navyMid }}>{screen === "playSang" ? t.bibleSung : t.bibleAudio}</div>
+              <div style={{ color: whiteDim, fontSize: 12, textAlign: "center", padding: "8px 0 4px" }}>{curLang.flag} {curLang.label}</div>
+              <div style={{ textAlign: "center", padding: "6px 0 12px" }}><div style={{ color: white, fontSize: 18, fontWeight: 700 }}>{bookName(bookIdx)}</div><div style={{ color: goldLight, fontSize: 15, marginTop: 2 }}>{t.chapter} {chapIdx + 1}</div></div>
+              <div style={{ padding: "0 4px" }}>
+                <div onClick={function(e) { var rect = e.currentTarget.getBoundingClientRect(); var x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left; var pct = Math.max(0, Math.min(1, x / rect.width)); var newTime = Math.round(pct * totalTime); setElapsed(newTime); if (audioRef.current && audioRef.current.duration) { audioRef.current.currentTime = newTime; } }} style={{ height: 14, cursor: "pointer", display: "flex", alignItems: "center", position: "relative" }}>
+                  <div style={{ height: 3, width: "100%", background: navyMid, borderRadius: 2, overflow: "hidden" }}><div style={{ height: "100%", width: ((elapsed / totalTime) * 100) + "%", background: "linear-gradient(90deg, " + gold + ", " + goldLight + ")", transition: "width 0.3s linear" }} /></div>
+                  <div style={{ position: "absolute", left: ((elapsed / totalTime) * 100) + "%", top: "50%", width: 10, height: 10, borderRadius: "50%", background: gold, transform: "translate(-50%, -50%)", boxShadow: "0 0 4px " + gold + "80" }} />
+                </div>
+                <div style={{ display: "flex", justifyContent: "space-between", marginTop: 2, color: whiteDim, fontSize: 11 }}><span>{fmtTime(elapsed)}</span><span>{fmtTime(totalTime)}</span></div>
+              </div>
+              <div style={{ textAlign: "center", marginTop: 8 }}><span onClick={function() { setScreen("main"); }} style={{ color: goldDim, fontSize: 11, cursor: "pointer" }}>{"\u2630"} {t.menu}</span></div>
+            </div>
+          )}
+
+          {screen === "resume" && (<div style={{ flex: 1, padding: "8px 12px 6px", display: "flex", flexDirection: "column", overflow: "hidden" }}><ScreenTitle label={t.resume} /><div style={{ background: navyMid + "40", borderRadius: 8, padding: "10px 12px", margin: "4px 0 12px", border: "1px solid " + gold + "25" }}><div style={{ color: gold, fontSize: 13, padding: "2px 0" }}>{curLang.label}</div><div style={{ color: screenText, fontSize: 13, padding: "2px 0" }}>{t.bibleSung}</div><div style={{ color: screenText, fontSize: 13, padding: "2px 0" }}>{bookName(18)}</div><div style={{ color: white, fontSize: 13, padding: "2px 0" }}>{t.chapter} 23</div></div><div onClick={function() { setBookIdx(18); setChapIdx(22); setScreen("playSang"); setPlaying(true); }} style={{ padding: "7px 10px", background: gold, borderRadius: 6, color: navy, fontWeight: 700, fontSize: 13, cursor: "pointer", textAlign: "center", marginBottom: 4 }}>{"\u25B6"} {t.cont}</div><div onClick={function() { setScreen("main"); }} style={{ padding: "7px 10px", background: navyMid, borderRadius: 6, color: screenText, fontSize: 13, cursor: "pointer", textAlign: "center", border: "1px solid " + gold + "30" }}>{t.backMenu}</div></div>)}
+
+          {screen === "playlists" && (<div style={{ flex: 1, padding: "8px 12px 6px", display: "flex", flexDirection: "column", overflow: "hidden" }}><div style={{ borderTop: "1px solid " + navyMid, marginBottom: 4 }}><ScreenTitle label={t.playlists} /></div><div style={{ flex: 1, overflowY: "auto", borderBottom: "1px solid " + gold }}><div style={{ display: "flex", flexDirection: "column", gap: 2 }}>{playlistItems.map(function(p, i) { return <MenuItem key={i} label={p} isSelected={i === playlistIdx} onClick={function() { setPlaylistIdx(i); }} />; })}</div></div></div>)}
+
+          {screen === "settings" && (<div style={{ flex: 1, padding: "8px 12px 6px", display: "flex", flexDirection: "column", overflow: "hidden" }}><div style={{ borderTop: "1px solid " + navyMid, marginBottom: 4 }}><ScreenTitle label={t.settings} /></div><div style={{ flex: 1, overflowY: "auto", borderBottom: "1px solid " + gold }}><div style={{ display: "flex", flexDirection: "column", gap: 2 }}>{settingsItems.map(function(s, i) { return <MenuItem key={i} label={s} isSelected={i === settingsIdx} onClick={function() { goSettings(i); }} />; })}</div></div></div>)}
+
+          {screen === "volume" && (<div style={{ flex: 1, padding: "8px 12px 6px" }}><ScreenTitle label={t.volume} /><div style={{ marginTop: 24, display: "flex", flexDirection: "column", gap: 20, alignItems: "center" }}><BarSlider value={vol} /><div style={{ display: "flex", gap: 16 }}><SmallBtn label={"\u2212"} onClick={function() { setVol(function(v) { return Math.max(0, v - 1); }); }} /><SmallBtn label="+" onClick={function() { setVol(function(v) { return Math.min(10, v + 1); }); }} /></div><span onClick={function() { setScreen("settings"); }} style={{ color: goldDim, fontSize: 12, cursor: "pointer" }}>{"\u25C0"} {t.back}</span></div></div>)}
+
+          {screen === "brightness" && (<div style={{ flex: 1, padding: "8px 12px 6px" }}><ScreenTitle label={t.brightness} /><div style={{ marginTop: 24, display: "flex", flexDirection: "column", gap: 20, alignItems: "center" }}><BarSlider value={bright} /><div style={{ display: "flex", gap: 16 }}><SmallBtn label={"\u2212"} onClick={function() { setBright(function(v) { return Math.max(1, v - 1); }); }} /><SmallBtn label="+" onClick={function() { setBright(function(v) { return Math.min(10, v + 1); }); }} /></div><span onClick={function() { setScreen("settings"); }} style={{ color: goldDim, fontSize: 12, cursor: "pointer" }}>{"\u25C0"} {t.back}</span></div></div>)}
+
+          {screen === "bluetooth" && (<div style={{ flex: 1, padding: "8px 12px 6px" }}><ScreenTitle label={t.bluetooth} /><div style={{ display: "flex", flexDirection: "column", gap: 2 }}>{btOptions.map(function(b, i) { return <MenuItem key={i} label={b} isSelected={i === btIdx} onClick={function() { setBtIdx(i); }} />; })}</div><span onClick={function() { setScreen("settings"); }} style={{ color: goldDim, fontSize: 12, cursor: "pointer", display: "block", marginTop: 12, textAlign: "center" }}>{"\u25C0"} {t.back}</span></div>)}
+
+          {screen === "info" && (<div style={{ flex: 1, padding: "8px 12px 6px", display: "flex", flexDirection: "column", overflow: "hidden" }}><div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}><div style={{ fontSize: 24, color: gold }}>{"\u{1D11E}"}</div><div style={{ color: gold, fontSize: 13, fontWeight: 700, letterSpacing: 1 }}>Bible Chantée Player</div></div><div style={{ flex: 1, overflowY: "auto" }}><div style={{ background: navyMid + "40", borderRadius: 8, padding: "8px 12px", border: "1px solid " + gold + "20" }}>{[[t.firmware, "1.1"], [t.memory, "128 GB"], [t.languages, "7"], [t.books, "66 \u00D7 7"]].map(function(row) { return (<div key={row[0]} style={{ display: "flex", justifyContent: "space-between", padding: "3px 0", borderBottom: "1px solid " + navyMid, fontSize: 12 }}><span style={{ color: whiteDim }}>{row[0]}</span><span style={{ color: gold }}>{row[1]}</span></div>); })}</div></div><span onClick={function() { setScreen("settings"); }} style={{ color: goldDim, fontSize: 12, cursor: "pointer", textAlign: "center", display: "block", paddingTop: 4 }}>{"\u25C0"} {t.back}</span></div>)}
+
+        </div>
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <PhysBtn label={"\u25C0\u25C0"} onClick={function() { if (screen === "playSang" || screen === "playAudio") { var newB = Math.max(0, bookIdx - 1); setBookIdx(newB); setChapIdx(0); loadAndPlay(newB, 0); } }} />
+          <PhysBtn label={"\u25C0"} onClick={function() { if (screen === "playSang" || screen === "playAudio") { var newC = Math.max(0, chapIdx - 1); setChapIdx(newC); loadAndPlay(bookIdx, newC); } }} />
+          <PhysBtn label={playing ? "\u23F8" : "\u25B6"} accent={playing} onClick={function() { if (screen === "playSang" || screen === "playAudio") setPlaying(function(p) { return !p; }); }} />
+          <PhysBtn label={"\u25B6"} onClick={function() { if (screen === "playSang" || screen === "playAudio") { var newC = Math.min(BOOKS[bookIdx].ch - 1, chapIdx + 1); setChapIdx(newC); loadAndPlay(bookIdx, newC); } }} />
+          <PhysBtn label={"\u25B6\u25B6"} onClick={function() { if (screen === "playSang" || screen === "playAudio") { var newB = Math.min(BOOKS.length - 1, bookIdx + 1); setBookIdx(newB); setChapIdx(0); loadAndPlay(newB, 0); } }} />
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <button onClick={function() { setScreen("lang"); }} style={{ width: 36, height: 36, background: "linear-gradient(180deg, " + navyMid + ", " + navy + ")", border: "1.5px solid " + gold + "40", borderRadius: 8, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 2px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)", padding: 0 }} onMouseDown={function(e) { e.currentTarget.style.transform = "scale(0.93)"; }} onMouseUp={function(e) { e.currentTarget.style.transform = "scale(1)"; }}>
+            <svg width="26" height="26" viewBox="0 0 26 26"><text x="3" y="17" fill={gold} fontSize="12" fontWeight="700" fontFamily="serif">A</text><line x1="12" y1="4" x2="14" y2="22" stroke={gold} strokeWidth="1" opacity="0.5" /><line x1="16" y1="9" x2="24" y2="9" stroke={gold} strokeWidth="2" strokeLinecap="round" /><line x1="16" y1="14" x2="24" y2="14" stroke={gold} strokeWidth="2" strokeLinecap="round" /><line x1="16" y1="19" x2="24" y2="19" stroke={gold} strokeWidth="2" strokeLinecap="round" /></svg>
+          </button>
+          <div style={{ width: 110, height: 36, borderRadius: 7, border: "1.5px solid " + gold, background: "linear-gradient(180deg, #232b6a 0%, #1a2158 100%)", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", overflow: "hidden", cursor: "pointer" }}>
+            <svg width="110" height="36" viewBox="0 0 110 36" style={{ position: "absolute", top: 0, left: 0 }}><line x1="6" y1="8" x2="104" y2="8" stroke={gold} strokeWidth="0.8" opacity="0.5" /><line x1="6" y1="14" x2="104" y2="14" stroke={gold} strokeWidth="0.8" opacity="0.5" /><line x1="6" y1="20" x2="104" y2="20" stroke={gold} strokeWidth="0.8" opacity="0.5" /><line x1="6" y1="26" x2="104" y2="26" stroke={gold} strokeWidth="0.8" opacity="0.5" /><line x1="6" y1="32" x2="104" y2="32" stroke={gold} strokeWidth="0.8" opacity="0.5" /></svg>
+            <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", gap: 4 }}>
+              <span style={{ color: gold, fontSize: 28, lineHeight: 1, fontFamily: "serif", filter: "drop-shadow(0 1px 3px rgba(0,0,0,0.5))" }}>{"\u{1D11E}"}</span>
+              <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.1 }}><span style={{ color: gold, fontSize: 9, fontWeight: 700, letterSpacing: 1, fontFamily: "Georgia, serif" }}>Bible</span><span style={{ color: gold, fontSize: 9, fontWeight: 700, letterSpacing: 1, fontFamily: "Georgia, serif" }}>Chantée</span></div>
+            </div>
+          </div>
+          <PhysBtn label={"\u2630"} onClick={function() { setScreen("main"); }} />
+        </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<BibleChanteePlayer />);
+</script>
+</body>
+</html>
