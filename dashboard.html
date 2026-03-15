@@ -715,9 +715,10 @@
 
             <!-- Map Tabs -->
             <div class="map-tabs">
-                <button class="map-tab active" id="mapTabPlatform" onclick="setMapView('platform')">🎵 Vue Plateforme</button>
-                <button class="map-tab" id="mapTabLanguage" onclick="setMapView('language')">🌐 Vue Langue</button>
-                <button class="map-tab" id="mapTabRevenue" onclick="setMapView('revenue')">💰 Vue Revenus</button>
+                <button class="map-tab active" id="mapTabPlatform" onclick="setMapView('platform')">🎵 Plateforme</button>
+                <button class="map-tab" id="mapTabDiscovery" onclick="setMapView('discovery')">🔍 Découverte GA4</button>
+                <button class="map-tab" id="mapTabLanguage" onclick="setMapView('language')">🌐 Langue</button>
+                <button class="map-tab" id="mapTabRevenue" onclick="setMapView('revenue')">💰 Revenus</button>
             </div>
 
             <div id="map"></div>
@@ -745,6 +746,37 @@
                         <tbody id="streamTableBody"><!-- Filled by JS --></tbody>
                     </table>
                 </div>
+            </div>
+        </div>
+
+        <!-- Intelligence Marketing Section -->
+        <div class="breakdown-section">
+            <div class="section-title"><span class="section-emoji">💡</span> Intelligence Marketing (données réelles GA4)</div>
+            <div class="breakdown-grid">
+
+                <!-- Entry Platform -->
+                <div class="breakdown-panel">
+                    <h3>🔍 Plateforme d'entrée par pays</h3>
+                    <p style="color:#888;font-size:0.75rem;margin-bottom:10px;">Comment les visiteurs découvrent Bible Chantée</p>
+                    <div id="entryPlatformList" style="max-height:320px;overflow-y:auto;">
+                        <p style="color:#888;font-size:0.85rem;">Chargement GA4...</p>
+                    </div>
+                </div>
+
+                <!-- Viral Countries -->
+                <div class="breakdown-panel">
+                    <h3>🔥 Pays viraux</h3>
+                    <p style="color:#888;font-size:0.75rem;margin-bottom:10px;">Score = croissance × écoutes — marchés à pousser</p>
+                    <div id="viralCountriesList"></div>
+                </div>
+
+                <!-- Revenue by Platform -->
+                <div class="breakdown-panel">
+                    <h3>💰 Revenus estimés par plateforme</h3>
+                    <p style="color:#888;font-size:0.75rem;margin-bottom:10px;">Spotify $0.0035 · Apple $0.007 · YouTube $0.001 · Amazon $0.004 · Deezer $0.006</p>
+                    <div id="revenuePlatformList"></div>
+                </div>
+
             </div>
         </div>
 
@@ -2549,6 +2581,14 @@
                 updateActivity(filteredData);
                 updateMap(validCountries);
                 setDataSource(true);
+
+                // Merge real GA4 data into platform map
+                mergeGA4IntoStreamData(data);
+
+                // Render intelligence panels with real data
+                renderEntryPlatforms(data.sourceByCountry || {});
+                renderViralCountries();
+                renderRevenueSummary();
             } else {
                 setDataSource(false, 'Erreur connexion API GA4');
             }
@@ -2603,6 +2643,8 @@
                     renderStreamMap(data);
                     renderStreamTable(data);
                     updateMapLegend('platform');
+                    renderViralCountries();
+                    renderRevenueSummary();
                 })
                 .catch(err => console.warn('platform-streams.json:', err));
         }
@@ -2653,6 +2695,10 @@
                 } else if (currentMapView === 'revenue') {
                     const rev = p.streams * (PLATFORM_PAYOUTS[p.platform]||0);
                     color = rev > 5 ? '#ff4444' : rev > 2 ? '#FFD700' : '#00cc66';
+                } else if (currentMapView === 'discovery') {
+                    // Use real GA4 entry platform if available
+                    const discPlat = p.ga4Source ? (sourceToPlatform(p.ga4Source) || 'google') : p.platform;
+                    color = PLATFORM_COLORS[discPlat] || '#aaa';
                 } else {
                     color = PLATFORM_COLORS[p.platform] || '#888';
                 }
@@ -2693,6 +2739,10 @@
                     .filter(([c]) => streamData.some(p => p.language === c))
                     .map(([code, color]) => `<div class="legend-item"><div class="legend-dot" style="background:${color};width:14px;height:14px;border-radius:50%;"></div><span>${LANG_FLAGS[code]||''} ${LANG_NAMES[code]||code}</span></div>`)
                     .join('');
+            } else if (view === 'discovery') {
+                legend.innerHTML = Object.entries(PLATFORM_COLORS)
+                    .map(([key, color]) => `<div class="legend-item"><div class="legend-dot" style="background:${color};width:14px;height:14px;border-radius:50%;border:1px solid rgba(255,255,255,0.3);"></div><span>${PLATFORM_LABELS[key]} (entrée)</span></div>`)
+                    .join('') + `<div class="legend-item"><div class="legend-dot" style="background:#aaa;width:14px;height:14px;border-radius:50%;"></div><span>Google/Direct</span></div>`;
             } else if (view === 'revenue') {
                 legend.innerHTML = `
                     <div class="legend-item"><div class="legend-dot" style="background:#ff4444;width:14px;height:14px;border-radius:50%;"></div><span>&gt; $5</span></div>
@@ -2885,6 +2935,180 @@
                 `;
             }
         }
+
+        // =====================================================
+        // GA4 REAL DATA → MAP INTEGRATION
+        // =====================================================
+
+        // GA4 source → platform key
+        function sourceToPlatform(source) {
+            if (!source) return null;
+            const s = source.toLowerCase();
+            if (s.includes('youtube') || s.includes('youtu.be')) return 'youtube';
+            if (s.includes('spotify')) return 'spotify';
+            if (s.includes('apple') || s.includes('itunes')) return 'apple';
+            if (s.includes('amazon') || s.includes('alexa')) return 'amazon';
+            if (s.includes('deezer')) return 'deezer';
+            if (s.includes('facebook') || s.includes('fb.com') || s.includes('instagram')) return 'facebook';
+            return null; // google/direct = pas une plateforme musicale
+        }
+
+        // Merge real GA4 visitor counts + entry platforms into streamData
+        function mergeGA4IntoStreamData(apiData) {
+            const ga4Countries = apiData.today?.countries || [];
+            const sourceByCountry = apiData.sourceByCountry || {};
+
+            // Build name→{visitors, source} map (case-insensitive)
+            const ga4Map = {};
+            ga4Countries.forEach(c => {
+                ga4Map[c.name.toLowerCase()] = {
+                    visitors: c.visitors,
+                    source: sourceByCountry[c.name]?.source || null
+                };
+            });
+
+            // Update existing streamData entries
+            streamData = streamData.map(p => {
+                const key = Object.keys(ga4Map).find(k =>
+                    k === p.country.toLowerCase() ||
+                    k.includes(p.country.toLowerCase().slice(0, 5)) ||
+                    p.country.toLowerCase().includes(k.slice(0, 5))
+                );
+                if (!key) return p;
+                const ga4 = ga4Map[key];
+                const realPlatform = sourceToPlatform(ga4.source);
+                return {
+                    ...p,
+                    streams: ga4.visitors || p.streams,
+                    platform: realPlatform || p.platform,
+                    ga4Source: ga4.source
+                };
+            });
+
+            // Add GA4 countries not in streamData
+            ga4Countries.forEach(c => {
+                if (c.visitors < 1) return;
+                const exists = streamData.some(p =>
+                    p.country.toLowerCase() === c.name.toLowerCase() ||
+                    c.name.toLowerCase().includes(p.country.toLowerCase().slice(0, 5))
+                );
+                if (!exists) {
+                    const coords = window.getCountryCoords ? window.getCountryCoords(c.name) : null;
+                    if (!coords) return;
+                    const srcData = sourceByCountry[c.name];
+                    streamData.push({
+                        country: c.name,
+                        flag: coords.flag || '',
+                        lat: coords.lat, lng: coords.lng,
+                        platform: sourceToPlatform(srcData?.source) || 'youtube',
+                        streams: c.visitors,
+                        language: 'EN', growth: 0,
+                        ga4Source: srcData?.source || null
+                    });
+                }
+            });
+
+            // Re-render everything with real data
+            renderStreamSummary(streamData);
+            renderStreamMap(streamData);
+            renderStreamTable(streamData);
+            updateMapLegend(currentMapView);
+            renderViralCountries();
+            renderRevenueSummary();
+        }
+
+        // Render entry platform by country (from GA4 sourceByCountry)
+        function renderEntryPlatforms(sourceByCountry) {
+            const el = document.getElementById('entryPlatformList');
+            if (!el) return;
+            const entries = Object.entries(sourceByCountry)
+                .filter(([, v]) => v.users > 0)
+                .sort((a, b) => b[1].users - a[1].users)
+                .slice(0, 20);
+
+            if (entries.length === 0) {
+                el.innerHTML = '<p style="color:#888;font-size:0.85rem;">Données GA4 non disponibles</p>';
+                return;
+            }
+            el.innerHTML = entries.map(([country, data]) => {
+                const platKey = sourceToPlatform(data.source);
+                const color = platKey ? (PLATFORM_COLORS[platKey] || '#aaa') : '#aaa';
+                const label = platKey ? (PLATFORM_LABELS[platKey] || data.source) : (data.source || 'direct');
+                const coords = window.getCountryCoords ? window.getCountryCoords(country) : null;
+                const flag = coords?.flag || '';
+                return `<div style="display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+                    <span style="font-size:0.82rem;">${flag} ${country}</span>
+                    <span class="platform-badge" style="background:${color}22;color:${color};">${label}</span>
+                    <span style="color:#aaa;font-size:0.72rem;">${data.users} vis.</span>
+                </div>`;
+            }).join('');
+        }
+
+        // Render top viral countries
+        function renderViralCountries() {
+            const el = document.getElementById('viralCountriesList');
+            if (!el || !streamData.length) return;
+            const top7 = [...streamData]
+                .filter(p => p.growth > 0)
+                .sort((a, b) => (b.growth * b.streams) - (a.growth * a.streams))
+                .slice(0, 7);
+            const maxScore = top7[0] ? top7[0].growth * top7[0].streams : 1;
+
+            el.innerHTML = top7.map(p => {
+                const score = p.growth * p.streams;
+                const barW  = Math.round((score / maxScore) * 100);
+                const color = PLATFORM_COLORS[p.platform] || '#FFD700';
+                const label = score >= 1000 ? (score/1000).toFixed(1)+'k' : score;
+                return `<div class="growth-item">
+                    <div class="growth-label">${p.flag} ${p.country}</div>
+                    <div class="growth-track">
+                        <div class="growth-track-fill" style="width:${barW}%;background:linear-gradient(90deg,${color},${color}88);">
+                            +${p.growth}% · ${label}
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+        }
+
+        // Render revenue breakdown by platform
+        function renderRevenueSummary() {
+            const el = document.getElementById('revenuePlatformList');
+            if (!el || !streamData.length) return;
+            const revByPlat = {};
+            const streamsByPlat = {};
+            streamData.forEach(p => {
+                const rev = p.streams * (PLATFORM_PAYOUTS[p.platform] || 0);
+                revByPlat[p.platform]    = (revByPlat[p.platform]    || 0) + rev;
+                streamsByPlat[p.platform] = (streamsByPlat[p.platform] || 0) + p.streams;
+            });
+            const sorted = Object.entries(revByPlat).sort((a, b) => b[1] - a[1]);
+            const maxRev = sorted[0]?.[1] || 1;
+            const totalRev = sorted.reduce((s, [, v]) => s + v, 0);
+
+            el.innerHTML = sorted.map(([plat, rev]) => {
+                const color  = PLATFORM_COLORS[plat] || '#888';
+                const barW   = Math.round((rev / maxRev) * 100);
+                const payout = PLATFORM_PAYOUTS[plat] || 0;
+                const streams = streamsByPlat[plat] || 0;
+                const pct = Math.round((rev / totalRev) * 100);
+                return `<div class="bbar-item">
+                    <div class="bbar-header">
+                        <span style="color:${color};">${PLATFORM_LABELS[plat]||plat}</span>
+                        <span style="color:#00cc66;font-weight:bold;">$${rev.toFixed(2)} <small style="color:#888;">(${pct}%)</small></span>
+                    </div>
+                    <div class="bbar-bg">
+                        <div class="bbar-fill" style="width:${barW}%;background:${color};">
+                            ${streams.toLocaleString()} × $${payout}
+                        </div>
+                    </div>
+                </div>`;
+            }).join('') + `<div style="margin-top:10px;text-align:right;color:#00cc66;font-weight:bold;">
+                Total estimé : $${totalRev.toFixed(2)}
+            </div>`;
+        }
+
+        // Handle discovery view in map (uses ga4Source)
+        const _origRenderStreamMap = renderStreamMap;
 
         // =====================================================
         // INITIALISATION
