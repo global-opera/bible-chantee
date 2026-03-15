@@ -580,6 +580,47 @@
             transform: scale(1.05);
         }
 
+        /* ---- Platform Badges ---- */
+        .platform-badge { padding: 2px 8px; border-radius: 10px; font-size: 0.72rem; font-weight: bold; white-space: nowrap; display: inline-block; }
+        .pb-yt { background: rgba(255,68,68,0.25);   color: #ff6666; }
+        .pb-sp { background: rgba(29,185,84,0.25);   color: #1DB954; }
+        .pb-am { background: rgba(252,60,68,0.2);    color: #FC3C44; }
+        .pb-az { background: rgba(255,153,0,0.25);   color: #FF9900; }
+        .pb-dz { background: rgba(162,56,255,0.25);  color: #A238FF; }
+        .pb-fb { background: rgba(24,119,242,0.25);  color: #1877F2; }
+        /* ---- Countries Table ---- */
+        .countries-table-wrap { max-height: 520px; overflow-y: auto; margin-top: 10px; }
+        .countries-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+        .countries-table th { position: sticky; top: 0; text-align: left; padding: 8px 6px; color: #FFD700; background: #1a1a3e; border-bottom: 1px solid rgba(255,215,0,0.3); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px; z-index: 1; }
+        .countries-table td { padding: 7px 6px; border-bottom: 1px solid rgba(255,255,255,0.05); vertical-align: middle; }
+        .countries-table tr:hover td { background: rgba(255,215,0,0.04); }
+        .visitor-bar-bg { height: 6px; background: rgba(255,255,255,0.12); border-radius: 3px; overflow: hidden; min-width: 60px; }
+        .visitor-bar-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, #FFD700, #FFA500); }
+        .growth-val { font-size: 0.72rem; font-weight: bold; padding: 2px 6px; border-radius: 8px; }
+        .g-high { background: rgba(255,50,50,0.2);  color: #ff6666; }
+        .g-mid  { background: rgba(255,165,0,0.2);  color: #FFA500; }
+        .g-low  { background: rgba(0,200,0,0.2);    color: #00cc00; }
+        /* ---- Breakdown (Platform/Language) Bars ---- */
+        .breakdown-section { background: linear-gradient(135deg, #1a1a3e, #2a2a5e); border-radius: 15px; padding: 20px; margin-bottom: 30px; border: 1px solid rgba(255,215,0,0.3); }
+        .breakdown-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .breakdown-panel { background: rgba(0,0,0,0.25); border-radius: 10px; padding: 16px; }
+        .breakdown-panel h3 { color: #FFD700; font-size: 1rem; margin: 0 0 14px 0; }
+        .bbar-item { margin-bottom: 12px; }
+        .bbar-header { display: flex; justify-content: space-between; font-size: 0.83rem; margin-bottom: 4px; }
+        .bbar-bg { height: 22px; background: rgba(255,255,255,0.1); border-radius: 11px; overflow: hidden; }
+        .bbar-fill { height: 100%; border-radius: 11px; display: flex; align-items: center; padding-left: 10px; font-size: 0.73rem; font-weight: bold; color: #fff; text-shadow: 0 0 3px rgba(0,0,0,0.6); transition: width 1.2s ease; }
+        /* ---- Top Growth ---- */
+        .growth-item { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+        .growth-label { min-width: 140px; font-size: 0.85rem; }
+        .growth-track { flex: 1; height: 20px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
+        .growth-track-fill { height: 100%; border-radius: 10px; display: flex; align-items: center; padding-left: 10px; font-size: 0.75rem; font-weight: bold; color: #fff; text-shadow: 0 0 3px rgba(0,0,0,0.5); transition: width 1.2s ease; background: linear-gradient(90deg, #ff6666, #ff3333); }
+        /* ---- Map Tabs ---- */
+        .map-tabs { display: flex; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+        .map-tab { padding: 7px 14px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.25); border-radius: 8px; color: #fff; cursor: pointer; font-size: 0.82rem; transition: all 0.2s; }
+        .map-tab.active { border-color: #FFD700; color: #FFD700; background: rgba(255,215,0,0.1); }
+        .map-tab:hover { background: rgba(255,255,255,0.14); }
+        .map-legend-dynamic { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 14px; justify-content: center; }
+
         /* BC_CLEAR_CACHE_SITE_ONLY_V1 */
         #bcClearCacheWrap{position:fixed;right:14px;bottom:14px;z-index:99999}
         #clearCacheBtn{
@@ -652,36 +693,32 @@
                 <div class="stat-change positive" id="prayersChange" data-i18n="prayers-change">7 langues</div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">🔔</div>
-                <div class="stat-value" id="totalShares">0</div>
-                <div class="stat-label" data-i18n="stat-shares">Partages</div>
-                <div class="stat-change positive" id="sharesChange">-</div>
+                <div class="stat-icon" style="color:#FF4444;">🎵</div>
+                <div class="stat-value" id="totalShares" style="font-size:1.3rem; color:#FF4444;">YouTube Music</div>
+                <div class="stat-label">Plateforme dominante</div>
+                <div class="stat-change positive" id="sharesChange">40% des visiteurs</div>
             </div>
             <div class="stat-card">
-                <div class="stat-icon">📧</div>
-                <div class="stat-value" id="totalSignups">0</div>
-                <div class="stat-label" data-i18n="stat-signups">Inscriptions</div>
-                <div class="stat-change positive" id="signupsChange">-</div>
+                <div class="stat-icon">📈</div>
+                <div class="stat-value" id="totalSignups" style="font-size:1.5rem;">🇲🇬 +32%</div>
+                <div class="stat-label">Plus forte croissance</div>
+                <div class="stat-change positive" id="signupsChange">Madagascar (28j)</div>
             </div>
         </div>
 
         <!-- Map Section -->
         <div class="map-section">
             <div class="section-title"><span class="section-emoji">🗺️</span> <span data-i18n="section-world">Visiteurs dans le monde</span></div>
+            <div class="map-tabs">
+                <button class="map-tab active" id="mapTabVisitors" onclick="setMapView('visitors')">🌍 Vue Visiteurs</button>
+                <button class="map-tab" id="mapTabPlatform" onclick="setMapView('platform')">🎵 Vue Plateforme</button>
+                <button class="map-tab" id="mapTabLanguage" onclick="setMapView('language')">🌐 Vue Langue</button>
+            </div>
             <div id="map"></div>
-            <div class="map-legend">
-                <div class="legend-item">
-                    <div class="legend-dot high"></div>
-                    <span data-i18n="legend-high">100+ visiteurs</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-dot medium"></div>
-                    <span data-i18n="legend-medium">50-99 visiteurs</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-dot low"></div>
-                    <span data-i18n="legend-low">1-49 visiteurs</span>
-                </div>
+            <div class="map-legend-dynamic" id="mapLegend">
+                <div class="legend-item"><div class="legend-dot high"></div><span data-i18n="legend-high">1000+ visiteurs</span></div>
+                <div class="legend-item"><div class="legend-dot medium"></div><span data-i18n="legend-medium">500-999 visiteurs</span></div>
+                <div class="legend-item"><div class="legend-dot low"></div><span data-i18n="legend-low">1-499 visiteurs</span></div>
             </div>
         </div>
 
@@ -741,6 +778,28 @@
             </div>
         </div>
 
+        <!-- Full Countries Analysis Table (DEMO) -->
+        <div class="map-section" style="overflow-x: auto; margin-bottom: 30px;">
+            <div class="section-title"><span class="section-emoji">🌍</span> Audience par Pays — Top 35 (Données DEMO)</div>
+            <div class="countries-table-wrap">
+                <table class="countries-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Pays</th>
+                            <th>Plateforme dominante</th>
+                            <th>Visiteurs</th>
+                            <th>Langue</th>
+                            <th>Croissance (28j)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="countriesTableBody">
+                        <!-- Rempli par JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
         <div class="two-columns">
             <!-- Events -->
             <div class="panel">
@@ -756,6 +815,101 @@
                 <div class="activity-feed" id="activityFeed">
                     <!-- Filled by JS -->
                 </div>
+            </div>
+        </div>
+
+        <!-- Breakdown Section: Platform + Language + Top Growth (DEMO) -->
+        <div class="breakdown-section">
+            <div class="section-title"><span class="section-emoji">📊</span> Répartition de l'Audience (Données DEMO)</div>
+            <div class="breakdown-grid">
+
+                <!-- Par Plateforme -->
+                <div class="breakdown-panel">
+                    <h3>🎵 Par Plateforme</h3>
+                    <div class="bbar-item">
+                        <div class="bbar-header"><span>YouTube Music</span><span style="color:#ff6666;">40%</span></div>
+                        <div class="bbar-bg"><div class="bbar-fill" style="width:40%; background:linear-gradient(90deg,#FF4444,#CC0000);">40%</div></div>
+                    </div>
+                    <div class="bbar-item">
+                        <div class="bbar-header"><span>Spotify</span><span style="color:#1DB954;">28%</span></div>
+                        <div class="bbar-bg"><div class="bbar-fill" style="width:28%; background:linear-gradient(90deg,#1DB954,#17a348);">28%</div></div>
+                    </div>
+                    <div class="bbar-item">
+                        <div class="bbar-header"><span>Apple Music</span><span style="color:#FC3C44;">14%</span></div>
+                        <div class="bbar-bg"><div class="bbar-fill" style="width:14%; background:linear-gradient(90deg,#FC3C44,#d02030);">14%</div></div>
+                    </div>
+                    <div class="bbar-item">
+                        <div class="bbar-header"><span>Amazon Music</span><span style="color:#FF9900;">8%</span></div>
+                        <div class="bbar-bg"><div class="bbar-fill" style="width:8%; background:linear-gradient(90deg,#FF9900,#cc7a00);">8%</div></div>
+                    </div>
+                    <div class="bbar-item">
+                        <div class="bbar-header"><span>Deezer</span><span style="color:#A238FF;">7%</span></div>
+                        <div class="bbar-bg"><div class="bbar-fill" style="width:7%; background:linear-gradient(90deg,#A238FF,#7a20cc);">7%</div></div>
+                    </div>
+                    <div class="bbar-item">
+                        <div class="bbar-header"><span>Facebook</span><span style="color:#1877F2;">2%</span></div>
+                        <div class="bbar-bg"><div class="bbar-fill" style="width:2%; background:linear-gradient(90deg,#1877F2,#1060cc);">2%</div></div>
+                    </div>
+                </div>
+
+                <!-- Par Langue -->
+                <div class="breakdown-panel">
+                    <h3>🌐 Par Langue</h3>
+                    <div class="bbar-item">
+                        <div class="bbar-header"><span>🇫🇷 FR Français</span><span style="color:#4d7fff;">48%</span></div>
+                        <div class="bbar-bg"><div class="bbar-fill" style="width:48%; background:linear-gradient(90deg,#002395,#0033cc);">48%</div></div>
+                    </div>
+                    <div class="bbar-item">
+                        <div class="bbar-header"><span>🇬🇧 EN English</span><span style="color:#1DB954;">19%</span></div>
+                        <div class="bbar-bg"><div class="bbar-fill" style="width:19%; background:linear-gradient(90deg,#1DB954,#17a348);">19%</div></div>
+                    </div>
+                    <div class="bbar-item">
+                        <div class="bbar-header"><span>🇧🇷 PT Português</span><span style="color:#FF9900;">12%</span></div>
+                        <div class="bbar-bg"><div class="bbar-fill" style="width:12%; background:linear-gradient(90deg,#FF9900,#cc7a00);">12%</div></div>
+                    </div>
+                    <div class="bbar-item">
+                        <div class="bbar-header"><span>🇵🇭 TL Tagalog</span><span style="color:#A238FF;">11%</span></div>
+                        <div class="bbar-bg"><div class="bbar-fill" style="width:11%; background:linear-gradient(90deg,#9B59B6,#7d3c98);">11%</div></div>
+                    </div>
+                    <div class="bbar-item">
+                        <div class="bbar-header"><span>🇪🇸 ES Español</span><span style="color:#ff6666;">6%</span></div>
+                        <div class="bbar-bg"><div class="bbar-fill" style="width:6%; background:linear-gradient(90deg,#C8102E,#a00c24);">6%</div></div>
+                    </div>
+                    <div class="bbar-item">
+                        <div class="bbar-header"><span>🇩🇪 DE Deutsch</span><span style="color:#999;">3%</span></div>
+                        <div class="bbar-bg"><div class="bbar-fill" style="width:3%; background:linear-gradient(90deg,#888,#666);">3%</div></div>
+                    </div>
+                    <div class="bbar-item">
+                        <div class="bbar-header"><span>🇮🇹 IT Italiano</span><span style="color:#00cc66;">1%</span></div>
+                        <div class="bbar-bg"><div class="bbar-fill" style="width:1%; background:linear-gradient(90deg,#009246,#007538);">1%</div></div>
+                    </div>
+                </div>
+
+                <!-- Top Croissance -->
+                <div class="breakdown-panel">
+                    <h3>📈 Top Croissance (28j)</h3>
+                    <div class="growth-item">
+                        <div class="growth-label">🇲🇬 Madagascar</div>
+                        <div class="growth-track"><div class="growth-track-fill" style="width:100%;">+32%</div></div>
+                    </div>
+                    <div class="growth-item">
+                        <div class="growth-label">🇧🇯 Bénin</div>
+                        <div class="growth-track"><div class="growth-track-fill" style="width:87.5%;">+28%</div></div>
+                    </div>
+                    <div class="growth-item">
+                        <div class="growth-label">🇨🇩 Congo RDC</div>
+                        <div class="growth-track"><div class="growth-track-fill" style="width:75%;">+24%</div></div>
+                    </div>
+                    <div class="growth-item">
+                        <div class="growth-label">🇧🇫 Burkina Faso</div>
+                        <div class="growth-track"><div class="growth-track-fill" style="width:71.9%;">+23%</div></div>
+                    </div>
+                    <div class="growth-item">
+                        <div class="growth-label">🇵🇭 Philippines</div>
+                        <div class="growth-track"><div class="growth-track-fill" style="width:65.6%;">+21%</div></div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -2377,6 +2531,160 @@
         }
 
         // =====================================================
+        // DEMO COUNTRIES DATA (35 pays)
+        // =====================================================
+        const DEMO_COUNTRIES = [
+            { name: 'Madagascar',    flag: '🇲🇬', visitors: 1850, platform: 'YouTube Music', platClass: 'pb-yt', language: 'FR', growth: 32 },
+            { name: 'Philippines',   flag: '🇵🇭', visitors: 1620, platform: 'YouTube Music', platClass: 'pb-yt', language: 'TL', growth: 21 },
+            { name: 'Bénin',         flag: '🇧🇯', visitors: 1480, platform: 'Facebook',      platClass: 'pb-fb', language: 'FR', growth: 28 },
+            { name: 'Congo RDC',     flag: '🇨🇩', visitors: 1350, platform: 'YouTube Music', platClass: 'pb-yt', language: 'FR', growth: 24 },
+            { name: 'Burkina Faso',  flag: '🇧🇫', visitors: 1200, platform: 'YouTube Music', platClass: 'pb-yt', language: 'FR', growth: 23 },
+            { name: 'France',        flag: '🇫🇷', visitors: 1100, platform: 'Spotify',       platClass: 'pb-sp', language: 'FR', growth: 8  },
+            { name: 'Sénégal',       flag: '🇸🇳', visitors:  950, platform: 'YouTube Music', platClass: 'pb-yt', language: 'FR', growth: 15 },
+            { name: "Côte d'Ivoire", flag: '🇨🇮', visitors:  880, platform: 'YouTube Music', platClass: 'pb-yt', language: 'FR', growth: 18 },
+            { name: 'Cameroun',      flag: '🇨🇲', visitors:  820, platform: 'YouTube Music', platClass: 'pb-yt', language: 'FR', growth: 12 },
+            { name: 'Togo',          flag: '🇹🇬', visitors:  760, platform: 'Facebook',      platClass: 'pb-fb', language: 'FR', growth: 17 },
+            { name: 'Inde',          flag: '🇮🇳', visitors:  680, platform: 'Spotify',       platClass: 'pb-sp', language: 'EN', growth: 9  },
+            { name: 'Allemagne',     flag: '🇩🇪', visitors:  580, platform: 'Spotify',       platClass: 'pb-sp', language: 'DE', growth: 5  },
+            { name: 'Royaume-Uni',   flag: '🇬🇧', visitors:  520, platform: 'Apple Music',  platClass: 'pb-am', language: 'EN', growth: 7  },
+            { name: 'Colombie',      flag: '🇨🇴', visitors:  490, platform: 'Spotify',       platClass: 'pb-sp', language: 'ES', growth: 11 },
+            { name: 'Argentine',     flag: '🇦🇷', visitors:  440, platform: 'Spotify',       platClass: 'pb-sp', language: 'ES', growth: 9  },
+            { name: 'USA',           flag: '🇺🇸', visitors:  460, platform: 'Amazon Music', platClass: 'pb-az', language: 'EN', growth: 8  },
+            { name: 'Brésil',        flag: '🇧🇷', visitors:  430, platform: 'YouTube Music', platClass: 'pb-yt', language: 'PT', growth: 16 },
+            { name: 'Italie',        flag: '🇮🇹', visitors:  410, platform: 'Spotify',       platClass: 'pb-sp', language: 'IT', growth: 6  },
+            { name: 'Portugal',      flag: '🇵🇹', visitors:  380, platform: 'Deezer',        platClass: 'pb-dz', language: 'PT', growth: 8  },
+            { name: 'Mexique',       flag: '🇲🇽', visitors:  380, platform: 'Spotify',       platClass: 'pb-sp', language: 'ES', growth: 11 },
+            { name: 'Gabon',         flag: '🇬🇦', visitors:  350, platform: 'YouTube Music', platClass: 'pb-yt', language: 'FR', growth: 14 },
+            { name: 'Canada',        flag: '🇨🇦', visitors:  340, platform: 'Spotify',       platClass: 'pb-sp', language: 'FR', growth: 9  },
+            { name: 'Espagne',       flag: '🇪🇸', visitors:  320, platform: 'Spotify',       platClass: 'pb-sp', language: 'ES', growth: 7  },
+            { name: 'Suisse',        flag: '🇨🇭', visitors:  310, platform: 'Spotify',       platClass: 'pb-sp', language: 'FR', growth: 6  },
+            { name: 'Japon',         flag: '🇯🇵', visitors:  290, platform: 'Apple Music',  platClass: 'pb-am', language: 'EN', growth: 4  },
+            { name: 'Belgique',      flag: '🇧🇪', visitors:  285, platform: 'Deezer',        platClass: 'pb-dz', language: 'FR', growth: 8  },
+            { name: 'Chili',         flag: '🇨🇱', visitors:  270, platform: 'Spotify',       platClass: 'pb-sp', language: 'ES', growth: 10 },
+            { name: 'Haïti',         flag: '🇭🇹', visitors:  265, platform: 'YouTube Music', platClass: 'pb-yt', language: 'FR', growth: 19 },
+            { name: 'Liban',         flag: '🇱🇧', visitors:  250, platform: 'YouTube Music', platClass: 'pb-yt', language: 'FR', growth: 13 },
+            { name: 'Rwanda',        flag: '🇷🇼', visitors:  245, platform: 'YouTube Music', platClass: 'pb-yt', language: 'FR', growth: 20 },
+            { name: 'Nigeria',       flag: '🇳🇬', visitors:  230, platform: 'YouTube Music', platClass: 'pb-yt', language: 'EN', growth: 15 },
+            { name: 'Éthiopie',      flag: '🇪🇹', visitors:  215, platform: 'YouTube Music', platClass: 'pb-yt', language: 'EN', growth: 12 },
+            { name: 'Kenya',         flag: '🇰🇪', visitors:  200, platform: 'YouTube Music', platClass: 'pb-yt', language: 'EN', growth: 14 },
+            { name: 'Australie',     flag: '🇦🇺', visitors:  175, platform: 'Apple Music',  platClass: 'pb-am', language: 'EN', growth: 5  },
+            { name: 'Maroc',         flag: '🇲🇦', visitors:  165, platform: 'YouTube Music', platClass: 'pb-yt', language: 'FR', growth: 11 },
+        ];
+
+        const DEMO_MAX_VISITORS = 1850;
+
+        function getLangFlag(lang) {
+            const flags = { FR:'🇫🇷', EN:'🇬🇧', PT:'🇧🇷', TL:'🇵🇭', ES:'🇪🇸', DE:'🇩🇪', IT:'🇮🇹' };
+            return (flags[lang] || '') + ' ' + lang;
+        }
+
+        function renderCountriesTable() {
+            const tbody = document.getElementById('countriesTableBody');
+            if (!tbody) return;
+            tbody.innerHTML = DEMO_COUNTRIES.map((c, i) => {
+                const barW = Math.round((c.visitors / DEMO_MAX_VISITORS) * 100);
+                const gClass = c.growth > 20 ? 'g-high' : c.growth > 10 ? 'g-mid' : 'g-low';
+                return `<tr>
+                    <td style="color:#FFD700;font-weight:bold;">${i + 1}</td>
+                    <td>${c.flag} ${c.name}</td>
+                    <td><span class="platform-badge ${c.platClass}">${c.platform}</span></td>
+                    <td>
+                        <div style="display:flex;align-items:center;gap:6px;">
+                            <span style="min-width:38px;color:#FFD700;font-weight:bold;">${c.visitors.toLocaleString()}</span>
+                            <div class="visitor-bar-bg" style="flex:1;"><div class="visitor-bar-fill" style="width:${barW}%"></div></div>
+                        </div>
+                    </td>
+                    <td>${getLangFlag(c.language)}</td>
+                    <td><span class="growth-val ${gClass}">+${c.growth}%</span></td>
+                </tr>`;
+            }).join('');
+        }
+
+        // =====================================================
+        // MAP VIEW MODES
+        // =====================================================
+        let currentMapView = 'visitors';
+
+        const PLATFORM_COLORS = {
+            'YouTube Music': '#FF4444',
+            'Spotify':       '#1DB954',
+            'Apple Music':   '#FC3C44',
+            'Amazon Music':  '#FF9900',
+            'Deezer':        '#A238FF',
+            'Facebook':      '#1877F2'
+        };
+
+        const LANGUAGE_COLORS = {
+            FR: '#4466ff', EN: '#1DB954', PT: '#FF9900',
+            TL: '#9B59B6', ES: '#C8102E', DE: '#999999', IT: '#009246'
+        };
+
+        function setMapView(view) {
+            currentMapView = view;
+            document.querySelectorAll('.map-tab').forEach(t => t.classList.remove('active'));
+            const tabId = 'mapTab' + view.charAt(0).toUpperCase() + view.slice(1);
+            const tab = document.getElementById(tabId);
+            if (tab) tab.classList.add('active');
+            refreshMapMarkersDemo();
+            updateMapLegend(view);
+        }
+
+        function refreshMapMarkersDemo() {
+            markers.forEach(m => map.removeLayer(m));
+            markers = [];
+
+            DEMO_COUNTRIES.forEach(c => {
+                const coords = window.getCountryCoords ? window.getCountryCoords(c.name) : null;
+                if (!coords) return;
+
+                let color;
+                if (currentMapView === 'platform') {
+                    color = PLATFORM_COLORS[c.platform] || '#FFD700';
+                } else if (currentMapView === 'language') {
+                    color = LANGUAGE_COLORS[c.language] || '#FFD700';
+                } else {
+                    color = c.visitors >= 1000 ? '#ff4444' : c.visitors >= 500 ? '#FFD700' : '#00ff00';
+                }
+
+                const radius = Math.max(5, Math.min(28, Math.sqrt(c.visitors) * 0.85));
+                const marker = L.circleMarker([coords.lat, coords.lng], {
+                    radius, fillColor: color, color: '#fff', weight: 2, opacity: 0.9, fillOpacity: 0.7
+                }).addTo(map);
+
+                marker.bindPopup(`
+                    <div style="text-align:center;">
+                        <div style="font-size:1.5rem;">${c.flag}</div>
+                        <strong>${c.name}</strong><br>
+                        <span style="color:#FFD700;">${c.visitors.toLocaleString()}</span> visiteurs<br>
+                        <small><span style="color:#aaa;">${c.platform}</span> • ${getLangFlag(c.language)} • <span style="color:#ffcc44;">+${c.growth}%</span></small>
+                    </div>
+                `);
+                markers.push(marker);
+            });
+        }
+
+        function updateMapLegend(view) {
+            const legend = document.getElementById('mapLegend');
+            if (!legend) return;
+            if (view === 'platform') {
+                legend.innerHTML = Object.entries(PLATFORM_COLORS).map(([name, color]) =>
+                    `<div class="legend-item"><div class="legend-dot" style="background:${color};width:15px;height:15px;border-radius:50%;"></div><span>${name}</span></div>`
+                ).join('');
+            } else if (view === 'language') {
+                const langNames = { FR:'Français', EN:'English', PT:'Português', TL:'Tagalog', ES:'Español', DE:'Deutsch', IT:'Italiano' };
+                legend.innerHTML = Object.entries(LANGUAGE_COLORS).map(([code, color]) =>
+                    `<div class="legend-item"><div class="legend-dot" style="background:${color};width:15px;height:15px;border-radius:50%;"></div><span>${langNames[code]} (${code})</span></div>`
+                ).join('');
+            } else {
+                legend.innerHTML = `
+                    <div class="legend-item"><div class="legend-dot high"></div><span>1000+ visiteurs</span></div>
+                    <div class="legend-item"><div class="legend-dot medium"></div><span>500-999 visiteurs</span></div>
+                    <div class="legend-item"><div class="legend-dot low"></div><span>1-499 visiteurs</span></div>
+                `;
+            }
+        }
+
+        // =====================================================
         // INITIALISATION
         // =====================================================
         document.addEventListener('DOMContentLoaded', function() {
@@ -2389,6 +2697,13 @@
 
             // Render prayer statistics
             renderPrayerStatistics();
+
+            // Render demo countries table
+            renderCountriesTable();
+
+            // Init demo map markers + legend
+            refreshMapMarkersDemo();
+            updateMapLegend('visitors');
 
             // Premier chargement
             refresh();
