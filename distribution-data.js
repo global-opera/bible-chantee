@@ -1,10 +1,9 @@
 // BibleChantée – Distribution mondiale – Données plateformes V2
-// ⚠️  bibleChanteeUrl : à compléter manuellement plateforme par plateforme
-// ⚠️  availabilityStatus : à confirmer — valeurs possibles : "live" | "pending" | "unknown" | "not_applicable"
+// ⚠️ bibleChanteeUrl : à compléter manuellement plateforme par plateforme
+// ⚠️ availabilityStatus : à confirmer — valeurs possibles : "live" | "pending" | "unknown" | "not_applicable"
 window.distributionData = {
   platforms: [
-
-    // ── SPOTIFY ECOSYSTEM ──────────────────────────────────────────────────────
+    // ── SPOTIFY ECOSYSTEM ────────────────────────────────────────────────────────
     {
       id: "spotify",
       name: "Spotify",
@@ -21,8 +20,7 @@ window.distributionData = {
       notes: "",
       lastCheckedAt: ""
     },
-
-    // ── APPLE ECOSYSTEM ────────────────────────────────────────────────────────
+    // ── APPLE ECOSYSTEM ──────────────────────────────────────────────────────────
     {
       id: "apple-music",
       name: "Apple Music",
@@ -55,8 +53,7 @@ window.distributionData = {
       notes: "",
       lastCheckedAt: ""
     },
-
-    // ── YOUTUBE / GOOGLE ECOSYSTEM ─────────────────────────────────────────────
+    // ── YOUTUBE / GOOGLE ECOSYSTEM ───────────────────────────────────────────────
     {
       id: "youtube-music",
       name: "YouTube Music",
@@ -73,8 +70,7 @@ window.distributionData = {
       notes: "",
       lastCheckedAt: ""
     },
-
-    // ── AMAZON ECOSYSTEM ───────────────────────────────────────────────────────
+    // ── AMAZON ECOSYSTEM ─────────────────────────────────────────────────────────
     {
       id: "amazon-music",
       name: "Amazon Music",
@@ -91,8 +87,7 @@ window.distributionData = {
       notes: "",
       lastCheckedAt: ""
     },
-
-    // ── AUDIO STREAMING ALTERNATIF ─────────────────────────────────────────────
+    // ── AUDIO STREAMING ALTERNATIF ───────────────────────────────────────────────
     {
       id: "deezer",
       name: "Deezer",
@@ -173,8 +168,7 @@ window.distributionData = {
       notes: "",
       lastCheckedAt: ""
     },
-
-    // ── SOCIAL MEDIA ───────────────────────────────────────────────────────────
+    // ── SOCIAL MEDIA ─────────────────────────────────────────────────────────────
     {
       id: "instagram",
       name: "Instagram",
@@ -222,217 +216,26 @@ window.distributionData = {
       availabilityStatus: "unknown",
       notes: "",
       lastCheckedAt: ""
-    },
-
-    // ── PLATEFORMES RÉGIONALES ─────────────────────────────────────────────────
-    {
-      id: "anghami",
-      name: "Anghami",
-      category: "regional",
-      ecosystem: "Moyen-Orient",
-      color: "#FF8C00",
-      region: "MENA",
-      lat: 33.8938, lng: 35.5018, city: "Beyrouth",
-      regions: ["Moyen-Orient", "Afrique du Nord"],
-      icon: "🌍",
-      officialUrl: "https://www.anghami.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
-      notes: "",
-      lastCheckedAt: ""
-    },
-    {
-      id: "boomplay",
-      name: "Boomplay",
-      category: "regional",
-      ecosystem: "Afrique",
-      color: "#FF8C00",
-      region: "Afrique",
-      lat: 6.5244, lng: 3.3792, city: "Lagos",
-      regions: ["Afrique"],
-      icon: "🌍",
-      officialUrl: "https://www.boomplay.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
-      notes: "",
-      lastCheckedAt: ""
-    },
-    {
-      id: "joox",
-      name: "Joox",
-      category: "regional",
-      ecosystem: "Asie du Sud-Est",
-      color: "#FF8C00",
-      region: "Asie du Sud-Est",
-      lat: 22.3193, lng: 114.1694, city: "Hong Kong",
-      regions: ["Asie du Sud-Est"],
-      icon: "🌏",
-      officialUrl: "https://www.joox.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
-      notes: "",
-      lastCheckedAt: ""
-    },
-    {
-      id: "saavn",
-      name: "Saavn",
-      category: "regional",
-      ecosystem: "Asie du Sud",
-      color: "#FF8C00",
-      region: "Inde / Asie du Sud",
-      lat: 19.0760, lng: 72.8777, city: "Mumbai",
-      regions: ["Inde", "Asie du Sud"],
-      icon: "🌏",
-      officialUrl: "https://www.jiosaavn.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
-      notes: "",
-      lastCheckedAt: ""
-    },
-    {
-      id: "netease",
-      name: "NetEase Music",
-      category: "regional",
-      ecosystem: "Chine",
-      color: "#FF8C00",
-      region: "Chine",
-      lat: 30.2741, lng: 120.1551, city: "Hangzhou",
-      regions: ["Chine"],
-      icon: "🌏",
-      officialUrl: "https://music.163.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
-      notes: "",
-      lastCheckedAt: ""
-    },
-    {
-      id: "tencent-music",
-      name: "Tencent Music",
-      category: "regional",
-      ecosystem: "Chine",
-      color: "#FF8C00",
-      region: "Chine",
-      lat: 22.5431, lng: 114.0579, city: "Shenzhen",
-      regions: ["Chine"],
-      icon: "🌏",
-      officialUrl: "https://www.tencentmusic.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
-      notes: "",
-      lastCheckedAt: ""
-    },
-    {
-      id: "kuack",
-      name: "Kuack Media",
-      category: "regional",
-      ecosystem: "Amérique Latine",
-      color: "#FF8C00",
-      region: "Amérique Latine",
-      lat: 4.7110, lng: -74.0721, city: "Bogotá",
-      regions: ["Amérique Latine"],
-      icon: "🌎",
-      officialUrl: "https://www.kuackmedia.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
-      notes: "",
-      lastCheckedAt: ""
-    },
-    {
-      id: "claro-musica",
-      name: "Claro Música",
-      category: "regional",
-      ecosystem: "Amérique Latine",
-      color: "#FF8C00",
-      region: "Amérique Latine",
-      lat: -12.0464, lng: -77.0428, city: "Lima",
-      regions: ["Amérique Latine"],
-      icon: "🌎",
-      officialUrl: "https://www.claromusica.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
-      notes: "",
-      lastCheckedAt: ""
-    },
-    {
-      id: "flo",
-      name: "Flo",
-      category: "regional",
-      ecosystem: "Corée du Sud",
-      color: "#FF8C00",
-      region: "Corée du Sud",
-      lat: 37.5665, lng: 126.9780, city: "Séoul",
-      regions: ["Corée du Sud"],
-      icon: "🌏",
-      officialUrl: "https://www.music-flo.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
-      notes: "",
-      lastCheckedAt: ""
-    },
-    {
-      id: "adaptr",
-      name: "Adaptr",
-      category: "regional",
-      ecosystem: "USA / B2B",
-      color: "#FF8C00",
-      region: "USA",
-      lat: 40.7128, lng: -74.0060, city: "New York",
-      regions: ["USA"],
-      icon: "🎵",
-      officialUrl: "https://www.adaptr.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
-      notes: "",
-      lastCheckedAt: ""
-    },
-    {
-      id: "medianet",
-      name: "MediaNet",
-      category: "regional",
-      ecosystem: "USA / B2B",
-      color: "#FF8C00",
-      region: "USA",
-      lat: 32.7767, lng: -96.7970, city: "Dallas",
-      regions: ["USA"],
-      icon: "🎵",
-      officialUrl: "https://b2b.medianet.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
-      notes: "",
-      lastCheckedAt: ""
     }
   ],
-
-  // ── META ────────────────────────────────────────────────────────────────────
-
+  // ── META ──────────────────────────────────────────────────────────────────────
   categoryMeta: {
-    "streaming": { label: "Streaming",   color: "#9B59B6", icon: "🎵" },
-    "social":    { label: "Social Media", color: "#E91E8C", icon: "📱" },
-    "regional":  { label: "Régional",    color: "#FF8C00", icon: "🌍" }
+    "streaming": { label: "Streaming", color: "#9B59B6", icon: "🎵" },
+    "social":    { label: "Social Media", color: "#E91E8C", icon: "📱" }
   },
-
   statusMeta: {
     "live":           { label: "Live",       color: "#00C851", icon: "✅" },
     "pending":        { label: "En attente", color: "#FFB300", icon: "⏳" },
     "unknown":        { label: "Inconnu",    color: "#9E9E9E", icon: "❓" },
     "not_applicable": { label: "N/A",        color: "#607D8B", icon: "—"  }
   },
-
   ecosystemColors: {
-    "Spotify ecosystem":        "#1DB954",
-    "Apple ecosystem":          "#A2AAAD",
+    "Spotify ecosystem":          "#1DB954",
+    "Apple ecosystem":            "#A2AAAD",
     "YouTube / Google ecosystem": "#FF0000",
-    "Amazon ecosystem":         "#00A8E0",
-    "Alternatif":               "#9B59B6",
-    "Meta":                     "#E91E8C",
-    "ByteDance":                "#E91E8C",
-    "Moyen-Orient":             "#FF8C00",
-    "Afrique":                  "#FF8C00",
-    "Asie du Sud-Est":          "#FF8C00",
-    "Asie du Sud":              "#FF8C00",
-    "Chine":                    "#FF8C00",
-    "Amérique Latine":          "#FF8C00",
-    "Corée du Sud":             "#FF8C00",
-    "USA / B2B":                "#FF8C00"
+    "Amazon ecosystem":           "#00A8E0",
+    "Alternatif":                 "#9B59B6",
+    "Meta":                       "#E91E8C",
+    "ByteDance":                  "#E91E8C"
   }
 };
