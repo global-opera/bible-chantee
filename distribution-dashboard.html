@@ -419,6 +419,59 @@ h
     @media (max-width: 640px) {
       #audience-map { height: 320px; }
     }
+
+  /* ── AUDIENCE GLOBAL BANNER ────────────────────────────────────── */
+  .audience-global-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: linear-gradient(135deg, rgba(29,185,84,.1) 0%, rgba(29,185,84,.04) 100%);
+    border: 1px solid rgba(29,185,84,.28);
+    border-radius: 12px;
+    padding: 14px 20px;
+    margin-bottom: 16px;
+  }
+  .audience-banner-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1DB954;
+    letter-spacing: -.01em;
+  }
+  .audience-banner-stats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .audience-banner-stat {
+    text-align: center;
+  }
+  .audience-banner-stat-num {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #FFD700;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .audience-banner-stat-label {
+    font-size: .66rem;
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    color: rgba(240,230,208,.45);
+    margin-top: 2px;
+  }
+  /* Leaflet tooltip for audience map */
+  .audience-tooltip {
+    background: #1a1a3e !important;
+    border: 1px solid rgba(29,185,84,.45) !important;
+    border-radius: 8px !important;
+    color: #F0E6D0 !important;
+    font-size: .82rem !important;
+    padding: 6px 10px !important;
+    white-space: nowrap;
+    box-shadow: 0 4px 16px rgba(0,0,0,.5) !important;
+  }
 </style>
 </head>
 
@@ -555,6 +608,19 @@ h
       </div>
       <div class="map-message" style="border-color:rgba(29,185,84,.25);background:rgba(29,185,84,.06);">
         🎵 <strong id="audience-total-listeners">—</strong> auditeurs Spotify dans <strong id="audience-countries-count">—</strong> pays · <span id="audience-period">—</span>
+      </div>
+      <div class="audience-global-banner" id="audience-global-banner">
+        <div class="audience-banner-title">🌍 Audience mondiale Bible Chantée</div>
+        <div class="audience-banner-stats">
+          <div class="audience-banner-stat">
+            <div class="audience-banner-stat-num" id="banner-countries">—</div>
+            <div class="audience-banner-stat-label">pays actifs</div>
+          </div>
+          <div class="audience-banner-stat">
+            <div class="audience-banner-stat-num" id="banner-continents">—</div>
+            <div class="audience-banner-stat-label">continents</div>
+          </div>
+        </div>
       </div>
       <div id="audience-map" role="img" aria-label="Carte auditeurs Spotify Bible Chantée"></div>
       <div class="audience-legend" id="audience-legend">
@@ -1084,6 +1150,12 @@ h
       setText('audience-period', aud.period || '28 derniers jours');
       setText('audience-map-meta', 'Source : ' + (aud.source || 'Spotify for Artists') + ' · ' + (aud.updatedAt || ''));
 
+      // Update global audience banner dynamically
+      var countriesCount = countries.length;
+      var continentsCount = aud.continents ? aud.continents.length : 4;
+      setText('banner-countries', countriesCount);
+      setText('banner-continents', continentsCount);
+
       // Max listeners for scaling
       var maxListeners = Math.max.apply(null, countries.map(function (c) { return c.listeners || 0; }));
 
@@ -1137,6 +1209,10 @@ h
           '<div class="audience-popup-row" style="font-size:.74rem;color:rgba(240,230,208,.4);margin-top:6px;">Source : Spotify for Artists · ' + (aud.period || '') + '</div>',
           { maxWidth: 220 }
         );
+      marker.bindTooltip(
+        '<strong>' + flag + ' ' + c.country + '</strong><br>' + fmt(c.listeners) + ' auditeurs',
+        { permanent: false, direction: 'top', className: 'audience-tooltip' }
+      );
 
         marker.addTo(map);
 
