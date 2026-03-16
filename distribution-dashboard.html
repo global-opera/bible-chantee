@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bible Chantée – Distribution mondiale</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <style>
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background-color: #0d0d2b;
+      color: #F0E6D0;
+      line-height: 1.6;
+    }
+
+    /* ============================================================
+       LAYOUT
+    ============================================================ */
+    .page-wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+
+    /* ============================================================
+       HEADER
+    ============================================================ */
+    .site-header {
+      padding: 32px 0 24px;
+      border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+      margin-bottom: 32px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #FFD700;
+      text-decoration: none;
+      font-size: 0.85rem;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+      margin-bottom: 20px;
+    }
+
+    .back-link:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .header-title {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: #FFD700;
+      letter-spacing: -0.02em;
+      text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+    }
+
+    .header-subtitle {
+      font-size: 0.95rem;
+      color: rgba(240, 230, 208, 0.65);
+      margin-top: 4px;
+    }
+
+    .header-badge {
+      background: rgba(255, 215, 0, 0.12);
+      border: 1px solid rgba(255, 215, 0, 0.35);
+      color: #FFD700;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    /* ============================================================
+       STAT COUNTERS
+    ============================================================ */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 20px 24px;
+      text-align: center;
+      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+      cursor: default;
+    }
+
+    .stat-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 215, 0, 0.25);
+      transform: translateY(-2px);
+    }
+
+    .stat-card.active-filter {
+      border-color: var(--accent);
+      background: rgba(255, 255, 255, 0.09);
+      box-shadow: 0 0 0 1px var(--accent), 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .stat-number {
+      font-size: 2.4rem;
+      font-weight: 800;
+      line-height: 1;
+      color: #FFD700;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: rgba(240, 230, 208, 0.55);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 6px;
+    }
+
+    .stat-icon {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    /* ============================================================
+       FILTER BUTTONS
+    ============================================================ */
+    .filter-section {
+      margin-bottom: 24px;
+    }
+
+    .filter-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(240, 230, 208, 0.45);
+      margin-bottom: 10px;
+    }
+
+    .filter-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 18px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.05);
+      color: #F0E6D0;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      letter-spacing: 0.01em;
+    }
+
+    .filter-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .filter-btn.active {
+      border-color: var(--btn-color, #FFD700);
+      background: rgba(255, 215, 0, 0.1);
+      color: var(--btn-color, #FFD700);
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.15);
+    }
+
+    .filter-btn .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--btn-color, #FFD700);
+      flex-shrink: 0;
+    }
+
+    /* ============================================================
+       MAP
+    ============================================================ */
+    .map-section {
+      margin-bottom: 36px;
+    }
+
+    .section-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(240, 230, 208, 0.45);
+      margin-bottom: 12px;
+    }
+
+    #distribution-map {
+      height: 600px;
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      background: #1a1a3e;
+    }
+
+    /* Leaflet popup styling */
+    .leaflet-popup-content-wrapper {
+      background: #1a1a3e !important;
+      border: 1px solid rgba(255, 215, 0, 0.3) !important;
+      border-radius: 10px !important;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5) !important;
+      color: #F0E6D0 !important;
+    }
+
+    .leaflet-popup-tip {
+      background: #1a1a3e !important;
+    }
+
+    .leaflet-popup-content {
+      margin: 14px 16px !important;
+      font-family: 'Segoe UI', system-ui, sans-serif !important;
+      color: #F0E6D0 !important;
+    }
+
+    .popup-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #FFD700;
+      margin-bottom: 6px;
+    }
+
+    .popup-row {
+      font-size: 0.82rem;
+      color: rgba(240, 230, 208, 0.75);
+      margin-bottom: 3px;
+      display: flex;
+      gap: 6px;
+    }
+
+    .popup-row strong {
+      color: rgba(240, 230, 208, 0.95);
+    }
+
+    .popup-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+
+    /* ============================================================
+       LEGEND
+    ============================================================ */
+    .legend-section {
+      margin-bottom: 36px;
+    }
+
+    .legend-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-size: 0.83rem;
+      color: rgba(240, 230, 208, 0.85);
+      transition: background 0.2s;
+    }
+
+    .legend-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      box-shadow: 0 0 6px var(--dot-color, transparent);
+    }
+
+    /* ============================================================
+       TABLE
+    ============================================================ */
+    .table-section {
+      margin-bottom: 36px;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    thead tr {
+      background: rgba(255, 215, 0, 0.07);
+      border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+    }
+
+    th {
+      text-align: left;
+      padding: 14px 18px;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: rgba(240, 230, 208, 0.5);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      transition: background 0.15s;
+    }
+
+    tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    tbody tr.row-hidden {
+      display: none;
+    }
+
+    tbody tr.row-highlighted {
+      background: rgba(255, 215, 0, 0.05);
+    }
+
+    td {
+      padding: 13px 18px;
+      vertical-align: middle;
+    }
+
+    .td-platform {
+      font-weight: 600;
+      color: #F0E6D0;
+      white-space: nowrap;
+    }
+
+    .platform-icon {
+      margin-right: 6px;
+    }
+
+    .td-category {
+      white-space: nowrap;
+    }
+
+    .category-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+    }
+
+    .td-ecosystem {
+      color: rgba(240, 230, 208, 0.7);
+      font-size: 0.84rem;
+    }
+
+    .td-regions {
+      color: rgba(240, 230, 208, 0.6);
+      font-size: 0.82rem;
+    }
+
+    .region-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 6px;
+      padding: 1px 7px;
+      margin: 1px 2px;
+      font-size: 0.75rem;
+      white-space: nowrap;
+    }
+
+    .td-color {
+      white-space: nowrap;
+    }
+
+    .color-swatch {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .swatch-circle {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      box-shadow: 0 0 6px var(--sw-color, transparent);
+    }
+
+    .swatch-hex {
+      font-family: 'Courier New', monospace;
+      font-size: 0.78rem;
+      color: rgba(240, 230, 208, 0.55);
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .page-footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: rgba(240, 230, 208, 0.3);
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 640px) {
+      .page-wrapper {
+        padding: 0 16px 40px;
+      }
+
+      #distribution-map {
+        height: 380px;
+      }
+
+      .header-title {
+        font-size: 1.4rem;
+      }
+
+      th, td {
+        padding: 10px 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <a href="dashboard.html" class="back-link">&#8592; Retour au Dashboard</a>
+      <div class="header-content">
+        <div>
+          <h1 class="header-title">Bible Chantée – Distribution mondiale</h1>
+          <p class="header-subtitle">Présence sur 23 plateformes mondiales</p>
+        </div>
+        <span class="header-badge">Distribution 2025</span>
+      </div>
+    </header>
+
+    <!-- STAT COUNTERS -->
+    <section class="stats-grid" id="stats-grid" aria-label="Statistiques de distribution">
+      <div class="stat-card" data-filter="all" style="--accent:#FFD700" role="button" tabindex="0" aria-pressed="true">
+        <div class="stat-icon">🌐</div>
+        <div class="stat-number" id="stat-total">23</div>
+        <div class="stat-label">Plateformes totales</div>
+      </div>
+      <div class="stat-card" data-filter="Streaming Principal" style="--accent:#9B59B6" role="button" tabindex="0" aria-pressed="false">
+        <div class="stat-icon">🎵</div>
+        <div class="stat-number" id="stat-streaming">10</div>
+        <div class="stat-label">Streaming</div>
+      </div>
+      <div class="stat-card" data-filter="Social" style="--accent:#E91E8C" role="button" tabindex="0" aria-pressed="false">
+        <div class="stat-icon">📱</div>
+        <div class="stat-number" id="stat-social">3</div>
+        <div class="stat-label">Social Media</div>
+      </div>
+      <div class="stat-card" data-filter="Régional" style="--accent:#FF8C00" role="button" tabindex="0" aria-pressed="false">
+        <div class="stat-icon">🌍</div>
+        <div class="stat-number" id="stat-regional">10</div>
+        <div class="stat-label">Régional</div>
+      </div>
+    </section>
+
+    <!-- FILTER BUTTONS -->
+    <section class="filter-section" aria-label="Filtres par catégorie">
+      <div class="filter-label">Filtrer par catégorie</div>
+      <div class="filter-buttons" id="filter-buttons">
+        <button class="filter-btn active" data-filter="all" style="--btn-color:#FFD700">
+          <span class="dot"></span> Toutes les plateformes
+        </button>
+        <button class="filter-btn" data-filter="Streaming Principal" style="--btn-color:#9B59B6">
+          <span class="dot"></span> Streaming
+        </button>
+        <button class="filter-btn" data-filter="Social" style="--btn-color:#E91E8C">
+          <span class="dot"></span> Social Media
+        </button>
+        <button class="filter-btn" data-filter="Régional" style="--btn-color:#FF8C00">
+          <span class="dot"></span> Régional
+        </button>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="map-section" aria-label="Carte mondiale des plateformes">
+      <div class="section-title">Carte interactive</div>
+      <div id="distribution-map" role="img" aria-label="Carte mondiale montrant la localisation des plateformes de distribution"></div>
+    </section>
+
+    <!-- LEGEND -->
+    <section class="legend-section" aria-label="Légende des couleurs">
+      <div class="section-title">Légende</div>
+      <div class="legend-grid">
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#1DB954; --dot-color:#1DB954;"></span>
+          Spotify
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#A2AAAD; --dot-color:#A2AAAD;"></span>
+          Apple (Music / iTunes)
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#FF0000; --dot-color:#FF0000;"></span>
+          YouTube / Google
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#00A8E0; --dot-color:#00A8E0;"></span>
+          Amazon Music
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#9B59B6; --dot-color:#9B59B6;"></span>
+          Streaming Alternatif
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#E91E8C; --dot-color:#E91E8C;"></span>
+          Social Media
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background:#FF8C00; --dot-color:#FF8C00;"></span>
+          Plateformes Régionales
+        </div>
+      </div>
+    </section>
+
+    <!-- TABLE -->
+    <section class="table-section" aria-label="Liste détaillée des plateformes">
+      <div class="section-title">Détail des plateformes</div>
+      <div class="table-wrapper">
+        <table id="platforms-table" aria-label="Plateformes de distribution">
+          <thead>
+            <tr>
+              <th scope="col">Plateforme</th>
+              <th scope="col">Catégorie</th>
+              <th scope="col">Écosystème</th>
+              <th scope="col">Zones couvertes</th>
+              <th scope="col">Couleur</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <!-- Rows injected by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <p>Bible Chantée &mdash; Distribution mondiale &mdash; 23 plateformes &mdash; 2025</p>
+    </footer>
+
+  </div><!-- /.page-wrapper -->
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WPkk=" crossorigin=""></script>
+
+  <!-- Distribution data (must load before inline script) -->
+  <script src="distribution-data.js"></script>
+
+  <!-- Dashboard logic -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ----------------------------------------------------------
+         SAFETY CHECK
+      ---------------------------------------------------------- */
+      if (!window.distributionData) {
+        document.getElementById('distribution-map').innerHTML =
+          '<p style="color:#F0E6D0;padding:20px;">Erreur : distribution-data.js non chargé.</p>';
+        return;
+      }
+
+      var data = window.distributionData;
+      var platforms = data.platforms;
+
+      /* ----------------------------------------------------------
+         COORDINATE JITTER
+         Platforms sharing the same HQ city get small offsets so
+         markers don't stack exactly on top of each other.
+      ---------------------------------------------------------- */
+      var locationCount = {};
+      platforms.forEach(function (p) {
+        var key = p.lat + ',' + p.lng;
+        locationCount[key] = (locationCount[key] || 0) + 1;
+      });
+
+      var locationIndex = {};
+      var jitteredPlatforms = platforms.map(function (p) {
+        if (p.lat == null || p.lng == null) return p;
+        var key = p.lat + ',' + p.lng;
+        var count = locationCount[key];
+        if (count <= 1) return p;
+        locationIndex[key] = (locationIndex[key] || 0);
+        var idx = locationIndex[key];
+        locationIndex[key]++;
+        // Spread markers in a circle around the original point
+        var angle = (idx / count) * 2 * Math.PI;
+        var radius = 0.45;
+        return Object.assign({}, p, {
+          lat: p.lat + radius * Math.sin(angle),
+          lng: p.lng + radius * Math.cos(angle)
+        });
+      });
+
+      /* ----------------------------------------------------------
+         LEAFLET MAP
+      ---------------------------------------------------------- */
+      var map = L.map('distribution-map', {
+        center: [20, 10],
+        zoom: 2,
+        minZoom: 1,
+        maxZoom: 10,
+        zoomControl: true
+      });
+
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
+      }).addTo(map);
+
+      /* Build markers */
+      var markers = {}; // keyed by platform name
+
+      jitteredPlatforms.forEach(function (p) {
+        if (p.lat == null || p.lng == null || isNaN(p.lat) || isNaN(p.lng)) return;
+
+        var marker = L.circleMarker([p.lat, p.lng], {
+          radius: 10,
+          fillColor: p.color,
+          color: 'rgba(255,255,255,0.4)',
+          weight: 1.5,
+          opacity: 1,
+          fillOpacity: 0.85
+        });
+
+        // Build popup content
+        var regionsHtml = (p.regions || []).map(function (r) {
+          return '<span style="background:rgba(255,255,255,0.1);border-radius:4px;padding:1px 6px;margin:1px 2px;font-size:0.78rem;display:inline-block;">' + r + '</span>';
+        }).join('');
+
+        marker.bindPopup(
+          '<div class="popup-name">' + (p.icon || '') + ' ' + p.name + '</div>' +
+          '<div class="popup-row"><strong>Catégorie&nbsp;:</strong> ' + p.category + '</div>' +
+          '<div class="popup-row"><strong>Écosystème&nbsp;:</strong> ' + p.ecosystem + '</div>' +
+          '<div class="popup-row"><strong>Ville&nbsp;:</strong> ' + (p.city || '—') + '</div>' +
+          '<div style="margin-top:8px;">' + regionsHtml + '</div>' +
+          '<div><span class="popup-badge" style="background:' + p.color + '22;border:1px solid ' + p.color + '55;color:' + p.color + '">' + p.category + '</span></div>',
+          { maxWidth: 260 }
+        );
+
+        marker.addTo(map);
+        markers[p.name] = { marker: marker, platform: p };
+      });
+
+      /* ----------------------------------------------------------
+         TABLE
+      ---------------------------------------------------------- */
+      var tbody = document.getElementById('table-body');
+
+      function getCategoryStyle(cat) {
+        var styles = {
+          'Streaming Principal': { bg: 'rgba(155,89,182,0.15)', border: '#9B59B6', color: '#c89edb' },
+          'Social':              { bg: 'rgba(233,30,140,0.15)', border: '#E91E8C', color: '#f07cbf' },
+          'Régional':            { bg: 'rgba(255,140,0,0.15)',  border: '#FF8C00', color: '#ffaa44' }
+        };
+        return styles[cat] || { bg: 'rgba(255,255,255,0.08)', border: 'rgba(255,255,255,0.2)', color: '#F0E6D0' };
+      }
+
+      platforms.forEach(function (p) {
+        var catStyle = getCategoryStyle(p.category);
+        var regionsHtml = (p.regions || []).map(function (r) {
+          return '<span class="region-tag">' + r + '</span>';
+        }).join('');
+
+        var tr = document.createElement('tr');
+        tr.dataset.category = p.category;
+        tr.dataset.platform = p.name;
+
+        tr.innerHTML =
+          '<td class="td-platform"><span class="platform-icon">' + (p.icon || '') + '</span>' + p.name + '</td>' +
+          '<td class="td-category">' +
+            '<span class="category-pill" style="background:' + catStyle.bg + ';border-color:' + catStyle.border + ';color:' + catStyle.color + ';">' +
+              p.category +
+            '</span>' +
+          '</td>' +
+          '<td class="td-ecosystem">' + p.ecosystem + '</td>' +
+          '<td class="td-regions">' + regionsHtml + '</td>' +
+          '<td class="td-color">' +
+            '<span class="color-swatch">' +
+              '<span class="swatch-circle" style="background:' + p.color + ';--sw-color:' + p.color + ';box-shadow:0 0 6px ' + p.color + '80;"></span>' +
+              '<span class="swatch-hex">' + p.color + '</span>' +
+            '</span>' +
+          '</td>';
+
+        tbody.appendChild(tr);
+      });
+
+      /* ----------------------------------------------------------
+         FILTER LOGIC
+      ---------------------------------------------------------- */
+      var activeFilter = 'all';
+
+      function applyFilter(filter) {
+        activeFilter = filter;
+
+        /* Update filter buttons */
+        document.querySelectorAll('.filter-btn').forEach(function (btn) {
+          btn.classList.toggle('active', btn.dataset.filter === filter);
+        });
+
+        /* Update stat cards */
+        document.querySelectorAll('.stat-card').forEach(function (card) {
+          card.classList.toggle('active-filter', card.dataset.filter === filter);
+          card.setAttribute('aria-pressed', card.dataset.filter === filter ? 'true' : 'false');
+        });
+
+        /* Update markers */
+        Object.keys(markers).forEach(function (name) {
+          var m = markers[name];
+          var show = filter === 'all' || m.platform.category === filter;
+          if (show) {
+            if (!map.hasLayer(m.marker)) m.marker.addTo(map);
+          } else {
+            if (map.hasLayer(m.marker)) map.removeLayer(m.marker);
+          }
+        });
+
+        /* Update table rows */
+        document.querySelectorAll('#table-body tr').forEach(function (row) {
+          var show = filter === 'all' || row.dataset.category === filter;
+          row.classList.toggle('row-hidden', !show);
+          row.classList.toggle('row-highlighted', filter !== 'all' && show);
+        });
+      }
+
+      /* Filter button clicks */
+      document.getElementById('filter-buttons').addEventListener('click', function (e) {
+        var btn = e.target.closest('.filter-btn');
+        if (!btn) return;
+        applyFilter(btn.dataset.filter);
+      });
+
+      /* Stat card clicks */
+      document.getElementById('stats-grid').addEventListener('click', function (e) {
+        var card = e.target.closest('.stat-card[data-filter]');
+        if (!card) return;
+        applyFilter(card.dataset.filter);
+      });
+
+      /* Keyboard support for stat cards */
+      document.getElementById('stats-grid').addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          var card = e.target.closest('.stat-card[data-filter]');
+          if (!card) return;
+          e.preventDefault();
+          applyFilter(card.dataset.filter);
+        }
+      });
+
+      /* Initialise with "all" filter active */
+      applyFilter('all');
+
+    })();
+  </script>
+
+</body>
+</html>
