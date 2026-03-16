@@ -7,7 +7,7 @@
   <link rel="manifest" href="/manifest.json">
 
   <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanahger.com/gtag/js?id=G-TX3ETCKJQZ"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TX3ETCKJQZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -878,7 +878,6 @@
 
     #lyricsContent {
       line-height: 1.4;
-      white-space: pre-wrap;
     }
 
     .bible-text {
@@ -1220,7 +1219,7 @@
   </style>
     <script src="js/books.js"></script>
     <script src="js/book-names.js"></script>
-    <script src="js/player.js?v=20260306b"></script>
+    <!-- player.js retiré le 2026-03-08 : interférence dual-player, voir audit_player_audio_flow_complet.txt -->
     <script src="js/chapter-titles.js?v=3"></script>
 <script>
 /* ===== EN TITLES HARDENING (AUTO-PATCH) =====
@@ -1246,7 +1245,7 @@ function isVerseLikeEN(s){
 /* ===== END EN TITLES HARDENING ===== */
 </script>
     <script src="lyrics-data.js?v=20260114f"></script>
-    <script src="lyrics-data-fr.js?v=20260122b"></script>
+    <script src="lyrics-data-fr.js?v=20260312"></script>
     <script src="lyrics-data-en.js"></script>
     <script src="lyrics-data-pt.js"></script>
     <script src="lyrics-data-es.js"></script>
@@ -1270,7 +1269,7 @@ function isVerseLikeEN(s){
 
     <!-- LIGNE 2: BOUTONS NAVIGATION -->
     <div class="nav-row">
-      <a href="about.html" class="nav-btn" id="navAbout">
+      <a href="/about" class="nav-btn" id="navAbout">
         <span class="icon">📖</span>
         <span class="text">À propos</span>
       </a>
@@ -1286,11 +1285,11 @@ function isVerseLikeEN(s){
         <span class="icon">📻</span>
         <span class="text">Radio</span>
       </button>
-      <a href="promesses.html" class="nav-btn" id="navPromesses">
+      <a href="/promesses" class="nav-btn" id="navPromesses">
         <span class="icon">⭐</span>
         <span class="text">Promesses</span>
       </a>
-      <a href="confessions.html" class="nav-btn" id="navConfessions">
+      <a href="/confessions" class="nav-btn" id="navConfessions">
         <span class="icon">❤️</span>
         <span class="text">Confessions</span>
       </a>
@@ -1303,7 +1302,7 @@ function isVerseLikeEN(s){
     <!-- LIGNE 3: SOUTENIR + RECHERCHE + LOUPE + WHATSAPP -->
     <div style="display: flex; gap: 10px; align-items: center; margin-top: 5px; max-width: 100%; margin-left: auto; margin-right: auto; padding: 0 15px; box-sizing: border-box;">
       <!-- Bouton Soutenir: 75px (même taille réelle que les 14 autres) -->
-      <a href="crowdfunding.html" class="nav-btn" id="navSoutenir" style="width: 75px; height: 50px; flex-shrink: 0;">
+      <a href="/crowdfunding" class="nav-btn" id="navSoutenir" style="width: 75px; height: 50px; flex-shrink: 0;">
         <span class="icon" style="font-size: 20px;">💝</span>
         <span class="text" style="font-size: 8px;">Soutenir</span>
       </a>
@@ -1822,14 +1821,44 @@ const audioPlayer = document.querySelector('#audioPlayer');
     const playBtn = document.querySelector('#playBtn');
     let isPlaying = false;
 
+    // Helper: Résoudre le code R2 pour un livre
+    // Certains livres utilisent un code de dossier/fichier différent sur R2
+    // par rapport au code books.js (ex: 41_MAR → dossier 41_MRK sur R2)
+    // Vérifié via audio-urls-fr.js le 2026-03-08
+    function resolveR2Codes(book) {
+      // Alias dossier R2 : books.js code → code canonique utilisé par R2
+      const R2_FOLDER_ALIASES = {
+        '26_EZE': '26_EZK',
+        '29_JOE': '29_JOL',
+        '41_MAR': '41_MRK',
+        '43_JOH': '43_JHN',
+        '59_JAM': '59_JAS',
+        '62_1JO': '62_1JN',
+        '63_2JO': '63_2JN',
+        '64_3JO': '64_3JN'
+      };
+      // Alias fichier R2 : seulement quand le préfixe fichier diffère aussi
+      // (Jean et Jacques utilisent le code canonique pour le fichier aussi)
+      const R2_FILE_ALIASES = {
+        '43_JOH': '43_JHN',
+        '59_JAM': '59_JAS'
+      };
+      return {
+        folder: R2_FOLDER_ALIASES[book] || book,
+        file:   R2_FILE_ALIASES[book]   || book
+      };
+    }
+
     // Helper: Obtenir URL audio pour un chapitre
     function getAudioUrl(book, chapter, lang) {
       // Construire URL directement depuis Cloudflare R2
-      // Format: https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/{LANG}/{BOOK}/{BOOK}_{CHAPTER}_{LANG}.mp3
+      // Format: https://pub-...r2.dev/{LANG}/{FOLDER}/{FILE}_{CHAPTER}_{LANG}.mp3
       // Exemple: .../FR/01_GEN/01_GEN_01_FR.mp3
+      // Exemple aliasé: .../FR/41_MRK/41_MAR_01_FR.mp3
       const chapterPadded = String(chapter).padStart(2, '0');
       const langUpper = lang.toUpperCase();
-      const base = `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${langUpper}/${book}/${book}_${chapterPadded}_${langUpper}`;
+      const r2 = resolveR2Codes(book);
+      const base = `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${langUpper}/${r2.folder}/${r2.file}_${chapterPadded}_${langUpper}`;
       return {
         primary: `${base}.mp3`,
         fallback: `${base}_v1.mp3`
@@ -1938,15 +1967,15 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
       // 4. MARQUER les vraies séparations de couplets (tags de section)
       // Français: [Verset], [Couplet], [Refrain], [Strophe]
-      // Anglais: [Verse], [Chorus], [Bridge], [Outro], [Intro], [Pre-Chorus|Spoken Word]
+      // Anglais: [Verse], [Chorus], [Bridge], [Outro], [Intro], [Spoken Word]
       // Espagnol: [Verso], [Coro], [Puente]
       // Portugais: [Verso], [Refrão], [Ponte], [Fim]
 
       // D'abord, supprimer les markdown ** ** autour des sections
-      text = text.replace(/\*\*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Pre-Chorus|Spoken Word)[^\]]*)\]\*\*/gi, '[$1]');
+      text = text.replace(/\*\*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*)\]\*\*/gi, '[$1]');
 
       // Remplacer les tags de section par un marqueur unique
-      text = text.replace(/\s*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Pre-Chorus|Spoken Word)[^\]]*)\]\s*/gi, '###PARAGRAPH_BREAK###');
+      text = text.replace(/\s*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*)\]\s*/gi, '###PARAGRAPH_BREAK###');
 
       // 5. Supprimer les lignes de section avec deux-points (Verse 1:, Chorus:, etc.)
       // Format: "Verse 1:  " ou "Verso 1:  " ou "Coro  " etc.
@@ -1968,7 +1997,14 @@ const audioPlayer = document.querySelector('#audioPlayer');
       text = text.replace(/^\uFEFF/, '');
       text = text.replace(/\uFEFF/g, '');
 
-      // 11. Convertir tous les doubles sauts de ligne en simples (élimine les lignes vides partout)
+      // 10b. Convertir ¶ en séparateur de couplet (pilcrow = début de section Segond 1910)
+      text = text.replace(/\n*¶\s*/g, '###PARAGRAPH_BREAK###');
+
+      // 10c. Préserver les doubles sauts de ligne comme séparateurs de couplets
+      // AVANT step 11 qui les détruirait
+      text = text.replace(/\n\n+/g, '###PARAGRAPH_BREAK###');
+
+      // 11. Convertir les sauts de ligne simples restants (normalement rien de double n'est plus là)
       text = text.replace(/\n\n+/g, '\n');
 
       // 12. Restaurer les vraies séparations de couplets (marqueurs -> double saut)
@@ -1982,6 +2018,19 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
       // 15. Supprimer lignes vides à la fin
       text = text.replace(/\n+$/, '');
+
+      // 16. Auto-groupement en couplets de 4 lignes si la structure est trop dense
+      // (ex: paroles IA sans \n\n entre strophes → un seul bloc de 30+ lignes)
+      const _paras = text.split('\n\n').filter(p => p.trim());
+      const _maxParaLines = Math.max(..._paras.map(p => p.split('\n').filter(l => l.trim()).length));
+      if (_maxParaLines > 6) {
+        const _allLines = text.split('\n').filter(l => l.trim());
+        const stanzas = [];
+        for (let i = 0; i < _allLines.length; i += 4) {
+          stanzas.push(_allLines.slice(i, i + 4).join('\n'));
+        }
+        text = stanzas.join('\n\n');
+      }
 
       return text;
     }
@@ -2029,8 +2078,14 @@ const audioPlayer = document.querySelector('#audioPlayer');
           return;
         }
 
-        // Affichage direct (white-space: pre-wrap gère les sauts de ligne)
-        lyricsContent.textContent = lyrics;
+        // Convertir les sauts de ligne en HTML
+        const paragraphs = lyrics.split('\n\n');
+        const html = paragraphs.map(p => {
+          const lines = p.split('\n').join('<br>');
+          return '<p style="margin: 0 0 1em 0;">' + lines + '</p>';
+        }).join('');
+
+        lyricsContent.innerHTML = html;
         console.log('[Lyrics] Loaded successfully:', bookCode, chapter, lang);
 
       } catch (error) {
@@ -2061,7 +2116,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
         let bibleData = bibleCache[filename];
 
         if (!bibleData) {
-          const response = await fetch(`bible/${filename}`);
+          const response = await fetch(`bibles/${filename}`);
           if (!response.ok) {
             bibleContent.innerHTML = '<p style="color: #f88;">Fichier Bible introuvable</p>';
             return;
@@ -2081,7 +2136,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
         // Formater le texte
         let html = '';
         verses.forEach(v => {
-          html += `<sup style="color: #F5CB42; font-weight: bold;">${v.verse}</sup> ${v.text}\n\n`;
+          const cleanText = v.text.replace(/^¶\s*/g, '').trim();
+          html += `<p style="margin: 0 0 0.6em 0; line-height: 1.6;"><sup style="color: #F5CB42; font-weight: bold; margin-right: 3px;">${v.verse}</sup>${cleanText}</p>`;
         });
 
         bibleContent.innerHTML = html;
@@ -3065,6 +3121,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
   </script>
 
   <!-- SEMANTIC SEARCH ENGINE -->
+  <script src="js/semantic-dictionary.js"></script>
+  <script src="js/semantic-adapter-v2.js"></script>
   <script src="js/semantic-engine.js"></script>
   <script>
     // Recherche sémantique
@@ -3107,7 +3165,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
         const bookCode = parts[0] + '_' + parts[1];
         const chapterNum = parseInt(parts[2]);
 
-        const bookName = SemanticEngine.getBookName(parts[1], currentLang);
+        const bookName = getBookName(bookCode, currentLang);
 
         return `
           <div class="result-card" onclick="playSearchResult('${bookCode}', ${chapterNum})">
@@ -3232,6 +3290,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
 </body>
 </html>
+
 
 
 
