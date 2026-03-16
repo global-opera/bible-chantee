@@ -2059,9 +2059,9 @@
             console.log('📍 Pays reçus pour la carte:', countries.map(c => c.name));
 
             countries.forEach(country => {
+                if (!country.name || country.name === '(not set)') return;
                 const coords = window.getCountryCoords(country.name);
-                if (!coords) {
-                    // Country not found in database - already logged by getCountryCoords()
+                if (!coords || coords.lat == null || coords.lng == null || isNaN(coords.lat) || isNaN(coords.lng)) {
                     return;
                 }
 
@@ -2873,6 +2873,7 @@
             // Build name→{visitors, source} map (case-insensitive)
             const ga4Map = {};
             ga4Countries.forEach(c => {
+                if (!c.name || c.name === '(not set)') return;
                 ga4Map[c.name.toLowerCase()] = {
                     visitors: c.visitors,
                     source: sourceByCountry[c.name]?.source || null
@@ -2899,7 +2900,7 @@
 
             // Add GA4 countries not in streamData
             ga4Countries.forEach(c => {
-                if (c.visitors < 1) return;
+                if (!c.name || c.name === '(not set)' || c.visitors < 1) return;
                 const exists = streamData.some(p =>
                     p.country.toLowerCase() === c.name.toLowerCase() ||
                     c.name.toLowerCase().includes(p.country.toLowerCase().slice(0, 5))
