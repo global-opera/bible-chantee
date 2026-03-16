@@ -2051,17 +2051,69 @@
         // Marqueurs
         let markers = [];
 
+        // =====================================================
+        // COUNTRY NAME NORMALIZATION + COORD VALIDATION
+        // =====================================================
+        const COUNTRY_ALIASES = {
+            '(not set)':                              null,
+            'not set':                                null,
+            'congo - kinshasa':                       'Congo RDC',
+            'dr congo':                               'Congo RDC',
+            'rdc':                                    'Congo RDC',
+            'democratic republic of the congo':       'Congo RDC',
+            'republique democratique du congo':       'Congo RDC',
+            'republique democratique du congo':       'Congo RDC',
+            'cote divoire':                           "Côte d'Ivoire",
+            'cote d ivoire':                          "Côte d'Ivoire",
+            'ivory coast':                            "Côte d'Ivoire",
+            'south korea':                            'South Korea',
+            'korea, south':                           'South Korea',
+            'republic of korea':                      'South Korea',
+            'united states':                          'USA',
+            'uk':                                     'United Kingdom',
+            'great britain':                          'United Kingdom',
+            'england':                                'United Kingdom',
+            'taiwan':                                 'Taiwan',
+            'taiwan, province of china':              'Taiwan',
+        };
+
+        function normalizeCountryName(rawName) {
+            if (!rawName || typeof rawName !== 'string') return null;
+            const trimmed = rawName.trim();
+            if (!trimmed) return null;
+            // Lowercase + strip diacritics for alias lookup
+            const lower = trimmed.toLowerCase()
+                .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            if (COUNTRY_ALIASES.hasOwnProperty(lower)) {
+                const alias = COUNTRY_ALIASES[lower];
+                if (alias === null) return null; // explicitly invalid
+                console.log('[Normalize] alias:', JSON.stringify(rawName), '->', JSON.stringify(alias));
+                return alias;
+            }
+            return trimmed; // preserve original casing for display
+        }
+
+        function isValidLatLng(lat, lng) {
+            return lat != null && lng != null &&
+                   !isNaN(lat) && !isNaN(lng) &&
+                   isFinite(lat) && isFinite(lng) &&
+                   lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180;
+        }
+
         function updateMap(countries) {
-            // Supprimer anciens marqueurs
             markers.forEach(m => map.removeLayer(m));
             markers = [];
-
-            console.log('📍 Pays reçus pour la carte:', countries.map(c => c.name));
+            console.log('[Map] pays reçus:', countries.length);
 
             countries.forEach(country => {
-                if (!country.name || country.name === '(not set)') return;
-                const coords = window.getCountryCoords(country.name);
-                if (!coords || coords.lat == null || coords.lng == null || isNaN(coords.lat) || isNaN(coords.lng)) {
+                const normalized = normalizeCountryName(country.name);
+                if (!normalized) {
+                    if (country.name) console.log('[Map] pays ignoré car nom invalide:', JSON.stringify(country.name));
+                    return;
+                }
+                const coords = window.getCountryCoords ? window.getCountryCoords(normalized) : null;
+                if (!coords || !isValidLatLng(coords.lat, coords.lng)) {
+                    console.log('[Map] coordonnées manquantes pour:', normalized);
                     return;
                 }
 
@@ -2071,39 +2123,25 @@
                 else if (country.visitors >= 50) color = '#FFD700';
 
                 const marker = L.circleMarker([coords.lat, coords.lng], {
-                    radius: radius,
-                    fillColor: color,
-                    color: '#fff',
-                    weight: 2,
-                    opacity: 0.8,
-                    fillOpacity: 0.6
+                    radius, fillColor: color, color: '#fff', weight: 2, opacity: 0.8, fillOpacity: 0.6
                 }).addTo(map);
 
-                // Extract city names safely (handle strings, objects with .name, and objects without .name)
-                const cities = country.cities ?
-                    country.cities
-                        .map(c => {
-                            if (typeof c === 'string') return c;
-                            if (c && typeof c === 'object' && c.name) return c.name;
-                            return null; // Skip invalid entries
-                        })
-                        .filter(c => c !== null) // Remove null entries
-                        .join(', ')
+                const cities = country.cities
+                    ? country.cities.map(c => typeof c === 'string' ? c : (c?.name || null)).filter(Boolean).join(', ')
                     : '';
 
                 marker.bindPopup(`
                     <div style="text-align:center;">
-                        <div style="font-size:1.5rem;">${coords.flag}</div>
-                        <strong>${country.name}</strong><br>
+                        <div style="font-size:1.5rem;">${coords.flag || ''}</div>
+                        <strong>${normalized}</strong><br>
                         <span style="color:#FFD700;font-size:1.2rem;">${country.visitors}</span> visiteurs
                         ${cities ? '<br><small>' + cities + '</small>' : ''}
                     </div>
                 `);
-
                 markers.push(marker);
             });
 
-            console.log('✅ Marqueurs ajoutés sur la carte:', markers.length);
+            console.log('[Map] ✅', markers.length, 'marqueurs ajoutés');
         }
 
         // =====================================================
@@ -2689,7 +2727,7 @@
             markers.forEach(m => map.removeLayer(m));
             markers = [];
             data.forEach(p => {
-                if (!p.lat || !p.lng || isNaN(p.lat) || isNaN(p.lng)) return;
+                if (!isValidLatLng(p.lat, p.lng)) return;
                 let color;
                 if (currentMapView === 'language') {
                     color = LANGUAGE_COLORS[p.language] || '#888';
@@ -2870,25 +2908,28 @@
             const ga4Countries = apiData.today?.countries || [];
             const sourceByCountry = apiData.sourceByCountry || {};
 
-            // Build name→{visitors, source} map (case-insensitive)
+            // 1. Build normalizedName→{visitors, source, rawName} map
             const ga4Map = {};
             ga4Countries.forEach(c => {
-                if (!c.name || c.name === '(not set)') return;
-                ga4Map[c.name.toLowerCase()] = {
-                    visitors: c.visitors,
-                    source: sourceByCountry[c.name]?.source || null
-                };
+                const norm = normalizeCountryName(c.name);
+                if (!norm) return; // skip (not set) and invalid
+                const key = norm.toLowerCase();
+                // Keep entry with most visitors if duplicate after normalization
+                if (!ga4Map[key] || ga4Map[key].visitors < c.visitors) {
+                    ga4Map[key] = {
+                        visitors: c.visitors,
+                        source: sourceByCountry[c.name]?.source || null,
+                        rawName: c.name
+                    };
+                }
             });
 
-            // Update existing streamData entries
+            // 2. Update existing streamData entries by normalized name match
             streamData = streamData.map(p => {
-                const key = Object.keys(ga4Map).find(k =>
-                    k === p.country.toLowerCase() ||
-                    k.includes(p.country.toLowerCase().slice(0, 5)) ||
-                    p.country.toLowerCase().includes(k.slice(0, 5))
-                );
-                if (!key) return p;
-                const ga4 = ga4Map[key];
+                const pNorm = normalizeCountryName(p.country);
+                if (!pNorm) return p;
+                const ga4 = ga4Map[pNorm.toLowerCase()];
+                if (!ga4) return p;
                 const realPlatform = sourceToPlatform(ga4.source);
                 return {
                     ...p,
@@ -2898,30 +2939,40 @@
                 };
             });
 
-            // Add GA4 countries not in streamData
+            // 3. Add GA4 countries not yet in streamData (with valid coords)
+            const existingNorms = new Set(
+                streamData.map(p => normalizeCountryName(p.country)?.toLowerCase()).filter(Boolean)
+            );
             ga4Countries.forEach(c => {
-                if (!c.name || c.name === '(not set)' || c.visitors < 1) return;
-                const exists = streamData.some(p =>
-                    p.country.toLowerCase() === c.name.toLowerCase() ||
-                    c.name.toLowerCase().includes(p.country.toLowerCase().slice(0, 5))
-                );
-                if (!exists) {
-                    const coords = window.getCountryCoords ? window.getCountryCoords(c.name) : null;
-                    if (!coords) return;
+                const norm = normalizeCountryName(c.name);
+                if (!norm || c.visitors < 1) return;
+                if (existingNorms.has(norm.toLowerCase())) return;
+                const coords = window.getCountryCoords ? window.getCountryCoords(norm) : null;
+                if (!coords || !isValidLatLng(coords.lat, coords.lng)) {
+                    console.log('[Table] ligne rendue sans coordonnées pour:', norm);
+                    // Still add to streamData for table, but no coords → no map marker
                     const srcData = sourceByCountry[c.name];
                     streamData.push({
-                        country: c.name,
-                        flag: coords.flag || '',
+                        country: norm, flag: '',
+                        lat: null, lng: null,
+                        platform: sourceToPlatform(srcData?.source) || 'youtube',
+                        streams: c.visitors, language: 'EN', growth: 0,
+                        ga4Source: srcData?.source || null
+                    });
+                } else {
+                    const srcData = sourceByCountry[c.name];
+                    streamData.push({
+                        country: norm, flag: coords.flag || '',
                         lat: coords.lat, lng: coords.lng,
                         platform: sourceToPlatform(srcData?.source) || 'youtube',
-                        streams: c.visitors,
-                        language: 'EN', growth: 0,
+                        streams: c.visitors, language: 'EN', growth: 0,
                         ga4Source: srcData?.source || null
                     });
                 }
+                existingNorms.add(norm.toLowerCase());
             });
 
-            // Re-render everything with real data
+            // 4. Re-render everything with enriched data
             renderStreamSummary(streamData);
             renderStreamMap(streamData);
             renderStreamTable(streamData);
