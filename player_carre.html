@@ -147,40 +147,52 @@ function BibleChanteePlayer() {
   var audioRef = useRef(null);
   var playingRef = useRef(false);
   var loadAndPlayRef = useRef(null);
+  var bookIdxRef = useRef(0);
+  var chapIdxRef = useRef(0);
+  var queuedUrlRef = useRef(null);
 
   var langCode = LANGUAGES[lang].code;
   var t = UI[langCode];
   function bookName(idx) { return BOOK_NAMES[langCode][idx]; }
 
-  useEffect(function() { audioRef.current = new Audio(); audioRef.current.preload = "metadata"; return function() { if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; } }; }, []);
   useEffect(function() { if (audioRef.current) audioRef.current.volume = vol / 10; }, [vol]);
-  useEffect(function() { playingRef.current = playing; }, [playing]);
+  playingRef.current = playing;
+  bookIdxRef.current = bookIdx;
+  chapIdxRef.current = chapIdx;
+  queuedUrlRef.current = queuedUrl;
 
   useEffect(function() {
-    if (!audioRef.current) return;
-    var audio = audioRef.current;
+    var audio = new Audio();
+    audio.preload = "metadata";
+    audioRef.current = audio;
     function onTime() { setElapsed(Math.floor(audio.currentTime)); }
     function onMeta() { setDuration(Math.floor(audio.duration) || 0); }
     function onEnded() {
-      // Si une partie suivante est en file, la jouer (toujours, peu importe le bouton)
-      if (queuedUrl) {
-        var nextUrl = queuedUrl;
+      // Partie 2 en file : la jouer sans condition
+      if (queuedUrlRef.current) {
+        var nextUrl = queuedUrlRef.current;
+        queuedUrlRef.current = null;
         setQueuedUrl(null);
         setElapsed(0); setDuration(0);
         audio.src = nextUrl; audio.load(); audio.play().catch(function() {});
         return;
       }
-      // Avancer au suivant seulement si le bouton play est actif (jaune)
+      // Avancer seulement si bouton play actif (jaune)
       if (!playingRef.current) return;
-      var nextBook = bookIdx, nextChap = chapIdx;
-      if (chapIdx < BOOKS[bookIdx].ch - 1) { nextChap = chapIdx + 1; setChapIdx(nextChap); }
-      else if (bookIdx < BOOKS.length - 1) { nextBook = bookIdx + 1; nextChap = 0; setBookIdx(nextBook); setChapIdx(0); }
+      var bIdx = bookIdxRef.current;
+      var cIdx = chapIdxRef.current;
+      var nextBook = bIdx, nextChap = cIdx;
+      if (cIdx < BOOKS[bIdx].ch - 1) { nextChap = cIdx + 1; }
+      else if (bIdx < BOOKS.length - 1) { nextBook = bIdx + 1; nextChap = 0; }
       else { setPlaying(false); return; }
+      setBookIdx(nextBook); setChapIdx(nextChap);
       if (loadAndPlayRef.current) loadAndPlayRef.current(nextBook, nextChap);
     }
-    audio.addEventListener("timeupdate", onTime); audio.addEventListener("loadedmetadata", onMeta); audio.addEventListener("ended", onEnded);
-    return function() { audio.removeEventListener("timeupdate", onTime); audio.removeEventListener("loadedmetadata", onMeta); audio.removeEventListener("ended", onEnded); };
-  }, [bookIdx, chapIdx, queuedUrl]);
+    audio.addEventListener("timeupdate", onTime);
+    audio.addEventListener("loadedmetadata", onMeta);
+    audio.addEventListener("ended", onEnded);
+    return function() { audio.pause(); audio.removeEventListener("timeupdate", onTime); audio.removeEventListener("loadedmetadata", onMeta); audio.removeEventListener("ended", onEnded); audioRef.current = null; };
+  }, []);
 
   function loadAndPlay(bIdx, cIdx) {
     if (!audioRef.current) return;
