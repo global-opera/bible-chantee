@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+    setText('sn-regional', counts.regional);
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -309,6 +310,11 @@
         <div class="stat-number" id="sn-social">—</div>
         <div class="stat-label">Social Media</div>
       </div>
+    <div class="stat-card" data-catfilter="regional" style="--accent:#FF8C00" role="button" tabindex="0">
+      <div class="stat-icon">🌍</div>
+      <div class="stat-number" id="sn-regional">—</div>
+      <div class="stat-label">Régional</div>
+    </div>
     </section>
 
     <!-- STATS ROW 2 : par statut (cliquable) ────────────────────────────── -->
@@ -353,6 +359,9 @@
         <button class="filter-btn" data-catfilter="social" style="--btn-color:#E91E8C">
           <span class="dot"></span> Social
         </button>
+        <button class="filter-btn" data-catfilter="regional" style="--btn-color:#FF8C00">
+          <span class="dot"></span> Régional
+        </button>
       </div>
       <div class="filter-group" id="filter-status">
         <span class="filter-group-label">Statut</span>
@@ -388,6 +397,7 @@
         <div class="legend-item"><span class="legend-dot" style="background:#00A8E0;--dc:#00A8E0;"></span>Amazon Music</div>
         <div class="legend-item"><span class="legend-dot" style="background:#9B59B6;--dc:#9B59B6;"></span>Streaming Alternatif</div>
         <div class="legend-item"><span class="legend-dot" style="background:#E91E8C;--dc:#E91E8C;"></span>Social Media</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#FF8C00;--dc:#FF8C00;"></span>Plateformes Régionales</div>
       </div>
     </section>
 
@@ -414,7 +424,7 @@
 
     <!-- FOOTER ──────────────────────────────────────────────────────────── -->
     <footer class="page-footer">
-      <p>Bible Chantée &mdash; Distribution mondiale V2 &mdash; <span id="footer-count">13</span> plateformes &mdash; 2025</p>
+      <p>Bible Chantée &mdash; Distribution mondiale V2 &mdash; <span id="footer-count">14</span> plateformes &mdash; 2025</p>
     </footer>
 
   </div><!-- /.page-wrapper -->
@@ -440,12 +450,13 @@
     var statMeta  = data.statusMeta      || {};
 
     /* ── Computed stats ───────────────────────────────────────────────── */
-    var counts = { total: platforms.length, streaming: 0, social: 0,
+    var counts = { total: platforms.length, streaming: 0, social: 0, regional: 0,
                    live: 0, pending: 0, unknown: 0, bcLinks: 0, todo: 0 };
 
     platforms.forEach(function (p) {
       if (p.category === 'streaming') counts.streaming++;
       if (p.category === 'social')    counts.social++;
+      if (p.category === 'regional')  counts.regional++;
       if (p.availabilityStatus === 'live')    counts.live++;
       if (p.availabilityStatus === 'pending') counts.pending++;
       if (p.availabilityStatus === 'unknown') counts.unknown++;
