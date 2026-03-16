@@ -259,6 +259,80 @@ h
       color: rgba(240,230,208,.35);
     }
 
+    /* ── AUDIENCE MONDIALE ───────────────────────────────────────────────── */
+    .audience-section { margin-bottom: 36px; }
+
+    .platform-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px; margin-bottom: 24px;
+    }
+    .platform-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 14px; padding: 20px 22px; transition: background .2s;
+    }
+    .platform-card:hover { background: rgba(255,255,255,.08); }
+    .platform-card-header {
+      display: flex; align-items: center; gap: 8px;
+      font-size: .95rem; font-weight: 700;
+      margin-bottom: 14px; padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+    .platform-card--youtube { border-color: rgba(255,68,68,.25); }
+    .platform-card--youtube .platform-card-header { color: #FF6666; }
+    .platform-card--spotify { border-color: rgba(29,185,84,.25); }
+    .platform-card--spotify .platform-card-header { color: #1DB954; }
+    .platform-card--apple   { border-color: rgba(162,170,173,.25); }
+    .platform-card--apple   .platform-card-header { color: #C0C8CC; }
+
+    .pstat-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,.04);
+    }
+    .pstat-row:last-of-type { border-bottom: none; }
+    .pstat-val {
+      font-size: 1.45rem; font-weight: 800; color: #FFD700;
+      font-variant-numeric: tabular-nums;
+    }
+    .pstat-label {
+      font-size: .72rem; color: rgba(240,230,208,.45);
+      text-align: right; margin-left: 8px;
+    }
+    .data-source-badge {
+      margin-top: 12px; font-size: .68rem;
+      color: rgba(240,230,208,.28); text-align: right; font-style: italic;
+    }
+    .data-source-badge--real { color: rgba(0,200,81,.55); }
+
+    /* country table */
+    .country-table-wrapper {
+      overflow-x: auto; border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .country-table-wrapper table { width: 100%; border-collapse: collapse; font-size: .86rem; }
+    .country-table-wrapper thead tr {
+      background: rgba(255,215,0,.07);
+      border-bottom: 1px solid rgba(255,215,0,.15);
+    }
+    .country-table-wrapper th {
+      text-align: left; padding: 13px 16px;
+      font-size: .7rem; text-transform: uppercase; letter-spacing: .07em;
+      color: rgba(240,230,208,.5); font-weight: 600; white-space: nowrap;
+    }
+    .country-table-wrapper tbody tr {
+      border-bottom: 1px solid rgba(255,255,255,.04); transition: background .15s;
+    }
+    .country-table-wrapper tbody tr:last-child { border-bottom: none; }
+    .country-table-wrapper tbody tr:hover { background: rgba(255,255,255,.04); }
+    .country-table-wrapper td { padding: 10px 16px; vertical-align: middle; }
+    .streams-val { font-variant-numeric: tabular-nums; font-weight: 600; }
+    .streams-bar {
+      display: inline-block; height: 3px; border-radius: 2px;
+      margin-left: 8px; vertical-align: middle; opacity: .65;
+    }
+    .streams-empty { color: rgba(240,230,208,.2) !important; }
+
     /* ── FOOTER ───────────────────────────────────────────────────────────── */
     .page-footer {
       text-align: center; font-size: .76rem;
@@ -396,6 +470,80 @@ h
         <div class="legend-item"><span class="legend-dot" style="background:#9B59B6;--dc:#9B59B6;"></span>Streaming Alternatif</div>
         <div class="legend-item"><span class="legend-dot" style="background:#E91E8C;--dc:#E91E8C;"></span>Social Media</div>
         <div class="legend-item"><span class="legend-dot" style="background:#FF8C00;--dc:#FF8C00;"></span>Plateformes Régionales</div>
+      </div>
+    </section>
+
+    <!-- AUDIENCE MONDIALE ────────────────────────────────────────────────── -->
+    <section class="audience-section" aria-label="Audience mondiale Bible Chantée">
+      <div class="section-title">Audience mondiale Bible Chantée</div>
+
+      <div class="platform-stats-grid">
+
+        <!-- YouTube ── données réelles -->
+        <div class="platform-card platform-card--youtube">
+          <div class="platform-card-header">▶️ YouTube</div>
+          <div class="pstat-row">
+            <span class="pstat-val" id="yt-subscribers">—</span>
+            <span class="pstat-label">abonnés</span>
+          </div>
+          <div class="pstat-row">
+            <span class="pstat-val" id="yt-views-total">—</span>
+            <span class="pstat-label">vues totales</span>
+          </div>
+          <div class="pstat-row">
+            <span class="pstat-val" id="yt-views-28d">—</span>
+            <span class="pstat-label">vues (28 jours)</span>
+          </div>
+          <div class="data-source-badge data-source-badge--real">✅ Données réelles · YouTube Studio</div>
+        </div>
+
+        <!-- Spotify ── estimations distribution -->
+        <div class="platform-card platform-card--spotify">
+          <div class="platform-card-header">🎵 Spotify</div>
+          <div class="pstat-row">
+            <span class="pstat-val" id="sp-streams">—</span>
+            <span class="pstat-label">streams estimés (par pays)</span>
+          </div>
+          <div class="pstat-row">
+            <span class="pstat-val" id="sp-countries">—</span>
+            <span class="pstat-label">pays actifs</span>
+          </div>
+          <div class="data-source-badge">Estimations · API Spotify à connecter</div>
+        </div>
+
+        <!-- Apple Music ── estimations distribution -->
+        <div class="platform-card platform-card--apple">
+          <div class="platform-card-header">🍎 Apple Music</div>
+          <div class="pstat-row">
+            <span class="pstat-val" id="ap-streams">—</span>
+            <span class="pstat-label">plays estimés (par pays)</span>
+          </div>
+          <div class="pstat-row">
+            <span class="pstat-val" id="ap-countries">—</span>
+            <span class="pstat-label">pays actifs</span>
+          </div>
+          <div class="data-source-badge">Estimations · API Apple à connecter</div>
+        </div>
+
+      </div>
+
+      <!-- Country breakdown table -->
+      <div class="section-title">Top pays par plateforme</div>
+      <div class="country-table-wrapper">
+        <table aria-label="Streams par pays et plateforme">
+          <thead>
+            <tr>
+              <th>Pays</th>
+              <th style="color:#1DB954;">Spotify</th>
+              <th style="color:#C0C8CC;">Apple Music</th>
+              <th style="color:#FF6666;">YouTube</th>
+              <th style="color:#9B59B6;">Autre</th>
+            </tr>
+          </thead>
+          <tbody id="country-table-body">
+            <tr><td colspan="5" style="text-align:center;color:rgba(240,230,208,.3);padding:20px;">Chargement…</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
@@ -738,6 +886,106 @@ h
         if (current >= target) clearInterval(interval);
       }, 80);
     })();
+
+  })();
+  </script>
+
+  <!-- Audience mondiale : fetch données réelles + estimations -->
+  <script>
+  (function () {
+    'use strict';
+
+    function fmt(n) {
+      if (n == null || isNaN(+n)) return '—';
+      return (+n).toLocaleString('fr-FR');
+    }
+    function setText(id, val) {
+      var el = document.getElementById(id);
+      if (el) el.textContent = val;
+    }
+
+    /* ── YouTube : données réelles depuis social-stats.json ─────────────── */
+    fetch('/data/social-stats.json')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var yt = data.youtube || {};
+        setText('yt-subscribers', fmt(yt.subscribers_current));
+        setText('yt-views-total', fmt(yt.views_total));
+        setText('yt-views-28d',   fmt(yt.views_28d));
+      })
+      .catch(function () { /* silently keep — placeholders */ });
+
+    /* ── Spotify + Apple + tableau pays : platform-streams.json ─────────── */
+    fetch('/data/platform-streams.json')
+      .then(function (r) { return r.json(); })
+      .then(function (streams) {
+        if (!Array.isArray(streams)) return;
+
+        /* Aggregate by country */
+        var byCountry = {};
+        var spSet = {}, apSet = {};
+
+        streams.forEach(function (row) {
+          var c = row.country || '?';
+          if (!byCountry[c]) {
+            byCountry[c] = { flag: row.flag || '', spotify: 0, apple: 0, youtube: 0, other: 0, total: 0 };
+          }
+          var v = +(row.streams) || 0;
+          var p = (row.platform || '').toLowerCase();
+          if (p === 'spotify')      { byCountry[c].spotify += v;  spSet[c] = true; }
+          else if (p === 'apple')   { byCountry[c].apple  += v;   apSet[c] = true; }
+          else if (p === 'youtube') { byCountry[c].youtube += v; }
+          else                      { byCountry[c].other   += v; }
+          byCountry[c].total += v;
+        });
+
+        /* Platform totals */
+        var spTotal = streams.filter(function (r) { return r.platform === 'spotify'; })
+                             .reduce(function (s, r) { return s + (+(r.streams) || 0); }, 0);
+        var apTotal = streams.filter(function (r) { return r.platform === 'apple'; })
+                             .reduce(function (s, r) { return s + (+(r.streams) || 0); }, 0);
+
+        setText('sp-streams',   fmt(spTotal));
+        setText('sp-countries', Object.keys(spSet).length);
+        setText('ap-streams',   fmt(apTotal));
+        setText('ap-countries', Object.keys(apSet).length);
+
+        /* Country table — top 20 by total streams */
+        var rows = Object.keys(byCountry).map(function (c) {
+          return Object.assign({ name: c }, byCountry[c]);
+        }).sort(function (a, b) { return b.total - a.total; }).slice(0, 20);
+
+        var maxTotal = rows.length ? rows[0].total : 1;
+
+        function cell(val, color) {
+          if (!val) return '<td class="streams-empty">—</td>';
+          var barW = Math.round((val / maxTotal) * 56);
+          return '<td>' +
+            '<span class="streams-val" style="color:' + color + ';">' + fmt(val) + '</span>' +
+            '<span class="streams-bar" style="width:' + barW + 'px;background:' + color + ';"></span>' +
+            '</td>';
+        }
+
+        var tbody = document.getElementById('country-table-body');
+        if (!tbody) return;
+        tbody.innerHTML = '';
+
+        rows.forEach(function (c) {
+          var tr = document.createElement('tr');
+          tr.innerHTML =
+            '<td>' + c.flag + ' ' + c.name + '</td>' +
+            cell(c.spotify, '#1DB954') +
+            cell(c.apple,   '#C0C8CC') +
+            cell(c.youtube, '#FF6666') +
+            cell(c.other,   '#9B59B6');
+          tbody.appendChild(tr);
+        });
+      })
+      .catch(function () {
+        var tbody = document.getElementById('country-table-body');
+        if (tbody) tbody.innerHTML =
+          '<tr><td colspan="5" style="text-align:center;color:rgba(240,230,208,.3);padding:20px;">Données non disponibles</td></tr>';
+      });
 
   })();
   </script>
