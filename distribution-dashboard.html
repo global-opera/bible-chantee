@@ -442,6 +442,7 @@
     var statMeta  = data.statusMeta      || {};
 
     /* ── Computed stats ───────────────────────────────────────────────── */
+    var counts = { total: 0, streaming: 0, social: 0,
                    live: 0, pending: 0, unknown: 0, bcLinks: 0, todo: 0 };
 
     platforms.forEach(function (p) {
