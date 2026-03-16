@@ -546,6 +546,142 @@ h
   .sp-summary-val--highlight {
     color: #1DB954;
   }
+
+  /* ── CROISSANCE RÉCENTE ───────────────────────────────────────────── */
+  .growth-section {
+    margin-bottom: 36px;
+  }
+  .growth-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  /* base card */
+  .growth-card {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.09);
+    border-radius: 14px;
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    transition: background .2s, transform .15s;
+    position: relative;
+    overflow: hidden;
+  }
+  .growth-card:hover {
+    background: rgba(255,255,255,.08);
+    transform: translateY(-2px);
+  }
+  /* accent strip on left edge */
+  .growth-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    border-radius: 14px 0 0 14px;
+    background: var(--gc-accent, #FFD700);
+  }
+  /* per-platform accent colours */
+  .growth-card--spotify  { --gc-accent: #1DB954; border-color: rgba(29,185,84,.2); }
+  .growth-card--youtube  { --gc-accent: #FF4444; border-color: rgba(255,68,68,.2); }
+  .growth-card--boomplay { --gc-accent: #FF6200; border-color: rgba(255,98,0,.2); }
+  /* header row */
+  .growth-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  .growth-card-platform {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: .95rem;
+    font-weight: 700;
+    color: var(--gc-accent, #FFD700);
+  }
+  .growth-card-period {
+    font-size: .68rem;
+    color: rgba(240,230,208,.35);
+    font-style: italic;
+    text-align: right;
+  }
+  /* metric rows */
+  .growth-metric {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(255,255,255,.04);
+  }
+  .growth-metric:last-of-type {
+    border-bottom: none;
+  }
+  .growth-metric-label {
+    font-size: .74rem;
+    color: rgba(240,230,208,.45);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+  .growth-metric-val {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #FFD700;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+  .growth-metric-val--muted {
+    color: rgba(240,230,208,.7);
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  /* footer badge */
+  .growth-card-footer {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,.05);
+    font-size: .68rem;
+    color: rgba(240,230,208,.28);
+    font-style: italic;
+    text-align: right;
+  }
+  .growth-card-footer--real {
+    color: rgba(0,200,81,.5);
+  }
+  /* placeholder state */
+  .growth-placeholder {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px 0 10px;
+    text-align: center;
+  }
+  .growth-placeholder-icon {
+    font-size: 2rem;
+    opacity: .4;
+  }
+  .growth-placeholder-title {
+    font-size: .9rem;
+    font-weight: 700;
+    color: rgba(240,230,208,.5);
+  }
+  .growth-placeholder-note {
+    font-size: .74rem;
+    color: rgba(240,230,208,.28);
+    line-height: 1.45;
+    max-width: 200px;
+  }
+  @media (max-width: 640px) {
+    .growth-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
 </head>
 
@@ -817,7 +953,71 @@ h
       </div>
     </section>
 
-    <!-- FOOTER ──────────────────────────────────────────────────────────── -->
+    <!-- CROISSANCE RÉCENTE ───────────────────────────────────────────────── -->
+  <section class="growth-section" aria-label="Croissance récente">
+    <div class="section-title">Croissance récente</div>
+    <div class="growth-grid">
+
+      <!-- ── Spotify ── données réelles Spotify for Artists ── -->
+      <div class="growth-card growth-card--spotify">
+        <div class="growth-card-header">
+          <div class="growth-card-platform">🎵 Spotify</div>
+          <div class="growth-card-period" id="gr-sp-period">28 derniers jours</div>
+        </div>
+        <div class="growth-metric">
+          <span class="growth-metric-label">Auditeurs</span>
+          <span class="growth-metric-val" id="gr-sp-listeners">436</span>
+        </div>
+        <div class="growth-metric">
+          <span class="growth-metric-label">Pays actifs</span>
+          <span class="growth-metric-val" id="gr-sp-countries">14</span>
+        </div>
+        <div class="growth-metric">
+          <span class="growth-metric-label">Top pays</span>
+          <span class="growth-metric-val growth-metric-val--muted" id="gr-sp-top">🇫🇷 France</span>
+        </div>
+        <div class="growth-card-footer growth-card-footer--real">✅ Données réelles · Spotify for Artists</div>
+      </div>
+
+      <!-- ── YouTube ── données réelles YouTube Studio ── -->
+      <div class="growth-card growth-card--youtube">
+        <div class="growth-card-header">
+          <div class="growth-card-platform">▶️ YouTube</div>
+          <div class="growth-card-period">Cumulé · 28 j</div>
+        </div>
+        <div class="growth-metric">
+          <span class="growth-metric-label">Abonnés</span>
+          <span class="growth-metric-val" id="gr-yt-subscribers">1 540</span>
+        </div>
+        <div class="growth-metric">
+          <span class="growth-metric-label">Vues totales</span>
+          <span class="growth-metric-val" id="gr-yt-views-total">20 121</span>
+        </div>
+        <div class="growth-metric">
+          <span class="growth-metric-label">Vues (28 j)</span>
+          <span class="growth-metric-val" id="gr-yt-views-28d">18 821</span>
+        </div>
+        <div class="growth-card-footer growth-card-footer--real">✅ Données réelles · YouTube Studio</div>
+      </div>
+
+      <!-- ── Boomplay ── placeholder ── -->
+      <div class="growth-card growth-card--boomplay">
+        <div class="growth-card-header">
+          <div class="growth-card-platform">🎵 Boomplay</div>
+          <div class="growth-card-period">—</div>
+        </div>
+        <div class="growth-placeholder">
+          <div class="growth-placeholder-icon">⏳</div>
+          <div class="growth-placeholder-title">Données à venir</div>
+          <div class="growth-placeholder-note">En attente de validation Boomplay for Artists</div>
+        </div>
+        <div class="growth-card-footer">Accès analytics en cours d'obtention</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER ──────────────────────────────────────────────────────────── -->
     <footer class="page-footer">
       <p>Bible Chantée &mdash; Distribution mondiale V2 &mdash; <span id="footer-count">23</span> plateformes &mdash; 2025</p>
     </footer>
@@ -1163,6 +1363,10 @@ h
         setText('yt-subscribers', fmt(yt.subscribers_current));
         setText('yt-views-total', fmt(yt.views_total));
         setText('yt-views-28d',   fmt(yt.views_28d));
+        // Growth card — YouTube (mirrors studio data)
+        setText('gr-yt-subscribers',  fmt(yt.subscribers_current));
+        setText('gr-yt-views-total',   fmt(yt.views_total));
+        setText('gr-yt-views-28d',     fmt(yt.views_28d));
       })
       .catch(function () { /* silently keep — placeholders */ });
 
@@ -1282,6 +1486,12 @@ h
       setText('sp-top-country', topC ? (flags[topC.code] || '') + ' ' + topC.country : '—');
       setText('sp-total-listeners', fmt(totalListeners));
       setText('sp-country-count', countries.length);
+
+      // Growth card — Spotify (mirrors audience data)
+      setText('gr-sp-listeners', fmt(totalListeners));
+      setText('gr-sp-countries', countries.length);
+      setText('gr-sp-top', topC ? (flags[topC.code] || '') + '\u00a0' + topC.country : '—');
+      setText('gr-sp-period', aud.period || '28 derniers jours');
 
       // Sort by listeners descending so smaller circles draw on top
       var sorted = countries.slice().sort(function (a, b) { return b.listeners - a.listeners; });
