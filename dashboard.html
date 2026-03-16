@@ -2111,7 +2111,9 @@
                     if (country.name) console.log('[Map] pays ignoré car nom invalide:', JSON.stringify(country.name));
                     return;
                 }
-                const coords = window.getCountryCoords ? window.getCountryCoords(normalized) : null;
+                const raw = window.getCountryCoords ? window.getCountryCoords(normalized) : null;
+                // getCountryCoords returns [lat,lng] array — convert to {lat,lng} object
+                const coords = Array.isArray(raw) ? { lat: raw[0], lng: raw[1], flag: '' } : raw;
                 if (!coords || !isValidLatLng(coords.lat, coords.lng)) {
                     console.log('[Map] coordonnées manquantes pour:', normalized);
                     return;
@@ -2727,7 +2729,7 @@
             markers.forEach(m => map.removeLayer(m));
             markers = [];
             data.forEach(p => {
-                if (!isValidLatLng(p.lat, p.lng)) return;
+                if (!p || !isValidLatLng(p.lat, p.lng)) return;
                 let color;
                 if (currentMapView === 'language') {
                     color = LANGUAGE_COLORS[p.language] || '#888';
@@ -2742,9 +2744,15 @@
                     color = PLATFORM_COLORS[p.platform] || '#888';
                 }
                 const size = Math.max(6, Math.log(p.streams) * 4);
-                const marker = L.circleMarker([p.lat, p.lng], {
-                    radius: size, color: color, fillColor: color, fillOpacity: 0.75, weight: 1.5
-                }).addTo(map);
+                let marker;
+                try {
+                    marker = L.circleMarker([p.lat, p.lng], {
+                        radius: size, color: color, fillColor: color, fillOpacity: 0.75, weight: 1.5
+                    }).addTo(map);
+                } catch(e) {
+                    console.warn('[renderStreamMap] marker ignoré pour', p.country, '| lat=', p.lat, 'lng=', p.lng, '|', e.message);
+                    return;
+                }
                 const rev = (p.streams * (PLATFORM_PAYOUTS[p.platform]||0)).toFixed(2);
                 const viralScore = (p.growth * p.streams / 1000).toFixed(1);
                 marker.bindPopup(`
@@ -2947,7 +2955,8 @@
                 const norm = normalizeCountryName(c.name);
                 if (!norm || c.visitors < 1) return;
                 if (existingNorms.has(norm.toLowerCase())) return;
-                const coords = window.getCountryCoords ? window.getCountryCoords(norm) : null;
+                const rawC = window.getCountryCoords ? window.getCountryCoords(norm) : null;
+                const coords = Array.isArray(rawC) ? { lat: rawC[0], lng: rawC[1], flag: '' } : rawC;
                 if (!coords || !isValidLatLng(coords.lat, coords.lng)) {
                     console.log('[Table] ligne rendue sans coordonnées pour:', norm);
                     // Still add to streamData for table, but no coords → no map marker
