@@ -1636,128 +1636,88 @@ h
 
 <!-- Insights script — generated from real data only -->
 <script>
-(function () {
-  'use strict';
-
-  function buildInsights() {
-    var grid = document.getElementById('insights-grid');
-    if (!grid) return;
-
-    var aud  = window.audienceData;
-    var dist = window.distributionData;
-
-    // Guard: need at least audienceData
-    if (!aud || !aud.countries || !aud.countries.length) {
-      grid.innerHTML = '<p style="color:rgba(240,230,208,.3);font-size:.82rem;padding:8px 0;">Chargement des données…</p>';
-      return;
-    }
-
-    var countries      = aud.countries;           // sorted by listeners desc
-    var totalListeners = countries.reduce(function (s, c) { return s + (c.listeners || 0); }, 0);
-    var continents     = aud.continents || [];
-    var flags = {
-      'FR':'🇫🇷','BR':'🇧🇷','US':'🇺🇸','CA':'🇨🇦','DE':'🇩🇪','CH':'🇨🇭',
-      'NG':'🇳🇬','BE':'🇧🇪','GB':'🇬🇧','CD':'🇨🇩','ZA':'🇿🇦','GN':'🇬🇳',
-      'SG':'🇸🇬','PH':'🇵🇭'
-    };
-
-    // Helper: safe integer percentage from data (not invented)
-    function pct(part, total) {
-      return total > 0 ? Math.round((part / total) * 100) : 0;
-    }
-
-    // ── Insight 1: Top market ──────────────────────────────────
-    var top = countries[0];
-    var topFlag = flags[top.code] || '';
-    var topShare = pct(top.listeners, totalListeners); // real ratio
-
-    // ── Insight 2: Continental reach ──────────────────────────
-    var continentCount = continents.length;
-
-    // ── Insight 3: Secondary market ───────────────────────────
-    var sec = countries[1];
-    var secFlag = sec ? (flags[sec.code] || '') : '';
-
-    // ── Insight 4: African presence ───────────────────────────
-    var africaCountries = countries.filter(function (c) {
-      return c.continent === 'Afrique';
-    });
-    var africaListeners = africaCountries.reduce(function (s, c) { return s + (c.listeners || 0); }, 0);
-    var africaShare = pct(africaListeners, totalListeners); // real ratio
-
-    // ── Insight 5: Distribution coverage ─────────────────────
-    // From distributionData: how many streaming platforms are live
-    var streamingLive = 0;
-    var streamingTotal = 0;
-    if (dist && dist.platforms) {
-      dist.platforms.forEach(function (p) {
-        if (p.category === 'streaming') {
-          streamingTotal++;
-          if (p.availabilityStatus === 'live') streamingLive++;
-        }
+  (function () {
+    function getFlag(code) {
+      if (!code) return '';
+      return code.toUpperCase().replace(/./g, function (c) {
+        return String.fromCodePoint(127397 + c.charCodeAt(0));
       });
     }
-
-    // ── Build card HTML ───────────────────────────────────────
-    var cards = [
-      {
-        cls: 'insight-card--gold',
-        icon: '🏆',
-        title: 'Marché principal',
-        body: '<strong>' + topFlag + ' ' + top.country + '</strong> est le 1<sup>er</sup> marché Spotify avec <strong>' + top.listeners + ' auditeurs</strong>, soit <strong>' + topShare + '%</strong> de l'audience totale.',
-        source: 'Spotify for Artists · ' + (aud.period || '28 derniers jours')
-      },
-      {
-        cls: 'insight-card--blue',
-        icon: '🌐',
-        title: 'Rayonnement continental',
-        body: 'Bible Chantée touche des auditeurs sur <strong>' + continentCount + ' continents</strong> distincts : ' + continents.join(', ') + '.',
-        source: 'Spotify for Artists · ' + countries.length + ' pays actifs'
-      },
-      {
-        cls: 'insight-card--green',
-        icon: '🌎',
-        title: 'Marché secondaire',
-        body: sec
-          ? '<strong>' + secFlag + ' ' + sec.country + '</strong> est le 2<sup>e</sup> marché Spotify avec <strong>' + sec.listeners + ' auditeurs</strong>.'
-          : 'Données insuffisantes pour identifier un marché secondaire.',
-        source: 'Spotify for Artists · ' + (aud.period || '28 derniers jours')
-      },
-      {
-        cls: 'insight-card--orange',
-        icon: '🌍',
-        title: 'Présence africaine',
-        body: '<strong>' + africaCountries.length + ' pays d'Afrique</strong> confirmés sur Spotify (' + africaCountries.map(function (c) { return (flags[c.code] || '') + ' ' + c.country; }).join(', ') + '), représentant <strong>' + africaShare + '%</strong> de l'audience totale.',
-        source: 'Spotify for Artists · données réelles'
-      },
-      {
-        cls: 'insight-card--muted',
-        icon: '⏳',
-        title: 'Analytics Boomplay',
-        body: 'Boomplay est <strong>confirmé live</strong> sur le tableau de distribution, mais les analytics Boomplay for Artists ne sont pas encore disponibles.',
-        source: 'distribution-data.js · boomplay-data.js'
+    function buildInsights() {
+      var grid = document.getElementById('insights-grid');
+      if (!grid) return;
+      var aud = window.audienceData;
+      if (!aud || !aud.countries || !aud.countries.length) {
+        grid.innerHTML = '<p style="color:#6b7280;font-size:.85rem">Donn\u00e9es non disponibles.</p>';
+        return;
       }
-    ];
-
-    grid.innerHTML = cards.map(function (card) {
-      return '<div class="insight-card ' + card.cls + '">' +
-        '<div class="insight-card-header">' +
-          '<span class="insight-icon">' + card.icon + '</span>' +
-          '<span class="insight-title">' + card.title + '</span>' +
-        '</div>' +
-        '<p class="insight-body">' + card.body + '</p>' +
-        '<p class="insight-source">' + card.source + '</p>' +
-      '</div>';
-    }).join('');
-  }
-
-  // Run after all scripts are loaded
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', buildInsights);
-  } else {
-    buildInsights();
-  }
-})();
+      var countries      = aud.countries;
+      var totalListeners = aud.totalListeners || countries.reduce(function (s, c) { return s + (c.listeners || 0); }, 0);
+      var continents     = aud.continents || [];
+      var top      = countries[0];
+      var topFlag  = getFlag(top ? top.code : '');
+      var topShare = top ? Math.round(top.listeners / totalListeners * 100) : 0;
+      var sec      = countries[1] || null;
+      var secFlag  = getFlag(sec ? sec.code : '');
+      var africaCountries = countries.filter(function (c) { return c.continent === 'Afrique'; });
+      var africaListeners = africaCountries.reduce(function (s, c) { return s + (c.listeners || 0); }, 0);
+      var africaShare = totalListeners ? Math.round(africaListeners / totalListeners * 100) : 0;
+      var continentCount = continents.length;
+      var period = aud.period || '28 derniers jours';
+      var secBody = sec
+        ? ('<strong>' + secFlag + '\u00a0' + sec.country + '</strong> est le 2<sup>e</sup> march\u00e9 Spotify avec <strong>' + sec.listeners + '\u00a0auditeurs</strong>.')
+        : 'Donn\u00e9es insuffisantes.';
+      var cards = [
+        {
+          cls: 'insight-card--gold',
+          icon: '\u{1F3C6}',
+          title: 'March\u00e9 principal',
+          body: '<strong>' + topFlag + '\u00a0' + top.country + '</strong> est le 1<sup>er</sup> march\u00e9 Spotify avec <strong>' + top.listeners + '\u00a0auditeurs</strong>, soit <strong>' + topShare + '\u00a0%</strong> de l\u2019audience totale.',
+          source: 'Spotify for Artists \u00b7 ' + period
+        },
+        {
+          cls: 'insight-card--blue',
+          icon: '\u{1F310}',
+          title: 'Rayonnement continental',
+          body: 'Bible Chant\u00e9e touche des auditeurs sur <strong>' + continentCount + '\u00a0continents</strong> distincts\u00a0: ' + continents.join(', ') + '.',
+          source: 'Spotify for Artists \u00b7 ' + countries.length + ' pays actifs'
+        },
+        {
+          cls: 'insight-card--green',
+          icon: '\u{1F30E}',
+          title: 'March\u00e9 secondaire',
+          body: secBody,
+          source: 'Spotify for Artists \u00b7 ' + period
+        },
+        {
+          cls: 'insight-card--orange',
+          icon: '\u{1F30D}',
+          title: 'Pr\u00e9sence africaine',
+          body: '<strong>' + africaCountries.length + '\u00a0pays d\u2019Afrique</strong> confirm\u00e9s sur Spotify pour <strong>' + africaListeners + '\u00a0auditeurs</strong> (' + africaShare + '\u00a0% du total).',
+          source: 'Spotify for Artists \u00b7 ' + period
+        },
+        {
+          cls: 'insight-card--muted',
+          icon: '\u23F3',
+          title: 'Analytics Boomplay',
+          body: 'Bible Chant\u00e9e est d\u00e9j\u00e0 distribu\u00e9e sur Boomplay. Les donn\u00e9es analytiques seront disponibles apr\u00e8s validation de l\u2019acc\u00e8s Boomplay for Artists.',
+          source: 'Boomplay \u00b7 en attente de validation'
+        }
+      ];
+      grid.innerHTML = cards.map(function (d) {
+        return '<div class="insight-card ' + d.cls + '">' +
+          '<div class="insight-header"><span class="insight-icon">' + d.icon + '</span><span class="insight-title">' + d.title + '</span></div>' +
+          '<div class="insight-body">' + d.body + '</div>' +
+          '<div class="insight-source">' + d.source + '</div>' +
+          '</div>';
+      }).join('');
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', buildInsights);
+    } else {
+      buildInsights();
+    }
+  })();
 </script>
 </body>
 </html>
