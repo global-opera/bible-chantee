@@ -116,6 +116,14 @@
       font-size: .72rem; text-transform: uppercase; letter-spacing: .08em;
       color: rgba(240,230,208,.4); margin-bottom: 12px;
     }
+    .map-message {
+      background: rgba(255,215,0,.07);
+      border: 1px solid rgba(255,215,0,.18);
+      border-radius: 10px; padding: 10px 18px;
+      font-size: .88rem; color: rgba(240,230,208,.72);
+      margin-bottom: 14px; text-align: center; letter-spacing: .01em;
+    }
+    .map-message strong { color: #FFD700; font-variant-numeric: tabular-nums; }
     .map-section { margin-bottom: 32px; }
     #distribution-map {
       height: 560px; width: 100%; border-radius: 14px;
@@ -373,6 +381,7 @@
     <!-- MAP ─────────────────────────────────────────────────────────────── -->
     <section class="map-section" aria-label="Carte mondiale">
       <div class="section-title">Carte interactive</div>
+      <div class="map-message">🌍 Bible Chantée est distribuée sur <strong id="anim-count">0</strong> plateformes dans le monde</div>
       <div id="distribution-map" role="img" aria-label="Carte mondiale de distribution Bible Chantée"></div>
     </section>
 
@@ -462,7 +471,7 @@
       var el = document.getElementById(id);
       if (el) el.textContent = val;
     }
-    setText('sn-total',    counts.total);
+    setText('sn-total',    0); /* will animate */
     setText('sn-streaming', counts.streaming);
     setText('sn-social',   counts.social);
     setText('sn-regional', counts.regional);
@@ -535,27 +544,26 @@
 
     var markers = {}; // keyed by platform id
 
+    /* ── Build all markers invisible — stored immediately for filter logic ── */
     jittered.forEach(function (p) {
-      /* Skip if coordinates invalid */
       if (p.lat == null || p.lng == null || isNaN(+p.lat) || isNaN(+p.lng)) return;
 
       var marker = L.circleMarker([+p.lat, +p.lng], {
         radius: 10,
         fillColor: p.color,
         color: 'rgba(255,255,255,0.35)',
-        weight: 1.5, opacity: 1, fillOpacity: 0.85
+        weight: 1.5,
+        opacity: 0,      /* invisible at start */
+        fillOpacity: 0   /* invisible at start */
       });
 
-      /* Popup regions */
       var regHtml = (p.regions || []).map(function (r) {
         return '<span style="background:rgba(255,255,255,.1);border-radius:4px;padding:1px 5px;margin:1px 2px;font-size:.76rem;display:inline-block;">' + esc(r) + '</span>';
       }).join('');
 
-      /* Status badge */
       var ss = statusStyle(p.availabilityStatus);
       var statusHtml = '<div><span class="popup-status-badge" style="background:' + ss.color + '22;border:1px solid ' + ss.color + '55;color:' + ss.color + ';">' + ss.icon + ' ' + esc(ss.label) + '</span></div>';
 
-      /* Action buttons */
       var actionsHtml = '<div class="popup-actions">';
       if (p.officialUrl) {
         actionsHtml += '<a class="popup-btn popup-btn-platform" href="' + esc(p.officialUrl) + '" target="_blank" rel="noopener noreferrer">↗ Ouvrir la plateforme</a>';
@@ -579,6 +587,26 @@
 
       marker.addTo(map);
       markers[p.id] = { marker: marker, platform: p };
+    });
+
+    /* ── Progressive fade-in animation (180 ms between each platform) ─────── */
+    var animStartDelay = 400; /* small pause before first platform appears */
+
+    jittered.forEach(function (p, i) {
+      if (!markers[p.id]) return;
+      var m = markers[p.id];
+
+      setTimeout(function () {
+        if (!map.hasLayer(m.marker)) return; /* filtered out – skip */
+        var op = 0;
+        var fade = setInterval(function () {
+          op += 0.12;
+          if (op >= 0.85) { op = 0.85; clearInterval(fade); }
+          try {
+            m.marker.setStyle({ fillOpacity: op, opacity: Math.min(op * 1.4, 1) });
+          } catch (e) { clearInterval(fade); }
+        }, 25);
+      }, animStartDelay + i * 180);
     });
 
     /* ── Table rows ───────────────────────────────────────────────────── */
@@ -698,6 +726,19 @@
 
     /* Init */
     applyFilters();
+
+    /* ── Animated counters (sn-total + map message) ───────────────────────── */
+    (function () {
+      var target  = counts.total;
+      var current = 0;
+      var interval = setInterval(function () {
+        current = Math.min(current + 1, target);
+        setText('sn-total', current);
+        var el = document.getElementById('anim-count');
+        if (el) el.textContent = current;
+        if (current >= target) clearInterval(interval);
+      }, 80);
+    })();
 
   })();
   </script>
