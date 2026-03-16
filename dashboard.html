@@ -2589,52 +2589,34 @@
                 isUsingRealData = true;
                 lastApiData = data;
 
-                console.log('🌍 Liste des pays:', data.today?.countries);
-
-                // Filtrer les pays valides
+                // Filtrer les pays valides dès la source
                 const allCountries = data.today?.countries || [];
                 const validCountries = allCountries.filter(c =>
                     c.name && c.name !== '(not set)' && c.name.trim() !== ''
                 );
 
-                // Debug: afficher les pays "(not set)" avec leurs villes
-                const notSetCountries = allCountries.filter(c =>
-                    !c.name || c.name === '(not set)' || c.name.trim() === ''
-                );
-                if (notSetCountries.length > 0) {
-                    console.warn('⚠️ Pays "(not set)" détectés:', notSetCountries.length);
-                    notSetCountries.forEach(c => {
-                        const cities = c.cities ? c.cities.map(city => city.name || city).join(', ') : 'Aucune ville';
-                        console.log(`   → "${c.name}" - ${c.visitors} visiteurs - Villes: ${cities}`);
-                    });
-                }
+                const notSetCount = allCountries.length - validCountries.length;
+                if (notSetCount > 0) console.warn('[GA4] pays ignorés (not set / vide):', notSetCount);
+                console.log('[GA4] pays valides:', validCountries.length, validCountries.map(c => c.name));
 
-                console.log('✅ Pays valides pour affichage:', validCountries.length, validCountries.map(c => c.name));
-
-                // Créer un objet data modifié avec les pays filtrés
                 const filteredData = {
                     ...data,
-                    today: {
-                        ...data.today,
-                        countries: validCountries
-                    }
+                    today: { ...data.today, countries: validCountries }
                 };
 
-                updateStats(filteredData);
-                updateTopCountries(validCountries);
-                updateTopPages(data.topPages || []);
-                updateEvents(data.events || {});
-                updateActivity(filteredData);
-                updateMap(validCountries);
+                // setDataSource called first — UI never stays "Connecting..." even if rendering fails
                 setDataSource(true);
 
-                // Merge real GA4 data into platform map
-                mergeGA4IntoStreamData(data);
-
-                // Render intelligence panels with real data
-                renderEntryPlatforms(data.sourceByCountry || {});
-                renderViralCountries();
-                renderRevenueSummary();
+                try { updateStats(filteredData); }       catch(e) { console.error('[refresh] updateStats:', e); }
+                try { updateTopCountries(validCountries); } catch(e) { console.error('[refresh] updateTopCountries:', e); }
+                try { updateTopPages(data.topPages || []); } catch(e) { console.error('[refresh] updateTopPages:', e); }
+                try { updateEvents(data.events || {}); }  catch(e) { console.error('[refresh] updateEvents:', e); }
+                try { updateActivity(filteredData); }    catch(e) { console.error('[refresh] updateActivity:', e); }
+                try { updateMap(validCountries); }       catch(e) { console.error('[refresh] updateMap:', e); }
+                try { mergeGA4IntoStreamData(data); }    catch(e) { console.error('[refresh] mergeGA4:', e); }
+                try { renderEntryPlatforms(data.sourceByCountry || {}); } catch(e) { console.error('[refresh] entryPlatforms:', e); }
+                try { renderViralCountries(); }          catch(e) { console.error('[refresh] viralCountries:', e); }
+                try { renderRevenueSummary(); }          catch(e) { console.error('[refresh] revenueSummary:', e); }
             } else {
                 setDataSource(false, 'Erreur connexion API GA4');
             }
