@@ -426,51 +426,125 @@ h
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10px;
-    background: linear-gradient(135deg, rgba(29,185,84,.1) 0%, rgba(29,185,84,.04) 100%);
-    border: 1px solid rgba(29,185,84,.28);
-    border-radius: 12px;
-    padding: 14px 20px;
+    gap: 16px;
+    background: linear-gradient(135deg, rgba(29,185,84,.13) 0%, rgba(13,13,43,.95) 60%);
+    border: 1px solid rgba(29,185,84,.35);
+    border-radius: 14px;
+    padding: 18px 24px;
     margin-bottom: 16px;
+    box-shadow: 0 4px 24px rgba(29,185,84,.08), inset 0 1px 0 rgba(255,255,255,.04);
+    position: relative;
+    overflow: hidden;
+  }
+  .audience-global-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 10% 50%, rgba(29,185,84,.07) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .audience-banner-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
   }
   .audience-banner-title {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #1DB954;
-    letter-spacing: -.01em;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -.02em;
+    line-height: 1.2;
+    text-shadow: 0 0 20px rgba(29,185,84,.3);
+  }
+  .audience-banner-source {
+    font-size: .72rem;
+    color: rgba(29,185,84,.7);
+    letter-spacing: .02em;
   }
   .audience-banner-stats {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    align-items: center;
   }
   .audience-banner-stat {
     text-align: center;
+    padding: 6px 14px;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 10px;
+    min-width: 68px;
   }
   .audience-banner-stat-num {
-    font-size: 1.6rem;
-    font-weight: 800;
+    font-size: 1.75rem;
+    font-weight: 900;
     color: #FFD700;
     line-height: 1;
     font-variant-numeric: tabular-nums;
+    text-shadow: 0 0 16px rgba(255,215,0,.25);
   }
   .audience-banner-stat-label {
-    font-size: .66rem;
+    font-size: .62rem;
     text-transform: uppercase;
-    letter-spacing: .07em;
-    color: rgba(240,230,208,.45);
-    margin-top: 2px;
+    letter-spacing: .08em;
+    color: rgba(240,230,208,.4);
+    margin-top: 3px;
   }
-  /* Leaflet tooltip for audience map */
+  /* ── Leaflet tooltip — audience map ──────────────────────── */
   .audience-tooltip {
-    background: #1a1a3e !important;
-    border: 1px solid rgba(29,185,84,.45) !important;
-    border-radius: 8px !important;
+    background: rgba(15,15,40,.97) !important;
+    border: 1px solid rgba(29,185,84,.5) !important;
+    border-radius: 10px !important;
     color: #F0E6D0 !important;
-    font-size: .82rem !important;
-    padding: 6px 10px !important;
+    font-size: .86rem !important;
+    line-height: 1.5 !important;
+    padding: 8px 13px !important;
     white-space: nowrap;
-    box-shadow: 0 4px 16px rgba(0,0,0,.5) !important;
+    box-shadow: 0 6px 24px rgba(0,0,0,.65), 0 0 0 1px rgba(29,185,84,.12) !important;
+    font-family: 'Segoe UI', system-ui, sans-serif !important;
+  }
+  .audience-tooltip strong {
+    color: #1DB954 !important;
+    font-size: .9rem !important;
+    display: block;
+    margin-bottom: 1px;
+  }
+  .audience-tooltip::before {
+    border-top-color: rgba(29,185,84,.5) !important;
+  }
+  /* ── SPOTIFY SUMMARY ROW ─────────────────────────────────────── */
+  .sp-summary-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(29,185,84,.12);
+  }
+  .sp-summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,.04);
+  }
+  .sp-summary-item:last-child {
+    border-bottom: none;
+  }
+  .sp-summary-label {
+    font-size: .74rem;
+    color: rgba(240,230,208,.45);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+  }
+  .sp-summary-val {
+    font-size: .88rem;
+    font-weight: 700;
+    color: #F0E6D0;
+    font-variant-numeric: tabular-nums;
+  }
+  .sp-summary-val--highlight {
+    color: #1DB954;
   }
 </style>
 </head>
@@ -610,7 +684,10 @@ h
         🎵 <strong id="audience-total-listeners">—</strong> auditeurs Spotify dans <strong id="audience-countries-count">—</strong> pays · <span id="audience-period">—</span>
       </div>
       <div class="audience-global-banner" id="audience-global-banner">
-        <div class="audience-banner-title">🌍 Audience mondiale Bible Chantée</div>
+        <div class="audience-banner-left">
+          <div class="audience-banner-title">🌍 Audience mondiale Bible Chantée</div>
+          <div class="audience-banner-source" id="banner-source">Source : Spotify for Artists · 28 derniers jours</div>
+        </div>
         <div class="audience-banner-stats">
           <div class="audience-banner-stat">
             <div class="audience-banner-stat-num" id="banner-countries">—</div>
@@ -671,6 +748,20 @@ h
             <span class="pstat-label">pays confirmés</span>
           </div>
           <div id="sp-country-chips" style="margin-top:12px;display:flex;flex-wrap:wrap;gap:5px;"></div>
+          <div class="sp-summary-row" id="sp-summary-row">
+            <div class="sp-summary-item">
+              <span class="sp-summary-label">Top pays</span>
+              <span class="sp-summary-val sp-summary-val--highlight" id="sp-top-country">—</span>
+            </div>
+            <div class="sp-summary-item">
+              <span class="sp-summary-label">Auditeurs</span>
+              <span class="sp-summary-val" id="sp-total-listeners">—</span>
+            </div>
+            <div class="sp-summary-item">
+              <span class="sp-summary-label">Pays</span>
+              <span class="sp-summary-val" id="sp-country-count">—</span>
+            </div>
+          </div>
           <div class="data-source-badge data-source-badge--real">✅ Données réelles · Spotify for Artists</div>
         </div>
 
@@ -1155,6 +1246,7 @@ h
       var continentsCount = aud.continents ? aud.continents.length : 4;
       setText('banner-countries', countriesCount);
       setText('banner-continents', continentsCount);
+      setText('banner-source', 'Source : ' + (aud.source || 'Spotify for Artists') + ' · ' + (aud.period || '28 derniers jours'));
 
       // Max listeners for scaling
       var maxListeners = Math.max.apply(null, countries.map(function (c) { return c.listeners || 0; }));
@@ -1184,6 +1276,12 @@ h
         'NG':'🇳🇬','BE':'🇧🇪','GB':'🇬🇧','CD':'🇨🇩','ZA':'🇿🇦','GN':'🇬🇳',
         'SG':'🇸🇬','PH':'🇵🇭'
       };
+
+      // Spotify card summary row — filled here because flags is now available
+      var topC = aud.countries && aud.countries[0];
+      setText('sp-top-country', topC ? (flags[topC.code] || '') + ' ' + topC.country : '—');
+      setText('sp-total-listeners', fmt(totalListeners));
+      setText('sp-country-count', countries.length);
 
       // Sort by listeners descending so smaller circles draw on top
       var sorted = countries.slice().sort(function (a, b) { return b.listeners - a.listeners; });
