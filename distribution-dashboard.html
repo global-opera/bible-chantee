@@ -10,471 +10,260 @@
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
   <style>
-    /* ============================================================
-       RESET & BASE
-    ============================================================ */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    /* ── RESET & BASE ─────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     html, body {
-      height: 100%;
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background-color: #0d0d2b;
+      background: #0d0d2b;
       color: #F0E6D0;
       line-height: 1.6;
+      min-height: 100%;
     }
 
-    /* ============================================================
-       LAYOUT
-    ============================================================ */
-    .page-wrapper {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px 60px;
-    }
+    a { color: inherit; }
 
-    /* ============================================================
-       HEADER
-    ============================================================ */
+    /* ── LAYOUT ───────────────────────────────────────────────────────────── */
+    .page-wrapper { max-width: 1300px; margin: 0 auto; padding: 0 24px 72px; }
+
+    /* ── HEADER ───────────────────────────────────────────────────────────── */
     .site-header {
       padding: 32px 0 24px;
-      border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+      border-bottom: 1px solid rgba(255,215,0,0.2);
       margin-bottom: 32px;
     }
-
     .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: #FFD700;
-      text-decoration: none;
-      font-size: 0.85rem;
-      opacity: 0.8;
-      transition: opacity 0.2s;
-      margin-bottom: 20px;
+      display: inline-flex; align-items: center; gap: 6px;
+      color: #FFD700; text-decoration: none; font-size: 0.85rem;
+      opacity: 0.75; transition: opacity .2s; margin-bottom: 18px;
     }
-
-    .back-link:hover {
-      opacity: 1;
-      text-decoration: underline;
-    }
-
+    .back-link:hover { opacity: 1; text-decoration: underline; }
     .header-content {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
+      display: flex; align-items: flex-end;
+      justify-content: space-between; flex-wrap: wrap; gap: 12px;
     }
-
     .header-title {
       font-size: clamp(1.5rem, 3vw, 2.2rem);
-      font-weight: 700;
-      color: #FFD700;
-      letter-spacing: -0.02em;
-      text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+      font-weight: 700; color: #FFD700; letter-spacing: -.02em;
+      text-shadow: 0 0 30px rgba(255,215,0,.3);
     }
-
     .header-subtitle {
-      font-size: 0.95rem;
-      color: rgba(240, 230, 208, 0.65);
-      margin-top: 4px;
+      font-size: .95rem; color: rgba(240,230,208,.6); margin-top: 4px;
     }
-
     .header-badge {
-      background: rgba(255, 215, 0, 0.12);
-      border: 1px solid rgba(255, 215, 0, 0.35);
-      color: #FFD700;
-      font-size: 0.78rem;
-      font-weight: 600;
-      padding: 5px 14px;
-      border-radius: 20px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      white-space: nowrap;
+      background: rgba(255,215,0,.12); border: 1px solid rgba(255,215,0,.35);
+      color: #FFD700; font-size: .78rem; font-weight: 600;
+      padding: 5px 14px; border-radius: 20px; letter-spacing: .04em;
+      text-transform: uppercase; white-space: nowrap;
     }
 
-    /* ============================================================
-       STAT COUNTERS
-    ============================================================ */
-    .stats-grid {
+    /* ── STAT CARDS ───────────────────────────────────────────────────────── */
+    .stats-row {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 16px;
-      margin-bottom: 36px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 14px; margin-bottom: 14px;
     }
-
     .stat-card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      padding: 20px 24px;
-      text-align: center;
-      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 12px; padding: 18px 20px; text-align: center;
+      transition: background .2s, border-color .2s, transform .15s;
       cursor: default;
     }
-
-    .stat-card:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 215, 0, 0.25);
-      transform: translateY(-2px);
-    }
-
+    .stat-card[data-filter] { cursor: pointer; }
+    .stat-card:hover { background: rgba(255,255,255,.08); transform: translateY(-2px); }
     .stat-card.active-filter {
-      border-color: var(--accent);
-      background: rgba(255, 255, 255, 0.09);
-      box-shadow: 0 0 0 1px var(--accent), 0 4px 20px rgba(0,0,0,0.3);
+      border-color: var(--accent, #FFD700);
+      background: rgba(255,255,255,.09);
+      box-shadow: 0 0 0 1px var(--accent, #FFD700), 0 4px 20px rgba(0,0,0,.3);
+    }
+    .stat-icon  { font-size: 1.3rem; margin-bottom: 6px; }
+    .stat-number { font-size: 2.2rem; font-weight: 800; line-height: 1; color: #FFD700; }
+    .stat-label  {
+      font-size: .72rem; color: rgba(240,230,208,.5);
+      text-transform: uppercase; letter-spacing: .06em; margin-top: 5px;
     }
 
-    .stat-number {
-      font-size: 2.4rem;
-      font-weight: 800;
-      line-height: 1;
-      color: #FFD700;
+    /* ── FILTER GROUPS ────────────────────────────────────────────────────── */
+    .filters-wrap { margin-bottom: 28px; display: flex; flex-direction: column; gap: 12px; }
+    .filter-group { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .filter-group-label {
+      font-size: .7rem; text-transform: uppercase; letter-spacing: .08em;
+      color: rgba(240,230,208,.4); white-space: nowrap; min-width: 80px;
     }
-
-    .stat-label {
-      font-size: 0.78rem;
-      color: rgba(240, 230, 208, 0.55);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-top: 6px;
-    }
-
-    .stat-icon {
-      font-size: 1.4rem;
-      margin-bottom: 8px;
-    }
-
-    /* ============================================================
-       FILTER BUTTONS
-    ============================================================ */
-    .filter-section {
-      margin-bottom: 24px;
-    }
-
-    .filter-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: rgba(240, 230, 208, 0.45);
-      margin-bottom: 10px;
-    }
-
-    .filter-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
     .filter-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      padding: 8px 18px;
-      border-radius: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      background: rgba(255, 255, 255, 0.05);
-      color: #F0E6D0;
-      font-size: 0.85rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.2s;
-      letter-spacing: 0.01em;
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 16px; border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      color: #F0E6D0; font-size: .82rem; font-weight: 500;
+      cursor: pointer; transition: all .2s; letter-spacing: .01em;
     }
-
-    .filter-btn:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.3);
-    }
-
+    .filter-btn:hover { background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.28); }
     .filter-btn.active {
       border-color: var(--btn-color, #FFD700);
-      background: rgba(255, 215, 0, 0.1);
+      background: color-mix(in srgb, var(--btn-color, #FFD700) 12%, transparent);
       color: var(--btn-color, #FFD700);
-      box-shadow: 0 0 12px rgba(255, 215, 0, 0.15);
+      box-shadow: 0 0 10px color-mix(in srgb, var(--btn-color, #FFD700) 20%, transparent);
     }
-
     .filter-btn .dot {
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background: var(--btn-color, #FFD700);
-      flex-shrink: 0;
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--btn-color, #FFD700); flex-shrink: 0;
     }
 
-    /* ============================================================
-       MAP
-    ============================================================ */
-    .map-section {
-      margin-bottom: 36px;
-    }
-
+    /* ── MAP ──────────────────────────────────────────────────────────────── */
     .section-title {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: rgba(240, 230, 208, 0.45);
-      margin-bottom: 12px;
+      font-size: .72rem; text-transform: uppercase; letter-spacing: .08em;
+      color: rgba(240,230,208,.4); margin-bottom: 12px;
     }
-
+    .map-section { margin-bottom: 32px; }
     #distribution-map {
-      height: 600px;
-      width: 100%;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      overflow: hidden;
+      height: 560px; width: 100%; border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.08); overflow: hidden;
       background: #1a1a3e;
     }
 
-    /* Leaflet popup styling */
+    /* Leaflet popup */
     .leaflet-popup-content-wrapper {
       background: #1a1a3e !important;
-      border: 1px solid rgba(255, 215, 0, 0.3) !important;
+      border: 1px solid rgba(255,215,0,.3) !important;
       border-radius: 10px !important;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.5) !important;
+      box-shadow: 0 8px 32px rgba(0,0,0,.55) !important;
       color: #F0E6D0 !important;
     }
-
-    .leaflet-popup-tip {
-      background: #1a1a3e !important;
-    }
-
+    .leaflet-popup-tip { background: #1a1a3e !important; }
     .leaflet-popup-content {
       margin: 14px 16px !important;
       font-family: 'Segoe UI', system-ui, sans-serif !important;
       color: #F0E6D0 !important;
+      min-width: 200px;
     }
-
-    .popup-name {
-      font-size: 1rem;
-      font-weight: 700;
+    .popup-name { font-size: 1rem; font-weight: 700; color: #FFD700; margin-bottom: 8px; }
+    .popup-row  {
+      font-size: .8rem; color: rgba(240,230,208,.75);
+      margin-bottom: 3px; display: flex; gap: 6px; align-items: baseline;
+    }
+    .popup-row strong { color: rgba(240,230,208,.95); }
+    .popup-status-badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 2px 8px; border-radius: 10px;
+      font-size: .72rem; font-weight: 600; margin-top: 6px; margin-bottom: 8px;
+    }
+    .popup-actions { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+    .popup-btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 6px 12px; border-radius: 8px; font-size: .78rem; font-weight: 600;
+      text-decoration: none; transition: opacity .2s; white-space: nowrap;
+    }
+    .popup-btn:hover { opacity: .8; }
+    .popup-btn-platform {
+      background: rgba(255,215,0,.15); border: 1px solid rgba(255,215,0,.35);
       color: #FFD700;
-      margin-bottom: 6px;
+    }
+    .popup-btn-bc {
+      background: rgba(0,200,81,.15); border: 1px solid rgba(0,200,81,.35);
+      color: #00C851;
     }
 
-    .popup-row {
-      font-size: 0.82rem;
-      color: rgba(240, 230, 208, 0.75);
-      margin-bottom: 3px;
-      display: flex;
-      gap: 6px;
-    }
-
-    .popup-row strong {
-      color: rgba(240, 230, 208, 0.95);
-    }
-
-    .popup-badge {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 10px;
-      font-size: 0.72rem;
-      font-weight: 600;
-      margin-top: 6px;
-    }
-
-    /* ============================================================
-       LEGEND
-    ============================================================ */
-    .legend-section {
-      margin-bottom: 36px;
-    }
-
-    .legend-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
+    /* ── LEGEND ───────────────────────────────────────────────────────────── */
+    .legend-section { margin-bottom: 32px; }
+    .legend-grid { display: flex; flex-wrap: wrap; gap: 10px; }
     .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-      border-radius: 8px;
-      padding: 8px 14px;
-      font-size: 0.83rem;
-      color: rgba(240, 230, 208, 0.85);
-      transition: background 0.2s;
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07);
+      border-radius: 8px; padding: 7px 13px; font-size: .81rem;
+      color: rgba(240,230,208,.82); transition: background .2s;
     }
-
-    .legend-item:hover {
-      background: rgba(255, 255, 255, 0.08);
-    }
-
+    .legend-item:hover { background: rgba(255,255,255,.07); }
     .legend-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      flex-shrink: 0;
-      box-shadow: 0 0 6px var(--dot-color, transparent);
+      width: 11px; height: 11px; border-radius: 50%; flex-shrink: 0;
+      box-shadow: 0 0 6px var(--dc, transparent);
     }
 
-    /* ============================================================
-       TABLE
-    ============================================================ */
-    .table-section {
-      margin-bottom: 36px;
-    }
-
+    /* ── TABLE ────────────────────────────────────────────────────────────── */
+    .table-section { margin-bottom: 36px; }
     .table-wrapper {
-      overflow-x: auto;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      overflow-x: auto; border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.08);
     }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.88rem;
-    }
-
+    table { width: 100%; border-collapse: collapse; font-size: .86rem; }
     thead tr {
-      background: rgba(255, 215, 0, 0.07);
-      border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+      background: rgba(255,215,0,.07);
+      border-bottom: 1px solid rgba(255,215,0,.15);
     }
-
     th {
-      text-align: left;
-      padding: 14px 18px;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: rgba(240, 230, 208, 0.5);
-      font-weight: 600;
-      white-space: nowrap;
+      text-align: left; padding: 13px 16px;
+      font-size: .7rem; text-transform: uppercase;
+      letter-spacing: .07em; color: rgba(240,230,208,.5);
+      font-weight: 600; white-space: nowrap;
     }
+    tbody tr { border-bottom: 1px solid rgba(255,255,255,.04); transition: background .15s; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: rgba(255,255,255,.04); }
+    tbody tr.row-hidden { display: none; }
+    tbody tr.row-highlighted { background: rgba(255,215,0,.04); }
+    td { padding: 12px 16px; vertical-align: middle; }
 
-    tbody tr {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-      transition: background 0.15s;
-    }
+    .td-platform { font-weight: 600; color: #F0E6D0; white-space: nowrap; }
+    .platform-icon { margin-right: 5px; }
 
-    tbody tr:last-child {
-      border-bottom: none;
-    }
-
-    tbody tr:hover {
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    tbody tr.row-hidden {
-      display: none;
-    }
-
-    tbody tr.row-highlighted {
-      background: rgba(255, 215, 0, 0.05);
-    }
-
-    td {
-      padding: 13px 18px;
-      vertical-align: middle;
-    }
-
-    .td-platform {
-      font-weight: 600;
-      color: #F0E6D0;
-      white-space: nowrap;
-    }
-
-    .platform-icon {
-      margin-right: 6px;
-    }
-
-    .td-category {
-      white-space: nowrap;
-    }
-
-    .category-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      padding: 3px 10px;
-      border-radius: 12px;
-      font-size: 0.75rem;
-      font-weight: 600;
+    .cat-pill {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 2px 9px; border-radius: 10px;
+      font-size: .72rem; font-weight: 600; white-space: nowrap;
       border: 1px solid transparent;
     }
 
-    .td-ecosystem {
-      color: rgba(240, 230, 208, 0.7);
-      font-size: 0.84rem;
+    .status-badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 2px 9px; border-radius: 10px;
+      font-size: .72rem; font-weight: 600; white-space: nowrap;
     }
 
-    .td-regions {
-      color: rgba(240, 230, 208, 0.6);
-      font-size: 0.82rem;
-    }
+    .td-ecosystem { color: rgba(240,230,208,.65); font-size: .82rem; }
+    .td-region    { color: rgba(240,230,208,.55); font-size: .8rem; white-space: nowrap; }
 
     .region-tag {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.06);
-      border-radius: 6px;
-      padding: 1px 7px;
-      margin: 1px 2px;
-      font-size: 0.75rem;
+      display: inline-block; background: rgba(255,255,255,.06);
+      border-radius: 5px; padding: 1px 6px; margin: 1px 2px;
+      font-size: .72rem; white-space: nowrap;
+    }
+
+    .link-btn {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 4px 10px; border-radius: 7px; font-size: .75rem;
+      font-weight: 600; text-decoration: none; transition: opacity .2s;
       white-space: nowrap;
     }
-
-    .td-color {
-      white-space: nowrap;
+    .link-btn:hover { opacity: .78; }
+    .link-btn-official {
+      background: rgba(255,215,0,.12); border: 1px solid rgba(255,215,0,.3);
+      color: #FFD700;
+    }
+    .link-btn-bc {
+      background: rgba(0,200,81,.12); border: 1px solid rgba(0,200,81,.3);
+      color: #00C851;
+    }
+    .badge-todo {
+      display: inline-block; padding: 3px 9px; border-radius: 7px;
+      font-size: .72rem; font-weight: 500;
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
+      color: rgba(240,230,208,.35);
     }
 
-    .color-swatch {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .swatch-circle {
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      flex-shrink: 0;
-      box-shadow: 0 0 6px var(--sw-color, transparent);
-    }
-
-    .swatch-hex {
-      font-family: 'Courier New', monospace;
-      font-size: 0.78rem;
-      color: rgba(240, 230, 208, 0.55);
-    }
-
-    /* ============================================================
-       FOOTER
-    ============================================================ */
+    /* ── FOOTER ───────────────────────────────────────────────────────────── */
     .page-footer {
-      text-align: center;
-      font-size: 0.78rem;
-      color: rgba(240, 230, 208, 0.3);
-      padding-top: 24px;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      text-align: center; font-size: .76rem;
+      color: rgba(240,230,208,.28); padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,.05);
     }
 
-    /* ============================================================
-       RESPONSIVE
-    ============================================================ */
+    /* ── RESPONSIVE ───────────────────────────────────────────────────────── */
     @media (max-width: 640px) {
-      .page-wrapper {
-        padding: 0 16px 40px;
-      }
-
-      #distribution-map {
-        height: 380px;
-      }
-
-      .header-title {
-        font-size: 1.4rem;
-      }
-
-      th, td {
-        padding: 10px 12px;
-      }
+      .page-wrapper { padding: 0 14px 40px; }
+      #distribution-map { height: 360px; }
+      .header-title { font-size: 1.35rem; }
+      th, td { padding: 9px 10px; }
     }
   </style>
 </head>
@@ -482,343 +271,435 @@
 <body>
   <div class="page-wrapper">
 
-    <!-- HEADER -->
+    <!-- HEADER ─────────────────────────────────────────────────────────────── -->
     <header class="site-header">
       <a href="dashboard.html" class="back-link">&#8592; Retour au Dashboard</a>
       <div class="header-content">
         <div>
           <h1 class="header-title">Bible Chantée – Distribution mondiale</h1>
-          <p class="header-subtitle">Présence sur 23 plateformes mondiales</p>
+          <p class="header-subtitle" id="header-subtitle">Chargement…</p>
         </div>
-        <span class="header-badge">Distribution 2025</span>
+        <span class="header-badge">Distribution V2</span>
       </div>
     </header>
 
-    <!-- STAT COUNTERS -->
-    <section class="stats-grid" id="stats-grid" aria-label="Statistiques de distribution">
-      <div class="stat-card" data-filter="all" style="--accent:#FFD700" role="button" tabindex="0" aria-pressed="true">
+    <!-- STATS ROW 1 : par catégorie (cliquable) ──────────────────────────── -->
+    <section class="stats-row" id="stats-cat" aria-label="Statistiques par catégorie">
+      <div class="stat-card" data-catfilter="all" style="--accent:#FFD700" role="button" tabindex="0">
         <div class="stat-icon">🌐</div>
-        <div class="stat-number" id="stat-total">23</div>
-        <div class="stat-label">Plateformes totales</div>
+        <div class="stat-number" id="sn-total">—</div>
+        <div class="stat-label">Total plateformes</div>
       </div>
-      <div class="stat-card" data-filter="Streaming Principal" style="--accent:#9B59B6" role="button" tabindex="0" aria-pressed="false">
+      <div class="stat-card" data-catfilter="streaming" style="--accent:#9B59B6" role="button" tabindex="0">
         <div class="stat-icon">🎵</div>
-        <div class="stat-number" id="stat-streaming">10</div>
+        <div class="stat-number" id="sn-streaming">—</div>
         <div class="stat-label">Streaming</div>
       </div>
-      <div class="stat-card" data-filter="Social" style="--accent:#E91E8C" role="button" tabindex="0" aria-pressed="false">
+      <div class="stat-card" data-catfilter="social" style="--accent:#E91E8C" role="button" tabindex="0">
         <div class="stat-icon">📱</div>
-        <div class="stat-number" id="stat-social">3</div>
+        <div class="stat-number" id="sn-social">—</div>
         <div class="stat-label">Social Media</div>
       </div>
-      <div class="stat-card" data-filter="Régional" style="--accent:#FF8C00" role="button" tabindex="0" aria-pressed="false">
+      <div class="stat-card" data-catfilter="regional" style="--accent:#FF8C00" role="button" tabindex="0">
         <div class="stat-icon">🌍</div>
-        <div class="stat-number" id="stat-regional">10</div>
+        <div class="stat-number" id="sn-regional">—</div>
         <div class="stat-label">Régional</div>
       </div>
     </section>
 
-    <!-- FILTER BUTTONS -->
-    <section class="filter-section" aria-label="Filtres par catégorie">
-      <div class="filter-label">Filtrer par catégorie</div>
-      <div class="filter-buttons" id="filter-buttons">
-        <button class="filter-btn active" data-filter="all" style="--btn-color:#FFD700">
-          <span class="dot"></span> Toutes les plateformes
+    <!-- STATS ROW 2 : par statut (cliquable) ────────────────────────────── -->
+    <section class="stats-row" id="stats-status" aria-label="Statistiques par statut" style="margin-bottom:32px;">
+      <div class="stat-card" data-statusfilter="live" style="--accent:#00C851" role="button" tabindex="0">
+        <div class="stat-icon">✅</div>
+        <div class="stat-number" id="sn-live">—</div>
+        <div class="stat-label">Live</div>
+      </div>
+      <div class="stat-card" data-statusfilter="pending" style="--accent:#FFB300" role="button" tabindex="0">
+        <div class="stat-icon">⏳</div>
+        <div class="stat-number" id="sn-pending">—</div>
+        <div class="stat-label">En attente</div>
+      </div>
+      <div class="stat-card" data-statusfilter="unknown" style="--accent:#9E9E9E" role="button" tabindex="0">
+        <div class="stat-icon">❓</div>
+        <div class="stat-number" id="sn-unknown">—</div>
+        <div class="stat-label">Inconnu</div>
+      </div>
+      <div class="stat-card" style="cursor:default;">
+        <div class="stat-icon">🔗</div>
+        <div class="stat-number" id="sn-bc-links">—</div>
+        <div class="stat-label">Liens BC renseignés</div>
+      </div>
+      <div class="stat-card" style="cursor:default;">
+        <div class="stat-icon">📝</div>
+        <div class="stat-number" id="sn-todo">—</div>
+        <div class="stat-label">À compléter</div>
+      </div>
+    </section>
+
+    <!-- FILTERS ─────────────────────────────────────────────────────────── -->
+    <div class="filters-wrap" aria-label="Filtres">
+      <div class="filter-group" id="filter-cat">
+        <span class="filter-group-label">Catégorie</span>
+        <button class="filter-btn active" data-catfilter="all" style="--btn-color:#FFD700">
+          <span class="dot"></span> Toutes
         </button>
-        <button class="filter-btn" data-filter="Streaming Principal" style="--btn-color:#9B59B6">
+        <button class="filter-btn" data-catfilter="streaming" style="--btn-color:#9B59B6">
           <span class="dot"></span> Streaming
         </button>
-        <button class="filter-btn" data-filter="Social" style="--btn-color:#E91E8C">
-          <span class="dot"></span> Social Media
+        <button class="filter-btn" data-catfilter="social" style="--btn-color:#E91E8C">
+          <span class="dot"></span> Social
         </button>
-        <button class="filter-btn" data-filter="Régional" style="--btn-color:#FF8C00">
+        <button class="filter-btn" data-catfilter="regional" style="--btn-color:#FF8C00">
           <span class="dot"></span> Régional
         </button>
       </div>
-    </section>
+      <div class="filter-group" id="filter-status">
+        <span class="filter-group-label">Statut</span>
+        <button class="filter-btn active" data-statusfilter="all" style="--btn-color:#FFD700">
+          <span class="dot"></span> Tous
+        </button>
+        <button class="filter-btn" data-statusfilter="live" style="--btn-color:#00C851">
+          <span class="dot"></span> Live
+        </button>
+        <button class="filter-btn" data-statusfilter="pending" style="--btn-color:#FFB300">
+          <span class="dot"></span> En attente
+        </button>
+        <button class="filter-btn" data-statusfilter="unknown" style="--btn-color:#9E9E9E">
+          <span class="dot"></span> Inconnu
+        </button>
+      </div>
+    </div>
 
-    <!-- MAP -->
-    <section class="map-section" aria-label="Carte mondiale des plateformes">
+    <!-- MAP ─────────────────────────────────────────────────────────────── -->
+    <section class="map-section" aria-label="Carte mondiale">
       <div class="section-title">Carte interactive</div>
-      <div id="distribution-map" role="img" aria-label="Carte mondiale montrant la localisation des plateformes de distribution"></div>
+      <div id="distribution-map" role="img" aria-label="Carte mondiale de distribution Bible Chantée"></div>
     </section>
 
-    <!-- LEGEND -->
-    <section class="legend-section" aria-label="Légende des couleurs">
-      <div class="section-title">Légende</div>
+    <!-- LEGEND ──────────────────────────────────────────────────────────── -->
+    <section class="legend-section" aria-label="Légende">
+      <div class="section-title">Légende des couleurs</div>
       <div class="legend-grid">
-        <div class="legend-item">
-          <span class="legend-dot" style="background:#1DB954; --dot-color:#1DB954;"></span>
-          Spotify
-        </div>
-        <div class="legend-item">
-          <span class="legend-dot" style="background:#A2AAAD; --dot-color:#A2AAAD;"></span>
-          Apple (Music / iTunes)
-        </div>
-        <div class="legend-item">
-          <span class="legend-dot" style="background:#FF0000; --dot-color:#FF0000;"></span>
-          YouTube / Google
-        </div>
-        <div class="legend-item">
-          <span class="legend-dot" style="background:#00A8E0; --dot-color:#00A8E0;"></span>
-          Amazon Music
-        </div>
-        <div class="legend-item">
-          <span class="legend-dot" style="background:#9B59B6; --dot-color:#9B59B6;"></span>
-          Streaming Alternatif
-        </div>
-        <div class="legend-item">
-          <span class="legend-dot" style="background:#E91E8C; --dot-color:#E91E8C;"></span>
-          Social Media
-        </div>
-        <div class="legend-item">
-          <span class="legend-dot" style="background:#FF8C00; --dot-color:#FF8C00;"></span>
-          Plateformes Régionales
-        </div>
+        <div class="legend-item"><span class="legend-dot" style="background:#1DB954;--dc:#1DB954;"></span>Spotify</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#A2AAAD;--dc:#A2AAAD;"></span>Apple (Music / iTunes)</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#FF0000;--dc:#FF0000;"></span>YouTube / Google</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#00A8E0;--dc:#00A8E0;"></span>Amazon Music</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#9B59B6;--dc:#9B59B6;"></span>Streaming Alternatif</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#E91E8C;--dc:#E91E8C;"></span>Social Media</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#FF8C00;--dc:#FF8C00;"></span>Plateformes Régionales</div>
       </div>
     </section>
 
-    <!-- TABLE -->
-    <section class="table-section" aria-label="Liste détaillée des plateformes">
+    <!-- TABLE ───────────────────────────────────────────────────────────── -->
+    <section class="table-section" aria-label="Tableau des plateformes">
       <div class="section-title">Détail des plateformes</div>
       <div class="table-wrapper">
-        <table id="platforms-table" aria-label="Plateformes de distribution">
+        <table aria-label="Plateformes de distribution">
           <thead>
             <tr>
-              <th scope="col">Plateforme</th>
-              <th scope="col">Catégorie</th>
-              <th scope="col">Écosystème</th>
-              <th scope="col">Zones couvertes</th>
-              <th scope="col">Couleur</th>
+              <th>Plateforme</th>
+              <th>Catégorie</th>
+              <th>Écosystème</th>
+              <th>Région</th>
+              <th>Statut</th>
+              <th>Lien officiel</th>
+              <th>Lien Bible Chantée</th>
             </tr>
           </thead>
-          <tbody id="table-body">
-            <!-- Rows injected by JS -->
-          </tbody>
+          <tbody id="table-body"></tbody>
         </table>
       </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER ──────────────────────────────────────────────────────────── -->
     <footer class="page-footer">
-      <p>Bible Chantée &mdash; Distribution mondiale &mdash; 23 plateformes &mdash; 2025</p>
+      <p>Bible Chantée &mdash; Distribution mondiale V2 &mdash; <span id="footer-count">23</span> plateformes &mdash; 2025</p>
     </footer>
 
   </div><!-- /.page-wrapper -->
 
-  <!-- Leaflet JS -->
+  <!-- Leaflet JS (must load before inline script) -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
           integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WPkk=" crossorigin=""></script>
 
   <!-- Distribution data (must load before inline script) -->
   <script src="distribution-data.js"></script>
 
-  <!-- Dashboard logic -->
+  <!-- Dashboard V2 logic -->
   <script>
-    (function () {
-      'use strict';
+  (function () {
+    'use strict';
 
-      /* ----------------------------------------------------------
-         SAFETY CHECK
-      ---------------------------------------------------------- */
-      if (!window.distributionData) {
-        document.getElementById('distribution-map').innerHTML =
-          '<p style="color:#F0E6D0;padding:20px;">Erreur : distribution-data.js non chargé.</p>';
-        return;
+    /* ── Safety guard ─────────────────────────────────────────────────── */
+    if (!window.distributionData || !window.distributionData.platforms) {
+      document.getElementById('distribution-map').innerHTML =
+        '<p style="color:#F0E6D0;padding:20px;text-align:center;">Erreur : distribution-data.js non chargé.</p>';
+      return;
+    }
+
+    var data      = window.distributionData;
+    var platforms = data.platforms;
+    var catMeta   = data.categoryMeta    || {};
+    var statMeta  = data.statusMeta      || {};
+
+    /* ── Computed stats ───────────────────────────────────────────────── */
+    var counts = { total: platforms.length, streaming: 0, social: 0, regional: 0,
+                   live: 0, pending: 0, unknown: 0, bcLinks: 0, todo: 0 };
+
+    platforms.forEach(function (p) {
+      if (p.category === 'streaming') counts.streaming++;
+      if (p.category === 'social')    counts.social++;
+      if (p.category === 'regional')  counts.regional++;
+      if (p.availabilityStatus === 'live')    counts.live++;
+      if (p.availabilityStatus === 'pending') counts.pending++;
+      if (p.availabilityStatus === 'unknown') counts.unknown++;
+      if (p.bibleChanteeUrl) counts.bcLinks++;
+      else                   counts.todo++;
+    });
+
+    /* ── Fill stat numbers ────────────────────────────────────────────── */
+    function setText(id, val) {
+      var el = document.getElementById(id);
+      if (el) el.textContent = val;
+    }
+    setText('sn-total',    counts.total);
+    setText('sn-streaming', counts.streaming);
+    setText('sn-social',   counts.social);
+    setText('sn-regional', counts.regional);
+    setText('sn-live',     counts.live);
+    setText('sn-pending',  counts.pending);
+    setText('sn-unknown',  counts.unknown);
+    setText('sn-bc-links', counts.bcLinks);
+    setText('sn-todo',     counts.todo);
+    setText('footer-count', counts.total);
+    setText('header-subtitle',
+      'Présence sur ' + counts.total + ' plateformes mondiales · ' +
+      counts.bcLinks + ' liens Bible Chantée renseignés'
+    );
+
+    /* ── Coordinate jitter (spread markers at same location) ─────────── */
+    var locCount = {}, locIdx = {};
+    platforms.forEach(function (p) {
+      if (p.lat == null || p.lng == null) return;
+      var k = p.lat + ',' + p.lng;
+      locCount[k] = (locCount[k] || 0) + 1;
+    });
+    var jittered = platforms.map(function (p) {
+      if (p.lat == null || p.lng == null) return p;
+      var k = p.lat + ',' + p.lng;
+      if (locCount[k] <= 1) return p;
+      locIdx[k] = (locIdx[k] || 0);
+      var idx = locIdx[k]++;
+      var angle = (idx / locCount[k]) * 2 * Math.PI;
+      var r = 0.45;
+      return Object.assign({}, p, {
+        lat: p.lat + r * Math.sin(angle),
+        lng: p.lng + r * Math.cos(angle)
+      });
+    });
+
+    /* ── Helpers ──────────────────────────────────────────────────────── */
+    function esc(s) {
+      return String(s || '')
+        .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+        .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function catStyle(cat) {
+      var m = catMeta[cat];
+      if (m) {
+        var c = m.color;
+        return { bg: c + '26', border: c + '88', color: c };
       }
+      return { bg: 'rgba(255,255,255,.08)', border: 'rgba(255,255,255,.2)', color: '#F0E6D0' };
+    }
 
-      var data = window.distributionData;
-      var platforms = data.platforms;
+    function statusStyle(s) {
+      var m = statMeta[s] || statMeta['unknown'];
+      return { color: m.color, label: m.label, icon: m.icon };
+    }
 
-      /* ----------------------------------------------------------
-         COORDINATE JITTER
-         Platforms sharing the same HQ city get small offsets so
-         markers don't stack exactly on top of each other.
-      ---------------------------------------------------------- */
-      var locationCount = {};
-      platforms.forEach(function (p) {
-        var key = p.lat + ',' + p.lng;
-        locationCount[key] = (locationCount[key] || 0) + 1;
+    function catLabel(cat) {
+      return (catMeta[cat] && catMeta[cat].label) || cat;
+    }
+
+    /* ── Map ──────────────────────────────────────────────────────────── */
+    var map = L.map('distribution-map', {
+      center: [20, 10], zoom: 2, minZoom: 1, maxZoom: 10
+    });
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      subdomains: 'abcd', maxZoom: 19
+    }).addTo(map);
+
+    var markers = {}; // keyed by platform id
+
+    jittered.forEach(function (p) {
+      /* Skip if coordinates invalid */
+      if (p.lat == null || p.lng == null || isNaN(+p.lat) || isNaN(+p.lng)) return;
+
+      var marker = L.circleMarker([+p.lat, +p.lng], {
+        radius: 10,
+        fillColor: p.color,
+        color: 'rgba(255,255,255,0.35)',
+        weight: 1.5, opacity: 1, fillOpacity: 0.85
       });
 
-      var locationIndex = {};
-      var jitteredPlatforms = platforms.map(function (p) {
-        if (p.lat == null || p.lng == null) return p;
-        var key = p.lat + ',' + p.lng;
-        var count = locationCount[key];
-        if (count <= 1) return p;
-        locationIndex[key] = (locationIndex[key] || 0);
-        var idx = locationIndex[key];
-        locationIndex[key]++;
-        // Spread markers in a circle around the original point
-        var angle = (idx / count) * 2 * Math.PI;
-        var radius = 0.45;
-        return Object.assign({}, p, {
-          lat: p.lat + radius * Math.sin(angle),
-          lng: p.lng + radius * Math.cos(angle)
-        });
-      });
+      /* Popup regions */
+      var regHtml = (p.regions || []).map(function (r) {
+        return '<span style="background:rgba(255,255,255,.1);border-radius:4px;padding:1px 5px;margin:1px 2px;font-size:.76rem;display:inline-block;">' + esc(r) + '</span>';
+      }).join('');
 
-      /* ----------------------------------------------------------
-         LEAFLET MAP
-      ---------------------------------------------------------- */
-      var map = L.map('distribution-map', {
-        center: [20, 10],
-        zoom: 2,
-        minZoom: 1,
-        maxZoom: 10,
-        zoomControl: true
-      });
+      /* Status badge */
+      var ss = statusStyle(p.availabilityStatus);
+      var statusHtml = '<div><span class="popup-status-badge" style="background:' + ss.color + '22;border:1px solid ' + ss.color + '55;color:' + ss.color + ';">' + ss.icon + ' ' + esc(ss.label) + '</span></div>';
 
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: 'abcd',
-        maxZoom: 19
-      }).addTo(map);
-
-      /* Build markers */
-      var markers = {}; // keyed by platform name
-
-      jitteredPlatforms.forEach(function (p) {
-        if (p.lat == null || p.lng == null || isNaN(p.lat) || isNaN(p.lng)) return;
-
-        var marker = L.circleMarker([p.lat, p.lng], {
-          radius: 10,
-          fillColor: p.color,
-          color: 'rgba(255,255,255,0.4)',
-          weight: 1.5,
-          opacity: 1,
-          fillOpacity: 0.85
-        });
-
-        // Build popup content
-        var regionsHtml = (p.regions || []).map(function (r) {
-          return '<span style="background:rgba(255,255,255,0.1);border-radius:4px;padding:1px 6px;margin:1px 2px;font-size:0.78rem;display:inline-block;">' + r + '</span>';
-        }).join('');
-
-        marker.bindPopup(
-          '<div class="popup-name">' + (p.icon || '') + ' ' + p.name + '</div>' +
-          '<div class="popup-row"><strong>Catégorie&nbsp;:</strong> ' + p.category + '</div>' +
-          '<div class="popup-row"><strong>Écosystème&nbsp;:</strong> ' + p.ecosystem + '</div>' +
-          '<div class="popup-row"><strong>Ville&nbsp;:</strong> ' + (p.city || '—') + '</div>' +
-          '<div style="margin-top:8px;">' + regionsHtml + '</div>' +
-          '<div><span class="popup-badge" style="background:' + p.color + '22;border:1px solid ' + p.color + '55;color:' + p.color + '">' + p.category + '</span></div>',
-          { maxWidth: 260 }
-        );
-
-        marker.addTo(map);
-        markers[p.name] = { marker: marker, platform: p };
-      });
-
-      /* ----------------------------------------------------------
-         TABLE
-      ---------------------------------------------------------- */
-      var tbody = document.getElementById('table-body');
-
-      function getCategoryStyle(cat) {
-        var styles = {
-          'Streaming Principal': { bg: 'rgba(155,89,182,0.15)', border: '#9B59B6', color: '#c89edb' },
-          'Social':              { bg: 'rgba(233,30,140,0.15)', border: '#E91E8C', color: '#f07cbf' },
-          'Régional':            { bg: 'rgba(255,140,0,0.15)',  border: '#FF8C00', color: '#ffaa44' }
-        };
-        return styles[cat] || { bg: 'rgba(255,255,255,0.08)', border: 'rgba(255,255,255,0.2)', color: '#F0E6D0' };
+      /* Action buttons */
+      var actionsHtml = '<div class="popup-actions">';
+      if (p.officialUrl) {
+        actionsHtml += '<a class="popup-btn popup-btn-platform" href="' + esc(p.officialUrl) + '" target="_blank" rel="noopener noreferrer">↗ Ouvrir la plateforme</a>';
       }
-
-      platforms.forEach(function (p) {
-        var catStyle = getCategoryStyle(p.category);
-        var regionsHtml = (p.regions || []).map(function (r) {
-          return '<span class="region-tag">' + r + '</span>';
-        }).join('');
-
-        var tr = document.createElement('tr');
-        tr.dataset.category = p.category;
-        tr.dataset.platform = p.name;
-
-        tr.innerHTML =
-          '<td class="td-platform"><span class="platform-icon">' + (p.icon || '') + '</span>' + p.name + '</td>' +
-          '<td class="td-category">' +
-            '<span class="category-pill" style="background:' + catStyle.bg + ';border-color:' + catStyle.border + ';color:' + catStyle.color + ';">' +
-              p.category +
-            '</span>' +
-          '</td>' +
-          '<td class="td-ecosystem">' + p.ecosystem + '</td>' +
-          '<td class="td-regions">' + regionsHtml + '</td>' +
-          '<td class="td-color">' +
-            '<span class="color-swatch">' +
-              '<span class="swatch-circle" style="background:' + p.color + ';--sw-color:' + p.color + ';box-shadow:0 0 6px ' + p.color + '80;"></span>' +
-              '<span class="swatch-hex">' + p.color + '</span>' +
-            '</span>' +
-          '</td>';
-
-        tbody.appendChild(tr);
-      });
-
-      /* ----------------------------------------------------------
-         FILTER LOGIC
-      ---------------------------------------------------------- */
-      var activeFilter = 'all';
-
-      function applyFilter(filter) {
-        activeFilter = filter;
-
-        /* Update filter buttons */
-        document.querySelectorAll('.filter-btn').forEach(function (btn) {
-          btn.classList.toggle('active', btn.dataset.filter === filter);
-        });
-
-        /* Update stat cards */
-        document.querySelectorAll('.stat-card').forEach(function (card) {
-          card.classList.toggle('active-filter', card.dataset.filter === filter);
-          card.setAttribute('aria-pressed', card.dataset.filter === filter ? 'true' : 'false');
-        });
-
-        /* Update markers */
-        Object.keys(markers).forEach(function (name) {
-          var m = markers[name];
-          var show = filter === 'all' || m.platform.category === filter;
-          if (show) {
-            if (!map.hasLayer(m.marker)) m.marker.addTo(map);
-          } else {
-            if (map.hasLayer(m.marker)) map.removeLayer(m.marker);
-          }
-        });
-
-        /* Update table rows */
-        document.querySelectorAll('#table-body tr').forEach(function (row) {
-          var show = filter === 'all' || row.dataset.category === filter;
-          row.classList.toggle('row-hidden', !show);
-          row.classList.toggle('row-highlighted', filter !== 'all' && show);
-        });
+      if (p.bibleChanteeUrl) {
+        actionsHtml += '<a class="popup-btn popup-btn-bc" href="' + esc(p.bibleChanteeUrl) + '" target="_blank" rel="noopener noreferrer">🎵 Voir Bible Chantée</a>';
       }
+      actionsHtml += '</div>';
 
-      /* Filter button clicks */
-      document.getElementById('filter-buttons').addEventListener('click', function (e) {
-        var btn = e.target.closest('.filter-btn');
-        if (!btn) return;
-        applyFilter(btn.dataset.filter);
+      marker.bindPopup(
+        '<div class="popup-name">' + esc(p.icon || '') + ' ' + esc(p.name) + '</div>' +
+        '<div class="popup-row"><strong>Catégorie&nbsp;:</strong> ' + esc(catLabel(p.category)) + '</div>' +
+        '<div class="popup-row"><strong>Écosystème&nbsp;:</strong> ' + esc(p.ecosystem) + '</div>' +
+        '<div class="popup-row"><strong>Région&nbsp;:</strong> ' + esc(p.region || '—') + '</div>' +
+        statusHtml +
+        (regHtml ? '<div style="margin-top:6px;margin-bottom:4px;">' + regHtml + '</div>' : '') +
+        (p.notes ? '<div style="font-size:.76rem;color:rgba(240,230,208,.5);margin-top:4px;">' + esc(p.notes) + '</div>' : '') +
+        actionsHtml,
+        { maxWidth: 280 }
+      );
+
+      marker.addTo(map);
+      markers[p.id] = { marker: marker, platform: p };
+    });
+
+    /* ── Table rows ───────────────────────────────────────────────────── */
+    var tbody = document.getElementById('table-body');
+
+    platforms.forEach(function (p) {
+      var cs  = catStyle(p.category);
+      var ss  = statusStyle(p.availabilityStatus);
+
+      var regHtml = (p.regions || []).map(function (r) {
+        return '<span class="region-tag">' + esc(r) + '</span>';
+      }).join('');
+
+      var officialHtml = p.officialUrl
+        ? '<a class="link-btn link-btn-official" href="' + esc(p.officialUrl) + '" target="_blank" rel="noopener noreferrer">↗ Voir</a>'
+        : '<span class="badge-todo">—</span>';
+
+      var bcHtml = p.bibleChanteeUrl
+        ? '<a class="link-btn link-btn-bc" href="' + esc(p.bibleChanteeUrl) + '" target="_blank" rel="noopener noreferrer">🎵 Voir</a>'
+        : '<span class="badge-todo">À compléter</span>';
+
+      var tr = document.createElement('tr');
+      tr.dataset.category = p.category;
+      tr.dataset.status   = p.availabilityStatus || 'unknown';
+      tr.dataset.id       = p.id;
+
+      tr.innerHTML =
+        '<td class="td-platform"><span class="platform-icon">' + esc(p.icon || '') + '</span>' + esc(p.name) + '</td>' +
+        '<td><span class="cat-pill" style="background:' + cs.bg + ';border-color:' + cs.border + ';color:' + cs.color + ';">' + esc(catLabel(p.category)) + '</span></td>' +
+        '<td class="td-ecosystem">' + esc(p.ecosystem) + '</td>' +
+        '<td class="td-region">' + regHtml + '</td>' +
+        '<td><span class="status-badge" style="background:' + ss.color + '22;color:' + ss.color + ';">' + esc(ss.icon) + ' ' + esc(ss.label) + '</span></td>' +
+        '<td>' + officialHtml + '</td>' +
+        '<td>' + bcHtml + '</td>';
+
+      tbody.appendChild(tr);
+    });
+
+    /* ── Filter logic (category + status combined) ────────────────────── */
+    var activeCat    = 'all';
+    var activeStatus = 'all';
+
+    function isVisible(tr) {
+      var catOk    = activeCat    === 'all' || tr.dataset.category === activeCat;
+      var statusOk = activeStatus === 'all' || tr.dataset.status   === activeStatus;
+      return catOk && statusOk;
+    }
+
+    function applyFilters() {
+      /* Buttons */
+      document.querySelectorAll('[data-catfilter]').forEach(function (el) {
+        el.classList.toggle('active', el.dataset.catfilter === activeCat);
+        if (el.dataset.catfilter) el.setAttribute('aria-pressed', el.dataset.catfilter === activeCat ? 'true' : 'false');
+      });
+      document.querySelectorAll('[data-statusfilter]').forEach(function (el) {
+        el.classList.toggle('active', el.dataset.statusfilter === activeStatus);
+        if (el.dataset.statusfilter) el.setAttribute('aria-pressed', el.dataset.statusfilter === activeStatus ? 'true' : 'false');
       });
 
-      /* Stat card clicks */
-      document.getElementById('stats-grid').addEventListener('click', function (e) {
-        var card = e.target.closest('.stat-card[data-filter]');
-        if (!card) return;
-        applyFilter(card.dataset.filter);
+      /* Map markers */
+      Object.keys(markers).forEach(function (id) {
+        var m = markers[id];
+        var p = m.platform;
+        var catOk    = activeCat    === 'all' || p.category === activeCat;
+        var statusOk = activeStatus === 'all' || (p.availabilityStatus || 'unknown') === activeStatus;
+        var show = catOk && statusOk;
+        if (show && !map.hasLayer(m.marker)) m.marker.addTo(map);
+        if (!show && map.hasLayer(m.marker)) map.removeLayer(m.marker);
       });
 
-      /* Keyboard support for stat cards */
-      document.getElementById('stats-grid').addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          var card = e.target.closest('.stat-card[data-filter]');
-          if (!card) return;
-          e.preventDefault();
-          applyFilter(card.dataset.filter);
-        }
+      /* Table rows */
+      document.querySelectorAll('#table-body tr').forEach(function (tr) {
+        var show = isVisible(tr);
+        tr.classList.toggle('row-hidden', !show);
+        tr.classList.toggle('row-highlighted', show && (activeCat !== 'all' || activeStatus !== 'all'));
       });
+    }
 
-      /* Initialise with "all" filter active */
-      applyFilter('all');
+    /* Category filter clicks (buttons + stat cards) */
+    document.getElementById('filter-cat').addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-catfilter]');
+      if (!btn) return;
+      activeCat = btn.dataset.catfilter;
+      applyFilters();
+    });
+    document.getElementById('stats-cat').addEventListener('click', function (e) {
+      var card = e.target.closest('[data-catfilter]');
+      if (!card) return;
+      activeCat = card.dataset.catfilter;
+      applyFilters();
+    });
 
-    })();
+    /* Status filter clicks (buttons + stat cards) */
+    document.getElementById('filter-status').addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-statusfilter]');
+      if (!btn) return;
+      activeStatus = btn.dataset.statusfilter;
+      applyFilters();
+    });
+    document.getElementById('stats-status').addEventListener('click', function (e) {
+      var card = e.target.closest('[data-statusfilter]');
+      if (!card) return;
+      activeStatus = card.dataset.statusfilter;
+      applyFilters();
+    });
+
+    /* Keyboard support (Enter / Space) */
+    function keyHandler(e) {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      var el = e.target.closest('[data-catfilter],[data-statusfilter]');
+      if (!el) return;
+      e.preventDefault();
+      el.click();
+    }
+    document.getElementById('stats-cat').addEventListener('keydown', keyHandler);
+    document.getElementById('stats-status').addEventListener('keydown', keyHandler);
+
+    /* Init */
+    applyFilters();
+
+  })();
   </script>
 
 </body>
