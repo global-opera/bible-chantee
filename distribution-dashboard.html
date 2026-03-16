@@ -760,6 +760,136 @@ h
       grid-template-columns: 1fr;
     }
   }
+
+  /* ── GLOBAL AUDIENCE MAP ─────────────────────────────── */
+  .global-audience-section {
+    margin: 40px 0;
+  }
+  .global-audience-section .section-title {
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #6b7280;
+    margin-bottom: 16px;
+  }
+  .global-map-banner {
+    background: linear-gradient(135deg, rgba(124,58,237,.15) 0%, rgba(16,185,129,.10) 100%);
+    border: 1px solid rgba(124,58,237,.25);
+    border-radius: 10px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .global-map-banner .banner-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #f0e6d0;
+    flex: 1;
+  }
+  .global-map-banner .banner-pills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .global-map-banner .banner-pill {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: .78rem;
+    color: #a0aec0;
+  }
+  .global-map-banner .banner-pill strong {
+    color: #1ED760;
+  }
+  .global-map-banner .banner-source {
+    font-size: .72rem;
+    color: #6b7280;
+    width: 100%;
+  }
+  #global-audience-map {
+    height: 420px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.07);
+    margin-bottom: 16px;
+  }
+  /* Country list table */
+  .global-country-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .82rem;
+  }
+  .global-country-table thead th {
+    text-align: left;
+    padding: 7px 10px;
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #6b7280;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+  }
+  .global-country-table tbody tr {
+    border-bottom: 1px solid rgba(255,255,255,.04);
+    transition: background .15s;
+  }
+  .global-country-table tbody tr:hover {
+    background: rgba(255,255,255,.04);
+  }
+  .global-country-table tbody td {
+    padding: 7px 10px;
+    color: #c9d1d9;
+    vertical-align: middle;
+  }
+  .global-country-table .col-country {
+    font-weight: 600;
+    color: #f0e6d0;
+    white-space: nowrap;
+  }
+  .global-country-table .col-sources {
+    color: #a0aec0;
+  }
+  .platform-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: .72rem;
+    font-weight: 600;
+    margin-right: 4px;
+    white-space: nowrap;
+  }
+  .tag-spotify     { background: rgba(30,215,96,.15);  color: #1ED760; border: 1px solid rgba(30,215,96,.3); }
+  .tag-apple       { background: rgba(252,60,68,.15);   color: #fc3c44; border: 1px solid rgba(252,60,68,.3); }
+  .tag-youtube     { background: rgba(255,0,0,.12);     color: #ff4444; border: 1px solid rgba(255,0,0,.25); }
+  .tag-boomplay    { background: rgba(30,215,96,.10);   color: #1ED760; border: 1px solid rgba(30,215,96,.2); }
+  .source-count-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: .72rem;
+    font-weight: 700;
+  }
+  .badge-2 { background: rgba(124,58,237,.3); color: #a78bfa; }
+  .badge-1 { background: rgba(107,114,128,.2); color: #9ca3af; }
+  .global-map-legend {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    font-size: .78rem;
+    color: #9ca3af;
+  }
+  .global-map-legend span { display: flex; align-items: center; gap: 6px; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+
 </style>
 </head>
 
@@ -1103,6 +1233,44 @@ h
     </div>
   </section>
 
+  <!-- GLOBAL AUDIENCE ──────────────────────────────────────────────────── -->
+  <section class="global-audience-section" aria-label="Audience mondiale consolidée">
+    <div class="section-title">Audience mondiale consolidée</div>
+
+    <div class="global-map-banner">
+      <div class="banner-title">🌍 Audience globale Bible Chantée</div>
+      <div class="banner-pills">
+        <span class="banner-pill"><strong id="global-country-count">—</strong> pays</span>
+        <span class="banner-pill"><strong id="global-continent-count">—</strong> continents</span>
+        <span class="banner-pill"><strong id="global-multi-count">—</strong> pays multi-plateformes</span>
+      </div>
+      <div class="banner-source" id="global-banner-source">Source : Spotify for Artists + Apple Music for Artists · 28 derniers jours</div>
+    </div>
+
+    <div class="global-map-legend">
+      <span><span class="legend-dot" style="background:#7c3aed"></span> 2+ plateformes</span>
+      <span><span class="legend-dot" style="background:#1ED760"></span> Spotify uniquement</span>
+      <span><span class="legend-dot" style="background:#fc3c44"></span> Apple Music uniquement</span>
+    </div>
+
+    <div id="global-audience-map"></div>
+
+    <table class="global-country-table">
+      <thead>
+        <tr>
+          <th>Pays</th>
+          <th>Plateformes</th>
+          <th style="text-align:center">Sources</th>
+        </tr>
+      </thead>
+      <tbody id="global-country-tbody">
+        <!-- injected by buildGlobalAudience() -->
+      </tbody>
+    </table>
+  </section>
+
+
+
   <!-- FOOTER ──────────────────────────────────────────────────────────── -->
     <footer class="page-footer">
       <p>Bible Chantée &mdash; Distribution mondiale V2 &mdash; <span id="footer-count">23</span> plateformes &mdash; 2025</p>
@@ -1117,6 +1285,7 @@ h
   <script src="distribution-data.js"></script>
   <!-- Audience data (Spotify for Artists) -->
   <script src="audience-data.js"></script>
+  <script src="global-audience-data.js"></script>
 
   <!-- Dashboard V2 logic -->
   <script>
@@ -1716,6 +1885,127 @@ h
       document.addEventListener('DOMContentLoaded', buildInsights);
     } else {
       buildInsights();
+    }
+  })();
+</script>
+
+<script>
+  (function () {
+    // source → CSS tag class + label
+    var SOURCE_META = {
+      'Spotify':     { cls: 'tag-spotify',  label: 'Spotify' },
+      'Apple Music': { cls: 'tag-apple',    label: 'Apple Music' },
+      'YouTube':     { cls: 'tag-youtube',  label: 'YouTube' },
+      'Boomplay':    { cls: 'tag-boomplay', label: 'Boomplay' }
+    };
+
+    // Map colour per sourceCount
+    function markerColor(n) {
+      if (n >= 2) return '#7c3aed';
+      return null; // determined by source
+    }
+    function singleColor(src) {
+      if (src === 'Spotify')     return '#1ED760';
+      if (src === 'Apple Music') return '#fc3c44';
+      if (src === 'YouTube')     return '#ff4444';
+      if (src === 'Boomplay')    return '#1ED760';
+      return '#6b7280';
+    }
+
+    function getFlag(code) {
+      if (!code) return '';
+      return code.toUpperCase().replace(/./g, function (c) {
+        return String.fromCodePoint(127397 + c.charCodeAt(0));
+      });
+    }
+
+    function buildGlobalAudience() {
+      var gad = window.globalAudienceData;
+      if (!gad || !gad.countries || !gad.countries.length) return;
+
+      var countries = gad.countries;
+
+      // ── Update banner stats ──────────────────────────────────────────
+      var totalCountries  = countries.length;
+      var multiPlatform   = countries.filter(function(c){ return c.sources.length >= 2; }).length;
+      var continentSet    = {};
+      countries.forEach(function(c){ continentSet[c.continent] = true; });
+      var continentCount  = Object.keys(continentSet).length;
+
+      var elCC = document.getElementById('global-country-count');
+      var elCont = document.getElementById('global-continent-count');
+      var elMC = document.getElementById('global-multi-count');
+      if (elCC)   elCC.textContent   = totalCountries;
+      if (elCont) elCont.textContent = continentCount;
+      if (elMC)   elMC.textContent   = multiPlatform;
+
+      // ── Build Leaflet map ────────────────────────────────────────────
+      var mapEl = document.getElementById('global-audience-map');
+      if (mapEl && typeof L !== 'undefined') {
+        var map = L.map('global-audience-map', {
+          center: [20, 10],
+          zoom: 2,
+          zoomControl: true,
+          scrollWheelZoom: false,
+          attributionControl: true
+        });
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+          attribution: '\u00a9 Leaflet | \u00a9 OSM \u00a9 CARTO',
+          subdomains: 'abcd',
+          maxZoom: 19
+        }).addTo(map);
+
+        countries.forEach(function(c) {
+          var n = c.sources.length;
+          var color = n >= 2 ? '#7c3aed' : singleColor(c.sources[0]);
+          var r = n >= 2 ? 9 : 7;
+          var tooltipLines = getFlag(c.code) + ' <strong>' + c.country + '</strong><br>' +
+            c.sources.join(' + ');
+
+          L.circleMarker([c.lat, c.lng], {
+            radius: r,
+            fillColor: color,
+            color: 'rgba(0,0,0,.4)',
+            weight: 1,
+            fillOpacity: n >= 2 ? 0.9 : 0.75
+          }).addTo(map)
+            .bindTooltip(tooltipLines, {
+              direction: 'top',
+              offset: [0, -4],
+              className: 'audience-tooltip'
+            });
+        });
+      }
+
+      // ── Build country table ──────────────────────────────────────────
+      var tbody = document.getElementById('global-country-tbody');
+      if (!tbody) return;
+
+      // Sort: multi-platform first, then alpha
+      var sorted = countries.slice().sort(function(a, b) {
+        if (b.sources.length !== a.sources.length) return b.sources.length - a.sources.length;
+        return a.country.localeCompare(b.country, 'fr');
+      });
+
+      tbody.innerHTML = sorted.map(function(c) {
+        var n = c.sources.length;
+        var badge = '<span class="source-count-badge badge-' + (n >= 2 ? 2 : 1) + '">' + n + '</span>';
+        var tags = c.sources.map(function(s) {
+          var m = SOURCE_META[s] || { cls: 'tag-spotify', label: s };
+          return '<span class="platform-tag ' + m.cls + '">' + m.label + '</span>';
+        }).join('');
+        return '<tr>' +
+          '<td class="col-country">' + getFlag(c.code) + '\u00a0' + c.country + '</td>' +
+          '<td class="col-sources">' + tags + '</td>' +
+          '<td style="text-align:center">' + badge + '</td>' +
+          '</tr>';
+      }).join('');
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', buildGlobalAudience);
+    } else {
+      buildGlobalAudience();
     }
   })();
 </script>
