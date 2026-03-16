@@ -2826,11 +2826,6 @@
 
         const DEMO_MAX_VISITORS = 1850;
 
-        function getLangFlag(lang) {
-            const flags = { FR:'🇫🇷', EN:'🇬🇧', PT:'🇧🇷', TL:'🇵🇭', ES:'🇪🇸', DE:'🇩🇪', IT:'🇮🇹' };
-            return (flags[lang] || '') + ' ' + lang;
-        }
-
         function renderCountriesTable() {
             const tbody = document.getElementById('countriesTableBody');
             if (!tbody) return;
@@ -2851,90 +2846,6 @@
                     <td><span class="growth-val ${gClass}">+${c.growth}%</span></td>
                 </tr>`;
             }).join('');
-        }
-
-        // =====================================================
-        // MAP VIEW MODES
-        // =====================================================
-        let currentMapView = 'visitors';
-
-        const PLATFORM_COLORS = {
-            'YouTube Music': '#FF4444',
-            'Spotify':       '#1DB954',
-            'Apple Music':   '#FC3C44',
-            'Amazon Music':  '#FF9900',
-            'Deezer':        '#A238FF',
-            'Facebook':      '#1877F2'
-        };
-
-        const LANGUAGE_COLORS = {
-            FR: '#4466ff', EN: '#1DB954', PT: '#FF9900',
-            TL: '#9B59B6', ES: '#C8102E', DE: '#999999', IT: '#009246'
-        };
-
-        function setMapView(view) {
-            currentMapView = view;
-            document.querySelectorAll('.map-tab').forEach(t => t.classList.remove('active'));
-            const tabId = 'mapTab' + view.charAt(0).toUpperCase() + view.slice(1);
-            const tab = document.getElementById(tabId);
-            if (tab) tab.classList.add('active');
-            refreshMapMarkersDemo();
-            updateMapLegend(view);
-        }
-
-        function refreshMapMarkersDemo() {
-            markers.forEach(m => map.removeLayer(m));
-            markers = [];
-
-            DEMO_COUNTRIES.forEach(c => {
-                const coords = window.getCountryCoords ? window.getCountryCoords(c.name) : null;
-                if (!coords) return;
-
-                let color;
-                if (currentMapView === 'platform') {
-                    color = PLATFORM_COLORS[c.platform] || '#FFD700';
-                } else if (currentMapView === 'language') {
-                    color = LANGUAGE_COLORS[c.language] || '#FFD700';
-                } else {
-                    color = c.visitors >= 1000 ? '#ff4444' : c.visitors >= 500 ? '#FFD700' : '#00ff00';
-                }
-
-                const radius = Math.max(5, Math.min(28, Math.sqrt(c.visitors) * 0.85));
-                const marker = L.circleMarker([coords.lat, coords.lng], {
-                    radius, fillColor: color, color: '#fff', weight: 2, opacity: 0.9, fillOpacity: 0.7
-                }).addTo(map);
-
-                marker.bindPopup(`
-                    <div style="text-align:center;">
-                        <div style="font-size:1.5rem;">${c.flag}</div>
-                        <strong>${c.name}</strong><br>
-                        <span style="color:#FFD700;">${c.visitors.toLocaleString()}</span> visiteurs<br>
-                        <small><span style="color:#aaa;">${c.platform}</span> • ${getLangFlag(c.language)} • <span style="color:#ffcc44;">+${c.growth}%</span></small>
-                    </div>
-                `);
-                markers.push(marker);
-            });
-        }
-
-        function updateMapLegend(view) {
-            const legend = document.getElementById('mapLegend');
-            if (!legend) return;
-            if (view === 'platform') {
-                legend.innerHTML = Object.entries(PLATFORM_COLORS).map(([name, color]) =>
-                    `<div class="legend-item"><div class="legend-dot" style="background:${color};width:15px;height:15px;border-radius:50%;"></div><span>${name}</span></div>`
-                ).join('');
-            } else if (view === 'language') {
-                const langNames = { FR:'Français', EN:'English', PT:'Português', TL:'Tagalog', ES:'Español', DE:'Deutsch', IT:'Italiano' };
-                legend.innerHTML = Object.entries(LANGUAGE_COLORS).map(([code, color]) =>
-                    `<div class="legend-item"><div class="legend-dot" style="background:${color};width:15px;height:15px;border-radius:50%;"></div><span>${langNames[code]} (${code})</span></div>`
-                ).join('');
-            } else {
-                legend.innerHTML = `
-                    <div class="legend-item"><div class="legend-dot high"></div><span>1000+ visiteurs</span></div>
-                    <div class="legend-item"><div class="legend-dot medium"></div><span>500-999 visiteurs</span></div>
-                    <div class="legend-item"><div class="legend-dot low"></div><span>1-499 visiteurs</span></div>
-                `;
-            }
         }
 
         // =====================================================
