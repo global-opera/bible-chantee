@@ -2689,6 +2689,7 @@
             markers.forEach(m => map.removeLayer(m));
             markers = [];
             data.forEach(p => {
+                if (!p.lat || !p.lng || isNaN(p.lat) || isNaN(p.lng)) return;
                 let color;
                 if (currentMapView === 'language') {
                     color = LANGUAGE_COLORS[p.language] || '#888';
