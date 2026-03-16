@@ -2115,7 +2115,7 @@
                 // getCountryCoords returns [lat,lng] array — convert to {lat,lng} object
                 const coords = Array.isArray(raw) ? { lat: raw[0], lng: raw[1], flag: '' } : raw;
                 if (!coords || !isValidLatLng(coords.lat, coords.lng)) {
-                    console.log('[Map] coordonnées manquantes pour:', normalized);
+                    console.error('[Map] COUNTRY WITHOUT COORDS:', { raw: country.name, normalized, coords });
                     return;
                 }
 
@@ -2124,9 +2124,15 @@
                 if (country.visitors >= 100) color = '#ff4444';
                 else if (country.visitors >= 50) color = '#FFD700';
 
-                const marker = L.circleMarker([coords.lat, coords.lng], {
-                    radius, fillColor: color, color: '#fff', weight: 2, opacity: 0.8, fillOpacity: 0.6
-                }).addTo(map);
+                let marker;
+                try {
+                    marker = L.circleMarker([coords.lat, coords.lng], {
+                        radius, fillColor: color, color: '#fff', weight: 2, opacity: 0.8, fillOpacity: 0.6
+                    }).addTo(map);
+                } catch(e) {
+                    console.error('[Map] LEAFLET CRASH:', { country: normalized, lat: coords.lat, lng: coords.lng, err: e.message });
+                    return;
+                }
 
                 const cities = country.cities
                     ? country.cities.map(c => typeof c === 'string' ? c : (c?.name || null)).filter(Boolean).join(', ')
