@@ -145,6 +145,7 @@ function BibleChanteePlayer() {
   var _br = useState(5); var bright = _br[0]; var setBright = _br[1];
   var _qu = useState(null); var queuedUrl = _qu[0]; var setQueuedUrl = _qu[1];
   var audioRef = useRef(null);
+  var playingRef = useRef(false);
 
   var langCode = LANGUAGES[lang].code;
   var t = UI[langCode];
@@ -152,6 +153,7 @@ function BibleChanteePlayer() {
 
   useEffect(function() { audioRef.current = new Audio(); audioRef.current.preload = "metadata"; return function() { if (audioRef.current) { audioRef.current.pause(); audioRef.current = null; } }; }, []);
   useEffect(function() { if (audioRef.current) audioRef.current.volume = vol / 10; }, [vol]);
+  useEffect(function() { playingRef.current = playing; }, [playing]);
 
   useEffect(function() {
     if (!audioRef.current) return;
@@ -159,7 +161,7 @@ function BibleChanteePlayer() {
     function onTime() { setElapsed(Math.floor(audio.currentTime)); }
     function onMeta() { setDuration(Math.floor(audio.duration) || 0); }
     function onEnded() {
-      // Si une partie suivante est en file, la jouer
+      // Si une partie suivante est en file, la jouer (toujours, peu importe le bouton)
       if (queuedUrl) {
         var nextUrl = queuedUrl;
         setQueuedUrl(null);
@@ -167,7 +169,8 @@ function BibleChanteePlayer() {
         audio.src = nextUrl; audio.load(); audio.play().catch(function() {});
         return;
       }
-      // Sinon avancer au chapitre/livre suivant
+      // Avancer au suivant seulement si le bouton play est actif (jaune)
+      if (!playingRef.current) return;
       if (chapIdx < BOOKS[bookIdx].ch - 1) { setChapIdx(function(c) { return c + 1; }); }
       else if (bookIdx < BOOKS.length - 1) { setBookIdx(function(b) { return b + 1; }); setChapIdx(0); }
       else { setPlaying(false); }
