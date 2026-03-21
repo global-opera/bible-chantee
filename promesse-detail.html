@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -87,20 +87,20 @@
             width: 100%;
             margin: 15px 0;
         }
-        
+
         .audio-player audio {
             width: 100%;
             height: 45px;
             border-radius: 25px;
         }
-        
+
         .psalm-actions {
             display: flex;
-            gap: 15px;
+            gap: 10px;
             flex-wrap: wrap;
             margin-top: 15px;
         }
-        
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -114,7 +114,7 @@
             transition: all 0.3s ease;
             border: none;
         }
-        
+
         .btn-primary {
             background: linear-gradient(135deg, #f5c842 0%, #e0b030 100%);
             color: #1e3a5f;
@@ -123,7 +123,7 @@
             transform: scale(1.05);
             box-shadow: 0 4px 15px rgba(245, 200, 66, 0.4);
         }
-        
+
         .btn-secondary {
             background: transparent;
             border: 1px solid #f5c842;
@@ -131,6 +131,57 @@
         }
         .btn-secondary:hover {
             background: rgba(245, 200, 66, 0.1);
+        }
+
+        .btn-toggle {
+            background: transparent;
+            border: 1px solid rgba(245, 200, 66, 0.4);
+            color: #f5c842;
+        }
+        .btn-toggle.active {
+            background: #f5c842;
+            color: #1e3a5f;
+            font-weight: bold;
+        }
+        .btn-toggle:hover {
+            background: rgba(245, 200, 66, 0.1);
+        }
+
+        .lyrics-box {
+            background: rgba(10, 22, 40, 0.8);
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 15px;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            line-height: 1.8;
+            color: #e0e0e0;
+            display: none;
+        }
+        .lyrics-box.active {
+            display: block;
+        }
+
+        /* Styles for formatted lyrics (Couplet 1, Refrain, etc.) */
+        .lyrics-container {
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        .lyrics-section {
+            margin-bottom: 20px;
+        }
+        .lyrics-tag {
+            font-weight: bold;
+            color: #f5c842;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .lyrics-paragraph {
+            color: #e0e0e0;
+            margin-bottom: 12px;
         }
         
         .no-audio {
@@ -167,12 +218,22 @@
     </div>
 
     <script>
+    // Global language variable
+    let currentLang = 'FR';
+
     // Themes data (same as promesses.html)
     const THEMES_DATA = {
         FR: {
             back: "Retour aux themes",
+            siteName: "Bible Chantee",
             psalmWord: "Psaume",
             listenLabel: "Ecouter dans le lecteur",
+            lyricsLabel: "Paroles",
+            bibleLabel: "Bible",
+            shareLabel: "Partager",
+            shareCopied: "Lien copie !",
+            loadingText: "Chargement...",
+            lyricsUnavailable: "Paroles non disponibles",
             comingSoon: "Audio bientot disponible",
             themes: [
                 { icon: "😰", name: "Anxiete et Peur", desc: "Trouvez la paix interieure", psalms: [23, 27, 46, 91] },
@@ -189,8 +250,15 @@
         },
         EN: {
             back: "Back to themes",
+            siteName: "Sung Bible",
             psalmWord: "Psalm",
             listenLabel: "Listen in player",
+            lyricsLabel: "Lyrics",
+            bibleLabel: "Bible",
+            shareLabel: "Share",
+            shareCopied: "Link copied!",
+            loadingText: "Loading...",
+            lyricsUnavailable: "Lyrics not available",
             comingSoon: "Audio coming soon",
             themes: [
                 { icon: "😰", name: "Anxiety and Fear", desc: "Find inner peace", psalms: [23, 27, 46, 91] },
@@ -207,7 +275,14 @@
         },
         PT: {
             back: "Voltar aos temas",
+            siteName: "Biblia Cantada",
             psalmWord: "Salmo",
+            lyricsLabel: "Letras",
+            bibleLabel: "Biblia",
+            shareLabel: "Compartilhar",
+            shareCopied: "Link copiado!",
+            loadingText: "Carregando...",
+            lyricsUnavailable: "Letras nao disponiveis",
             listenLabel: "Ouvir no leitor",
             comingSoon: "Audio em breve",
             themes: [
@@ -225,7 +300,14 @@
         },
         ES: {
             back: "Volver a los temas",
+            siteName: "Biblia Cantada",
             psalmWord: "Salmo",
+            lyricsLabel: "Letras",
+            bibleLabel: "Biblia",
+            shareLabel: "Compartir",
+            shareCopied: "Enlace copiado!",
+            loadingText: "Cargando...",
+            lyricsUnavailable: "Letras no disponibles",
             listenLabel: "Escuchar en el reproductor",
             comingSoon: "Audio proximamente",
             themes: [
@@ -240,33 +322,83 @@
                 { icon: "🌟", name: "Esperanza", desc: "El futuro esta en Sus manos", psalms: [27, 42, 62, 130] },
                 { icon: "🎵", name: "Adoracion", desc: "Adora al Rey de reyes", psalms: [100, 148, 150] }
             ]
+        },
+        DE: {
+            back: "Zuruck zu den Themen",
+            siteName: "Gesungene Bibel",
+            psalmWord: "Psalm",
+            lyricsLabel: "Text",
+            bibleLabel: "Bibel",
+            shareLabel: "Teilen",
+            shareCopied: "Link kopiert!",
+            loadingText: "Laden...",
+            lyricsUnavailable: "Text nicht verfugbar",
+            listenLabel: "Im Player anhoren",
+            comingSoon: "Audio bald verfugbar",
+            themes: [
+                { icon: "😰", name: "Innerer Frieden", desc: "Finden Sie inneren Frieden", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "Frieden und Ruhe", desc: "Gehen Sie in Gottes Ruhe ein", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "Lob und Dankbarkeit", desc: "Feiern Sie Gottes Gute", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "Schutz", desc: "Gott ist Ihre Zuflucht", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "Trauer und Leid", desc: "Trost in Prufungen", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "Starke und Mut", desc: "Werden Sie von Gott gestarkt", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "Vertrauen auf Gott", desc: "Geben Sie sich Ihm hin", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "Gottes Liebe", desc: "Erleben Sie Seine Liebe", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "Hoffnung", desc: "Die Zukunft liegt in Seinen Handen", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "Anbetung", desc: "Beten Sie den Konig der Konige an", psalms: [100, 148, 150] }
+            ]
+        },
+        IT: {
+            back: "Torna ai temi",
+            siteName: "Bibbia Cantata",
+            psalmWord: "Salmo",
+            lyricsLabel: "Testo",
+            bibleLabel: "Bibbia",
+            shareLabel: "Condividi",
+            shareCopied: "Link copiato!",
+            loadingText: "Caricamento...",
+            lyricsUnavailable: "Testo non disponibile",
+            listenLabel: "Ascolta nel lettore",
+            comingSoon: "Audio prossimamente",
+            themes: [
+                { icon: "😰", name: "Pace interiore", desc: "Trova la pace interiore", psalms: [23, 27, 46, 91] },
+                { icon: "🕊️", name: "Pace e Riposo", desc: "Entra nel riposo di Dio", psalms: [4, 23, 37, 131] },
+                { icon: "🙌", name: "Lode e Gratitudine", desc: "Celebra la bonta di Dio", psalms: [100, 103, 145, 150] },
+                { icon: "🛡️", name: "Protezione", desc: "Dio e il tuo rifugio", psalms: [91, 121, 125, 144] },
+                { icon: "😢", name: "Tristezza e Lutto", desc: "Conforto nelle prove", psalms: [30, 34, 42, 130] },
+                { icon: "💪", name: "Forza e Coraggio", desc: "Sii fortificato da Dio", psalms: [18, 27, 46, 144] },
+                { icon: "🙏", name: "Fiducia in Dio", desc: "Affidati a Lui", psalms: [37, 62, 125, 131] },
+                { icon: "❤️", name: "Amore di Dio", desc: "Sperimenta il Suo amore", psalms: [103, 145, 147, 148] },
+                { icon: "🌟", name: "Speranza", desc: "Il futuro e nelle Sue mani", psalms: [27, 42, 62, 130] },
+                { icon: "🎵", name: "Adorazione", desc: "Adora il Re dei re", psalms: [100, 148, 150] }
+            ]
         }
     };
 
     // Psalm themes/subtitles
     const PSALM_THEMES = {
-        4: { FR: "Paix dans la nuit", EN: "Peace at night", PT: "Paz na noite", ES: "Paz en la noche" },
-        18: { FR: "Dieu mon rocher", EN: "God my rock", PT: "Deus minha rocha", ES: "Dios mi roca" },
-        23: { FR: "L'Eternel est mon berger", EN: "The Lord is my shepherd", PT: "O Senhor e meu pastor", ES: "El Senor es mi pastor" },
-        27: { FR: "L'Eternel est ma lumiere", EN: "The Lord is my light", PT: "O Senhor e minha luz", ES: "El Senor es mi luz" },
-        30: { FR: "La joie vient le matin", EN: "Joy comes in the morning", PT: "A alegria vem pela manha", ES: "El gozo viene por la manana" },
-        34: { FR: "Goutez et voyez", EN: "Taste and see", PT: "Provai e vede", ES: "Gustad y ved" },
-        37: { FR: "Confie-toi en l'Eternel", EN: "Trust in the Lord", PT: "Confia no Senhor", ES: "Confia en el Senor" },
-        42: { FR: "Mon ame a soif de Dieu", EN: "My soul thirsts for God", PT: "Minha alma tem sede de Deus", ES: "Mi alma tiene sed de Dios" },
-        46: { FR: "Dieu est notre refuge", EN: "God is our refuge", PT: "Deus e nosso refugio", ES: "Dios es nuestro refugio" },
-        62: { FR: "Mon ame se confie en Dieu", EN: "My soul trusts in God", PT: "Minha alma confia em Deus", ES: "Mi alma confia en Dios" },
-        91: { FR: "A l'abri du Tres-Haut", EN: "Shelter of the Most High", PT: "Abrigo do Altissimo", ES: "Abrigo del Altisimo" },
-        100: { FR: "Acclamez l'Eternel", EN: "Shout for joy", PT: "Aclamai ao Senhor", ES: "Aclamad al Senor" },
-        103: { FR: "Benis l'Eternel mon ame", EN: "Bless the Lord O my soul", PT: "Bendize o Senhor minha alma", ES: "Bendice al Senor alma mia" },
-        121: { FR: "Mon secours vient de l'Eternel", EN: "My help comes from the Lord", PT: "O meu socorro vem do Senhor", ES: "Mi socorro viene del Senor" },
-        125: { FR: "Ceux qui se confient", EN: "Those who trust", PT: "Os que confiam", ES: "Los que confian" },
-        130: { FR: "Des profondeurs", EN: "Out of the depths", PT: "Das profundezas", ES: "De lo profundo" },
-        131: { FR: "Mon coeur n'est pas orgueilleux", EN: "My heart is not proud", PT: "Meu coracao nao e soberbo", ES: "Mi corazon no es soberbio" },
-        144: { FR: "Mon rocher et ma forteresse", EN: "My rock and fortress", PT: "Minha rocha e fortaleza", ES: "Mi roca y fortaleza" },
-        145: { FR: "Je t'exalterai mon Dieu", EN: "I will exalt You my God", PT: "Eu te exaltarei meu Deus", ES: "Te exaltare mi Dios" },
-        147: { FR: "Louez l'Eternel", EN: "Praise the Lord", PT: "Louvai ao Senhor", ES: "Alabad al Senor" },
-        148: { FR: "Que tout ce qui respire loue", EN: "Let everything praise", PT: "Tudo que respira louve", ES: "Todo lo que respira alabe" },
-        150: { FR: "Louez Dieu dans son sanctuaire", EN: "Praise God in His sanctuary", PT: "Louvai a Deus no seu santuario", ES: "Alabad a Dios en su santuario" }
+        4: { FR: "Paix dans la nuit", EN: "Peace at night", PT: "Paz na noite", ES: "Paz en la noche", DE: "Frieden in der Nacht", IT: "Pace nella notte" },
+        18: { FR: "Dieu mon rocher", EN: "God my rock", PT: "Deus minha rocha", ES: "Dios mi roca", DE: "Gott mein Fels", IT: "Dio mia roccia" },
+        23: { FR: "L'Eternel est mon berger", EN: "The Lord is my shepherd", PT: "O Senhor e meu pastor", ES: "El Senor es mi pastor", DE: "Der Herr ist mein Hirte", IT: "Il Signore e il mio pastore" },
+        27: { FR: "L'Eternel est ma lumiere", EN: "The Lord is my light", PT: "O Senhor e minha luz", ES: "El Senor es mi luz", DE: "Der Herr ist mein Licht", IT: "Il Signore e la mia luce" },
+        30: { FR: "La joie vient le matin", EN: "Joy comes in the morning", PT: "A alegria vem pela manha", ES: "El gozo viene por la manana", DE: "Freude kommt am Morgen", IT: "La gioia viene al mattino" },
+        34: { FR: "Goutez et voyez", EN: "Taste and see", PT: "Provai e vede", ES: "Gustad y ved", DE: "Schmeckt und seht", IT: "Gustate e vedete" },
+        37: { FR: "Confie-toi en l'Eternel", EN: "Trust in the Lord", PT: "Confia no Senhor", ES: "Confia en el Senor", DE: "Vertraue auf den Herrn", IT: "Confida nel Signore" },
+        42: { FR: "Mon ame a soif de Dieu", EN: "My soul thirsts for God", PT: "Minha alma tem sede de Deus", ES: "Mi alma tiene sed de Dios", DE: "Meine Seele durstet nach Gott", IT: "La mia anima ha sete di Dio" },
+        46: { FR: "Dieu est notre refuge", EN: "God is our refuge", PT: "Deus e nosso refugio", ES: "Dios es nuestro refugio", DE: "Gott ist unsere Zuflucht", IT: "Dio e il nostro rifugio" },
+        62: { FR: "Mon ame se confie en Dieu", EN: "My soul trusts in God", PT: "Minha alma confia em Deus", ES: "Mi alma confia en Dios", DE: "Meine Seele vertraut auf Gott", IT: "La mia anima confida in Dio" },
+        91: { FR: "A l'abri du Tres-Haut", EN: "Shelter of the Most High", PT: "Abrigo do Altissimo", ES: "Abrigo del Altisimo", DE: "Schutz des Hochsten", IT: "Rifugio dell'Altissimo" },
+        100: { FR: "Acclamez l'Eternel", EN: "Shout for joy", PT: "Aclamai ao Senhor", ES: "Aclamad al Senor", DE: "Jauchzt dem Herrn", IT: "Acclamate al Signore" },
+        103: { FR: "Benis l'Eternel mon ame", EN: "Bless the Lord O my soul", PT: "Bendize o Senhor minha alma", ES: "Bendice al Senor alma mia", DE: "Lobe den Herrn meine Seele", IT: "Benedici il Signore anima mia" },
+        121: { FR: "Mon secours vient de l'Eternel", EN: "My help comes from the Lord", PT: "O meu socorro vem do Senhor", ES: "Mi socorro viene del Senor", DE: "Meine Hilfe kommt vom Herrn", IT: "Il mio aiuto viene dal Signore" },
+        125: { FR: "Ceux qui se confient", EN: "Those who trust", PT: "Os que confiam", ES: "Los que confian", DE: "Die vertrauen", IT: "Coloro che confidano" },
+        130: { FR: "Des profondeurs", EN: "Out of the depths", PT: "Das profundezas", ES: "De lo profundo", DE: "Aus der Tiefe", IT: "Dalle profondita" },
+        131: { FR: "Mon coeur n'est pas orgueilleux", EN: "My heart is not proud", PT: "Meu coracao nao e soberbo", ES: "Mi corazon no es soberbio", DE: "Mein Herz ist nicht stolz", IT: "Il mio cuore non e orgoglioso" },
+        144: { FR: "Mon rocher et ma forteresse", EN: "My rock and fortress", PT: "Minha rocha e fortaleza", ES: "Mi roca y fortaleza", DE: "Mein Fels und Festung", IT: "La mia roccia e fortezza" },
+        145: { FR: "Je t'exalterai mon Dieu", EN: "I will exalt You my God", PT: "Eu te exaltarei meu Deus", ES: "Te exaltare mi Dios", DE: "Ich will dich erheben mein Gott", IT: "Ti esaltero mio Dio" },
+        147: { FR: "Louez l'Eternel", EN: "Praise the Lord", PT: "Louvai ao Senhor", ES: "Alabad al Senor", DE: "Lobt den Herrn", IT: "Lodate il Signore" },
+        148: { FR: "Que tout ce qui respire loue", EN: "Let everything praise", PT: "Tudo que respira louve", ES: "Todo lo que respira alabe", DE: "Alles was atmet lobe", IT: "Tutto cio che respira lodi" },
+        150: { FR: "Louez Dieu dans son sanctuaire", EN: "Praise God in His sanctuary", PT: "Louvai a Deus no seu santuario", ES: "Alabad a Dios en su santuario", DE: "Lobt Gott in seinem Heiligtum", IT: "Lodate Dio nel suo santuario" }
     };
 
     // Mapping index theme -> section key (meme que sections-promesses.js)
@@ -284,17 +416,19 @@
     ];
 
     function getLecteurUrl(psalmNum, lang, themeIndex) {
-        const chapterPadded = String(psalmNum).padStart(2, '0');
         const sectionKey = THEME_INDEX_TO_KEY[themeIndex] || 'anxiete';
-        return `lecteur.html?book=19&chapter=${chapterPadded}&lang=${lang}&return=/promesse-detail.html?theme=${themeIndex}&section=${sectionKey}`;
+        const isPremium = (localStorage.getItem('bc_unlimited') === 'true')
+            || /(?:^|;\\s*)bc_premium=1(?:;|$)/.test(document.cookie || '');
+        const page = isPremium ? 'premium.html' : 'lecteur.html';
+        return `${page}?book=19&chapter=${psalmNum}&lang=${lang}&return=/promesse-detail.html?theme=${themeIndex}&section=${sectionKey}`;
     }
 
     function render() {
         const urlParams = new URLSearchParams(window.location.search);
         const themeIndex = parseInt(urlParams.get('theme')) || 0;
-        const lang = urlParams.get('lang') || localStorage.getItem('selectedLang') || 'FR';
-        
-        const langData = THEMES_DATA[lang] || THEMES_DATA.FR;
+        currentLang = urlParams.get('lang') || localStorage.getItem('selectedLang') || 'EN';
+
+        const langData = THEMES_DATA[currentLang] || THEMES_DATA.FR;
         const theme = langData.themes[themeIndex];
         
         if (!theme) {
@@ -304,42 +438,460 @@
         
         // Update back link
         document.getElementById('backLink').textContent = langData.back;
-        document.getElementById('backLink').href = `promesses.html?lang=${lang}`;
-        
+        document.getElementById('backLink').href = `promesses.html?lang=${currentLang}`;
+
         // Update header
         document.getElementById('themeIcon').textContent = theme.icon;
         document.getElementById('themeName').textContent = theme.name;
         document.getElementById('themeDesc').textContent = theme.desc;
-        document.title = `${theme.name} - Bible Chantee`;
-        
+        document.title = `${theme.name} - ${langData.siteName}`;
+
         // Build psalms list
         const listContainer = document.getElementById('psalmsList');
         listContainer.innerHTML = '';
-        
-        theme.psalms.forEach(psalmNum => {
+
+        theme.psalms.forEach((psalmNum, index) => {
             const card = document.createElement('div');
             card.className = 'psalm-card';
-            
-            const psalmTheme = PSALM_THEMES[psalmNum] ? (PSALM_THEMES[psalmNum][lang] || PSALM_THEMES[psalmNum].FR) : '';
-            const lecteurUrl = getLecteurUrl(psalmNum, lang, themeIndex);
-            
+            card.dataset.psalmNum = psalmNum;
+
+            const psalmTheme = PSALM_THEMES[psalmNum] ? (PSALM_THEMES[psalmNum][currentLang] || PSALM_THEMES[psalmNum].FR) : '';
+            const audioUrl = getAudioUrl(psalmNum, currentLang);
+            const lyricsId = `lyrics-${psalmNum}`;
+            const audioId = `audio-${psalmNum}`;
+
             card.innerHTML = `
                 <div class="psalm-header">
                     <h2 class="psalm-title">${langData.psalmWord} ${psalmNum}</h2>
                     <span class="psalm-theme">${psalmTheme}</span>
                 </div>
+                <div class="audio-player">
+                    <audio id="${audioId}" controls ${index === 0 ? 'autoplay' : ''}>
+                        ${audioUrl ? `<source src="${audioUrl}" type="audio/mpeg">` : ''}
+                    </audio>
+                </div>
                 <div class="psalm-actions">
-                    <a href="${lecteurUrl}" class="btn btn-primary">
-                        <span>&#9658;</span> ${langData.listenLabel}
-                    </a>
+                    <button class="btn btn-toggle" onclick="toggleLyrics('${lyricsId}', this)">
+                        🎤 ${langData.lyricsLabel || 'Paroles'}
+                    </button>
+                    <button class="btn btn-toggle" onclick="toggleBible('${psalmNum}', '${lyricsId}', this, '${currentLang}')">
+                        📖 ${langData.bibleLabel || 'Bible'}
+                    </button>
+                    <button class="btn btn-toggle" onclick="shareContent(${themeIndex}, ${psalmNum}, '${currentLang}', this)">
+                        🔗 ${langData.shareLabel || 'Partager'}
+                    </button>
+                </div>
+                <div id="${lyricsId}" class="lyrics-box">
+                    ${langData.loadingText || 'Chargement...'}
                 </div>
             `;
-            
+
             listContainer.appendChild(card);
+
+            // Load lyrics after card is added
+            loadLyrics(psalmNum, currentLang, lyricsId);
         });
     }
 
-    document.addEventListener('DOMContentLoaded', render);
+    // Get audio URL for psalm
+    function getAudioUrl(psalmNum, lang) {
+        // Format: 19_PSA_23_ES for Psalm 23 in Spanish
+        const langUpper = lang.toUpperCase();
+        const chapter = String(psalmNum).padStart(2, '0');
+        const key = `19_PSA_${chapter}_${langUpper}`;
+
+        // Try to get from window.AUDIO_URLS if it exists
+        if (window.AUDIO_URLS && window.AUDIO_URLS[key]) {
+            return window.AUDIO_URLS[key];
+        }
+
+        // Fallback to R2 URL pattern
+        return `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${langUpper}/19_PSA/19_PSA_${chapter}_${langUpper}.mp3`;
+    }
+
+    // Cache for loaded content
+    const contentCache = {};
+
+    // Toggle lyrics display
+    function toggleLyrics(lyricsId, button) {
+        const lyricsBox = document.getElementById(lyricsId);
+        const psalmNum = lyricsId.replace('lyrics-', '');
+
+        // Deactivate Bible button
+        const bibleBtn = button.parentElement.querySelector('.btn-toggle:not(:first-child)');
+        if (bibleBtn) bibleBtn.classList.remove('active');
+
+        if (button.classList.contains('active')) {
+            lyricsBox.classList.remove('active');
+            button.classList.remove('active');
+        } else {
+            // Restore lyrics from cache or reload
+            if (contentCache[`lyrics-${psalmNum}-${currentLang}`]) {
+                lyricsBox.textContent = contentCache[`lyrics-${psalmNum}-${currentLang}`];
+            }
+            lyricsBox.classList.add('active');
+            button.classList.add('active');
+        }
+    }
+
+    // Map language codes to Bible file names
+    const BIBLE_FILES = {
+        'FR': 'fr_bible_segond1910.json',
+        'EN': 'en_bible_kjv_1611.json',
+        'PT': 'pt_bible_almeida_acf.json',
+        'ES': 'es_bible_reina_valera_1909.json',
+        'DE': 'de_bible_luther_1912.json',
+        'IT': 'it_bible_diodati_1649.json'
+    };
+
+    // Toggle Bible text display
+    async function toggleBible(psalmNum, lyricsId, button, lang) {
+        const lyricsBox = document.getElementById(lyricsId);
+        const langData = THEMES_DATA[lang] || THEMES_DATA.FR;
+        const langUpper = lang.toUpperCase();
+
+        // Deactivate Lyrics button
+        const lyricsBtn = button.parentElement.querySelector('.btn-toggle:first-child');
+        if (lyricsBtn) lyricsBtn.classList.remove('active');
+
+        // Deactivate Share button
+        const shareBtn = button.parentElement.querySelector('.btn-toggle:last-child');
+        if (shareBtn) shareBtn.classList.remove('active');
+
+        if (button.classList.contains('active')) {
+            lyricsBox.classList.remove('active');
+            button.classList.remove('active');
+        } else {
+            button.classList.add('active');
+            lyricsBox.classList.add('active');
+
+            // Check cache first
+            const cacheKey = `bible-${psalmNum}-${lang}`;
+            if (contentCache[cacheKey]) {
+                lyricsBox.textContent = contentCache[cacheKey];
+                return;
+            }
+
+            lyricsBox.textContent = langData.loadingText || 'Chargement...';
+
+            try {
+                const bibleFile = BIBLE_FILES[langUpper] || BIBLE_FILES['EN'];
+                const response = await fetch(`bible/${bibleFile}`);
+
+                if (response.ok) {
+                    const data = await response.json();
+                    const verses = data.verses || [];
+
+                    // Filter verses for Psalms (book 19) and specific chapter
+                    const psalmVerses = verses.filter(v =>
+                        v.book === 19 && v.chapter === parseInt(psalmNum)
+                    );
+
+                    if (psalmVerses.length > 0) {
+                        // Combine verses into text
+                        const bibleText = psalmVerses
+                            .sort((a, b) => a.verse - b.verse)
+                            .map(v => `${v.verse}. ${v.text}`)
+                            .join('\n\n');
+
+                        // Cache the result
+                        contentCache[cacheKey] = bibleText;
+                        lyricsBox.textContent = bibleText;
+                    } else {
+                        lyricsBox.textContent = langData.lyricsUnavailable || 'Texte biblique non disponible';
+                    }
+                } else {
+                    lyricsBox.textContent = langData.lyricsUnavailable || 'Texte biblique non disponible';
+                }
+            } catch (error) {
+                console.error('Error loading Bible text:', error);
+                lyricsBox.textContent = langData.lyricsUnavailable || 'Erreur de chargement';
+            }
+        }
+    }
+
+    // Load lyrics from window.chapterLyricsPrompts (same as lecteur.html)
+    async function loadLyrics(psalmNum, lang, lyricsId) {
+        const lyricsBox = document.getElementById(lyricsId);
+        const langData = THEMES_DATA[lang] || THEMES_DATA.FR;
+
+        // Check cache first
+        const cacheKey = `lyrics-${psalmNum}-${lang}`;
+        if (contentCache[cacheKey]) {
+            lyricsBox.innerHTML = contentCache[cacheKey];
+            return;
+        }
+
+        try {
+            // Pour FR: utiliser window.chapterLyricsPrompts (paroles structurées avec tags [Verse], [Chorus])
+            if (lang === 'FR' && window.chapterLyricsPrompts && window.LyricsFormatter) {
+                const rawLyrics = window.chapterLyricsPrompts['19'] && window.chapterLyricsPrompts['19'][psalmNum];
+
+                if (rawLyrics && rawLyrics.includes('[Verse')) {
+                    // Formater avec LyricsFormatter (convertit [Verse 1] → "Couplet 1", [Chorus] → "Refrain", etc.)
+                    const formattedHTML = window.LyricsFormatter.format(rawLyrics);
+                    contentCache[cacheKey] = formattedHTML;
+                    lyricsBox.innerHTML = formattedHTML;
+                    return;
+                }
+            }
+
+            // Fallback: charger depuis JSON pour les autres langues
+            const langUpper = lang.toUpperCase();
+            const response = await fetch(`lyrics/${langUpper}.json`);
+            if (response.ok) {
+                const data = await response.json();
+                // Get psalm from book 19
+                if (data['19'] && data['19'][String(psalmNum)]) {
+                    let lyrics = data['19'][String(psalmNum)];
+                    // Clean up the text (remove [TITLE], [LYRICS] tags, etc.)
+                    lyrics = lyrics.replace(/\[TITLE\]\r?\n/g, '');
+                    lyrics = lyrics.replace(/\[LYRICS\]\r?\n/g, '');
+                    lyrics = lyrics.replace(/\r\n/g, '\n');
+                    lyrics = lyrics.trim();
+
+                    // Cache the result
+                    contentCache[cacheKey] = lyrics;
+                    lyricsBox.textContent = lyrics;
+                } else {
+                    lyricsBox.textContent = langData.lyricsUnavailable || 'Paroles non disponibles';
+                }
+            } else {
+                lyricsBox.textContent = langData.lyricsUnavailable || 'Paroles non disponibles';
+            }
+        } catch (error) {
+            console.error('Error loading lyrics:', error);
+            lyricsBox.textContent = langData.lyricsUnavailable || 'Paroles non disponibles';
+        }
+    }
+
+    // Share content function
+    function shareContent(themeIndex, psalmNum, lang, button) {
+        const langData = THEMES_DATA[lang] || THEMES_DATA.FR;
+
+        // Generate shareable URL with shared=true parameter for email gate
+        const baseUrl = window.location.origin + window.location.pathname;
+        const shareUrl = `${baseUrl}?theme=${themeIndex}&psalm=${psalmNum}&lang=${lang}&shared=true`;
+
+        // Copy to clipboard
+        navigator.clipboard.writeText(shareUrl).then(() => {
+            // Show feedback
+            const originalText = button.innerHTML;
+            button.innerHTML = `✓ ${langData.shareCopied}`;
+            button.classList.add('active');
+
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.classList.remove('active');
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy:', err);
+            alert(shareUrl);
+        });
+    }
+
+    // Check if this is a shared link (requires email gate)
+    function checkEmailGate() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const isShared = urlParams.get('shared');
+
+        if (isShared === 'true') {
+            // Check if user has already entered email within 7 days
+            const emailData = localStorage.getItem('bc_trial_email');
+
+            if (emailData) {
+                const data = JSON.parse(emailData);
+                const now = Date.now();
+                const sevenDays = 7 * 24 * 60 * 60 * 1000;
+
+                if (now - data.timestamp < sevenDays) {
+                    // Still within trial period
+                    return true;
+                }
+            }
+
+            // Show email gate modal
+            showEmailGate();
+            return false;
+        }
+
+        return true;
+    }
+
+    // Show email gate modal
+    function showEmailGate() {
+        const lang = new URLSearchParams(window.location.search).get('lang') || currentLang;
+        const langData = THEMES_DATA[lang] || THEMES_DATA.FR;
+
+        const modal = document.createElement('div');
+        modal.id = 'emailGateModal';
+        modal.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+        `;
+
+        const modalContent = document.createElement('div');
+        modalContent.style.cssText = `
+            background: linear-gradient(135deg, #1a237e 0%, #0a1628 100%);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 500px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 20px 60px rgba(245, 200, 66, 0.3);
+        `;
+
+        const messages = {
+            FR: {
+                title: 'Bienvenue sur Bible Chantée',
+                subtitle: 'Entrez votre email pour accéder gratuitement pendant 7 jours',
+                placeholder: 'Votre email',
+                button: 'Accéder gratuitement',
+                privacy: 'Nous respectons votre vie privée'
+            },
+            EN: {
+                title: 'Welcome to Sung Bible',
+                subtitle: 'Enter your email for 7 days free access',
+                placeholder: 'Your email',
+                button: 'Get Free Access',
+                privacy: 'We respect your privacy'
+            },
+            PT: {
+                title: 'Bem-vindo à Bíblia Cantada',
+                subtitle: 'Digite seu email para acesso gratuito por 7 dias',
+                placeholder: 'Seu email',
+                button: 'Obter Acesso Gratuito',
+                privacy: 'Respeitamos sua privacidade'
+            },
+            ES: {
+                title: 'Bienvenido a Biblia Cantada',
+                subtitle: 'Ingresa tu email para acceso gratuito por 7 días',
+                placeholder: 'Tu email',
+                button: 'Obtener Acceso Gratuito',
+                privacy: 'Respetamos tu privacidad'
+            },
+            DE: {
+                title: 'Willkommen bei Gesungene Bibel',
+                subtitle: 'Geben Sie Ihre E-Mail für 7 Tage kostenlosen Zugang ein',
+                placeholder: 'Ihre E-Mail',
+                button: 'Kostenlosen Zugang erhalten',
+                privacy: 'Wir respektieren Ihre Privatsphäre'
+            },
+            IT: {
+                title: 'Benvenuto su Bibbia Cantata',
+                subtitle: 'Inserisci la tua email per accesso gratuito per 7 giorni',
+                placeholder: 'La tua email',
+                button: 'Ottieni Accesso Gratuito',
+                privacy: 'Rispettiamo la tua privacy'
+            }
+        };
+
+        const msg = messages[lang] || messages.FR;
+
+        modalContent.innerHTML = `
+            <h1 style="color: #f5c842; margin-bottom: 20px; font-size: 2rem;">🎵 ${msg.title}</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; line-height: 1.6;">${msg.subtitle}</p>
+            <input type="email" id="trialEmail" placeholder="${msg.placeholder}"
+                style="width: 100%; padding: 15px; font-size: 1rem; border-radius: 10px; border: 2px solid #f5c842; margin-bottom: 20px; background: rgba(255,255,255,0.9); color: #1a237e;">
+            <button id="submitEmail" style="width: 100%; padding: 15px; font-size: 1.1rem; background: #f5c842; color: #1a237e; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; margin-bottom: 15px;">
+                ${msg.button}
+            </button>
+            <p style="font-size: 0.9rem; color: #b0b0b0;">${msg.privacy}</p>
+        `;
+
+        modal.appendChild(modalContent);
+        document.body.appendChild(modal);
+
+        // Handle email submission
+        document.getElementById('submitEmail').onclick = async function() {
+            const email = document.getElementById('trialEmail').value.trim();
+            const submitBtn = document.getElementById('submitEmail');
+
+            if (!email || !email.includes('@')) {
+                alert('Please enter a valid email address');
+                return;
+            }
+
+            // Désactiver le bouton pendant la requête
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'En cours...';
+
+            try {
+                // Générer UID unique
+                const uid = 'uid_' + Date.now() + '_' + Math.random().toString(36).substring(2, 11);
+
+                // Sauvegarder localement AVANT l'appel backend
+                const data = {
+                    uid: uid,
+                    email: email,
+                    timestamp: Date.now()
+                };
+                localStorage.setItem('bc_trial_email', JSON.stringify(data));
+
+                // Envoyer vers backend Supabase
+                const response = await fetch('/.netlify/functions/bc_signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ uid, email })
+                });
+
+                const result = await response.json();
+
+                if (result.ok) {
+                    console.log('✅ Utilisateur inscrit:', result.me);
+
+                    // Sauvegarder les infos complètes
+                    localStorage.setItem('bc_user', JSON.stringify(result.me));
+                } else {
+                    console.warn('⚠️ Backend signup failed:', result.error);
+                    // Continuer quand même (fail gracefully)
+                }
+
+            } catch (error) {
+                console.error('❌ Error during signup:', error);
+                // Continuer quand même (fail gracefully)
+            }
+
+            // Fermer le modal et afficher le contenu
+            modal.remove();
+            render();
+        };
+
+        // Allow Enter key to submit
+        document.getElementById('trialEmail').onkeypress = function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('submitEmail').click();
+            }
+        };
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        if (checkEmailGate()) {
+            render();
+        }
+    });
     </script>
+
+  <!-- js/audio-urls-*.js: optional, getAudioUrl() falls back to R2 directly -->
+  <!-- js/lyrics-data-prompts.js: optional, lyrics fetched from lyrics/{LANG}.json fallback -->
+  <script src="js/lyrics-formatter.js"></script>
+  <script src="/translations.js"></script>
+  <script src="/translations-extra.js"></script>
+  <script src="/i18n.js"></script>
+  <script src="/lang-shared.js"></script>
 </body>
 </html>
+
+
+
+
+
+
