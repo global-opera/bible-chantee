@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>10 Confessions de la Bible Chantee</title>
+  <script src="analytics-tracking.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -12,35 +13,11 @@
             min-height: 100vh;
             color: #fff;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        
-        .lang-bar {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 15px;
-            background: rgba(0,0,0,0.3);
-            margin-bottom: 30px;
-        }
-        .lang-btn {
-            padding: 8px 16px;
-            background: #1e3a5f;
-            color: #f5c842;
-            border: 1px solid #f5c842;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            transition: all 0.3s;
-        }
-        .lang-btn:hover, .lang-btn.active {
-            background: #f5c842;
-            color: #1e3a5f;
-        }
-        
+        .container { max-width: 400px; margin: 0 auto; padding: 20px; }
+
         h1 {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 1.7rem;
             color: #f5c842;
             margin-bottom: 20px;
         }
@@ -64,47 +41,145 @@
             text-align: center;
             font-style: italic;
             color: #b0b0b0;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             font-size: 1.2rem;
         }
-        
+
+        /* Favorites filter button */
+        .filter-container { text-align: center; margin-bottom: 20px; }
+        .filter-btn {
+            padding: 8px 20px;
+            border: 2px solid rgba(245, 200, 66, 0.5);
+            background: rgba(30, 58, 95, 0.6);
+            color: #fff;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        .filter-btn:hover {
+            border-color: #f5c842;
+            background: rgba(30, 58, 95, 0.8);
+        }
+        .filter-btn.active {
+            background: #f5c842;
+            color: #1a237e;
+            border-color: #f5c842;
+            font-weight: bold;
+        }
+
+        /* Favorite star */
+        .favorite-star {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: transform 0.2s;
+            user-select: none;
+        }
+        .favorite-star:hover { transform: scale(1.2); }
+        .favorite-star.favorited { color: #f5c842; }
+        .favorite-star:not(.favorited) { color: rgba(255, 255, 255, 0.3); }
+
+        /* Empty state */
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #b0b0b0;
+            font-style: italic;
+        }
+
         .confessions-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 13px;
+            max-width: 495px;
+            margin: 0 auto;
         }
         .confession-card {
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             background: rgba(30, 58, 95, 0.8);
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
+            border-radius: 11px;
+            text-decoration: none;
+            padding: 13px;
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
-            text-decoration: none;
-            display: block;
+            position: relative;
         }
         .confession-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(245, 200, 66, 0.3);
         }
-        .confession-icon { font-size: 3rem; margin-bottom: 15px; }
-        .confession-word { color: #f5c842; font-size: 0.9rem; }
-        .confession-title { font-size: 1.3rem; margin: 10px 0; color: #fff; }
-        .confession-verse { color: #b0b0b0; font-style: italic; margin-bottom: 15px; }
-        .confession-cta {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 16px;
-            background: linear-gradient(135deg, #f5c842 0%, #e0b030 100%);
-            color: #1e3a5f;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
+        .confession-icon {
+            font-size: 2.2rem;
+            margin-bottom: 9px;
         }
-        
+        .confession-title {
+            color: white;
+            font-size: 0.85rem;
+            text-align: center;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+
+        /* Player Overlay (copié de prieres.html) */
+        .player-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        .player-overlay.active { display: block; }
+        .player-container { max-width: 500px; margin: 20px auto; padding: 20px; }
+        .close-btn {
+            display: block;
+            text-align: right;
+            color: #f5c842;
+            font-size: 30px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            user-select: none;
+        }
+        .player-title {
+            color: #f5c842;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .player-box {
+            background: rgba(30, 58, 95, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+        }
+        .player-box audio {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .lyrics-box {
+            background: #162B46;
+            border-radius: 10px;
+            padding: 15px;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
         @media (max-width: 480px) {
             h1 { font-size: 1.8rem; }
-            .lang-btn { padding: 6px 10px; font-size: 12px; }
         }
     </style>
 </head>
@@ -113,14 +188,56 @@
     <script src="lang-shared.js"></script>
 
     <div class="container">
+        <a href="lecteur.html" class="back-link" id="backLink">Retour accueil</a>
         <h1 id="pageTitle">10 Confessions de la Bible en Musique</h1>
-        <a href="index.html" class="back-link" id="backLink">Retour accueil</a>
         <p class="subtitle" id="subtitle">Declarez la Parole de Dieu sur votre vie</p>
-        
+
+        <div class="filter-container">
+            <button class="filter-btn" id="filterBtn" onclick="toggleFilter()">
+                <span id="filterText">★ Favoris</span>
+            </button>
+        </div>
+
         <div class="confessions-grid" id="confessionsGrid"></div>
+        <div class="empty-state" id="emptyState" style="display:none;"></div>
     </div>
 
+    <!-- Player Overlay -->
+    <div class="player-overlay" id="playerOverlay">
+        <div class="player-container">
+            <span class="close-btn" onclick="closePlayer()">✕</span>
+            <h2 class="player-title" id="playerTitle">Confession</h2>
+            <div class="player-box">
+                <audio id="confessionAudio" controls></audio>
+                <div class="lyrics-box" id="lyricsBox">Chargement...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio URLs for confessions - MUST load BEFORE inline script -->
+    <script src="/audio-urls-confessions-fr.js?v=1"></script>
+    <script src="/audio-urls-confessions-en.js?v=1"></script>
+    <script src="/audio-urls-confessions-es.js?v=1"></script>
+    <script src="/audio-urls-confessions-de.js?v=1"></script>
+    <script src="/audio-urls-confessions-it.js?v=1"></script>
+    <script src="/audio-urls-confessions-pt.js?v=1"></script>
+    <script src="/audio-urls-confessions-tl.js?v=1"></script>
+
     <script>
+    // Mapping confession index to Bible book and chapter
+    const CONFESSION_REFS = [
+        { book: "43", chapter: "1" },  // 0: Jean 1:12
+        { book: "49", chapter: "1" },  // 1: Éphésiens 1:7
+        { book: "47", chapter: "5" },  // 2: 2 Corinthiens 5:17
+        { book: "45", chapter: "8" },  // 3: Romains 8:37
+        { book: "49", chapter: "1" },  // 4: Éphésiens 1:3
+        { book: "60", chapter: "2" },  // 5: 1 Pierre 2:24
+        { book: "19", chapter: "91" }, // 6: Psaume 91:11
+        { book: "45", chapter: "8" },  // 7: Romains 8:38-39
+        { book: "50", chapter: "4" },  // 8: Philippiens 4:13
+        { book: "40", chapter: "5" }   // 9: Matthieu 5:14
+    ];
+
     const DATA = {
         FR: {
             title: "10 Confessions de la Bible Chantee",
@@ -128,17 +245,20 @@
             subtitle: "Declarez la Parole de Dieu sur votre vie",
             word: "Confession",
             listenBtn: "Ecouter",
+            favorites: "★ Favoris",
+            showAll: "Voir tout",
+            noFavorites: "Aucun favori. Cliquez sur ★ pour en ajouter.",
             items: [
                 ["Je suis enfant de Dieu", "Jean 1:12"],
-                ["Je suis justifie par la foi", "Romains 5:1"],
+                ["J'ai la redemption par son sang", "Ephesiens 1:7"],
+                ["Je suis une nouvelle creation", "2 Corinthiens 5:17"],
                 ["Je suis plus que vainqueur", "Romains 8:37"],
-                ["Je peux tout en Christ", "Philippiens 4:13"],
-                ["Dieu pourvoit a tous mes besoins", "Philippiens 4:19"],
-                ["Je suis gueri par ses meurtrissures", "Esaie 53:5"],
-                ["Aucune arme ne prosperera", "Esaie 54:17"],
-                ["Le Seigneur est mon berger", "Psaume 23:1"],
-                ["Je suis beni", "Ephesiens 1:3"],
-                ["L'amour de Dieu est en moi", "Romains 5:5"]
+                ["Je suis beni de toutes benedictions", "Ephesiens 1:3"],
+                ["Je suis gueri par ses meurtrissures", "1 Pierre 2:24"],
+                ["Ses anges me gardent", "Psaume 91:11"],
+                ["Rien ne peut me separer de l'amour de Dieu", "Romains 8:38-39"],
+                ["Je peux tout par Christ qui me fortifie", "Philippiens 4:13"],
+                ["Je suis la lumiere du monde", "Matthieu 5:14"]
             ]
         },
         EN: {
@@ -147,17 +267,20 @@
             subtitle: "Declare God's Word over your life",
             word: "Confession",
             listenBtn: "Listen",
+            favorites: "★ Favorites",
+            showAll: "Show all",
+            noFavorites: "No favorites. Click ★ to add some.",
             items: [
                 ["I am a child of God", "John 1:12"],
-                ["I am justified by faith", "Romans 5:1"],
+                ["I have redemption through His blood", "Ephesians 1:7"],
+                ["I am a new creation", "2 Corinthians 5:17"],
                 ["I am more than a conqueror", "Romans 8:37"],
+                ["I am blessed with every blessing", "Ephesians 1:3"],
+                ["By His wounds I am healed", "1 Peter 2:24"],
+                ["His angels guard me", "Psalm 91:11"],
+                ["Nothing can separate me from God's love", "Romans 8:38-39"],
                 ["I can do all things through Christ", "Philippians 4:13"],
-                ["God supplies all my needs", "Philippians 4:19"],
-                ["By His stripes I am healed", "Isaiah 53:5"],
-                ["No weapon shall prosper", "Isaiah 54:17"],
-                ["The Lord is my shepherd", "Psalm 23:1"],
-                ["I am blessed", "Ephesians 1:3"],
-                ["God's love is in me", "Romans 5:5"]
+                ["I am the light of the world", "Matthew 5:14"]
             ]
         },
         PT: {
@@ -166,17 +289,20 @@
             subtitle: "Declare a Palavra de Deus sobre sua vida",
             word: "Confissao",
             listenBtn: "Ouvir",
+            favorites: "★ Favoritos",
+            showAll: "Ver tudo",
+            noFavorites: "Sem favoritos. Clique em ★ para adicionar.",
             items: [
                 ["Sou filho de Deus", "Joao 1:12"],
-                ["Sou justificado pela fe", "Romanos 5:1"],
+                ["Tenho redencao pelo Seu sangue", "Efesios 1:7"],
+                ["Sou nova criatura", "2 Corintios 5:17"],
                 ["Sou mais que vencedor", "Romanos 8:37"],
+                ["Sou abencoado com toda bencao", "Efesios 1:3"],
+                ["Pelas Suas feridas fui sarado", "1 Pedro 2:24"],
+                ["Seus anjos me guardam", "Salmo 91:11"],
+                ["Nada pode me separar do amor de Deus", "Romanos 8:38-39"],
                 ["Posso todas as coisas em Cristo", "Filipenses 4:13"],
-                ["Deus supre todas as minhas necessidades", "Filipenses 4:19"],
-                ["Pelas suas feridas fui sarado", "Isaias 53:5"],
-                ["Nenhuma arma prosperara", "Isaias 54:17"],
-                ["O Senhor e meu pastor", "Salmo 23:1"],
-                ["Sou abencoado", "Efesios 1:3"],
-                ["O amor de Deus esta em mim", "Romanos 5:5"]
+                ["Sou a luz do mundo", "Mateus 5:14"]
             ]
         },
         ES: {
@@ -185,17 +311,20 @@
             subtitle: "Declara la Palabra de Dios sobre tu vida",
             word: "Confesion",
             listenBtn: "Escuchar",
+            favorites: "★ Favoritos",
+            showAll: "Ver todo",
+            noFavorites: "Sin favoritos. Haz clic en ★ para agregar.",
             items: [
                 ["Soy hijo de Dios", "Juan 1:12"],
-                ["Soy justificado por la fe", "Romanos 5:1"],
+                ["Tengo redencion por Su sangre", "Efesios 1:7"],
+                ["Soy nueva criatura", "2 Corintios 5:17"],
                 ["Soy mas que vencedor", "Romanos 8:37"],
+                ["Soy bendecido con toda bendicion", "Efesios 1:3"],
+                ["Por Sus heridas fui sanado", "1 Pedro 2:24"],
+                ["Sus angeles me guardan", "Salmo 91:11"],
+                ["Nada puede separarme del amor de Dios", "Romanos 8:38-39"],
                 ["Todo lo puedo en Cristo", "Filipenses 4:13"],
-                ["Dios suple todas mis necesidades", "Filipenses 4:19"],
-                ["Por sus llagas fui sanado", "Isaias 53:5"],
-                ["Ninguna arma prosperara", "Isaias 54:17"],
-                ["El Senor es mi pastor", "Salmo 23:1"],
-                ["Soy bendecido", "Efesios 1:3"],
-                ["El amor de Dios esta en mi", "Romanos 5:5"]
+                ["Soy la luz del mundo", "Mateo 5:14"]
             ]
         },
         DE: {
@@ -204,17 +333,20 @@
             subtitle: "Bekenne Gottes Wort uber dein Leben",
             word: "Bekenntnis",
             listenBtn: "Anhoren",
+            favorites: "★ Favoriten",
+            showAll: "Alle anzeigen",
+            noFavorites: "Keine Favoriten. Klicke auf ★ zum Hinzufügen.",
             items: [
                 ["Ich bin ein Kind Gottes", "Johannes 1:12"],
-                ["Ich bin durch Glauben gerechtfertigt", "Romer 5:1"],
+                ["Ich habe Erlosung durch Sein Blut", "Epheser 1:7"],
+                ["Ich bin eine neue Schopfung", "2 Korinther 5:17"],
                 ["Ich bin mehr als ein Uberwinder", "Romer 8:37"],
+                ["Ich bin mit jedem Segen gesegnet", "Epheser 1:3"],
+                ["Durch Seine Wunden bin ich geheilt", "1 Petrus 2:24"],
+                ["Seine Engel bewachen mich", "Psalm 91:11"],
+                ["Nichts kann mich von Gottes Liebe trennen", "Romer 8:38-39"],
                 ["Ich kann alles durch Christus", "Philipper 4:13"],
-                ["Gott versorgt alle meine Bedurfnisse", "Philipper 4:19"],
-                ["Durch seine Wunden bin ich geheilt", "Jesaja 53:5"],
-                ["Keine Waffe wird Erfolg haben", "Jesaja 54:17"],
-                ["Der Herr ist mein Hirte", "Psalm 23:1"],
-                ["Ich bin gesegnet", "Epheser 1:3"],
-                ["Gottes Liebe ist in mir", "Romer 5:5"]
+                ["Ich bin das Licht der Welt", "Matthaus 5:14"]
             ]
         },
         IT: {
@@ -223,17 +355,20 @@
             subtitle: "Dichiara la Parola di Dio sulla tua vita",
             word: "Confessione",
             listenBtn: "Ascolta",
+            favorites: "★ Preferiti",
+            showAll: "Mostra tutto",
+            noFavorites: "Nessun preferito. Clicca su ★ per aggiungere.",
             items: [
                 ["Sono figlio di Dio", "Giovanni 1:12"],
-                ["Sono giustificato per fede", "Romani 5:1"],
+                ["Ho la redenzione nel Suo sangue", "Efesini 1:7"],
+                ["Sono una nuova creazione", "2 Corinzi 5:17"],
                 ["Sono piu che vincitore", "Romani 8:37"],
+                ["Sono benedetto con ogni benedizione", "Efesini 1:3"],
+                ["Per le Sue piaghe sono guarito", "1 Pietro 2:24"],
+                ["I Suoi angeli mi custodiscono", "Salmo 91:11"],
+                ["Nulla puo separarmi dall'amore di Dio", "Romani 8:38-39"],
                 ["Posso ogni cosa in Cristo", "Filippesi 4:13"],
-                ["Dio provvede a ogni mio bisogno", "Filippesi 4:19"],
-                ["Per le sue piaghe sono guarito", "Isaia 53:5"],
-                ["Nessuna arma prospera", "Isaia 54:17"],
-                ["Il Signore e il mio pastore", "Salmo 23:1"],
-                ["Sono benedetto", "Efesini 1:3"],
-                ["L'amore di Dio e in me", "Romani 5:5"]
+                ["Sono la luce del mondo", "Matteo 5:14"]
             ]
         },
         AR: {
@@ -318,6 +453,9 @@
             subtitle: "Ipahayag ang Salita ng Diyos sa iyong buhay",
             word: "Pangungumpisal",
             listenBtn: "Makinig",
+            favorites: "★ Mga Paborito",
+            showAll: "Ipakita lahat",
+            noFavorites: "Walang paborito. I-click ang ★ para magdagdag.",
             items: [
                 ["Ako ay anak ng Diyos", "Juan 1:12"],
                 ["Ako ay pinawalang-sala", "Roma 5:1"],
@@ -367,41 +505,321 @@
     ];
 
     const ICONS = ["😊", "🤍", "💪", "🏆", "🌱", "🙏", "⭐", "🎵", "🙌", "❤️"];
-    let currentLang = 'FR';
+
+    // Résoudre la langue (priorité: URL > localStorage > défaut)
+    const params = new URLSearchParams(window.location.search);
+    let currentLang = params.get('lang') || localStorage.getItem('bc_lang') || 'FR';
+    currentLang = currentLang.toUpperCase();
+
+    // Sauvegarder dans localStorage pour cohérence
+    localStorage.setItem('bc_lang', currentLang);
+
+    // Favorites management
+    let showOnlyFavorites = false;
+
+    function getFavorites() {
+        try {
+            const stored = localStorage.getItem("bc_favorites_confessions");
+            return stored ? JSON.parse(stored) : [];
+        } catch (e) {
+            return [];
+        }
+    }
+
+    function saveFavorites(favorites) {
+        try {
+            localStorage.setItem("bc_favorites_confessions", JSON.stringify(favorites));
+        } catch (e) {
+            console.error("Failed to save favorites:", e);
+        }
+    }
+
+    function getFavoriteKey(lang, index) {
+        return "confession_" + lang + "_" + index;
+    }
+
+    function isFavorite(lang, index) {
+        const favorites = getFavorites();
+        return favorites.includes(getFavoriteKey(lang, index));
+    }
+
+    function toggleFavorite(lang, index, event) {
+        if (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        let favorites = getFavorites();
+        const key = getFavoriteKey(lang, index);
+
+        if (favorites.includes(key)) {
+            favorites = favorites.filter(f => f !== key);
+        } else {
+            favorites.push(key);
+        }
+
+        saveFavorites(favorites);
+        render(currentLang);
+    }
+
+    function toggleFilter() {
+        showOnlyFavorites = !showOnlyFavorites;
+        const filterBtn = document.getElementById('filterBtn');
+        const filterText = document.getElementById('filterText');
+        const d = DATA[currentLang] || DATA.FR;
+
+        if (showOnlyFavorites) {
+            filterBtn.classList.add('active');
+            filterText.textContent = d.showAll;
+        } else {
+            filterBtn.classList.remove('active');
+            filterText.textContent = d.favorites;
+        }
+
+        render(currentLang);
+    }
 
     function render(lang) {
+        console.log('[DEBUG] render() called with lang:', lang, 'type:', typeof lang);
         currentLang = lang;
         const d = DATA[lang] || DATA.FR;
-        
+
         document.getElementById('pageTitle').textContent = d.title;
         document.getElementById('backLink').textContent = d.back;
         document.getElementById('subtitle').textContent = d.subtitle;
-        
+
         const grid = document.getElementById('confessionsGrid');
+        const emptyState = document.getElementById('emptyState');
         grid.innerHTML = '';
-        
+
+        // Filter items if showing only favorites
+        let itemsToShow = d.items;
+        if (showOnlyFavorites) {
+            itemsToShow = d.items.filter((item, i) => isFavorite(lang, i));
+
+            if (itemsToShow.length === 0) {
+                grid.style.display = 'none';
+                emptyState.style.display = 'block';
+                emptyState.textContent = d.noFavorites;
+                return;
+            }
+        }
+
+        grid.style.display = 'grid';
+        emptyState.style.display = 'none';
+
         d.items.forEach((item, i) => {
-            const ref = BIBLE_REFS[i];
-            const card = document.createElement('a');
-            card.className = 'confession-card';
-            // Lien direct vers le lecteur avec le bon chapitre
-            card.href = `lecteur.html?book=${ref.book}&chapter=${ref.chapter}&lang=${lang}&return=/confessions.html`;
-            card.innerHTML = `
-                <div class="confession-icon">${ICONS[i]}</div>
-                <div class="confession-word">${d.word} ${i + 1}</div>
-                <h3 class="confession-title">${item[0]}</h3>
-                <p class="confession-verse">${item[1]}</p>
-                <div class="confession-cta">${d.listenBtn} &#9658;</div>
-            `;
-            grid.appendChild(card);
+            if (showOnlyFavorites && !isFavorite(lang, i)) {
+                return;
+            }
+
+            // Create card using IIFE to capture values properly
+            (function(index, itemData) {
+                const card = document.createElement('div');
+                card.className = 'confession-card';
+                card.style.cursor = 'pointer'; // Ensure cursor shows it's clickable
+
+                const ref = CONFESSION_REFS[index];
+                if (!ref) {
+                    console.error(`[ERROR] No ref found for index ${index}`);
+                    return;
+                }
+
+                // Click handler - ouvre overlay player (comme prières)
+                card.addEventListener('click', function(e) {
+                    // Don't open player if clicking on star
+                    if (e.target.classList.contains('favorite-star')) {
+                        return;
+                    }
+                    openPlayer(index, lang);
+                });
+
+                const star = document.createElement('span');
+                star.className = 'favorite-star' + (isFavorite(lang, index) ? ' favorited' : '');
+                star.textContent = isFavorite(lang, index) ? '★' : '☆';
+                star.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    toggleFavorite(lang, index, e);
+                });
+
+                const icon = document.createElement('div');
+                icon.className = 'confession-icon';
+                icon.textContent = ICONS[index];
+
+                const title = document.createElement('div');
+                title.className = 'confession-title';
+                title.textContent = itemData[0];
+
+                card.appendChild(star);
+                card.appendChild(icon);
+                card.appendChild(title);
+                grid.appendChild(card);
+            })(i, item);
         });
     }
 
+    // Ouvrir le player overlay avec audio/paroles CONFESSIONS
+    function openPlayer(index, lang) {
+        const d = DATA[lang] || DATA.FR;
+        const confession = d.items[index];
+
+        // Afficher le titre
+        document.getElementById('playerTitle').textContent = confession[0];
+
+        const langUpper = lang.toUpperCase();
+        const confNum = String(index + 1).padStart(2, '0'); // 0 → "01", 1 → "02", etc.
+
+        // Audio depuis archive.org (confessions spécifiques)
+        // Langues disponibles: FR, PT. Fallback vers FR si non disponible
+        let audioVarName = `audioUrlsConfessions${langUpper}`;
+        let audioUrls = window[audioVarName];
+        let audioLang = langUpper;
+
+        // Fallback vers FR si langue audio pas disponible
+        if (!audioUrls || !audioUrls[confNum]) {
+            console.log('[PLAYER] Audio not available for', langUpper, ', falling back to FR');
+            audioVarName = 'audioUrlsConfessionsFR';
+            audioUrls = window[audioVarName];
+            audioLang = 'FR';
+        }
+
+        let audioUrl = audioUrls && audioUrls[confNum] ? audioUrls[confNum] : null;
+
+        console.log('[PLAYER] Loading confession:', { index, confNum, lang: langUpper, audioLang, audioUrl });
+
+        const audio = document.getElementById('confessionAudio');
+
+        if (audioUrl) {
+            audio.src = audioUrl;
+        } else {
+            console.error('[PLAYER] No audio URL for confession', confNum);
+        }
+
+        // Charger paroles depuis lyrics/confessions/{LANG}/
+        const lyricsBox = document.getElementById('lyricsBox');
+        lyricsBox.textContent = 'Chargement des paroles...';
+
+        const lyricsFileName = getLyricsFileName(confNum, langUpper);
+        const lyricsUrl = `/lyrics/confessions/${langUpper}/${lyricsFileName}`;
+
+        // Essayer langue demandée, sinon fallback FR
+        fetch(lyricsUrl)
+            .then(r => {
+                if (r.ok) return r.text();
+                // Fallback vers FR si langue pas disponible
+                console.log('[PLAYER] Lyrics not found for', langUpper, ', trying FR');
+                return fetch(`/lyrics/confessions/FR/${getLyricsFileName(confNum, 'FR')}`).then(r2 => r2.text());
+            })
+            .then(lyrics => {
+                if (lyrics && lyrics.trim()) {
+                    const html = lyrics.split('\n\n').map(p => {
+                        return '<p style="margin: 0 0 1em 0;">' + p.split('\n').join('<br>') + '</p>';
+                    }).join('');
+                    lyricsBox.innerHTML = html;
+                } else {
+                    lyricsBox.textContent = `${confession[0]}\n\n${confession[1]}`;
+                }
+            })
+            .catch(err => {
+                console.error('[PLAYER] Lyrics fetch error:', err);
+                lyricsBox.textContent = `${confession[0]}\n\n${confession[1]}\n\n[Paroles non disponibles]`;
+            });
+
+        // Afficher l'overlay
+        document.getElementById('playerOverlay').classList.add('active');
+
+        // Tenter de lire l'audio
+        if (audioUrl) {
+            audio.play().catch(function(err) {
+                console.error('[PLAYER] Audio play error:', err);
+            });
+        }
+    }
+
+    // Mapping numéro confession → nom fichier lyrics (par langue)
+    function getLyricsFileName(confNum, lang) {
+        const mappings = {
+            FR: { '01': 'Joie', '02': 'Gueri', '03': 'Sante', '04': 'Vainqueur',
+                  '05': 'Prospere', '06': 'Reconnaissant', '07': 'Heureux',
+                  '08': 'Beni', '09': 'Amen', '10': 'Shalom' },
+            EN: { '01': 'Joy', '02': 'Healed', '03': 'Health', '04': 'Conqueror',
+                  '05': 'Prosper', '06': 'Grateful', '07': 'Happy',
+                  '08': 'Blessed', '09': 'Amen', '10': 'Shalom' },
+            ES: { '01': 'Alegria', '02': 'Sanado', '03': 'Salud', '04': 'Vencedor',
+                  '05': 'Prospero', '06': 'Agradecido', '07': 'Feliz',
+                  '08': 'Bendecido', '09': 'Amen', '10': 'Shalom' },
+            PT: { '01': 'Alegria', '02': 'Curado', '03': 'Saude', '04': 'Vencedor',
+                  '05': 'Prospero', '06': 'Grato', '07': 'Feliz',
+                  '08': 'Abencoado', '09': 'Amem', '10': 'Shalom' },
+            DE: { '01': 'Freude', '02': 'Geheilt', '03': 'Gesundheit', '04': 'Ueberwinder',
+                  '05': 'Wohlstand', '06': 'Dankbar', '07': 'Gluecklich',
+                  '08': 'Gesegnet', '09': 'Amen', '10': 'Shalom' },
+            IT: { '01': 'Gioia', '02': 'Guarito', '03': 'Salute', '04': 'Vincitore',
+                  '05': 'Prospero', '06': 'Grato', '07': 'Felice',
+                  '08': 'Benedetto', '09': 'Amen', '10': 'Shalom' },
+            AR: { '01': 'Farah', '02': 'Shifa', '03': 'Siha', '04': 'Ghalib',
+                  '05': 'Najah', '06': 'Shukr', '07': 'Saada',
+                  '08': 'Baraka', '09': 'Amin', '10': 'Salam' },
+            HI: { '01': 'Anand', '02': 'Changa', '03': 'Swasthya', '04': 'Vijayi',
+                  '05': 'Samriddhi', '06': 'Dhanyavad', '07': 'Khushi',
+                  '08': 'Ashirwad', '09': 'Amen', '10': 'Shalom' },
+            RU: { '01': 'Radost', '02': 'Istselenie', '03': 'Zdorovie', '04': 'Pobeditel',
+                  '05': 'Protsvetanie', '06': 'Blagodarnost', '07': 'Schastie',
+                  '08': 'Blagoslovenie', '09': 'Amin', '10': 'Shalom' },
+            SW: { '01': 'Furaha', '02': 'Uponyaji', '03': 'Afya', '04': 'Mshindi',
+                  '05': 'Ustawi', '06': 'Shukrani', '07': 'Furaha',
+                  '08': 'Baraka', '09': 'Amina', '10': 'Shalom' },
+            TL: { '01': 'Kagalakan', '02': 'Kagalingan', '03': 'Kalusugan', '04': 'Tagumpay',
+                  '05': 'Kasaganaan', '06': 'Pasasalamat', '07': 'Kaligayahan',
+                  '08': 'Pagpapala', '09': 'Amen', '10': 'Shalom' },
+            ZH: { '01': 'Xile', '02': 'Yizhi', '03': 'Jiankang', '04': 'Deshenglizhe',
+                  '05': 'Chansheng', '06': 'Ganen', '07': 'Xingfu',
+                  '08': 'Zhufu', '09': 'Amen', '10': 'Shalom' }
+        };
+
+        const langMapping = mappings[lang] || mappings.FR; // fallback to FR if lang not found
+        const name = langMapping[confNum] || 'Unknown';
+        return `${confNum}_${name}.txt`;
+    }
+
+    // Fermer le player
+    function closePlayer() {
+        const overlay = document.getElementById('playerOverlay');
+        overlay.classList.remove('active');
+
+        // Arrêter l'audio
+        const audio = document.getElementById('confessionAudio');
+        audio.pause();
+        audio.src = '';
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
-        // Utiliser la langue depuis lang-shared.js (lue depuis localStorage)
-        const lang = window.currentLanguage || 'FR';
-        render(lang);
+        // Utiliser currentLang déjà résolu (URL > localStorage > défaut)
+        render(currentLang);
     });
     </script>
+
+  <script src="/translations.js"></script>
+  <script src="/translations-extra.js"></script>
+  <script src="/i18n.js"></script>
+  <script src="/lang-shared.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
