@@ -1,0 +1,24 @@
+¶ Cantique des degrés.
+Je lève mes yeux vers les montagnes...
+D'où me viendra le secours?
+Le secours me vient de l'Eternel, Qui a fait les cieux et la terre.
+
+Il ne permettra point que ton pied chancelle;
+Celui qui te garde ne sommeillera point.
+Voici, il ne sommeille ni ne dort, Celui qui garde Israël.
+L'Eternel est celui qui te garde, L'Eternel est ton ombre à ta main droite.
+
+D'où me viendra le secours?
+Je lève mes yeux vers les montagnes...
+
+Je lève mes yeux vers les montagnes...
+Je lève mes yeux vers les montagnes...
+
+Pendant le jour le soleil ne te frappera point, Ni la lune pendant la nuit.
+L'Eternel te gardera de tout mal, Il gardera ton âme;
+L'Eternel gardera ton départ et ton arrivée, Dès maintenant et à jamais.
+
+Je lève mes yeux vers les montagnes...
+
+Je lève mes yeux vers les montagnes...
+Je lève mes yeux vers les montagnes...

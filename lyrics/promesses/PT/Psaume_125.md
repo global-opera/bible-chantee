@@ -1,0 +1,58 @@
+Monte Sião
+
+Os que confiam no Senhor,
+Como o monte Sião,
+Firmes e inabaláveis,
+Nas Suas mãos, nossa canção.
+Ele nos cerca a cada passo,
+Desde agora e pra sempre,
+Em meio à dor e ao cansaço,
+Seu amor nos sustenta, crente.
+
+Glória ao Senhor, nossa paz,
+Em Ti, Senhor, nos encontramos,
+Justos são como um farol,
+Teu cetro de amor nos guardamos.
+Ó Senhor, faz bem aos bons,
+E aos retos de coração,
+Paz sobre Israel, oh Senhor,
+Em Ti, encontramos nossa canção.
+
+Montes em volta de Jerusalém,
+Teu povo sempre em Tua mão,
+Desviados não têm o amém,
+Mas em Ti, nossa salvação.
+Os que trilham caminhos tortuosos,
+Leva, Senhor, com o mal,
+Mas em Teu amor, somos vitoriosos,
+Em Ti, sempre triunfal.
+
+Glória ao Senhor, nossa paz,
+Em Ti, Senhor, nos encontramos,
+Justos são como um farol,
+Teu cetro de amor nos guardamos.
+Ó Senhor, faz bem aos bons,
+E aos retos de coração,
+Paz sobre Israel, oh Senhor,
+Em Ti, encontramos nossa canção.
+
+E mesmo na tempestade,
+Teu amor não nos deixa só,
+Em Ti, encontramos verdade,
+Tua luz nos guia, oh Senhor.
+Faz brilhar a Tua luz,
+Sobre o povo que em Ti crê,
+Paz e bem, Senhor Jesus,
+Em Teu abrigo, quero viver.
+
+Glória ao Senhor, nossa paz,
+Em Ti, Senhor, nos encontramos,
+Justos são como um farol,
+Teu cetro de amor nos guardamos.
+Ó Senhor, faz bem aos bons,
+E aos retos de coração,
+Paz sobre Israel, oh Senhor,
+Em Ti, encontramos nossa canção.
+
+Ó Senhor, encontramos nossa canção,
+Em Ti, encontramos nossa canção.

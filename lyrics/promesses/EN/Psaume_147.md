@@ -1,0 +1,42 @@
+Praise the Lord, O Jerusalem
+
+Praise the Lord, for He is good,
+A melody upon our lips,
+In the quiet, He lifts us high,
+He gathers close, He never slips.
+He heals the broken, binds the wounds,
+In every heart, His love resumes.
+
+Sing unto the Lord with thankful hearts,
+Lift your voice, let the praises start.
+Great is our God, His power shines,
+Infinite wisdom, His love divine.
+
+He counts the stars, each name He knows,
+In every storm, His grace bestows.
+He lifts the meek, brings down the proud,
+In His embrace, we sing aloud.
+He sends the rain, makes the mountains bloom,
+In every season, He breaks the gloom.
+
+Sing unto the Lord with thankful hearts,
+Lift your voice, let the praises start.
+Great is our God, His power shines,
+Infinite wisdom, His love divine.
+
+O Jerusalem, lift your song,
+For He’s blessed your gates, you belong.
+Peace in your borders, His word runs free,
+In every heartbeat, His mercy we see.
+He sends His word, and the waters flow,
+In every promise, His love we know.
+
+Sing unto the Lord with thankful hearts,
+Lift your voice, let the praises start.
+Great is our God, His power shines,
+Infinite wisdom, His love divine.
+
+Praise the Lord, O my soul,
+In every moment, He makes me whole.
+Let every voice join in one accord,
+Praise ye the Lord, our mighty Lord.

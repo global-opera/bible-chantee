@@ -1,0 +1,43 @@
+Title: Purihin ang Panginoon
+
+Verse 1:
+Purihin mo, Oh kaluluwa,
+Ang Panginoon, sa Kanyang ngalan.
+Sa lahat ng Kanyang mga gawa,
+Tayo'y magpuri ng may galak.
+
+Chorus:
+Huwag kalimutan ang Kanyang kabutihan,
+Na nagtatawid sa atin sa kapayapaan.
+Sa pag-ibig at kahabagan,
+Kagandahang-loob, sa Kanya'y walang hanggan.
+
+Verse 2:
+Kanyang pinatawad ang lahat na kasalanan,
+Sa Kanyang mga yakap, tayo'y may kapayapaan.
+Sa bawat sakit, Siya'y ating tagapagpagaling,
+Tayo'y binusog ng Kanyang mabuting bagay.
+
+Chorus:
+Huwag kalimutan ang Kanyang kabutihan,
+Na nagtatawid sa atin sa kapayapaan.
+Sa pag-ibig at kahabagan,
+Kagandahang-loob, sa Kanya'y walang hanggan.
+
+Bridge:
+Kung gaano kalayo ang silangan sa kanluran,
+Ganoon din ang paglayo sa ating mga kasalanan.
+Tulad ng ama na may awa sa anak,
+Sa bawat pagsubok, Siya'y ating kasama.
+
+Chorus:
+Huwag kalimutan ang Kanyang kabutihan,
+Na nagtatawid sa atin sa kapayapaan.
+Sa pag-ibig at kahabagan,
+Kagandahang-loob, sa Kanya'y walang hanggan.
+
+Outro:
+Purihin mo, Oh kaluluwa,
+Ang Panginoon, sa Kanyang ngalan.
+Sa bawat araw, sa bawat sandali,
+Tayo'y magpuri, sa Kanya'y sumamba.

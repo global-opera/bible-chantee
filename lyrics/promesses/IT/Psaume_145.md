@@ -1,0 +1,46 @@
+Lodi al Mio Re
+
+Titolo: Lodi al Mio Re
+
+O Dio mio, Re della mia vita,
+Ti esalterò, in eterno ti loderò.
+Ogni giorno, la mia bocca canta,
+Benedico il Tuo Nome, con gioia nel cuor.
+
+Ritornello
+Il Signore è grande, degno di lode,
+La Sua grandezza non può essere esplorata.
+Le opere tue, le meraviglie narrerò,
+In ogni generazione, la Tua gloria canterò.
+
+La Tua bontà, oh Signore, è infinita,
+Lento all’ira, di grande benignità.
+Ogni creatura, in Te spera,
+Tu sazi ogni vita con la Tua verità.
+
+Ritornello
+Il Signore è grande, degno di lode,
+La Sua grandezza non può essere esplorata.
+Le opere tue, le meraviglie narrerò,
+In ogni generazione, la Tua gloria canterò.
+
+Tu sostieni chi cade,
+Rialzi chi è in pena,
+Vicino a chi Ti cerca,
+In verità, in Te troverò.
+La mia bocca narrerà,
+La lode al Signore,
+Ogni carne benedirà,
+Il Nome Santo Tuo, in eterno.
+
+Ritornello
+Il Signore è grande, degno di lode,
+La Sua grandezza non può essere esplorata.
+Le opere tue, le meraviglie narrerò,
+In ogni generazione, la Tua gloria canterò.
+
+Conclusione
+O Dio mio, Re della mia vita,
+In eterno Ti loderò,
+Con ogni battito del cuore,
+Il Tuo Nome esalterò.

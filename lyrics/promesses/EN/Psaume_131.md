@@ -1,0 +1,36 @@
+My Heart Is Humble
+
+Lord, my heart is humble, not proud in my ways,
+With eyes set on Your beauty, I seek to know Your grace.
+In matters too great, I won't strive or demand,
+For in the stillness, I rest in Your plan.
+
+I will hope in You, Lord, my soul finds its peace,
+Like a child by its mother, my worries cease.
+From this day forever, I lift up Your name,
+In the depths of my heart, Lord, I long for the same.
+
+Quiet my spirit, Lord, teach me to be still,
+In the arms of Your mercy, I surrender my will.
+With trust like a weaned child, I find my rest,
+In the promise of Your love, I am truly blessed.
+
+I will hope in You, Lord, my soul finds its peace,
+Like a child by its mother, my worries cease.
+From this day forever, I lift up Your name,
+In the depths of my heart, Lord, I long for the same.
+
+Israel, put your hope in the Lord,
+From now and forever, in Him be restored.
+He walks with the weary, He carries our pain,
+In His faithful embrace, we are never the same.
+
+I will hope in You, Lord, my soul finds its peace,
+Like a child by its mother, my worries cease.
+From this day forever, I lift up Your name,
+In the depths of my heart, Lord, I long for the same.
+
+Hope in the Lord, from henceforth and ever,
+In Your love, O God, we are bound together.
+Hope in the Lord, our hearts will abide,
+In the stillness of Your grace, we forever reside.
