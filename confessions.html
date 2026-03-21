@@ -385,7 +385,7 @@
             const card = document.createElement('a');
             card.className = 'confession-card';
             // Lien direct vers le lecteur avec le bon chapitre
-            card.href = `lecteur.html?book=${ref.book}&chapter=${ref.chapter}&lang=${lang}`;
+            card.href = `lecteur.html?book=${ref.book}&chapter=${ref.chapter}&lang=${lang}&return=/confessions.html`;
             card.innerHTML = `
                 <div class="confession-icon">${ICONS[i]}</div>
                 <div class="confession-word">${d.word} ${i + 1}</div>

@@ -561,6 +561,19 @@
       font-size: 16px;
       margin-top: 5px;
     }
+
+    .header-back-btn {
+      display: none;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+    .header-back-btn a {
+      color: var(--or-moyen);
+      text-decoration: none;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+    .header-back-btn a:hover { opacity: 1; }
     
     /* === CONTENU PRINCIPAL === */
     .main-content {
@@ -1373,6 +1386,7 @@ function isVerseLikeEN(s){
 
     <!-- HEADER -->
     <div class="header">
+      <div class="header-back-btn" id="headerBackBtn"><a id="headerBackLink" href="#">← Retour</a></div>
       <div class="header-mode" id="headerMode">Lecteur</div>
       <div class="header-title" id="headerTitle">Genèse</div>
       <div class="header-subtitle" id="headerSubtitle">Chapitre 1</div>
@@ -1822,31 +1836,17 @@ const audioPlayer = document.querySelector('#audioPlayer');
     let isPlaying = false;
 
     // Helper: Résoudre le code R2 pour un livre
-    // Certains livres utilisent un code de dossier/fichier différent sur R2
-    // par rapport au code books.js (ex: 41_MAR → dossier 41_MRK sur R2)
-    // Vérifié via audio-urls-fr.js le 2026-03-08
+    // Certains livres utilisent un code dossier+fichier différent sur R2
+    // Vérifié par curl HEAD sur R2 le 2026-03-20 (pas via audio-urls-fr.js qui est faux)
+    // Seuls 2 livres ont un vrai alias : Jean (43_JOH→43_JHN) et Jacques (59_JAM→59_JAS)
+    // Les 6 autres (EZE, JOE, MAR, 1JO, 2JO, 3JO) utilisent le code books.js directement
     function resolveR2Codes(book) {
-      // Alias dossier R2 : books.js code → code canonique utilisé par R2
-      const R2_FOLDER_ALIASES = {
-        '26_EZE': '26_EZK',
-        '29_JOE': '29_JOL',
-        '41_MAR': '41_MRK',
-        '43_JOH': '43_JHN',
-        '59_JAM': '59_JAS',
-        '62_1JO': '62_1JN',
-        '63_2JO': '63_2JN',
-        '64_3JO': '64_3JN'
-      };
-      // Alias fichier R2 : seulement quand le préfixe fichier diffère aussi
-      // (Jean et Jacques utilisent le code canonique pour le fichier aussi)
-      const R2_FILE_ALIASES = {
+      const R2_ALIASES = {
         '43_JOH': '43_JHN',
         '59_JAM': '59_JAS'
       };
-      return {
-        folder: R2_FOLDER_ALIASES[book] || book,
-        file:   R2_FILE_ALIASES[book]   || book
-      };
+      const resolved = R2_ALIASES[book] || book;
+      return { folder: resolved, file: resolved };
     }
 
     // Helper: Obtenir URL audio pour un chapitre
@@ -1854,7 +1854,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
       // Construire URL directement depuis Cloudflare R2
       // Format: https://pub-...r2.dev/{LANG}/{FOLDER}/{FILE}_{CHAPTER}_{LANG}.mp3
       // Exemple: .../FR/01_GEN/01_GEN_01_FR.mp3
-      // Exemple aliasé: .../FR/41_MRK/41_MAR_01_FR.mp3
+      // Exemple aliasé: .../FR/43_JHN/43_JHN_01_FR.mp3
       const chapterPadded = String(chapter).padStart(2, '0');
       const langUpper = lang.toUpperCase();
       const r2 = resolveR2Codes(book);
@@ -2590,9 +2590,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
       const bookCode = e.target.value;
       // Get book name from BOOK_NAMES (not from option.textContent which may contain chapter info)
       const bookData = BOOKS.find(b => b.code === bookCode);
-      const bookName = bookData && window.BOOK_NAMES && window.BOOK_NAMES[currentLang]
-        ? window.BOOK_NAMES[currentLang][bookCode] || window.BOOK_NAMES.FR[bookCode] || bookCode
-        : bookCode;
+      const bookName = getBookName(bookCode, currentLang);
       document.querySelector('#headerTitle').textContent = bookName;
 
       // Repopulate chapters grid for new book
@@ -2965,6 +2963,17 @@ const audioPlayer = document.querySelector('#audioPlayer');
         const urlBook = urlParams.get('book');
         const urlChapter = urlParams.get('chapter');
         const urlLang = urlParams.get('lang');
+        const urlReturn = urlParams.get('return');
+
+        // Show back button if return= parameter is provided
+        if (urlReturn) {
+          const backBtn = document.getElementById('headerBackBtn');
+          const backLink = document.getElementById('headerBackLink');
+          if (backBtn && backLink) {
+            backLink.href = urlReturn;
+            backBtn.style.display = 'block';
+          }
+        }
 
         console.log('Lecteur initialize:', { urlBook, urlChapter, urlLang, fullUrl: window.location.href });
 
@@ -3034,14 +3043,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
           }
         }, 100);
 
-        // Update header title (book name)
-        if (window.BOOK_NAMES && window.BOOK_NAMES[currentLang] && window.BOOKS) {
-          const bookData = window.BOOKS.find(b => b.code === bookCode);
-          if (bookData) {
-            const bookName = window.BOOK_NAMES[currentLang][bookData.code] || window.BOOK_NAMES.FR[bookData.code] || bookData.code;
-            document.querySelector('#headerTitle').textContent = bookName;
-          }
-        }
+        // Update header title (book name) — use getBookName() to handle aliases
+        document.querySelector('#headerTitle').textContent = getBookName(bookCode, currentLang);
 
         // Update chapter title
         const chapterNum = currentChapter.toString();
@@ -3189,10 +3192,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
       // Trigger book change event
       const bookData = BOOKS.find(b => b.code === bookCode);
       if (bookData) {
-        const bookName = window.BOOK_NAMES && window.BOOK_NAMES[currentLang]
-          ? window.BOOK_NAMES[currentLang][bookCode]
-          : bookCode;
-        document.querySelector('#headerTitle').textContent = bookName;
+        document.querySelector('#headerTitle').textContent = getBookName(bookCode, currentLang);
 
         // Repopulate chapters grid
         populateChaptersSelect(bookCode);
