@@ -92,7 +92,7 @@ jobs:
 
       - name: Update JSON and commit
         env:
-          NEW_SUBS: ${{ steps.youtube.outputs.subs }}
+          NEW_SUBS: ${{ steps.youtube.outputs.subscribers }}
           NEW_VIEWS: ${{ steps.youtube.outputs.views }}
           NEW_VIEWS28: ${{ steps.youtube.outputs.views28 }}
           NEW_FOL: ${{ steps.facebook.outputs.followers }}
@@ -100,22 +100,25 @@ jobs:
         run: |
           python3 - <<'PYEOF'
           import json, os, datetime
-          now = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+          now = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
           with open('data/social-stats.json') as f:
-              d = json.load(f)
+            d = json.load(f)
           prev_subs = d['youtube']['subscribers_current']
           prev_fol = d['facebook']['followers_current']
-          new_subs = int(os.environ['NEW_SUBS'])
-          new_fol = int(os.environ['NEW_FOL'])
+          new_subs = int(os.environ.get('NEW_SUBS') or '0')
+          new_fol = int(os.environ.get('NEW_FOL') or '0')
+          new_views = int(os.environ.get('NEW_VIEWS') or '0')
+          new_views28 = int(os.environ.get('NEW_VIEWS28') or '0')
+          new_int = int(os.environ.get('NEW_INT') or '0')
           delta_s = max(0, new_subs - prev_subs)
           delta_f = max(0, new_fol - prev_fol)
           g_s = round((new_subs-prev_subs)/prev_subs*100,1) if prev_subs>0 else 0
           g_f = round((new_fol-prev_fol)/prev_fol*100,1) if prev_fol>0 else 0
-          d['youtube'].update({'subscribers_current':new_subs,'subscribers_new_28d':delta_s,'subscribers_growth_pct':g_s,'views_total':int(os.environ['NEW_VIEWS']),'views_28d':int(os.environ['NEW_VIEWS28']),'updated_at':now})
-          d['facebook'].update({'followers_current':new_fol,'followers_new_28d':delta_f,'followers_growth_pct':g_f,'interactions_total_28d':int(os.environ['NEW_INT']),'updated_at':now})
+          d['youtube'].update({'subscribers_current':new_subs,'subscribers_new_28d':delta_s,'subscribers_growth_pct':g_s,'views_total':new_views,'views_28d':new_views28,'updated_at':now})
+          d['facebook'].update({'followers_current':new_fol,'followers_new_28d':delta_f,'followers_growth_pct':g_f,'interactions_total_28d':new_int,'updated_at':now})
           d['last_updated'] = now
           with open('data/social-stats.json','w') as f:
-              json.dump(d,f,indent=2,ensure_ascii=False)
+            json.dump(d,f,indent=2,ensure_ascii=False)
           print(f"Updated: YT={new_subs} (+{delta_s}), FB={new_fol} (+{delta_f})")
           PYEOF
           git config user.name "github-actions[bot]"
