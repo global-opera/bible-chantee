@@ -48,7 +48,7 @@ jobs:
           R=$(curl -s "https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${YT_CHANNEL}&key=${YT_KEY}")
           echo "API Response: $R"
           SUBS=$(echo "$R" | python3 -c "import sys,json;d=json.load(sys.stdin);print(d['items'][0]['statistics'].get('subscriberCount','0'))" 2>/dev/null || echo "0")
-          VIEWS=$(echo "$R" | python3 -c "import sys,json;d=json.load(sys.stdin);print(d['items'][0]['statistics']['viewCount'])")
+          VIEWS=$(echo "$R" | python3 -c "import sys,json;d=json.load(sys.stdin);print(d['items'][0]['statistics'].get('viewCount','0'))" 2>/dev/null || echo "0")
           echo "subscribers=$SUBS" >> $GITHUB_OUTPUT
           echo "views=$VIEWS" >> $GITHUB_OUTPUT
           echo "YouTube: $SUBS subscribers, $VIEWS total views"
@@ -66,6 +66,7 @@ jobs:
 
       - name: Fetch Facebook stats
         id: facebook
+        continue-on-error: true
         env:
           FB_PAGE: ${{ secrets.FACEBOOK_PAGE_ID }}
           FB_TOKEN: ${{ secrets.FACEBOOK_ACCESS_TOKEN }}
