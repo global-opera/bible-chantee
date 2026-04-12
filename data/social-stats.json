@@ -2,8 +2,8 @@
   "youtube": {
     "subscribers_current": 50,
     "subscribers_new_28d": 0,
-    "subscribers_growth_pct": -96.8,
-    "views_total": 12667,
+    "subscribers_growth_pct": 0.0,
+    "views_total": 12669,
     "views_28d": 3,
     "views_growth_pct": 999,
     "watch_time_total_h": 302.3,
@@ -18,12 +18,12 @@
     "target_90d_subscribers": 2000,
     "target_90d_views": 50000,
     "target_90d_watch_time_h": 600,
-    "updated_at": "2026-04-11T12:28:30Z"
+    "updated_at": "2026-04-12T07:06:00Z"
   },
   "facebook": {
     "followers_current": 0,
     "followers_new_28d": 0,
-    "followers_growth_pct": -100.0,
+    "followers_growth_pct": 0,
     "views_28d": 457833,
     "views_3sec_28d": 161063,
     "interactions_total_28d": 0,
@@ -33,7 +33,7 @@
     "shares_28d": 693,
     "content_type_reels_pct": 97.5,
     "non_followers_reach_pct": 99.8,
-    "updated_at": "2026-04-11T12:28:30Z"
+    "updated_at": "2026-04-12T07:06:00Z"
   },
-  "last_updated": "2026-04-11T12:28:30Z"
+  "last_updated": "2026-04-12T07:06:00Z"
 }
