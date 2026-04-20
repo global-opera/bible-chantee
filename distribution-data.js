@@ -1,9 +1,7 @@
 // BibleChantée – Distribution mondiale – Données plateformes V2
-// ⚠️ bibleChanteeUrl : à compléter manuellement plateforme par plateforme
-// ⚠️ availabilityStatus : à confirmer — valeurs possibles : "live" | "pending" | "unknown" | "not_applicable"
 window.distributionData = {
   platforms: [
-    // ── SPOTIFY ECOSYSTEM ────────────────────────────────────────────────────────
+    // ── SPOTIFY ──────────────────────────────────────────────────────────────────
     {
       id: "spotify",
       name: "Spotify",
@@ -20,7 +18,7 @@ window.distributionData = {
       notes: "",
       lastCheckedAt: ""
     },
-    // ── APPLE ECOSYSTEM ──────────────────────────────────────────────────────────
+    // ── APPLE ─────────────────────────────────────────────────────────────────────
     {
       id: "apple-music",
       name: "Apple Music",
@@ -53,7 +51,7 @@ window.distributionData = {
       notes: "",
       lastCheckedAt: ""
     },
-    // ── YOUTUBE / GOOGLE ECOSYSTEM ───────────────────────────────────────────────
+    // ── YOUTUBE MUSIC ─────────────────────────────────────────────────────────────
     {
       id: "youtube-music",
       name: "YouTube Music",
@@ -70,24 +68,7 @@ window.distributionData = {
       notes: "",
       lastCheckedAt: ""
     },
-    // ── AMAZON ECOSYSTEM ─────────────────────────────────────────────────────────
-    {
-      id: "amazon-music",
-      name: "Amazon Music",
-      category: "streaming",
-      ecosystem: "Amazon ecosystem",
-      color: "#00A8E0",
-      region: "Global",
-      lat: 47.6062, lng: -122.3321, city: "Seattle",
-      regions: ["Mondial"],
-      icon: "📦",
-      officialUrl: "https://music.amazon.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
-      notes: "",
-      lastCheckedAt: ""
-    },
-    // ── AUDIO STREAMING ALTERNATIF ───────────────────────────────────────────────
+    // ── DEEZER ───────────────────────────────────────────────────────────────────
     {
       id: "deezer",
       name: "Deezer",
@@ -104,6 +85,7 @@ window.distributionData = {
       notes: "",
       lastCheckedAt: ""
     },
+    // ── TIDAL ────────────────────────────────────────────────────────────────────
     {
       id: "tidal",
       name: "Tidal",
@@ -120,55 +102,7 @@ window.distributionData = {
       notes: "",
       lastCheckedAt: ""
     },
-    {
-      id: "iheartradio",
-      name: "iHeartRadio",
-      category: "streaming",
-      ecosystem: "Alternatif",
-      color: "#9B59B6",
-      region: "USA",
-      lat: 40.7128, lng: -74.0060, city: "New York",
-      regions: ["USA"],
-      icon: "📻",
-      officialUrl: "https://www.iheart.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
-      notes: "",
-      lastCheckedAt: ""
-    },
-    {
-      id: "pandora",
-      name: "Pandora",
-      category: "streaming",
-      ecosystem: "Alternatif",
-      color: "#9B59B6",
-      region: "USA",
-      lat: 37.8044, lng: -122.2712, city: "Oakland",
-      regions: ["USA"],
-      icon: "📻",
-      officialUrl: "https://www.pandora.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
-      notes: "",
-      lastCheckedAt: ""
-    },
-    {
-      id: "qobuz",
-      name: "Qobuz",
-      category: "streaming",
-      ecosystem: "Alternatif",
-      color: "#9B59B6",
-      region: "Europe",
-      lat: 48.8566, lng: 2.3522, city: "Paris",
-      regions: ["Europe"],
-      icon: "🎧",
-      officialUrl: "https://www.qobuz.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
-      notes: "",
-      lastCheckedAt: ""
-    },
-    // ── STREAMING AFRIQUE ────────────────────────────────────────────────────────
+    // ── BOOMPLAY ─────────────────────────────────────────────────────────────────
     {
       id: "boomplay",
       name: "Boomplay",
@@ -180,9 +114,9 @@ window.distributionData = {
       regions: ["Afrique"],
       icon: "🌍",
       officialUrl: "https://www.boomplay.com",
-      bibleChanteeUrl: "https://www.boomplay.com/search/default/Bible+Chant%C3%A9e",
+      bibleChanteeUrl: "https://www.boomplay.com/artists/121487572",
       availabilityStatus: "live",
-      notes: "Plateforme leader en Afrique subsaharienne — présence confirmée",
+      notes: "Plateforme leader en Afrique subsaharienne",
       lastCheckedAt: ""
     },
     // ── SOCIAL MEDIA ─────────────────────────────────────────────────────────────
@@ -197,8 +131,8 @@ window.distributionData = {
       regions: ["Mondial"],
       icon: "📸",
       officialUrl: "https://www.instagram.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
+      bibleChanteeUrl: "https://www.instagram.com/biblechantee/",
+      availabilityStatus: "live",
       notes: "",
       lastCheckedAt: ""
     },
@@ -207,53 +141,33 @@ window.distributionData = {
       name: "Facebook",
       category: "social",
       ecosystem: "Meta",
-      color: "#E91E8C",
+      color: "#1877F2",
       region: "Global",
       lat: 37.4845, lng: -122.1477, city: "Menlo Park",
       regions: ["Mondial"],
       icon: "👥",
       officialUrl: "https://www.facebook.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
-      notes: "",
-      lastCheckedAt: ""
-    },
-    {
-      id: "tiktok",
-      name: "TikTok",
-      category: "social",
-      ecosystem: "ByteDance",
-      color: "#E91E8C",
-      region: "Global",
-      lat: 39.9042, lng: 116.4074, city: "Beijing",
-      regions: ["Mondial"],
-      icon: "🎵",
-      officialUrl: "https://www.tiktok.com",
-      bibleChanteeUrl: "",
-      availabilityStatus: "unknown",
+      bibleChanteeUrl: "https://www.facebook.com/biblechantee/",
+      availabilityStatus: "live",
       notes: "",
       lastCheckedAt: ""
     }
   ],
-  // ── META ──────────────────────────────────────────────────────────────────────
   categoryMeta: {
     "streaming": { label: "Streaming",    color: "#9B59B6", icon: "🎵" },
     "social":    { label: "Social Media", color: "#E91E8C", icon: "📱" }
   },
   statusMeta: {
-    "live":           { label: "Live",       color: "#00C851", icon: "✅" },
-    "pending":        { label: "En attente", color: "#FFB300", icon: "⏳" },
-    "unknown":        { label: "Inconnu",    color: "#9E9E9E", icon: "❓" },
-    "not_applicable": { label: "N/A",        color: "#607D8B", icon: "—"  }
+    "live":    { label: "Live",       color: "#00C851", icon: "✅" },
+    "pending": { label: "En attente", color: "#FFB300", icon: "⏳" },
+    "unknown": { label: "Inconnu",    color: "#9E9E9E", icon: "❓" }
   },
   ecosystemColors: {
     "Spotify ecosystem":          "#1DB954",
     "Apple ecosystem":            "#A2AAAD",
     "YouTube / Google ecosystem": "#FF0000",
-    "Amazon ecosystem":           "#00A8E0",
     "Alternatif":                 "#9B59B6",
-    "Meta":                       "#E91E8C",
-    "ByteDance":                  "#E91E8C",
+    "Meta":                       "#1877F2",
     "Afrique":                    "#1ED760"
   }
 };
