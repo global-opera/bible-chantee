@@ -63,7 +63,7 @@ window.distributionData = {
       regions: ["Mondial"],
       icon: "▶️",
       officialUrl: "https://music.youtube.com",
-      bibleChanteeUrl: "https://music.youtube.com/channel/UCHw_lelDPxB4Zmgfqqebk-w",
+      bibleChanteeUrl: "https://www.youtube.com/@SungBible-Biblechantee",
       availabilityStatus: "live",
       notes: "",
       lastCheckedAt: ""
