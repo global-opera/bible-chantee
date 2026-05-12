@@ -9,11 +9,11 @@
 /api/facebook-stats   /.netlify/functions/facebook-stats  200
 
 # Rediriger pages "completes" vers biblechantee.com
-/lecteur.html    https://biblechantee.com/lecteur.html    301
-/lecteur.html*   https://biblechantee.com/lecteur.html    301
-/premium.html    https://biblechantee.com/premium.html    301
-/premium.html*   https://biblechantee.com/premium.html    301
-/bible.html      https://biblechantee.com/lecteur.html    301
+#/lecteur.html    https://biblechantee.com/lecteur.html    301
+#/lecteur.html*   https://biblechantee.com/lecteur.html    301
+#/premium.html    https://biblechantee.com/premium.html    301
+#/premium.html*   https://biblechantee.com/premium.html    301
+#/bible.html      https://biblechantee.com/lecteur.html    301
 
 # Page merci
 /thank-you    /thank-you.html    200
