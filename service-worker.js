@@ -3,7 +3,7 @@
 const SW_DEBUG = false; // Mettre à true pour debug
 const swLog = (...args) => { if (SW_DEBUG) console.log(...args); };
 
-const CACHE_NAME = 'bible-chantee-v7';
+const CACHE_NAME = 'bible-chantee-v8';
 const STATIC_ASSETS = [
     '/',
     '/lecteur.html',
@@ -15,13 +15,14 @@ const STATIC_ASSETS = [
     '/bible-data-en.js',
     '/bible-data-es.js',
     '/lyrics-data.js',
+    '/lyrics-data-v2.js',
     '/lyrics-data-pt.js',
     '/lyrics-data-en.js'
 ];
 
 // Install
 self.addEventListener('install', event => {
-    console.log('[SW] Install v7'); // Log critique: garder
+    console.log('[SW] Install v8'); // Log critique: garder
     event.waitUntil(
         caches.open(CACHE_NAME).then(cache => {
             swLog('[SW] Caching static assets');
@@ -61,7 +62,7 @@ self.addEventListener('fetch', event => {
 
 // Activate - Clean old caches
 self.addEventListener('activate', event => {
-    console.log('[SW] Activate v7'); // Log critique: garder
+    console.log('[SW] Activate v8'); // Log critique: garder
     event.waitUntil(
         caches.keys().then(keys => {
             return Promise.all(
