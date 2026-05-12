@@ -1259,6 +1259,7 @@ function isVerseLikeEN(s){
 </script>
     <script src="lyrics-data.js?v=20260114f"></script>
     <script src="lyrics-data-fr.js?v=20260312"></script>
+    <script src="lyrics-data-v2.js?v=20260512"></script>
     <script src="lyrics-data-en.js"></script>
     <script src="lyrics-data-pt.js"></script>
     <script src="lyrics-data-es.js"></script>
@@ -2051,19 +2052,27 @@ const audioPlayer = document.querySelector('#audioPlayer');
         }
         const bookNumber = bookData.num; // "01", "02", etc.
 
-        // Obtenir les paroles depuis window.chapterLyrics{LANG} (uniforme pour toutes langues)
-        const lyricsVarName = `chapterLyrics${lang}`;
-        const lyricsDataSource = window[lyricsVarName];
-        console.log('[LYRICS] Book:', bookNumber, 'Lang:', lang, 'Using:', lyricsVarName, 'exists:', !!lyricsDataSource);
-
-        if (!lyricsDataSource) {
-          console.error('[LYRICS] Data source not found:', lyricsVarName);
-          lyricsContent.innerHTML = `<p style="color: #999; font-style: italic;">Paroles non disponibles en ${lang}.</p>`;
-          return;
+        // FR: priorité chapterLyricsV2, fallback chapterLyricsFR, puis chapterLyrics.
+        // Autres langues: comportement inchangé (window.chapterLyrics{LANG}).
+        let lyrics = null;
+        if (lang === 'FR') {
+          const v2  = window.chapterLyricsV2 && window.chapterLyricsV2[bookNumber] && window.chapterLyricsV2[bookNumber][chapter];
+          const fr  = window.chapterLyricsFR && window.chapterLyricsFR[bookNumber] && window.chapterLyricsFR[bookNumber][chapter];
+          const base = window.chapterLyrics  && window.chapterLyrics[bookNumber]  && window.chapterLyrics[bookNumber][chapter];
+          lyrics = v2 || fr || base;
+          const sourceLabel = v2 ? 'chapterLyricsV2' : (fr ? 'chapterLyricsFR' : (base ? 'chapterLyrics' : 'none'));
+          console.log('[LYRICS] Book:', bookNumber, 'Lang: FR Using:', sourceLabel, 'V2:', !!v2, 'FR:', !!fr, 'base:', !!base);
+        } else {
+          const lyricsVarName = `chapterLyrics${lang}`;
+          const lyricsDataSource = window[lyricsVarName];
+          console.log('[LYRICS] Book:', bookNumber, 'Lang:', lang, 'Using:', lyricsVarName, 'exists:', !!lyricsDataSource);
+          if (!lyricsDataSource) {
+            console.error('[LYRICS] Data source not found:', lyricsVarName);
+            lyricsContent.innerHTML = `<p style="color: #999; font-style: italic;">Paroles non disponibles en ${lang}.</p>`;
+            return;
+          }
+          lyrics = lyricsDataSource[bookNumber] && lyricsDataSource[bookNumber][chapter];
         }
-
-        // Extraire les paroles du chapitre (structure: lyricsDataSource["01"][1])
-        let lyrics = lyricsDataSource[bookNumber] && lyricsDataSource[bookNumber][chapter];
 
         if (!lyrics) {
           lyricsContent.innerHTML = '<p style="color: #999;">Paroles non disponibles pour ce chapitre</p>';
