@@ -2036,8 +2036,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
       return text;
     }
 
-    // Charger et afficher les paroles depuis lyrics-data.js
-    function loadLyrics(bookCode, chapter, lang) {
+    // Charger et afficher les paroles depuis lyrics-data.js (FR: depuis le JSON Bible Segond)
+    async function loadLyrics(bookCode, chapter, lang) {
       console.log('[LYRICS] Loading:', bookCode, chapter, lang);
       const lyricsContent = document.querySelector('#lyricsContent');
       lyricsContent.innerHTML = '<p style="color: #999; font-style: italic;">Chargement des paroles...</p>';
@@ -2053,21 +2053,33 @@ const audioPlayer = document.querySelector('#audioPlayer');
         const bookNumber = bookData.num; // "01", "02", etc.
 
         // FR: l'audio chante le texte biblique Segond (verifie par transcription Whisper sur Gen 1/2/21/50).
-        // On affiche donc bibleData (meme source que l'onglet Bible). Les anciennes lyrics V2 / Whisper
-        // ne correspondaient pas a ce qui est chante.
+        // On affiche donc le meme JSON Bible que l'onglet Bible (fetch via bibleFiles + bibleCache).
         // Autres langues: comportement inchangé (window.chapterLyrics{LANG}).
         let lyrics = null;
         if (lang === 'FR') {
-          const verses = window.bibleData && window.bibleData[bookNumber] && window.bibleData[bookNumber][chapter];
-          if (verses && Array.isArray(verses) && verses.length) {
-            lyrics = verses.map(function(v){
-              var t = String(v.text || '').replace(/^\s*¶\s*/, '');
-              return v.num + '. ' + t;
-            }).join('\n\n');
-            console.log('[LYRICS] Book:', bookNumber, 'Lang: FR Using: bibleData (Bible Segond)', 'verses:', verses.length);
-          } else {
-            console.error('[LYRICS] bibleData missing for FR', bookNumber, chapter);
-            lyrics = null;
+          try {
+            const filename = bibleFiles[lang] || bibleFiles.FR;
+            let bibleJson = bibleCache[filename];
+            if (!bibleJson) {
+              const resp = await fetch('bibles/' + filename);
+              if (!resp.ok) throw new Error('HTTP ' + resp.status);
+              bibleJson = await resp.json();
+              bibleCache[filename] = bibleJson;
+            }
+            const bookNumInt = parseInt(bookNumber, 10);
+            const chapInt = parseInt(chapter, 10);
+            const verses = (bibleJson.verses || []).filter(v => v.book === bookNumInt && v.chapter === chapInt);
+            if (verses.length) {
+              lyrics = verses.map(function(v){
+                var t = String(v.text || '').replace(/^\s*¶\s*/, '');
+                return v.verse + '. ' + t;
+              }).join('\n\n');
+              console.log('[LYRICS] Book:', bookNumber, 'Lang: FR Using: bibles/' + filename, 'verses:', verses.length);
+            } else {
+              console.error('[LYRICS] No verses for FR', bookNumber, chapter);
+            }
+          } catch (err) {
+            console.error('[LYRICS] FR Bible fetch error:', err);
           }
         } else {
           const lyricsVarName = `chapterLyrics${lang}`;
