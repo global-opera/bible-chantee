@@ -1,8 +1,13 @@
-[{
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "com.biblechantee.twa",
-        "sha256_cert_fingerprints": ["7E:A5:E7:44:55:4E:8D:D7:47:3E:42:FA:CD:FA:73:64:AF:F6:01:64:0E:E4:0F:45:DA:EC:51:47:3D:51:27:1B"]
-      }
-    }]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.biblechantee.twa",
+      "sha256_cert_fingerprints": [
+        "16:D1:03:09:A8:57:C8:38:D6:5D:3F:D5:6A:29:B0:6A:2C:9E:6A:5D:D8:29:D9:A6:77:C6:43:20:25:2A:F5:AB",
+        "27:B9:38:63:66:BD:C5:A0:A8:A4:97:1E:34:17:63:B7:2E:D2:4B:15:EC:DF:A5:3E:46:B3:76:CF:27:74:11:4E"
+      ]
+    }
+  }
+]
