@@ -5,7 +5,7 @@ const translations = {
   FR: {
     // Header
     siteName: "Bible Chantée",
-    tagline: "Toute la Parole de Dieu en musique – 12 langues",
+    tagline: "Toute la Parole de Dieu en musique – 7 langues",
     totalChristians: "1.8 milliard de chrétiens dans le monde",
 
     // Navigation
@@ -26,7 +26,7 @@ const translations = {
 
     // Project Section
     projectTitle: "Le projet",
-    projectDesc1: "Bible Chantée est un projet missionnaire chrétien international dont la vision est de rendre la Parole de Dieu accessible en musique, chapitre par chapitre, dans 12 langues.",
+    projectDesc1: "Bible Chantée est un projet missionnaire chrétien international dont la vision est de rendre la Parole de Dieu accessible en musique, chapitre par chapitre, dans 7 langues.",
     projectDesc2: "Le projet s'adresse aux enfants, familles, personnes âgées, personnes qui ne savent pas lire, nouveaux convertis, ainsi qu'aux églises pour la louange, l'enseignement, la prière et l'évangélisation.",
     statChapters: "chapitres",
     statLanguages: "langues",
@@ -157,7 +157,7 @@ const translations = {
   EN: {
     // Header
     siteName: "Sung Bible",
-    tagline: "The entire Word of God in music – 12 languages",
+    tagline: "The entire Word of God in music – 7 languages",
     totalChristians: "1.8 billion Christians worldwide",
 
     // Navigation
@@ -178,7 +178,7 @@ const translations = {
 
     // Project Section
     projectTitle: "The project",
-    projectDesc1: "Sung Bible is an international Christian missionary project whose vision is to make the Word of God accessible through music, chapter by chapter, in 12 languages.",
+    projectDesc1: "Sung Bible is an international Christian missionary project whose vision is to make the Word of God accessible through music, chapter by chapter, in 7 languages.",
     projectDesc2: "The project is aimed at children, families, elderly people, people who cannot read, new converts, as well as churches for worship, teaching, prayer and evangelization.",
     statChapters: "chapters",
     statLanguages: "languages",
@@ -309,7 +309,7 @@ const translations = {
   ES: {
     // Header
     siteName: "Biblia Cantada",
-    tagline: "Toda la Palabra de Dios en música – 12 idiomas",
+    tagline: "Toda la Palabra de Dios en música – 7 idiomas",
     totalChristians: "1.8 mil millones de cristianos en el mundo",
 
     // Navigation
@@ -330,7 +330,7 @@ const translations = {
 
     // Project Section
     projectTitle: "El proyecto",
-    projectDesc1: "Biblia Cantada es un proyecto misionero cristiano internacional cuya visión es hacer accesible la Palabra de Dios a través de la música, capítulo por capítulo, en 12 idiomas.",
+    projectDesc1: "Biblia Cantada es un proyecto misionero cristiano internacional cuya visión es hacer accesible la Palabra de Dios a través de la música, capítulo por capítulo, en 7 idiomas.",
     projectDesc2: "El proyecto está dirigido a niños, familias, personas mayores, personas que no saben leer, nuevos convertidos, así como a iglesias para la adoración, enseñanza, oración y evangelización.",
     statChapters: "capítulos",
     statLanguages: "idiomas",
@@ -461,7 +461,7 @@ const translations = {
   PT: {
     // Header
     siteName: "Bíblia Cantada",
-    tagline: "Toda a Palavra de Deus em música – 12 idiomas",
+    tagline: "Toda a Palavra de Deus em música – 7 idiomas",
     totalChristians: "1.8 bilhão de cristãos no mundo",
 
     // Navigation
@@ -482,7 +482,7 @@ const translations = {
 
     // Project Section
     projectTitle: "O projeto",
-    projectDesc1: "Bíblia Cantada é um projeto missionário cristão internacional cuja visão é tornar a Palavra de Deus acessível através da música, capítulo por capítulo, em 12 idiomas.",
+    projectDesc1: "Bíblia Cantada é um projeto missionário cristão internacional cuja visão é tornar a Palavra de Deus acessível através da música, capítulo por capítulo, em 7 idiomas.",
     projectDesc2: "O projeto é voltado para crianças, famílias, idosos, pessoas que não sabem ler, novos convertidos, bem como igrejas para adoração, ensino, oração e evangelização.",
     statChapters: "capítulos",
     statLanguages: "idiomas",
@@ -613,7 +613,7 @@ const translations = {
   DE: {
     // Header
     siteName: "Gesungene Bibel",
-    tagline: "Das gesamte Wort Gottes in Musik – 12 Sprachen",
+    tagline: "Das gesamte Wort Gottes in Musik – 7 Sprachen",
     totalChristians: "1,8 Milliarden Christen weltweit",
 
     // Navigation
@@ -634,7 +634,7 @@ const translations = {
 
     // Project Section
     projectTitle: "Das Projekt",
-    projectDesc1: "Gesungene Bibel ist ein internationales christliches Missionsprojekt, dessen Vision es ist, das Wort Gottes durch Musik, Kapitel für Kapitel, in 12 Sprachen zugänglich zu machen.",
+    projectDesc1: "Gesungene Bibel ist ein internationales christliches Missionsprojekt, dessen Vision es ist, das Wort Gottes durch Musik, Kapitel für Kapitel, in 7 Sprachen zugänglich zu machen.",
     projectDesc2: "Das Projekt richtet sich an Kinder, Familien, ältere Menschen, Menschen die nicht lesen können, Neubekehrte sowie Kirchen für Gottesdienst, Lehre, Gebet und Evangelisation.",
     statChapters: "Kapitel",
     statLanguages: "Sprachen",
@@ -764,7 +764,7 @@ const translations = {
   IT: {
     // Header
     siteName: "Bibbia Cantata",
-    tagline: "Tutta la Parola di Dio in musica – 12 lingue",
+    tagline: "Tutta la Parola di Dio in musica – 7 lingue",
     totalChristians: "1,8 miliardi di cristiani nel mondo",
 
     // Navigation
@@ -779,7 +779,7 @@ const translations = {
 
     // Project Section
     projectTitle: "Il progetto",
-    projectDesc1: "Bibbia Cantata è un progetto missionario cristiano internazionale la cui visione è rendere accessibile la Parola di Dio attraverso la musica, capitolo per capitolo, in 12 lingue.",
+    projectDesc1: "Bibbia Cantata è un progetto missionario cristiano internazionale la cui visione è rendere accessibile la Parola di Dio attraverso la musica, capitolo per capitolo, in 7 lingue.",
     projectDesc2: "Il progetto si rivolge a bambini, famiglie, anziani, persone che non sanno leggere, nuovi convertiti, nonché chiese per il culto, insegnamento, preghiera ed evangelizzazione.",
     statChapters: "capitoli",
     statLanguages: "lingue",
@@ -909,7 +909,7 @@ const translations = {
   RU: {
     // Header
     siteName: "Поющая Библия",
-    tagline: "Всё Слово Божье в музыке – 12 языков",
+    tagline: "Всё Слово Божье в музыке – 7 языков",
     totalChristians: "1,8 миллиарда христиан в мире",
 
     // Navigation
@@ -924,7 +924,7 @@ const translations = {
 
     // Project Section
     projectTitle: "Проект",
-    projectDesc1: "Поющая Библия – это международный христианский миссионерский проект, цель которого сделать Слово Божье доступным через музыку, глава за главой, на 12 языках.",
+    projectDesc1: "Поющая Библия – это международный христианский миссионерский проект, цель которого сделать Слово Божье доступным через музыку, глава за главой, на 7 языках.",
     projectDesc2: "Проект предназначен для детей, семей, пожилых людей, людей которые не умеют читать, новообращённых, а также для церквей для богослужения, обучения, молитвы и евангелизации.",
     statChapters: "глав",
     statLanguages: "языков",
@@ -1054,7 +1054,7 @@ const translations = {
   AR: {
     // Header
     siteName: "الكتاب المقدس المُغنّى",
-    tagline: "كلمة الله كاملة في الموسيقى – 12 لغة",
+    tagline: "كلمة الله كاملة في الموسيقى – 7 لغة",
     totalChristians: "1.8 مليار مسيحي في العالم",
 
     // Navigation
@@ -1069,7 +1069,7 @@ const translations = {
 
     // Project Section
     projectTitle: "المشروع",
-    projectDesc1: "الكتاب المقدس المُغنّى هو مشروع تبشيري مسيحي دولي رؤيته جعل كلمة الله متاحة من خلال الموسيقى، فصلاً تلو الآخر، في 12 لغة.",
+    projectDesc1: "الكتاب المقدس المُغنّى هو مشروع تبشيري مسيحي دولي رؤيته جعل كلمة الله متاحة من خلال الموسيقى، فصلاً تلو الآخر، في 7 لغة.",
     projectDesc2: "المشروع موجه للأطفال والعائلات وكبار السن والأشخاص الذين لا يعرفون القراءة والمتحولين الجدد، وكذلك للكنائس للعبادة والتعليم والصلاة والتبشير.",
     statChapters: "فصول",
     statLanguages: "لغات",
@@ -1199,7 +1199,7 @@ const translations = {
   ZH: {
     // Header
     siteName: "圣经之歌",
-    tagline: "上帝的话语以音乐呈现 – 12种语言",
+    tagline: "上帝的话语以音乐呈现 – 7种语言",
     totalChristians: "全球18亿基督徒",
 
     // Navigation
@@ -1214,7 +1214,7 @@ const translations = {
 
     // Project Section
     projectTitle: "项目",
-    projectDesc1: "圣经之歌是一个国际基督教宣教项目，其愿景是通过音乐，逐章逐节地将上帝的话语以12种语言呈现。",
+    projectDesc1: "圣经之歌是一个国际基督教宣教项目，其愿景是通过音乐，逐章逐节地将上帝的话语以7种语言呈现。",
     projectDesc2: "该项目面向儿童、家庭、老年人、不识字的人、新信徒，以及教会用于敬拜、教导、祷告和传福音。",
     statChapters: "章",
     statLanguages: "语言",
@@ -1344,7 +1344,7 @@ const translations = {
   HI: {
     // Header
     siteName: "गायी जाने वाली बाइबिल",
-    tagline: "संगीत में परमेश्वर का पूरा वचन – 12 भाषाएँ",
+    tagline: "संगीत में परमेश्वर का पूरा वचन – 7 भाषाएँ",
     totalChristians: "दुनिया भर में 1.8 अरब ईसाई",
 
     // Navigation
@@ -1359,7 +1359,7 @@ const translations = {
 
     // Project Section
     projectTitle: "परियोजना",
-    projectDesc1: "गायी जाने वाली बाइबिल एक अंतरराष्ट्रीय ईसाई मिशनरी परियोजना है जिसका दृष्टिकोण परमेश्वर के वचन को संगीत के माध्यम से, अध्याय दर अध्याय, 12 भाषाओं में सुलभ बनाना है।",
+    projectDesc1: "गायी जाने वाली बाइबिल एक अंतरराष्ट्रीय ईसाई मिशनरी परियोजना है जिसका दृष्टिकोण परमेश्वर के वचन को संगीत के माध्यम से, अध्याय दर अध्याय, 7 भाषाओं में सुलभ बनाना है।",
     projectDesc2: "यह परियोजना बच्चों, परिवारों, बुजुर्गों, जो पढ़ नहीं सकते, नए धर्मांतरित लोगों के साथ-साथ पूजा, शिक्षा, प्रार्थना और सुसमाचार प्रचार के लिए चर्चों के लिए है।",
     statChapters: "अध्याय",
     statLanguages: "भाषाएँ",
@@ -1489,7 +1489,7 @@ const translations = {
   TL: {
     // Header
     siteName: "Aawitin ng Bibliya",
-    tagline: "Ang buong Salita ng Diyos sa musika – 12 wika",
+    tagline: "Ang buong Salita ng Diyos sa musika – 7 wika",
     totalChristians: "1.8 bilyong Kristiyano sa mundo",
 
     // Navigation
@@ -1504,7 +1504,7 @@ const translations = {
 
     // Project Section
     projectTitle: "Ang proyekto",
-    projectDesc1: "Ang Aawitin ng Bibliya ay isang internasyonal na Kristiyanong misyonaryo proyekto na ang bisyon ay gawin ang Salita ng Diyos na madaling makuha sa pamamagitan ng musika, kabanata-kabanata, sa 12 wika.",
+    projectDesc1: "Ang Aawitin ng Bibliya ay isang internasyonal na Kristiyanong misyonaryo proyekto na ang bisyon ay gawin ang Salita ng Diyos na madaling makuha sa pamamagitan ng musika, kabanata-kabanata, sa 7 wika.",
     projectDesc2: "Ang proyekto ay nakatuon sa mga bata, pamilya, matatanda, mga taong hindi marunong magbasa, bagong converts, pati na rin sa mga simbahan para sa pagsamba, pagtuturo, panalangin at ebanghelisasyon.",
     statChapters: "kabanata",
     statLanguages: "wika",
@@ -1634,7 +1634,7 @@ const translations = {
   KO: {
     // Header
     siteName: "노래하는 성경",
-    tagline: "음악으로 듣는 하나님의 말씀 전체 – 12개 언어",
+    tagline: "음악으로 듣는 하나님의 말씀 전체 – 7개 언어",
     totalChristians: "전 세계 18억 기독교인",
 
     // Navigation
@@ -1649,7 +1649,7 @@ const translations = {
 
     // Project Section
     projectTitle: "프로젝트",
-    projectDesc1: "노래하는 성경은 하나님의 말씀을 음악을 통해 장마다, 12개 언어로 접근 가능하게 만드는 국제 기독교 선교 프로젝트입니다.",
+    projectDesc1: "노래하는 성경은 하나님의 말씀을 음악을 통해 장마다, 7개 언어로 접근 가능하게 만드는 국제 기독교 선교 프로젝트입니다.",
     projectDesc2: "이 프로젝트는 어린이, 가족, 노인, 읽을 수 없는 사람들, 새 신자들, 그리고 예배, 가르침, 기도, 전도를 위한 교회를 대상으로 합니다.",
     statChapters: "장",
     statLanguages: "언어",
@@ -1796,7 +1796,7 @@ Object.keys(translations).forEach(lang => {
     t.navPlayer = "Lecteur";
     t.navBible = "Bible";
     t.aboutProjectTitle = "À propos du projet";
-    t.aboutProjectDesc1 = "Bible Chantée est un projet musical spirituel visant à mettre en musique les 1189 chapitres de la Bible en 12 langues.";
+    t.aboutProjectDesc1 = "Bible Chantée est un projet musical spirituel visant à mettre en musique les 1189 chapitres de la Bible en 7 langues.";
     t.aboutProjectDesc2 = "Toutes les compositions sont originales. Les paroles sont basées sur les textes bibliques du domaine public.";
     t.aboutListenTitle = "Écoutez Bible Chantée";
     t.aboutListenDesc = "Retrouvez nos musiques sur vos plateformes de streaming préférées :";
@@ -1822,7 +1822,7 @@ Object.keys(translations).forEach(lang => {
     t.navPlayer = "Player";
     t.navBible = "Bible";
     t.aboutProjectTitle = "About the project";
-    t.aboutProjectDesc1 = "Sung Bible is a spiritual music project aiming to set to music the 1189 chapters of the Bible in 12 languages.";
+    t.aboutProjectDesc1 = "Sung Bible is a spiritual music project aiming to set to music the 1189 chapters of the Bible in 7 languages.";
     t.aboutProjectDesc2 = "All compositions are original. The lyrics are based on public domain biblical texts.";
     t.aboutListenTitle = "Listen to Sung Bible";
     t.aboutListenDesc = "Find our music on your favorite streaming platforms:";
@@ -1848,7 +1848,7 @@ Object.keys(translations).forEach(lang => {
     t.navPlayer = "Reproductor";
     t.navBible = "Biblia";
     t.aboutProjectTitle = "Acerca del proyecto";
-    t.aboutProjectDesc1 = "Biblia Cantada es un proyecto de música espiritual que busca poner en música los 1189 capítulos de la Biblia en 12 idiomas.";
+    t.aboutProjectDesc1 = "Biblia Cantada es un proyecto de música espiritual que busca poner en música los 1189 capítulos de la Biblia en 7 idiomas.";
     t.aboutProjectDesc2 = "Todas las composiciones son originales. Las letras se basan en textos bíblicos de dominio público.";
     t.aboutListenTitle = "Escuchar Biblia Cantada";
     t.aboutListenDesc = "Encuentra nuestra música en tus plataformas de streaming favoritas:";
@@ -1874,7 +1874,7 @@ Object.keys(translations).forEach(lang => {
     t.navPlayer = "Leitor";
     t.navBible = "Bíblia";
     t.aboutProjectTitle = "Sobre o projeto";
-    t.aboutProjectDesc1 = "Bíblia Cantada é um projeto de música espiritual que visa colocar em música os 1189 capítulos da Bíblia em 12 idiomas.";
+    t.aboutProjectDesc1 = "Bíblia Cantada é um projeto de música espiritual que visa colocar em música os 1189 capítulos da Bíblia em 7 idiomas.";
     t.aboutProjectDesc2 = "Todas as composições são originais. As letras são baseadas em textos bíblicos de domínio público.";
     t.aboutListenTitle = "Ouvir Bíblia Cantada";
     t.aboutListenDesc = "Encontre nossa música em suas plataformas de streaming favoritas:";
@@ -1905,14 +1905,14 @@ Object.keys(translations).forEach(lang => {
     t.cfSubtitle = "Participez à la diffusion mondiale de la Parole de Dieu en musique";
     t.cfBackHome = "← Retour accueil";
     t.cfGoalTitle = "Objectif de la campagne";
-    t.cfGoalDesc = "Bible Chantée a pour vision de rendre la Bible accessible en musique worship dans 12 langues, touchant potentiellement 1.8 milliard de personnes.";
+    t.cfGoalDesc = "Bible Chantée a pour vision de rendre la Bible accessible en musique worship dans 7 langues, touchant potentiellement 1.8 milliard de personnes.";
     t.cfGoalAmount = "50 000 CHF";
     t.cfGoalLabel = "Objectif de financement";
     t.cfProgressLaunch = "Lancement imminent";
     t.cfMission = "10% des bénéfices nets seront reversés à des oeuvres missionnaires chrétiennes.";
     t.cfFundsTitle = "Utilisation des fonds";
     t.cfFund1 = "Développement App iOS/Android";
-    t.cfFund2 = "Génération musicale 12 langues";
+    t.cfFund2 = "Génération musicale 7 langues";
     t.cfFund3 = "Infrastructure et hébergement";
     t.cfFund4 = "Marketing et communication";
     t.cfRewardsTitle = "Contreparties";
@@ -2093,14 +2093,14 @@ Object.keys(translations).forEach(lang => {
     t.cfSubtitle = "Participate in the global spread of God's Word in music";
     t.cfBackHome = "← Back home";
     t.cfGoalTitle = "Campaign goal";
-    t.cfGoalDesc = "Sung Bible's vision is to make the Bible accessible in worship music in 12 languages, potentially reaching 1.8 billion people.";
+    t.cfGoalDesc = "Sung Bible's vision is to make the Bible accessible in worship music in 7 languages, potentially reaching 1.8 billion people.";
     t.cfGoalAmount = "50,000 CHF";
     t.cfGoalLabel = "Funding goal";
     t.cfProgressLaunch = "Launch imminent";
     t.cfMission = "10% of net profits will be donated to Christian missionary works.";
     t.cfFundsTitle = "Use of funds";
     t.cfFund1 = "iOS/Android App Development";
-    t.cfFund2 = "Musical generation 12 languages";
+    t.cfFund2 = "Musical generation 7 languages";
     t.cfFund3 = "Infrastructure and hosting";
     t.cfFund4 = "Marketing and communication";
     t.cfRewardsTitle = "Rewards";
@@ -2281,14 +2281,14 @@ Object.keys(translations).forEach(lang => {
     t.cfSubtitle = "Participe en la difusión mundial de la Palabra de Dios en música";
     t.cfBackHome = "← Volver inicio";
     t.cfGoalTitle = "Objetivo de la campaña";
-    t.cfGoalDesc = "La visión de Biblia Cantada es hacer la Biblia accesible en música worship en 12 idiomas, alcanzando potencialmente a 1.8 mil millones de personas.";
+    t.cfGoalDesc = "La visión de Biblia Cantada es hacer la Biblia accesible en música worship en 7 idiomas, alcanzando potencialmente a 1.8 mil millones de personas.";
     t.cfGoalAmount = "50.000 CHF";
     t.cfGoalLabel = "Objetivo de financiación";
     t.cfProgressLaunch = "Lanzamiento inminente";
     t.cfMission = "El 10% de los beneficios netos se destinarán a obras misioneras cristianas.";
     t.cfFundsTitle = "Uso de fondos";
     t.cfFund1 = "Desarrollo App iOS/Android";
-    t.cfFund2 = "Generación musical 12 idiomas";
+    t.cfFund2 = "Generación musical 7 idiomas";
     t.cfFund3 = "Infraestructura y alojamiento";
     t.cfFund4 = "Marketing y comunicación";
     t.cfRewardsTitle = "Recompensas";
@@ -2469,14 +2469,14 @@ Object.keys(translations).forEach(lang => {
     t.cfSubtitle = "Participe na difusão mundial da Palavra de Deus em música";
     t.cfBackHome = "← Voltar início";
     t.cfGoalTitle = "Objetivo da campanha";
-    t.cfGoalDesc = "A visão da Bíblia Cantada é tornar a Bíblia acessível em música worship em 12 idiomas, alcançando potencialmente 1.8 bilhão de pessoas.";
+    t.cfGoalDesc = "A visão da Bíblia Cantada é tornar a Bíblia acessível em música worship em 7 idiomas, alcançando potencialmente 1.8 bilhão de pessoas.";
     t.cfGoalAmount = "50.000 CHF";
     t.cfGoalLabel = "Objetivo de financiamento";
     t.cfProgressLaunch = "Lançamento iminente";
     t.cfMission = "10% dos lucros líquidos serão doados a obras missionárias cristãs.";
     t.cfFundsTitle = "Uso dos fundos";
     t.cfFund1 = "Desenvolvimento App iOS/Android";
-    t.cfFund2 = "Geração musical 12 idiomas";
+    t.cfFund2 = "Geração musical 7 idiomas";
     t.cfFund3 = "Infraestrutura e hospedagem";
     t.cfFund4 = "Marketing e comunicação";
     t.cfRewardsTitle = "Recompensas";
@@ -2664,7 +2664,7 @@ Object.keys(translations).forEach(lang => {
     t.creditsSiteName = "Bible Chantee";
     t.creditsTagline = "La Parole de Dieu en musique worship";
     t.creditsAboutTitle = "A propos du Projet";
-    t.creditsAboutDesc = "Bible Chantée est un projet missionnaire chrétien qui transforme l'intégralité de la Bible en musique worship contemporaine, en 12 langues.";
+    t.creditsAboutDesc = "Bible Chantée est un projet missionnaire chrétien qui transforme l'intégralité de la Bible en musique worship contemporaine, en 7 langues.";
     t.creditsExperience = "Une expérience unique : Chaque chapitre biblique est mis en musique avec une qualité professionnelle et des paroles poétiques originales.";
     t.creditsCharacteristics = "Caracteristiques";
     t.creditsExperienceFull = "Une experience unique : Chaque chapitre biblique est mis en musique avec une qualite professionnelle et des paroles poetiques originales.";
@@ -2675,7 +2675,7 @@ Object.keys(translations).forEach(lang => {
     t.creditsStatBooks = "Livres bibliques";
     t.creditsStatChapters = "Chapitres";
     t.creditsStatMP3 = "MP3 Total (FR+PT)";
-    t.creditsStatProgress = "Progression 12 langues";
+    t.creditsStatProgress = "Progression 7 langues";
     t.creditsTechTitle = "Technologie";
     t.creditsTechDesc = "Production musicale Suno AI, interface web responsive.";
     t.creditsCopyrightTitle = "Droits d'Auteur";
@@ -2699,7 +2699,7 @@ Object.keys(translations).forEach(lang => {
     t.creditsSiteName = "Sung Bible";
     t.creditsTagline = "God's Word in worship music";
     t.creditsAboutTitle = "About the Project";
-    t.creditsAboutDesc = "Sung Bible is a Christian missionary project that transforms the entire Bible into contemporary worship music, in 12 languages.";
+    t.creditsAboutDesc = "Sung Bible is a Christian missionary project that transforms the entire Bible into contemporary worship music, in 7 languages.";
     t.creditsExperience = "A unique experience: Each biblical chapter is set to music with professional quality and original poetic lyrics.";
     t.creditsCharacteristics = "Characteristics";
     t.creditsExperienceFull = "A unique experience: Each biblical chapter is set to music with professional quality and original poetic lyrics.";
@@ -2710,7 +2710,7 @@ Object.keys(translations).forEach(lang => {
     t.creditsStatBooks = "Biblical Books";
     t.creditsStatChapters = "Chapters";
     t.creditsStatMP3 = "Total MP3 (FR+PT)";
-    t.creditsStatProgress = "12 Languages Progress";
+    t.creditsStatProgress = "7 Languages Progress";
     t.creditsTechTitle = "Technology";
     t.creditsTechDesc = "Suno AI music production, responsive web interface.";
     t.creditsCopyrightTitle = "Copyright";
@@ -2734,7 +2734,7 @@ Object.keys(translations).forEach(lang => {
     t.creditsSiteName = "Biblia Cantada";
     t.creditsTagline = "La Palabra de Dios en música worship";
     t.creditsAboutTitle = "Acerca del Proyecto";
-    t.creditsAboutDesc = "Biblia Cantada es un proyecto misionero cristiano que transforma toda la Biblia en música worship contemporánea, en 12 idiomas.";
+    t.creditsAboutDesc = "Biblia Cantada es un proyecto misionero cristiano que transforma toda la Biblia en música worship contemporánea, en 7 idiomas.";
     t.creditsExperience = "Una experiencia única: Cada capítulo bíblico está musicado con calidad profesional y letras poéticas originales.";
     t.creditsCharacteristics = "Características";
     t.creditsExperienceFull = "Una experiencia única: Cada capítulo bíblico está musicado con calidad profesional y letras poéticas originales.";
@@ -2745,7 +2745,7 @@ Object.keys(translations).forEach(lang => {
     t.creditsStatBooks = "Libros Bíblicos";
     t.creditsStatChapters = "Capítulos";
     t.creditsStatMP3 = "Total MP3 (FR+PT)";
-    t.creditsStatProgress = "Progreso 12 idiomas";
+    t.creditsStatProgress = "Progreso 7 idiomas";
     t.creditsTechTitle = "Tecnología";
     t.creditsTechDesc = "Producción musical Suno AI, interfaz web responsive.";
     t.creditsCopyrightTitle = "Derechos de Autor";
@@ -2769,7 +2769,7 @@ Object.keys(translations).forEach(lang => {
     t.creditsSiteName = "Bíblia Cantada";
     t.creditsTagline = "A Palavra de Deus em música worship";
     t.creditsAboutTitle = "Sobre o Projeto";
-    t.creditsAboutDesc = "Bíblia Cantada é um projeto missionário cristão que transforma toda a Bíblia em música worship contemporânea, em 12 idiomas.";
+    t.creditsAboutDesc = "Bíblia Cantada é um projeto missionário cristão que transforma toda a Bíblia em música worship contemporânea, em 7 idiomas.";
     t.creditsExperience = "Uma experiência única: Cada capítulo bíblico é musicado com qualidade profissional e letras poéticas originais.";
     t.creditsCharacteristics = "Características";
     t.creditsExperienceFull = "Uma experiência única: Cada capítulo bíblico é musicado com qualidade profissional e letras poéticas originais.";
@@ -2780,7 +2780,7 @@ Object.keys(translations).forEach(lang => {
     t.creditsStatBooks = "Livros Bíblicos";
     t.creditsStatChapters = "Capítulos";
     t.creditsStatMP3 = "Total MP3 (FR+PT)";
-    t.creditsStatProgress = "Progresso 12 idiomas";
+    t.creditsStatProgress = "Progresso 7 idiomas";
     t.creditsTechTitle = "Tecnologia";
     t.creditsTechDesc = "Produção musical Suno AI, interface web responsiva.";
     t.creditsCopyrightTitle = "Direitos Autorais";
