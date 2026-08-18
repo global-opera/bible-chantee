@@ -1,6 +1,11 @@
 /**
  * SYSTÈME FREEMIUM - Bible Chantée
  *
+ * ⚠️ OBSOLÈTE — CE FICHIER N'EST CHARGÉ PAR AUCUNE PAGE (vérifié le 18.08.2026).
+ * Le système en service est assets/freemium.js, dont le modèle DIFFÈRE :
+ * 100 chapitres gratuits PAR LANGUE, et 0,99 $ débloque UNE SEULE langue.
+ * Ne pas réutiliser ce fichier tel quel : ses montants et son périmètre sont faux.
+ *
  * Modèle: 100 chapitres gratuits + $0.99 pour débloquer tout (1189 chapitres)
  * Storage: localStorage (credits, unlockedChapters, premium, premiumCode)
  */
@@ -252,7 +257,7 @@ class FreemiumSystem {
 
                 <div class="paywall-benefits">
                     <div class="benefit">✅ Toute la Bible (1189 chapitres)</div>
-                    <div class="benefit">✅ 4 langues (FR, PT, EN, ES)</div>
+                    <div class="benefit">✅ 7 langues (FR, EN, PT, ES, DE, IT, TL)</div>
                     <div class="benefit">✅ Écoute illimitée à vie</div>
                     <div class="benefit">✅ Moins qu'un café!</div>
                 </div>

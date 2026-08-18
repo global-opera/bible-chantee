@@ -31,7 +31,7 @@ const GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // À remplacer par votre ID GA4
  * Tracker une écoute audio
  * @param {string} book - Code du livre (ex: "19_PSA")
  * @param {number} chapter - Numéro du chapitre
- * @param {string} language - Code langue (FR, EN, PT, ES)
+ * @param {string} language - Code langue (FR, EN, PT, ES, DE, IT, TL)
  * @param {number} duration - Durée écoutée en secondes
  */
 function trackAudioPlay(book, chapter, language, duration) {
