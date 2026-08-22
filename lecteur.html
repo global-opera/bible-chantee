@@ -1873,28 +1873,40 @@ const audioPlayer = document.querySelector('#audioPlayer');
     let isPlaying = false;
 
     // Helper: Résoudre le code R2 pour un livre
-    // Certains livres utilisent un code dossier+fichier différent sur R2.
-    // Recensement complet du 2026-08-22 : 8323 requêtes HEAD, les 1189 chapitres
-    // dans les 7 langues. Il corrige la vérification du 2026-03-20, qui n'avait été
-    // faite qu'en FR et concluait donc faux pour les autres langues.
+    // Le dossier et le nom de fichier ne portent PAS toujours le même code, et la
+    // règle depend de la langue. Etabli le 2026-08-22 en interrogeant R2 sur les
+    // 13 livres dont le code diverge, dans les 7 langues, 4 combinaisons chacune.
     //
-    // 22_SNG → 22_SON : le dossier R2 est 22_SON dans les 7 langues (8/8 partout).
-    //   Le site cherchait 22_SNG, qui n'existe qu'en FR. Le Cantique des cantiques
-    //   était donc injouable dans les 6 autres langues alors que les fichiers existent.
-    // 59_JAM → 59_JAS : alias réel. 59_JAS répond dans les 7 langues, 59_JAM jamais.
-    // PAS d'alias pour Jean. L'ancien 43_JOH → 43_JHN venait de la vérification faite
-    //   en FR, où les deux dossiers existent en double. En IT et TL, seul 43_JOH
-    //   répond : l'alias cassait les 21 chapitres de Jean dans ces deux langues.
+    // NOM DE FICHIER : code books.js, avec deux exceptions valables partout.
+    //   22_SNG -> 22_SON  et  59_JAM -> 59_JAS
+    // NOM DE DOSSIER : identique au fichier, SAUF en EN, PT, ES et DE ou sept
+    //   livres sont ranges sous leur code OSIS alors que le fichier garde le code
+    //   books.js (ex. EN/26_EZK/26_EZE_01_EN.mp3). En FR, IT et TL, dossier et
+    //   fichier coincident.
     //
-    // Réellement absents de R2, aucun code de rechange ne les trouve (17 variantes
-    // testées) : EZE, JOE, MAR, JOH, 1JO, 2JO, 3JO en EN, PT, ES et DE.
-    function resolveR2Codes(book) {
-      const R2_ALIASES = {
+    // C'est ce decalage qui faisait croire a 379 chapitres manquants : ils sont
+    // tous en ligne, le site les cherchait au mauvais endroit.
+    function resolveR2Codes(book, lang) {
+      const FILE_ALIASES = {
         '22_SNG': '22_SON',
         '59_JAM': '59_JAS'
       };
-      const resolved = R2_ALIASES[book] || book;
-      return { folder: resolved, file: resolved };
+      const OSIS_FOLDERS = {
+        '26_EZE': '26_EZK',
+        '29_JOE': '29_JOL',
+        '41_MAR': '41_MRK',
+        '43_JOH': '43_JHN',
+        '62_1JO': '62_1JN',
+        '63_2JO': '63_2JN',
+        '64_3JO': '64_3JN'
+      };
+      const OSIS_FOLDER_LANGS = ['EN', 'PT', 'ES', 'DE'];
+      const file = FILE_ALIASES[book] || book;
+      let folder = file;
+      if (OSIS_FOLDER_LANGS.indexOf(String(lang || '').toUpperCase()) !== -1 && OSIS_FOLDERS[book]) {
+        folder = OSIS_FOLDERS[book];
+      }
+      return { folder: folder, file: file };
     }
 
     // Helper: Obtenir URL audio pour un chapitre
@@ -1902,10 +1914,10 @@ const audioPlayer = document.querySelector('#audioPlayer');
       // Construire URL directement depuis Cloudflare R2
       // Format: https://pub-...r2.dev/{LANG}/{FOLDER}/{FILE}_{CHAPTER}_{LANG}.mp3
       // Exemple: .../FR/01_GEN/01_GEN_01_FR.mp3
-      // Exemple aliasé: .../FR/43_JHN/43_JHN_01_FR.mp3
+      // Exemple decale: .../EN/26_EZK/26_EZE_01_EN.mp3 (dossier OSIS, fichier books.js)
       const chapterPadded = String(chapter).padStart(2, '0');
       const langUpper = lang.toUpperCase();
-      const r2 = resolveR2Codes(book);
+      const r2 = resolveR2Codes(book, langUpper);
       const base = `https://pub-2dc4dfed0c5e45338913878f35d4d56a.r2.dev/${langUpper}/${r2.folder}/${r2.file}_${chapterPadded}_${langUpper}`;
       return {
         primary: `${base}.mp3`,
