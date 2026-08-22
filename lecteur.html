@@ -1544,6 +1544,7 @@ function isVerseLikeEN(s){
         newsletterBtn: "S'inscrire",
         privacyLink: "Règles de confidentialité",
         audioUnavailable: "Ce chapitre n'est pas encore disponible dans cette langue.",
+        lyricsUnavailable: "Paroles non disponibles pour ce chapitre. Le texte biblique reste accessible dans l'onglet Bible.",
         privacyUrl: "privacy-fr.html",
         popupTitle: "Inscrivez-vous",
         popupSubtitle: "Recevez les nouveautés : prières, promesses, confessions",
@@ -1561,6 +1562,7 @@ function isVerseLikeEN(s){
         newsletterBtn: "Subscribe",
         privacyLink: "Privacy Policy",
         audioUnavailable: "This chapter is not yet available in this language.",
+        lyricsUnavailable: "Lyrics not available for this chapter. The Bible text is still available in the Bible tab.",
         privacyUrl: "privacy-en.html",
         popupTitle: "Subscribe",
         popupSubtitle: "Receive updates: prayers, promises, confessions",
@@ -1578,6 +1580,7 @@ function isVerseLikeEN(s){
         newsletterBtn: "Inscrever-se",
         privacyLink: "Política de Privacidade",
         audioUnavailable: "Este capítulo ainda não está disponível neste idioma.",
+        lyricsUnavailable: "Letras não disponíveis para este capítulo. O texto bíblico continua acessível na aba Bíblia.",
         privacyUrl: "privacy-pt.html",
         popupTitle: "Inscreva-se",
         popupSubtitle: "Receba novidades: orações, promessas, confissões",
@@ -1595,6 +1598,7 @@ function isVerseLikeEN(s){
         newsletterBtn: "Suscribirse",
         privacyLink: "Política de Privacidad",
         audioUnavailable: "Este capítulo aún no está disponible en este idioma.",
+        lyricsUnavailable: "Letra no disponible para este capítulo. El texto bíblico sigue disponible en la pestaña Biblia.",
         privacyUrl: "privacy-es.html",
         popupTitle: "Suscríbete",
         popupSubtitle: "Recibe novedades: oraciones, promesas, confesiones",
@@ -1612,6 +1616,7 @@ function isVerseLikeEN(s){
         newsletterBtn: "Anmelden",
         privacyLink: "Datenschutzrichtlinie",
         audioUnavailable: "Dieses Kapitel ist in dieser Sprache noch nicht verfügbar.",
+        lyricsUnavailable: "Für dieses Kapitel ist kein Liedtext verfügbar. Der Bibeltext bleibt im Reiter Bibel zugänglich.",
         privacyUrl: "privacy-de.html",
         popupTitle: "Anmelden",
         popupSubtitle: "Erhalten Sie Neuigkeiten: Gebete, Verheißungen, Bekenntnisse",
@@ -1629,6 +1634,7 @@ function isVerseLikeEN(s){
         newsletterBtn: "Iscriviti",
         privacyLink: "Informativa sulla Privacy",
         audioUnavailable: "Questo capitolo non è ancora disponibile in questa lingua.",
+        lyricsUnavailable: "Testo non disponibile per questo capitolo. Il testo biblico resta accessibile nella scheda Bibbia.",
         privacyUrl: "privacy-it.html",
         popupTitle: "Iscriviti",
         popupSubtitle: "Ricevi novità: preghiere, promesse, confessioni",
@@ -1646,6 +1652,7 @@ function isVerseLikeEN(s){
         newsletterBtn: "Mag-subscribe",
         privacyLink: "Patakaran sa Privacy",
         audioUnavailable: "Hindi pa available ang kabanatang ito sa wikang ito.",
+        lyricsUnavailable: "Walang lyrics para sa kabanatang ito. Available pa rin ang teksto ng Bibliya sa tab na Bibliya.",
         privacyUrl: "privacy-tl.html",
         popupTitle: "Mag-subscribe",
         popupSubtitle: "Tumanggap ng balita: panalangin, pangako, pagtatapat",
@@ -2162,7 +2169,10 @@ const audioPlayer = document.querySelector('#audioPlayer');
         }
 
         if (!lyrics) {
-          lyricsContent.innerHTML = '<p style="color: #999;">Paroles non disponibles pour ce chapitre</p>';
+          // Le texte biblique existe pour ces chapitres : on y renvoie au lieu
+          // de laisser l'utilisateur sur un simple constat d'absence.
+          const tl = translations[currentLang] || translations.FR;
+          lyricsContent.innerHTML = '<p style="color: #999;">' + tl.lyricsUnavailable + '</p>';
           return;
         }
 
@@ -2170,7 +2180,10 @@ const audioPlayer = document.querySelector('#audioPlayer');
         lyrics = cleanLyrics(lyrics);
 
         if (!lyrics.trim()) {
-          lyricsContent.innerHTML = '<p style="color: #999;">Paroles non disponibles pour ce chapitre</p>';
+          // Le texte biblique existe pour ces chapitres : on y renvoie au lieu
+          // de laisser l'utilisateur sur un simple constat d'absence.
+          const tl = translations[currentLang] || translations.FR;
+          lyricsContent.innerHTML = '<p style="color: #999;">' + tl.lyricsUnavailable + '</p>';
           return;
         }
 
