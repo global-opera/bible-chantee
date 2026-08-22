@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nouveautés - Bible Chantée V3</title>
+  <script src="analytics-tracking.js"></script>
+    <meta name="description" content="Dernières mises à jour et nouveautés de Bible Chantée">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bleu-nuit: #1E3A5F;
+            --bleu-sombre: #162B46;
+            --bleu-cartes: #243F66;
+            --bleu-hover: #2C4A73;
+            --or-moyen: #F5CB42;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--bleu-sombre) 0%, var(--bleu-nuit) 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--or-moyen);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #b0b0b0;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background: transparent;
+            border: 2px solid var(--or-moyen);
+            border-radius: 25px;
+            color: var(--or-moyen);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            background: var(--or-moyen);
+            color: var(--bleu-nuit);
+        }
+
+        .update-card {
+            background: rgba(30, 58, 95, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--or-moyen);
+            transition: transform 0.3s;
+        }
+
+        .update-card:hover {
+            transform: translateX(5px);
+        }
+
+        /* Card FEATURED pour la nouveauté principale */
+        .update-card.featured {
+            border: 2px solid var(--or-moyen);
+            border-left: 5px solid var(--or-moyen);
+            background: linear-gradient(135deg, rgba(36, 63, 102, 0.95) 0%, rgba(30, 58, 95, 0.95) 100%);
+            box-shadow: 0 0 20px rgba(245, 203, 66, 0.3);
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: var(--or-moyen);
+            color: var(--bleu-nuit);
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-left: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .update-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .update-date {
+            color: var(--or-moyen);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .update-version {
+            background: var(--or-moyen);
+            color: var(--bleu-nuit);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .update-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .update-list li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .update-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--or-moyen);
+            font-weight: bold;
+        }
+
+        .try-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: var(--or-moyen);
+            color: var(--bleu-nuit);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .try-btn:hover {
+            background: #fff;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            text-align: center;
+            color: #888;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .update-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="pageTitle">🆕 Nouveautés</h1>
+            <p class="subtitle" id="pageSubtitle">Dernières mises à jour</p>
+            <a href="lecteur.html" class="back-btn" id="backBtn">← Retour au Lecteur</a>
+        </div>
+
+        <div id="updatesContainer"></div>
+
+        <div class="footer">
+            © 2025-2026 Bible Chantée — V3
+        </div>
+    </div>
+
+    <script>
+        // Détection automatique de la langue
+        const getDefaultLang = () => {
+            const browserLang = (navigator.language || navigator.userLanguage || 'en').substring(0, 2).toUpperCase();
+            const supported = ['FR', 'EN', 'PT', 'ES', 'DE', 'IT', 'TL'];
+            return supported.includes(browserLang) ? browserLang : 'EN';
+        };
+
+        // Résoudre la langue (priorité: URL > localStorage > navigateur)
+        const params = new URLSearchParams(window.location.search);
+        let currentLang = params.get('lang') || localStorage.getItem('bc_lang') || getDefaultLang();
+        currentLang = currentLang.toUpperCase();
+
+        // Sauvegarder dans localStorage pour cohérence
+        localStorage.setItem('bc_lang', currentLang);
+
+        const TRANSLATIONS = {
+            FR: {
+                pageTitle: "🆕 Nouveautés",
+                pageSubtitle: "Dernières mises à jour",
+                backBtn: "← Retour au Lecteur",
+                tryNow: "Essayer maintenant →",
+                featured: "NOUVEAU",
+                updates: [
+                    {
+                        date: "10 Janvier 2026",
+                        version: "V3.4",
+                        featured: true,
+                        items: [
+                            "🙏 Page Prières Chantées",
+                            "   - 35 prières audio en 7 langues",
+                            "   - Paroles synchronisées + lecteur intégré",
+                            "⭐ Système de Favoris COMPLET",
+                            "   - Favoris sur Prières, Confessions ET Promesses",
+                            "   - Marquez vos contenus préférés (étoile)",
+                            "   - Filtrez pour voir uniquement les favoris",
+                            "   - Sauvegarde automatique persistante",
+                            "🔧 Corrections titres et paroles"
+                        ],
+                        link: "prieres.html"
+                    },
+                    {
+                        date: "7 Janvier 2026",
+                        version: "V3.3",
+                        featured: false,
+                        items: [
+                            "📋 Menu déroulant pour sélection des chapitres",
+                            "   - Navigation simplifiée (fini les grilles de boutons)",
+                            "❤️ Bouton Like sur les chapitres",
+                            "   - Likez vos musiques préférées",
+                            "   - Aide à définir les styles des prochaines éditions",
+                            "🔔 Inscription aux nouveautés",
+                            "   - Recevez les annonces : Prières, Promesses, Confessions",
+                            "🎨 Interface améliorée",
+                            "   - Meilleur alignement sur mobile",
+                            "   - Design harmonisé"
+                        ]
+                    },
+                    {
+                        date: "2 Janvier 2026",
+                        version: "V3.2",
+                        featured: false,
+                        items: [
+                            "🔍 Recherche sémantique intelligente",
+                            "💬 \"Comment vous sentez-vous ?\" - Trouvez le chapitre parfait",
+                            "🎯 12 familles thématiques (peur, solitude, burnout, joie...)",
+                            "🌍 Recherche en 7 langues (FR, EN, PT, ES, DE, IT, TL)",
+                            "📖 Exemples : peur → Psaume 23, 27, 91 | burnout → 1 Rois 19"
+                        ]
+                    },
+                    {
+                        date: "1er Janvier 2026",
+                        version: "V3.1",
+                        items: [
+                            "🎵 Mode Radio activé (lecture continue)",
+                            "❓ Page Aide avec FAQ complète",
+                            "📖 Page À propos redessinée",
+                            "❤️ 10 Confessions en 7 langues (FR, EN, PT, ES, DE, IT, TL)",
+                            "🔗 Bouton partage dynamique (livre/chapitre actuel)"
+                        ]
+                    },
+                    {
+                        date: "31 Décembre 2025",
+                        version: "V3.0",
+                        items: [
+                            "🚀 Lancement Bible Chantée V3",
+                            "🎵 1189 chapitres de la Bible en musique",
+                            "🌍 7 langues audio disponibles (FR, EN, PT, ES, DE, IT, TL)",
+                            "📝 7 langues pour les paroles et interface",
+                            "🎨 Nouvelle interface bleu nuit + or",
+                            "☁️ Audio hébergé sur Cloudflare R2",
+                            "⚡ Chargement ultra-rapide"
+                        ]
+                    },
+                    {
+                        date: "Décembre 2025",
+                        version: "V2",
+                        items: [
+                            "📦 Migration depuis Archive.org",
+                            "🌐 Ajout des 7 premières langues audio",
+                            "🎨 Interface améliorée"
+                        ]
+                    }
+                ]
+            },
+            EN: {
+                pageTitle: "🆕 What's New",
+                pageSubtitle: "Latest updates",
+                backBtn: "← Back to Player",
+                tryNow: "Try it now →",
+                featured: "NEW",
+                updates: [
+                    {
+                        date: "January 10, 2026",
+                        version: "V3.4",
+                        featured: true,
+                        items: [
+                            "🙏 Sung Prayers Page",
+                            "   - 35 audio prayers in 7 languages",
+                            "   - Synchronized lyrics + integrated player",
+                            "⭐ COMPLETE Favorites System",
+                            "   - Favorites on Prayers, Confessions AND Promises",
+                            "   - Mark your favorite content (star)",
+                            "   - Filter to see only favorites",
+                            "   - Persistent automatic save",
+                            "🔧 Title and lyrics fixes"
+                        ],
+                        link: "prayers.html"
+                    },
+                    {
+                        date: "January 7, 2026",
+                        version: "V3.3",
+                        featured: false,
+                        items: [
+                            "📋 Dropdown menu for chapter selection",
+                            "   - Simplified navigation (no more button grids)",
+                            "❤️ Like button on chapters",
+                            "   - Like your favorite music",
+                            "   - Helps define styles for next editions",
+                            "🔔 Newsletter subscription",
+                            "   - Receive announcements: Prayers, Promises, Confessions",
+                            "🎨 Improved interface",
+                            "   - Better mobile alignment",
+                            "   - Harmonized design"
+                        ]
+                    },
+                    {
+                        date: "January 2, 2026",
+                        version: "V3.2",
+                        featured: false,
+                        items: [
+                            "🔍 Intelligent semantic search",
+                            "💬 \"How are you feeling?\" - Find the perfect chapter",
+                            "🎯 12 thematic families (fear, loneliness, burnout, joy...)",
+                            "🌍 Search in 7 languages (FR, EN, PT, ES, DE, IT, TL)",
+                            "📖 Examples: fear → Psalm 23, 27, 91 | burnout → 1 Kings 19"
+                        ]
+                    },
+                    {
+                        date: "January 1, 2026",
+                        version: "V3.1",
+                        items: [
+                            "🎵 Radio mode activated (continuous playback)",
+                            "❓ Help page with complete FAQ",
+                            "📖 Redesigned About page",
+                            "❤️ 10 Confessions in 7 languages (FR, EN, PT, ES, DE, IT, TL)",
+                            "🔗 Dynamic share button (current book/chapter)"
+                        ]
+                    },
+                    {
+                        date: "December 31, 2025",
+                        version: "V3.0",
+                        items: [
+                            "🚀 Launch of Sung Bible V3",
+                            "🎵 1189 Bible chapters in music",
+                            "🌍 7 audio languages available (FR, EN, PT, ES, DE, IT, TL)",
+                            "📝 7 languages for lyrics and interface",
+                            "🎨 New midnight blue + gold interface",
+                            "☁️ Audio hosted on Cloudflare R2",
+                            "⚡ Ultra-fast loading"
+                        ]
+                    },
+                    {
+                        date: "December 2025",
+                        version: "V2",
+                        items: [
+                            "📦 Migration from Archive.org",
+                            "🌐 Added first 7 audio languages",
+                            "🎨 Improved interface"
+                        ]
+                    }
+                ]
+            },
+            PT: {
+                pageTitle: "🆕 Novidades",
+                pageSubtitle: "Últimas atualizações",
+                backBtn: "← Voltar ao Player",
+                tryNow: "Experimentar agora →",
+                featured: "NOVO",
+                updates: [
+                    {
+                        date: "10 de Janeiro de 2026",
+                        version: "V3.4",
+                        featured: true,
+                        items: [
+                            "🙏 Página Orações Cantadas",
+                            "   - 35 orações em áudio em 7 idiomas",
+                            "   - Letras sincronizadas + player integrado",
+                            "⭐ Sistema de Favoritos COMPLETO",
+                            "   - Favoritos em Orações, Confissões E Promessas",
+                            "   - Marque seus conteúdos favoritos (estrela)",
+                            "   - Filtre para ver apenas favoritos",
+                            "   - Salvamento automático persistente",
+                            "🔧 Correções de títulos e letras"
+                        ],
+                        link: "prayers.html"
+                    },
+                    {
+                        date: "7 de Janeiro de 2026",
+                        version: "V3.3",
+                        featured: false,
+                        items: [
+                            "📋 Menu suspenso para seleção de capítulos",
+                            "   - Navegação simplificada (chega de grades de botões)",
+                            "❤️ Botão Like nos capítulos",
+                            "   - Curta suas músicas favoritas",
+                            "   - Ajuda a definir os estilos das próximas edições",
+                            "🔔 Inscrição para novidades",
+                            "   - Receba anúncios: Orações, Promessas, Confissões",
+                            "🎨 Interface melhorada",
+                            "   - Melhor alinhamento no celular",
+                            "   - Design harmonizado"
+                        ]
+                    },
+                    {
+                        date: "2 de Janeiro de 2026",
+                        version: "V3.2",
+                        featured: false,
+                        items: [
+                            "🔍 Pesquisa semântica inteligente",
+                            "💬 \"Como você está se sentindo?\" - Encontre o capítulo perfeito",
+                            "🎯 12 famílias temáticas (medo, solidão, burnout, alegria...)",
+                            "🌍 Pesquisa em 7 idiomas (FR, EN, PT, ES, DE, IT, TL)",
+                            "📖 Exemplos: medo → Salmo 23, 27, 91 | burnout → 1 Reis 19"
+                        ]
+                    },
+                    {
+                        date: "1 de Janeiro de 2026",
+                        version: "V3.1",
+                        items: [
+                            "🎵 Modo Rádio ativado (reprodução contínua)",
+                            "❓ Página de Ajuda com FAQ completo",
+                            "📖 Página Sobre redesenhada",
+                            "❤️ 10 Confissões em 7 idiomas (FR, EN, PT, ES, DE, IT, TL)",
+                            "🔗 Botão de compartilhamento dinâmico (livro/capítulo atual)"
+                        ]
+                    },
+                    {
+                        date: "31 de Dezembro de 2025",
+                        version: "V3.0",
+                        items: [
+                            "🚀 Lançamento da Bíblia Cantada V3",
+                            "🎵 1189 capítulos da Bíblia em música",
+                            "🌍 7 idiomas de áudio disponíveis (FR, EN, PT, ES, DE, IT, TL)",
+                            "📝 7 idiomas para letras e interface",
+                            "🎨 Nova interface azul noite + dourado",
+                            "☁️ Áudio hospedado no Cloudflare R2",
+                            "⚡ Carregamento ultra-rápido"
+                        ]
+                    },
+                    {
+                        date: "Dezembro de 2025",
+                        version: "V2",
+                        items: [
+                            "📦 Migração do Archive.org",
+                            "🌐 Adição dos primeiros 6 idiomas de áudio",
+                            "🎨 Interface melhorada"
+                        ]
+                    }
+                ]
+            },
+            ES: {
+                pageTitle: "🆕 Novedades",
+                pageSubtitle: "Últimas actualizaciones",
+                backBtn: "← Volver al Reproductor",
+                tryNow: "Probar ahora →",
+                featured: "NUEVO",
+                updates: [
+                    {
+                        date: "10 de Enero de 2026",
+                        version: "V3.4",
+                        featured: true,
+                        items: [
+                            "🙏 Página Oraciones Cantadas",
+                            "   - 35 oraciones en audio en 7 idiomas",
+                            "   - Letras sincronizadas + reproductor integrado",
+                            "⭐ Sistema de Favoritos COMPLETO",
+                            "   - Favoritos en Oraciones, Confesiones Y Promesas",
+                            "   - Marca tus contenidos favoritos (estrella)",
+                            "   - Filtra para ver solo favoritos",
+                            "   - Guardado automático persistente",
+                            "🔧 Correcciones de títulos y letras"
+                        ],
+                        link: "prayers.html"
+                    },
+                    {
+                        date: "7 de Enero de 2026",
+                        version: "V3.3",
+                        featured: false,
+                        items: [
+                            "📋 Menú desplegable para selección de capítulos",
+                            "   - Navegación simplificada (adiós a las cuadrículas de botones)",
+                            "❤️ Botón Me gusta en los capítulos",
+                            "   - Dale me gusta a tus músicas favoritas",
+                            "   - Ayuda a definir los estilos de las próximas ediciones",
+                            "🔔 Suscripción a novedades",
+                            "   - Recibe anuncios: Oraciones, Promesas, Confesiones",
+                            "🎨 Interfaz mejorada",
+                            "   - Mejor alineación en móvil",
+                            "   - Diseño armonizado"
+                        ]
+                    },
+                    {
+                        date: "2 de Enero de 2026",
+                        version: "V3.2",
+                        featured: false,
+                        items: [
+                            "🔍 Búsqueda semántica inteligente",
+                            "💬 \"¿Cómo te sientes?\" - Encuentra el capítulo perfecto",
+                            "🎯 12 familias temáticas (miedo, soledad, burnout, alegría...)",
+                            "🌍 Búsqueda en 7 idiomas (FR, EN, PT, ES, DE, IT, TL)",
+                            "📖 Ejemplos: miedo → Salmo 23, 27, 91 | burnout → 1 Reyes 19"
+                        ]
+                    },
+                    {
+                        date: "1 de Enero de 2026",
+                        version: "V3.1",
+                        items: [
+                            "🎵 Modo Radio activado (reproducción continua)",
+                            "❓ Página de Ayuda con FAQ completo",
+                            "📖 Página Acerca de rediseñada",
+                            "❤️ 10 Confesiones en 7 idiomas (FR, EN, PT, ES, DE, IT, TL)",
+                            "🔗 Botón de compartir dinámico (libro/capítulo actual)"
+                        ]
+                    },
+                    {
+                        date: "31 de Diciembre de 2025",
+                        version: "V3.0",
+                        items: [
+                            "🚀 Lanzamiento de Biblia Cantada V3",
+                            "🎵 1189 capítulos de la Biblia en música",
+                            "🌍 7 idiomas de audio disponibles (FR, EN, PT, ES, DE, IT, TL)",
+                            "📝 7 idiomas para letras e interfaz",
+                            "🎨 Nueva interfaz azul noche + dorado",
+                            "☁️ Audio alojado en Cloudflare R2",
+                            "⚡ Carga ultra-rápida"
+                        ]
+                    },
+                    {
+                        date: "Diciembre de 2025",
+                        version: "V2",
+                        items: [
+                            "📦 Migración desde Archive.org",
+                            "🌐 Adición de los primeros 6 idiomas de audio",
+                            "🎨 Interfaz mejorada"
+                        ]
+                    }
+                ]
+            },
+            DE: {
+                pageTitle: "🆕 Neuigkeiten",
+                pageSubtitle: "Neueste Updates",
+                backBtn: "← Zurück zum Player",
+                tryNow: "Jetzt ausprobieren →",
+                featured: "NEU",
+                updates: [
+                    {
+                        date: "10. Januar 2026",
+                        version: "V3.4",
+                        featured: true,
+                        items: [
+                            "🙏 Gesungene Gebete Seite",
+                            "   - 35 Audio-Gebete in 7 Sprachen",
+                            "   - Synchronisierte Texte + integrierter Player",
+                            "⭐ VOLLSTÄNDIGES Favoriten-System",
+                            "   - Favoriten für Gebete, Bekenntnisse UND Verheißungen",
+                            "   - Markieren Sie Ihre Lieblingsinhalte (Stern)",
+                            "   - Filtern, um nur Favoriten zu sehen",
+                            "   - Persistentes automatisches Speichern",
+                            "🔧 Titel- und Textkorrekturen"
+                        ],
+                        link: "prayers.html"
+                    },
+                    {
+                        date: "7. Januar 2026",
+                        version: "V3.3",
+                        featured: false,
+                        items: [
+                            "📋 Dropdown-Menü zur Kapitelauswahl",
+                            "   - Vereinfachte Navigation (keine Button-Raster mehr)",
+                            "❤️ Like-Button auf Kapiteln",
+                            "   - Liken Sie Ihre Lieblingsmusik",
+                            "   - Hilft bei der Definition der Stile für die nächsten Editionen",
+                            "🔔 Newsletter-Abonnement",
+                            "   - Erhalten Sie Ankündigungen: Gebete, Verheißungen, Bekenntnisse",
+                            "🎨 Verbesserte Benutzeroberfläche",
+                            "   - Bessere Ausrichtung auf Mobilgeräten",
+                            "   - Harmonisiertes Design"
+                        ]
+                    },
+                    {
+                        date: "2. Januar 2026",
+                        version: "V3.2",
+                        featured: false,
+                        items: [
+                            "🔍 Intelligente semantische Suche",
+                            "💬 \"Wie fühlen Sie sich?\" - Finden Sie das perfekte Kapitel",
+                            "🎯 12 thematische Familien (Angst, Einsamkeit, Burnout, Freude...)",
+                            "🌍 Suche in 7 Sprachen (FR, EN, PT, ES, DE, IT, TL)",
+                            "📖 Beispiele: Angst → Psalm 23, 27, 91 | Burnout → 1. Könige 19"
+                        ]
+                    },
+                    {
+                        date: "1. Januar 2026",
+                        version: "V3.1",
+                        items: [
+                            "🎵 Radio-Modus aktiviert (kontinuierliche Wiedergabe)",
+                            "❓ Hilfeseite mit vollständigem FAQ",
+                            "📖 Neu gestaltete Über-Seite",
+                            "❤️ 10 Bekenntnisse in 7 Sprachen (FR, EN, PT, ES, DE, IT, TL)",
+                            "🔗 Dynamischer Teilen-Button (aktuelles Buch/Kapitel)"
+                        ]
+                    },
+                    {
+                        date: "31. Dezember 2025",
+                        version: "V3.0",
+                        items: [
+                            "🚀 Start der Gesungenen Bibel V3",
+                            "🎵 1189 Bibelkapitel in Musik",
+                            "🌍 7 Audiosprachen verfügbar (FR, EN, PT, ES, DE, IT, TL)",
+                            "📝 7 Sprachen für Texte und Benutzeroberfläche",
+                            "🎨 Neues nachtblau + gold Interface",
+                            "☁️ Audio auf Cloudflare R2 gehostet",
+                            "⚡ Ultra-schnelles Laden"
+                        ]
+                    },
+                    {
+                        date: "Dezember 2025",
+                        version: "V2",
+                        items: [
+                            "📦 Migration von Archive.org",
+                            "🌐 Hinzufügung der ersten 6 Audiosprachen",
+                            "🎨 Verbesserte Benutzeroberfläche"
+                        ]
+                    }
+                ]
+            },
+            IT: {
+                pageTitle: "🆕 Novità",
+                pageSubtitle: "Ultimi aggiornamenti",
+                backBtn: "← Torna al Lettore",
+                tryNow: "Prova ora →",
+                featured: "NUOVO",
+                updates: [
+                    {
+                        date: "10 Gennaio 2026",
+                        version: "V3.4",
+                        featured: true,
+                        items: [
+                            "🙏 Pagina Preghiere Cantate",
+                            "   - 35 preghiere audio in 7 lingue",
+                            "   - Testi sincronizzati + lettore integrato",
+                            "⭐ Sistema Preferiti COMPLETO",
+                            "   - Preferiti su Preghiere, Confessioni E Promesse",
+                            "   - Segna i tuoi contenuti preferiti (stella)",
+                            "   - Filtra per vedere solo i preferiti",
+                            "   - Salvataggio automatico persistente",
+                            "🔧 Correzioni titoli e testi"
+                        ],
+                        link: "prayers.html"
+                    },
+                    {
+                        date: "7 Gennaio 2026",
+                        version: "V3.3",
+                        featured: false,
+                        items: [
+                            "📋 Menu a discesa per selezione capitoli",
+                            "   - Navigazione semplificata (basta griglie di pulsanti)",
+                            "❤️ Pulsante Mi piace sui capitoli",
+                            "   - Metti mi piace alle tue musiche preferite",
+                            "   - Aiuta a definire gli stili delle prossime edizioni",
+                            "🔔 Iscrizione alle novità",
+                            "   - Ricevi annunci: Preghiere, Promesse, Confessioni",
+                            "🎨 Interfaccia migliorata",
+                            "   - Migliore allineamento su mobile",
+                            "   - Design armonizzato"
+                        ]
+                    },
+                    {
+                        date: "2 Gennaio 2026",
+                        version: "V3.2",
+                        featured: false,
+                        items: [
+                            "🔍 Ricerca semantica intelligente",
+                            "💬 \"Come ti senti?\" - Trova il capitolo perfetto",
+                            "🎯 12 famiglie tematiche (paura, solitudine, burnout, gioia...)",
+                            "🌍 Ricerca in 7 lingue (FR, EN, PT, ES, DE, IT, TL)",
+                            "📖 Esempi: paura → Salmo 23, 27, 91 | burnout → 1 Re 19"
+                        ]
+                    },
+                    {
+                        date: "1 Gennaio 2026",
+                        version: "V3.1",
+                        items: [
+                            "🎵 Modalità Radio attivata (riproduzione continua)",
+                            "❓ Pagina Aiuto con FAQ completo",
+                            "📖 Pagina Chi Siamo ridisegnata",
+                            "❤️ 10 Confessioni in 7 lingue (FR, EN, PT, ES, DE, IT, TL)",
+                            "🔗 Pulsante condivisione dinamico (libro/capitolo corrente)"
+                        ]
+                    },
+                    {
+                        date: "31 Dicembre 2025",
+                        version: "V3.0",
+                        items: [
+                            "🚀 Lancio Bibbia Cantata V3",
+                            "🎵 1189 capitoli della Bibbia in musica",
+                            "🌍 7 lingue audio disponibili (FR, EN, PT, ES, DE, IT, TL)",
+                            "📝 7 lingue per testi e interfaccia",
+                            "🎨 Nuova interfaccia blu notte + oro",
+                            "☁️ Audio ospitato su Cloudflare R2",
+                            "⚡ Caricamento ultra-veloce"
+                        ]
+                    },
+                    {
+                        date: "Dicembre 2025",
+                        version: "V2",
+                        items: [
+                            "📦 Migrazione da Archive.org",
+                            "🌐 Aggiunta delle prime 6 lingue audio",
+                            "🎨 Interfaccia migliorata"
+                        ]
+                    }
+                ]
+            },
+            TL: {
+                pageTitle: "🆕 Mga Bagong Update",
+                pageSubtitle: "Pinakabagong mga pagbabago",
+                backBtn: "← Bumalik sa Player",
+                tryNow: "Subukan ngayon →",
+                featured: "BAGO",
+                updates: [
+                    {
+                        date: "Enero 10, 2026",
+                        version: "V3.4",
+                        featured: true,
+                        items: [
+                            "🙏 Pahina ng mga Panalangin na Inaawit",
+                            "   - 35 audio na panalangin sa 7 wika",
+                            "   - Naka-sync na lyrics + integrated player",
+                            "⭐ KUMPLETONG Sistema ng mga Paborito",
+                            "   - Mga paborito sa Panalangin, Pagtatapat AT Pangako",
+                            "   - Markahan ang iyong mga paboritong nilalaman (bituin)",
+                            "   - I-filter upang makita lamang ang mga paborito",
+                            "   - Awtomatikong pag-save na persistent",
+                            "🔧 Mga pagwawasto sa pamagat at lyrics"
+                        ],
+                        link: "prayers.html"
+                    },
+                    {
+                        date: "Enero 7, 2026",
+                        version: "V3.3",
+                        featured: false,
+                        items: [
+                            "📋 Dropdown menu para sa chapter selection",
+                            "   - Simplified navigation",
+                            "❤️ Like button sa mga chapter",
+                            "   - Like ang iyong favorite music",
+                            "   - Tumutulong sa pagdefine ng styles para sa susunod",
+                            "🔔 Newsletter subscription",
+                            "   - Makatanggap ng announcements",
+                            "🎨 Improved interface",
+                            "   - Better mobile alignment",
+                            "   - Harmonized design"
+                        ]
+                    },
+                    {
+                        date: "Enero 2, 2026",
+                        version: "V3.2",
+                        featured: false,
+                        items: [
+                            "🔍 Intelligent semantic search",
+                            "💬 \"Paano mo nararamdaman?\" - Hanapin ang perfect chapter",
+                            "🎯 12 thematic families",
+                            "🌍 Search sa 7 wika",
+                            "📖 Mga halimbawa: takot → Salmo 23, 27, 91"
+                        ]
+                    },
+                    {
+                        date: "Enero 1, 2026",
+                        version: "V3.1",
+                        items: [
+                            "🎵 Radio mode (continuous playback)",
+                            "❓ Help page na may FAQ",
+                            "📖 Redesigned About page",
+                            "❤️ 10 Pangungumpisal sa 7 wika",
+                            "🔗 Dynamic share button"
+                        ]
+                    },
+                    {
+                        date: "Disyembre 31, 2025",
+                        version: "V3.0",
+                        items: [
+                            "🚀 Launch ng Sung Bible V3",
+                            "🎵 1189 kabanata ng Bibliya sa musika",
+                            "🌍 7 audio languages available",
+                            "📝 7 wika para sa lyrics at interface",
+                            "🎨 Bagong midnight blue + gold interface",
+                            "☁️ Audio hosted sa Cloudflare R2",
+                            "⚡ Ultra-fast loading"
+                        ]
+                    },
+                    {
+                        date: "Disyembre 2025",
+                        version: "V2",
+                        items: [
+                            "📦 Migration mula Archive.org",
+                            "🌐 Idinagdag ang unang 6 audio languages",
+                            "🎨 Improved interface"
+                        ]
+                    }
+                ]
+            }
+        };
+
+        function updateContent(lang) {
+            const t = TRANSLATIONS[lang] || TRANSLATIONS.FR;
+
+            document.getElementById('pageTitle').textContent = t.pageTitle;
+            document.getElementById('pageSubtitle').textContent = t.pageSubtitle;
+            document.getElementById('backBtn').textContent = t.backBtn;
+
+            const updatesContainer = document.getElementById('updatesContainer');
+            updatesContainer.innerHTML = '';
+
+            t.updates.forEach(update => {
+                const updateDiv = document.createElement('div');
+                updateDiv.className = update.featured ? 'update-card featured' : 'update-card';
+                
+                let headerHTML = `
+                    <div class="update-header">
+                        <div class="update-date">${update.date}${update.featured ? `<span class="featured-badge">${t.featured}</span>` : ''}</div>
+                        <div class="update-version">${update.version}</div>
+                    </div>
+                `;
+                
+                let listHTML = `
+                    <ul class="update-list">
+                        ${update.items.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                `;
+
+                let btnLink = update.link || 'lecteur.html';
+                let btnHTML = update.featured ? `<a href="${btnLink}" class="try-btn">${t.tryNow}</a>` : '';
+
+                updateDiv.innerHTML = headerHTML + listHTML + btnHTML;
+                updatesContainer.appendChild(updateDiv);
+            });
+        }
+
+        // Initialize
+        updateContent(currentLang);
+    </script>
+</body>
+</html>

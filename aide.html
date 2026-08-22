@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aide - Bible Chantée V3</title>
+  <script src="analytics-tracking.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bleu-nuit: #1E3A5F;
+            --bleu-sombre: #162B46;
+            --bleu-cartes: #243F66;
+            --bleu-hover: #2C4A73;
+            --or-moyen: #F5CB42;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--bleu-sombre) 0%, var(--bleu-nuit) 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: var(--or-moyen);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #b0b0b0;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background: transparent;
+            border: 2px solid var(--or-moyen);
+            border-radius: 25px;
+            color: var(--or-moyen);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            background: var(--or-moyen);
+            color: var(--bleu-nuit);
+        }
+
+        .faq-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            color: var(--or-moyen);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .faq-item {
+            background: rgba(30, 58, 95, 0.8);
+            border-radius: 11px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 5px 20px rgba(245, 200, 66, 0.2);
+        }
+
+        .faq-question {
+            padding: 18px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bleu-cartes);
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: var(--bleu-hover);
+        }
+
+        .faq-question-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--or-moyen);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--or-moyen);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 20px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 20px;
+        }
+
+        .faq-answer-text {
+            color: #e0e0e0;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .faq-answer ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .faq-answer li {
+            margin-bottom: 8px;
+        }
+
+        .contact-card {
+            background: rgba(30, 58, 95, 0.8);
+            border-radius: 11px;
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .contact-card h3 {
+            color: var(--or-moyen);
+            margin-bottom: 15px;
+        }
+
+        .contact-card p {
+            color: #b0b0b0;
+            margin-bottom: 20px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--or-moyen);
+            color: var(--bleu-nuit);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(245, 200, 66, 0.4);
+        }
+
+        .footer {
+            text-align: center;
+            color: #808080;
+            margin-top: 50px;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            .faq-question-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="pageTitle">Aide</h1>
+            <p class="subtitle" id="pageSubtitle">Découvrez comment utiliser Bible Chantée</p>
+            <a href="lecteur.html" class="back-btn" id="backBtn">← Retour au Lecteur</a>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="section-title" id="faqTitle">Questions Fréquentes</h2>
+            <div id="faqContainer"></div>
+        </div>
+
+        <div class="contact-card">
+            <h3 id="contactTitle">Besoin d'aide supplémentaire ?</h3>
+            <p id="contactText">Notre équipe est là pour vous aider</p>
+            <a href="mailto:info@biblechantee.com" class="contact-btn" id="contactBtn">Nous contacter</a>
+        </div>
+
+        <div class="faq-card" style="background: linear-gradient(135deg, #243F66 0%, #1E3A5F 100%); border: 2px solid var(--or-moyen); margin-top: 30px;">
+            <div class="faq-icon">💝</div>
+            <h3 style="color: var(--or-moyen);" id="supportTitle">Soutenir le projet</h3>
+            <p id="supportText">Bible Chantée est un projet gratuit et bénévole. Si cette application vous bénit, vous pouvez nous aider à continuer et à atteindre plus de personnes dans le monde.</p>
+            <a href="crowdfunding.html" class="contact-btn" style="margin-top: 15px; display: inline-block;" id="supportBtn">💝 Faire un don</a>
+        </div>
+
+        <div class="footer">
+            © 2025 Bible Chantée — V3
+        </div>
+    </div>
+
+    <script>
+        // Traductions
+        const TRANSLATIONS = {
+            FR: {
+                pageTitle: "Aide",
+                pageSubtitle: "Découvrez comment utiliser Bible Chantée",
+                backBtn: "← Retour au Lecteur",
+                faqTitle: "Questions Fréquentes",
+                contactTitle: "Besoin d'aide supplémentaire ?",
+                contactText: "Notre équipe est là pour vous aider",
+                contactBtn: "Nous contacter",
+                supportTitle: "Soutenir le projet",
+                supportText: "Bible Chantée est un projet gratuit et bénévole. Si cette application vous bénit, vous pouvez nous aider à continuer et à atteindre plus de personnes dans le monde.",
+                supportBtn: "💝 Faire un don",
+                faqs: [
+                    {
+                        q: "Comment écouter la Bible ?",
+                        a: "Pour écouter la Bible :<ul><li>Sélectionnez un livre dans le menu déroulant en haut</li><li>Choisissez un chapitre en cliquant sur sa carte</li><li>Appuyez sur le bouton Play pour commencer l'écoute</li><li>Utilisez les contrôles pour mettre en pause, avancer ou reculer</li></ul>"
+                    },
+                    {
+                        q: "Comment changer de langue ?",
+                        a: "Pour changer la langue :<ul><li>Cliquez sur les drapeaux en haut de l'écran</li><li>Sélectionnez votre langue préférée (FR, EN, PT, ES, DE, IT, TL)</li><li>Le contenu se mettra automatiquement à jour</li><li>Votre choix est sauvegardé pour vos prochaines visites</li></ul>"
+                    },
+                    {
+                        q: "Pourquoi seulement 7 langues ?",
+                        a: "Bible Chantée est actuellement disponible en 7 langues : Français (FR), Anglais (EN), Portugais (PT), Espagnol (ES), Allemand (DE), Italien (IT) et Tagalog (TL). Ces langues couvrent environ 60% des chrétiens dans le monde.<br><br>Nous avons testé d'autres langues (Chinois, Arabe, Russe, Hindi, Swahili, Hébreu) mais malheureusement l'IA musicale Suno V5 ne les supporte pas encore correctement. La qualité audio était insuffisante.<br><br>Nous explorons activement des solutions alternatives (synthèse vocale premium + musique instrumentale) pour proposer ces langues à l'avenir. Restez connectés pour les mises à jour !"
+                    },
+                    {
+                        q: "Comment fonctionne le mode Radio ?",
+                        a: "Le mode Radio vous permet d'écouter la Bible en continu :<ul><li>Cliquez sur le bouton 📻 Radio dans le menu</li><li>Le lecteur passera automatiquement au chapitre suivant</li><li>Profitez d'une écoute ininterrompue de la Parole de Dieu</li><li>Cliquez à nouveau sur le bouton 📻 Radio pour revenir au mode normal</li></ul>"
+                    },
+                    {
+                        q: "Comment voir les paroles ?",
+                        a: "Pour afficher les paroles :<ul><li>Cliquez sur le bouton 🎤 Paroles pendant la lecture</li><li>Les paroles du chapitre s'afficheront à l'écran</li><li>Suivez le texte pendant que vous écoutez</li><li>Cliquez à nouveau pour masquer les paroles</li></ul>"
+                    },
+                    {
+                        q: "Comment partager un chapitre ?",
+                        a: "Pour partager un chapitre :<ul><li>Sélectionnez le livre et le chapitre que vous souhaitez partager</li><li>Cliquez sur le bouton de partage (icône ⤴️)</li><li>Choisissez votre méthode de partage préférée</li><li>Le lien partagé ouvrira directement ce chapitre</li></ul>"
+                    },
+                    {
+                        q: "Problèmes de lecture audio ?",
+                        a: "Si vous rencontrez des problèmes :<ul><li>Vérifiez votre connexion Internet</li><li>Actualisez la page (F5 ou Ctrl+R)</li><li>Vérifiez que votre volume n'est pas en sourdine</li><li>Essayez un autre navigateur (Chrome, Firefox, Safari)</li><li>Contactez-nous si le problème persiste</li></ul>"
+                    }
+                ]
+            },
+            EN: {
+                pageTitle: "Help",
+                pageSubtitle: "Learn how to use Bible Chantée",
+                backBtn: "← Back to Player",
+                faqTitle: "Frequently Asked Questions",
+                contactTitle: "Need more help?",
+                contactText: "Our team is here to help you",
+                contactBtn: "Contact Us",
+                supportTitle: "Support the project",
+                supportText: "Bible Chantée is a free volunteer project. If this app blesses you, you can help us continue and reach more people around the world.",
+                supportBtn: "💝 Make a donation",
+                faqs: [
+                    {
+                        q: "How to listen to the Bible?",
+                        a: "To listen to the Bible:<ul><li>Select a book from the dropdown menu at the top</li><li>Choose a chapter by clicking on its card</li><li>Press the Play button to start listening</li><li>Use controls to pause, forward or rewind</li></ul>"
+                    },
+                    {
+                        q: "How to change language?",
+                        a: "To change the language:<ul><li>Click on the flags at the top of the screen</li><li>Select your preferred language (FR, EN, PT, ES, DE, IT, TL)</li><li>Content will update automatically</li><li>Your choice is saved for future visits</li></ul>"
+                    },
+                    {
+                        q: "Why only 7 languages?",
+                        a: "Bible Chantée is currently available in 7 languages: French (FR), English (EN), Portuguese (PT), Spanish (ES), German (DE), Italian (IT), and Tagalog (TL). These languages cover approximately 60% of Christians worldwide.<br><br>We tested other languages (Chinese, Arabic, Russian, Hindi, Swahili, Hebrew) but unfortunately Suno V5 AI doesn't support them properly yet. The audio quality was insufficient.<br><br>We are actively exploring alternative solutions (premium text-to-speech + instrumental music) to offer these languages in the future. Stay tuned for updates!"
+                    },
+                    {
+                        q: "How does Radio mode work?",
+                        a: "Radio mode lets you listen to the Bible continuously:<ul><li>Click the 📻 Radio button in the menu</li><li>The player will automatically move to the next chapter</li><li>Enjoy uninterrupted listening to God's Word</li><li>Click the 📻 Radio button again to return to normal mode</li></ul>"
+                    },
+                    {
+                        q: "How to view lyrics?",
+                        a: "To display lyrics:<ul><li>Click the 🎤 Lyrics button during playback</li><li>The chapter lyrics will appear on screen</li><li>Follow along with the text while listening</li><li>Click again to hide lyrics</li></ul>"
+                    },
+                    {
+                        q: "How to share a chapter?",
+                        a: "To share a chapter:<ul><li>Select the book and chapter you want to share</li><li>Click the share button (⤴️ icon)</li><li>Choose your preferred sharing method</li><li>The shared link will open directly to that chapter</li></ul>"
+                    },
+                    {
+                        q: "Audio playback issues?",
+                        a: "If you experience problems:<ul><li>Check your Internet connection</li><li>Refresh the page (F5 or Ctrl+R)</li><li>Make sure your volume isn't muted</li><li>Try another browser (Chrome, Firefox, Safari)</li><li>Contact us if the problem persists</li></ul>"
+                    }
+                ]
+            },
+            PT: {
+                pageTitle: "Ajuda",
+                pageSubtitle: "Aprenda a usar a Bíblia Cantada",
+                backBtn: "← Voltar ao Player",
+                faqTitle: "Perguntas Frequentes",
+                contactTitle: "Precisa de mais ajuda?",
+                contactText: "Nossa equipe está aqui para ajudá-lo",
+                contactBtn: "Entre em Contato",
+                supportTitle: "Apoiar o projeto",
+                supportText: "Bíblia Cantada é um projeto gratuito e voluntário. Se este aplicativo abençoa você, pode nos ajudar a continuar e alcançar mais pessoas no mundo.",
+                supportBtn: "💝 Fazer uma doação",
+                faqs: [
+                    {
+                        q: "Como ouvir a Bíblia?",
+                        a: "Para ouvir a Bíblia:<ul><li>Selecione um livro no menu suspenso no topo</li><li>Escolha um capítulo clicando em seu cartão</li><li>Pressione o botão Play para começar a ouvir</li><li>Use os controles para pausar, avançar ou retroceder</li></ul>"
+                    },
+                    {
+                        q: "Como mudar o idioma?",
+                        a: "Para mudar o idioma:<ul><li>Clique nas bandeiras no topo da tela</li><li>Selecione seu idioma preferido (FR, EN, PT, ES, DE, IT, TL)</li><li>O conteúdo será atualizado automaticamente</li><li>Sua escolha é salva para visitas futuras</li></ul>"
+                    },
+                    {
+                        q: "Por que apenas 7 idiomas?",
+                        a: "Bíblia Cantada está disponível em 7 idiomas: Francês (FR), Inglês (EN), Português (PT), Espanhol (ES), Alemão (DE), Italiano (IT) e Tagalog (TL). Esses idiomas cobrem aproximadamente 60% dos cristãos no mundo.<br><br>Testamos outros idiomas (Chinês, Árabe, Russo, Hindi, Suaíli, Hebraico) mas infelizmente a IA musical Suno V5 ainda não os suporta adequadamente. A qualidade de áudio foi insuficiente.<br><br>Estamos explorando ativamente soluções alternativas (síntese de voz premium + música instrumental) para oferecer esses idiomas no futuro. Fique ligado para atualizações!"
+                    },
+                    {
+                        q: "Como funciona o modo Rádio?",
+                        a: "O modo Rádio permite ouvir a Bíblia continuamente:<ul><li>Clique no botão 📻 Rádio no menu</li><li>O player passará automaticamente para o próximo capítulo</li><li>Desfrute de uma escuta ininterrupta da Palavra de Deus</li><li>Você pode voltar ao modo normal a qualquer momento</li></ul>"
+                    },
+                    {
+                        q: "Como ver as letras?",
+                        a: "Para exibir as letras:<ul><li>Clique no botão 🎤 Letras durante a reprodução</li><li>As letras do capítulo aparecerão na tela</li><li>Acompanhe o texto enquanto ouve</li><li>Clique novamente para ocultar as letras</li></ul>"
+                    },
+                    {
+                        q: "Como compartilhar um capítulo?",
+                        a: "Para compartilhar um capítulo:<ul><li>Selecione o livro e o capítulo que deseja compartilhar</li><li>Clique no botão de compartilhamento (ícone ⤴️)</li><li>Escolha seu método de compartilhamento preferido</li><li>O link compartilhado abrirá diretamente nesse capítulo</li></ul>"
+                    },
+                    {
+                        q: "Problemas com reprodução de áudio?",
+                        a: "Se você tiver problemas:<ul><li>Verifique sua conexão com a Internet</li><li>Atualize a página (F5 ou Ctrl+R)</li><li>Certifique-se de que seu volume não está no mudo</li><li>Tente outro navegador (Chrome, Firefox, Safari)</li><li>Entre em contato se o problema persistir</li></ul>"
+                    }
+                ]
+            },
+            ES: {
+                pageTitle: "Ayuda",
+                pageSubtitle: "Aprende a usar Biblia Cantada",
+                backBtn: "← Volver al Reproductor",
+                faqTitle: "Preguntas Frecuentes",
+                contactTitle: "¿Necesitas más ayuda?",
+                contactText: "Nuestro equipo está aquí para ayudarte",
+                contactBtn: "Contáctanos",
+                supportTitle: "Apoyar el proyecto",
+                supportText: "Biblia Cantada es un proyecto gratuito y voluntario. Si esta aplicación te bendice, puedes ayudarnos a continuar y alcanzar más personas en el mundo.",
+                supportBtn: "💝 Hacer una donación",
+                faqs: [
+                    {
+                        q: "¿Cómo escuchar la Biblia?",
+                        a: "Para escuchar la Biblia:<ul><li>Selecciona un libro del menú desplegable en la parte superior</li><li>Elige un capítulo haciendo clic en su tarjeta</li><li>Presiona el botón Play para comenzar a escuchar</li><li>Usa los controles para pausar, avanzar o retroceder</li></ul>"
+                    },
+                    {
+                        q: "¿Cómo cambiar el idioma?",
+                        a: "Para cambiar el idioma:<ul><li>Haz clic en las banderas en la parte superior de la pantalla</li><li>Selecciona tu idioma preferido (FR, EN, PT, ES, DE, IT, etc.)</li><li>El contenido se actualizará automáticamente</li><li>Tu elección se guarda para futuras visitas</li></ul>"
+                    },
+                    {
+                        q: "¿Cómo funciona el modo Radio?",
+                        a: "El modo Radio te permite escuchar la Biblia continuamente:<ul><li>Haz clic en el botón 📻 Radio en el menú</li><li>El reproductor pasará automáticamente al siguiente capítulo</li><li>Disfruta de una escucha ininterrumpida de la Palabra de Dios</li><li>Puedes volver al modo normal en cualquier momento</li></ul>"
+                    },
+                    {
+                        q: "¿Cómo ver las letras?",
+                        a: "Para mostrar las letras:<ul><li>Haz clic en el botón 🎤 Letras durante la reproducción</li><li>Las letras del capítulo aparecerán en pantalla</li><li>Sigue el texto mientras escuchas</li><li>Haz clic de nuevo para ocultar las letras</li></ul>"
+                    },
+                    {
+                        q: "¿Cómo compartir un capítulo?",
+                        a: "Para compartir un capítulo:<ul><li>Selecciona el libro y el capítulo que deseas compartir</li><li>Haz clic en el botón de compartir (icono ⤴️)</li><li>Elige tu método de compartir preferido</li><li>El enlace compartido abrirá directamente ese capítulo</li></ul>"
+                    },
+                    {
+                        q: "¿Problemas con la reproducción de audio?",
+                        a: "Si tienes problemas:<ul><li>Verifica tu conexión a Internet</li><li>Actualiza la página (F5 o Ctrl+R)</li><li>Asegúrate de que tu volumen no esté silenciado</li><li>Prueba otro navegador (Chrome, Firefox, Safari)</li><li>Contáctanos si el problema persiste</li></ul>"
+                    }
+                ]
+            },
+            DE: {
+                pageTitle: "Hilfe",
+                pageSubtitle: "Erfahren Sie, wie Sie Bible Chantée verwenden",
+                backBtn: "← Zurück zum Player",
+                faqTitle: "Häufig gestellte Fragen",
+                contactTitle: "Benötigen Sie weitere Hilfe?",
+                contactText: "Unser Team ist hier, um Ihnen zu helfen",
+                contactBtn: "Kontaktieren Sie uns",
+                supportTitle: "Das Projekt unterstützen",
+                supportText: "Bible Chantée ist ein kostenloses Freiwilligenprojekt. Wenn diese App Sie segnet, können Sie uns helfen, weiterzumachen und mehr Menschen weltweit zu erreichen.",
+                supportBtn: "💝 Spenden",
+                faqs: [
+                    {
+                        q: "Wie höre ich die Bibel?",
+                        a: "Um die Bibel zu hören:<ul><li>Wählen Sie ein Buch aus dem Dropdown-Menü oben aus</li><li>Wählen Sie ein Kapitel, indem Sie auf seine Karte klicken</li><li>Drücken Sie die Play-Taste, um mit dem Hören zu beginnen</li><li>Verwenden Sie die Steuerelemente zum Pausieren, Vor- oder Zurückspulen</li></ul>"
+                    },
+                    {
+                        q: "Wie ändere ich die Sprache?",
+                        a: "Um die Sprache zu ändern:<ul><li>Klicken Sie auf die Flaggen oben auf dem Bildschirm</li><li>Wählen Sie Ihre bevorzugte Sprache (FR, EN, PT, ES, DE, IT, etc.)</li><li>Der Inhalt wird automatisch aktualisiert</li><li>Ihre Wahl wird für zukünftige Besuche gespeichert</li></ul>"
+                    },
+                    {
+                        q: "Wie funktioniert der Radio-Modus?",
+                        a: "Der Radio-Modus ermöglicht Ihnen, die Bibel kontinuierlich zu hören:<ul><li>Klicken Sie im Menü auf die Schaltfläche 📻 Radio</li><li>Der Player wechselt automatisch zum nächsten Kapitel</li><li>Genießen Sie ununterbrochenes Hören des Wortes Gottes</li><li>Sie können jederzeit zum normalen Modus zurückkehren</li></ul>"
+                    },
+                    {
+                        q: "Wie sehe ich die Texte?",
+                        a: "Um Texte anzuzeigen:<ul><li>Klicken Sie während der Wiedergabe auf die Schaltfläche 🎤 Texte</li><li>Die Kapiteltexte erscheinen auf dem Bildschirm</li><li>Folgen Sie dem Text beim Zuhören</li><li>Klicken Sie erneut, um die Texte auszublenden</li></ul>"
+                    },
+                    {
+                        q: "Wie teile ich ein Kapitel?",
+                        a: "Um ein Kapitel zu teilen:<ul><li>Wählen Sie das Buch und Kapitel aus, das Sie teilen möchten</li><li>Klicken Sie auf die Teilen-Schaltfläche (⤴️ Symbol)</li><li>Wählen Sie Ihre bevorzugte Methode zum Teilen</li><li>Der geteilte Link öffnet direkt dieses Kapitel</li></ul>"
+                    },
+                    {
+                        q: "Audio-Wiedergabeprobleme?",
+                        a: "Wenn Sie Probleme haben:<ul><li>Überprüfen Sie Ihre Internetverbindung</li><li>Aktualisieren Sie die Seite (F5 oder Strg+R)</li><li>Stellen Sie sicher, dass Ihr Ton nicht stumm geschaltet ist</li><li>Versuchen Sie einen anderen Browser (Chrome, Firefox, Safari)</li><li>Kontaktieren Sie uns, wenn das Problem weiterhin besteht</li></ul>"
+                    }
+                ]
+            },
+            IT: {
+                pageTitle: "Aiuto",
+                pageSubtitle: "Scopri come usare Bible Chantée",
+                backBtn: "← Torna al Lettore",
+                faqTitle: "Domande Frequenti",
+                contactTitle: "Hai bisogno di ulteriore aiuto?",
+                contactText: "Il nostro team è qui per aiutarti",
+                contactBtn: "Contattaci",
+                supportTitle: "Sostenere il progetto",
+                supportText: "Bible Chantée è un progetto gratuito e volontario. Se questa app ti benedice, puoi aiutarci a continuare e raggiungere più persone nel mondo.",
+                supportBtn: "💝 Fai una donazione",
+                faqs: [
+                    {
+                        q: "Come ascoltare la Bibbia?",
+                        a: "Per ascoltare la Bibbia:<ul><li>Seleziona un libro dal menu a discesa in alto</li><li>Scegli un capitolo cliccando sulla sua scheda</li><li>Premi il pulsante Play per iniziare l'ascolto</li><li>Usa i controlli per mettere in pausa, avanzare o riavvolgere</li></ul>"
+                    },
+                    {
+                        q: "Come cambiare lingua?",
+                        a: "Per cambiare la lingua:<ul><li>Clicca sulle bandiere nella parte superiore dello schermo</li><li>Seleziona la tua lingua preferita (FR, EN, PT, ES, DE, IT, ecc.)</li><li>Il contenuto si aggiornerà automaticamente</li><li>La tua scelta viene salvata per le visite future</li></ul>"
+                    },
+                    {
+                        q: "Come funziona la modalità Radio?",
+                        a: "La modalità Radio ti permette di ascoltare la Bibbia continuamente:<ul><li>Clicca sul pulsante 📻 Radio nel menu</li><li>Il lettore passerà automaticamente al capitolo successivo</li><li>Goditi un ascolto ininterrotto della Parola di Dio</li><li>Puoi tornare alla modalità normale in qualsiasi momento</li></ul>"
+                    },
+                    {
+                        q: "Come vedere i testi?",
+                        a: "Per visualizzare i testi:<ul><li>Clicca sul pulsante 🎤 Testi durante la riproduzione</li><li>I testi del capitolo appariranno sullo schermo</li><li>Segui il testo mentre ascolti</li><li>Clicca di nuovo per nascondere i testi</li></ul>"
+                    },
+                    {
+                        q: "Come condividere un capitolo?",
+                        a: "Per condividere un capitolo:<ul><li>Seleziona il libro e il capitolo che vuoi condividere</li><li>Clicca sul pulsante di condivisione (icona ⤴️)</li><li>Scegli il tuo metodo di condivisione preferito</li><li>Il link condiviso aprirà direttamente quel capitolo</li></ul>"
+                    },
+                    {
+                        q: "Problemi con la riproduzione audio?",
+                        a: "Se riscontri problemi:<ul><li>Controlla la tua connessione Internet</li><li>Aggiorna la pagina (F5 o Ctrl+R)</li><li>Assicurati che il volume non sia disattivato</li><li>Prova un altro browser (Chrome, Firefox, Safari)</li><li>Contattaci se il problema persiste</li></ul>"
+                    }
+                ]
+            },
+            TL: {
+                pageTitle: "Tulong",
+                pageSubtitle: "Tuklasin kung paano gamitin ang Bible Chantée",
+                backBtn: "← Bumalik sa Reader",
+                faqTitle: "Mga Madalas Itanong",
+                contactTitle: "Kailangan ng karagdagang tulong?",
+                contactText: "Ang aming koponan ay nandito upang tumulong sa iyo",
+                contactBtn: "Makipag-ugnayan sa Amin",
+                supportTitle: "Suportahan ang proyekto",
+                supportText: "Ang Bible Chantée ay isang libreng at boluntaryong proyekto. Kung pinagpala ka ng app na ito, maaari mong tulungan kami na magpatuloy at maabot ang mas maraming tao sa mundo.",
+                supportBtn: "💝 Mag-donate",
+                faqs: [
+                    {
+                        q: "Paano makinig sa Bibliya?",
+                        a: "Upang makinig sa Bibliya:<ul><li>Pumili ng libro mula sa dropdown menu sa itaas</li><li>Pumili ng kabanata sa pamamagitan ng pag-click sa card nito</li><li>Pindutin ang Play button upang magsimula ng pakikinig</li><li>Gamitin ang mga kontrol upang mag-pause, mag-fast forward, o mag-rewind</li></ul>"
+                    },
+                    {
+                        q: "Paano magpalit ng wika?",
+                        a: "Upang magpalit ng wika:<ul><li>I-click ang mga bandila sa itaas ng screen</li><li>Piliin ang iyong gustong wika (FR, EN, PT, ES, DE, IT, atbp.)</li><li>Ang nilalaman ay awtomatikong mag-a-update</li><li>Ang iyong pagpili ay naka-save para sa mga susunod na bisita</li></ul>"
+                    },
+                    {
+                        q: "Paano gumagana ang Radio mode?",
+                        a: "Ang Radio mode ay nagbibigay-daan sa iyo na makinig sa Bibliya nang tuluy-tuloy:<ul><li>I-click ang 📻 Radio button sa menu</li><li>Ang player ay awtomatikong lilipat sa susunod na kabanata</li><li>Tamasahin ang walang tigil na pakikinig sa Salita ng Diyos</li><li>Maaari kang bumalik sa normal na mode anumang oras</li></ul>"
+                    },
+                    {
+                        q: "Paano makita ang lyrics?",
+                        a: "Upang makita ang lyrics:<ul><li>I-click ang 🎤 Lyrics button habang tumutugtog</li><li>Ang lyrics ng kabanata ay lalabas sa screen</li><li>Sundin ang teksto habang nakikinig</li><li>I-click muli upang itago ang lyrics</li></ul>"
+                    },
+                    {
+                        q: "Paano ibahagi ang isang kabanata?",
+                        a: "Upang ibahagi ang isang kabanata:<ul><li>Pumili ng libro at kabanata na nais mong ibahagi</li><li>I-click ang share button (icon na ⤴️)</li><li>Pumili ng iyong gustong paraan ng pagbabahagi</li><li>Ang shared link ay direktang magbubukas ng kabanatang iyon</li></ul>"
+                    },
+                    {
+                        q: "Mga problema sa audio playback?",
+                        a: "Kung mayroon kang mga problema:<ul><li>Suriin ang iyong koneksyon sa Internet</li><li>I-refresh ang page (F5 o Ctrl+R)</li><li>Siguraduhin na ang volume ay hindi naka-mute</li><li>Subukan ang ibang browser (Chrome, Firefox, Safari)</li><li>Makipag-ugnayan sa amin kung ang problema ay patuloy</li></ul>"
+                    }
+                ]
+            }
+        };
+
+        // Résoudre la langue (priorité: URL > localStorage > défaut)
+        const params = new URLSearchParams(window.location.search);
+        let currentLang = params.get('lang') || localStorage.getItem('bc_lang') || 'FR';
+        currentLang = currentLang.toUpperCase();
+
+        // Sauvegarder dans localStorage pour cohérence
+        localStorage.setItem('bc_lang', currentLang);
+
+        // Update page content
+        function updateContent(lang) {
+            const t = TRANSLATIONS[lang] || TRANSLATIONS.FR;
+
+            document.getElementById('pageTitle').textContent = t.pageTitle;
+            document.getElementById('pageSubtitle').textContent = t.pageSubtitle;
+            document.getElementById('backBtn').textContent = t.backBtn;
+            document.getElementById('faqTitle').textContent = t.faqTitle;
+            document.getElementById('contactTitle').textContent = t.contactTitle;
+            document.getElementById('contactText').textContent = t.contactText;
+            document.getElementById('contactBtn').textContent = t.contactBtn;
+            document.getElementById('supportTitle').textContent = t.supportTitle;
+            document.getElementById('supportText').textContent = t.supportText;
+            document.getElementById('supportBtn').textContent = t.supportBtn;
+
+            // Generate FAQ items
+            const faqContainer = document.getElementById('faqContainer');
+            faqContainer.innerHTML = '';
+
+            t.faqs.forEach((faq, index) => {
+                const faqItem = document.createElement('div');
+                faqItem.className = 'faq-item';
+                faqItem.innerHTML = `
+                    <div class="faq-question" data-index="${index}">
+                        <span class="faq-question-text">${faq.q}</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-text">${faq.a}</div>
+                    </div>
+                `;
+                faqContainer.appendChild(faqItem);
+            });
+
+            // Add click handlers to questions
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', () => {
+                    const item = question.parentElement;
+                    const wasActive = item.classList.contains('active');
+
+                    // Close all items
+                    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+                    // Toggle current item
+                    if (!wasActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        // Initialize
+        updateContent(currentLang);
+    </script>
+</body>
+</html>
+
+
+
