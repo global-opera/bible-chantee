@@ -1317,6 +1317,12 @@ function isVerseLikeEN(s){
         <span class="icon">🎵</span>
         <span class="text">Spotify</span>
       </a>
+      <!-- Page artiste Apple Music, sans storefront : chaque visiteur est
+           redirige vers sa boutique locale, dans sa langue. Masque en DE/IT/TL. -->
+      <a href="https://music.apple.com/artist/1860864175" target="_blank" rel="noopener" class="nav-btn" id="navApple">
+        <span class="icon">🍎</span>
+        <span class="text">Apple Music</span>
+      </a>
     </div>
 
     <!-- LIGNE 3: SOUTENIR + RECHERCHE + LOUPE + WHATSAPP (alignée sur rows 1-2) -->
@@ -1518,6 +1524,12 @@ function isVerseLikeEN(s){
     // Traductions
     // Playlists Spotify par langue. Seules 4 langues en ont une : DE, IT et TL
     // ne sont pas distribuees, le bouton est donc masque pour elles.
+    // Langues reellement distribuees sur les plateformes d'ecoute.
+    // DE, IT et TL n'y ont aucun titre : les boutons Spotify et Apple Music
+    // sont masques pour elles plutot que de renvoyer vers un autre catalogue.
+    const DISTRIBUTED_LANGS = ['FR', 'EN', 'PT', 'ES'];
+    const APPLE_MUSIC_URL = 'https://music.apple.com/artist/1860864175';
+
     const SPOTIFY_PLAYLISTS = {
       FR: '2xpVskRxm0yHtbvPwY8gA7',
       EN: '6eKCbf1yMuOUJZi3OUjv9f',
@@ -2369,6 +2381,11 @@ const audioPlayer = document.querySelector('#audioPlayer');
         } else {
           navSpotify.style.display = 'none';
         }
+      }
+      const navApple = document.querySelector('#navApple');
+      if (navApple) {
+        navApple.href = APPLE_MUSIC_URL;
+        navApple.style.display = DISTRIBUTED_LANGS.indexOf(currentLang) !== -1 ? '' : 'none';
       }
       document.querySelector('#labelLivre').textContent = t.livre;
       document.querySelector('#labelChapitre').textContent = t.chapitre;
