@@ -1453,6 +1453,8 @@ function isVerseLikeEN(s){
         
         <!-- LECTEUR AUDIO (cachÃ©, contrÃ´lÃ© par UI) -->
         <audio id="audioPlayer" style="display: none;"></audio>
+        <!-- Affiche quand les deux URL audio echouent (chapitre non encore produit). -->
+        <div id="audioUnavailable" role="status" style="display: none; margin: 8px auto; padding: 10px 14px; max-width: 585px; border-radius: 8px; background: rgba(212,175,55,0.12); border-left: 4px solid #d4af37; color: #f0e0b0; font-size: 13px; text-align: center;"></div>
 </div>
         
         <!-- TOGGLE PAROLES/BIBLE -->
@@ -1529,6 +1531,7 @@ function isVerseLikeEN(s){
         newsletterSubtitle: "Prières chantées • Promesses bibliques • Confessions de foi",
         newsletterBtn: "S'inscrire",
         privacyLink: "Règles de confidentialité",
+        audioUnavailable: "Ce chapitre n'est pas encore disponible dans cette langue.",
         privacyUrl: "privacy-fr.html",
         popupTitle: "Inscrivez-vous",
         popupSubtitle: "Recevez les nouveautés : prières, promesses, confessions",
@@ -1545,6 +1548,7 @@ function isVerseLikeEN(s){
         newsletterSubtitle: "Sung Prayers • Biblical Promises • Confessions of Faith",
         newsletterBtn: "Subscribe",
         privacyLink: "Privacy Policy",
+        audioUnavailable: "This chapter is not yet available in this language.",
         privacyUrl: "privacy-en.html",
         popupTitle: "Subscribe",
         popupSubtitle: "Receive updates: prayers, promises, confessions",
@@ -1561,6 +1565,7 @@ function isVerseLikeEN(s){
         newsletterSubtitle: "Orações cantadas • Promessas bíblicas • Confissões de fé",
         newsletterBtn: "Inscrever-se",
         privacyLink: "Política de Privacidade",
+        audioUnavailable: "Este capítulo ainda não está disponível neste idioma.",
         privacyUrl: "privacy-pt.html",
         popupTitle: "Inscreva-se",
         popupSubtitle: "Receba novidades: orações, promessas, confissões",
@@ -1577,6 +1582,7 @@ function isVerseLikeEN(s){
         newsletterSubtitle: "Oraciones cantadas • Promesas bíblicas • Confesiones de fe",
         newsletterBtn: "Suscribirse",
         privacyLink: "Política de Privacidad",
+        audioUnavailable: "Este capítulo aún no está disponible en este idioma.",
         privacyUrl: "privacy-es.html",
         popupTitle: "Suscríbete",
         popupSubtitle: "Recibe novedades: oraciones, promesas, confesiones",
@@ -1593,6 +1599,7 @@ function isVerseLikeEN(s){
         newsletterSubtitle: "Gesungene Gebete • Biblische Verheißungen • Glaubensbekenntnisse",
         newsletterBtn: "Anmelden",
         privacyLink: "Datenschutzrichtlinie",
+        audioUnavailable: "Dieses Kapitel ist in dieser Sprache noch nicht verfügbar.",
         privacyUrl: "privacy-de.html",
         popupTitle: "Anmelden",
         popupSubtitle: "Erhalten Sie Neuigkeiten: Gebete, Verheißungen, Bekenntnisse",
@@ -1609,6 +1616,7 @@ function isVerseLikeEN(s){
         newsletterSubtitle: "Preghiere cantate • Promesse bibliche • Confessioni di fede",
         newsletterBtn: "Iscriviti",
         privacyLink: "Informativa sulla Privacy",
+        audioUnavailable: "Questo capitolo non è ancora disponibile in questa lingua.",
         privacyUrl: "privacy-it.html",
         popupTitle: "Iscriviti",
         popupSubtitle: "Ricevi novità: preghiere, promesse, confessioni",
@@ -1625,6 +1633,7 @@ function isVerseLikeEN(s){
         newsletterSubtitle: "Mga Awit na Panalangin • Pangako sa Bibliya • Mga Pahayag ng Pananampalataya",
         newsletterBtn: "Mag-subscribe",
         privacyLink: "Patakaran sa Privacy",
+        audioUnavailable: "Hindi pa available ang kabanatang ito sa wikang ito.",
         privacyUrl: "privacy-tl.html",
         popupTitle: "Mag-subscribe",
         popupSubtitle: "Tumanggap ng balita: panalangin, pangako, pagtatapat",
@@ -1884,6 +1893,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
     // Helper: Assigner audio avec fallback automatique pour fichiers _v1
     function setAudioWithFallback(audioEl, urls, autoplay = false) {
       let triedFallback = false;
+      const banner = document.getElementById('audioUnavailable');
+      if (banner) banner.style.display = 'none';
 
       audioEl.onerror = () => {
         if (!triedFallback && urls.fallback) {
@@ -1896,6 +1907,13 @@ const audioPlayer = document.querySelector('#audioPlayer');
           }
         } else {
           console.error('[AUDIO] Both URLs failed:', audioEl.src);
+          // Chapitre non encore produit dans cette langue : le dire a l'utilisateur
+          // plutot que de laisser le lecteur muet sans explication.
+          if (banner) {
+            const tb = translations[currentLang] || translations.FR;
+            banner.textContent = '⚠️ ' + tb.audioUnavailable;
+            banner.style.display = 'block';
+          }
         }
       };
 
