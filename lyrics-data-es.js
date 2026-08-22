@@ -2807,6 +2807,7 @@ Su memoria vivirá,
 En el corazón del pueblo,  
 La promesa brillará.`,
     },
+
     "02": {
         1: `[Verse 1]  
 En la tierra de Egipto, un pueblo llegó,  
@@ -4896,6 +4897,7 @@ Tu presencia poderosa, nos hace descansar.
 Oh Jehová, en tu amor quiero estar,  
 El tabernáculo eterno, jamás se irá.`,
     },
+
     "03": {
         1: `[Verse 1]  
 Desde el tabernáculo, llama Jehová,  
@@ -6318,6 +6320,7 @@ La paz que anhelo, mi fiel sostén.
 Consagrados a Ti, en cada canción,  
 Te alabaremos, oh, mi Redentor.`,
     },
+
     "04": {
         1: `### TÍTULO: "Contados en Tu Presencia"
 
@@ -8236,6 +8239,7 @@ Tu herencia en nosotros, siempre será.
 Así en la tierra, juntos viviremos,  
 Con fe y esperanza, en ti floreceremos.`,
     },
+
     "05": {
         1: `[Verse 1]  
 En Horeb escuchamos, tu voz nos guió,  
@@ -10134,6 +10138,7 @@ Conoció Tu rostro, en su gran desdén.
 Oh, Jehová, en Ti, hallamos verdad,  
 Tierra prometida, nuestra eternidad.`,
     },
+
     "06": {
         1: `Verso 1:  
 Después de Moisés, un nuevo amanecer,  
@@ -10831,6 +10836,59 @@ En la tierra prometida, eternamente estaré,
 Con fe en Ti, Señor, siempre venceré.  
 Reyes caídos, Tu gloria se verá,  
 Por siempre en Tu reino, mi alma descansará.`,
+        13: `[Verse 1]
+Josué, hombre de fe, ya anciano,
+el Señor le habló con voz de esperanza.
+"Mucho queda aún por poseer,
+la tierra prometida, ven a renacer."
+
+[CORO]
+¡Oh, Jehová, guíanos con tu luz!
+Con cada paso, en Ti confío yo.
+De las montañas al mar sin fin,
+tú eres nuestra heredad, ¡nuestro porvenir!
+
+[Verse 2]
+Desde Sihor, hasta el término de Accarón,
+los filisteos y heveos no resistirán tu razón.
+La tierra que has dado, la vamos a tomar,
+con valor en el alma, y listos para luchar.
+
+[CORO]
+¡Oh, Jehová, guíanos con tu luz!
+Con cada paso, en Ti confío yo.
+De las montañas al mar sin fin,
+tú eres nuestra heredad, ¡nuestro porvenir!
+
+[PUENTE]
+Cada ciudad, cada llanura,
+tú desarraigarás con tu gran armadura.
+Oh, Israel, escucha hoy,
+la promesa de Dios nunca se irá.
+
+[Verse 3]
+Moisés, con fe, repartió la heredad,
+a Rubén y Gad, y a Manasés sin cesar.
+La tribu de Leví, en Ti hallará paz,
+su herencia es Tu altar, donde siempre estarás.
+
+[CORO]
+¡Oh, Jehová, guíanos con tu luz!
+Con cada paso, en Ti confío yo.
+De las montañas al mar sin fin,
+tú eres nuestra heredad, ¡nuestro porvenir!
+
+[Outro]
+Con corazones valientes, marchamos en unión,
+la tierra prometida, es nuestra misión.
+Confía, oh alma, en Su gran poder,
+en cada batalla, en Él venceré.
+
+[CORO]
+¡Oh, Jehová, guíanos con tu luz!
+Con cada paso, en Ti confío yo.
+De las montañas al mar sin fin,
+tú eres nuestra heredad, ¡nuestro porvenir!`,
         14: `[Verse 1]  
 En la tierra prometida, el pueblo marchó,  
 Eleazar y Josué, su herencia dio.  
@@ -11449,6 +11507,7 @@ A Jehová, nuestro Dios,
 Por la eternidad.  
 Amén.`,
     },
+
     "07": {
         1: `### TÍTULO: La Victoria de Judá
 
@@ -12605,6 +12664,7 @@ nuestra fe, un eterno pacto.
 Oh Jehová, escucha nuestra canción,  
 en Ti, hallamos nuestra redención.`,
     },
+
     "08": {
         1: `[Verse 1]  
 En tiempos de hambre y dolor,  
@@ -12779,6 +12839,7 @@ hijo de promesas, en Ti confiará.
 Oh, redentor eterno, nuestra salvación,  
 en cada paso, danzamos en Tu razón.`,
     },
+
     "09": {
         1: `Verso 1:  
 En la tierra de Silo, un clamor se alzó,  
@@ -14337,6 +14398,7 @@ El sacrificio y amor, en nuestra misión.
 Aunque caiga el rey, la fe se levantará,  
 En el nombre del Señor, la victoria llegará.`,
     },
+
     "10": {
         1: `[Verse 1]  
 En el monte Gilboa, la gloria cayó,  
@@ -15576,6 +15638,7 @@ Tu gracia nos cubre, oh Salvador.
 En el altar de Aruna, la fe renacerá,  
 En tu amor eterno, siempre hallaré paz.`,
     },
+
     "11": {
         1: `### Rey de Mi Corazón
 
@@ -16825,6 +16888,7 @@ Tu palabra es la luz que me guiará.
 Aunque las batallas se acerquen a mí,  
 en Ti tengo paz, yo no temeré.`,
     },
+
     "12": {
         1: `Verso 1:  
 En la sombra de la muerte,  
@@ -18161,6 +18225,7 @@ en la tierra de lágrimas, nace el temor.
 Mas en medio de la guerra y el dolor,  
 Tú eres nuestra esperanza, nuestro Salvador.`,
     },
+
     "13": {
         1: `Generaciones de Fe
 
@@ -18932,6 +18997,47 @@ La fama de David, en todas las naciones,
 Tu temor, Jehová, llena los corazones.  
 En Ti hallamos paz, en cada batallar,  
 Oh, Rey de gloria, siempre yo te alabaré.`,
+        15: `[Verse 1]
+En la ciudad de David, un hogar se levantó,
+Un lugar para el arca, donde el corazón halló.
+Los Levitas elegidos, su carga llevarán,
+Con reverencia y gozo, su servicio ofrecerán.
+
+Coro
+¡Oh, ven, levita, alza tu voz!
+Trae el arca de su amor, con gran clamor.
+En júbilo resuena, en la danza de adoración,
+El arca de Su presencia, ¡nuestro corazón!
+
+[Verse 2]
+David reunió al pueblo, con un propósito fiel,
+Buscar la gloria de Dios, en su hermoso poder.
+Santifíquense, hermanos, el tiempo ya llegó,
+En alabanza y música, al Rey rendimos honor.
+
+Coro
+¡Oh, ven, levita, alza tu voz!
+Trae el arca de su amor, con gran clamor.
+En júbilo resuena, en la danza de adoración,
+El arca de Su presencia, ¡nuestro corazón!
+
+Puente
+Con trompetas y címbalos, nuestra fe resonará,
+Salterios y arpas, el cielo tocará.
+Con alegría y fervor, la victoria vendrá,
+En cada paso juntos, Su gloria brillará.
+
+Coro
+¡Oh, ven, levita, alza tu voz!
+Trae el arca de su amor, con gran clamor.
+En júbilo resuena, en la danza de adoración,
+El arca de Su presencia, ¡nuestro corazón!
+
+Cierre
+Así llegaron al pueblo, con alegría sin par,
+El arca de su pacto, ¡a la casa del altar!
+David danzando, su corazón en libertad,
+En la presencia de Dios, hallamos unidad.`,
         16: `[Verse 1]  
 Trajeron el arca, oh Dios,  
 en la tienda de David,  
@@ -19657,6 +19763,7 @@ Oh Jehová, nuestro Dios,
 Te damos gracias, por tu amor,  
 Por siempre, en tu casa estar.`,
     },
+
     "14": {
         1: `[Verse 1]  
 En Gabaón, con gran reverencia,  
@@ -21595,6 +21702,7 @@ Tu pueblo se levanta, en unidad y verdad.
 Oh Jehová, en ti confiamos,  
 Tu gloria, Señor, siempre brillará.`,
     },
+
     "15": {
         1: `[Verse 1]  
 En el año de Ciro, se oyó un clamor,  
@@ -22177,6 +22285,7 @@ la gloria es para Ti,
 hoy y siempre,  
 en Ti, nuestro vivir.`,
     },
+
     "16": {
         1: `Verso 1:  
 En la tierra de dolor,  
@@ -22880,6 +22989,7 @@ Límpianos y guíanos, en tu perfecta dirección.
 Recuerda, oh Dios, nuestra voz al elevar,  
 En tu casa, por siempre, queremos adorar.`,
     },
+
     "17": {
         1: `[Verse 1]  
 En días de Assuero, reinando en su gloria,  
@@ -23352,6 +23462,7 @@ Un pueblo en victoria, en unidad.
 
 *Amén.*`,
     },
+
     "18": {
         1: `[Verse 1]  
 En tierra de Hus, un varón fiel,  
@@ -25599,6 +25710,7 @@ Te alabo, mi Rey, sin cesar,
 Tu fidelidad nunca falla,  
 En tu abrazo quiero estar.`,
     },
+
     "19": {
         1: `Verso 1:  
 Bienaventurado el que sigue tu voz,  
@@ -32903,6 +33015,7 @@ En su amor eterno, siempre hallarás.
 ¡Aleluya! ¡Aleluya!  
 Alabad a Dios, ¡alabad a JAH!`,
     },
+
     "20": {
         1: `[Verse 1]  
 La sabiduría clama en la plaza,  
@@ -34411,6 +34524,7 @@ Eres luz en la oscuridad,
 Mujer que teme al Señor,  
 Eres nuestra verdad.`,
     },
+
     "21": {
         1: `(Verso 1)  
 El Predicador habla, con voz de verdad,  
@@ -35034,6 +35148,7 @@ en cada día, en cada anhelo,
 su luz te guía, su amor eterno,  
 en Él encontramos nuestro suelo.`,
     },
+
     "22": {
         1: `Verso 1:  
 Oh, si tú me besas,  
@@ -35444,6 +35559,7 @@ mi amado, en esta canción,
 en cada nota y en cada verso,  
 te busco, oh, mi salvación.`,
     },
+
     "23": {
         1: `[Verse 1]  
 Cielos, oíd mi clamor,  
@@ -39071,6 +39187,7 @@ en tu luz, quiero habitar.
 Oh Jehová, en ti quiero estar,  
 mi corazón siempre a ti irá.`,
     },
+
     "24": {
         1: `[Verse 1]  
 Palabras que brotan, oh Dios, de tu voz,  
@@ -41946,6 +42063,7 @@ Tu amor nunca falla,
 En la oscuridad,  
 Tu luz nos acompaña.`,
     },
+
     "25": {
         1: `Verso 1:  
 Oh, Jerusalén, en soledad,  
@@ -42212,6 +42330,7 @@ Trae la restauración, trae tu paz a esta vida.
 Por el monte de Sión, que asolado está,  
 Levanta tu pueblo, en ti confiará.`,
     },
+
     "26": {
         1: `Verso 1:  
 En el río de Chebar, oh Jehová,  
@@ -44688,6 +44807,7 @@ tu presencia nos guía, hoy y por siempre.
 En cada paso, en cada voz,  
 te alabamos, oh Dios, eres nuestro sol.`,
     },
+
     "27": {
         1: `Verso 1:  
 En el tiempo de angustia, en la tierra de Babel,  
@@ -45291,6 +45411,7 @@ El tiempo del fin llegó,
 Nuestra esperanza en Ti, Dios.  
 Amén.`,
     },
+
     "28": {
         1: `[Verse 1]  
 Palabra de Jehová, con Oseas llegó,  
@@ -46053,6 +46174,7 @@ en Ti nos queremos quedar,
 Tú eres nuestra esperanza,  
 en Ti volvemos a amar.`,
     },
+
     "29": {
         1: `[Verse 1]  
 Oíd, ancianos, el clamor,  
@@ -46217,6 +46339,7 @@ la paz que anhelamos, en Ti vivirá.
 Jerusalén, santa, jamás será en vano,  
 nuestro Dios reside, en Ti, eterno hermano.`,
     },
+
     "30": {
         1: `Verso 1:  
 Desde Sión clama Jehová,  
@@ -46676,6 +46799,7 @@ tu pueblo vuelve a ti, en fe.
 Con corazones rendidos,  
 te alabamos, oh Rey, eterno y fiel.`,
     },
+
     "31": {
         1: `[Verse 1]  
 Escuchamos el clamor,  
@@ -46743,6 +46867,7 @@ en Él hay libertad,
 ven, oh pueblo mío,  
 a adorar en verdad.`,
     },
+
     "32": {
         1: `[Verse 1]  
 Palabra de Jehová me llegó,  
@@ -46937,6 +47062,7 @@ Tu misericordia es real,
 Permíteme ser un reflejo,  
 De tu amor celestial.`,
     },
+
     "33": {
         1: `[Verse 1]  
 Oh tierra, escucha mi lamento,  
@@ -47330,6 +47456,7 @@ mi corazón vibrará,
 pues Tu justicia y verdad,  
 al mundo restaurarán.`,
     },
+
     "34": {
         1: `[Verse 1]  
 En la carga de Nínive, oh Señor,  
@@ -47485,6 +47612,7 @@ De nuestras ofensas, de nuestra maldad.
 Ven, transforma nuestro corazón,  
 Devuélvenos la paz, la redención.`,
     },
+
     "35": {
         1: `[Verse 1]  
 Hasta cuándo, oh Jehová,  
@@ -47672,6 +47800,7 @@ y el mundo se agite en temor,
 en ti, Jehová, hallaré paz,  
 mi Dios, mi eterno Salvador.`,
     },
+
     "36": {
         1: `[Verse 1]  
 En la voz del Dios eterno,  
@@ -47843,6 +47972,7 @@ porque en Ti hallamos paz,
 en Ti hallamos redención.  
 ¡Amén!`,
     },
+
     "37": {
         1: `[Verse 1]  
 En el tiempo de sequía,  
@@ -47949,6 +48079,7 @@ La gloria del Altísimo, hoy se manifestará en ti.
 No temáis, no temáis, yo soy tu Rey,  
 En mi casa hay paz, en mi casa hay fe.`,
     },
+
     "38": {
         1: `[TITLE]  
 Vuelve a Mí
@@ -48671,6 +48802,7 @@ con poder Él vendrá,
 en Su amor hallaremos,  
 la paz que nos dará.`,
     },
+
     "39": {
         1: `[Verse 1]  
 Te amé, oh Israel, mi pueblo amado,  
@@ -48911,6 +49043,7 @@ que Tu gloria nos llenará.
 Sol de justicia, ven,  
 en Ti nuestra vida hallará.`,
     },
+
     "40": {
         1: `[Verse 1]  
 Desde Abraham, la historia va,  
@@ -50400,6 +50533,7 @@ Unidos en su gracia, en su eternidad.
 Él ha resucitado, nuestra fe en su voz,  
 Celebramos juntos, ¡Cristo es nuestro Dios!`,
     },
+
     "41": {
         1: `Verso 1:  
 En el desierto una voz resuena,  
@@ -51177,6 +51311,7 @@ Que Cristo ha resucitado, en Él yo creeré.
 Con manos levantadas, su nombre alabaré,  
 ¡Resucitó, en Él viviré!`,
     },
+
     "42": {
         1: `[TITLE]  
 "La Promesa de Dios"
@@ -52206,6 +52341,69 @@ Hoy en tu casa, juntos a adorar,
 Con gratitud, ven, ¡vamos a cantar!  
 Zaqueo, hoy en tu casa he de estar,  
 La paz del cielo, en ti va a habitar.`,
+        20: `[Verse 1]
+En el templo escuché tu voz,
+Los príncipes se asombraron,
+Con preguntas llenas de temor,
+Tu verdad nunca han alcanzado.
+
+Pre-Coro
+Mas tú, Señor, con sabiduría,
+Respondes con luz en la oscuridad,
+Eres la viña que florece,
+Tú eres mi paz, mi verdad.
+
+Coro
+Eres la piedra angular,
+Sobre ti edificaré,
+La herencia que me diste,
+Te alabaré, te alabaré.
+Oh, mi Salvador,
+Con tu amor me encontré,
+Eres la vida en mí,
+Te alabaré, te alabaré.
+
+[Verse 2]
+Los labradores no entendieron,
+Tu Hijo amado rechazaron,
+Pero en la sombra de tu amor,
+Nos llamas a ser restaurados.
+
+Pre-Coro
+En la resurrección hay vida,
+No hay muerte en tu eternidad,
+Eres el Dios de los vivos,
+Tú eres mi fe, mi verdad.
+
+Coro
+Eres la piedra angular,
+Sobre ti edificaré,
+La herencia que me diste,
+Te alabaré, te alabaré.
+Oh, mi Salvador,
+Con tu amor me encontré,
+Eres la vida en mí,
+Te alabaré, te alabaré.
+
+Puente
+Y aunque el mundo no entienda,
+Tu gracia me sostiene,
+En ti mi alma descansa,
+Tu luz nunca se detiene.
+Oh, en ti, oh, en ti,
+Soy libre, soy feliz,
+Eres mi todo,
+Eres mi rey, yo te seguiré.
+
+Coro
+Eres la piedra angular,
+Sobre ti edificaré,
+La herencia que me diste,
+Te alabaré, te alabaré.
+Oh, mi Salvador,
+Con tu amor me encontré,
+Eres la vida en mí,
+Te alabaré, te alabaré.`,
         21: `Verso 1:  
 Miro a los ricos que dan sin pensar,  
 en mi corazón, la viuda quiero imitar.  
@@ -52384,6 +52582,7 @@ En tus brazos hallamos paz,
 Eres el camino, la verdad y la vida,  
 Por siempre, en ti quiero estar.`,
     },
+
     "43": {
         1: `[Verse 1]  
 En el principio, Tú eras el Verbo,  
@@ -53503,6 +53702,7 @@ oh Jesús, mi razón.
 En tu amor, mi vida hallé,  
 en ti, mi corazón.`,
     },
+
     "44": {
         1: `[Verse 1]  
 En el primer tratado, oh Teófilo,  
@@ -55051,6 +55251,7 @@ Tu amor es nuestro canto,
 En cada paso que doy,  
 ¡Te alabaré, Santo!`,
     },
+
     "45": {
         1: `Verso 1:  
 Oh, Padre Santo, en tu amor me llamaste,  
@@ -55896,6 +56097,7 @@ en Jesucristo hallamos, la fuerza y el fervor.
 Amén, amén, en el amor,  
 unidos en el amor.`,
     },
+
     "46": {
         1: `[Verse 1]  
 Llamados por tu gracia, oh Señor,  
@@ -56855,6 +57057,7 @@ Con amor eterno, en tu esplendor,
 Te honramos hoy, en cada acción,  
 Con amor y fe, en adoración.`,
     },
+
     "47": {
         1: `[Verse 1]  
 Te alabo, oh Dios de misericordia,  
@@ -57179,6 +57382,59 @@ Te adoramos con fervor,
 En el tiempo aceptable,  
 Te entrego mi adoración.  
 Amén.`,
+        7: `[Verse 1]
+Amados, venid, limpiémonos
+De toda inmundicia, en Tu amor.
+Perfeccionando en temor,
+Nuestra santidad, oh Señor.
+
+[CORO]
+Dios de toda consolación,
+Llena nuestros corazones hoy.
+En la tribulación,
+Tu paz nos inunda, ¡oh Rey!
+
+[Verse 2]
+Aunque venimos atribulados,
+Tú eres nuestro refugio fiel.
+En medio de la tempestad,
+Tu amor nos sostiene, oh Bel.
+
+[CORO]
+Dios de toda consolación,
+Llena nuestros corazones hoy.
+En la tribulación,
+Tu paz nos inunda, ¡oh Rey!
+
+[PUENTE]
+El dolor que trae arrepentimiento,
+Nos guía a la luz del perdón.
+Confiamos en Ti, oh Salvador,
+Tu gracia es nuestra canción.
+
+[CORO]
+Dios de toda consolación,
+Llena nuestros corazones hoy.
+En la tribulación,
+Tu paz nos inunda, ¡oh Rey!
+
+[Verse 3]
+Con Tito en alegría,
+Nos regocijamos en verdad.
+Con amor y obediencia,
+Mostremos nuestra humildad.
+
+[CORO]
+Dios de toda consolación,
+Llena nuestros corazones hoy.
+En la tribulación,
+Tu paz nos inunda, ¡oh Rey!
+
+[Outro]
+Así que en Ti, Señor,
+Nos gozamos, nuestra esperanza.
+Consolación en el amor,
+En Ti hallamos confianza.`,
         8: `[Verse 1]  
 En la prueba, tu gracia nos da,  
 en la tribulación, el gozo brotará.  
@@ -57490,6 +57746,7 @@ y en Su fuerza, redención.
 
 (Repetir el Coro)`,
     },
+
     "48": {
         1: `Verso 1:  
 Oh, Señor, me has llamado,  
@@ -57842,6 +58099,7 @@ sea con nosotros, con fervor.
 Amén, amén, en el amor,  
 Juntos en Su redentor.`,
     },
+
     "49": {
         1: `Verso 1:  
 Pablo nos habla en amor,  
@@ -58157,6 +58415,7 @@ que en Cristo siempre hallamos,
 unidos en Su amor,  
 cantemos con fervor.`,
     },
+
     "50": {
         1: `Verso 1:
 Pablo y Timoteo en unidad,  
@@ -58373,6 +58632,7 @@ por los siglos en su historia,
 la gracia de Jesús,  
 con nosotros, en su luz.`,
     },
+
     "51": {
         1: `Verso 1:
 Pablo nos habla, en fe y en amor,  
@@ -58564,6 +58824,7 @@ Te busco, oh Rey, mi vida es tuya,
 Con amor y paz, en comunión,  
 Te entrego mi ser, oh gran Salvador.`,
     },
+
     "52": {
         1: `[Verse 1]  
 En la gracia de nuestro Dios,  
@@ -58884,6 +59145,7 @@ En cada hermano, en cada vida,
 Su amor nos unirá.  
 Amén.`,
     },
+
     "53": {
         1: `[Verse 1]  
 En la fe que crece, gracias te damos,  
@@ -59037,6 +59299,7 @@ En cada paso, Él estará.
 La gracia de Cristo, en nuestra voz,  
 Confiamos en Ti, oh Dios, nuestro Dios.`,
     },
+
     "54": {
         1: `[Verse 1]  
 Oh, Cristo, mi esperanza,  
@@ -59399,6 +59662,7 @@ te damos honor,
 a Ti, oh Señor,  
 nuestro Salvador.`,
     },
+
     "55": {
         1: `[Verse 1]  
 Te doy gracias, oh Señor,  
@@ -59614,6 +59878,7 @@ Su gracia y paz, mi amanecer.
 Te alabaré, oh Rey de gloria,  
 mi vida entera a Ti entregué.`,
     },
+
     "56": {
         1: `[Verse 1]  
 Pablo, siervo fiel, de Dios llamado,  
@@ -59789,6 +60054,7 @@ En cada paso, en cada voz,
 Te alabamos, oh Salvador,  
 Por Su gracia, ¡gloria a Dios!`,
     },
+
     "57": {
         1: `[Verse 1]  
 Prisionero en tu amor, oh Cristo,  
@@ -59838,6 +60104,7 @@ En cada paso, su luz brillará,
 Hermano amado, juntos en verdad,  
 En su nombre, ¡hoy glorificará!`,
     },
+
     "58": {
         1: `[Verse 1]  
 Dios habló en tiempos pasados,  
@@ -60545,6 +60812,7 @@ En su amor, siempre unidos,
 nuestro canto es de verdad.  
 Amén.`,
     },
+
     "59": {
         1: `[Verse 1]  
 En las pruebas, Señor, hallamos gozo,  
@@ -60819,6 +61087,7 @@ en Su presencia, vida habrá.
 Amén, oh Señor, ven a nos dar,  
 nuestra alma en Ti hallará paz sin par.`,
     },
+
     "60": {
         1: `Verso 1:  
 En la sombra de Tu amor,  
@@ -61103,6 +61372,7 @@ en Ti hallamos el vivir,
 cuando aparezca el Príncipe,  
 su corona nos dará.`,
     },
+
     "61": {
         1: `[Verse 1]  
 Pedro nos habla, con voz sincera,  
@@ -61267,6 +61537,7 @@ a Él sea la gloria, hoy y por siempre, Señor.
 
 Amén.`,
     },
+
     "62": {
         1: `[Verse 1]  
 Desde el principio, yo he oído,  
@@ -61506,6 +61777,7 @@ en Cristo hay eternidad.
 Amén, amén, oh Salvador,  
 en Ti siempre hay verdad.`,
     },
+
     "63": {
         1: `En Verdad y Amor
 
@@ -61563,6 +61835,7 @@ siempre en Tu camino,
 oh Dios, a Ti clamamos,  
 nuestra vida es Tu destino.`,
     },
+
     "64": {
         1: `[Verse 1]  
 Amado, en verdad yo te saludo,  
@@ -61612,6 +61885,7 @@ a los tuyos andar en la verdad,
 con amor y en unidad,  
 cooperando en Tu verdad, Señor.`,
     },
+
     "65": {
         1: `"En Tu Amor, Señor"
 
@@ -61657,6 +61931,7 @@ En tu misericordia, hallamos nuestra cruz.
 A Ti, oh Salvador, sea gloria y honor,  
 Ahora y por siempre, en nuestro clamor.`,
     },
+
     "66": {
         1: `[Verse 1]  
 Revelación divina, en el cielo brilla,  

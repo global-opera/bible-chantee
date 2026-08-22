@@ -27825,6 +27825,30 @@ Let God arise, let His glory shine,
 In every heart, let His love entwine.  
 Blessed be God, forever we’ll sing,  
 In Your presence, we find everything.`,
+        69: `Hear me, O Lord, in my hour of need
+Your loving kindness my soul shall bring
+Deliver me, Lord, from the floods that surround
+In the arms of Your mercy let hope be found
+Enemies rise, they mock and they scorn
+But I stand in faith, though my heart feels worn
+I bear reproach for the seal of Your name
+In my weakness, O Lord, I call on the Savior
+Hear me, O Lord, in my hour of need
+Your loving kindness my soul shall bring
+Deliver me, Lord, from the floods that surround
+In the arms of Your mercy let hope be found
+Draw near to my soul, redeem and restore
+In the deep of my sorrow I cling to You more
+Though the world may forsake, Your love never fails
+In the darkest of nights, Your light still prevails
+Hear me, O Lord, in my hour of need
+Your loving kindness my soul shall bring
+Deliver me, Lord, from the floods that surround
+In the arms of Your mercy let hope be found
+I will praise Your name with a song of thanks
+For in my despair You lift me from race
+The humble shall see and their hearts will rejoice
+In the depths of my pain I will lift up my voice`,
         70: `In the silence, I cry out to Thee Oh God, my heart longs for Your decree
 Make haste, oh Lord, deliver me In my weakness, You are my plea
 Let all who seek You rejoice In the shadow of Your voice
@@ -28162,6 +28186,40 @@ Outro:
 So I cry out to You, Lord, and lift up my plea,  
 In the night I will call, for You’re here with me.  
 In the night I will call, for You’re here with me.`,
+        78: `We will sing of His strength
+His marvelous ways to the next generation
+We'll lift our praise, let our hope be in God
+Let His love be our song, in His grace and His mercy
+We forever belong
+Oh, how often we wander
+How often we stray
+Yet His love still surrounds us
+His grace leads the way
+With hearts that remember
+Let us not forget
+The wonders He's shown us
+Our hearts He'll not let
+Though they turned from His promise
+And wandered in doubt
+His compassion forgave them
+His love called them out
+With every new morning
+His mercies arise
+He's the rock of our refuge
+Our hope in the sky
+We will sing of His strength
+His marvelous ways to the next generation
+We'll lift our praise, let our hope be in God
+Let His love be our song, in His grace and His mercy
+We forever belong
+So we'll pass on this story
+Our hearts will proclaim
+The faithfulness of Jesus
+Forever the same
+Let our lives be a beacon
+A light through the night
+In the generations of grace
+We'll walk in His light`,
         79: `O Lord, the nations rise against Your name Your holy place in ruins and hearts filled with shame
 The cries of Your servants echo in the night We stand in our sorrow, longing for Your light
 How long, O Lord, will You keep silence near? Pour out Your mercy, calm our every fear
@@ -28367,6 +28425,40 @@ Bow down thine ear, oh Lord I cry
 With all my soul, to You I fly
 Your mercy flows, my heart's embrace
 Oh Lord my God, I seek Your face`,
+        87: `In the holy mountains, your foundation lies
+O Lord, we gather beneath your skies
+With praise we lift our voices
+A song from the heart
+For glorious things are spoken
+In your love we take part
+O city of God, where the faithful arise
+In the gates of Zion our spirits will rise
+The highest is written, our names in your grace
+In the heart of your people we find our place
+From rehab to Babylon
+Nations will sing
+In the land of your promise
+Our praises we bring
+Philistines tire
+And Ethiopia's song
+In the arms of your mercy
+We know we belong
+O city of God, where the faithful arise
+In the gates of Zion our spirits will rise
+The highest is written, our names in your grace
+In the heart of your people we find our place
+When you count the nations, Lord, let it be known
+This man was born here in Zion's own home
+With singers and players, our hearts in a twine
+All our springs are in you, forever we shine
+O city of God, where the faithful arise
+In the gates of Zion our spirits will rise
+The highest is written, our names in your grace
+In the heart of your people we find our place
+In the heart of your people we find our place
+In the gates of Zion we rest in your grace
+O city of God, our hearts will remain
+In your love everlasting we'll praise your name`,
         88: `O Lord my God, my heart is low In shadows deep I feel the woe
 I've cried to You both day and night Incline Your ear, oh hear my plight
 From the depths I call to Thee In my sorrow set me free
@@ -32685,6 +32777,36 @@ In wisdom and grace, we follow You`,
     },
 
     "21": {
+        1: `In the shadow of the sun, we toil each day,
+chasing dreams that fade, just like the sun's rain.
+Generations pass, yet the earth remains,
+while our hearts seem meaning, enjoying and in pains.
+None of the amenities, all is but a breath.
+In the search for wisdom, we find ourselves in death.
+What profit is there, in the labor we bear,
+in the echo of the ages that are seeking in prayer.
+The rivers float as seas, they never find their fill.
+And the winds keep turning, in a dance of his will.
+He hasn't never satisfied, the ears long to hear,
+yet in the stillness of his presence,
+we can draw near, amenity, amenity, all is but a breath.
+In the search for wisdom, we find ourselves in death.
+What profit is there, in the labor we bear,
+in the echo of the ages that are seeking in prayer.
+Our search for meaning, in the wisdom of the wise,
+at the heart it knows the truth, beneath the endless skies.
+What was will be again, but in his grace we stand,
+finding peace in every moment, and within his hand.
+Vanity, amenity, all is but a breath.
+In the search for wisdom, we find ourselves in death.
+What profit is there, in the labor we bear,
+in the echo of the ages that are seeking in prayer.
+So we lay our burdens down, in the quiet of his love,
+trusting in the journey.
+Guide him from above, for in the heart of a wisdom,
+my spirit finds his rest, in the vanity of enemies.
+We are truly blessed.
+We are truly blessed.`,
         2: `You're my heart, I saw the light
 Chasing dreams both day and night
 Build my house out to the ground
@@ -33101,6 +33223,31 @@ I am made whole, the flowers bloom, the birds take flight in the still of the da
 my beloved in my heart, forever in love, come away, my fear water rises, the winter's past, here the joy that spring will bring, under your banner, my heart finds its place, in the sweetness of your love,
 I behold your grace, until the day breaks, and shadows flee, call my beloved, forever with me, in the gardens of your heart, I will stay resting in your love,
 come away, come away, come away,`,
+        3: `But night on my bed, in silence I am, for him who my soul loves
+My heart's desires, I rise to the city, through streets I will roam
+In search of my savior, my heart's true hope
+Oh, where is the word, the love of my soul?
+I call out to the watchman, their eyes make me whole have you seen
+My heart's still light, in the still of the night, I seek his light
+But a moment I pass, and then I behold, the one whom I cherish, in treasures untold
+I hold him so tightly, I won't let him go into the chambers where love's rivers flow
+Oh, where is the word, the love of my soul?
+I call out to the watchman, their eyes make me whole have you seen
+My heart's still light, in the still of the night, I seek his light
+Who is this coming from wilderness wide, perfume with mud and his love?
+I abide with the crown of his glory, he reigns from above
+In the day of his foes, I'm right in his love
+Oh, daughters of Zion, do not stir him away, for in gentle whispers
+My heart shall partake in the chambers of grace, where his presence is known
+I find all I need in the love that he's shown
+Oh, where is the word, the love of my soul?
+I call out to the watchman, their eyes make me whole have you seen
+My heart's still light, in the still of the night, I seek his light
+So I'll seek him forever, my heart's longing song
+In the arms of my Savior, where I truly belong
+With each breath I take, I'll lift his name high
+For the one whom my soul loves will never pass by
+For the one whom my soul loves will never pass by`,
         4: `Verse 1  
 Behold, my love, so fair and bright,  
 Your beauty shines, a pure delight.  
@@ -37245,6 +37392,41 @@ Oh Lord, our refuge in you, we stand, our hearts cry out. We reach for your hand
 You lift us from ashes, our cries to restore. From every heart mountain, your love we adore. With hunters and fishes, our hearts you will claim. We'll know you are faithful forever the same. Oh Lord, our refuge in you, we stand, our hearts cry out.
 In you, we stand, our hearts cry out. We reach for your hand from the land of the Lord. Bring us back home, in the depths of despair, we're never alone.
 Surely our fathers, if they may have so. Yet in you, Lord, our battles are fought. We'll proclaim your name, through every storm. You are the God who restores and transforms.`,
+        17: `In the heart of the wilderness, where shadows bloom
+The scene of you to edge deep, sealing their doom
+Yet in the silence, I hear your call
+Oh Lord, you're my soul, I surrender it all
+You are my home, my refuge, my song
+In the fire and the flood, I'll stand firm and strong
+Blessed is the man, who trusts in your ways
+Like a tree by the water
+I'll flourish all ways, cursed are the hearts
+That lean on their own
+In the desert of doubt, they stand all alone
+But you, oh Lord, are the fountain of grace
+In the year of drought, still, I seek your face
+You are my home, my refuge, my song
+In the fire and the flood, I'll stand firm and strong
+Blessed is the man, who trusts in your ways
+Who trusts in your ways, like a tree by the water
+I'll flourish all ways, hear me your Lord
+And I shall be home, you're the anchor of truth
+In the depths of my soul, though the world may forsake
+I'll cling to your light, and your presence, my darkness turns into bright
+You are my home, my refuge, my song
+In the fire and the flood, I'll stand firm and strong
+Blessed is the man, who trusts in your ways
+Like a tree by the water
+I'll flourish all ways
+So I stand at the gates, lift my voice, I bring in sacrifices
+Of praise to the sky with my heart open wide
+I'll follow your call in the arms of the Father
+I'll surrender it all
+I'll surrender it all
+This lyrical composition captures the essence of the biblical text
+While providing a worshipful atmosphere suitable
+For a modern worship setting the structure and teens reflect both the gravity of sin
+And the hope found in trusting the Lord`,
         18: `In the potter's house, I hear your call, you shape and mold, you're the Lord of all.
 Mored in my sin, I lay out your feet, recreate my heart, make my spirit complete.
 Oh, as the clay is in the potter's head, so are we Lord in your plans? Turn our hearts back, let us see.
@@ -37764,6 +37946,42 @@ In the sirens and rays, you turn my morning to joyous grace.
 Hear the word of the Lord, our nations are far, he gathers his people, our guiding star.
 In the arms of mercy, we find our rest, everlasting love, forever bliss.
 Hear the word of the Lord, our nations are far, he gathers his people, our guiding star.`,
+        32: `In the midst of troubled times, Lord, we hear your call.
+In the midst of troubled times, Lord, we hear your call.
+Jeremiah's voice, a beacon through the fall.
+Though the city's walls are shaking, fear grips every heart.
+You remind us of redemption.
+Lord, we'll never part.
+You are the God of all the earth.
+In every trial you prove your worth.
+With your mighty hand you shape our fate.
+In the darkest hours still away.
+From ashes you bring forth our song.
+In your promises we still belong.
+And I'm here again with a message to believe.
+In the end of desolation you teach us to receive.
+Feels the promise awaiting in the heart of despair.
+You call us to remember, Lord, you're always there.
+You are the God of all the earth.
+In every trial you prove your worth.
+With your mighty hand you shape our fate.
+In the darkest hours still away.
+From ashes you bring forth our song.
+In your promises we still belong.
+Great and mighty hearts cry out.
+With every wonder we'll sing and shout.
+You gather us from every land in your covenant.
+We take our stand fear not always real for you.
+On here in the storm, Lord, we'll persevere.
+You are the God of all the earth.
+In every trial you prove your worth.
+With your mighty hand you shape our fate.
+In the darkest hours still away.
+From ashes you bring forth our song.
+In your promises so we buy this field of hope, Lord.
+In your name for you are faithful forever the same.
+In fields restore our faith we'll rise.
+With us on you our Savior our prize.`,
         33: `In the silence of the night, your voice calls to me,
 From the depths of my despair, you bring hope to see.
 You are the maker, the one who formed the earth in my prison.
@@ -40656,6 +40874,65 @@ For I am the Lord, the God of might,
 In the shadows, I bring the light.
 Though nations gather, they will see,
 My glory reigns, I set them free.`,
+        39: `[Verse 1]
+O Gog, the Lord is against you,
+With fire upon the mountains high,
+He’ll turn you back, your arrows fall,
+In Israel, your end draws nigh.
+The birds will feast upon your pride,
+The beasts will claim what you have sown,
+For God has spoken, it is done,
+His justice reigns, His truth is known.
+
+[Chorus]
+Come, let us gather in His name,
+Proclaim the glory, shout His fame,
+In the valley, we will stand,
+The Lord our God, with mighty hand.
+With hearts aflame, we lift our song,
+For in His love, we all belong.
+
+[Verse 2]
+The weapons of the foe shall burn,
+For seven years, we shall not yield,
+In Israel, His name proclaimed,
+No more shall we pollute this field.
+From every bone, a sign will rise,
+As we cleanse our land of shame,
+O Lord, You’ve brought us back to life,
+In mercy, we will praise Your name.
+
+[Chorus]
+Come, let us gather in His name,
+Proclaim the glory, shout His fame,
+In the valley, we will stand,
+The Lord our God, with mighty hand.
+With hearts aflame, we lift our song,
+For in His love, we all belong.
+
+[Bridge]
+The nations will see, the world will know,
+The judgments of the Lord unfold,
+From every darkened place we rise,
+To witness grace, in Him we're whole.
+No more we'll hide, His face we’ll see,
+His Spirit poured upon the land,
+With every heart, we’ll sing His praise,
+Our God is here, forever stand.
+
+[Chorus]
+Come, let us gather in His name,
+Proclaim the glory, shout His fame,
+In the valley, we will stand,
+The Lord our God, with mighty hand.
+With hearts aflame, we lift our song,
+For in His love, we all belong.
+
+[Outro]
+O Gog, your reign is now undone,
+The Lord has spoken; He is one.
+In Israel, His people rise,
+To lift His name beyond the skies.`,
         40: `[Verse 1]
 In the year of our sorrow, in the land of our pain,
 You brought me to Your mountain, where Your glory remains.
@@ -44364,6 +44641,26 @@ In the turning of hearts, we'll find our true place
 O Lord, let your mercy rain down from above
 In the role of your justice, we'll know of your love
 O Lord, we feel to us your way in the shadow of truth`,
+        6: `I turn my eyes to the heavens high, for chariots blaze in the morning sky, red and black,
+why is the dawn grizzled and bay, through the earth they've drawn, spirits of heaven,
+sent forth from the throne, going to the north, where your peace is known, O Lord of hosts,
+we come in prayer, your glory reigns, we lay our cash, build your temple,
+O branch divine in our hearts, let your light shine, we are waiting, we are yearning for your kingdom,
+our hearts are burning, from Babylon's chains, you call us near, we're silver and gold,
+our offerings clear, crown the high priest, just you are stands, he'll build the temple,
+fulfilling your plans, in the council of peace, let us abide, as we gather, Lord be our guide,
+O Lord of hosts, we come in prayer, your glory reigns, we lay our cash,
+build your temple, O branch divine in our hearts, let your light shine, we are waiting, we are yearning for your kingdom,
+our hearts are burning, and we will walk to and fro, in the earth is your love or show,
+we'll obey your voice, we'll heed your call, for the glory of the Lord, we'll give our all,
+raise the crowns that the people sing, for the king of kings, our offering,
+O Lord of hosts, we come in prayer, your glory reigns, we lay our cash,
+build your temple, O branch divine in our hearts, let your light shine, we are waiting,
+we are yearning for your kingdom, our hearts are burning,
+we are yearning for your kingdom, our hearts are burning,
+we are yearning for your kingdom, our hearts are burning,
+the chariot's moon, your spirit flows, in every heart, your presence grows,
+with faithful hearts, we seek your face, O Lord of hosts, we dwell in grace,`,
         7: `In the silence of our hearts we've wandered far away
 with our fasting and our morning seeking what to say.
 Did we seek your face, O Lord, or just our own desire?
@@ -44516,6 +44813,25 @@ We walk in your name, with faith we declare.
 Your love is our light, in your presence we share.
 As rain falls upon us, our souls is renewed.
 Forever we praise our hope, resting you.`,
+        11: `Open wide your doors, O Lebanon, For the fire consumes
+The seed is strong, how low for tree, for the mighty of fallen, in the silence of sorrow, we sing this song.
+Voices of shepherds, their glory is fading, the pride of the Jordan no longer remains.
+Hear the cries of the lost, in darkness they wander, come Lord, heal our land, break these chains.
+O shepherd of mercy, come feed the love, hear the shout of the lost on this song.
+We cry out to you in our pain and despair, revive us all, for we know you care.
+Void of the shepherds, who lead us astray, they profit from sorrow, while the flock goes astray.
+Yet still you promise to gather the wheat, in your love and compassion, our spirits you see.
+Thirty pieces of silver cast to the potter, a covenant broken, the price that was paid, but the poor of the flock.
+They wait for your calling, in the midst of our trials, your truth will not fail.
+O shepherd of mercy, come feed the love, hear the shout of the lost on this song.
+We cry out to you in our pain and despair, revive us all, for we know you care.
+Raise up the shepherd, who lead us with love, not one who forsakes, but sin from above.
+Heal the broken hearted, bind up our wounds in the light of your presence, our hope is renewed.
+O shepherd of mercy, come feed the love, hear the shout of the lost on this song.
+We cry out to you in our pain and despair, revive us all, for we know you care.
+Open wide the heavens, let your glory descend, in the arms of the shepherd, our hearts will mend.
+We'll follow you, Jesus, through valleys and strife, for you are our shepherd, the giver of life.
+O shepherd of mercy, come feed the love, hear the shout of the lost on this song.`,
         12: `From the heavens you stretch forth O Lord, lay in foundations, the earth you work, in
 This cup of trembling, we find our place
 As you gather the nations, we see your grace
@@ -46560,6 +46876,55 @@ As the evening falls, we seek Your will,
 In every moment, Lord, our hearts be still.
 With voices raised, we sing anew,
 Hosanna forever, we worship You.`,
+        12: `The Vineyard's Call
+
+Verse 1
+In the heart of the land, a vineyard stands,
+A man planted seeds with gentle hands.
+He built a tower, set a hedge in place,
+Longing to see the fruit of grace.
+
+Chorus
+Oh, Lord, we hear Your call,
+In the shadows where we fall.
+You sent Your Son, so we might see,
+The love that sets the captives free.
+
+Verse 2
+Servants sent, they were turned away,
+Beaten and broken, night turned to day.
+Yet still You hoped, with love so wide,
+To send Your Son, to be our guide.
+
+Chorus
+Oh, Lord, we hear Your call,
+In the shadows where we fall.
+You sent Your Son, so we might see,
+The love that sets the captives free.
+
+Bridge
+The stone rejected, now our cornerstone,
+In Your embrace, we are never alone.
+You are the God of the living, we rise,
+With love that conquers, our hearts will fly.
+
+Verse 3
+Teach us to love, with all that we are,
+With heart and soul, we’ll follow Your star.
+To love our neighbor, as we love Thee,
+In every moment, in unity.
+
+Chorus
+Oh, Lord, we hear Your call,
+In the shadows where we fall.
+You sent Your Son, so we might see,
+The love that sets the captives free.
+
+Outro
+In every heartbeat, in every song,
+We find our place, where we belong.
+With grace unending, Your light will shine,
+In the vineyard of love, Your heart entwined.`,
         13: `Verse 1:
 As we gather in Your name,
 In the shadow of Your grace,
@@ -48219,6 +48584,63 @@ For every miracle, every sign we see,
 Points to Your glory, setting our hearts free.
 Fill our hearts with Your grace,
 Pour out Your love in this place.`,
+        3: `[Verse 1]
+In the night, a seeker came,
+Nicodemus called Your name,
+Rabbi, Teacher, from above,
+In Your presence, we find love.
+You spoke of life, a spirit's plea,
+To see the Kingdom, set us free.
+Born again, the truth we find,
+Awaken hearts, renew our minds.
+
+[Chorus]
+For God so loved the world, He gave,
+His only Son, our souls to save.
+Whosoever believes in Him,
+Shall never perish, life begins.
+In the light, we come to see,
+Your grace, O Lord, has set us free.
+
+[Verse 2]
+Moses lifted up the sign,
+In the wilderness, a love divine.
+So must You, our Savior, rise,
+That we may look and realize.
+The Spirit moves, like the wind so bright,
+Invisible but fills our night.
+Help us to trust in what we hear,
+Your whispered truth, forever near.
+
+[Chorus]
+For God so loved the world, He gave,
+His only Son, our souls to save.
+Whosoever believes in Him,
+Shall never perish, life begins.
+In the light, we come to see,
+Your grace, O Lord, has set us free.
+
+[Bridge]
+He must increase, I must decrease,
+In You alone, we find our peace.
+The Father’s love, poured out so wide,
+In Your embrace, we will abide.
+Come, Holy Spirit, fill this place,
+Awaken hearts to seek Your face.
+
+[Chorus]
+For God so loved the world, He gave,
+His only Son, our souls to save.
+Whosoever believes in Him,
+Shall never perish, life begins.
+In the light, we come to see,
+Your grace, O Lord, has set us free.
+
+[Outro]
+Born again, we rise anew,
+In every breath, we worship You.
+For God so loved the world, He gave,
+Our hearts are Yours, our lives to save.`,
         4: `Verse 1
 In the heat of noon, weary at the well,
 A woman of Samaria, her story to tell.
@@ -48365,6 +48787,71 @@ He is the bread of life, our Savior and our King,
 In Him, we find our every need, His praises we will sing.
 No hunger shall remain, no thirst will ever last,
 For He provides the living bread, our future and our past.`,
+        7: `[Verse 1]
+In the quiet of the evening,
+Jesus walked through Galilee,
+His heart was set on healing,
+Yet they sought to silence He.
+“Come and see the works I do,
+But my time is not yet due.”
+In their doubt, they turned away,
+But He spoke the truth, come what may.
+
+[Chorus]
+If any man is thirsty,
+Let him draw from me,
+Rivers of living water,
+Flowing endlessly.
+Come, come, to the living water,
+Come, come, be made whole,
+In the heart of our Savior,
+Find the peace for your soul.
+
+[Verse 2]
+In the temple’s sacred shadows,
+He taught with words so pure,
+“Know the One who sent me,
+In His love, you will endure.”
+They marveled at His wisdom,
+Yet they turned to doubt and fear,
+“Who is this that speaks so boldly?
+Is the Christ really near?”
+
+[Chorus]
+If any man is thirsty,
+Let him draw from me,
+Rivers of living water,
+Flowing endlessly.
+Come, come, to the living water,
+Come, come, be made whole,
+In the heart of our Savior,
+Find the peace for your soul.
+
+[Bridge]
+Oh, the world may not believe,
+But we know the truth He brings,
+With every word, He sets us free,
+In His grace, our hearts take wing.
+“Seek me now, you will find,
+In the shadow of the vine.”
+Oh, Jesus, we are longing,
+For the life that You define.
+
+[Chorus]
+If any man is thirsty,
+Let him draw from me,
+Rivers of living water,
+Flowing endlessly.
+Come, come, to the living water,
+Come, come, be made whole,
+In the heart of our Savior,
+Find the peace for your soul.
+
+[Outro]
+Come, come, to the living water,
+In His arms, we are made whole.
+Jesus, our hope and glory,
+Fill our hearts, and make us whole.`,
         8: `[Verse 1]
 In the morning light, He came to teach,
 Gathered round, the people reach,
@@ -48538,6 +49025,63 @@ Through the valleys and the shadows,
 His love will always endure.
 One fold, one heart, we are His own,
 In the light of His mercy, we have grown.`,
+        11: `[Verse 1]
+In Bethany, a cry arose,
+Mary wept for her dear brother,
+Lazarus lay in the tomb so cold,
+But You, Lord, were still their comfort.
+With love so deep, You heard their plea,
+“His sickness won’t bring death, just glory.”
+Your voice, a promise in the dark,
+Awake, dear friend, rise in faith’s spark.
+
+[Chorus]
+Awaken us, Lord, to Your light,
+In our sorrow, be our might.
+Even in death, You hold the key,
+You are the life, our victory.
+Awaken us, Lord, with Your grace,
+In Your presence, we find our place.
+
+[Verse 2]
+Martha came with hope entwined,
+“If You had been here, he’d still be alive.”
+But You whispered truth, “I am the way,
+The resurrection, the life today.”
+You called to Lazarus, darkness fled,
+With a shout, he rose from the dead.
+All who saw were filled with awe,
+And many believed, they heard Your call.
+
+[Chorus]
+Awaken us, Lord, to Your light,
+In our sorrow, be our might.
+Even in death, You hold the key,
+You are the life, our victory.
+Awaken us, Lord, with Your grace,
+In Your presence, we find our place.
+
+[Bridge]
+When we’re lost, when we’re weak,
+You come near, it’s You we seek.
+In the night, when hope is dim,
+Your love breaks through, we rise in Him.
+Oh, Jesus, we believe in You,
+In every trial, Your promise is true.
+
+[Chorus]
+Awaken us, Lord, to Your light,
+In our sorrow, be our might.
+Even in death, You hold the key,
+You are the life, our victory.
+Awaken us, Lord, with Your grace,
+In Your presence, we find our place.
+
+[Outro]
+Awaken us, Lord, awaken our hearts,
+In Your embrace, we’ll never part.
+With every breath, we sing Your praise,
+You are our hope, our endless days.`,
         12: `Verse 1
 In Bethany, where love abounds,
 With Lazarus, Your grace resounds,
@@ -48775,6 +49319,72 @@ In Your presence, Lord, we’ll stand secure,
 Through every trial, Your love is pure.
 You’ve spoken truth, we’ll hold it tight,
 In every shadow, You are our light.`,
+        17: `Verse 1
+Father, the hour has come,
+Lifted eyes to heaven’s throne.
+Glorify Your Son, we pray,
+As He brings the light of day.
+Eternal life, in You we find,
+To know the Truth that frees the blind.
+You’ve given us Your holy name,
+In Your embrace, we’re not the same.
+
+Chorus
+Glorify, O Lord, Your grace,
+In our hearts, let love embrace.
+We are one, as You are whole,
+In Your presence, we are bold.
+Keep us safe, O Holy One,
+In the light of Your own Son.
+Glorify, O Lord, we sing,
+To the glory that You bring.
+
+Verse 2
+You’ve manifested all Your ways,
+In the hearts of those You praise.
+We’ve kept Your word and known Your call,
+In the shadows, we will not fall.
+For You have given us Your truth,
+Sanctified, we walk in youth.
+Though the world may rise against,
+In Your love, we find our rest.
+
+Chorus
+Glorify, O Lord, Your grace,
+In our hearts, let love embrace.
+We are one, as You are whole,
+In Your presence, we are bold.
+Keep us safe, O Holy One,
+In the light of Your own Son.
+Glorify, O Lord, we sing,
+To the glory that You bring.
+
+Bridge
+That the world may know,
+You sent me here, with love to show.
+In perfect unity, we stand,
+With the glory from Your hand.
+Father, I will that they be near,
+In Your presence, we have no fear.
+For the love that You have shown,
+In us, Your heart is known.
+
+Chorus
+Glorify, O Lord, Your grace,
+In our hearts, let love embrace.
+We are one, as You are whole,
+In Your presence, we are bold.
+Keep us safe, O Holy One,
+In the light of Your own Son.
+Glorify, O Lord, we sing,
+To the glory that You bring.
+
+Outro
+O Righteous Father, hear our plea,
+In Your love, we long to be.
+With Your joy, our hearts will soar,
+Glorify forevermore.
+Glorify forevermore.`,
         18: `Verse 1
 In the garden where You prayed,
 With the weight of all our shame,
@@ -52778,6 +53388,22 @@ In all we do, in word or deed,
 We serve the Lord, our hearts He'll lead.  
 With thankful hearts, we rise and sing,  
 In Christ, our Savior, everything.`,
+        4: `Master's here, our home, O plea, to serve with love and equity.
+In every heart your truth, we find, for we are led by the Savior.
+In your grace we stand, O Lord, with thankful hearts, we lift our voice, open doors.
+Because your word proclaim in every moment we rejoice.
+Pray for thinly, we seek your face, walk in wise, we embrace your grace.
+Retaining time, our speech is pure, season with love, our hearts secure.
+In your grace we stand, O Lord, with thankful hearts, we lift our voice, open doors.
+Because your word proclaim in every moment we rejoice.
+For every brother, every friend in unity, our hearts will mend.
+There are workers in the light, together we will shine so bright.
+In your grace we stand, O Lord, with thankful hearts, we lift our voice, open doors.
+In your grace we stand, O Lord, with thankful hearts, we lift our voice, open doors.
+Because your word proclaim in every moment we rejoice.
+Remembering bonds, we all may hold in Christ our Master, we find our role.
+Christ be with us as we go, in your love we'll ever grow.
+We'll ever grow.`,
     },
 
     "52": {
@@ -52846,6 +53472,27 @@ Now may the Lord guide you in every step take,
 as we walk in his promise for his love we awake.
 Stand fast in the Lord, let his light be your way, forever we will praise you.
 Today and every day.`,
+        4: `We gather here, O Lord, we seek Your face, teach us how to walk and live in grace.
+You've shown the way, how we should abide, in sanctification, let our hearts confide.
+For You have called to holiness, to love one another in Your righteousness.
+We walk in faith with hope inside in the light of Your love.
+We find our mind, abstaining from the ways that lead us astray.
+In honor we possess our vessels each day.
+Help us to grow, to love and to serve, as we seek Your will.
+O Lord, our hearts preserve.
+For You have called to holiness, to love one another in Your righteousness.
+We walk in faith with hope inside in the light of Your love.
+We find our mind, when the trumpet sounds and the skies unfold,
+with the dead in Christ, will rise, be consoled.
+Forever with You, in glory we'll stand together in Heaven.
+You're not in Will Man.
+For You have called us to holiness, to love one another in Your righteousness.
+We walk in faith with hope inside in the light of Your love.
+We find our mind.
+So comfort each other, with these words of grace, in the hope of our Savior.
+We find our place, together we rise, in His arms we'll stay.
+Walking in His ways, day by day.
+Walking in His ways, day by day.`,
         5: `In the night we've been called to see a wake arise for the light is free
 as a thief the day of the Lord will come but we're not in darkness for we are one
 we are the children of the day living in hope we will not stray put on faith love and salvation's
@@ -52917,6 +53564,17 @@ In hope and faith, we rise and break.
 Forever grateful, your love we sing.
 In Christ our Savior, our everything.
 Amen.`,
+        3: `Oh, Lord, we come to seek Your face, in prayer we lift, our hearts with grace, Your
+Word, O Lord, let it run free, glorify, just as it is in Me. You are faithful, our
+strong defense. In trials, Lord, we find our end. Direct our hearts in love, divine, in
+peace and waiting, we call You. From wicked men, deliver us, with faith we stand, in
+Your retrust and quiet Word. We find our way, we'll labor on, and not dismiss. You are faithful, our
+strong defense. In trials, Lord, we find our end. Direct our hearts in love, divine, in
+peace and waiting, we call You. From wicked men, deliver us, with faith we stand, in
+Your grace, we'll us to the end. And when it starts, we love so true, we gather strength. I hope in you. You are
+faithful, our strong defense. In trials, Lord, we find our end. Direct our hearts in love, divine, in
+peace and waiting, we call You. From wicked men, deliver us, with faith we stand, in
+peace and waiting, we call You. From wicked men, deliver us, with faith we stand, in`,
     },
 
     "54": {
