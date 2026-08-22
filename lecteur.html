@@ -1873,13 +1873,24 @@ const audioPlayer = document.querySelector('#audioPlayer');
     let isPlaying = false;
 
     // Helper: Résoudre le code R2 pour un livre
-    // Certains livres utilisent un code dossier+fichier différent sur R2
-    // Vérifié par curl HEAD sur R2 le 2026-03-20 (pas via audio-urls-fr.js qui est faux)
-    // Seuls 2 livres ont un vrai alias : Jean (43_JOH→43_JHN) et Jacques (59_JAM→59_JAS)
-    // Les 6 autres (EZE, JOE, MAR, 1JO, 2JO, 3JO) utilisent le code books.js directement
+    // Certains livres utilisent un code dossier+fichier différent sur R2.
+    // Recensement complet du 2026-08-22 : 8323 requêtes HEAD, les 1189 chapitres
+    // dans les 7 langues. Il corrige la vérification du 2026-03-20, qui n'avait été
+    // faite qu'en FR et concluait donc faux pour les autres langues.
+    //
+    // 22_SNG → 22_SON : le dossier R2 est 22_SON dans les 7 langues (8/8 partout).
+    //   Le site cherchait 22_SNG, qui n'existe qu'en FR. Le Cantique des cantiques
+    //   était donc injouable dans les 6 autres langues alors que les fichiers existent.
+    // 59_JAM → 59_JAS : alias réel. 59_JAS répond dans les 7 langues, 59_JAM jamais.
+    // PAS d'alias pour Jean. L'ancien 43_JOH → 43_JHN venait de la vérification faite
+    //   en FR, où les deux dossiers existent en double. En IT et TL, seul 43_JOH
+    //   répond : l'alias cassait les 21 chapitres de Jean dans ces deux langues.
+    //
+    // Réellement absents de R2, aucun code de rechange ne les trouve (17 variantes
+    // testées) : EZE, JOE, MAR, JOH, 1JO, 2JO, 3JO en EN, PT, ES et DE.
     function resolveR2Codes(book) {
       const R2_ALIASES = {
-        '43_JOH': '43_JHN',
+        '22_SNG': '22_SON',
         '59_JAM': '59_JAS'
       };
       const resolved = R2_ALIASES[book] || book;
