@@ -1,6 +1,6 @@
 # 🎵 BibleChantée - La Bible en Musique Worship
 
-> **Projet de mise en musique complète de la Bible en français et 11 autres langues**
+> **Projet de mise en musique complète de la Bible en français et 6 autres langues**
 
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -8,12 +8,12 @@
 
 ## 📖 Vue d'ensemble
 
-**BibleChantée** transforme chaque chapitre de la Bible en une chanson worship francophone unique, générée par intelligence artificielle via l'API Suno. Le projet vise à créer **1189 chansons en français** et **14,268 chansons au total** dans 12 langues.
+**BibleChantée** transforme chaque chapitre de la Bible en une chanson worship francophone unique, générée par intelligence artificielle via l'API Suno. Le projet vise à créer **1189 chansons en français** et **8,323 chansons au total** dans 7 langues.
 
 ### 🎯 Objectifs
 
 - ✅ **1189 chapitres** de la Bible en français
-- ✅ **12 langues** supportées (FR, EN, ES, PT, IT, DE, NL, PL, RO, HI, AR, ZH)
+- ✅ **7 langues** supportées (FR, EN, ES, PT, IT, DE, TL)
 - ✅ **Génération automatisée** via API Suno
 - ✅ **Qualité professionnelle** - Modèle V4_5ALL
 - ✅ **Distribution publique** via Archive.org & GitHub Pages
@@ -41,7 +41,7 @@
 - **Voix claire** et instrumentation équilibrée
 
 ### 📚 Multilingue
-- **12 langues** avec traductions automatiques (GPT-4)
+- **7 langues** avec traductions automatiques (GPT-4)
 - **Adaptation culturelle** des styles musicaux
 - **Lyrics optimisés** pour chaque langue
 
@@ -62,7 +62,7 @@
 │   │   ├── 01_GEN/           # Genèse (50 chapitres)
 │   │   ├── 02_EXO/           # Exode (40 chapitres)
 │   │   └── ...               # 66 livres au total
-│   ├── EN/, ES/, PT/...      # 11 autres langues
+│   ├── EN/, ES/, PT/...      # 6 autres langues
 │
 ├── Suno_Output/              # MP3 générés par Suno API
 │   ├── FR/
@@ -162,7 +162,7 @@ python test_single_chapter.py
 ```python
 from translate_from_fr_to_all import translate_all_languages
 
-translate_all_languages()  # FR → 11 langues
+translate_all_languages()  # FR → 6 autres langues
 ```
 
 ---
@@ -196,12 +196,12 @@ generator.generate_song(
 
 ### Progression Actuelle
 
-| Catégorie | FR | Total (12 langues) |
+| Catégorie | FR | Total (7 langues) |
 |-----------|----|--------------------|
-| **Chapitres totaux** | 1,189 | 14,268 |
+| **Chapitres totaux** | 1,189 | 8,323 |
 | **Générés** | *En cours* | *En cours* |
-| **Durée estimée** | ~60h | ~720h |
-| **Coût Suno** | ~14,268 crédits | ~171,216 crédits |
+| **Durée estimée** | ~60h | ~420h |
+| **Coût Suno** | ~14,268 crédits | ~99,876 crédits |
 
 ### Livres de la Bible
 
