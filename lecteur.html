@@ -1312,6 +1312,11 @@ function isVerseLikeEN(s){
         <span class="icon">🙏</span>
         <span class="text">Prières</span>
       </a>
+      <!-- Playlist Spotify de la langue active. Masque en DE/IT/TL : pas de playlist. -->
+      <a href="https://open.spotify.com/playlist/2xpVskRxm0yHtbvPwY8gA7" target="_blank" rel="noopener" class="nav-btn" id="navSpotify">
+        <span class="icon">🎵</span>
+        <span class="text">Spotify</span>
+      </a>
     </div>
 
     <!-- LIGNE 3: SOUTENIR + RECHERCHE + LOUPE + WHATSAPP (alignée sur rows 1-2) -->
@@ -1509,6 +1514,15 @@ function isVerseLikeEN(s){
   
   <script>
     // Traductions
+    // Playlists Spotify par langue. Seules 4 langues en ont une : DE, IT et TL
+    // ne sont pas distribuees, le bouton est donc masque pour elles.
+    const SPOTIFY_PLAYLISTS = {
+      FR: '2xpVskRxm0yHtbvPwY8gA7',
+      EN: '6eKCbf1yMuOUJZi3OUjv9f',
+      PT: '0jolMQ9yWSvyMydIAU0oUu',
+      ES: '6XGBsbbqQ1p6sJ7HHYzGqq'
+    };
+
     const translations = {
       FR: { about: "À propos", aide: "Aide", news: "Nouveautés", radio: "Radio", promesses: "Promesses", confessions: "Confessions", prieres: "Prières", soutenir: "Soutenir", livre: "Livre", chapitre: "Chapitre", paroles: "Paroles", bible: "Bible", lecteur: "Lecteur", searchPlaceholder: "Comment vous sentez-vous ?",
         newsletterTitle: "Restez informé des nouveautés",
@@ -2328,6 +2342,16 @@ const audioPlayer = document.querySelector('#audioPlayer');
       document.querySelector('#navPrieres').href = 'prieres.html?lang=' + currentLang;
       document.querySelector('#navSoutenir .text').textContent = t.soutenir;
       document.querySelector('#navSoutenir').href = 'crowdfunding.html?lang=' + currentLang;
+      const navSpotify = document.querySelector('#navSpotify');
+      if (navSpotify) {
+        const playlistId = SPOTIFY_PLAYLISTS[currentLang];
+        if (playlistId) {
+          navSpotify.href = 'https://open.spotify.com/playlist/' + playlistId;
+          navSpotify.style.display = '';
+        } else {
+          navSpotify.style.display = 'none';
+        }
+      }
       document.querySelector('#labelLivre').textContent = t.livre;
       document.querySelector('#labelChapitre').textContent = t.chapitre;
       document.querySelector('#toggleLyrics').innerHTML = '🎤 ' + t.paroles;
