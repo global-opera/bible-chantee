@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bible Chantée - Lecteur Audio</title>
+
+  <!-- Aperçu des liens partagés (WhatsApp, Facebook, Telegram...) -->
+  <meta name="description" content="1189 chapitres bibliques mis en musique, à écouter en 7 langues.">
+  <meta property="og:type" content="music.song">
+  <meta property="og:site_name" content="Bible Chantée">
+  <meta property="og:title" content="Bible Chantée">
+  <meta property="og:description" content="1189 chapitres bibliques mis en musique, à écouter en 7 langues.">
+  <meta property="og:url" content="https://biblechantee.com/lecteur.html">
+  <meta property="og:image" content="https://biblechantee.com/icons/icon-512.png">
+  <meta name="twitter:card" content="summary">
+
   <link rel="manifest" href="/manifest.json">
 
   <!-- Google Analytics 4 -->
@@ -1703,12 +1714,30 @@ function isVerseLikeEN(s){
       return bookCode;
     }
 
+    // Helper: Infos du titre en cours pour le partage (nom du livre traduit + titre chante)
+    function getShareInfo() {
+      const bookCode = window.currentBook || '01_GEN';
+      const chapter = window.currentChapter || 1;
+      const lang = (typeof currentLang !== 'undefined' && currentLang) ? currentLang : 'FR';
+      // BOOKS ne contient pas les noms de livres : ils vivent dans BOOK_NAMES, via getBookName()
+      const bookName = getBookName(bookCode, lang) || 'Bible';
+      let chapterTitle = getChapterTitle(bookCode, String(chapter), lang) || '';
+      const reference = bookName + ' ' + chapter;
+      // Certains titres stockes repetent la reference ("2 Samuel 1 - Chant des Heros") : ne pas la doubler
+      const dupPrefix = new RegExp('^["\u00ab\\s]*' + reference.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s*[-\u2013\u2014:]*\\s*', 'i');
+      chapterTitle = chapterTitle.replace(dupPrefix, '').trim();
+      const label = chapterTitle ? reference + ' - ' + chapterTitle : reference;
+      const url = 'https://biblechantee.com/lecteur.html?lang=' + lang
+        + '&book=' + encodeURIComponent(bookCode) + '&ch=' + chapter;
+      return { bookCode, chapter, lang, bookName, chapterTitle, reference, label, url };
+    }
+
     // Helper: Clean chapter titles (outer quotes + TITRE/Title/Titulo prefixes)
     function cleanTitle(s) {
       if (s == null) return '';
       s = String(s).trim();
-      // Remove quotes right after " - " and trailing quotes
-      s = s.replace(/(\s-\s)["“'«]+/g, '');
+      // Remove quotes right after " - " and trailing quotes (garder le separateur)
+      s = s.replace(/(\s-\s)["“'«]+/g, '$1');
       s = s.replace(/["”'»]+\s*$/g, '');
       // Outer quotes
       s = s.replace(/^[\s"“'«]+/g, '');
@@ -2686,15 +2715,12 @@ const audioPlayer = document.querySelector('#audioPlayer');
     
     // Partage
     document.querySelector('#shareBtn').addEventListener('click', async () => {
-      const bookData = BOOKS.find(b => b.code === currentBook);
-      const bookName = bookData ? bookData.name : 'Bible';
-      const chapter = currentChapter || 1;
-      const bookCode = currentBook || '01_GEN';
+      const info = getShareInfo();
 
       const shareData = {
-        title: 'Bible Chantée - ' + bookName + ' ' + chapter,
-        text: '🎵 Écoute ' + bookName + ' ' + chapter + ' sur Bible Chantée !',
-        url: 'https://biblechantee.com/lecteur.html?lang=' + currentLang + '&book=' + bookCode + '&ch=' + chapter
+        title: 'Bible Chantée - ' + info.label,
+        text: '🎵 Écoute ' + info.label + ' sur Bible Chantée !',
+        url: info.url
       };
 
       if (navigator.share) {
@@ -3375,15 +3401,14 @@ const audioPlayer = document.querySelector('#audioPlayer');
       let text = "🎵 Découvrez la Bible Chantée !\n\n";
       text += "1189 chapitres bibliques mis en musique en 7 langues.\n\n";
 
-      // Ajouter le chapitre en cours si disponible
-      const bookTitle = document.getElementById('headerTitle')?.textContent;
-      const chapterInfo = document.getElementById('headerSubtitle')?.textContent;
-      if (bookTitle && chapterInfo) {
-        text += "🎧 En ce moment : " + bookTitle + " - " + chapterInfo + "\n\n";
+      // Titre en cours : nom du livre + chapitre + titre chante
+      const info = (typeof getShareInfo === 'function') ? getShareInfo() : null;
+      if (info) {
+        text += "🎧 En ce moment : " + info.label + "\n\n";
       }
 
       text += "🇫🇷 🇬🇧 🇧🇷 🇪🇸 🇩🇪 🇮🇹 🇵🇭\n\n";
-      text += "👉 https://biblechantee.com";
+      text += "👉 " + (info ? info.url : "https://biblechantee.com");
 
       window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank");
     }
