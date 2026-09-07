@@ -412,3 +412,14 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/JOURNAL_INTERVENTIONS.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/tests/*"
+  to = "/lecteur.html"
+  status = 404
+  force = true
