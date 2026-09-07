@@ -3,26 +3,36 @@
 const SW_DEBUG = false; // Mettre à true pour debug
 const swLog = (...args) => { if (SW_DEBUG) console.log(...args); };
 
-const CACHE_NAME = 'bible-chantee-v11';
+const CACHE_NAME = 'bible-chantee-v12';
+
+// ATTENTION : ce service worker n'est enregistre par AUCUNE page (l'appel a
+// serviceWorker.register a ete retire le 2025-12-24). Il ne s'execute donc que
+// chez les visiteurs qui en ont garde un enregistrement de decembre 2025.
+// Il est corrige ici pour etre sain le jour ou on decide de le rebrancher.
+//
+// Corrections de l'audit du 2026-09-07 :
+//  - /credits-system.js n'existe pas : cache.addAll() echouait EN BLOC, donc
+//    absolument rien n'etait mis en cache (mode hors-ligne inoperant).
+//  - lyrics-data.js et lyrics-data-v2.js ne sont plus charges par le lecteur.
+//  - le HTML passe en "reseau d'abord" pour ne plus servir une page perimee.
+//  - le cache audio est plafonne (il pouvait grossir sans limite, 1189
+//    chapitres x 7 langues).
 const STATIC_ASSETS = [
     '/',
     '/lecteur.html',
-    '/credits.js',
-    '/credits.css',
-    '/credits-system.js',
-    '/bible-data.js',
-    '/bible-data-pt.js',
-    '/bible-data-en.js',
-    '/bible-data-es.js',
-    '/lyrics-data.js',
-    '/lyrics-data-v2.js',
-    '/lyrics-data-pt.js',
-    '/lyrics-data-en.js'
+    '/manifest.json',
+    '/js/books.js',
+    '/js/book-names.js',
+    '/js/chapter-titles.js',
+    '/lyrics-data-fr.js'
 ];
+
+// Nombre maximum de MP3 conserves hors ligne (~3 Mo piece)
+const MAX_AUDIO_CACHE = 40;
 
 // Install
 self.addEventListener('install', event => {
-    console.log('[SW] Install v11'); // Log critique: garder
+    console.log('[SW] Install v12'); // Log critique: garder
     event.waitUntil(
         caches.open(CACHE_NAME).then(cache => {
             swLog('[SW] Caching static assets');
@@ -35,26 +45,53 @@ self.addEventListener('install', event => {
 });
 
 // Fetch - Cache first, then network
+// Limite la taille du cache audio (FIFO)
+async function trimAudioCache() {
+    const cache = await caches.open(CACHE_NAME);
+    const keys = (await cache.keys()).filter(r => r.url.endsWith('.mp3'));
+    for (let i = 0; i < keys.length - MAX_AUDIO_CACHE; i++) {
+        await cache.delete(keys[i]);
+    }
+}
+
 self.addEventListener('fetch', event => {
+    const req = event.request;
+    if (req.method !== 'GET') return;
+
+    const estHTML = req.mode === 'navigate' ||
+        (req.headers.get('accept') || '').includes('text/html');
+
+    // HTML : reseau d'abord, cache en secours. Sinon une correction deployee
+    // n'atteint jamais les utilisateurs deja passes sur le site.
+    if (estHTML) {
+        event.respondWith(
+            fetch(req)
+                .then(res => {
+                    caches.open(CACHE_NAME).then(c => c.put(req, res.clone())).catch(() => {});
+                    return res;
+                })
+                .catch(() => caches.match(req).then(r => r || caches.match('/lecteur.html')))
+        );
+        return;
+    }
+
     event.respondWith(
-        caches.match(event.request).then(response => {
+        caches.match(req).then(response => {
             if (response) {
-                swLog('[SW] Cache hit:', event.request.url);
+                swLog('[SW] Cache hit:', req.url);
                 return response;
             }
-
-            return fetch(event.request).then(fetchResponse => {
-                // Cache MP3 files when played
-                if (event.request.url.endsWith('.mp3')) {
-                    caches.open(CACHE_NAME).then(cache => {
-                        swLog('[SW] Caching audio:', event.request.url);
-                        cache.put(event.request, fetchResponse.clone());
-                    });
+            return fetch(req).then(fetchResponse => {
+                if (req.url.endsWith('.mp3') && fetchResponse.ok) {
+                    const copie = fetchResponse.clone();
+                    caches.open(CACHE_NAME)
+                        .then(cache => cache.put(req, copie))
+                        .then(trimAudioCache)
+                        .catch(() => {});
                 }
                 return fetchResponse;
             }).catch(err => {
                 console.error('[SW] Fetch error:', err);
-                // Return offline page or default response if needed
             });
         })
     );
@@ -62,7 +99,7 @@ self.addEventListener('fetch', event => {
 
 // Activate - Clean old caches
 self.addEventListener('activate', event => {
-    console.log('[SW] Activate v11'); // Log critique: garder
+    console.log('[SW] Activate v12'); // Log critique: garder
     event.waitUntil(
         caches.keys().then(keys => {
             return Promise.all(

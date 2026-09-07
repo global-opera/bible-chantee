@@ -50,8 +50,36 @@
     return s ? s.toUpperCase().substring(0,2) : 'FR';
   }
 
+  // Index des titres chantes : "19_PSA_023" -> "Psaume 23 - Mon Berger, Ma Lumiere".
+  // window.CHAPTER_TITLES est indexe par numero de livre ("19"), le dictionnaire
+  // par code ("19_PSA") : on fait la correspondance une fois par langue.
+  var titleIndexCache = {};
+  function buildTitleIndex(lang) {
+    if (titleIndexCache[lang]) return titleIndexCache[lang];
+    var idx = {};
+    var titles = window.CHAPTER_TITLES && window.CHAPTER_TITLES[lang];
+    var books = window.BOOKS;
+    if (titles && books) {
+      for (var i = 0; i < books.length; i++) {
+        var b = books[i];
+        var perBook = titles[b.num] || titles[String(parseInt(b.num, 10))];
+        if (!perBook) continue;
+        for (var ch in perBook) {
+          if (!perBook.hasOwnProperty(ch)) continue;
+          var n = parseInt(ch, 10);
+          if (!n) continue;
+          idx[b.code + '_' + String(n).padStart(3, '0')] = perBook[ch];
+        }
+      }
+    }
+    titleIndexCache[lang] = idx;
+    return idx;
+  }
+
   // Recherche principale
-  function semanticSearch(query, lang) {
+  // limit : nombre max de resultats (l'appelant demandait 8, l'ancien moteur
+  // ignorait ce parametre et en renvoyait toujours 50).
+  function semanticSearch(query, lang, limit) {
     if (!query || query.trim().length < 2) return [];
     lang = lang || detectLang();
     var dictLang = {'FR':'FR','EN':'EN','PT':'PT','ES':'ES','DE':'DE','IT':'IT'}[lang] || 'FR';
@@ -95,6 +123,9 @@
     try {
       if (window['titres_' + lang.toLowerCase()]) titresData = window['titres_' + lang.toLowerCase()];
       else if (window.titresData) titresData = window.titresData;
+      // Repli sur CHAPTER_TITLES : les globales titres_xx n'existent sur aucune
+      // page, donc cette etape ne servait jamais (audit 2026-09-07).
+      if (!titresData) titresData = buildTitleIndex(dictLang);
     } catch(e) {}
 
     if (titresData) {
@@ -106,7 +137,11 @@
         var normTitre = normalize(titre);
         if (normTitre.indexOf(normQuery) !== -1) {
           if (!results[chapKey]) results[chapKey] = {score:0, families:[], matchedWords:[]};
-          results[chapKey].score = Math.max(results[chapKey].score, 0.95);
+          // Au-dessus de 1 : un chapitre dont le TITRE contient la requete
+          // passe avant les chapitres simplement rattaches au meme theme
+          // (avant, 0.95 le faisait passer apres : "berger" ne remontait pas
+          // le Psaume 23).
+          results[chapKey].score = Math.max(results[chapKey].score, 1.5);
           if (results[chapKey].families.indexOf('titre') === -1) results[chapKey].families.push('titre');
           if (results[chapKey].matchedWords.indexOf(titre) === -1) results[chapKey].matchedWords.push(titre);
         }
@@ -126,8 +161,9 @@
     }
     arr.sort(function(a, b) { return b.score - a.score; });
 
-    // Limiter a 50 resultats max
-    return arr.slice(0, 50);
+    // Limiter au nombre demande par l'appelant (50 par defaut)
+    var max = (typeof limit === 'number' && limit > 0) ? limit : 50;
+    return arr.slice(0, max);
   }
 
   // Fonction utilitaire: decoder un code chapitre

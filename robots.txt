@@ -1,0 +1,26 @@
+# Bible Chantee - robots.txt (ajoute le 2026-09-07)
+# Note : si le domaine est servi derriere Cloudflare avec un robots.txt gere,
+# c'est celui de Cloudflare qui peut primer. A verifier apres deploiement.
+
+User-agent: *
+Allow: /
+
+# Coulisses du projet : scripts, notes internes, sauvegardes, pages de test.
+# Ces chemins renvoient deja 404 (voir netlify.toml) mais on les declare aussi.
+Disallow: /Scripts/
+Disallow: /docs/
+Disallow: /Logs/
+Disallow: /data/
+Disallow: /lyrics/
+Disallow: /bibles/
+Disallow: /_BACKUP_
+Disallow: /_archive_
+Disallow: /test-
+Disallow: /demo.html
+Disallow: /demo-lite.html
+Disallow: /BIBLE_DU_PROJET_Bible_Chantee.html
+Disallow: /dashboard.html
+Disallow: /distribution-dashboard.html
+Disallow: /spotify-callback.html
+
+Sitemap: https://biblechantee.com/sitemap.xml

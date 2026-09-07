@@ -15,6 +15,18 @@
   <meta property="og:image" content="https://biblechantee.com/icons/icon-512.png">
   <meta name="twitter:card" content="summary">
 
+  <!-- Referencement : une seule URL canonique, et une declaration par langue
+       (la langue est choisie par ?lang=XX). Audit 2026-09-07. -->
+  <link rel="canonical" href="https://biblechantee.com/lecteur.html">
+  <link rel="alternate" hreflang="x-default" href="https://biblechantee.com/lecteur.html">
+  <link rel="alternate" hreflang="fr" href="https://biblechantee.com/lecteur.html?lang=FR">
+  <link rel="alternate" hreflang="en" href="https://biblechantee.com/lecteur.html?lang=EN">
+  <link rel="alternate" hreflang="pt" href="https://biblechantee.com/lecteur.html?lang=PT">
+  <link rel="alternate" hreflang="es" href="https://biblechantee.com/lecteur.html?lang=ES">
+  <link rel="alternate" hreflang="de" href="https://biblechantee.com/lecteur.html?lang=DE">
+  <link rel="alternate" hreflang="it" href="https://biblechantee.com/lecteur.html?lang=IT">
+  <link rel="alternate" hreflang="tl" href="https://biblechantee.com/lecteur.html?lang=TL">
+
   <link rel="manifest" href="/manifest.json">
 
   <!-- Google Analytics 4 -->
@@ -1269,28 +1281,28 @@ function isVerseLikeEN(s){
 }
 /* ===== END EN TITLES HARDENING ===== */
 </script>
-    <script src="lyrics-data.js?v=20260114f"></script>
+    <!-- Paroles : seule la langue affichee est chargee, a la demande (voir
+         ensureLyricsData plus bas). Avant l'audit du 2026-09-07 les 7 langues
+         etaient telechargees a chaque visite (~12 Mo), dont 3,7 Mo
+         (lyrics-data.js et lyrics-data-v2.js) qu'aucune ligne ne lisait. -->
     <script src="lyrics-data-fr.js?v=20260312"></script>
-    <script src="lyrics-data-v2.js?v=20260512"></script>
-    <script src="lyrics-data-en.js"></script>
-    <script src="lyrics-data-pt.js"></script>
-    <script src="lyrics-data-es.js"></script>
-    <script src="lyrics-data-de.js"></script>
-    <script src="lyrics-data-it.js"></script>
-    <script src="lyrics-data-tl.js"></script>
   </head>
 <body>
   <div class="container">
     
+    <!-- Un seul h1 par page, lu par les lecteurs d'ecran et les moteurs.
+         Masque visuellement : la marque est deja dans l'image d'entete. -->
+    <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;padding:0;margin:-1px;">Bible Chantée — la Bible entière chantée, 1189 chapitres en 7 langues</h1>
+
     <!-- LIGNE 1: 7 DRAPEAUX (toutes les langues disponibles) -->
     <div class="flags-row">
-      <button class="flag-btn active" data-lang="FR"><img src="./img/flags/flag_FR.png" alt="FR" class="flag-img"></button>
-      <button class="flag-btn" data-lang="EN"><img src="./img/flags/flag_EN.png" alt="EN" class="flag-img"></button>
-      <button class="flag-btn" data-lang="PT"><img src="./img/flags/flag_PT.png" alt="PT" class="flag-img"></button>
-      <button class="flag-btn" data-lang="ES"><img src="./img/flags/flag_ES.png" alt="ES" class="flag-img"></button>
-      <button class="flag-btn" data-lang="DE"><img src="./img/flags/flag_DE.png" alt="DE" class="flag-img"></button>
-      <button class="flag-btn" data-lang="IT"><img src="./img/flags/flag_IT.png" alt="IT" class="flag-img"></button>
-      <button class="flag-btn" data-lang="TL"><img src="./img/flags/flag_TL.png" alt="TL" class="flag-img"></button>
+      <button class="flag-btn active" data-lang="FR" lang="fr" title="Français" aria-label="Français"><img src="./img/flags/flag_FR.png" alt="" class="flag-img"></button>
+      <button class="flag-btn" data-lang="EN" lang="en" title="English" aria-label="English"><img src="./img/flags/flag_EN.png" alt="" class="flag-img"></button>
+      <button class="flag-btn" data-lang="PT" lang="pt" title="Português" aria-label="Português"><img src="./img/flags/flag_PT.png" alt="" class="flag-img"></button>
+      <button class="flag-btn" data-lang="ES" lang="es" title="Español" aria-label="Español"><img src="./img/flags/flag_ES.png" alt="" class="flag-img"></button>
+      <button class="flag-btn" data-lang="DE" lang="de" title="Deutsch" aria-label="Deutsch"><img src="./img/flags/flag_DE.png" alt="" class="flag-img"></button>
+      <button class="flag-btn" data-lang="IT" lang="it" title="Italiano" aria-label="Italiano"><img src="./img/flags/flag_IT.png" alt="" class="flag-img"></button>
+      <button class="flag-btn" data-lang="TL" lang="tl" title="Tagalog" aria-label="Tagalog"><img src="./img/flags/flag_TL.png" alt="" class="flag-img"></button>
     </div>
 
     <!-- LIGNE 2: BOUTONS NAVIGATION -->
@@ -1350,10 +1362,10 @@ function isVerseLikeEN(s){
              autocomplete="off">
 
       <!-- Bouton Loupe: même taille que les 14 autres -->
-      <button id="searchBtn" class="search-button">🔍</button>
+      <button id="searchBtn" aria-label="Lancer la recherche" class="search-button">🔍</button>
 
       <!-- Bouton WhatsApp: même taille que les 14 autres -->
-      <button class="nav-btn btn-whatsapp" onclick="shareWhatsApp()" title="Partager sur WhatsApp" style="flex-shrink: 0; background: #25D366; border-color: #25D366;">
+      <button class="nav-btn btn-whatsapp" onclick="shareWhatsApp()" title="Partager sur WhatsApp" style="flex-shrink: 0; background: #25D366; border-color: #25D366;" aria-label="Partager sur WhatsApp">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
@@ -1423,13 +1435,13 @@ function isVerseLikeEN(s){
       <div id="playerSection">
         <div class="section-title" id="labelLivre">Livre</div>
         
-        <select class="book-select" id="bookSelect">
+        <select class="book-select" id="bookSelect" aria-labelledby="labelLivre">
           <!-- Populated dynamically from BOOKS + BOOK_NAMES -->
         </select>
         
         <div class="section-title" id="labelChapitre">Chapitre</div>
 
-        <select class="chapter-select" id="chapterSelect">
+        <select class="chapter-select" id="chapterSelect" aria-labelledby="labelChapitre">
           <!-- Populated dynamically based on selected book -->
         </select>
         
@@ -1437,11 +1449,11 @@ function isVerseLikeEN(s){
         <div class="player-bar">
           <!-- Contrôles de navigation -->
           <div class="player-nav-controls">
-            <button class="player-nav-btn" id="restartBtn" title="Chapitre précédent">⏮️</button>
-            <button class="player-nav-btn" id="rewind10Btn" title="Reculer 10s">⏪</button>
-            <button class="play-btn" id="playBtn">▶</button>
-            <button class="player-nav-btn" id="forward10Btn" title="Avancer 10s">⏩</button>
-            <button class="player-nav-btn" id="nextChapterBtn" title="Chapitre suivant">⏭️</button>
+            <button class="player-nav-btn" id="restartBtn" title="Chapitre précédent" aria-label="Chapitre précédent">⏮️</button>
+            <button class="player-nav-btn" id="rewind10Btn" title="Reculer 10s" aria-label="Reculer 10s">⏪</button>
+            <button class="play-btn" id="playBtn" title="Lecture / pause" aria-label="Lecture ou pause">▶</button>
+            <button class="player-nav-btn" id="forward10Btn" title="Avancer 10s" aria-label="Avancer 10s">⏩</button>
+            <button class="player-nav-btn" id="nextChapterBtn" title="Chapitre suivant" aria-label="Chapitre suivant">⏭️</button>
           </div>
 
           <div class="progress-container">
@@ -1451,17 +1463,17 @@ function isVerseLikeEN(s){
           </div>
           <div class="time" id="timeDisplay">00:00 / 00:00</div>
           <div class="player-controls">
-            <button class="control-btn add-radio-btn" id="favoriteBtn" title="Ajouter à la radio"><span class="plus-icon">+</span><span class="radio-icon">📻</span></button>
+            <button class="control-btn add-radio-btn" id="favoriteBtn" title="Ajouter à la radio" aria-label="Ajouter à la radio"><span class="plus-icon">+</span><span class="radio-icon">📻</span></button>
             <!-- KARAOKÉ TEMPORAIREMENT DÉSACTIVÉ -->
-            <!-- <button class="control-btn" id="karaokeBtn" title="Karaoké" onclick="openKaraoke()">🎤</button> -->
-            <button class="control-btn autoplay-btn" id="autoplayBtn" title="Lecture continue">🔁</button>
-            <button class="control-btn share-btn" id="shareBtn" title="Partager">
+            <!-- <button class="control-btn" id="karaokeBtn" title="Karaoké" onclick="openKaraoke()" aria-label="Karaoké">🎤</button> -->
+            <button class="control-btn autoplay-btn" id="autoplayBtn" title="Lecture continue" aria-label="Lecture continue">🔁</button>
+            <button class="control-btn share-btn" id="shareBtn" title="Partager" aria-label="Partager">
               <svg viewBox="0 0 100 100" class="share-icon">
                 <circle cx="50" cy="50" r="48" fill="#2C4A73"/>
                 <path d="M30 55 Q30 35 50 35 L50 25 L75 45 L50 65 L50 55 Q40 55 30 55 Z" fill="#F5CB42"/>
               </svg>
             </button>
-            <button class="control-btn like-btn" id="likeBtn" title="Ajouter aux favoris" onclick="toggleLike()">
+            <button class="control-btn like-btn" id="likeBtn" title="Ajouter aux favoris" onclick="toggleLike()" aria-label="Ajouter aux favoris">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
               </svg>
@@ -1514,11 +1526,11 @@ function isVerseLikeEN(s){
 
         <!-- Contrôles -->
         <div class="radio-controls">
-          <button class="radio-btn" id="radioShuffle" title="Aléatoire">🔀</button>
-          <button class="radio-btn" id="radioPrev" title="Précédent">⏮️</button>
-          <button class="radio-btn main" id="radioPlayPause" title="Lecture">▶️</button>
-          <button class="radio-btn" id="radioNext" title="Suivant">⏭️</button>
-          <button class="radio-btn" id="radioRepeat" title="Répéter">🔁</button>
+          <button class="radio-btn" id="radioShuffle" title="Aléatoire" aria-label="Aléatoire">🔀</button>
+          <button class="radio-btn" id="radioPrev" title="Précédent" aria-label="Précédent">⏮️</button>
+          <button class="radio-btn main" id="radioPlayPause" title="Lecture" aria-label="Lecture">▶️</button>
+          <button class="radio-btn" id="radioNext" title="Suivant" aria-label="Suivant">⏭️</button>
+          <button class="radio-btn" id="radioRepeat" title="Répéter" aria-label="Répéter">🔁</button>
         </div>
       </div>
       
@@ -2010,28 +2022,13 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
     // Jouer chapitre suivant (pour autoplay)
     function playNextChapter() {
-      // Récupérer le nombre de chapitres du livre actuel
-      const currentBookData = BOOKS.find(b => b.code === currentBook);
-      const maxChapters = currentBookData ? currentBookData.chapters : 50;
+      const bookData = BOOKS.find(b => b.code === currentBook);
+      const maxChapters = bookData ? bookData.chapters : 50;
 
       if (currentChapter < maxChapters) {
-        const nextChapter = currentChapter + 1;
-        // Mettre à jour l'UI
-        const chapterSelect = document.querySelector('#chapterSelect');
-        if (chapterSelect) {
-          chapterSelect.value = nextChapter;
-        }
-        // Charger et jouer
-        loadAndPlayChapter(currentBook, nextChapter, currentLang);
-        // Mettre à jour le sous-titre
-        const t = translations[currentLang] || translations.FR;
-        const chapterTitle = getChapterTitle(currentBook, nextChapter.toString(), currentLang);
-        const subtitle = chapterTitle
-          ? `${t.chapitre} ${nextChapter} - ${chapterTitle}`
-          : `${t.chapitre} ${nextChapter}`;
-        document.querySelector('#headerSubtitle').textContent = subtitle;
+        goToChapter(currentBook, currentChapter + 1, { play: true });
       } else {
-        // Fin du livre, arrêter l'autoplay
+        // Fin du livre, arreter l'autoplay
         isPlaying = false;
         playBtn.textContent = '▶';
         console.log('Fin du livre atteint');
@@ -2040,6 +2037,44 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
     // Cache pour les fichiers JSON (Bible seulement)
     const bibleCache = {};
+    const biblePromises = {};
+
+    // Cache par PROMESSE et non par resultat : deux appels simultanes ne
+    // telechargent plus deux fois le meme JSON de 6,6 Mo (c'etait le cas au
+    // demarrage en francais, ou paroles et Bible lisent le meme fichier).
+    function loadBibleJson(filename) {
+      if (bibleCache[filename]) return Promise.resolve(bibleCache[filename]);
+      if (!biblePromises[filename]) {
+        biblePromises[filename] = fetch('bibles/' + filename)
+          .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+          .then(json => { bibleCache[filename] = json; return json; })
+          .catch(err => { delete biblePromises[filename]; throw err; });
+      }
+      return biblePromises[filename];
+    }
+
+    // Paroles : un fichier par langue, ~1,8 Mo chacun. On ne charge que celui
+    // de la langue affichee, la premiere fois qu'on en a besoin.
+    const LYRICS_FILES = {
+      EN: 'lyrics-data-en.js', PT: 'lyrics-data-pt.js', ES: 'lyrics-data-es.js',
+      DE: 'lyrics-data-de.js', IT: 'lyrics-data-it.js', TL: 'lyrics-data-tl.js'
+    };
+    const lyricsLoading = {};
+    function ensureLyricsData(lang) {
+      const L = String(lang || '').toUpperCase();
+      if (!LYRICS_FILES[L] || window['chapterLyrics' + L]) return Promise.resolve();
+      if (!lyricsLoading[L]) {
+        lyricsLoading[L] = new Promise(resolve => {
+          const s = document.createElement('script');
+          s.src = LYRICS_FILES[L];
+          s.async = true;
+          s.onload = () => resolve();
+          s.onerror = () => { console.error('[LYRICS] fichier introuvable: ' + LYRICS_FILES[L]); resolve(); };
+          document.head.appendChild(s);
+        });
+      }
+      return lyricsLoading[L];
+    }
 
     // Mapping langue -> fichier Bible
     const bibleFiles = {
@@ -2056,35 +2091,37 @@ const audioPlayer = document.querySelector('#audioPlayer');
     function cleanLyrics(text) {
       if (!text) return '';
 
-      // 1. Supprimer [STYLE] et tout ce qui suit
-      const styleIndex = text.indexOf('[STYLE]');
+      // 1. Supprimer [STYLE] / [ESTILO] et tout ce qui suit (consigne de style Suno)
+      const styleIndex = text.search(/\[(STYLE|ESTILO)\]/i);
       if (styleIndex !== -1) {
         text = text.substring(0, styleIndex);
       }
 
-      // 2. Supprimer les tags structurels [TITLE], [LYRICS]
-      text = text.replace(/\[TITLE\]/gi, '');
-      text = text.replace(/\[LYRICS\]/gi, '');
+      // 2. Balises de structure Suno, regle GENERALE (audit 2026-09-07).
+      // L'ancienne liste blanche ne connaissait que [TITLE]/[LYRICS] et les
+      // sections anglaises : tout le reste s'affichait en clair a l'ecran
+      // ([TITRE], [RITORNELLO], [KORO], [CORACAO], [PRE-REFRAO]... soit une
+      // cinquantaine de variantes sur les 7 langues).
+      // Une balise Suno est en DEBUT de ligne, parfois precedee de markdown
+      // (### ou **) et parfois suivie du titre sur la meme ligne. Une
+      // parenthese editoriale du texte biblique ("[des pillards Amalecites]",
+      // 1 Ch 12:21) est au milieu d'une phrase : elle doit etre conservee.
+      text = text.replace(/^[ \t]*#{0,6}[ \t]*\*{0,2}[ \t]*\[[^\]\n]{1,40}\][ \t]*\*{0,2}[ \t]*/gm, '###PARAGRAPH_BREAK###');
 
       // 3. Supprimer les lignes de titre avec markdown et guillemets
       text = text.replace(/\*\*(Título|Title|TÍTULO|TITLE):\s*["""][^"""]*["""]\*\*/gi, '');
       text = text.replace(/(Título|Title|TÍTULO|TITLE):\s*["""][^"""]*["""]/gi, '');
 
-      // 4. MARQUER les vraies séparations de couplets (tags de section)
-      // Français: [Verset], [Couplet], [Refrain], [Strophe]
-      // Anglais: [Verse], [Chorus], [Bridge], [Outro], [Intro], [Spoken Word]
-      // Espagnol: [Verso], [Coro], [Puente]
-      // Portugais: [Verso], [Refrão], [Ponte], [Fim]
+      // 4. (fusionne dans l'etape 2 : une seule regle pour toutes les langues)
 
-      // D'abord, supprimer les markdown ** ** autour des sections
-      text = text.replace(/\*\*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*)\]\*\*/gi, '[$1]');
-
-      // Remplacer les tags de section par un marqueur unique
-      text = text.replace(/\s*\[((Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe|Spoken Word)[^\]]*)\]\s*/gi, '###PARAGRAPH_BREAK###');
-
-      // 5. Supprimer les lignes de section avec deux-points (Verse 1:, Chorus:, etc.)
-      // Format: "Verse 1:  " ou "Verso 1:  " ou "Coro  " etc.
-      text = text.replace(/^\s*(Vers[oe]|Chorus|Refrão|Refrain|Coro|Ponte|Puente|Bridge|Final|Fim|Outro|Intro|Introduction|Couplet|Verset|Strophe)\s*\d*\s*:?\s*$/gmi, '');
+      // 5. Libelles de section SANS crochets, seuls sur leur ligne, dans les 7
+      // langues, y compris quand Suno les entoure de markdown ("**Verso 1**").
+      // Le markdown n'etait retire qu'a l'etape 7, donc ces lignes passaient au
+      // travers et s'affichaient dans les paroles (audit 2026-09-07).
+      const SECTIONS = 'Vers[oe]s?|Verse|Verset|Couplet|Strophen?|Chorus|Chor|Coro|Coros|Refr[ãa]o|Refrain|Estribillo|Ritornello|Koro|Bridge|Br[üu]cke|Ponte|Puente|Tulay|Outro|Intro|Introduction|Final|Finale|Fim|Fine|Ende|End|Ending|Closing|Cierre|Conclusione|Conclus[ãa]o|Coda|Tag|Pre-?Chorus|Pre-?Refr[ãa]o|Pr[eé]-?Refr[ãa]o|Pre-?Coro|Pre-?Ritornello|Spoken Word|Liriko|Letras?|Lyrics|Titre|Title|T[íi]tulo|Titel|Titolo';
+      text = text.replace(
+        new RegExp('^[ \\t]*#{0,6}[ \\t]*\\*{0,2}[ \\t]*(?:' + SECTIONS + ')[ \\t]*\\d*[ \\t]*:?[ \\t]*\\*{0,2}[ \\t]*$', 'gmi'),
+        '###PARAGRAPH_BREAK###');
 
       // 6. Supprimer "Letras", "Lyrics", "LYRICS" seul en début de ligne
       text = text.replace(/^\s*(Letras|Lyrics|LYRICS)\s*$/gmi, '');
@@ -2163,13 +2200,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
         if (lang === 'FR') {
           try {
             const filename = bibleFiles[lang] || bibleFiles.FR;
-            let bibleJson = bibleCache[filename];
-            if (!bibleJson) {
-              const resp = await fetch('bibles/' + filename);
-              if (!resp.ok) throw new Error('HTTP ' + resp.status);
-              bibleJson = await resp.json();
-              bibleCache[filename] = bibleJson;
-            }
+            const bibleJson = await loadBibleJson(filename);
             const bookNumInt = parseInt(bookNumber, 10);
             const chapInt = parseInt(chapter, 10);
             const verses = (bibleJson.verses || []).filter(v => v.book === bookNumInt && v.chapter === chapInt);
@@ -2186,6 +2217,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
             console.error('[LYRICS] FR Bible fetch error:', err);
           }
         } else {
+          // Charge le fichier de la langue si ce n'est pas deja fait
+          await ensureLyricsData(lang);
           const lyricsVarName = `chapterLyrics${lang}`;
           const lyricsDataSource = window[lyricsVarName];
           console.log('[LYRICS] Book:', bookNumber, 'Lang:', lang, 'Using:', lyricsVarName, 'exists:', !!lyricsDataSource);
@@ -2251,17 +2284,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
         // Charger le fichier JSON
         const filename = bibleFiles[lang] || bibleFiles.FR;
-        let bibleData = bibleCache[filename];
-
-        if (!bibleData) {
-          const response = await fetch(`bibles/${filename}`);
-          if (!response.ok) {
-            bibleContent.innerHTML = '<p style="color: #f88;">Fichier Bible introuvable</p>';
-            return;
-          }
-          bibleData = await response.json();
-          bibleCache[filename] = bibleData;
-        }
+        const bibleData = await loadBibleJson(filename);
 
         // Extraire les versets du chapitre
         const verses = bibleData.verses.filter(v => v.book === bookNumber && v.chapter === chapter);
@@ -2399,25 +2422,16 @@ const audioPlayer = document.querySelector('#audioPlayer');
         updateTranslations();
         updateNewsletterTranslations(); // Traductions newsletter + popup
 
-        // Recharger le chapitre actuel avec la nouvelle langue
+        // Recharger le chapitre courant dans la nouvelle langue : audio, entete,
+        // paroles et Bible d'un seul coup. Si la lecture etait en cours elle
+        // reprend dans la nouvelle langue, au lieu de s'arreter en laissant le
+        // bouton affiche sur "pause".
         if (currentBook && currentChapter) {
-          // Charger l'audio SANS lancer la lecture automatique
-          const audioUrls = getAudioUrl(currentBook, currentChapter, currentLang);
-          setAudioWithFallback(audioPlayer, audioUrls, false);
-
-          loadLyrics(currentBook, currentChapter, currentLang);
-          loadBibleText(currentBook, currentChapter, currentLang);
-
-          // Mettre à jour le titre du chapitre
-          const chapterTitle = getChapterTitle(currentBook, currentChapter, currentLang);
-          if (chapterTitle) {
-            const t = translations[currentLang] || translations.FR;
-            document.querySelector('#headerSubtitle').textContent = `${t.chapitre} ${currentChapter} - ${chapterTitle}`;
-          }
+          goToChapter(currentBook, currentChapter);
         }
       });
     });
-    
+
     // Mise à jour traductions
     function updateTranslations() {
       const t = translations[currentLang] || translations.FR;
@@ -2457,6 +2471,9 @@ const audioPlayer = document.querySelector('#audioPlayer');
       document.querySelector('#toggleLyrics').innerHTML = '🎤 ' + t.paroles;
       document.querySelector('#toggleBible').innerHTML = '📖 ' + t.bible;
       document.querySelector('#headerMode').textContent = isRadioMode ? t.radio : t.lecteur;
+      // L'attribut lang du document restait fige a "fr" : les lecteurs d'ecran
+      // prononcaient l'anglais ou le tagalog avec la phonetique francaise.
+      document.documentElement.lang = String(currentLang || 'FR').toLowerCase();
       document.querySelector('#searchInput').placeholder = t.searchPlaceholder;
 
       // Mettre à jour le titre du livre (headerTitle)
@@ -2471,15 +2488,11 @@ const audioPlayer = document.querySelector('#audioPlayer');
       // Mettre à jour le titre du contenu (Paroles ou Bible)
       // Vérifier quel bouton est actif (plus fiable que style.display)
       const lyricsActive = document.querySelector('#toggleLyrics').classList.contains('active');
-      if (lyricsActive) {
-        document.querySelector('#contentTitle').textContent = t.paroles;
-        loadLyrics(currentBook, currentChapter, currentLang);
-      } else {
-        document.querySelector('#contentTitle').textContent = t.bible;
-        loadBibleText(currentBook, currentChapter, currentLang);
-      }
+      document.querySelector('#contentTitle').textContent = lyricsActive ? t.paroles : t.bible;
+      // Le rechargement du texte appartient a goToChapter et aux onglets. Le refaire
+      // ici telechargeait une seconde fois la Bible FR (6,6 Mo) a chaque demarrage.
     }
-    
+
     // Toggle Radio
     document.querySelector('#navRadio').addEventListener('click', () => {
       isRadioMode = !isRadioMode;
@@ -2549,14 +2562,10 @@ const audioPlayer = document.querySelector('#audioPlayer');
     function playRadioItem(index) {
       radioIndex = index;
       const item = radioPlaylist[index];
+      if (!item) return;
 
-      // Charger et jouer le chapitre
-      currentBook = item.book;
-      currentChapter = item.chapter;
-      const urls = getAudioUrl(item.book, item.chapter, currentLang);
-      setAudioWithFallback(audioPlayer, urls, true);
+      goToChapter(item.book, item.chapter, { play: true });
 
-      isPlaying = true;
       radioPlaying = true;
       renderRadioPlaylist();
       updateRadioPlayPauseBtn();
@@ -2670,6 +2679,9 @@ const audioPlayer = document.querySelector('#audioPlayer');
       // Afficher paroles, masquer Bible
       document.querySelector('#lyricsContent').style.display = 'block';
       document.querySelector('#bibleContent').style.display = 'none';
+      // Un panneau masque n'est pas rafraichi pendant qu'il est cache : on recharge
+      // en revenant dessus, sinon on affiche les paroles du chapitre precedent.
+      loadLyrics(currentBook, currentChapter, currentLang);
     });
 
     document.querySelector('#toggleBible').addEventListener('click', () => {
@@ -2700,8 +2712,12 @@ const audioPlayer = document.querySelector('#audioPlayer');
       saveRadioPlaylist();
 
       // Update badge radio
+      // #radioBadge n'existe plus dans le balisage : sans cette garde, le clic
+      // levait une TypeError et n'affichait jamais la confirmation ✓ alors que
+      // le chapitre etait bien ajoute (audit 2026-09-07). Les autres appels
+      // avaient deja la garde, celui-ci l'avait perdue.
       const badge = document.querySelector('#radioBadge');
-      badge.textContent = `(${radioPlaylist.length})`;
+      if (badge) badge.textContent = `(${radioPlaylist.length})`;
 
       // Show confirmation briefly then reset
       btn.innerHTML = '<span class="plus-icon">✓</span><span class="radio-icon">📻</span>';
@@ -2737,37 +2753,11 @@ const audioPlayer = document.querySelector('#audioPlayer');
     
     // Changement de livre
     document.querySelector('#bookSelect').addEventListener('change', (e) => {
-      const bookCode = e.target.value;
-      // Get book name from BOOK_NAMES (not from option.textContent which may contain chapter info)
-      const bookData = BOOKS.find(b => b.code === bookCode);
-      const bookName = getBookName(bookCode, currentLang);
-      document.querySelector('#headerTitle').textContent = bookName;
-
-      // Repopulate chapters grid for new book
-      populateChaptersSelect(bookCode);
-
-      // Update subtitle for chapter 1
-      const t = translations[currentLang] || translations.FR;
-      const chapterTitle = getChapterTitle(bookCode, '1', currentLang);
-      const subtitle = chapterTitle
-        ? `${t.chapitre} 1 - ${chapterTitle}`
-        : `${t.chapitre} 1`;
-      document.querySelector('#headerSubtitle').textContent = subtitle;
-
-      // Reset audio
-      currentBook = bookCode;
-      currentChapter = 1;
-
-      // Mettre à jour les paroles si on est en mode paroles
-      if (document.querySelector('#lyricsContent').style.display !== 'none') {
-        loadLyrics(bookCode, 1, currentLang);
-      }
-      // Mettre à jour le texte de la Bible si on est en mode Bible
-      if (document.querySelector('#bibleContent').style.display !== 'none') {
-        loadBibleText(bookCode, 1, currentLang);
-      }
+      // L'ancien code changeait titre, sous-titre, paroles et Bible mais JAMAIS
+      // la piste audio : on ecoutait la Genese en lisant les Psaumes.
+      goToChapter(e.target.value, 1);
     });
-    
+
     // Play/Pause
     playBtn.addEventListener('click', () => {
       if (isPlaying) {
@@ -2790,25 +2780,8 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
     // Chapitre précédent
     document.getElementById('restartBtn').addEventListener('click', () => {
-      const chapterSelect = document.getElementById('chapterSelect');
-      const currentIndex = chapterSelect.selectedIndex;
-      if (currentIndex > 0) {
-        chapterSelect.selectedIndex = currentIndex - 1;
-        const prevChapter = parseInt(chapterSelect.value);
-        currentChapter = prevChapter;
-        if (isPlaying) {
-          loadAndPlayChapter(currentBook, prevChapter, currentLang);
-        } else {
-          const audioUrls = getAudioUrl(currentBook, prevChapter, currentLang);
-          setAudioWithFallback(audioPlayer, audioUrls, false);
-        }
-        // Mettre à jour les paroles/bible
-        if (document.querySelector('#lyricsContent').style.display !== 'none') {
-          loadLyrics(currentBook, prevChapter, currentLang);
-        }
-        if (document.querySelector('#bibleContent').style.display !== 'none') {
-          loadBibleText(currentBook, prevChapter, currentLang);
-        }
+      if (currentChapter > 1) {
+        goToChapter(currentBook, currentChapter - 1);
       }
     });
 
@@ -2828,26 +2801,10 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
     // Chapitre suivant
     document.getElementById('nextChapterBtn').addEventListener('click', () => {
-      const chapterSelect = document.getElementById('chapterSelect');
-      const currentIndex = chapterSelect.selectedIndex;
-      if (currentIndex < chapterSelect.options.length - 1) {
-        chapterSelect.selectedIndex = currentIndex + 1;
-        const nextChapter = parseInt(chapterSelect.value);
-        currentChapter = nextChapter;
-        if (isPlaying) {
-          loadAndPlayChapter(currentBook, nextChapter, currentLang);
-        } else {
-          const audioUrls = getAudioUrl(currentBook, nextChapter, currentLang);
-          setAudioWithFallback(audioPlayer, audioUrls, false);
-        }
-        // Mettre à jour les paroles/bible
-        if (document.querySelector('#lyricsContent').style.display !== 'none') {
-          loadLyrics(currentBook, nextChapter, currentLang);
-        }
-        if (document.querySelector('#bibleContent').style.display !== 'none') {
-          loadBibleText(currentBook, nextChapter, currentLang);
-        }
-        updateHeaderSubtitle(currentBook, nextChapter, currentLang);
+      const bookData = BOOKS.find(b => b.code === currentBook);
+      const maxChapters = bookData ? bookData.chapters : 50;
+      if (currentChapter < maxChapters) {
+        goToChapter(currentBook, currentChapter + 1);
       }
     });
 
@@ -2895,6 +2852,18 @@ const audioPlayer = document.querySelector('#audioPlayer');
     audioPlayer.addEventListener('loadedmetadata', updateProgressAndTime);
 
     // Helper pour mettre à jour le sous-titre du header
+    // Rafraichir le panneau visible (Paroles ou Bible) apres un changement de chapitre
+    function refreshTextPanels(book, chapter, lang) {
+      const lyricsEl = document.querySelector('#lyricsContent');
+      const bibleEl = document.querySelector('#bibleContent');
+      if (lyricsEl && lyricsEl.style.display !== 'none') {
+        loadLyrics(book, chapter, lang);
+      }
+      if (bibleEl && bibleEl.style.display !== 'none') {
+        loadBibleText(book, chapter, lang);
+      }
+    }
+
     function updateHeaderSubtitle(book, chapter, lang) {
       const t = translations[lang] || translations.FR;
       const chapterTitle = getChapterTitle(book, String(chapter), lang);
@@ -2902,6 +2871,47 @@ const audioPlayer = document.querySelector('#audioPlayer');
         ? `${t.chapitre} ${chapter} - ${chapterTitle}`
         : `${t.chapitre} ${chapter}`;
       document.querySelector('#headerSubtitle').textContent = subtitle;
+    }
+
+    // POINT D'ENTREE UNIQUE pour tout changement de livre/chapitre.
+    // Avant l'audit du 2026-09-07, chaque bouton refaisait sa propre liste de
+    // mises a jour et en oubliait une ou deux : l'audio ne suivait pas le livre,
+    // le sous-titre restait sur le chapitre precedent, le coeur des favoris
+    // restait allume... Tous les appelants (menus, fleches, autoplay, radio,
+    // recherche, changement de langue, demarrage) passent maintenant par ici.
+    //   opts.play  : true = jouer, false = ne pas jouer, absent = suivre l'etat courant
+    //   opts.audio : false = ne meme pas precharger la piste (utilise au demarrage)
+    function goToChapter(book, chapter, opts) {
+      opts = opts || {};
+      const bookChanged = currentBook !== book;
+      currentBook = book;
+      currentChapter = parseInt(chapter, 10);
+
+      // 1. Selecteurs
+      const bookSelectEl = document.querySelector('#bookSelect');
+      if (bookSelectEl && bookSelectEl.value !== currentBook) bookSelectEl.value = currentBook;
+      if (bookChanged) populateChaptersSelect(currentBook);
+      const chapterSelectEl = document.querySelector('#chapterSelect');
+      if (chapterSelectEl) chapterSelectEl.value = currentChapter;
+
+      // 2. Entete
+      const headerTitleEl = document.querySelector('#headerTitle');
+      if (headerTitleEl) headerTitleEl.textContent = getBookName(currentBook, currentLang);
+      updateHeaderSubtitle(currentBook, currentChapter, currentLang);
+
+      // 3. Audio
+      if (opts.audio !== false) {
+        const play = (opts.play === true) || (opts.play !== false && isPlaying);
+        if (play) {
+          loadAndPlayChapter(currentBook, currentChapter, currentLang);
+        } else {
+          setAudioWithFallback(audioPlayer, getAudioUrl(currentBook, currentChapter, currentLang), false);
+        }
+      }
+
+      // 4. Texte affiche + favori
+      refreshTextPanels(currentBook, currentChapter, currentLang);
+      updateLikeButton();
     }
 
     // Autoplay toggle
@@ -3193,31 +3203,10 @@ const audioPlayer = document.querySelector('#audioPlayer');
           }
         }, 100);
 
-        // Update header title (book name) — use getBookName() to handle aliases
-        document.querySelector('#headerTitle').textContent = getBookName(bookCode, currentLang);
-
-        // Update chapter title
-        const chapterNum = currentChapter.toString();
-        const t = translations[currentLang] || translations.FR;
-        const chapterTitle = getChapterTitle(bookCode, chapterNum, currentLang);
-        if (chapterTitle) {
-          const subtitle = `${t.chapitre} ${chapterNum} - ${chapterTitle}`;
-          document.querySelector('#headerSubtitle').textContent = subtitle;
-        } else {
-          const subtitle = `${t.chapitre} ${chapterNum}`;
-          document.querySelector('#headerSubtitle').textContent = subtitle;
-        }
-
-        // Préparer l'audio mais NE PAS lancer automatiquement
-        // L'utilisateur doit cliquer sur Play pour démarrer
-        if (urlBook || urlChapter) {
-          const audioUrls = getAudioUrl(bookCode, currentChapter, currentLang);
-          setAudioWithFallback(audioPlayer, audioUrls, false);
-          // Ne pas appeler .play() - attendre le clic utilisateur
-        }
-
-        // Charger les paroles initiales
-        loadLyrics(bookCode, currentChapter, currentLang);
+        // Un seul point d'entree pour l'etat initial : entete, paroles/Bible et
+        // favori. L'audio n'est prepare que si l'URL cible un chapitre precis,
+        // sinon on evite une requete MP3 inutile a chaque visite.
+        goToChapter(bookCode, currentChapter, { play: false, audio: !!(urlBook || urlChapter) });
 
         // Initialiser les traductions de la newsletter
         updateNewsletterTranslations();
@@ -3232,32 +3221,7 @@ const audioPlayer = document.querySelector('#audioPlayer');
         const chapterSelect = document.querySelector('#chapterSelect');
         if (chapterSelect) {
           chapterSelect.addEventListener('change', (e) => {
-            const chapterNum = parseInt(e.target.value);
-            const t = translations[currentLang] || translations.FR;
-            const chapterTitle = getChapterTitle(currentBook, chapterNum.toString(), currentLang);
-            const subtitle = chapterTitle
-              ? `${t.chapitre} ${chapterNum} - ${chapterTitle}`
-              : `${t.chapitre} ${chapterNum}`;
-            document.querySelector('#headerSubtitle').textContent = subtitle;
-
-            currentChapter = chapterNum;
-            if (isPlaying) {
-              loadAndPlayChapter(currentBook, chapterNum, currentLang);
-            } else {
-              const audioUrls = getAudioUrl(currentBook, chapterNum, currentLang);
-              setAudioWithFallback(audioPlayer, audioUrls, false);
-            }
-
-            // Mettre à jour les paroles si on est en mode paroles
-            if (document.querySelector('#lyricsContent').style.display !== 'none') {
-              loadLyrics(currentBook, currentChapter, currentLang);
-            }
-            // Mettre à jour le texte de la Bible si on est en mode Bible
-            if (document.querySelector('#bibleContent').style.display !== 'none') {
-              loadBibleText(currentBook, currentChapter, currentLang);
-            }
-            // Mettre à jour le bouton like
-            updateLikeButton();
+            goToChapter(currentBook, parseInt(e.target.value, 10));
           });
         }
       } catch (error) {
@@ -3319,13 +3283,24 @@ const audioPlayer = document.querySelector('#audioPlayer');
         const chapterNum = parseInt(parts[2]);
 
         const bookName = getBookName(bookCode, currentLang);
+        // Le titre chante est plus utile que l'ancien "Score: 1%" (tous les
+        // resultats d'un meme theme portaient le meme score, donc la mention
+        // n'apprenait rien). A defaut de titre, on montre les mots reconnus.
+        let resultSubtitle = cleanTitle(getChapterTitle(bookCode, String(chapterNum), currentLang) || '');
+        const reference = bookName + ' ' + chapterNum;
+        if (resultSubtitle.toLowerCase().startsWith(reference.toLowerCase())) {
+          resultSubtitle = resultSubtitle.slice(reference.length).replace(/^[\s\-–—:]+/, '');
+        }
+        if (!resultSubtitle && result.matchedWords && result.matchedWords.length) {
+          resultSubtitle = result.matchedWords.slice(0, 3).join(', ');
+        }
 
         return `
           <div class="result-card" onclick="playSearchResult('${bookCode}', ${chapterNum})">
             <div class="result-icon">📖</div>
             <div class="result-info">
               <h4>${bookName} ${chapterNum}</h4>
-              <p>Score: ${result.score}%</p>
+              <p>${resultSubtitle}</p>
             </div>
             <button class="result-play-btn" onclick="event.stopPropagation(); playSearchResult('${bookCode}', ${chapterNum})">▶ Écouter</button>
           </div>
@@ -3335,48 +3310,13 @@ const audioPlayer = document.querySelector('#audioPlayer');
 
     // Fonction pour jouer un résultat de recherche
     function playSearchResult(bookCode, chapter) {
-      // Mettre à jour la sélection du livre
-      const bookSelect = document.getElementById('bookSelect');
-      bookSelect.value = bookCode;
+      // goToChapter s'occupe des selecteurs, de l'entete, de l'audio, des paroles,
+      // de la Bible et du favori : l'onglet Bible n'etait pas recharge avant.
+      goToChapter(bookCode, chapter, { play: true });
 
-      // Trigger book change event
-      const bookData = BOOKS.find(b => b.code === bookCode);
-      if (bookData) {
-        document.querySelector('#headerTitle').textContent = getBookName(bookCode, currentLang);
-
-        // Repopulate chapters grid
-        populateChaptersSelect(bookCode);
-
-        // Wait a bit for select to populate, then select chapter
-        setTimeout(() => {
-          // Set the chapter in select
-          const chapterSelect = document.querySelector('#chapterSelect');
-          if (chapterSelect) {
-            chapterSelect.value = chapter;
-          }
-
-          // Load and play
-          currentBook = bookCode;
-          currentChapter = chapter;
-          loadAndPlayChapter(bookCode, chapter, currentLang);
-          loadLyrics(bookCode, chapter, currentLang);
-
-          // Update subtitle
-          const t = translations[currentLang] || translations.FR;
-          const chapterTitle = getChapterTitle(bookCode, chapter.toString(), currentLang);
-          const subtitle = chapterTitle
-            ? `${t.chapitre} ${chapter} - ${chapterTitle}`
-            : `${t.chapitre} ${chapter}`;
-          document.querySelector('#headerSubtitle').textContent = subtitle;
-
-          // Clear search results
-          searchResults.innerHTML = '';
-          searchInput.value = '';
-
-          // Scroll to player
-          document.querySelector('.header').scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-      }
+      searchResults.innerHTML = '';
+      searchInput.value = '';
+      document.querySelector('.header').scrollIntoView({ behavior: 'smooth' });
     }
 
     // Event listeners

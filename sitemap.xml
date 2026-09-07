@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Bible Chantee - sitemap (ajoute le 2026-09-07).
+     Le lecteur est une page unique dont la langue se choisit par ?lang=XX :
+     on declare donc les 7 variantes avec leurs liens alternates. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://biblechantee.com/lecteur.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://biblechantee.com/lecteur.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://biblechantee.com/lecteur.html?lang=FR"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://biblechantee.com/lecteur.html?lang=EN"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://biblechantee.com/lecteur.html?lang=PT"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://biblechantee.com/lecteur.html?lang=ES"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://biblechantee.com/lecteur.html?lang=DE"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://biblechantee.com/lecteur.html?lang=IT"/>
+    <xhtml:link rel="alternate" hreflang="tl" href="https://biblechantee.com/lecteur.html?lang=TL"/>
+  </url>
+
+  <url><loc>https://biblechantee.com/promesses.html</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://biblechantee.com/promesses-tema.html</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://biblechantee.com/prieres.html</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://biblechantee.com/confessions.html</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://biblechantee.com/nouveautes.html</loc><lastmod>2026-09-07</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://biblechantee.com/about.html</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://biblechantee.com/aide.html</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://biblechantee.com/install.html</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://biblechantee.com/pricing.html</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://biblechantee.com/crowdfunding.html</loc><lastmod>2026-09-07</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://biblechantee.com/contact.html</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://biblechantee.com/signup.html</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://biblechantee.com/mentions-legales.html</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://biblechantee.com/privacy-fr.html</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://biblechantee.com/privacy-en.html</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://biblechantee.com/privacy-pt.html</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://biblechantee.com/privacy-es.html</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://biblechantee.com/privacy-de.html</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://biblechantee.com/privacy-it.html</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://biblechantee.com/privacy-tl.html</loc><lastmod>2026-09-07</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+
+</urlset>

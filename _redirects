@@ -2,6 +2,7 @@
 
 # API
 /api/premium-status  /.netlify/functions/premium-status  200
+/api/bc_signup       /.netlify/functions/bc_signup       200
 /api/premium-claim   /.netlify/functions/premium-claim   200
 /api/stats           /.netlify/functions/stats           200
 /api/get-analytics   /.netlify/functions/get-analytics   200

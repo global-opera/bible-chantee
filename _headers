@@ -9,3 +9,21 @@
 /service-worker.js
   Content-Type: application/javascript
   Service-Worker-Allowed: /
+
+# Audit du 2026-09-07 : en-tetes de securite sans effet de bord.
+# (Pas de Content-Security-Policy ici : le site utilise beaucoup de scripts
+# inline, une CSP demande une passe de test dediee par page.)
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Tableaux de bord internes : ni indexation, ni encadrement dans un iframe.
+# (X-Frame-Options n'est PAS mis sur tout le site : player_carre.html peut
+#  etre integre ailleurs et on ne veut pas casser une integration existante.)
+/dashboard.html
+  X-Frame-Options: SAMEORIGIN
+  X-Robots-Tag: noindex, nofollow
+
+/distribution-dashboard.html
+  X-Frame-Options: SAMEORIGIN
+  X-Robots-Tag: noindex, nofollow

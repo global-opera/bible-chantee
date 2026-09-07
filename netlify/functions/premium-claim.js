@@ -23,14 +23,17 @@ exports.handler = async (event) => {
 
     const maxAge = 60 * 60 * 24 * 365;
 
+    // Deux cookies dans un seul en-tete Set-Cookie separes par une virgule :
+    // le second etait perdu selon les navigateurs. Netlify expose
+    // multiValueHeaders exactement pour ce cas (audit 2026-09-07).
     return {
       statusCode: 200,
-      headers: {
-        "Content-Type": "application/json",
+      headers: { "Content-Type": "application/json" },
+      multiValueHeaders: {
         "Set-Cookie": [
           `bc_premium=1; Path=/; Max-Age=${maxAge}; SameSite=Lax; Secure; HttpOnly`,
           `bc_premium_uid=${encodeURIComponent(payload.sub || "user")}; Path=/; Max-Age=${maxAge}; SameSite=Lax; Secure; HttpOnly`,
-        ].join(", "),
+        ],
       },
       body: JSON.stringify({ ok: true, premium: true }),
     };

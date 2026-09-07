@@ -24,3 +24,391 @@
   to = "/thank-you.html"
   status = 301
   force = true
+
+# ---------------------------------------------------------------------------
+# Audit du 2026-09-07 : le site publie la racine du depot, donc les scripts,
+# notes internes, sauvegardes et pages de test etaient accessibles en ligne.
+# Ces regles les rendent invisibles sans rien deplacer (donc reversible).
+# ---------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/Scripts/*"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/docs/*"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/html%20old/*"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/_archive_cleanup_20251215_1920/*"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/_BACKUP_FIX_PROMESSES_20251216_124043/*"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/_BACKUP_AUDIT_20260907_114852/*"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/ARCHITECTURE-LANGUE.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/AUDIT-ARCHITECTURE-LANGUE.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/AUDIT_SYSTEM.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/BIBLE_DU_PROJET_Bible_Chantee.html"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/FINAL_SECURITY_FIXES.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/FREEMIUM_INTEGRATION.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/GOOGLE_ANALYTICS_SETUP.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/GOOGLE_PLACE_ID.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/LYRICS_CLEANING.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/PRIORITY-GENERATION.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/PROMPT-CORRECTION-LANGUE.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/RAPPORT-FIX-POPUP-ANTISPAM.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/README.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/REFERRAL_SETUP.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/SECURITY_FIXES.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/SUPABASE_CONSTRAINTS.sql"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/SUPABASE_CONSTRAINTS_FIXED.sql"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/TEST-RECHERCHE-VALIDATION.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/TESTS-VALIDATION.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/TEST_GA4_ACCESS.bat"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/TEST_REFERRAL.md"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/analyze-missing-chapters.py"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/audit-langue.ps1"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/batch-generate-missing.py"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/check_bible.ps1"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/check_es_missing.py"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/check_html_output.js"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/check_lyrics.js"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/debug-ui.js"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/deploy-referral.ps1"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/fix-demo-cache.ps1"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/generate-all-audio-urls.py"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/generate-audio-urls-es.py"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/generate-audio-urls-pt.py"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/generate_bible_data_en.py"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/generate_bible_data_es.py"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/generate_bible_data_js.py"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/generate_bible_data_pt.py"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/generate_icons.py"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/generate_maskable_icons.py"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/generate_pwa_icons.py"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/generate_simple_icons.py"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/list-ga4-properties.js"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/progress.json"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/sync_lyrics_en_to_site.py"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/sync_lyrics_es_to_site.py"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/test-audio-urls.js"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/test-console.js"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/test-ga4-access.js"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/test-ga4-local.js"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/test-promesses.html"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/test-search-diagnostic.js"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/tools_generate_chapter_titles.py"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/update_audio_urls_1.ps1"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+# Anciennes applis par langue : elles annoncaient encore "100 gratuits +
+# $0.99 pour tout debloquer". Redirection 301 pour conserver les liens entrants.
+
+[[redirects]]
+  from = "/fr/*"
+  to = "/lecteur.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en/*"
+  to = "/lecteur.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pt/*"
+  to = "/lecteur.html"
+  status = 301
+  force = true
+
