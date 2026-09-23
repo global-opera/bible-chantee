@@ -13,6 +13,67 @@ Journaux antérieurs, hors périmètre de celui-ci :
 
 ---
 
+## 2026-09-23 — Ménage : 18 fichiers archivés, liens éteints réparés · commit `80e51547`
+
+Suite directe de l'entrée ci-dessous. Demande utilisateur : « il faut tout mettre à
+jour, archiver ce qui est obsolète ». **Rien n'a été supprimé** : tout est déplacé dans
+`_archive_cleanup_20260923/`, bloqué en 404 par `netlify.toml` et déjà exclu du miroir
+Pages. Git a reconnu les 18 déplacements comme des renommages à 100 %.
+
+### Comment le « mort » a été établi
+
+Un `grep` ne suffisait pas : il donnait `bible-data.js` (6 Mo) et `service-worker.js`
+pour orphelins, ce qui est faux — beaucoup de fichiers sont chargés dynamiquement.
+Preuve retenue : **capture réseau réelle** via CDP sur un Chrome headless.
+`lecteur.html` fait 28 requêtes, **aucune** vers un `audio-urls-*.js`.
+
+### Archivé
+
+| Quoi | Pourquoi |
+|---|---|
+| 16 × `audio-urls-*.js` (~680 Ko) | plus chargés par personne : `lecteur.html` et `promesse-detail.html` construisent leurs URL. Inclut les 2 tables `archive.org` d'avant R2, les 4 grosses tables FR/EN/ES/PT, les 8 placeholders et les 2 fichiers « promesses » que personne ne lisait. |
+| `bus.html`, `sxc-bus-2025.html` | horaires Carto Riviera / CFF, sans rapport avec le projet, publiés en ligne. |
+
+🔴 **Les placeholders étaient nuisibles**, pas seulement inutiles : leur « 0 chapters »
+pour DE, IT et TL m'avait fait conclure à tort que ces langues n'avaient pas d'audio.
+Restent à la racine les **14 tables vivantes** : `audio-urls-confessions-*.js` et
+`audio-urls-prayers-*.js`, 7 langues chacune.
+
+### Réparé
+
+- **`demo.html`** construisait *toutes* ses URL de partage sur `sungbible.world`, qui ne
+  répond plus → `location.origin`, comme le fait déjà `credits.js`.
+- **`pricing.html`** : `support@sungbible.world` → `info@biblechantee.com`, l'adresse
+  utilisée partout ailleurs (24 occurrences).
+- **`.well-known/README.md`** annonçait `7E:A5:E7…` comme empreinte de production.
+  C'est la keystore PWA Builder d'origine, périmée. Réécrit avec les deux empreintes
+  qui font foi et la distinction clé de téléversement / clé de signature Play.
+
+### Vérification
+
+Smoke tests FR ✅ PT ✅ EN ✅ — lecteur chargé dans un Chrome headless, **audio
+réellement décodé** (durée lue, 200 à 294 s) sur 9 cas choisis pour couvrir les pièges :
+alias de fichier (`22_SNG→22_SON`, `59_JAM→59_JAS`) et dossiers OSIS (`43_JHN`,
+`41_MRK`, `26_EZK`). Confessions et prières chargent toujours leurs tables. Aucune
+requête locale en échec.
+
+### 🔴 Volontairement NON traité — décisions qui ne m'appartiennent pas
+
+1. **Le service worker n'est jamais enregistré.** La seule mention de `serviceWorker`
+   dans tout le site est dans `clearCache()` de `demo.html`, qui le *désenregistre*.
+   `service-worker.js` (cache `bible-chantee-v12`, `MAX_AUDIO_CACHE = 40`) et l'en-tête
+   `Service-Worker-Allowed` sont donc du code mort : **il n'y a aucun hors-ligne**.
+   L'activer changerait le comportement de cache en production — à décider.
+2. **Double marqueur GA4** sur `demo.html` et `thank-you.html` (`G-TX3ETCKJQZ` et
+   `G-H8H3TWSGTF`) : double comptage. Retirer le mauvais casse une continuité de mesure.
+3. **Versions Facebook divergentes** : v19.0 dans le workflow, v21.0 dans la fonction
+   Netlify. Aligner touche un cron en production qui échoue silencieusement
+   (`continue-on-error: true`).
+4. **Aucun lien Play Store** sur le site.
+5. **Gabarits `XXXXX`** dans les liens de diffusion.
+
+---
+
 ## 2026-09-23 — Bible des connexions · aucune modification du site
 
 **Déclencheur.** Demande utilisateur : « crée un document indiquant tous les liens
