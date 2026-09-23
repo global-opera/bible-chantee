@@ -13,6 +13,69 @@ Journaux antérieurs, hors périmètre de celui-ci :
 
 ---
 
+## 2026-09-23 — Bible des connexions · aucune modification du site
+
+**Déclencheur.** Demande utilisateur : « crée un document indiquant tous les liens
+utilisés […] une sorte de bible des connexions, mets sur le bureau ».
+
+Relevé de toutes les liaisons externes du projet, **en lecture seule** : rien n'a été
+changé dans le dépôt en dehors de ce journal. Le document produit est
+`Desktop\Bible des connexions - Bible Chantee.html` — domaines, R2, les 8 fonctions
+Netlify et leurs variables d'environnement, Supabase, GA4/YouTube/Facebook, la TWA,
+Suno en amont, les plateformes de diffusion en aval, les canaux de paiement.
+Il complète `BIBLE_DU_PROJET_Bible_Chantee.html`, qui couvre l'éditorial et le juridique.
+
+### 🔴 Erreur commise, à ne pas refaire
+
+Première version du document : j'y affirmais que l'allemand, l'italien et le tagalog
+étaient **injouables**, au motif que `audio-urls-de.js`, `-it.js` et `-tl.js` sont des
+placeholders de 90 octets annonçant « 0 chapters ». **C'était faux**, et l'utilisateur
+l'a relevé : « tu as déjà fait plusieurs audits, confirmé que l'application sur Google
+Play est fonctionnelle, et tu ne retrouves même pas les liens audio ? »
+
+`lecteur.html` **ne charge aucun de ces fichiers**. Il construit l'URL à la volée
+(`resolveR2Codes()` puis `getAudioUrl()`). Les tables `audio-urls-*.js` ne servent plus
+qu'à `confessions.html`, `prieres.html`, `promesse-detail.html` et `dashboard.html`,
+pour les confessions, prières et promesses — **jamais pour les chapitres bibliques**.
+
+**Règle : ne jamais déduire la couverture audio de ces fichiers.** Leur « 0 chapters »
+ne prouve rien. La seule source de vérité est `getAudioUrl()`, et le seul test valable
+est d'interroger R2 avec la règle qu'elle applique.
+
+### Vérification refaite correctement
+
+Règle de `getAudioUrl()` rejouée contre R2 sur les livres qui divergent :
+**10 sondages sur 10 en HTTP 200.**
+
+| Cas testé | URL | Code |
+|---|---|---|
+| dossier OSIS, DE | `DE/43_JHN/43_JOH_03_DE.mp3` | 200 |
+| dossier OSIS, EN | `EN/41_MRK/41_MAR_01_EN.mp3` | 200 |
+| dossier OSIS, PT | `PT/62_1JN/62_1JO_01_PT.mp3` | 200 |
+| dossier = fichier, IT | `IT/43_JOH/43_JOH_03_IT.mp3` | 200 |
+| dossier = fichier, TL | `TL/41_MAR/41_MAR_01_TL.mp3` | 200 |
+| alias de fichier, IT | `IT/22_SON/22_SON_01_IT.mp3` | 200 |
+| alias de fichier, DE | `DE/59_JAS/59_JAS_01_DE.mp3` | 200 |
+
+Conclusion : **les 7 langues du manifeste sont complètes et jouables**, 8 323 chapitres.
+AR, HI, KO, RU et ZH répondent bien 404 — ces langues n'ont jamais eu d'audio, leurs
+placeholders sont honnêtes. L'app Play Store est fonctionnelle, comme les audits
+précédents l'avaient établi.
+
+### Reste ouvert
+
+| # | Constat | Vérifié le 23.09.2026 |
+|---|---|---|
+| 1 | `sungbible.world` ne répond pas — DNS vers `198.54.117.242`, port 443 refusé. Or `demo.html` y construit **toutes** ses URL de partage (`getShareUrl()`), et `pricing.html` y donne `support@sungbible.world`. | connexion échouée |
+| 2 | Trois empreintes de signature circulent : `16:D1…` et `27:B9…` dans `assetlinks.json` en ligne (font autorité, l'app marche), `7E:A5:E7…` dans `.well-known/README.md` (**périmée**), `53:5F…` en notes de build (clé de *téléversement*). Le README date d'avant la signature Play. | `assetlinks.json` en ligne : 200 |
+| 3 | Aucun lien `play.google.com` nulle part sur le site : impossible d'installer l'app depuis le site. | 0 occurrence |
+| 4 | `bus.html` et `sxc-bus-2025.html` (horaires Riviera / CFF) n'ont rien à voir avec le projet et sont publiés, la racine du dépôt étant le site. | présents |
+| 5 | `package.json` est servi publiquement (200) et expose la liste des dépendances. `JOURNAL_INTERVENTIONS.md` et `netlify.toml`, eux, sont bien bloqués en 404. | 200 / 404 / 404 |
+| 6 | Liens de diffusion restés en gabarit `XXXXX` (Amazon Music, YouTube Music, doublons Spotify/Apple/Deezer). | présents |
+| 7 | `demo.html` et `thank-you.html` portent **deux** marqueurs GA4 (`G-TX3ETCKJQZ` et `G-H8H3TWSGTF`) : double comptage. | présents |
+
+---
+
 ## 2026-09-07 — Audit global et correction de 9 défauts · commit `19700dd6` · EN LIGNE
 
 **Déclencheur.** Signalement utilisateur : « en lecture automatique continue,
