@@ -56,6 +56,12 @@
   force = true
 
 [[redirects]]
+  from = "/_archive_cleanup_20260923/*"
+  to = "/lecteur.html"
+  status = 404
+  force = true
+
+[[redirects]]
   from = "/_BACKUP_FIX_PROMESSES_20251216_124043/*"
   to = "/lecteur.html"
   status = 404
