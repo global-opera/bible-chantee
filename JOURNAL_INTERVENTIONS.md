@@ -62,6 +62,30 @@ AR, HI, KO, RU et ZH répondent bien 404 — ces langues n'ont jamais eu d'audio
 placeholders sont honnêtes. L'app Play Store est fonctionnelle, comme les audits
 précédents l'avaient établi.
 
+### Deux automatismes qu'il faut connaître
+
+`.github/workflows/` contient deux workflows qui s'appuient sur les **GitHub Secrets** —
+un magasin de secrets **distinct** de celui de Netlify.
+
+**`update-social-stats.yml`** — cron `0 6 * * *`. Interroge YouTube Data API v3 et
+Facebook Graph API, réécrit `data/social-stats.json` et **commite sur `main`** : ce sont
+les commits quotidiens « Auto-update social stats ». Deux pièges d'entretien :
+
+- le jeton Facebook existe **en double sous deux noms** — `FACEBOOK_ACCESS_TOKEN`
+  côté GitHub, `FACEBOOK_PAGE_ACCESS_TOKEN` côté Netlify. À renouveler aux deux endroits.
+- les deux appels ne visent pas la même version : **v19.0** dans le workflow,
+  **v21.0** dans `netlify/functions/facebook-stats.js`.
+
+**`deploy-pages.yml`** — à chaque push sur `main`, publie une **seconde copie publique**
+du site : <https://global-opera.github.io/bible-chantee/> (200, lecteur compris).
+Copie filtrée par `rsync` : `netlify/`, `Scripts/`, `*.md`, `*.py`, `*.ps1`, `.env*`,
+`netlify.toml` et `package.json` sont exclus.
+
+🔴 **Conséquence : un `push` déploie sur DEUX sites, pas un.** Sur le miroir Pages, le
+lecteur fonctionne (l'audio vient de R2, les URL sont construites côté navigateur), mais
+`netlify/` étant exclu, **aucune route `/api/*` n'existe** — `…/api/stats` répond 404.
+Comptes, premium et statistiques sont donc inopérants sur ce miroir.
+
 ### Reste ouvert
 
 | # | Constat | Vérifié le 23.09.2026 |
