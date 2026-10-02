@@ -283,7 +283,7 @@ const SemanticDictionary = {
             "48_GAL_002", "48_GAL_003",
             "49_EPH_002", "49_EPH_006",
             "58_HEB_011", "58_HEB_012",
-            "59_JAS_001", "59_JAS_002", "59_JAS_005",
+            "59_JAM_001", "59_JAM_002", "59_JAM_005",
             "60_1PE_001"
         ]
     },
@@ -396,7 +396,7 @@ const SemanticDictionary = {
             "08_RUT_001", "08_RUT_002", "08_RUT_003", "08_RUT_004",
             "09_1SAM_018", "09_1SAM_020",
             "10_2SAM_001", "10_2SAM_009",
-            "22_SON_001", "22_SON_002", "22_SON_003", "22_SON_004", "22_SON_005", "22_SON_006", "22_SON_007", "22_SON_008",
+            "22_SNG_001", "22_SNG_002", "22_SNG_003", "22_SNG_004", "22_SNG_005", "22_SNG_006", "22_SNG_007", "22_SNG_008",
             "28_HOS_001", "28_HOS_002", "28_HOS_003", "28_HOS_011", "28_HOS_014",
             "40_MAT_005", "40_MAT_018", "40_MAT_019", "40_MAT_022", "40_MAT_025",
             "41_MAR_010", "41_MAR_012",
@@ -412,7 +412,7 @@ const SemanticDictionary = {
             "52_1TH_003", "52_1TH_004",
             "57_PHM_001",
             "58_HEB_013",
-            "59_JAS_002",
+            "59_JAM_002",
             "60_1PE_001", "60_1PE_003", "60_1PE_004",
             "62_1JO_002", "62_1JO_003", "62_1JO_004",
             "63_2JO_001",
@@ -553,7 +553,7 @@ const SemanticDictionary = {
             "45_ROM_005", "45_ROM_008",
             "47_2CO_001", "47_2CO_004", "47_2CO_006", "47_2CO_011", "47_2CO_012",
             "58_HEB_011", "58_HEB_012",
-            "59_JAS_001", "59_JAS_005",
+            "59_JAM_001", "59_JAM_005",
             "60_1PE_001", "60_1PE_002", "60_1PE_004", "60_1PE_005",
             "66_REV_002", "66_REV_003", "66_REV_006", "66_REV_007"
         ]
@@ -680,7 +680,7 @@ const SemanticDictionary = {
             "20_PRO_001", "20_PRO_002", "20_PRO_003", "20_PRO_004", "20_PRO_008", "20_PRO_009",
             "19_PSA_001", "19_PSA_019", "19_PSA_025", "19_PSA_032", "19_PSA_119",
             "21_ECC_002", "21_ECC_012",
-            "59_JAS_001", "59_JAS_003",
+            "59_JAM_001", "59_JAM_003",
             "51_COL_001", "51_COL_003"
         ]
     },
@@ -1016,7 +1016,7 @@ const SemanticDictionary = {
             "38_ZEC_007",
             "40_MAT_023", "40_MAT_025",
             "45_ROM_002",
-            "59_JAS_002",
+            "59_JAM_002",
             "66_REV_020"
         ]
     },
@@ -1150,7 +1150,7 @@ const SemanticDictionary = {
             ES: ["desempleo", "pérdida de empleo", "dificultades financieras", "deuda", "pobreza"],
             DE: ["arbeitslosigkeit", "jobverlust", "finanzielle schwierigkeiten", "schulden", "armut"],
             IT: ["disoccupazione", "perdita di lavoro", "difficoltà finanziarie", "debito", "povertà"],            TL: ["kawalang-trabaho", "pagkawala ng trabaho", "kahirapan sa pananalapi"],            families: ["souffrance_epreuves", "foi_confiance"],
-            chapters: ["19_PSA_037", "20_PRO_006", "40_MAT_006", "50_PHP_004", "59_JAS_002"]
+            chapters: ["19_PSA_037", "20_PRO_006", "40_MAT_006", "50_PHP_004", "59_JAM_002"]
         },
         maladie_grave: {
             FR: [
@@ -1317,11 +1317,11 @@ const SemanticDictionary = {
             families: ["souffrance_epreuves", "guerison_restauration"],
             chapters: [
                 // Chapitres existants (5)
-                "19_PSA_041", "19_PSA_103", "23_ISA_053", "40_MAT_008", "59_JAS_005",
+                "19_PSA_041", "19_PSA_103", "23_ISA_053", "40_MAT_008", "59_JAM_005",
 
                 // NOUVEAUX: Miracles de guérison de Jésus (Évangiles)
                 "40_MAT_009", "40_MAT_015", "40_MAT_020",
-                "41_MRK_001", "41_MRK_002", "41_MRK_005", "41_MRK_007", "41_MRK_008", "41_MRK_010",
+                "41_MAR_001", "41_MAR_002", "41_MAR_005", "41_MAR_007", "41_MAR_008", "41_MAR_010",
                 "42_LUK_004", "42_LUK_005", "42_LUK_007", "42_LUK_008", "42_LUK_013", "42_LUK_017", "42_LUK_018",
                 "43_JOH_005", "43_JOH_009", "43_JOH_011",
 
@@ -1363,7 +1363,7 @@ const SemanticDictionary = {
             ES: ["decisión", "elección", "dirección", "discernimiento", "sabiduría", "guía"],
             DE: ["entscheidung", "wahl", "richtung", "unterscheidung", "weisheit", "führung"],
             IT: ["decisione", "scelta", "direzione", "discernimento", "saggezza", "guida"],            TL: ["desisyon", "pagpili", "direksyon", "karunungan", "paggabay"],            families: ["sagesse_verite", "foi_confiance"],
-            chapters: ["19_PSA_025", "19_PSA_032", "20_PRO_003", "59_JAS_001"]
+            chapters: ["19_PSA_025", "19_PSA_032", "20_PRO_003", "59_JAM_001"]
         },
         nouveau_depart: {
             FR: ["nouveau départ", "renaissance", "changement", "transition", "espoir"],
@@ -1390,7 +1390,7 @@ const SemanticDictionary = {
             ES: ["matrimonio", "compromiso", "boda", "unión", "pareja", "amor"],
             DE: ["ehe", "verlobung", "hochzeit", "verbindung", "paar", "liebe"],
             IT: ["matrimonio", "fidanzamento", "nozze", "unione", "coppia", "amore"],            TL: ["kasal", "pangako", "pagsasama", "mag-asawa", "pag-ibig"],            families: ["amour_relations", "vie_responsabilite"],
-            chapters: ["01_GEN_002", "01_GEN_024", "22_SON_008", "49_EPH_005", "66_REV_019"]
+            chapters: ["01_GEN_002", "01_GEN_024", "22_SNG_008", "49_EPH_005", "66_REV_019"]
         },
         naissance: {
             FR: ["naissance", "bébé", "grossesse", "parentalité", "éducation", "famille"],
@@ -1590,7 +1590,7 @@ const SemanticDictionary = {
                 "tigil-putukan", "kasunduan", "proteksyon", "depensa", "kalasag", "tapang"
             ],
             families: ["combat_spirituel", "souffrance_epreuves"],
-            chapters: ["02_EXO_014", "06_JOS_006", "09_1SA_017", "19_PSA_018", "19_PSA_020", "19_PSA_144", "49_EPH_006"]
+            chapters: ["02_EXO_014", "06_JOS_006", "09_1SAM_017", "19_PSA_018", "19_PSA_020", "19_PSA_144", "49_EPH_006"]
         },
         divorce: {
             FR: [
@@ -1659,7 +1659,7 @@ const SemanticDictionary = {
             families: ["souffrance_epreuves", "amour_relations"],
             chapters: [
                 "40_MAT_005", "40_MAT_019",
-                "41_MRK_010",
+                "41_MAR_010",
                 "42_LUK_016",
                 "46_1CO_007",
                 "49_EPH_005",
@@ -1758,8 +1758,8 @@ const SemanticDictionary = {
             ],
             families: ["vie_responsabilite", "sagesse_verite"],
             chapters: [
-                "09_1SA_002", "09_1SA_003", "09_1SA_017",
-                "10_2SA_018",
+                "09_1SAM_002", "09_1SAM_003", "09_1SAM_017",
+                "10_2SAM_018",
                 "11_1KI_003",
                 "14_2CH_034",
                 "19_PSA_008", "19_PSA_119", "19_PSA_148",
@@ -1976,7 +1976,7 @@ const SemanticDictionary = {
                 "19_PSA_037", "19_PSA_091", "19_PSA_120", "19_PSA_137", "19_PSA_146",
                 "23_ISA_016", "23_ISA_058",
                 "24_JER_029",
-                "26_EZK_011", "26_EZK_047",
+                "26_EZE_011", "26_EZE_047",
                 "40_MAT_002", "40_MAT_025",
                 "42_LUK_010",
                 "44_ACT_007",
@@ -2215,11 +2215,11 @@ const SemanticDictionary = {
             chapters: [
                 "02_EXO_004",
                 "03_LEV_021",
-                "10_2SA_009",
+                "10_2SAM_009",
                 "19_PSA_038", "19_PSA_146",
                 "23_ISA_035", "23_ISA_061",
                 "40_MAT_009", "40_MAT_011", "40_MAT_012", "40_MAT_015", "40_MAT_020", "40_MAT_021",
-                "41_MRK_002", "41_MRK_007", "41_MRK_008", "41_MRK_010",
+                "41_MAR_002", "41_MAR_007", "41_MAR_008", "41_MAR_010",
                 "42_LUK_005", "42_LUK_007", "42_LUK_013", "42_LUK_014", "42_LUK_018",
                 "43_JOH_005", "43_JOH_009",
                 "44_ACT_003", "44_ACT_008", "44_ACT_009", "44_ACT_014",
@@ -2322,7 +2322,7 @@ const SemanticDictionary = {
                 "17_EST_003", "17_EST_004",
                 "27_DAN_003", "27_DAN_006",
                 "40_MAT_005", "40_MAT_010", "40_MAT_024",
-                "41_MRK_013",
+                "41_MAR_013",
                 "42_LUK_006", "42_LUK_021",
                 "43_JOH_015", "43_JOH_016",
                 "44_ACT_004", "44_ACT_005", "44_ACT_007", "44_ACT_008", "44_ACT_012",
@@ -2333,7 +2333,7 @@ const SemanticDictionary = {
                 "53_2TH_001",
                 "55_2TI_001", "55_2TI_003",
                 "58_HEB_011", "58_HEB_012",
-                "59_JAS_001",
+                "59_JAM_001",
                 "60_1PE_002", "60_1PE_003", "60_1PE_004",
                 "66_REV_002", "66_REV_006", "66_REV_007", "66_REV_012", "66_REV_013"
             ]
@@ -2456,13 +2456,13 @@ const SemanticDictionary = {
                 "01_GEN_022", "01_GEN_027", "01_GEN_037", "01_GEN_048",
                 "02_EXO_002", "02_EXO_020",
                 "05_DEU_006", "05_DEU_011",
-                "09_1SA_001", "09_1SA_002", "09_1SA_003",
+                "09_1SAM_001", "09_1SAM_002", "09_1SAM_003",
                 "11_1KI_003",
                 "19_PSA_078", "19_PSA_103", "19_PSA_127", "19_PSA_128", "19_PSA_139",
                 "20_PRO_001", "20_PRO_003", "20_PRO_004", "20_PRO_013", "20_PRO_017",
                 "20_PRO_019", "20_PRO_022", "20_PRO_023", "20_PRO_029", "20_PRO_031",
                 "40_MAT_007", "40_MAT_018", "40_MAT_019",
-                "41_MRK_007", "41_MRK_010",
+                "41_MAR_007", "41_MAR_010",
                 "42_LUK_001", "42_LUK_002", "42_LUK_015",
                 "49_EPH_005", "49_EPH_006",
                 "51_COL_003",
@@ -2603,7 +2603,7 @@ const SemanticDictionary = {
                 "20_PRO_026", "20_PRO_029",
                 "21_ECC_005", "21_ECC_007",
                 "40_MAT_005", "40_MAT_006", "40_MAT_007", "40_MAT_012", "40_MAT_015",
-                "41_MRK_004",
+                "41_MAR_004",
                 "42_LUK_006", "42_LUK_008", "42_LUK_011",
                 "43_JOH_008", "43_JOH_017",
                 "45_ROM_012", "45_ROM_014",
@@ -2612,7 +2612,7 @@ const SemanticDictionary = {
                 "50_PHP_004",
                 "51_COL_003",
                 "52_1TH_005",
-                "59_JAS_001", "59_JAS_003", "59_JAS_004",
+                "59_JAM_001", "59_JAM_003", "59_JAM_004",
                 "60_1PE_002", "60_1PE_003",
                 "62_1JO_002"
             ]
@@ -2745,7 +2745,7 @@ const SemanticDictionary = {
                 "19_PSA_008", "19_PSA_023", "19_PSA_100", "19_PSA_103", "19_PSA_139", "19_PSA_147",
                 "23_ISA_043", "23_ISA_062",
                 "24_JER_001", "24_JER_029", "24_JER_031",
-                "26_EZK_034", "26_EZK_036",
+                "26_EZE_034", "26_EZE_036",
                 "28_HOS_001", "28_HOS_002",
                 "38_ZEC_002",
                 "39_MAL_003",
