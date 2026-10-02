@@ -170,3 +170,9 @@ notes_locales.md
 ########################################
 player.js
 
+
+# Dossiers de travail audio : jamais dans le depot (fichiers .wav de 15 a 75 Mo)
+Psaumes FR - Immersion/
+*.wav
+data/export_brut.csv
+
