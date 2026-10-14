@@ -13,6 +13,41 @@ Journaux antérieurs, hors périmètre de celui-ci :
 
 ---
 
+## 2026-10-14 — Page « Suppression des données » pour l'app Meta BibleChantee-AI-Social
+
+Demande utilisateur, suite à une demande de suppression de données reçue de Meta
+(app `BibleChantee-AI-Social`, ID 1416551256507109) le 13.10.2026.
+
+### Ajouté
+
+- `suppression-donnees.html` (nouvelle page autonome, aucun autre fichier touché) :
+  explique quelles données les réponses automatiques Facebook / Instagram / Messenger
+  enregistrent (nom public, ID Facebook, commentaire, réponse, date) et comment en
+  demander l'effacement (e-mail à info@biblechantee.com, délai 30 jours, ou retrait de
+  l'app depuis Facebook). Langues : FR, EN, PT, ES, TL, MG.
+- Sert d'« URL d'instructions de suppression des données » dans les paramètres de l'app
+  Meta, pour que Meta cesse d'envoyer les demandes sans procédure.
+
+### Demande traitée
+
+1 identifiant demandé (fichier Meta du 13.10.2026) : trouvé sur une seule ligne de la
+feuille « Baiboly Mihira - Boost SALAMO FIAROVANA - Log Commentaires ». Ligne
+supprimée, absence vérifiée dans cette feuille et dans « Bible Chantée - Prospects FB ».
+(Nom et ID volontairement non consignés ici.)
+
+### Vérification
+
+`audit-langue.ps1` ne concerne que les pages secondaires à barre de langue
+(lecteur, about, mentions-legales…), qui ne sont pas modifiées. Page vérifiée en ligne
+après déploiement (HTTP 200).
+
+### Ouvert
+
+- `privacy*.html` ne mentionne pas encore Facebook / Meta : à compléter si souhaité.
+- Textes TL et MG simples, à faire relire par un locuteur natif.
+
+---
+
 ## 2026-09-23 — Ménage : 18 fichiers archivés, liens éteints réparés · commit `80e51547`
 
 Suite directe de l'entrée ci-dessous. Demande utilisateur : « il faut tout mettre à
