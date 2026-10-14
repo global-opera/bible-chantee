@@ -13,6 +13,16 @@ Journaux antérieurs, hors périmètre de celui-ci :
 
 ---
 
+## 2026-10-14 — Politiques de confidentialité : paragraphe Facebook / Instagram / Messenger
+
+Demande utilisateur (suite de l'entrée ci-dessous). Dans `privacy.html` et les 7
+`privacy-*.html` (FR, EN, PT, ES, DE, IT, TL) : ajout d'un sous-titre en fin de section
+4 « Services tiers » décrivant les données enregistrées par les réponses automatiques
+Meta, avec lien vers `suppression-donnees.html`. Date de mise à jour passée au
+14.10.2026. Aucun autre contenu modifié. Vérifié en ligne (HTTP 200, lien présent).
+
+---
+
 ## 2026-10-14 — Page « Suppression des données » pour l'app Meta BibleChantee-AI-Social
 
 Demande utilisateur, suite à une demande de suppression de données reçue de Meta
@@ -43,7 +53,6 @@ après déploiement (HTTP 200).
 
 ### Ouvert
 
-- `privacy*.html` ne mentionne pas encore Facebook / Meta : à compléter si souhaité.
 - Textes TL et MG simples, à faire relire par un locuteur natif.
 
 ---
