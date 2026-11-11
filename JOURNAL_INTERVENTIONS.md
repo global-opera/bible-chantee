@@ -13,49 +13,6 @@ Journaux antérieurs, hors périmètre de celui-ci :
 
 ---
 
-<<<<<<< Updated upstream
-## 2026-10-14 — Politiques de confidentialité : paragraphe Facebook / Instagram / Messenger
-
-Demande utilisateur (suite de l'entrée ci-dessous). Dans `privacy.html` et les 7
-`privacy-*.html` (FR, EN, PT, ES, DE, IT, TL) : ajout d'un sous-titre en fin de section
-4 « Services tiers » décrivant les données enregistrées par les réponses automatiques
-Meta, avec lien vers `suppression-donnees.html`. Date de mise à jour passée au
-14.10.2026. Aucun autre contenu modifié. Vérifié en ligne (HTTP 200, lien présent).
-
----
-
-## 2026-10-14 — Page « Suppression des données » pour l'app Meta BibleChantee-AI-Social
-
-Demande utilisateur, suite à une demande de suppression de données reçue de Meta
-(app `BibleChantee-AI-Social`, ID 1416551256507109) le 13.10.2026.
-
-### Ajouté
-
-- `suppression-donnees.html` (nouvelle page autonome, aucun autre fichier touché) :
-  explique quelles données les réponses automatiques Facebook / Instagram / Messenger
-  enregistrent (nom public, ID Facebook, commentaire, réponse, date) et comment en
-  demander l'effacement (e-mail à info@biblechantee.com, délai 30 jours, ou retrait de
-  l'app depuis Facebook). Langues : FR, EN, PT, ES, TL, MG.
-- Sert d'« URL d'instructions de suppression des données » dans les paramètres de l'app
-  Meta, pour que Meta cesse d'envoyer les demandes sans procédure.
-
-### Demande traitée
-
-1 identifiant demandé (fichier Meta du 13.10.2026) : trouvé sur une seule ligne de la
-feuille « Baiboly Mihira - Boost SALAMO FIAROVANA - Log Commentaires ». Ligne
-supprimée, absence vérifiée dans cette feuille et dans « Bible Chantée - Prospects FB ».
-(Nom et ID volontairement non consignés ici.)
-
-### Vérification
-
-`audit-langue.ps1` ne concerne que les pages secondaires à barre de langue
-(lecteur, about, mentions-legales…), qui ne sont pas modifiées. Page vérifiée en ligne
-après déploiement (HTTP 200).
-
-### Ouvert
-
-- Textes TL et MG simples, à faire relire par un locuteur natif.
-=======
 ## 2026-11-11 — Paroles FR de Cantique 1-8 : afficher ce qui est réellement chanté
 
 **Signalement** : les paroles FR de Cantique 2 ne correspondent pas à l'audio.
@@ -97,7 +54,50 @@ le réenregistrement de janvier 2026 les a vraisemblablement manqués pour une
 question de nommage. Liste et dates : relever `Last-Modified` des MP3 FR sur R2.
 Passages à réécouter dans Cantique : 2 « éclaire ma mer », 4 « qui me rend raide »
 et « se déluge », 3 strophe finale parlée « Ces paroles sont inspirées… ».
->>>>>>> Stashed changes
+
+---
+
+## 2026-10-14 — Politiques de confidentialité : paragraphe Facebook / Instagram / Messenger
+
+Demande utilisateur (suite de l'entrée ci-dessous). Dans `privacy.html` et les 7
+`privacy-*.html` (FR, EN, PT, ES, DE, IT, TL) : ajout d'un sous-titre en fin de section
+4 « Services tiers » décrivant les données enregistrées par les réponses automatiques
+Meta, avec lien vers `suppression-donnees.html`. Date de mise à jour passée au
+14.10.2026. Aucun autre contenu modifié. Vérifié en ligne (HTTP 200, lien présent).
+
+---
+
+## 2026-10-14 — Page « Suppression des données » pour l'app Meta BibleChantee-AI-Social
+
+Demande utilisateur, suite à une demande de suppression de données reçue de Meta
+(app `BibleChantee-AI-Social`, ID 1416551256507109) le 13.10.2026.
+
+### Ajouté
+
+- `suppression-donnees.html` (nouvelle page autonome, aucun autre fichier touché) :
+  explique quelles données les réponses automatiques Facebook / Instagram / Messenger
+  enregistrent (nom public, ID Facebook, commentaire, réponse, date) et comment en
+  demander l'effacement (e-mail à info@biblechantee.com, délai 30 jours, ou retrait de
+  l'app depuis Facebook). Langues : FR, EN, PT, ES, TL, MG.
+- Sert d'« URL d'instructions de suppression des données » dans les paramètres de l'app
+  Meta, pour que Meta cesse d'envoyer les demandes sans procédure.
+
+### Demande traitée
+
+1 identifiant demandé (fichier Meta du 13.10.2026) : trouvé sur une seule ligne de la
+feuille « Baiboly Mihira - Boost SALAMO FIAROVANA - Log Commentaires ». Ligne
+supprimée, absence vérifiée dans cette feuille et dans « Bible Chantée - Prospects FB ».
+(Nom et ID volontairement non consignés ici.)
+
+### Vérification
+
+`audit-langue.ps1` ne concerne que les pages secondaires à barre de langue
+(lecteur, about, mentions-legales…), qui ne sont pas modifiées. Page vérifiée en ligne
+après déploiement (HTTP 200).
+
+### Ouvert
+
+- Textes TL et MG simples, à faire relire par un locuteur natif.
 
 ---
 
