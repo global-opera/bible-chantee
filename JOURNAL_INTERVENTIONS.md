@@ -46,14 +46,30 @@ paires de mots retrouvées dans le texte de référence) :
 couplets affichés = couplets écrits, Genèse 1 toujours Segond, EN Cantique 2
 inchangé, aucune erreur JS) + `tests/suite.mjs` 36/36.
 
-**Reste ouvert** : 150 autres chapitres ont encore l'audio de décembre 2025, donc
-très probablement le même défaut : Ézéchiel (48), Joël (3), Marc (16), Jean (21),
-1-2 Corinthiens, 1-2 Thessaloniciens, 1-2 Timothée, 1-2 Pierre, 1-2-3 Jean.
-Ce sont presque tous des livres à code de fichier particulier (OSIS ou numéroté) :
-le réenregistrement de janvier 2026 les a vraisemblablement manqués pour une
-question de nommage. Liste et dates : relever `Last-Modified` des MP3 FR sur R2.
-Passages à réécouter dans Cantique : 2 « éclaire ma mer », 4 « qui me rend raide »
-et « se déluge », 3 strophe finale parlée « Ces paroles sont inspirées… ».
+**Suite le même jour : les 150 autres chapitres sont corrigés** (commits `a57d609c`,
+`769caf11`, `29fd5ec4` et suivant). Relevé `Last-Modified` des 1189 MP3 FR :
+158 datent du 25.12.2025 = Cantique, Ézéchiel (48), Joël (3), Marc (16), Jean (21),
+1-2 Corinthiens, 1-2 Thessaloniciens, 1-2 Timothée, 1-2 Pierre, 1-2-3 Jean. Presque
+tous des livres à code de fichier particulier (OSIS ou numéroté) : le réenregistrement
+de janvier 2026 les a vraisemblablement manqués pour une question de nommage.
+Règle des dates confirmée sur 26 chapitres transcrits (6 en déc. 2025 = paraphrase,
+20 en 2026 = Segond, 0 exception).
+
+Méthode : transcription large-v3 des 150 MP3 (≈ 50 s/chapitre sur la RTX), rédaction
+par livre à partir de la transcription + FR_V1 + Segond (pour les noms propres
+seulement), contrôle automatique fidélité ≥ 0,80 / couverture ≥ 0,70 / strophes ≤ 6
+lignes, puis réécoute ciblée des débuts de chanson que la transcription sautait
+(46 débuts réécoutés, 7 chapitres complétés). Vérifié en ligne : les 158 chapitres
+affichent leurs paroles, Segond et les autres langues inchangés, suite 36/36.
+
+⚠️ `lyrics-fr-chantees.js` est désormais GÉNÉRÉ (JSON) ; l'URL porte un numéro de
+version (`?v=AAAAMMJJhhmm`) à changer à chaque modification, sinon Cloudflare sert
+l'ancienne version pendant 4 h (vécu : seuls 8 chapitres sur 75 apparaissaient).
+
+**Reste ouvert** : une liste de passages incertains à vérifier à l'oreille est sur le
+bureau de Stéphane (`PAROLES-FR-A-REECOUTER.md`). Dans 21 chapitres, Suno a CHANTÉ sa
+note de rédaction (« Ces paroles sont conçues pour… ») : affichée car chantée, à
+masquer si Stéphane le souhaite.
 
 ---
 
