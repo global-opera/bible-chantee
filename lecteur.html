@@ -1286,6 +1286,7 @@ function isVerseLikeEN(s){
          etaient telechargees a chaque visite (~12 Mo), dont 3,7 Mo
          (lyrics-data.js et lyrics-data-v2.js) qu'aucune ligne ne lisait. -->
     <script src="lyrics-data-fr.js?v=20260312"></script>
+    <script src="lyrics-fr-chantees.js?v=20261111"></script>
   </head>
 <body>
   <div class="container">
@@ -2197,7 +2198,15 @@ const audioPlayer = document.querySelector('#audioPlayer');
         // On affiche donc le meme JSON Bible que l'onglet Bible (fetch via bibleFiles + bibleCache).
         // Autres langues: comportement inchangé (window.chapterLyrics{LANG}).
         let lyrics = null;
-        if (lang === 'FR') {
+        // FR : certains chapitres ne chantent PAS Segond mais une paraphrase
+        // (Cantique 1-8, constate le 11.11.2026). Leurs vraies paroles sont dans
+        // lyrics-fr-chantees.js et passent avant le texte biblique.
+        const frChantees = (lang === 'FR' && window.chapterLyricsFRChantees) ? window.chapterLyricsFRChantees[bookNumber] : null;
+        const frChante = frChantees ? frChantees[String(parseInt(chapter, 10))] : null;
+        if (frChante) {
+          lyrics = frChante;
+          console.log('[LYRICS] Book:', bookNumber, 'Lang: FR Using: lyrics-fr-chantees.js');
+        } else if (lang === 'FR') {
           try {
             const filename = bibleFiles[lang] || bibleFiles.FR;
             const bibleJson = await loadBibleJson(filename);

@@ -13,6 +13,7 @@ Journaux antérieurs, hors périmètre de celui-ci :
 
 ---
 
+<<<<<<< Updated upstream
 ## 2026-10-14 — Politiques de confidentialité : paragraphe Facebook / Instagram / Messenger
 
 Demande utilisateur (suite de l'entrée ci-dessous). Dans `privacy.html` et les 7
@@ -54,6 +55,49 @@ après déploiement (HTTP 200).
 ### Ouvert
 
 - Textes TL et MG simples, à faire relire par un locuteur natif.
+=======
+## 2026-11-11 — Paroles FR de Cantique 1-8 : afficher ce qui est réellement chanté
+
+**Signalement** : les paroles FR de Cantique 2 ne correspondent pas à l'audio.
+
+**Cause** : depuis mai 2026, le lecteur affiche en FR le texte Segond pour TOUS les
+chapitres, au motif que « l'audio chante Segond ». Ce n'était vérifié que sur
+4 chapitres de la Genèse. Or une partie de l'audio FR est encore la version de
+**décembre 2025**, qui chante une **paraphrase**, pas Segond.
+
+**Preuve** (transcription Whisper large-v3 de l'audio R2 actuel, score = part des
+paires de mots retrouvées dans le texte de référence) :
+- Cantique 1-8 : 0,15 à 0,26 contre Segond → paraphrase, 8/8.
+- Échantillon de 12 chapitres répartis dans la Bible : 10 chantent Segond
+  (0,69 à 0,92) ; Jean 3 (0,27) et 1 Co 13 (0,13) chantent une paraphrase.
+- La date `Last-Modified` des MP3 sur R2 sépare parfaitement les deux :
+  paraphrases = 25.12.2025 ; Segond = janvier 2026 et après.
+- `Lyrics/FR_V1` du Drive = transcription de l'ANCIEN audio (≈ 0,9 avec les
+  paraphrases encore en ligne, ≈ 0,1 avec les chapitres réenregistrés). Il ne
+  décrit donc l'audio actuel QUE pour les chapitres de décembre 2025.
+
+**Correctif (sans toucher aux autres chapitres)** :
+- nouveau `lyrics-fr-chantees.js` : `window.chapterLyricsFRChantees[livre][chapitre]`,
+  aujourd'hui Cantique 1-8 seulement, rédigé depuis la transcription large-v3,
+  recoupée avec FR_V1 et le texte biblique ;
+- `loadLyrics()` (FR) lit d'abord cette table, sinon Segond comme avant. L'onglet
+  Bible reste Segond. Les autres langues ne sont pas concernées.
+- ⚠️ une strophe de plus de 6 lignes déclenche le regroupement automatique par 4
+  de `cleanLyrics` (étape 16), qui casse les refrains : garder des strophes ≤ 6 lignes.
+
+**Vérification** : Chrome headless + CDP, 21 contrôles (8 chapitres affichés,
+couplets affichés = couplets écrits, Genèse 1 toujours Segond, EN Cantique 2
+inchangé, aucune erreur JS) + `tests/suite.mjs` 36/36.
+
+**Reste ouvert** : 150 autres chapitres ont encore l'audio de décembre 2025, donc
+très probablement le même défaut : Ézéchiel (48), Joël (3), Marc (16), Jean (21),
+1-2 Corinthiens, 1-2 Thessaloniciens, 1-2 Timothée, 1-2 Pierre, 1-2-3 Jean.
+Ce sont presque tous des livres à code de fichier particulier (OSIS ou numéroté) :
+le réenregistrement de janvier 2026 les a vraisemblablement manqués pour une
+question de nommage. Liste et dates : relever `Last-Modified` des MP3 FR sur R2.
+Passages à réécouter dans Cantique : 2 « éclaire ma mer », 4 « qui me rend raide »
+et « se déluge », 3 strophe finale parlée « Ces paroles sont inspirées… ».
+>>>>>>> Stashed changes
 
 ---
 
